@@ -180,5 +180,32 @@ calc_ndcg_random_forest <- function(rf_model, test_data) {
   ndcg (sorted_predict_data$actual_class)
 }
 
+feature_select_rf <- function (){
+  set.seed(2015)
+  train_data <- read.csv ("all_score_train.csv")
+  test_data <- read.csv ("all_score_test.csv")
+  all_data <- rbind (train_data, test_data)
+  require(caTools)
+  sample = sample.split(all_data$revid, SplitRatio = 0.8)
+  train = subset (all_data, sample==TRUE)
+  test = subset (all_data, sample == FALSE)
+  
+  #Importance of feature
+  train$readability_consensus <- NULL
+  test$readability_consensus <- NULL
+  
+  train$pageid <- NULL
+  test$pageid <- NULL
+  
+  train$revid <- NULL
+  test$revid <- NULL
+  
+  model = train (user_rating ~ flesch_reading_ease + flesch_kincaid_grade + smog_index + coleman_liau_index + automated_readability_index + dale_chall_readability_score + difficult_words + linsear_write_formula + gunning_fog + infonoisescore + logcontentlength + logreferences + logpagelinks + numimageslength + num_citetemplates + lognoncitetemplates + num_categories + hasinfobox + lvl2headings + lvl3heading, data = train, method = "lvq", preProcess="scale")
+  
+  importance <- varImp(model, scale=FALSE)
+  
+  feature_selection <- rfe (x = train[,4:23], y=train$user_rating, testX = test[,4:23], testY = test$user_rating, sizes = c(1:20))
+}
+
 # convert factor to integer
 # df$rating_score = c(1,2,3,4,6,7)[as.numeric(df$user_rating)]
