@@ -204,7 +204,7 @@ feature_select_rf <- function (){
   
   importance <- varImp(model, scale=FALSE)
   
-  feature_selection <- rfe (x = train[,4:23], y=train$user_rating, testX = test[,4:23], testY = test$user_rating, sizes = c(1:20))
+  plot (importance)
 }
 
 # convert factor to integer
