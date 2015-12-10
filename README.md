@@ -2,7 +2,7 @@
 
 This repository contains my code to predict quality class of Wikipedia articles.
 
-You should find the code in R file in *random_forest* directory.
+You should find the code in R file in **analysis** directory.
 
 Please note that we used the random seed as 2015 in our code.
 
