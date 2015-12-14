@@ -20,56 +20,11 @@ runRegression <- function (train, test) {
   print (sum (diag(table1)) / sum (table1))
 }
 
-runSingleRandomForest <- function (train_data, test_data, ntree, nodesize = 8) {
+runSingleRandomForest <- function (train_data, test_data, ntree, nodesize) {
   qualityForest3 = randomForest(user_rating ~ flesch_reading_ease + flesch_kincaid_grade + smog_index + coleman_liau_index + automated_readability_index + dale_chall_readability_score + difficult_words + linsear_write_formula + gunning_fog + infonoisescore + logcontentlength + logreferences + logpagelinks + numimageslength + num_citetemplates + lognoncitetemplates + num_categories + hasinfobox + lvl2headings + lvl3heading, data = train_data, ntree = ntree, nodesize = nodesize, mtry = 2)
   predictForest3 = predict(qualityForest3, newdata = test_data)
   table3 = table (test_data$user_rating, predictForest3)
   sum (diag(table3)) / sum (table3)
-}
-
-runMultiRandomForest <- function (train_data, test_data, nodesize = 8) {
-  require (randomForest)
-  res = as.numeric ()
-  # ntreeSet = c (32, 64, 96, 100, 128, 200, 256, 300, 350, 400, 450, 500, 501, 512, 600,1500,2000)
-#   ntreeSet = c(256, 284, 400, 450, 500, 501, 512,2000)
-#   nodesizeSet = c (4, 8, 16, 32, 64)
-  #ntreeSet = c(16,24,48,60,150,180,220,280,320,280,420,475)
-  #nodesizeSet = c (2,4,8,16,24,32,46,64,96,128,256)
-  #ntreeSet = c(440,445,455,460)
-  #nodesizeSet = c (2,4,8,16,24,32,46,64,96,128,256)
-  ntreeSet = c(32, 64, 96, 100, 128, 200, 256, 300, 350, 400, 450,475, 500, 501, 512, 600, 1000,1200,1500,1550,1600,1650,1700,1750, 1800, 1850,1900,1950, 2000, 20000)
-  nodesizeSet = c (2,4,8,16,24,32,46,64,96,128,256)
-  max_accuracy = 0
-  max_i = 0
-  max_j = 0
-  best_rf_model = NULL
-  for (i in ntreeSet) {
-    for (j in nodesizeSet) {
-      print ("***")
-      print (paste(c(i,j), collapse = " "))
-      qualityForest3 = randomForest(user_rating ~ flesch_reading_ease + flesch_kincaid_grade + smog_index + coleman_liau_index + automated_readability_index + dale_chall_readability_score + difficult_words + linsear_write_formula + gunning_fog + infonoisescore + logcontentlength + logreferences + logpagelinks + numimageslength + num_citetemplates + lognoncitetemplates + num_categories + hasinfobox + lvl2headings + lvl3heading, data = train_data, ntree = i, nodesize = j, mtry = 2)
-      predictForest3 = predict(qualityForest3, newdata = test_data)
-      table3 = table (test_data$user_rating, predictForest3)
-      accuracy = sum (diag(table3)) / sum (table3)
-      res <- c (res, accuracy)
-      if (accuracy > max_accuracy) {
-        print ("NEW MAX")
-        print (accuracy)
-        print (table3)
-        print (paste("RMSE: ", calc_rmse(c(4,3,6,5,2,1)[test_data$user_rating], c(4,3,6,5,2,1)[as.numeric(predictForest3)])))
-        print (paste("NDCG: ", calc_ndcg_random_forest(qualityForest3, test_data = test_data)))
-        print ("---------")
-        print ("")
-        max_accuracy = accuracy
-        max_i = i
-        max_j = j
-        best_rf_model = qualityForest3
-      } else {
-        print (paste (c(max_i, max_j, max_accuracy), collapse = " "))
-      }
-    }
-  }
-  best_rf_model
 }
 
 runRFModel <- function ()
