@@ -6,7 +6,7 @@ You should find the code in R file in **analysis** directory.
 
 ## Data set
 
-The data are stored in two files: *all_score_train.csv" and *all_score_test.csv*. The files ".tsv" are provided as backup.
+The data are stored in two files: *all_score_train.csv* and *all_score_test.csv*. The files ".tsv" are provided as backup.
 
 # Running the code
 
