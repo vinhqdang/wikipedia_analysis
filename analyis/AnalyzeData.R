@@ -29,15 +29,43 @@ runSingleRandomForest <- function (train_data, test_data, ntree, nodesize) {
 
 runRFModel <- function ()
 {
+  if (!require(h2o)) {
+    install.packages("h2o")
+  }
+  library(h2o)
+  
   set.seed(2015)
   train_data <- read.csv ("all_score_train.csv")
   test_data <- read.csv ("all_score_test.csv")
   all_data <- rbind (train_data, test_data)
-  require(caTools)
-  sample = sample.split(all_data$revid, SplitRatio = 0.8)
-  train = subset (all_data, sample==TRUE)
-  test = subset (all_data, sample == FALSE)
-  runMultiRandomForest (train, test)
+  all_data$pageid = NULL
+  all_data$revid = NULL
+  
+  
+  localH2O <- h2o.init(ip = "localhost", port = 54321, startH2O = TRUE)
+  
+  data = as.h2o (all_data)
+  rf_h2o = h2o.randomForest(x = 2:21, y = 1, training_frame = data, ntrees = 450, nfolds = 5)
+}
+
+runRFModel_withoutReadabilityScore = function()
+{
+  if (!require(h2o)) {
+    install.packages("h2o")
+  }
+  library(h2o)
+  
+  train_data <- read.csv ("all_score_train.csv")
+  test_data <- read.csv ("all_score_test.csv")
+  all_data <- rbind (train_data, test_data)
+  all_data$pageid = NULL
+  all_data$revid = NULL
+  
+  
+  localH2O <- h2o.init(ip = "localhost", port = 54321, startH2O = TRUE)
+  
+  data = as.h2o (all_data)
+  rf_h2o = h2o.randomForest(x = 2:12, y = 1, training_frame = data, ntrees = 501, nfolds = 5)
 }
 
 runKNNModel <- function () {
