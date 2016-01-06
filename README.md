@@ -4,7 +4,25 @@ This repository contains my code to predict quality class of Wikipedia articles.
 
 You should find the code in R file in **analysis** directory.
 
-Please note that we used the random seed as 2015 in our code.
+## Data set
+
+The data are stored in two files: *all_score_train.csv" and *all_score_test.csv*. The files ".tsv" are provided as backup.
+
+# Running the code
+
+You should have [R](https://www.r-project.org) installed. I suggest that you should also use [RStudio](https://www.rstudio.com) as the IDE, but it is optional.
+
+Please note that the code is tested with R 3.2.3
+
+First, you should load the code
+
+
+```r
+setwd ("path to AnalyzeData.R file")
+source ("AnalyzeData.R")
+```
+
+Then you can run the following analysis.
 
 ## Linear regression
 
