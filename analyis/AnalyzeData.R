@@ -1,4 +1,14 @@
-runRpart <-function (train, test) {
+runRpart <-function () {
+  set.seed(2015)
+  train_data <- read.csv ("all_score_train.csv")
+  test_data <- read.csv ("all_score_test.csv")
+  all_data <- rbind (train_data, test_data)
+  require(caTools)
+  sample = sample.split(all_data$revid, SplitRatio = 0.8)
+  
+  train = subset (all_data, sample==TRUE)
+  test = subset (all_data, sample == FALSE)
+  
   require(rpart)
   r1 <- rpart(user_rating ~ flesch_reading_ease + flesch_kincaid_grade + smog_index + coleman_liau_index + automated_readability_index + dale_chall_readability_score + difficult_words + linsear_write_formula + gunning_fog + infonoisescore + logcontentlength + logreferences + logpagelinks + numimageslength + num_citetemplates + lognoncitetemplates + num_categories + hasinfobox + lvl2headings + lvl3heading, data = train, method = "class")
   predictR <- predict(r1, newdata = test, type = "class")
@@ -8,7 +18,17 @@ runRpart <-function (train, test) {
   
 }
 
-runRegression <- function (train, test) {
+runRegression <- function () {
+  set.seed(2015)
+  train_data <- read.csv ("all_score_train.csv")
+  test_data <- read.csv ("all_score_test.csv")
+  all_data <- rbind (train_data, test_data)
+  require(caTools)
+  sample = sample.split(all_data$revid, SplitRatio = 0.8)
+  
+  train = subset (all_data, sample==TRUE)
+  test = subset (all_data, sample == FALSE)
+  
   train$user_rating <- as.numeric(train$user_rating, levels(c(3,4,1,2,5,6)))
   test$user_rating <- as.numeric (test$user_rating, levels(c(3,4,1,2,5,6)))
   lm1 <- lm(user_rating ~ flesch_reading_ease + flesch_kincaid_grade + smog_index + coleman_liau_index + automated_readability_index + dale_chall_readability_score + difficult_words + linsear_write_formula + gunning_fog + infonoisescore + logcontentlength + logreferences + logpagelinks + numimageslength + num_citetemplates + lognoncitetemplates + num_categories + hasinfobox + lvl2headings + lvl3heading, data = train)
@@ -18,13 +38,6 @@ runRegression <- function (train, test) {
   table1 <- table (test$user_rating, predictLM)
   print (table1)
   print (sum (diag(table1)) / sum (table1))
-}
-
-runSingleRandomForest <- function (train_data, test_data, ntree, nodesize) {
-  qualityForest3 = randomForest(user_rating ~ flesch_reading_ease + flesch_kincaid_grade + smog_index + coleman_liau_index + automated_readability_index + dale_chall_readability_score + difficult_words + linsear_write_formula + gunning_fog + infonoisescore + logcontentlength + logreferences + logpagelinks + numimageslength + num_citetemplates + lognoncitetemplates + num_categories + hasinfobox + lvl2headings + lvl3heading, data = train_data, ntree = ntree, nodesize = nodesize, mtry = 2)
-  predictForest3 = predict(qualityForest3, newdata = test_data)
-  table3 = table (test_data$user_rating, predictForest3)
-  sum (diag(table3)) / sum (table3)
 }
 
 runRFModel <- function ()
