@@ -44,6 +44,18 @@ The CART model is done by calling the function *runCART*.
 
 The function for kNN model is *runKNNModel*.
 
+## Multinominal logistic regression
+
+The predictor using multinominal logistic regression could be called with the function *runMultinominalLogisticRegression*
+
+The function requires packages *caret* and *nnet*.
+
+## SVM
+
+Packages required: *caret* and *e1071*
+
+Function name: *runSVM*
+
 ## random forest
 
 We provided two functions for *randomForest* model.
@@ -52,7 +64,9 @@ The first function is ``runRFModel``, which will load and run the data with read
 
 The second function is ``runRFModel_withoutReadabilityScore``, which will run without using readability scores, as in [1].
 
-You should observe that the first function provide a better prediction, as we claimed in our submitted paper to ESWC 2016.
+We applied 5-folds cross validation.
+
+You should observe that the first function provide a better prediction, as we claimed in our submitted paper to Group 2016.
 
 ## Utilities
 
