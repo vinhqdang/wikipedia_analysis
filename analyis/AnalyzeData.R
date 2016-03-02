@@ -1,43 +1,79 @@
-runRpart <-function () {
-  set.seed(2015)
-  train_data <- read.csv ("all_score_train.csv")
-  test_data <- read.csv ("all_score_test.csv")
-  all_data <- rbind (train_data, test_data)
-  require(caTools)
-  sample = sample.split(all_data$revid, SplitRatio = 0.8)
+runCART <-function () {
+  set.seed(2016)
   
-  train = subset (all_data, sample==TRUE)
-  test = subset (all_data, sample == FALSE)
+  all_data = read.csv ("all_data.csv", header = FALSE)
+  all_data$V1 = NULL
+  all_data$V2 = NULL
   
-  require(rpart)
-  r1 <- rpart(user_rating ~ flesch_reading_ease + flesch_kincaid_grade + smog_index + coleman_liau_index + automated_readability_index + dale_chall_readability_score + difficult_words + linsear_write_formula + gunning_fog + infonoisescore + logcontentlength + logreferences + logpagelinks + numimageslength + num_citetemplates + lognoncitetemplates + num_categories + hasinfobox + lvl2headings + lvl3heading, data = train, method = "class")
-  predictR <- predict(r1, newdata = test, type = "class")
-  table1 <- table(test$user_rating, predictR)
-  print (table1)
-  print (sum (diag(table1)) / sum (table1))
-  
+  library(caret)
+  tc <- trainControl("cv",5)
+  train.rpart <- train(V3 ~ V4 + V5 + V6+ V7 + V8 + V9 + V10 + V11 + V12 + V14 + V15 + V16 + V17+ V18 + V19 + V20 + V21 + V22 + V23 + V24, data = all_data, method="rpart",trControl=tc)
+  print (train.rpart)
+  p.rpart = predict(train.rpart, newdata = all_data)
+  print (multiclass.roc(as.ordered(all_data$V3), as.ordered(p.rpart)))
 }
 
 runRegression <- function () {
   set.seed(2015)
-  train_data <- read.csv ("all_score_train.csv")
-  test_data <- read.csv ("all_score_test.csv")
-  all_data <- rbind (train_data, test_data)
+  all_data = read.csv ("all_data.csv", header = FALSE)
+  all_data$V1 = NULL
+  all_data$V2 = NULL
   require(caTools)
-  sample = sample.split(all_data$revid, SplitRatio = 0.8)
+  sample = sample.split(all_data$V3, SplitRatio = 0.8)
   
   train = subset (all_data, sample==TRUE)
   test = subset (all_data, sample == FALSE)
   
-  train$user_rating <- as.numeric(train$user_rating, levels(c(3,4,1,2,5,6)))
-  test$user_rating <- as.numeric (test$user_rating, levels(c(3,4,1,2,5,6)))
-  lm1 <- lm(user_rating ~ flesch_reading_ease + flesch_kincaid_grade + smog_index + coleman_liau_index + automated_readability_index + dale_chall_readability_score + difficult_words + linsear_write_formula + gunning_fog + infonoisescore + logcontentlength + logreferences + logpagelinks + numimageslength + num_citetemplates + lognoncitetemplates + num_categories + hasinfobox + lvl2headings + lvl3heading, data = train)
+  train$V3 <- as.numeric (as.character (factor (train$V3, labels = c(4,3,6,5,2,1))))
+  test$V3 <- as.numeric (as.character (factor (test$V3, labels = c(4,3,6,5,2,1))))
+  lm1 <- lm(V3 ~ V4 + V5 + V6+ V7 + V8 + V9 + V10 + V11 + V12 + V14 + V15 + V16 + V17+ V18 + V19 + V20 + V21 + V22 + V23 + V24, data = train)
   predictLM <- predict(lm1, newdata = test)
   predictLM <- round (predictLM)
-  replace(predictLM, predictLM == 7, 6)
-  table1 <- table (test$user_rating, predictLM)
+  predictLM = replace(predictLM, predictLM >= 7, 6)
+  predictLM = replace(predictLM, predictLM < 1, 1)
+  table1 <- table (test$V3, predictLM)
+  print ("Confusion matrix")
   print (table1)
-  print (sum (diag(table1)) / sum (table1))
+  print (paste("Accuracy of linear regression is:", sum (diag(table1)) / sum (table1)))
+}
+
+runMultinominalLogisticRegression = function ()
+{
+  
+  library(caret)
+  library (nnet)
+  set.seed(2015)
+  all_data = read.csv ("all_data.csv", header = FALSE)
+  all_data$V1 = NULL
+  all_data$V2 = NULL
+  tc <- trainControl("cv",5)
+  
+  train.multinom = train(V3 ~ V4 + V5 + V6+ V7 + V8 + V9 + V10 + V11 + V12 + V14 + V15 + V16 + V17+ V18 + V19 + V20 + V21 + V22 + V23 + V24, data = all_data, method="multinom",trControl=tc)
+  
+  print (train.multinom)
+  
+  p.multinom = predict(train.multinom, newdata = all_data)
+  library (pROC)
+  print (multiclass.roc(as.ordered(all_data$V3), as.ordered(p.multinom)))
+}
+
+runSVM = function ()
+{
+  set.seed(2015)
+  all_data = read.csv ("all_data.csv", header = FALSE)
+  all_data$V1 = NULL
+  all_data$V2 = NULL
+  all_data$V13 = NULL
+  library (e1071)
+  library (caret)
+  tc <- trainControl("cv",5)
+  
+  train.svm = train(V3 ~ V4 + V5 + V6+ V7 + V8 + V9 + V10 + V11 + V12 + V14 + V15 + V16 + V17+ V18 + V19 + V20 + V21 + V22 + V23 + V24, data = all_data, method="svmLinear",trControl=tc)
+  
+  print (train.svm)
+  
+  p.svm = predict (train.svm, newdata = all_data)
+  print (multiclass.roc(as.ordered(all_data$V3), as.ordered(p.svm)))
 }
 
 runRFModel <- function ()
@@ -48,17 +84,18 @@ runRFModel <- function ()
   library(h2o)
   
   set.seed(2015)
-  train_data <- read.csv ("all_score_train.csv")
-  test_data <- read.csv ("all_score_test.csv")
-  all_data <- rbind (train_data, test_data)
-  all_data$pageid = NULL
-  all_data$revid = NULL
+  all_data <- read.csv("all_data.csv", header = FALSE)
+  all_data$V1 = NULL
+  all_data$V2 = NULL
+  all_data$V13 = NULL
   
-  
-  localH2O <- h2o.init(ip = "localhost", port = 54321, startH2O = TRUE)
+  localH2O <- h2o.init()
   
   data = as.h2o (all_data)
   rf_h2o = h2o.randomForest(x = 2:21, y = 1, training_frame = data, ntrees = 450, nfolds = 5)
+  print (rf_h2o)
+  
+  h2o.shutdown(prompt = FALSE)
 }
 
 runRFModel_withoutReadabilityScore = function()
@@ -68,60 +105,38 @@ runRFModel_withoutReadabilityScore = function()
   }
   library(h2o)
   
-  train_data <- read.csv ("all_score_train.csv")
-  test_data <- read.csv ("all_score_test.csv")
-  all_data <- rbind (train_data, test_data)
-  all_data$pageid = NULL
-  all_data$revid = NULL
+  localH20 = h2o.init ()
   
+  all_data <- read.csv("all_data.csv", header = FALSE)
+  all_data$V1 = NULL
+  all_data$V2 = NULL
+  all_data$V13 = NULL
   
   localH2O <- h2o.init(ip = "localhost", port = 54321, startH2O = TRUE)
   
   data = as.h2o (all_data)
   rf_h2o = h2o.randomForest(x = 2:12, y = 1, training_frame = data, ntrees = 501, nfolds = 5)
+  print (rf_h2o)
+  
+  h2o.shutdown(prompt = FALSE)
+  
+  # HandTill2001::auc(multcap(response = test$V3, predicted = as.matrix(p_sepa[,2:7])))
 }
 
 runKNNModel <- function () {
+  library (class)
+  
   set.seed(2015)
-  train_data <- read.csv ("all_score_train.csv")
-  test_data <- read.csv ("all_score_test.csv")
-  all_data <- rbind (train_data, test_data)
-  require(caTools)
-  sample = sample.split(all_data$revid, SplitRatio = 0.8)
-  
-  train = subset (all_data, sample==TRUE)
-  test = subset (all_data, sample == FALSE)
-  
-  train_rate <- train$user_rating
-  test_rate <- test$user_rating
-  
-  train$user_rating <- NULL
-  train$pageid <- NULL
-  train$revid <- NULL
-  train$readability_consensus <- NULL
-  train$hasinfobox <- as.numeric(train$hasinfobox)
-  train$sample <- NULL
-  
-  test$user_rating <- NULL
-  test$pageid <- NULL
-  test$revid <- NULL
-  test$readability_consensus <- NULL
-  test$hasinfobox <- as.numeric(test$hasinfobox)
-  test$sample <- NULL
-  
-  max_correction = 0
-  for (k in 1:100) {
-    model = knn(train = train, test = test, k = k, cl = train_rate)
-    table1 <- table (model, test_rate)
-    
-    correct = sum (diag(table1))/sum(table1)
-    
-    if (correct > max_correction) {
-      print (paste("Correction of k = ", k, " is: ", correct))
-      print (table1)
-      max_correction = correct
-    }
-  }
+  all_data <- read.csv("all_data.csv", header =  FALSE)
+  all_data$V1 = NULL
+  all_data$V2 = NULL
+  all_data$V13 = NULL
+  all_data$V22 = as.numeric (all_data$V22)
+  library(class)
+  knn.cv = knn.cv(train = all_data[,2:20], cl = all_data$V3, k = 101)
+  t = table (all_data$V3, knn.cv)
+  print (sum (diag(t))/sum(t))
+  print (multiclass.roc(as.ordered(all_data$V3), as.ordered(knn.cv)))
 }
 
 tuning <- function (train_data)
@@ -205,3 +220,27 @@ feature_select_rf <- function (){
 
 # convert factor to integer
 # df$rating_score = c(1,2,3,4,6,7)[as.numeric(df$user_rating)]
+
+# p1_ores = as.numeric(as.character(factor(as.vector(p.ores[,1]), labels = c(4,3,6,5,2,1))))
+# p2_ores = as.numeric(as.character(factor(as.vector(test_ores$V25), labels = c(4,3,6,5,2,1))))
+# p1_h2o = as.numeric(as.character(factor(as.vector(p.h2o[,1]), labels = c(4,3,6,5,2,1))))
+# p2_h2o = as.numeric(as.character(factor(as.vector(as.data.frame(test_h2o)$V3), labels = c(4,3,6,5,2,1))))
+
+# h2_true = 0
+# hw_true = 0
+# hh_true = 0
+# h2_false = 0
+# for (i in 1:4098) {
+#   if (p3_h2o[i] == correct[i] & p3_w[i] == correct[i]) {
+#     h2_true = h2_true + 1
+#   }
+#   else if (p3_h2o[i] != correct[i] & p3_w[i] == correct[i]) {
+#     hw_true = hw_true + 1
+#   }
+#   else if (p3_h2o[i] == correct[i] & p3_w[i] != correct[i]) {
+#     hh_true = hh_true + 1
+#   }
+#   else if (p3_h2o[i] != correct[i] & p3_w[i] != correct[i]) {
+#     h2_false = h2_false + 1
+#   }
+# }

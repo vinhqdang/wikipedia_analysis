@@ -14,6 +14,14 @@ You should have [R](https://www.r-project.org) installed. I suggest that you sho
 
 Please note that the code is tested with R 3.2.3
 
+These following packages are required:
+
+- caTools
+- rpart
+- class
+- h2o
+
+
 First, you should load the code
 
 
@@ -28,9 +36,9 @@ Then you can run the following analysis.
 
 The linear regression is done by calling the function *runRegression*. 
 
-## rpart
+## CART
 
-The rpart model is done by calling the function *runRpart*. 
+The CART model is done by calling the function *runCART*. 
 
 ## kNN
 
