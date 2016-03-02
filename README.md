@@ -6,7 +6,9 @@ You should find the code in R file in **analysis** directory.
 
 ## Data set
 
-The data are stored in two files: *all_score_train.csv* and *all_score_test.csv*. The files ".tsv" are provided as backup.
+The data is stored in *all_data.tsv* file.
+
+The data set contains information of ~ 20 000 Wikipedia articles, collected through Wikipedia projects.
 
 # Running the code
 
@@ -66,7 +68,7 @@ The second function is ``runRFModel_withoutReadabilityScore``, which will run wi
 
 We applied 5-folds cross validation.
 
-You should observe that the first function provide a better prediction, as we claimed in our submitted paper to Group 2016.
+You should observe that the first function provide a better prediction.
 
 ## Utilities
 
