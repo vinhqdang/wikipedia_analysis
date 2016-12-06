@@ -8,20 +8,20 @@ inTrain <- createDataPartition(y = all_data$V25, p = .8, list = FALSE)
 training <- all_data[inTrain,]
 testing <- all_data [-inTrain,]
 
-my_control <- trainControl(
-  method="boot",
-  number=25,
-  savePredictions="final",
-  classProbs=TRUE,
-  index=createResample(training$V25, 25),
-  summaryFunction=multiClassSummary
-)
-
-model_list <- caretList(
-  V25~., data=training,
-  trControl=my_control,
-  methodList=c("rpart","knn")
-)
+# my_control <- trainControl(
+#   method="boot",
+#   number=25,
+#   savePredictions="final",
+#   classProbs=TRUE,
+#   index=createResample(training$V25, 25),
+#   summaryFunction=multiClassSummary
+# )
+# 
+# model_list <- caretList(
+#   V25~., data=training,
+#   trControl=my_control,
+#   methodList=c("rpart","knn")
+# )
 
 models <- caretList(
   x = training[1:nrow(training),1:24],
