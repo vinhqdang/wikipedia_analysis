@@ -1,5 +1,5 @@
 if (!require("pacman")) install.packages("pacman")
-pacman::p_load(caret, caretEnsemble)
+pacman::p_load(caret, caretEnsemble,e1071)
 
 all_data = read.table ("enwiki.features_wp10.30k.tsv")
 
