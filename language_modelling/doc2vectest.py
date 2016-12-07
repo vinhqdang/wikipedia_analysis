@@ -20,8 +20,12 @@ documents = load.get_doc(sys.argv[1])
 
 model_size = 500
 
-if (len(argv) >= 3):
+if (len(sys.argv) >= 3):
     model_size = int (sys.argv[2])
+
+nb_epochs = 200
+if (len(sys.argv) >= 4):
+    nb_epochs = int (sys.argv[3])
 
 print ('Data Loading finished')
  
@@ -31,7 +35,7 @@ print (len(documents),type(documents))
 model = gensim.models.Doc2Vec(documents, dm = 1, alpha=0.025, size= model_size, min_alpha=0.025, min_count=0)
  
 # start training
-for epoch in range(200):
+for epoch in range(nb_epochs):
     if epoch % 20 == 0:
         print ('Now training epoch %s'%epoch)
     model.train(documents)
