@@ -32,7 +32,7 @@ print ('Data Loading finished')
 print (len(documents),type(documents))
  
 # build the model
-model = gensim.models.Doc2Vec(documents, dm = 1, alpha=0.025, size= model_size, min_alpha=0.025, min_count=0)
+model = gensim.models.Doc2Vec(documents, dm = 1, alpha=0.025, size= model_size, min_alpha=0.025, min_count=0, workers=8)
  
 # start training
 for epoch in range(nb_epochs):
