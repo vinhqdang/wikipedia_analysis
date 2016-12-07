@@ -1,0 +1,158 @@
+In [[mathematics]], especially in elementary [[arithmetic]], '''division''' is an arithmetic operation which is the inverse of [[multiplication]].  
+
+Specifically, if  ''c'' times ''b'' equals ''a'', written:
+:<math>c \times b = a</math>
+where ''b'' is not [[0 (number)|zero]], then ''a'' divided by ''b'' equals ''c'', written:
+:<math>\frac ab = c</math>
+For instance, 
+:<math>\frac 63 = 2</math>
+since
+:<math>2 \times 3 = 6\,</math>.
+
+In the above expression, ''a'' is called the '''dividend''', ''b'' the '''divisor''' and ''c'' the '''quotient'''.
+
+[[Division by zero]] (i.e. where the divisor is zero) is not defined.
+
+==Notation==
+Division is most often shown by placing the ''dividend'' over the ''divisor'' with a horizontal line, also called a [[Vinculum (symbol)|vinculum]], between them. For example, ''a'' divided by ''b'' is written
+:<math>\frac ab.</math>
+This can be read out loud as "a divided by b" or "a over b". A way to express division all on one line is to write the ''dividend'', then a [[Slash (punctuation)|slash]], then the ''divisor'', like this:
+:<math>a/b.\,</math>
+This is the usual way to specify division in most computer [[programming language]]s since it can easily be typed as a simple sequence of characters.
+
+A typographical variation which is halfway between these two forms uses a slash but elevates the dividend, and lowers the divisor:
+
+:<sup>''a''</sup><U+2044><sub>''b''</sub> .
+
+Any of these forms can be used to display a [[fraction (mathematics)|fraction]]. A fraction is a division expression where both dividend and divisor are [[integer]]s (although typically called the ''numerator'' and ''denominator''), and there is no implication that the division needs to be evaluated further.
+
+A less common way to show division is to use the [[obelus]] (or division sign) in this manner:
+:<math>a \div b.</math>
+This form is infrequent except in elementary arithmetic.  The obelus is also used alone to represent the division operation itself, as for instance as a label on a key of a [[calculator]].
+
+In some non-[[English language|English]]-speaking cultures, "a divided by b" is written ''a'' : ''b''. However, in English usage the [[colon (punctuation)|colon]] is restricted to expressing the related concept of [[ratio]]s (then "a is to b").
+
+==Computing division==
+With a knowledge of [[multiplication tables]], two integers can be divided on paper using the method of [[long division]]. If the dividend has a [[fraction (mathematics)|fraction]]al part (expressed as a [[decimal fraction]]), one can continue the algorithm past the ones place as far as desired. If the divisor has a fractional part, one can restate the problem by moving the decimal to the right in both numbers until the divisor has no fraction.
+
+In modern computers, long division has been replaced by faster methods; see [[Division (digital)]]. 
+
+Division can be calculated with an [[abacus]] by repeatedly placing the dividend on the abacus, and then subtracting the divisor the offset of each digit in the result, counting the number of divisions possible at each offset.
+
+In [[modular arithmetic]], some numbers have a multiplicative inverse with respect to the modulus. In such a case, division can be calculated by multiplication. This approach is useful in computers that do not have a fast division instruction.
+
+==Division of integers==
+
+Division of integers is not [[Closure (mathematics)|closed]]. Apart from division by zero being undefined, the quotient will not be an integer unless the dividend is an integer multiple of the divisor; for example 26 cannot be divided by 10 to give an integer.  In such a case there are four possible approaches.
+# Say that 26 cannot be divided by 10.
+# Give the answer as a [[decimal fraction]] or a [[Vulgar fraction#Other ways of writing fractions|mixed number]], so <math>\frac{26}{10} = 2.6</math> or <math>26/10 = 2 \frac 35</math>. This is the approach usually taken in mathematics.
+# Give the answer as an integer ''[[quotient]]'' and a ''[[remainder]]'', so <math>\frac{26}{10} = 2</math> remainder 6.
+# Give the integer quotient as the answer, so <math>\frac{26}{10} = 2</math>. This is sometimes called ''integer division''. 
+One has to be careful when performing division of integers in a [[computer program]]. Some [[programming language]]s, such as [[C (programming language)|C]], will treat division of integers as in case 4 above, so the answer will be an integer. Other languages, such as [[MATLAB]], will first convert the integers to real numbers, and then give a real number as the answer, as in case 2 above.
+
+Names and symbols used for integer division include div, /, \, and %. Definitions vary regarding integer division when the quotient is negative: rounding may be toward zero or toward minus [[infinity]].
+
+[[Divisibility rule]]s can sometimes be used to quickly determine whether one integer divides exactly into another.
+
+==Division of rational numbers==
+
+The result of dividing two [[rational number]]s is another rational number when the divisor is not 0. We may define division of two rational numbers ''p''/''q'' and ''r''/''s'' by
+
+:<math>{p/q \over r/s} = (p \times s)/(q \times r).</math>
+
+All four quantities are integers, and only ''p'' may be 0. This definition ensures that division is the inverse operation of [[multiplication]].
+
+==Division of real numbers==
+
+Division of two [[real number]]s results in another real number when the divisor is not 0. It is defined such ''a''/''b'' = ''c'' if and only if ''a'' = ''cb'' and ''b'' <U+2260> 0.
+
+==Division of complex numbers==
+
+Dividing two [[complex number]]s results in another complex number when the divisor is not 0, defined thus:
+
+:<math>{p + iq \over r + is} = {pr + qs \over r^2 + s^2} + i{qr - ps \over r^2 + s^2}.</math>
+
+All four quantities are real numbers. ''r'' and ''s'' may not both be 0.
+
+Division for complex numbers expressed in polar form is simpler and easier to remember than the definition above:
+
+:<math>{pe^{iq} \over re^{is}} = {p \over r}e^{i(q - s)}.</math>
+
+Again all four quantities are real numbers. ''r'' may not be 0.
+
+==Division of polynomials==
+One can define the division operation for [[polynomial]]s. Then, as in the case of integers, one has a remainder. See [[polynomial long division]].
+
+==Division of matrices==
+One can define a division operation for matrices. The usual way to do this is to define ''A'' / ''B'' = ''AB''<sup><U+2212>1</sup>, where ''B''<sup><U+2212>1</sup> denotes the [[inverse matrix|inverse]] of ''B''.
+
+===Left and right division===
+Because [[matrix multiplication]] is not [[commutative]], one can also define a [[left division]] or so-called ''backslash-division'' as ''A'' \ ''B'' = ''A''<sup><U+2212>1</sup>''B''. For this to be well defined,  ''B''<sup><U+2212>1</sup> need not exist, however ''A''<sup><U+2212>1</sup> does need to exist. To avoid confusion, division as defined by ''A'' / ''B'' = ''AB''<sup><U+2212>1</sup> is sometimes called ''right division'' or ''slash-division'' in this context.
+
+===Matrix division and pseudoinverse===
+To avoid problems when ''A''<sup><U+2212>1</sup> and/or ''B''<sup><U+2212>1</sup> do not exist, division can also be defined as multiplication with the [[pseudoinverse]], i.e., ''A'' / ''B'' = ''AB''<sup>+</sup> and ''A'' \ ''B''  = ''A''<sup>+</sup>''B'', where ''A''<sup>+</sup> and ''B''<sup>+</sup> denote the pseudoinverse of ''A'' and ''B''.
+
+==Division in abstract algebra==
+
+In [[abstract algebra]]s such as [[Matrix (mathematics)|matrix]] algebras and [[quaternion]] algebras, fractions such as <math>{a \over b}</math> are typically defined as <math>a \cdot {1 \over b}</math> or <math>a \cdot b^{-1}</math> where <math>b</math> is presumed to be an invertible element (i.e. there exists a multiplicative inverse <math>b^{-1}</math> such that <math>bb^{-1} = b^{-1}b = 1</math> where <math>1</math> is the multiplicative identity).  In an [[integral domain]] where such elements may not exist, ''division'' can still be performed on equations of the form <math>ab = ac</math> or <math>ba = ca</math> by left or right cancellation, respectively.  More generally "division" in the sense of "cancellation" can be done in any [[ring (mathematics)|ring]] with the aforementioned cancellation properties.  If such a ring is finite, then by an application of the [[pigeonhole principle]], every nonzero element of the ring is invertible, so ''division'' by any nonzero element is possible in such a ring.  To learn about when ''algebras'' (in the technical sense) have a division operation, refer to the page on [[division algebra]]s.  In particular [[Bott periodicity]] can be used to show that any [[real number|real]] [[normed division algebra]] must be [[isomorphic]] to either the real numbers '''R''', the [[complex number]]s '''C''', the [[quaternion]]s '''H''', or the [[octonion]]s '''O'''.
+<!-- Left vs right, definition of quasigroup, relationship to inverse elements in presence of associativity, examples: groups, octonions -->
+
+==Division and calculus==
+
+The [[derivative]] of the quotient of two functions is given by the [[quotient rule]]:
+
+:<math>{\left(\frac fg\right)}' = \frac{f'g - fg'}{g^2}</math>
+
+There is no general method to [[integral|integrate]] the quotient of two functions.
+
+== See also==
+*[[Division (electronics)]]
+*[[Vulgar fraction]]
+*[[Multiplicative inverse]]
+*[[Inverse element]]
+*[[Division by two]]
+*[[Long division]]
+*[[Quasigroup]]
+*[[Group (mathematics)|Group]]
+*[[Field (mathematics)|Field]]
+*[[Vinculum (symbol)|Vinculum]]
+
+== External links ==
+
+*{{planetmath reference|id=6148|title=Division}}
+*[http://webhome.idirect.com/~totton/abacus/pages.htm#Division1 Division on a Japanese abacus] selected from [http://webhome.idirect.com/~totton/abacus/ Abacus: Mystery of the Bead]
+*[http://webhome.idirect.com/~totton/suanpan/sh_div/ Chinese Short Division Techniques on a Suan Pan]
+*[http://www.math.wichita.edu/history/topics/arithmetic.html#div Rules of divisibility]
+
+[[Category:Elementary arithmetic]]
+[[Category:Arithmetic]]
+[[Category:Binary operations]]
+
+[[bg:<U+0414><U+0435><U+043B><U+0435><U+043D><U+0438><U+0435>]]
+[[ca:Divisi<U+00F3>]]
+[[cs:D<U+011B>len<U+00ED>]]
+[[cy:Rhannu (mathemateg)]]
+[[da:Division (matematik)]]
+[[de:Division (Mathematik)]]
+[[es:Divisi<U+00F3>n (matem<U+00E1>ticas)]]
+[[eo:Divido (matematiko)]]
+[[fr:Division]]
+[[ko:<U+B098><U+B217><U+C148>]]
+[[is:Deiling]]
+[[it:Divisione (matematica)]]
+[[nl:Delen]]
+[[ja:<U+9664><U+6CD5>]]
+[[no:Divisjon (matematikk)]]
+[[pl:Dzielenie]]
+[[pt:Divis<U+00E3>o]]
+[[ru:<U+0414><U+0435><U+043B><U+0435><U+043D><U+0438><U+0435> (<U+043C><U+0430><U+0442><U+0435><U+043C><U+0430><U+0442><U+0438><U+043A><U+0430>)]]
+[[simple:Division]]
+[[sk:Delenec]]
+[[sl:Deljenje]]
+[[sr:<U+0414><U+0435><U+0459><U+0435><U+045A><U+0435>]]
+[[fi:Jakolasku]]
+[[sv:Division (matematik)]]
+[[tl:Dibisyon]]
+[[th:<U+0E01><U+0E32><U+0E23><U+0E2B><U+0E32><U+0E23>]]
+[[ur:<U+062A><U+0642><U+0633><U+06CC><U+0645> (<U+0631><U+06CC><U+0627><U+0636><U+06CC>)]]
+[[zh:<U+9664><U+6CD5>]]

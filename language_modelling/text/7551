@@ -1,0 +1,68 @@
+In [[mathematics]], '''Serre's modularity conjecture''', introduced by [[Jean-Pierre Serre]] based on some  1973<U+2013>1974 correspondence with [[John Tate]] {{harvs|last=Serre|authorlink=|year1=1975|year2=1987}}, states that an odd irreducible  two-dimensional [[Galois representation]] over a finite field arises from a modular form, and a stronger version of his conjecture specifies the weight and level of the modular form. It was proved by [[Chandrashekhar Khare]] in the level 1 case,<ref>{{Citation |last=Khare |first=Chandrashekhar |title=Serre's modularity conjecture: The level one case |year=2006 |journal=Duke Mathematical Journal |volume=134 |issue=3 |pages=557<U+2013>589 |doi=10.1215/S0012-7094-06-13434-8 }}.</ref> in 2005 and later in 2008 a proof of the full conjecture was worked out jointly by Khare and [[Jean-Pierre Wintenberger]].<ref>{{Citation |last=Khare |first=Chandrashekhar |last2=Wintenberger |first2=Jean-Pierre |year=2009 |title=Serre<U+2019>s modularity conjecture (I) |journal=Inventiones Mathematicae |volume=178 |issue=3 |pages=485<U+2013>504 |doi=10.1007/s00222-009-0205-7 }} and {{Citation |last=Khare |first=Chandrashekhar |last2=Wintenberger |first2=Jean-Pierre |year=2009 |title=Serre<U+2019>s modularity conjecture (II) |journal=Inventiones Mathematicae |volume=178 |issue=3 |pages=505<U+2013>586 |doi=10.1007/s00222-009-0206-6 }}.</ref>
+
+==Formulation==
+
+The conjecture concerns the [[absolute Galois group]] <math>G_\mathbb{Q}</math> of the [[rational number field]] <math>\mathbb{Q}</math>.
+
+Let <math>\rho</math> be an [[absolutely irreducible]], continuous,  two-dimensional representation of <math>G_\mathbb{Q}</math> over a finite field that is odd (meaning that complex conjugation has determinant -1)
+
+:<math>F = \mathbb{F}_{\ell^r}</math>
+
+of [[characteristic (field theory)|characteristic]] <math>\ell</math>,
+
+:<math> \rho: G_\mathbb{Q} \rightarrow \mathrm{GL}_2(F).\ </math>
+
+To any normalized [[modular eigenform]]
+
+:<math> f = q+a_2q^2+a_3q^3+\cdots\ </math>
+
+of [[level of a modular form|level]] <math> N=N(\rho) </math>, [[weight of a modular form|weight]] <math> k=k(\rho) </math>, and some [[Nebentype character]]
+
+:<math> \chi : \mathbb{Z}/N\mathbb{Z} \rightarrow F^*\ </math>,
+
+a theorem due to Shimura, Deligne, and Serre-Deligne attaches to <math> f </math> a representation
+
+:<math> \rho_f: G_\mathbb{Q} \rightarrow \mathrm{GL}_2(\mathcal{O}),\ </math>
+
+where <math> \mathcal{O} </math> is the ring of integers in a finite extension of <math> \mathbb{Q}_\ell </math>. This representation is characterized by the condition that for all prime numbers <math>p</math>, [[coprime]] to <math>N\ell</math> we have
+
+:<math> \operatorname{Trace}(\rho_f(\operatorname{Frob}_p))=a_p\ </math>
+
+and
+
+:<math> \det(\rho_f(\operatorname{Frob}_p))=p^{k-1} \chi(p).\ </math>
+
+Reducing this representation modulo the maximal ideal of <math> \mathcal{O} </math> gives a mod <math> \ell </math> representation <math> \overline{\rho_f} </math> of <math> G_\mathbb{Q} </math>.
+
+Serre's conjecture asserts that for any <math> \rho </math> as above, there is a modular eigenform <math> f </math> such that
+
+:<math> \overline{\rho_f} \cong \rho </math>.
+
+The level and weight of the conjectural form <math> f </math> are explicitly calculated in Serre's article.  In addition, he derives a number of results from this conjecture, among them [[Fermat's Last Theorem]] and the now-proven Taniyama<U+2013>Weil (or Taniyama<U+2013>Shimura) conjecture, now known as the [[modularity theorem]] (although this implies Fermat's Last Theorem, Serre proves it directly from his conjecture).
+
+==Optimal level and weight==
+
+The strong form of Serre's conjecture describes the level and weight of the modular form.
+
+The optimal level is the [[Artin conductor]] of the representation, with the power of ''l'' removed.
+
+==Proof==
+A proof of the level 1 and small weight cases of the conjecture was obtained during 2004 by [[Chandrashekhar Khare]] and [[Jean-Pierre Wintenberger]],<ref>{{Citation |last=Khare |first=Chandrashekhar |last2=Wintenberger |first2=Jean-Pierre |year=2009 |title=On Serre's reciprocity conjecture for 2-dimensional mod p representations of Gal(Q/Q) |journal=[[Annals of Mathematics]] |volume=169 |issue=1 |pages=229<U+2013>253 |doi= 10.4007/annals.2009.169.229|url=http://annals.princeton.edu/annals/2009/169-1/p05.xhtml }}.</ref> and by [[Luis Dieulefait]],<ref>{{Citation |last=Dieulefait |first=Luis |year=2007 |title=The level 1 weight 2 case of Serre's conjecture |journal=Revista Matem<U+00E1>tica Iberoamericana |volume=23 |issue=3 |pages=1115<U+2013>1124 |url=http://projecteuclid.org/euclid.rmi/1204128312 |doi=10.4171/rmi/525}}.</ref> independently.
+
+In 2005, Chandrashekhar Khare obtained a proof of the level 1 case of Serre conjecture,<ref>{{Citation |last=Khare |first=Chandrashekhar |title=Serre's modularity conjecture: The level one case |year=2006 |journal=Duke Mathematical Journal |volume=134 |issue=3 |pages=557<U+2013>589 |doi=10.1215/S0012-7094-06-13434-8 }}.</ref> and in 2008 a proof of the full conjecture in collaboration with Jean-Pierre Wintenberger.<ref>{{Citation |last=Khare |first=Chandrashekhar |last2=Wintenberger |first2=Jean-Pierre |year=2009 |title=Serre<U+2019>s modularity conjecture (I) |journal=Inventiones Mathematicae |volume=178 |issue=3 |pages=485<U+2013>504 |doi=10.1007/s00222-009-0205-7 }} and {{Citation |last=Khare |first=Chandrashekhar |last2=Wintenberger |first2=Jean-Pierre |year=2009 |title=Serre<U+2019>s modularity conjecture (II) |journal=Inventiones Mathematicae |volume=178 |issue=3 |pages=505<U+2013>586 |doi=10.1007/s00222-009-0206-6 }}.</ref>
+
+==Notes==
+{{Reflist}}
+
+==References==
+
+*{{Citation | last1=Serre | first1=Jean-Pierre | author1-link=Jean-Pierre Serre | title=Journ<U+00E9>es Arithm<U+00E9>tiques de Bordeaux (Conf., Univ. Bordeaux, 1974) | publisher=[[Soci<U+00E9>t<U+00E9> Math<U+00E9>matique de France]] | location=Paris |mr=0382173 | year=1975 | journal=Ast<U+00E9>risque | issn=0303-1179 | volume=24<U+2013>25 | chapter=Valeurs propres des op<U+00E9>rateurs de Hecke modulo l | pages=109<U+2013>117}}
+*{{Citation | last1=Serre | first1=Jean-Pierre | author1-link=Jean-Pierre Serre | title=Sur les repr<U+00E9>sentations modulaires de degr<U+00E9> 2 de Gal({{overline|Q}}/Q) | url=http://dx.doi.org/10.1215/S0012-7094-87-05413-5 | doi=10.1215/S0012-7094-87-05413-5 |mr=885783 | year=1987 | journal=[[Duke Mathematical Journal]] | issn=0012-7094 | volume=54 | issue=1 | pages=179<U+2013>230}}
+*{{Citation | last1=Stein | first1=William A. | last2=Ribet | first2=Kenneth A. | editor1-last=Conrad | editor1-first=Brian | editor2-last=Rubin | editor2-first=Karl | title=Arithmetic algebraic geometry (Park City, UT, 1999) | publisher=[[American Mathematical Society]] | location=Providence, R.I. | series=IAS/Park City Math. Ser. | isbn=978-0-8218-2173-2  |mr=1860042 | year=2001 | volume=9 | chapter=Lectures on Serre's conjectures | pages=143<U+2013>232}}
+
+==External links==
+*[http://fora.tv/2007/10/25/Kenneth_Ribet_Serre_s_Modularity_Conjecture Serre's Modularity Conjecture] 50 minute lecture by [[Ken Ribet]] given on October 25, 2007 ( [http://math.berkeley.edu/~ribet/cms.pdf slides] PDF, [http://www.cirm.univ-mrs.fr/videos/2007/exposes/23/Ribet.pdf other version of slides] PDF)
+*[http://modular.fas.harvard.edu/papers/serre/ribet-stein.pdf Lectures on Serre's conjectures]
+
+[[Category:Modular forms]]
+[[Category:Theorems in number theory]]

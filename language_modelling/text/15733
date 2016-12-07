@@ -1,0 +1,78 @@
+'''Microsoft DNS''' is the name given to the implementation of [[domain name system]] services provided in [[Microsoft Windows]] [[operating system]]s.
+
+== Overview ==
+The Domain Name System support in [[Windows NT|Microsoft Windows NT]], and thus its derivatives [[Windows 2000]], [[Windows XP]], and [[Windows Server 2003]], comprises two clients and a server.  Every Microsoft Windows machine has a DNS lookup client, to perform ordinary DNS lookups.  Some machines have a [[Dynamic DNS]] client, to perform Dynamic DNS Update transactions, registering the machines' names and [[IP address]]es.  Some machines run a DNS server, to publish DNS data, to service DNS lookup requests from DNS lookup clients, and to service DNS update requests from DNS update clients.
+
+The server software is only supplied with the server versions of Windows.
+
+== DNS lookup client ==
+Applications perform DNS lookups with the aid of a [[Dynamic-link library|DLL]].  They call library functions in the DLL, which in turn handle all communications with DNS servers (over [[User Datagram Protocol|UDP]] or [[Transmission Control Protocol|TCP]]) and return the final results of the lookup back to the applications.
+
+Microsoft's DNS client also has optional support for local caching, in the form of a ''DNS Client'' service (also known as ''DNSCACHE'').  Before they attempt to directly communicate with DNS servers, the library routines first attempt to make a [[Inter-process communication|local IPC]] connection to the DNS Client service on the machine.  If there is one, and if such a connection can be made, they hand the actual work of dealing with the lookup over to the DNS Client service.  The DNS Client service itself communicates with DNS servers, and [[cache]]s the results that it receives.  
+
+Microsoft's DNS client is capable of talking to multiple DNS servers.  The exact algorithm varies according to the version, and [[service pack]] level, of the operating system; but in general all communication is with a ''primary'' DNS server until it fails to answer, whereupon communication switches to one of several ''alternative'' DNS servers.
+
+=== The effects of running the DNS Client service ===
+There are several minor differences in system behavior depending on whether the DNS Client service is started:
+
+* '''Parsing of the "hosts" file''':  The lookup functions read only the [[hosts file]] if they cannot off-load their task onto the DNS Client service and have to fall back to communicating with DNS servers themselves.  In turn, the DNS Client service reads the "hosts" file once, at startup, and only re-reads it if it notices that the last modification timestamp of the file has changed since it last read it.  Thus:
+** With the DNS Client service running: The "hosts" file is read and parsed only a few times, once at service startup, and thereafter whenever the DNS Client service notices that it has been modified.
+** Without the DNS Client service running: The "hosts" file is read and parsed repeatedly, by each individual application program as it makes a DNS lookup.
+
+* '''The effect of multiple answers in the "hosts" file''':  The DNS Client service does not use the "hosts" file directly when performing lookups.  Instead, it (initially) populates its cache from it, and then performs lookups using the data in its cache.  When the lookup functions fall back to doing the work themselves, however, they scan the "hosts" file directly and sequentially, stopping when the first answer is found.  Thus:
+** With the DNS Client service running: If the "hosts" file contains multiple lines denoting multiple answers for a given lookup, all of the answers in the cache will be returned.
+** Without the DNS Client service running: If the "hosts" file contains multiple lines denoting multiple answers for a given lookup, only the first answer found will be returned.
+
+* '''Fallback from primary to alternative DNS servers''':  The fallback from the primary DNS server to the alternative DNS servers is done by whatever entity, the DNS Client service or the library functions themselves, is actually performing the communication with them.  Thus:
+** With the DNS Client service running: Fallback to the alternative DNS servers happens globally.  If the primary DNS server fails to answer, all subsequent communication is with the alternative DNS servers.
+** Without the DNS Client service running: Any fallback to the alternative DNS servers happen locally, within each individual process that is making DNS queries.  Different processes may be in different states, some talking to the primary DNS server and some talking to alternative DNS servers.
+
+=== Differences from other systems ===
+[[Linux distributions]] and various versions of [[Unix]] have a generalized name resolver layer.  The resolver could alternatively be configured to use a '''hosts''' file or [[Network Information Service]] (NIS), by configuring the [[Name Service Switch]].
+
+== Dynamic DNS Update client ==
+Whilst DNS lookups read DNS data, DNS updates ''write'' them.  Both workstations and servers running Windows attempt to write DNS data, by sending [[Dynamic DNS]] update requests to DNS servers.
+
+Workstations running Windows attempt to register their names and their [[IP address]]es with DNS servers, so that other machines may locate them by name and map their IP addresses to their names.  This is done not by the ''DNS Client'' service, but by the ''DHCP Client'' service.  It is thus necessary to run the DHCP Client service, even if [[Dynamic Host Configuration Protocol|DHCP]] isn't being used to configure the machine, in order to dynamically register a machine's name and address for DNS lookup.  The DHCP Client service registers name and address data whenever they are changed (either manually by an administrator or automatically by the granting or revocation of a DHCP lease).
+
+Servers running Microsoft Windows also attempt to register other information, in addition to their names and IP addresses, such as the locations of the [[Lightweight Directory Access Protocol|LDAP]] and [[Kerberos (protocol)|Kerberos]] services that they provide.
+
+== DNS server ==
+Microsoft Windows server operating systems can run the ''DNS Server'' service.  This is a monolithic DNS server that provides many types of DNS service, including caching, [[Dynamic DNS]] update, [[DNS zone transfer|zone transfer]], and DNS notification. DNS notification implements a push mechanism for notifying a select set of secondary servers for a [[DNS zone|zone]] when it is updated.
+
+Microsoft's "DNS Server" service was first introduced in Windows NT 3.51 as an add-on with Microsoft's collection of [[Microsoft BackOffice Server|BackOffice]] services (at the time was marked to be used for testing proposes only). Its code is a fork of ISC's [[BIND]], version 4.3, and remains largely compatible with it including the format of all master files. 
+
+As of [[2004]], it was the fourth most popular DNS server (counting [[BIND]] version 9 separately from versions 8 and 4) for the publication of DNS data.<ref>{{cite web | last = Moore | first = Don | year = [[2004]] | url = http://mydns.bboy.net./survey/ | title = DNS server survey | accessdate = 2005-01-06 }}</ref>
+
+Like various other DNS servers, Microsoft's DNS server supports different database ''back ends''.  Microsoft's DNS server supports two such back ends.  DNS data can be stored either in ''master files'' (also known as ''[[zone file]]s'') or in the [[Active Directory]] database itself.  In the latter case, since Active Directory (rather than the DNS server) handles the actual replication of the database across multiple machines, the database can be modified on any server ("multiple-master replication"), and the addition or removal of a ''[[DNS zone|zone]]'' will be immediately propagated to all other DNS servers within the appropriate Active Directory "replication scope".  (Contrast this with [[BIND]], where when such changes are made, the list of ''zones'', in the <tt>/etc/named.conf</tt> file, has to be explicitly updated on each individual server.)
+
+Microsoft's DNS server can be administered using either a [[graphical user interface]], the "DNS Management Console", or a [[command line interface]], the '''dnscmd''' utility.
+
+=== Common issues ===
+Prior to [[Windows Server 2003]] and [[Windows 2000|Microsoft Windows 2000 Service Pack 3]], the most common problem encountered with Microsoft's DNS server was [[DNS cache poisoning|cache pollution]].  Although Microsoft's DNS Server had a mechanism for properly dealing with cache pollution, until those releases that mechanism was turned off by default. <ref> [http://support.microsoft.com/kb/241352 How to prevent DNS cache pollution] </ref>
+
+A long-known issue is with the slight incompatibles with BIND configuration files: in particular, the lack of support of [[Wildcard DNS record|DNS wildcards]]. This can be partially attributed to the fact that Microsoft's DNS server is based on BIND 4.3, before BIND added the support for DNS wildcards. ''Loose Wildcarding'' can be enabled as described [http://www.microsoft.com/technet/prodtechnol/windows2000serv/reskit/regentry/46758.mspx?mfr=true here]. To create a wildcard character record, the ''Dnscmd'' command-line tool can be used. Also the support of [[IPv6]] is implemented using a different technique from that of BIND 9, further driving even more incompatibles between the two products.
+
+In [[2004]], a common problem involved the ability of the [[Windows Server 2003]] version of Microsoft's DNS server to use [[EDNS|EDNS0]], which a large number of [[Firewall (networking)|firewalls]] could not cope with. <ref>{{cite web | author = Microsoft | publisher = Microsoft | date = [[April 6]] [[2006]] | url = http://support.microsoft.com/kb/828731/ | title = An external DNS query may cause an error message in Windows Server 2003 | accessdate = 2006-05-08 }}</ref>
+
+== References ==
+<div class="references-small">
+<!--See http://en.wikipedia.org/wiki/Wikipedia:Footnotes for an explanation of how to generate footnotes using the <ref(erences/)> tags-->
+<references/>
+</div>
+
+== See also ==
+* [[Comparison of DNS server software]]
+
+== External links ==
+* [http://www.microsoft.com/windows2000/technologies/communications/dns/default.asp Microsoft Domain Name System (DNS) Center]
+* [http://homepages.tesco.net./~J.deBoynePollard/FGA/dns-edns0-and-firewalls.html "Your firewall is preventing you from using EDNS0."] &mdash; the problems with EDNS0 and firewalls, and how to fix them
+* [http://www.microsoft.com/technet/network/ipv6/vista_dns.mspx Domain Name System Client Behavior in Windows Vista]
+* [http://technet2.microsoft.com/windowsserver/longhorn/en/library/0b0bf633-5732-4b39-80d3-a2a4330acb141033.mspx What's new in DNS in Windows Server 2008]
+
+{{Windows Components}}
+
+[[Category:DNS software]]
+[[Category:Microsoft server technology|DNS]]
+[[Category:Windows Server System|DNS]]
+[[Category:Windows Server|DNS]]

@@ -1,0 +1,223 @@
+'''Flow cytometry bioinformatics''' is the application of [[bioinformatics]] to [[flow cytometry]] data, which involves storing, retrieving, organizing and analyzing flow cytometry data using extensive computational resources and tools.
+Flow cytometry bioinformatics requires extensive use of and contributes to the development of techniques from [[computational statistics]] and [[machine learning]].
+Flow cytometry and related methods allow the quantification of multiple independent [[Biomarker (cell)|biomarkers]] on large numbers of single [[Cell (biology)|cells]]. The rapid growth in the multidimensionality and throughput of flow cytometry data, particularly in the 2000s, has led to the creation of a variety of computational analysis methods, data standards, and public databases for the sharing of results.
+
+Computational methods exist to assist in the preprocessing of flow cytometry data, identifying cell populations within it, matching those cell populations across samples, and performing diagnosis and discovery using the results of previous steps. For preprocessing, this includes compensating for spectral overlap, [[Data transformation (statistics)|transforming]] data onto scales conducive to visualization and analysis, assessing data for quality, and [[Normalization (statistics)|normalizing]] data across samples and experiments.
+For population identification, tools are available to aid traditional manual identification of populations in two-dimensional [[scatter plot]]s (gating), to use [[dimensionality reduction]] to aid gating, and to find populations automatically in higher dimensional space in a variety of ways.
+It is also possible to characterize data in more comprehensive ways, such as the density-guided [[binary space partitioning]] technique known as probability binning, or by combinatorial gating.
+Finally, diagnosis using flow cytometry data can be aided by [[supervised learning]] techniques, and discovery of new cell types of biological importance by high-throughput statistical methods, as part of pipelines incorporating all of the aforementioned methods.
+
+[[Open standard]]s, [[Open data|data]] and [[Open-source software|software]] are also key parts of flow cytometry bioinformatics.
+Data standards include the widely adopted Flow Cytometry Standard (FCS) defining how data from cytometers should be stored, but also several new standards under development by the International Society for Advancement of Cytometry (ISAC) to aid in storing more detailed information about experimental design and analytical steps.
+Open data is slowly growing with the opening of the CytoBank database in 2010, and FlowRepository in 2012, both of which allow users to freely distribute their data, and the latter of which has been recommended as the preferred repository for MIFlowCyt-compliant data by ISAC.
+Open software is most widely available in the form of a suite of [[Bioconductor]] packages, but is also available for web execution on the [[GenePattern]] platform.
+
+==Flow cytometry data==
+{{Main|Flow cytometry}}
+[[File:Cytometer.svg|thumb|400px|Schematic diagram of a flow cytometer, showing focusing of the fluid sheath, laser, optics (in simplified form, omitting focusing), photomultiplier tubes (PMTs), analogue-to-digital converter, and analysis workstation.]]
+
+Flow cytometers operate by [[Hydrodynamic focusing|hydrodynamically focusing]] suspended cells so that they separate from each other within a fluid stream.
+The stream is passed by one or more lasers, and the resulting [[Fluorescence|fluorescent]] and [[Light scattering|scattered]] light is detected by [[photomultiplier]]s.
+By using [[Filter (optics)|optical filters]], particular [[fluorophore]]s on or within the cells can be quantified by peaks in their [[Emission spectrum|emission spectra]].
+These may be [[Autofluorescence|endogenous fluorophores]] such as [[chlorophyll]] or [[Transgenesis|transgenic]] [[green fluorescent protein]], or they may be artificial fluorophores [[Covalent bond|covalently bonded]] to detection molecules such as [[antibody|antibodies]] for detecting [[protein]]s, or [[hybridization probe]]s for detecting [[DNA]] or [[RNA]].
+
+The ability to quantify these has led to flow cytometry being used in a wide range of applications, including but not limited to:
+
+* Monitoring of [[CD4]] count in [[HIV]]<ref name="pmid11135287">{{cite pmid|11135287}}</ref>
+* Diagnosis of various [[cancer]]s<ref name="pmid23472067">{{cite pmid|23472067}}</ref><ref name="pmid23296956">{{cite pmid|23296956}}</ref>
+* Analysis of aquatic [[microbiome]]s<ref name="pmid20541271">{{cite pmid|20541271}}</ref>
+* [[Sperm sorting]]<ref name="pmid3506896">{{cite pmid|3506896}}</ref>
+* Measuring [[telomere]] length<ref name="pmid17406480">{{cite pmid|17406480}}</ref>
+
+Until the early 2000s, flow cytometry could only measure a few fluorescent markers at a time.
+Through the late 1990s into the mid-2000s, however, rapid development of new fluorophores resulted in modern instruments capable of quantifying up to 18 markers per cell.<ref name="pmid19137647">{{cite pmid|19137647}}</ref> 
+More recently, the new technology of mass cytometry replaces fluorophores with [[rare earth element]]s detected by [[Time-of-flight mass spectrometry|time of flight mass spectrometry]], achieving the ability to measure the expression of 34 or more markers.<ref name="pmid22693166">{{cite pmid|22693166}}</ref>
+At the same time, [[Microfluidics|microfluidic]] [[Real-time polymerase chain reaction|qPCR]] methods are providing a flow cytometry-like method of quantifying 48 or more RNA molecules per cell.<ref name="pmid21808033">{{cite pmid|21808033}}</ref>
+The rapid increase in the dimensionality of flow cytometry data, coupled with the development of high-throughput robotic platforms capable of assaying hundreds to thousands of samples automatically have created a need for improved computational analysis methods.<ref name="pmid19137647"/>
+
+==Steps in computational flow cytometry data analysis==
+[[File:AutomatedFlowPipeline.svg|thumb|400px|right|An example pipeline for analysis of FCM data and some of the Bioconductor packages relevant to each step.]]
+The process of moving from primary FCM data to disease diagnosis and biomarker discovery involves four major steps:
+
+# Data pre-processing (including compensation, transformation and normalization)
+# Cell population identification (a.k.a. gating) 
+# Cell population matching for cross sample comparison 
+# Relating cell populations to external variables (diagnosis and discovery)
+
+Saving of the steps taken in a particular flow cytometry [[workflow]] is supported by some flow cytometry software, and is important for the reproducibility of flow cytometry experiments.
+However, saved workspace files are rarely interchangeable between software.<ref name=GatingML>{{Cite_pmid|18773465}}</ref> 
+An attempt to solve this problem is the development of the Gating-ML [[XML]]-based data standard (discussed in more detail under the standards section), which is slowly being adopted in both commercial and open source flow cytometry software.<ref name="GatingML2">{{Cite report|title=Gating-ML 2.0|publisher=International Society for the Advancement of Cytometry |date=2013| url=http://flowcyt.sourceforge.net/gating/latest.pdf}}</ref>
+
+==Data pre-processing==
+Prior to analysis, flow cytometry data must typically undergo pre-processing to remove artifacts and poor quality data, and to be transformed onto an optimal scale for identifying cell populations of interest. Below are various steps in a typical flow cytometry preprocessing pipeline.
+
+===Compensation===
+When more than one fluorochrome is used with the same laser, their [[emission spectrum|emission spectra]] frequently overlap. Each particular fluorochrome is typically measured using a bandpass optical filter set to a narrow band at or near the fluorochrome's emission intensity peak.
+The result is that the reading for any given fluorochrome is actually the sum of that fluorochrome's peak emission intensity, and the intensity of all other fluorochromes' spectra where they overlap with that frequency band.
+This overlap is termed spillover, and the process of removing spillover from flow cytometry data is called compensation.<ref name="pmid18770762">{{cite pmid|18770762}}</ref>
+
+Compensation is typically accomplished by running a series of representative samples each stained for only one fluorochrome, to give measurements of the contribution of each fluorochrome to each channel.<ref name="pmid18770762"/>
+The total signal to remove from each channel can be computed by solving a system of [[linear equation]]s based on this data to produce a spillover matrix, which when [[Invertible matrix|inverted]] and multiplied with the raw data from the cytometer produces the compensated data.<ref name="pmid18770762"/><ref name="pmid8494206">{{cite pmid|8494206}}</ref>
+The processes of computing the spillover matrix, or applying a precomputed spillover matrix to compensate flow cytometry data, are standard features of flow cytometry software.<ref name="flowCore">{{cite pmid|19358741}}</ref>
+
+===Transformation===
+Cell populations detected by flow cytometry are often described as having approximately [[Log-normal distribution|log-normal]] expression.<ref name=shapiro>{{Cite book  | last1 = Shapiro | first1 = Howard M. | title = Practical flow cytometry | year = 2003 | publisher = Wiley-Liss | location = New York | isbn = 0-471-41125-6 | pages = 235 }}</ref>
+As such, they have traditionally been [[Data transformation (statistics)|transformed]] to a [[logarithmic scale]].
+In early cytometers, this was often accomplished even before data acquisition by use of a [[log amplifier]].
+On modern instruments, data is usually stored in linear form, and transformed digitally prior to analysis.
+
+However, compensated flow cytometry data frequently contains negative values due to compensation, and cell populations do occur which have low means and normal distributions.<ref name=logicle>{{cite journal| author=Parks DR, Roederer M, Moore WA| title=A new "Logicle" display method avoids deceptive effects of logarithmic scaling for low signals and compensated data | journal=Cytometry A | year= 2006 | volume= 69 | issue= 6 | pages= 541<U+2013>51 | pmid=16604519| doi=10.1002/cyto.a.20258}}</ref>
+Logarithmic transformations cannot properly handle negative values, and poorly display normally distributed cell types.<ref name=logicle/><ref name=flowTrans>{{cite pmid|21050468}}</ref>
+Alternative transformations which address this issue include the log-linear hybrid transformations Logicle<ref name=logicle/><ref name="pmid22411901">{{cite pmid|22411901}}</ref> and Hyperlog,<ref name="pmid15700280">{{cite pmid|15700280}}</ref> as well as the [[Inverse hyperbolic function|hyperbolic arcsine]] and the [[Power transform|Box-Cox]].<ref name="pmid18307272">{{cite pmid|18307272}}</ref>
+
+A comparison of commonly used transformations concluded that the biexponential and Box-Cox transformations, when optimally parameterized, provided the clearest visualization and least variance of cell populations across samples.<ref name=flowTrans/> However, a later comparison of the flowTrans package used in that comparison indicated that it did not parameterize the Logicle transformation in a manner consistent with other implementations, potentially calling those results into question.<ref name="pmid22431383">{{cite pmid|22431383}}</ref>
+
+===Quality control===
+Particularly in newer, high-throughput experiments, there is a need for [[Information visualization|visualization]] methods to help detect technical errors in individual samples.
+One approach is to visualize summary statistics, such as the [[empirical distribution function]]s of single dimensions of technical or biological replicates to ensure they are the similar.<ref name=flowq>{{cite pmid|17366638}}</ref>
+For more rigor, the [[Kolmogorov<U+2013>Smirnov test]] can be used to determine if individual samples deviate from the norm.<ref name="flowq" />
+The [[Grubbs' test for outliers]] may be used to detect samples deviating from the group.
+
+A method for quality control in higher-dimensional space is to use probability binning with bins fit to the whole data set pooled together.<ref name=CFP>{{Cite pmid|18383310}}</ref>
+Then the [[standard deviation]] of the number of cells falling in the bins within each sample can be taken as a measure of multidimensional similarity, with samples that are closer to the norm having a smaller standard deviation.<ref name="CFP" />
+With this method, higher standard deviation can indicate outliers, although this is a relative measure as the absolute value depends partly on the number of bins.
+
+With all of these methods, the cross-sample variation is being measured. However, this is the combination of technical variations introduced by the instruments and handling, and actual biological information that is desired to be measured. Disambiguating the technical and the biological contributions to between-sample variation can be a difficult to impossible task.<ref name="flowStats"/>
+
+===Normalization===
+Particularly in multi-centre studies, technical variation can make biologically equivalent populations of cells difficult to match across samples.
+[[Normalization (statistics)|Normalization methods]] to remove technical variance, frequently derived from [[image registration]] techniques, are thus a critical step in many flow cytometry analyses.
+Single-marker normalization can be performed using landmark registration, in which peaks in a [[kernel density estimate]] of each sample are identified and aligned across samples.<ref name="flowStats">{{Cite pmid|19899135}}</ref>
+
+==Identifying cell populations==
+[[File:FlowCAP Results.png|thumb|300px|left|Comparison of consensus of eight independent manual gates (polygons) and automated gates (colored dots). The consensus of the manual gates and the algorithms were produced using the CLUE package.<ref>{{cite web| url=http://cran.r-project.org/web/packages/clue/index.html| title=CLUE package|accessdate=2013-02-15}}</ref> Figure reproduced from.<ref name="FlowCAP" />]]
+The complexity of raw flow cytometry data (dozens of measurements for thousands to millions of cells) makes answering questions directly using statistical tests or supervised learning difficult. Thus, a critical step in the analysis of flow cytometric data is to reduce this complexity to something more tractable while establishing common features across samples. This usually involves identifying multidimensional regions that contain functionally and phenotypically homogeneous groups of cells.<ref name="lugli2010data">{{cite pmid|20583274}}</ref> There are a range of methods by which this can be achieved, detailed below.
+
+===Gating===
+The data generated by flow-cytometers can be plotted in one or two [[dimension]]s to produce a [[histogram]] or scatter plot. The regions on these plots can be sequentially separated, based on fluorescence [[intensity (physics)|intensity]], by creating a series of subset extractions, termed "[[Gate (cytometry)|gate]]s". These gates can be produced using software, e.g. Flowjo,<ref name="FlowJo">{{cite web| url=http://www.flowjo.com/vX/en/ws.boolean.html| title=FlowJo|accessdate=2013-04-05}}</ref> FCS Express,<ref>{{cite web| url=http://www.denovosoftware.com/site/Flow-RUO-Overview.shtml| title=FCS Express|accessdate=2013-04-03}}</ref> WinMDI,<ref>{{cite web| url=http://facs.scripps.edu/software.html| title=TSRI Cytometry Software Page|accessdate=2009-09-03}}</ref>   CytoPaint (aka Paint-A-Gate),<ref>{{cite web| url=http://leukobyte.com| title=CytoPaint Classic|accessdate=2013-04-05}}</ref> VenturiOne, CellQuest Pro, Cytospec,<ref>{{cite web| url=http://www.cyto.purdue.edu/Purdue_software| title=PUCL Cytometry Software Page|accessdate=2011-07-07}}</ref> or Kaluza.<ref>{{cite web| url=https://www.beckmancoulter.com| title=Beckman Coulter|accessdate=2013-02-10}}</ref>
+
+In datasets with a low number of dimensions and limited cross-sample technical and biological variability (e.g., clinical laboratories), manual analysis of specific cell populations can produce effective and reproducible results. However, exploratory analysis of a large number of cell populations in a high-dimensional dataset is not feasible.<ref name="Bendall2012From">{{cite pmid|22781693}}</ref> In addition, manual analysis in less controlled settings (e.g., cross-laboratory studies) can increase the overall error rate of the study.<ref name="Maecker2006Standard">{{cite pmid|15978127}}</ref> In one study, several computational gating algorithms performed better than manual analysis in the presence of some variation.<ref name="FlowCAP" /> However, despite the considerable advances in computational analysis, manual gating remains the main solution for the identification of specific rare cell populations that are not well-separated from other cell types.
+
+====Gating guided by dimension reduction====
+As the number of markers measured by flow cytometry increases, the number of scatter plots that need to be investigated increase exponentially (some markers need to be investigated several times for each group of cells to resolve high-dimensional differences between cell types that appear to be similar in most markers).<ref name="pmid22028426">{{cite pmid|22028426}}</ref> To address this issue, [[principal component analysis]] has been used to summarize the high-dimensional datasets using a combination of markers that maximizes the variance of all data points.<ref name="pmid20844562">{{cite pmid|20844562}}</ref> However, PCA is a linear method and is not able to preserve complex and non-linear relationships. More recently, two dimensional [[minimum spanning tree]] layouts have been used to guide the manual gating process.  Density-based down-sampling and clustering was used to better represent rare populations and control the time and memory complexity of the minimum spanning tree construction process.<ref name="pmid21964415">{{cite pmid|21964415}}</ref> More sophisticated [[dimension reduction]] algorithms are yet to be investigated.<ref>{{cite web| url=http://homepage.tudelft.nl/19j49/Matlab_Toolbox_for_Dimensionality_Reduction.html| title=Matlab Toolbox for Dimensionality Reduction|accessdate=2013-02-10}}</ref>
+
+[[File:Spade plot.svg|thumb|400px|right|Cell populations in a high-dimensional mass-cytometry dataset manually gated after dimension reduction using 2D layout for a minimum spanning tree. Figure reproduced from the data provided in.<ref name="BScience">{{Cite pmid|21551058}}</ref>]]
+
+====Automated gating====
+Developing computational tools for identification of cell populations has been an area of active research only since 2008. Many individual [[Cluster analysis|clustering]] approaches have recently been developed, including model-based algorithms (e.g., flowClust<ref name="flowClust">{{Cite pmid|19442304}}</ref> and FLAME<ref name="FLAME">{{Cite pmid|19443687}}</ref>), density based algorithms (e.g. FLOCK<ref name="FLOCK">{{Cite pmid|20839340}}</ref> and SWIFT, graph-based approaches (e.g. SamSPECTRAL<ref name="SamSPECTRAL">{{Cite pmid|20667133}}</ref>) and most recently, hybrids of several approaches (flowMeans<ref name="flowMeans">{{Cite pmid|21182178}}</ref> and flowPeaks<ref name="flowPeaks">{{Cite pmid|22595209}}</ref>).  These algorithms are different in terms of memory and time complexity, their software requirements, their ability to automatically determine the required number of cell populations, and their sensitivity and specificity. The FlowCAP (Flow Cytometry: Critical Assessment of Population Identification Methods) project, with active participation from most academic groups with research efforts in the area, is providing a way to objectively cross-compare state-of-the-art automated analysis approaches.<ref name="FlowCAP">{{Cite pmid|23396282}}</ref>
+
+===Probability binning methods===
+[[File:FlowFPExample.png|thumb|300px|left|An example of frequency difference gating, created using the flowFP Bioconductor package. The dots represent individual events in an FCS file. The rectangles represent the bins.]]
+
+Probability binning is a non-gating analysis method in which flow cytometry data is split into [[quantile]]s on a univariate basis.<ref name=PB>{{Cite pmid|11598945}}</ref> 
+The locations of the quantiles can then be used to test for differences between samples using the chi-squared test.<ref name=PB/>
+
+This was later extended into multiple dimensions in the form of frequency difference gating, a [[binary space partitioning]] technique where data is iteratively partitioned along the median.<ref name=FDG>{{Cite pmid|11598947}}</ref> 
+These partitions (or bins) are fit to a control sample. 
+Then the proportion of cells falling within each bin in test samples can be compared to the control sample by the chi squared test.
+
+Finally, cytometric fingerprinting uses a variant of frequency difference gating to set bins and measure for a series of samples how many cells fall within each bin.<ref name="CFP" /> These bins can be used as gates and used for subsequent analysis similarly to automated gating methods.
+
+===Combinatorial gating===
+High-dimensional clustering algorithms are often unable to identify rare cell types that are not well separated from other major populations. Matching these small cell populations across multiple samples is even more challenging. In manual analysis, prior biological knowledge (e.g., biological controls) provides guidance to reasonably identify these populations. However, integrating this information into the exploratory clustering process (e.g., as in [[semi-supervised learning]]) has not been successful.
+
+An alternative to high-dimensional clustering is to identify cell populations using one marker at a time and then combine them to produce higher dimensional clusters. This functionality was first implemented in FlowJo.<ref name="FlowJo"/> The flowType algorithm builds on this framework by allowing the exclusion of the markers.<ref name="flowType">{{Cite pmid|22383736}}</ref> This enables the development of statistical tools (e.g. RchyOptimyx) that can investigate the importance of each marker and exclude high-dimensional redundancies.<ref name="RchyOptimyx">{{Cite pmid| 23044634}}</ref>
+
+==Diagnosis and discovery==
+[[File:FlowType-RchyOptimyx.png|thumb|400px|right|Overview of the flowType/RchyOptimyx pipeline for identification of correlates of protection against HIV: First, tens of thousands of cell populations are identified by combining one dimensional partitions (panel one). The cell populations are then analyzed using a statistical test (and bonferroni's method for multiple testing correction) to identify those correlated with the survival information. The third panel shows a complete gating hierarchy describing all possible strategies for gating that cell population. This graph can be mined to identify the "best" gating strategy (i.e., the one in which the most important markers appear earlier). These hierarchies for all selected phenotypes are demonstrated in penel 4. In panel 5, these hierarchies are merged into a single graph that summarized the entire dataset and demonstrates the trade-off between the number of markers involved in each phenotype and the significance of the correlation with the clinical outcome (e.g., as measured by the [[:Kaplan<U+2013>Meier estimator|Kaplan<U+2013>Meier estimator]] in panel 6). Figure reproduced in part from<ref name="flowType" /> and.<ref name="RchyOptimyx" />]]
+After identification of the cell population of interest, a cross sample analysis can be performed to identify phenotypical or functional variations that are correlated with an external variable (e.g., a clinical outcome). These studies can be partitioned into two main groups:
+
+===Diagnosis===
+In these studies, the goal usually is to diagnose a disease (or a sub-class of a disease) using variations in one or more cell populations. For example, one can use multidimensional clustering to identify a set of clusters, match them across all samples, and then use [[supervised learning]] to construct a classifier for prediction of the classes of interest (e.g., this approach can be used to improve the accuracy of the classification of specific lymphoma subtypes<ref name="H1">{{Cite pmid|22180480}}</ref>). Alternatively, all the cells from the entire cohort can be pooled into a single multidimensional space for clustering before classification.<ref name="peng2">{{Cite pmid|22662133}}</ref> This approach is particularly suitable for datasets with a high amount of biological variation (in which cross-sample matching is challenging) but requires technical variations to be carefully controlled.<ref name="barcode">{{Cite pmid|22902532}}</ref>
+
+===Discovery===
+In a discovery setting, the goal is to identify and describe cell populations correlated with an external variable (as opposed to the diagnosis setting in which the goal is to combine the predictive power of multiple cell types to maximize the accuracy of the results). Similar to the diagnosis use-case, cluster matching in high-dimensional space can be used for exploratory analysis but the descriptive power of this approach is very limited, as it is hard to characterize and visualize a cell population in a high-dimensional space without first reducing the dimensionality.<ref name=peng2 /><ref name="ali">{{Cite pmid|22523221}}</ref> Finally, combinatorial gating approaches have been particularly successful in exploratory analysis of FCM data. Simplified Presentation of Incredibly Complex Evaluations (SPICE) is a software package that can use the gating functionality of FlowJo to statistically evaluate a wide range of different cell populations and visualize those that are correlated with the external outcome. flowType and RchyOptimyx (as discussed above) expand this technique by adding the ability of exploring the impact of independent markers on the overall correlation with the external outcome. This enables the removal of unnecessary markers and provides a simple visualization of all identified cell types. In a recent analysis of a large (n=466) cohort of HIV+ patients, this pipeline identified three correlates of protection against HIV, only one of which had been previously identified through extensive manual analysis of the same dataset.<ref name=flowType />
+
+==Data formats and interchange==
+
+===Flow Cytometry Standard===
+
+Flow cytometry data is typically saved for analysis in the form of an [[Array (data type)|array]], with fluorescence and scatter channels represented in columns, and individual "events" (most of which are cells) forming the rows. 
+The number of events acquired from each sample usually ranges between the low thousands and the low millions.
+[[File:Fcsmatrix.svg|thumb|400px|left|Representation of flow cytometry data from an instrument with three scatter channels and 13 fluorescent channels. Only the values for the first 30 (of hundreds of thousands) of cells are shown.]]
+
+The first version of a Flow Cytometry Standard (FCS) was developed in 1984.<ref name=FCS1>{{Cite_pmid|6489069}}</ref> Since then, FCS became the standard [[file format]] supported by all flow cytometry software and hardware vendors. 
+FCS is a [[binary file]] format with three main segments: a text segment containing meta data in keyword/value pairs structures, a data segment usually containing a matrix of detected expression values (so called list mode format), and a rarely used analysis segment.
+The FCS specification has traditionally been developed and maintained by the International Society for Advancement of Cytometry (ISAC).<ref name="ISAC">{{cite web|url=http://isac-net.org/|title=International Society for Advancement of Cytometry|accessdate=5 March 2013}}</ref>
+
+Over the years, updates were incorporated to adapt to technological advancements in both flow cytometry and computing technologies.
+
+In 1990, FCS 2.0  was introduced.<ref name=FCS2>{{Cite_pmid|2340768}}</ref> Features introduced in FCS 2.0 included the option of multiple data sets within a data file, the use of different [[Endianness|byte order]]s accommodating hardware variations on different computing platforms, and basic compensation and scaling information. FCS 2.0 was followed by FCS 3.0 in 1997, which introduced the possibility of storing data sets larger than 100MB.<ref name=FCS3>{{Cite_pmid|9181300}}</ref>
+
+The latest version, FCS 3.1, was introduced in 2010.<ref name=FCS31>{{Cite_pmid|19937951}}</ref> It retains the basic FCS file structure and most features of previous versions of the standard. Changes included in FCS 3.1 address potential ambiguities in the previous versions and provide a more robust standard. They include simplified support for international characters and improved support for storing compensation. The major additions are support for preferred display scale, a standardized way of capturing the [[Biological specimen|sample]] volume, information about the origins of the data file, and support for plate and well identification in high throughput, plate based experiments.
+
+FCS used to be the only widely adopted file format in flow cytometry. Recently, additional standard file formats have been developed by ISAC.
+
+===netCDF===
+ISAC is considering replacing FCS with a flow cytometry specific version of the [[NetCDF|Network Common Data Form]] (netCDF) file format.<ref name=netCDF>{{cite journal| author=Robert C. Leif, Josef Spidlen, Ryan R. Brinkman| title=Cytometry Standards Continuum
+| journal=SPIE Proceedings | year= 2009 | volume= 6859 | url=http://newportinstrument.com/cytometryml/pdf/Cytometry_Stds_Continuum08.pdf| bibcode=2008SPIE.6859E..17L| last=Brinkman| pages=17| doi=10.1117/12.762514| series=Imaging, Manipulation, and Analysis of Biomolecules, Cells, and Tissues VI| editor1-last=Farkas| editor1-first=Daniel L| editor2-last=Nicolau| editor2-first=Dan V| editor3-last=Leif| editor3-first=Robert C}}</ref>
+netCDF is a set of freely available software libraries and machine independent data formats that support the creation, access, and sharing of array-oriented scientific data. In 2008, ISAC drafted the first version of netCDF conventions for storage of raw flow cytometry data.<ref name=netCDFProposal>International Society for the Advancement of Cytometry (2008). Analytical Cytometry Standard NetCDF Conventions for List Mode Binary Data File Component http://flowcyt.sourceforge.net/netcdf/latest.pdf</ref>
+
+===Archival Cytometry Standard (ACS)===
+The Archival Cytometry Standard (ACS) is being developed to bundle data with different components describing cytometry experiments.<ref name=ACS>{{Cite_pmid|21385382}}</ref> It captures relations among data, metadata, analysis files and other components, and includes support for audit trails, versioning and digital signatures. The ACS container is based on the [[Zip (file format)|ZIP file format]] with an [[XML]]-based table of contents specifying relations among files in the container. The [[XML Signature]] [[World Wide Web Consortium|W3C]] Recommendation has been adopted to allow for digital signatures of components within the ACS container.
+An initial draft of ACS has been designed in 2007 and finalized in 2010. Since then, ACS support has been introduced in several software tools including FlowJo and Cytobank.
+
+===Gating-ML===
+The lack of gating interoperability has traditionally been a bottleneck preventing reproducibility of flow cytometry data analysis and the usage of multiple analytical tools. To address this shortcoming, ISAC developed Gating-ML, an XML-based mechanism to formally describe gates and related data (scale) transformations.<ref name=GatingML/>
+The draft recommendation version of Gating-ML was approved by ISAC in 2008 and it is partially supported by tools like FlowJo, the flowUtils library in R/BioConductor, and FlowRepository.<ref name=ACS/> It supports rectangular gates, polygon gates, convex polytopes, ellipsoids, decision trees and Boolean collections of any of the other types of gates. In addition, it includes dozens of built in public transformations that have been shown to potentially useful for display or analysis of cytometry data. In 2013, Gating-ML version 2.0 was approved by ISAC's Data Standards Task Force as a Recommendation. This new version offers slightly less flexibility in terms of the power of gating description; however, it is also significantly easier to implement in software tools.<ref name="GatingML2"/>
+
+===Classification Results (CLR)===
+The Classification Results (CLR) File Format<ref>{{Cite report|url=http://flowcyt.sourceforge.net/clr/latest.pdf|title=Classification Results File Format
+|publisher=International Society for the Advancement of Cytometry |date=2012}}</ref> has been developed to exchange the results of manual gating and algorithmic classification approaches in a standard way in order to be able to report and process the classification.  CLR is based in the commonly supported [[Comma-separated values|CSV file format]] with columns corresponding to different classes and cell values containing the probability of an event being a member of a particular class. These are captured as values between 0 and 1. Simplicity of the format and its compatibility with common spreadsheet tools have been the major requirements driving the design of the specification. Although it was originally designed for the field of flow cytometry, it is applicable in any domain that needs to capture either fuzzy or unambiguous classifications of virtually any kinds of objects.
+
+==Public data and software==
+As in other bioinformatics fields, development of new methods has primarily taken the form of [[Free and open source software|free open source software]], and several databases have been created for depositing [[Open science data|open data]].
+
+===Bioconductor===
+{{Main|Bioconductor}}
+The Bioconductor project is a repository of free open source software, mostly written in the [[R (programming language)|R programming language]].<ref name=Bioc>{{Cite pmid|15461798}}</ref>
+As of July 2013, Bioconductor contained 21 software packages for processing flow cytometry data.<ref name=BiocFlow>{{cite web|url=http://www.bioconductor.org/packages/release/BiocViews.html#___FlowCytometry|title=BioConductor FlowCytometry view|author=Bioconductor|accessdate=11 July 2013}}</ref>
+These packages cover most of the range of functionality described earlier in this article.
+
+===GenePattern===
+{{Main|GenePattern}}
+GenePattern is a predominantly genomic analysis platform with over 200 tools for analysis of gene expression, proteomics, and other data. A web-based interface provides easy access to these tools and allows the creation of automated analysis pipelines enabling reproducible research. Recently, a  GenePattern Flow Cytometry Suite has been developed in order to bring advanced flow cytometry data analysis tools to experimentalists without programmatic skills. It contains close to 40 open source GenePattern flow cytometry modules covering methods from basic processing of flow cytometry standard (i.e., FCS) files to advanced algorithms for automated identification of cell populations, normalization and quality assessment. Internally, most of these modules leverage from functionality developed in BioConductor.
+
+Much of the functionality of the Bioconductor packages for flow cytometry analysis has been packaged up for use with the GenePattern<ref name=genepattern>{{Cite pmid|16642009}}</ref>  [[Scientific workflow system|workflow system]], in the form of the GenePattern Flow Cytometry Suite.<ref name=gfs>{{Cite web|url=http://www.broadinstitute.org/cancer/software/genepattern/modules/flow_cytometry|title=GenePattern Flow Cytometry Suite|accessdate=14 February 2013}}</ref>
+
+===Public databases===
+The Minimum Information about a Flow Cytometry Experiment (MIFlowCyt), requires that any flow cytometry data used in a publication be available, although this does not include a requirement that it be deposited in a public database.<ref name=miflowcyt>{{cite pmid|18752282}}</ref>
+Thus, although the journals Cytometry A and B, as well as all journals from the [[Nature Publishing Group]] require MIFlowCyt compliance, there is still relatively little publicly available flow cytometry data.
+Some efforts have been made towards creating public databases, however.
+
+Firstly, CytoBank, which is a complete web-based flow cytometry data storage and analysis platform, has been made available to the public in a limited form.<ref name=cytobank>{{cite pmid|20578106}}</ref>
+Using the CytoBank code base, FlowRepository was developed in 2012 with the support of ISAC to be a public repository of flow cytometry data.<ref name=flowrepository>{{cite pmid|22887982}}</ref>
+FlowRepository facilitates MIFlowCyt compliance,<ref name=flowrepositoryhowto>{{cite pmid|22752950}}</ref> and as of July 2013 contained 65 public data sets.<ref name=flowrepositorydata>[http://flowrepository.org/public_experiment_representations Listing of FlowRepository public data sets.]</ref>
+
+===Datasets===
+In 2012, the flow cytometry community has started to release a set of publicly available datasets. A subset of these datasets representing the existing data analysis challenges is described below. For comparison against manual gating, the FlowCAP-I project has released five datasets, manually gated by human analysts, and two of them gated by eight independent analysts.<ref name="FlowCAP"/> The FlowCAP-II project included three datasets for binary classification and also reported several algorithms that were able to classify these samples perfectly. FlowCAP-III included two larger datasets for comparison against manual gates as well as one more challenging sample classification dataset. As of March 2013, public release of FlowCAP-III was still in progress.<ref name=flowcapweb>{{cite web|url=http://flowcap.flowsite.org|title=FlowCAP - Flow Cytometry: Critical Assessment of Population Identification Methods|accessdate=15 March 2013}}</ref> The datasets used in FlowCAP-I, II, and III either have a low number of subjects or parameters. However, recently several more complex clinical datasets have been released including a dataset of 466 HIV-infected subjects, which provides both 14 parameter assays and sufficient clinical information for survival analysis.<ref name="RchyOptimyx"/><ref name=HIVData>{{cite web|url=https://flowrepository.org/id/FR-FCM-ZZZK|title=IDCRP's HIV Natural History Study Data Set|accessdate=3 March 2013}}</ref><ref name=clinicalexample1>{{cite pmid|23873623}}</ref><ref name=clinicalexample2>{{cite pmid|23843942}}</ref>
+
+Another class of datasets are higher-dimensional mass cytometry assays. A representative of this class of datasets is a study which includes analysis of two bone marrow samples using more than 30 surface or intracellular markers under a wide range of different stimulations.<ref name="pmid22693166"/> The raw data for this dataset is publicly available as described in the manuscript, and manual analyses of the surface markers are available upon request from the authors.
+
+==Open problems==
+Despite rapid development in the field of flow cytometry bioinformatics, several problems remain to be addressed.
+
+Variability across flow cytometry experiments arises from biological variation among samples, technical variations across instruments used, as well as methods of analysis.
+In 2010, a group of researchers from [[Stanford University]] and the [[National Institutes of Health]] pointed out that while technical variation can be ameliorated by standardizing sample handling, instrument setup and choice of reagents, solving variation in analysis methods will require similar standardization and computational automation of gating methods.<ref name="pmid22343568"/>
+They further opined that centralization of both data and analysis could aid in decreasing variability between experiments and in comparing results.<ref name="pmid22343568">{{Cite pmid|22343568}}</ref>
+
+This was echoed by another group of [[Pacific Biosciences]] and Stanford University researchers, who suggested that [[cloud computing]] could enable centralized, standardized, high-throughput analysis of flow cytometry experiments.<ref name="pmid20717155"/>
+They also emphasised that ongoing development and adoption of standard data formats could continue to aid in reducing variability across experiments.<ref name="pmid20717155"/>
+They also proposed that new methods will be needed to model and summarize results of high-throughput analysis in ways that can be interpreted by biologists,<ref name="pmid20717155">{{Cite pmid|20717155}}</ref> as well as ways of integrating large-scale flow cytometry data with other high-throughput biological information, such as [[gene expression]], [[genetic variation]], [[metabolite]] levels and disease states.<ref name="pmid20717155"/>
+
+==See also==
+* [[Flow cytometry]]
+* [[Bioinformatics]]
+* [[Proteomics]]
+
+==References==
+{{Reflist|30em}}
+*{{OA-attribution| {{cite doi|10.1371/journal.pcbi.1003365}} }}
+
+[[Category:Flow cytometry]]
+[[Category:Bioinformatics]]

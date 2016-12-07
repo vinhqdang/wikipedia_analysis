@@ -1,0 +1,377 @@
+[[Image:Kepler laws diagram.svg|thumb|300px|Illustration of Kepler's three laws with two planetary orbits. (1)  The orbits are ellipses, with focal points ''f1'' and ''&fnof;''2 for the first planet and ''&fnof;''<sub>1</sub> and ''&fnof;''<sub>3</sub> for the second planet. The sun is placed in focal point ''&fnof;''<sub>1</sub>. (2) The two shaded sectors ''A''<sub>1</sub> and ''A''<sub>2</sub> have the same surface area and the time for planet 1 to cover segment ''A''<sub>1</sub> is equal to the time to cover segment ''A''<sub>2</sub>. (3) The total orbit times for planet 1 and planet 2 have a ratio ''a''<sub>1</sub><sup>3/2</sup>&nbsp;:&nbsp;''a''<sub>2</sub><sup>3/2</sup>.]]
+
+In [[astronomy]], '''Kepler's laws of planetary motion''' are three mathematical laws that describe the motion of [[planet]]s in the [[Solar System]]. German [[mathematician]] and [[astronomer]] '''[[Johannes Kepler]]''' ([[1571]]&ndash;[[1630]]) discovered them.
+
+Kepler studied the [[observation]]s (the [[Rudolphine tables]]) of [[Tycho Brahe]]. Around 1605, Kepler found that Brahe's observations of the planets' positions followed three relatively simple mathematical laws.
+
+Kepler's laws challenged [[Aristotle|Aristotelean]] and [[Ptolemy|Ptolemaic]] astronomy and physics. His assertion that the Earth moved, his use of ellipses rather than [[epicycle]]s, and his proof that the planets' speeds varied, changed [[astronomy]] and [[physics]].  Almost a century later [[Isaac Newton]] was able to deduce Kepler's laws from  Newton's own [[Newton's laws of motion|laws of motion]] and his [[Newton's law of universal gravitation|law of universal gravitation]], using classical Euclidean geometry. 
+
+In modern times, Kepler's laws are used to calculate approximate orbits for [[artificial satellite]]s, and bodies orbiting the [[Sun]] of which Kepler was unaware (such as the outer planets and smaller [[asteroid]]s).  They apply where any relatively small body is orbiting a larger, relatively massive body, though the effects of [[atmospheric drag]] (e.g. in a low orbit), [[relativity]] (e.g. [[Perihelion precession of Mercury]]), and other nearby bodies can make the results insufficiently accurate for a specific purpose.
+
+Kepler's laws are formulated below using [[heliocentrism|heliocentric]] [[polar coordinate]]s. However, they can alternatively be formulated and derived using [[Cartesian coordinates]].<ref>Hyman, Andrew. [http://www.andrewhyman.com/articles/newton.pdf "A Simple Cartesian Treatment of Planetary Motion"], ''European Journal of Physics'', Vol. 14, pp. 145&ndash;147 (1993).</ref>
+
+===First law===
+[[Image:kepler-first-law.svg|thumb|right|Kepler's first law]]
+The first law says:"The [[orbit]] of every [[planet]] is an [[ellipse]] with the sun at one of the [[Focus (geometry)|foci]]." 	 
+
+The mathematics of the ellipse is as follows. The equation is 
+:<math>r=\frac{p}{1+\varepsilon\cdot\cos\nu}</math> 	 
+where (''r'',&nbsp;''<U+03BD>'') are heliocentricical polar coordinates for the planet, ''p'' is the ''[[semi-latus rectum]]'', and ''<U+03B5>'' is the ''[[Eccentricity (mathematics)|eccentricity]]'', which is greater than or equal to zero, and less than one. For ''<U+03BD>'' = 0 the planet is at the '''[[perihelion]]''' at minimum distance:
+
+:<math>r_\mathrm{min}=\frac{p}{1+\varepsilon}</math> 	 
+
+for ''<U+03BD>'' = 90<U+00B0>: ''r'' = ''p'', and for ''<U+03BD>'' = 180<U+00B0> the planet is at the '''[[aphelion]]''' at maximum distance: 	 
+
+:<math>r_\mathrm{max}=\frac{p}{1-\varepsilon}.</math> 	 
+
+The [[semi-major axis]] is the [[arithmetic mean]] between ''r''<sub>min</sub> and ''r''<sub>max</sub>:
+
+:<math>a=\frac{p}{1-\varepsilon^2}.</math> 	 
+
+The [[semi-minor axis]] is the [[geometric mean]] between ''r''<sub>min</sub> and ''r''<sub>max</sub>:
+
+:<math>b=\frac p{\sqrt{1-\varepsilon^2}}</math>
+
+and it is also the [[geometric mean]] between the semimajor axis and the semi latus rectum:
+:<math>\frac a b=\frac b p</math>
+
+===Second law===
+[[Image:kepler-second-law.svg|right|thumb|Illustration of Kepler's second law.]]
+
+The second law: "A [[line (geometry)|line]] joining a planet and the sun sweeps out equal areas during equal intervals of time."<ref>"[http://demonstrations.wolfram.com/KeplersSecondLaw/ Kepler's Second Law]" by Jeff Bryant with Oleksandr Pavlyk, [[The Wolfram Demonstrations Project]].</ref>
+
+This is also known as the law of equal areas. It is a direct consequence of the [[Angular momentum#Conservation of angular momentum|law of conservation of angular momentum]]; see the derivation below.
+
+Suppose a planet takes one day to travel from [[Point (geometry)|point]] ''A'' to ''B''. The lines from the Sun to ''A'' and ''B'', together with the planet orbit, will define a (roughly [[triangle (geometry)|triangular]]) area. This same amount of area will be formed every day regardless of where in its orbit the planet is. This means that the planet moves faster when it is closer to the sun. 
+
+This is because the sun's gravity accelerates the planet as it falls toward the sun, and decelerates it on the way back out, but Kepler did not know that reason.
+
+The two laws permitted Kepler to calculate the position, (''r'',''&nu;''), of the planet, based on the time since [[perihelion]], ''t'', and the orbital period, ''P''. The calculation is done in four steps.
+:1. Compute the '''mean anomaly''' ''M'' from the formula
+::<math>M=\frac{2\pi t}{P}</math>
+:2. Compute the '''[[eccentric anomaly]]''' ''E'' by numerically solving '''Kepler's equation''':
+::<math>\ M=E-\varepsilon\cdot\sin E</math>
+:3. Compute the '''[[true anomaly]]''' ''&nu;'' by the equation:
+::<math>\tan\frac \nu 2 = \sqrt{\frac{1+\varepsilon}{1-\varepsilon}}\cdot\tan\frac E 2</math>
+:4. Compute the '''heliocentric distance''' ''r'' from the first law:
+::<math>r=\frac p {1+\varepsilon\cdot\cos\nu}</math>
+The proof of this procedure is shown below.
+
+===Third law===
+The third law : "The [[square (algebra)|square]]s of the [[orbital period]]s of planets are directly [[Proportionality (mathematics)|proportional]] to the [[cube (arithmetic)|cube]]s of the [[semi-major axis|axes]] of the orbits."  Thus, not only does the length of the orbit increase with distance, the [[orbital speed]] decreases, so that the increase of the [[orbital period]] is more than proportional.
+
+:<math>P^2 \propto a^3</math>
+:<math>P</math> = orbital period of planet
+:<math>a</math> = semimajor axis of orbit
+
+So the expression ''P''<sup>2</sup>&middot;''a''<sup><U+2013>3</sup> has the same value for all planets in the [[Solar System]] as it has for [[Earth]].  When certain units are chosen, namely ''P'' is measured in [[sidereal year]]s and ''a'' in [[astronomical unit]]s, ''P''<sup>2</sup>&middot;''a''<sup>&minus;3</sup> has the value 1 for all planets in the Solar System.  
+
+In [[SI units]]: <math>\frac{P^{2}}{a^{3}} = 3.00\times 10^{-19} \frac{s^{2}}{m^{3}}   \pm \ 0.7%.\, </math>
+
+The law, when applied to [[circular orbit]]s where the [[acceleration]] is proportional to ''a''<U+00B7>''P''<sup>&minus;2</sup>, shows that the acceleration is proportional to  ''a''<U+00B7>''a''<sup>&minus;3</sup> = ''a''<sup>&minus;2</sup>, in accordance with [[Newton's law of gravitation]].
+
+The general equation, which was derived from Newton's law of gravity, is 
+
+:<math>\left({\frac{P}{2\pi}}\right)^2 = {a^3 \over G (M+m)}, </math>
+where <math>G</math> is the [[gravitational constant]], <math>M</math> is the mass of the sun, and <math>m</math> is the mass of planet. The latter appears in the equation since the equation of motion involves the [[reduced mass]].
+Note that ''P'' is time per [[orbit]] and ''P''/2<U+03C0> is time per [[radian]].
+
+See the actual figures: [[Attributes of the largest solar system bodies|attributes of major planets]].
+
+This law is also known as the '''harmonic law'''.
+
+===Position as a function of time===
+[[Image:anomalies.svg|right]]
+The Keplerian problem assumes an [[Elliptic orbit|elliptical orbit]] and the four points:
+*''s'' the sun (at one focus of ellipse); 
+*''z'' the perihelion
+*''c'' the center of the ellipse
+*''p'' the planet
+and 
+:<math>\ a=|cz|,</math> distance from center to perihelion, the '''semimajor axis''',
+:<math>\ \varepsilon={|cs|\over a},</math> the '''eccentricity''',
+:<math>\ b=a\sqrt{1-\varepsilon^2},</math> the '''semiminor axis''',
+:<math>\ r=|sp| ,</math> the distance from sun to planet.
+and the angle
+:<math>\nu=\angle zsp,</math> the planet as seen from the sun, the '''[[true anomaly]]'''.
+
+The problem is to compute the [[polar coordinates]] (''r'',''&nu;'') of the planet from the '''time since perihelion''', ''t''. 
+
+It is solved in steps. Kepler began by adding the orbit's auxiliary circle (that with the major axis as a diameter) and defined these points:
+*''x'' is the projection of the planet to the auxiliary circle; then the area <math>|zsx|=\frac a b \cdot|zsp|</math>
+*''y'' is a point on the auxiliary circle such that the area <math>\ |zcy|=|zsx|</math>
+and 
+:<math>M=\angle zcy</math>, ''y'' as seen from the centre, the '''[[mean anomaly]]'''.
+
+The area of the [[circular sector]] <math>\ |zcy| =  \frac{a^2 M}2</math>, and the area swept since perihelion, 
+:<math>|zsp|=\frac b a \cdot|zsx|=\frac b a \cdot|zcy|=\frac b a\cdot\frac{a^2 M}2 = \frac {a b M}{2} </math> , 
+is by Kepler's second law proportional to time since perihelion. So the mean anomaly, ''M'', is proportional to time since perihelion, ''t''.
+:<math>M={2 \pi t \over P},</math> 
+where ''P'' is the [[orbital period]].
+
+The mean anomaly ''M'' is first computed. The goal is to compute the true anomaly ''&nu;''. The function ''&nu;''=''f''(''M'') is, however, not elementary. Kepler's solution is to use 
+:<math>E=\angle zcx</math>, ''x'' as seen from the centre,  the '''[[eccentric anomaly]]''' 
+as an intermediate variable, and first compute ''E'' as a function of ''M'' by solving Kepler's equation below, and then compute the true anomaly ''&nu;'' from the eccentric anomaly ''E''. Here are the details.
+:<math>\ |zcy|=|zsx|=|zcx|-|scx|</math>
+
+:<math>\frac{a^2 M}2=\frac{a^2 E}2-\frac {a\varepsilon\cdot a\sin E}2</math>
+Division by ''a''<U+00B2>/2 gives '''Kepler's equation'''
+:<math>M=E-\varepsilon\cdot\sin E</math>.
+The catch is that Kepler's equation cannot be rearranged to isolate ''E''. The function ''E''=''f''(''M'') is not an elementary formula, but Kepler's equation is solved either iteratively by a [[root-finding algorithm]] or, as derived in the article on [[eccentric anomaly]], by an [[infinite series]].
+
+Having computed the eccentric anomaly ''E'' from Kepler's equation, the next step is to calculate the true anomaly ''&nu;'' from the eccentric anomaly ''E''. 
+
+Note from the geometry of the problem that
+:<math>a\cdot\cos E=a\cdot\varepsilon+r\cdot\cos \nu.</math>
+Dividing by ''a'' and inserting from Kepler's first law
+:<math>\ \frac r a =\frac{1-\varepsilon^2}{1+\varepsilon\cdot\cos \nu} </math> 
+to get
+:<math>\cos E
+=\varepsilon+\frac{1-\varepsilon^2}{1+\varepsilon\cdot\cos \nu}\cdot\cos \nu
+=\frac{\varepsilon\cdot(1+\varepsilon\cdot\cos \nu)+(1-\varepsilon^2)\cdot\cos \nu}{1+\varepsilon\cdot\cos \nu}
+=\frac{\varepsilon +\cos \nu}{1+\varepsilon\cdot\cos \nu}.</math>
+The result is a usable relationship between the eccentric anomaly ''E'' and the true anomaly ''&nu;''. 
+
+A computationally more convenient form follows by substituting into the [[trigonometric identity]]:
+:<math>\tan^2\frac{x}{2}=\frac{1-\cos x}{1+\cos x}.</math>
+Get
+:<math>\tan^2\frac{E}{2}
+=\frac{1-\cos E}{1+\cos E}
+=\frac{1-\frac{\varepsilon+\cos \nu}{1+\varepsilon\cdot\cos \nu}}{1+\frac{\varepsilon+\cos \nu}{1+\varepsilon\cdot\cos \nu}}
+=\frac{(1+\varepsilon\cdot\cos \nu)-(\varepsilon+\cos \nu)}{(1+\varepsilon\cdot\cos \nu)+(\varepsilon+\cos \nu)}
+=\frac{1-\varepsilon}{1+\varepsilon}\cdot\frac{1-\cos \nu}{1+\cos \nu}=\frac{1-\varepsilon}{1+\varepsilon}\cdot\tan^2\frac{\nu}{2}.</math>
+Multiplying by (1+<U+03B5>)/(1&minus;<U+03B5>) and taking the square root gives the result
+:<math>\tan\frac \nu2=\sqrt\frac{1+\varepsilon}{1-\varepsilon}\cdot\tan\frac E2.</math>
+
+We have now completed the third step in the connection between time and position in the orbit. 
+
+One could even develop a series computing ''&nu;'' directly from ''M''. [http://info.ifpan.edu.pl/firststep/aw-works/fsII/mul/mueller.html]
+
+The fourth step is to compute the heliocentric distance ''r'' from the true anomaly ''&nu;'' by Kepler's first law:
+:<math>\ r=a\cdot\frac{1-\varepsilon^2}{1+\varepsilon\cdot\cos \nu}.</math>
+
+==Derivation from Newton's laws ==
+Kepler's laws are about the motion of the planets around the sun, while [[Newton's laws]] more generally are about the motion of point particles attracting each other by the force of [[gravitation]].
+
+In the special case where there are only two particles, and one of them is much lighter than the other, and the distance between the particles remains limited, then the lighter particle moves around the heavy particle as a planet around the Sun according to Kepler's laws, as shown below. 
+
+Newton's laws however admit solutions, see the article on the [[two body problem]], where the trajectory of the lighter particle may also be a [[parabola]] or a [[hyperbola]] or a [[straight line]].
+
+Newton's laws imply that the focus of the ellipse is at the centre of mass of the sun and the planet, rather than at the sun alone &mdash; that the period of the orbit depends a little on the mass of the planet &mdash; and that interaction from other planets modifies the orbit of a planet. Still the language of Kepler's laws applies as the complicated orbits are described as simple Kepler orbits with slowly varying [[orbital elements]]. See also [[Kepler problem in general relativity]].
+
+While Kepler's laws are expressed either in geometrical language, or as equations connecting the coordinates of the planet and the time variable with the [[orbital elements]], Newton's second law is a [[differential equation]]. So the derivations below involve the art of solving differential equations.  Kepler's second law is derived first, as the derivation of the first law depends on the derivation of the second law.
+
+===Deriving Kepler's second law===
+Newton's law of gravitation says that "every object in the universe attracts every other object along a line of the centers of the objects, proportional to each object's mass, and inversely proportional to the square of the distance between the objects," and his second law of motion says that "the mass times the acceleration is equal to the force." So the mass of the planet times the acceleration vector of the planet equals the mass of the sun times the mass of the planet, divided by the square of the distance,  times minus the radial [[unit vector]], times a constant of proportionality. This is written:
+
+:<math> m\cdot\ddot\mathbf{r} = \frac{M\cdot m}{r^2}\cdot(-\hat{\mathbf{r}})\cdot G</math>
+
+where a dot on top of the variable signifies differentiation with respect to time, and the second dot indicates the second derivative.
+
+Assume that the planet is so much lighter than the sun that the acceleration of the sun can be neglected.
+
+:<math> \dot\hat{\mathbf{r}} = \dot\nu  \hat{\boldsymbol\nu}</math>
+where <math> \hat{\boldsymbol\nu}</math> is the tangential unit vector, and
+:<math> \dot\hat{\boldsymbol\nu} = -\dot\nu \hat{\mathbf{r}}.</math>
+
+So the position vector
+:<math>\mathbf{r} = r \hat{\mathbf{r}}</math>
+is differentiated twice to give the velocity vector and the acceleration vector
+:<math>\dot\mathbf{r} =\dot r \hat\mathbf{r} + r \dot\hat\mathbf{r}
+=\dot r \hat{\mathbf{r}} + r \dot\nu \hat{\boldsymbol\nu},</math>
+:<math>\ddot\mathbf{r} 
+= (\ddot r \hat{\mathbf{r}} +\dot r \dot\hat{\mathbf{r}} )
++ (\dot r\dot\nu \hat{\boldsymbol\nu} + r\ddot\nu \hat{\boldsymbol\nu}
++ r\dot\nu \dot\hat{\boldsymbol\nu})
+= (\ddot r - r\dot\nu^2) \hat{\mathbf{r}} + (r\ddot\nu + 2\dot r \dot\nu) \hat{\boldsymbol\nu}.</math>
+
+Note that for constant distance, <math>\ r</math>, the planet is subject to the [[centripetal acceleration]], <math>r\dot\nu^2</math>, and for constant angular speed, <math>\dot\nu</math>, the planet is subject to the [[coriolis acceleration]], <math>2\dot r \dot\nu</math>.
+
+Inserting the acceleration vector into Newton's laws, and dividing by ''m'', gives the vector [[equation of motion]]
+:<math> (\ddot r - r\dot\nu^2) \hat{\mathbf{r}} + (r\ddot\nu + 2\dot r \dot\nu) \hat{\boldsymbol\nu}= -GMr^{-2}\hat{\mathbf{r}}</math>
+
+Equating component, we get the two [[ordinary differential equation]]s of motion, one for the radial acceleration and one for the tangential acceleration:
+:<math>\ddot r - r\dot\nu^2 = -GMr^{-2},</math>
+:<math>r\ddot\nu + 2\dot r\dot\nu = 0.</math>
+
+In order to derive Kepler's second law only the tangential acceleration equation is needed. Divide it by <math>\ r \dot\nu:</math>
+:<math>\frac{\ddot\nu}{\dot\nu} +2\frac{\dot r}{r}=0</math>
+and integrate:
+:<math>\log\dot\nu +2\log r = \log\ell,</math>
+where <math>\log\ell</math> is a [[Arbitrary constant of integration|constant of integration]], and exponentiate:
+:<math> r^2\dot \nu =\ell .</math>
+This says that the [[specific angular momentum]] <math> r^2 \dot \nu</math> is a [[constant of motion]], even if both the distance <math>\ r</math> and the [[angular speed]] <math>\dot\nu</math> vary. 
+
+The area swept out from time ''t''<sub>1</sub> to time ''t''<sub>2</sub>,
+:<math>\ \int_{t_1}^{t_2}\frac 1 2 \cdot base\cdot d(height) = \int_{t_1}^{t_2}\frac 1 2 \cdot r\cdot r\dot \nu dt=\frac 1 2 \cdot\ell \cdot(t_2-t_1) </math>
+depends only on the duration ''t''<sub>2</sub>&minus;''t''<sub>1</sub>. This is Kepler's second law.
+
+===Deriving Kepler's first law===
+
+The expression 
+
+:<math>p=\ell ^2 G^{-1}M^{-1}\,</math>
+
+has the dimension of length and is used to make the equations of motion dimensionless. We define
+
+:<math>\ u =pr^{-1}\,</math>
+
+and get
+
+:<math>-GMr^{-2}=-\ell^2 p^{-3}u^{2} </math>
+
+and
+
+:<math>\ \dot \nu =\ell r^{-2}=\ell p^{-2}u^2. </math>
+
+Differentiation with respect to time is transformed into differentiation with respect to angle:
+
+:<math>\ \dot X=\frac {dX}{dt}=\frac {dX}{d\nu}\cdot\frac {d\nu}{dt}=\frac {dX}{d \nu}\cdot \dot\nu=\frac {dX}{d \nu}\cdot\ell p^{-2}u^2. </math>
+
+Differentiate
+
+:<math>\ r =pu^{-1}</math>
+
+twice:
+
+:<math>\dot r = \frac{d(pu^{-1})}{d\nu}\cdot\ell p^{-2}u^{2} = -pu^{-2}\frac{du}{d\nu}\cdot\ell p^{-2}u^{2}= -\ell p^{-1}\frac{du}{d\nu}</math>
+
+:<math>\ddot r = \frac{d\dot r}{d\nu}\cdot\ell p^{-2}u^{2}
+= \frac{d}{d\nu}\left(-\ell p^{-1} \frac{du}{d\nu}\right)\cdot\ell p^{-2}u^{2}
+= -\ell^2 p^{-3}u^{2}\frac{d^2 u}{d\nu^2}</math>
+
+Substitute into the radial equation of motion
+
+:<math>\ddot r - r\dot\nu^2 = -GMr^{-2}</math>
+
+and get
+
+:<math>\left(-\ell^2 p^{-3}u^2\frac{d^2u}{d\nu^2}\right) - (pu^{-1})(\ell p^{-2}u^2)^2 = -\ell ^2 p^{-3} u^2</math>
+
+Divide by <math>-\ell^2 p^{-3}u^2</math> to get a simple [[Linear differential equation#Non-homogeneous linear differential equation with constant coefficients|non-homogeneous linear differential equation]] for the orbit of the planet:
+
+:<math>\frac{d^2u}{d\nu^2} + u = 1 . </math>
+
+An obvious solution to this equation is the circular orbit
+
+:<math>\ u = 1.</math>
+
+Other solutions are obtained by adding solutions to the [[Linear differential equation#Homogeneous linear differential equation with constant coefficients|homogeneous linear differential equation with constant coefficients]]
+
+:<math>\frac{d^2u}{d\nu^2} + u = 0</math>
+
+These solutions are
+
+:<math>\ u =  \varepsilon\cdot\cos(\nu-\nu_0) </math>
+
+where <math>\ \varepsilon </math> and <math>\nu_0\,</math> are arbitrary constants of integration. So the result is
+
+:<math>\ u = 1+ \varepsilon\cdot\cos(\nu-\nu_0) </math>
+
+Choosing the axis of the [[coordinate system]] such that <math>\ \nu_0=0</math>, and inserting <math>\ u=pr^{-1}</math>, gives:
+
+:<math>\ pr^{-1 }  = 1+  \varepsilon\cdot\cos\nu . </math>
+
+If <math>\ \varepsilon<1 , </math> this is Kepler's first law.
+
+===Deriving Kepler's third law===
+In the case of circular orbits, which is a special case of an ellipse with zero eccentricity where the half long axis is equal to the radius ''r'' of the circle, the relation between the radius of the orbit and its period can be derived relatively easily. The [[centripetal force]] of a circular motion is proportional to ''r''/''T''<sup>2</sup> and is provided by the gravitational force, which is proportional to 1/''r''<sup>2</sup>. Hence, <math>r^3 \propto T^2</math>.
+
+For an elliptical orbit, the derivation is more complicated. The area of the planetary orbit ellipse is
+
+:<math>A=\pi a b=\pi a(a\sqrt{1-\varepsilon^2})=\pi a^2\sqrt{1-\varepsilon^2}\,</math>
+
+The area speed of the radius vector sweeping the orbit area is
+
+:<math>\dot A=\ell/ 2 \,</math>
+
+where
+
+:<math>\ell^2=pGM=a(1-\varepsilon^2)GM \,.</math>
+
+The period of the orbit is
+
+:<math>P=\frac A \dot A =\frac {\pi a^2\sqrt{1-\varepsilon^2}}{\ell/2}=2\pi\frac {a^2\sqrt{1-\varepsilon^2}}{\ell}\,</math>
+
+satisfying
+
+:<math>\left(\frac P{2 \pi}\right)^2=\left( \frac {a^2\sqrt{1-\varepsilon^2}}{\ell}\right)^2 = \frac {a^4(1-\varepsilon^2)}{\ell^2} = \frac {a^4(1-\varepsilon^2)}{a(1-\varepsilon^2)GM }=\frac{a^3}{GM}\,</math>
+
+which is Kepler's third law.
+
+==Notes==
+{{reflist}}
+
+==References==
+*Kepler's life is summarized on pages 627&ndash;623 and Book Five of his ''magnum opus'', ''[[Harmonice Mundi]]'' (''harmonies of the world''), is reprinted on pages 635&ndash;732 of ''On the Shoulders of Giants'': The Great Works of Physics and Astronomy (works by [[Copernicus]], [[Johannes Kepler|Kepler]], [[Galileo]], [[Isaac Newton|Newton]], and [[Albert Einstein|Einstein]]). [[Stephen Hawking]], ed. 2002 ISBN 0-7624-1348-4
+
+*A derivation of Kepler's third law of planetary motion is a standard topic in engineering mechanics classes. See, for example, pages 161&ndash;164 of {{Citation|first=J. L. |last=Meriam|year=1971|date=1966, 1971|title=Dynamics, 2nd ed. |location=New York|publisher=John Wiley|ISBN=0-471-59601-9}}.
+
+*Murray and Dermott, Solar System Dynamics, Cambridge University Press 1999, ISBN-10 0-521-57597-4
+
+==See also==
+*[[Kepler orbit]]
+*[[Kepler problem]]
+*[[Circular motion]]
+*[[Gravity]]
+*[[Two-body problem]]
+*[[Free-fall time]]
+*[[Laplace-Runge-Lenz vector]]
+
+==External links==
+* B.Surendranath Reddy; animation of Kepler's laws:  [http://www.surendranath.org/Applets/Dynamics/Kepler/Kepler1Applet.html applet]
+* Crowell, Benjamin, ''Conservation Laws'', [http://www.lightandmatter.com/area1book2.html http://www.lightandmatter.com/area1book2.html], an [[On-line book|online book]] that gives a proof of the first law without the use of calculus. (see section 5.2, p.112)
+* David McNamara and Gianfranco Vidali, ''Kepler's Second Law - Java Interactive Tutorial'', [http://www.phy.syr.edu/courses/java/mc_html/kepler.html http://www.phy.syr.edu/courses/java/mc_html/kepler.html], an interactive Java applet that aids in the understanding of Kepler's Second Law.
+* University of Tennessee's Dept. Physics & Astronomy: Astronomy 161 page on Johannes Kepler: The Laws of Planetary Motion  [http://csep10.phys.utk.edu/astr161/lect/history/kepler.html]
+* Equant compared to Kepler: interactive model [http://people.scs.fsu.edu/~dduke/kepler.html]
+* Kepler's Third Law:interactive model[http://people.scs.fsu.edu/~dduke/kepler3.html]
+
+{{orbits}}
+
+[[Category:Johannes Kepler]]
+[[Category:Celestial mechanics]]
+[[Category:Equations]]
+
+{{Link FA|he}}
+
+[[ar:<U+0642><U+0648><U+0627><U+0646><U+064A><U+0646> <U+0643><U+0628><U+0644><U+0631>]]
+[[ast:Lleis de Kepler]]
+[[bg:<U+0417><U+0430><U+043A><U+043E><U+043D><U+0438> <U+043D><U+0430> <U+041A><U+0435><U+043F><U+043B><U+0435><U+0440>]]
+[[ca:Lleis de Kepler]]
+[[cs:Keplerovy z<U+00E1>kony]]
+[[da:Keplers love]]
+[[de:Keplersche Gesetze]]
+[[et:Kepleri seadused]]
+[[es:Leyes de Kepler]]
+[[eo:Le<U+011D>oj de Kepler]]
+[[eu:Keplerren legeak]]
+[[fa:<U+0642><U+0648><U+0627><U+0646><U+06CC><U+0646> <U+06A9><U+067E><U+0644><U+0631>]]
+[[fr:Lois de Kepler]]
+[[gl:Leis de Kepler]]
+[[ko:<U+CF00><U+D50C><U+B7EC><U+C758> <U+D589><U+C131><U+C6B4><U+B3D9><U+BC95><U+CE59>]]
+[[hy:<U+053F><U+0565><U+057A><U+056C><U+0565><U+0580><U+056B> <U+0585><U+0580><U+0565><U+0576><U+0584><U+0576><U+0565><U+0580>]]
+[[hr:Keplerovi zakoni]]
+[[id:Hukum Gerakan Planet Kepler]]
+[[is:L<U+00F6>gm<U+00E1>l Keplers]]
+[[it:Leggi di Keplero]]
+[[he:<U+05D7><U+05D5><U+05E7><U+05D9> <U+05E7><U+05E4><U+05DC><U+05E8>]]
+[[lv:Keplera likumi]]
+[[lt:Keplerio d<U+0117>sniai]]
+[[hu:Kepler-t<U+00F6>rv<U+00E9>nyek]]
+[[ms:Hukum gerakan planet Kepler]]
+[[nl:Wetten van Kepler]]
+[[ja:<U+30B1><U+30D7><U+30E9><U+30FC><U+306E><U+6CD5><U+5247>]]
+[[no:Keplers lover for planetenes bevegelser]]
+[[oc:Leis de Kepler]]
+[[pl:Prawa Keplera]]
+[[pt:Leis de Kepler]]
+[[ro:Legile lui Kepler]]
+[[ru:<U+0417><U+0430><U+043A><U+043E><U+043D><U+044B> <U+041A><U+0435><U+043F><U+043B><U+0435><U+0440><U+0430>]]
+[[sl:Keplerjevi zakoni]]
+[[sr:<U+0414><U+0440><U+0443><U+0433><U+0438> <U+041A><U+0435><U+043F><U+043B><U+0435><U+0440><U+043E><U+0432> <U+0437><U+0430><U+043A><U+043E><U+043D>]]
+[[fi:Keplerin lait]]
+[[sv:Keplers lagar]]
+[[ta:<U+0B95><U+0BC6><U+0BAA><U+0BCD><U+0BB2><U+0BB0><U+0BBF><U+0BA9><U+0BCD> <U+0B95><U+0BCB><U+0BB3><U+0BCD> <U+0B87><U+0BAF><U+0B95><U+0BCD><U+0B95> <U+0BB5><U+0BBF><U+0BA4><U+0BBF><U+0B95><U+0BB3><U+0BCD>]]
+[[th:<U+0E01><U+0E0E><U+0E01><U+0E32><U+0E23><U+0E40><U+0E04><U+0E25><U+0E37><U+0E48><U+0E2D><U+0E19><U+0E17><U+0E35><U+0E48><U+0E02><U+0E2D><U+0E07><U+0E14><U+0E32><U+0E27><U+0E40><U+0E04><U+0E23><U+0E32><U+0E30><U+0E2B><U+0E4C>]]
+[[uk:<U+0417><U+0430><U+043A><U+043E><U+043D><U+0438> <U+041A><U+0435><U+043F><U+043B><U+0435><U+0440><U+0430>]]
+[[zh:<U+5F00><U+666E><U+52D2><U+5B9A><U+5F8B>]]

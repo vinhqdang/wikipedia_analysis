@@ -1,0 +1,58 @@
+A '''nonlinear filter''' is a signal-processing device whose output is not a [[linear function]] of its input. Terminology concerning the filtering problem may refer to the time domain ([[state space (controls)|state space]]) representation of the signal or to the [[frequency domain]] representation of the signal. When referring to filters with adjectives such as "bandpass, highpass, and lowpass" one has in mind the frequency domain. When resorting to terms like "additive noise", one has in mind the time domain, since the noise that is to be added to the signal is added in the [[state space (controls)|state space]] representation of the signal. The state space representation is more general and is used for the advanced formulation of the filtering problem as a mathematical problem in probability and statistics of stochastic processes. 
+
+==Frequency domain==
+
+In signal processing one often deals with obtaining an input signal and processing it into an output signal. At times the signal may be transmitted through a channel which corrupts it, resulting in a noisy output. As a consequence, the user at the output end has to attempt to reconstruct the original signal given the noisy one. 
+When the noise is additive, i.e. it is added to the signal (rather than multiplied for example) and the statistics of the noise process are know to follow the gaussian statistical law, then a linear filter is known to be optimal under a number of possible criteria (for example the mean square error criterion, aiming at minimizing the variance of the error). This optimality is one of the main reasons why linear filters are so important in the history of signal processing. 
+
+However, in several cases one cannot find an acceptable linear filter, either because the noise is non-additive or non-gaussian.  For example, linear filters can remove additive high frequency noise if the signal and the noise do not overlap in the [[frequency domain]]. Still, in two-dimensional signal processing the signal may have important and structured high frequency components, like edges and small details in image processing. In this case a linear lowpass filter would blur sharp edges and yield bad results. Nonlinear filters should be used instead.
+
+Nonlinear filters locate and remove data that is recognised as noise. The algorithm is 'nonlinear' because it looks at each data point and decides if that data is noise or valid signal. If the point is noise, it is simply removed and replaced by an estimate based on surrounding data points, and parts of the data that are not considered noise are not modified at all. Linear filters, such as those used in bandpass, highpass, and lowpass, lack such a decision capability and therefore modify all data.
+Nonlinear filters are sometimes used also for removing very short wavelength, but high amplitude features from data. Such a filter can be thought of as a noise spike-rejection filter, but it can also be effective for removing short wavelength geological features, such as signals from surficial features.
+
+Examples of nonlinear filters include:
+
+* [[phase-locked loop]]s
+* [[detector (radio)|detector]]s
+* [[mixer]]s
+* [[median filter]]s
+
+When moving to the time domain description of a system, in [[state space (controls)|state space]] form, there is the possibility of describing more effectively the dynamics of a system, considering also the case where the time-evolution of the system is described by non-linear differential (or difference in discrete time) equations, or the case where the observations are a known nonlinear function of the signal then perturbed by additive noise. These are possible further sources of non-linearity, besides non-additive or non-gaussian noise, for which in most cases we have to move into the [[state space (controls)|state space]] description of a system and abandon the [[frequency domain]] formulation. 
+
+
+
+== Time domain: nonlinear filter (estimation theory) ==
+
+When moving in the time domain and mostly under the [[state space (controls)|state space]] representation of a system,  one can have the most general formulation of the nonlinear filtering problem, see also "[[filtering problem (stochastic processes)]]". In this context, and more generally in [[estimation theory]], [[control theory]], and engineering, a '''nonlinear filter''' is an algorithm that estimates the [[state (physics)|state]] of a (stochastic) [[dynamical system]] from noisy measurements, where either the system dynamics model or measurement model is a nonlinear function of the state. When the system is linear the optimal solution is the [[Kalman filter]]. The problem of optimal nonlinear filtering was solved by [[Ruslan L. Stratonovich]] (1959<ref>Stratonovich, R. L. (1959). ''Optimum nonlinear systems which bring about a separation of a signal with constant parameters from noise''. Radiofizika, 2:6, pp. 892-901.</ref>, 1960<ref>Stratonovich, R.L. (1960). ''Application of the Markov processes theory to optimal filtering''. Radio Engineering and Electronic Physics, 5:11, pp.1-19.</ref>), see also [[Harold J. Kushner]]'s work <ref>Kushner, Harold. (1967). Nonlinear filtering: The exact dynamical equations satisfied by the conditional mode. Automatic Control, IEEE Transactions on
+Volume 12, Issue 3, Jun 1967 Page(s): 262 - 267</ref> and [[Moshe Zakai]]'s, who introduced a simplified dynamics for the unnormalized conditional law of the filter<ref>Zakai, Moshe (1969), On the optimal filtering of diffusion processes. Zeit. Wahrsch. 11  230<U+2013>243. [http://www.ams.org/mathscinet-getitem?mr=242552 MR242552] [http://www.zentralblatt-math.org/zmath/en/advanced/?q=an:0164.19201&format=complete Zbl 0164.19201] [http://dx.doi.org/10.1007/BF00536382 DOI 10.1007/BF00536382]</ref> known as [[Zakai equation]].  
+Its linear case is known as the [[Kalman filter]] (or Kalman-Bucy filter).
+The Kushner-Stratonovich solution to the nonlinear filtering problem in continuous time takes the form of a mathematical object called Stochastic Partial Differential Equation. It has been proved by [[Mireille Chaleyat-Maurel]] and Dominique Michel<ref>  Chaleyat-Maurel, Mireille and Dominique Michel. Des resultats de non existence de filtre de dimension
+finie. Stochastics, 13(1+2):83-102, 1984.</ref> that the solution is infinite dimensional in general, and as such requires finite dimensional approximations. These may be heuristics-based such as the Extended [[Kalman Filter]] or the Assumed Density Filters described in [[Peter S. Maybeck]]'s book <ref>Maybeck, Peter S., Stochastic models, estimation, and control, Volume 141, Series Mathematics in Science and Engineering, 1979, Academic Press</ref> or more methodologically driven such as the projection filters introduced by [[Damiano Brigo]], [[Bernard Hanzon]] and [[Fran<U+00E7>ois Le Gland]] <ref>Brigo, Damiano, Hanzon, Bernard and Fran<U+00E7>ois LeGland, A Differential Geometric approach to nonlinear filtering: the Projection Filter, IEEE Transactions on Automatic Control Vol. 43, 2 (1998), pp 247--252.</ref>, some sub-families of which are shown to coincide with the Assumed Density Filters<ref>Brigo, Damiano, Hanzon, Bernard and  Fran<U+00E7>ois Le Gland, Approximate Nonlinear Filtering by Projection on Exponential Manifolds of Densities, Bernoulli, Vol. 5, N. 3 (1999), pp. 495--534</ref>. 
+
+
+* Extended [[Kalman Filter]] and Unscented Kalman Filter
+* [[Particle filter]]
+
+== References ==
+* {{cite book 
+| last = Jazwinski
+| first = Andrew H.
+| title = Stochastic Processes and Filtering Theory 
+| publisher=Academic Press
+| location = New York
+| year = 1970 
+| isbn = 0123815509
+}} 
+<references/>
+
+== See also ==
+
+* [[Nonlinearity]]
+* [[Filtering problem (stochastic processes)]]
+
+== External links ==
+*[http://personal.systemsbiology.net/ilya/NONLINEAR.htm Prof. Ilya Shmulevich page on nonlinear signal processing ]
+
+[[Category: Filter theory]]
+
+[[ru:<U+041D><U+0435><U+043B><U+0438><U+043D><U+0435><U+0439><U+043D><U+044B><U+0439> <U+0444><U+0438><U+043B><U+044C><U+0442><U+0440>]]

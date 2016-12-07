@@ -1,0 +1,202 @@
+'''Surface states''' are [[electronic state]]s found at the [[surface]] of materials. They are formed due to the sharp transition from solid material that ends with a surface and are found only at the atom layers closest to the surface. The termination of a material with a surface leads to a change of the [[electronic band structure]] from the bulk material to the [[vacuum]]. In the weakened potential at the surface, new electronic states can be formed, so called surface states.
+
+==Origin of surface states at condensed matter interfaces==
+[[Image:FigPotential.PNG|thumbnail|350px|'''Figure 1'''. Simplified one-dimensional model of a periodic crystal potential terminating at an ideal surface. At the surface, the model potential jumps abruptly to the vacuum level (solid line). The dashed line represents a more realistic picture, where the potential reaches the vacuum level over some distance.]]
+[[Image:Solution1.PNG|thumbnail|350px|'''Figure 2'''. Real part of the type of solution to the one-dimensional Schr<U+00F6>dinger equation, which correspond to bulk states. These states have Bloch character in the bulk, while decaying exponentially into the vacuum.]]
+[[Image:Solution2.PNG|thumbnail|350px|'''Figure 3'''. Real part of the type of solution to the one-dimensional Schr<U+00F6>dinger equation, which correspond to surface states. These states decay into both the vacuum and the bulk crystal and thus represent states localized at the crystal surface.]]
+As stated by [[Bloch's theorem]], eigenstates of the single electron Schr<U+00F6>dinger equation with a perfectly periodic potential, a crystal, are [[Bloch waves]] <ref name="Kittel">{{cite book|author=C. Kittel|title= Introduction to Solid State Physics|publisher=Wiley|year=1996|pages=80<U+2013>150|isbn=0471142867}}</ref>
+
+:<math>
+\begin{align}
+ \Psi_{n\textbf{k}} &=& e^{i\textbf{k}\cdot\textbf{r}}u_{n\textbf{k}}(\textbf{r}).
+\end{align}
+</math>
+
+Here <math>u_{n\textbf{k}}(\textbf{r})</math> is a function with the same periodicity as the crystal, ''n'' is the band index and '''k''' is the wave number. The allowed wave numbers for a given potential are found by applying the usual Born- von Karman cyclic boundary conditions <ref name="Kittel" />. The termination of a crystal, i.e. the formation of a surface, obviously causes deviation from perfect periodicity. Consequently, if the cyclic boundary conditions are abandoned in the direction normal to the surface the behavior of electrons will deviate from the behavior in the bulk and some modifications of the electronic structure has to be expected. 
+
+A simplified model of the crystal potential in one dimension can be sketched as shown in '''figure 1''' <ref name="Oura">{{cite book|author=K. Oura, V.G. Lifshifts, A.A. Saranin, A. V. Zotov, M. Katayama|title=Surface Science|publisher=Springer-Verlag, Berlin Heidelberg New York|year=2003|chapter=11}}</ref>. In the crystal, the potential has the periodicity, '''a''', of the lattice while close to the surface it has to somehow attain the value of the vacuum level. The step potential (solid line) shown in '''figure 1''' is an oversimplification which is mostly convenient for simple model calculations. At a real surface the potential is influenced by image charges and the formation of surface dipoles and it rather looks as indicated by the dashed line. 
+
+Given the potential in '''figure 1''', it can be shown that the one-dimensional single electron Schr<U+00F6>dinger equation gives two qualitatively different types of solutions.<ref name="Feng">{{cite book|author=Feng Duan, Jin Guojin| title=Condensed Matter Physics:Volume 1|publisher=World Scientific| year=2005|chapter=7|isbn=981256070X}}</ref>.
+
+*The first type of states (see figure 2) extends into the crystal and has Bloch character there. These type of solutions correspond to bulk states which terminate in an exponentially decaying tail reaching into the vacuum.
+*The second type of states (see figure 3) decays exponentially both into the vacuum and the bulk crystal. These type of solutions correspond to states, with wave functions localized close to the crystal surface.
+
+The first type of solution can be obtained for both [[metal]]s and [[semiconductor]]s. In semiconductors though, the associated [[eigenenergy|eigenenergies]] have to belong to one of the allowed energy bands. The second type of solution exists in [[band gap|forbidden energy gap]] of semiconductors as well as in ''local gaps'' of the projected band structure of metals. It can be shown that the energies of these states all lie within the band gap. As a consequence, in the crystal these states are characterized by a imaginary [[wavenumber]] leading to an [[exponential decay]] into the bulk. 
+ 
+===Shockley states and Tamm states===
+In the discussion of surface states, one generally distinguishes between Shockley states<ref name="Shockley">{{cite journal|author=W. Shockley| journal= Phys. Rev.|volume=56|pages=317|year=1939|doi=10.1103/PhysRev.56.317|title=On the Surface States Associated with a Periodic Potential}}</ref> and Tamm states<ref name="Tamm">{{cite journal|author=I. Tamm| journal= Phys. Z. Soviet Union|volume=1|pages=733|year=1932}}</ref>. However there is no real physical distinction between the two terms, only the mathematical approach in describing surface states is different.
+
+*Historically, surface states that arise as solutions to the [[Schr<U+00F6>dinger equation]] in the framework of the nearly free electron approximation for clean and ideal surfaces, are called '''Shockley states'''. Shockley states are thus states that arise due to the change in the electron potential associated solely with the crystal termination. This approach is suited to describe normal metals and some [[narrow gap semiconductors]]. Figures 1 and 2 are examples of Shockley states, derived using the nearly free electron approximation.
+*Surface states that are calculated in the framework of a tight-binding model are often called '''Tamm states'''. In the tight binding approach, the electronic [[wave function]]s are usually expressed as [[linear combinations of atomic orbitals]] (LCAO). In contrast to the nearly free electron model used to describe the Shockley states, the Tamm states are suitable to describe also [[transition metal]]s and [[wide gap semiconductors]]<ref name="Oura" />.
+
+==Shockley states==
+===Surface states in metals===
+A simple model for the derivation of the basic properties of states at a metal surface is a semi-infinite periodic chain of identical atoms.<ref name="SydneySteslicka">{{cite book|author=Sydney G. Davison, Maria Steslicka|title= Basic Theory of surface states|publisher=Oxford University Press|year=1996|chapter=3-5}}</ref> In this model, the termination of the chain represents the surface, where the potential attains the value V<sub>0</sub> of the vacuum in the form of a [[step function]], '''figure 1'''. Within the crystal the potential is assumed periodic with the periodicity '''a''' of the lattice.
+The Shockley states are then found as solutions to the one-dimensional single electron Schr<U+00F6>dinger equation
+
+:<math>
+\begin{align}
+ \left[-\frac{\hbar^2}{2m}\frac{d^2}{dz^2}+V(z)\right]\Psi(z) &=& E\Psi(z),
+\end{align}
+</math>
+
+with the periodic potential
+
+:<math>
+\begin{align}
+V(z)=\left\{
+\begin{array}{cc}
+  V(z+la),& \textrm{for}\quad z<0 \\
+  V_0,&\textrm{for} \quad z>0
+\end{array}\right.,
+\end{align}
+</math>
+
+where ''l'' is an integer.
+The solution must be obtained independently for the two domains ''z''<0 and ''z>0'', where at the domain boundary (z=0) the usual conditions on continuity of the wave function and its derivatives is applied. Since the potential is periodic deep inside the crystal the electronic [[wave function]]s must be [[Bloch wave]]s here. The solution in the crystal is then a linear combination of an incoming and a wave reflected from the surface. For ''z''>0 the solution will be required to decrease exponentially into the vacuum
+
+:<math>
+\begin{align}
+ \Psi(z) &=& \left\{
+\begin{array}{cc}
+  Bu_{-k}e^{-ikz}+Cu_{k}e^{ikz},&\textrm{for} \quad z<0\\
+   A\exp\left[-\sqrt{2m(V_0-E)}\frac{z}{\hbar}\right],& \textrm{for}\quad z>0
+\end{array}\right.,
+\end{align}
+</math>
+
+The wave function for a state at a metal surface is qualitatively shown in '''figure 2'''. It is an extended Bloch wave within the crystal with an exponentially decaying tail outside the surface. The consequence of the tail is a deficiency of negative [[charge density]] just inside the crystal and an increased negative charge density just outside the surface, leading to the formation of a dipole [[double layer]]. The dipole perturbs the potential at the surface leading, for example, to a change of the metal [[work function]].
+
+===Surface states in semiconductors===
+[[Image:BandstructureNFE.PNG|thumbnail|350px|'''Figure 4'''. Electronic band structure in the nearly free electron picture. Away from the Brillouin zone boundary the electron wave function has plane wave character and the dispersion relation is parabolic. At the Brillouin zone boundary the wave function is a standing wave composed of an incoming and a Bragg-reflected wave. This ultimately leads to the creation of a band gap.]]
+The nearly free electron approximation can be used to derive the basic properties of surface states for narrow gap semiconductors. The semi-infinite linear chain model is also useful in this case<ref name="Feng" />. However, now the potential along the atomic chain is assumed to vary as a cosine function
+
+<math>
+\begin{alignat}{2}
+V(z)&=& V\left[\exp\left(i\frac{2\pi z}{a}\right)+\exp\left(-i\frac{2\pi z}{a}\right)\right] \\
+=2 V\cos\left(\frac{2\pi z}{a}\right), \\
+\end{alignat}
+</math>
+
+whereas at the surface the potential is modeled as a step function of height V<sub>0</sub>.
+The solutions to the Schr<U+00F6>dinger equation must be obtained separately for the two domains z < 0 and z > 0. In the sense of the nearly free electron approximation, the solutions obtained for z < 0 will have plain wave character for wave vectors away from the Brillouin zone boundary <math>k=\pm\pi/a</math>, where the dispersion relation will be parabolic, as shown in '''figure 4'''.
+At the Brillouin zone boundaries, Bragg reflection occurs resulting in a [[standing wave]] consisting of a wave with [[wave vector]] <math>k = \pi/a</math> and wave vector <math>k=-\pi/a</math>. 
+
+:<math>
+\begin{align}
+ \Psi(z) &=& Ae^{ik z}+ Be^{i[k -(2\pi/a) ]z}.
+\end{align}
+</math>
+
+Here <math>G=2\pi/a</math> is a [[lattice vector]] of the [[reciprocal lattice]] (see '''figure 4''').
+Since the solutions of interest are close to the Brillouin zone boundary, we set <math>k_\perp=\pi/a+\kappa</math>, where ''<U+03BA>'' is a small quantity. The arbitrary constants ''A'',''B'' are found by substitution into the Schr<U+00F6>dinger equation. This leads to the following eigenvalues
+
+:<math>
+\begin{align}
+ E &=& \frac{\hbar^2}{2m}\left(\frac{\pi}{a}+\kappa\right)^2\pm |V|\left[-\frac{\hbar^2 \pi \kappa}{m a |V|}\pm \sqrt{\left(\frac{\hbar^2 \pi \kappa}{ma |V|}\right)^2+1}\right]
+\end{align}
+</math>
+
+demonstrating the [[band splitting]] at the edges of the [[Brillouin zone]], where the width of the [[forbidden gap]] is given by 2V. The electronic wave functions deep inside the crystal, attributed to the different bands are given by
+
+:<math>
+\begin{align}
+ \Psi_i &=& Ce^{i\kappa z} \left(
+ e^{i\pi z/a} + \left[-\frac{\hbar^2 \pi \kappa}{m a |V|}\pm \sqrt{\left(\frac{\hbar^2 \pi \kappa}{ma |V|}\right)^2+1}\right]e^{-i\pi z/a}\right)
+\end{align}
+</math>
+
+Where ''C'' is a normalization constant.
+Near the surface at ''z = 0'',
+the bulk solution has to be fitted to an exponentially decaying solution, which is compatible with the constant potential ''V<sub>0</sub>''. 
+
+:<math>
+\begin{align}
+ \Psi_0 &=& D\exp\left[-\sqrt{\frac{2m}{\hbar^2}(V_0-E)z}\right]
+\end{align}
+</math>
+
+It can be shown that the matching conditions can be fulfilled for every possible energy [[eigenvalue]] which lies in the allowed band. As in the case for metals, this type of solution represents standing Bloch waves extending into the crystal which spill over into the [[vacuum]] at the surface. A qualitative plot of the wave function is shown in figure 2.
+
+If imaginary values of ''<U+03BA>'' are considered, i.e. ''<U+03BA> = - i<U+00B7>q'' for ''z <U+2264> 0'' and one defines
+ 
+:<math>
+\begin{align}
+  i \sin(2\delta) &=& -i\frac{\hbar^2 \pi q}{maV}
+ \end{align}
+</math>
+
+one obtains solutions with a decaying amplitude into the crystal
+
+:<math>
+\begin{align}
+ \Psi_i(z\leq0) &=& Fe^{qz}\left[\exp\left[i\left(\frac{\pi}{a}z\pm\delta\right)\right]\pm\exp\left[-i\left(\frac{\pi}{a}z\pm\delta\right)\right]\right]e^{\mp i\delta}
+\end{align}
+</math>
+
+The energy eigenvalues are given by
+
+:<math>
+\begin{align}
+ E &=& \frac{\hbar^2}{2m}\left[\left(\frac{\pi}{a}\right)^2-q^2\right]\pm V\sqrt{1-\left(\frac{\hbar^2\pi q}{maV}\right)^2}
+\end{align}
+</math>
+
+E is real for large negative z, as required. Also in the range <math>0\leq q\leq q_{max}=m a V \hbar^2 \pi</math> all energies of the surface states fall into the forbidden gap. The complete solution is again found by matching the bulk solution to the exponentially decaying vacuum solution. The result is a state localized at the surface decaying both into the crystal and the vacuum. A qualitative plot is shown in '''figure 3'''.
+
+===Surface states of a three-dimensional crystal===
+[[Image:Orbitals.PNG|thumbnail|350px|'''Figure 5'''. Atomic like orbitals of a Pt-atom. The orbitals shown are part of the double-zeta basis set used in density functional calculations. The orbitals are indexed according to the usual quantum numbers (n,l,m).]]
+The results for surface states of a [[quantum wire|monoatomic linear chain]] can readily be generalized to the case of a three-dimensional crystal. Because of the two-dimensional periodicity of the surface lattice Bloch's theorem must hold for translations parallel to the surface. As a result, the surface states can be written as the product of a Bloch waves with k-values <math>\textbf{k}_{||}=(k_x,k_y)</math> parallel to the surface and a function representing a one-dimensional surface state
+
+:<math>
+\begin{align}
+\Psi_0(\textbf{r}) &=& \psi_0(z)u_{\textbf{k}_{||}}(\textbf{r}_{||})e^{-i\textbf{r}_{||}\cdot\textbf{k}_{||}}
+\end{align}
+</math>
+
+The energy of this state is increased by a term <math>E_{||}</math> so that we have
+
+:<math>
+\begin{align}
+E_s = E_0 + \frac{\hbar^2\textbf{k}^2_{||}}{2m^*},
+\end{align}
+</math>
+
+where ''m<sup>*</sup>'' is the effective mass of the electron. The matching conditions at the crystal surface, i.e. at z=0, have to be satisfied for each <math>\textbf{k}_{||}</math> separately and for each <math>\textbf{k}_{||}</math> a single, but generally different energy level for the surface state is obtained.
+
+===True surface states and surface resonances===
+A surface state is described by the energy <math>E_s</math> and its wave vector <math>\textbf{k}_{||}</math> parallel to the surface, while a bulk state is characterized by both <math>\mathbf{k}_{||}</math> and <math>\mathbf{k}_\perp</math> wave numbers. In the two-dimensional [[Brillouin zone]] of the surface, for each value of <math>\mathbf{k}_{||}</math> therefore a rod of <math>\mathbf{k}_\perp</math> is extending into the three-dimensional Brillouin zone of the Bulk. Bulk [[energy band]]s that are being cut by these rods allow states that penetrate deep into the crystal.
+One therefore generally distinguishes between true surface states and surface resonances. True surface states are characterized by energy bands that are not degenerate with bulk energy bands. These state are existing in the [[band gap|forbidden energy gap]] only and are therefore localized at the surface, similar to the picture given in '''figure 3''. At energies where a surface and bulk state are degenerate surface and the bulk state can mix, forming a [[surface resonance]]. Such state can propagate deep into the bulk similar to [[Bloch wave]]s, while retaining an enhanced amplitude close to the surface.
+
+==Tamm states==
+Surface states that are calculated in the framework of a tight-binding model are often called Tamm states. In the tight binding approach, the electronic wave functions are usually expressed as a linear combinations of atomic orbitals (LCAO), see figure 5. In this picture, it is easy to comprehend that the existence of a surface will give rise to surface states with energies different from the energies of the bulk states: Since the atoms residing in the topmost surface layer are missing their bonding partners on one side their orbitals have less overlap with the orbitals of neighboring atoms. The splitting and shifting of energy levels of the atoms forming the crystal is therefore smaller at the surface than in the bulk. 
+
+If a particular [[Atomic orbital|orbital]] is responsible for the chemical bonding, e.g. the ''sp<sup>3</sup>'' hybrid in Si or Ge, it is strongly affected by the presence of the surface, bonds are broken, and the remaining lobes of the orbital stick out from the surface. They are called [[dangling bond]]s. The energy levels of such states are expected to significantly shift from the bulk values.
+
+In contrast to the nearly free electron model used to describe the Shockley states, the Tamm states are suitable to describe also [[transition metal]]s and [[wide bandgap semiconductors]].
+
+==Extrinsic surface states==
+Surface states originating from clean and well ordered surfaces are usually called ''intrinsic''. These states include states originating from reconstructed surfaces, where the two-dimensional translational symmetry gives rise to the band structure in the k space of the surface. 
+
+''Extrinsic '' surface states are usually defined as states not originating from a clean and well ordered surface. Surfaces that are fit into the category ''extrinsic'' are <ref name="Seidel">{{cite book|author=Frederick Seitz, Henry Ehrenreich, David Turnbull|title= Solid State Physics|publisher=Academic Press|year=1996|pages=80<U+2013>150|isbn=0126077290}}</ref>:
+
+#Surfaces with defects, where the translational symmetry of the surface is broken.
+#Surfaces with adsorbates 
+#Interfaces between two material such as a semiconductor-oxide or semiconductor-metal interfaces
+#Interfaces between solid and liquid phases.
+
+Generally for ''extrinsic'' surface states is that they cannot easily be characterized in terms of their chemical, physical or structural properties.
+
+==Angle resolved photoemission spectroscopy (ARPES)==
+An experimental technique to measure the dispersion of surface states is angle resolved photoemission spectroscopy ([[ARPES]]) or angle resolved [[ultraviolet photoelectron spectroscopy]] (ARUPS).
+
+==References==
+{{reflist|2}}
+
+[[Category:Materials science]]
+[[Category:Electronic band structures]]
+[[Category:Semiconductor structures]]
+
+[[ja:<U+8868><U+9762><U+6E96><U+4F4D>]]
+[[ru:<U+041F><U+043E><U+0432><U+0435><U+0440><U+0445><U+043D><U+043E><U+0441><U+0442><U+043D><U+044B><U+0435> <U+0441><U+043E><U+0441><U+0442><U+043E><U+044F><U+043D><U+0438><U+044F>]]
+[[uk:<U+041F><U+043E><U+0432><U+0435><U+0440><U+0445><U+043D><U+0435><U+0432><U+0456> <U+0441><U+0442><U+0430><U+043D><U+0438>]]

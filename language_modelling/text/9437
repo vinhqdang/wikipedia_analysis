@@ -1,0 +1,113 @@
+{{dablink|For other uses of this word, see [[promoter (disambiguation)]].}}
+
+A '''promoter''' is a [[DNA]] sequence that contains the information, in the form of DNA sequences, that permits the proper activation or repression of the [[gene]] which it controls, i.e. whether RNA is synthesized or not.  The promoter contains specific sequences that are recognized by proteins known as transcription factors.  These factors bind to the promoter DNA sequences and the end result is the recruitment of RNA polymerase, the enzyme that synthesizes the RNA from the coding region of the gene.  In prokaryotes, the promoter is recognized by [[RNA polymerase]] and an associated sigma factor, which in turn are brought to the promoter DNA by an activator protein binding to its own DNA sequence nearby.  In eukaryotes, the process is more complicated, and at least seven different factors are necessary for the transcription of an RNA polymerase II promoter.
+
+== Promoter elements ==
+Promoters represent critical elements that can work in concert with other regulatory regions ([[Enhancer (genetics)|enhancer]]s, [[silencer (DNA)|silencers]], boundary elements/insulators) to direct the level of transcription of a given gene. As promoters are typically immediately adjacent to the gene in question, positions in the promoter are designated relative to +1, or the transcriptional start site, where transcription of RNA begins for a particular gene. Positions upstream are negative numbers counting back from -1, for example -100 is a position 100 base pairs upstream. 
+
+The usage of canonical sequence for a promoter is often problematic, and can lead to misunderstandings about promoter sequences. Canonical implies perfect, in some sense. In the case of a transcription factor binding site, then there may be a single sequence which binds the protein most strongly under specified cellular conditions. This might be called canonical. However, natural selection may favor less energetic binding as a way of regulating transcriptional output. In this case, we may call the most common sequence in a population, the wild-type sequence. It may not even be the most advantageous sequence to have under prevailing conditions. Recent evidence also indicates that several genes (including the proto-oncogene c-myc) have [[G-quadruplex]] motifs as potential regulatory signals.
+
+A wide variety of algorithms have been developed to facilitate detection of promoters in genomic sequence, and promoter prediction is a common element of many [[gene prediction]] methods. 
+
+A major question in evolutionary biology is how important tinkering with promoter sequences is to evolutionary change, for example, the changes that have occurred in the human lineage after separating from chimps. Some evolutionary biologists, for example Allan Wilson, have proposed that evolution in promoter or regulatory regions may be more important than changes in coding sequences over such time frames.
+
+* Core promoter - the minimal portion of the promoter required to properly initiate transcription
+** Transcription Start Site (TSS)
+** Approximately -35
+** A binding site for [[RNA polymerase]]
+*** [[RNA polymerase I]]: transcribes genes encoding [[ribosomal RNA]]
+*** [[RNA polymerase II]]: transcribes genes encoding [[messenger RNA]] and certain small nuclear RNAs
+*** [[RNA polymerase III]]: transcribes genes encoding [[tRNA]]s and other small RNAs
+** General transcription factor binding sites
+* Proximal promoter - the proximal sequence upstream of the gene that tends to contain primary regulatory elements
+** Approximately -250
+** Specific transcription factor binding sites
+* Distal promoter - the distal sequence upstream of the gene that may contain additional regulatory elements, often with a weaker influence than the proximal promoter
+** Anything further upstream (but not an enhancer or other regulatory region whose influence is positional/orientation independent)
+** Specific transcription factor binding sites
+
+== Promoter sequences ==
+=== Prokaryotic promoters ===
+In [[prokaryote]]s, the promoter consists of two short sequences at -10 and -35 position ''upstream'' from the transcription start site. The sequence at -10 is called the [[Pribnow box]], or the -10 element, and usually consists of the six nucleotides TATAAT. The Pribnow box is absolutely essential to start transcription in prokaryotes. The other sequence at -35 (the -35 element) usually consists of the six nucleotides TTGACA. Its presence allows a very high transcription rate. Some promoters contain so-called "extended -10 element" (consensus sequence 5<U+2019>-TGNTATAAT-3'); the presence of the -35 element appears to be unimportant for transcription from the "extended -10" promoters. It should be noted that the above promoter sequences are only recognized by the sigma-70 protein that interacts with the prokaryotic RNA polymerase. Complexes of prokaryotic RNA polymerase with other sigma factors recognize totally different core promoter sequences.
+
+    <nowiki><--</nowiki> upstream                                                          downstream <nowiki>--></nowiki>
+ 5'-XXXXXXXPPPPPXXXXXXPPPPPPXXXXGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGXXXX-3'
+            -35       -10       Gene to be transcribed
+ .
+ (note that the optimal spacing between the -35 and -10 sequences is 17 nt)
+
+====Probability of occurrence of each nucleotide====
+  for -10 sequence
+  T    A    T    A    A    T
+ 77%  76%  60%  61%  56%  82%
+
+  for -35 sequence
+  T    T    G    A    C    A
+ 69%  79%  61%  56%  54%  54%
+
+=== Eukaryotic promoters ===
+[[Eukaryotic]] promoters are extremely diverse and are difficult to characterize. They typically lie upstream of the gene and can have regulatory elements several kilobases away from the transcriptional start site. In eukaryotes, the transcriptional complex can cause the DNA to bend back on itself, which allows for placement of regulatory sequences far from the actual site of transcription. Many eukaryotic promoters, but by no means all, contain a [[TATA box]] (sequence TATAAA), which in turn binds a [[TATA binding protein]] which assists in the formation of the [[RNA polymerase]] transcriptional complex <ref>Smale ST, Kadonaga JT (2003). The RNA polymerase II core promoter. Annu Rev Biochem. 72, 449-479. PMID 12651739 [http://www.lpt.ens.fr/~monasson/Houches/Kadonaga/CorePromoterAnnuRev2003.pdf PDF]</ref>. The TATA box typically lies very close to the transcriptional start site (often within 50 bases).
+
+Eukaryotic promoter regulatory sequences typically bind proteins called [[transcription factors]] which are involved in the formation of the transcriptional complex. An example is the E-box (sequence CACGTG), which binds transcription factors in the basic-helix-loop-helix (bHLH) family (e.g. BMAL1-Clock, cMyc). <ref>Levine M, Tjian R (2003). Transcription regulation and animal diversity. Nature. 424(6945), 147-151. PMID 12853946 [http://bioweb.usc.edu/courses/2003-fall/documents/bisc320-gp_article1.pdf PDF]</ref>
+
+== Binding ==
+The binding of a promoter sequence (P) to a [[sigma factor]]-[[RNAP]] complex (R) is a two-step process:
+#R+P <U+2194> RP(closed). ''K'' = 10<sup>7</sup>
+#RP(closed) <U+2192> RP(open). ''K'' = 10<sup><U+2212>2</sup>
+
+== Diseases associated with aberrant promoter function ==
+Though [[OMIM]] is a major resource for gathering information on the relationship between mutations and natural variation in gene sequence and susceptibility to hundreds of [[diseases]], it requires a sophisticated search strategy to extract those diseases that are associated with defects in transcriptional control where the promoter is believed to have direct involvement.  This is a [[list of diseases]] that evidence suggests have some involvement of promoter malfunction, either through direct [[mutation]] of a promoter sequence or mutation in a [[transcription factor]] or [[transcriptional co-activator]].  Keep in mind that most diseases are heterogeneous in [[wiktionary:etiology|etiology]], meaning that one "disease" is often many different diseases at the molecular level, though the symptoms exhibited and the response to treatment might be identical.  How diseases respond differently to treatment as a result of differences in the underlying molecular origins is partially addressed by the discipline of [[pharmacogenomics]].  Not listed here are the many kinds of [[cancer]]s that involve aberrant changes in transcriptional regulation owing to the creation of [[chimeric gene]]s through pathological [[chromosomal translocation]].
+
+* [[Asthma]]
+** population genetics study: Hobbs, K.; Negri, J.; Klinnert, M.; Rosenwasser, L.J.; and Borish, L. (1998). Interleukin-10 and transforming growth factor-beta promoter polymorphisms in allergies and asthma. ''Am J Respir Crit Care Med''. '''158''' (6), 1958-1962. PMID 9847292 
+** population genetics study: Burchard, E.G.; Silverman, E.K.; Rosenwasser, L.J.; Borish, L.; Yandava, C.; Pillari, A.; Weiss, S.T.; Hasday, J.; Lilly, C.M.; Ford, J.G.; and Drazen, J.M. (1999). Association between a sequence variant in the IL-4 gene promoter and FEV(1) in asthma. ''Am J Respir Crit Care Med''. '''160''' (3), 919-922. PMID 10471619 
+
+* [[Beta thalassemia]]
+** case study: Kulozik, A.E.; Bellan-Koch, A.; Bail, S.; Kohne, E.; and Kleihauer, E. (1991). Thalassemia intermedia: moderate reduction of beta globin gene transcriptional activity by a novel mutation of the proximal CACCC promoter element. ''Blood''. '''77''' (9), 2054-2058. PMID 2018842 
+
+* [[Rubinstein-Taybi syndrome]]
+** case study: Petrij F, Giles RH, Dauwerse HG, Saris JJ, Hennekam RC, Masuno M, Tommerup N, van Ommen GJ, Goodman RH, Peters DJ, et al. (1995). Rubinstein-Taybi syndrome caused by mutations in the transcriptional co-activator CBP.  ''Nature''. '''376''' (6538), 348-351. PMID 7630403
+
+==See also==
+* [[Regulatory region]]
+* [[ORegAnno]]
+
+==References==
+<!-- ----------------------------------------------------------
+  See http://en.wikipedia.org/wiki/Wikipedia:Footnotes for a 
+  discussion of different citation methods and how to generate 
+  footnotes using the <ref>, </ref> and  <reference /> tags
+----------------------------------------------------------- -->
+<div class="references-small">
+<references />
+</div>
+{{citations missing|date=January 2007}}
+
+== External Links ==
+* ''Directory of computational tools for detecting promoters in sequence data'': {{cite web
+| url = http://www.biodirectory.com/biowiki/Promoter_finders
+| title = BioDirectory
+| accessdate = 2006-12-11
+| format = Directory
+| work = BioDirectory
+| publisher = [[Oxford Informatics]]
+}}
+*[http://www.oreganno.org ORegAnno - Open Regulatory Annotation Database]
+* {{MeshName|Promoter+Regions+(Genetics)}}
+
+*[http://www.switchdb.com SwitchDB] - An online database used to analyze promoters and transcription start sites (TSSs) throughout the human genome. 
+
+
+{{Transcription}}
+[[Category:Gene expression]]
+
+[[eo:Promotoro]]
+[[fr:S<U+00E9>quence promoteur]]
+[[he:<U+05E7><U+05D3><U+05DD>]]
+[[nl:Promotor (genetica)]]
+[[pl:Promotor DNA]]
+[[ru:<U+041F><U+0440><U+043E><U+043C><U+043E><U+0442><U+043E><U+0440> (<U+0431><U+0438><U+043E><U+0445><U+0438><U+043C><U+0438><U+044F>)]]
+[[fi:Promoottori]]
+[[vi:Promoter]]
+[[zh:<U+555F><U+52D5><U+5B50>]]
+[[ja:<U+30D7><U+30ED><U+30E2><U+30FC><U+30BF><U+30FC>]]

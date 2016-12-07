@@ -1,0 +1,84 @@
+{{No footnotes|date=September 2009}}
+
+'''Optimal discriminant analysis (ODA)''' and the related '''classification tree analysis (CTA)''' are statistical methods that maximize predictive accuracy.  For any specific sample and exploratory or confirmatory hypothesis, optimal discriminant analysis (ODA) identifies the statistical model that yields maximum predictive accuracy, assesses the exact [[Type I error]] rate, and evaluates potential cross-generalizability. Optimal discriminant analysis may be applied to >&nbsp;0 dimensions, with the one-dimensional case being referred to as UniODA and the multidimensional case being referred to as MultiODA.  Classification tree analysis is a generalization of optimal discriminant analysis to non-orthogonal trees. Classification tree analysis has more recently been called "hierarchical optimal discriminant analysis".  Optimal discriminant analysis and classification tree analysis may be used to find the combination of variables and cut points that best separate classes of objects or events. These variables and cut points may then be used to reduce dimensions and to then build a  statistical model that optimally describes the data.
+
+Optimal discriminant analysis may be thought of as a generalization of Fisher's [[linear discriminant analysis]].  Optimal discriminant analysis is an alternative to [[analysis of variance|ANOVA]] (analysis of variance) and [[regression analysis]], which attempt to express one [[dependent variable]] as a linear combination of other features or measurements. However, ANOVA and regression analysis give a dependent variable that is a numerical variable, while optimal discriminant analysis gives a dependent variable that is a class variable.
+
+==See also==
+
+* [[Data mining]]
+* [[Decision tree]]
+* [[Factor analysis]]
+* [[Linear classifier]]
+* [[Logit]] (for [[logistic regression]])
+* [[Machine learning]]
+* [[Multidimensional scaling]]
+* [[Perceptron]]
+* [[Preference regression]]
+* [[Quadratic classifier]]
+* [[Statistics]]
+
+== References ==
+<references/>
+* {{cite book
+ | title=Optimal Data Analysis
+ |first1=Paul R.|last1=Yarnold
+ |first2=Robert C.|last2=Soltysik
+ |publisher=American Psychologicla Association
+ |isbn=1-55798-981-8
+ |year=2004
+ |url=http://books.apa.org/books.cfm?id=4316000
+}}
+* {{cite journal
+ |last=Fisher |first=R. A. |authorlink=Ronald Fisher
+ |title=The Use of Multiple Measurements in Taxonomic Problems
+ |journal=[[Annals of Eugenics]]
+ |volume=7
+ |pages=179<U+2013>188
+ |year=1936
+ |id={{hdl|2440/15227}}|doi=10.1111/j.1469-1809.1936.tb02137.x
+ |issue=2
+}}
+* {{cite journal
+ |last1=Martinez |first1=A. M. |last2=Kak |first2=A. C. 
+ |title=PCA versus LDA
+ |journal=[[IEEE Transactions on Pattern Analysis and Machine Intelligence]]
+ |volume=23 |issue=2 |pages=228&ndash;233
+ |year=2001
+ |url=http://www.ece.osu.edu/~aleix/pami01f.pdf
+ |doi=10.1109/34.908974
+}}
+* {{cite journal
+ |author=Mika, S. et al. 
+ |title=Fisher Discriminant Analysis with Kernels
+ |journal=IEEE Conference on Neural Networks for Signal Processing IX
+ |year=1999
+ |pages=41&ndash;48
+ |doi=10.1109/NNSP.1999.788121
+ |url=http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.35.9904
+}}
+
+== External links ==
+*[http://people.revoledu.com/kardi/tutorial/LDA/index.html LDA tutorial using MS Excel]
+*[http://www.roguewave.com/Portals/0/products/imsl-numerical-libraries/fortran-library/docs/7.0/stat/stat.htm IMSL discriminant analysis function DSCRM], which has many useful mathematical definitions.
+
+[[Category:Multivariate statistics]]
+[[Category:Statistical classification]]
+[[Category:Classification algorithms]]
+[[Category:Psychometrics]]
+[[Category:Market research]]
+[[Category:Marketing]]
+[[Category:Consumer behaviour]]
+
+[[de:Diskriminanzanalyse]]
+[[eo:Vikipedio:Projekto matematiko/Lineara diskriminanta analitiko]]
+[[fr:Analyse discriminante lin<U+00E9>aire]]
+[[hr:Linearna analiza razli<U+010D>itih]]
+[[it:Analisi discriminante]]
+[[nl:Discriminantanalyse]]
+[[ja:<U+5224><U+5225><U+5206><U+6790>]]
+[[pl:Liniowa analiza dyskryminacyjna]]
+[[ru:<U+0414><U+0438><U+0441><U+043A><U+0440><U+0438><U+043C><U+0438><U+043D><U+0430><U+043D><U+0442><U+043D><U+044B><U+0439> <U+0430><U+043D><U+0430><U+043B><U+0438><U+0437>]]
+[[sl:Diskriminantna analiza]]
+[[zh:<U+7DDA><U+6027><U+5224><U+5225><U+5206><U+6790>]]
+[[ar:<U+062A><U+062D><U+0644><U+064A><U+0644> <U+0627><U+0644><U+0646><U+0645><U+0648><U+0630><U+062C> <U+0627><U+0644><U+0625><U+062D><U+0635><U+0627><U+0626><U+064A> <U+0627><U+0644><U+0623><U+0645><U+062B><U+0644>]]

@@ -1,0 +1,494 @@
+{{Use dmy dates|date=August 2012}}
+{{Infobox file format
+| name         = Portable Network Graphics
+| icon         = PNG
+| screenshot   = [[Image:PNG transparency demonstration 1.png|280px]] <br />[[Image:PNG transparency demonstration 2.png|280px]]
+| caption      = A PNG image with an 8-bit transparency channel (top). The same image is overlaid onto a checkered background (bottom), typically used in [[graphics software]] to indicate transparency.
+| extension    = .png
+| mime         = image/png
+| typecode     = <code>PNGf</code><br /><code>PNG </code>
+| uniform type = public.png
+| genre        = [[Lossless data compression|lossless]] [[Raster graphics|bitmap]] [[Graphics file format|image format]]
+| containerfor = 
+| containedby  = 
+| owner        = PNG Development Group (donated to [[World Wide Web Consortium|W3C]])
+| released     = {{start date|df=yes|1996|10|01}}
+| extendedfrom = 
+| extendedto   = [[APNG]], [[JPEG Network Graphics|JNG]] and [[Multiple-image Network Graphics|MNG]]
+| standard     = [[International Organization for Standardization|ISO]]/[[International Electrotechnical Commission|IEC]] [[List of ISO standards|15948]],<ref name="iso">{{cite web |url=http://www.iso.org/iso/catalogue_detail.htm?csnumber=29581 |title=ISO/IEC 15948:2004 - Information technology -- Computer graphics and image processing -- Portable Network Graphics (PNG): Functional specification |accessdate=2011-02-19}}</ref> [[Internet Engineering Task Force|IETF]] RFC 2083
+| free          = Yes
+| magic        = <tt>89 50 4e 47 0d 0a 1a 0a</tt>
+}} 
+
+'''Portable Network Graphics''' ('''PNG''' {{IPAc-en|<U+02C8>|p|<U+026A>|<U+014B>}}<ref name="pnghist">{{cite web|url=http://www.libpng.org/pub/png/#history |title=History of PNG |publisher=Libpng.org |date=29 May 2010 |accessdate=2010-10-20}}</ref> {{respell|PING|'}}) is a [[raster graphics]] [[graphics file format|file format]] that supports [[lossless data compression]]. PNG was created as an improved, non-patented replacement for [[Graphics Interchange Format]] (GIF), and is the most used lossless image compression format on the World Wide Web.<ref name=W3Techs>{{cite web|title=The PNG image file format is now more popular than GIF|url=http://w3techs.com/blog/entry/the_png_image_file_format_is_now_more_popular_than_gif|work=W3Techs|publisher=Q-Success|accessdate=March 22, 2013|author=Matthias Gelbmann|date=January 31, 2013|quote=PNG is now used on 62.4% of all websites, just ahead of GIF with 62.3%.}}</ref>  <!-- Cute, but not needed in the intro: The initialism ''PNG'' can also be interpreted as a [[recursive initialism]] for "'''P'''NG's --><!-- Please do not remove the "'". It is a contraction, not a plural. --><!-- '''N'''ot '''G'''IF".<ref name="pnghist" /> -->
+
+PNG supports palette-based images (with palettes of 24-bit [[RGB color model|RGB]] or 32-bit [[RGBA]] colors), [[grayscale]] images (with or without [[alpha channel]]), and full-color non-palette-based RGB[A] images (with or without alpha channel). PNG was designed for transferring images on the Internet, not for professional-quality print graphics, and therefore does not support non-RGB [[color space]]s such as [[CMYK color model|CMYK]].
+
+PNG files nearly always use file extension <code>PNG</code> or <code>png</code> and are assigned [[MIME type|MIME]] media type <code>image/png</code>. PNG was approved for this use by the [[Internet Engineering Steering Group]] on 14 October 1996,<ref>[http://www.iana.org/assignments/media-types/image/png IANA.org]</ref> and was published as an ISO/IEC standard in 2004.<ref name="iso" />
+
+== History and development ==
+{{see also|Graphics Interchange Format#Unisys and LZW patent enforcement}}
+The motivation for creating the PNG format was in early 1995, after it became known that the [[Lempel<U+2013>Ziv<U+2013>Welch]] (LZW) [[data compression]] algorithm used in the [[Graphics Interchange Format]] (GIF) format was [[patent]]ed by [[Unisys]]. There were also other problems with the GIF format that made a replacement desirable, notably its limit of 256 [[color]]s at a time when computers able to display far more than 256 colors were growing common. Although GIF allows for [[computer animation|animation]], it was decided that PNG should be a single-image format. A companion format called [[Multiple-image Network Graphics]] (MNG) has been defined for animation, whereas a competing format, [[APNG|Animated Portable Network Graphics (APNG)]], supports backward-compatibility with PNG (which MNG does not).
+
+A January 1995 precursory discussion thread, on the [[usenet newsgroup]] "comp.graphics" with the subject ''Thoughts on a GIF-replacement file format'', had many propositions, which would later be part of the PNG file format. In this thread, Oliver Fromme, author of the popular [[DOS]] [[JPEG]] viewer [[QPEG]], proposed the PING name, meaning ''[[Recursive acronym|PING is not GIF]]'', and also the PNG extension.<ref name="fromme">{{cite web|author=TBH &nbsp; View profile &nbsp; &nbsp;More options |url=http://groups.google.com/group/comp.graphics/msg/1131d852358a7578 |title=Thoughts on a GIF-replacement file format |publisher=Groups.google.com |date=6 January 1995 |accessdate=2010-10-20}}</ref>
+* 1 October 1996: Version 1.0 of the PNG specification was released, and later appeared as [[Request for Comments|RFC]] 2083. It became a [[World Wide Web Consortium|W3C]] Recommendation on 1 October 1996.
+* 31 December 1998: Version 1.1, with some small changes and the addition of three new chunks, was released.
+* 11 August 1999: Version 1.2, adding one extra chunk, was released.
+* 10 November 2003: PNG became an International Standard ([[International Organization for Standardization|ISO]]/[[International Electrotechnical Commission|IEC]] 15948:2003). This version of PNG differs only slightly from version 1.2 and adds no new chunks.
+* 3 March 2004: [http://www.iso.org/iso/en/CatalogueDetailPage.CatalogueDetail?CSNUMBER=29581&scopelist=PROGRAMME ISO/IEC 15948:2004].<ref name="iso" />
+
+== PNG Working Group ==
+The original PNG specification was authored by an ad-hoc group of computer graphics experts and enthusiasts.  Discussions and decisions about the format were done exclusively via email.  The original authors listed on RFC 2083 are:<ref name=rfc2083>{{cite web|author=Thomas Boutell|url=http://tools.ietf.org/html/rfc2083|title=PNG (Portable Network Graphics) Specification 1.0|date=1 March 1997}}</ref>
+
+*Editor: [[Thomas Boutell]]
+*Contributing Editor: [[Tom Lane (computer scientist)|Tom Lane]]
+*Authors (in alphabetical order): [[Mark Adler]], [[Thomas Boutell]], [[Christian Brunschen]], [[Adam M. Costello]], [[Lee Daniel Crocker]], [[Andreas Dilger]], [[Oliver Fromme]], [[Jean-loup Gailly]], [[Chris Herborth]], [[Aleks Jakulin]], [[Neal Kettler]], [[Tom Lane (computer scientist)|Tom Lane]], [[Alexander Lehmann]], [[Chris Lilley (computer scientist)|Chris Lilley]], Dave Martindale, [[Owen Mortensen]], [[Keith S. Pickens]], [[Robert P. Poole]], [[Glenn Randers-Pehrson]], [[Greg Roelofs]], [[Willem van Schaik]], [[Guy Schalnat]], [[Paul Schmidt (computer programmer)|Paul Schmidt]], [[Tim Wegner]], [[Jeremy Wohl]]
+
+== Technical details ==
+[[File:PNG-Gradient hex.png|thumb|The PNG image [[File:PNG-Gradient.png|30px]] viewed with a [[hex editor]]]]
+
+=== File header ===
+A PNG file starts with an 8-[[byte]] [[Binary signature|signature]]. The [[hexadecimal]] byte values are <code>89 50 4E 47 0D 0A 1A 0A</code>; the decimal values are <code>137 80 78 71 13 10 26 10</code>. Each of the header bytes is there for a specific reason:<ref>{{cite web|url=http://www.libpng.org/pub/png/spec/1.1/PNG-Rationale.html#R.PNG-file-signature |title=PNG (Portable Network Graphics) Specification, Version 1.1<U+2013>12. Appendix: Rationale |publisher=Libpng.org |date= |accessdate=2010-10-20}}</ref>
+
+{|class=wikitable
+! style="text-align:left; background:#def;"|Bytes
+! style="text-align:left; background:#def;"|Purpose
+|-
+|<code>89</code>
+|Has the high bit set to detect transmission systems that do not support [[8-bit clean|8 bit data]] and to reduce the chance that a text file is mistakenly interpreted as a PNG, or vice versa.
+|-
+|<code>50 4E 47</code>
+|In [[ASCII]], the letters ''PNG'', allowing a person to identify the format easily if it is viewed in a text editor.
+|-
+|<code>0D 0A</code>
+|A [[DOS]]-style [[newline|line ending]] (CRLF) to detect DOS-Unix line ending conversion of the data.
+|-
+|<code>1A</code>
+|A byte that stops display of the file under DOS when the command [[type (command)|type]] has been used<U+2014>the [[end-of-file]] character
+|-
+|<code>0A</code>
+|A Unix-style line ending (LF) to detect Unix-DOS line ending conversion.
+|}
+
+=== "Chunks" within the file ===
+After the header comes a series of [[Chunk (information)|chunks]], each of which conveys certain information about the image. Chunks declare themselves as ''critical'' or ''ancillary'', and a program encountering an ancillary chunk that it does not understand can safely ignore it.  This chunk-based storage layer structure, similar in concept to a [[Container format (digital)|container format]], is designed to allow the PNG format to be extended while maintaining compatibility with older versions<U+2014>it provides [[forward compatibility]], and this same file structure (with different signature and chunks) is used in the associated [[MNG]], [[JPEG Network Graphics|JNG]], and [[APNG]] formats.
+
+A chunk consists of four parts: length (4 bytes), chunk type/name (4 bytes), chunk data (length bytes) and [[cyclic redundancy check|CRC]] (cyclic redundancy code/checksum; 4 bytes). The CRC is a network-byte-order CRC-32 computed over the chunk type and chunk data, but not the length.
+
+{| class="wikitable" style="text-align: center;"
+|-
+! style="width: 8em"  | Length
+! style="width: 8em"  | Chunk type
+! style="width: 16em" | Chunk data
+! style="width: 8em"  | CRC
+|-
+| 4 bytes
+| 4 bytes
+| ''Length'' bytes
+| 4 bytes
+|}
+
+Chunks are given a four-letter [[Case sensitivity|case sensitive]] ASCII type/name; compare [[FourCC]]. The case of the different letters in the name (bit 5 of the numeric value of the character) is a [[bit field]] that provides the [[decoder]] with some information on the nature of chunks it does not recognize.
+
+The case of the first letter indicates whether the chunk is critical or not. If the first letter is uppercase, the chunk is critical; if not, the chunk is ancillary.  Critical chunks contain information that is necessary to read the file. If a decoder encounters a critical chunk it does not recognize, it must abort reading the file or supply the user with an appropriate warning.
+
+The case of the second letter indicates whether the chunk is "public" (either in the specification or the registry of special-purpose public chunks) or "private" (not standardised). Uppercase is public and lowercase is private. This ensures that public and private chunk names can never conflict with each other (although two private chunk names could conflict).
+
+The third letter must be uppercase to conform to the PNG specification. It is reserved for future expansion. Decoders should treat a chunk with a lower case third letter the same as any other unrecognised chunk.
+
+The case of the fourth letter indicates whether the chunk is safe to copy by editors that do not recognize it. If lowercase, the chunk may be safely copied regardless of the extent of modifications to the file. If uppercase, it may only be copied if the modifications have not touched any critical chunks.
+
+==== Critical chunks ====
+A decoder must be able to interpret critical chunks to read and render a PNG file.
+* <code>IHDR</code> must be the first chunk; it contains the image's width, height, and bit depth.<ref>{{cite web |url=http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html#C.IHDR |title=Chunk Specifications |chapter= |author=Glenn Randers-Pehrson & Thomas Boutell (editors)|year=1999 |work=PNG (Portable Network Graphics) Specification, Version 1.2 |publisher=Massachusetts Institute of Technology (MIT) |accessdate=30 Jan 2011 }}</ref>
+* <code>PLTE</code> contains the [[Palette (computing)|palette]]; list of colors.
+* <code>IDAT</code> contains the image, which may be split among multiple IDAT chunks. Such splitting increases filesize slightly, but makes it possible to generate a PNG in a streaming manner. The IDAT chunk contains the actual image data, which is the output stream of the compression algorithm.<ref>{{cite web|url=http://www.w3.org/TR/PNG/#11IDAT |title=Portable Network Graphics (PNG) Specification (Second Edition) |publisher=W3.org |date= |accessdate=2013-05-01}}</ref>
+* <code>IEND</code> marks the image end.
+The <code>PLTE</code> chunk is essential for color type 3 (indexed color). It is optional for color types 2 and 6 (truecolor and truecolor with alpha) and it must not appear for color types 0 and 4 (grayscale and grayscale with alpha).
+
+==== Ancillary chunks ====
+Other image attributes that can be stored in PNG files include [[gamma correction|gamma]] values, background color, and textual [[metadata]] information. PNG also supports [[color management]] through the inclusion of [[International Color Consortium|ICC]] [[color space]] profiles.<ref>{{cite web | url = http://www.libpng.org/pub/png/spec/iso/index-object.html#11iCCP | title = Portable Network Graphics (PNG) Specification (Second Edition) Information technology <U+2014> Computer graphics and image processing <U+2014> Portable Network Graphics (PNG): Functional specification. ISO/IEC 15948:2003 (E) W3C Recommendation 10 November 2003}}</ref>
+
+* <tt>bKGD</tt> gives the default background color. It is intended for use when there is no better choice available, such as in standalone image viewers (but not web browsers; see below for more details).
+* <tt>cHRM</tt> gives the [[chromaticity]] coordinates of the display [[Primary color|primaries]] and [[white point]].
+* <tt>gAMA</tt> specifies [[Gamma correction|gamma]].
+* <tt>hIST</tt> can store the histogram, or total amount of each color in the image.
+* <tt>iCCP</tt> is an [[ICC color profile]].
+* <tt>iTXt</tt> contains [[UTF-8]] text, compressed or not, with an optional [[IETF language tag|language tag]]. iTXt chunk with the keyword 'XML:com.adobe.xmp' can contain [[Extensible Metadata Platform]] (XMP).
+* <tt>pHYs</tt> holds the intended pixel size and/or [[aspect ratio]] of the image.
+* <tt>sBIT</tt> (significant bits) indicates the color-accuracy of the source data.
+* <tt>sPLT</tt> suggests a palette to use if the full range of colors is unavailable.
+* <tt>sRGB</tt> indicates that the standard [[sRGB color space]] is used.
+* <tt>sTER</tt> stereo-image indicator chunk for [[stereoscopic]] images.<ref>{{cite web|url=http://www.libpng.org/pub/png/png2006.html |title=PNG News from 2006 |publisher=Libpng.org |date=}}</ref>
+* <tt>tEXt</tt> can store text that can be represented in [[ISO/IEC 8859-1]], with one name=value pair for each chunk.
+* <tt>tIME</tt> stores the time that the image was last changed.
+* <tt>tRNS</tt> contains transparency information. For indexed images, it stores alpha channel values for one or more palette entries. For truecolor and grayscale images, it stores a single pixel value that is to be regarded as fully transparent.
+* <tt>zTXt</tt> contains compressed text with the same limits as <tt>tEXt.</tt>
+
+The lowercase first letter in these chunks indicates that they are not needed for the PNG specification. The lowercase last letter in some chunks indicates that they are safe to copy, even if the application concerned does not understand them.
+
+=== Color depth ===
+
+{| class="wikitable floatright"
+|+ PNG color options<ref>[http://www.w3.org/TR/PNG/#11IHDR Portable Network Graphics (PNG) Specification (Second Edition): 11.2.2 IHDR Image header].</ref>
+! colspan=7| Bits per pixel
+|-
+! rowspan=2| Color option
+! rowspan=2| Channels
+! colspan=5| Bits per channel
+|-
+! 1 !! 2 !! 4 !! 8 !! 16
+|-
+! Indexed
+! 1
+| {{yes|1}} || {{yes|2}} || {{yes|4}} || {{yes|8}} || {{no|}}
+|-
+! Grayscale
+! 1
+| {{yes|1}} || {{yes|2}} || {{yes|4}} || {{yes|8}} || {{yes|16}}
+|-
+! Grayscale & alpha
+! 2
+| {{no|}} || {{no|}} || {{no|}} || {{yes|16}} || {{yes|32}}
+|-
+! Truecolor
+! 3
+| {{no|}} || {{no|}} || {{no|}} || {{yes|24}} || {{yes|48}}
+|-
+! Truecolor & alpha
+! 4
+| {{no|}} || {{no|}} || {{no|}} || {{yes|32}} || {{yes|64}}
+|}
+
+PNG images can either use palette-indexed color or be made up of one or more channels (numerical values directly representing quantities about the pixels). When there is more than one channel in an image all channels have the same number of bits allocated per pixel (known as the [[Color depth|bit depth]] of the channel). Although the PNG specification always talks about the bit depth of channels, most software and users generally talk about the total number of bits per pixel (sometimes also referred to as bit depth or [[color depth]]). If there is more than one channel, the number of bits per pixel is higher than the number of bits per channel, as shown in the illustration at right.
+
+The number of channels will depend on whether the image is grayscale or color and whether it has an [[alpha channel]]. PNG allows the following combinations of channels, called the ''color type''.
+
+The color type is specified in the color type field, which is a [[bit field]], as explained in the table below at right.  Not all combinations are valid, however: there is no ''indexed grayscale'', which would be color types 1 and 5; transparency in palette images is indicated by the presence of a <code>tRNS</code> chunk, not a separate channel, so there is no color type 7.
+
+{| class="wikitable floatright"
+|+ PNG color types
+!rowspan=2| Color<br> type
+!rowspan=2| Name
+!colspan=4| Binary
+!rowspan=2| Masks
+|-
+!title="undefined"| &nbsp; !!title="alpha"| A !!title="color"| C !!title="palette"| P
+|-
+! 0 !! Grayscale
+| {{no|0}}||{{no|0}}||{{no|0}}||{{no|0}}
+| &nbsp;
+|-
+! 1 !! (Indexed grayscale)
+| {{no|0}}||{{no|0}}||{{no|0}}||{{yes|1}}
+| palette
+|-
+! 2 !! Truecolor
+| {{no|0}}||{{no|0}}||{{yes|1}}||{{no|0}}
+| color
+|-
+! 3 !! Indexed
+| {{no|0}}||{{no|0}}||{{yes|1}}||{{yes|1}}
+| color, palette
+|-
+! 4 !! Grayscale & alpha
+| {{no|0}}||{{yes|1}}||{{no|0}}||{{no|0}}
+| alpha
+|-
+! 5 !! (Indexed grayscale & alpha)
+| {{no|0}} || {{yes|1}} || {{no|0}} || {{yes|1}}
+| alpha, palette
+|-
+! 6 !! Truecolor & alpha
+| {{no|0}} || {{yes|1}} || {{yes|1}} || {{no|0}}
+| alpha, color
+|-
+! 7 !! (Indexed & alpha)
+| {{no|0}} || {{yes|1}} || {{yes|1}} || {{yes|1}}
+| alpha, color, palette
+|}
+* 0: grayscale
+* 2: red, green and blue: rgb/truecolor
+* 3: indexed: channel containing indices into a palette of colors
+* 4: grayscale and alpha: level of transparency for each pixel
+* 6: red, green, blue and alpha
+
+With indexed color images, the palette is always stored in RGB at a depth of 8 bits per channel (24 bits per palette entry). Additionally, an optional array of 8-bit alpha values of the palette entries may be included. The palette must not have more entries than the image bit depth allows for, but it may have fewer (for example, if an image only uses 90 colors then it does not need palette entries for all 256 colors).
+
+Indexed color PNGs are allowed to have 1, 2, 4 or 8 bits per pixel by the standard; grayscale images with no alpha channel allow for 1, 2, 4, 8 or 16 bits per pixel. Everything else uses a bit depth per channel of either 8 or 16. The combinations this allows are given in the table above. The standard requires that decoders can read all supported color formats, but many image editors can only produce a small subset of them.
+
+=== Transparency of image ===
+PNG offers a variety of transparency options. With truecolor and grayscale images either a single pixel value can be declared as transparent or an [[alpha channel]] can be added (enabling any percentage of partial transparency to be used). For paletted images, alpha values can be added to palette entries. The number of such values stored may be less than the total number of palette entries, in which case the remaining entries are considered fully opaque.
+
+The scanning of pixel values for binary transparency is supposed to be performed before any color reduction to avoid pixels' becoming unintentionally transparent. This is most likely to pose an issue for systems that can decode 16-bits-per-channel images (as they must to be compliant with the specification) but only output at 8 bits per channel (the norm for all but the highest end systems).
+
+Alpha storage can be "associated" ("premultiplied") or "unassociated", but PNG standardized<ref name="w3.org">[http://www.w3.org/TR/PNG-Rationale.html PNG Specification: Rationale]</ref> on "unassociated" ("non-premultiplied") alpha so that images with separate transparency masks can be stored losslessly.
+
+=== Compression ===
+PNG uses a 2-stage compression process:
+* pre-compression: filtering (prediction)
+* compression: DEFLATE
+
+PNG uses a non-patented [[lossless data compression]] method known as [[DEFLATE]], which is the same algorithm used in the [[zlib]] compression library.
+
+==== Filtering ====
+[[File:Pixel-prediction.svg|thumb|128px|PNG's filter method 0 can use the data in pixels A, B, and C to predict the value for X.]]
+[[File:PNG-Gradient.png|thumb|128px|A PNG with 256 colors, which is only 251 bytes large with pre-filter. The same image as a GIF would be more than thirteen times larger.]]
+
+Before DEFLATE is applied, the data is precompressed, via a prediction method: a single ''filter method'' is used for the entire image, while for each image line, a ''filter type'' is chosen that transforms the data so that it is hopefully more easily compressed.<ref>{{cite web|url=http://www.w3.org/TR/PNG/#9Filters |title=Portable Network Graphics (PNG) Specification (Second Edition): 9 Filtering |publisher=W3.org |date= |accessdate=2010-10-20}}</ref>
+
+There is only one filter method in the current PNG specification (denoted method 0), and thus in practice the only choice is which filter type to apply to each line.  For this method, the filter predicts the value of each pixel based on the values of previous neighboring pixels, and subtracts the predicted color of the pixel from the actual value, as in [[DPCM]]. An image line filtered in this way is often more compressible than the raw image line would be, especially if it is similar to the line above, since the differences from prediction will generally be clustered around 0, rather than spread over all possible image values. This is particularly important in relating separate rows, since DEFLATE has no understanding that an image is a 2D entity, and instead just sees the image data as a stream of bytes.
+
+There are five filter types for filter method 0; each type predicts the value of each byte (of the image data before filtering) based on the corresponding byte of the pixel to the left (''A''), the pixel above (''B''), and the pixel above and to the left (''C'') or some combination thereof, and encodes the ''difference'' between the predicted value and the actual value.  Filters are applied to byte values, not pixels; pixel values may be one or two bytes, or several values per byte, but never cross byte boundaries.  The filter types are:<ref>{{cite web | url = http://www.libpng.org/pub/png/spec/1.2/PNG-Filters.html | work = PNG Specification | title = Filter Algorithms}}</ref>
+
+{| class="wikitable"
+|-
+! Type byte !! Filter name !! Predicted value
+|-
+| 0 || None || Zero (so that the raw byte value passes through unaltered)
+|-
+| 1 || Sub || Byte ''A'' (to the left)
+|-
+| 2 || Up || Byte ''B'' (above)
+|-
+| 3 || Average || Mean of bytes ''A'' and ''B'', rounded down
+|-
+| 4 || Paeth || ''A'', ''B'', or ''C'', whichever is closest to {{nowrap|1=''p'' = ''A'' + ''B'' <U+2212> ''C''}}
+|}
+The Paeth filter is based on an algorithm by Alan W. Paeth.<ref>Paeth, A.W., "Image File Compression Made Easy", in Graphics Gems II, James Arvo, editor. Academic Press, San Diego, 1991. ISBN 0-12-064480-0.</ref>
+Compare to the version of [[DPCM]] used in [[lossless JPEG]], and to the [[discrete wavelet transform]] using 1<U+00D7>2, 2<U+00D7>1, or (for the Paeth predictor) 2<U+00D7>2 windows and [[Haar wavelet]]s.
+
+Compression is further improved by choosing filter types adaptively on a line-by-line basis. This improvement, and a heuristic method of implementing it commonly used by PNG-writing software, were created by [[Lee Daniel Crocker]], who tested the methods on many images during the creation of the format;<ref>{{cite journal | url = http://www.ddj.com/architect/184409587?pgno=4 | title = PNG: The Portable Network Graphic Format | work = [[Dr. Dobb's Journal]] | issue = 232 | month = July | year = 1995 | volume = 20 | pages = 36<U+2013>44 | first = Lee Daniel | last = Crocker | authorlink = Lee Daniel Crocker}}</ref> the choice of filter is a component of file size optimization, as discussed below.
+
+If interlacing is used, each stage of the interlacing is filtered separately, meaning that the image can be progressively rendered as each stage is received; however, interlacing generally makes compression less effective.
+
+=== Interlacing ===
+[[File:Adam7 passes.gif|thumb|An illustration of Adam7 interlacing over a 16<U+00D7>16 image.]]
+PNG offers an optional 2-dimensional, 7-pass [[interlacing (bitmaps)|interlacing]] scheme<U+2014>the [[Adam7 algorithm]]. This is more sophisticated than GIF's 1-dimensional, 4-pass scheme, and allows a clearer low-resolution image to be visible earlier in the transfer, particularly if interpolation algorithms such as [[bicubic interpolation]] are used.<ref>{{cite web|url=http://nuwen.net/png.html |title=Introduction to PNG |publisher=nuwen.net |date= |accessdate=2010-10-20}}</ref>
+
+However, the 7-pass scheme tends to reduce the data's compressibility more than simpler schemes.
+
+=== Animation ===
+PNG itself does not support animation at all. [[Multiple-image Network Graphics|MNG]] is an extension to PNG that does; it was designed by members of the PNG Group. MNG shares PNG's basic structure and chunks, but it is significantly more complex and has a different file signature, which automatically renders it incompatible with standard PNG decoders.
+
+The complexity of MNG led to the proposal of [[APNG]] by developers of the Mozilla Foundation. It is based on PNG, supports animation and is simpler than MNG. APNG offers fallback to single-image display for PNG decoders that do not support APNG. However, neither of these formats is currently widely supported. APNG is supported in [[Mozilla Firefox|Firefox]] 3.0 and [[Opera (web browser)|Opera]] 9.5.<ref>{{cite web|url=http://my.opera.com/desktopteam/blog/2007/09/14/opera-9-5-build |title=Opera Desktop Team: Post-Alpha Opera 9.5 Release |publisher=My.opera.com |date= |accessdate=2010-10-20}}</ref> The PNG Group decided in April 2007 not to embrace APNG.<ref>{{cite web|url=http://sourceforge.net/mailarchive/message.php?msg_name=3.0.6.32.20070420132821.012dd8e8%40mail.comcast.net|title=Vote failed: APNG 20070405a|date=20 April 2007}}</ref> Several alternatives were under discussion, [[Animated Network Graphics|ANG]], [[mPNG|aNIM/mPNG]], <U+201C>[[PNG in GIF]]<U+201D> and its subset <U+201C>RGBA in GIF<U+201D>.<ref>[http://gjuyn.xs4all.nl/pnganim.html Comparison of animated PNG format proposals]</ref>
+
+== Comparison to other file formats ==
+
+=== Comparison to Graphics Interchange Format (GIF) ===
+* On small images, GIF can achieve greater compression than PNG (see the [[#File size and optimization software|section on filesize]], below).
+* On most images, except for the above cases, GIF will be bigger than indexed PNG.
+* PNG gives a much wider range of transparency options than GIF, including [[alpha channel]] transparency.
+* Whereas GIF is limited to 8-bit [[indexed color]], PNG gives a much wider range of color depths, including 24-bit (8 bits per channel) and 48-bit (16 bits per channel) [[True Color|truecolor]], allowing for greater color precision, smoother fades, etc.<ref>{{cite web|url=http://www.libpng.org/pub/png/pngintro.html |title=A Basic Introduction to PNG Features |publisher=Libpng.org |date= |accessdate=2010-10-20}}</ref>  When an alpha channel is added, up to 64 bits per pixel (before compression) are possible.
+* When converting an image from the PNG format to GIF, the image quality may suffer due to [[posterization]] if the PNG image has more than 256 colors.
+* GIF intrinsically supports animated images. PNG supports animation only via unofficial extensions (see the [[#Animation|section on animation]], above).
+
+PNG images are less widely supported by older browsers.  In particular, IE6 has limited support for PNG.<ref>{{cite web|url=http://www.sitepoint.com/gif-png-jpg-which-one-to-use/ |title=GIF, PNG, JPG. Which One To Use? |publisher=Sitepoint.com |date=3 August 2009 |accessdate=2010-10-20}}</ref> As users adopt newer browsers, this becomes less of an issue.
+
+=== Comparison to JPEG ===
+[[Image:Comparison of JPEG and PNG.png|thumb|200px|left|Composite image comparing lossy compression in JPEG with lossless compression in PNG: the JPEG artifacts are easily visible in the background, where the PNG image has solid color.]]
+
+[[JPEG]] (Joint Photographic Experts Group) format can produce a smaller file than PNG for [[photography|photographic]] (and photo-like) images, since JPEG uses a [[lossy compression|lossy encoding method]] specifically designed for photographic image data, which is typically dominated by soft, low-contrast transitions, and an amount of noise or similar irregular structures. Using PNG instead of a high-quality JPEG for such images would result in a large increase in filesize with [[transparency (data compression)|negligible]] gain in quality. In contrast, when storing images that contain text, line art, or graphics <U+2013> images with sharp transitions and large areas of solid color <U+2013> the PNG format can compress image data more than JPEG can. Additionally, PNG is lossless, while JPEG produces noticeable visual artifacts around high-contrast areas. Where an image contains both sharp transitions and photographic parts a choice must be made between the two effects. JPEG does not support transparency.
+
+Because JPEG uses lossy compression, it also suffers from [[generation loss]], where repeatedly encoding and decoding an image progressively loses information and degrades the image. Because PNG is lossless, it is suitable for storing images to be edited. While PNG is reasonably efficient when compressing photographic images, there are lossless compression formats designed specifically for photographic images, [[lossless JPEG 2000]] and [[Adobe DNG]] (digital negative) for example. However these formats are either not widely supported, or proprietary. An image can be stored losslessly and converted to JPEG format only for distribution, so that there is no generation loss.
+
+The PNG specification does not include a standard for embedded [[Exchangeable image file format|Exif]] image data from sources such as digital cameras. [[TIFF]], JPEG 2000, and DNG support EXIF data.
+
+Early web browsers did not support PNG images; JPEG and GIF were the main image formats. JPEG was commonly used when exporting images containing gradients for web pages, because of GIF's limited color depth. However, JPEG compression causes a gradient to blur slightly. A PNG file will reproduce a gradient as accurately as possible for a given bit depth, while keeping the file size small. PNG became the optimal choice for small gradient images as web browser support for the format improved.
+
+=== Comparison to JPEG-LS ===
+[[JPEG-LS]] is a "near-lossless" image format by the [[Joint Photographic Experts Group]], though far less widely known and supported than the other lossy JPEG format discussed above. It is directly comparable with PNG,{{Clarify|date=March 2010|reason=explain in which way it is directly comparable, or is this confused with Lossless JPEG?}} and has a standard set of test images.<ref name="jpegstdimg">{{cite web|url=http://www.itu.int/net/ITU-T/sigdb/speimage/T87.htm|title=T.87 : Lossless and near-lossless compression of continuous-tone still images - Baseline|publisher=International Telecommunication Union|accessdate=20 March 2011}}</ref>  On the Waterloo Repertoire ColorSet, a standard set of test images (unrelated to the JPEG-LS conformance test set), JPEG-LS generally  performs better than PNG, by 10<U+2013>15%, but on some images PNG performs substantially better, on the order of 50<U+2013>75%.<ref name="pngcf">[http://www.libpng.org/pub/png/book/chapter09.html Chapter 9. Compression and Filtering], in ''PNG: The Definitive Guide'' by Greg Roelofs.</ref> Thus, if both of these formats are options and file size is an important criterion, they should both be considered, depending on the image.
+
+=== Comparison to TIFF ===
+[[Tagged Image File Format]] (TIFF) is a format that incorporates an extremely wide range of options. While this makes TIFF useful as a generic format for interchange between professional image editing applications, it makes adding support for it to applications a much bigger task and so it has little support in applications not concerned with image manipulation (such as web browsers). It also means that many<!--most?--> applications can read only a subset of TIFF types, potentially creating more user confusion.
+
+The most common general-purpose, lossless compression algorithm used with TIFF is [[Lempel<U+2013>Ziv<U+2013>Welch]] (LZW). This compression technique, also used in GIF, was covered by patents until 2003. There is a TIFF variant{{which|date=March 2013}} that uses the same compression algorithm as PNG, but it is not supported by many proprietary programs. TIFF also offers special-purpose lossless compression algorithms like [[CCITT Group IV]], which can compress [[binary image|bilevel images]] (e.g., faxes or black-and-white text) better than PNG's compression algorithm.
+
+PNG supports non-premultiplied alpha only<ref name="w3.org"/> whereas TIFF also supports "associated" (premultiplied) alpha.
+
+== Software support ==
+
+=== Bitmap graphics editor support for PNG ===
+{{Main|Comparison of raster graphics editors}}
+
+The PNG format is widely supported by graphics programs, including [[Adobe Photoshop]], [[Corel]]'s [[Corel Photo-Paint|Photo-Paint]] and [[Corel Paint Shop Pro|Paint Shop Pro]], the [[GIMP]], [[GraphicConverter]], [[Helicon Filter]], [[ImageMagick]], [[Inkscape]], [[IrfanView]], [[Pixel image editor]], [[Paint.NET]] and [[Xara Photo & Graphic Designer]] and many others. Some programs bundled with popular [[operating system]]s which support PNG include [[Microsoft]]'s [[Paint (software)|Paint]] and [[Apple Inc.|Apple]]'s [[iPhoto]] and [[Preview (software)|Preview]], with the GIMP also often being bundled with popular [[GNU/Linux]] distributions.
+
+[[Adobe Fireworks]] (formerly by [[Macromedia]]) uses PNG as its native file format, allowing other image editors and preview utilities to view the flattened image. However, Fireworks by default also stores meta data for layers, animation, vector data, text and effects. Such files should not be distributed directly. Fireworks can instead export the image as an optimized PNG without the extra meta data for use on web pages, etc.{{Citation needed|date=May 2012}}
+
+=== Web browser support for PNG ===
+{{Main|Comparison of web browsers#Image format support|l1=Web browser image format support}}
+
+PNG support first appeared in [[Internet Explorer]] 4.0b1 and in [[Netscape]] 4.04.<ref>{{cite web | url = http://oregon.usgs.gov/png_images.html | title = Use of PNG Images to Display Data | publisher = Oregon Water Science Center | date = 16 February 2006}}</ref>
+
+Despite calls by the [[Free Software Foundation]]<ref>{{cite web | url = http://www.gnu.org/philosophy/gif.html | title = Why There Are No GIF files on GNU Web Pages | work = [[GNU|GNU Operating System]] | date = 16 December 2008}}</ref> and the [[World Wide Web Consortium]] (W3C),<ref>{{cite web | url = http://www.w3.org/Press/PNG-fact.html | title = PNG Fact Sheet | publisher = [[World Wide Web Consortium]] | date = 7 October 1996}}</ref> tools such as gif2png,<ref>[http://www.catb.org/~esr/gif2png/ Catb.org]</ref> and campaigns such as Burn All GIFs,<ref>[http://burnallgifs.org/ Burnallgifs.org]</ref> PNG adoption on websites has been fairly slow due to late and buggy support in Internet Explorer, particularly regarding transparency.<ref>{{cite web | url = http://www.pcmag.com/article2/0,2817,1645187,00.asp | title = PNG Transparency in Internet Explorer | publisher = [[PC Magazine]] | date = 5 October 2004}}</ref>
+
+PNG is found to be in use less than [[GIF]] for a few reasons {{Citation needed|date=July 2013}}:
+* No support on old browsers (such as Internet Explorer below version 4).
+* No animation, still images only (unlike GIF, though Mozilla's unofficial [[APNG]] format is a potential solution).
+* Force of habit
+
+PNG compatible browsers include: Apple [[Safari (web browser)|Safari]], [[Google Chrome]], [[Mozilla Firefox]], [[Opera (web browser)|Opera]], [[Camino]], [[Internet Explorer 7]] (still numerous issues),<ref name="png-msie">{{cite web | url = http://www.libpng.org/pub/png/pngapbr.html#msie-win-unix | title = Browsers with PNG Support | date = 14 March 2009}}</ref> [[Internet Explorer 8]] (still some issues), [[Internet Explorer 9]] and many others. For the complete comparison, see [[Comparison of web browsers#Image format support|Comparison of web browsers (Image format support)]].
+
+Especially versions of Internet Explorer (Windows) below 9.0 have numerous problems which prevent it from correctly rendering PNG images.<ref name="png-msie"/>
+
+* 4.0 crashes on large PNG chunks.<ref>{{cite web | url = http://kb.adobe.com/selfservice/viewContent.do?externalId=tn_13501&sliceId=2 | title = Windows Explorer Crashes When I Click on a Fireworks PNG File to View It | publisher = [[Adobe Systems]] | date = 5 June 2007}}</ref>
+* 4.0 does not include the functionality to view .png files,<ref>{{cite web | url = http://support.microsoft.com/kb/174946 | title = Unable to view .png images with Internet Explorer 4.0 | work = Microsoft Knowledge Base}}</ref> but there is a registry fix.<ref name="png-msie" />
+* 5.0 and 5.01 have broken OBJECT support.<ref>{{cite web | url = http://support.microsoft.com/kb/257081 | title = PNG Graphics That Are Inside of an Object Tag Print as a Negative Image | work = Microsoft Knowledge Base}}</ref>
+* 5.01 prints palette images with black (or dark gray) backgrounds under Windows 98, sometimes with radically altered colors.<ref>{{cite web | url = http://support.microsoft.com/kb/255239 | title = PNG Images Are Printed Improperly in Internet Explorer 5.01 | work = Microsoft Knowledge Base}}</ref>
+* 6.0 fails to display PNG images of 4097 or 4098 bytes in size.<ref>{{cite web | url = http://support.microsoft.com/kb/822071 | title = You cannot view some PNG images in Internet Explorer 6 | work = Microsoft Knowledge Base}}</ref>
+* 6.0 cannot open a PNG file that contains one or more zero-length IDAT chunks. This issue was first fixed in security update 947864 (MS08-024). For more information, see this article in the Microsoft Knowledge Base: [http://support.microsoft.com/kb/947864/ 947864] MS08-024: Cumulative Security Update for Internet Explorer <ref>{{cite web | url = http://support.microsoft.com/kb/897242 | title = You cannot use Internet Explorer 6 to open a PNG file that contains one or more zero-length IDAT chunks | work = Microsoft Knowledge Base}}</ref>
+* 6.0 sometimes completely loses ability to display PNGs, but there are various fixes.<ref name="libpng.org">{{cite web | url = http://www.libpng.org/pub/png/pngfaq.html#msie | title = PNG Frequently Asked Questions}}</ref>
+* 6.0 and below have broken alpha-channel transparency support (will display the default background color instead).<ref>{{cite web | url = http://support.microsoft.com/kb/265221 | title = PhD: Portable Network Graphics Lose Transparency in Web Browser | work = Microsoft Knowledge Base}}</ref><ref>{{cite web | url = http://support.microsoft.com/kb/294714 | title = PNG Files Do Not Show Transparency in Internet Explorer | work = Microsoft Knowledge Base}}</ref><ref>{{cite web | url = http://www.alistapart.com/articles/pngopacity/ | title = Cross-Browser Variable Opacity with PNG: A Real Solution | first = Michael | last = Lovitt | work = [[A List Apart]] | date = 21 December 2002}}</ref> However there are various fixes:
+** [http://schoberg.net/2009/07/degradable-png-transparency-for-ie6/ Degradable PNG Transparency for IE6]
+** [http://webfx.eae.net/dhtml/pngbehavior/pngbehavior.html webfx - PNG Behavior] (IE behavior/.htc)
+** [http://homepage.ntlworld.com/bobosola/ The PNG problem in Windows Internet Explorer] (IE behavior/.htc) (unmaintained)
+** [http://www.twinhelix.com/css/iepngfix/ TwinHelix - Near-native PNG support with alpha opacity to IE 5.5 and 6] (IE behavior/.htc)
+** [http://pp.flixn.com/2008/05/11/a-better-ie-55-and-6-png-fix/ A Better IE 5.5 and 6 PNG Fix (supports CSS background-position, background-repeat)] (IE behavior/.htc)
+** [http://24ways.org/2007/supersleight-transparent-png-in-ie6 24ways.org - Transparent PNGs in Internet Explorer 6 by Drew McLellan] (Javascript)
+** [http://koivi.com/ie-png-transparency/ PNG-24 Alpha Transparency With Microsoft Internet Explorer or better (MSIE 5.5+)] (PHP)
+** [http://blog.psyrendust.com/pngpong/ PNGPong, an open source solution to display transparent PNGs in IE, Firefox, and Safari without the use of filters, PHP, or complicated Javascript and CSS] (JavaScript+Flash)
+** [http://www.drunkenfist.com/304/2007/04/04/cross-browser-png-transparency-part-2/ Cross Browser PNG Transparency] (CSS)
+** [http://www.pluitsolutions.com/2008/04/11/solving-css-png-fix-background-none-call/ CSS PNG fix (with background call none fix)] (CSS)
+** [http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/ SitePoint - Use 8-bit PNGs with Fireworks]
+** [http://cubicspot.blogspot.com/2010/01/transparent-png8-is-solution-to-ie6.html Use 8-bit PNGs with Photoshop and pngquant]
+** [http://dillerdesign.com/experiment/DD_belatedPNG/ dillerdesign belatedPNG] (JavaScript+VML)
+** [http://dean.edwards.name/weblog/2008/01/ie7-2/ Dean Edwards<U+2019>s IE7.js and IE8.js] fixes this issue (for specially-named .PNG files, for performance reasons), and other IE 5.5, 6, and 7 CSS incompatibilities as well.
+* 7.0 and below cannot combine 8-bit alpha transparency AND element opacity ([[Cascading Style Sheets|CSS]] - filter: Alpha(opacity=xx)) without filling partially transparent sections with black.<ref>{{cite web | url = http://channel9.msdn.com/forums/TechOff/257324-IE7-alpha-transparent-PNG--opacity/ | title = IE7 alpha transparent PNG + opacity | work = [[Channel 9 (discussion forum)|Channel 9]]}}</ref>
+* 8.0 and below have inconsistent/broken gamma support.<ref name="png-msie"/>
+* 8.0 and below don't have color-correction support.<ref name="png-msie"/>
+
+=== Operating system support for PNG icons ===
+PNG icons have been supported in most distributions of [[GNU/Linux]] since at least 1999, in desktop environments such as [[GNOME]].<ref>{{cite web | url = http://developer.gnome.org/doc/whitepapers/libroadmap/ | title = GNOME 1.0 Library Roadmap | first = Michael | last = Fulbright | year = 1999}}</ref> In 2006, [[Microsoft Windows]] support for PNG icons was introduced in [[Windows Vista]].<ref>{{cite web |url=http://www.oone.googlepages.com/windows_vista_icons.htm |title=Windows Vista - Icons |accessdate=2007-11-12 |work=OOne |year=2007}}</ref> PNG icons are supported in [[AROS]], [[Mac OS X]], [[iOS]] and [[MorphOS]] as well. In addition, [[Android (operating system)|Android]] makes a large use of PNGs.
+
+== File size and optimization software ==
+<!-- Deleted image removed: [[Image:PNGOUT plugin.png|frame|right|Screenshots of the Save Options for the [[PNGOUT]] plugin which is included in the [[IrfanView]] image converter. The screenshots show the default settings.|{{Deletable image-caption|1=Sunday, 27 April 2008|date=May 2012}}]] -->
+PNG file size can vary significantly depending on how it is encoded and compressed; this is discussed and a number of tips are given in ''PNG: The Definitive Guide.''<ref name="pngcf" />
+
+=== Compared to GIF ===
+Compared to GIF files, a PNG file with the same information (256 colors, no ancillary chunks/metadata), compressed by an effective compressor will normally be smaller than GIF. Depending on the file and the compressor, PNG may range from somewhat smaller (10%) to significantly smaller (50%) to somewhat larger (5%), but is rarely significantly larger <ref name="pngcf" /> for large images. This is attributed to the performance of PNG's [[DEFLATE]] compared to GIF's [[LZW]], and because the added precompression layer of PNG's predictive filters take account of the 2-dimensional image structure to further compress files; as filtered data encodes differences between pixels, they will tend to cluster closer to 0, rather than being spread across all possible values, and thus be more easily compressed by DEFLATE.  However, some versions of [[Adobe Photoshop]], [[CorelDRAW]] and [[Paint (software)|MS Paint]] provide poor PNG compression, creating the impression that GIF is more efficient.<ref name="pngcf" />
+
+=== File size factors ===
+PNG files vary in size due to a number of factors:
+;color depth: Color depth can range from 1 to 64 bits per pixel.
+;ancillary chunks: PNG supports metadata<U+2014>this may be useful for editing, but unnecessary for viewing, as on websites.
+;interlacing: As each pass of the Adam7 algorithm is separately filtered, this can increase file size.<ref name="pngcf" />
+;filter: As a precompression stage, each line is filtered by a predictive filter, which can change from line to line. As the ultimate DEFLATE step operates on the whole image's filtered data, one cannot optimize this row-by-row; the choice of filter for each row is thus potentially very variable, though heuristics exist.{{Clarify|date=March 2010|reason=please rewrite to explain this better: assume "this" is the DEFLATE step, and what do "potentially very variable" and "heuristics exist." mean?}}
+;compression: With additional computation, DEFLATE compressors can produce smaller files.
+There is thus a filesize trade-off between high color depth, maximal metadata (including color space information, together with information that does not affect display), interlacing, and speed of compression, which all yield large files, with lower color depth, fewer or no ancillary chunks, no interlacing, and tuned but computationally intensive filtering and compression. For different purposes one will choose different trade-offs: a maximal file may be best for archiving and editing, while a stripped down file may be best for use on a website, and similarly fast but poor compression is preferred when repeatedly editing and saving a file, while slow but high compression is preferred when a file is stable: when archiving or posting.
+Interlacing is a trade-off: it dramatically speeds up early rendering of large files (improves latency), but may increase file size (decrease throughput) for little gain, particularly for small files.<ref name="pngcf" />
+==== Lossy PNG compression ====
+Even though PNG has been designed as a lossless format PNG encoders can pre-process image data in a lossy fashion to improve PNG compression.<ref>http://pngmini.com/lossypng.html</ref>
+
+=== Image editing software ===
+Some programs are more efficient than others when saving PNG files, this relates to implementation of the PNG compression used by the program.
+
+Many graphics programs (such as Apple's [[Preview (software)|Preview]] software) save PNGs with large amounts of [[metadata]] and color-correction data that are generally unnecessary for [[World Wide Web|Web]] viewing. Unoptimized PNG files from [[Adobe Fireworks]] are also notorious for this since they contain options to make the image editable in supported editors. Also CorelDRAW (at least version 11) sometimes produces PNGs which cannot be opened by Internet Explorer (versions 6<U+2013>8).
+
+[[Adobe Photoshop]]'s performance on PNG files has improved in the CS Suite when using the Save For Web feature (which also allows explicit PNG/8 use).
+
+Adobe's Fireworks saves larger PNG files than many programs by default. This stems from the mechanics of its ''Save'' format, the images produced by Fireworks save function include large, private chunks, containing complete layer and vector information. This allows further lossless editing. When saved with the ''Export'' option, Fireworks' PNGs are competitive with those produced by other image editors, but are no longer editable as anything but flattened bitmaps. Fireworks is unable to save size-optimized vector-editable PNGs.
+
+Other notable examples of poor PNG compressors include:
+* Microsoft's Paint for Windows XP
+* Microsoft Picture It! Photo Premium 9 <!-- explain? -->
+
+
+Poor compression increases the PNG file size but does not affect the image quality or compatibility of the file with other programs.
+
+Because GIF is [[Graphics Interchange Format#True color|de facto limited to 256 colors]] (GIF87a Standard), image editors must automatically reduce the color depth when saving an image in GIF format. Often, when people save the same [[True Color|truecolor]] image as PNG and GIF, they see that the GIF is smaller, and do not realize that this is due to the color depth reduction, and that it is possible to create a 256-color PNG that has identical quality to the GIF with a smaller file size. Further, some tools may automatically create PNG files as 24-bit, even if the source image is 8-bit, bloating the file.<ref name="pngcf" />
+This leads to the misconception that PNG files are larger than equivalent GIF files.
+
+=== Optimizing tools ===
+Various tools are available for optimizing PNG files; they do this by:
+* (optionally) removing ancillary chunks,
+* reducing color depth, either:
+** use a palette (instead of RGB) if the image has 256 or fewer colors,
+** use a smaller palette, if the image has 2, 4, or 16 colors, or
+** (optionally) lossily discard some of the data in the original image,
+* optimizing line-by-line filter choice, and
+* optimizing DEFLATE compression.
+
+As some tools are PNG-specific, while others only optimize DEFLATE, in general one must use a combination of 2 tools in sequence for optimal compression: one which optimizes filters (and removes ancillary chunks), and one which optimizes DEFLATE. Most commonly, OptiPNG is used for the first (non-DEFLATE) step, and either of AdvanceCOMP or PNGOUT is used for the DEFLATE step.
+
+==== Ancillary chunk removal ====
+For removing ancillary chunks, [[pngcrush]] and [[PNGOUT]] have the ability to remove all color correction data from PNG files (gamma, white balance, ICC color profile, standard RGB color profile). This often results in much smaller file sizes. The following command line options achieve this with pngcrush:
+
+<code>pngcrush -rem gAMA -rem cHRM -rem iCCP -rem sRGB ''InputFile.png'' ''OutputFile.png''</code>
+
+Ancillary chunks can also be losslessly removed using the free Win32 program [http://www.fieggen.com/software/pngextra.htm PNGExtra].
+
+==== Filter optimization ====
+For optimizing filters, OptiPNG and [[pngcrush]] are both [[open source software]] optimizers that run from a [[Unix]] command line or a Windows Command Prompt, and effectively reduce the size of PNG files. OptiPNG was based on pngcrush and effectively supersedes it, by iterating over a wider range of compression parameters and performing trials in memory for faster execution,<ref name=pngoptguide>Tru<U+0163>a, Cosmin. [http://optipng.sourceforge.net/pngtech/optipng.html "A guide to PNG optimization"].<!--Retrieved 23 March 2009--></ref> as well as performing automatic bit depth, color type and color palette reduction where possible.
+
+==== DEFLATE optimization ====
+[[AdvanceCOMP]] <tt>advdef</tt> and [[Ken Silverman]]'s [[PNGOUT]] and Glenn Randers-Pehrson's [[pngcrush]], [[Image-Pngslimmer|Image::Pngslimmer]] and [http://code.google.com/r/ehoeks-zopfli-png/ ehoeks-zopfli-png] employ [[DEFLATE]] compression algorithms that are more exhaustive and produce smaller files than the reference implementation, [[zlib]], that is used by the other compressors.
+
+==== Wrapper tools ====
+Wrapper tools that simplify this workflow include: [http://pornel.net/imageoptim/en ImageOptim], a GUI front-end for Mac OS X; Kashmir Web Optimizer- GUI front-end for Windows; [http://lyncd.com/2009/03/imgopt-lossless-optimize-png-jpeg/ imgopt], a command-line shell script that also losslessly optimizes JPEG images, [http://smush.it/ Smush.it], an image-optimizing web service; [http://tinypng.org/ TinyPNG], which provides compression by reducing the number of colors in the image to 256, but preserving alpha transparency; and [http://compresspng.com/ Compress PNG] that permits even further pallete size reductions, down to 2 colors.
+
+The [http://sourceforge.net/projects/littleutils littleutils] are another open-source package, containing a wrapper script called opt-png that uses [[pngcrush]] and a variant of [http://entropymine.com/jason/pngrewrite/ pngrewrite] to reduce bit-depth when possible. [[Perl]] scripts might wish to employ [[Image-Pngslimmer]] which allows some dynamic optimization.
+
+The current version of [[IrfanView]] can use PNGOUT as an external plug-in, obviating the need for a separate compressor.
+
+=== Icon optimization ===
+Since [[Computer icon|icons]] intended for Windows Vista and later versions may contain PNG subimages, the optimizations can be applied to them as well. At least one [[icon editor]], [http://www.qualibyte.com/pixelformer/ Pixelformer], is able to perform a special optimization pass while saving [[ICO (icon image file format)|ICO]] files, thereby reducing their sizes.
+
+== See also ==
+* [[Comparison of graphics file formats]]
+* [[Computer graphics]], including:
+** [[Comparison of layout engines (graphics)]]
+* [[Image editing]]
+* [[Image file formats]]
+* [[libpng]]
+* Related [[graphics file format]]s
+** [[APNG]] Animated PNG
+** [[JPEG Network Graphics]] (JNG)
+** [[Multiple-image Network Graphics]] (MNG)
+* Similar file formats
+** [[Graphics Interchange Format]] (GIF)
+** [[X PixMap]] for portable icons
+* [[Scalable Vector Graphics]]
+* [[WebP]]
+
+== References ==
+{{Reflist|2}}
+
+== Further reading ==
+* {{cite journal|last=Roelofs|first=Greg|date=April 1997|title=Linux Gazette: History of the Portable Network Graphics (PNG) Format|journal=Linux Journal|publisher=Specialized Systems Consultants, Inc.|volume=1997|issue=36es|issn=1075-3583|url=http://linuxgazette.net/issue13/png.html}}
+*{{cite book|last=Roelofs|first=Greg|title=PNG: The Definitive Guide|url=http://www.libpng.org/pub/png/book/|edition=2nd|year=2003|publisher=O'Reilly Media|isbn=1-56592-542-4}}
+
+== External links ==
+
+=== libpng.org ===
+* [http://www.libpng.org/pub/png/ PNG Home Site]
+* [http://www.libpng.org/pub/png/libpng.html libpng Home Page]
+* [http://www.libpng.org/pub/png/slashpng-1999.html ''The Story of PNG'' by  Greg Roelofs]
+
+=== W3C ===
+* [http://www.w3.org/TR/PNG/ PNG Specification (Latest Edition)]
+* [http://www.w3.org/Graphics/PNG/Inline-img.html Test inline PNG images]
+
+=== Others ===
+* [http://www.mywebsite.force9.co.uk/png/ An introduction to the PNG image format] <U+2014> Including test images, file editing tips, and reviews of PNG image tools for Windows.
+* RFC 2083
+* [http://entropymine.com/jason/testbed/pngtrans/ PNG transparency test]
+* [http://mrclay.org/web_design/lonely_planet/ "The Lonely Planet"] <U+2014> PNG-based animation for web browsers
+* [http://hsivonen.iki.fi/png-gamma/ More information about PNG color correction]
+* [http://php.net/gd The GD-library to generate dynamic PNG-files with PHP]
+* [http://optipng.sourceforge.net/pngtech/optipng.html A guide to PNG optimization]
+* [http://schaik.com/png/adam7.html PNG Adam7 interlacing]
+* [http://www.xarg.org/2010/03/generate-client-side-png-files-using-javascript/ JavaScript PNG library] Generate client-side PNG files using JavaScript
+* [http://lodev.org/lodepng/ lodepng]: by Lode Vandevenne.  An open source PNG encoder and decoder for C and C++ with no external dependencies.
+* [http://code.google.com/p/pngj/ PNGJ]: A pure Java PNG encoder and decoder.
+* [http://optipng.sourceforge.net/ OptiPNG PNG optimizer]
+* [http://www.idontplaydarts.com/2012/06/encoding-web-shells-in-png-idat-chunks/ Encoding Web Shells in PNG files]: Encoding human readable data inside an IDAT block.
+
+{{Graphics file formats}}
+{{Compression formats}}
+
+[[Category:Graphics file formats]]
+[[Category:Graphics standards]]
+[[Category:ISO standards]]
+[[Category:World Wide Web Consortium standards]]
+[[Category:Open formats]]
+[[Category:Image compression]]

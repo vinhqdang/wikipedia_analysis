@@ -1,0 +1,357 @@
+{{technical|date=September 2012}}
+{{External links|date=July 2010}}
+{{Differential equations}}
+
+The '''finite element method (FEM)''' (its practical application often known as '''finite element analysis''' (FEA)) is a  [[numerical analysis|numerical technique]] for finding approximate solutions to [[partial differential equation]]s (PDE) and their systems, as well as (less often) [[integral equation]]s. In simple terms, FEM is a method for dividing up a very complicated problem into small elements that can be solved in relation to each other. FEM is a special case of the more general [[Galerkin method]] with polynomial approximation functions. The solution approach is based on eliminating the spatial derivatives from the PDE. This approximates the PDE with
+
+* a system of [[algebraic equations]] for steady state problems,
+* a system of [[ordinary differential equation]]s for transient problems.
+
+These equation systems are linear if the underlying PDE is linear, and vice versa. Algebraic equation systems are solved using [[numerical linear algebra]] methods. [[Ordinary differential equation]]s that arise in transient problems are then numerically integrated using standard techniques such as [[Euler's method]] or the [[Runge-Kutta]] method.
+
+In solving [[partial differential equation]]s, the primary challenge is to create an equation that approximates the equation to be studied, but is [[numerically stable]], meaning that errors in the input and intermediate calculations do not accumulate and cause the resulting output to be meaningless. There are many ways of doing this, all with advantages and disadvantages. The finite element method is a good choice for solving partial differential equations over complicated domains (like cars and oil pipelines), when the domain changes (as during a solid state reaction with a moving boundary), when the desired precision varies over the entire domain, or when the solution lacks smoothness. For instance, in a frontal crash simulation it is possible to increase prediction accuracy in "important" areas like the front of the car and reduce it in its rear (thus reducing cost of the simulation). Another example would be in [[Numerical weather prediction]], where it is more important to have accurate predictions over developing highly nonlinear phenomena (such as [[tropical cyclone]]s in the atmosphere, or [[Eddy (fluid dynamics)|eddies]] in the ocean) rather than relatively calm areas.
+{{double image
+|1=right
+|2=Example of 2D mesh.png
+|3=300
+|4=FEM_example_of_2D_solution.png
+|5=300
+|6=FEM [[Polygon mesh|mesh]] created by an analyst prior to finding a solution to a [[Magnetism|magnetic]] problem using FEM software. Colours indicate that the analyst has set material properties for each zone, in this case a [[Electrical conductor|conducting]] wire coil in orange; a [[w:Ferromagnetism|ferromagnetic]] component (perhaps [[iron]]) in light blue; and air in grey. Although the geometry may seem simple, it would be very challenging to calculate the magnetic field for this setup without FEM software, using [[Closed-form expression|equations alone]].
+|7=FEM solution to the problem at left, involving a [[w:Cylinder (geometry)|cylindrically]] shaped [[Electromagnetic shielding#Magnetic shielding|magnetic shield]]. The [[w:Ferromagnetism|ferromagnetic]] cylindrical part is shielding the area inside the cylinder by diverting the magnetic field [[Electromagnet|created]] by the coil (rectangular area on the right). The color represents the [[Norm (mathematics)|amplitude]] of the [[Magnetic field#Definitions, units, and measurement|magnetic flux density]], as indicated by the scale in the inset legend, red being high amplitude. The area inside the cylinder is low amplitude (dark blue, with widely spaced lines of magnetic flux), which suggests that the shield is performing as it was designed to.
+|8=Example of 2D mesh
+|9=FEM_example_of_2D_solution}}
+
+== History ==
+The finite element method originated from the need for solving complex [[Elasticity (physics)|elasticity]] and [[structural analysis]] problems in [[civil engineering|civil]] and [[aeronautical engineering]]. Its development can be traced back to the work by [[Alexander Hrennikoff]] (1941) and [[Richard Courant]]<ref name=G.Pelosi>{{cite web|title=The finite-element method, Part I: R. L. Courant: Historical Corner|author=[[Giuseppe Pelosi]]|year=2007|doi=10.1109/MAP.2007.376627}}</ref> (1942). While the approaches used by these pioneers are different, they share one essential characteristic: [[Polygon mesh|mesh]] discretization of a continuous domain into a set of discrete sub-domains, usually called elements. Starting in 1947, [[Olgierd Zienkiewicz]] from [[Swansea University]] gathered those methods together into what would be called the Finite Element Method, building the pioneering mathematical  formalism of the method.<ref>E. Stein (2009), Olgierd C. Zienkiewicz, a pioneer in the development of the finite element method in engineering science. Steel Construction, 2 (4), 264-272.</ref>
+
+Hrennikoff's work discretizes the domain by using a [[Lattice (group)|lattice]] analogy, while Courant's approach divides the domain into finite triangular subregions to solve [[second order equation|second order]] [[elliptic equation|elliptic]] [[partial differential equation]]s (PDEs) that arise from the problem of [[torsion (mechanics)|torsion]] of a cylinder. Courant's contribution was evolutionary, drawing on a large body of earlier results for PDEs developed by [[John Strutt, 3rd Baron Rayleigh|Rayleigh]], [[Walter Ritz|Ritz]], and [[Boris Grigoryevich Galerkin|Galerkin]].
+
+Development of the finite element method began in earnest in the middle to late 1950s for [[airframe]] and [[structural analysis]]<ref>Matrix Analysis Of Framed Structures, 3rd Edition by Jr. William Weaver, James M. Gere, 3rd Edition, Springer-Verlag New York, LLC, ISBN 978-0-412-07861-3, First edition 1966</ref> and gathered momentum at the [[University of Stuttgart]] through the work of [[John Argyris]] and at [[University of California, Berkeley|Berkeley]] through the work of [[Ray W. Clough]] in the 1960s for use in [[civil engineering]]. By late 1950s, the key concepts of [[stiffness matrix]] and element assembly existed essentially in the form used today. NASA issued a request for proposals for the development of the finite element [[software]] [[NASTRAN]] in 1965. The method was again provided with a rigorous mathematical foundation in 1973 with the publication of [[Gilbert Strang|Strang]] and [[George Fix|Fix]]'s ''An Analysis of The Finite Element Method'',<ref>{{cite book | first1=Gilbert | last1=Strang | authorlink1=Gilbert Strang | first2=George | last2=Fix | authorlink2=George Fix | title=An Analysis of The Finite Element Method | publisher=Prentice Hall | year=1973 | isbn=0-13-032946-0}}</ref> and has since been generalized into a branch of applied mathematics for numerical modeling of physical systems in a wide variety of [[engineering]] disciplines, e.g., [[electromagnetism]]<ref name=R.Coccioli>{{cite web|title=Finite-element methods in microwaves: a selected bibliography|author=[[Roberto Coccioli]], [[Tatsuo Itoh]], [[Giuseppe Pelosi]], [[Peter P. Silvester]]|year=1996|doi=10.1109/74.556518}}</ref><ref name=R.Ferrari>{{cite web|title=The Finite-Element Method, Part 2: P. P. Silvester, an Innovator in Electromagnetic Numerical Modeling|author=[[Ronald L. Ferrari]]|year=2007|doi=10.1109/MAP.2007.4293978}}</ref> and [[fluid dynamics]].
+
+== Technical discussion ==
+
+We will illustrate the finite element method using two sample problems from which the general method can be extrapolated. It is assumed that the reader is familiar with [[calculus]] and [[linear algebra]].
+
+=== Illustrative problems P1 and P2 ===
+
+P1 is a ''' one-dimensional''' problem
+:<math>\mbox{ P1 }:\begin{cases}
+u''(x)=f(x) \mbox{ in } (0,1), \\
+u(0)=u(1)=0,
+\end{cases}</math>
+where <math>f</math> is given, <math>u</math> is an unknown function of <math>x</math>, and <math>u''</math> is the second derivative of <math>u</math> with respect to <math>x</math>.
+
+P2 is a ''' two-dimensional''' problem ([[Dirichlet problem]])
+:<math>\mbox{P2 }:\begin{cases}
+u_{xx}(x,y)+u_{yy}(x,y)=f(x,y) & \mbox{ in } \Omega, \\
+u=0 & \mbox{ on } \partial \Omega,
+\end{cases}</math>
+
+where <math>\Omega</math> is a connected open region in the <math>(x,y)</math> plane whose boundary <math>\partial \Omega</math> is "nice" (e.g., a [[smooth manifold]] or a [[polygon]]), and <math>u_{xx}</math> and <math>u_{yy}</math> denote the second derivatives with respect to <math>x</math> and <math>y</math>, respectively.
+
+The problem P1 can be solved "directly" by computing [[antiderivative]]s. However, this method of solving the [[boundary value problem]] works only when there is one spatial dimension and does not generalize to higher-dimensional problems or to problems like <math>u+u''=f</math>. For this reason, we will develop the finite element method for P1 and outline its generalization to P2.
+
+Our explanation will proceed in two steps, which mirror two essential steps one must take to solve a boundary value problem (BVP) using the FEM.
+*In the first step, one rephrases the original BVP in its weak form. Little to no computation is usually required for this step.  The transformation is done by hand on paper.
+*The second step is the discretization, where the weak form is discretized in a finite dimensional space.
+After this second step, we have concrete formulae for a large but finite dimensional linear problem whose solution will approximately solve the original BVP. This finite dimensional problem is then implemented on a [[computer]].
+
+=== Weak formulation ===
+
+The first step is to convert P1 and P2 into their equivalent [[weak formulation]]s.
+
+==== The weak form of P1 ====
+If <math>u</math> solves P1, then for any smooth function <math>v</math> that satisfies the displacement boundary conditions, i.e. <math>v=0</math> at <math>x=0</math> and <math>x=1</math>, we have
+
+(1) <math>\int_0^1 f(x)v(x) \, dx = \int_0^1 u''(x)v(x) \, dx.</math>
+
+Conversely, if <math>u</math> with <math>u(0)=u(1)=0</math> satisfies (1) for every smooth function <math>v(x)</math> then one may show that this <math>u</math> will solve P1.  The proof is easier for twice continuously differentiable <math>u</math> ([[mean value theorem]]), but may be proved in a [[Distribution (mathematics)|distributional]] sense as well.
+
+By using [[integration by parts]] on the right-hand-side of (1), we obtain
+
+(2)<math>
+\begin{align}
+ \int_0^1 f(x)v(x) \, dx & = \int_0^1 u''(x)v(x) \, dx \\
+ & = u'(x)v(x)|_0^1-\int_0^1 u'(x)v'(x) \, dx \\
+ & = -\int_0^1 u'(x)v'(x) \, dx = -\phi (u,v).
+\end{align}
+</math>
+
+where we have used the assumption that <math>v(0)=v(1)=0</math>.
+
+==== The weak form of P2 ====
+
+If we integrate by parts using a form of [[Green's identities]], we see that if <math>u</math> solves P2, then for any <math>v</math>,
+
+:<math>\int_{\Omega} fv\,ds = -\int_{\Omega} \nabla u \cdot \nabla v \, ds = -\phi(u,v),</math>
+
+where <math>\nabla</math> denotes the [[gradient]] and <math>\cdot</math> denotes the [[dot product]] in the two-dimensional plane. Once more <math>\,\!\phi</math> can be turned into an inner product on a suitable space <math>H_0^1(\Omega)</math> of "once differentiable" functions of <math>\Omega</math> that are zero on <math>\partial \Omega</math>. We have also assumed that <math>v \in H_0^1(\Omega)</math> (see [[Sobolev space]]s). Existence and uniqueness of the solution can also be shown.
+
+==== A proof outline of existence and uniqueness of the solution ====
+
+We can loosely think of <math>H_0^1(0,1)</math> to be the [[absolutely continuous]] functions of <math>(0,1)</math> that are <math>0</math> at <math>x=0</math> and <math>x=1</math> (see [[Sobolev spaces]]). Such functions are (weakly) "once differentiable" and it turns out that the symmetric [[bilinear map]] <math>\!\,\phi</math> then defines an [[inner product]] which turns <math>H_0^1(0,1)</math> into a [[Hilbert space]] (a detailed proof is nontrivial). On the other hand, the left-hand-side <math>\int_0^1 f(x)v(x)dx</math> is also an inner product, this time on the [[Lp space]] <math>L^2(0,1)</math>. An application of the [[Riesz representation theorem]] for Hilbert spaces shows that there is a unique <math>u</math> solving (2) and therefore P1.  This solution is a-priori only a member of <math>H_0^1(0,1)</math>, but using [[elliptic operator|elliptic]] regularity, will be smooth if <math>f</math> is.
+
+== Discretization ==
+[[File:Finite element method 1D illustration1.png|right|thumb|A function in <math>H_0^1,</math> with zero values at the endpoints (blue), and a piecewise linear approximation (red).]]
+
+P1 and P2 are ready to be discretized which leads to a common sub-problem (3). The basic idea is to replace the infinite dimensional linear problem:
+:Find <math>u \in  H_0^1</math>  such that
+:<math>\forall v \in H_0^1, \; -\phi(u,v)=\int fv</math>
+with a finite dimensional version:
+
+:(3) Find <math>u \in V</math> such that
+:<math>\forall v \in V, \; -\phi(u,v)=\int fv</math>
+
+where <math>V</math> is a finite dimensional [[Linear subspace|subspace]] of <math>H_0^1</math>. There are many possible choices for <math>V</math> (one possibility leads to the [[spectral method]]). However, for the finite element method we take <math>V</math> to be a space of piecewise polynomial functions.
+
+=== For problem P1 ===
+
+We take the interval <math>(0,1)</math>, choose <math>n</math> values of <math>x</math> with <math>0=x_0<x_1<...<x_n<x_{n+1}=1</math> and we define <math>V</math> by:
+
+:<math>V=\{v:[0,1] \rightarrow \Bbb R\;: v\mbox{ is continuous, }v|_{[x_k,x_{k+1}]} \mbox{ is linear for } k=0,...,n \mbox{, and } v(0)=v(1)=0 \} </math>
+
+where we define <math>x_0=0</math> and <math>x_{n+1}=1</math>. Observe that functions in <math>V</math> are not differentiable according to the elementary definition of calculus. Indeed, if <math>v \in V</math> then the derivative is typically not defined at any <math>x=x_k</math>, <math>k=1,...,n</math>. However, the derivative exists at every other value of <math>x</math> and one can use this derivative for the purpose of [[integration by parts]].
+
+[[File:Piecewise linear function2D.svg|right|thumb|A piecewise linear function in two dimensions.]]
+
+=== For problem P2 ===
+We need <math>V</math> to be a set of functions of <math>\Omega</math>. In the figure on the right, we have illustrated a [[Polygon triangulation|triangulation]] of a 15 sided [[polygon]]al region <math>\Omega</math> in the plane (below), and a piecewise linear function (above, in color) of this polygon which is linear on each triangle of the triangulation; the space <math>V</math> would consist of functions that are linear on each triangle of the chosen triangulation.
+
+One often reads <math>V_h</math> instead of <math>V</math> in the literature. The reason is that one hopes that as the underlying triangular grid becomes finer and finer, the solution of the discrete problem (3) will in some sense converge to the solution of the original boundary value problem P2. The triangulation is then indexed by a real valued parameter <math>h>0</math> which one takes to be very small. This parameter will be related to the size of the largest or average triangle in the triangulation. As we refine the triangulation, the space of piecewise linear functions <math>V</math> must also change with <math>h</math>, hence the notation <math>V_h</math>. Since we do not perform such an analysis, we will not use this notation.
+
+=== Choosing a basis ===
+[[File:Finite element method 1D illustration2.svg|right|thumb|Basis functions ''v''<sub>''k''</sub> (blue) and a linear combination of them, which is piecewise linear (red).]]
+To complete the discretization, we must select a [[Basis (linear algebra)|basis]] of <math>V</math>. In the one-dimensional case, for each control point <math>x_k</math> we will choose the piecewise linear function <math>v_k</math> in <math>V</math> whose value is <math>1</math> at <math>x_k</math> and zero at every <math>x_j,\;j \neq k</math>, i.e.,
+
+:<math>v_{k}(x)=\begin{cases} {x-x_{k-1} \over x_k\,-x_{k-1}} & \mbox{ if } x \in [x_{k-1},x_k], \\
+{x_{k+1}\,-x \over x_{k+1}\,-x_k} & \mbox{ if } x \in [x_k,x_{k+1}], \\
+0 & \mbox{ otherwise},\end{cases}</math>
+
+for <math>k=1,...,n</math>; this basis is a shifted and scaled [[tent function]]. For the two-dimensional case, we choose again one basis function <math>v_k</math> per vertex <math>x_k</math> of the triangulation of the planar region <math>\Omega</math>. The function <math>v_k</math> is the unique function of <math>V</math> whose value is <math>1</math> at <math>x_k</math> and zero at every <math>x_j,\;j \neq k</math>.
+
+Depending on the author, the word "element" in "finite element method" refers either to the triangles in the domain, the piecewise linear basis function, or both. So for instance, an author interested in curved domains might replace the triangles with curved primitives, and so might describe the elements as being curvilinear. On the other hand, some authors replace "piecewise linear" by "piecewise quadratic" or even "piecewise polynomial". The author might then say "higher order element" instead of "higher degree polynomial". Finite element method is not restricted to triangles (or tetrahedra in 3-d, or higher order simplexes in multidimensional spaces), but can be defined on quadrilateral subdomains (hexahedra, prisms, or pyramids in 3-d, and so on). Higher order shapes (curvilinear elements) can be defined with polynomial and even non-polynomial shapes (e.g. ellipse or circle).
+
+Examples of methods that use higher degree piecewise polynomial basis functions are the
+[[hp-FEM]] and [[spectral element method|spectral FEM]].
+
+More advanced implementations (adaptive finite element methods) utilize a method to assess the quality of the results (based on error estimation theory) and modify the mesh during the solution aiming to achieve approximate solution within some bounds from the 'exact' solution of the continuum problem. Mesh adaptivity may utilize various techniques, the most popular are:
+* moving nodes (r-adaptivity)
+* refining (and unrefining) elements (h-adaptivity)
+* changing order of base functions (p-adaptivity)
+* combinations of the above ([[hp-FEM|hp-adaptivity]]).
+
+=== Small support of the basis ===
+[[File:Finite element triangulation.svg|right|thumb|Solving the two-dimensional problem <math>u_{xx}+u_{yy}=-4</math> in the disk centered at the origin and radius 1, with zero boundary conditions. <br>(a) The triangulation.]]
+[[File:Finite element sparse matrix.png|right|thumb|(b) The [[sparse matrix]] ''L'' of the discretized linear system.]]
+[[File:Finite element solution.svg|right|thumb|(c) The computed solution, <math>u(x, y)=1-x^2-y^2.</math>]]
+The primary advantage of this choice of basis is that the inner products
+
+:<math>\langle v_j,v_k \rangle=\int_0^1 v_j v_k\,dx</math>
+
+and
+
+:<math>\phi(v_j,v_k)=\int_0^1 v_j' v_k'\,dx</math>
+
+will be zero for almost all <math>j,k</math>.
+(The matrix containing <math>\langle v_j,v_k \rangle</math> in the <math>(j,k)</math> location is known as the [[Gramian matrix]].)
+In the one dimensional case, the [[support (mathematics)|support]] of <math>v_k</math> is the interval <math>[x_{k-1},x_{k+1}]</math>. Hence, the integrands of <math>\langle v_j,v_k \rangle</math> and ''<math>\phi(v_j,v_k)</math>'' are identically zero whenever <math>|j-k|>1</math>.
+
+Similarly, in the planar case, if <math>x_j</math> and <math>x_k</math> do not share an edge of the triangulation, then the integrals
+
+:<math>\int_{\Omega} v_j v_k\,ds</math>
+
+and
+
+:<math>\int_{\Omega} \nabla v_j \cdot \nabla v_k\,ds</math>
+
+are both zero.
+
+=== Matrix form of the problem ===
+
+If we write <math>u(x)=\sum_{k=1}^n u_k v_k(x)</math> and <math>f(x)=\sum_{k=1}^n f_k v_k(x)</math> then problem (3), taking <math>v(x)=v_j(x)</math> for <math>j=1,...,n</math>, becomes
+
+:<math>-\sum_{k=1}^n u_k \phi (v_k,v_j) = \sum_{k=1}^n f_k \int v_k v_j dx</math> for <math>j=1,...,n</math>.  (4)
+
+If we denote by <math>\mathbf{u}</math> and <math>\mathbf{f}</math> the column vectors <math>(u_1,...,u_n)^t</math> and <math>(f_1,...,f_n)^t</math>, and if we let
+: <math>L=(L_{ij})</math>
+and
+: <math>M=(M_{ij})</math>
+be matrices whose entries are
+: <math>L_{ij}=\phi (v_i,v_j)</math>
+and
+: <math>M_{ij}=\int v_i v_j dx</math>
+then we may rephrase (4) as
+: <math>-L \mathbf{u} = M \mathbf{f}</math>. (5)
+
+It is not, in fact, necessary to assume <math>f(x)=\sum_{k=1}^n f_k v_k(x)</math>. For a general function  <math>f(x)</math>,  problem (3) with <math>v(x)=v_j(x)</math> for <math>j=1,...,n</math> becomes actually simpler, since no matrix <math>M</math> is used,
+: <math>-L \mathbf{u} = \mathbf{b}</math>, (6)
+where <math>\mathbf{b}=(b_1,...,b_n)^t</math> and <math>b_j=\int f v_j dx</math> for <math>j=1,...,n</math>.
+
+As we have discussed before, most of the entries of <math>L</math> and <math>M</math> are zero because the basis functions <math>v_k</math> have small support. So we now have to solve a linear system in the unknown <math>\mathbf{u}</math> where most of the entries of the matrix <math>L</math>, which we need to invert, are zero.
+
+Such matrices are known as [[sparse matrix|sparse matrices]], and there are efficient solvers for such problems (much more efficient than actually inverting the matrix.) In addition, <math>L</math> is symmetric and positive definite, so a technique such as the [[conjugate gradient method]] is favored. For problems that are not too large, sparse [[LU decomposition]]s and [[Cholesky decomposition]]s still work well. For instance, [[Matlab]]'s backslash operator (which uses sparse LU, sparse Cholesky, and other factorization methods) can be sufficient for meshes with a hundred thousand vertices.
+
+The matrix <math>L</math> is usually referred to as the [[stiffness matrix]], while the matrix <math>M</math> is dubbed the [[mass matrix]].
+
+=== General form of the finite element method ===
+
+In general, the finite element method is characterized by the following process.
+
+* One chooses a grid for <math>\Omega</math>. In the preceding treatment, the grid consisted of triangles, but one can also use squares or curvilinear polygons.
+* Then, one chooses basis functions. In our discussion, we used piecewise linear basis functions, but it is also common to use piecewise polynomial basis functions.
+
+A separate consideration is the smoothness of the basis functions. For second order [[elliptic boundary value problem]]s, piecewise polynomial basis function that are merely continuous suffice (i.e., the derivatives are discontinuous.) For higher order partial differential equations, one must use smoother basis functions. For instance, for a fourth order problem such as <math>u_{xxxx}+u_{yyyy}=f</math>, one may use piecewise quadratic basis functions that are [[Smooth function#Order of continuity|<math>C^1</math>]].
+
+Another consideration is the relation of the finite dimensional space <math>V</math> to its infinite dimensional counterpart, in the examples above <math>H_0^1</math>. A [[conforming element method]] is one in which the space <math>V</math> is a subspace of the element space for the continuous problem. The example above is such a method. If this condition is not satisfied, we obtain a [[nonconforming element method]], an example of which is the space of piecewise linear functions over the mesh which are continuous at each edge midpoint. Since these functions are in general discontinuous along the edges, this finite dimensional space is not a subspace of the original <math>H_0^1</math>.
+
+Typically, one has an algorithm for taking a given mesh and subdividing it. If the main method for increasing precision is to subdivide the mesh, one has an ''h''-method (''h'' is customarily the diameter of the largest element in the mesh.) In this manner, if one shows that the error with a grid <math>h</math> is bounded above by <math>Ch^p</math>, for some <math>C<\infty</math> and <math>p>0</math>, then one has an order ''p'' method. Under certain hypotheses (for instance, if the domain is convex), a piecewise polynomial of order <math>d</math> method will have an error of order <math>p=d+1</math>.
+
+If instead of making ''h'' smaller, one increases the degree of the polynomials used in the basis function, one has a ''p''-method. If one combines these two refinement types, one obtains an ''hp''-method ([[hp-FEM]]). In the hp-FEM, the polynomial degrees can vary from element to element. High order methods with large uniform ''p'' are called spectral finite element methods ([[spectral element method|SFEM]]). These are not to be confused with [[spectral method]]s.
+
+For vector partial differential equations, the basis functions may take values in <math>\mathbb{R}^n</math>.
+
+== Various types of finite element methods ==
+
+=== AEM ===
+The Applied Element Method, or AEM combines features of both FEM and [[Discrete element method]], or (DEM).
+{{Main|Applied element method}}
+
+=== Generalized finite element method ===
+
+The Generalized Finite Element Method (GFEM) uses local spaces consisting of functions, not necessarily polynomials, that reflect the available information on the unknown solution and thus ensure good local approximation. Then a [[partition of unity]] is used to <U+201C>bond<U+201D> these spaces together to form the approximating subspace. The effectiveness of GFEM has been shown when applied to problems with domains having complicated boundaries, problems with micro-scales, and problems with boundary layers.<ref>{{cite journal | first1=Ivo | last1=Babu<U+0161>ka | author1-link=Ivo Babu<U+0161>ka | first2=Uday | last2=Banerjee | first3=John E. | last3=Osborn | author3-link=John E. Osborn (mathematician) |  title=Generalized Finite Element Methods: Main Ideas, Results, and Perspective | journal=International Journal of Computational Methods | year=2004 | issue=1 | month=June | pages= 67<U+2013>103 | doi=10.1142/S0219876204000083 | volume=1}}</ref>
+
+=== hp-FEM ===
+
+The [[hp-FEM]] combines adaptively, elements with variable size ''h'' and polynomial degree ''p'' in order to achieve exceptionally fast, exponential convergence rates.<ref>P. Solin, K. Segeth, I. Dolezel: Higher-Order Finite Element Methods, Chapman & Hall/CRC Press, 2003</ref>
+
+=== hpk-FEM ===
+
+The [[hpk-FEM]] combines adaptively, elements with variable size ''h'', polynomial degree of the local approximations ''p'' and global differentiability of the local approximations ''(k-1)'' in order to achieve best convergence rates.
+
+=== XFEM ===
+
+{{Main|Extended finite element method}}
+
+=== S-FEM ===
+
+{{Main|Smoothed finite element method}}
+
+=== Spectral methods ===
+
+{{Main|Spectral method}}
+
+=== Meshfree methods ===
+
+{{Main|Meshfree methods}}
+
+=== Discontinuous Galerkin methods ===
+
+{{Main|Discontinuous Galerkin method}}
+
+=== Finite element limit analysis ===
+
+{{Main|Finite element limit analysis}}
+
+=== Stretched grid method ===
+
+{{Main|Stretched grid method}}
+
+== Comparison to the finite difference method ==
+{{Unreferenced section|date=November 2010}}
+The [[finite difference method]] (FDM) is an alternative way of approximating solutions of PDEs. The differences between FEM and FDM are:
+
+*The most attractive feature of the FEM is its ability to handle complicated geometries (and boundaries) with relative ease. While FDM in its basic form is restricted to handle rectangular shapes and simple alterations thereof, the handling of geometries in FEM is theoretically straightforward.
+
+*The most attractive feature of finite differences is that it can be very easy to implement.
+
+*There are several ways one could consider the FDM a special case of the FEM approach. E.g., first order FEM is identical to FDM for Poisson's equation, if the problem is discretized by a regular rectangular mesh with each rectangle divided into two triangles.
+
+*There are reasons to consider the mathematical foundation of the finite element approximation more sound, for instance, because the quality of the approximation between grid points is poor in FDM.
+
+*The quality of a FEM approximation is often higher than in the corresponding FDM approach, but this is extremely problem-dependent and several examples to the contrary can be provided.
+
+Generally, FEM is the method of choice in all types of analysis in structural mechanics (i.e. solving for deformation and stresses in solid bodies or dynamics of structures) while [[computational fluid dynamics]] (CFD) tends to use FDM or other methods like [[finite volume method]] (FVM). CFD problems usually require discretization of the problem into a large number of cells/gridpoints (millions and more), therefore cost of the solution favors simpler, lower order approximation within each cell. This is especially true for 'external flow' problems, like air flow around the car or airplane, or weather simulation.
+
+== Application ==
+[[File:FAE visualization.jpg|thumb|250px|Visualization of how a car deforms in an asymmetrical crash using finite element analysis.[http://impact.sourceforge.net]]]
+
+A variety of specializations under the umbrella of the mechanical engineering discipline (such as aeronautical, biomechanical, and automotive industries) commonly use integrated FEM in design and development of their products. Several modern FEM packages include specific components such as thermal, electromagnetic, fluid, and structural working environments. In a structural simulation, FEM helps tremendously in producing stiffness and strength visualizations and also in minimizing weight, materials, and costs.
+
+FEM allows detailed visualization of where structures bend or twist, and indicates the distribution of stresses and displacements. FEM software provides a wide range of simulation options for controlling the complexity of both modeling and analysis of a system. Similarly, the desired level of accuracy required and associated computational time requirements can be managed simultaneously to address most engineering applications. FEM allows entire designs to be constructed, refined, and optimized before the design is manufactured.
+
+This powerful design tool has significantly improved both the standard of engineering designs and the methodology of the design process in many industrial applications.<ref name=Hastings>Hastings, J. K., Juds, M. A., Brauer, J. R., ''Accuracy and Economy of Finite Element Magnetic Analysis'', 33rd Annual National Relay Conference, April 1985.</ref> The introduction of FEM has substantially decreased the time to take products from concept to the production line.<ref name=Hastings/> It is primarily through improved initial prototype designs using FEM that testing and development have been accelerated.<ref name=McLaren-Mercedes>{{cite web|title=Vodafone McLaren-Mercedes: Feature - Stress to impress|author=McLaren-Mercedes|year=2006|url=http://www.mclaren.com/features/technical/stress_to_impress.php|accessdate=2006-10-03 |archiveurl = http://web.archive.org/web/20061030200423/http://www.mclaren.com/features/technical/stress_to_impress.php <!-- Bot retrieved archive --> |archivedate = 2006-10-30}}</ref> In summary, benefits of FEM include increased accuracy, enhanced design and better insight into critical design parameters, virtual prototyping, fewer hardware prototypes, a faster and less expensive design cycle, increased productivity, and increased revenue.<ref name=Hastings/>
+
+FEA has also been proposed to use in stochastic modelling, for numerically solving probability models. See the references list.<ref>"Methods with high accuracy for finite element probability computing" by Peng Long, Wang Jinliang and  Zhu Qiding, in Journal of Computational and Applied Mathematics 59 (1995) 181-189</ref><ref>Achintya Haldar and Sankaran mahadan: "Reliability Assessment Using Stochastic Finite Element Analysis", John Wiley & sons.</ref>
+
+== See also ==
+
+* [[Applied element method]]
+* [[Boundary element method]]
+* [[Direct stiffness method]]
+* [[Discontinuity layout optimization]]
+* [[Discrete element method]]
+* [[Finite element machine]]
+* [[Finite element method in structural mechanics]]
+* [[Galerkin method]]
+* [[Interval finite element]]
+* [[Isogeometric analysis]]
+* [[List of finite element software packages]]
+* [[Movable Cellular Automata]]
+* [[Multidisciplinary design optimization]]
+* [[Multiphysics]]
+* [[Patch test (finite elements)|Patch test]]
+* [[Rayleigh-Ritz method]]
+* [[Weakened weak form]]
+
+== References ==
+
+{{Reflist}}
+
+== External links ==
+* [http://homepage.usask.ca/~ijm451/finite/fe_resources/ IFER] Internet Finite Element Resources - Describes and provides access to finite element analysis software via the Internet.
+* [http://www.nafems.org NAFEMS]<U+2014>The International Association for the Engineering Analysis Community
+* [http://www.feadomain.com Finite Element Analysis Resources]- Finite Element news, articles and tips
+* [http://www.fieldp.com/femethods.html Finite-element Methods for Electromagnetics] - free 320-page text
+* [http://www.solid.ikp.liu.se/fe/index.html Finite Element Books]- books bibliography
+* [http://math.nist.gov/mcsd/savg/tutorial/ansys/FEM/ Mathematics of the Finite Element Method]
+* [http://people.maths.ox.ac.uk/suli/fem.pdf Finite Element Methods for Partial Differential Equations] - Lecture notes by [[Endre S<U+00FC>li]]
+*[http://www.cvel.clemson.edu/modeling/ Electromagnetic Modeling web site at Clemson University] (includes list of currently available software)
+
+{{Numerical PDE}}
+
+[[Category:Continuum mechanics]]
+[[Category:Finite element method]]
+[[Category:Numerical differential equations]]
+[[Category:Partial differential equations]]
+[[Category:Structural analysis]]
+
+[[ar:<U+0637><U+0631><U+064A><U+0642><U+0629> <U+0627><U+0644><U+0639><U+0646><U+0627><U+0635><U+0631> <U+0627><U+0644><U+0645><U+0646><U+062A><U+0647><U+064A><U+0629>]]
+[[az:Sonlu elementl<U+0259>r <U+00FC>sulu]]
+[[bg:<U+041C><U+0435><U+0442><U+043E><U+0434> <U+043D><U+0430> <U+043A><U+0440><U+0430><U+0439><U+043D><U+0438><U+0442><U+0435> <U+0435><U+043B><U+0435><U+043C><U+0435><U+043D><U+0442><U+0438>]]
+[[ca:An<U+00E0>lisi d'elements finits]]
+[[cs:Metoda kone<U+010D>n<U+00FD>ch prvk<U+016F>]]
+[[de:Finite-Elemente-Methode]]
+[[el:<U+039C><U+03AD><U+03B8><U+03BF><U+03B4><U+03BF><U+03C2> <U+03C0><U+03B5><U+03C0><U+03B5><U+03C1><U+03B1><U+03C3><U+03BC><U+03AD><U+03BD><U+03C9><U+03BD> <U+03C3><U+03C4><U+03BF><U+03B9><U+03C7><U+03B5><U+03AF><U+03C9><U+03BD>]]
+[[es:M<U+00E9>todo de los elementos finitos]]
+[[fa:<U+0631><U+0648><U+0634> <U+0627><U+062C><U+0632><U+0627><U+0621> <U+0645><U+062D><U+062F><U+0648><U+062F>]]
+[[fr:M<U+00E9>thode des <U+00E9>l<U+00E9>ments finis]]
+[[ko:<U+C720><U+D55C><U+C694><U+C18C><U+BC95>]]
+[[it:Metodo degli elementi finiti]]
+[[he:<U+05D0><U+05DC><U+05DE><U+05E0><U+05D8><U+05D9><U+05DD> <U+05E1><U+05D5><U+05E4><U+05D9><U+05D9><U+05DD>]]
+[[lt:Baigtini<U+0173> element<U+0173> metodas]]
+[[hu:V<U+00E9>geselemes m<U+00F3>dszer]]
+[[nl:Eindige-elementenmethode]]
+[[ja:<U+6709><U+9650><U+8981><U+7D20><U+6CD5>]]
+[[km:<U+179C><U+17B7><U+1792><U+17B8><U+200B><U+17A0><U+17D2><U+179C><U+17C3><U+178E><U+17C3><U+1790><U+17CD><U+200B><U+17A2><U+17CA><U+17C1><U+179B><U+1798><U+17C9><U+17B7><U+1793>]]
+[[pl:Metoda element<U+00F3>w sko<U+0144>czonych]]
+[[pt:M<U+00E9>todo dos elementos finitos]]
+[[ru:<U+041C><U+0435><U+0442><U+043E><U+0434> <U+043A><U+043E><U+043D><U+0435><U+0447><U+043D><U+044B><U+0445> <U+044D><U+043B><U+0435><U+043C><U+0435><U+043D><U+0442><U+043E><U+0432>]]
+[[simple:Finite element method]]
+[[sk:Met<U+00F3>da kone<U+010D>n<U+00FD>ch prvkov]]
+[[sl:Metoda kon<U+010D>nih elementov]]
+[[sv:Finita elementmetoden]]
+[[th:<U+0E23><U+0E30><U+0E40><U+0E1A><U+0E35><U+0E22><U+0E1A><U+0E27><U+0E34><U+0E18><U+0E35><U+0E44><U+0E1F><U+0E44><U+0E19><U+0E15><U+0E4C><U+0E40><U+0E2D><U+0E40><U+0E25><U+0E40><U+0E21><U+0E19><U+0E15><U+0E4C>]]
+[[tr:Sonlu elemanlar y<U+00F6>ntemi]]
+[[uk:<U+041C><U+0435><U+0442><U+043E><U+0434> <U+0441><U+043A><U+0456><U+043D><U+0447><U+0435><U+043D><U+043D><U+0438><U+0445> <U+0435><U+043B><U+0435><U+043C><U+0435><U+043D><U+0442><U+0456><U+0432>]]
+[[vi:Ph<U+01B0><U+01A1>ng ph<U+00E1>p ph<U+1EA7>n t<U+1EED> h<U+1EEF>u h<U+1EA1>n]]
+[[zh:<U+6709><U+9650><U+5143><U+5206><U+6790>]]

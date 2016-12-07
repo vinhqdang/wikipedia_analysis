@@ -1,0 +1,64 @@
+{{Mergefrom|evolutionary landscape|date=December 2008}}
+In [[evolutionary biology]], '''fitness landscapes''' or '''adaptive landscapes''' are used to visualize the relationship between [[genotype]]s (or [[phenotype]]s) and [[reproductive success]]. It is assumed that every genotype has a well defined replication rate (often referred to as [[fitness (biology)|fitness]]). This fitness is the "height" of the landscape. Genotypes which are very similar are said to be "close" to each other, while those  that are very different are "far" from each other. 
+
+The two concepts of height and distance are sufficient to form the concept of a "landscape". The set of all possible genotypes, their degree of similarity, and their related fitness values is then called a fitness landscape. 
+
+In [[evolutionary algorithm|evolutionary optimization]] problems, fitness landscapes are evaluations of a [[fitness function]] for all candidate solutions (see below). The idea of studying evolution by visualizing the distribution of fitness values as a kind of landscape was first introduced by [[Sewall Wright]] in 1932<ref name=Wright>Wright, S. 1932 "[http://www.blackwellpublishing.com/ridley/classictexts/wright.pdf The roles of mutation, inbreeding, crossbreeding, and selection in evolution]". In ''Proceedings of the Sixth International Congress on Genetics'', pp. 355-366.</ref>
+
+==Fitness landscapes in biology==
+
+Fitness landscapes are often conceived of as ranges of mountains. There exist local peaks (points from which all paths are downhill, i.e. to lower fitness) and valleys (regions from which most paths lead uphill). A fitness landscape with many local peaks surrounded by deep valleys is called rugged. If all genotypes have the same replication rate, on the other hand, a fitness landscape is said to be flat. The shapes of fitness landscapes are also closely related to [[epistasis]]. This connection was made precise by Niko Beerenwinkel, Lior Pachter and [[Bernd Sturmfels]] in 2006<ref>Beerenwinkel, N., Eriksson, N., Sturmfels, B.,''[[Journal of Theoretical Biology|J. Theo. Bio.]]'', '''242'''(2), 409-420, (2006)</ref> 
+
+An evolving [[population]] typically climbs uphill in the fitness landscape, by a series of  small genetic changes, until a local optimum is reached (Fig. 1). There it remains, unless a rare [[mutation]] opens a path to a new, higher fitness peak. Note, however, that at high mutation rates this picture is somewhat simplistic. A population may not be able to climb a very sharp peak if the mutation rate is too high, or it may drift away from a peak it had already found; consequently, reducing the fitness of the system. The process of drifting away from a peak is often referred to as [[Muller's ratchet]].
+
+The apparent lack of [[rotation in living systems|wheeled animals]] is an example of a fitness peak which is presently inaccessible due to a surrounding valley.
+
+In general, the higher the [[Connectivity (graph theory)|connectivity]] the more rugged the system becomes. Thus, a simply connected [[system]] only has one peak and if part of the system is changed then there will be little, if any, effect on any other part of the system. A high connectivity implies that the variables or sub-systems interact far more and the system may have to settle for a level of <U+2018>fitness<U+2019> lower than it might be able to attain. The system would then have to change its approach to overcoming whatever problems that confront it, thus, changing the <U+2018>terrain<U+2019> and enabling it to continue.
+
+==Fitness landscapes in evolutionary optimization==
+
+Apart from the field of evolutionary biology, the concept of a fitness landscape has also gained importance in [[evolutionary algorithm|evolutionary optimization]] methods such as [[genetic algorithm]]s or evolutionary strategies. In evolutionary optimization, one tries to solve real-world problems (e.g., [[engineering]] or [[logistics]] problems) by imitating the dynamics of biological evolution. For example, a delivery truck with a number of destination addresses can take a large variety of different routes, but only very few will result in a short driving time. 
+
+In order to use evolutionary optimization, one has to define for every possible [[solution point|solution]] ''s'' to the problem of interest (i.e., every possible route in the case of the delivery truck) how 'good' it is. This is done by introducing a [[scalar (mathematics)|scalar]]-valued [[function (mathematics)|function]] ''f(s)'' (scalar valued means that ''f(s)'' is a simple number, such as 0.3, while ''s'' can be a more complicated object, for example a list of destination addresses in the case of the delivery truck), which is called the [[fitness function]] or '''fitness landscape'''. 
+
+A high ''f(s)'' implies that ''s'' is a good solution. In the case of the delivery truck, ''f(s)'' could be the number of deliveries per hour on route ''s''. The best, or at least a very good, solution is then found in the following way: initially, a population of random solutions is created. Then, the solutions are mutated and selected for those with higher fitness, until a satisfying solution has been found.
+
+Evolutionary optimization techniques are particularly useful in situations in which it is easy to determine the quality of a single solution, but hard to go through all possible solutions one by one (it is easy to determine the driving time for a particular route of the delivery truck, but it is almost impossible to check all possible routes once the number of destinations grows to more than a handful).
+
+The concept of a scalar valued fitness function ''f(s)'' also corresponds to the concept of a potential or [[energy function]] in [[physics]]. The two concepts only differ in that [[physicists]] traditionally think in terms of minimizing the potential function, while [[biologists]] prefer the notion that fitness is being maximized. Therefore, taking the inverse of a potential function turns it into a fitness function, and vice versa.
+
+[[Image:fitness-landscape-cartoon.png|frame|none|Figure 1: Sketch of a fitness landscape. The arrows indicate the preferred flow of a population on the landscape, and the points A and C are local optima. The red ball indicates a population that moves from a very low fitness value to the top of a peak.]]
+
+==See also==
+*[[Fitness approximation]]
+*[[Fitness function]]
+*[[Epigenetic landscape]]
+*[[Evolution]]
+*[[Genetic algorithm]]
+*[[Habitat (ecology)]]
+*[[Hill climbing]]
+*[[Natural selection]]
+*[[Potential function]]
+*[[Self-organized criticality]]
+
+==References==
+<references/>
+
+==Further reading==
+*[[Niko Beerenwinkel]], [[Lior Pachter]] and [[Bernd Sturmfels]]. [http://arxiv.org/abs/q-bio.PE/0603034 Epistasis and shapes of fitness landscapes], 2006.
+*[[Richard Dawkins]]. ''[[Climbing Mount Improbable]]''. New York: Norton, 1996.
+*[[Sergey Gavrilets]]. [http://press.princeton.edu/titles/7799.html Fitness landscapes and the origin of species], 2004.
+*[[Stuart Kauffman]]. ''At Home in the Universe: The Search for Laws of Self-Organization and Complexity''. New York: Oxford University Press, 1995.
+*[[Melanie Mitchell]]. ''An Introduction to Genetic Algorithms''. Cambridge, MA: MIT Press, 1996.
+* [http://www.cs.ucl.ac.uk/staff/W.Langdon/FOGP/intro_pic/landscape.html Foundations of Genetic Programming, Chapter 2]
+*[[Stuart Kauffman]], ''The Origins of Order'', OUP, 1993
+
+{{genarch}}
+{{popgen}}
+
+[[Category:Population genetics]]
+[[Category:Selection]]
+
+[[es:Paisaje adaptativo]]
+[[pt:Paisagem de aptid<U+00E3>o]]
+[[fi:Adaptiivinen maisema]]

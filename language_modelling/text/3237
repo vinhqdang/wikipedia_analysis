@@ -1,0 +1,111 @@
+[[Image:Heckert GNU white.svg|thumb|300px|The GNU logo, by Etienne Suvasa]]
+The '''GNU Project''' {{IPAc-en|audio=En-gnu.ogg|<U+0261>|<U+0259>|<U+02C8>|n|u<U+02D0>}}<ref>{{cite web|url=http://www.gnu.org/ |title= What is GNU?| work = The GNU Operating System  |date=September 4, 2009 |publisher=[[Free Software Foundation]] |accessdate=October 9, 2009 |quote=The name "GNU" is a recursive acronym for "GNU's Not Unix!"; it is pronounced ''g-noo'', as one syllable with no vowel sound between the ''g'' and the ''n''.}}</ref><!-- /gnu:/ is not a possible English pronunciation-->
+is a [[free software]], [[mass collaboration]] project, announced on September 27, 1983, by [[Richard Stallman]] at [[Massachusetts Institute of Technology|MIT]].  It initiated [[GNU]] [[operating system]] development in January, 1984.  The founding goal of the project was, in the words of its initial announcement, to develop "''a sufficient body of free software [...] to get along without any software that is not free.''"<ref name="manifesto">{{cite web |url=http://www.gnu.org/gnu/manifesto.html |title=The GNU Manifesto |date=2007-07-21 |publisher=[[Free Software Foundation]] |accessdate=2007-11-10}}</ref>
+To make this happen, the GNU Project began working on an operating system called [[GNU]] ("GNU" is a [[recursive acronym]] that stands for "GNU's Not [[Unix]]").  This goal of making a free software operating system was achieved in 1992 when the last gap in the GNU system, a [[kernel (computer science)|kernel]], was filled by the third-party [[Linux kernel]] being released as Free Software, under version 2 of the GNU [[GNU General Public License|GPL]].<ref>http://www.gnu.org/gnu/linux-and-gnu.html</ref>
+
+Current work of the GNU Project includes software development, awareness building, political campaigning and sharing of the new material.
+
+==Origins of the project==
+When the GNU project first started they "had an [[Emacs]] text editor with [[Lisp (programming language)|Lisp]] for writing editor commands, a source level [[debugger]], a [[yacc]]-compatible [[parsing|parser]] generator, and a linker".<ref>Wardrip-Fruin, Noah; and Nick Montfort. "The GNU Manifesto." ''The NewMediaReader''. Cambridge, Massachusetts: MIT, 2003. pp.545-550.</ref> They had an initial kernel that needed more updates. Once the kernel and the compiler were finished GNU was able to be used for program development. The main goal was to create many other applications to be like the Unix system. GNU was able to run Unix programs but was not identical to it. GNU incorporated longer file names, file version numbers, and a crashproof file system. The GNU Manifesto was written to gain support and participation from others for the project. Programmers were encouraged to take part in any aspect of the project that interested them. People could donate funds, computer parts, or even their own time to write code and programs for the project.<ref name="manifesto"/>
+
+==GNU Manifesto==
+{{Main|GNU Manifesto}}
+The GNU Manifesto was written by Richard Stallman to gain support and participation in the GNU Project. 
+In the GNU Manifesto, Stallman listed four freedoms essential to software development: freedom to run a program for any purpose, freedom to study the mechanics of the program and modify it, freedom to redistribute copies, and freedom to improve and change modified versions for public use.<ref name="weber">Weber, S. (2004). ''The Success of Open Source''. Cambridge: Harvard University Press.</ref> To implement these freedoms, users needed full access to code. To ensure code remained free and provide it to the public, Stallman created the General Public License (GPL), which allowed software and the future generations of code derived from it to remain free for public use. Some complications arose, however, when certain software was grandfathered in the law of GPL because of code it derived from.<ref name="weber"/>
+
+==Philosophy and activism==
+{{Main|Free software movement}}
+Although most of the GNU Project's output is technical in nature, it was launched as a social, ethical, and political initiative.  As well as producing software and licenses, the GNU Project has published a number of writings,<ref>{{cite web |url=http://www.gnu.org/philosophy/philosophy.html |title=Philosophy of the GNU Project}}</ref> the majority of which were authored by [[Richard Stallman]].
+
+==Participation==
+Within the GNU website a list of projects are laid out and each project has specifics for what type of developer is able to perform the task needed for a certain piece of the GNU project. The skill level ranges from project to project but anyone with background knowledge in programming is encouraged to support the project.<ref>{{cite web |url=http://www.gnu.org/help/help.html |title=How you can help the GNU Project}}</ref>
+
+==Free software==
+The GNU project uses software that is free for users to copy, edit, and distribute. It is free in the sense that users can change the software to fit individual needs. The way programmers obtain the free software depends on where they get it. The software could be provided to the programmer from friends or over the internet, or the company a programmer works for may purchase the software. Proceeds from purchases support the GNU project.
+GNU has four kinds of freedom for the software:
+*Freedom to run the program
+*Freedom to access the code
+*Freedom to redistribute the program to anyone
+*Freedom to improve the software<ref>{{cite web |url=http://www.gnu.org/ |title=The GNU Operating System}}</ref>
+
+==Copyleft==
+{{main|Copyleft}}
+
+[[Copyleft]] is what helps maintain free use of this software among other programmers. Copyleft gives the legal right to everyone to use, edit, and redistribute programs or program's code as long as the distribution terms do not change. Copyleft preserves the freedom in new code and programs.
+
+==Operating system development==
+[[File:HURD Live CD.png|thumb|[[GNU Hurd]], is an example of the [[GNU]] operating system]]
+The first goal of the GNU project was to create a whole free-software operating system. By 1992, the GNU project had completed all of the major operating system components except for their kernel, [[GNU Hurd]]. The [[Linux kernel]], started independently by [[Linus Torvalds]] in 1991, filled the last gap, and Linux version 0.12 was released under the [[GPL]] in 1992. Together, Linux and GNU formed the first completely free-software operating system. Though the Linux kernel is not part of the GNU project, it was developed using [[GNU Compiler Collection|GCC]] and other GNU programming tools.<ref>{{cite web |url=http://groups.google.com/group/comp.os.minix/browse_thread/thread/76536d1fb451ac60/b813d52cbc5a044b |title=What would you like to see most in minix? |author=Linus Benedict Torvalds |publisher=comp.os.minix |date=August 26, 1991}}</ref>
+
+==Strategic projects==
+From the mid-1990s onward, with many companies investing in free software development, the [[Free Software Foundation]] redirected its funds toward the legal and political support of free software development.  Software development from that point on focused on maintaining existing projects, and starting new projects only when there was an acute threat to the [[free software community]]; see [[High Priority Free Software Projects]]. One of the most notable projects of the GNU Project is the [[GNU Compiler Collection]], whose components have been adopted as the standard compiler(s) on almost all UNIX and UNIX-like systems, including Apple's [[iOS]].
+
+===GNOME===
+One example is the [[GNOME]] desktop. This development effort was launched by the GNU Project because another desktop system, [[KDE]], was becoming popular but required users to install certain [[proprietary software]]. To prevent people from being tempted to install that proprietary software, the GNU Project simultaneously launched two projects. One was the [[Harmony toolkit]]. This was an attempt to make a free software replacement for the proprietary software that KDE depended on. Had this project been successful, the problem with KDE would have been solved. The second project was GNOME, which tackled the same issue from a different angle. It aimed to make a replacement for KDE that had no dependencies on proprietary software.  The Harmony project didn't make much progress, but GNOME developed very well. Eventually, the proprietary component that KDE depended on ([[Qt (toolkit)|Qt]]) was released as free software.<ref>{{cite web
+| url = http://linuxtoday.com/news_story.php3?ltsn=2000-09-05-001-21-OP-LF-KE
+| author = Richard Stallman
+| title = Stallman on Qt, the GPL, KDE, and GNOME
+| publisher = Linux Today
+| date = September 5, 2000
+| accessdate = 2005-09-09
+}}</ref>
+
+===Gnash===
+Another example is [[Gnash]], software able to play content distributed in the [[Adobe Flash]] format.  This has been marked as a priority project by GNU because it was seen that many people were installing a free software operating system and using a free software web-browser, but were then also installing the proprietary software plug-in from Adobe.
+
+==Recognition==
+*2001: [[USENIX#USENIX Lifetime Achievement Award|USENIX Lifetime Achievement Award]]<ref>{{cite web|url=http://www.usenix.org/directory/flame.html |title=USENIX Lifetime Achievement Award ("The Flame") |publisher=USENIX |quote=Awarded for the ubiquity, breadth, and quality of its freely available redistributable and modifiable software, which has enabled a generation of research and commercial development. |accessdate=2007-12-05}}</ref>
+
+== See also ==
+{{Portal|Free software}}
+{{Refbegin|2}}
+* [[GNU Free Documentation License]]
+* [[Free Software Foundation]]
+* [[List of GNU software]]
+* [[9965 GNU]]
+{{Refend}}
+
+==References==
+{{Reflist|2}}
+
+== External links ==
+* [http://www.gnu.org/ GNU Website]
+* [http://www.gnu.org/gnu/initial-announcement.html The initial announcement]
+* [http://www.gnu.org/philosophy/philosophy.html The GNU philosophy pages]
+* [http://www.gnu.org/gnu/manifesto.html The GNU Manifesto]
+* [http://www.gnu.org/gnu/the-gnu-project.html A detailed essay about the GNU Project]
+* [http://www.gnu.org/bulletins/ The "GNU's bulletins"], a discontinued newsletter containing much now-historical information
+
+{{Free Software Foundation}}
+{{GNU}}
+{{Linux}}
+{{FLOSS}}
+
+{{DEFAULTSORT:Gnu Project}}
+[[Category:GNU Project| ]]
+[[Category:Copyleft media]]
+[[Category:Free Software Foundation]]
+
+[[ar:<U+0645><U+0634><U+0631><U+0648><U+0639> <U+062C><U+0646><U+0648>]]
+[[bn:<U+0997><U+09A8><U+09C1> <U+09AA><U+09CD><U+09B0><U+0995><U+09B2><U+09CD><U+09AA>]]
+[[be:<U+041F><U+0440><U+0430><U+0435><U+043A><U+0442> GNU]]
+[[cs:Projekt GNU]]
+[[de:GNU-Projekt]]
+[[fa:<U+067E><U+0631><U+0648><U+0698><U+0647> <U+06AF><U+0646><U+0648>]]
+[[fr:Projet GNU]]
+[[ga:Tionscadal GNU]]
+[[id:Proyek GNU]]
+[[ia:Projecto GNU]]
+[[it:Progetto GNU]]
+[[ml:<U+0D17><U+0D4D><U+0D28><U+0D41> <U+0D2A><U+0D26><U+0D4D><U+0D27><U+0D24><U+0D3F>]]
+[[mr:<U+0917><U+094D><U+0928><U+0942> <U+092A><U+094D><U+0930><U+0915><U+0932><U+094D><U+092A>]]
+[[ms:Projek GNU]]
+[[nn:GNU-prosjektet]]
+[[mhr:GNU <U+043F><U+0440><U+043E><U+0435><U+043A><U+0442>]]
+[[pl:Projekt GNU]]
+[[pt:Projeto GNU]]
+[[ru:<U+041F><U+0440><U+043E><U+0435><U+043A><U+0442> GNU]]
+[[sq:Projekti GNU]]
+[[sv:GNU-projektet]]
+[[ta:<U+0B95><U+0BCD><U+0BA9><U+0BC2> <U+0BA4><U+0BBF><U+0B9F><U+0BCD><U+0B9F><U+0BAE><U+0BCD>]]
+[[vi:D<U+1EF1> <U+00E1>n GNU]]

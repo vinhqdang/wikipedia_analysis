@@ -1,0 +1,297 @@
+'''Maximum likelihood estimation''' ('''MLE''') is a popular [[statistics|statistical]] method used for fitting a mathematical model to some data. The modeling of real world data using estimation by maximum likelihood offers a way of tuning the free parameters of the model to provide a good fit.
+
+The method was pioneered by [[geneticist]] and [[statistician]] [[Ronald Fisher|Sir R. A. Fisher]] between 1912 and 1922. It has widespread applications in various fields, including:
+* [[linear model]]s and [[generalized linear model]]s;
+* [[communication systems]];
+* exploratory and confirmatory factor analysis;
+* [[structural equation modeling]];
+* [[psychometrics]] and [[econometrics]];
+* time-delay of arrival (TDOA) in acoustic or electromagnetic detection;
+* data modeling in nuclear and particle physics;
+* [[computational phylogenetics]];
+* origin/destination and path-choice modeling in transport networks;
+* many situations in the context of [[hypothesis testing]] and [[confidence interval]] formation.
+
+The method of maximum likelihood corresponds to many well-known estimation methods in statistics. For example, suppose you are interested in the heights of Americans.  You have a sample of some number of Americans, but not the entire population, and record their heights.  Further, you are willing to assume that heights are [[Normal distribution|normally distributed]] with some unknown [[mean]] and [[variance]]. The sample mean is then the maximum likelihood estimator of the population mean, and the sample variance is a close approximation to the maximum likelihood estimator of the population variance (see examples below).
+
+For a fixed set of data and underlying probability model, maximum likelihood picks the values of the model parameters that make the data "more likely" than any other values of the parameters would make them. Maximum likelihood estimation gives a unique and easy way to determine solution in the case of the [[normal distribution]] and many other problems, although in very complex problems this may not be the case.  If a [[uniform distribution|uniform]] [[prior probability|prior distribution]] is assumed over the parameters, the maximum likelihood estimate coincides with the [[Maximum a posteriori|most probable]] values thereof. 
+
+==Prerequisites==
+
+The following discussion assumes that readers are familiar with basic notions in [[probability theory]] such as [[probability distribution]]s, [[probability density function]]s, [[random variable]]s and [[expected value|expectation]]. It also assumes they are familiar with standard basic techniques of maximizing [[continuous function|continuous]] [[real number|real-valued]] [[function (mathematics)|function]]s, such as using [[differentiation]] to find a function's [[maxima and minima|maxima]].
+
+== Principles ==
+
+Consider a family <math>D_\theta</math> of probability distributions parameterized by an unknown parameter <math>\theta</math> (which could be vector-valued), associated with either a known [[probability density function]] (continuous distribution) or a known [[probability mass function]] (discrete distribution), denoted as <math>f_\theta</math>. We draw a sample <math>x_1,x_2,\dots,x_n</math> of ''n'' values from this distribution, and then using <math>f_\theta</math> we compute the (multivariate) probability density associated with our observed data, <math> f_\theta(x_1,\dots,x_n).\,\!</math>
+
+As a function of &theta; with ''x''<sub>1</sub>, ..., ''x''<sub>''n''</sub> fixed, this is the [[likelihood function]]
+
+:<math> \mathcal{L}(\theta) = f_{\theta}(x_1,\dots,x_n).\,\!</math>
+
+The method of maximum likelihood estimates &theta; by finding the value of &theta; that maximizes <math>\mathcal{L}(\theta)</math>. This is the '''maximum likelihood estimator''' ('''MLE''') of &theta;:
+
+:<math>\widehat{\theta} = \underset{\theta}{\operatorname{arg\ max}}\ \mathcal{L}(\theta).</math>
+
+From a simple point of view, the outcome of a maximum likelihood analysis is the maximum likelihood estimate. This can be supplemented by an approximation for the [[covariance matrix]] of the MLE, where this approximation is derived from the [[likelihood function]]. A more complete outcome from a maximum likelihood analysis would be the likelihood function itself, which can be used to construct improved versions of [[confidence interval]]s compared to those obtained from the approximate variance matrix. See also [[Likelihood Ratio Test]]
+
+Commonly, one assumes that the data drawn from a particular distribution are [[independent, identically distributed]] (iid) with unknown parameters. This considerably simplifies the problem because the likelihood can then be written as a product of ''n'' univariate probability densities:
+
+:<math>\mathcal{L}(\theta) = \prod_{i=1}^n f_{\theta}(x_i)</math>
+
+and since maxima are unaffected by monotone transformations, one can take the logarithm of this expression to turn it into a sum:
+
+:<math>\mathcal{L}^*(\theta) = \sum_{i=1}^n \log f_{\theta}(x_i).</math>
+
+The maximum of this expression can then be found numerically using various [[optimization (mathematics)|optimization]] algorithms.
+
+This contrasts with seeking an [[unbiased estimator]] of &theta;, which may not necessarily yield the MLE but which will yield a value that (on average) will neither tend to over-estimate nor under-estimate the true value of &theta;.
+
+Note that the maximum likelihood estimator may not be unique, or indeed may not even exist.
+
+==Properties==
+
+=== Functional invariance ===
+The maximum likelihood estimator selects the parameter value which gives the observed data the largest possible probability (or probability density, in the continuous case). If the parameter consists of a number of components, then we define their separate maximum likelihood estimators, as the corresponding component of the MLE of the complete parameter. Consistent with this, if <math>\widehat{\theta}</math> is the MLE for ''&theta;'', and if ''g'' is any function of ''&theta;'', then the MLE for ''&alpha;'' = ''g''(''&theta;'') is by definition
+
+:<math>\widehat{\alpha} = g(\widehat{\theta}).\,\!</math>
+
+It maximizes the so-called profile likelihood:
+
+:<math>\bar{L}(\alpha) = \sup_{\theta: \alpha = g(\theta)} L(\theta).</math>
+
+===Bias===
+For small numbers of samples, the [[unbiased estimator|bias]] of maximum-likelihood estimators can be substantial. Consider a case where ''n'' tickets numbered from 1 to ''n'' are placed in a box and one is selected at random (''see [[uniform distribution]]'').  If ''n'' is unknown, then the maximum-likelihood estimator of ''n'' is the number on the drawn ticket. The [[Expected value|expected value]] of the number on the drawn ticket, and therefore the expected value of ''n'', is (''n''+1)/2. As a result, the maximum likelihood estimator for ''n'' will systematically underestimate ''n'' by (n-1)/2. In estimating the highest number ''n'', we can only be certain that it is greater than or equal to the drawn ticket number.
+
+=== Asymptotics ===
+
+In many cases, estimation is performed using a set of [[independent identically distributed]] measurements. These may correspond to distinct elements from a random [[sample (statistics)|sample]], repeated observations, etc. In such cases, it is of interest to determine the behavior of a given estimator as the number of measurements increases to infinity, referred to as ''[[asymptotic]] behaviour''. 
+
+Under certain (fairly weak) regularity conditions, which are listed below, the MLE exhibits several characteristics which can be interpreted to mean that it is "asymptotically optimal". These characteristics include:
+
+* The MLE is '''asymptotically unbiased''', i.e., its [[bias of an estimator|bias]] tends to zero as the number of samples increases to infinity.
+* The MLE is '''asymptotically [[efficiency (statistics)|efficient]]''', i.e., it achieves the [[Cram<U+00E9>r-Rao lower bound]] when the number of samples tends to infinity. This means that, asymptotically, no unbiased estimator has lower [[mean squared error]] than the MLE.
+* The MLE is '''[[Estimator#Asymptotic_normality|asymptotically normal]]'''. As the number of samples increases, the distribution of the MLE tends to the Gaussian distribution with mean <math>\theta</math> and covariance matrix equal to the inverse of the [[Fisher information]] matrix.
+
+Since the Cram<U+00E9>r-Rao bound only speaks of unbiased estimators while the maximum likelihood estimator is usually biased, asymptotic efficiency as defined here does not mean anything: perhaps there are other nearly unbiased estimators with much smaller variance. However, it can be shown that among all regular estimators, which are estimators which have an asymptotic distribution which is not dramatically disturbed by small changes in the parameters, the asymptotic distribution of the maximum likelihood estimator is the best possible, i.e., most concentrated. <ref>[http://www.cambridge.org/catalogue/catalogue.asp?isbn=0521784506 A.W. van der Vaart, Asymptotic Statistics (Cambridge Series in Statistical and Probabilistic Mathematics) (1998)]</ref>
+
+Some regularity conditions which ensure this behavior are:
+# The first and second derivatives of the log-likelihood function must be defined.
+# The Fisher information matrix must not be zero, and must be continuous as a function of the parameter.
+# The maximum likelihood estimator is consistent.
+
+By the mathematical meaning of the word asymptotic, asymptotic properties are properties which only approached in the limit of larger and larger samples: they are approximately true when the sample size is large enough. The theory does not tell us how large the sample needs to be in order to obtain a good enough degree of approximation. Fortunately, in practice they often appear to be approximately true, when the sample size is moderately large.  So in practice, inference about the estimated parameters is often based on the asymptotic Gaussian distribution of the MLE. When we do this, the Fisher information matrix is usefully estimated by the [[observed information matrix]].
+
+Some cases where the asymptotic behaviour described above does not hold are outlined next.
+
+'''Estimate on boundary.''' Sometimes the maximum likelihood estimate lies on the boundary of the set of possible parameters, or (if the boundary is not, strictly speaking, allowed) the likelihood gets larger and larger as the parameter approaches the boundary. Standard asymptotic theory needs the assumption that the true parameter value lies away from the boundary.  If we have enough data, the maximum likelihood estimate will keep away from the boundary too. But with smaller samples, the estimate can lie on the boundary. In such cases, the asymptotic theory clearly does not give a practically useful approximation. Examples here would be variance-component models, where each component of variance, <U+03C3><sup>2</sup>, must satisfy the constraint <U+03C3><sup>2</sup> &ge;0.
+
+'''Data boundary parameter-dependent.''' For the theory to apply in a simple way, the set of data values which has positive probability (or positive probability density) should not depend on the unknown parameter. A simple example where such parameter-dependence does hold is the case of estimating <U+03B8> from a set of independent identically distributed when the common distribution is [[uniform distribution|uniform]] on the range (0,<U+03B8>). For estimation purposes the relevant range of <U+03B8> is such that <U+03B8> cannot be less than the largest observation. In this instance the maximum likelihood estimate exists and has some good behaviour, but the asymptotics are not as outlined above.
+
+'''Nuisance parameters.''' For maximum likelihood estimations, a model may have a number of [[nuisance parameter]]s. For the asymptotic behaviour outlined to hold, the number of nuisance parameters should not increase with the number of observations (the sample size). A well-known example of this case is where observations occur as pairs, where the observations in each pair have a different (unknown) mean but otherwise the observations are independent and Normally distributed with a common variance. Here for 2''N'' observations, there are ''N''+1 parameters. It is well-known that the maximum likelihood estimate for the variance does not converge to the true value of the variance.
+
+'''Increasing information.''' For the asymptotics to hold in cases where the assumption of [[independent identically distributed]] observations does not hold, a basic requirement is that the amount of information in the data increases indefinitely as the sample size increases. Such a requirement may not be met if either there is too much dependence in the data (for example, if new observations are essentially identical to existing observations), or if new independent observations are subject to an increasing observation error.
+
+==Examples==
+
+===Discrete distribution, finite parameter space===
+
+Consider tossing an [[unfair coin]] 80 times (i.e., we sample something like ''x''<sub>1</sub>=H, ''x''<sub>2</sub>=T, ..., ''x''<sub>80</sub>=T, and count the number of HEADS "H" observed). Call the probability of tossing a HEAD ''p'', and the probability of tossing TAILS 1-''p'' (so here ''p'' is ''&theta;'' above). Suppose we toss 49 HEADS and 31 TAILS, and suppose the coin was taken from a  box containing three coins: one which gives HEADS with probability ''p''=1/3, one which gives HEADS with probability ''p''=1/2 and another which gives HEADS with probability ''p''=2/3. The coins have lost their labels, so we don't know which one it was. Using '''maximum likelihood estimation''' we can calculate which coin has the largest likelihood, given the data that we observed. The likelihood function (defined below) takes one of three values:
+
+:<math>
+\begin{matrix}
+\Pr(\mathrm{H} = 49 \mid p=1/3) & = & \binom{80}{49}(1/3)^{49}(1-1/3)^{31} \approx 0.000 \\
+&&\\
+\Pr(\mathrm{H} = 49 \mid p=1/2) & = & \binom{80}{49}(1/2)^{49}(1-1/2)^{31} \approx 0.012 \\
+&&\\
+\Pr(\mathrm{H} = 49 \mid p=2/3) & = & \binom{80}{49}(2/3)^{49}(1-2/3)^{31} \approx 0.054 \\
+\end{matrix}
+</math>
+
+We see that the likelihood is maximized when ''p''=2/3, and so this is our ''maximum likelihood estimate'' for ''p''.
+
+===Discrete distribution, continuous parameter space===
+
+Now suppose we had only one coin but its ''p'' could have been any value 0 &le; ''p'' &le; 1. We must maximize the likelihood function:
+
+:<math>
+L(\theta) = f_D(\mathrm{H} = 49 \mid p) = \binom{80}{49} p^{49}(1-p)^{31}
+</math>
+
+over all possible values 0 &le; ''p'' &le; 1.
+
+One way to maximize this function is by [[derivative|differentiating]] with respect to ''p'' and setting to zero:
+
+:<math>
+\begin{align}
+{0}&{} = \frac{\partial}{\partial p} \left( \binom{80}{49} p^{49}(1-p)^{31} \right) \\
+  & {}\propto 49p^{48}(1-p)^{31} - 31p^{49}(1-p)^{30} \\
+  & {}= p^{48}(1-p)^{30}\left[ 49(1-p) - 31p \right]  \\
+  & {}= p^{48}(1-p)^{30}\left[ 49 - 80p \right]
+\end{align}
+</math>
+
+[[image:BinominalLikelihoodGraph.png|thumb|200px|Likelihood of different proportion parameter values for a binomial process with ''t'' = 3 and ''n'' = 10; the ML estimator occurs at the [[mode (statistics)|mode]] with the peak (maximum) of the curve.]]
+
+which has solutions ''p''=0, ''p''=1, and ''p''=49/80. The solution which maximizes the likelihood is clearly ''p''=49/80 (since ''p''=0 and ''p''=1 result in a likelihood of zero). Thus we say the ''maximum likelihood estimator'' for ''p'' is 49/80.
+
+This result is easily generalized by substituting a letter such as ''t'' in the place of 49 to represent the observed number of 'successes' of our [[Bernoulli trial]]s, and a letter such as ''n'' in the place of 80 to represent the number of Bernoulli trials. Exactly the same calculation yields the ''maximum likelihood estimator'' ''t''&nbsp;/&nbsp;''n'' for any sequence of ''n'' Bernoulli trials resulting in ''t'' 'successes'.
+
+===Continuous distribution, continuous parameter space===
+
+For the [[normal distribution]] <math>\mathcal{N}(\mu, \sigma^2)</math> which has [[probability density function]]
+
+:<math>f(x\mid \mu,\sigma^2) = \frac{1}{\sqrt{2\pi}\ \sigma\ } 
+                               \exp{\left(-\frac {(x-\mu)^2}{2\sigma^2} \right)}, </math>
+
+the corresponding [[probability density function]] for a sample of ''n'' [[independent identically distributed]] normal random variables (the likelihood) is
+
+:<math>f(x_1,\ldots,x_n \mid \mu,\sigma^2) = \prod_{i=1}^{n} f( x_{i}\mid  \mu, \sigma^2) = \left( \frac{1}{2\pi\sigma^2} \right)^{n/2} \exp\left( -\frac{ \sum_{i=1}^{n}(x_i-\mu)^2}{2\sigma^2}\right),</math>
+
+or more conveniently:
+
+:<math>f(x_1,\ldots,x_n \mid \mu,\sigma^2) = \left( \frac{1}{2\pi\sigma^2} \right)^{n/2} \exp\left(-\frac{ \sum_{i=1}^{n}(x_i-\bar{x})^2+n(\bar{x}-\mu)^2}{2\sigma^2}\right)</math>,
+where <math> \bar{x} </math> is the [[sample mean]].
+
+This family of distributions has two parameters: ''&theta;''=(''&mu;'',''&sigma;''), so we maximize the likelihood, <math>\mathcal{L} (\mu,\sigma) = f(x_1,\ldots,x_n \mid \mu, \sigma)</math>, over both parameters simultaneously, or if possible, individually.  
+
+Since the [[natural logarithm|logarithm]] is a [[continuous function|continuous]] [[strictly increasing]] function over the [[range (mathematics)|range]] of the likelihood, the values which maximize the likelihood will also maximize its logarithm.  Since maximizing the logarithm often requires simpler algebra, it is the logarithm which is maximized below.  (Note: the log-likelihood is closely related to [[information entropy]] and [[Fisher information]].)
+
+:<math>
+0 = \frac{\partial}{\partial \mu} \log \left( \left( \frac{1}{2\pi\sigma^2} \right)^{n/2} \exp\left(-\frac{ \sum_{i=1}^{n}(x_i-\bar{x})^2+n(\bar{x}-\mu)^2}{2\sigma^2}\right) \right) </math>
+
+<!-- extra blank space for legibility -->
+
+::<math> = \frac{\partial}{\partial \mu} \left( \log\left( \frac{1}{2\pi\sigma^2} \right)^{n/2} - \frac{ \sum_{i=1}^{n}(x_i-\bar{x})^2+n(\bar{x}-\mu)^2}{2\sigma^2} \right)</math>
+
+<!-- extra blank space for legibility -->
+
+::<math> = 0 - \frac{-2n(\bar{x}-\mu)}{2\sigma^2} </math>
+
+which is solved by 
+
+:<math>\hat\mu = \bar{x} = \sum^{n}_{i=1}x_i/n </math>. 
+
+This is indeed the maximum of the function since it is the only turning point in &mu; and the second derivative is strictly less than zero. Its [[expectation value]] is equal to the parameter &mu; of the given distribution,
+
+:<math> E \left[ \widehat\mu \right] = \mu,</math>
+
+which means that the maximum-likelihood estimator <math>\widehat\mu</math> is unbiased. 
+
+Similarly we differentiate the log likelihood with respect to &sigma; and equate to zero:
+
+:<math> 0 = \frac{\partial}{\partial \sigma} \log \left( \left( \frac{1}{2\pi\sigma^2} \right)^{n/2} \exp\left(-\frac{ \sum_{i=1}^{n}(x_i-\bar{x})^2+n(\bar{x}-\mu)^2}{2\sigma^2}\right) \right) </math>
+
+<!-- extra blank space for legibility -->
+
+::<math> = \frac{\partial}{\partial \sigma} \left( \frac{n}{2}\log\left( \frac{1}{2\pi\sigma^2} \right) - \frac{ \sum_{i=1}^{n}(x_i-\bar{x})^2+n(\bar{x}-\mu)^2}{2\sigma^2} \right) </math>
+
+<!-- extra blank space for legibility -->
+
+::<math> = -\frac{n}{\sigma} + \frac{ \sum_{i=1}^{n}(x_i-\bar{x})^2+n(\bar{x}-\mu)^2}{\sigma^3} </math>
+
+which is solved by 
+
+:<math>\widehat\sigma^2 = \sum_{i=1}^n(x_i-\widehat{\mu})^2/n</math>.  
+
+Inserting <math>\widehat\mu</math> we obtain
+
+:<math>\widehat\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_{i} - \bar{x})^2 = \frac{1}{n}\sum_{i=1}^n x_i^2
+                          -\frac{1}{n^2}\sum_{i=1}^n\sum_{j=1}^n x_i x_j</math>.  
+
+To calculate its expected value, it is convenient to rewrite the expression in terms of zero-mean random variables ([[statistical error]])  <math>\delta_i \equiv \mu - x_i</math>. Expressing the estimate in these variables yields
+
+:<math>\widehat\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (\mu - \delta_i)^2 -\frac{1}{n^2}\sum_{i=1}^n\sum_{j=1}^n (\mu - \delta_i)(\mu - \delta_j)</math>. 
+
+Simplifying the expression above, utilizing the facts that <math>E\left[\delta_i\right] = 0 </math> and <math> E[\delta_i^2] = \sigma^2 </math>, allows us to obtain
+
+:<math>E \left[ \widehat{\sigma^2}  \right]= \frac{n-1}{n}\sigma^2</math>.  
+
+This means that the estimator <math>\widehat\sigma</math> is biased (However, <math>\widehat\sigma</math> is consistent).
+
+Formally we say that the ''maximum likelihood estimator'' for <math>\theta=(\mu,\sigma^2)</math> is:
+
+:<math>\widehat{\theta} = \left(\widehat{\mu},\widehat{\sigma}^2\right).</math>
+
+In this case the MLEs could be obtained individually.  In general this may not be the case, and the MLEs would have to be obtained simultaneously.
+
+== Non-independent variables ==
+
+It may be the case that variables are correlated, in which case they are not independent. Two random variables X and Y are only independent if their joint probability density function is the product of the individual probability density functions, i.e.
+:<math>f(x,y)=f(x)f(y)\,</math>
+
+Suppose one constructs an order <math>n\,</math> Gaussian vector out of random variables <math>(x_1,\ldots,x_n)\,</math>, where each variable has means given by <math>(\mu_1, \ldots, \mu_n)\,</math>. Furthermore, let the [[covariance matrix]] be denoted by <math>\Sigma,</math>
+
+The joint probability density function of these <math>n</math> random variables is then given by:
+:<math>f(x_1,\ldots,x_n)=\frac{1}{2\pi\sqrt{\text{det}(\Sigma)}} \exp\left( -\frac{1}{2} \left[x_1-\mu_1,\ldots,x_n-\mu_n\right]\Sigma^{-1}     \left[x_1-\mu_1,\ldots,x_n-\mu_n\right]^T       \right)</math>
+
+In the two variable case, the joint probability density function is given by:
+:<math>f(x,y) = \frac{1}{2\pi \sigma_x \sigma_y \sqrt{1-\rho^2}} \exp\left[ -\frac{1}{2(1-\rho^2)} \left(\frac{(x-\mu_x)^2}{\sigma_x^2} - \frac{2\rho(x-\mu_x)(y-\mu_y)}{\sigma_x\sigma_y} + \frac{(y-\mu_y)^2}{\sigma_y^2}\right)            \right]</math>
+
+In this and other cases where a joint density function exists, the likelihood function is defined as above, under ''Principles'', using this density.
+
+==See also==
+{{Statistics portal}}
+* [[Abductive reasoning]], a logical technique corresponding to maximum likelihood.
+* [[Censoring (statistics)]] 
+* [[Delta method]], a method for finding the distribution of functions of a maximum likelihood estimator.
+* [[Generalized method of moments]], a method related to maximum likelihood estimation.
+* [[Inferential statistics]], for an alternative to the maximum likelihood estimate.
+* [[Likelihood function]], a description on what likelihood functions are.
+* [[Maximum a posteriori|Maximum a posteriori (MAP) estimator]], for a contrast in the way to calculate estimators when prior knowledge is postulated.
+* [[Mean squared error]], a measure of how 'good' an estimator of a distributional parameter is (be it the maximum likelihood estimator or some other estimator).
+* [[Method of moments (statistics)]], for another popular method for finding parameters of distributions.
+* [[Method of support]], a variation of the maximum likelihood technique.
+* [[Minimum distance estimation]]
+* [[Quasi-maximum likelihood]] estimator, a MLE estimator that is misspecified, but still consistent.
+* The [[Rao<U+2013>Blackwell theorem]], a result which yields a process for finding the best possible unbiased estimator (in the sense of having minimal [[mean squared error]]). The MLE is often a good starting place for the process.
+* [[Sufficient statistic]], a function of the data through which the MLE (if it exists and is unique) will depend on the data.
+
+== References ==
+<references />
+
+* {{cite book
+  | last = Kay
+  | first = Steven M.
+  | title = Fundamentals of Statistical Signal Processing: Estimation Theory
+  | publisher = Prentice Hall
+  | date = 1993
+  | pages = Ch. 7
+  | isbn = 0-13-345711-7 }}
+* {{cite book
+  | last = Lehmann
+  | first = E. L.
+  | coauthors = Casella, G.
+  | title = Theory of Point Estimation
+  | date = 1998
+  | publisher = Springer
+  | isbn = 0-387-98502-6
+  | pages = 2nd ed }}
+* A paper on the history of Maximum Likelihood: {{cite journal
+  | last = Aldrich
+  | first = John
+  | title = R.A. Fisher and the making of maximum likelihood 1912-1922
+  | journal = Statistical Science
+  | volume = 12
+  | issue = 3
+  | pages = 162<U+2013>176 
+  | date = 1997
+  | url = http://projecteuclid.org/Dienst/UI/1.0/Summarize/euclid.ss/1030037906
+  | doi = 10.1214/ss/1030037906}}
+* M. I. Ribeiro, [http://users.isr.ist.utl.pt/~mir/pub/probability.pdf Gaussian Probability Density Functions: Properties and Error Characterization] (Accessed 19 March 2008)
+
+==External links==
+*[http://statgen.iop.kcl.ac.uk/bgim/mle/sslike_1.html Maximum Likelihood Estimation Primer (an excellent tutorial)]
+*[http://www.mayin.org/ajayshah/KB/R/documents/mle/mle.html Implementing MLE for your own likelihood function using R]
+{{Statistics}}
+[[Category:Estimation theory]]
+
+[[de:Maximum-Likelihood-Methode]]
+[[fr:Maximum de vraisemblance]]
+[[it:Metodo della massima verosimiglianza]]
+[[nl:Meest aannemelijke schatter]]
+[[ja:<U+6700><U+5C24><U+6CD5>]]
+[[pt:M<U+00E1>xima verossimilhan<U+00E7>a]]
+[[ru:<U+041C><U+0435><U+0442><U+043E><U+0434> <U+043C><U+0430><U+043A><U+0441><U+0438><U+043C><U+0430><U+043B><U+044C><U+043D><U+043E><U+0433><U+043E> <U+043F><U+0440><U+0430><U+0432><U+0434><U+043E><U+043F><U+043E><U+0434><U+043E><U+0431><U+0438><U+044F>]]
+[[fi:Suurimman uskottavuuden estimointi]]
+[[sv:Maximum Likelihood-metoden]]
+[[zh:<U+6700><U+5927><U+4F3C><U+7136><U+4F30><U+8BA1>]]

@@ -1,0 +1,215 @@
+In mathematics, an '''orthogonal array''' is a [[combinatorial design]] which generalizes the idea of [[mutually orthogonal latin square]]s in a tabular form. These arrays have many connections to other combinatorial designs and have applications in the [[design of experiments]], [[coding theory]], [[cryptography]] and [[algorithm design|software testing]].
+
+==Definition==
+A ''t''-(''v'',''k'',<U+03BB>) ''orthogonal array'' is a <U+03BB>''v''<sup>''t''</sup> <U+00D7> ''k'' array whose entries are chosen from a set ''X'' with ''v'' points such that in every subset of ''t'' columns of the array, every ''t''-tuple of points of ''X'' appears in exactly <U+03BB> rows.
+
+In many applications these parameters are given the following names:
+: ''v'' is the number of ''levels'',
+: <U+03BB>''v''<sup>''t''</sup> is the number of ''runs'',
+: ''t'' is the ''strength'', and
+: <U+03BB> is the ''index''.
+
+==Examples==
+
+An example of a 2-(4, 5, 1) orthogonal array; a strength 2, 4 level design of index 1 with 16 runs.
+<center>
+{| class="wikitable"
+|-
+| 1 || 1 || 1 || 1 || 1
+|-
+| 1 || 2 || 2 || 2 || 2
+|-
+| 1 || 3 || 3 || 3 || 3
+|-
+| 1 || 4 || 4 || 4 || 4
+|-
+| 2 || 1 || 4 || 2 || 3
+|-
+| 2 || 2 || 3 || 1 || 4
+|-
+| 2 || 3 || 2 || 4 || 1
+|-
+| 2 || 4 || 1 || 3 || 2
+|-
+| 3 || 1 || 2 || 3 || 4
+|-
+| 3 || 2 || 1 || 4 || 3
+|-
+| 3 || 3 || 4 || 1 || 2
+|-
+| 3 || 4 || 3 || 2 || 1
+|-
+| 4 || 1 || 3 || 4 || 2
+|-
+| 4 || 2 || 4 || 3 || 1
+|-
+| 4 || 3 || 1 || 2 || 4
+|-
+| 4 || 4 || 2 || 1 || 3
+|}
+</center>
+
+==Mutually orthogonal latin squares==
+{{main|mutually orthogonal latin square}}
+
+A 2-(''v'',''k'',1) orthogonal array is equivalent to a set of ''k'' - 2 [[mutually orthogonal latin square]]s of order ''v''.
+
+Let ''A'' be a strength 2, index 1 orthogonal array on a ''v''-set of elements, identified with the set of natural numbers {1,...,''v''}. Chose and fix, in order, two columns of ''A'', called the ''indexing columns''. All ordered pairs (''i'', ''j'') with 1 <U+2264> ''i'', ''j'' <U+2264> ''v'' appear exactly once in the rows of the indexing columns. Take any other column of ''A'' and create a square array whose entry in position (''i'',''j'') is the entry of ''A'' in this column in the row that contains (''i'', ''j'') in the indexing columns of ''A''. The resulting square is a [[latin square]] of order ''v''. For example, consider the 2-(3,4,1) orthogonal array:
+{| class="wikitable"
+|-
+| 1 || 1 || 1 || 1
+|-
+| 1 || 2 || 2 || 2
+|-
+| 1 || 3 || 3 || 3
+|-
+| 2 || 1 || 2 || 3
+|-
+| 2 || 2 || 3 || 1
+|-
+| 2 || 3 || 1 || 2
+|-
+| 3 || 1 || 3 || 2
+|-
+| 3 || 2 || 1 || 3
+|-
+| 3 || 3 || 2 || 1
+|}
+By chosing columns 3 and 4 (in that order) as the indexing columns, the first column produces the latin square,
+{| class="wikitable"
+|-
+| 1 || 2 || 3
+|-
+| 3 || 1 || 2
+|-
+| 2 || 3 || 1
+|}
+while the second column produces the latin square, 
+{| class="wikitable"
+|-
+| 1 || 3 || 2
+|-
+| 3 || 2 || 1
+|-
+| 2 || 1 || 3
+|}
+
+The latin squares produced in this way from an orthogonal array will be [[orthogonal latin squares]], so the ''k'' - 2 columns other than the indexing columns will produce a set of ''k'' - 2 [[mutually orthogonal latin square]]s.
+
+This construction is completely reversible and so strength 2, index 1 orthogonal arrays can be constructed from sets of mutually orthogonal latin squares.<ref>{{harvnb|Stinson|2003|loc=pp. 140-141, Section 6.5.1}}</ref>
+
+==History==
+The concepts of [[latin square]]s and [[mutually orthogonal latin square]]s were generalized to latin cubes and hypercubes, and orthogonal latin cubes and hypercubes by {{harvtxt|Kishen|1942}}.<ref>{{harvnb|Raghavarao|1988|loc=pg. 9}}</ref> {{harvtxt|Rao|1946}} generalized these results to strength ''t''. The present notion of orthogonal array as a generalization of these ideas appears in {{harvtxt|Rao|1947}}.<ref>{{harvnb|Raghavarao|1988|loc=pg. 10}}</ref>
+
+==Other constructions==
+===Hadamard matrices===
+
+If there exists an [[Hadamard matrix]] of order 4''m'', then there exists a 2-(2, 4''m'' - 1, ''m'') orthogonal array.
+
+Let ''H'' be an Hadamard matrix of order 4''m'' in standardized form (first row and column entries are all +1). Delete the first row and take the [[transpose]] to obtain the desired orthogonal array.<ref>{{harvnb|Stinson|2003|loc=pg. 225, Theorem 10.2}}</ref>
+
+The order 8 standardized Hadamard matrix below (<U+00B1>1 entries indicated only by sign),
+{| class="wikitable"
+|-
+| + || + || + || + || + || + || + || +
+|-
+| + || + || + || + || - || - || - || -
+|-
+| + || + || - || - || + || + || - || -
+|-
+| + || + || - || - || - || - || + || +
+|-
+| + || - || + || - || + || - || + || -
+|-
+| + || - || + || - || - || + || - || +
+|-
+| + || - || - || + || + || - || - || +
+|-
+| + || - || - || + || - || + || + || -
+|}
+
+produces the 2-(2,7,2) orthogonal array:<ref>{{harvnb|Stinson|2003|loc=pg. 226, Example 10.3}}</ref>
+{| class="wikitable"
+|-
+| + || + || + || + || + || + || +
+|-
+| + || + || + || - || - || - || -
+|-
+| + || - || - || + || + || - || -
+|-
+| + || - || - || - || - || + || +
+|-
+| - || + || - || + || - || + || -
+|-
+| - || + || - || - || + || - || +
+|-
+| - || - || + || + || - || - || +
+|-
+| - || - || + || - || + || + || -
+|}
+
+==Applications==
+===Codes===
+===Threshold schemes===
+===Experimental designs===
+===Testing===
+'''Orthogonal array testing''' is a [[black box testing]] technique which is a systematic, [[statistical]] way of [[software testing]].<ref name="Pressman, p. 446">{{cite book |last=Pressman |first=Roger S |title=Software Engineering: A Practitioner's Approach |edition=6th |publisher=McGraw-Hill |year=2005 |isbn=0-07-285318-2}}</ref><ref>{{cite web |url=https://paportal.phadkeassociates.net/learning.aspx |title=Planning Efficient Software Tests |first=Madhav S |last=Phadke |publisher=Phadke Associates, Inc. |quote=Numerous articles on utilizing Orthogonal Arrays for Software and System Testing.}}</ref> It is used when the number of inputs to the system is relatively small, but too large to allow for exhaustive testing of every possible input to the [[software system|systems]].<ref name="Pressman, p. 446" /> It is particularly effective in finding errors associated with faulty [[logic]] within [[computer]] [[software systems]].<ref name="Pressman, p. 446" /> Orthogonal arrays can be applied in [[user interface]] testing, [[system testing]], [[Regression analysis|regression]] testing, [[configuration testing]] and [[Performance test (assessment)|performance testing]]. 
+The [[permutations]] of factor levels comprising a single treatment are so chosen that their responses are uncorrelated and hence each treatment gives a unique piece of [[information]]. The net effect of organizing the experiment in such treatments is that the same piece of information is gathered in the minimum number of [[experiments]].
+
+
+==See also==
+
+* [[Combinatorial design]]
+* [[Latin square]]s 
+* [[Latin hypercube sampling]]
+* [[Graeco-Latin square]]s
+
+==Notes==
+{{reflist}}
+
+==References==
+*{{cite book |last1=Box|first1= G. E. P.|last2= Hunter|first2= W. G.|last3=Hunter|first3= J. S.| year=1978|title=Statistics for Experimenters: An Introduction to Design, Data Analysis, and Model Building|publisher=John Wiley and Sons}}
+
+* {{citation|first=K.|last=Kishen|year=1942|title=On latin and hypergraecolatin cubes and hypercubes|journal=Current Science|volume=11|pages=98-99}}
+
+* {{cite book
+|title=Constructions and Combinatorial Problems in Design of Experiments
+|author=[[Damaraju Raghavarao|Raghavarao, Damaraju]]
+|location=New York
+|year=1988
+|edition=corrected reprint of the 1971 Wiley
+|publisher=Dover
+}}
+* {{cite book
+|title=Block Designs: Analysis, Combinatorics and Applications
+|author=[[Damaraju Raghavarao|Raghavarao, Damaraju]] and Padgett, L.V.
+|location=
+|year=2005
+|edition=
+|publisher=World Scientific
+}}
+*{{citation|first=C.R.|last=Rao|year=1946|title=Hypercubes of strength <nowiki>''d''</nowiki> leading to confounded designs in factorial experiments|journal=Bull. Calcutta Math. Soc.|volume=38|pages=67-78}}
+*{{citation|first=C.R.|last=Rao|year=1947|title=Factorial experiments derivable from combinatorial arrangements of arrays|journal=J. Roy. Stat. Soc., Suppl.|volume=9|pages=128-139}}
+* {{citation|last=Stinson|first=Douglas R.|title=Combinatorial Designs: Constructions and Analysis|year=2003|publisher=Springer|location=New York|isbn=0-387-95487-2}}
+
+* {{cite book
+|author=Street, Anne Penfold and Street, Deborah J.
+|title=Combinatorics of Experimental Design
+|publisher=Oxford U. P. [Clarendon]
+|year=1987
+|pages=400+xiv
+|isbn=0-19-853256-3
+}}
+
+
+
+==External links==
+
+*[http://www.itl.nist.gov/div898/handbook/pri/section3/pri3323.htm Hyper-Graeco-Latin square designs]
+*[http://support.sas.com/documentation/cdl/en/qcug/59658/HTML/default/fac_details_sect23.htm A SAS example using PROC FACTEX]
+{{Experimental design}}
+{{NIST-PD}}
+
+[[Category:Design of experiments]]
+[[Category:Latin squares]]
+[[Category:Design theory]]

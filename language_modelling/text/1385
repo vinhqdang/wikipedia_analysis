@@ -1,0 +1,352 @@
+{{Pp-move-indef}}
+ [[Image:Carter leaving Three Mile Island.gif|thumb|300px|right|President [[Jimmy Carter]] leaving [[Three Mile Island Nuclear Generating Station|Three Mile Island]] for [[Middletown, Dauphin County, Pennsylvania|Middletown, Pennsylvania]], April 1, 1979]]
+
+The '''Three Mile Island accident''' was a partial core [[nuclear meltdown|meltdown]] in Unit 2 (a [[pressurized water reactor]] manufactured by [[Babcock and Wilcox|Babcock & Wilcox]]) of the [[Three Mile Island Nuclear Generating Station]] in [[Dauphin County, Pennsylvania]] near [[Harrisburg, Pennsylvania|Harrisburg]]. It was the most significant accident in the history of the American commercial [[nuclear power]] generating industry, resulting in the release of up to 481 [[peta-|P]][[Becquerel|Bq]] (13 million [[curie]]s) of radioactive [[gas]]es, but less than 740 G[[Becquerel|Bq]] (20 [[curie]]s) of the particularly dangerous [[iodine-131]].<ref name=Walker231>Walker, p. 231</ref>
+
+The accident began at 4:00 a.m. on Wednesday, March 28, 1979, with failures in the non-nuclear secondary system, followed by a stuck-open [[pilot-operated relief valve]] (PORV) in the primary system, which allowed large amounts of reactor coolant to escape. The mechanical failures were compounded by the initial failure of plant operators to recognize the situation as a [[loss of coolant accident]] due to inadequate training and [[human factors]] [[industrial design]] errors relating to ambiguous control room indicators in the power plant's [[user interface]]. The scope and complexity of the accident became clear over the course of five days, as employees of [[Metropolitan Edison]] (Met Ed, the utility operating the plant), Pennsylvania state officials, and members of the U.S. [[Nuclear Regulatory Commission]] (NRC) tried to understand the problem, communicate the situation to the press and local community, decide whether the accident required an emergency evacuation, and ultimately end the crisis.
+
+In the end, the reactor was brought under control, although full details of the accident were not discovered until much later, following extensive investigations by both a presidential commission and the NRC. The Kemeny Commission Report concluded that "there will either be no case of cancer or the number of cases will be so small that it will never be possible to detect them. The same conclusion applies to the other possible health effects."<ref>Kemeny, p. 12</ref> Several epidemiological studies in the years since the accident have supported the conclusion that radiation releases from the accident had no perceptible effect on cancer incidence in residents near the plant, though these findings have been contested by one team of researchers.<ref>Walker, pp. 234-237</ref>
+
+Public reaction to the event was probably influenced by the release (12 days before the accident) of a movie called ''[[The China Syndrome]]'', depicting an accident at a nuclear reactor.<ref>{{cite news 
+  |title=The Jane Fonda Effect 
+  |author=Stephen J. Dubner and Steven D. Levitt 
+  |work=[[The New York Times]] 
+  |date=2007-09-16 
+  |url=http://www.nytimes.com/2007/09/16/magazine/16wwln-freakonomics-t.html?_r=1
+  |accessdate=2008-12-29
+}}</ref> Communications from officials during the initial phases of the accident were felt to be confusing.<ref>{{cite magazine
+  |title=Lessons from Three Mile Island 
+  |author=Tom McKenna 
+  |date=2004-08-10 
+  |journal=[[Physics World]] 
+  |url=http://physicsworld.com/cws/article/print/19964
+}}</ref> The accident was followed by a cessation of new nuclear plant construction in the US.
+
+==Three Mile Island reactor accident==
+===Understanding pressurized water reactors===
+{{Main|Pressurized water reactor}}
+{{Unreferenced section|date=December 2008}}{{Cleanup-jargon|date=March 2009}}
+[[Image:Threemileisland2.gif|thumb|right|250px|[[Three Mile Island Nuclear Generating Station]] consisted of two [[pressurized water reactor]]s manufactured by [[Babcock and Wilcox|Babcock & Wilcox]] each inside its own [[containment building]] and connected [[cooling tower]]s. Reactor 2 highlighted.]]
+There are three major water/steam loops in most pressurized water reactors: the primary loop, the secondary loop, and the condenser feedwater (cooling tower) loop. The primary loop runs through the reactor. It consists of purified, demineralized water to which a small, variable amount of [[boron]] has been added for reactivity control.  It is the primary thermal energy transport loop.  The primary loop carries the thermal neutron fission heat energy from the fuel assemblies (the reactor's "core") to an area outside the reactor, where the energy can be more easily harnessed (via the secondary loop). The primary loop runs at a temperature far higher than the boiling point of water at [[Atmosphere (unit)|standard atmospheric pressure]], and must remain pressurized or the water will instantly change ("flash") to steam, compromising cooling of the core. The water has two functions: to moderate or slow neutrons so they can be more easily captured by uranium fuel, and to transfer heat from the reactor.
+
+In this reactor design, water is used as the primary loop transport medium because it is cheap, has a high thermal transport efficiency, and actually contributes to fission reaction safety.  If this primary loop water is lost, neutron moderation will stop and self sustaining fission in the reactor core will be halted. This is not desirable under operating (or recently shutdown) conditions, since [[decay heat]] alone is sufficient to melt the fuel.
+
+The secondary loop resembles the steam cycle in a conventional power plant. The feedwater pump moves cool water into the steam generator, a heat exchanger which uses heat from the primary loop to boil the water in the secondary loop. The resulting steam then spins a turbine that is connected to the electrical generator. Once its energy has been expended, the steam flows through a condenser, which is another type of heat exchanger that changes the steam back to feedwater and transfers the absorbed latent heat to the cooling tower water. The feedwater is then pumped back to the steam generator system and the process repeats. 
+
+The cooling tower loop provides [[cooling water]] for the condenser of the secondary loop and other plant operational cooling needs. After being heated by absorbing waste heat from the generation process, the water is cooled by flowing through the cooling tower, which in most cases is a natural draft water-to-air heat exchanger. Water lost to evaporation in the cooling tower is replenished by water from a nearby source.
+
+===Accident description===
+====Stuck valve====
+[[Image:Tmi-2 schematic.svg|right|thumb|500px|Simplified Schematic Diagram of the TMI-2 plant.<ref name="FactSheet">{{cite web 
+  |url=http://www.nrc.gov/reading-rm/doc-collections/fact-sheets/3mile-isle.html 
+  |title=Fact Sheet on the Three Mile Island Accident 
+  |publisher=[[U.S. Nuclear Regulatory Commission]] 
+  |accessdate=2008-11-25
+}}</ref>]]
+
+In the nighttime hours preceding the accident, the TMI-2 reactor was running at 97 percent of full power, while the companion TMI-1 reactor was shut down for refueling.<ref>Walker, p. 71</ref> The chain of events leading to the partial core meltdown began in TMI-2's secondary non-nuclear cooling system at 4:00 a.m. [[EST]] on March 28, 1979. As a result of mechanical or electrical failure, the pumps in the [[condensate polisher|condensate polishing]] system stopped running, followed immediately by the main [[feedwater pump]]s. This automatically triggered the [[turbine]] to shut down and the reactor to [[scram]]: [[control rod]]s were inserted into the core and fission ceased. But the reactor continued to generate [[decay heat]], and because water was no longer flowing through the secondary loop, the [[Steam generator (nuclear power)|steam generators]] no longer removed that heat from the reactor.<ref>Walker, pp. 72-73</ref>
+
+Once the primary feedwater pump system failed, three auxiliary pumps activated automatically. However, because the valves had been closed for routine maintenance, the system was unable to pump any water. The closure of these valves was a violation of a key NRC rule, according to which the reactor must be shut down if all auxiliary feed pumps are closed for maintenance. This failure was later singled out by NRC officials as a key one, without which the course of events would have been very different.<ref name=postch1>''[[The Washington Post]], [http://www.washingtonpost.com/wp-srv/national/longterm/tmi/stories/ch1.htm A Pump Failure and Claxon Alert]</ref> The pumps were activated manually eight minutes later, and manually deactivated between 1 and 2 hours later,<ref name=postch1/> as per procedure, due to excessive vibration in the pumps.<ref>Le Bot, Pierre (2004), "Human reliability data, human error and accident models<U+2014>illustration through the Three Mile Island accident analysis", ''Reliability Engineering & System Safety'', Volume 83, Issue 2, February 2004, Pages 153-167</ref>
+
+Due to the loss of heat removal from the primary loop and the failure of the auxiliary system to activate, the primary side pressure began to increase, triggering the [[pilot-operated relief valve]] (PORV) at the top of the [[pressurizer]] to open automatically. The PORV should have closed again when the excess pressure had been released and electric power to the solenoid of the pilot was automatically cut, but instead the main relief valve stuck open due to a mechanical fault. The open valve permitted coolant water to escape from the primary system, and was the principal mechanical cause of the crisis that followed.<ref>Walker, pp. 73-74</ref>
+
+====Human Factors: Confusion over valve status====
+Critical [[human factors]] problems were revealed in the investigation about the [[industrial design]] of the reactor's [[Process control|control]] system's [[user interface]].  A lamp in the control room, designed to light up when electric power was applied to the solenoid that operated the pilot valve of the PORV, went out, as intended, when the power was removed. This was incorrectly interpreted by the operators as meaning that the main relief valve was closed, when in reality it only indicated that power had been removed from the solenoid, not the actual position of the pilot valve or the main relief valve. Because this indicator was not designed to unambiguously indicate the actual position of the main relief valve, the operators did not correctly diagnose the problem for several hours.<ref>Rogovin, pp. 14-15</ref> 
+
+The design of the PORV indicator light was fundamentally flawed, because it ''implied'' that the PORV was shut when it went dark. When everything was operating correctly this was true, and the operators became habituated to rely on it. However, when things went wrong and the main relief valve stuck open, the dark lamp was actually misleading the operators by implying that the valve was shut. This caused the operators considerable confusion, because the pressure, temperature and levels in the primary circuit,  so far as they could observe them via their instruments, were not behaving as they would have done if the PORV was shut &mdash; which they were convinced it was. This confusion contributed to the severity of the accident: because the operators were unable to break out of a cycle of assumptions which conflicted with what their instruments were telling them, it was not until a fresh shift came in who did not have the mind-set of the first set of operators that the problem was correctly diagnosed. But by then, major damage had been done.
+
+The operators had not been trained to understand the ambiguous nature of the PORV indicator and look for alternative confirmation that the main relief valve was closed. There was in fact a temperature indicator downstream of the PORV in the tail pipe between the PORV and the pressurizer that could have told them the valve was stuck open, by showing that the temperature in the tail pipe remained high after the PORV should have, and was assumed to have, shut. But this temperature indicator was not part of the "safety grade" suite of indicators designed to be used after an incident, and the operators had not been trained to use it. Its location on the back of the desk also meant that it was effectively out of sight of the operators.
+
+====Consequences of stuck valve====
+As the pressure in the primary system continued to decrease, reactor coolant continued to flow, but it was boiling inside the core. First, small bubbles of steam formed and immediately collapsed, known as [[nucleate boiling]]. As the system pressure decreased further, steam pockets began to form in the reactor coolant. This [[departure from nucleate boiling]] caused steam voids in coolant channels, blocking the flow of liquid coolant and greatly increasing the fuel plate temperature. The steam voids also took up more volume than liquid water, causing the pressurizer water level to rise even though coolant was being lost through the open PORV. Because of the lack of a dedicated instrument to measure the level of water in the core, operators judged the level of water in the core solely by the level in the pressurizer. Since it was high, they assumed that the core was properly covered with coolant, unaware that because of the voids forming in the reactor vessel, the indicator provided false readings.<ref>Kemeny, p. 94</ref> This was a key contributor to the initial failure to recognize the accident as a [[loss of coolant accident]], and led operators to turn off the emergency core cooling pumps, which had automatically started after the initial pressure decrease, due to fears the system was being overfilled.<ref>Rogovin, p. 16</ref>
+
+With the PORV still open, the quench tank that collected the discharge from the PORV overfilled, causing the containment building [[sump]] to fill and sound an alarm at 4:11 a.m. This alarm, along with higher than normal temperatures on the PORV discharge line and unusually high containment building temperatures and pressures, were clear indications that there was an ongoing loss of coolant accident, but these indications were initially ignored by operators.<ref>Kemeny, p. 96; Rogovin, pp. 17-18</ref> At 4:15 a.m., the quench tank relief diaphragm ruptured, and radioactive coolant began to leak out into the general [[containment building]]. This radioactive coolant was pumped from the [[containment building]] sump to an auxiliary building, outside the main containment, until the [[sump pump]]s were stopped at 4:39 a.m.<ref>Kemeny, p. 96</ref>
+
+After almost 80 minutes of slow [[temperature]] rise, the primary loop pumps began to [[cavitation|cavitate]] as steam, rather than water, began to pass through them. The pumps were shut down, and it was believed that natural circulation would continue the water movement. Steam in the system prevented flow through the core, and as the water stopped circulating it was converted to steam in increasing amounts. About 130 minutes after the first malfunction, the top of the reactor core was exposed and the intense heat caused a reaction to occur between the steam forming in the reactor core and the [[zirconium]] [[nuclear fuel rod]] [[Clad (metallurgy)|cladding]]. This fiery reaction burned off the nuclear fuel rod cladding, the hot plume of reacting steam and zirconium damaged the fuel pellets which released more radioactivity to the reactor coolant and produced hydrogen gas that is believed to have caused a small explosion in the containment building later that afternoon.<ref>Kemeny, p. 99</ref>
+
+[[Image:Graphic TMI-2 Core End-State Configuration.jpg|thumb|left|300px|NRC Image of Graphic TMI-2 Core End-State Configuration.]]
+
+At 6 a.m., there was a shift change in the control room. A new arrival noticed that the temperature in PORV tail pipe and the holding tanks was excessive and used a backup valve called a block valve to shut off the coolant venting via the PORV, but around 32,000 gallons (120 m<U+00B3>) of coolant had already leaked from the primary loop.<ref>Rogovin, p. 19; Walker, p. 78</ref> It was not until 165 minutes after the start of the problem that radiation alarms activated as contaminated water reached detectors &mdash; by that time, the radiation levels in the primary coolant water were around 300 times expected levels, and the plant was seriously contaminated.
+
+====Emergency declared====
+At 6:56 a.m. a plant supervisor declared a site emergency, and less than half an hour later station manager Gary Miller announced a general emergency, defined as having the "potential for serious radiological consequences" to the general public.<ref>Walker, p. 79</ref> Metropolitan Edison notified the Pennsylvania Emergency Management Agency (PEMA), which in turn contacted state and local agencies, governor [[Richard L. Thornburgh]] and lieutenant governor [[William W. Scranton]], to whom Thornburgh assigned responsibility for collecting and reporting on information about the accident.<ref>Walker, pp. 80-81</ref> The uncertainty of operators at the plant was reflected in fragmentary, ambiguous, or contradictory statements made by Met Ed to government agencies and to the press, particularly about the possibility and severity of off-site radiation releases. Scranton held a press conference in which he was reassuring, yet confusing, about this possibility, stating that though there had been a "small release of radiation,... no increase in normal radiation levels" had been detected. These were contradicted by another official, and by statements from Met Ed, who both claimed that no radiation had been released.<ref>Walker, pp. 80-84</ref> In fact, readings from instruments at the plant and off-site detectors had detected radiation releases, albeit at levels that were unlikely to threaten public health as long as they were temporary, and providing that containment of the then highly contaminated reactor was maintained.<ref>Walker, pp. 84-86</ref>
+
+Angry that Met Ed had not informed them before conducting a steam venting from the plant and convinced that the company was downplaying the severity of the accident, state officials turned to the NRC.<ref>Walker, p. 87</ref> After receiving word of the accident from Met Ed, the NRC had activated its emergency response headquarters in [[Bethesda, Maryland]] and sent staff members to Three Mile Island. NRC chairman [[Joseph Hendrie]] and commissioner Victor Gilinsky<ref>[http://www.nrc.gov/about-nrc/organization/commission/former-commissioners/gilinsky.html NRC: Victor Gilinsky]</ref> initially viewed the accident as a "cause for concern but not alarm".<ref>Walker p. 89</ref> Gilinsky briefed reporters and members of Congress on the situation and informed White House staff, and at 10:00 A.M. met with two other commissioners. However, the NRC faced the same problems in obtaining accurate information as the state, and was further hampered by being organizationally ill-prepared to deal with emergencies, as it lacked a clear command structure and the authority to tell the utility what to do, or to order an evacuation of the local area.<ref>Walker, pp. 90-91</ref>
+
+Gilinsky wrote in a recent article that it took five weeks to learn that "the reactor operators had measured fuel temperatures near the melting point."<ref name=Gilinsky2009>{{cite journal
+  | last = Gilinsky
+  | first = Victor
+  | title = Behind the scenes of Three Mile Island
+  | journal = [http://thebulletin.org/ Bulletin of the Atomic Scientists]
+  | date = 23 March 2009 
+  | url = http://thebulletin.org/web-edition/features/behind-the-scenes-of-three-mile-island
+  | accessdate = 2009-03-31
+}}</ref>
+He further wrote: "We didn't learn for years--until the reactor vessel was physically opened--that by the time the plant operator called the NRC at about 8 a.m., roughly one-half of the uranium fuel had already melted."<ref name="Gilinsky2009" />
+
+It was still not clear to the control room staff that the primary loop water levels were low and that over half the core was exposed. A group of workers took manual readings from the thermocouples and obtained a sample of primary loop water. Seven hours into the emergency, new water was pumped into the primary loop and the backup relief valve was opened to reduce pressure so that the loop could be filled with water. After 16 hours, the primary loop pumps were turned on once again, and the core temperature began to fall. A large part of the core had [[Nuclear meltdown|melted]], and the system was still dangerously radioactive. 
+
+On the third day following the accident, a hydrogen bubble was discovered in the dome of the pressure vessel, and become the focus of concern. A hydrogen explosion might not only breach the pressure vessel, but, depending on its magnitude, might compromise the integrity of the containment vessel leading to large scale release of radiation. Fortunately, it was determined that there was no oxygen present in the pressure vessel, a prerequisite for hydrogen to burn or explode. Immediate steps were taken to reduce the hydrogen bubble, and by the following day it was significantly smaller. Over the next week, steam and hydrogen were removed from the reactor using a [[Plasma recombination|plasma recombiner]] and, controversially, by venting straight to the [[Earth's atmosphere|atmosphere]].
+
+====Radioactive material release====
+Once the first line of containment is breached during a reactor plant accident, there is a possibility that the fuel or the fission products held inside can be released to the environment. Although the zirconium fuel cladding has been breached in other nuclear reactors without generating a release to the environment, at TMI-2, operators permitted fission products to leave the other containment barriers in a matter of minutes. Since very little of the fission products released were solids at room temperature, however, very little [[radiological contamination]] was reported in the environment. No significant level of [[radiation]] was attributed to the TMI-2 accident outside of the TMI-2 facility. [[Noble gases]] made up the bulk of the release of radioactive materials from TMI-2, with the next most abundant element being iodine.
+
+According to the official figures, as compiled by the 1979 Kemeny Commission from Metropolitan Edison and NRC data, a maximum of 480 [[petabecquerel]]s (13 million [[curie]]s) of radioactive noble gases (primarily [[xenon]]) were released by the event.<ref name=Walker231/> However these noble gases were considered relatively harmless,<ref name=sturgis09/> and only 481 to 629 G[[Bq]] (13 to 17 [[curie]]s) of [[thyroid cancer]]-causing [[iodine-131]] were released.<ref name=Walker231/> Total releases according to these figures were a relatively small proportion of the estimated 37 [[Exa-|E]][[Bq]] (10 billion [[curie]]s) in the reactor.<ref name=sturgis09/> It was later found that about half the core had melted, and the cladding around 90% of the fuel rods had failed,<ref name=FactSheet/><ref>Kemeny, p. 30</ref> with five feet of the core gone, and around 20 tons of uranium flowing to the bottom head of the pressure vessel.<ref>McEvily Jr., AJ and Le May, I. (2002), "The accident at Three Mile Island", ''Materials science research international'', vol:8 iss:1 pg:1 -8 </ref> However, the reactor vessel maintained integrity and contained the damaged fuel.<ref name=ANS>{{Cite web 
+  |url=http://www.ans.org/pi/resources/sptopics/tmi/whathappened.html 
+  |accessdate=2008-11-09 
+  |title=What Happened and What Didn't in the TMI-2 Accident 
+  |publisher=[[American Nuclear Society]]
+}}</ref> The reactor vessel, the second level of containment after the cladding, therefore contained nearly all of the radioactive isotopes in the core.
+
+The official figures are not, however, uncontested. Independent measurements provided evidence of radiation levels up to five times higher than normal in locations hundreds of miles downwind from TMI.<ref name=Mangano2004/><ref>{{Verify credibility|date=July 2009}}"In 1980, Science magazine published an article by New York state health officials who had measured levels of airborne xenon 133 in Albany that were three times above normal for five days after the meltdown (xenon 133 has a half-life of 5.3 days). A University of Southern Maine professor, Charles Armentrout, also documented elevated airborne beta radioactivity in Portland for several days following the accident. Both Albany and Portland lie north/northeast of the plant, about 230 and 430 miles distant." (Mangano 2004)</ref>{{Verify credibility|date=July 2009}} According to Randall Thompson, the lead health physicist at TMI after the accident (a veteran of the US Navy nuclear submarine program and a self-confessed "nuclear geek"), radiation releases were hundreds if not thousands of times higher.<ref name=sturgis09>Sue Sturgis (2009) [http://www.southernstudies.org/2009/04/post-4.html "FOOLING WITH DISASTER? Startling revelations about Three Mile Island disaster raise doubts over nuclear plant safety"], ''Facing South: Online Magazine of the Institute for Southern Studies'', April 2009</ref><ref>Thompson and Bear (1995), [http://www.southernstudies.org/images/sitepieces/ThompsonTMIassessment.pdf TMI Assessment (Part 2)] </ref> Some other insiders, including Arnie Gundersen, a former nuclear industry executive turned whistle-blower,<ref>[http://www.tmia.com/march26 Video: TMI and Community Health] - Gundersen 30th anniversary testimony for the Pennsylvania Legislature</ref> concur; Gundersen offers evidence, based on pressure monitoring data, for a hydrogen explosion shortly before 2 p.m. on 28 March 1979, which would have provided the means for a high dose of radiation to occur.<ref name=sturgis09/>{{Verify credibility|date=July 2009}} Gundersen cites affidavits from four reactor operators according to which the plant manager was aware of a dramatic pressure spike, after which the internal pressure dropped to outside pressure. Gundersen also notes that the control room shook and doors were blown off hinges. However official NRC reports refer merely to a "hydrogen burn." <ref name=sturgis09/> The Kemeny Commission referred to "a burn or an explosion that caused pressure to increase by 28 pounds per square inch in the containment building".<ref>Kemeny, John G., (Chairman, 1979), [http://www.threemileisland.org/downloads//188.pdf ''President's Commission: The Need For Change: The Legacy Of TMI''] </ref> ''[[The Washington Post]]'' reported that "At about 2 p.m., with pressure almost down to the point where the huge cooling pumps could be brought into play, a small hydrogen explosion jolted the reactor."<ref>''[[The Washington Post]]'' [http://www.washingtonpost.com/wp-srv/national/longterm/tmi/stories/ch4.htm The Tough Fight to Confine the Damage]</ref>
+
+But large radioactive releases, had they occurred, should have been readily detectable by other means. For example, researchers at nearby Dickinson College, which had radiation monitoring equipment sensitive enough to detect Chinese atmospheric atomic weapons testing, collected soil samples from the area for the ensuing two weeks and detected no elevated levels of radioactivity, except after rainfalls (likely due to natural [[radon]] plateout, not the accident).<ref>[http://www.threemileisland.org/science/pdfs/what_dickinson_found.pdf]</ref> Also, white-tailed deer tongues harvested over 50 miles from the reactor subsequent to the accident were found to have significantly higher levels of Cs-137 than was found in deer in the counties immediately surrounding the power plant. However, the elevated levels were still below those seen in deer in other parts of the country during the height of atmospheric weapons testing<ref>[http://www.ncbi.nlm.nih.gov/pubmed/8491625] </ref> Had there been elevated releases of radioactivity, increased levels of Iodine-131 and Cesium-137 would have been expected to be detected in cattle and goat's milk samples. Yet elevated levels were not found. <ref>[http://www.threemileisland.org/downloads/210.pdf]</ref>
+
+A later scientific study noted that the official emission figures were consistent with available [[dosimeter]] data,<ref name=hatch97>Hatch et al. (1997), [http://www.pubmedcentral.nih.gov/pagerender.fcgi?artid=1469856&pageindex=1 Comments on "A Re-Evaluation of Cancer Incidence Near the Three Mile Island Nuclear Plant"], ''Environmental Health Perspectives'', 105(1)</ref> though others have noted the incompleteness of this data, particularly for releases early on.<ref>[http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1469992]</ref>
+
+==Aftermath==
+===Voluntary evacuation===
+The experts had said an accident like the one at Three Mile Island could not happen, and initially described it as a "minor malfunction". Twenty-eight hours after the accident began, Lt. Gov. [[William W. Scranton]] appeared at a news briefing to say that Metropolitan Edison, the plant's owner, had assured the state that "everything is under control".<ref name=mis>[http://www.washingtonpost.com/wp-srv/national/longterm/tmi/stories/decade032889.htm A Decade Later, TMI's Legacy Is Mistrust] ''The Washington Post'', March 28, 1989, p. A01.</ref> Later that day, Scranton  changed his statement, saying that the situation was "more complex than the company first led us to believe".<ref name=mis/> There were conflicting statements about radiation releases.<ref name=cooke>Stephanie Cooke (2009). ''[[In Mortal Hands: A Cautionary History of the Nuclear Age]]'', Black Inc., p. 294.</ref> Schools were closed and residents were urged to stay indoors. Farmers were told to keep their animals under cover and on stored feed.<ref name=mis/><ref name=cooke/>
+
+Governor [[Dick Thornburgh]], on the advice of NRC Chairman [[Joseph Hendrie]], advised the evacuation "of pregnant women and pre-school age children ... within a five-mile radius of the Three Mile Island facility." Within days, 140,000 people had left the area.<ref name=mis/><ref>[http://www.nrc.gov/reading-rm/doc-collections/fact-sheets/3mile-isle.html Fact Sheet on the Three Mile Island Accident]</ref><ref>[http://www.pbs.org/wgbh/amex/three/peopleevents/pandeAMEX97.html  People & Events: Dick Thornburgh]</ref>
+
+Post-TMl surveys have shown that less than half of the American public were satisfied with the way the accident was handled by Pennsylvania State officials and the NRC, and people surveyed were even less pleased with the utility (General Public Utilities) and the plant designer.<ref name=ota>Office of Technology Assessment. (1984). [http://www.princeton.edu/~ota/disk3/1984/8421/842111.PDF Public Attitudes Toward Nuclear Power] p. 231.</ref>
+
+===Investigations===
+Several state and federal government agencies mounted investigations into the crisis, the most prominent of which was the President's Commission on the Accident at Three Mile Island, created by [[Jimmy Carter]] in April 1979.<ref>Walker, pp. 209-210</ref> The commission consisted of a panel of twelve people, specifically chosen for their lack of strong pro- or antinuclear views, and headed by chairman [[John G. Kemeny]], president of [[Dartmouth College]]. It was instructed to produce a final report within six months, and after public hearings, depositions, and document collection, released a completed study on October 31, 1979.<ref>Walker, p. 210</ref> Though the study avoided drawing conclusions about the future of the nuclear industry, it strongly criticized Babcock and Wilcox, Met Ed, GPU, and the NRC for lapses in quality assurance and maintenance, inadequate operator training, lack of communication of important safety information, poor management, and complacency.<ref>Walker, pp. 211-212</ref> Kemeny said that the actions taken by the operators were "inappropriate" but that the workers "were operating under procedures that they were required to follow, and our review and study of those indicates that the procedures were inadequate" and that the control room "was greatly inadequate for managing an accident."<ref>http://www.upi.com/Audio/Year_in_Review/Events-of-1979/Three-Mile-Island/12311692377023-3/ "Three Mile Island, 1979 Year in Review."</ref>
+
+The Kemeny Commission noted that Babcock and Wilcox's PORV valve had previously failed on 11 occasions, 9 of them in the open position, allowing coolant to escape. More disturbing, however, was the fact that virtually the entire sequence of events at TMI had been duplicated 18 months earlier at another Babcock and Wilcox reactor, owned by [[Davis-Besse]]. The only difference was that the operators at Davis-Besse identified the valve failure after 20 minutes, where at TMI it took 2 hours and 20 minutes; and the Davis-Besse facility was operating at 9% power, against TMI's 97%. Although Babcock engineers recognised the problem, the company failed to clearly notify its customers of the valve issue.<ref>Hopkins, A. (2001), "Was Three Mile Island a 'normal accident'?", ''Journal of contingencies and crisis management'', vol:9 iss:2 pg:65 -72</ref> 
+
+The [[Pennsylvania House of Representatives]] conducted its own investigation, which focused on the need to improve evacuation procedures.
+
+===Effect on nuclear power industry===
+[[Image:Nuclear Power History.png|right|thumb|300px|Global history of the use of nuclear power. The Three Mile Island accident is one of the factors cited for the decline of new reactor construction.]]
+
+According to the IAEA, the Three Mile Island accident was a significant turning point in the global development of nuclear power <ref>{{cite web
+  |url=http://www.iaea.org/About/Policy/GC/GC48/Documents/gc48inf-4_ftn3.pdf
+  |title=50 Years of Nuclear Energy
+  |publisher=[[IAEA]]
+  |accessdate=2008-12-29
+}}</ref>. From 1963 to 1979, the number of reactors under construction globally increased every year except 1971 and 1978. However, following the event, the number of reactors under construction declined every year from 1980 to 1998. Many similar [[Babcock and Wilcox]] reactors on order were canceled &mdash; in total, 51 American nuclear reactors were canceled from 1980 to 1984.<ref>[http://www.homestead.com/clonemaster/files/Cancel.htm Cancelled Nuclear Units Ordered in the United States]</ref>
+
+The 1979 TMI accident did not, however, initiate the demise of the U.S. nuclear power industry. As a result of post-[[1973 oil crisis|oil-shock]] analysis and conclusions of overcapacity, 40 planned nuclear power plants had already been canceled between 1973 and 1979. No U.S. nuclear power plant had been authorized to begin construction since the year before TMI. Nonetheless, at the time of the TMI incident, 129 nuclear power plants had been approved; of those, only 53 (which were not already operating) were completed. Federal requirements became more stringent, [[Anti-nuclear movement in the United States|local opposition]] became more strident, and construction times were significantly lengthened.
+
+===Cleanup===
+Three Mile Island Unit 2 was too badly damaged and contaminated to resume operations, the reactor was gradually deactivated and mothballed. TMI-2 had been online only three months but now had a ruined reactor vessel and a containment building that was unsafe to walk in &mdash; it has since been permanently closed. Cleanup started in August 1979 and officially ended in December 1993, having cost around US$975 million. Initially, efforts focused on the cleanup and decontamination of the site, especially the defueling of the damaged reactor. Starting in 1985 almost 100 tons of radioactive fuel were removed from the site, the defueling process was completed in 1990, and the damaged fuel was removed and disposed of in 1993.{{Citation needed|date=December 2008}} However the contaminated cooling water that leaked into the containment building had seeped into the building's concrete, leaving the radioactive residue impossible to remove.{{Citation needed|date=December 2008}}  In 1988, the Nuclear Regulatory Commission announced that, although it was possible to further decontaminate the Unit 2 site, the remaining radioactivity had been sufficiently contained as to pose no threat to public health and safety. Accordingly, further cleanup efforts were deferred to allow for decay of the radiation levels and to take advantage of the potential economic benefits of retiring both Unit 1 and Unit 2 together.
+
+===Health effects and epidemiology===
+{{Main|Three Mile Island accident health effects}}
+
+In the aftermath of the accident, investigations focused on the amount of radiation released by the accident. According to the [[American Nuclear Society]], using the official radiation emission figures, "The average radiation dose to people living within ten miles of the plant was eight [[millirem]], and no more than 100 millirem to any single individual. Eight millirem is about equal to a chest [[X-ray]], and 100 millirem is about a third of the average background level of radiation received by US residents in a year."<ref name=ANS/><ref>{{cite news 
+  |title=Three-Mile Island cancer rates probed 
+  |author= 
+  |work=BBC News 
+  |date=2002-11-01 
+  |url=http://news.bbc.co.uk/1/hi/health/2385551.stm 
+  |accessdate=2008-11-25
+}}</ref> 
+
+Based on these low emission figures, early scientific publications on the health effects of the fallout estimated one or two additional cancer deaths in the 10-mile area around TMI.<ref name=Mangano2004/>{{Verify credibility|date=October 2009}} Disease rates in areas further than 10 miles from the plant were never examined.<ref name=Mangano2004/> Local activism in the 1980s, based on anecdotal reports of negative health effects, led to scientific studies being commissioned. A variety of studies have been unable to conclude that the accident had substantial health effects.
+
+===Activism and legal action===
+{{See also|List of anti-nuclear groups in the United States#Three Mile Island Alert}}
+[[Image:Anti-nuke rally in Harrisburg USA.jpg|right|thumb|Anti-nuclear protest at Harrisburg in 1979, following the Three Mile Island Accident.]]
+
+The TMI accident enhanced the credibility of anti-nuclear groups, who had predicted an accident,<ref>Luther J. Carter "Political Fallout from Three Mile Island", ''Science'', 204, April 13 1979, p. 154.</ref> and triggered protests around the world.<ref>[[Mark Hertsgaard]] (1983). ''Nuclear Inc. The Men and Money Behind Nuclear Energy'', Pantheon Books, New York, p. 95 & 97.</ref>
+ 
+The American public were concerned about the release of radioactive gas from the TMI accident and many mass [[List of anti-nuclear protests in the United States|anti-nuclear demonstrations]] took place across the country in the following months.  The largest one was held in New York City in September 1979 and involved two hundred thousand people; speeches were given by [[Jane Fonda]] and [[Ralph Nader]].<ref>[http://books.google.com.au/books?id=YSdz4Cxqnx4C&pg=PA149&lpg=PA149&dq=nevada+test+site+protest+demonstration&source=bl&ots=nTFbGvuIvV&sig=mHTTpB0YnZiCNoxaM8u772e8Lj4&hl=en&ei=F0GzSfmmNMnUkAWxo_XJBA&sa=X&oi=book_result&resnum=5&ct=result#PPA149,M1 Interest Group Politics In America] p. 149.</ref><ref name=diablo>[http://books.google.com.au/books?id=Kn6YhNtyVigC&pg=PA45&lpg=PA45&dq=%22three+mile+island%22+anti-nuclear+protests+demonstrations&source=web&ots=rnr4LRrarL&sig=QboiWwnO5UIRJxIGqFuwOQq9nvQ&hl=en&sa=X&oi=book_result&resnum=9&ct=result#PPA45,M1 Social Protest and Policy Change] p. 45.</ref><ref>{{cite news |first=Robin |last=Herman |authorlink= |coauthors= |title=Nearly 200,000 Rally to Protest Nuclear Energy |url= |work=[[New York Times]] |page=B1 |date=September 24, 1979 |accessdate= }}</ref>  The New York rally was held in conjunction with a series of nightly <U+201C>[[No Nukes (album)|No Nukes<U+201D> concerts]] given at [[Madison Square Garden]] from September 19 through 23 by [[Musicians United for Safe Energy]]. In the previous May, an estimated 65,000 people, including the Governor of California, attended a march and rally against nuclear power in Washington, D.C.<ref name=diablo/>
+
+In 1981 citizens' groups succeeded in a class action suit against TMI, winning $25m in an out-of-court settlement. Part of this money was used to found the TMI Public Health Fund.<ref>Gayle Greene [http://books.google.com/books?id=PdkJo5yerGYC&pg=PA178&lpg=PA178&dq=%22Alice+Stewart%22+%2B+%22three+mile+island%22&source=bl&ots=kzKByb-M2Y&sig=VvkRzrozouHw50bF60rl9xjkiG4&hl=en&ei=6MvJSaOMF4mMtgfpnoWgAw&sa=X&oi=book_result&resnum=1&ct=result#PPA178,M1 The Woman Who Knew Too Much: Alice Stewart]</ref>
+
+The [[Radiation and Public Health Project]] cited calculations by Joseph Mangano, who has authored 19 medical journal articles and a book on ''Low Level Radiation and Immune Disease'', that reported a spike in infant mortality in the downwind communities two years after the accident.<ref name=Mangano2004>{{cite journal
+  | last = Mangano
+  | first = Joseph
+  | authorlink = 
+  | coauthors = 
+  | title = Three Mile Island: Health Study Meltdown
+  | journal = [http://thebulletin.org/ Bulletin of the Atomic Scientists]
+  | volume = 60
+  | issue = 5
+  | pages = 30<U+2013>35
+  | publisher = Metapress
+  | location = 
+  | date = September/October 2004
+  | url = http://thebulletin.metapress.com/content/t0778475220w1365/?p=90575ba504f3478da3d2aeac62e52ec1&pi=0
+  | doi = 10.2968/060005010
+  | id = 
+  | issn = 0096-3402
+  | accessdate = 2009-03-31
+}}</ref><ref>{{cite web
+  |url=http://www.guardian.co.uk/business/2004/apr/13/nuclearindustry.usnews
+  |title=US nuclear industry powers back into life
+  |work=[[The Guardian]]
+  |author=
+  |date=2004-04-13
+  |accessdate=2008-12-29
+}}</ref> Anecdotal evidence also records effects on the region's wildlife.<ref>{{cite journal
+  | last = Mangano
+  | first = Joseph
+  | authorlink = 
+  | coauthors = 
+  | title = Three Mile Island: Health Study Meltdown
+  | journal = [http://thebulletin.org/ Bulletin of the Atomic Scientists]
+  | volume = 60
+  | issue = 5
+  | pages = 30<U+2013>35
+  | publisher = Metapress
+  | location = 
+  | date = September/October 2004
+  | url = http://thebulletin.metapress.com/content/t0778475220w1365/?p=90575ba504f3478da3d2aeac62e52ec1&pi=0
+  | doi = 10.2968/060005010
+  | id = 
+  | issn = 0096-3402
+  | accessdate = 2009-03-31
+}}</ref>For example, according to one anti-nuclear activist, [[Harvey Wasserman]], the fallout caused "a plague of death and disease among the area's wild animals and farm livestock", including a sharp fall in the reproductive rate of the region's horses and cows, reflected in statistics from Pennsylvania's Department of Agriculture, though the Department denies a link with TMI.<ref>Harvey Wasserman, ''[[CounterPunch]]'', 24 March 2009, [http://www.counterpunch.org/wasserman03242009.html People Died at Three Mile Island]</ref>  
+
+According to Eric Epstein, chair of Three Mile Island Alert, the TMI plant operator and its insurers paid at least $82 million in publicly documented compensation to residents for "loss of business revenue, evacuation expenses and health claims".<ref>[http://www.pittsburghlive.com/x/pittsburghtrib/news/multimedia/s_617234.html Three Mile Island: 30 years of what if ...] ''Pittsburgh Tribune Review'', March 22, 2009.</ref> Also according to Harvey Wasserman, hundreds of out-of-court settlements have been reached with alleged victims of the fallout, with a total of $15m paid out to parents of children born with birth defects.<ref>[[Harvey Wasserman]], 1 April 2009, ''CounterPunch'', [http://www.counterpunch.org/wasserman04012009.html Cracking the Media Silence on Three Mile Island]</ref> However, a class action lawsuit alleging that the accident caused detrimental health effects was rejected by Harrisburg U.S. District Court Judge Sylvia Rambo. The appeal of the decision in front of U.S. Third Circuit Court of Appeals also failed.<ref name="world-nuclear">{{cite web 
+  |url=http://www.world-nuclear.org/info/inf36.htm 
+  |title=Three Mile Island: 1979 
+  |publisher=[[World Nuclear Association]] 
+  |accessdate=2008-11-25
+}}</ref>
+
+=== Lessons learned ===
+{{Unreferenced section|date=December 2008}}
+Three Mile Island has been of interest to [[human factors|human factors engineers]] as an example of how groups of people react to and make decisions under [[stress (medicine)|stress]]. There is now a general consensus that the accident was exacerbated by wrong decisions made because the operators were overwhelmed with information, much of it irrelevant, misleading or incorrect. As a result of the TMI-2 incident, nuclear reactor operator training has been improved. Before the incident it focused on diagnosing the underlying problem; afterward, it focused on reacting to the emergency by going through a standardized checklist to ensure that the core is receiving enough coolant under sufficient pressure. 
+
+In addition to the improved operating training, improvements in quality assurance, engineering, operational surveillance and emergency planning have been instituted.  Improvements in control room habitability, "sight lines" to instruments, ambiguous indications and even the placement of "trouble" tags were made; some trouble tags were covering important instrument indications during the accident. Improved surveillance of critical systems, structures and components required for cooling the plant and mitigating the escape of radionuclides during an emergency were also implemented. In addition, each nuclear site needed to have an approved emergency plan to direct the evacuation of the public within a ten mile Emergency Planning Zone (EPZ); and to facilitate rapid notification and evacuation. This plan is periodically rehearsed with federal and local authorities to ensure that all groups work together quickly and efficiently.
+
+In 1979, as Pennsylvania state secretary of health in the Thornburg administration, [[Gordon K MacLeod]], MD, managed the health effects of the Three Mile Island nuclear accident. He criticized Pennsylvania's preparedness, in the event of a nuclear accident, at the time for not having potassium iodide in stock, which protects the thyroid gland in the event of exposure to radioactive iodine, as well as for not having any physicians on Pennsylvania's equivalent to the Nuclear Regulatory Commission.
+
+The Three Mile Island accident inspired [[Charles Perrow]]'s 1982 exposition of [[normal accident|Normal Accident Theory]], which became widely known through his 1984 book. TMI was an example of this type of accident because it was "unexpected, incomprehensible, uncontrollable and unavoidable".<ref>Perrow, C. (1982), <U+2018>The President<U+2019>s Commission and the Normal Accident<U+2019>, in Sils, D., Wolf, C. and Shelanski, V. (Eds), Accident at Three Mile Island: The Human Dimensions, Westview, Boulder, pp.173<U+2013>184.</ref>
+
+==''The China Syndrome''==
+<!-- Image with unknown copyright status removed: [[Image:Edward Teller Washington Post Ad.jpg|right|thumb|275px|Edward Teller as "the only victim of Three Mile Island" in his 1979 ''Wall Street Journal'' pro-nuclear ad, sponsored by [[Dresser Industries]], the firm which had manufactured one of the defective valves which contributed to the accident.]] -->
+The accident at the plant occurred 12 days after the release of the movie ''[[The China Syndrome]]'', which featured [[Jane Fonda]] as a news anchor at a California TV station. In the film, a major nuclear plant failure almost happens while Fonda's character and her cameraman ([[Michael Douglas]]) are at a plant doing a series on [[nuclear power]]. She proceeds to raise awareness of how unsafe the plant was. Coincidentally, there is a scene in which Fonda's character speaks with a [[nuclear safety]] expert who says that a meltdown could render an area "the size of Pennsylvania permanently uninhabitable." Also, the fictional near-accident in the movie stems from plant operators overestimating the amount of water within the core.
+
+After the release of the film, Fonda began lobbying against nuclear power &mdash; the only actor in the film to do so. In an attempt to counter her efforts, the nuclear physicist [[Edward Teller]], "father of the [[hydrogen bomb]]" and long-time government science advisor, himself lobbied in favor of nuclear power, and the 71-year-old scientist eventually suffered a heart attack on May 8, 1979, which he later blamed on Fonda: "You might say that I was the only one whose health was affected by that reactor near Harrisburg. No, that would be wrong. It was not the reactor. It was Jane Fonda. Reactors are not dangerous."<ref>{{cite book |title=Our Precarious Habitat-- It's in Your Hands |author=Melvin A Benarde |publisher=Wiley InterScience |year=2007 |page=256 |isbn=0471740659 |url=http://books.google.com/books?id=9O82L8QEZXcC&pg=PA256}}</ref>
+
+==Current status==
+[[Image:Three Mile Island nuclear power plant.jpg|thumb|300px|left|Viewed from the west, Three Mile Island currently uses only one nuclear generating station, TMI-1, which is on the left. TMI-2, to the right, has not been used since the accident. Note that this is a pre-accident photo taken when TMI-2 was in operation.]]
+
+Unit 1 had its license temporarily suspended following the incident at Unit 2. Although the citizens of the three counties surrounding the site voted by a margin of 3:1 to permanently retire Unit 1, it was permitted to resume operations in 1985.{{Citation needed|date=December 2008}} General Public Utilities Corporation, the plant's owner, formed General Public Utilities Nuclear Corporation (GPUN) as a new subsidiary to own and operate the company's fleet of nuclear facilities, including Three Mile Island. The plant had previously been operated by Metropolitan Edison Company (Met-Ed), one of GPU's regional utility operating companies. In 1996, General Public Utilities shortened its name to GPU Inc. Three Mile Island Unit 1 was sold to [[AmerGen]] Energy Corporation, a joint venture between Philadelphia Electric Company (PECO), and [[British Energy]], in 1998.{{Citation needed|date=December 2008}} In 2000, PECO merged with Unicom Corporation to form [[Exelon|Exelon Corporation]], which acquired British Energy's share of AmerGen in 2003.{{Citation needed|date=December 2008}} Today, AmerGen LLC is a fully owned subsidiary of Exelon Generation and owns TMI Unit 1, Oyster Creek Nuclear Generating Station, and Clinton Power Station.  These three units, in addition to Exelon's other nuclear units, are operated by Exelon Nuclear Inc., an Exelon subsidiary. 
+
+General Public Utilities was legally obliged to continue to maintain and monitor the site, and therefore retained ownership of Unit 2 when Unit 1 was sold to AmerGen in 1998. GPU Inc. was acquired by First Energy Corporation in 2001, and subsequently dissolved. First Energy then contracted out the maintenance and administration of Unit 2 to AmerGen. Unit 2 has been administered by Exelon Nuclear since 2003, when Exelon Nuclear's parent company, Exelon, bought out the remaining shares of AmerGen, inheriting First Energy's maintenance contract.  Unit 2 continues to be licensed and regulated by the Nuclear Regulatory Commission in a condition known as Post Defueling Monitored Storage (PDMS).<ref>{{cite web
+ |url=http://www.nrc.gov/info-finder/decommissioning/power-reactor/three-mile-island-unit-2.html
+ |title=NRC: Three Mile Island - Unit 2
+ |accessdate=2009-01-29
+ }}</ref>
+
+Today, the TMI-2 reactor is permanently shut down and defueled, with the reactor coolant system drained, the radioactive water decontaminated and evaporated, radioactive waste shipped off-site to a disposal site, reactor fuel and core debris shipped off-site to a Department of Energy facility, and the remainder of the site being monitored. The owner says it will keep the facility in long-term, monitored storage until the operating license for the TMI-1 plant expires at which time both plants will be decommissioned.<ref name="FactSheet"/> In 2009 the NRC granted a license extension which means the TMI-1 reactor may operate until April 19, 2034.<ref>{{cite web |url=http://www.nrc.gov/info-finder/reactor/tmi1.html |title=Three Mile Island 1 - Pressurized Water Reactor |publisher=[[Nuclear Regulatory Commission]] |accessdate=2008-12-15}}</ref><ref name="license-extended-reuters">{{cite news|url=http://www.reuters.com/article/companyNewsAndPR/idUSN223175220091022|title=NRC renews Exelon Pa. Three Mile Isl reactor license|date=2009-10-22|publisher=Thomson Reuters|accessdate=2009-10-23}}</ref>
+
+==Unit 2 Generator==
+On January 22, 2010 officials at the Nuclear Regulatory Commission announced the electrical generator from the damaged Unit 2 reactor at TMI will be used at [[Shearon_Harris_Nuclear_Power_Plant|Shearon Harris Nuclear Plant]] in New Hill, North Carolina. Preliminary work is under way to move the generator. It will be transported in two parts, weighing a combined 670 tons. TMI's Unit 2 reactor has been shut down since a partial meltdown in 1979.<ref>{{cite web |url=http://www.wral.com/news/state/story/6864151/ |title=Three Mile Island generator moving to Shearon Harris |publisher=[[WRAL]] |accessdate=2010-1-22}}</ref>
+{{clear}}
+
+==Timeline==
+{| class="wikitable"
+!Date||Event
+|- 
+|July 1980||Approximately 1591 T[[Bq]] (43,000 [[curie]]s) of krypton were vented from the reactor building.
+|-
+|July 1980||The first manned entry into the reactor building took place.
+|-
+|Nov. 1980||An Advisory Panel for the Decontamination of TMI-2, composed of citizens, scientists, and State and local officials, held its first meeting in Harrisburg, PA.
+|-
+|July 1984||The reactor vessel head (top) was removed.
+|-
+|Oct. 1985||Defueling began.
+|-
+|July 1986||The off-site shipment of reactor core debris began.
+|-
+|Aug. 1988||GPU submitted a request for a proposal to amend the TMI-2 license to a "possession-only" license and to allow the facility to enter long-term monitoring storage.
+|-
+|Jan. 1990||Defueling was completed.
+|-
+|July 1990||GPU submitted its funding plan for placing $229 million in escrow for radiological decommissioning of the plant.
+|-
+|Jan. 1991||The evaporation of accident-generated water began.
+|-
+|April 1991||NRC published a notice of opportunity for a hearing on GPU's request for a license amendment.
+|-
+|Feb. 1992||NRC issued a safety evaluation report and granted the license amendment.
+|-
+|Aug. 1993||The processing of accident-generated water was completed involving 2.23 million gallons.
+|- 
+|Sept. 1993||NRC issued a possession-only license.
+|-
+|Sept. 1993||The Advisory Panel for Decontamination of TMI-2 held its last meeting.
+|- 
+|Dec. 1993||Post-Defueling Monitoring Storage began.
+|}
+
+==See also==
+*[[International Nuclear Events Scale]]
+*[[Nuclear and radiation accidents]] | [[List of civilian nuclear accidents]]
+*[[Nuclear meltdown]] | [[Loss of coolant accident]]
+*[[Nuclear safety]] | [[Nuclear power]] | [[Radiation]]
+*[[Radioactive contamination]]
+*[[Anti-nuclear]]
+*[[Three Mile Island: A Nuclear Crisis in Historical Perspective]]
+*[[TMI 25 Years Later: The Three Mile Island Nuclear Power Plant Accident and Its Impact]]
+*[[Chernobyl disaster]]
+*[[Three Mile Island: Thirty Minutes to Meltdown]]
+*[[Forked River Nuclear Power Plant]]
+*[[Human factors]]
+*[[Industrial design]]
+*[[Process control]]
+*[[User interface]]
+*[[Human-machine interaction]]
+
+==References==
+{{reflist|3}}
+
+==Bibliography==
+* {{cite book |title=Report of The President's Commission on the Accident at Three Mile Island: The Need for Change: The Legacy of TMI |first=John G. |last=Kemeny |authorlink=John G. Kemeny |location=Washington, D.C. |publisher=The Commission |year=1979 |month=October  |isbn=0935758003 |url=http://www.threemileisland.org/downloads/188.pdf}}
+* {{cite book |title=Three Mile Island: A report to the Commissioners and to the Public, Volume I |first=Mitchell |last=Rogovin |authorlink=Mitchell Rogovin |publisher=[[Nuclear Regulatory Commission]], Special Inquiry Group |year=1980 |url=http://www.threemileisland.org/downloads/354.pdf}}
+* {{cite book |title=[[Three Mile Island: A Nuclear Crisis in Historical Perspective]] |first=J. Samuel |last=Walker |location=Berkeley |publisher=University of California Press |year=2004 |isbn=0-520-23940-7}} ([http://books.google.com/books?id=0EDwbQF5k24C&dq=%22three+mile+island%22+%2B+books&printsec=frontcover&source=bn&hl=en&ei=U9PLSbDxG4WEtwfz3qTaCQ&sa=X&oi=book_result&resnum=7#PPP9,M1 Google Books])
+
+== External links ==
+*[http://www.eia.doe.gov/cneaf/nuclear/page/at_a_glance/reactors/threemileisland.html TMI web page from the US Department of Energy's Energy Information Administration]
+*[http://www.threemileisland.org/ "Three Mile Island 1979 Emergency"] - website about the accident, with many reports and other documents relating to the accident, created by nearby [[Dickinson College]]
+*[http://www.pbs.org/wgbh/amex/three/sfeature/tmihow.html Step-By-Step] account of the accident with illustrations from pbs.org
+*[http://www.tmia.com Three Mile Island Alert], the watchdog group that warned the public for nearly two years that reactor #2 was dangerously faulty.{{Citation needed|date=November 2008}} [http://www.tmia.com/accident/whatswrong.html What's wrong with the "fact sheet"] purports to correct errors in the NRC report.
+*[http://www.efmr.org/ EFMR] citizens radiation monitoring group for the Three Mile Island and Peach Bottom nuclear plants
+*[http://alsos.wlu.edu/qsearch.aspx?browse=places/Three+Mile+Island,+Pennsylvania Annotated bibliography for Three Mile Island from the Alsos Digital Library for Nuclear Issues]
+*[http://www.library.pitt.edu/thornburgh/collection/series19.html#tmi Video] and [http://www.library.pitt.edu/thornburgh/collection/series20.html#tmi audio] relating to the Three Mile Island accident, from the [http://www.library.pitt.edu/thornburgh/index.html Dick Thornburgh Papers] at University of Pittsburgh.
+* [http://www.ratical.org/radiation/KillingOurOwn/KOO.pdf Killing Our Own] a review of subsequent casualties by Harvey Wasserman and Norman Solomon with Robert Alveraez and Eleanore Walters
+* [http://www.sciencedaily.com/releases/2007/01/070129152941.htm Three Mile Island -- Failure Of Science Or Spin?, Science Daily]
+*[http://www.wcbs880.com/topic/play_window.php?audioType=Episode&audioId=871710 1979 - Three Mile Island] A report from Steve Holt of WCBS Newsradio 880 (WCBS-AM New York) Part of WCBS 880's celebration of 40 years of newsradio.
+*[http://www.washingtonpost.com/wp-srv/national/longterm/tmi/whathappened.htm Crisis at Three Mile Island] by The Washington Post
+*[http://www.counterpunch.org/wasserman03242009.html People Died at Three Mile Island] by Harvey Wasserman
+
+{{Coord|40.153293|-76.72534|region:US_type:event|display=title}}
+{{U.S. nuclear plants}}
+
+<!-- Categories:  alphabetical -->
+
+<!-- Interwiki links:  alphabetical -->
+
+{{DEFAULTSORT:Three Mile Island Accident}}
+[[Category:1979 in the United States]]
+[[Category:Nuclear accidents]]
+[[Category:Islands of Pennsylvania]]
+[[Category:Civilian nuclear power accidents]]
+[[Category:Nuclear history of the United States]]
+[[Category:Nuclear technology in the United States]]
+[[Category:Environment of Pennsylvania]]
+
+[[bg:<U+0418><U+043D><U+0446><U+0438><U+0434><U+0435><U+043D><U+0442> <U+043D><U+0430> <U+0422><U+0440><U+0438><U+043C><U+0438><U+043B><U+043D><U+0438><U+044F> <U+043E><U+0441><U+0442><U+0440><U+043E><U+0432>]]
+[[da:Three Mile Island-ulykken]]
+[[es:Accidente de Three Mile Island]]
+[[fa:<U+062D><U+0627><U+062F><U+062B><U+0647> <U+0627><U+062A><U+0645><U+06CC> <U+062A><U+0631><U+06CC> <U+0645><U+0627><U+06CC><U+0644> <U+0622><U+06CC><U+0644><U+0646><U+062F>]] <!-- station or accident? -->
+[[ko:<U+C2A4><U+B9AC><U+B9C8><U+C77C> <U+C12C>]]  <!-- station or accident? -->
+[[he:<U+05EA><U+05D0><U+05D5><U+05E0><U+05EA> <U+05D0><U+05D9> <U+05E9><U+05DC><U+05D5><U+05E9><U+05EA> <U+05D4><U+05DE><U+05D9><U+05DC><U+05D9><U+05DF>]]  <!-- station or accident? -->
+[[lt:Avarija Trij<U+0173> myli<U+0173> saloje]] 
+[[ja:<U+30B9><U+30EA><U+30FC><U+30DE><U+30A4><U+30EB><U+5CF6><U+539F><U+5B50><U+529B><U+767A><U+96FB><U+6240><U+4E8B><U+6545>]]
+[[pl:Wypadek w elektrowni j<U+0105>drowej Three Mile Island]]
+[[simple:Three Mile Island accident]]
+[[sr:<U+0418><U+043D><U+0446><U+0438><U+0434><U+0435><U+043D><U+0442> <U+043D><U+0430> <U+043E><U+0441><U+0442><U+0440><U+0432><U+0443> <U+0422><U+0440><U+0438> <U+041C><U+0438><U+0459><U+0435>]]
+[[fi:Three Mile Islandin ydinvoimalaonnettomuus]]
+[[sv:Harrisburgolyckan]]
+[[zh:<U+4E09><U+54E9><U+5C9B><U+6838><U+6CC4><U+6F0F><U+4E8B><U+6545>]]  <!-- station or accident? -->

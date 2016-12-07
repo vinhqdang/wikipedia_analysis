@@ -1,0 +1,64 @@
+The '''Karp<U+2013>Lipton theorem''' in [[complexity theory]] states that if the [[boolean satisfiability problem]] (SAT) can be solved by [[Boolean circuit]]s with a [[polynomial]] number of logic gates, then 
+
+:<math>\Pi_2 \,</math> = <math>\Sigma_2 \,</math> and therefore <math>\mathrm{PH} \,</math> = <math>\Sigma_2 \,</math>.
+
+That is, if we assume that [[NP (complexity)|NP]], the class of nondeterministic polynomial time problems, can be contained in the non-uniform polynomial time complexity class [[P/poly]], then this assumption implies the collapse of the [[polynomial hierarchy]] at its second level. Such a collapse is believed unlikely, so the theorem is generally viewed by complexity theorists as evidence for the nonexistence of polynomial size circuits for SAT or for other [[NP-complete]] problems. A proof that such circuits do not exist would imply that [[P = NP problem|P <U+2260> NP]]. As P/poly contains all problems solvable in randomized polynomial time (Adleman 1978), the Karp<U+2013>Lipton theorem is also evidence that the use of randomization does not lead to polynomial time algorithms for NP-complete problems.
+
+The Karp<U+2013>Lipton theorem is named after [[Richard M. Karp]] and [[Richard J. Lipton]], who first proved it in 1980.
+
+== Intuition ==
+
+Suppose that polynomial sized circuits for SAT not only exist, but also that they could be constructed by a polynomial time algorithm. Then this supposition implies that SAT itself could be solved by a polynomial time algorithm that constructs the circuit and then applies it. That is, efficiently constructable circuits for SAT would lead to a stronger collapse, P = NP.
+
+The assumption of the Karp<U+2013>Lipton theorem, that these circuits exist, is weaker. But it is still possible for an algorithm in the complexity class <math>\Sigma_2</math> to ''guess'' a correct circuit for SAT. The complexity class <math>\Sigma_2</math> describes problems of the form
+:<math>\exists x\forall y\;\psi(x,y)</math>
+where <math>\psi</math> is any polynomial-time computable predicate. The existential power of the first quantifier in this predicate can be used to guess a correct circuit for SAT, and the universal power of the second quantifier can be used to verify that the circuit is correct. Once this circuit is guessed and verified, the algorithm in class <math>\Sigma_2</math> can use it as a subroutine for solving other problems.
+
+== Self-reducibility ==
+
+
+
+To understand the Karp<U+2013>Lipton proof in more detail, we consider the problem of testing whether a circuit ''c'' is a correct circuit for solving SAT instances of a given size, and show that this circuit testing problem belongs to <math>\Pi_1</math>. That is, there exists a polynomial time computable predicate ''V'' such that ''c'' is a correct circuit if and only if, for all polynomially-bounded ''z'', ''V''(''c'',''z'') is true.
+
+The circuit ''c'' is a correct circuit for SAT if it satisfies two properties:
+*For every pair (''s'',''x'') where ''s'' is an instance of SAT and ''x'' is a solution to the instance, ''c''(''s'') must be true
+*For every instance ''s'' of SAT for which ''c''(''s'') is true, ''s'' must be solvable.
+The first of these two properties is already in the form of problems in class <math>\Pi_1</math>. To verify the second property, we use the ''self-reducibility'' property of SAT.
+
+Self-reducibility describes the phenomenon that, if we can quickly test whether a SAT instance is solvable, we can almost as quickly find an explicit solution to the instance. To find a solution to an instance ''s'', choose one of the Boolean variables ''x'' that is input to ''s'', and make two smaller instances ''s''<sub>0</sub> and ''s''<sub>1</sub> where ''s''<sub>''i''</sub> denotes the formula formed by replacing ''x'' with the constant ''i''. Once these two smaller instances have been constructed, apply the test for solvability to each of them. If one of these two tests returns that the smaller instance is satisfiable, continue solving that instance until a complete solution has been derived.
+
+To use self-reducibility to check the second property of a correct circuit for SAT, we rewrite it as follows:
+*For every instance ''s'' of SAT for which ''c''(''s'') is true, the self-reduction procedure described above finds a valid solution to ''s''.
+
+Thus, we can test in <math>\Pi_1</math> whether ''c'' is a valid circuit for solving SAT.
+
+see [[Random_self-reducibility]] for more information
+
+== Proof of Karp<U+2013>Lipton theorem ==
+
+The Karp<U+2013>Lipton theorem can be restated as a result about Boolean formulas with polynomially-bounded quantifiers. Problems in <math>\Pi_2</math> are described by formulas of this type, with the syntax
+:<math>\phi = \forall x \exists y \; \psi(x, y)</math>
+where <math>\psi</math> is a polynomial-time computable predicate. The Karp<U+2013>Lipton theorem states that this type of formula can be transformed in polynomial time into an equivalent formula in which the quantifiers appear in the opposite order; such a formula belongs to <math>\Sigma_2</math>. Note that the subformula
+:<math>s(x)=\exists y \; \psi(x, y)</math>
+is an instance of SAT. That is, if ''c'' is a valid circuit for SAT, then this subformula is equivalent to the unquantified formula ''c''(''s''(''x'')). Therefore, the full formula for <math>\phi</math> is equivalent (under the assumption that a valid circuit ''c'' exists) to the formula
+:<math>\exists c\forall (x,z)\;V(c,z)\wedge c(s(x))</math>
+where ''V'' is the formula used to verify that ''c'' really is a valid circuit using self-reducibility, as described above. This equivalent formula has its quantifiers in the opposite order, as desired. Therefore, the Karp<U+2013>Lipton assumption allows us to transpose the order of existential and universal quantifiers in formulas of this type, showing that <math>\Sigma_2=\Pi_2.</math> Repeating the transposition allows formulas with deeper nesting to be simplified to a form in which they have a single existential quantifier followed by a single universal quantifier, showing that <math>PH=\Sigma_2.</math>
+
+== References ==
+
+*{{cite conference
+ | author = [[Leonard Adleman|Adleman, L. M.]]
+ | title = Two theorems on random polynomial time
+ | booktitle = Proceedings of the Nineteenth Annual IEEE Symposium on Foundations of Computing
+ | date = 1978
+ | pages = 75<U+2013>83}}
+
+*{{cite conference
+ | author = [[Richard M. Karp|Karp, R. M.]]; [[Richard J. Lipton|Lipton, R. J.]]
+ | title = Some connections between nonuniform and uniform complexity classes
+ | booktitle = Proceedings of the Twelfth Annual ACM Symposium on Theory of Computing
+ | date = 1980
+ | pages = 302<U+2013>309
+ | doi = 10.1145/800141.804678}}
+
+[[Category:Computational complexity theory]]

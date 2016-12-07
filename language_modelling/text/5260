@@ -1,0 +1,73 @@
+Microsoft '''ActiveX Data Objects''' ('''ADO''') is a set of [[Component Object Model]] objects for accessing data sources. It provides a layer between [[programming language]]s and [[OLE DB]] (a means of accessing data stores, whether they be [[database]]s or otherwise, in a uniform manner), which allows a developer to write programs which access data, without knowing how the database is implemented.  You must be aware of your database for connection only. No knowledge of [[SQL]] is required to access a database when using ADO, although one can use ADO to execute arbitrary SQL commands. The disadvantage of this (i.e. using SQL directly) is that it introduces a dependency upon the type of database used.
+
+It is positioned as a successor to Microsoft's earlier object layers for accessing data sources, including [[Remote Data Objects|RDO]] (Remote Data Objects) and [[Data Access Objects|DAO]] (Data Access Objects).  ADO was introduced by [[Microsoft]] in October 1996.
+
+ADO consists of several top-level objects:
+
+*Connection Object - represents the [[Database Connection|connection to the database]].
+*Recordset Object - represents a set of database records.
+*Command Object - represents a SQL command.
+*Record Object - represents a set of data, typically from a source other than a database.
+*Stream Object - represents a stream of data, as from a text file or web page.
+*Error Object - stores errors.
+*Field Object - represents a database field.
+*Parameter Object - represents a SQL parameter.
+*Property Object - stores information about objects.
+
+The ADO components are usually used in conjunction with a high-level language such as [[VBScript]] in an [[Active Server Pages|ASP]] environment or [[Visual Basic]]. However, languages such as [[Borland Delphi|Delphi]] and [[C++ Builder]], development environments from Microsoft rival [[Borland|Borland Software Corporation]], also allow the use of ADO to access various databases.
+
+In the newer programming framework of [[Microsoft .NET|.NET]], [[Microsoft]] also presented an upgraded version of ADO called [[ADO.NET]]. Its object structure is quite different from that of traditional ADO. 
+
+Here is an ASP example using ADO to select the "Name" field, from a table called "Phonebook", where a "PhoneNumber" was equal to "555-5555".
+
+ dim myconnection, myrecordset, name
+ set myconnection = server.createobject("ADODB.Connection")
+ set myrecordset = server.createobject("ADODB.Recordset")
+ 
+ myconnection.open mydatasource
+ myrecordset.open "Phonebook", myconnection
+ myrecordset.find "PhoneNumber = '555-5555'"
+ name = myrecordset.fields.item("Name")
+ myrecordset.close
+ 
+ set myrecordset = nothing
+ set myconnection = nothing
+
+This is equivalent to the following ASP code, which uses plain SQL instead of the functionality of the Recordset object:
+
+ dim myconnection, myrecordset, name
+ set myconnection = server.createobject("ADODB.connection")
+ myconnection.open mydatasource
+ set myrecordset = myconnection.execute("SELECT Name FROM Phonebook WHERE PhoneNumber = '555-5555'")
+ name = myrecordset(0) 
+ myrecordset.close
+ 
+ set myrecordset = nothing
+ set myconnection = nothing
+
+==Software support==
+ADO was supported in ASP and in VBA for Office.
+
+==External links==
+*[http://msdn.microsoft.com/library/en-us/ado270/htm/dasdkadooverview.asp?frame=true Microsoft ADO page]
+*[http://www.SQLstrings.com ADO database connection strings]
+*[http://www.connectionstrings.com/ Database connection strings]
+*[http://www.exforsys.com/content/view/1341/266/ ASP.NET: Accessing Data with C#]
+*[http://devguru.com/technologies/ado/index.asp DevGuru ADO Quick Reference]
+
+
+{{Microsoft APIs}}
+
+[[Category:Microsoft APIs]]
+
+[[da:ADO]]
+[[de:ActiveX Data Objects]]
+[[es:ActiveX Data Objects]]
+[[fr:ADO]]
+[[nl:ActiveX Data Objects]]
+[[ja:ActiveX Data Objects]]
+[[pl:ADO]]
+[[pt:ADO]]
+[[ru:ADO]]
+[[th:ADO]]
+[[zh:ADO]]

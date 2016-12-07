@@ -1,0 +1,43 @@
+[[Poker]] hand A is said to '''dominate''' poker hand B if poker hand B has three or fewer [[Out (poker)|outs]] (cards to catch) that would improve it enough to win. Informally, domination is sometimes used to refer to any situation where one hand is highly likely to beat another.  The term '''drawing dead''' is used to denote a domination situation with zero outs.  
+
+In [[hold'em]] poker variations, domination usually refers to one of three situations involving the hole cards:
+* Higher pair dominating a lower pair (e.g., QQ vs. 99): Barring an unlikely [[Rank of hands (poker)#Straight|straight]] or [[Rank of hands (poker)#Flush|flush]] possibility, the underdog must catch one of two remaining nines (improving to 999) to beat the QQ.
+* A pair dominating higher than at least one of the cards in a non-paired hand (e.g. JJ vs. A8, AJ or 87)
+* Sharing a card, a higher [[Kicker (poker)|kicker]] dominating a lower kicker (e.g., AJ vs. KJ or AJ vs. A9): Barring an unlikely straight or flush possibility, the underdog must catch one of the three remaining cards of his kicker rank (and ''not'' catch one of the three remaining cards of the opponent's kicker rank).<ref>[http://video.google.com/videoplay?docid=-8342571185202960132 How to recognize and prevent domination in Texas hold 'em poker] [[Phil Gordon]] video</ref>
+
+The following table shows examples of common domination situations.  The percentages represent preflop pot equity in a heads up confrontation (percentage of winning plus half the percentage of splitting the pot).  
+
+:{| border="2" cellpadding="2" cellspacing="0" style="background: #f9f9f9; border: 3px #aaa solid; border-collapse: collapse; font-size: 95%;"
+|-
+! align="center" nowrap | &nbsp;&nbsp; vs. &nbsp;&nbsp;
+| align="center" nowrap | <font color="red"> &nbsp;&nbsp; '''A<U+2666>''' '''J<U+2665>''' &nbsp;&nbsp; </font>
+| align="center" nowrap | <font color="red">&nbsp;&nbsp; '''9<U+2666>''' '''9<U+2665>''' &nbsp;&nbsp; </font>
+| align="center" nowrap | <font color="red">&nbsp;&nbsp; '''8<U+2666>''' '''7<U+2665>''' &nbsp;&nbsp; </font>
+|-
+| '''J<U+2660>''' '''J<U+2663>'''
+| align="center" nowrap | <font color="green">69.5</font>
+| align="center" nowrap | <font color="green">81.0</font>
+| align="center" nowrap | <font color="green">82.2</font>
+|-
+| '''A<U+2660>''' '''K<U+2663>'''
+| align="center" nowrap | <font color="green">74.0</font>	
+| align="center" nowrap | <font color="brown">44.3</font>
+| align="center" nowrap | <font color="brown">61.9</font>
+|}
+
+The <font color="green">green</font> percentages denote the three common domination situations noted above.  In contrast, the <font color="brown">brown </font> percentages denote non-domination situations. After the flop domination becomes more complex and there are many domination situations which do not warrant exhaustive treatment however most commonly domination is maintained: 
+* A higher hand vs. a lower (AJ vs. A9 when a A flops with no 9 or J)
+* A higher pair vs. a lower (QQ vs. 99 where no 9 or Q flops)
+However a situation can emerge where domination is lost.  This can either be a result of :
+* the weaker hand adding additional outs (example: JJ vs. A8 where an 8 flops with no J or A) 
+* the weaker hand becoming stronger but not dominating (example JJ vs 87 with a flop of A-8-7, or <font color="red"> '''9<U+2666>''' '''9<U+2665>'''  </font> vs. '''6<U+2660>''' '''5<U+2660>''' with a flop of '''4<U+2660>''' '''3<U+2660>''' <font color ="red"> '''5<U+2665>''' </font>)
+* The weaker hand can become the dominating hand (example: QQ vs 99 where a 9 but not a Q flops, or '''J<U+2660>''' '''J<U+2663>''' vs. '''8<U+2663> 7<U+2663>''' on a flop of <font color="red"> '''6<U+2666> 5<U+2666> 4<U+2666>''' </font>).  The term '''reverse domination''' is applied to the 3rd case of preflop domination under one of these reversals (example: AJ vs A9 when a 9 but not a J flops, regardless of whether an A flops).
+
+==See also==
+*[[Poker probability]]
+*[[Poker probability (Texas hold 'em)]]
+
+==Notes==
+<references/>
+
+[[Category:Poker gameplay and terminology]]

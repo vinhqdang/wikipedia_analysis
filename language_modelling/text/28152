@@ -1,0 +1,19 @@
+'''Collective Tuning Initiative''' is a community-driven initiative, which aims to develop free collaborative [[open-source]] research tools with unified [[API]] for code and architecture characterization and optimization, and enable sharing of benchmarks, data sets and optimization cases from the community in the [[Collective Optimization Database|open optimization repository]] through unified web-services to be able to predict better optimizations or architecture designs provided there is enough information collected in the repository from multiple users.<ref>Grigori Fursin. Collective Tuning Initiative: automating and accelerating development and optimization of computing systems. Proceedings of the GCC Summit'09, Montreal, Canada, June 2009 ([http://unidapt.org/index.php/Dissemination#Fur2009 link])</ref><ref>''Rethinking code optimization for mobile and multicore'', InfoWorld, July 2009 ([http://www.infoworld.com/d/developer-world/rethinking-code-optimization-mobile-and-multicore-505 link])</ref> Using common R&D tools should help to improve the quality and reproducibility of the research of code and architecture design and optimization, and boost innovation in this area. 
+
+cTuning tools and repository currently include:
+* [[Collective Optimization Database]]<ref>Grigori Fursin and Olivier Temam. ''Collective optimization''. Proceedings of the International Conference on High Performance Embedded Architectures & Compilers (HiPEAC 2009), Paphos, Cyprus, January 2009 ([http://fursin.net/wiki/index.php5?title=Research:Dissemination#FT2009 link])</ref> is an open repository to share optimization cases from the community, provide web-services and plugins to analyze collective optimization data and predict good program optimizations based on statistical and machine learning techniques, and improve the quality and reproducibility of the compiler and architecture research.
+* [http://ctuning.org/cpredict Online machine learning-based program optimization predictor] is used to suggest profitable optimizations that improve execution time/code size/compilation time, etc. based on similarities between programs (program features).
+* [http://ctuning.org/ccc Continuous Collective Compilation Framework] is used to automate and distribute iterative feedback-directed exploration of large optimization spaces by multiple users.
+* [[Interactive Compilation Interface]] "opens up" and transforms production compilers into stable interactive research toolsets using event-driven plugin system to avoid costly developments of new research compilers from scratch. 
+* [http://ctuning.org/cbench Collective Benchmark] with multiple datasets is used to enable realistic benchmarking and research on iterative compilation and run-time adaptation.
+* [http://ctuning.org/unidapt Universal Adaptation Framework] is used to enable run-time adaptation and optimization of statically-compiled programs for heterogeneous multi-core architectures.
+
+== References ==
+<references />
+
+==External links==
+* [http://ctuning.org Collective Tuning Center]
+* [http://cTuning.org/cTools Collective Tuning Tools]
+* [http://cTuning.org/cdatabase Collective Tuning Repository]
+
+[[Category:Software optimization]]

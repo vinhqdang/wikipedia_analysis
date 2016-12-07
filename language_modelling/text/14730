@@ -1,0 +1,36 @@
+The goal of the '''Christofides [[heuristics|heuristic]] [[algorithm]]''' is to find a solution to the instances of the [[traveling salesman problem]] where the edge weights satisfy the [[triangle inequality]].
+Let <math>G=(V,w)</math> be an instance of TSP, i.e. <math>G</math> is a complete graph on the set <math>V</math> of vertices with weight function <math>w</math> assigning a nonnegative real weight to every edge of <math>G</math>.
+
+[[Pseudo-code]]:<br>
+Step 1: Create the [[minimum spanning tree]] MST <math>T</math> of <math>G</math>.<br>
+Step 2: Let <math>O</math> be the set of vertices with odd degree in <math>T</math> and find a [[perfect matching]] <math>M</math> with minimum weight in the [[complete graph]] over the vertices from <math>O</math>.<br>
+Step 3: Combine the edges of <math>M</math> and <math>T</math> to form a [[multigraph]] <math>H</math>.<br>
+Step 4: Form an [[Eulerian circuit]] in <math>H</math> (H is Eulerian because it is [[Eulerian_path#Properties|connected, with only even-degree vertices]]).<br>
+Step 5: Make the circuit found in previous step [[Hamiltonian circuit|Hamiltonian]] by skipping visited nodes (''shortcutting'').
+
+== Approximation ratio ==
+
+The cost of the solution produced by the algorithm is within 3/2 of the optimum.
+
+The proof is as follows:
+
+Let <math>A</math> denote the edge set of the optimal solution of TSP for <math>G</math>. Because <math>(V,A)</math> is connected, it contains some spanning tree and thus <math>w(A)\ge w(T)</math>. Further let <math>B</math> denote the edge set of the optimal solution of TSP for the complete graph over vertices from <math>O</math>. Because the edge weights are triangular (so visiting more nodes cannot reduce total cost), we know that
+<math>w(A)\ge w(B)</math>. We show that there is a perfect matching of vertices from <math>O</math> with weight under
+<math>w(B)/2\le w(A)/2</math> and therefore we have the same upper bound for <math>M</math> (because <math>M</math> is a perfect matching of minimum cost).
+Because <math>O</math> must contain an even number of vertices, a perfect matching exists. Let
+<math>e_1,\ldots,e_{2k}</math> be the (only) Eulerian path in <math>(O,B)</math>. Clearly both
+<math>\{e_1,e_3,\ldots,e_{2k-1}\}</math> and
+<math>\{e_2,e_4,\ldots,e_{2k}\}</math> are perfect matchings and the weight of at least one of them is
+less than or equal to <math>w(B)/2</math>.
+Thus <math>w(M)+w(T)\le w(A)+w(A)/2</math> and from the triangle inequality it follows that the algorithm is 3/2-approximative.
+
+== References ==
+* [http://www.nist.gov/dads/HTML/christofides.html NIST Christofides Algorithm Definition]
+* Nicos Christofides, Worst-case analysis of a new heuristic for the [[travelling salesman problem]], Report 388, Graduate School of Industrial Administration, CMU, 1976.
+
+[[Category:Travelling salesman problem]]
+[[Category:Graph algorithms]]
+[[Category:Spanning tree]]
+[[Category:Approximation algorithms]]
+
+[[de:Christofides-Heuristik]]

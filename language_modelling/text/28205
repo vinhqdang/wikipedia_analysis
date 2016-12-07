@@ -1,0 +1,658 @@
+{{Use dmy dates|date=May 2013}}
+{{Infobox Website
+|name           = Acid2
+|logo           =
+|screenshot     = [[Image:Acid2 reference.png|frameless]]
+|caption        = This is the reference image for Acid2. In the real test, the nose becomes blue while the cursor is hovering over it.
+|url            = [http://acid2.acidtests.org/ acid2.acidtests.org]
+|commercial     = No
+|type           = [[Web standards]] test
+|language       = [[English language]]
+|registration   = No
+|owner          = The [[Web Standards Project]]
+|author         = [[Ian Hickson]]
+|launch date    = 13 April 2005
+|current status = Online
+|revenue        =
+|slogan         =
+}}
+
+'''Acid2''' is a test page published and promoted by the [[Web Standards Project]] to expose [[web page]] [[rendering (computer graphics)|rendering]] flaws in [[web browser]]s and other [[Layout engine|applications that render HTML]]. Named after the [[acid test (gold)|acid test for gold]], it was developed in the spirit of [[Acid1]], a relatively narrow test of compliance with the [[Cascading Style Sheets]] 1.0 (CSS1) [[Technical standard|standard]], and was released on 13 April 2005. As with Acid1, an application passes the test if the way it displays the test page matches a reference image.
+
+Acid2 tests aspects of HTML markup, CSS 2.1 styling, [[Portable Network Graphics|PNG]] images, and [[data URI]]s. The Acid2 test page will be displayed correctly in any application that follows the [[World Wide Web Consortium]] and [[Internet Engineering Task Force]] specifications for these technologies. These specifications are known as [[web standards]] because they describe how technologies used on the web are expected to function.
+
+Acid2 was designed with [[Microsoft Internet Explorer]] particularly in mind. The creators of Acid2 were dismayed that Internet Explorer did not follow web standards. It was prone to display web pages differently from other browsers, causing web developers to spend time [[tweaking]] their web pages. Acid2 challenged Microsoft to make Internet Explorer comply with web standards.
+
+Acid2 was released on 13 April 2005. On 31 October 2005, [[Safari (web browser)|Safari]] 2.0.2 became the first browser to pass Acid2. [[Opera (web browser)|Opera]], [[Konqueror]], [[Firefox]], and others followed. With the release of [[Internet Explorer 8]] on 19 March 2009, the latest versions of all major desktop web browsers now pass the test. Acid2 was followed by [[Acid3]].
+
+The test fails when browsers become compliant with current CSS collapse and margin standards.<ref>{{cite web|url=http://wiki.csswg.org/test/css2.1/blocking/margin-collapse#relevant-links|title=Margin Collapse Issue}}</ref>
+
+==History==
+[[Image:Original Acid2 smiley.png|thumb|The smiley face of the first version of Acid2. Due to problems in this version of the test, the mouth is too close to the nose and the text "ERROR" appears even in a standards-compliant browser.]]
+
+Acid2 was first proposed by [[H<U+00E5>kon Wium Lie]], chief technical officer of [[Opera Software]] and creator of the widely used [[Cascading Style Sheets]] [[web standard]].<ref>{{cite web
+|url=http://people.opera.com/howcome/
+|title=H<U+00E5>kon
+|first=H<U+00E5>kon Wium
+|last=Lie
+|authorlink=H<U+00E5>kon Wium Lie
+|publisher=[[Opera Software]]
+|date=12 May 2008
+|accessdate=27 July 2008
+}}</ref> In a 16 March 2005 article on [[CNET]], Lie expressed dismay that [[Microsoft Internet Explorer]] did not properly support web standards and hence was not completely interoperable with other browsers. He announced that Acid2 would be a challenge to [[Microsoft]] to design [[Internet Explorer 7]], then in development, to achieve a greater degree of standards compliance than previous versions of Internet Explorer. The original [[Acid1]] test had forced browser makers to fix their applications or face embarrassment; Lie hoped that Acid2 would do the same.<ref name="Lie">{{cite web
+|url=http://news.cnet.com/The-Acid2-challenge-to-Microsoft/2010-1032_3-5618723.html
+|title=The Acid2 challenge to Microsoft
+|first=H<U+00E5>kon Wium
+|last=Lie
+|authorlink=H<U+00E5>kon Wium Lie
+|publisher=[[CNET]]
+|date=16 March 2005
+|accessdate=12 January 2008
+}}</ref>
+
+Lie and a colleague, [[Ian Hickson]], had created the first draft of the test in February 2005.<ref name="Hickson">{{cite web
+|url=http://ln.hixie.ch/?start=1137799947&count=1
+|title=People who don't realise that they're wrong
+|last=Hickson
+|first=Ian
+|authorlink=Ian Hickson
+|work=Hixie's Natural Log
+|date=20 January 2006
+|accessdate=1 April 2008
+| archiveurl= http://web.archive.org/web/20080502004836/http://ln.hixie.ch/?start=1137799947&count=1| archivedate= 2 May 2008 <!--DASHBot-->| deadurl= no}}</ref> Ian Hickson coded the final test in collaboration with the [[Web Standards Project]] and the larger web community.<ref name="Lie"/><ref>{{cite web
+|url=http://www.webstandards.org/about/members/hixie/
+|title=Ian Hickson
+|publisher=The [[Web Standards Project]]
+|accessdate=25 March 2008
+}}</ref><ref>{{cite web
+|url=http://www.webstandards.org/about/members/bhenick/
+|title=Ben Henick
+|publisher=The [[Web Standards Project]]
+|accessdate=2 April 2008
+| archiveurl= http://web.archive.org/web/20080401031826/http://www.webstandards.org/about/members/bhenick/| archivedate= 1 April 2008 <!--DASHBot-->| deadurl= no}}</ref><ref>{{cite web
+|url=http://www.webstandards.org/about/members/dbaron/
+|title=David Baron
+|publisher=The [[Web Standards Project]]
+|accessdate=2 April 2008
+}}</ref> It was officially released on 13 April 2005<ref>{{cite press release
+|url=http://www.webstandards.org/press/releases/2005-04-13/
+|title=Acid2: Putting Browser Makers on Notice
+|publisher=The [[Web Standards Project]]
+|date=13 April 2005
+|accessdate=1 April 2008
+}}</ref> and at that time, every web browser failed it spectacularly.<ref name="Hyatt">{{cite web
+|url=http://weblogs.mozillazine.org/hyatt/archives/2005_04.html#007932
+|title=The Acid2 Test
+|last=Hyatt
+|first=Dave
+|authorlink=Dave Hyatt
+|work=Surfin' Safari
+|publisher=[[MozillaZine]]
+|date=12 April 2005
+|accessdate=1 April 2008
+| archiveurl= http://web.archive.org/web/20080331225905/http://weblogs.mozillazine.org/hyatt/archives/2005_04.html| archivedate= 31 March 2008 <!--DASHBot-->| deadurl= no}}</ref>
+
+On 23 April 2005, Acid2 was updated to fix a bug that made the mouth appear too close to the nose.<ref>{{cite web
+|url=http://weblogs.mozillazine.org/hyatt/archives/2005_04.html#008011
+|title=Acid2: Version 1.1 Posted
+|work=Surfin' Safari
+|last=Hyatt
+|first=Dave
+|authorlink=Dave Hyatt
+|publisher=[[MozillaZine]]
+|date=23 April 2005
+|accessdate=24 December 2007
+| archiveurl= http://web.archive.org/web/20071223171928/http://weblogs.mozillazine.org/hyatt/archives/2005_04.html#008011| archivedate= 23 December 2007 <!--DASHBot-->| deadurl= no}}</ref><ref>{{cite web
+|url=http://weblogs.mozillazine.org/hyatt/archives/2005_04.html#007977
+|title=Acid2: Lopping Off the Sideburns
+|work=Surfin' Safari
+|last=Hyatt
+|first=Dave
+|authorlink=Dave Hyatt
+|publisher=[[MozillaZine]]
+|date=20 April 2005
+|accessdate=14 May 2008
+| archiveurl= http://web.archive.org/web/20080514173606/http://weblogs.mozillazine.org/hyatt/archives/2005_04.html| archivedate= 14 May 2008 <!--DASHBot-->| deadurl= no}}</ref> After several complaints, the test was again updated in January 2006 to remove a test for unpopular [[SGML]]-style comments that were never widely implemented. In browsers that do not implement SGML-style comments, the original test displayed the word "ERROR" on the bottom part of the face.<ref name="Hickson"/>
+
+In March 2008, Ian Hickson released [[Acid3]] as a follow-up to Acid2. While Acid2 primarily tests CSS, Acid3 focuses more on [[JavaScript]] and other "[[Web 2.0]]" technologies.<ref>{{cite web
+|url=http://www.webstandards.org/action/acid3/
+|title=Acid3 Browser Test
+|publisher=The [[Web Standards Project]]
+|accessdate=15 August 2008
+| archiveurl= http://web.archive.org/web/20080815190023/http://www.webstandards.org/action/acid3/| archivedate= 15 August 2008 <!--DASHBot-->| deadurl= no}}</ref>
+
+==Microsoft's response==
+In July 2005, Chris Wilson, the Internet Explorer Platform Architect, stated that passing Acid2 was not a priority for [[Internet Explorer 7]], describing the test as a "wish list" of features rather than a true test of standards compliance.<ref>{{cite web
+|url=http://blogs.msdn.com/ie/archive/2005/07/29/445242.aspx
+|title=Standards and CSS in IE
+|last=Wilson
+|first=Chris
+|work=IEBlog
+|publisher=[[Microsoft]]
+|date=29 July 2005
+|accessdate=11 March 2008
+| archiveurl= http://web.archive.org/web/20080315212733/http://blogs.msdn.com/ie/archive/2005/07/29/445242.aspx| archivedate= 15 March 2008 <!--DASHBot-->| deadurl= no}}</ref> In December 2007, Microsoft announced that all the changes required to pass Acid2 would be made available in [[Internet Explorer 8]], but that the changes would not be turned on by default, meaning that IE8 would not actually pass the test.<ref>{{cite web
+|url=http://channel9.msdn.com/blogs/charles/ie-8-on-the-path-to-web-standards-compliance-acid-2-test-pass-complete
+|title=IE 8: On the Path to Web Standards Compliance <U+2013> ACID 2 Test Pass Complete
+|author=Charles
+|publisher=[[Microsoft]]
+|work=[[Microsoft Developer Network]]
+|date=19 December 2007
+|accessdate=30 August 2008
+|quote=About 19 minutes and 15 seconds through the video, Alex Mogilevsky, a member of the IE team, points at a picture of the Acid2 test improperly rendered and states "The video in the bottom is an IE7 version of smiley face...What you're looking at is actually IE8. It is what it looks currently in IE8 and it will look exactly like this when we ship IE8 because we are not breaking any compatibility, and this is a compatible mode of IE8. And, uh, most of the web relies on particular behavior including particular ''incorrect'' behavior, so the incorrect behavior will still be there unless the new content ''wants'' IE to be in standards-compliant mode, and then they will ask us, and then we will show perfectly standard picture."}}</ref><ref>{{cite web
+|url=http://people.opera.com/howcome/2007/msft/acid2.html
+|title=Acid2 in IE8!
+|first=H<U+00E5>kon Wium
+|last=Lie
+|authorlink=H<U+00E5>kon Wium Lie
+|publisher=[[Opera Software]]
+|date=20 December 2007
+|accessdate=30 August 2008
+}}</ref> The concern was that switching to a new behavior would cause too many problems in web pages expecting Internet Explorer's old, non-compliant behavior. Then in March 2008 Microsoft released IE8 beta 1 and turned on the changes by default after all.<ref>{{cite web
+|url=http://blogs.msdn.com/ie/archive/2008/03/03/microsoft-s-interoperability-principles-and-ie8.aspx
+|title=Microsoft's Interoperability Principles and IE8
+|last=Hachamovitch
+|first=Dean
+|work=IEBlog
+|publisher=[[Microsoft]]
+|date=3 March 2008
+|accessdate=30 August 2008
+| archiveurl= http://web.archive.org/web/20080830002633/http://blogs.msdn.com/ie/archive/2008/03/03/microsoft-s-interoperability-principles-and-ie8.aspx| archivedate= 30 August 2008 <!--DASHBot-->| deadurl= no}}</ref> James Pratt, product manager for IE8, explained that this decision was made so that "developers can spend more time building features and cool stuff, and less time just trying to tweak their sites across different browsers."<ref>{{cite web
+|url=http://technet.microsoft.com/en-us/edge/IE8-Beta-2-screencast-demo-and-Interview.aspx
+|title=IE8 Beta 2 screencast demo and interview
+|last=Tesar
+|first=David
+|publisher=[[Microsoft]]
+|date=27 August 2008
+|accessdate=14 December 2008
+}}</ref>
+
+Unfortunately, another unresolved standards compliance issue caused IE8 beta 1 to fail if not all elements of the test were hosted from the same server.<ref name="h-13.3.1"/><ref name="Nachreiner">{{cite web
+|url=http://blogs.msdn.com/ie/archive/2008/03/05/why-isn-t-ie8-passing-acid2.aspx
+|title=Why Isn't IE8 Passing Acid2?
+|publisher=[[Microsoft]]
+|first=Phil
+|last=Nachreiner
+|date=5 March 2008
+|accessdate=11 March 2008
+| archiveurl= http://web.archive.org/web/20080309182614/http://blogs.msdn.com/ie/archive/2008/03/05/why-isn-t-ie8-passing-acid2.aspx| archivedate= 9 March 2008 <!--DASHBot-->| deadurl= no}}</ref><ref>{{cite web
+|url=http://lists.w3.org/Archives/Public/www-archive/2008Mar/0018.html
+|title=Re: MSIE 8 beta 1 clarification needed
+|last=Hickson
+|first=Ian
+|authorlink=Ian Hickson
+|publisher=[[World Wide Web Consortium]]
+|date=14 March 2008
+|accessdate=5 May 2008
+}}</ref> In August 2008 Microsoft released IE8 beta 2, which resolved the issue.<ref name="<U+041F><U+0435><U+0440><U+0435><U+0432><U+0435><U+0440><U+0442><U+0430><U+0439><U+043B><U+043E><U+0432>">{{cite web
+|url=http://www.fcenter.ru/online.shtml?articles/software/utilities/24947
+|title=Internet Explorer 8 Beta 2: <U+043F><U+0440><U+043E><U+0432><U+0435><U+0440><U+044F><U+0435><U+043C> <U+0440><U+0430><U+0431><U+043E><U+0442><U+043E><U+0441><U+043F><U+043E><U+0441><U+043E><U+0431><U+043D><U+043E><U+0441><U+0442><U+044C>
+|last=<U+041F><U+0435><U+0440><U+0435><U+0432><U+0435><U+0440><U+0442><U+0430><U+0439><U+043B><U+043E><U+0432>
+|first=<U+0410><U+043B><U+0435><U+043A><U+0441><U+0435><U+0439>
+|language=[[Russian language|Russian]]
+|date=7 September 2008
+|accessdate=15 October 2008
+| archiveurl= http://web.archive.org/web/20081016065747/http://www.fcenter.ru/online.shtml?articles/software/utilities/24947| archivedate= 16 October 2008 <!--DASHBot-->| deadurl= no}}</ref> As of that beta, however, standards mode is not turned on by default for pages loaded in the "[[Intranet]] Zone". This zone is active for pages loaded via [[UNC path]]s, named addresses without dots (like <nowiki>http://mysite/</nowiki>), and sites that bypass the [[Proxy server|proxy]] settings.<ref>{{cite web
+|url=http://support.microsoft.com/kb/174360
+|title=How to use security zones in Internet Explorer
+|work=Microsoft Knowledge Base
+|publisher=[[Microsoft]]
+|date=18 December 2007
+|accessdate=31 August 2008
+|archiveurl= http://web.archive.org/web/20080916215557/http://support.microsoft.com/kb/174360| archivedate= 16 September 2008 <!--DASHBot-->| deadurl= no}}</ref> As such, IE8 will not pass the Acid2 test if loaded in these cases.<ref name="Dickens">{{cite web
+|url=http://blogs.msdn.com/ie/archive/2008/08/27/introducing-compatibility-view.aspx
+|title=Introducing Compatibility View
+|last=Dickens
+|first=Scott
+|work=IEBlog
+|publisher=[[Microsoft]]
+|date=27 August 2008
+|accessdate=30 August 2008
+|archiveurl= http://web.archive.org/web/20080831011039/http://blogs.msdn.com/ie/archive/2008/08/27/introducing-compatibility-view.aspx| archivedate= 31 August 2008 <!--DASHBot-->| deadurl= no}}</ref>
+
+==Overview of standards tested==
+Acid2 tests a variety of [[web standards]] published by the [[World Wide Web Consortium]] and the [[Internet Engineering Task Force]]. With the exception of CSS 2.1, all web standards tested were codified before the year 2000.<ref>{{cite press release
+|url=http://www.w3.org/Press/PNG-PR.en.html
+|title=World Wide Web Consortium Issues First Recommendation for PNG
+|publisher=[[World Wide Web Consortium]]
+|date=7 October 1996
+|accessdate=12 August 2008
+| archiveurl= http://web.archive.org/web/20080725202354/http://www.w3.org/Press/PNG-PR.en.html| archivedate= 25 July 2008 <!--DASHBot-->| deadurl= no}}</ref><ref>{{cite web
+|url=http://www.w3.org/TR/CSS2/
+|title=Cascading Style Sheets, level 2
+|last=Bos
+|first=Bert
+|coauthors=[[H<U+00E5>kon Wium Lie|Lie, H<U+00E5>kon Wium]]; Lilley, Chris; Jacobs, Ian
+|publisher=[[World Wide Web Consortium]]
+|date=11 April 2008
+|accessdate=12 August 2008
+| archiveurl= http://web.archive.org/web/20080811125115/http://www.w3.org/TR/CSS2/| archivedate= 11 August 2008 <!--DASHBot-->| deadurl= no}}</ref><ref name="RFC 2397">{{cite web
+|url=http://tools.ietf.org/html/rfc2397
+|title=RFC 2397 <U+2013> The "data" URL scheme
+|author=Masinter, L
+|publisher=[[Internet Engineering Task Force]]
+|date=August 1998
+|accessdate=12 August 2008
+| archiveurl= http://web.archive.org/web/20080915131159/http://tools.ietf.org/html/rfc2397| archivedate= 15 September 2008 <!--DASHBot-->| deadurl= no}}</ref><ref>{{cite web
+|url=http://www.w3.org/TR/REC-html40/
+|title=HTML 4.01 Specification
+|last1=Raggett
+|first1=Dave
+|authorlink1=Dave Raggett
+|last2=Le Hors
+|first2=Arnaud
+|last3=Jacobs
+|first3=Ian
+|publisher=[[World Wide Web Consortium]]
+|date=24 December 1999
+|accessdate=11 August 2008
+| archiveurl= http://web.archive.org/web/20080810221048/http://www.w3.org/TR/REC-html40/| archivedate= 10 August 2008 <!--DASHBot-->| deadurl= no}}</ref> CSS 2.1 was a candidate recommendation at the time of Acid2's release,<ref>{{cite web
+|url=http://www.w3.org/TR/2004/CR-CSS21-20040225/
+|title=Cascading Style Sheets, level 2 revision 1
+|last1=Bos
+|first1=Bert
+|coauthors=<U+00C7>elik, Tantek; Hickson, Ian; [[H<U+00E5>kon Wium Lie|Lie, H<U+00E5>kon Wium]]
+|publisher=[[World Wide Web Consortium]]
+|date=19 July 2007
+|accessdate=5 January 2009
+| archiveurl= http://web.archive.org/web/20081217162828/http://www.w3.org/TR/2004/CR-CSS21-20040225/| archivedate= 17 December 2008 <!--DASHBot-->| deadurl= no}}</ref> and was still a candidate recommendation as of 23 April 2009.<ref>{{cite web
+|url=http://www.w3.org/TR/CSS21/
+|title=Cascading Style Sheets, level 2 revision 1
+|last=Bos
+|first=Bert
+|coauthors=<U+00C7>elik, Tantek; Hickson, Ian; [[H<U+00E5>kon Wium Lie|Lie, H<U+00E5>kon Wium]]
+|publisher=[[World Wide Web Consortium]]
+|date=19 July 2007
+|accessdate=21 March 2009
+| archiveurl= http://web.archive.org/web/20090319050021/http://www.w3.org/TR/CSS21/| archivedate= 19 March 2009 <!--DASHBot-->| deadurl= no}}</ref>
+
+Specifically, Acid2 tests:<ref name="The Guided Tour">{{cite web
+|url=http://www.webstandards.org/action/acid2/guide/
+|title=Acid2: The Guided Tour
+|publisher=The Web Standards Project
+|accessdate=24 December 2007
+| archiveurl= http://web.archive.org/web/20071223090445/http://www.webstandards.org/action/acid2/guide/#row-1| archivedate= 23 December 2007 <!--DASHBot-->| deadurl= no}}</ref>
+* '''[[Alpha transparency]] in [[Portable Network Graphics|PNG]]-format images:''' The eyes of the smiley face use ''alpha transparency'', which is part of the 1996 Portable Network Graphics specification. Alpha transparency blends the eyebrows into the face smoothly and elegantly. This was a significant issue because [[Internet Explorer 6]], the most widely used web browser at the time Acid2 was released,<ref>{{cite web
+|url=http://www.thecounter.com/stats/2005/April/browser.php
+|title=Browser Stats
+|publisher=TheCounter.com
+|date=April 2005
+|accessdate=23 August 2008
+| archiveurl= http://web.archive.org/web/20080813102040/http://www.thecounter.com/stats/2005/April/browser.php| archivedate= 13 August 2008 <!--DASHBot-->| deadurl= no}}</ref> did not support alpha transparency. This deficiency was rectified in [[Internet Explorer 7]], bringing Internet Explorer in line with other web browsers in this regard.<ref>{{cite web
+|url=http://www.libpng.org/pub/png/pngstatus.html#browsers
+|title=Current Status of PNG
+|last=Roelofs
+|first=Greg
+|publisher=[[SourceForge.net]]
+|date=14 March 2009
+|accessdate=4 April 2009
+| archiveurl= http://web.archive.org/web/20090413143250/http://www.libpng.org/pub/png/pngstatus.html| archivedate= 13 April 2009 <!--DASHBot-->| deadurl= no}}</ref>
+* The '''[[object element]]:''' The eyes also test support of the HTML object element. The object element has been a part of HTML since HTML 4 was released in 1998,<ref>{{cite web
+|url=http://www.w3.org/TR/1998/REC-html40-19980424/
+|title=HTML 4.0 Specification
+|last=Raggett
+|first=Dave
+|authorlink=Dave Raggett
+|first2=Arnaud Le
+|last2=Hors
+|last3=Jacobs
+|first3=Ian
+|publisher=[[World Wide Web Consortium]]
+|date=24 April 1998
+|accessdate=28 July 2008
+| archiveurl= http://web.archive.org/web/20080727143129/http://www.w3.org/TR/1998/REC-html40-19980424/| archivedate= 27 July 2008 <!--DASHBot-->| deadurl= no}}</ref> yet by 2005 it still was not completely supported in all web browsers. The creators of Acid2 considered object element support important because it allows for content fallback<U+2014>if an object fails to load, then the browser can display alternative (generally simpler, more reliable) content in its place.
+* '''[[Data URI]]s:''' The actual images that form the eyes are encoded as data URIs, which allow multimedia to be embedded in web pages rather than stored as a separate file. Acid2 tests the most common case, where a [[Binary file|binary]] image is [[base64]]-encoded into text and then that encoded text is included in a data URI in the web page. Interestingly, although the IETF published the data URI specification in 1998,<ref name="RFC 2397"/> they never formally adopted it as a standard.<ref>{{cite web
+|url=http://www.rfc-editor.org/rfcxx00.html#Proposed
+|title=Proposed Standards
+|work=Official Internet Protocol Standards
+|publisher=[[Internet Society]]
+|date=4 January 2009
+|accessdate=4 January 2009
+| archiveurl= http://web.archive.org/web/20090117062740/http://rfc-editor.org/rfcxx00.html| archivedate= 17 January 2009 <!--DASHBot-->| deadurl= no}}</ref> Nonetheless, the HTML 4.01 specification references the [[data URI scheme]],<ref name="h-13.3.1">{{cite web
+|url=http://www.w3.org/TR/1999/REC-html401-19991224/struct/objects.html#h-13.3.1
+|title=Objects, Images, and Applets: Rules for rendering objects
+|last=Raggett
+|first=Dave
+|author2=Le Hors, Arnaud|author3= Jacobs, Ian
+|work=HTML 4.01 Specification
+|publisher=[[W3C]]
+|date=24 December 1999
+|accessdate=20 March 2008
+| archiveurl= http://web.archive.org/web/20080312073553/http://www.w3.org/TR/1999/REC-html401-19991224/struct/objects.html| archivedate= 12 March 2008 <!--DASHBot-->| deadurl= no}}</ref> and data URI support has now been implemented in most browsers.
+* '''Absolute, relative, and fixed CSS positioning:''' Absolute positioning means that the web developer specifies the exact X and Y coordinates where an element is to be placed into the page. Relative positioning means that the web developer specifies an X and Y offset from the usual position of the element. Fixed positioning means that the element is placed relative to the browser window, and scrolls with the window rather than with the rest of the page.<ref>{{cite web
+|url=http://www.w3.org/TR/CSS21/visuren.html
+|title=Visual formatting model
+|work=Cascading Style Sheets, level 2 revision 1
+|last=Bos
+|first=Bert
+|coauthors=<U+00C7>elik, Tantek; Hickson, Ian; [[H<U+00E5>kon Wium Lie|Lie, H<U+00E5>kon Wium]]
+|publisher=[[World Wide Web Consortium]]
+|date=19 July 2007
+|accessdate=5 January 2009
+| archiveurl= http://web.archive.org/web/20090105052236/http://www.w3.org/TR/CSS21/visuren.html| archivedate= 5 January 2009 <!--DASHBot-->| deadurl= no}}</ref><ref>{{cite web
+|url=http://kilianvalkhof.com/2008/css-xhtml/understanding-css-positioning-part-1/
+|title=Understanding CSS Positioning part 1
+|last=Valkhof
+|first=Kilian
+|date=5 May 2008
+|accessdate=31 July 2008
+| archiveurl= http://web.archive.org/web/20080730034559/http://kilianvalkhof.com/2008/css-xhtml/understanding-css-positioning-part-1/| archivedate= 30 July 2008 <!--DASHBot-->| deadurl= no}}</ref>
+* The '''CSS box model:''' This feature allows the web designer to specify dimensions, padding, borders, and margins,<ref>{{cite web
+|url=http://www.w3.org/TR/CSS21/box.html
+|title=Box model
+|work=Cascading Style Sheets, level 2 revision 1
+|last=Bos
+|first=Bert
+|coauthors=<U+00C7>elik, Tantek; Hickson, Ian; [[H<U+00E5>kon Wium Lie|Lie, H<U+00E5>kon Wium]]
+|publisher=[[World Wide Web Consortium]]
+|date=19 July 2007
+|accessdate=5 January 2009
+| archiveurl= http://web.archive.org/web/20090105052231/http://www.w3.org/TR/CSS21/box.html| archivedate= 5 January 2009 <!--DASHBot-->| deadurl= no}}</ref> and was the focus of the original [[Acid1]] test.<ref name="The Guided Tour"/> Acid2 not only retests margin support but also tests minimum and maximum heights and widths, features new to CSS 2.0.
+* '''CSS table formatting:''' This part of CSS allows the web designer to apply table formatting without traditional [[HTML table|HTML table markup]].
+* '''CSS generated content:''' Using CSS generated content, web developers can add decorations and annotations to specified elements without having to add the content to each one individually.
+* '''CSS parsing:''' A number of illegal CSS statements are present in Acid2 to test error handling. Standards-compliant browsers are expected to handle these errors as the CSS specification directs. This helps ensure cross-browser compatibility by making all browsers treat CSS with the same level of strictness, so that what works in one browser should not cause errors in another.
+* '''Paint order:''' Acid2 requires that the browser has standard paint order. That is, overlapping elements should be placed or ''painted'' on top of each other in the correct order.
+* '''Hovering effects:''' When the user moves his or her mouse over the smiley face's nose, it turns blue. This is called a hovering effect, and while it has traditionally been used for [[hyperlink]]s, it should work on a wide variety of HTML elements.<ref>{{cite web
+|url=http://blogs.msdn.com/ie/archive/2006/08/22/712830.aspx
+|title=Details on our CSS changes for IE7
+|last=Mielke
+|first=Markus
+|work=IEBlog
+|publisher=[[Microsoft]]
+|date=22 August 2006
+|accessdate=31 July 2008
+| archiveurl= http://web.archive.org/web/20080730034543/http://blogs.msdn.com/ie/archive/2006/08/22/712830.aspx| archivedate= 30 July 2008 <!--DASHBot-->| deadurl= no}}</ref>
+
+Because Acid2 is not a comprehensive test, it does not guarantee total conformance to any particular standard. A variant of the Acid2 test that does not test for data URI support is also available from the Web Standards Project.<ref name="The Guided Tour"/>
+
+==Passing conditions==
+A passing score is only considered valid if the browser's default settings were used. Actions such as changing font sizes, zoom level, and applying user stylesheets can break the display of the test. This is expected and is not relevant to a browser's compliance.<ref name="Holzschlag">{{cite web
+|url=http://www.webstandards.org/2006/07/20/acid2-and-opera-9-clarifications/
+|title=Acid2 and Opera 9 Clarifications: Yes, Opera 9 Passes the Test
+|author=Holzschlag, Molly E.
+|authorlink=Molly Holzschlag
+|publisher=The [[Web Standards Project]]
+|date=20 July 2006
+|accessdate=22 July 2006
+| archiveurl= http://web.archive.org/web/20060805182608/http://www.webstandards.org/2006/07/20/acid2-and-opera-9-clarifications/| archivedate= 5 August 2006 <!--DASHBot-->| deadurl= no}}</ref>
+
+The following browser settings and user actions invalidate the test:<ref name="Holzschlag"/><ref>{{cite web
+|url=http://weblog.timaltman.com/archive/2006/07/19/tims-opera-bits-v11
+|title=Tim's Opera Bits v1.1
+|last=Altman
+|first=Tim
+|work=Tim's blog
+|date=19 July 2006
+|accessdate=15 November 2007
+}}</ref>
+* Scrolling
+* Resizing the browser window
+* Zooming in or out
+* Disabling images
+* Using [[Opera (web browser)|Opera]]'s ''Fit to width'' or ''Small Screen Rendering'' modes
+* Applying custom fonts, colors, styles, etc.
+* [[User JavaScript]] or [[Greasemonkey]] scripts
+* Enabling [[Internet Explorer]]'s "compatibility view"
+
+==Compliant applications==
+[[Image:Safariacid2.png|thumb|Acid2 as rendered by compliant applications]]
+[[Image:Usage share of web browsers that pass Acid2.png|thumb|Use of Acid2-conformant web browsers rose between October 2005 and May 2009.<ref>{{cite web |url=http://marketshare.hitslink.com/report.aspx?qprid=2&qptimeframe=M&qpstick=1 |title=Browser Version Market Share |publisher=Net Applications |date=January 2009 |accessdate=2 January 2009}}</ref>]]
+
+If rendered correctly, Acid2 will appear as a [[smiley]] face below the text "[[Hello World!]]" in the user's browser, with the nose turning blue when the mouse cursor hovers over it. At the time of the test's release, every browser failed it,<ref name="Hyatt"/> but now a number of browsers pass it. See the list below.
+
+===Officially released===
+* [[Internet Explorer]], the web browser that comes with Windows
+* [[Gecko (layout engine)|Gecko]]-based browsers
+** [[Mozilla Firefox]], a web browser for Windows, Mac OS X, and Linux
+** [[SeaMonkey]], an [[Internet suite]] for Windows, Mac OS X, and Linux
+** [[Songbird (software)|Songbird]], a media player and web browser for Windows, Mac OS X, and Linux
+** [[Camino]], a web browser for Mac OS X
+** [[Mozilla Thunderbird]], an email client for Windows, Mac OS X, and Linux
+** [[Firefox for mobile]], a web browser for mobile devices
+** [[Miro (software)|Miro]], an RSS aggregator, BitTorrent client, web browser and media player
+** [[Mozilla Sunbird]], a calendar application for Windows, Mac OS X, and Linux
+** [[Spicebird]] 0.8, a personal information manager for Windows, Mac OS X, and Linux
+** [[Mozilla Prism|WebRunner]] (formerly Prism), a web application platform for Windows, Mac OS X, and Linux
+* [[WebKit]]- and [[KHTML]]-based browsers
+** [[Safari (web browser)|Safari]], the web browser included in [[Mac OS X]]
+** [[Google Chrome]], a web browser for Windows, Mac OS X, and Linux
+** [[Konqueror]], a web browser for [[Linux]]
+** [[OmniWeb]], a web browser for Mac OS X
+** [[Shiira]], a web browser for Mac OS X
+** [[iCab]], a web browser for Mac OS X
+** [[Web (web browser)|Web]], the official [[GNOME]] web browser
+** [[Midori (web browser)|Midori]], the official [[Xfce]] web browser
+** The [[Google Earth]] integrated web browser
+* [[Presto (layout engine)|Presto]]-based browsers
+** [[Opera (web browser)|Opera]], a web browser for Windows, Mac OS X, Linux, [[BSD]] and Solaris with mobile versions for all mobile phones, tablets and all [[Apple Inc.|Apple]] products like [[iPad]]
+** The [[Internet Channel]], a version of the Opera browser for the Nintendo [[Wii]] game console.
+* [[Prince XML|Prince]], an XML-to-PDF converter for Windows, Mac OS X, and Linux
+
+==Non-compliant applications==
+<gallery widths="150px" style="margin-left:auto; margin-right:auto; text-align:center">
+Image:Ieacid2.png|[[Internet Explorer 6]]
+Image:Ie7acid2.png|[[Internet Explorer 7]]
+Image:Acid2 NS72.png|[[Firefox]] 1.0, [[Mozilla Application Suite|Mozilla]] 1.7.13, [[Camino]] 1.6, and [[Netscape (web browser)|Netscape]] 7.2
+Image:Firefoxacid2.png|[[Firefox]] 1.5 and 2.0, [[SeaMonkey]] 1.1
+Image:Opera 8.0 Acid2.png|[[Opera (web browser)|Opera]] 8.0
+Image:Opera 8.54 Acid2.png|[[Opera (web browser)|Opera]] 8.54
+Image:Konqueror 3.4.1 Acid2.png|[[Konqueror]] 3.4
+Image:Midori 0.1.10 Acid2.png|[[Midori (web browser)|Midori]] 0.1.10-r2 on [[SHR (operating system)|SHR]]
+Image:Netsurf-1.2-acid2.png|[[NetSurf]] 1.2
+Image:NetSurf-3.0-acid2.png|[[NetSurf]] 3.0 in Q2/2011
+Image:Acid2 in Opera Mini 4.png|[[Opera Mini]] 4
+Image:Nokia Nst-4 Acid2.png|on Nokia Nst-4, [[Symbian|Nst OS]] 3.1.9
+Image:Acid2iPod.png|[[Safari (web browser)|MobileSafari]] 3.1
+Image:BBStormAcid2.jpg|[[Blackberry storm|BlackBerry Storm Browser]] 4.7.0.122
+Image:WebOS v1.4.0 Acid2.png|[[webOS|Palm Pre / webOS]] v1.4.0
+<!-- Do not add screenshots of browsers that were already obsolete when Acid2 was released. -->
+</gallery>
+
+Even though [[Opera Mini]] is based on the same rendering engine as [[Opera (web browser)|Opera]] for [[personal computer]]s, it does not pass the Acid2 test.<ref>{{cite web
+|url=http://virtuelvis.com/archives/2007/06/opera-mini-4-beta
+|title=Opera Mini 4 beta out
+|last=Bersvendsen
+|first=Arve
+|date=June 2007
+|accessdate=22 December 2007
+}}</ref><ref>{{cite web
+|url=http://www.opera.com/mobile/demo/
+|title=Opera Mini Simulator
+|publisher=[[Opera Software]]
+|accessdate=22 December 2007
+}}</ref> This is because Opera Mini intentionally reformats web pages to try to make them more suitable for devices with small screens.<ref name="Holzschlag"/><ref>{{cite web
+|url=http://www.opera.com/mobile/features/
+|title=Opera Mini Features
+|publisher=[[Opera Software]]
+|accessdate=21 December 2007
+}}</ref><ref>{{cite web
+|url=http://simonwillison.net/2006/May/11/operamini/#c33322
+|title=c33322
+|author=Wilton-Jones, Mark "Tarquin"
+|publisher=Simon Willison
+|date=10 June 2006
+|accessdate=10 May 2008
+}}</ref>
+
+==Timeline of passing applications==
+The following is a list of releases noting significant releases of applications that passed the test. New applications that have passed Acid2 since their first official release are not included in the timeline.
+
+{|class="wikitable"
+|-
+!style="width:18ex"|Date
+!style="width:19ex"|Browser
+!style="width:18ex"|Availability
+!Notes
+|-
+|27 April 2005
+|[[Safari (web browser)|Safari]]
+| style="background:#ff8a80;"|private build<ref>{{cite web |url=http://weblogs.mozillazine.org/hyatt/archives/2005_04.html#008042|title=Safari Passes the Acid2 Test (Updated)|last=Hyatt|first=Dave|date=27 April 2005|accessdate=14 June 2006| archiveurl= http://web.archive.org/web/20060615232750/http://weblogs.mozillazine.org/hyatt/archives/2005_04.html| archivedate= 15 June 2006 <!--DASHBot-->| deadurl= no}}</ref>
+|
+|-
+|18 May 2005
+|[[iCab]]
+| style="background:#ff8a80;"|private build<ref name="Much">{{cite web |url=http://snailshell.de/blog/archives/2005/11/entry_22.html|title=Acid2 <U+2013> the truth about Safari, iCab and Konqueror|last=Much|first=Thomas|work=Thomas Much's Weblog|date=5 November 2005|accessdate=5 May 2008}}</ref>
+|This build was made available to registered iCab users on 20 May 2005.
+|-
+|4 June 2005
+|[[Konqueror]]
+| style="background:#ff8a80;"|private build<ref>{{cite web|url=http://kdedevelopers.org/node/1129|title=Konqueror now passes Acid2|author=Sandfeld, Allan [carewolf]|work=carewolf's blog |publisher=KDE Developer's Journals |date=4 June 2005|accessdate=16 May 2006| archiveurl= http://web.archive.org/web/20060614111829/http://www.kdedevelopers.org/node/1129| archivedate= 14 June 2006 <!--DASHBot-->| deadurl= no}}</ref>
+|
+|-
+|6 June 2005
+|[[iCab]]
+| style="background:#fe0;"|public build<ref name="Much"/>
+|Whether this version of iCab truly passes the test or not was questioned because it displays a scrollbar on the test page.<ref>{{cite web |url=http://www.howtocreate.co.uk/acid/#scrollbarnotes |title=Notes about the scrollbar |work=Acid 2 in major browsers |author=Wilton-Jones, Mark "Tarquin" |accessdate=10 January 2009| archiveurl= http://web.archive.org/web/20090122055238/http://www.howtocreate.co.uk/acid/| archivedate= 22 January 2009 <!--DASHBot-->| deadurl= no}}</ref> The CSS specification states that Acid2 correctly rendered should not have a scrollbar,<ref>{{cite web |url=http://www.w3.org/TR/CSS21/visufx.html#overflow |title=Visual effects |work=Cascading Style Sheets, level 2 revision 1 |last=Bos |first=Bert |coauthors=<U+00C7>elik, Tantek; Hickson, Ian; [[H<U+00E5>kon Wium Lie|Lie, H<U+00E5>kon Wium]] |publisher=[[World Wide Web Consortium]] |date=19 July 2007 |accessdate=5 January 2009| archiveurl= http://web.archive.org/web/20081218012016/http://www.w3.org/TR/CSS21/visufx.html| archivedate= 18 December 2008 <!--DASHBot-->| deadurl= no}}</ref> but also says that "there may exist valid reasons in particular circumstances" to ignore this requirement.<ref>{{cite web |url=http://www.w3.org/TR/CSS21/conform.html#defs |title=Conformance: Requirements and Recommendations |work=Cascading Style Sheets, level 2 revision 1 |last=Bos |first=Bert |coauthors=<U+00C7>elik, Tantek; Hickson, Ian; [[H<U+00E5>kon Wium Lie|Lie, H<U+00E5>kon Wium]] |publisher=[[World Wide Web Consortium]]|date=19 July 2007|accessdate=10 January 2009| archiveurl= http://web.archive.org/web/20090115175119/http://www.w3.org/TR/CSS21/conform.html| archivedate= 15 January 2009 <!--DASHBot-->| deadurl= no}}</ref><ref>{{cite web |url=http://tools.ietf.org/html/rfc2119|title=RFC 2119 <U+2013> Key words for use in RFCs to Indicate Requirement Levels|author=Bradner, S.|publisher=[[Internet Engineering Task Force]]|date=March 1997|accessdate=10 January 2009| archiveurl= http://web.archive.org/web/20090127025839/http://tools.ietf.org/html/rfc2119| archivedate= 27 January 2009 <!--DASHBot-->| deadurl= no}}</ref>
+|-
+|6 June 2005
+|[[Safari (web browser)|Safari]]
+| style="background:#fa0;"|source code available<ref>{{cite news|url=http://news.cnet.com/Apple-opens-up-open-source-effort/2100-1032_3-5735660.html|title=Apple opens up open-source effort|last=Festa|first=Paul|publisher=[[CNET]]|date=7 June 2005|accessdate=26 February 2009}}</ref>
+|[[WebKit]], the underpinnings of Safari, was made [[open source]] on 6 June 2005. When Safari was run with this latest version of WebKit, it passed the Acid2 test.
+|-
+|31 October 2005
+|[[Safari (web browser)|Safari]] 2.0.2
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://webkit.org/blog/32/webkit-fixes-in-safari-202-mac-os-x-1043/|title=WebKit Fixes in Safari 2.0.2 / Mac OS X 10.4.3|last=Stachowiak |first=Maciej |work=Surfin' Safari |date=1 November 2005|accessdate=3 May 2008| archiveurl= http://web.archive.org/web/20080430204118/http://webkit.org/blog/32/webkit-fixes-in-safari-202-mac-os-x-1043/| archivedate= 30 April 2008 <!--DASHBot-->| deadurl= no}}</ref><ref>{{cite web|url=http://www.versiontracker.com/dyn/moreinfo/macosx/17743&vid=252114|archiveurl=http://web.archive.org/web/20080801170636/http://www.versiontracker.com/dyn/moreinfo/macosx/17743&vid=252114|archivedate=1 August 2008 |title=Apple Safari 2.0.2 software download |publisher=VersionTracker|accessdate=3 May 2008}}</ref>
+|Included in [[Mac OS X]] 10.4.3. First officially released web browser to pass test.
+|-
+|29 November 2005
+|[[Konqueror]] 3.5
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://www.kde.org/announcements/announce-3.5.php|title=K Desktop Environment 3.5 Released|publisher=KDE Project|date=29 November 2005|accessdate=16 May 2006| archiveurl= http://web.archive.org/web/20060424151944/http://kde.org/announcements/announce-3.5.php| archivedate= 24 April 2006 <!--DASHBot-->| deadurl= no}}</ref>
+|First [[Linux]]-compatible browser to pass the test, although it did not hide the scrollbar.
+|-
+|7 December 2005
+|[[Prince XML|Prince]] 5.1
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://www.princexml.com/samples/acid2/|title=The Acid2 Test|publisher=YesLogic|accessdate=16 May 2006| archiveurl= http://web.archive.org/web/20060515200150/http://princexml.com/samples/acid2/| archivedate= 15 May 2006 <!--DASHBot-->| deadurl= no}}</ref>
+|First non-web browser to pass test.
+|-
+|10 March 2006
+|[[Opera (web browser)|Opera]] 9 Development build 8249
+| style="background:#fe0;"|public weekly build<ref>{{cite web|url=http://weblog.timaltman.com/archive/2006/03/10/acid2-rows-4-and-5-aka-opera-passes-acid2-test |title=Acid2 <U+2013> Rows 4 and 5 AKA Opera passes the Acid2 test!|last=Altman|first=Tim|work=Tim's blog|date=10 March 2006|accessdate=16 May 2006}}</ref><ref>{{cite web|url=http://my.opera.com/desktopteam/blog/show.dml/172375|title=<U+2026>and one more weekly!|last=Santambrogio|first=Claudio|date=10 March 2006|accessdate=10 May 2008}}</ref>
+|First [[Microsoft Windows]]-compatible browser to pass the test and also the first [[Linux]]-compatible browser to pass the test including hiding the scrollbar. A public beta was released on 20 April, also successful.<ref>{{cite press release |url=http://www.opera.com/press/releases/2006/04/20/ |title=Widgets, BitTorrent, content blocking: Introducing Opera 9 Beta|publisher=[[Opera Software]]|date=20 April 2006|accessdate=10 May 2008}}</ref><ref>{{cite web|url=http://www.opera.com/docs/changelogs/windows/900b1/|title=Changelog for Opera 9.0 Beta 1 for Windows|publisher=[[Opera Software]]|date=20 April 2006|accessdate=10 May 2008| archiveurl= http://web.archive.org/web/20080520115436/http://www.opera.com/docs/changelogs/windows/900b1/| archivedate= 20 May 2008 <!--DASHBot-->| deadurl= no}}</ref>
+|-
+|28 March 2006
+|[[Konqueror]] 3.5.2
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://kde.org/announcements/announce-3.5.2.php|title=KDE 3.5.2 Release Announcement|publisher=The KDE Project|date=28 March 2006|accessdate=10 January 2009| archiveurl= http://web.archive.org/web/20081226160526/http://kde.org/announcements/announce-3.5.2.php| archivedate= 26 December 2008 <!--DASHBot-->| deadurl= no}}</ref>
+|Updated to hide the scrollbar.<ref>{{cite web|url=http://kde.org/announcements/changelogs/changelog3_5_1to3_5_2.php |title=KDE 3.5.1 to KDE 3.5.2 Changelog|publisher=The KDE Project |date=28 March 2006|accessdate=10 January 2009| archiveurl= http://web.archive.org/web/20081222212441/http://www.kde.org/announcements/changelogs/changelog3_5_1to3_5_2.php| archivedate= 22 December 2008 <!--DASHBot-->| deadurl= no}}</ref><ref>{{cite news|url=http://dot.kde.org/2006/03/28/kde-352-released|title=KDE 3.5.2 Released|last=K<U+00FC>gler|first=Sebastian|publisher=The KDE Project|date=28 March 2006|accessdate=26 February 2009}}</ref>
+|-
+|11 April 2006
+|[[Mozilla Firefox]]
+| style="background:#fe0;"|public nightly build<ref>{{cite web|url=http://www.flickr.com/photos/dbaron/126886608/|title=Firefox (on a development branch) passing the Acid2 test|last=Baron|first=David|publisher=[[Flickr]]|date=11 April 2006|accessdate=1 January 2009}}</ref>
+|The "reflow refactoring" nightly builds, whose code was [[branching (software)|branched]] from the [[Gecko (layout engine)|Gecko]] 1.9/Firefox 3.0 [[Trunk (software)|trunk]], pass Acid2.
+|-
+|24 May 2006
+|[[Opera Mobile]] for [[Symbian OS]]
+| style="background:#ff8a80;"|private build<ref>{{cite web|url=http://my.opera.com/spz/blog/show.dml/268384|title=Opera for Symbian passes Acid2|last=Nevstad|first=Magnus|work=The Digital Void of SPZ|publisher=[[Opera Software]]|accessdate=24 May 2006}}</ref>
+|First mobile browser to pass test.
+|-
+|20 July 2006
+|[[OmniWeb]] 5.5 beta 1
+| style="background:#fe0;"|public build<ref name="OmniWeb Historical Release Notes">{{cite web|url=http://www.omnigroup.com/products/omniweb/download/releasenotes/|title=Historical Release Notes|publisher=The Omni Group|date=9 April 2008|accessdate=29 April 2008}}</ref><ref>{{cite web |url=http://forums.omnigroup.com/archive/index.php/t-425.html |title=Acid2 Passes!|author=Handycam|publisher=The Omni Group|date=8 May 2006 |accessdate=10 May 2008}}</ref><ref>{{cite web|url=http://macintalk.com/index.php?id=136|title=Fourth Mac OS X browser test |archiveurl=http://web.archive.org/web/20060717122922/http://macintalk.com/index.php?id=136|last=Lengye|first=Andras|work=Macintalk|date=11 July 2006 |archivedate=17 July 2006|accessdate=24 August 2008}}</ref>
+|OmniWeb switches its rendering engine to [[WebKit]], the same rendering engine used in [[Safari (web browser)|Safari]] which already passed the Acid2 test
+|-
+|20 June 2006
+|[[Opera (web browser)|Opera]] 9.0
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://my.opera.com/welcome%20to%209/blog/show.dml/306342|title=Welcome to Opera 9.0 |last=Ford|first=Thomas|publisher=[[Opera Software]]|date=20 June 2006|accessdate=20 June 2006| archiveurl= http://web.archive.org/web/20060704163027/http://my.opera.com/welcome%2520to%25209/blog/show.dml/306342| archivedate= 4 July 2006 <!--DASHBot-->| deadurl= no}}</ref>
+|
+|-
+|4 July 2006
+|[[Obigo Browser]]
+| style="background:#ff8a80;"|private build<ref>{{cite press release|url=http://feed.ne.cision.com/wpyfs/00/00/00/00/00/07/F3/B5/wkr0001.pdf|title=Teleca's Obigo Browser displays prestigious Acid2 test page faultlessly|publisher=Teleca|date=4 July 2006|accessdate=5 May 2008|format=PDF}}</ref>
+|Second mobile browser to pass test.
+|-
+|17 August 2006
+|[[iCab]] 3.0.3
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://www.snailshell.de/blog/archives/2006/08/entry_78.html|title=iCab 3.0.3 Final(ly)|last=Much|first=Thomas|work=Thomas Much's Weblog|date=24 August 2006|accessdate=13 April 2008}}</ref>
+|First public release that hides the scrollbar.
+|-
+|6 September 2006
+|[[OmniWeb]] 5.5
+| style="background:#4f2;"|official release<ref name="OmniWeb Historical Release Notes"/>
+|
+|-
+|8 December 2006
+|[[Mozilla Firefox]], [[Camino]], [[SeaMonkey]]
+| style="background:#fe0;"|public nightly build<ref>{{cite web|url=https://bugzilla.mozilla.org/show_bug.cgi?id=289480#c121|last=Baron|first=David|title=Comment #121|work=Bug 289480 <U+2013> Tracking bug for acid2 (acid 2) test|publisher=[[Mozilla Corporation]]|date=8 December 2006|accessdate=8 December 2006}}</ref>
+|Reflow refactoring branch is merged into main Gecko trunk. Firefox, Camino, and SeaMonkey trunk builds now pass Acid2.
+|-
+|5 March 2008
+|[[Internet Explorer 8]] Beta 1
+| style="background:#fe0;"|public build<ref>{{cite web|url=http://blogs.msdn.com/ie/archive/2008/03/05/internet-explorer-8-beta-1-for-developers-now-available.aspx|title=Internet Explorer 8 Beta 1 for Developers Now Available|last=Hachamovitch|first=Dean|work=IEBlog|publisher=[[Microsoft]]|date=5 March 2008 |accessdate=5 May 2008| archiveurl= http://web.archive.org/web/20080409150249/http://blogs.msdn.com/ie/archive/2008/03/05/internet-explorer-8-beta-1-for-developers-now-available.aspx| archivedate= 9 April 2008 <!--DASHBot-->| deadurl= no}}</ref>
+|Beta 1 passes the test when hosted at www.webstandards.org, but fails the test when hosted at webstandards.org or acid2.acidtests.org.<ref name="Nachreiner" />
+|-
+|17 June 2008
+|[[Mozilla Firefox 3]].0
+| style="background:#4f2;"|official release<ref>{{cite news|url=http://arstechnica.com/software/news/2006/12/8409.ars|title=A first look at Firefox 3.0|last=Paul|first=Ryan|publisher=Ars Technica|date=12 December 2006|accessdate=5 August 2008}}</ref><ref>{{cite web|url=http://www.mozilla.com/en-US/firefox/3.0/releasenotes/|title=Firefox 3 Release Notes|publisher=[[Mozilla Foundation]]|date=7 June 2008|accessdate=4 August 2008| archiveurl= http://web.archive.org/web/20080731164120/http://www.mozilla.com/en-US/firefox/3.0/releasenotes/| archivedate= 31 July 2008 <!--DASHBot-->| deadurl= no}}</ref>
+|Mozilla Firefox 3.0,3.5,and 3.6 Pass The Acid2 Test.
+|-
+|27 August 2008
+|[[Internet Explorer 8]] Beta 2
+| style="background:#fe0;"|public build<ref>{{cite web|url=http://blogs.msdn.com/ie/archive/2008/08/27/internet-explorer-8-beta-2-now-available.aspx|title=Internet Explorer 8 Beta 2 Now Available|last=Hachamovitch|first=Dean|work=IEBlog|publisher=[[Microsoft]]|date=27 August 2008|accessdate=17 November 2008| archiveurl= http://web.archive.org/web/20081218012122/http://blogs.msdn.com/ie/archive/2008/08/27/internet-explorer-8-beta-2-now-available.aspx| archivedate= 18 December 2008 <!--DASHBot-->| deadurl= no}}</ref>
+|Beta 2 and later pass the test unless it is hosted from the [[Intranet]] Zone.<ref name="<U+041F><U+0435><U+0440><U+0435><U+0432><U+0435><U+0440><U+0442><U+0430><U+0439><U+043B><U+043E><U+0432>"/><ref name="Dickens"/>
+|-
+|2 September 2008
+|[[Google Chrome]] 0.2 beta
+| style="background:#fe0;"|public build<ref>{{cite web|url=http://news.cnet.com/8301-17939_109-10030962-2.html|title=Chrome tops IE, Firefox in Acid3 test}}</ref>
+|
+|-
+|14 October 2008
+|[[flock (web browser)|Flock]] 2.0
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://flock.com/node/64027|title=Flock 2.0, Out Of Beta And Ready To Rock}}</ref>
+|
+|-
+|11 December 2008
+|[[Google Chrome]] 1.0
+| style="background:#4f2;"|official release
+|
+|-
+|19 March 2009
+|[[Internet Explorer 8]]
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://blogs.msdn.com/ie/archive/2009/03/19/internet-explorer-8-final-available-now.aspx|title=Internet Explorer 8 Final Available Now|last=Hachamovitch|first=Dean|work=IEBlog|publisher=[[Microsoft]]|date=19 March 2009|accessdate=19 March 2009| archiveurl= http://web.archive.org/web/20090322102517/http://blogs.msdn.com/ie/archive/2009/03/19/internet-explorer-8-final-available-now.aspx| archivedate= 22 March 2009 <!--DASHBot-->| deadurl= no}}</ref>
+|
+|-
+|27 October  2009
+|[[SeaMonkey]] 2.0
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://www.seamonkey-project.org/releases/seamonkey2.0/|title=SeaMonkey 2.0}}</ref>
+|
+|-
+|18 November 2009
+|[[Camino]] 2.0
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://caminobrowser.org/releases/2.0/|title=Camino 2 Release Notes}}</ref>
+|
+|-
+|24 June 2010
+|[[Spicebird]] 0.8
+| style="background:#4f2;"|official release<ref>{{cite web|url=http://www.spicebird.com/en-US/spicebird/0.8/releasenotes|title=Spicebird 0.8 Release Notes}}</ref>
+|
+<!-- See talk page for info on what is appropriate to include in this table -->
+|}
+
+==See also==
+{{Portal|Software Testing|Internet}}
+* [[Comparison of layout engines]]
+{{clear}}
+
+==References==
+{{Reflist|colwidth=30em}}
+
+==External links==
+{{Commons}}
+{{Spoken Wikipedia|Acid2.ogg|2009-04-13}}
+* [http://acid2.acidtests.org/ Acid2 test]
+* [http://www.webstandards.org/action/acid2/ Acid2 test information]
+* [http://www.howtocreate.co.uk/acid/ Acid2 in major browsers]
+* [http://www.acidtests.org/ Web Standards Project collection of Acid tests]
+* [http://www.webstandards.org/press/releases/2005-04-13/ Web Standards Project press release 13 Apr 2005]
+* [http://news.cnet.com/The-Acid2-challenge-to-Microsoft/2010-1032_3-5618723.html CNET article proposing the Acid2 test]
+* [http://www.hyperborea.org/journal/2005/11/acid2-timeline/ Acid2 timeline]
+
+{{Acid tests}}
+{{featured article}}
+
+
+
+
+
+[[Category:Web software]]
+
+[[de:Acid (Browsertests)#Acid2]]
+[[sv:Acid webbl<U+00E4>sartester#Acid2]]

@@ -1,0 +1,127 @@
+In [[mathematics]], a '''continuous function''' is a [[function (mathematics)|function]] for which, intuitively, small changes in the input result in small changes in the output. Otherwise, a function is said to be '''discontinuous'''.
+  
+An intuitive though imprecise (and inexact) idea of continuity is given by the common statement that a continuous function is a function whose graph can be drawn without lifting the chalk from the blackboard.  
+
+The context of this introduction is one in which the inputs and outputs of functions are [[real number]]s.  More technical definitions are needed for [[complex number]]s or more general [[topological space]]s.  In [[order theory]], especially in [[domain theory]], one considers a notion derived from this basic definition, which is known as [[Scott continuity]].
+
+As an example, consider the function ''h''(''t'') which describes the [[height]] of a growing flower at time ''t''. This function is continuous.  In fact, there is a dictum of [[classical physics]] which states that ''in nature everything is continuous''.  By contrast, if ''M''(''t'') denotes the amount of money in a bank account at time ''t'', then the function jumps whenever money is deposited or withdrawn, so the function ''M''(''t'') is discontinuous.
+
+== Real-valued continuous functions ==
+Suppose we have a function that maps [[real number]]s to real numbers and whose [[domain (mathematics)|domain]] is some [[interval (mathematics)|interval]], like the functions ''h'' and ''M'' above.  Such a function can be represented by a [[graph of a function|graph]] in the [[Cartesian coordinate system|Cartesian plane]]; the function is continuous if, roughly speaking, the graph is a single unbroken [[curve]] with no "holes" or "jumps".
+
+To be more precise, we say that the function ''f'' is continuous at some [[point (geometry)|point]] ''c'' when the following two requirements are satisfied:
+* ''f''(''c'') must be defined (i.e. ''c'' must be an element of the [[domain (mathematics)|domain]] of ''f'').
+* The [[limit (mathematics)|limit]] of ''f''(''x'') as ''x'' approaches ''c'' must exist and be equal to ''f''(''c'').  (If the point ''c'' in the domain of ''f'' is not an [[accumulation point]] of the domain, then this condition is [[vacuous truth|vacuously true]], since ''x'' cannot approach ''c''.  Thus, for example, every function whose domain is the set of all integers is continuous, merely for lack of opportunity to be otherwise.  However, one does not usually talk about continuous functions in this setting.) 
+
+We call the function '''everywhere continuous''', or simply '''continuous''', if it is continuous at every point of its [[domain (mathematics)|domain]].  More generally, we say that a function is continuous on some [[subset]] of its domain if it is continuous at every point of that subset.  If we simply say that a function is continuous, we usually mean that it is continuous for all real numbers.
+
+The notation ''C''(<U+03A9>) or ''C''<sup>0</sup>(<U+03A9>) is sometimes used to denote the set of all continuous functions with domain <U+03A9>. Similarly, ''C''<sup>1</sup>(<U+03A9>) is used to denote the set of differentiable functions whose derivative is continuous, ''C''<sup>2</sup>(<U+03A9>) for the twice-differentiable functions whose second derivative is continuous, and so on. The notation <math>C^{(n,\alpha)}(\Omega)</math> occurs in the definition of a more subtle concept, that of [[H<U+00F6>lder continuity]].
+
+=== Cauchy definition (epsilon-delta) ===
+Without resorting to limits, one can define continuity of real functions as follows.
+
+Again consider a function ''f'' that maps a set of [[real numbers]] to another set of real numbers, and suppose ''c'' is an element of the domain of ''f''. The function ''f'' is said to be continuous at the point ''c'' if (and only if) the following holds: For any number <U+03B5> > 0 however small, there exists some number <U+03B4> > 0 such that for all ''x'' in the domain with ''c''&nbsp;&minus;&nbsp;<U+03B4> < ''x'' < ''c''&nbsp;+&nbsp;<U+03B4>, the value of ''f''(''x'') will satisfy ''f''(''c'')&nbsp;&minus;&nbsp;<U+03B5> < ''f''(''x'') < ''f''(''c'')&nbsp;+&nbsp;<U+03B5>.
+
+Alternatively written:  Given <math>I,D\subset\mathbb{R}</math> (that is, ''I'' and ''D'' are subsets of the [[real number]]s), continuity of <math>f:I \to D</math> (read <math>f</math> maps ''I'' into ''D'') at <math>c\in I</math> means that for all <math>\varepsilon>0</math> there exists a <math>\delta>0</math> such that <math>|x-c|<\delta</math> and <math>x\in I</math> imply  that <math>|f(x)-f(c)|<\varepsilon</math>.
+
+This "epsilon-delta definition" of continuity was first given by [[Augustin-Louis Cauchy|Cauchy]]. 
+
+More intuitively, we can say that if we want to get all the ''f''(''x'') values to stay in some small [[topological neighbourhood|neighborhood]] around ''f''(''c''), we simply need to choose a small enough neighborhood for the ''x'' values around ''c'', and we can do that no matter how small the ''f''(''x'') neighborhood is; ''f''(''x'') is then continuous at ''c''.
+
+=== Heine definition of continuity ===
+The following definition of continuity is due to [[Eduard Heine|Heine]].
+
+:A real function <math>f</math> is continuous if for any sequence <math>(x_n)</math> such that
+::<math>\lim\limits_{n\to\infty} x_n=x_0,</math> 
+:it holds that
+::<math>\lim\limits_{n\to\infty} f(x_n)=f(x_0).</math>
+:(We assume that all points <math>x_n</math>, <math>x_0</math> belong to the domain of <math>f</math>.)
+
+One can say briefly, that a function is continuous if and only if it preserves limits.
+
+Cauchy's and Heine's definition of continuity are equivalent. The usual (easier) proof makes use of the [[axiom of choice]], but in the case of global continuity of real functions it was proved by [[Wac<U+0142>aw Sierpi<U+0144>ski]] that the axiom of choice is not actually needed. [http://www.apronus.com/math/cauchyheine.htm]
+
+In more general setting of topological spaces, the concept analogous to Heine definition of continuity is called ''sequential continuity''. In general, sequential continuity is not equivalent to the analogue of Cauchy continuity, which is just called ''continuity'' (see [[continuity (topology)]] for details).
+
+=== Examples ===
+* All [[polynomial|polynomial function]]s are continuous.
+* If a function has a domain which is not an interval, the notion of a continuous function as one whose graph you can draw without taking your pencil off the paper is not quite correct.  Consider the functions ''f''(''x'')=1/''x'' and ''g''(''x'')=(sin ''x'')/''x''.  Neither function is defined at ''x''=0, so each has domain '''R'''\{0}, and each function is continuous.  The question of continuity at ''x''=0 does not arise, since it is not in the domain.  The function ''f'' cannot be extended to a continuous function whose domain is '''R''', since no matter what value is assigned at 0, the resulting function will not be continuous.  On the other hand, since the limit of ''g'' at 0 is 1, ''g'' can be extended continuously to '''R''' by defining its value at 0 to be 1.  A point in the domain that can be filled in so that the resulting function is continuous is called a [[removable singularity]].  Whether this can be done is not the same as continuity.
+* The [[rational function]]s, [[exponential function]]s, [[logarithm]]s, [[square root]] function, [[trigonometric function]]s and [[absolute value]] function are continuous.
+* An example of a discontinuous function is the function ''f'' defined by ''f''(''x'') = 1 if ''x'' > 0, ''f''(''x'') = 0 if ''x'' <U+2264> 0. Pick for instance <U+03B5> = 1/2. There is no <U+03B4>-neighborhood around ''x''=0 that will force all the ''f''(''x'') values to be within <U+03B5> of ''f''(0). Intuitively we can think of this type of discontinuity as a sudden jump in function values.
+* Another example of a discontinuous function is the [[sign function]].
+* A more complicated example of a discontinuous function is the [[popcorn function]].
+
+=== Facts about continuous functions ===
+If two functions ''f'' and ''g'' are continuous, then ''f'' + ''g'' and ''fg'' are continuous. If ''g''(''x'') <U+2260> 0 for all ''x'' in the domain, then ''f/g'' is also continuous. 
+
+The [[Function composition|composition]] ''f'' o ''g'' of two continuous functions is continuous.
+
+The [[intermediate value theorem]] is an [[existence theorem]], based on the real number property of [[completeness]], and states: "If the real-valued function ''f'' is continuous on the [[interval (mathematics)|closed interval]] [''a'', ''b''] and ''k'' is some number between ''f''(''a'') and ''f''(''b''), then there is some number ''c'' in [''a'', ''b''] such that ''f''(''c'') = ''k''". For example, if a child undergoes continuous growth from 1[[metre|m]] to 1.5m between the ages of 2 years and 6 years, then, at some time between 2 years and 6 years of age, the child's height must have been 1.25m. 
+
+As a consequence, if ''f'' is continuous on [''a'', ''b''] and ''f''(''a'') and ''f''(''b'') differ in [[Negative and non-negative numbers|sign]], then, at some point ''c'', ''f''(''c'') must equal [[0 (number)|zero]]. 
+
+[[Extreme value theorem]]: if a function ''f'' is defined on a closed interval [''a'',''b''] (or any closed and bounded set) and is continuous there, then the function attains its maximum, i.e. there exists ''c''&nbsp;<U+2208>&nbsp;[''a'',''b''] with ''f''(''c'') <U+2265> ''f''(''x'') for all ''x''&nbsp;<U+2208>&nbsp;[''a'',''b'']. The same is true of the minimum of ''f''. These statements are false if the function is defined on an open interval (''a'',''b'') (or any set that is not both closed and bounded), as for example the continuous function ''f''(''x'') = 1/''x'' defined on the open interval (0,1).
+
+If a function is [[derivative|differentiable]] at some point ''c'' of its domain, then it is also continuous at ''c''. The converse is not true: a function that's continuous at ''c'' need not be differentiable there. Consider for instance the [[absolute value]] function at ''c''&nbsp;=&nbsp;0.
+
+== Continuous functions between metric spaces ==
+Now consider a function ''f'' from one [[metric space]] (''X'', d<sub>''X''</sub>) to another metric space (''Y'', d<sub>''Y''</sub>). Then ''f'' is continuous at the point ''c'' in ''X'' if for any positive real number <U+03B5>, there exists a positive real number <U+03B4> such that all ''x'' in ''X'' satisfying d<sub>''X''</sub>(''x'', ''c'') < <U+03B4> will also satisfy d<sub>''Y''</sub>(''f''(''x''), ''f''(''c'')) < <U+03B5>.
+
+This can also be formulated in terms of [[sequence]]s and [[limit (mathematics)|limits]]: the function ''f'' is continuous at the point ''c'' if for every sequence (''x''<sub>''n''</sub>) in ''X'' with limit lim ''x''<sub>''n''</sub> = ''c'', we have lim ''f''(''x''<sub>''n''</sub>) = ''f''(''c''). ''Continuous functions transform limits into limits.''
+
+This latter condition can be weakened as follows: ''f'' is continuous at the point ''c'' if and only if for every convergent sequence (''x''<sub>''n''</sub>) in ''X'' with limit ''c'', the sequence (''f''(''x''<sub>''n''</sub>)) is a [[Cauchy sequence]], and ''c'' is in the domain of ''f''. ''Continuous functions transform convergent sequences into Cauchy sequences.''
+
+== Continuous functions between topological spaces ==
+{{main|continuity (topology)}}
+
+The above definitions of continuous functions can be generalized to functions from one [[topological space]]s to another in a natural way; a function ''f'' : ''X'' <U+2192> ''Y'', where ''X'' and ''Y'' are topological spaces, is continuous [[iff]] for every [[open set]] ''V'' <U+2286> ''Y'', ''f''<sup> &minus;1</sup>(''V'') is open in ''X''.
+
+== Continuous functions between partially ordered sets ==
+In [[order theory]], continuity of a function between [[Partially ordered sets|posets]] is [[Scott continuity]]. Let ''X'' be a [[complete lattice]], then a function ''f'':''X'' <U+2192> ''X'' is continuous if, for each subset ''Y'' of ''X'', we have [[supremum|sup]]&nbsp;''f''(''Y'') = ''f''(sup&nbsp;''Y'').
+
+== Continuous binary relation ==
+A binary [[relation (mathematics)|relation]] ''R'' on ''A'' is continuous if ''R(a,b)'' whenever there are sequences (''a''<sup>''k''</sup>)<sub>''i''</sub> and (''b''<sup>''k''</sup>)<sub>''i''</sub> in ''A'' which converge to ''a'' and ''b'' respectively for which ''R''(''a''<sup>''k''</sup>,&nbsp;''b''<sup>''k''</sup>) for all ''k''.  Clearly, if one treats ''R'' as a characteristic function in three variables, this definition of continuous is identical to that for continuous functions.
+
+== See also ==
+* [[semicontinuity]]
+* [[classification of discontinuities]]
+* [[uniform continuity]]
+* [[absolute continuity]]
+* [[equicontinuity]]
+* [[Lipschitz continuity]]
+* [[Scott continuity]]
+* [[normal function]]
+* [[bounded linear operator]]
+* [[limit (category theory)|continuous functor]]
+
+==References==
+*[http://archives.math.utk.edu/visual.calculus/ Visual Calculus] by Lawrence S. Husch, [[University of Tennessee]] ([[2001]])
+
+[[Category:Calculus]]
+[[Category:General topology]]
+[[Category:Scientific terminology]]
+[[Category:Scientific modeling]]
+
+[[ca:Funci<U+00F3> cont<U+00ED>nua]]
+[[cs:Spojit<U+00E1> funkce]]
+[[da:Kontinuitet]]
+[[de:Stetigkeit]]
+[[el:<U+03A3><U+03C5><U+03BD><U+03AD><U+03C7><U+03B5><U+03B9><U+03B1> <U+03C3><U+03C5><U+03BD><U+03AC><U+03C1><U+03C4><U+03B7><U+03C3><U+03B7><U+03C2>]]
+[[es:Continuidad (matem<U+00E1>tica)]]
+[[eo:Kontinua funkcio]]
+[[fr:Fonction continue]]
+[[ko:<U+C5F0><U+C18D> <U+D568><U+C218>]]
+[[it:Funzione continua]]
+[[he:<U+05E8><U+05E6><U+05D9><U+05E4><U+05D5><U+05EA>]]
+[[lt:Tolydi funkcija]]
+[[nl:Continue functie]]
+[[ja:<U+9023><U+7D9A> (<U+6570><U+5B66>)]]
+[[pl:Funkcja ci<U+0105>g<U+0142>a]]
+[[pt:Fun<U+00E7><U+00E3>o cont<U+00ED>nua]]
+[[ro:Func<U+0163>ie continu<U+0103>]]
+[[ru:<U+041D><U+0435><U+043F><U+0440><U+0435><U+0440><U+044B><U+0432><U+043D><U+043E><U+0435> <U+043E><U+0442><U+043E><U+0431><U+0440><U+0430><U+0436><U+0435><U+043D><U+0438><U+0435>]]
+[[su:Continuous function]]
+[[fi:Jatkuva funktio]]
+[[sv:Kontinuerlig]]
+[[th:<U+0E1F><U+0E31><U+0E07><U+0E01><U+0E4C><U+0E0A><U+0E31><U+0E19><U+0E15><U+0E48><U+0E2D><U+0E40><U+0E19><U+0E37><U+0E48><U+0E2D><U+0E07>]]
+[[zh:<U+8FDE><U+7EED><U+51FD><U+6570>]]

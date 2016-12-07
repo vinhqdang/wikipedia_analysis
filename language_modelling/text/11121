@@ -1,0 +1,190 @@
+In the theory of [[integrable system]]s, a '''peakon''' ("peaked soliton") is a [[soliton]] with [[discontinuous]] first [[derivative]]; the wave profile is shaped like the graph of the function <math>e^{-|x|}</math>. Some examples of [[non-linear partial differential equation]]s with (multi-)peakon solutions are the [[Camassa<U+2013>Holm equation|Camassa<U+2013>Holm shallow water wave equation]] and the [[Degasperis<U+2013>Procesi equation]].
+Since peakon solutions are only piecewise differentiable, they must be interpreted in a suitable [[weak solution|weak sense]].
+The concept was introduced in 1993 by Camassa and Holm in the short but much cited paper where they derived their shallow water equation.<ref>Camassa & Holm 1993</ref>
+
+== A family of equations with peakon solutions ==
+
+The primary example of a PDE which supports peakon solutions is
+
+:<math>
+u_t - u_{xxt} + (b+1) u u_x = b u_x u_{xx} + u u_{xxx}, \,
+</math>
+
+where <math>u(x,t)</math> is the unknown function, and ''b'' is a parameter.<ref>Degasperis, Holm & Hone 2002</ref>
+In terms of the auxiliary function <math>m(x,t)</math> defined by the relation <math>m = u-u_{xx}</math>, the equation takes the simpler form
+
+:<math>
+m_t + m_x u + b m u_x = 0. \,
+</math>
+
+This equation is [[integrable system|integrable]] for exactly two values of ''b'', namely ''b'' = 2 (the [[Camassa<U+2013>Holm equation]]) and ''b'' = 3 (the [[Degasperis<U+2013>Procesi equation]]).
+
+== The single peakon solution ==
+
+The PDE above admits the travelling wave solution <math>u(x,t) = c \, e^{-|x-ct|}</math>,
+which is a peaked solitary wave with amplitude ''c'' and speed ''c''.
+This solution is called a (single) peakon solution,
+or simply a '''peakon'''.
+If ''c'' is negative, the wave moves to the left with the peak pointing downwards,
+and then it is sometimes called an '''antipeakon'''.
+
+It is not immediately obvious in what sense the peakon solution satisfies the PDE.
+Since the derivative ''u''<sub>''x''</sub> has a jump discontinuity at the peak,
+the second derivative ''u''<sub>''xx''</sub> must be taken in the sense of [[distribution (mathematics)|distributions]] and will contain a [[Dirac delta function]];
+in fact, <math>m = u - u_{xx} = c \, \delta(x-ct)</math>.
+Now the product <math>m u_x</math> occurring in the PDE seems to be undefined, since the distribution ''m'' is supported at the very point where the derivative ''u''<sub>''x''</sub> is undefined. An [[ad hoc]] interpretation is to take the value of ''u''<sub>''x''</sub> at that point to equal the average of its left and right limits (zero, in this case). A more satisfactory way to make sense of the solution is to invert the relationship between ''u'' and ''m'' by writing <math>m = (G/2) * u</math>, where <math>G(x) = \exp(-|x|)</math>, and use this to rewrite the PDE as a (nonlocal) [[Hyperbolic partial differential equation#Hyperbolic system and conservation laws|hyperbolic conservation law]]:
+
+:<math>
+\partial_t u + \partial_x \left[\frac{u^2}{2} + \frac{G}{2} * \left(\frac{b u^2}{2} + \frac{(3-b) u_x^2}{2} \right) \right] = 0.
+</math>
+
+(The star denotes [[convolution]] with respect to ''x''.)
+In this formulation the function ''u'' can simply be interpreted as a [[weak solution]] in the usual sense.<ref>Constantin & McKean 1999 (who treat the Camassa<U+2013>Holm case ''b'' = 2; the general case is very similar)</ref>
+
+== Multipeakon solutions ==
+
+[[Image:Two-peakon.svg|thumb|400px|Two-peakon wave profile (solid curve) formed by adding two peakons (dashed curves): <math>u = m_1 \, e^{-|x-x_1|} + m_2 \, e^{-|x-x_2|}</math>]]
+
+Multipeakon solutions are formed by taking a linear combination of several peakons, each with its own time-dependent amplitude and position. (This is a very simple structure compared to the multisoliton solutions of most other integrable PDEs, like the [[KdV equation]] for instance.)
+The ''n''-peakon solution thus takes the form
+
+:<math>
+u(x,t) = \sum_{i=1}^n m_i(t) \, e^{-|x-x_i(t)|},
+</math>
+
+where the 2''n'' functions <math>x_i(t)</math> and <math>m_i(t)</math>
+must be chosen suitably in order for ''u'' to satisfy the PDE.
+For the "''b''-family" above it turns out that this ansatz indeed gives a solution, provided that the system of [[ordinary differential equation|ODEs]]
+
+:<math>
+\dot{x}_k = \sum_{i=1}^n m_i e^{-|x_k-x_i|},
+\qquad
+\dot{m}_k = (b-1) \sum_{i=1}^n m_k m_i \sgn(x_k-x_i) e^{-|x_k-x_i|}
+\qquad
+(k = 1,\dots,n)
+</math>
+
+is satisfied. (Here sgn denotes the [[sign function]].)
+Note that the right-hand side of the equation for <math>x_k</math> is obtained by substituting <math>x=x_k</math> in the formula for ''u''.
+Similarly, the equation for <math>m_k</math> can be expressed in terms of <math>u_x</math>, if one interprets the derivative of <math>\exp(-|x|)</math> at ''x'' = 0 as being zero.
+This gives the following convenient shorthand notation for the system:
+
+:<math>
+\dot{x}_k = u(x_k),
+\qquad
+\dot{m}_k = -(b-1) m_k u_x(x_k)
+\qquad
+(k = 1,\dots,n).
+</math>
+
+The first equation provides some useful intuition about peakon dynamics: the velocity of each peakon equals the elevation of the wave at that point.
+
+== Explicit solution formulas ==
+
+In the integrable cases ''b'' = 2 and ''b'' = 3, the system of ODEs describing the peakon dynamics can be solved explicitly for arbitrary ''n'' in terms of elementary functions, using inverse spectral techniques. For example, the solution for ''n'' = 3 in the Camassa<U+2013>Holm case ''b'' = 2 is given by<ref>Beals, Sattinger & Szmigielski 2000 (where a different normalization and sign convention is used)</ref>
+
+:<math>
+  \begin{align}
+    x_1(t) &= \log\frac{(\lambda_1-\lambda_2)^2 (\lambda_1-\lambda_3)^2 (\lambda_2-\lambda_3)^2 a_1 a_2 a_3}{\sum_{j<k} \lambda_j^2 \lambda_k^2 (\lambda_j-\lambda_k)^2 a_j a_k}
+    \\
+    x_2(t) &= \log\frac{\sum_{j<k} (\lambda_j-\lambda_k)^2 a_j a_k}{\lambda_1^2 a_1 + \lambda_2^2 a_2 + \lambda_3^2 a_3}
+    \\
+    x_3(t) &= \log(a_1+a_2+a_3)
+    \\
+    m_1(t) &= \frac{\sum_{j<k} \lambda_j^2 \lambda_k^2 (\lambda_j-\lambda_k)^2 a_j a_k}{\lambda_1 \lambda_2 \lambda_3 \sum_{j<k} \lambda_j \lambda_k (\lambda_j-\lambda_k)^2 a_j a_k}
+    \\
+    m_2(t) &= \frac{ \left( \lambda_1^2 a_1 + \lambda_2^2 a_2 + \lambda_3^2 a_3 \right) \sum_{j<k} (\lambda_j-\lambda_k)^2 a_j a_k}{ \left( \lambda_1 a_1 + \lambda_2 a_2 + \lambda_3 a_3 \right) \sum_{j<k} \lambda_j \lambda_k (\lambda_j-\lambda_k)^2 a_j a_k}
+    \\
+    m_3(t) &= \frac{a_1+a_2+a_3}{\lambda_1 a_1 + \lambda_2 a_2 + \lambda_3 a_3}
+  \end{align}
+</math>
+
+where <math>a_k(t) = a_k(0) e^{t/\lambda_k}</math>, and where the 2''n'' constants <math>a_k(0)</math> and <math>\lambda_k</math> are determined from initial conditions. The general solution for arbitrary ''n'' can be expressed in terms of [[symmetric function]]s of <math>a_k</math> and <math>\lambda_k</math>. The general ''n''-peakon solution in the Degasperis<U+2013>Procesi case ''b'' = 3 is similar in flavour, although the detailed structure is more complicated.<ref>Lundmark & Szmigielski 2005</ref>
+
+== Notes ==
+{{reflist}}
+
+==References==
+
+*{{Citation
+ | last = Beals
+ | first = Richard
+ | author-link =
+ | last2 = Sattinger
+ | first2 = David H.
+ | last3 = Szmigielski
+ | first3 = Jacek
+ | year = 2000
+ | title = Multipeakons and the classical moment problem
+ | periodical = Adv. Math.
+ | volume = 154
+ | issue = 2
+ | pages = 229<U+2013>257
+ | doi = 10.1006/aima.1999.1883
+}}
+
+*{{Citation
+ | last = Camassa
+ | first = Roberto
+ | author-link =
+ | last2 = Holm
+ | first2 = Darryl D.
+ | year = 1993
+ | title = An integrable shallow water equation with peaked solitons
+ | periodical = Phys. Rev. Lett.
+ | volume = 71
+ | issue = 11
+ | pages = 1661<U+2013>1664
+ | doi = 10.1103/PhysRevLett.71.1661
+}}
+
+*{{Citation
+ | last = Constantin
+ | first = Adrian
+ | author-link =
+ | last2 = McKean
+ | first2 = Henry P.
+ | year = 1999
+ | title = A shallow water equation on the circle
+ | periodical = Commun. Pure Appl. Math.
+ | volume = 52
+ | issue = 8
+ | pages = 949<U+2013>982
+ | doi = 10.1002/(SICI)1097-0312(199908)52:8<949::AID-CPA3>3.0.CO;2-D
+}}
+
+*{{Citation
+ | last = Degasperis
+ | first = Antonio
+ | author-link =
+ | last2 = Holm
+ | first2 = Darryl D.
+ | last3 = Hone
+ | first3 = Andrew N. W.
+ | year = 2002
+ | title = A new integrable equation with peakon solutions
+ | periodical = Theoretical and Mathematical Physics
+ | volume = 133
+ | issue = 2
+ | pages = 1463<U+2013>1474
+ | url = http://arxiv.org/abs/nlin.SI/0205023
+ | doi = 10.1023/A:1021186408422
+}}
+
+*{{Citation
+ | last = Lundmark
+ | first = Hans
+ | author-link =
+ | last2 = Szmigielski
+ | first2 = Jacek
+ | year = 2005
+ | title = Degasperis<U+2013>Procesi peakons and the discrete cubic string
+ | periodical = International Mathematics Research Papers
+ | volume = 2005
+ | issue = 2
+ | pages = 53<U+2013>116
+ | url = http://arxiv.org/abs/nlin.SI/0503036
+ | doi = 10.1155/IMRP.2005.53
+}}
+
+[[Category:solitons]]

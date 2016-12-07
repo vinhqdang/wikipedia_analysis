@@ -1,0 +1,715 @@
+{{otheruses}}
+{{Infobox_Game
+  | subject_name  = Chess
+  | image_link    = [[Image:ChessSet.jpg|250px]]
+  | image_caption = From left, a white [[King (chess)|king]], black [[rook (chess)|rook]] and [[queen (chess)|queen]], white [[pawn (chess)|pawn]], black [[knight (chess)|knight]], and white [[bishop (chess)|bishop]]
+  | players       = 2
+  | setup_time    = under one minute
+  | playing_time  = 10<U+2013>60 minutes; tournament games last up to 7 hours*
+  | complexity    = Medium
+  | strategy      = High
+  | random_chance = None
+  | skills        = [[Chess tactics|Tactics]], [[Chess strategy|Strategy]]
+  | footnotes     = * Games by correspondence may last many months, while [[blitz chess]] games are even shorter than 10 minutes
+  | bggid         = 171
+  | bggxrefs      = 
+}}
+{{portal}}
+
+'''Chess''' is a recreational and competitive game for two players. Sometimes called '''Western Chess''' or '''International Chess''' to distinguish it from its predecessors and other [[chess variants]], the current form of the game emerged in Southern Europe in the second half of the 15th century after evolving from similar, much older games of [[India]]n origin.
+
+Today, chess is one of the world's most popular games, played by an estimated 605 million people worldwide in [[Chess club|clubs]], offline, by [[correspondence chess|correspondence]] ([[Play-by-mail game|mail]] and e-mail), in [[tournament]]s (amateur and professional) and informally. Aspects of art and science are found in [[chess composition]] and theory. Chess is also advocated as a way of enhancing [[Chess as mental training|mental prowess]]. 
+
+The game is played on a square chequered [[chessboard]]. At the start, each player ("white" and "black") controls sixteen [[Chess piece|pieces]]: one [[king (chess)|king]], one [[queen (chess)|queen]], two [[rook (chess)|rooks]], two [[knight (chess)|knights]], two [[bishop (chess)|bishops]], and eight [[pawn (chess)|pawns]]. The object of the game is to [[checkmate]] the opponent's king, whereby the king is under immediate attack (in "[[Check (board game)|check]]") and there is no way to remove it from attack on the next move. Theoreticians have developed extensive [[chess strategy|chess strategies]] and [[chess tactics|tactics]] since the game's inception. 
+
+The tradition of organized competitive chess began in the 16th century. The first official [[World Chess Champion]], [[Wilhelm Steinitz]], claimed his title in 1886; [[Vladimir Kramnik]], today, is the 14th Champion in this lineage. There are also biennial world team events called [[Chess Olympiad]]s. Since the 20th century, two international organizations, the [[F<U+00E9>d<U+00E9>ration Internationale des <U+00C9>checs|World Chess Federation]] and the [[International Correspondence Chess Federation]] have organized and overseen the top chess competitions and international titles. 
+
+One of the goals of early computer scientists was to create a [[Computer chess|chess-playing machine]], and today's chess is deeply influenced by the abilities of current chess programs. In 1997, a match between [[Garry Kasparov]], then World Champion, and [[IBM|IBM's]] [[Deep Blue]] chess program proved for the first time that computers are able to beat even the strongest human players. The popularity of online chess coincided with the growth of the [[Internet]], which started in the mid 1990s.
+{{Chess diagram|=
+| tright
+|
+|=
+
+ 8 |rd|nd|bd|qd|kd|bd|nd|rd|=
+ 7 |pd|pd|pd|pd|pd|pd|pd|pd|=
+ 6 |  |  |  |  |  |  |  |  |=
+ 5 |  |  |  |  |  |  |  |  |=
+ 4 |  |  |  |  |  |  |  |  |=
+ 3 |  |  |  |  |  |  |  |  |=
+ 2 |pl|pl|pl|pl|pl|pl|pl|pl|=
+ 1 |rl|nl|bl|ql|kl|bl|nl|rl|=
+    a  b  c  d  e  f  g  h
+
+| The position of the pieces at the start of a game of chess.
+}}
+[[Image:Staunton chess set.jpg|thumbnail|right|240px|Pieces at the start of a game and a chess [[Game clock|clock]].]]
+
+==Rules==
+{{Table chess pieces}}
+{{main|Rules of chess}} ''For a simple demonstration of the gameplay, see [http://en.wikibooks.org/wiki/Transwiki:Sample_chess_game sample chess game].''
+
+Chess is played on a square [[Chessboard|board]] of eight rows (called [[rank (chess)|''ranks'']] and numbered ''1'' to ''8'') and eight columns (called [[file (chess)|''files'']] and labeled ''a'' to ''h'') of squares. The colors of the sixty-four squares alternate and are referred to as "light squares" and "dark squares". The pieces are divided into two matching sets, by convention called White and Black. Each player, referred to by the color of his pieces, begins the game with sixteen [[Chess piece|pieces]]: these comprise one [[king (chess)|king]], one [[queen (chess)|queen]], two [[rook (chess)|rooks]], two [[bishop (chess)|bishops]], two [[knight (chess)|knights]] and eight [[pawn (chess)|pawns]]. 
+
+The colors are chosen either by a friendly agreement, by a [[game of chance]] or by a [[tournament]] director. The chessboard is placed with a light square at each player's right on the nearest rank, and the pieces are set out on the first and last two ranks as shown in the diagram. Each [[Queen (chess)|queen]] stands on a square of its own color.
+
+White makes the first move. The players then alternate moving one piece of their own at a time (with the exception of [[castling]], when a rook and the king are moved simultaneously). Pieces are moved to either an unoccupied square, or one occupied by an opponent's piece, capturing it and removing it from play. With one exception ([[en passant]]), all pieces capture opponent's pieces by moving to the square that the opponent's piece occupies. When a piece can be captured on the opposing player's next move, it is said to be "threatened" or "under attack".
+
+When a player's king is under direct attack, it is said to be in [[Check (board game)|''check'']].  A player is not permitted to make any move that would place her king in check, and if her king is put in check she is then required to immediately make a move that takes the king out of check. If no such move is available, the player is [[checkmate]]d. The object of the game is to [[checkmate]] the opponent. 
+{| class="toccolours" border="1" cellpadding="4" style="float: right; margin: 0 0 1em 1em; border-collapse: collapse; font-size: 95%; clear: right"
+|-
+|{{Chess diagram small|=
+| tright
+| 
+|= 
+
+ 8 |  |  |kd|rd|  |  |  |  |=
+ 7 |  |  |  |  |  |  |  |  |=
+ 6 |  |  |  |  |xx|xx|xx|  |=
+ 5 |  |  |  |  |xx|kl|xx|  |=
+ 4 |  |  |  |  |xx|xx|xx|  |=
+ 3 |  |  |  |  |  |  |  |  |=
+ 2 |  |  |  |  |  |  |  |  |=
+ 1 |  |  |  |  |  |rl|kl|  |=
+    a  b  c  d  e  f  g  h  
+
+| Moves of a king; positions after kingside (White) and queenside (Black) castling
+}}
+|{{Chess diagram small|=
+| tright
+| 
+|= 
+
+ 8 |  |  |  |xx|  |  |  |  |=
+ 7 |  |  |  |xx|  |  |  |  |=
+ 6 |  |  |  |xx|  |  |  |  |=
+ 5 |xx|xx|xx|rl|xx|xx|xx|xx|=
+ 4 |  |  |  |xx|  |  |  |  |=
+ 3 |  |  |  |xx|  |  |  |  |=
+ 2 |  |  |  |xx|  |  |  |  |=
+ 1 |  |  |  |xx|  |  |  |  |=
+    a  b  c  d  e  f  g  h  
+
+| Moves of a rook
+}}
+|-
+|{{Chess diagram small|=
+| tright
+| 
+|= 
+
+ 8 |xx|  |  |  |  |  |xx|  |=
+ 7 |  |xx|  |  |  |xx|  |  |=
+ 6 |  |  |xx|  |xx|  |  |  |=
+ 5 |  |  |  |bl|  |  |  |  |=
+ 4 |  |  |xx|  |xx|  |  |  |=
+ 3 |  |xx|  |  |  |xx|  |  |=
+ 2 |xx|  |  |  |  |  |xx|  |=
+ 1 |  |  |  |  |  |  |  |xx|=
+    a  b  c  d  e  f  g  h  
+| Moves of a bishop
+}}
+|{{Chess diagram small|=
+| tright
+| 
+|= 
+
+ 8 |  |  |  |xx|  |  |  |xx|=
+ 7 |xx|  |  |xx|  |  |xx|  |=
+ 6 |  |xx|  |xx|  |xx|  |  |=
+ 5 |  |  |xx|xx|xx|  |  |  |=
+ 4 |xx|xx|xx|ql|xx|xx|xx|xx|=
+ 3 |  |  |xx|xx|xx|  |  |  |=
+ 2 |  |xx|  |xx|  |xx|  |  |=
+ 1 |xx|  |  |xx|  |  |xx|  |=
+    a  b  c  d  e  f  g  h  
+
+| Moves of a queen
+}}
+|-
+|{{Chess diagram small|=
+| tright
+| 
+|= 
+
+ 8 |  |  |  |  |  |  |  |  |=
+ 7 |  |  |  |  |  |  |  |  |=
+ 6 |  |  |xx|  |xx|  |  |  |=
+ 5 |  |xx|  |  |  |xx|  |  |=
+ 4 |  |  |  |nd|  |  |  |  |=
+ 3 |  |xx|  |  |  |xx|  |  |=
+ 2 |  |  |xx|  |xx|  |  |  |=
+ 1 |  |  |  |  |  |  |  |  |=
+    a  b  c  d  e  f  g  h  
+
+| Moves of a knight
+}}
+|{{Chess diagram small|=
+| tright
+| 
+|= 
+
+ 8 |  |  |  |  |  |  |  |  |=
+ 7 |  |rd|xx|rd|  |  |  |  |=
+ 6 |  |  |pl|  |  |  |xx|xx|=
+ 5 |  |  |  |  |  |  |pd|pl|=
+ 4 |  |  |  |  |xx|  |  |  |=
+ 3 |  |  |  |  |xx|  |  |  |=
+ 2 |  |  |  |  |pl|  |  |  |=
+ 1 |  |  |  |  |  |  |  |  |=
+    a  b  c  d  e  f  g  h  
+
+| Moves of a pawn; the pawn on e2 can move to e3 or e4; the pawn on c6 can move to c7 or take either black rook; the pawn on h5 can take ''en passant'' the black pawn on g5 if the last Black move was g7-g5
+}}
+|-
+|}
+Each chess piece has its own style of moving. 
+*The '''[[king (chess)|king]]''' can move only one square horizontally, vertically, or diagonally. Once in every game, each king is allowed to make a special move, known as ''[[castling]]''. Castling consists of moving the king two squares towards a rook, then placing the rook immediately on the far side of the king. Castling is only permissible if all of the following conditions hold:
+# The player must never have moved either the king or the rook involved in castling;
+# There must be no pieces between the king and the rook;
+# The king may not currently be in check, nor may the king pass through squares that are under attack by enemy pieces. As with any move, castling is illegal if it would place the king in check.
+# The king and the rook must be on the same rank (to exclude castling with a promoted pawn). 
+*The '''[[Rook (chess)|rook]]''' moves any number of vacant squares vertically or horizontally (it is also involved in the king's special move of castling); 
+*The '''[[bishop (chess)|bishop]]''' moves any number of vacant squares in any direction diagonally. Note that a bishop never changes square color, therefore players speak about "dark-squared" or "light-squared" bishops, depending on the color of square on which the bishop resides.  Alternatively, bishops may be identified as a "queen bishop" or a "king bishop", depending on whether they are next to the queen or the king when on their home square.
+*The '''[[Queen (chess)|queen]]''' can move any number of vacant squares diagonally, horizontally, or vertically; 
+*The '''[[knight (chess)|knight]]''' can jump over occupied squares and moves two spaces horizontally and one space vertically or vice versa, making an "L" shape. A knight in the middle of the board has eight squares to which it can move.  Note that every time a knight moves, it changes square color.   
+*'''[[Pawn (chess)|Pawns]]''' have the most complex rules of movement:
+:*A pawn can move forward one square, if that square is unoccupied. If it has not yet moved, the pawn has the option of moving two squares forward, if both squares in front of the pawn are unoccupied. A pawn cannot move backward.
+:*When such an initial two square advance is made that puts that pawn horizontally adjacent to an opponent's pawn, the opponent's pawn can capture that pawn "[[en passant]]" as if it moved forward only one square rather than two, but only on the immediately subsequent move. 
+:*Pawns are the only pieces that capture differently than they move. They can capture an enemy piece on either of the two spaces adjacent to the space in front of them (i.e., the two squares diagonally in front of them), but cannot move to these spaces if they are vacant.  
+:*If a pawn advances all the way to its eighth rank, it is then [[Promotion (chess)|promoted]] (converted) to a queen, rook, bishop, or knight of the same color.  In practice, the pawn is almost always promoted to a queen.  
+
+With the exception of the knight, pieces cannot jump over each other. One's own pieces ("friendly pieces") cannot be passed if they are in the line of movement, and a friendly piece can never replace another friendly piece. Enemy pieces cannot be passed, but they can be "captured". When a piece is captured (or taken), the attacking piece replaces the enemy piece on its square (en passant being the only exception). The captured piece is thus removed from the game and may not be returned to play for the remainder of the game.<ref>However, a captured piece is often used as a "new" piece, following the [[Promotion (chess)|promotion]] of a pawn. The new piece is nevertheless regarded distinct from the original captured piece; it is simply used for convenience. Moreover, the player's choice by promotion is not restricted to pieces that have been captured previously. World Chess Federation.  [http://www.fide.com/official/handbook.asp?level=EE101 FIDE Laws of Chess].  Retrieved [[9 December]] [[2006]].</ref> The king cannot be captured, only put in [[check (board game)|check]]. If a player is unable to get the king out of check, [[checkmate]] results, with the loss of the game.
+
+Chess games do not have to end in checkmate <U+2014> either player may [[Resignation|resign]] if the situation looks hopeless.  Games also may end in a [[Draw (chess)|draw]] (tie). A draw can occur in several situations, including [[draw by agreement]], [[stalemate]], [[threefold repetition]] of a position, the [[fifty move rule]], or a draw by impossibility of checkmate (usually because of insufficient material to checkmate).  
+
+Besides casual games without exact timing, chess is also played with a [[time control]], mostly by club and professional players. If a player's time runs out before the game is completed, he automatically loses. The timing ranges from long games played up to seven hours to shorter [[rapid chess]] games lasting usually 30 minutes or one hour per game. Even shorter is [[blitz chess]] with a time control of three to fifteen minutes for each player and [[bullet chess]] (under three minutes). 
+
+The international rules of chess are described in more detail in the ''[[FIDE]] Handbook'', section Laws of Chess.<ref>World Chess Federation. [http://www.fide.com/official/handbook.asp?level=EE101 FIDE Laws of Chess.] Retrieved [[30 November]] [[2006]].</ref>
+
+==History==
+[[Image:Shatranj.jpg|thumb|250px|right|Iranian chess set, glazed fritware, 12th century. [[New York Metropolitan Museum of Art]].]]
+===Predecessors===
+{{main|Origins of chess}}
+<div id="Origins of chess">
+Many countries lay claim to the invention of chess. It is presently thought that the game originated in [[India]],<ref>{{cite book | author=[[Harold James Ruthven Murray|Murray, H.J.R.]] | title=A History of Chess |publisher=Benjamin Press (originally published by Oxford University Press)| year=1913 | id=ISBN 0-936317-01-9}}</ref> since the Arabic, Persian, Turkish, Greek, Portuguese and Spanish words for chess are all derived from the ancient Indian [[chaturanga]]. In addition, only India had in its cavalry all three animals <U+2014> horse, camel and elephant <U+2014> represented by the knight, bishop and rook. The present version of chess stems from a form of chaturanga played in India around the 6th century. The first reference in literature to a game called [[chatrang]] is from [[Persia]] around 600, where the name became [[shatranj]]. The earliest documented chess pieces also date to the 7th century. By about 800 the game reached [[China]] and was known, with modifications, as [[Xiangqi]]. Chaturanga also spread to [[Japan]], where it evolved into [[shogi]]. Shatranj was taken up by the [[Muslim world]] after the [[Islamic conquest of Persia]], with the pieces largely retaining their Persian names. In [[Spanish language|Spanish]] "shatranj" was rendered as ''ajedrez'' and in [[Greek language|Greek]] as ''zatrikion'', but in the rest of Europe it was replaced by versions of the Persian ''sh<U+0101>h'' ("king"). The game reached Western Europe and Russia by at least three routes, the earliest being in the 9th century.  By the year 1000 it had spread throughout Europe.<ref>Hooper and Whyld, 144-45 (first edition)</ref> Introduced into the [[Iberian Peninsula]] by the [[Moors]] in the 10th century, it was described in a famous 13th century manuscript covering shatranj, [[backgammon]], and [[dice]] named the ''[[Libro de los juegos]]''.<ref>[http://www.u.arizona.edu/~smusser/ljtranslation.html Sonja Musser Golladay's English Translation of Alfonso X's Book of Games]. Retrieved [[11 December]] [[2006]]</ref>
+
+Another theory, championed by [[David H. Li]], contends that chess arose from the game [[Xiangqi]] (also known as Chinese Chess), or at least a predecessor thereof, existing in China since the 2nd century BC.<ref>{{cite book | author=[[David H. Li|Li, David H.]] | title=The Genealogy of Chess |publisher=Premier Pub. Co | year=1998 | id=ISBN 0-9637852-2-2}}</ref><ref>{{cite book | author=[[Sam Sloan]] | title=The Origin of Chess|publisher=Sloan Publishers | year=1985 | id=ISBN 0-9609190-1-5}}[http://www.samsloan.com/origin.htm The Origin of Chess] Retrieved [[27 February]] [[2007]]</ref>
+
+===Origins of the modern game (1450<U+2014>1850)===
+<div id="Development of modern chess rules and pieces">
+The pieces in [[shatranj]] had limited movement; the elephant or ''aufin'' (the predecessor of the modern bishop) could only move by jumping two spaces diagonally (it could jump over pieces), the counselor or ''fers'' (the predecessor of the modern queen) could move only one space diagonally, pawns could not advance two spaces on their first move, and there was no castling. Also, pawns could only promote to counselor, which was the weakest piece (after the pawn), due to its limited range.<ref>Davidson (1981), p. 9</ref>  In addition to checkmate, a player could win by capturing all of the opponent's pieces (except the king) and a stalemate was a win for the player administering it.<ref>Davidson (1981), p. 14, 66</ref> 
+[[Image:JaquesCookStaunton.jpg|left|240px|thumb|Original [[Howard Staunton|Staunton]] chess pieces by [[Nathaniel Cook]] from 1849, left to right: pawn, rook, knight, bishop, queen, and king.]]
+Around 1200, rules started to be modified in southern Europe, and around 1475, several major changes rendered the game essentially as we know it today.<ref>Hooper and Whyld, 144-45 (first edition)</ref> These modern rules for the basic moves had been adopted in [[Italy]]<ref>Davidson (1981), p. 13-17</ref> (or in [[Spain]] according to other sources<ref>Calvo, Ricardo. [http://www.goddesschess.com/chessays/ricardovalencia.html Valencia Spain: The Cradle of European Chess]. Retrieved [[10 December]] [[2006]]</ref>): pawns gained the option of advancing two squares on their first move and the [[en passant]] capture therewith, while bishops and queens acquired their modern abilities.  This made the queen the most powerful piece; consequently modern chess was referred to as "Queen's Chess" or "Mad Queen Chess".<ref>An analysis from the feminist perspective: {{cite book | author=Weissberger, Barbara F.| title=Isabel Rules: constructing queenship, wielding power |publisher=University of Minnesota Press| year=2003 | id=ISBN 0-8166-4164-1}} P. 152ff</ref> These new rules quickly spread throughout western Europe, with the exception of the rules about stalemate, which varied from place to place and were finalized in the early 19th century.<ref>See [[Stalemate#History of the stalemate rule|History of the stalemate rule]].</ref>
+
+This was also the time when chess started to develop a corpus of theory. The oldest preserved printed chess book, ''Repetici<U+00F3>n de Amores y Arte de Ajedrez'' (''Repetition of Love and the Art of Playing Chess'') by leading [[Spanish people|Spanish]] chess player [[Luis Ramirez de Lucena]] was published in [[Salamanca]] in 1497.<ref>Calvo, Ricardo. [http://www.goddesschess.com/chessays/ricardovalencia.html Valencia Spain: The Cradle of European Chess]. Retrieved [[10 December]] [[2006]]</ref> Lucena and later masters of the 16th and 17th century like [[Portugal|Portuguese]] [[Pedro Damiano]], [[Italians]] [[Giovanni Leonardo Di Bona]], [[Giulio Cesare Polerio]] and [[Gioacchino Greco]] or Spanish bishop [[Ruy L<U+00F3>pez de Segura]] developed elements of [[opening]]s, such as the [[Italian Game]], [[King's Gambit]] and [[Ruy Lopez]], and started to analyze simple [[endgame]]s.
+[[Image:Andr<U+00E9> Philidor.jpg|right|thumb|caption|[[Fran<U+00E7>ois-Andr<U+00E9> Danican Philidor]], 18th century French chess Master]] 
+In the 18th century the center of European chess life moved from the Southern European countries to [[France]]. The two most important French masters were [[Fran<U+00E7>ois-Andr<U+00E9> Danican Philidor]], a musician by profession, who discovered the importance of pawns for chess strategy, and later [[Louis-Charles Mah<U+00E9> de La Bourdonnais]] who won a famous series of matches with the strongest [[United Kingdom|British]] master of the time, [[Alexander McDonnell]] from [[Ireland]], in 1834.<ref>[http://www.chessgames.com/perl/chessplayer?pid=31596  Louis Charles Mahe De La Bourdonnai.] ''Chessgames.com''.  Retrieved [[30 November]] [[2006]].</ref> Centers of chess life in this period were [[coffee house]]s in big European cities like ''[[Caf<U+00E9> de la R<U+00E9>gence]]'' in [[Paris]]<ref>{{cite book | author=Metzner, Paul| title=Crescendo of the Virtuoso: Spectacle, Skill, and Self-Promotion in Paris during the Age of Revolution |publisher=Berkeley:  University of California Press| year=1998 | id=ISBN 0-520-20684-3}} [http://ark.cdlib.org/ark:/13030/ft438nb2b6/ Online version]</ref> and ''[[Simpson's-in-the-Strand|Simpson's Divan]]'' in [[London]].<ref>[[Henry Edward Bird|Bird, Henry Edward]]. [http://www.gutenberg.org/etext/4902 Chess History and Reminiscences]. Retrieved [[10 December]] [[2006]] </ref>
+
+As the 19th century progressed, chess organization developed quickly. Many [[chess club]]s, chess books and chess journals appeared. There were correspondence matches between cities; for example the London Chess Club played against the [[Edinburgh]] Chess Club in 1824.<ref>[http://www.chessgames.com/perl/chessplayer?pid=80740 London Chess Club.] ''Chessgames.com''.  Retrieved [[30 November]] [[2006]].</ref> [[Chess problems]] became a regular part of 19th century newspapers; [[Bernhard Horwitz]], [[Josef Kling]] and [[Samuel Loyd]] composed some of the most influential problems. In 1843, the first edition of ''[[Handbuch des Schachspiels]]'' (''Handbook of Chess'') was published; written by German chess masters [[Paul Rudolf von Bilguer]] and [[Tassilo von Heydebrand und der Lasa]], it was the first comprehensive manual of chess theory.
+
+===Birth of a sport (1850<U+2014>1945)===
+The first modern chess tournament was held in [[London]] in 1851 and was won, surprisingly, by German [[Adolf Anderssen]], relatively unknown at the time. Anderssen was hailed as the leading chess master and his brilliant, energetic <U+2014> but from today's viewpoint strategically shallow <U+2014> attacking style became typical for the time.<ref>[http://www.worldchessnetwork.com/English/chessHistory/salute/matchesTournaments/london1851.php Chess history.] ''worldchessnetwork.com''.  Retrieved [[30 November]] [[2006]].</ref> Sparkling games like Anderssen's ''[[Immortal game]]'' or [[Paul Morphy|Morphy]]'s ''[[Opera game]]'' <U+2014> both short casual games with many sacrifices <U+2014> were regarded as the highest possible summit of the chess art.<ref>{{cite book | author=Burgess, Graham, Nunn, John and Emms, John | title=The Mammoth Book of the World's Greatest Chess Games |publisher=Carroll & Graf Publishers| year=1998 | id=ISBN 0-7867-0587-6}}, p. 14.</ref>
+
+[[Image:immortal_game_animation.gif|frame|left|The "[[Immortal Game]]", Anderssen-Kieseritzky, 1851]]
+
+Deeper insight into the nature of chess battle came with two younger players. [[United States|American]] [[Paul Morphy]], an extraordinary [[chess prodigy]], won against all important competitors, including Anderssen, during his short chess career between 1857 and 1863. Morphy's success stemmed from a combination of brilliant attacks and sound strategy; he intuitively knew how to prepare attacks.<ref>{{cite book | author=Shibut, Macon | title=Paul Morphy and the Evolution of Chess Theory |publisher=Courier Dover Publications| year=2004 | id=ISBN 0-486-43574-1}}</ref> This scheme was later reinvented and described by another strong master and theoretician, [[Prague]]-born [[Wilhelm Steinitz]].<ref>{{cite book | author=Steinitz, William and Landsberger, Kurt | title=The Steinitz Papers: Letters and Documents of the First World Chess Champion |publisher=McFarland & Company| year=2002 | id=ISBN 0-7864-1193-7}}</ref> 
+
+Besides his theoretical successes, Steinitz founded another important tradition: his triumph over the leading German master [[Johannes Zukertort]] in 1886 is regarded as the first official [[World Chess Championship]], and Steinitz the first champion. He lost his crown in 1894 to a much younger player, German mathematician [[Emanuel Lasker]], who maintained this title for 27 years, the longest tenure of all World Champions.<ref>Kasparov 1983a</ref>
+
+[[Image:Wilhelm Steinitz2.jpg|thumb|right|[[Wilhelm Steinitz]], the first World Chess Champion]] 
+The prodigy from [[Cuba]], [[Jos<U+00E9> Ra<U+00FA>l Capablanca]] (World champion 1921<U+2014>1927), who ended the German-speaking dominance in chess, loved simple positions and endgames; he was undefeated in tournament play for eight years until 1924. His successor was Russian-French [[Alexander Alekhine]], a strong attacking player, who died as the World champion in 1946, having briefly lost the title to [[Dutch people|Dutch]] player [[Max Euwe]] in 1935, before regaining it two years later.<ref>Kasparov 1983b</ref>
+
+Between the two World wars, chess was revolutionized by the new theoretical school of so-called [[Hypermodernism (chess)|hypermodernists]] like [[Aron Nimzowitsch]] or [[Richard R<U+00E9>ti]]. They denied the simple principles of the established positional school of Steinitz and [[Tarrasch]]; hypermodernists advocated controlling the center of the board with distant pieces rather than with pawns, inviting opponents to occupy the center with pawns which become objects of attack.
+
+Since the end of 19th century, the number of annually held master tournaments and matches quickly grew. In 1914, the title of chess [[International Grandmaster|grandmaster]] was first formally conferred by Russian Tsar [[Nicholas II]], who awarded it to five finalists of a tournament in [[Saint Petersburg]] (Lasker, Capablanca, Alekhine, Tarrasch and [[Frank Marshall|Marshall]]). This tradition was later continued by [[FIDE]], The F<U+00E9>d<U+00E9>ration Internationale des <U+00C9>checs or World Chess Federation, founded in 1924 in [[Paris]]. In 1927, a World Champion title for women was established, whose first bearer was [[Czech people|Czech]]-[[English people|English]] master [[Vera Menchik]].<ref>[http://www.chessgames.com/perl/chessplayer?pid=13277 Menchik at ChessGames.com]. Retrieved [[11 December]] [[2006]]</ref>
+
+=== Post-war era (1945 and later)===
+After the death of Alekhine, a new World Champion was sought in a tournament of elite players ruled by FIDE, who have, since then, controlled the title. The winner of the 1948 tournament, Russian [[Mikhail Botvinnik]], started an era of [[Soviet]] dominance in the chess world. Until the end of the Soviet Union, there was only one non-Soviet champion, American [[Bobby Fischer]] (champion 1972-1975).<ref>Kasparov 2003b, 2004a, 2004b, 2006</ref>
+[[Image:Capablanca-Lasker 1925.jpg|thumb|250px|left|World Champions [[Jos<U+00E9> Ra<U+00FA>l Capablanca]] (left) and [[Emanuel Lasker]] in 1925]] 
+In the previous informal system, the World Champion decided which challenger he would play for the title and the challenger was forced to seek sponsors for the match.  FIDE set up a new system of qualifying tournaments and matches. The world's strongest players were seeded into "[[Interzonal]] tournaments", where they were joined by players who had qualified from "Zonal tournaments". The leading finishers in these Interzonals would go on the "Candidates" stage, which was initially a tournament, later a series of knock-out matches. The winner of the [[Candidates]] would then play the reigning champion for the title. A champion defeated in a match had a right to play a rematch a year later. This system worked on a three-year cycle. 
+
+Botvinnik participated in championship matches over a period of fifteen years. He won the world championship tournament in 1948 and retained the title in tied matches in 1951 and 1954. In 1957, he lost to [[Vasily Smyslov]], but regained the title in a rematch in 1958.  In 1960, he lost the title to the [[Latvia]]n prodigy [[Mikhail Tal]], an accomplished tactician and attacking player. Botvinnik again regained the title in a rematch in 1961. 
+
+Following the 1961 event, FIDE abolished the automatic right of a deposed champion to a rematch, and the next champion, [[Armenia|Armenian]] [[Tigran Petrosian]], a genius of defense and strong positional player, was able to hold the title for two cycles, 1963<U+2013>1969. His successor, [[Boris Spassky]] from Russia (1969<U+2013>1972), was a player able to win in both positional and sharp tactical style.<ref>Kasparov 2003b, 2004a</ref> 
+
+The next championship, the so-called [[Match of the Century]], saw the first non-Soviet finalist since before [[World War II]], American [[Bobby Fischer]], who defeated his Candidates opponents by unheard-of margins and clearly won the world championship match. In 1975, however, Fischer refused to defend his title against Soviet [[Anatoly Karpov]] when FIDE refused to meet his demands, and Karpov obtained the title by default. Karpov defended his title twice against [[Viktor Korchnoi]] and dominated the 1970s and 1980s with a string of tournament successes.<ref>Kasparov 2003a, 2006</ref> 
+
+Karpov eventually lost his title to another Russian player, [[Garry Kasparov]], in 1984, who then dominated the chess world for a further two decades.<ref>[http://www.chessgames.com/perl/chessplayer?pid=15940 Kasparov at ChessGames.com]. Retrieved [[13 December]] [[2006]]</ref> 
+
+In 1993, Garry Kasparov and [[Nigel Short]] broke with FIDE to organize their own match for the title and formed a competing [[Professional Chess Association]] (PCA). From then until 2006 there were two simultaneous World Champions and World Championships: the PCA or Classical champion extending the Steinitzian tradition in which the current champion plays a challenger in match format (a series of many games); the other following FIDE's new format of many players competing in a tournament to determine the champion. Kasparov lost his Classical title in 2000 to [[Vladimir Kramnik]]. 
+
+Reunification of the two lineages happened in the [[FIDE World Chess Championship 2006]], when Kramnik beat the FIDE World Champion [[Veselin Topalov]] and became the undisputed World Chess Champion.<ref>[http://www.chessgames.com/perl/chessplayer?pid=12295 Kramnik at ChessGames.com]. Retrieved [[13 December]] [[2006]]</ref>
+
+== Place in culture ==
+{{main|Chess in the arts and literature}}
+
+[[Image:Meister der Manessischen Liederhandschrift 004.jpg|thumb|250px|Noble chess players, Germany, c. 1320]]
+=== Pre-modern ===
+In the [[Middle Ages]] and during the [[Renaissance]], chess was a part of [[Nobility|noble]] culture;<ref>{{cite book | author=Vale, Malcolm| title=The Princely Court: Medieval Courts and Culture in North-West Europe, 1270-1380 |publisher=Oxford University Press| year=2001 | id=ISBN 0-19-926993-9}} Pp. 170-199</ref> it was used as a means of teaching war strategy and was dubbed the "[[Chess or the King's game|King's Game]]".  Gentlemen are "to be meanly seene in the play at Chestes," says the overview at the beginning of [[Baldassare Castiglione]]'s ''[[The Book of the Courtier]]'' (1528, English 1561 by Sir Thomas Hoby), but chess should not be a gentleman's main passion. Castiglione explains it further: 
+<blockquote>And what say you to the game at chestes?
+</blockquote><blockquote>
+It is truely<!--sic--> an honest kynde of enterteynmente and wittie, quoth Syr Friderick. But me think it hath a fault, whiche is, that a man may be to couning at it, for who ever will be excellent in the playe of chestes, I beleave he must beestowe much tyme about it, and applie it with so much study, that a man may assoone learne some noble scyence, or compase any other matter of importaunce, and yet in the ende in beestowing all that laboure, he knoweth no more but a game. Therfore in this I beleave there happeneth a very rare thing, namely, that the meane is more commendable, then the excellency.<ref>[http://darkwing.uoregon.edu/~rbear/courtier/courtier2.html The Second Book of the Courtier.] ''uoregon.edu'' Retrieved [[9 December]] [[2006]]. Translated by Sir Thomas Hoby (1561) as edited by Walter Raleigh for David Nutt, Publisher, London, 1900.</ref>
+</blockquote>
+Beautiful chess sets used by the aristocracy of the time are mostly lost, but some of the surviving examples, like the 12th century [[Lewis chessmen]], are of high artistic quality.
+
+At the same time, chess was often used as a basis of sermons on [[morality]]. An example is ''Liber de moribus hominum et officiis nobilium sive super ludo scacchorum'' ('Book of the customs of men and the duties of nobles or the Book of Chess'), written by an Italian [[Dominican Order|Dominican]] monk [[Jacobus de Cessolis]] circa 1300. The popular work was translated into many other languages (first printed edition at Utrecht in 1473) and was the basis for [[William Caxton]]'s ''The Game and Playe of the Chesse'' (1474), one of the first books printed in [[English language|English]].<ref>The Introduction of Printing into England and the Early Work of the Press: The First Book printed in English (1907), from [[The Cambridge History of English and American Literature]], Vol II. [http://www.bartleby.com/212/1303.html Online at bartleby.com.] Retrieved [[12 December]] [[2006]]</ref> Different chess pieces were used as metaphors for different classes of people, and human duties were derived from the rules of the game or from visual properties of the chess pieces.<ref>{{cite book | author=Adams, Jenny| title=Power Play: The Literature and Politics of Chess in the Late Middle Ages |publisher=University of Pennsylvania Press| year=2006 | id=ISBN 0-8122-3944-X}}</ref> 
+[[Image:UigChessmen_SelectionOfKings.jpg|thumb|300px|left|Two kings and two queens from the [[Lewis chessmen]] at the [[British Museum]].]]
+<blockquote>
+The knyght ought to be made alle armed upon an hors in suche wyse that he haue an helme on his heed and a spere in his ryght hande/ and coueryd wyth his sheld/ a swerde and a mace on his lyft syde/ Cladd wyth an hawberk and plates to fore his breste/ legge harnoys on his legges/ Spores on his heelis on his handes his gauntelettes/ his hors well broken and taught and apte to bataylle and couerid with his armes/ whan the knyghtes ben maad they ben bayned or bathed/ that is the signe that they shold lede a newe lyf and newe maners/ also they wake alle the nyght in prayers and orysons vnto god that he wylle gyue hem grace that they may gete that thynge that they may not gete by nature/ The kynge or prynce gyrdeth a boute them a swerde in signe/ that they shold abyde and kepe hym of whom they take theyr dispenses and dignyte.<ref>Caxton, William.  [http://www.classicistranieri.com/english/1/0/6/7/10672/10672-h/10672-h.htm The Game and Playe of the Chesse.] ''Project Gutenberg''.  Retrieved [[9 December]] [[2006]].</ref> 
+</blockquote>
+On the other side, political and religious authorities in many places forbade chess as frivolous or as a sort of [[gambling]].
+
+Known in the circles of clerics, students and merchants, chess entered into the popular culture of Middle Ages. An example is the 209th song of [[Carmina Burana]] from the 13th century, which starts with the names of chess pieces, ''Roch, pedites, regina...''<ref>[http://www.fh-augsburg.de/~harsch/Chronologia/Lspost13/CarminaBurana/bur_cpo2.html Camina Burana.] ''Bibliotheca Augustana''.  Retrieved [[2 November]] [[2006]].</ref>
+
+[[Image:Honor<U+00E9> Daumier 032.jpg|thumb|right|300px|[[Honor<U+00E9> Daumier]], ''The Chess Players'']]
+
+=== Modern ===
+To the [[Age of Enlightenment]], chess appeared mainly as a means of self-improvement. [[Benjamin Franklin]], in his article "The Morals of Chess" (1750), wrote:
+<blockquote>
+"The Game of Chess is not merely an idle amusement; several very valuable qualities of the mind, useful in the course of human life, are to be acquired and strengthened by it, so as to become habits ready on all occasions; for life is a kind of Chess, in which we have often points to gain, and competitors or adversaries to contend with, and in which there is a vast variety of good and ill events, that are, in some degree, the effect of prudence, or the want of it. By playing at Chess then, we may learn:
+</blockquote><blockquote>
+1st, Foresight, which looks a little into futurity, and considers the consequences that may attend an action ...
+</blockquote><blockquote>
+2nd, Circumspection, which surveys the whole Chess-board, or scene of action: - the relation of the several Pieces, and their situations; ...
+</blockquote><blockquote>
+3rd, Caution, not to make our moves too hastily...."<ref>Franklin, Benjamin.[http://www.metajedrez.com.ar/franklineng.htm The Morals of Chess.] ''metajedrez.com.ar''. Retrieved [[2 December]] [[2006]].</ref>
+</blockquote>
+[[Image:Red King sleeping.jpg|thumb|left|300px|[[Through the Looking-Glass]], Red King snoring, illustration by [[John Tenniel]] ]] 
+With these or similar hopes, chess is taught to children in schools around the world today and used in armies to train minds of cadets and officers.<ref>[http://www.nscfchess.org/nscfmiss.html National Scholastic Chess Foundation]. Retrieved [[10 December]] [[2006]]</ref>
+
+Moreover, chess is often depicted in the [[arts]], used for example as a [[metaphor]] of a struggle of two, as a [[symbol]] of cold logic, or - in the spirit of mediaeval moralists - as an [[allegory]] of society's life. Significant works, where chess plays a key role, range from Thomas Middleton's ''[[A Game at Chess]]'' over ''[[Through the Looking-Glass]]'' by Lewis Carroll to ''[[The Royal Game]]'' by Stefan Zweig or Vladimir Nabokov's ''[[The Defense]]''.
+
+Chess is also present in the contemporary popular culture. For example, J. K. Rowling's [[Harry Potter]] plays "[[Magical objects in Harry Potter|Wizard's Chess]]" while the characters of ''[[Star Trek]]'' prefer "[[Three-dimensional chess#Tri-Dimensional Chess|Tri-Dimensional Chess]]" and the hero of ''[[Searching for Bobby Fischer]]'' struggles against adopting the aggressive and misanthropic views of a real chess Grandmaster.
+
+== Notation for recording moves==
+{{main|Chess notation}}
+[[Image:SCD_algebraic_notation.png|frame|left|Algebraic chess notation]]
+Chess games and positions are recorded using a chess notation, most often the [[algebraic chess notation]].<ref>[http://www.fide.com/official/handbook.asp?level=EE102 FIDE Laws of Chess, App. E]. Retrieved [[11 December]] [[2006]]</ref> The ''abbreviated (or short) algebraic notation'' generally records moves in the format ''abbreviation of the piece moved - file where it moved - rank where it moved'', e.g. ''Qg5'' means "Queen moved to file ''g'' and rank ''5'' (that is, to the field ''g5''). If there are two pieces of the same type, which can move to the same field, one more letter or number is added to indicate the file or rank from which the piece moved, e.g. ''Ngf3'' means "Knight from the file g moved to the field f3". The letter ''P'' indicating a pawn is usually dropped, so that ''e4'' means "Pawn moved to the field ''e4''". 
+
+If the piece captures, "x" is inserted behind the abbreviation of the piece, e.g. ''Bxf3'' means "Bishop captures on f3". When a pawn makes a capture, the file from which the pawn departed is used in place of a piece initial. For example, ''exd5'' (pawn on the e-file captures the piece on ''d5''). 
+{| class="toccolours" border="1" cellpadding="4" style="float: right; margin: 0 0 1em 1em; border-collapse: collapse; font-size: 95%; clear: right"
+|-
+![[Image:Scholars_mate_animation.gif|Scholar's mate|right]]
+|-
+|The "[[Scholar's mate]]" 
+|-
+|}
+If a pawn moves to its last rank, achieving promotion, the piece chosen is indicated after the move, for example ''e1Q'', or ''e1=Q''. Castling is indicated by the special notations 0-0 for kingside castling and 0-0-0 for queenside. A move which places the opponent's king in check usually has the notation "+" added. Checkmate can be indicated by "#" (some use "++", although this is occasionally used for a [[double check]] instead). At the end of the game, "1-0" means "White won", "0-1" means "Black won" and "<U+00BD>-<U+00BD>" indicates draw.
+
+Chess moves can be commented by [[punctuation (chess)|punctuation]]. For example ''!'' indicates a good move, ''!!'' an excellent move, 
+''?'' a mistake, ''??'' a blunder, ''!?'' an interesting move that may not be best or ''?!'' a dubious move, but not easily refuted. 
+
+For example, one variant of a simple trap known as the [[Scholar's mate]], animated in the picture rights, can be recorded:<br/>
+'''1. e4 e5'''   <br/>
+'''2. Qh5?! Nc6''' <br/>
+'''3. Bc4 Nf6??''' <br/>
+'''4. Qxf7#''' 1-0
+
+==Strategy and tactics==
+Chess strategy consists of setting and achieving long-term goals during the game <U+2014> for example, where to place different pieces <U+2014> while tactics concentrate on immediate maneuvers. These two sides of chess thinking cannot be completely separated, because strategic goals are mostly achieved by the means of tactics, while the tactical opportunities are based on the previous sound strategy of play.
+
+Because of different strategic and tactical patterns, a game of chess is usually divided into three distinct phases: [[Chess opening|Opening]], usually the first 10 to 25 moves, when players develop their armies and set up the stage for the coming battle; [[middlegame]], the developed phase of the game; and [[endgame]], when most of pieces are gone and kings start to take an active part in the struggle.
+
+===Fundamentals of strategy===
+{{main|Chess strategy}}
+Chess strategy is concerned with evaluation of chess positions and with setting up goals and long-term plans for the future play. During the evaluation, players must take into account the value of pieces on board, [[pawn structure]], king safety, space, and control of key squares and groups of squares (for example, diagonals, open-files, and dark or light squares). 
+{| class="toccolours" border="1" cellpadding="4" style="float: right; margin: 0 0 1em 1em; border-collapse: collapse; font-size: 95%; clear: right"
+|-
+|{{Chess diagram small|=
+| tright
+| 
+|= 
+
+|rd|  |bd|  |rd|  |kd|  |=
+|pd|pd|  |nd|  |pd|bd|pd|=
+|  |  |pd|rl|  |nd|pd|  |=
+|  |  |  |  |pd|  |  |  |=
+|  |  |pl|  |pl|  |  |  |=
+|  |  |nl|  |bl|nl|  |pl|=
+|pl|pl|  |  |  |pl|pl|  |=
+|  |  |kl|  |  |bl|  |rl|=
+    a  b  c  d  e  f  g  h  
+
+| A chess position (Tarrasch - Euwe, 1922)...
+}}
+|{{Chess diagram small|=
+| tright
+| 
+|= 
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|  |pd|=
+|  |  |pd|  |  |  |pd|  |=
+|  |  |  |  |pd|  |  |  |=
+|  |  |pl|  |pl|  |  |  |=
+|  |  |  |  |  |  |  |pl|=
+|pl|pl|  |  |  |pl|pl|  |=
+|  |  |  |  |  |  |  |  |=
+| ...and its pawn skeleton ("The Rauzer formation")
+}}
+|-
+|}
+The most basic, is to count the total value of pieces of both sides.<ref>Harding (2003), p. 1<U+2013>7</ref> The point values used for this purpose are based on experience; usually pawns are considered worth one point, knights and bishops about three points each, rooks about five points (the value difference between a rook and a bishop being known as [[The exchange (chess)|the exchange]]), and queens about nine points. The fighting value of the king in the endgame is equivalent to about four points. These basic values are then modified by other factors like ''position of the piece'' (for example, advanced pawns are usually more valuable than those on initial positions), ''coordination between pieces'' (for example, a pair of bishops usually coordinates better than the pair bishop + knight), or ''type of position'' (knights are generally better in closed positions with many pawns while bishops are more powerful in open positions).
+
+Another important factor in the evaluation of chess positions is the pawn structure (sometimes known as the pawn skeleton), or the configuration of pawns on the chessboard.<ref>Harding (2003), p. 138ff</ref> Pawns being the least mobile of the chess pieces, the pawn structure is relatively static, and largely determines the strategic nature of the position. Weaknesses in the pawn structure, such as [[Isolated pawn|isolated]], [[Doubled pawns|doubled]] or [[Backward pawn|backward]] pawns and [[chess terminology#H|holes]], once created, are usually permanent. Care must therefore be taken to avoid them unless they are compensated by another valuable asset (for example, by the possibility to develop an attack).
+[[Image:Lucena1497.jpg|thumb|left|250px|A tactical puzzle from [[Luis Ramirez Lucena|Lucena's]] 1497 book]]
+
+===Fundamentals of tactics===
+{{main|Chess tactics}}
+In chess, tactics in general concentrate on short-term actions <U+2014> so short-term that they can be calculated in advance by a human player or by a computer. The possible depth of calculation depends on the player's ability or speed of the processor.  In quiet positions with many possibilities on both sides, a deep calculation is not possible, while in "tactical" positions with a limited number of forced variants, it is possible to calculate very long sequences of moves.
+
+Simple one-move or two-move tactical actions <U+2014> threats, exchanges of material, double attacks etc. <U+2014> can be combined into more complicated ''variants'', tactical maneuvers, often forced from one side or from both. Theoreticians described many elementary tactical methods and typical maneuvers, for example [[Pin (chess)|pins]], [[Fork (chess)|forks]], [[Skewer (chess)|skewers]], [[discovered attack]]s (especially discovered checks), [[zwischenzug]]s, deflections, decoys, [[Sacrifice (chess)|sacrifices]], [[undermining (chess)|underminings]], [[Overloading (chess)|overloadings]] and [[Interference (chess)|interferences]].<ref>Harding (2003), p. 8ff</ref> 
+
+A forced variant which is connected with a sacrifice and usually results in a tangible gain is named a [[combination (chess)|combination]].<ref>Harding (2003), p. 70ff</ref> Brilliant combinations <U+2014> such as those in the [[Immortal game]] <U+2014> are described as beautiful and are admired by chess lovers. Finding a combination is also a common type of chess puzzle aimed at development of players' skills.
+
+===Opening===
+{{main|Chess opening}}
+A chess opening is the group of initial moves of a game (the "opening moves"). Recognized sequences of opening moves are referred to as ''openings'' and have been given names such as the [[Ruy Lopez]] or [[Sicilian Defense]]. They are catalogued in reference works such as the '[[Encyclopedia of Chess Openings]]''. 
+
+There are dozens of different openings, varying widely in character from quiet positional play (e.g. the [[R<U+00E9>ti Opening]]) to very aggressive (e.g. the [[Latvian Gambit]]). In some opening lines, the exact sequence considered best for both sides has been worked out to 30-35 moves or more.<ref>{{cite book | author= Collins, Sam| title=Understanding the Chess Openings |publisher=Gambit Publications| year=2005 | id=ISBN 1-904600-28-X}}</ref> Professional players spend years studying openings, and continue doing so throughout their careers, as opening theory continues to evolve. Uncovering one or two novelties in opening theory can be key to success in a high level match or tournament.
+
+The fundamental strategic aims of most openings are similar:<ref>{{cite book | author=[[Siegbert Tarrasch|Tarrasch, Siegbert]] | title=The Game of Chess |publisher=Courier Dover Publications| year=1987 | id=ISBN 0-486-25447-X}}</ref> 
+*''Development'': To place (develop) the pieces (particularly bishops and knights) on useful squares where they will have an impact on the game.
+*''Control of the center'': Control of the central squares allows pieces to be moved to any part of the board relatively easily, and can also have a cramping effect on the opponent. 
+*''King safety'': It is often enhanced by castling.
+*''Pawn structure'': Players strive to avoid the creation of pawn weaknesses such as isolated, doubled or backward pawns, and pawn islands. 
+
+Apart from these fundamentals, other strategic plans or tactical sequences may be employed in the opening.
+
+===Middlegame===
+{{main|Middlegame}}
+The middlegame is the part of the game when most pieces have been developed.  Because the opening theory has ended, players have to assess the position, to form plans based on the features of the positions, and at the same time to take into account the tactical possibilities in the position.<ref>Harding (2003), p. 32-151</ref>
+
+Typical plans or strategical themes <U+2014> for example the minority attack, that is the attack of [[Chess terminology#Q|queenside]] pawns against an opponent who has more pawns on the queenside <U+2014> are often appropriate just for some [[pawn structure]]s, resulting from a specific group of openings. The study of openings should therefore be connected with the preparation of plans typical for resulting middlegames.
+
+Middlegame is also the phase in which most [[Combination (chess)|combinations]] occur. Middlegame combinations are often connected with the attack against the opponent's king; some typical patterns have their own names, for example the [[Boden's Mate]] or the [[Lasker - Bauer, Amsterdam, 1889|Lasker<U+2014>Bauer]] combination.
+
+Another important strategical question in the middlegame is whether and how to reduce material and transform into an endgame. For example, minor material advantages can generally be transformed into victory only in an endgame, and therefore the stronger side must choose an appropriate way to achieve an ending. Not every reduction of material is good for this purpose; for example, if one side keeps a light-squared bishop and the opponent has a dark-squared one, the transformation into a ''bishops and pawns'' ending is usually advantageous for the weaker side only, because an endgame with [[Endgame#Bishops on opposite colors|bishops on opposite colors]] is likely to be a draw, even with an advantage of one or two pawns.
+{{Chess diagram|=
+| tright
+| 
+|= 
+
+ 8 |  |  |kd|  |  |  |  |  |=
+ 7 |  |  |pl|  |  |  |  |  |=
+ 6 |  |  |  |kl|  |  |  |  |=
+ 5 |  |  |  |  |  |  |  |  |=
+ 4 |  |  |  |  |  |  |  |  |=
+ 3 |  |  |  |  |  |  |  |  |=
+ 2 |  |  |  |  |  |  |  |  |=
+ 1 |  |  |  |  |  |  |  |  |=
+    a  b  c  d  e  f  g  h  
+| An example of [[zugzwang]]: The side which is to make a move is in a disadvantage. Black on move must go 1. ... Kb7 and allow white to queen after 2. Kd7. White on move must allow a draw either after 1. Kc6 [[stalemate]], or through insufficient material after losing his last pawn.}}
+
+===Endgame===
+{{main|Endgame}}
+The endgame (or ''end game'' or ''ending'') is the stage of the game when there are few pieces left on the board. There are three main strategic differences between earlier stages of the game and endgame:<ref>Harding (2003), p. 187ff</ref>
+*During the endgame, pawns become more important; endgames often revolve around attempting to promote a pawn by advancing it to the eighth rank. 
+*The king, which has to be protected in the middlegame owing to the threat of checkmate, becomes a strong piece in the endgame and it is often advisable to bring it to the center of the board where it can protect its own pawns and attack the pawns of opposite color. 
+*[[Zugzwang]], a disadvantage because the player has to make a move, is often a factor in endgames and rarely in other stages of the game.
+
+Endgames can be classified according to the type of pieces that remain on board. [[Checkmate#Basic checkmates|Basic checkmates]] are positions in which one side has only a king and the other side has one or two pieces and can checkmate the opposing king, with the pieces working together with their king. [[Endgame#King and pawn endings|King and pawn endgames]] involve only kings and pawns on one or both sides and the task of the stronger side is to promote one of the pawns. Other more complicated endings are classified according to the pieces on board other than kings, e.g. "[[rook and pawn versus rook]]".
+
+== Chess composition ==
+{{main|Chess problem}}
+{{Chess diagram|=
+| tright
+| '''[[Richard R<U+00E9>ti]]'''<br />''[[Ostrava|Ostrauer]] Morgenzeitung<br />[[4 December]] [[1921]]''
+|= 
+
+ 8 |  |  |  |  |  |  |  |kl|=
+ 7 |  |  |  |  |  |  |  |  |=
+ 6 |kd|  |pl|  |  |  |  |  |=
+ 5 |  |  |  |  |  |  |  |pd|=
+ 4 |  |  |  |  |  |  |  |  |=
+ 3 |  |  |  |  |  |  |  |  |=
+ 2 |  |  |  |  |  |  |  |  |=
+ 1 |  |  |  |  |  |  |  |  |=
+    a  b  c  d  e  f  g  h  
+
+|<center>'''White to play and draw'''</center><p>One of the most famous chess studies ever composed. It seems impossible to catch the advanced black pawn, while the white pawn can be easily stopped by the black king. The idea of the solution is to advance to both pawns at the same time using specific properties of the chess geometry. 1. Kg7! h4 2. Kf6 Kb6 (or 2. ... h3 3. Ke7 and the white king can support its own pawn) 3. Ke5!! (and now the white king comes just in time to the white pawn, or catches the black one) 3. ... h3 4. Kd6 draw.
+}}
+Chess composition is the art of creating chess problems (these problems themselves are sometimes also called chess compositions). A person who creates such problems is known as a [[chess composer]].<ref>{{cite book | author=Howard, Kenneth S | title=How to Solve Chess Problems |publisher=Courier Dover Publications| year=1961 | id=ISBN 0-486-20748-X}}</ref>  
+
+Most chess problems exhibit the following features:
+*The position is ''composed'', that is, it has not been taken from an actual game, but has been invented for the specific purpose of providing a problem.  
+*There is a specific ''stipulation'', that is, a goal to be achieved; for example, to checkmate black within a specified number of moves.
+*There is a ''theme'' (or combination of themes) that the problem has been composed to illustrate: chess problems typically instantiate particular ideas. Many of these themes have their own names, often by persons who used them first, for example [[Novotny (chess)|Novotny]] or [[Lacny]] theme.
+*The problem exhibits ''economy'' in its construction: no greater force is employed than that required to guarantee that the problem's intended solution is indeed a solution and that it is the problem's only solution.
+*The problem has ''aesthetic value''. Problems are experienced not only as puzzles but as objects of beauty. This is closely related to the fact that problems are organized to exhibit clear ideas in as economical a manner as possible.
+
+There are many types of chess problems. The two most important are:
+*'''Directmates''': white to move first and checkmate black within a specified number of moves against any defense. These are often referred to as "mate in ''n''", where ''n'' is the number of moves within which mate must be delivered - for example "mate in three" (a ''three-mover''). 
+*'''[[Endgame study|Studies]]''': orthodox problems in which the stipulation is that white to play must win or draw.  Almost all studies are [[endgame]] positions. 
+
+Chess composition is a distinct branch of chess sport, and tournaments (or ''tourneys'') exist for both the composition and solving of chess problems.
+
+== Competitive play ==
+===Organization of competitions===
+Contemporary chess is an organized sport with structured international and national leagues, tournaments and [[congress]]es. Chess's international governing body is [[FIDE]] (F<U+00E9>d<U+00E9>ration Internationale des <U+00C9>checs). Most countries have a national chess organization as well (such as the [[United States Chess Federation|US Chess Federation]] and [[English Chess Federation]]), which in turn is a member of FIDE. FIDE is a member of the [[International Olympic Committee]] (IOC), but the game of chess has never been part of the [[Olympic Games|Olympic]] Games;  chess does have its own [[Chess Olympiad|Olympiad]], held every two years as a team event. An estimated 605 million people worldwide know how to play chess, and 7.5 million are members of national chess federations, which exist in 160 countries worldwide. This makes chess one of the most popular sports worldwide.<ref>[http://www.turowski.com/chess/world2005.html Chess in the Olympics]. Retrieved [[19 December]] [[2006]]</ref>
+
+The current World Chess Champion is [[Vladimir Kramnik]],<ref>The World Champion is not necessarily the highest-[[Elo rating system|rated]] player in the world. Topalov is in fact rated number one on the 2006 FIDE rating list.  World Chess Federation. [http://www.fide.com/ratings/top.phtml?list=men Top 100 Players October 2006.]  Retrieved [[20 November]] [[2006]].</ref> and the reigning Women's World Champion is [[Xu Yuhua]] from [[China]]. However, the world's highest rated female player, [[Judit Polgar]], has never participated in the [[Women's World Chess Championship]], instead preferring to compete with the leading men. 
+
+Other competitions for individuals include the [[World Junior Chess Championship]], the [[European Individual Championship]] and the [[List of national chess championships|National Chess Championships]]. Other elite tournaments include Spain's [[Linares chess tournament|Linares]] event, Monte Carlo's [[Melody Amber]] tournament, the [[Dortmund Sparkassen Chess Meeting|Dortmund Sparkassen]] meeting and Wijk aan Zee's [[Corus chess tournament|Corus]] tournament. 
+
+Regular team chess events include the aforementioned [[Chess Olympiad]] and the [[European Team Championship]]. The [[37th Chess Olympiad]] was held 2006 in [[Turin]], [[Italy]]; [[Armenia]] won the gold in the unrestricted event, and [[Ukraine]] took the top medal for the women. The [[World Chess Solving Championship]] and World [[Correspondence Chess]] Championships are both team and individual events. 
+
+Besides these prestigious competitions, there are thousands of other chess tournaments, matches and festivals held around the world every year, which cater to players of all levels, from beginners to experts.
+
+===Titles and rankings===
+The best players can be awarded specific lifetime titles by the world chess organization FIDE:<ref>World Chess Federation.  [http://www.fide.com/official/handbook.asp?level=B0101 FIDE Handbook:  Chess Rules.  1.0. Requirements for the titles designated in 0.31.] Retrieved [[9 December]] [[2006]].</ref>
+*''[[International Grandmaster]]'' (shortened: Grandmaster, GM or IGM) is awarded to world-class chess masters. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Before FIDE will confer the title on a player, the player must have an ELO chess rating (see below) of at least 2500 at one time and two favorable results (called norms) in tournaments involving other Grandmasters, including some from countries other than the applicant's. There are also other milestones a player can achieve to attain the title, such as winning the World Junior Championship. 
+*''[[International Master]]'' (shortened: IM). The conditions are similar to GM, but less demanding. The minimum rating for the IM title is 2400.
+*''[[FIDE Master]]'' (shortened: FM). The usual way for a player to qualify for the FIDE Master title is by achieving a FIDE Rating of 2300 or more. 
+*''[[Candidate Master]]'' (shortened: CM). Similar to FM, but with a FIDE Rating of at least 2200.
+All the titles are open to men and women. Separate women-only titles, such as Woman Grandmaster (WGM), are also available. In 1991, [[Susan Polgar]] became the first woman to earn the GM title under the same conditions as men, and most of the top ten women in 2006 hold the unrestricted GM title.<ref>Current FIDE lists of top players with their titles are online at [http://www.fide.com/ratings/toplist.phtml fide.com]. Retrieved [[11 December]] [[2006]]</ref>
+
+International titles are awarded to composers and solvers of chess problems, and to correspondence chess players (by the International Correspondence Chess Federation). Moreover, national chess organizations may also award titles, usually to the advanced players still under the level needed for international titles;  an example is the [[Chess expert]] title used in the USA.
+
+In order to rank players, FIDE, [[ICCF]] and national chess organizations use the [[Elo rating system]] developed by [[Arpad Elo]]. Elo is a [[Statistical model|statistical system]] based on assumption that the chess performance of each player in his games is a random variable. Arpad Elo thought of a player's true skill as the average of that player's performance random variable, and showed how to estimate the average from results of player's games. The [[US Chess Federation]] implemented Elo's suggestions in 1960, and the system quickly gained recognition as being both fairer and more accurate than older systems; it was adopted by FIDE in 1970.<ref>FIDE Handbook [http://www.fide.com/official/handbook.asp?level=B0210 The working of the FIDE Rating System]. Retrieved [[13 December]] [[2006]]</ref> 
+
+The highest ever FIDE rating was 2851, which Garry Kasparov had on the July 1999 and January 2000 lists.<ref> [http://www.eurochess.org/content/view/26/9/ European Chess Union]. Retrieved [[11 December]] [[2006]]</ref>
+
+==Mathematics and computers==
+{{main|Computer chess|List of mathematicians who studied chess}}
+<div id="Computer chess">
+[[Image:Knight's tour.svg|right|thumb|200px|Mathematicians [[Euler]], [[de Moivre]] and [[Vandermonde]] studied the [[knight's tour]].]]
+Chess is interesting from the mathematical point of view. Many [[combinatorics|combinatorical]] and [[topology|topological]] problems connected with it were known already hundreds years ago. In 1913, [[Ernst Zermelo]] used it as a basis for his theory of game strategies, which is considered as one of the predecessors of the [[game theory]].<ref>Zermelo, Ernst (1913), Uber eine Anwendung der Mengenlehre auf die Theorie des Schachspiels, Proceedings of the Fifth International Congress of Mathematicians 2, 501-4. Cited from Eichhorn, Christoph: Der Beginn der Formalen Spieltheorie: Zermelo (1913), http://www.mathematik.uni-muenchen.de/~spielth/artikel/Zermelo.pdf. Retrieved March 23, 2007.</ref>  
+
+The number of legal positions in chess is estimated to be between 10<sup>43</sup> and 10<sup>50</sup>, with a  [[game-tree complexity]] of approximately 10<sup>123</sup>. The game-tree complexity of chess was first calculated by [[Claude Shannon]] as 10<sup>120</sup>, a number known as the [[Shannon number]].<ref>[http://mathworld.wolfram.com/Chess.html Chess.] ''Mathworld.Wolfram.com''. Retrieved [[5 December]] [[2006]].</ref>  Typically an average position has thirty to forty possible moves, but there may be as few as zero (in the case of checkmate or stalemate) or as many as 218.   
+
+The most important mathematical challenge of chess is the development of [[algorithm]]s which can play chess.  The idea of creating a chess playing machine dates to the eighteenth century; around 1769, the chess playing [[automaton]] called [[The Turk]] became famous before being exposed as a [[hoax]].<ref>{{cite book | author= Levitt, Gerald M.| title=The Turk, chess automaton |publisher=McFarland & Company| year=2000 | id=ISBN 0-7864-0778-6}}</ref> Serious trials based on [[automaton]]s, such as [[El Ajedrecista]], were too complex and limited to be useful.
+
+Since the advent of the [[digital computer]] in the 1950s, chess enthusiasts and [[computer engineer]]s have built, with increasing degrees of seriousness and success, chess-playing machines and computer programs. The groundbreaking paper on computer chess, "Programming a Computer for Playing Chess", was published in 1950 by Shannon. He wrote:
+<blockquote>
+The chess machine is an ideal one to start with, since: (1) the problem is sharply defined both in allowed operations (the moves) and in the ultimate goal (checkmate); (2) it is neither so simple as to be trivial nor too difficult for satisfactory solution; (3) chess is generally considered to require &quot;thinking" for skillful play; a solution of this problem will force us either to admit the possibility of a mechanized thinking or to further restrict our concept of "thinking"; (4) the discrete structure of chess fits well into the digital nature of
+modern computers.<ref>Shannon, Claude E.  XXII. Programming a Computer for Playing Chess.  ''Philosophical Magazine'', Ser.7, Vol. 41, No. 314 - March 1950.  Available online at {{PDFlink|[http://archive.computerhistory.org/projects/chess/related_materials/text/2-0%20and%202-1.Programming_a_computer_for_playing_chess.shannon/2-0%20and%202-1.Programming_a_computer_for_playing_chess.shannon.062303002.pdf ''computerhistory.org'']|175&nbsp;[[Kibibyte|KiB]]<!-- application/pdf, 179879 bytes -->;}}  Retrieved [[6 December]] [[2006]].</ref>
+</blockquote>  
+[[Image:RS Chess Computer.JPG|thumb|250px|left|1990s chess-playing computer]]
+The [[Association for Computing Machinery]] (ACM) held the first major chess tournament for computers, the [[North American Computer Chess Championship]], in September 1970. [[Chess (Northwestern University)|CHESS 3.0]], a chess program from [[Northwestern University]], won the championship. At first considered only a curiosity, the best [[chess engine|chess playing programs]], for example [[Rybka]] or [[Hydra (chess)|Hydra]], have become extremely strong. Nevertheless, from the point of view of [[artificial intelligence]], chess-playing programs are relatively simple: they essentially explore huge numbers of potential future moves by both players and apply an [[evaluation function]] to the resulting positions.
+  
+[[Garry Kasparov]], then ranked number one in the world, played a six-game match against [[International Business Machines|IBM's]] chess computer [[Deep Blue]] in February 1996. Deep Blue won the [[Deep Blue - Kasparov, 1996, Game 1|first game]], but Kasparov convincingly won the match by winning three games and drawing two. The six-game rematch in May 1997 was won by the machine (informally dubbed "Deeper Blue"),<ref>{{cite book | author=Feng-Hsiung Hsu| title=Behind Deep Blue: Building the Computer that Defeated the World Chess Champion |publisher=Princeton University Press| year=2002 | id=ISBN 0-691-09065-3}}</ref> which was subsequently retired by IBM.<ref>[http://www.research.ibm.com/deepblue/watch/html/c.shtml Deep Blue <U+2014> Kasparov Match.] ''research.ibm.com''.  Retrieved [[30 November]] [[2006]].</ref>
+
+With huge databases of past games and high analytical ability, computers also help players to learn chess and prepare for matches.  Additionally, [[Internet Chess Server]]s such as [[Free Internet Chess Server]] and [[Kurnik]] allow people to find and play opponents all over the world. The presence of computers and modern communication tools have also raised concerns regarding [[cheating]] during games, most notably the "[[FIDE World Chess Championship 2006#Bathroom controversy|bathroom controversy]]" during the 2006 World Championship.
+
+==Psychology==
+There is an extensive scientific literature on chess psychology.<ref> {{cite book | author= Gobet, Fernand, de Voogt, Alex, & Retschitzki, Jean  | title= Moves in mind: The psychology of board games | publisher= Psychology Press | year=2004 | id=ISBN 1841693367}}</ref><ref> {{cite book | author= Holding, Dennis  | title= The psychology of chess skill | publisher= Erlbaum | year=1985 | id=ISBN 978-0898595758}}</ref><ref> {{cite book | author= Saariluoma, Pertti | title= Chess players' thinking: A cognitive psychological approach | publisher= Routledge | year=1995 | id=ISBN 0415120799-1-DBS }}</ref> As early as 1894, [[Alfred Binet]] showed that knowledge, rather than ability to visualize positions, lies at the core of expertise.<ref> Binet, A. (1894). Psychologie des grands calculateurs et joueurs d'<U+00E9>checs. Paris: Hachette.</ref>   [[Adriaan de Groot]], in his doctoral thesis, showed that chess masters can rapidly perceive the key features of a position.<ref> De Groot, A. D. (1965). Thought and choice in chess (first Dutch edition in 1946). The Hague: Mouton Publishers.</ref>   According to de Groot, this intuitive [[perception]], made possible by years of practice and study, is more important than the sheer ability to anticipate moves.  De Groot also showed that chess masters can memorize positions shown for a few seconds almost perfectly. Memorization ability alone does not account for this skill, since masters and novices, when faced with random arrangements of chess pieces, had equivalent recall (about half a dozen positions in each case). Rather, it is the ability to recognize patterns, which are then memorized, which distinguished the skilled players from the novices. When the positions of the pieces were taken from an actual game, the masters had almost total positional recall.<ref>Richards J. Heuer, Jr. ''Psychology of Intelligence Analysis'' Center for the Study of Intelligence, Central Intelligence Agency 1999 (see [https://www.cia.gov/csi/books/19104/art6.html Chapter 3]).</ref> 
+
+More recent research has focused on the respective roles of [[knowledge]] and look-ahead [[search]]; the role of practice and talent in the development of expertise; [[brain imaging]] studies of chess masters and novices; [[blindfold chess]]; the role of [[personality]] and [[intelligence]] in chess skill, gender differences, and computational models of chess expertise.
+
+== Variants ==
+{{main|Chess variant}}
+[[Image:Glinski_Chess_Setup.png|right|thumb|[[Glinski's Hexagonal Chess]], one of many chess variants]]
+Chess variants are forms of chess where the game is played with a different board, special [[Fairy chess piece|fairy pieces]] or different rules. There are more than two thousand published chess variants,<ref>{{cite book | author=[[David Pritchard (chess writer)|Pritchard, D.]] | title=Popular Chess Variants|publisher=Bastford Chess Books | year=2000 | id=ISBN 0-7134-8578-7}}</ref> the most popular being [[xiangqi]] in [[China]] and [[shogi]] in [[Japan]].<ref>{{cite book | author=[[David Pritchard (chess writer)|Pritchard, D.]] | title=The Encyclopedia of Chess Variants|publisher=Games & Puzzles Publications | year=1994 | id=ISBN 0-9524142-0-1}}</ref> 
+
+Chess variants can be divided into:
+* Direct predecessors of chess, [[chaturanga]] and [[shatranj]]. 
+* Traditional national or regional chess variants like [[xiangqi]], [[shogi]], [[janggi]] and [[makruk]], which share common predecessors with Western chess. 
+* Modern variants of chess, such as ''[[Chess960]]'', where the initial position is [[Chess960#Rules|selected randomly]] before each game. This random positioning makes it almost impossible to prepare the opening play in advance.<ref>van Reem, Eeric.  [http://www.chessvariants.com/diffsetup.dir/fischerh.html The birth of Fischer Random Chess.] ''chessvariants.com'', [[24 July]] [[2001]].  Retrieved [[30 November]] [[2006]].</ref>
+
+==See also==
+* [[Chess in early literature]]
+* [[Chess terminology]]
+* [[Comparing top chess players throughout history]]
+* [[Timeline of chess]]
+* [[List of chess players]]
+* [[List of chess topics]]
+* [[List of famous chess games]]
+* [[List of strong chess tournaments]]
+* [[List of chess world championship matches]]
+* [[Women's World Chess Championship]]
+* [[List of national chess championships]]
+* [[Chess Olympiad]]
+
+== Notes ==
+{{reflist|2}}
+
+==References==
+* {{cite book
+ | last = Davidson
+ | first = Henry A.
+ | authorlink = 
+ | year = 1949, 1981
+ | title = A Short History of Chess
+ | publisher = McKay 
+ |id = ISBN 0-679-14550-8
+}}
+
+*{{cite book 
+ | last= Harding 
+ | first = Tim
+ | title=Better Chess for Average Players 
+ | year=2003 
+ | publisher=Courier Dover Publications
+ | id=ISBN 0-486-29029-8
+}}
+
+*{{cite book 
+| author=Hooper, David and [[Kenneth Whyld|Whyld, Kenneth]] 
+| title=The Oxford Companion to Chess, 2nd Edition|publisher=Oxford University Press 
+| year=1992 
+| id=ISBN 0-19-866164-9}} Reprint: (1996) ISBN 0-19-280049-3
+
+*{{cite book 
+ | last= Kasparov
+ | first = Garry
+ | title=My Great Predecessors, part I
+ | year=2003a
+ | publisher=Everyman Chess
+ | id=ISBN 1-85744-330-6
+}}
+
+*{{cite book 
+ | last= Kasparov
+ | first = Garry
+ | title=My Great Predecessors, part II
+ | year=2003b
+ | publisher=Everyman Chess
+ | id=ISBN 1-85744-342-X
+}}
+
+*{{cite book 
+ | last= Kasparov
+ | first = Garry
+ | title=My Great Predecessors, part III
+ | year= 2004a
+ | publisher=Everyman Chess
+ | id=ISBN 1-85744-371-3
+}}
+
+*{{cite book 
+ | last= Kasparov
+ | first = Garry
+ | title=My Great Predecessors, part IV
+ | year=2004b
+ | publisher=Everyman Chess
+ | id=ISBN 1-85744-395-0
+}}
+
+*{{cite book 
+ | last= Kasparov
+ | first = Garry
+ | title=My Great Predecessors, part V
+ | year=2006
+ | publisher=Everyman Chess
+ | id=ISBN 1-85744-404-3
+}}
+
+== Further reading ==
+*{{cite book | author=[[Reuben Fine|Fine, Reuben]] | title=The World's Great Chess Games | publisher=Courier Dover Publications | year=1983 | id=ISBN 0-486-24512-8}}
+*{{cite book | author= Gobet, Fernand, de Voogt, Alex, & Retschitzki, Jean  | title= Moves in mind: The psychology of board games | publisher= Psychology Press | year=2004 | id=ISBN 1841693367}}
+*{{cite book | author=[[James Mason (chess player)|Mason, James]] | title=The Art of Chess| publisher=Dover Publications | year=1947| id=ISBN 0-486-20463-4}} (see the included supplement, "How Do You Play Chess")
+*{{cite book | author=Rizzitano, James | title=Understanding Your Chess | publisher=Gambit Publications | year=2004 | id=ISBN 978-1-904600-07-7 | id=ISBN 1-904600-07-7}}
+*{{cite book | author=[[David Shenk]] | title=[[Immortal game|The Immortal Game]]: A History of Chess| publisher=[[Doubleday]] | year=2006 | id=ISBN 0-385-51010-1}}
+*{{cite book | author=[[Siegbert Tarrasch|Tarrasch, Siegbert]] | title=The Game of Chess. Algebraic Edition | publisher=Hays Publishing | year=1994 | id=ISBN 1-880673-94-0}}
+
+==External links==
+
+{{Spoken Wikipedia|Chess.ogg|2006-09-26}}
+{{sisterlinks|Chess}}
+
+===International organizations===
+* [http://www.fide.com/ FIDE] - [[F<U+00E9>d<U+00E9>ration Internationale des <U+00C9>checs|World Chess Federation]]
+:*[http://www.fide.com/official/handbook.asp?level=EE101 Official rules - FIDE Laws of Chess]
+:*[http://www.fide.com/ratings/toplist.phtml FIDE list of top rated players]
+* [http://www.iccf.com/ ICCF] - [[International Correspondence Chess Federation]]
+* [http://www.chess-players.org/eng/index.html ACP] - [[Association of Chess Professionals]]
+
+===News===
+* [http://www.chessbase.com/ Chessbase news]
+* [http://wcn.tentonhammer.com/modules.php?op=modload&name=News&file=index&meid=9 World Chess Network]
+* [http://www.chessville.com/ Chessville]
+* [http://www.chesscenter.com/twic/twic.html The Week in Chess]
+
+===Other===
+* [http://www.chessdryad.com/education/magictheater/index.htm How to Play Chess] - for beginners and parents.
+* [http://www.chessgames.com/ ChessGames.com] - online chess database and community
+* [http://www.chesslive.de/ ChessBase] - online database 
+* [http://www.chessmuseum.org/ Chessmuseum.org] - World Chess Hall of Fame
+* [http://mathworld.wolfram.com/Chess.html Mathworld] - chess and mathematics 
+
+{{featured article}}
+
+[[Category:Chess]]
+[[Category:Abstract strategy games]]
+[[Category:Board wargames]]
+[[Category:Persian loanwords]]
+
+{{Link FA|ar}}
+{{Link FA|de}}
+{{Link FA|es}}
+{{Link FA|fi}}
+{{Link FA|fr}}
+{{Link FA|he}}
+{{Link FA|it}}
+{{Link FA|kn}}
+{{Link FA|vi}}
+
+[[af:Skaak]]
+[[am:<U+127C><U+12DD>]]
+[[ar:<U+0634><U+0637><U+0631><U+0646><U+062C>]]
+[[an:Axedrez]]
+[[ast:Axedrez]]
+[[az:<U+015E>ahmat]]
+[[bn:<U+09A6><U+09BE><U+09AC><U+09BE>]]
+[[zh-min-nan:Kok-ch<U+00E8> b<U+00FA>-k<U+00EE>]]
+[[bs:<U+0160>ah]]
+[[br:Echedo<U+00F9>]]
+[[bg:<U+0428><U+0430><U+0445><U+043C><U+0430><U+0442>]]
+[[ca:Escacs]]
+[[cs:<U+0160>achy]]
+[[cy:Gwyddbwyll]]
+[[da:Skak]]
+[[de:Schach]]
+[[et:Male]]
+[[el:<U+03A3><U+03BA><U+03AC><U+03BA><U+03B9>]]
+[[es:Ajedrez]]
+[[eo:<U+015C>ako]]
+[[eu:Xake]]
+[[fa:<U+0634><U+0637><U+0631><U+0646><U+062C>]]
+[[fr:Jeu d'<U+00E9>checs]]
+[[ga:Ficheall]]
+[[gl:Xadrez]]
+[[ko:<U+CCB4><U+C2A4>]]
+[[hy:<U+0547><U+0561><U+056D><U+0574><U+0561><U+057F>]]
+[[hr:<U+0160>ah]]
+[[io:Shak-ludo]]
+[[id:Catur]]
+[[ia:Chacos]]
+[[is:Sk<U+00E1>k]]
+[[it:Scacchi]]
+[[he:<U+05E9><U+05D7><U+05DE><U+05D8>]]
+[[kn:<U+0C9A><U+0CA6><U+0CC1><U+0CB0><U+0C82><U+0C97> (<U+0C86><U+0C9F>)]]
+[[ka:<U+10ED><U+10D0><U+10D3><U+10E0><U+10D0><U+10D9><U+10D8>]]
+[[la:Scacci]]
+[[lv:<U+0160>ahs (galda sp<U+0113>le)]]
+[[lb:Schach]]
+[[lt:<U+0160>achmatai]]
+[[jbo:caxmati]]
+[[hu:Sakk]]
+[[mk:<U+0428><U+0430><U+0445>]]
+[[nl:Schaken]]
+[[ja:<U+30C1><U+30A7><U+30B9>]]
+[[no:Sjakk]]
+[[nn:Sjakk]]
+[[pl:Szachy]]
+[[pt:Xadrez]]
+[[ro:<U+015E>ah (joc)]]
+[[ru:<U+0428><U+0430><U+0445><U+043C><U+0430><U+0442><U+044B>]]
+[[sq:Shahu]]
+[[scn:Scacchi]]
+[[simple:Chess]]
+[[sd:<U+0634><U+0637><U+0631><U+0646><U+062C>]]
+[[sk:<U+0160>ach (hra)]]
+[[sl:<U+0160>ah]]
+[[sr:<U+0428><U+0430><U+0445>]]
+[[sh:<U+0160>ah]]
+[[fi:Shakki]]
+[[sv:Schack]]
+[[ta:<U+0B9A><U+0BA4><U+0BC1><U+0BB0><U+0B99><U+0BCD><U+0B95><U+0BAE><U+0BCD>]]
+[[tt:Sh<U+0430>hmat]]
+[[th:<U+0E2B><U+0E21><U+0E32><U+0E01><U+0E23><U+0E38><U+0E01><U+0E2A><U+0E32><U+0E01><U+0E25>]]
+[[vi:C<U+1EDD> vua]]
+[[tr:Satran<U+00E7>]]
+[[uk:<U+0428><U+0430><U+0445><U+0438>]]
+[[yi:<U+05E9><U+05D0><U+05DA> (<U+05E9><U+05E4><U+05D9><U+05DC>)]]
+[[zh:<U+570B><U+969B><U+8C61><U+68CB>]]

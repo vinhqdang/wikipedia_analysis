@@ -1,0 +1,64 @@
+{{Infobox Software
+| name      = CTD
+| developer = Department of Bioinformatics, [http://www.mdibl.org/ The Mount Desert Island Biological Laboratory]
+| language  = English
+| status    = Active
+| genre     = [[Bioinformatics]], [[data analysis]]
+| website   = http://ctdbase.org/
+}}
+
+The '''Comparative Toxicogenomics Database''' ('''CTD''') is a public website and research tool that curates scientific data describing relationships between chemicals, genes, and human diseases.<ref>{{cite journal |author=Mattingly CJ, Rosenstein MC, Colby GT, Forrest JN, Boyer JL |title=The Comparative Toxicogenomics Database (CTD): A Resource for Comparative Toxicological Studies |journal=J Exp Zoolog. Part a Comp Exp Biol. |volume=305 |issue=9 |pages=689<U+2013>92 |year=2006 |month=Sep |pmid=16902965 |pmc=1586110 |doi=10.1002/jez.a.307 }}</ref><ref>{{cite journal |author=Mattingly CJ, Rosenstein MC, Davis AP, Colby GT, Forrest JN, Boyer JL |title=The Comparative Toxicogenomics Database (CTD): A Cross-Species Resource for Building Chemical-Gene Interaction Networks |journal=Toxicol. Sci. |volume=92 |issue=2 |pages=587<U+2013>95 |year=2006 |month=Aug |pmid=16675512 |pmc=1586111 |doi=10.1093/toxsci/kfl008 }}</ref><ref>{{cite journal |author=Mattingly CJ, Colby GT, Rosenstein MC, Forrest JN, Boyer JL |title=Promoting comparative molecular studies in environmental health research: an overview of the comparative toxicogenomics database (CTD) |journal=Pharmacogenomics J. |volume=4 |issue=1 |pages=5<U+2013>8 |year=2004 |pmid=14735110 |doi=10.1038/sj.tpj.6500225 }}</ref><ref>{{cite journal |author=Mattingly CJ, Colby GT, Forrest JN, Boyer JL |title=The Comparative Toxicogenomics Database (CTD) |journal=Environ Health Perspect. |volume=111 |issue=6 |pages=793<U+2013>5 |year=2003 |month=May |pmid=12760826 |pmc=1241500 |url=http://ehp.niehs.nih.gov/txg/docs/2003/6028/abstract.html |doi=10.1289/ehp.6028}}</ref>
+
+The database is maintained by the Department of Bioinformatics at the [[Mount Desert Island Biological Laboratory]] in [[Salisbury Cove]], [[Maine]] and by the Department of Biology at [[North Carolina State University]].
+
+CTD was launched on the web on [[November 12, 2004]].
+
+==Goals and objectives==
+One of the primary goals of CTD is to advance the understanding of the effects of environmental chemicals on human health.
+
+The [[etiology]] of many chronic diseases involves interactions between environmental factors and genes that modulate important physiological processes. Chemicals are an important component of the environment. Conditions such as [[asthma]], [[cancer]], [[diabetes mellitus|diabetes]], [[hypertension]], [[immunodeficiency]], and [[Parkinson's disease]] are known to be influenced by the environment; however, the molecular mechanisms underlying these correlations are not well understood. CTD may help resolve these mechanisms.
+
+==Core data==
+CTD is a unique resource where [[biocurator]]s<ref>{{cite journal |author=Bourne PE, McEntyre J |title=Biocurators: Contributors to the World of Science |journal=PLoS Comput Biol. |volume=2 |issue=10 |pages=e142 |year=2006 |month=Oct |pmid=17411327 |pmc=1626157 |doi=10.1371/journal.pcbi.0020142 }}</ref><ref>{{cite journal |author=Salimi N, Vita R |title=The Biocurator: Connecting and Enhancing Scientific Data |journal=PLoS Comput Biol. |volume=2 |issue=10 |pages=e125 |year=2006 |month=Oct |pmid=17069454 |pmc=1626147 |doi=10.1371/journal.pcbi.0020125 }}</ref> read the scientific literature and manually curate three types of core data:
+
+* Chemical-gene interactions
+* Chemical-disease associations
+* Gene-disease associations
+
+==Data integration==
+By integrating the above three data sets, CTD automatically constructs putative chemical-gene-disease networks to illuminate molecular mechanisms underlying environmentally-influenced diseases.
+
+Users can search CTD to explore scientific data for chemicals, genes, diseases, or interactions between any of these three concepts.
+Currently, CTD integrates toxicogenomic data for vertebrates and invertebrates, including 59,000 chemicals, 1.2 million gene and protein sequences (and their associated [[Gene Ontology]], [[KEGG]], and [[Reactome]] annotations), 83,000 taxonomic terms, and 6,000 human diseases to produce a unique resource for the cross-species analysis of chemical, gene, and disease interactions.
+
+CTD integrates data from or hyperlinks to these databases:
+*[http://chem.sis.nlm.nih.gov/chemidplus/chemidlite.jsp ChemIDplus]
+*[[DrugBank]]
+*[http://www.ebi.ac.uk/GO/ GOAnnotations@EBI]
+*[[Gene Ontology|Gene Ontology Consortium]]
+*[[KEGG]]
+*[[Entrez|NCBI Entrez-Gene]]
+*[[PubMed|NCBI PubMed]]
+*[http://www.ncbi.nlm.nih.gov/sites/entrez?db=taxonomy NCBI Taxonomy]
+*[[Medical Subject Headings|NLM Medical Subject Headings]]
+*[[Mendelian Inheritance in Man|OMIM]]
+*[[Reactome]]
+
+==CTD Publications==
+An extensive list of peer-reviewed scientific articles about CTD is available from their [http://ctdbase.org/about/publications/#ctdpubs Publications page]
+
+==References==
+{{reflist}}
+
+==External links==
+* [http://ctdbase.org/ Comparative Toxicogenomics Database]
+* [http://www.mdibl.org/ The Mount Desert Island Biological Laboratory]
+
+[[Category:Biological databases]]
+[[Category:Ontology (information science)]]
+[[Category:Toxicology]]
+[[Category:Chemical databases]]
+[[Category:Molecular genetics]]
+[[Category:Environmental science]]
+
+[[pl:Comparative Toxicogenomics Database]]

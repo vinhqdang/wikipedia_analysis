@@ -1,0 +1,268 @@
+{{Refimprove|date=September 2007}}
+{{ infobox computer hardware generic
+| name        = ATI Radeon Graphics
+| image       = 44154-A_ATr_Logo_S_E_RBG.png
+| caption     = The Radeon Graphics logo
+| invent-date = 
+| invent-name = [[ATI_Technologies_Inc.|ATI]]
+}}
+'''ATI Radeon''' is a brand of [[graphics processing unit]]s (GPU) that since [[2000]] has been manufactured by [[ATI Technologies]] and subsequently [[AMD]] and is the successor to their [[ATI Rage|Rage]] line. There are four different groups, which can be differentiated by the [[DirectX]] generation they support.  More specific distinctions can also be followed, such as the [[HyperZ]] version, the number of [[Pipeline (computing)|pixel pipeline]]s, and of course, the [[Computer storage|memory]] and [[Central processing unit|processor]] [[clock speed]]s.
+
+==ATI Radeon Processor Generations==
+{| class="wikitable" style="margin: 1em auto 1em auto"
+|-
+! rowspan=2 | Series
+! colspan=2 | Graphics [[Application programming interface|API]]s support
+! rowspan=2 | Notes
+|-
+! width="85pt"| DirectX
+! width="85pt"| OpenGL
+|-
+| '''[[Radeon R100|R100]]'''
+| DirectX 7.0
+| align="center"| [[OpenGL]] 1.3
+| Was ATI's first graphics processor to be fully [[DirectX]] 7 compliant. It was first introduced in 2000. R100 brought with it large gains in bandwidth and fill-rate efficiency through the new [[HyperZ]] technology. Initial models included Radeon SDR, DDR and 7000/VE. The final release was the Radeon 7500.
+|-
+| '''[[Radeon R200|R200]]'''
+| DirectX 8.1 
+| align="center"| OpenGL 1.4
+| ATI's second generation Radeon. This design included ATI's first programmable shader architecture and introduced pixel shader 1.4, the most advanced shader model prior to 2.0. This line includes Radeon 8500 - 9200, 9250.
+|-
+| '''[[Radeon R300|R300]]'''
+| DirectX 9.0 
+| rowspan = 4 align="center"| OpenGL 2.0
+| ATI's breakthrough DirectX 9.0 technology, released in 2002, made ATI the technology leader for several years with its industry-leading pixel shader 2.0 performance. Included in this generation are Radeon 9500 - 9800, X300 - X600, X1050.
+|-
+| '''[[Radeon R420|R420]]'''
+|  DirectX 9.0b
+| While heavily based upon the previous generation, this line included extensions to the Shader Model 2 feature-set. Shader Model 2b, the specification ATI and Microsoft defined with this generation, offered somewhat more shader program flexibility. This generation's technology is used in Radeon X700 - X850.
+|-
+| '''[[Radeon R520|R520]]'''
+| DirectX 9.0c
+| ATI's DirectX 9.0c series of graphics cards, with complete [[shader|Shader Model 3.0]] support. Launched in October 2005, this series brought a number of enhancements including the floating point render target technology necessary for [[high dynamic range rendering|HDR rendering]] with [[anti-aliasing]]. Cards released include X1300 - X1950.
+|-
+| '''[[Radeon R600|R600]]'''
+| DirectX 10.0/<br>DirectX 10.1 (RV670)
+| ATI's first series of ATI Radeon GPUs supporting the [[Direct3D#Direct3D 10|Direct3D 10.0]] specification and the company's second graphics solution to employ [[Unified shader model|unified shader]] technology. Releases of this platform include the HD 2400, HD 2600 and HD 2900. There are also products supporting DirectX 10.1, known as the HD 3000 series, with a die shrink.
+|-
+| '''[[Radeon R700|R700]]'''
+| DirectX 10.1
+| align="center"| OpenGL 2.1
+| ATI's new series, based on the R600 architecture. Mostly a bolstered card with many more stream processors, with improvements to power consumption and GDDR5 support for the high-end RV770 chip. It arrived in late June 2008. The HD 4850 and HD 4870 have 800 stream processors and GDDR3 and GDDR5 memory respectively.
+|}
+
+==Radeon Card Brands==
+AMD does not actually sell Radeon cards at the retail level. Instead, it sells the hardware to 3rd party manufacturers who in turn sell their cards to the public. Examples of Radeon brands include Diamond Multimedia and Sapphire Technology
+
+==Product naming scheme==
+Since ATI's first DirectX 9-class GPU, the company has followed a naming scheme that relates each product to a market segment.
+
+* <sup>1</sup> Stream Processors only applicable to Radeon HD 2000 series video cards.
+{| class="wikitable"
+|-
+! rowspan=2 width=80px | Product Category
+! rowspan=2 width=150px | Card Name <br>(<nowiki>*</nowiki> denotes wildcard)
+! rowspan=2 width=100px | Usual Suffixes
+! rowspan=2 | Price range ([[United States Dollar|USD]])
+! rowspan=2 width=100px | Shader amount ([[Vertex Shader|VS]]/[[Pixel Shader|PS]]/[[Stream processing|SPU]])<sup>1</sup>
+! colspan=3 style="text-align:center;" | Memory
+! rowspan=2 | Outputs
+! rowspan=2 | Example products
+|-
+! Type
+! width=80px | Width <br>([[bit]])
+! Size ([[Mebibytes|MiB]])
+|-
+| Enthusiast/high-end
+| <nowiki>**9**</nowiki><br><nowiki>**8**</nowiki>
+| XTX, XT, XT PE, XL, Pro, GTO, GT
+| >$150
+| 75-100%<br />200% (X2, dual-GPU)
+| [[GDDR3]],<br> [[GDDR4]],<br> [[GDDR5]]
+| 256-bit/<br>512-bit
+| 256/512/1024
+| Dual [[DVI]] with <br>[[HDMI]] ([[Radeon R600|HD 2000]] dongle)
+| [[Radeon R420|X800]], [[Radeon R520|X1950]], [[Radeon R600|HD 2900]]
+|-
+| Mainstream
+| <nowiki>**7**</nowiki><br><nowiki>**6**</nowiki><br><nowiki>**5**</nowiki>
+| XT, XL, Pro, SE, GTO, GT
+| $100-$150
+| 37.5-75%
+| [[DDR2]], <br>[[GDDR3]], <br>[[GDDR4]]
+| 128-bit
+| 128/256/512
+| [[D-subminiature|D-Sub]], [[DVI]]/<br>Dual [[DVI]] with <br>[[HDMI]] ([[Radeon R600#Radeon HD 2600|HD 2000]] dongle)
+| [[Radeon R420|X700]], [[Radeon R520|X1600]], [[Radeon R600|HD 2600]]
+|-
+| Budget/Value
+| <nowiki>**4**</nowiki><br><nowiki>**3**</nowiki><br><nowiki>**2**</nowiki><br><nowiki>**1**</nowiki><br><nowiki>**0**</nowiki><br />7x00, 9000, 9200, 9250
+| SE, [[HyperMemory|HM]]
+| <$99
+| 25-50%
+| [[DDR2]], <br>[[GDDR3]]
+| 64-bit
+| 64/128 <br>([[HyperMemory|HM]]: 768/1024)
+| [[D-subminiature|D-Sub]], [[DVI]] with <br>[[HDMI]] ([[Radeon R600#Radeon HD 2600|HD 2000]] Dongle)
+| [[Radeon R300|X300]], [[Radeon R300|X1050]], <br>[[Radeon R520|X1400]], [[Radeon R600|HD 2400]]
+|}
+
+''Note'': ''Suffix indicate different layers of performance. ''See [[ATI Video Card Suffixes]]''.''
+
+Since the release of the [[Radeon R600#Radeon HD 3800|Radeon HD 3000 series]] products, [[ATI Video Card Suffixes|previous PRO, XT, GT, and XTX suffixes]] were eliminated, products will be differentiated by changing the last two digits of the product model number (for instance, HD 3850 and HD 3870, giving the impression that the HD 3870 model having higher performance than HD 3850).<ref name="vrzone-071017">{{cite web | url=http://www.vr-zone.com/articles/RV670_is_Radeon_HD_3800_Series/5358.html#Scene_1 | title=RV670 is Radeon HD 3800 Series | publisher=VR-Zone | date=October 17, 2007}}</ref> Similar changes to the IGP naming were spotted as well, for the previously launched [[AMD 690 chipset series#M690T|AMD M690T chipset]] with side-port memory, the IGP is named "Radeon X1270", while for the [[AMD 690 chipset series#690G|AMD 690G chipset]], the IGP is named "Radeon X1250", as for [[AMD 690 chipset series#690V|AMD 690V chipset]], the IGP is clocked lower and having fewer functions and thus named "Radeon X1200". The new numbering scheme of video products are shown below:
+
+<center>
+{| class="wikitable"
+|-
+! rowspan=2 | Product Category
+! rowspan=2 | Model number <br />range (steps of 10)<sup>1</sup>
+! rowspan=2 | Price range <br />([[United States Dollar|USD]])
+! rowspan=2 | Shader amount <br />([[Vertex Shader|VS]]/[[Pixel Shader|PS]]/[[Stream processing|SPU]])<sup>2</sup>
+! colspan=3 style="text-align:center;" | Memory
+! rowspan=2 | Outputs
+! rowspan=2 | Product(s)
+|-
+! Type
+! Width <br>([[bit]])
+! Size ([[Mebibytes|MiB]])
+|-
+| Enthusiast<br>/high-end
+| 800-990
+| >$150
+| 75-100%
+| [[GDDR3]],<br> [[GDDR4]],<br> [[GDDR5]]
+| 256-bit
+| 256/512
+| 2 [[DVI]], <br>[[HDMI]], [[DisplayPort|DP]] (Dongle)
+| [[Radeon R600#Radeon HD 3800|HD 3850/3870]]<br>[[Radeon R700#Radeon HD 4800|HD 4850/4870]]
+|-
+| rowspan=2 | Mainstream
+| rowspan=2 | 600-790
+| rowspan=2 | $100-$150
+| rowspan=2 | 37.5-75%
+| rowspan=2 | [[DDR2]], <br>[[GDDR3]], <br>[[GDDR4]]
+| rowspan=2 | 128-bit
+| rowspan=2 | 128/256/512
+| [[D-subminiature|D-Sub]], [[DVI]]<br>
+| rowspan=2 | [[Radeon R600#Radeon HD 3600|HD 3650]]
+|-
+|[[DVI]], 2 [[DisplayPort|DP]], <br>[[HDMI]] (Dongle)
+|-
+| Budget/Value
+| 350-590
+| <$99
+| 25-50%
+| [[DDR2]], <br>[[GDDR3]]
+| 64-bit
+| 64/128 <br>([[HyperMemory|HM]]: 768/1024)
+| [[D-subminiature|D-Sub]], [[DVI]], <br>[[HDMI]], [[DisplayPort|DP]] (Dongle)
+| [[Radeon R600#Radeon HD 3400|HD 3450/3470]]
+|-
+| IGP
+| 000-300
+| N/A
+| 25-50%
+| [[Unified Memory Architecture|UMA]], <br />side-port memory<br />(GDDR2/GDDR3)
+| UMA + 16-bit (side-port)
+| 64 + UMA <br />(OS dependent)
+| [[D-subminiature|D-Sub]], [[DVI]], <br>[[HDMI]], [[DisplayPort|DP]]<br />[[Component video|Component (YCbCr)]]
+| [[AMD 690 chipset series#M690T|X1270]]/[[AMD 690 chipset series#690G|X1250]]/[[AMD 690 chipset series#690V|X1200]] <br>[[AMD 700 chipset series#780G/780V|HD 3200/HD 3100]]/[[AMD 700 chipset series#740G/740V|2100]]
+|}
+</center>
+
+* <sup>1</sup> The last two digits denotes variant, similar to the [[ATI Video Card Suffixes|previous suffixes]], which "70" is in essence the "XT" variant while "50" is actually the "Pro" variant.<ref name="MadBox2">{{es icon}} [http://www.madboxpc.com/foro/index.php?showtopic=64335 MadboxPC thread], retrieved November 10, 2007</ref>
+* <sup>2</sup> Stream Processors only applicable to Direct3D 10-class video components (Radeon HD 2000/3000 series).
+
+==Drivers==
+===Windows===
+{{main|ATI Catalyst Drivers}}
+<!-- Image with inadequate rationale removed: [[Image:ATI Catalyst Logo.jpg|right|200px]] -->
+The ATI Radeon graphics driver package for [[Microsoft Windows|Windows]] operating system is called ATI Catalyst. 
+
+The ATI Catalyst official drivers don't work for the Mobility version of Radeon due to an agreement with the [[OEM]] vendors.<ref>[http://www.driverheaven.net/modtool/], retrieved March 10, 2008</ref> An alternative is an application called [[Modtool]], a 3rd party utility which modifies recent desktop Radeon drivers to work with Mobility Radeon graphics cards.
+
+There are also unofficial drivers available such as the [[Omega drivers]] or [[DNA drivers]], claiming to boost performance when compared to the official Catalyst. These drivers typically consist of mixtures of various driver file versions with some [[windows registry|registry]] variables altered and potentially offer superior performance or quality. They are, of course, unsupported, and as such are not guaranteed to function correctly or [[quantitative]]ly improve functionality ([[placebo effect]]). Some of them also provide modified or patched [[Dynamic-link library|DLL]] files for hardware enthusiasts to modify their cards (as 9500non-pro and 9500Pro use the same chips, and 9800SE and 9800 use the same chips, some of them can be modified by activating all 8 pixel pipelines).
+
+===Windows XP Professional x64===
+ATI has yet to produce mobile 64 bit drivers for the [[Windows XP Professional x64 Edition]] operating system. This may be due to a number of factors. One factor is that most people use the 32-bit version of Windows XP, due not only to video card driver issues, but other driver compatibility issues as well.  Nonetheless, it is possible to obtain a proper driver for this type of setup. In order to do so, one requires the use of an unsupported application like Modtool.
+
+===Macintosh===
+ATI used to only offer driver updates for their retail Mac video cards, but now also offer drivers for all ATI Mac products, including the GPUs in Apple's portable lines.  Apple also includes ATI driver updates whenever they release a new OS update.  ATI provides a preference panel for use in [[Mac OS X]] called ATI Displays which can be used both with retail and OEM versions of their cards. Though it gives more control over advanced features of the graphics chipset, ATI Displays has limited functionality compared to their Catalyst for Windows product.  As Microsoft does not license [[DirectX]] for other OS platforms, [[Mac OS X]] uses [[OpenGL]] exclusively, though in the past with OS 9, Apple used the now-defunct RAVE API.
+
+===Linux===
+Initially, ATI did not produce Radeon drivers for [[Linux]], instead giving hardware specifications and documentation to [[Direct Rendering Infrastructure]] (DRI) developers under various [[non-disclosure agreement]]s. In mid 2004, however, ATI started to support [[Linux]] ([[XFree86]], [[X.Org]]), hiring a new Linux driver team to produce [[fglrx]].  Their new [[Proprietary software|proprietary]] Linux drivers, instead of being a port of the Catalyst drivers, were based on the Linux drivers for the [[FireGL]] (the FireGL drivers worked with Radeons before, but didn't officially support them), a card geared towards graphics producers, not gamers; though the display drivers part is now based on the same sources as the ones from Windows Catalyst since version 4.x in late 2004. The proprietary Linux drivers don't support the R100 chips (Radeon 7000-7500).
+
+The frequency of driver updates increased in late 2004, releasing Linux drivers every 2 months, half as often as their Windows counterparts. Then since late 2005 this has been increased to monthly releases, inline with the Windows CATALYST releases. On 12 April 2006, ATI released binary drivers for the ATI R5x0 chips (x1300/x1600/x1800 cards), approximately six months after first releasing these cards. 
+
+However the ATI Linux graphics driver suffers from bad performance: 2D benchmarks show that ATI cards using these drivers are two orders of magnitude slower than competing cards in basic tasks.<ref>[http://ati.cchtml.com/show_bug.cgi?id=7#c24 Bug 7 - Render Support - 2D acceleration speed too slow<!-- Bot generated title -->]</ref> More information about the problems can be found on the [[Fglrx#Criticism|Fglrx driver page]].
+As of the 8.25.18 proprietary Linux driver release R200 support is completely broken. There has been no comment from ATI on the problem.<ref>[http://www.rage3d.com/board/showthread.php?s=932a39244ec6fb5fa118d2ee3b246539&t=33856854 r2** support is completely broken with 8.25.18 - Rage3D Discussion Area<!-- Bot generated title -->]</ref>
+
+The efforts to provide [[Free Software|free]] drivers for these cards continue, though. While the R100 and R200-series chipset drivers were written using specifications provided by ATI (r200 driver), the R300 and R400 series hardware acceleration was written through reverse engineering (r300 driver) the methods used by ATI's proprietary driver.  The reverse-engineered code is now in [[X.Org]] and [[Mesa (OpenGL)|Mesa]], bringing experimental support for some of the current Radeon cards.
+
+All r3xx cards and all r4xx excluding the Xpress integrated chips should be supported by the new experimental r300 driver; as of June 2007, there is experimental support for the Xpress chips in the DRI and Mesa git repositories.
+
+There are a number of unofficial community websites for bug tracking<ref>[http://ati.cchtml.com/ Unofficial ATI Linux Driver Bugzilla Main Page<!-- Bot generated title -->]</ref> and a wiki.<ref>[http://wiki.cchtml.com/ Main Page - cchtml.com<!-- Bot generated title -->]</ref>
+
+===FreeBSD===
+
+[[FreeBSD]] systems have the same open-source support for Radeon hardware as Linux, including 2D and 3D acceleration for Radeon R100, R200, and R300-series chipsets.  The R300 support, as with Linux, remains experimental due to being reverse-engineered from ATI's proprietary drivers.
+
+ATI does not support its proprietary fglrx driver on FreeBSD, it has been partly ported by a third party as of January 2007.  This is in contrast to its main rival, NVIDIA, which has periodically released its proprietary driver for FreeBSD since November 2002. In the meantime the release is similar to Linux.
+
+===AmigaOS===
+
+Since [[AmigaOS 4]] introduction [[AmigaOS]] users officially gained support for R100/R200 Radeon cards with the R300 chips being planned, although this depends on the available hardware documentations from ATI or the open source drivers from the Linux community.
+
+===BeOS===
+Although ATI does not provide its own drivers for [[BeOS]], it provides hardware and technical documentation to the [[Haiku (operating system)|Haiku Project]] who provide drivers with full 2D and video in/out support. They are the sole graphics manufacturer in any way still supporting BeOS.
+
+===FOSS drivers===
+{{see also|Graphics hardware and FOSS}}
+On [[September 12]], [[2007]], AMD released documentation for the RV630 (Radeon HD 2600 PRO and Radeon HD 2600 XT) and M56 (Radeon Mobility X1600) chips for open source driver development, for its strategic open source driver development initiative.<ref>[http://www.amd.com/us-en/Corporate/VirtualPressRoom/0,,51_104_543~119372,00.html AMD Press release], retrieved September 13, 2007</ref> This initial "documentation drop" released sufficient programming information for a skeleton display detection and modesetting driver to be released. This was version 1.0.0 of the "radeonhd" driver. Further documentation releases and a baseline open source drivers are likely to follow in the near future. <ref>[http://www.phoronix.com/scan.php?page=news_item&px=NjA1Mw AMD Releases 900+ Pages Of GPU Specifications]</ref> The register reference guides for M76 (Mobility Radeon HD 2600/2700/3600/3800 series) and RS690 (AMD 690 chipset series) were also released on January 4, 2008, and is available from ATI website <ref>[http://ati.amd.com/developer/open_gpu_documentation.html AMD Open GPU documentations page], retrieved Feberuary 13, 2008</ref>.
+
+All specs are available without an [[Non-disclosure agreement|NDA]]. AMD is collaborating with [[Novell]] to build a new, free driver called RadeonHD based on these specifications. At present it is reasonably stable, and supports DRI for r500 series cards. Its development can be tracked using the [[Git (software)|git]] repository at the [[Freedesktop.org]] website. <ref>[http://gitweb.freedesktop.org/?p=xorg/driver/xf86-video-radeonhd;a=summary freedesktop.org git - xorg/driver/xf86-video-radeonhd/summary<!-- Bot generated title -->]</ref>
+
+Also available is a driver known as "ati", "xf86-video-ati", "video-ati" and "radeon". The main difference between video-ati and radeonhd is that video-ati uses [[AtomBIOS]] and radeonhd does not. AtomBIOS is an abstraction layer filled in by [[Advanced Micro Devices|AMD]] to quickly add a new type of card or card series. AtomBIOS speeds up development of video-ati, but some have argued that it makes the open-source driver more legacy and untouchable. <ref>[http://www.phoronix.com/scan.php?page=news_item&px=NjMwOA Phoronix article about AtomBIOS]</ref>
+
+==Pulse-Width Modulation (fan control)==
+Unlike NVIDIA, ATI implements PWM ([[Pulse-width modulation#Power delivery|pulse-width modulation]]) on some of their newer graphics cards to control fan speeds. Some computer motherboards use this technology for fan control, most commonly on [[CPU]] fans. PWM is used to reduce the total amount of power delivered to a load without losses normally incurred when a power source is limited by resistive means. As the name of the technology says, PWM delivers power through pulses instead of resistance-based constant voltage. However, this can create a clicking sound on the video card when the fan is at certain speeds. Some users see this as hindering the ability to build a quiet computer system. In recent releases of products, [[Pulse-width modulation#Digital|digital PWM]] was used.
+
+==See also==
+* [[Comparison of ATI Graphics Processing Units]]
+* [[ATI Rage]] <U+2013> previous series of ATI's video cards
+* [[Nvidia]]
+* [[Video In Video Out|Video In Video Out (VIVO)]]
+
+==References==
+{{reflist}}
+*[http://www.rage3d.com/board/showthread.php?s=932a39244ec6fb5fa118d2ee3b246539&t=33856854 Rage3d thread]
+
+==External links==
+*[http://ati.amd.com/ ATI Technologies Inc.]
+*[http://dri.freedesktop.org/wiki/ATIRadeon DRI Wiki: ATI Radeon]
+*[http://www17.tomshardware.com/search/search.html?category=all&words=radeon/ Tom's Hardware links]
+*[http://www.omegadrivers.net/ Omega Drivers website]
+*[http://www.rage3d.com/ Rage3D: Support community for ATI hardware and drivers. News and discussion.]
+
+{{ATI}}
+
+[[Category:ATI Technologies]]
+[[Category:Graphics cards]]
+
+[[cs:Radeon]]
+[[de:ATI Radeon]]
+[[es:Radeon]]
+[[fr:ATI Radeon]]
+[[ko:<U+B808><U+C774><U+B514><U+C5B8>]]
+[[it:Radeon]]
+[[he:Radeon]]
+[[hu:ATI Radeon]]
+[[ja:RADEON]]
+[[no:Radeon]]
+[[pl:Radeon]]
+[[pt:Radeon]]
+[[ru:Radeon]]
+[[sk:Radeon]]
+[[fi:Radeon]]
+[[sv:Radeon]]
+[[zh:Radeon]]

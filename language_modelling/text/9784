@@ -1,0 +1,166 @@
+{{For|the mathematics journal|Discrete Mathematics (journal)}}
+[[File:6n-graf.svg|thumb|250px|[[Graph (mathematics)|Graphs]] like this are among the objects studied by discrete mathematics, for their interesting [[graph property|mathematical properties]], their usefulness as models of real-world problems, and their importance in developing computer [[algorithm]]s.]]
+
+'''Discrete mathematics''' is the study of [[Mathematics|mathematical]] [[Mathematical structure|structures]] that are fundamentally [[discrete space|discrete]] rather than continuous. In contrast to [[real number]]s that have the property of varying "smoothly", the objects studied in discrete mathematics <U+2013> such as [[integer]]s, [[Graph (mathematics)|graphs]], and statements in [[Mathematical logic|logic]]<ref>Richard Johnsonbaugh, ''Discrete Mathematics'', Prentice Hall, 2008.</ref> <U+2013> do not vary smoothly in this way, but have distinct, separated values.<ref>{{MathWorld |title=Discrete mathematics |urlname=DiscreteMathematics}}</ref> Discrete mathematics therefore excludes topics in "continuous mathematics" such as [[calculus]] and [[Mathematical analysis|analysis]]. Discrete objects can often be [[enumeration|enumerated]] by integers. More formally, discrete mathematics has been characterized as the branch of mathematics dealing with [[countable set]]s<ref>{{citation
+ | last = Biggs | first = Norman L. | authorlink = Norman L. Biggs
+ | edition = 2nd
+ | isbn = 9780198507178
+ | location = New York
+ | mr = 1078626
+ | page = 89
+ | publisher = The Clarendon Press Oxford University Press
+ | series = Oxford Science Publications
+ | title = Discrete mathematics
+ | url = http://books.google.com/books?id=Mj9gzZMrXDIC&pg=PA89
+ | year = 2002
+ | quote = Discrete Mathematics is the branch of Mathematics in which we deal with questions involving finite or countably infinite sets.}}</ref> (sets that have the same cardinality as subsets of the natural numbers, including rational numbers but not real numbers). However, there is no exact definition of the term "discrete mathematics."<ref>Brian Hopkins, ''Resources for Teaching Discrete Mathematics'', Mathematical Association of America, 2008.</ref> Indeed, discrete mathematics is described less by what is included than by what is excluded: continuously varying quantities and related notions.
+
+The set of objects studied in discrete mathematics can be finite or infinite. The term '''finite mathematics''' is sometimes applied to parts of the field of discrete mathematics that deals with finite sets, particularly those areas relevant to business.
+
+Research in discrete mathematics increased in the latter half of the twentieth century partly due to the development of [[digital computers]] which operate in discrete steps and store data in discrete bits. Concepts and notations from discrete mathematics are useful in studying and describing objects and problems in branches of computer science, such as computer algorithms, [[programming language]]s, [[cryptography]], [[automated theorem proving]], and [[software development]]. Conversely, computer implementations are significant in applying ideas from discrete mathematics to real-world problems, such as in [[operations research]].
+
+Although the main objects of study in discrete mathematics are discrete objects, analytic methods from continuous mathematics are often employed as well.
+
+==Grand challenges, past and present==
+[[File:Four Colour Map Example.svg|thumb|180px|right|Much research in [[graph theory]] was motivated by attempts to prove that all maps, like this one, could be [[graph coloring|colored]] using [[four color theorem|only four colors]] so that no areas of the same color touched. [[Kenneth Appel]] and [[Wolfgang Haken]] proved this in 1976.<ref name="4colors">{{cite book| last = Wilson| first = Robin| authorlink = Robin Wilson (mathematician)| title = Four Colors Suffice| year = 2002| publisher = Penguin Books| isbn = 978-0-691-11533-7| place = London }}</ref>]]
+
+The history of discrete mathematics has involved a number of challenging problems which have focused attention within areas of the field. In graph theory, much research was motivated by attempts to prove the [[four color theorem]], first stated in 1852, but not proved until 1976 (by Kenneth Appel and Wolfgang Haken, using substantial computer assistance).<ref name="4colors" />
+
+In [[Mathematical logic|logic]], the [[Hilbert's second problem|second problem]] on [[David Hilbert]]'s list of open [[Hilbert's problems|problems]] presented in 1900 was to prove that the [[axioms]] of [[arithmetic]] are [[consistent]]. [[G<U+00F6>del's second incompleteness theorem]], proved in 1931, showed that this was not possible <U+2013> at least not within arithmetic itself. [[Hilbert's tenth problem]] was to determine whether a given polynomial [[Diophantine equation]] with integer coefficients has an integer solution. In 1970, [[Yuri Matiyasevich]] proved that this [[Matiyasevich's theorem|could not be done]].
+
+The need to [[Cryptanalysis|break]] German codes in [[World War II]] led to advances in [[cryptography]] and [[theoretical computer science]], with the [[Colossus computer|first programmable digital electronic computer]] being developed at England's [[Bletchley Park]]. At the same time, military requirements motivated advances in [[operations research]]. The [[Cold War]] meant that cryptography remained important, with fundamental advances such as [[public-key cryptography]] being developed in the following decades. Operations research remained important as a tool in business and project management, with the [[critical path method]] being developed in the 1950s. The [[telecommunication]] industry has also motivated advances in discrete mathematics, particularly in graph theory and [[information theory]]. [[Formal verification]] of statements in logic has been necessary for [[software development]] of [[safety-critical system]]s, and advances in [[automated theorem proving]] have been driven by this need.
+
+[[Computational geometry]] has been an important part of the [[Computer graphics (computer science)|computer graphics]] incorporated into modern [[video game]]s and [[computer-aided design]] tools.
+
+Several fields of discrete mathematics, particularly theoretical computer science, graph theory, and [[combinatorics]], are important in addressing the challenging [[bioinformatics]] problems associated with understanding the [[Phylogenetic tree|tree of life]].<ref>{{cite book| author = Trevor R. Hodkinson|author2=John A. N. Parnell| title = Reconstruction the Tree of Life: Taxonomy And Systematics of Large And Species Rich Taxa| url = http://books.google.com/?id=7GKkbJ4yOKAC&pg=PA97| year = 2007| publisher = CRC PressINC| isbn = 978-0-8493-9579-6| page = 97 }}</ref>
+
+Currently, one of the most famous open problems in theoretical computer science is the [[P = NP problem]], which involves the relationship between the [[complexity class]]es [[P (complexity)|P]] and [[NP (complexity)|NP]]. The [[Clay Mathematics Institute]] has offered a $1 million [[USD]] prize for the first correct proof, along with prizes for [[Millennium Prize Problems|six other mathematical problems]].<ref name="CMI Millennium Prize Problems">{{cite web|title=Millennium Prize Problems|url=http://www.claymath.org/millennium/|date=2000-05-24|accessdate=2008-01-12}}</ref>
+
+==Topics in discrete mathematics==
+
+===Theoretical computer science===
+{{Main|Theoretical computer science}}
+[[File:Sorting quicksort anim.gif|thumb|210px|[[Computational complexity theory|Complexity]] studies the time taken by [[algorithm]]s, such as this [[Quicksort|sorting routine]].]]
+Theoretical computer science includes areas of discrete mathematics relevant to computing. It draws heavily on [[graph theory]] and [[Mathematical logic|logic]]. Included within theoretical computer science is the study of algorithms for computing mathematical results. [[Computability]] studies what can be computed in principle, and has close ties to logic, while complexity studies the time taken by computations. [[Automata theory]] and [[formal language]] theory are closely related to computability. [[Petri net]]s and [[process algebra]]s are used to model computer systems, and methods from discrete mathematics are used in analyzing [[VLSI]] electronic circuits. [[Computational geometry]] applies algorithms to geometrical problems, while [[computer image analysis]] applies them to representations of images. Theoretical computer science also includes the study of various continuous computational topics.
+
+===Information theory===
+{{Main|Information theory}}
+[[File:WikipediaBinary.svg|thumb|150px|The [[ASCII]] codes for the word "Wikipedia", given here in [[Binary numeral system|binary]], provide a way of representing the word in [[information theory]], as well as for information-processing [[algorithm]]s.]]
+Information theory involves the quantification of [[information]]. Closely related is [[coding theory]] which is used to design efficient and reliable data transmission and storage methods. Information theory also includes continuous topics such as: [[analog signal]]s, [[analog coding]], [[analog encryption]].
+
+===Logic===
+{{Main|Mathematical logic}}
+Logic is the study of the principles of valid reasoning and [[inference]], as well as of [[consistency]], [[soundness]], and [[Completeness (logic)|completeness]]. For example, in most systems of logic (but not in [[intuitionistic logic]]) [[Peirce's law]] (((''P''<U+2192>''Q'')<U+2192>''P'')<U+2192>''P'') is a theorem. For classical logic, it can be easily verified with a [[truth table]]. The study of [[mathematical proof]] is particularly important in logic, and has applications to [[automated theorem proving]] and [[formal verification]] of software.
+
+[[Well-formed formula|Logical formulas]] are discrete structures, as are [[Proof theory|proofs]], which form finite [[tree structure|trees]]<ref>{{cite book| author = A. S. Troelstra|author2=H. Schwichtenberg| title = Basic Proof Theory| url = http://books.google.com/?id=x9x6F_4mUPgC&pg=PA186| date = 2000-07-27| publisher = Cambridge University Press| isbn = 978-0-521-77911-1| page = 186 }}</ref> or, more generally, [[directed acyclic graph]] structures<ref>{{cite book| author = Samuel R. Buss| title = Handbook of Proof Theory| url = http://books.google.com/?id=MfTMDeCq7ukC&pg=PA13| year = 1998| publisher = Elsevier| isbn = 978-0-444-89840-1| page = 13 }}</ref><ref>{{cite book| author = Franz Baader|author2=Gerhard Brewka|author3=Thomas Eiter| title = KI 2001: Advances in Artificial Intelligence: Joint German/Austrian Conference on AI, Vienna, Austria, September 19-21, 2001. Proceedings| url = http://books.google.com/?id=27A2XJPYwIkC&pg=PA325| date = 2001-10-16| publisher = Springer| isbn = 978-3-540-42612-7| page = 325 }}</ref> (with each [[Rule of inference|inference step]] combining one or more [[premise]] branches to give a single conclusion). The [[truth value]]s of logical formulas usually form a finite set, generally restricted to two values: ''true'' and ''false'', but logic can also be continuous-valued, e.g., [[fuzzy logic]]. Concepts such as infinite proof trees or infinite derivation trees have also been studied,<ref>{{cite journal | id = {{citeseerx|10.1.1.111.1105}} | title = Cyclic proofs of program termination in separation logic | first1 = J. | last1 = Brotherston | first2 = R. | last2 = Bornat | first3 = C. | last3 = Calcagno | journal = ACM SIGPLAN Notices | volume = 43 | issue = 1 | month = January | year = 2008 }}</ref> e.g. [[infinitary logic]].
+
+===Set theory===
+{{Main|Set theory}}
+Set theory is the branch of mathematics that studies [[set (mathematics)|sets]], which are collections of objects, such as {blue, white, red} or the (infinite) set of all [[prime number]]s. [[Partially ordered set]]s and sets with other [[Relation (mathematics)|relations]] have applications in several areas.
+
+In discrete mathematics, [[countable set]]s (including [[finite set]]s) are the main focus. The beginning of set theory as a branch of mathematics is usually marked by [[Georg Cantor]]'s work distinguishing between different kinds of [[infinite set]], motivated by the study of trigonometric series, and further development of the theory of infinite sets is outside the scope of discrete mathematics. Indeed, contemporary work in [[descriptive set theory]] makes extensive use of traditional continuous mathematics.
+
+===Combinatorics===
+{{Main|Combinatorics}}
+Combinatorics studies the way in which discrete structures can be combined or arranged.
+[[Enumerative combinatorics]] concentrates on counting the number of certain combinatorial objects - e.g. the [[twelvefold way]] provides a unified framework for counting [[permutations]], [[combinations]] and [[Partition of a set|partitions]].
+[[Analytic combinatorics]] concerns the enumeration (i.e., determining the number) of combinatorial structures using tools from [[complex analysis]] and [[probability theory]]. In contrast with enumerative combinatorics which uses explicit combinatorial formulae and [[generating functions]] to describe the results, analytic combinatorics aims at obtaining [[Asymptotic analysis|asymptotic formulae]].
+Design theory is a study of [[combinatorial design]]s, which are collections of subsets with certain [[Set intersection|intersection]] properties.
+[[Partition theory]] studies various enumeration and asymptotic problems related to [[integer partition]]s, and is closely related to [[q-series]], [[special functions]] and [[orthogonal polynomials]]. Originally a part of [[number theory]] and [[analysis]], partition theory is now considered a part of combinatorics or an independent field.
+[[Order theory]] is the study of [[partially ordered sets]], both finite and infinite.
+
+===Graph theory===
+{{Main|Graph theory}}
+[[File:TruncatedTetrahedron.gif|thumb|right|200px|[[Graph theory]] has close links to [[group theory]]. This [[truncated tetrahedron]] graph is related to the [[alternating group]] ''A''<sub>4</sub>.]]
+Graph theory, the study of [[Graph (mathematics)|graphs]] and [[network theory|networks]], is often considered part of combinatorics, but has grown large enough and distinct enough, with its own kind of problems, to be regarded as a subject in its own right.<ref>[http://jhupbooks.press.jhu.edu/ecom/MasterServlet/GetItemDetailsHandler?iN=9780801866890&qty=1&viewMode=1&loggedIN=false&JavaScript=y Graphs on Surfaces], [[Bojan Mohar]] and [[Carsten Thomassen]], Johns Hopkins University press, 2001</ref> Graphs are one of the prime objects of study in discrete mathematics. They are among the most ubiquitous models of both natural and human-made structures. They can model many types of relations and process dynamics in physical, biological and social systems. In computer science, they can represent networks of communication, data organization, computational devices, the flow of computation, etc. In mathematics, they are useful in geometry and certain parts of [[topology]], e.g. [[knot theory]]. [[Algebraic graph theory]] has close links with group theory. There are also [[continuous graph]]s, however for the most part research in graph theory falls within the domain of discrete mathematics.
+
+===Probability===
+{{Main|Discrete probability theory}}
+Discrete probability theory deals with events that occur in countable [[sample spaces]]. For example, count observations such as the numbers of birds in flocks comprise only natural number values {0, 1, 2, ...}. On the other hand, continuous observations such as the weights of birds comprise real number values and would typically be modeled by a continuous probability distribution such as the [[normal distribution|normal]]. Discrete probability distributions can be used to approximate continuous ones and vice versa. For highly constrained situations such as throwing [[dice]] or experiments with [[decks of cards]], calculating the probability of events is basically [[enumerative combinatorics]].
+
+===Number theory===
+[[File:Ulam 1.png|thumb|200px|right|The [[Ulam spiral]] of numbers, with black pixels showing [[prime number]]s. This diagram hints at patterns in the [[Prime number#Distribution|distribution]] of prime numbers.]]
+{{Main|Number theory}}
+Number theory is concerned with the properties of numbers in general, particularly [[integer]]s. It has applications to [[cryptography]], [[cryptanalysis]], and [[cryptology]], particularly with regard to [[modular arithmetic]], [[diophantine equations]], linear and quadratic congruences, prime numbers and [[primality test]]ing. Other discrete aspects of number theory include [[geometry of numbers]]. In [[analytic number theory]], techniques from continuous mathematics are also used. Topics that go beyond discrete objects include [[transcendental number]]s, [[diophantine approximation]], [[p-adic analysis]] and [[function field of an algebraic variety|function fields]].
+
+===Algebra===
+{{Main|Abstract algebra}}
+[[Algebraic structure]]s occur as both discrete examples and continuous examples. Discrete algebras include: [[boolean algebra (logic)|boolean algebra]] used in [[logic gate]]s and programming; [[relational algebra]] used in [[databases]]; discrete and finite versions of [[group (mathematics)|groups]], [[ring (mathematics)|rings]] and [[field (mathematics)|fields]] are important in [[algebraic coding theory]]; discrete [[semigroup]]s and [[monoid]]s appear in the theory of [[formal languages]].
+
+===Calculus of finite differences, discrete calculus or discrete analysis===
+{{Main|finite difference}}
+A [[function (mathematics)|function]] defined on an interval of the [[integer]]s is usually called a [[sequence]]. A sequence could be a finite sequence from a data source or an infinite sequence from a [[discrete dynamical system]]. Such a discrete function could be defined explicitly by a list (if its domain is finite), or by a formula for its general term, or it could be given implicitly by a [[recurrence relation]] or [[difference equation]]. Difference equations are similar to a [[differential equation]]s, but replace [[derivative|differentiation]] by taking the difference between adjacent terms; they can be used to approximate differential equations or (more often) studied in their own right. Many questions and methods concerning differential equations have counterparts for difference equations. For instance where there are [[integral transforms]] in [[harmonic analysis]] for studying continuous functions or analog signals, there are [[discrete transform]]s for discrete functions or digital signals. As well as the [[discrete metric]] there are more general discrete or [[finite metric space]]s and [[finite topological space]]s.
+
+===Geometry===
+[[File:SimplexRangeSearching.png|right|thumb|150px|[[Computational geometry]] applies computer [[algorithm]]s to representations of [[geometry|geometrical]] objects.]]
+{{Main|discrete geometry|computational geometry}}
+[[Discrete geometry]] and combinatorial geometry are about combinatorial properties of ''discrete collections'' of geometrical objects. A long-standing topic in discrete geometry is [[tessellation|tiling of the plane]]. Computational geometry applies algorithms to geometrical problems.
+
+=== Topology ===
+Although [[topology]] is the field of mathematics that formalizes and generalizes the intuitive notion of "continuous deformation" of objects, it gives rise to many discrete topics; this can be attributed in part to the focus on [[topological invariant]]s, which themselves usually take discrete values.
+See [[combinatorial topology]], [[topological graph theory]], [[topological combinatorics]], [[computational topology]], [[discrete topological space]], [[finite topological space]], [[topology (chemistry)]].
+
+===Operations research===
+{{Main|Operations research}}
+[[File:Pert chart colored.svg|right|thumb|150px|[[Program Evaluation and Review Technique|PERT]] charts like this provide a business management technique based on [[graph theory]].]]
+Operations research provides techniques for solving practical problems in business and other fields <U+2014> problems such as allocating resources to maximize profit, or scheduling project activities to minimize risk. Operations research techniques include [[linear programming]] and other areas of [[optimization (mathematics)|optimization]], [[queuing theory]], [[scheduling algorithm|scheduling theory]], [[network theory]]. Operations research also includes continuous topics such as [[continuous-time Markov process]], continuous-time [[Martingale (probability theory)|martingales]], [[process optimization]], and continuous and hybrid [[control theory]].
+
+===Game theory, decision theory, utility theory, social choice theory===
+{{Payoff matrix | Name = Payoff matrix for the [[Prisoner's dilemma]], a common example in [[game theory]]. One player chooses a row, the other a column; the resulting pair gives their payoffs
+| 2L = Cooperate  | 2R = Defect     |
+1U = Cooperate  | UL = -1, -1       | UR = -10, 0       |
+1D = Defect     | DL = 0, -10       | DR = -5, -5      }}
+[[Decision theory]] is concerned with identifying the values, uncertainties and other issues relevant in a given decision, its rationality, and the resulting optimal decision.
+
+[[Utility theory]] is about measures of the relative [[economic]] satisfaction from, or desirability of, consumption of various goods and services.
+
+[[Social choice theory]] is about [[voting]]. A more puzzle-based approach to voting is [[ballot theory]].
+
+[[Game theory]] deals with situations where success depends on the choices of others, which makes choosing the best course of action more complex. There are even continuous games, see [[differential game]]. Topics include [[auction theory]] and [[fair division]].
+
+===Discretization===
+{{Main|Discretization}}
+
+Discretization concerns the process of transferring continuous models and equations into discrete counterparts, often for the purposes of making calculations easier by using approximations. [[Numerical analysis]] provides an important example.
+
+===Discrete analogues of continuous mathematics===
+There are many concepts in continuous mathematics which have discrete versions, such as [[discrete calculus]], [[discrete probability distribution]]s, [[discrete Fourier transform]]s, [[discrete geometry]], [[discrete logarithm]]s, [[discrete differential geometry]], [[discrete exterior calculus]], [[discrete Morse theory]], [[difference equation]]s, [[discrete dynamical system]]s, and [[Shapley<U+2013>Folkman lemma#Probability and measure theory|discrete vector&nbsp;measures]].
+
+In [[applied mathematics]], [[discrete modelling]] is the discrete analogue of [[continuous modelling]]. In discrete modelling, discrete formulae are fit to [[data]]. A common method in this form of modelling is to use [[recurrence relation]].
+
+In [[algebraic geometry]], the concept of a curve can be extended to discrete geometries by taking the [[Spectrum of a ring|spectra]] of [[polynomial ring]]s over [[finite field]]s to be models of the [[affine space]]s over that field, and letting [[Algebraic variety|subvarieties]] or spectra of other rings provide the curves that lie in that space. Although the space in which the curves appear has a finite number of points, the curves are not so much sets of points as analogues of curves in continuous settings. For example, every point of the form <math>V(x-c) \subset \operatorname{Spec} K[x] = \mathbb{A}^1</math> for <math>K</math> a field can be studied either as <math>\operatorname{Spec} K[x]/(x-c) \cong \operatorname{Spec} K</math>, a point, or as the spectrum <math>\operatorname{Spec} K[x]_{(x-c)}</math> of the [[Localization of a ring|local ring at (x-c)]], a point together with a neighborhood around it. Algebraic varieties also have a well-defined notion of [[tangent space]] called the [[Zariski tangent space]], making many features of calculus applicable even in finite settings.
+
+===Hybrid discrete and continuous mathematics===
+The [[time scale calculus]] is a unification of the theory of [[difference equations]] with that of [[differential equations]], which has applications to fields requiring simultaneous modelling of discrete and continuous data. Another way of modeling such a situation is the notion of [[hybrid system|hybrid dynamical system]].
+
+==See also==
+{{Portal|Discrete mathematics}}
+* [[Outline of discrete mathematics]]
+* [[CyberChase]], a show that teaches Discrete Mathematics to children
+
+==References==
+{{Reflist}}
+
+== Further reading ==
+* {{cite book |author=Norman L. Biggs   |title=Discrete Mathematics |date=2002-12-19 |publisher=Oxford University Press |isbn=978-0-19-850717-8}}
+* [[Ronald Graham]], [[Donald Knuth|Donald E. Knuth]], [[Oren Patashnik]], ''[[Concrete Mathematics]]''.
+* {{cite book |author=Donald E. Knuth   |title=The Art of Computer Programming, Volumes 1-4a Boxed Set |date=2011-03-03 |publisher=Addison-Wesley Professional |isbn=978-0-321-75104-1}}
+* {{cite book |author=Kenneth H. Rosen |author2=John G. Michaels |title=Hand Book of Discrete and Combinatorial Mathematics |year=2000 |publisher=CRC PressI Llc |isbn=978-0-8493-0149-0}}
+* {{cite book |author=Bojana Obrenic    |title=Practice Problems in Discrete Mathematics |date=2003-01-29 |publisher=Prentice Hall |isbn=978-0-13-045803-2}}
+* {{cite book |author=John Dwyer        |title=An Introduction to Discrete Mathematics for Business & Computing |year=2010 |isbn=978-1-907934-00-1}}
+* {{cite book |author=Kenneth H. Rosen  |title=Discrete Mathematics: And Its Applications |year=2007 |publisher=McGraw-Hill College |isbn=978-0-07-288008-3}}
+* {{cite book |author=Ralph P. Grimaldi |title=Discrete and Combinatorial Mathematics: An Applied Introduction |year=2004 |publisher=Addison Wesley |isbn=978-0-201-72634-3}}
+* {{cite book |author=Susanna S. Epp    |title=Discrete Mathematics With Applications |date=2010-08-04 |publisher=Thomson Brooks/Cole |isbn=978-0-495-39132-6}}
+* {{cite book |author=Ji<U+0159><U+00ED> Matou<U+0161>ek |author2=Jaroslav Ne<U+0161>et<U+0159>il |title=Discrete Mathematics |year=1998 |publisher=Oxford University Press |isbn=978-0-19-850208-1}}
+* {{cite book |author=Andrew Simpson    |title=Discrete Mathematics by Example |year=2002 |publisher=McGraw-Hill Incorporated |isbn=978-0-07-709840-7}}
+
+== External links ==
+{{Wikibooks|Discrete Mathematics}}
+* [http://archives.math.utk.edu/topics/discreteMath.html Discrete mathematics] at the utk.edu Mathematics Archives, providiing links to syllabi, tutorials, programs, etc.
+* [http://www.iowacentral.edu/industrial_technology/electrical_technologies/index.asp Iowa Central: Electrical Technologies Program] Discrete mathematics for [[Electrical engineering]].
+
+{{Areas of mathematics}}
+{{Industrial and applied mathematics}}
+
+{{DEFAULTSORT:Discrete Mathematics}}
+[[Category:Discrete mathematics| ]]

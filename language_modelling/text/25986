@@ -1,0 +1,154 @@
+{{Redirect|Sylvester's theorem in plane geometry|Sylvester's theorem in number theory|Bertrand's postulate}}
+{{Redirect|Sylvester's theorem|Sylvester's theorem about matrices|Sylvester's matrix theorem}}
+
+The '''Sylvester<U+2013>Gallai theorem''' asserts that given a [[finite set|finite]] number of points in the [[Plane (mathematics)|plane]], either
+
+# All the points are [[collinear]]; or
+# There is a line which contains exactly two of the points.
+
+This theorem was posed as a problem by [[James Joseph Sylvester]] (1893), posed again independently by [[Paul Erd<U+0151>s]] (1943), and solved by [[Tibor Gallai]] in 1944<ref>Gallai's proof was first published as part of a collection of proofs by several other authors (Steinberg et al 1944). However, it has priority, as the solution editors note that it was submitted together with Erd<U+0151>s' statement of the problem.</ref>, although a proof of an equivalent statement had already been given by Melchior (1940).  The Sylvester-Gallai theorem does not apply to sets of [[infinite|infinitely]] many points: consider for instance the [[square lattice|lattice of integer points]]. A line that contains exactly two of a set of points is known as an ''ordinary line''; an algorithm of Mukhopadhyay et al (1997) can be used to find an ordinary line in a set of ''n'' points in time O(''n'' log ''n'').
+
+== Projective duality ==
+
+The question of the existence of an ordinary line can also be posed for points in the real [[projective plane]] instead of the [[Euclidean plane]].  This provides no additional generality, as any finite set of projective points can be transformed into a Euclidean point set preserving all ordinary lines, but the projective viewpoint allows certain configurations to be described more easily; for instance, McKee's configuration, described below, is most naturally viewed in projective geometry.
+
+By [[projective duality]], the existence of an ordinary line in a set of non-collinear points in the projective plane is equivalent to the existence of an ''ordinary point'' in a set of lines that do not all pass through a common point, where we define an ordinary point to be the point of intersection of exactly two lines. Melchior (1940), prior to Gallai's proof, showed that any such set of lines has at least three ordinary points, by using the [[Euler characteristic]] to show that any arrangement of lines has at least three vertices of degree four.
+
+== Proof of the Sylvester<U+2013>Gallai theorem ==
+
+[[Image:Sylvester-Gallai_theorem.png|right]]
+For a description of Gallai's original proof see e.g. Borwein and Moser (1990). The proof below is instead due to Kelly.
+
+We shall use the method of [[infinite descent]].  Suppose we have a finite number of points which are not collinear (in particular, we must have at least three points).  Define a ''connecting line'' to be a line which contains at least two points in the collection; we then have to show that at least one connecting line contains ''exactly'' two points.
+
+Let ''l'' be a connecting line.  Since the points are not collinear, there is at least one point ''P'' which is not on ''l''.  If ''l'' contains exactly two points, we are done.  Otherwise, we know that ''l'' contains at least three points, say ''A'', ''B'', and ''C''.  We may assume without loss of generality that ''B'' lies between ''A'' and ''C''. Since the [[angle]]s <math>\angle ABP</math> and <math>\angle CBP</math> add up to 180 degrees, they cannot both be obtuse; without loss of generality we may assume <math>\angle ABP</math> is not obtuse (i.e. either acute or right-angled).
+
+Now let ''m'' be the line connecting ''C'' and ''P''.  Then ''m'' is a connecting line which does not contain ''B''.  Furthermore, the distance between ''B'' and ''m'' is less than the distance between ''P'' and ''l''.
+
+To summarize so far, we have started with a connecting line ''l'' and a point ''P'' not on this line, and observed that either ''l'' contains exactly two points, or that there exists another connecting line ''m'' and a point ''B'' not on that line such that the distance between ''B'' and ''m'' is less than the distance between ''P'' and ''l''.  In the latter case, we simply repeat the argument again, but with ''P'' and ''l'' replaced by ''B'' and ''m''.  We cannot continue indefinitely because we would obtain an infinite decreasing sequence of distances, but the number of possible distances between points and connecting lines is finite because the original set was assumed to be finite.  Thus we must eventually obtain a connecting line with exactly two points only.  
+
+== Generalizations of the Sylvester<U+2013>Gallai theorem ==
+
+[[Image:Few-ordinary-lines.png|thumb|360px|The two known examples of point sets with fewer than n/2 ordinary lines.]]
+While the Sylvester<U+2013>Gallai theorem tells us that there must exist at least one line containing exactly two points, an arrangement with exactly one line containing exactly two points has not yet been found.  This led Dirac (1951) to conjecture that for any collection of <math>n</math> points, not all collinear, there exist at least {{Fraction|n|2}} lines containing exactly two points.
+
+[[As of 2006]], only two counterexamples to Dirac's conjecture are known. One, by Kelly and Moser (1958), consists of the vertices, midpoints, and centroid of an equilateral triangle; these seven points determine only three ordinary lines. The configuration in which these three ordinary lines are replaced by a single line cannot be realized in the Euclidean plane, but forms a finite [[projective geometry]] known as the [[Fano plane]]. The other counterexample, due to McKee (Crowe and McKee 1968), consists of two regular pentagons joined edge-to-edge together with the midpoint of the shared edge and four points on the line at infinity in the [[projective plane]]; these 13 points have among them 6 ordinary lines. McKee's configuration can be distorted so that all of its points lie within the usual Euclidean plane.
+
+A weaker version of Dirac's conjecture, proven by Csima and Sawyer in 1993, states that any set of ''n'' points has at least <math>\lceil \frac{6n}{13} \rceil</math> ordinary lines.  A closely related result is [[Beck's theorem (geometry)|Beck's theorem]], stating a tradeoff between the number of lines with few points and the number of points on a single line.
+
+== Notes ==
+
+<references/>
+
+== References ==
+
+*{{cite journal
+  | author = Borwein, P.; Moser, W. O. J.
+  | title = A survey of Sylvester's problem and its generalizations
+  | journal = Aequationes Mathematicae
+  | volume = 40
+  | issue = 1
+  | year = 1990
+  | doi = 10.1007/BF02112289
+  | pages = 111<U+2013>135}}
+
+*{{cite journal
+  | author = Crowe, D. W.; McKee, T. A.
+  | title = Sylvester's problem on collinear points
+  | journal = [[Mathematics Magazine]]
+  | volume = 41
+  | issue = 1
+  | year = 1968
+  | pages = 30<U+2013>34
+  | url = http://www.jstor.org/view/0025570x/di021053/02p0032d/0}}
+
+*{{cite journal
+  | author = Csima, J.; Sawyer, E.
+  | title = There exist 6''n''/13 ordinary points
+  | journal = Discrete & Computational Geometry
+  | year = 1993
+  | volume = 9
+  | pages = 187<U+2013>202
+  | doi = 10.1007/BF02189318}}
+
+*{{cite journal
+  | author = Dirac, G.
+  | authorlink = Gabriel Andrew Dirac
+  | title = Collinearity properties of sets of points
+  | journal = Quart. J. Math.
+  | year = 1951
+  | volume = 2
+  | pages = 221<U+2013>227}}
+
+*{{cite journal
+  | author = Erd<U+0151>s, P.
+  | authorlink = Paul Erd<U+0151>s
+  | title = Problem 4065
+  | journal = [[American Mathematical Monthly]]
+  | volume = 50
+  | year = 1943
+  | pages = 65
+  | url = http://www.jstor.org/view/00029890/di991260/99p1609a/0}}
+
+*{{cite journal
+  | author = Kelly, L. M.; Moser, W. O. J.
+  | title = On the number of ordinary lines determined by ''n'' points
+  | journal = Canad. J. Math.
+  | volume = 10
+  | year = 1958
+  | pages = 210<U+2013>219}}
+
+*{{cite journal
+  | author = Melchior, E.
+  | title = <U+00DC>ber Vielseite der projektiven Ebene
+  | journal = Deutsche Math.
+  | volume = 5
+  | year = 1940
+  | pages = 461<U+2013>475}}
+
+*{{cite journal
+  | author = Mukhopadhyay, A.; Agrawal, A.; Hosabettu, R. M.
+  | title = On the ordinary line problem in computational geometry
+  | journal = Nordic Journal of Computing
+  | volume = 4
+  | issue = 4
+  | year = 1997
+  | pages = 330<U+2013>341}}
+
+*{{cite journal
+  | author = Steinberg, R.; Buck, R. C.; Gr<U+00FC>nwald, T. ([[Tibor Gallai]]); Steenrod, N. E.
+  | title = Three point collinearity (solution to problem 4065)
+  | journal = [[American Mathematical Monthly]]
+  | volume = 51
+  | year = 1944
+  | pages = 169<U+2013>171
+  | url = http://www.jstor.org/view/00029890/di991273/99p1986g/0}}
+
+*{{cite journal
+  | author = Sylvester, J. J.
+  | authorlink = J. J. Sylvester
+  | title = Mathematical question 11851
+  | journal = Educational Times
+  | volume = 59
+  | year = 1893
+  | pages = 98}}
+
+== External links ==
+
+*{{cite web
+  | author = Malkevitch, Joseph
+  | year = 2003
+  | title = A discrete geometrical gem
+  | url = http://e-math.ams.org/featurecolumn/archive/sylvester1.html}}
+
+*{{mathworld | title = Ordinary Line | urlname = OrdinaryLine}}
+
+[[Category: Discrete geometry]]
+[[Category:Euclidean plane geometry]]
+[[Category:Mathematical theorems]]
+
+[[fr:Th<U+00E9>or<U+00E8>me de Sylvester<U+2013>Gallai]]
+[[it:Teorema di Sylvester-Gallai]]
+[[ru:<U+0422><U+0435><U+043E><U+0440><U+0435><U+043C><U+0430> <U+0421><U+0438><U+043B><U+044C><U+0432><U+0435><U+0441><U+0442><U+0440><U+0430>]]
+[[fi:Sylvesterin<U+2013>Gallain lause]]
+[[zh:<U+897F><U+723E><U+7DAD><U+65AF><U+7279>-<U+52A0><U+840A><U+5B9A><U+7406>]]

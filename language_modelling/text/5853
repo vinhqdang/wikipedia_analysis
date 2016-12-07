@@ -1,0 +1,191 @@
+{{refimprove|date=January 2007}}
+'''IBM PC compatible''' computers are those generally similar to the original [[IBM PC]], [[IBM Personal Computer XT|XT]], and [[IBM Personal Computer/AT|AT]].  Such computers used to be referred to as '''PC clones''', or '''IBM clones''' since they almost exactly duplicated all the significant features of the PC, XT, or AT internal design, facilitated by various manufacturers' ability to legally reverse engineer the [[BIOS]] through [[cleanroom design]]. Columbia Data Products built the first clone of an IBM computer through a cleanroom implementation of its BIOS.
+
+"IBM compatible" is now a historical term since IBM no longer manufactures personal computers. 
+
+Descendants of the IBM PC compatibles make up the majority of [[microcomputer]]s on the market today, although interoperability with the bus structure and peripherals of the original PC, XT or AT may be non-existent.
+
+==History==
+===Origins===
+[[Image:IBM PC 5150.jpg|thumb|right|250px|The original [[IBM PC]] (Model 5150) motivated the production of clones in the early-1980s.]] 
+
+The origins of this [[System platform|platform]] came with the decision by IBM in [[1980]] to market a low-cost single-user computer that they dubbed a [[personal computer]] as quickly as possible in response to [[Apple Computer|Apple Computer's]] success in the burgeoning market. On [[12 August]] [[1981]], the first [[IBM PC]] went on sale. There were three [[operating system]]s (OS) available for it but the most popular and least expensive was PC DOS, a version of MS DOS licensed from [[Microsoft]]. In a crucial concession, IBM's agreement allowed Microsoft to sell its own version, [[MS-DOS]], for non-IBM platforms. The only proprietary component of the PC was the [[BIOS]] (Basic Input/Output System).
+
+The original "clones" of the IBM Personal Computer were created without IBM's participation or approval. 
+[[Columbia Data Products|Columbia]] closely modeled the IBM PC and produced the first "compatible" PC (i.e., more or less compatible to the IBM PC standard) in June [[1982]] closely followed by [[Eagle Computer]]. [[Compaq|Compaq Computer Corp.]] announced its first IBM PC compatible a few months later in November [[1982]]<U+2014>the ''[[Compaq Portable]]''. The Compaq was not only the first "sewing machine-sized" [[Portable computer|portable PC]] but, even more important, was the first essentially 100% PC-compatible computer. The company could not directly copy the BIOS as a result of the court decision in [[Apple v. Franklin]], but it could [[reverse engineering|reverse-engineer]] the IBM BIOS and then write its own BIOS using [[clean room design]]. Compaq became a very successful PC manufacturer, but was bought out by [[Hewlett-Packard]] in [[2002]].
+
+===Compatibility issues===
+Simultaneously, many manufacturers such as [[Xerox]], HP, [[Rainbow-100|Digital]], [[Sanyo]], [[Texas Instruments]], [[Tulip Computers|Tulip]] and [[Wang Laboratories|Wang]] introduced personal computers that were <U+2014> although x86 and MS-DOS-based <U+2014> not completely hardware-compatible with the IBM PC. While such decisions seem foolish in retrospect, it is not always appreciated just how fast the rise of the IBM clone market was, and the degree to which it took the industry by surprise. 
+
+Microsoft's intention, and the mindset of the industry from [[1981]] to as late as the mid-[[1980s]], was that application writers would write to the [[Application programming interface]]s (or APIs) in MS-DOS, and in some cases to the firmware BIOS, and that these components would form what would now be called a [[hardware abstraction layer]]. Each computer would have its own [[Original Equipment Manufacturer]] (OEM) version of MS-DOS, customized to its hardware. Any piece of software written for MS-DOS would run on any MS-DOS computer, regardless of variations in hardware design.
+
+This expectation seemed reasonable, in the light of the computer marketplace as it existed then. At that time, Microsoft was primarily focused on computer languages such as [[BASIC]]. The established model for small system operating software was [[CP/M]] from Digital Research, which was in use both at the hobbyist level and at the more professional end of the microcomputer spectrum. To achieve this spectrum of use, the OS had to operate across a range of machines that had widely varying hardware, although mostly based on the 8080 and [[Zilog Z-80|Z-80]] architectures. Many CP/M-based computers came with a suite of software (often including MicroPro's [[WordStar]], CalcStar, and DataStar). Those customers who needed additional applications beyond the [[starter pack]] could expect publishers to offer their products in several media formats for a variety of computers.
+
+Microsoft's competing OS was initially targeted to run on a similar varied spectrum of hardware, although all based on the 8086 architecture. Thus, MS-DOS was for many years sold only as an OEM product. There was no Microsoft-branded MS-DOS; MS-DOS could not be purchased directly from Microsoft, and the manual's cover had the corporate color and logo of the PC vendor. Bugs were to be reported to the OEM, not to Microsoft. However, in the case of the clones, it soon became clear that the OEM versions of MS-DOS were virtually identical, except perhaps for the provision of a few utility programs.
+
+MS-DOS provided adequate support for character-oriented applications, such as those that could have been implemented on a minicomputer and a Digital [[VT100]] terminal. Had the bulk of commercially important software fallen within these bounds, hardware compatibility might not have mattered. However, very early in the development of the PC, its applications evolved beyond the simple terminal applications that MS-DOS supported directly. <!-- mention performance as the reason MS DOS was bypassed and hardware differences could no longer be tolerated --> [[Spreadsheet]]s, [[WYSIWYG]] [[Word processors]], [[Presentation program|presentation software]] and [[Telix|remote communication software]] established new markets that exploited the PC's strengths, but required capabilities beyond what MS-DOS provided.  Thus, from very early in the development of the MS-DOS software environment, many significant pieces of popular commercial software wrote directly to the hardware, for a variety of reasons:
+*Communications software directly accessed the [[UART]] chip, because the MS-DOS API and the BIOS did not provide full support for the chip's capabilities.
+*Graphics capability was not taken seriously in the original IBM design brief. It was considered to be an exotic or novelty function.  MS-DOS didn't have an API for graphics, and the BIOS only included the most rudimentary of graphics functions (such as changing screen modes and plotting single points); having to make a BIOS call for every point drawn or modified also increased overhead considerably, making the BIOS interface notoriously slow. Because of this, [[Line drawing algorithm|line-drawing]], arc-drawing, and [[Bit blit|blitting]] had to be performed by the application to achieve acceptable speed; this was usually done by bypassing the BIOS and accessing video memory directly. 
+*Games, even early ones, mostly required a true graphics mode. They also performed any machine-dependent trick the programmers could think of in order to gain speed. Though initially the major market for the PC was for business applications, games capability became an important factor in driving PC purchases as PC prices fell.
+*Even for standard business applications, speed of execution was a significant competitive advantage. This was shown dramatically by [[Lotus 1-2-3]]'s competitive knockout of rival [[Context MBA]].<ref> Lotus 1-2-3 and Context MBA belonged to a now-mostly-forgotten genre known as "integrated software", today exemplified by Microsoft Works and AppleWorks. Before GUIs, user interfaces were mediated mostly by command keys, and every program had a unique user interface, making it difficult for a user to master more than one or two programs. And the lack of hard disk drives made programs slow to launch, making it inconvenient to use more than one program to accomplish a task. In response to this, monolithic multifunction "integrated" packages arose. Lotus 1-2-3 was built as a three-function "integrated" program: spreadsheet, database, and chart-making. Context MBA included these functions plus a word processor and terminal emulator, the same five functions to be included years later in [[Lotus Symphony]] </ref> The latter, now almost forgotten, preceded Lotus to market, included more functions, was written in [[Pascal programming language|Pascal]], and was highly portable. It was also too slow to be really usable on a PC. Lotus was written in pure assembly language and performed some machine-dependent tricks. It was so much faster that Context MBA was dead as soon as Lotus arrived. 
+*Disk copy-protection schemes, popular at the time, worked by reading nonstandard data patterns on the diskette to verify originality. These patterns were difficult or impossible to detect using standard DOS or BIOS calls, so direct access to the disk controller hardware was necessary for the protection to work.
+
+At first, other than Compaq's models, few "compatibles" really lived up to their claim. "95% compatibility" was seen as excellent. Reviewers and users developed suites of programs to test compatibility, generally including Lotus 1-2-3 and [[Microsoft Flight Simulator]], the two most popular "[[stress testing|stress tests]]." Gradually vendors discovered not only how to emulate the IBM BIOS, but the places where they needed to use identical hardware chips to perform key functions within the system. Eventually, the [[Phoenix BIOS]] and similar commercially-available products permitted computer makers to build essentially 100%-compatible clones without having to reverse-engineer the IBM PC BIOS themselves.
+
+Meanwhile, IBM damaged its own franchise by failing to appreciate the importance of "IBM compatibility", when they introduced products such as the ''[[IBM Portable]]'' (which was outperformed by the ''[[Compaq Portable]]'' launched at the same time, which went on to become the market leader), and later the [[PCjr]], which had significant incompatibilities with the mainline PCs. By the mid-to-late 1980s, buyers began to regard PCs as commodity items, and became skeptical as to whether the [[security blanket]] of the IBM name warranted the price differential. Meanwhile, the incompatible Xeroxes and Digitals and Wangs did not succeed in the marketplace. Although they ran MS-DOS, the inability to run off-the-shelf software written for the IBM PC and true compatibles resulted in poor sales.
+
+===The declining influence of IBM ===
+Since 1981, IBM PC compatibles have grown to dominate both the home and [[business]] markets of commodity computers, with the only notable alternative architecture being the [[Apple Macintosh]] computers (which comprise around 4% of shipping PCs). However, IBM itself lost the leadership role in the market for IBM PC compatibles by 1990.  Three events in retrospect are likely turning points:
+
+*Compaq beating IBM to the market in 1986 with the first [[80386]]-based PC.
+*IBM's 1987 introduction of incompatible technologies, such as its proprietary [[MicroChannel Architecture]] (MCA) [[computer bus]], in its [[IBM Personal System/2|PS/2]] line.
+*The 1988 introduction by the "[[Gang of Nine]]" companies of a rival [[Extended Industry Standard Architecture]] (EISA) bus aimed at toppling, rather than copying, MCA. 
+
+However, as the market evolved, IBM derived a considerable income stream from license fees from companies who paid for licenses to use IBM patents that were in the PC design, to the extent that IBM's focus changed from discouraging PC clones to maximizing its revenue from license sales. IBM finally relinquished its role as a PC manufacturer in April 2005, when it sold its PC Division to [[Lenovo]] for $1.75 billion. 
+
+As of October 2007, [[Hewlett-Packard]] and [[Dell Computer|Dell]] hold the largest shares of the PC market in North America. They are also successful overseas, with [[Acer (company)|Acer]], [[Lenovo]], and [[Toshiba]] also notable. Worldwide, a huge number of PCs are "[[White box (computer hardware)|white box]]" systems assembled by a myriad of local systems builders. Despite advances in computer [[technology]], all current IBM PC compatibles remain very much compatible with the original IBM PC computers, although most of the components implement the compatibility in special [[backward compatibility]] modes used only during a [[computer system|system]] [[booting|boot]].
+
+===Expandability===
+One of the strengths of the PC compatible platform is its modular hardware design. This meant that if a component became obsolete, only an individual component had to be upgraded and not the whole computer as was the case with many of the [[microcomputer]]s of the time. As long as applications used operating system calls and did not write to the hardware directly, the existing applications would work. However, MS-DOS (the dominant operating system of the time) did not have support for many calls for multimedia-hardware, and the BIOS was also inadequate. Various attempts to standardize the interfaces were made, but in practice, many of these attempts were either flawed or ignored. Even so, there were many expansion options, and the PC compatible platform advanced much faster than other competing platforms of the time.
+
+==="IBM PC Compatible" becomes "Wintel"===
+In the 1990s, IBM's influence on PC architecture became increasingly irrelevant. Instead of focusing on staying compatible with the IBM PC, vendors began to focus on compatibility with the evolution of [[Microsoft Windows]]. In 1993, [[Windows NT]] was released that in fact could run on processors other than [[x86 architecture|x86]]. It did require a recompile, however, and many applications weren't recompiled. Still, its hardware independence was taken advantage of when the [[Silicon Graphics|SGI]] x86 workstations were released that were not PC compatible. Thanks to NT's [[Hardware abstraction layer|HAL]], NT and more importantly, its applications could run on them. [[Windows 2000]] was also released for them (support is right on the Windows 2000 CD, minus some drivers). No vendor dares to be incompatible with the latest version of Windows, and Microsoft's annual [[WinHEC]] conferences provides a setting in which Microsoft can lobby for and in some cases dictate the pace and direction of the [[hardware]] side of the PC industry. Microsoft and Windows have become so important to the ongoing development of the  PC hardware that industry writers have taken to using the term "Wintel architecture" ("[[Wintel]]" being a [[portmanteau]] combination of "Windows" and "Intel") to refer to the combined hardware-software platform. This terminology itself is becoming a misnomer though as Intel has lost absolute control of the direction of the development of this hardware platform as [[AMD]] has become a major player and in some aspects a leader, with Intel starting to copy AMD technologies such as [[x86-64]].
+
+===Entertainment software===
+The original IBM PC was not designed with games as its primary focus. Although color graphics adapters and joystick adapters were available from the beginning, the more widely-adapted monochrome adapter and simple sound capabilities made it unsuitable for multimedia applications such as entertainment. It was also priced as a business computer (its primary design focus), well outside of the entertainment market, and thus home users purchased multimedia-oriented computers produced by [[Atari]], [[Commodore International|Commodore]], or [[Amiga]] that offered dozens of colors and near-CD-quality sound capabilities.
+
+The games that ''were'' available for the dawn of the PC used the real strength of the machine, 16-bit processing at a higher clock speed (4.77 megahertz), to overcome the lack of multimedia capabilities. One of the most impressive titles for the machine, available less than a year after launch, was [[Microsoft Flight Simulator]]. Although Flight Simulator was available for other platforms, it ran at a faster framerate and with more detail on the PC, albeit without the colors or music capabilities available on Commodore or Amiga machines.
+
+As the technology of the PC advanced, more advanced games were developed. As early as 1988, [[VGA]] cards were available for PC clones. These offered 256-colour graphics out of a [[palette (computing)|palette]] of 262,144.  Also in 1988, sound cards such as the [[Adlib]] and [[Creative Music System]] (precursor to the [[Sound Blaster]]) were available. These developments brought the PC up to a sufficient level such that it could support arcade games ported to the platform equal to the quality of other home computers of the time. Another advantage was that many consumers opted to equip their PCs with a hard drive, while relatively few home computer platforms were so equipped. This allowed PC games to be more ambitious in their use of resources, and made playing games faster and more convenient.
+
+By 1990, the PC had comparable hardware to competing entertainment platforms of the time, such as the [[Commodore Amiga]], but was still was not taken "seriously" as a games machine. This could have been caused by the higher price, or that the hardware was very awkward to program for, and required the development of different drivers for all the multimedia hardware options available to the consumer. As before, the PC's main strength -- raw processing power -- was used as leverage, and this led to impressive [[3D computer graphics|3D]] or [[pseudo-3D]] titles such as ''[[Wing Commander game series|Wing Commander]]'', ''[[Ultima Underworld]]'', ''[[Stunts (video game)|Stunts]]'', ''[[Wolfenstein 3D]]'' and the subsequent ''[[Doom (video game)|Doom]]''. ''Doom'' in particular had the most wide-spread success, with awareness crossing over into mainstream media.
+
+===Design limitations and more compatibility issues===
+Although the IBM PC was designed for expandability, the designers could not anticipate the hardware developments of the '80s. To make things worse, IBM's choice of the [[Intel 8088]] for the CPU introduced several limitations which were hurdles for developing software for the PC compatible platform. One example was the DOS [[Conventional memory#640 KB barrier|640 KB barrier]] (memory below 640 [[KB]] is known as [[conventional memory]]). This was due to the 20-bit memory [[address space|addressing space]] of the 8088. In order to expand ''PC''s beyond one mebibyte, Lotus, Intel, and Microsoft jointly created [[expanded memory]] (EMS), a scheme to allow access to additional memory provided by add-in hardware, available via a 64 KB "window" inside the 20-bit addressing. Later, Intel CPUs had larger address spaces and could directly address 16 [[MB]] (80286) or more, leading Microsoft to additionally develop [[extended memory]] (XMS) which did not require additional hardware. Expanded and extended memory have incompatible interfaces, so anyone writing software that used more than one mebibyte had to support both systems for the most compatibility. A [[protected mode]] OS can also be written for the [[80286]], but DOS application compatibility was harder than expected, owing not only to the fact that most DOS application directly access the hardware, but also that most BIOS interrupts were in reserved interrupt vectors.
+
+[[Graphics cards]] suffered from their own incompatibilities. Once graphics cards advanced to [[SVGA]] level, the standard for accessing them was no longer clear. At the time, PC programming involved using a [[memory model]] that had 64 KB [[memory segment]]s. The most common [[VGA]] graphics mode's [[screen memory]] fit into a single memory segment. SVGA modes required more memory, so accessing the full screen memory was tricky. Each manufacturer developed their own ways of accessing the screen-memory, even going so far as to not number the modes consistently. An attempt at creating a standard called [[VESA BIOS Extensions|VBE]] was made, but not all manufacturers adhered to it. 
+
+Due to the wide number of third-party adapters for the PC and no standard for interfacing with them, programming the PC could be difficult.  When developing for the PC, a large test-suite of various hardware combinations was needed to make sure the software was compatible with as many PC configurations as possible.  Even the PC itself had no clear application interface to the flat memory model the 386 and higher could provide in protected mode. Again a [[protected mode]] OS could be written for the 80386. This time, DOS compatibility was much easier because of [[virtual 8086 mode]]. Unfortunately programs cannot switch directly to protected mode from that mode so eventually, some new memory-model APIs were developed, [[VCPI]] and [[DPMI]], the latter becoming the most popular.
+
+Meanwhile, consumers were overwhelmed by the many different combinations of hardware on offer. To give the consumer some idea of what sort of ''PC'' would be needed to run a given piece of software, the [[Multimedia PC]] (MPC) standard was set in [[1990]]. It meant that a PC that met the minimum MPC standard could be considered an MPC. Software that could run on a minimalistic MPC-compliant PC would be guaranteed to run on any MPC. The MPC level 2 and MPC level 3 standards were later set, but the term "MPC compliant" never caught on. After MPC level 3 in [[1996]], no further MPC standards were set.
+
+===Challenges to Wintel domination===	 
+The success of Microsoft Windows had driven nearly all other rival commercial [[operating system]]s into near-extinction, and had ensured that the <U+201C>IBM-compatible<U+201D> PC was the dominant [[platform (computing)|computing platform]]. This meant that if a manufacturer only made their software for the [[Wintel]] platform, they would be able to reach out to the vast majority of computer users. By the mid to late [[1990s]], introducing a rival operating system had become too risky a commercial venture. Experience had shown that even if an operating system was superior to Windows, it would be a failure.
+
+However, free operating systems were being developed by enthusiasts in their spare time &mdash; for example [[Linux]]. Despite the fact that Microsoft programmers were programming for a living and the programmers working on Linux were programming as recreation, Linux became used by a great number of people in a vast number of settings. The sheer number of contributors to the Linux project allowed development effort comparable to that of the Microsoft programmers. After a couple of years, Linux had become a very powerful operating system and, because it was free, it spread widely.
+
+Linux had become a serious alternative operating system of technically adept users by the late 1990s.  It was seen as an example of what could be achieved by the [[open source]] movement. While initially lacking in software and being incompatible with Windows, Linux (like Windows NT) was shown to be more stable than Windows 9x-based operating systems in many instances. Linux has so far failed to gain marketshare outside of technically adept users, mainly due to its lack of software and hardware compatibility, and (contested) reputation of being complex and not user-friendly.
+
+On the hardware front, Intel initially licensed their technology so that other manufacturers could make [[x86 architecture|x86]] [[Central processing unit|CPUs]].  As the "Wintel" platform gained dominance Intel abandoned this practice.  Companies such as [[AMD]] and [[Cyrix]] developed alternative CPUs that were functionally compatible with Intel's. Towards the end of the 1990s, AMD was taking an increasing share of the CPU market for PCs.  AMD even ended up playing a significant role in directing the evolution of the 'x86 platform when its Athlon line of processors continued to develop the classic x86 architecture as Intel deviated with its "Netburst" architecture for the Pentium 4 CPUs and the IA-64 architecture for the Itanium line of server CPUs.  AMD developed the first 64 bit extension of the x86 architecture (that forced intel to make a clean-room version of it, in all its latest cpus).  In 2006 Intel began abandoning Netburst with the release of their line of "Core" processors that represent an evolution of the earlier Pentium III.
+
+[[DirectX]], while solving many of the problems in programming the PCs, was only compatible with Windows. [[OpenGL]], which was available for several platforms, was ported to Windows, and offered a means of rapidly developing cross-platform 3D applications.
+
+===The PC today===
+{{main|Personal computer}}
+
+[[Image:Computer.tower.750pix.jpg|thumb|right|150px|A modern PCs [[computer case|case]]. This is more fancy than the traditional [[beige box]] cases used throughout the 90s and late 80s.]]
+
+The term 'IBM PC compatible' is not commonly used for current computers. The processor speed and memory are many [[orders of magnitude]] greater than they were on the original [[IBM PC]], yet any well-behaved program for the original IBM PC that does not call the hardware directly can still run on a modern PC. Some say that the desire for [[backward compatibility]] might have hindered the development of the PC, but many believe the ability to run [[legacy system|legacy]] software is what helped keep the PC alive.
+
+The modular design makes it possible to choose every component of a PC from a variety of different manufacturers and to buy only what is needed for the tasks the computer is intended to carry out. Upgrades are easy. It is also possible to choose the operating system to run on the PC, and what software to run.
+
+Software and compatibility amongst different PCs and hardware compatibility is no longer a major issue. There are other platforms in existence today (mostly the Apple Macintosh, which is now known as Mac), but they are a minority.
+
+Thanks to intuitive user interfaces and the information-gathering and communications capabilities of the [[Internet]], the computer has finally escaped from the domain of computer professionals and computer hobbyists, and has become mainstream.
+
+The design of [[computer case]]s has become more elaborate and users can modify the cases themselves (this is known as [[case modding]]), but even so, the plain ''[[beige box]]'' case design that has been around since the '80s is still common.
+
+There is a thriving [[demo scene]], and a huge community of people willing to write [[free software]].
+
+==Hardware configurations==
+[[Image:Compaq portable.jpg|thumb|right|250px|The [[Compaq Portable]] was one of the first [[portable]] PC compatibles that was released.]]
+
+A ''PC'' can come in one of the following configurations:
+
+===Desktop computer===
+A computer that sits on the top of a desk (or often under the desk, with its [[peripheral]]s on top of the desk). [[Portable|Portability]] is not part of the design, so the ''desktop computers'' tend to be too heavy and too large to carry. This has the advantage that the components do not need to be miniaturised, and are therefore cheaper.
+
+===Portable computer===
+Not long after the first IBM-PC came out, Compaq produced the [[Compaq Portable]] &mdash; one of the first [[portable]] PC compatible computers. Weighing 28 pounds, it was more of a "luggable" than a "portable".
+
+The [[portable computer]] evolved into the [[laptop]]. Unlike laptops, portable computers usually do not run on [[Battery (electricity)|batteries]].
+
+===Laptop===
+[[Image:Laptop by Brainiac.jpg|thumb|right|250px|A PC compatible [[laptop]].]]
+
+A [[laptop]] (also known as a ''notebook'') is a PC that has been miniaturized so that it is easy to carry and can fit into a small space.  It uses a flat-screen [[LCD]] which is folded onto the [[computer keyboard|keyboard]] to create a slab-shaped object.  Carrying a [[laptop]] around is easy, but this increased portability comes at a cost.  To reduce size and mass, a special design is used with smaller components.  These components are more expensive than regular components.  The design is more integrated, meaning that it is less expandable, although the [[RAM]] and the [[hard drive]] can be upgraded (though to a lesser degree than they can be on most desktops).  Laptops are also battery-powered, so as well as being smaller, the components need to have a low power usage.
+
+===Palmtops and Sub-notebooks===
+In 1996, [[Toshiba]] produced the [[Libretto (notebook)|Libretto]] range of ''sub-notebooks'' (''mini-notebooks''). The first model (the ''Libretto 20'') had a volume of [[1 E-4 m<U+00B3>|821.1 cm<U+00B3>]] and weighed just 840 grams. They were fully ''PC compatible'' (unlike [[Personal digital assistant|PDA]]s). There were several models produced in the [[Libretto (notebook)|Libretto]] range. In 2005, Toshiba announced a new model, the Libretto U100.
+
+===Pocket computers===
+The [[OQO]] model 2 was released in [[2007]], and is the first PC compatible computer to fit in your pocket, this may end up supplanting traditional non-x86 PDAs such as [[Palm, Inc.|Palm]]-brand ones and may eliminate the need for slow emulators for PDAs such as the [[Palm OS]] port of [[DOSBox]] and other slow virtualization suites.  Previously, the common dependence on bulky connection ports and mechanical drives has limited the smallest possible size for PC-compatible computers prior to the introduction of [[USB]].
+
+==Operating systems==
+Over the years, there have been many [[operating system]]s for the PC:
+*[[CP/M-86]] from [[Digital Research]].
+*[[DOS]] and its derivatives,
+**[[PC-DOS]] from [[IBM]] - no longer commercially available.
+**[[MS-DOS]] from [[Microsoft]] - no longer commercially available.
+**[[DR-DOS]] from Digital Research - Still commercially available from [[DeviceLogics]].
+**[[OpenDOS]] derived from DR-DOS
+**[[Enhanced Dr-DOS]] Open source derivative of OpenDOS - development continues.
+**[[FreeDOS]] free software [[Rewrite (programming)|rewrite]] of DOS from scratch under the GPL - development continues.
+**[[FreeDOS-32]] extended version of FreeDOS with restricted backward compatibility - development continues.
+*[[Microsoft Windows]] in various forms,
+**[[Windows 3.1x|Windows 3.1]]
+**[[Windows 95]] and derivatives
+**[[Windows NT]] and its derivatives
+*[[OS/2]] from [[IBM]] 
+*[[BeOS]]
+*[[ReactOS]] GPL licensed NT-compatible kernel -  development continues.
+*[[Unix]] variants,
+**[[Coherent (operating system)|Coherent]] - no longer available.
+**[[Xenix]] now [[SCO Unix]]. 
+**[[Linux|GNU/Linux]] in its many distributions,
+***[[Debian]]
+***[[Fedora (Linux distribution)|Fedora]] and [[Red Hat Enterprise Linux]] from [[Red Hat]]
+***[[Ubuntu (Linux distribution)|Ubuntu]]
+***[[Gentoo Linux|Gentoo]]
+***[[Mandriva]]
+***[[Slackware]]
+***[[SUSE]]
+***[[List of Linux distributions|many others]] (Not all are suitable for PC Hardware)
+**[[BSD]] and its derivatives
+***[[OpenBSD]]
+***[[NetBSD]]
+***[[FreeBSD]]
+***[[DragonflyBSD]]
+**[[Solaris (operating system)|Solaris]]
+
+There were also many other OSes that however weren't well known.
+
+==See also==
+*[[Computer hardware]]
+*[[Computer software]]
+*[[IBM PC]]
+*[[Personal computer]]
+*[[Homebuilt computer]]
+*[[History of computing hardware (1960s-present)]]
+*[[PC speaker]]
+*[[AT form factor]]
+*[[x86 architecture]]
+
+==Notes==
+<references/>
+
+[[Category:IBM PC compatibles|*]]
+
+[[de:IBM-PC-kompatible Computer]]
+[[es:Compatible IBM PC]]
+[[fr:Compatible PC]]
+[[ko:IBM PC <U+D638><U+D658><U+AE30><U+C885>]]
+[[id:Kompatibel PC IBM]]
+[[lt:PC]]
+[[nl:IBM PC-compatibel]]
+[[ja:PC/AT<U+4E92><U+63DB><U+6A5F>]]
+[[pt:IBM PC compat<U+00ED>vel]]
+[[ru:IBM PC-<U+0441><U+043E><U+0432><U+043C><U+0435><U+0441><U+0442><U+0438><U+043C><U+044B><U+0435> <U+043A><U+043E><U+043C><U+043F><U+044C><U+044E><U+0442><U+0435><U+0440><U+044B>]]
+[[sv:Pc (dator)]]
+[[th:IBM PC compatible]]
+[[zh:IBM PC<U+517C><U+5BB9><U+673A>]]

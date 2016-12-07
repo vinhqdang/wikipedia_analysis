@@ -1,0 +1,488 @@
+{{alternateuses|MDAC (disambiguation)}}
+{{featured article}}
+{{Infobox_Software |
+name = MDAC (Microsoft Data Access Components) |
+screenshot = [[Image:MDAC Architecture.svg|251px]] |
+caption = [[Microsoft Corporation]]'s MDAC provides a uniform framework for accessing a variety of data sources on their [[Microsoft Windows|Windows]] platform. |
+developer = Microsoft |
+latest_release_version = 2.8 SP1 (2.81.1117.6) |
+latest_release_date = May 2005 |
+operating_system = [[Windows 98]], [[Windows Me]], [[Windows NT 4]], [[Windows 2000]], [[Windows XP]], [[Windows Server 2003]] |
+genre = [[Database]] |
+license = [[Microsoft EULA]] |
+website = [http://msdn2.microsoft.com/en-us/data/aa937729.aspx Microsoft MDAC Center] |
+}}
+'''Microsoft Data Access Components''' (commonly abbreviated '''MDAC''') is a group of [[Microsoft]] technologies that interact together as a [[framework]] that allows programmers a uniform and comprehensive way of developing applications for accessing almost any data store. It is made up of various components: [[ActiveX Data Objects]] (ADO), [[OLE DB]], and [[Open Database Connectivity]] (ODBC). There have been several deprecated components as well, such as the [[Microsoft Jet Database Engine]], MSDASQL, and [[Remote Data Services]] (RDS). Some components have also become [[obsolete]], such as the former [[Data Access Objects]] [[API]] and [[Remote Data Objects]].
+
+The first version of MDAC was released in August 1996, and according to statements from Microsoft was more of a concept than a stand-alone program and had no widespread distribution method, though later Microsoft released upgrades to MDAC as web-based redistributable packages. Eventually, later versions were integrated with [[Microsoft Windows]], and in MDAC 2.8 SP1 they ceased offering MDAC as a redistributable package. Throughout its history MDAC has been the subject of several security flaws, which lead to attacks such as an [[escalated privileges attack]], although the vulnerabilities were generally fixed in later versions and fairly promptly. The current version is 2.8 [[service pack]] 1, but the product has had many different versions and many of its components have been deprecated and replaced by newer Microsoft technologies. MDAC is now known as Windows DAC in [[Windows Vista]].
+
+== Architecture ==
+The latest version of MDAC (2.8) consists of several interacting components, all of which are [[Microsoft Windows|Windows]] specific except for [[ODBC]] (which is available on several platforms). MDAC architecture may be viewed as three layers: a programming interface layer, consisting of [[ActiveX Data Objects|ADO]] and [[ADO.NET]], a database access layer developed by database vendors such as Oracle and Microsoft ([[OLE DB]], .NET managed providers and [[ODBC]] drivers), and the database itself. These component layers are all made available to applications through the MDAC [[Application programming interface|API]]. The [[Microsoft SQL Server]] Network Library, a proprietary access method specific to Microsoft SQL Server, is also included in the MDAC. Developers of Windows applications are encouraged to use ADO or ADO.NET for data access, the benefit being that users of the application program are not constrained in their choice of database architecture except that it should be supported by MDAC. Naturally, developers still have the choice of writing applications which directly access OLE DB and ODBC.
+
+=== Microsoft SQL Server Network Library ===
+The Microsoft SQL Server Network Library (also known as Net-Lib) is used by the Microsoft SQL Server to read and write data using many different [[network protocol]]s. Though Net-Lib is specific to the SQL Server, Microsoft includes it with MDAC. The SQL Server uses the Open Data Services (ODS) library to communicate with Net-Lib, which interfaces directly with the [[Windows NT]] operating system line's [[Win32]] [[Architecture of Windows 2000#User mode|subsystem]]. The SQL Server Network Library is controlled through the use of a Client Network Utility, which is bundled with the SQL Server.
+
+Each Net-Lib supported network protocol has a separate driver (not to be confused with a [[device driver]]), and has support for a [[session layer]] in its protocol stack. There are two general types of Net-Lib: the primary and the secondary. The primary Net-Lib consists of a ''Super Socket'' Net-Lib and the ''Shared Memory'' Net-Lib, while there are numerous secondary Net-Libs, including [[TCP/IP]] and [[named pipes]] network libraries (named pipes are a method of communicating with other processes via a system-persistent [[Pipeline (software)|pipeline]] that is given an identity). The Microsoft OLE DB Provider for SQL Server (SQLOLEDB) communicates via primary Net-Libs.
+
+The Super Socket Net-Lib deals with inter-computer communications and coordinates the secondary Net-Libs &mdash; though the TCP/IP secondary Net-Lib is an exception in that it calls on the [[Windows Socket 2]] API directly. The Banyan VINES, AppleTalk, Servernet, IPX/SPX, Giganet, and RPC Net-Libs were dropped from MDAC 2.5 onwards. The Network Library router had the job of managing all these protocols, however now only the named pipes secondary Net-Lib is managed by the router. The Super Socket Net-Lib also handles [[data encryption]] via the use of the Windows [[Secure Sockets Layer|SSL]] API.
+
+The Shared Memory Net-Lib, on the other hand, manages connections between multiple instances of SQL Server that exist on one computer. It uses a [[shared memory]] area to communicate between the processes. This is inherently secure; there is no need for data encyption between instances of SQL Server that exist on one computer as the operating system does not allow any other process access to the instances' area of shared memory.
+
+Net-Lib is also able to support the impersonation of a logged in user's security context for protocols that support authenticated connections (called ''trusted connections''). This allows Net-Lib to provide an integrated logon authentication mechanism via the use of [[Windows Authentication]]. Windows Authentication is not supported on Windows 98 or Windows Me.<ref name="net-lib">Kalen Delaney, "Inside Microsoft SQL Server 2000", ''Microsoft Press'', pp. 70-74.</ref>
+
+=== OLE DB ===
+[[OLE DB]] (also called OLEDB or OLE-DB) allows MDAC applications access to different types of [[data]] stores in a uniform manner. Microsoft has used this technology to separate the application from the data store that it needs to access. This was done because different applications need access to different types and sources of data, and do not necessarily need to know how to access technology-specific functionality. The technology is conceptually divided into ''consumers'' and ''providers''. The consumers are the applications that need access to the data, and the provider is the software component that exposes an OLE DB interface through the use of the [[Component Object Model]] (or COM).
+
+OLE DB is the database access interface technology used by MDAC. OLE DB providers can be created to access such simple data stores as a text file or [[spreadsheet]], through to such complex databases as [[Oracle database|Oracle]] and [[Microsoft SQL Server|SQL Server]]. However, because different data store technology can have different capabilities, OLE DB providers may not implement every possible interface available. The capabilities that are available are implemented through the use of COM objects - an OLE DB provider will map the data store technology's functionality to a particular COM interface. Microsoft calls the availability of an interface to be "provider-specific" as it may not be applicable depending on the database technology involved. Additionally, however, providers may also augment the capabilities of a data store - these capabilities are known as ''services'' in Microsoft parlance.
+
+The ''Microsoft OLE DB Provider for SQL Server'' (SQLOLEDB) is the OLE DB provider that Microsoft provides for the [[Microsoft SQL Server]] from version 6.5 upwards. According to Microsoft, SQLOLEDB will be "the primary focus of future MDAC feature enhancements [and] will be available on the 64-bit Windows operating system."<ref name="sqloledb">Prash Shirolkar (Author); Alyssa Henry (contributor); Stephen Pepitone (Contributor); Acey J. Bunch (contributor), [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnmdac/html/data_mdacroadmap.asp "Data Access Technologies Road Map"], ''[[Microsoft Corporation]]'', accessed September 19, 2005.</ref>
+
+=== ODBC ===
+[[Open Database Connectivity]] (ODBC) is a native interface that is accessed through a [[programming language]] (usually [[C (programming language)|C]]) that can make calls into a [[native library]]. In MDAC this interface is defined as a [[DLL]]. A separate module or [[database driver|driver]] is needed for each database that must be accessed. The functions in the ODBC API are implemented by these DBMS-specific drivers. The driver that Microsoft provides in MDAC is called the SQL Server ODBC Driver (SQLODBC), and (as the name implies) is designed for Microsoft's SQL Server. It supports SQL Server v6.5 and upwards.<ref name="sqlodbc">''[[ibid.]]''</ref> ODBC allows programs to use [[SQL]] requests that will access databases without having to know the proprietary interfaces to the databases. It handles the SQL request and converts it into a request that the individual database system understands.
+
+=== ADO ===
+[[ActiveX Data Objects]] ('''ADO''') is a high level programming interface to OLE DB. It uses a hierarchical [[object oriented programming|object]] model to allow applications to programmatically [[CRUD (acronym)|create, retrieve, update and delete]] data from sources supported by OLE DB. ADO consists of a series of hierarchical COM-based objects and collections, an object that acts as a container of many other objects. A programmer can directly access ADO objects to manipulate data, or can send an [[SQL]] query to the database via several ADO mechanisms. ADO is made up of nine objects and four [[Collection class|collections]].
+
+The collections are:
+
+# '''Fields:''' This collection contains a set of Field objects. The Collection can be used in either a Recordset object or in a Record object. In a Recordset object, each of the Field objects that make up the Fields collection corresponds to a column in that Recordset object. In a Record object, a Field can be an absolute or relative URL that points into a tree-structured namespace (used for semi-structured data providers like the Microsoft OLE DB Provider for Internet Publishing) or as a reference to the default Stream object associated with that Record object.<ref name="adofieldscollection">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdcolfields.asp "Fields Collection"], "ADO 2.8 API Reference", accessed September 19, 2005.</ref>
+# '''Properties:''' An object can have more than one Property object, which are contained in the object's Properties collection.<ref name="adopropertiescollection">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdcolproperties.asp "Properties Collection"], "ADO 2.8 API Reference", accessed September 19, 2005.</ref>
+# '''Parameters:''' A Command object can have several Parameter commands to change its predefined behaviour, and each of the Parameter objects are contained in the Command object's Parameters collection<ref name="adoparameterscollection">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdcolparameters.asp "Parameters Collection"], "ADO 2.8 API Reference", accessed September 19, 2005.</ref>
+# '''Errors:''' All provider created errors are passed to a collection of Error objects, while the Errors collection itself is contained in a Connection object. When an ADO operation creates an error, the collection is cleared and a new group of Error objects are created in the collection.<ref name="adoerrorscollection">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdcolerrors.asp "Errors Collection"], "ADO 2.8 API Reference", accessed September 19, 2005.</ref>
+
+The objects are:
+
+# '''Connection:''' The connection object is ADO's connection to a data store via OLE DB. The connection object stores information about the session and provides methods of connecting to the data store. As some data stores have different methods of establishing a connection, some methods may not be supported in the connection object for particular OLE DB providers. A connection object connects to the data store using its 'Open' method with a connection string which specifies the connection as a list of key value pairs (for example: "<code>Provider='SQLOLEDB';Data Source='TheSqlServer'; Initial Catalog='Northwind';Integrated Security='SSPI';</code>").<ref name="adoconnectionobject">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdconusingconnectionobj.asp "Using a connection object"], "ADO 2.8 Programmers Guide", accessed September 10, 2005.</ref> The start of which must identify the type of data store connection that the connection object requires. This must be either:
+#* an OLE DB provider (for example SQLOLEDB), using the syntax "provider="
+#* a file name, using the syntax "file name="
+#* a remote provider and server (see [[#Remote Data Services (RDS)|RDS]]), using the syntax "Remote provider=" and "Remote server="
+#* an absolute [[URL]], using the syntax "URL="<ref name="adoconnectionstring">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdproconnectionstring.asp "ADO Connection String"], "ADO 2.8 Programmers Guide", accessed September 10, 2005.</ref>
+# '''Command:''' After the connection object establishes a session to the data source, instructions are sent to the data provider via the command object. The command object can send SQL queries directly to the provider through the use of the ''CommandText'' property, send a parameterised query or [[stored procedure]] through the use of a ''Parameter'' object or ''Parameters'' collection or run a query and return the results to a dataset object via the ''Execute'' method. There are several other methods that can be used in the Command object relating to other objects, such as the Stream, RecordSet or Connection objects.<ref name="adocommandobject">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdconcommandoverview.asp "Command Object Overview"], "ADO 2.8 Programmers Guide", accessed September 10, 2005</ref>
+# '''Recordset:''' A [[recordset]] is a group of records, and can either come from a base table or as the result of a query to the table. The RecordSet object contains a ''Fields'' collection and a ''Properties'' collection.<ref name="adorecordsetobject">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdconexploringtherecordset.asp "Examining Data"], "ADO 2.8 Programmers Guide", accessed September 10, 2005.</ref> The Fields collection is a set of Field objects, which are the corresponding [[column (database)|columns]] in the table. The Properties collection is a set of Property objects, which defines a particular functionality of an OLE DB provider. The RecordSet has numerous methods and properties for examining the data that exists within it.<ref name="adorecordsetobjectmethodsandproperties">A full list of ADO methods and properties that allow the examination of data in a recordset can be found in [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdobjodbrecpme.asp Microsoft's API documentation]</ref> Records can be updated in the recordset by changing the values in the record and then calling on the <code>Update</code> or <code>UpdateBatch</code> method. Adding new records is performed through the <code>AddNew</code> function and then by calling on the <code>Update</code> or <code>UpdateBatch</code> method.<ref name="adoeditingdata">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdconeditingdata.asp "Editing data"], "ADO 2.8 Programmers Guide", accessed September 10, 2005.</ref> Records are also deleted in the recordset with the Delete method and then by calling on the Update method. <!-- the preceding couple sentence should be switched from passive to active if possible -->However, if for some reason the deletion cannot occur, such as because of violations in [[referential integrity]], then the recordset will remain in edit mode after the call to the <code>Update</code> method. The programmer must explicitly call on the <code>CancelUpdate</code> function to cancel the update. Additionally, ADO can rollback transactions (if this is supported) and cancel batch updates.<ref name="adodelete">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdcondeletingrecords.asp "Deleting records using the Delete method"], "ADO 2.8 Programmers Guide", accessed September 10, 2005.</ref> Recordsets can also be updated in one of three ways: via an immediate update, via a batch update,<ref name="adoimmediatevsbatch">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdconupdatepersistdata.asp "Updating and Persisting Data"], "ADO 2.8 Programmers Guide", accessed September 12, 2005.</ref> or through the use of transactions:
+## '''Immediate:''' The recordset is locked using the <code>adLockOptimistic</code> or <code>adLockPessimistic</code> lock. The data is updated at the data source after the record is changed and the <code>Update</code> method is called.
+## '''Batch:''' The recordset is locked using <code>adLockBatchOptimistic</code> and each time <code>Update</code> is called the data is updated in a temporary buffer. Finally, when <code>UpdateBatch</code> is called the data is completely updated back at the data source. This has the advantage of it all being done in memory, and if a problem occurs then <code>UpdateCancel</code> is called and the updates are not sent to the data source
+## '''Transaction:''' If the OLE DB provider allows it, [[transactions]] can be used. To start the transaction, the programmer invokes the <code>BeginTrans</code> method and does the required updates. When they are all done, the programmer invokes the <code>CommitTrans</code> method. <code>RollbackTrans</code> can be invoked to cancel any changes made inside the transaction and [[Rollback (data management)|rollback]] the database to the state before the transaction began<ref name="adotransactions">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdcontrxproc.asp "Transaction Processing"], "ADO 2.8 Programmers Guide", accessed September 12, 2005.</ref>
+# '''Record:''' This object represents one [[record (database)|record]] in the database, and contains a fields collection. A RecordSet consists of a collection of Record objects.<ref name="adorecordobjects">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdobjrecord.asp "Record Object"], "ADO 2.8 API Reference", accessed September 12, 2005.</ref>
+# '''Stream:''' A stream, mainly used in a RecordSet object, is a means of reading and writing a stream of bytes.<ref name="adostreamobjects">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdmscadofordocuments.asp "Records and Streams"], "ADO 2.8 Programmers Guide", accessed September 12, 2005.</ref> It is mostly used to save a recordset in an XML format,<ref name="adostreamxml">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdmscstreamspersistence.asp "Streams and Persistence"], "ADO 2.8 Programmers Guide", accessed September 12, 2005.</ref> to send commands to an OLE DB provider as an alternative to the CommandText object and to contain the contents of a binary or text file.
+# '''Parameter:''' A parameter is a means of altering the behaviour of a common piece of functionality, for instance a stored procedure might have different parameters passed to it depending on what needs to be done - these are called ''parameterised commands''.<ref name="adoparameterobjects">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdobjparameter.asp "Parameter Object"], "ADO 2.8 API Reference", accessed September 12, 2005.</ref>
+# '''Field:''' Each Record object contains many fields, and a RecordSet object has a corresponding Field object also. The RecordSet object's Field object corresponds to a [[column (database)|column]] in the database table that it references.<ref name="adofieldobjects">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdobjfield.asp "Field Object"], "ADO 2.8 API Reference", accessed September 12, 2005.</ref>
+# '''Property:''' This object is specific to the OLE DB provider and defines an ability that the provider has implemented. A property object can be either a ''built-in'' property &mdash; it is a well defined property implemented by ADO already and thus cannot be altered &mdash; or can be a ''dynamic'' property &mdash; defined by the underlying data provider and can be changed<ref name="adopropertyobjects">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdobjproperty.asp "Property Object"] "ADO 2.8 Programmers Guide", accessed September 13, 2005.</ref>
+# '''Error:''' When a OLE DB provider [[error]] occurs during the use of ADO, an Error object will be created in the Errors collection.<ref name="adoerrorobject">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdconerrorhandling.asp "Error Handling"], "ADO 2.8 Programmers Guide", accessed September 18, 2005.</ref> Other errors do not go into an Error object, however. For instance, any errors that occur when manipulating data in a RecordSet or Field object are stored in a Status property.<ref name="adorsandfielderrors">''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdconfieldrelatederrors.asp "Field-Related Error Information"], "ADO 2.8 Programmers Guide", accessed September 18, 2005; & ''MSDN'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdconfieldrelatederrors.asp "Recordset-Related Error Information"], "ADO 2.8 Programmers Guide", accessed September 18, 2005.</ref>
+
+=== ADO.NET ===
+[[ADO.NET]] is the latest version of ADO (after ADO 2.8, now often referred to as ADO Classic) and is part of the MDAC 2.8 stack alongside classic ADO. It is built around [[Microsoft .NET]]. Though sometimes seen as an evolutionary step up from ADO, some fundamental structural changes were made by Microsoft. ADO.NET runs through a .NET Managed Provider, a modified version of an OLE DB provider specifically designed for .NET. The object structure is no longer built around a Recordset object. Instead a Dataset object is used to contain data gathered from multiple sources. This is transparent to the programmer. Unlike the old ADO Recordset, the Dataset's design allows for disconnected data. Conceptually, a Dataset object can be seen as a small in-memory relational database in its own right that allows for manipulation of data in any direction (a Recordset was a forward-only reader). In order to propagate changes back into the database, a Dataadapter object is used that transfers data from between the data source and the DataSet object. [[Cursor (databases)|Cursor]]s were also deprecated in ADO.NET, being replaced with a Datareader object, which is used to efficiently process a large list of results one record at a time without storing them.<ref name="ado.net">Doug Rothaus & Mike Pizzo, [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dndotnet/html/adonetprogmsdn.asp "ADO.NET for the ADO Programmer"], ''MSDN'', accessed September 22, 2005.</ref>
+
+== Deprecated & obsolete components ==
+MDAC is a continually evolving component framework. As such, there have been several components that were previously part of it but have since been deprecated or removed entirely from the framework.
+
+=== Microsoft Jet Database Engine and JRO ===
+{{main|Microsoft Jet Database Engine}}
+
+Jet stands for ''Joint Engine Technology'' and was a [[database engine]] used for [[Microsoft Access]], [[Microsoft Exchange Server]] and [[Visual Basic]]. Jet was part of a [[Relational Database Management System]] (RDBMS) and offered a single [[interface (computer science)|interface]] that other software could use to access Microsoft databases. Jet also provided support for security, [[referential integrity]], [[database transaction|transaction]] [[transaction processing|processing]], [[index (database)|index]]ing, [[record locking|record]], page locking and data replication. In later versions of Jet, the engine was extended to run [[SQL]] queries, store character data in [[Unicode]] format, create [[View (database)|views]], and allowed bi-directional replication with the Microsoft SQL Server. It has since been superseded by [[MSDE]].
+
+There were three modules to Jet. One was the '''Native Jet ISAM Driver''', a Jet [[Library (computer science)#Dynamic linking|dynamic link library]] (DLL) that could directly manipulate Microsoft Access database files (MDB), which was a modified form of an [[Indexed Sequential Access Method]] (ISAM) database. Another one of the modules were the '''ISAM Drivers''', DLLs that allowed access to ISAM databases, among them being [[Xbase]], [[Paradox (database)|Paradox]], [[Btrieve]] and [[FoxPro]] files. The final module was the '''Data Access Objects (DAO) DLL''', [[Data Access Objects|DAO]] allowed programmers access to the Jet engine. It was basically an [[object-oriented]] data language used by Access Basic and [[Visual Basic]] application developers to access Jet.
+
+Similarly, the ''Microsoft Jet OLE DB Provider and Replication Objects'' (JRO) which allowed replication between Jet data sources was removed from MDAC 2.6<ref name="jro">''Microsoft'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/oledb/htm/oledb_deprecated_components.asp Deprecated Components (OLE DB)], retrieved August 5, 2005.</ref>
+
+=== MSDASQL and Oracle ODBC ===
+The Microsoft OLE DB Provider for ODBC, or ''MSDASQL'', was an OLE DB provider for allowing [[ActiveX Data Objects]] access to databases via any ODBC driver. There were several OLE-DB providers supplied by Microsoft (providers available were for the Indexing Service, [[Active Directory]], Jet, SQL Server, Oracle and Internet Publishing), however unless specified, MSDASQL was the default provider used by ADO. After MDAC 2.5 both the Oracle ODBC driver and MSDASQL supported Oracle 7 and partially supported Oracle 8i. Features that were not supported were:
+* [[CLOB]], [[BLOB]], [[BFILE]], [[NCHAR]], [[NCLOB]], and [[NVARCHAR2]] Oracle datatypes
+* Unicode support for Oracle 7.x and 8i
+* multiple client instances of Oracle
+* nested [[outer join]]s
+Microsoft deprecated the MSDASQL component for their 64-bit operating systems<ref name="msdasql">''Microsoft'', [http://msdn.microsoft.com/data/mdac/default.aspx?pull=/library/en-us/dnmdac/html/data_mdacroadmap.asp#mdac%20technologies%20road%20map%20old_topic5 "Data Access Technologies Road Map", Deprecated MDAC Components], retrieved July 30, 2005; & ''Microsoft [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdrefodbcprovspec.asp "ADO Programmer's Guide" Appendix A: Providers, Microsoft OLE DB Provider for ODBC], retrieved July 30, 2005.</ref> and the Microsoft Oracle ODBC driver was later superseded by a .NET Managed Oracle Provider, which supported Oracle 9i.<ref name="oracleodbclimitations">''Microsoft'', MS KB article 244661: [http://support.microsoft.com/kb/q244661/ INFO: Limitations of Microsoft Oracle ODBC Driver and OLEDB Provider], last reviewed August 25, 2004, retrieved August 4, 2005.</ref>
+
+===Remote Data Services (RDS)===
+[[Remote Data Services]] (RDS) allowed the retrieval of a set of data from the server, which the client then altered in some way and then sent back to the server for further processing.<ref name="rds">''Microsoft'', [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/ado270/htm/mdmscsection2_rds.asp "Remote Data Service (RDS)"], retrieved August 11, 2005.</ref> With the popular adoption of [[Transact-SQL]], which extends SQL with such programming constructs as loops and conditional statements, this became less necessary and it was eventually deprecated in MDAC 2.7. Microsoft produced [[SOAP]] Toolkit 2.0, which allows clients to do this via an open [[XML]]-based standard.<ref name="rdsdeprecated">''Microsoft'', [http://msdn.microsoft.com/data/mdac/default.aspx?pull=/library/en-us/dnmdac/html/data_mdacroadmap.asp#mdac%20technologies%20road%20map%20old_topic5 "Data Access Technologies Roadmap"], "Deprecated MDAC Components", retrieved August 11, 2005.</ref>
+
+===SQLXML===
+SQLXML was designed for SQL Server 2000, but was deprecated with MDAC 2.6. It allowed Microsoft's relational database to be viewed by [[XPath]] and allowed data to viewable as an [[XML]] file. It has not actually been deprecated but has been removed from later versions of MDAC, though Microsoft does provide it as a downloadable component and will support it on their 64-bit operating systems.
+
+===Obsolete components===
+Several components have been completely removed from MDAC by Microsoft and are no longer supported. They are:
+* '''ESQL/C:''' [[Embedded SQL]] (also known as E-SQL or ESQL/C) is a way of using SQL when programming in Visual C. Microsoft dropped support for this after SQL Server 6.5 was released, though they did license some of the ESQL/C run-time environment to a company called [[Micro Focus]], who develops [[COBOL]] compilers and tools<ref name="esql">Kalen Delaney, "Inside Microsoft SQL Server 2000", ''Microsoft Press'', p65.</ref>
+* '''DAO:''' DAO, or [[Data Access Objects]] were an [[object oriented]] interface created by Microsoft which allowed early versions of [[Microsoft Access]] and [[Visual Basic]] to access the [[Microsoft Jet Database Engine|Jet database engine]]. Later (in version 3.5) it was able to bypass the Jet engine altogether and directly access [[ODBC]] data sources.<ref name="dao">Christine Solomon, "Microsoft Office 97 Developer's Handbook", ''Microsoft Press''. pp. 195-200.</ref>
+* '''RDO:''' [[Remote Data Objects]], or RDO, was a [[Microsoft]] technology that allowed for the creation of interfaces that directly called on ODBC. RDO version 2.0 was the final version developed by Microsoft.
+* '''DB-Library:''' a C-based API that allowed an application to interact with SQL Server. It will not be supported on any product after SQL Server 2000, and no added features were added after SQL Server 6.5.
+
+==History==
+Microsoft has released several versions of MDAC throughout its lifetime. The distribution method has been varied and the feature set is different for each version.
+
+;MDAC 1.0
+MDAC 1.0 was first released in August 1996.<ref name="mdac1releasede">{{de icon}} Christian Koller, [http://www.aspheute.com/artikel/20000327.htm "ADO und MDAC Versionen"] : ''MDAC 1.0 and 1.1 (OLE DB 1.0 and OLE DB 1.1)'' accessed July 1, 2005.</ref> According to Microsoft, "MDAC 1.0 existed more as concept than a coordinated, stand-alone setup program." The MDAC 1.0 stack consisted of ODBC 3.0, OLE DB 1.1, ADO 1.0, and the [[Advanced Data Connector]] (ADC) 1.0 &mdash; which according to Microsoft was the precursor to the Remote Data Service of MDAC 1.5. It also included ODBC drivers for Access/Jet, SQL Server and [[Oracle database|Oracle]] databases. MDAC 1.0 was released via several mechanisms: the Advanced Data Connector shipped with [[Internet Information Server]] (IIS) 3.0 and as a downloadable [[.cab|cab file]]; OLE DB 1.1 and ADO 1.0 shipped with the OLE DB 1.1 SDK, which came with [[Visual Studio]] 97 and was also downloadable.<ref name="mskbinfo190463">{{cite web| publisher=Microsoft| url=http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q190463&ID=KB;EN-US;Q190463| title=INFO: What are MDAC, DA SDK, ODBC, OLE DB, ADO, RDS, and ADO/MD?| accessdate=2005-07-01| year=March 14, 2005}}</ref> MDAC 1.0 came with Active Server Pages, that itself came in IIS 3.0, and also came with [[Visual InterDev]] 1.0.<ref name="mdac15releasede">{{de icon}} {{cite web| first=Christian| last=Koller| url=http://www.aspheute.com/artikel/20000327.htm| title=ADO und MDAC Versionen| work=MDAC 1.5| accessdate=2005-07-01}}</ref>
+
+;MDAC 1.5
+MDAC 1.5 was released between September 1997 and March 1998, and involved a more centralised distribution mechanism than MDAC 1.0. It was released with Microsoft Internet Explorer 4.0, the Internet Client SDK 4.0 and through a CD-ROM given out at the 1997 [[Professional Developers Conference]] (PDC). There were five versions of MDAC 1.5:
+* '''MDAC 1.5 (initial release):''' included with Internet Explorer 4.0 and the Internet Client SDK.
+* '''MDAC 1.5a:''' downloadable from Microsoft's website
+* '''MDAC 1.5b:''' came with [[Windows NT 4.0]] Option Pack & Office 97
+* '''MDAC 1.5c:''' fixed issues with ADO threading and ODBC Connection Pooling and was distributed via the Microsoft website. It only came with the ADO/MDAC runtime components.
+* '''MDAC 1.5d:''' came included with [[Windows 98]] and [[Internet Explorer]] 4.01 service pack 1.<ref name="mdac15releasede"/>
+
+The different versions of MDAC 1.5 consisted of:
+* ODBC 3.5
+* OLE DB 1.5
+* ADO 1.5
+* Remote Data Service 1.5, which superseded the Advanced Data Connector.<ref name="mskbinfo190463"/>
+
+This version of MDAC had a security flaw that made it vulnerable to an [[escalated privileges attack]]. The vulnerability caused systems that had both IIS and MDAC installed to give an unauthorized web user the ability to execute shell commands on the IIS system as a privileged user and use MDAC to tunnel SQL and other ODBC data requests through the public connection to a private back-end network when on a [[multi-homed]] Internet-connected IIS system. It also allowed the user to gain unauthorized access to secured, non-published files on the IIS system<ref name="mdac1_5securityflaw">''Microsoft'', [http://www.microsoft.com/technet/security/bulletin/fq99-025.mspx Microsoft Security Program: Frequently Asked Questions: Microsoft Security Bulletin (MS99-025)], accessed July 6, 2005.</ref>
+
+MDAC 1.5 was the last data access component release supported under Windows NT 3.51 SP5.
+
+;MDAC 2.0
+MDAC 2.0 was distributed with the Data Access 2.0 SDK and included the contents of MDAC 1.5, the ODBC 3.5 SDK and the OLE DB 1.5 SDK, and the OLE DB for [[OLAP]] Specification; it also had included many updates to the core product,<ref name="mskbinfo190463"/> including a security feature added to the RDS which prevented it from being used maliciously an IIS server.<ref name="mskb243245">''Microsoft'', [http://support.microsoft.com/kb/243245/EN-US/ PRB: RDS Handler Error Messages Due to Security Settings] (last reviewed September 30, 2003), accessed July 6, 2005; [http://www.microsoft.com/technet/security/bulletin/MS98-004.mspx Microsoft Security Program: Microsoft Security Bulletin (MS98-004)] : "Unauthorized ODBC Data Access with RDS and IIS" (last revision: July 17, 1998), accessed July 6, 2005; CVE vulnerability [http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-1999-1011 CVE-1999-1011].</ref> This version came included in Windows NT 4.0 SP4,<ref name="mdac20distde">Christian Koller, [http://www.aspheute.com/artikel/20000327.htm "ADO und MDAC Versionen"] : MDAC 2.0, accessed July 1, 2005.</ref> and also with Visual Studio 6.0, which came with the full Data Access SDK.<ref name="mskbinfo190463"/>
+
+;MDAC 2.1
+MDAC 2.1 was distributed with [[Microsoft SQL Server|SQL Server]] 7.0 and SQL Server 6.5 SP5; MDAC 2.1 SP1 was distributed with Internet Explorer 5; MDAC 2.1 SP1a (GA) was distributed with [[Microsoft Office]] 2000, [[Microsoft BackOffice|BackOffice]] 4.5 and Visual Studio 98 SP3; however, none of these versions of MDAC were released to the general public via the [[world wide web]]. MDAC 2.1 SP2 was distributed from Microsoft's website. The components that were included with 2.1 were:
+* ADO 2.1
+* RDS 2.1
+* OLE DB 2.1
+* the OLE DB Provider for ODBC, SQL Server and Oracle
+* JRO 2.1
+* a Jet driver
+* RDO.<ref name="mdac2_1distde">{{de icon}} Christian Koller, [http://www.aspheute.com/artikel/20000327.htm "ADO und MDAC Versionen"] : MDAC 2.1, accessed July 1, 2005.</ref>
+
+This version had security vulnerabilities whereby an unchecked buffer could allow an elevated privileges attack. This was found some time later and it affected MDAC 2.1, 2.5 and 2.6 and was addressed in a later patch<ref name="mdac_21_25_26_securityflaw">''Microsoft'', [http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=CC37D12E-AF4A-46DC-B0CC-8C789FDE2F4BMicrosoft Data Access Components: Security Hotfix for Q329414] (download page); [http://www.microsoft.com/technet/security/bulletin/MS02-065.mspx Microsoft Security Bulletin MS02-06] &mdash; originally Microsoft KB article Q329414) &mdash; (originally posted November 20, 2002), accessed July 6, 2005.</ref>
+
+;MDAC 2.5
+MDAC 2.5 was released on [[February 17]], [[2000]] and distributed with [[Windows 2000]], and the MDAC service packs were released in parallel with the Windows 2000 service packs. They were also distributed through Microsoft's website. Three service packs were released. The components included with 2.5 were:
+* ADO 2.5
+* ADO MD 2.5
+* ADOX 2.5
+* RDS 2.5
+* OLE DB 2.5
+* many OLE DB Providers
+* JRO 2.5
+* ODBC 3.51
+* many ODBC drivers
+* many Jet drivers.<ref name="mdac2_5distde">{{de icon}} Christian Koller, [http://www.aspheute.com/artikel/20000327.htm "ADO und MDAC Versionen"] : MDAC 2.5, accessed July 1, 2005.</ref>
+
+Several issues were found in this version of MDAC. When using OLE DB Session Pooling, Microsoft [[Component Object Model|COM+]] would try to continuously load and unload OLE DB, and a conflict could arise that caused the OLE DB Session Pooling to run at 100% CPU usage. This was later fixed.<ref name="mskb320700">''Microsoft'', MS KB article 320700, [http://support.microsoft.com/kb/320700 "OLE DB Session Pooling Causes 100 Percent CPU Usage (MDAC 2.5)"], accessed July 6, 2005.</ref> Microsoft published a full list of bugs fixed in [http://support.microsoft.com/kb/293311 MDAC 2.5 Service Pack 2] and [http://support.microsoft.com/kb/810656 MDAC 2.5 Service Pack 3]. A security vulnerability also existed (later fixed) whereby an unchecked buffer in was found in the SQL Server Driver. This flaw was introduced in MDAC 2.5 SP2.
+
+;MDAC 2.6
+MDAC 2.6 was released in September 2000 and was distributed through the web and with Microsoft SQL Server 2000<ref name="mdac2_6releasemanifest">''Microsoft'', MS KB article 842272 [http://support.microsoft.com/default.aspx?scid=kb;EN-US;842272 Release manifest for MDAC 2.6 (2.60.6526.3)], accessed July 6, 2005.</ref> MDAC 2.6 RTM, SP1 (released [[June 20]], [[2001]]), and SP2 (released [[June 11]], [[2002]]) were distributed in parallel with the Microsoft SQL Server 2000 service packs, and could also be downloaded from the Microsoft website.
+
+Beginning with this version of MDAC, Microsoft Jet, Microsoft Jet OLE DB Provider, and the ODBC Desktop Database Drivers were not included. Instead, these could be installed manually.<ref name="mskb271908nojet">''Microsoft'', MS KB article 271908 [http://support.microsoft.com/kb/271908 MDAC version 2.6 and later do not contain Jet or Desktop ODBC drivers], accessed July 6, 2005.</ref> Microsoft also released an alert warning that MDAC 2.6 should not be installed on an SQL Server 7.0 Cluster, because "if you install MDAC 2.6 or later on any node in the cluster, directly or through the installation of another program, it may cause a catastrophic failure of the SQL Server Agent or other SQL Server services."<ref name="mskb820754sqlserver7_0cluster">''Microsoft'', MS KB article 820754 [http://support.microsoft.com/kb/820754 MDAC 2.6 or later should not be installed on SQL Server 7.0 clusters], accessed July 6, 2005.</ref> This issue affected [[Veritas Software]]'s Backup Exec 9.0 for Windows Servers, because it installs Microsoft SQL Server 2000 Desktop Engine (MSDE 2000) as its database. Revision 4367 installed MDAC version 2.6 SP2 while revision 4454 installed MDAC version 2.7 SP1, which did not have the problem<ref name="veritas">''Veritas'', Document ID: 258144 [http://seer.support.veritas.com/docs/258144.htm VERITAS Backup Exec (tm) 9.0 for Windows Servers should not be installed on a Microsoft SQL Server 7.0 Cluster.]</ref>
+
+;MDAC 2.7
+MDAC 2.7 was released in October 2001 through Microsoft's website. A refresh release was issued in April 2002 through the release of Windows XP and through Microsoft's website. Version 2.7 was available in [[American English|U.S. English]], [[Chinese language|Chinese]] (Traditional and Simplified), [[German language|German]], [[Japanese language|Japanese]], [[Korean language|Korean]], [[Brazilian Portuguese]], [[Czech language|Czech]], [[Danish language|Danish]], [[Greek language|Greek]], [[Slovak language|Slovak]], [[Slovenian language|Slovenian]], [[Spanish language|Spanish]], [[Finnish language|Finnish]], [[French language|French]], [[Hungarian language|Hungarian]], [[Italian language|Italian]], [[Dutch language|Dutch]], [[Norwegian language|Norwegian]], [[Polish language|Polish]], [[Portuguese language|Portuguese]], [[Russian language|Russian]], [[Swedish language|Swedish]], and [[Turkish language|Turkish]]. [[Hebrew language|Hebrew]] and [[Arabic language|Arabic]] were only available through Windows XP.
+
+The main feature change was support for Microsoft's [[64-bit]] operating system, however support for [[Banyan VINES]] was also dropped from this version of MDAC. There were several known issues:<ref name="mskb842280mdac2_7manifest">[http://support.microsoft.com/default.aspx?scid=kb;EN-US;842280 Release manifest for MDAC 2.7 Refresh (2.70.9001.0)]</ref> MDAC 2.7 continued causing connectivity problems on clustered servers running Microsoft SQL Server 6.5 or SQL Server 7.0, with no workaround provided by Microsoft. When creating or configuring ODBC [[data source names]] (DSNs) using the Microsoft SQL Server ODBC driver the network library protocol might unexpectedly switch to [[TCP/IP]], even if the DSN was configured to use [[named pipes]].<ref name="mskb289573">''Microsoft'', MS KB article 289573 [http://support.microsoft.com/kb/289573/ PRB: Configuring DSNs with SQL Server Net-Libraries.]</ref> This issue was found by ''[[InfoWorld]]'' reporter [[Randall C. Kennedy]], who identified that the change was actually made in MDAC 2.6 but was never documented. It was discovered when testing client/server database workloads on a Windows XP computer - ''InfoWorld'' claims that although overall server CPU utilization rose by only 8 percent using TCP/IP, [[context switch]]es per second dropped by more than 150 percent for a 10-user workload. They were unimpressed that a fundamental functional change to the default behaviour of Net-Lib occurred without more than a passing mention in an unrelated document.<ref name="infoworldnetlibissue">Randall C. Kennedy, [http://www.infoworld.com/articles/tc/xml/01/11/26/011126tcmdac.html "It's not a bug, it's a feature"], ''[[InfoWorld]]''.</ref> Windows XP users also sometimes experienced problems connecting to SQL Server because SQL Server attempts to use [[public key certificate|certificate]]s it finds on the local computer, however if there is more than one certificate available it did not know which one to use.<ref name="mskb309398">''Microsoft'', MS KB article 309398 [http://support.microsoft.com/kb/309398/ SQL Server 2000 installation or local connections fail with "SSL Security error:ConnectionOpen (SECDoClientHandshake())" error message.]</ref> When attempting to use [[Microsoft Analysis Services]] 2000 RTM, an error would sometimes appear when trying to browse cubes.<ref name="mskb297232">''Microsoft'', MS KB article 297232 [http://support.microsoft.com/kb/297232/ FIX: Cannot Browse Cubes or Process Mining Model After You Install Analysis Services 2000 RTM.]</ref> Microsoft also discovered a problem in [[Windows 95]], [[Windows 98]], and [[Windows Me]]'s setup program which prevented the MDAC installation program from rolling back when it encountered an installation error.<ref name="mskb311720">''Microsoft'', MS KB article 311720 [http://support.microsoft.com/kb/311720/ PRB: MDAC Rollback May Fail on Windows 95, Windows 98, and Windows Millennium Edition.]</ref>
+
+Several security issues were resolved by Microsoft for MDAC 2.7. [[David Litchfield]] of [[Next Generation Security Software Ltd]] reported a security vulnerability that results because one of the ODBC functions in MDAC that is used to connect to data sources contained an unchecked buffer.<ref name="ms02-040">''Microsoft'', [http://www.microsoft.com/technet/security/Bulletin/MS02-040.mspx Microsoft Security Bulletin MS02-040 Unchecked Buffer in MDAC Function Could Enable System Compromise (Q326573)].</ref> Another vulnerability that was fixed was one whereby an attacker could respond to an SQL Server discovery message broadcast by clients with a specially crafted packet that could cause a buffer overflow.<ref name="ms03-033">''Microsoft'', [http://www.microsoft.com/technet/security/Bulletin/MS03-033.mspx Microsoft Security Bulletin MS03-033 Unchecked Buffer in MDAC Function Could Enable System Compromise (823718)]</ref> Another flaw was found whereby code could be executed remotely when the attacker responded to the broadcast with another specially crafted packet.<ref name="ms04-003">''Microsoft'', [http://www.microsoft.com/technet/security/Bulletin/MS04-003.mspx Microsoft Security Bulletin MS04-003 Buffer Overrun in MDAC Function Could Allow Code Execution (832483)]</ref>
+
+;MDAC 2.8
+MDAC 2.8 was released in August 2003 and distributed with Microsoft [[Windows Server 2003]], as well as on Microsoft's [http://msdn.microsoft.com/data/ Data Access Technologies] website. It did not introduce any new features to the product but fixed a number of bugs and security issues &mdash; a reg file (automates changes to the registry) was removed that made the server run in an "unsafe" mode whereby the RDS could be exploited to gain unauthorized access to the system<ref name="handunsf_reg">''Microsoft''. MS KB article 818490: [http://support.microsoft.com/kb/818490/ INFO: Handunsf.reg File Has Been Removed in MDAC 2.8 Redist Setup for Security Reasons]</ref> and a new restriction was imposed on the length of the Shape query string.<ref name="shapequerystringlimit">''Microsoft''. MS KB article 838405: [http://support.microsoft.com/kb/838405/ FIX: "Argument passed to data shaping service was invalid" error after you apply MDAC 2.8]</ref> There were also several ODBC Administrator changes.<ref name="odbcadministratorchanges">''Microsoft''. MS KB article 818489, [http://support.microsoft.com/kb/818489/ INFO: ODBC Administrator Changes in MDAC 2.8].</ref>
+
+On May 23, 2005 Brad Rhodes (Lead Program Manager of Microsoft Data Access Technologies) announced that MDAC 2.8 SP1 was the last stand-alone redistributable of MDAC that Microsoft will ship. MDAC is now an official component of the Microsoft's operating system, though they will be providing ongoing bug and security fixes to previously released versions of the web-distributable version.<ref name="bradrhodesstandalonedistributable">Brad Rhodes (blog entry), [http://blogs.msdn.com/dataaccess/archive/2005/05/23/421039.aspx The end of the MDAC Redistributable], May 23 2005, retrieved August 11, 2005; & ''Microsoft'', MS KB article 892854: [http://support.microsoft.com/default.aspx?scid=kb;en-us;892854 "Release strategy for Microsoft Data Access Components"], last updated January 24, 2005, retrieved August 11, 2005.</ref> However, Microsoft have created a new component called the [[SQL Native Client]] (SQLNCLI), which is a stand alone data access API that has combined the OLE DB and ODBC libraries into one [[DLL]]. It was formed to be independent of MDAC, which is now reliant on the state the operating system is in &mdash; a developer now links to this library and avoids situations where an update of the operating system which updates MDAC breaks applications built to a different version of MDAC.<ref name="sqlncli">Acey J. Bunch (April 26, 2005), [http://blogs.msdn.com/dataaccess/archive/2005/04/26/412161.aspx "Introducing SQL Native Client"], ''MSDN'' [[blog]] entry.</ref>
+
+;Windows DAC 6.0
+[[Windows Vista]] will no longer use MDAC, but instead use Windows DAC, which consists of updated versions of ADO, OLE DB, and ODBC components. According to Microsoft, "Windows DAC includes some changes to work with Windows Vista, but is almost entirely functionally equivalent to MDAC 2.8."<ref name="WDAC">''[[Microsoft]]'', [http://msdn2.microsoft.com/en-gb/library/ms692877.aspx "FAQ About Windows DAC/MDAC"]. Accessed 12th December, 2006.</ref>
+
+===Versions===
+There are two ways of checking the version of MDAC that is installed on a computer. One way is via Microsoft's Component Checker program, which compares the value of each installed MDAC DLL to the MDAC file manifest. The second way is to check the key <code>HKEY_LOCAL_MACHINE\Software\Microsoft\DataAccess\FullInstallVer</code> in the [[Windows registry]]. Microsoft notes that this information may be incorrect for versions of MDAC prior to 2.1 when compared with the versions of the MDAC files installed to the system<ref name="versionchecking">''Microsoft''. MS KB article 301202, [http://support.microsoft.com/?kbid=301202 How to check for MDAC version], last updated January 18, 2005, retrieved September 29, 2005.</ref>
+
+{| class=prettytable
+|-
+! width="10%" | '''Version'''
+! width="10%" | '''Release date'''
+! width="40%" | '''Distribution mechanism'''
+! width="15%" | '''Features'''
+! width="10%" | '''Security issues'''
+|- VALIGN=TOP
+| width="10%" | 1.0
+| width="10%" | August 1996
+|
+No coordinated release:<br />
+* ADC &ndash; IIS 3.0
+* OLE DB 1.1 SDK (OLE DB 1.1 and ADO 1.0) - Visual Studio
+* All components included in Visual Interdev 1.0 and with Active Server Pages (released in IIS 3.0)
+| WIDTH=151 |
+* ODBC 3.0
+* OLE DB 1.1
+* ADO 1.0
+* ADC 1.0
+* ODBC drivers for Access/Jet, SQL Server and Oracle databases
+| width="10%" |
+No bulletins released
+|- VALIGN=TOP
+| width="10%" |
+1.5
+| width="10%" | September 1997 &ndash; March 1998
+|
+* Microsoft Internet Explorer 4.0
+* Internet Client SDK 4.0 (from CD issued at Microsoft PDC)
+| WIDTH=151 |
+* ODBC 3.5
+* OLE DB 1.5
+* ADO 1.5
+* RDS 1.5 (superseded ADC 1.0)
+| ROWSPAN=4 width="10%" |
+* {{mssb|99|025}}
+|-
+| width="10%" | 1.5a
+| width="10%" | September 1997 - March 1998
+|
+* Microsoft website
+| WIDTH=151 |
+Service release
+|- VALIGN=TOP
+| width="10%" | 1.5b
+| width="10%" | September 1997 - March 1998
+|
+* [[Windows NT 4.0]] Option Pack
+* [[Microsoft Office]] 97
+| WIDTH=151 |
+Service release
+|-
+| width="10%" | 1.5c
+| width="10%" | September 1997 - March 1998
+|
+* Microsoft website
+| WIDTH=151 |
+* Fixed issues with ADO threading and ODBC Connection Pooling
+* Only came with ADO/MDAC runtime components
+|-
+| width="10%" | 2.0
+| width="10%" | [[July 1]], [[1998]]
+|
+* Visual Studio 98
+* Data Access 2.0 SDK
+| WIDTH=151 |
+* ODBC 3.5 SDK
+* OLE DB 1.5 SDK
+* OLE DB for OLAP Specification
+| ROWSPAN=3 width="10%" |
+* {{mssb|98|004}}
+|-
+| width="10%" | 2.0SP1
+| width="10%" | [[July 1]], [[1998]]
+|
+* Windows NT 4.0 SP4
+| WIDTH=151 |
+Y2K remediation for Windows NT 4.0
+|-
+| width="10%" | 2.0SP2
+| width="10%" | [[July 1]], [[1998]]
+|
+* Microsoft website
+| WIDTH=151 |
+Y2K remediation for all platforms
+|-
+| width="10%" | 2.1
+| width="10%" | [[July 11]], [[1998]]
+|
+* SQL Server 7.0
+* SQL Server 6.5 SP5
+| ROWSPAN=4 WIDTH=151 |
+* ADO 2.1
+* RDS 2.1
+* OLE DB 2.1
+* OLE DB Provider for ODBC, SQL Server and Oracle
+* JRO 2.1
+* ODBC driver
+* Jet driver
+* RDO
+| ROWSPAN=4 width="10%" |
+* {{mssb|02|065}}
+|-
+| width="10%" | 2.1 SP1
+| width="10%" | [[March 15]], [[1999]]
+|
+* Internet Explorer 5.0
+* Windows 98 Second Edition
+|-
+| width="10%" | 2.1 SP1a (GA)
+| width="10%" | [[April 1]], [[1999]]
+|
+* Office 2000
+* BackOffice 4.5
+* Visual Studio 98 SP3
+* Internet Explorer 5.0a (minimal install)
+|-
+| width="10%" | 2.1 SP2
+| width="10%" | July 1999
+|
+* <span class=plainlinksneverexpand>[http://www.microsoft.com/data/download_21242023.htm&nbsp; Microsoft website]</span>
+|-
+| width="10%" | 2.5
+| width="10%" | [[February 17]], [[2000]]
+|
+* Windows 2000
+* <span class=plainlinksneverexpand>[http://msdn.microsoft.com/data/downloads/updates/default.aspx#MDACDownloads Microsoft website]</span>
+| ROWSPAN=4 WIDTH=151 |
+* ADO 2.5
+* ADO MD 2.5
+* ADOX 2.5
+* RDS 2.5
+* OLE DB 2.5
+* OLE DB Provider for the ODBC driver for:
+** SQL
+** Server
+** Site Server Search
+** Internet Publishing
+** Jet 4.0 (Access 2000)
+** Oracle
+** Indexing Services (Index Server)
+** Microsoft Data Shaping Services
+** OLAP Services
+** DTS Packages
+** Microsoft Directory Services
+** Server DTS Flat File
+** OLE DB Simple Provider
+* JRO 2.5
+* ODBC 3.51
+* an ODBC driver for
+** Microsoft Access
+** SQL Server
+** Microsoft Excel
+** Text
+** Visual FoxPro
+** FoxPro VFP
+** dBase
+** dBase VFP
+** Paradox
+** Oracle
+* Jet drivers for:
+** Excel
+** Microsoft Exchange
+** Access
+** text files
+** Lotus 1-2-3
+** Paradox
+** xBase
+| ROWSPAN=4 width="10%" |
+* {{mssb|02|065}}
+|-
+| width="10%" | 2.5 SP1
+| width="10%" | [[July 31]], [[2000]]
+|
+* Windows 2000 SP1
+* <span class=plainlinksneverexpand>[http://msdn.microsoft.com/data/downloads/updates/default.aspx#MDACDownloads Microsoft website]</span>
+|-
+| width="10%" | 2.5 SP2
+| width="10%" | April 2000
+|
+* Windows 2000 SP2
+* <span class=plainlinksneverexpand>[http://msdn.microsoft.com/data/downloads/updates/default.aspx#MDACDownloads Microsoft website]</span>
+|-
+| width="10%" | 2.5 SPS3
+| width="10%" | December 2003
+|
+* Windows 2000 SP3
+* <span class=plainlinksneverexpand>[http://msdn.microsoft.com/data/downloads/updates/default.aspx#MDACDownloads Microsoft website]</span>
+|-
+| width="10%" |
+2.6
+| width="10%" |
+September 2000
+|
+* SQL Server 2000
+* <span class=plainlinksneverexpand>[http://msdn.microsoft.com/data/downloads/updates/default.aspx#MDACDownloads Microsoft website]</span>
+| ROWSPAN=3 WIDTH=151 | Not included (manually installed):
+* Microsoft Jet
+* Microsoft Jet OLE DB Provider
+* ODBC Desktop Database Drivers
+| ROWSPAN=3 width="10%" |
+* {{mssb|02|065}}
+|-
+| width="10%" | 2.6 SP1
+| width="10%" | May 2001
+|
+* SQL Server 2000 SP1
+* <span class=plainlinksneverexpand>[http://msdn.microsoft.com/data/downloads/updates/default.aspx#MDACDownloads Microsoft website]</span>
+|-
+| width="10%" | 2.6 SP2
+| width="10%" | May 2002
+|
+* SQL Server 2000 SP2
+* <span class=plainlinksneverexpand>[http://msdn.microsoft.com/data/downloads/updates/default.aspx#MDACDownloads Microsoft website]</span>
+|- VALIGN=TOP
+| width="10%" | 2.7
+| width="10%" | October 2001
+|
+* Windows XP
+* <span class=plainlinksneverexpand>[http://msdn.microsoft.com/data/downloads/updates/default.aspx#MDACDownloads Microsoft website]</span>
+| WIDTH=151 |
+* Support for 64-bit operating systems
+* Banyan Vines support dropped
+| width="10%" |
+* {{mssb|02|065}}
+* {{mssb|02|040}}
+* {{mssb|03|033}}
+* {{mssb|04|003}}
+|-
+| width="10%" | 2.8
+| width="10%" | August 2003
+|
+* Windows Server 2003
+* <span class=plainlinksneverexpand>[http://msdn.microsoft.com/data/downloads/updates/default.aspx#MDACDownloads Microsoft website]</span>
+| WIDTH=151 |
+Fixed bugs and security issues
+| width="10%" |
+* {{mssb|03|033}}
+* {{mssb|04|003}}
+|-
+| width="10%" | 2.8 SP1
+| width="10%" | May 2005
+|
+* SQL Server 2000 SP4
+* Windows XP SP2
+* <span class=plainlinksneverexpand>[http://msdn.microsoft.com/data/mdac/downloads/default.aspx Microsoft website]</span>
+| WIDTH=151 |
+Fixed bugs
+| width="10%" |
+|-
+| width="10%" | 2.8 SP2
+| width="10%" | March 2005
+|
+* Windows Server 2003 SP1
+| WIDTH=151 |
+|-
+| width="10%" | 9.0
+| width="10%" | Never released: Microsoft now includes MDAC with operating system updates.
+|
+* Visual Studio 2005 Beta 1, but later removed.
+* Originally released with SQL Server 2005 Beta 1, but later removed.<ref>[http://staff.develop.com/bobb/sql2005book/changes11.htm Chapter 11 Changes], supplementary material to "A First Look at SQL Server 2005 for Developers" by Bob Beauchemin, Niels Berglund, and Dan Sullivan.</ref>
+| WIDTH=151 |&nbsp;
+| width="10%" | &nbsp;
+|-
+| width="10%" | Windows DAC 6.0 (a variant of MDAC for use with Vista)
+| width="10%" | November 2006
+|
+* [[Windows Vista]]
+* Version number synchronized with Windows version, non-redistributable
+* <span class=plainlinksneverexpand></span>
+| WIDTH=151 |
+No new features, for use with Windows Vista
+| width="10%" |
+|}
+
+==References & notes==
+;Notes
+<div class="references-small" style="-moz-column-count:2; column-count:2;">
+<references />
+</div>
+
+;References
+
+<div class="references-small">
+* "ADO 2.8 API Reference". Online API Reference, ''[[Microsoft Corporation]]''.
+* "ADO 2.8 Programmers Guide". Online programming guide, ''Microsoft Corporation''.
+* Delaney, Kalen; & Soukup, Ron (2001). "Inside Microsoft SQL Server 2000" (based on 1st edition by Ron Soukup). ''Microsoft Press''. ISBN 0-7356-0998-5.
+* Kennedy, Randall C. ([[November 21]], [[2001]]). [http://www.infoworld.com/articles/tc/xml/01/11/26/011126tcmdac.html "It's not a bug, it's a feature"]. ''[[InfoWorld]]''.
+* Rothaus, Doug; & Pizzo, Mike (December, 2001). [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dndotnet/html/adonetprogmsdn.asp "ADO.NET for the ADO Programmer"]. ''Microsoft Corporation''.
+* Shirolkar, Prash (Author); Henry Alyssa (contributor); Pepitone Stephen (Contributor); Bunch, Acey J. (contributor), [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnmdac/html/data_mdacroadmap.asp "Data Access Technologies Road Map"], ''[[Microsoft Corporation]]''.
+* Solomon, Christine (1997). "Microsoft Office 97 Developer's Handbook". ''Microsoft Press''. ISBN 1-57231-440-0.
+</div>
+
+==External links==
+* [http://msdn2.microsoft.com/en-us/data/aa937729.aspx Microsoft MDAC Center]
+* [http://msdn2.microsoft.com/en-us/data/aa937730.aspx MDAC Downloads]
+* [http://msdn.microsoft.com/data/mdac/techinfo/default.aspx MDAC Technology Information]BROKEN
+* [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnmdac/html/data_mdacroadmap.asp MDAC Roadmap]
+
+[[Category:Microsoft APIs|Data Access Components]]
+
+[[pl:MDAC]]
+[[ru:MDAC]]

@@ -1,0 +1,51 @@
+In [[set theory]], a field of [[mathematics]], the '''Burali-Forti paradox''' demonstrates that naively constructing "the set of all [[ordinal number]]s" leads to a contradiction and therefore shows an [[antinomy]] in a system that allows its construction. It is named after [[Cesare Burali-Forti]], who discovered it in 1897.
+
+==Stated in terms of von Neumann ordinals==
+
+The reason is that the set of all ordinal numbers <math>\Omega</math> carries all properties of an ordinal number and would have to be considered an ordinal number itself. Then, we can construct its successor <math>\Omega + 1</math>, which is strictly greater than <math>\Omega</math>. However, this ordinal number must be an element of <math>\Omega</math> since <math>\Omega</math> contains all ordinal numbers, and we arrive at
+
+:<math>\Omega < \Omega + 1 \leq \Omega.</math>
+
+==Stated more generally==
+
+The version of the paradox above is anachronistic, because it presupposes the definition of the ordinals due to [[von Neumann]], under which each ordinal is the set of all preceding ordinals, which was not known at the time the paradox was framed by Burali-Forti.
+Here is an account with fewer presuppositions:  suppose that we associate with each [[well-ordering]]
+an object called its "[[order type]]" in an unspecified way (the order types are the ordinal numbers).  The "order types" (ordinal numbers) themselves are well-ordered in a natural way,
+and this well-ordering must have an order type <math>\Omega</math>.  It is easily shown in
+[[naive set theory|na<U+00EF>ve set theory]] (and remains true in [[ZFC]] but not in [[New Foundations]]) that the order
+type of all ordinal numbers less than a fixed <math>\alpha</math> is <math>\alpha</math> itself.
+So the order
+type of all ordinal numbers less than  <math>\Omega</math> is <math>\Omega</math> itself.  But
+this means that <math>\Omega</math>, being the order type of a proper initial segment of the ordinals,  is strictly less than the order type of all the ordinals,
+but the latter is <math>\Omega</math> itself by definition.  This is a contradiction. 
+
+If we use the von Neumann definition, under which each ordinal is identified as the set of all preceding ordinals, the paradox is unavoidable:  the offending proposition that the order type of all ordinal numbers less than a fixed <math>\alpha</math> is <math>\alpha</math> itself must be true.  The collection of von Neumann ordinals, like the collection in the [[Russell paradox]], cannot be a set in any set theory with classical logic.  But the collection of order types in New Foundations (defined as equivalence classes of well-orderings under similarity) is actually a set, and the paradox is avoided because the order type of the ordinals less than <math>\Omega</math>
+turns out not to be <math>\Omega</math>.
+
+==Resolution of the paradox==
+
+Modern [[axiomatic set theory]] such as ZF and ZFC circumvents this antinomy by simply not allowing construction of sets with unrestricted [[Axiom of specification#Unrestricted comprehension|comprehension terms]] like "all sets with the property <math>P</math>", as it was for example possible in [[Gottlob Frege]]'s axiom system. [[New Foundations]] uses a different solution.
+
+==References==
+*{{citation|first=Cesare|last=Burali-Forti|title= Una questione sui numeri transfiniti|journal=Rendiconti del Circolo Matematico di Palermo|volume=11|pages=154<U+2013>164|year=1897|doi=10.1007/BF03015911}}
+
+==External links==
+*[[Stanford Encyclopedia of Philosophy]]: "[http://plato.stanford.edu/entries/paradoxes-contemporary-logic/ Paradoxes and Contemporary Logic]" -- by Andrea Cantini.
+
+[[Category:Ordinal numbers]]
+[[Category:Paradoxes of naive set theory]]
+
+[[cs:Burali-Fortiho paradox]]
+[[de:Burali-Forti-Paradoxon]]
+[[fr:Paradoxe de Burali-Forti]]
+[[ko:<U+BD80><U+B784><U+B9AC>-<U+D3EC><U+B974><U+D2F0> <U+C5ED><U+C124>]]
+[[it:Paradosso di Burali-Forti]]
+[[he:<U+05D4><U+05E4><U+05E8><U+05D3><U+05D5><U+05E7><U+05E1> <U+05E9><U+05DC> <U+05D1><U+05D5><U+05E8><U+05DC><U+05D9>-<U+05E4><U+05D5><U+05E8><U+05D8><U+05D9>]]
+[[nl:Burali-Forti-paradox]]
+[[ja:<U+30D6><U+30E9><U+30EA><U+FF1D><U+30D5><U+30A9><U+30EB><U+30C6><U+30A3><U+306E><U+30D1><U+30E9><U+30C9><U+30C3><U+30AF><U+30B9>]]
+[[pms:Parad<U+00F2>ss <U+00EB>d Burali-Forti]]
+[[pl:Paradoks Burali-Fortiego]]
+[[pt:Paradoxo de Burali-Forti]]
+[[ru:<U+041F><U+0430><U+0440><U+0430><U+0434><U+043E><U+043A><U+0441> <U+0411><U+0443><U+0440><U+0430><U+043B><U+0438>-<U+0424><U+043E><U+0440><U+0442><U+0438>]]
+[[sk:Buraliho-Fortiho paradox]]
+[[zh:<U+5E03><U+62C9><U+5229>-<U+798F><U+5C14><U+8482><U+6096><U+8BBA>]]

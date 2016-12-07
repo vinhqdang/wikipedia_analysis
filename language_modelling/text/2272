@@ -1,0 +1,138 @@
+In [[mathematics]], the '''Henstock<U+2013>Kurzweil integral''', also known as the '''Denjoy integral''' (pronounced {{IPA-fr|d<U+0251><U+0303><U+02C8><U+0292>wa|}}) and the '''Perron integral''', is one of a number of definitions of the [[integral]] of a [[function (mathematics)|function]]. It is a generalization of the [[Riemann integral]] which in some situations is more useful than the [[Lebesgue integral]]. 
+
+This integral was first defined by [[Arnaud Denjoy]] (1912). Denjoy was interested in a definition that would allow one to integrate functions like 
+
+:<math>f(x)=\frac{1}{x}\sin\left(\frac{1}{x^3}\right).</math>
+
+This function has a singularity at 0, and is not Lebesgue integrable. However, it seems natural to calculate its integral except over [&minus;<U+03B5>,<U+03B4>] and then let <U+03B5>, <U+03B4> <U+2192> 0.
+
+Trying to create a general theory Denjoy used [[transfinite induction]] over the possible types of singularities which made the definition quite complicated. Other definitions were given by [[Nikolai Luzin]] (using variations on the notions of [[absolute continuity]]), and by [[Oskar Perron]], who was interested in continuous major and minor functions. It took a while to understand that the Perron and Denjoy integrals are actually identical. 
+
+Later, in 1957, the Czech mathematician [[Jaroslav Kurzweil]] discovered a new definition of this integral elegantly similar in nature to [[Riemann]]'s original definition which he named the '''gauge integral'''; the theory was developed by [[Ralph Henstock]]. Due to these two important mathematicians, it is now commonly known as the '''Henstock<U+2013>Kurzweil integral'''. The simplicity of Kurzweil's definition made some educators advocate that this integral should replace the Riemann integral in introductory calculus courses, but this idea has not gained traction.
+
+==Definition==
+Henstock's definition is as follows:
+
+Given a [[tagged partition]] ''P'' of [''a'', ''b''], say 
+
+:<math>a = u_0 < u_1 < \cdots < u_n = b, \ \ t_i \in [u_{i-1}, u_i]</math> 
+
+and a positive function 
+
+:<math>\delta \colon [a, b] \to (0, \infty),\,</math>
+
+which we call a ''gauge'', we say ''P ''is <math>\delta</math>-fine if 
+
+:<math>\forall i \ \ u_i - u_{i-1} < \delta (t_i). </math>
+
+For a tagged partition ''P'' and a function 
+
+:<math>f \colon [a, b] \to \mathbb{R}</math> 
+
+we define the Riemann sum to be 
+
+:<math> \sum_P f = \sum_{i = 1}^n (u_i - u_{i-1}) f(t_i).</math>
+
+Given a function 
+
+:<math>f \colon [a, b] \to \mathbb{R},</math> 
+
+we now define a number ''I'' to be the Henstock<U+2013>Kurzweil integral of ''f'' if for every <U+03B5>&nbsp;>&nbsp;0 there exists a gauge <math>\delta</math> such that whenever ''P'' is <math>\delta</math>-fine, we have 
+
+:<math> {\Big \vert} \sum_P f - I {\Big \vert} < \varepsilon. </math> 
+
+If such an ''I'' exists, we say that ''f'' is Henstock<U+2013>Kurzweil integrable on [''a'', ''b''].
+
+[[Cousin's theorem]] states that for every gauge <math>\delta</math>, such a <math>\delta</math>-fine partition ''P'' does exist, so this condition cannot be satisfied [[vacuous truth|vacuously]]. The Riemann integral can be regarded as the special case where we only allow constant gauges.
+
+==Properties==
+
+Let {{nowrap|''f'': [''a'', ''b''] <U+2192> '''R'''}} be any function.
+
+If {{nowrap|''a'' < ''c'' < ''b''}}, then ''f'' is Henstock<U+2013>Kurzweil integrable on [''a'',&nbsp;''b''] if and only if it is Henstock<U+2013>Kurzweil integrable on both [''a'',&nbsp;''c''] and [''c'',&nbsp;''b''], and then
+
+:<math>\int_a^bf(x)\,dx=\int_a^cf(x)\,dx+\int_c^bf(x)\,dx.</math>
+
+The Henstock<U+2013>Kurzweil integral is linear, i.e., if ''f'' and ''g'' are integrable, and <U+03B1>, <U+03B2> are reals, then <U+03B1>''f'' + <U+03B2>''g'' is integrable and
+
+:<math>\int_a^b\alpha f(x)+\beta g(x)\,dx=\alpha\int_a^bf(x)\,dx+\beta\int_a^bg(x)\,dx.</math>
+
+If ''f'' is Riemann or Lebesgue integrable, then it is also Henstock<U+2013>Kurzweil integrable, and the values of the integrals are the same. The important [[Hake's theorem]] states that
+
+:<math>\int_a^bf(x)\,dx=\lim_{c\to b-}\int_a^cf(x)\,dx</math>
+
+whenever either side of the equation exists, and symmetrically for the lower integration bound. This means that if ''f'' is "[[improper integral|improperly]] Henstock<U+2013>Kurzweil integrable", then it is properly Henstock<U+2013>Kurzweil integrable; in particular, improper Riemann or Lebesgue integrals such as
+
+:<math>\int_0^1\frac{\sin(1/x)}x\,dx</math>
+
+are also Henstock<U+2013>Kurzweil integrals. This shows that there is no sense in studying an "improper Henstock<U+2013>Kurzweil integral" with finite bounds. However, it makes sense to consider improper Henstock<U+2013>Kurzweil integrals with infinite bounds such as
+
+:<math>\int_a^{+\infty} f(x)\,dx := \lim_{b\to+\infty}\int_a^bf(x)\,dx.</math>
+
+For many types of functions the Henstock<U+2013>Kurzweil integral is no more general than Lebesgue integral. For example, if ''f'' is bounded, the following are equivalent:
+*''f'' is Henstock<U+2013>Kurzweil integrable,
+*''f'' is Lebesgue integrable,
+*''f'' is [[measurable function|Lebesgue measurable]].
+In general, every Henstock<U+2013>Kurzweil integrable function is measurable, and ''f'' is Lebesgue integrable if and only if both ''f'' and |''f''| are Henstock<U+2013>Kurzweil integrable. This means that the Henstock<U+2013>Kurzweil integral can be thought of as a "[[absolute convergence|non-absolutely convergent]] version of Lebesgue integral". It also implies that the Henstock<U+2013>Kurzweil integral satisfies appropriate versions of the [[monotone convergence theorem#Lebesgue monotone convergence theorem|monotone convergence theorem]] (without requiring the functions to be nonnegative) and [[dominated convergence theorem]] (where the condition of dominance is loosened to ''g''(''x'') <U+2264> ''f<sub>n</sub>''(''x'') <U+2264> ''h''(''x'') for some integrable ''g'', ''h'').
+
+If ''F'' is differentiable everywhere (or with countable many exceptions), the derivative ''F''&prime; is Henstock<U+2013>Kurzweil integrable, and its indefinite Henstock<U+2013>Kurzweil integral is ''F''.  (Note that ''F''&prime; need not be Lebesgue integrable.) In other words, we obtain a simpler and more satisfactory version of the [[second fundamental theorem of calculus]]: each differentiable function is, up to a constant, the integral of its derivative:
+
+: <math>F(x) - F(a) = \int_a^x F'(t) \,dt.</math>
+
+Conversely, the [[Lebesgue differentiation theorem]] continues to holds for the Henstock<U+2013>Kurzweil integral: if ''f'' is Henstock<U+2013>Kurzweil integrable on [''a'',&nbsp;''b''], and
+
+:<math>F(x)=\int_a^xf(t)\,dt,</math>
+
+then ''F''&prime;(''x'') = ''f''(''x'') almost everywhere in [''a'',&nbsp;''b''] (in particular, ''F'' is almost everywhere differentiable).
+
+==McShane integral==
+Interestingly, [[Lebesgue integral]] on a line can also be presented in a similar fashion. 
+
+First of all, change of
+
+:<math>\forall i \ \ u_i - u_{i-1} < \delta (t_i)</math>
+
+to
+
+:<math>\forall i \ \ [u_{i-1},u_i]\subset U_{\delta (t_i)}(t_i)</math>
+
+(here <math>U_{\varepsilon}(a)</math> is a <math>\varepsilon</math>-neighbourhood of ''a'') in the notion of <math>\delta</math>-fine partition yields a definition of the Henstock<U+2013>Kurzweil integral equivalent to the one given above. But after this change we can drop condition
+
+:<math>t_i \in [u_{i-1}, u_i]</math> 
+
+and get a definition of ''McShane integral'', which is equivalent to the Lebesgue integral.
+
+==References==
+* {{cite book |first1= A.G. |last = Das|title=The Riemann, Lebesgue, and Generalized Riemann Integrals |publisher=Narosa Publishers |year=2008 |isbn = 978-8173199332 }}
+* {{cite book | first1= Charles W. |last1= Swartz| first2 =Douglas S. | last2=Kurtz |title= Theories of Integration: The Integrals of Riemann, Lebesgue, Henstock-Kurzweil, and McShane|series= Series in Real Analysis |volume=9| publisher= World Scientific Publishing Company | year = 2004 |isbn = 978-9812566119 }}
+* {{cite book | first = Jaroslav | last= Kurzweil | author-link=Jaroslav Kurzweil | title=Integration Between the Lebesgue Integral and the Henstock-Kurzweil Integral: Its Relation to Locally Convex Vector Spaces|series = Series in Real Analysis | volume=8| publisher=World Scientific Publishing Company | year = 2002 |isbn=978-9812380463}}
+* {{cite book | first = Robert G. |last= Bartle | author-link=Robert G. Bartle| title = A Modern Theory of Integration | series = Graduate Studies in Mathematics |volume = 32 |publisher=American Mathematical Society | year=2001 | isbn=978-0821808450}}
+* {{cite book | last=Swartz | first=Charles W. |title=Introduction to Gauge Integrals | publisher= World Scientific Publishing Company |year=2001 | isbn=978-9810242398 }}
+* {{cite book |first=Solomon |last=Leader |title = The Kurzweil-Henstock Integral & Its Differentials | series= Pure and Applied Mathematics Series | publisher= CRC | year = 2001 | isbn = 978-0824705350 }} 
+* {{cite book | first = Jaroslav | last= Kurzweil | author-link=Jaroslav Kurzweil | title=Henstock-Kurzweil Integration: Its Relation to Topological Vector Spaces |series = Series in Real Analysis | volume=7| publisher=World Scientific Publishing Company | year = 2000 |isbn=978-9810242077}}
+* {{cite book | last1=Lee |first1 = Peng-Yee |last2= V<U+00FD>born<U+00FD>|first2=Rudolf |title = Integral: An Easy Approach after Kurzweil and Henstock |series = Australian Mathematical Society Lecture Series | publisher= Cambridge University Press |year=2000|isbn=978-0521779685}}
+* {{cite book | first1 = Robert G. |last1 = Bartle | author-link=Robert G. Bartle| first2= Donald R. |last2= Sherbert|title = Introduction to Real Analysis |publisher=Wiley |edition=3rd| year=1999 | isbn=978-0471321484}}  
+* {{cite book | last=Gordon | first=Russell A. | title=The integrals of Lebesgue, Denjoy, Perron, and Henstock | series=Graduate Studies in Mathematics | volume=4  | publisher=American Mathematical Society | location=Providence, RI | year=1994 | isbn=978-0821838051 }}
+* {{cite book | first1=V G |last1=<U+010C>elidze |first2= A G |last2= D<U+017E>var<U+0161>e<U+01D0><U+0161>vili|title= The Theory of the Denjoy Integral and Some Applications | series= Series in Real Analysis | volume=3| publisher=World Scientific Publishing Company | year = 1989 |isbn=978-9810200213}}
+* {{cite book | first=Peng-Yee |last=Lee | title=Lanzhou Lectures on Henstock Integration|series = Series in Real Analysis | volume=2| publisher=World Scientific Publishing Company | year = 1989 |isbn=978-9971508913}}
+* {{cite book | first=Ralph|last=Henstock| author-link=Ralph Henstock | title=Lectures on the Theory of Integration|series = Series in Real Analysis | volume=1| publisher=World Scientific Publishing Company | year=1988|isbn=978-9971504502}}
+* {{cite book | last=McLeod | first=Robert M. | title=The generalized Riemann integral | series=Carus Mathematical Monographs|volume=20 | publisher=Mathematical Association of America | location=Washington, D.C. | year=1980 | isbn=978-0883850213 }}
+
+==External links==
+The following are additional resources on the web for learning more:
+* http://www.math.vanderbilt.edu/~schectex/ccc/gauge/
+* http://www.math.vanderbilt.edu/~schectex/ccc/gauge/letter/
+
+{{integral}}
+
+[[Category:Definitions of mathematical integration]]
+
+[[ca:Integral de Henstock-Kurzwe]]
+[[de:Gauge-Integral]]
+[[fr:Int<U+00E9>grale de Kurzweil-Henstock]]
+[[it:Integrale di Henstock-Kurzweil]]
+[[he:<U+05D0><U+05D9><U+05E0><U+05D8><U+05D2><U+05E8><U+05DC> <U+05D4><U+05E0><U+05E1><U+05D8><U+05D5><U+05E7>]]
+[[nl:Henstock-Kurzweil-integraal]]
+[[pt:Integral de Henstock<U+2013>Kurzweil]]
+[[ru:<U+0418><U+043D><U+0442><U+0435><U+0433><U+0440><U+0430><U+043B> <U+041A><U+0443><U+0440><U+0446><U+0432><U+0435><U+0439><U+043B><U+044F>-<U+0425><U+0435><U+043D><U+0441><U+0442><U+043E><U+043A><U+0430>]]
+[[fi:Henstock-Kurzweil-integraali]]

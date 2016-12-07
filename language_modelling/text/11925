@@ -1,0 +1,189 @@
+{{featured article}}
+{{Infobox block cipher
+| name           = Caesar cipher
+| image          = [[Image:Caesar3.svg|320px]]
+| caption        = The action of a Caesar cipher is to replace each plaintext letter with one  fixed number of places down the alphabet. This example is with a shift of three, so that a <tt>B</tt> in the plaintext becomes <tt>E</tt> in the ciphertext.
+<!-- General -->
+| designers      = 
+| publish date   = 
+| series         = 
+| derived from   = 
+| derived to     = 
+| related to     = 
+| certification  = 
+<!-- Cipher detail -->
+| key size       = 
+| security claim = 
+| block size     = 
+| structure      = [[substitution cipher]]
+| rounds         = 
+| cryptanalysis  = Susceptible to [[frequency analysis]] and brute force attacks.
+}}
+In [[cryptography]], a '''Caesar cipher''', also known as a '''Caesar's cipher''', the '''shift cipher''', '''Caesar's code''' or '''Caesar shift''', is one of the simplest and most widely known [[encryption]] techniques. It is a type of [[substitution cipher]] in which each letter in the [[plaintext]] is replaced by a letter some fixed number of positions down the [[alphabet]]. For example, with a shift of 3, <tt>A</tt> would be replaced by <tt>D</tt>, <tt>B</tt> would become <tt>E</tt>, and so on. The method is named after [[Julius Caesar]], who used it in his private correspondence.
+
+The encryption step performed by a Caesar cipher is often incorporated as part of more complex schemes, such as the [[Vigen<U+00E8>re cipher]], and still has modern application in the [[ROT13]] system. As with all single alphabet substitution ciphers, the Caesar cipher is easily broken and in modern practice offers essentially no communication security.
+
+==Example==
+The transformation can be represented by aligning two alphabets; the cipher alphabet is the plain alphabet rotated left or right by some number of positions. For instance, here is a Caesar cipher using a left rotation of three places (the shift parameter, here 3, is used as the [[key (cryptography)|key]]):
+
+ Plain:    ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ Cipher:   DEFGHIJKLMNOPQRSTUVWXYZABC
+
+When encrypting, a person looks up each letter of the message in the "plain" line and writes down the corresponding letter in the "cipher" line.  Deciphering is done in reverse. 
+ Ciphertext: WKH TXLFN EURZQ IRA MXPSV RYHU WKH ODCB GRJ
+ Plaintext:  the quick brown fox jumps over the lazy dog
+
+The encryption can also be represented using [[modular arithmetic]] by first transforming the letters into numbers, according to the scheme, A = 0, B = 1,..., Z = 25.<ref>{{cite journal |last=Luciano |first=Dennis |coauthors=Gordon Prichett |year=1987 |month=January |title=Cryptology: From Caesar Ciphers to Public-Key Cryptosystems |journal=The College Mathematics Journal |volume=18 |issue=1 |pages=2<U+2013>17 |doi=10.2307/2686311 |jstor=2686311 }}</ref> Encryption of a letter <math>x</math> by a shift ''n'' can be described mathematically as,<ref>{{cite book |title=Cryptology Unlocked |last=Wobst |first=Reinhard |year=2001 |publisher=Wiley |isbn=978-0-470-06064-3 |pages=19 }}</ref>
+
+: <math>E_n(x) = (x + n) \mod {26}.</math>
+
+Decryption is performed similarly, 
+
+: <math>D_n(x) = (x - n) \mod {26}.</math>
+
+(There are different definitions for the [[modulo operation]]. In the above, the result is in the range 0...25. I.e., if ''x+n'' or ''x-n'' are not in the range 0...25, we have to subtract or add 26.)
+
+The replacement remains the same throughout the message, so the cipher is classed as a type of ''[[monoalphabetic substitution]]'', as opposed to ''[[polyalphabetic substitution]]''.
+
+==History and usage==
+[[Image:Gaius Julius Caesar (100-44 BC).JPG|thumbnail|The Caesar cipher is named for [[Julius Caesar]], who used an alphabet with a left shift of three.]]
+
+The Caesar cipher is named after [[Julius Caesar]], who, according to [[Lives of the Twelve Caesars|Suetonius]], used it with a shift of three to protect messages of military significance. While Caesar's was the first recorded use of this scheme, other substitution ciphers are known to have been used earlier. 
+{{Quote|If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out. If anyone wishes to decipher these, and get at their meaning, he must substitute the fourth letter of the alphabet, namely D, for A, and so with the others.|[[Suetonius]]|''[[Life of Julius Caesar]]'' 56}}
+His nephew, [[Augustus Caesar|Augustus]], also used the cipher, but with a right shift of one, and it did not wrap around to the beginning of the alphabet:
+{{Quote|Whenever he wrote in cipher, he wrote B for A, C for B, and the rest of the letters on the same principle, using AA for X.|[[Suetonius]]|''[[Life of Augustus]]'' 88}}
+There is evidence that Julius Caesar used more complicated systems as well,<ref>{{cite journal |last=Reinke |first=Edgar C. |year=1992 |month=December |title=Classical Cryptography |journal=The Classical Journal |volume=58 |issue=3 |pages=114 }}</ref> and one writer, [[Aulus Gellius]], refers to a (now lost) treatise on his ciphers:
+{{Quote|There is even a rather ingeniously written treatise by the grammarian Probus concerning the secret meaning of letters in the composition of Caesar's epistles.|[[Aulus Gellius]]|''Attic Nights 17.9.1<U+2013>5''}}
+
+It is unknown how effective the Caesar cipher was at the time, but it is likely to have been reasonably secure, not least because most of Caesar's enemies would have been [[literacy|illiterate]] and others would have assumed that the messages were written in an unknown foreign language.<ref>{{cite book |title=Fundamentals of Computer Security |last=Pieprzyk |first=Josef |coauthors=Thomas Hardjono, Jennifer Seberry |year=2003 |publisher=Springer |isbn=3-540-43101-2 |pages=6 }}</ref> There is no record at that time of any techniques for the solution of simple substitution ciphers. The earliest surviving records date to the 9th century works of [[Al-Kindi]] in the [[Arab]] world with the discovery of [[frequency analysis]].<ref>{{cite book |title=The Code Book |last=Singh |first=Simon |authorlink=Simon Singh |year=2000 |publisher=Anchor |isbn=0-385-49532-3 |pages=14<U+2013>20 }}</ref>
+
+A Caesar cipher with a shift of one is used on the back of the [[Mezuzah]] to encrypt the [[Names of God in Judaism|names of God]]. This may be a holdover from an earlier time when Jewish people were not allowed to have Mezuzahs. The letters of the cryptogram themselves comprise a religiously significant "divine name" which [[Orthodox Judaism|Orthodox]] belief holds keeps the forces of evil in check.<ref>{{cite web |url=http://www.chabad.org/library/article_cdo/aid/312102/jewish/Mezuzah-and-Astrology.htm |title= Mezuzah and Astrology |accessdate=2008-06-13 |author=Alexander Poltorak |publisher=[[chabad.org]]}}</ref>
+
+In the 19th century, the personal advertisements section in newspapers would sometimes be used to exchange messages encrypted using simple cipher schemes. [[David Kahn (writer)|Kahn]] (1967) describes instances of lovers engaging in secret communications enciphered using the Caesar cipher in ''[[The Times]]''.<ref>{{cite book |title=The Codebreakers |last=Kahn |first=David |authorlink=David Kahn (writer) |year=1967 |isbn=978-0-684-83130-5) |pages=775<U+2013>6 }}</ref> Even as late as 1915, the Caesar cipher was in use: the Russian army employed it as a replacement for more complicated ciphers which had proved to be too difficult for their troops to master; German and Austrian cryptanalysts had little difficulty in decrypting their messages.<ref>{{cite book |title=The Codebreakers |last=Kahn |first=David |authorlink=David Kahn (writer) |year=1967 |isbn=978-0-684-83130-5) |pages=631<U+2013>2 }}</ref>
+
+Caesar ciphers can be found today in children's toys such as [[secret decoder ring]]s. A Caesar shift of thirteen is also performed in the [[ROT13]] [[algorithm]], a simple method of obfuscating text widely found on [[Usenet]] and used to obscure text (such as joke punchlines and story [[Spoiler (media)|spoilers]]), but not seriously used as a method of encryption.<ref>{{cite book |title=Cryptology Unlocked |last=Wobst |first=Reinhard |year=2001 |publisher=Wiley |isbn=978-0-470-06064-3 |pages=20 }}</ref>
+
+The [[Vigen<U+00E8>re cipher]] uses a Caesar cipher with a different shift at each position in the text; the value of the shift is defined using a repeating keyword. If the keyword is as long as the message, chosen [[randomly|random]], never becomes known to anyone else, and is never reused, this is the [[one-time pad]] cipher, proven unbreakable. The conditions are so difficult they are, in practical effect, never achieved. Keywords shorter than the message (e.g., "[[Vigen<U+00E8>re cipher#History|Complete Victory]]" used by the [[Confederate States of America|Confederacy]] during the [[American Civil War]]), introduce a cyclic pattern that might be detected with a statistically advanced version of frequency analysis.<ref>{{cite book |title=The Codebreakers |last=Kahn |first=David |authorlink=David Kahn (writer) |year=1967 |isbn=978-0-684-83130-5) }}</ref>
+
+In April 2006, fugitive [[Mafia]] boss [[Bernardo Provenzano]] was captured in [[Sicily]] partly because some of his messages, written in a variation of the Caesar cipher, were broken. Provenzano's cipher used numbers, so that "A" would be written as "4", "B" as "5", and so on.<ref>{{cite news |first=John |last=Leyden |title=Mafia boss undone by clumsy crypto |url=http://www.theregister.co.uk/2006/04/19/mafia_don_clueless_crypto/ |publisher=''[[The Register]]'' |date=2006-04-19 |accessdate=2008-06-13 }}</ref>  
+
+In 2011, Rajib Karim was convicted in the [[United Kingdom]] of "terrorism offences" after using the Caesar cipher to communicate with Bangladeshi Islamic activists discussing plots to blow up [[British Airways]] planes or disrupt their IT networks.  Although the parties had access to far better encryption techniques (Karim himself used [[Pretty Good Privacy|PGP]] for data storage on computer disks), they chose to use their own scheme instead (implemented in [[Microsoft Excel]]) "because 'kaffirs', or non-believers, know about it [ie, PGP] so it must be less secure".
+<ref>{{cite news |title=BA jihadist relied on Jesus-era encryption |url=http://www.theregister.co.uk/2011/03/22/ba_jihadist_trial_sentencing/ |publisher=''[[The Register]]'' |date=2011-03-22 |accessdate=2011-04-01 }}</ref>
+
+==Breaking the cipher==
+{| class="wikitable" align="right" style="margin: 0 0 1em 1em"
+! Decryption<br>shift
+! Candidate plaintext
+|- align="center"
+|  0
+| <tt>exxegoexsrgi</tt>
+|- align="center"
+| 1
+| <tt>dwwdfndwrqfh</tt>
+|- align="center" 
+| 2
+| <tt>cvvcemcvqpeg</tt>
+|- align="center"
+| 3
+| <tt>buubdlbupodf</tt>
+|- align="center"
+| {{highlight2}} | 4
+| {{highlight2}} | <tt>attackatonce</tt>
+|- align="center" 
+| 5
+| <tt>zsszbjzsnmbd</tt>
+|- align="center"
+| 6
+| <tt>yrryaiyrmlac</tt>
+|- align="center"
+| colspan="2" | ...
+|- align="center"
+|  23
+| <tt>haahjrhavujl</tt>
+|- align="center"
+| 24
+| <tt>gzzgiqgzutik</tt>
+|- align="center"
+| 25
+| <tt>fyyfhpfytshj</tt>
+|}
+The Caesar cipher can be easily broken even in a [[ciphertext-only attack|ciphertext-only scenario]]. Two situations can be considered: 
+# an attacker knows (or guesses) that some sort of simple substitution cipher has been used, but not specifically that it is a Caesar scheme;
+# an attacker knows that a Caesar cipher is in use, but does not know the shift value.
+
+In the first case, the cipher can be broken using the same techniques as for a general simple substitution cipher, such as [[frequency analysis]]  or [[pattern word]]s.<ref>{{cite book |title=Cryptology |last=Beutelspacher |first=Albrecht |authorlink=Albrecht Beutelspacher |year=1994 |publisher=[[Mathematical Association of America]] |isbn=0-88385-504-6 |pages=9<U+2013>11 }}</ref> While solving, it is likely that an attacker will quickly notice the regularity in the solution and deduce that a Caesar cipher is the specific algorithm employed.
+
+[[Image:English-slf.png|left|320px|thumbnail|The distribution of letters in a typical sample of English language text has a distinctive and predictable shape. A Caesar shift "rotates" this distribution, and it is possible to determine the shift by examining the resultant frequency graph.]]
+In the second instance, breaking the scheme is even more straightforward. Since there are only a limited number of possible shifts (26 in English), they can each be tested in turn in a [[brute force attack]].<ref>{{cite book |title=Cryptology |last=Beutelspacher |first=Albrecht |authorlink=Albrecht Beutelspacher |year=1994 |publisher=[[Mathematical Association of America]] |isbn=0-88385-504-6 |pages=8<U+2013>9 }}</ref> One way to do this is to write out a snippet of the ciphertext in a table of all possible shifts<ref>{{cite journal |last=Leighton |first=Albert C. |year=1969 |month=April |title=Secret Communication among the Greeks and Romans |journal=Technology and Culture |volume=10 |issue=2 |pages=139<U+2013>154 |doi=10.2307/3101474 |jstor=3101474 }}</ref> <U+2014> a technique sometimes known as "completing the plain component".<ref>{{cite book |title=Elementary Cryptanalysis: A Mathematical Approach |last=Sinkov |first=Abraham |authorlink=Abraham Sinkov |coauthors=Paul L. Irwin |year=1966 |publisher=Mathematical Association of America |isbn=0-88385-622-0 |pages=13<U+2013>15 }}</ref> The example given is for the ciphertext "<tt>EXXEGOEXSRGI</tt>"; the plaintext is instantly recognisable by eye at a shift of four. Another way of viewing this method is that, under each letter of the ciphertext, the entire alphabet is written out in reverse starting at that letter. This attack can be accelerated using a set of strips prepared with the alphabet written down them in reverse order. The strips are then aligned to form the ciphertext along one row, and the plaintext should appear in one of the other rows.
+
+Another brute force approach is to match up the frequency distribution of the letters. By graphing the frequencies of letters in the ciphertext, and by knowing the expected distribution of those letters in the original language of the plaintext, a human can easily spot the value of the shift by looking at the displacement of particular features of the graph. This is known as [[frequency analysis]]. For example in the English language the plaintext frequencies of the letters <tt>E</tt>, <tt>T</tt>, (usually most frequent), and <tt>Q</tt>, <tt>Z</tt> (typically least frequent) are particularly distinctive.<ref>{{cite book |title=The Code Book |last=Singh |first=Simon |authorlink=Simon Singh |year=2000 |publisher=Anchor |isbn=0-385-49532-3 |pages=72<U+2013>77}}</ref> Computers can also do this by measuring how well the actual frequency distribution matches up with the expected distribution; for example, the [[chi-squared statistic]] can be used.<ref>{{cite web |url=http://starbase.trincoll.edu/~crypto/historical/caesar.html |title=The Caesar Cipher |accessdate=2008-07-16 |last=Savarese |first=Chris |coauthors=Brian Hart |date=2002-07-15 }}</ref>
+
+For natural language plaintext, there will, in all likelihood, be only one plausible decryption, although for extremely short plaintexts, multiple candidates are possible. For example, the ciphertext <tt>MPQY</tt> could, plausibly, decrypt to either "<tt>[[aden]]</tt>" or "<tt>know</tt>" (assuming the plaintext is in English); similarly, "<tt>ALIIP</tt>" to "<tt>dolls</tt>" or "<tt>wheel</tt>"; and "<tt>AFCCP</tt>" to "<tt>jolly</tt>" or "<tt>cheer</tt>" (see also [[unicity distance]]).
+
+Multiple encryptions and decryptions provide no additional security. This is because two encryptions of, say, shift ''A'' and shift ''B'', will be equivalent to an encryption with shift ''A'' + ''B''. In mathematical terms, the encryption under various keys forms a [[group (mathematics)|group]].<ref>{{cite book |title=Cryptology Unlocked |last=Wobst |first=Reinhard |year=2001 |publisher=Wiley |isbn=978-0-470-06064-3 |pages=31}}</ref>
+
+==Notes==
+{{reflist|2}}
+
+==Bibliography==
+* [[David Kahn (writer)|David Kahn]], ''The Codebreakers <U+2014> The Story of Secret Writing,'' Revised ed. 1996. ISBN 0-684-83130-9.
+* [[F.L. Bauer]], ''Decrypted Secrets,'' 2nd edition, 2000, Springer. ISBN 3-540-66871-3.
+*  Chris Savarese and Brian Hart, ''[http://starbase.trincoll.edu/~crypto/historical/caesar.html The Caesar Cipher]'', 1999
+
+==External links==
+{{Spoken Wikipedia|Caesar_cipher.ogg|2005-04-14}}
+* {{MathWorld | urlname=CaesarsMethod | title=Caesar's Method}}
+* [http://www.murky.org/blg/2004/09/02/the-caesar-shift/ The Caesar Shift] discussed on [http://www.murky.org/blg/category/cryptography/ The Beginner's Guide to Cryptography]
+* [http://www.xarg.org/2010/05/cracking-a-caesar-cipher/ A simple approach to crack a Caesar cipher]
+{{Cryptography navbox | classical}}
+
+[[Category:Julius Caesar]]
+[[Category:Classical ciphers]]
+[[Category:Group theory]]
+
+{{Link GA|es}}
+{{Link GA|fr}}
+{{Link FA|ca}}
+{{Link FA|pl}}
+{{Link FA|pt}}
+{{Link FA|ro}}
+[[az:Sezar <U+015F>ifr<U+0259>si]]
+[[bg:<U+0428><U+0438><U+0444><U+044A><U+0440> <U+043D><U+0430> <U+0426><U+0435><U+0437><U+0430><U+0440>]]
+[[br:Sifr Kaezar]]
+[[ca:Xifratge de C<U+00E8>sar]]
+[[cs:Caesarova <U+0161>ifra]]
+[[de:Caesar-Verschl<U+00FC>sselung]]
+[[es:Cifrado C<U+00E9>sar]]
+[[eo:<U+0108>ifro de Cezaro]]
+[[eu:Zesar zifratu]]
+[[fa:<U+0631><U+0645><U+0632> <U+0633><U+0632><U+0627><U+0631>]]
+[[fr:Chiffrement par d<U+00E9>calage]]
+[[ko:<U+CE74><U+C774><U+C0AC><U+B974> <U+C554><U+D638>]]
+[[hr:Cezarova <U+0161>ifra]]
+[[id:Sandi Caesar]]
+[[is:Reiknirit Sesars]]
+[[it:Cifrario di Cesare]]
+[[he:<U+05E6><U+05D5><U+05E4><U+05DF> <U+05E7><U+05D9><U+05E1><U+05E8>]]
+[[ka:<U+10D9><U+10D4><U+10D8><U+10E1><U+10E0><U+10D8><U+10E1> <U+10D9><U+10DD><U+10D3><U+10D8>]]
+[[kk:<U+0426><U+0435><U+0437><U+0430><U+0440><U+044C> <U+0448><U+0438><U+0444><U+0440><U+044B>]]
+[[lv:C<U+0113>zara <U+0161>ifrs]]
+[[lb:Code C<U+00E4>sar]]
+[[hu:Caesar-rejtjel]]
+[[mk:<U+0426><U+0435><U+0437><U+0430><U+0440><U+043E><U+0432><U+0430> <U+0448><U+0438><U+0444><U+0440><U+0430>]]
+[[nl:Caesarcijfer]]
+[[ja:<U+30B7><U+30FC><U+30B6><U+30FC><U+6697><U+53F7>]]
+[[no:C<U+00E6>sarchiffer]]
+[[pl:Szyfr Cezara]]
+[[pt:Cifra de C<U+00E9>sar]]
+[[ro:Cifrul Cezar]]
+[[ru:<U+0428><U+0438><U+0444><U+0440> <U+0426><U+0435><U+0437><U+0430><U+0440><U+044F>]]
+[[si:<U+0DC3><U+0DD3><U+0DC3><U+0DBB><U+0DCA> <U+0D9A><U+0DDA><U+0DAD><U+0DCF><U+0D82><U+0D9A><U+0DBA>]]
+[[simple:Caesar cipher]]
+[[sk:C<U+00E9>zarova <U+0161>ifra]]
+[[sl:Cezarjeva <U+0161>ifra]]
+[[sr:<U+0426><U+0435><U+0437><U+0430><U+0440><U+043E><U+0432><U+0430> <U+0448><U+0438><U+0444><U+0440><U+0430>]]
+[[sv:Caesarchiffer]]
+[[th:<U+0E23><U+0E2B><U+0E31><U+0E2A><U+0E0B><U+0E35><U+0E0B><U+0E32><U+0E23><U+0E4C>]]
+[[uk:<U+0428><U+0438><U+0444><U+0440> <U+0426><U+0435><U+0437><U+0430><U+0440><U+044F>]]
+[[vi:M<U+1EAD>t m<U+00E3> Caesar]]
+[[zh:<U+51F1><U+6492><U+5BC6><U+78BC>]]

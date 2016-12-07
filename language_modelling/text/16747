@@ -1,0 +1,66 @@
+[[File:iadb.gif|thumb|Screenshot of the IADB]]The Integrated Archaeological Database system, or '''IADB'''  for short, is an [[open source]] web based application designed to address the data management requirements throughout the lifespan of [[archaeology|archaeological]] excavation projects, from initial excavation recording, through post-excavation analysis and research to eventual dissemination and archiving.
+
+==History==
+Development of the IADB began in the late 1980s at the Scottish Urban Archaeological Trust (SUAT) in Perth, Scotland (archaeological services in Perth are now provided by Alder Archaeology <ref name="alder">[http://www.alderarchaeology.co.uk http://www.alderarchaeology.co.uk], Alder Archaeology</ref>). The aim was to develop a computerised integrated database to record and help with the analysis of several large excavation projects on which SUAT was working at the time. Initial components included a simple stratigraphic analysis program, a basic Context and Find cataloging application and an early attempt at a single context plan digitising solution.
+
+The original concept of the IADB was to make available digital versions of the various excavation records as an easily accessible integrated resource for use in post-excavation analysis and to provide a framework within which that analysis would be undertaken. Initially, the IADB only dealt with simple artefact records and stratigraphic unit or context records. Over time, the scope of the IADB has widened to include other digital resources including single context plans, photographs, stratigraphy diagrams, etc. Initially the IADB was described as a "digital workbench" or a "computerised desktop", today we would probably call it a virtual research environment.
+
+Early versions of the IADB ran under [[MS-DOS]] and were written in Clipper and [[C (programming language)|C]] using the [[dBase]] database format. Vector graphics used the [[Graphical Environment Manager|GEM]] graphics library, a precursor to [[Windows]]. With the launch of [[Visual Basic]], the IADB was moved to Windows using an [[MS Access]] database. In 1997 development of the IADB moved from SUAT to York Archaeological Trust <ref name="YAT">[http://www.yorkarchaeology.co.uk http://www.yorkarchaeology.co.uk], York Archaeological Trust</ref> and shortly afterwards the IADB programs were re-written in Delphi, still using an Access database. In 1999 work was begun on converting the IADB to a web application using [[MySQL]] and [[PHP]].
+
+In recent years, development has continued in collaboration with the Silchester Town Life Project<ref name="Silch">[http://www.silchester.rdg.ac.uk http://www.silchester.rdg.ac.uk], Silchester Town Life Project</ref> at the [[University of Reading]]. Grants from the UK Arts and Humanities Research Council (AHRC) have funded the development of the IADB as a web publication tool, and grants from the UK JISC have funded the OGHAM and VERA<ref name="VERA">[http://vera.rdg.ac.uk http://vera.rdg.ac.uk], Virtual Environment for Research in Archaeology (VERA)</ref> projects for the development of the IADB as a Virtual Research Environment for archaeology using the Silchester project as a test-bed.
+
+In September 2005, an edition of the BBC Radio 4 programme The Material World featured a discussion on the role of the IADB in the Silchester project with particular reference to the development of the IADB as a virtual research environment. As of September 2010, this programme remains available online at http://www.bbc.co.uk/radio4/science/thematerialworld_20050922.shtml.
+
+The IADB was Highly Commended in the Best Archaeological Innovation category at the 2010 British Archaeological Awards<ref name="BAA">[http://www.britarch.ac.uk/awards http://www.britarch.ac.uk/awards], British Archaeological Awards</ref> ceremony held at the British Museum on 19 July 2010.
+
+==Structure==
+An IADB project database consists of data resources and the links, or connections between them.
+
+* '''Finds''' are sub-divided into Small Finds, Bulk Finds, Samples, Skeletons, Architectural Fragments and Structural Timbers. Find References take the form FSF12345.
+* '''Contexts''' are the standard stratigraphic excavation unit. A basic Context record consists of keywords and other metadata, an optional image (or facsimile) of the original context recording sheet, stratigraphic links to other contexts and a "single context plan" of the context.
+* '''Sets''' consist of one or more Contexts, for example, the cut of a pit and its several fills, and can belong to a single Group
+* '''Groups''' consist of one or more Sets, for example, several associated pit Sets, and can belong to a single Phase
+* '''Phases''' consist of one or more Groups
+* '''Objects''' consist of any combination of Finds, Contexts, Sets, Groups, Phases and other Objects. They are defined either as a list of members (static) or as the result of a database query (dynamic).
+* '''Images''' include photographs and other digital raster images such as scanned X-rays. Each image can be linked to any number of Finds, Contexts, etc and can be inserted into internal IADB documents.
+* '''Illustrations''' include any type of digital vector illustration which can be converted into SVG or DXF format
+* '''Structure Diagrams''' can be a simple stratigraphic matrix diagrams showing stratigraphic units (Contexts, Sets, etc) and the relationships between them, or other database resources (images, plans, documents, other Structure Diagrams, etc) can be added to create more general purpose visualisations. A Structure Diagram can be thought of as a visual representation of, and an index into, a particularly aspect of the project database.
+* '''Documents''' can be internal HTML documents created and edited within the IADB, externally created documents (such as PDF files) uploaded and stored within the IADB, links to external (non-IADB) web resources, or references to paper documents.
+* '''Bibliography References'''. Each IADB server maintains a global Bibliography, from which selected items are tagged for inclusion within individual Projects.
+
+The IADB includes built-in editors for creating and manipulating Structure Diagrams, creating and editing internal documents, and for digitizing single Context plans (from scanned images or using a graphics tablet). No third party software is required.
+
+Any number of user-defined tags (analogous to Labels in Google Mail, for example) may be applied to any resources within a project database.
+
+Each IADB project, each Tagged list, each individual resource record (Find, Context, Image, Structure Diagram, etc), and each SQL Query in an IADB project database has a unique URI which allows links to individual IADB resources to be included in web publications, external databases, etc.
+
+==Recent Developments==
+An innovative approach to Context recording has been developed which uses a scanned image of the original Context Recording Sheet (CRS) and some associated metadata as an alternative to the traditional IADB context record which was essentially a full transcription of the CRS. An example of a facsimile Context record may be seen here. A discussion of the background to the Facsimile Context Record may be downloaded from here (PDF 290kb).
+
+Work is continuing on the development of a Section record within the IADB. The aim is to produce a fully interactive system of digitised section drawings linked to the Contexts, Finds and Samples represented on them. In many ways, this will be similar to the existing system for digitising and storing single context plans within the IADB.
+
+Work has begun on the development of a web service to provide IADB project data in XML format, possibly with an associated RSS feed. The XML web service will be in addition to the unique URIs mentioned above which provide IADB project data as formatted HTML.
+
+==IADB Users==
+Some current users of the IADB include:
+
+* York Archaeological Trust<ref name="YAT" />
+* Silchester Town Life Project (University of Reading)<ref name="Silch" />
+* Butrint Foundation - Albania (Centre for World Archaeology, University of East Anglia, Norwich)<ref name="Butrint">[http://www.butrint.org/butrint_2_1.php http://www.butrint.org/butrint_2_1.php], Butrint Foundation</ref>
+* Noviodunum Project - Romania (University of Southampton and Kings College London)<ref name="Soton">[http://www.arch.soton.ac.uk/Projects/default.asp?ProjectID=52 http://www.arch.soton.ac.uk/Projects/default.asp?ProjectID=52], Noviodunum Project, Romania</ref>
+* Wadi Faynan Project - Jordan (University of Reading)<ref name="WF">[http://www.reading.ac.uk/SHESresearch/Archaeology/Prehistoric/WadiFaynan.htm http://www.reading.ac.uk/SHESresearch/Archaeology/Prehistoric/WadiFaynan.htm], Wadi Faynan Project, Jordan</ref>
+* NAU Archaeology (Norwich)<ref name="NAU">[http://www.nau.org.uk http://www.nau.org.uk], NAU Archaeology, Norwich, UK</ref>
+* Canterbury Archaeological Trust<ref name="CAT">[http://www.canterburytrust.co.uk http://www.canterburytrust.co.uk], Canterbury Archaeological Trust, UK</ref>
+* Central Zagros Archaeological Project - Iran (University College London and University of Reading)
+* Glastonbury Abbey Archive Project (University of Reading and Glastonbury Abbey)<ref name="Glas">[http://www.rdg.ac.uk/archaeology/research/Projects/arch-project-Glastonbury.asp http://www.rdg.ac.uk/archaeology/research/Projects/arch-project-Glastonbury.asp], Glastonbury Abbey Archive Project</ref>
+
+In addition, the IADB is used as a teaching tool within the Department of Archaeology at the University of Reading and, most recently, in the RADII (Recording Archaeological Data in Iran and Iraq) project, a [[British Academy]] funded joint project between [[University College London]] and the University of Reading.
+
+==References==
+<references/>
+
+==External Links==
+http://www.iadb.org.uk IADB Home Page
+
+[[Category:Archaeology]]
+[[Category:Software]]

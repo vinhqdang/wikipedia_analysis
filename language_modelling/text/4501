@@ -1,0 +1,123 @@
+[[Image:Petersen graph blue.svg|thumb|right|The Petersen graph is most commonly drawn as a pentagon with a star inside, with five spokes.]]
+[[Image:Petersen graph, two crossings.svg|thumb|right|The Petersen graph has crossing number 2.]]
+[[Image:Petersen graph, unit distance.svg|thumb|right|The Petersen graph is a [[unit distance graph]]: it can be drawn in the plane with each edge having unit length.]]
+
+The '''Petersen graph''' is a small [[graph (mathematics)|graph]] that serves as a useful example and counterexample in [[graph theory]].  The graph is named for [[Julius Petersen]], who published it in 1898.  Petersen constructed it to be the smallest bridgeless cubic graph with no three-edge-coloring.<ref>[http://www.win.tue.nl/~aeb/drg/graphs/Petersen.html The Petersen graph] by Andries E. Brouwer.</ref>  Although the graph is generally credited to Petersen, it had in fact first appeared 12 years earlier, in 1886.<ref>{{cite journal|author=A. B. Kempe|title=A memoir on the theory of mathematical form|journal=Philosophical Transactions of the Royal Society of London|volume=177|pages=1&ndash;70|year=1886}}</ref>
+
+== Properties ==
+=== Basic properties ===
+
+The Petersen graph ...
+
+* is 3-connected and hence 3-edge-connected and bridgeless.  See the [[Glossary of graph theory#Connectivity|glossary]].
+* has independence number 4 and is 3-partite.  See the [[Glossary of graph theory#Independence|glossary]].
+* is [[cubic graph|cubic]], is [[strongly regular graph|strongly regular]], has domination number 3, and has a perfect matching and a 2-factor.  See the [[Glossary of graph theory#Adjacency and degree|glossary]].
+* has [[radius (graph theory)|radius]] 2 and diameter 2.
+* has [[chromatic number]] 3 and [[chromatic index]] 4, making it a [[snark (graph theory)|snark]].  (To see that there is no 3-edge-coloring requires checking four cases.)  It was the only known snark from 1898 until 1946.
+
+=== Other properties ===
+
+The Petersen graph ...
+
+* is [[planar graph|nonplanar]].  It has as [[minor (graph theory)|minor]]s both the [[complete graph]] <math>K_5</math> (contract the five short edges in the first picture), and the [[complete bipartite graph]] <math>K_{3,3}</math>.
+* has [[crossing number]] 2.
+* can be embedded in the [[projective plane]] with six pentagonal faces.
+* has a [[Hamiltonian path]] but no Hamiltonian cycle.
+* is [[symmetric graph|symmetric]], meaning that it is [[edge-transitive graph|edge transitive]] and [[vertex-transitive graph|vertex transitive]].
+* is one of only five known connected vertex transitive graphs with no Hamiltonian cycle.  It is conjectured that there are no others.
+* is [[hypohamiltonian graph|hypohamiltonian]], meaning that although it has no Hamiltonian cycle, deleting any vertex makes it Hamiltonian.  See [[:Image:Petersen graph 2.svg|this embedding]] for a demonstration of the hypohamiltonian property.
+* is one of only 14 cubic [[distance-regular graph]]s.<ref>According to [http://www.csse.uwa.edu.au/~gordon/remote/foster/#drgs Cubic symmetric graphs (The Foster Census)].</ref>
+* is the [[complement graph|complement]] of the [[line graph]] of <math>K_5</math>.
+* is a [[unit distance graph]], meaning it can be drawn in the plane with all the edges length 1.
+* has [[automorphism group]] the [[symmetric group]] <math>S_5</math>.
+* is the [[Kneser graph]] <math>KG_{5,2}</math>.  (This means you get the Petersen graph from the following construction: Take the 2-element subsets of a 5-element set as vertices, and connect two vertices if they are disjoint as sets.)
+* is the graph formed by the vertices and edges of the [[hemi-dodecahedron]], that is, a [[dodecahedron]] with opposite points, lines and faces identified together.
+* has [[graph spectrum]] &minus;2, &minus;2, &minus;2, &minus;2, 1, 1, 1, 1, 1, 3.
+* has [[Thue number]] five
+
+Every [[graph homomorphism|homomorphism]] of the Petersen graph to itself that doesn't identify adjacent vertices is an automorphism.
+
+=== Largest and smallest ===
+
+The Petersen graph ...
+* is the smallest [[snark (graph theory)|snark]].
+* is the smallest bridgeless cubic graph with no Hamiltonian cycle.
+* is the smallest bridgeless cubic graph with no three-edge-coloring.
+* is the largest cubic graph with diameter 2.
+* is the smallest hypohamiltonian graph.
+* is the smallest cubic graph of [[girth]] 5.  (It is the unique <math>(3,5)</math>-[[cage (graph theory)|cage]].  In fact, since it has only 10 vertices, it is the unique <math>(3,5)</math>-[[Moore graph]].)
+* is the smallest connected vertex-transitive graph that is not a [[Cayley graph]]
+* has 2000 [[Spanning tree (mathematics)|spanning tree]]s, the most of any 10-vertex cubic graph<ref>Jakobson and Rivin 1999; Valdes 1991. The cubic graphs with 6 and 8 vertices maximizing the number of spanning trees are [[M<U+00F6>bius ladder]]s.</ref>.
+
+== As counterexample ==
+
+The Petersen graph frequently arises as a counterexample or exception in graph theory.  For example, if ''G'' is a 2-connected, ''r''-regular graph with at most 3''r''&nbsp;+&nbsp;1 vertices, then ''G'' is Hamiltonian or ''G'' is the Petersen graph.<ref>Holton and Sheehan, page 32</ref>
+
+== Generalized Petersen graphs  ==
+
+In 1969 [[Mark Watkins]] introduced a family of graphs generalizing the Petersen graph.  The '''generalized Petersen graph''' <math>G(n,k)</math> is a graph
+with vertex set
+
+: <math>\{u_0, u_1, \dots, u_{n-1}, v_0, v_1, \dots, v_{n-1}\}</math>
+
+and edge set
+
+: <math>\{u_i u_{i+1}, u_i v_i, v_i v_{i+k} : i=0,\dots,n-1\}</math>
+
+where subscripts are to be read modulo <math>n</math> and <math>k < n/2</math>.
+
+The Petersen graph itself is <math>G(5,2)</math>.
+
+This family of graphs possesses a number of interesting properties. For example,
+# <math>G(n,k)</math> is vertex-transitive if and only if <math>n = 10, k = 2</math> or <math>k^2 \equiv \pm 1 \pmod n</math>.
+# It is edge-transitive only in the following seven cases: <math>(n,k) = (4,1), (5,2), (8,3), (10,2), (10,3), (12,5), (24,5) </math>.
+# It is [[bipartite]] if and only if <math>n</math> is even and <math>k</math> is odd.
+# It is a [[Cayley graph]] if and only if <math>k^2 \equiv 1 \pmod n</math>.
+
+Among the generalized Petersen graphs are the ''n''-prism <math>G(n,1)</math>,
+the [[D<U+00FC>rer graph]] <math>G(6,2)</math>, the [[M<U+00F6>bius-Kantor graph]] 
+<math>G(8,3)</math>, the [[dodecahedron]] <math>G(10,2)</math>, and the [[Desargues graph]] <math>G(10,3)</math>.
+
+The Petersen graph itself is the only generalized Petersen graph that is not 3-[[edge coloring|edge-colorable]]. [Castagna and Prins, 1972]
+
+== Petersen graph family ==
+
+The '''Petersen graph family''' consists of the seven graphs that can be formed from the [[complete graph]] <math>K_6</math> by zero or more applications of [[Y-<U+0394> transform|<U+0394>-Y or Y-<U+0394> transform]]s.  A graph is [[intrinsically linked graph|intrinsically linked]] if and only if it contains one of these graphs as a subgraph.
+
+== Notes ==
+<references />
+
+== References ==
+
+{{Commonscat|Petersen graph}}
+* {{cite journal|author=Frank Castagna and Geert Prins|title=Every Generalized Petersen Graph has a Tait Coloring|journal=[[Pacific Journal of Mathematics]]|volume=40|year=1972}}
+* {{cite journal|author=Geoffrey Exoo, [[Frank Harary]], and Jerald Kabell|title=The crossing numbers of some generalized Petersen graphs|journal=[[Mathematica Scandinavica]]|volume=48|year=1981|pages=184&ndash;188}}
+* {{cite book|author=D. A. Holton and J. Sheehan|title=[http://www.cambridge.org/uk/catalogue/catalogue.asp?isbn=0521435943 The Petersen Graph]|publisher=[[Cambridge University Press]]|date=[[June 1]], [[1993]]|id=ISBN 0-521-43594-3}}  Available on [http://print.google.com/print?id=nld40slgtdkC&lpg=1&prev=http://print.google.com/print%3Fq%3DPetersen%2BGraph&pg=0_1&sig=9I_4mnnsjsU8nWaAW5O5SbeobYY Google print].
+*{{cite journal
+  | author = Jakobson, Dmitry; Rivin, Igor
+  | title = On some extremal problems in graph theory
+  | year = 1999
+  | id = {{arxiv|archive = math.CO|id = 9907050}}}}
+* Mitch Keller, {{planetmath reference|id=5732|title=Kneser graphs}}
+* {{cite book|author=[[L<U+00E1>szl<U+00F3> Lov<U+00E1>sz]]|title=[[Combinatorial Problems and Exercises]], second edition|publisher=North-Holland|year=1993|id=ISBN 0-444-81504-X}}
+* {{cite journal|author=Julius Petersen|title=Sur le th<U+00E9>or<U+00E8>me de Tait|journal=L'Interm<U+00E9>diaire des Math<U+00E9>maticiens|volume=5|year=1898|pages=225&ndash;227}}
+*{{cite journal
+  | author = Valdes, L.
+  | title = Extremal properties of spanning trees in cubic graphs
+  | journal = Congr. Numer.
+  | year = 1991
+  | volume = 85
+  | pages = 143<U+2013>160}}
+* {{cite journal | author=Mark E. Watkins | title=A Theorem on Tait Colorings with an Application to the Generalized Petersen Graphs | journal=[[Journal of Combinatorial Theory]] | year=1969 | volume=6 | pages=152&ndash;164}}
+* {{MathWorld|urlname=PetersenGraph|title=Petersen Graph}}
+
+[[Category:Graphs]]
+
+[[de:Petersen-Graph]]
+[[es:Grafo de Petersen]]
+[[fr:Graphe Petersen]]
+[[ko:<U+D398><U+D14C><U+B974><U+C13C> <U+ADF8><U+B798><U+D504>]]
+[[no:Petersen-grafen]]
+[[pl:Graf Petersena]]
+[[sl:Petersenov graf]]
+[[zh:<U+4F69><U+7279><U+68EE><U+5716>]]

@@ -1,0 +1,345 @@
+In [[mathematics]], [[computing]], [[linguistics]], and related disciplines, an '''algorithm''' is a procedure (a finite [[set]] of well-defined instructions) for accomplishing some task which, given an initial state, will [[termination|terminate]] in a defined end-state. The [[computational complexity]] and efficient [[implementation]] of the algorithm are important in computing, and this depends on suitable [[data structure]]s.
+
+Informally, the concept of an algorithm is often illustrated by the example of a [[recipe]], although many algorithms are much more complex. Basically, an algorithm is a method, like a recipe, in that by following the steps of an algorithm you are guaranteed to find the solution or the answer, if there is one. Algorithms often have steps that repeat ([[iteration|iterate]]) or require decisions (such as [[Boolean logic|logic]] or [[inequality|comparison]]).  Algorithms can be composed to create more complex algorithms.
+
+The concept of an algorithm originated as a means of recording  procedures for solving mathematical problems such as finding the common divisor of two numbers or multiplying two numbers.  The concept was  formalized in 1936 through [[Alan Turing]]'s [[Turing machines]] and [[Alonzo Church]]'s [[lambda calculus]], which in turn formed the foundation of [[computer science]].
+
+Most algorithms can be directly implemented by [[computer program]]s; any other algorithms can at least in theory be ''simulated'' by computer programs. In many [[programming languages]], algorithms are implemented as functions or procedures.
+
+==Etymology==
+[[Muhammad ibn M<U+016B>s<U+0101> al-Khw<U+0101>rizm<U+012B>|Al-Khw<U+0101>rizm<U+012B>]], the [[Persian people|Persian]] astronomer and mathematician, wrote a treatise in Arabic in 825 AD, ''On Calculation with Hindu Numerals'', which was translated into Latin in the 12th century as ''Algoritmi de numero Indorum''[http://www.answers.com/topic/muhammad-ibn-musa-al-khwarizmi], which title was likely intended to mean "Algoritmi on the numbers of the Indians", where "Algoritmi" was the translator's rendition of the author's name; but people misunderstanding the title treated ''Algoritmi'' as a Latin plural and this led to the word "algorithm" (Latin ''algorithmus'') coming to mean "calculation method". The intrusive "h" is most likely due to false analogy with [[Greek language|Greek]] <U+03B1><U+03C1><U+03B9><U+03B8><U+03BC><U+03BF><U+03C2> ''arithmos'' = "number".
+
+<br clear=all>
+[[Image:LampFlowchart.svg|thumb|right|[[Flowchart]]s are often used to graphically represent algorithms.]]
+
+== Why algorithms are necessary: an informal definition ==
+:''For a detailed presentation of the various points of view around the definition of "algorithm" see [[Algorithm characterizations]]. For examples of simple addition algorithms specified in the detailed manner described in [[Algorithm characterizations]], see [[Algorithm examples]].'' 
+
+No generally accepted ''formal'' definition of "algorithm" exists. We can, however, derive clues to the issues involved and an informal meaning of the word from the following quotation from Boolos and Jeffrey (1974, 1999):
+
+:"No human being can write fast enough, or long enough, or small enough to list all members of an enumerably infinite set by writing out their names, one after another, in some notation. But humans can do something equally useful, in the case of certain enumerably infinite sets: They can give '''explicit instructions for determining the nth member of the set''', for arbitrary finite n. Such instructions are to be given quite explicitly, in a form in which '''they could be followed by a computing machine''', or by a '''human who is capable of carrying out only very elementary operations on symbols'''" (boldface added, p. 19).
+
+The words "enumerably infinite" mean "countable using integers perhaps extending to infinity". Thus Boolos and Jeffrey are saying that an algorithm ''implies'' instructions for a process that "creates" output integers from an ''arbitrary'' "input" integer or integers that, in theory, can be chosen from 0 to infinity. Thus we might expect an algorithm to be an algebraic equation such as '''y = m + n''' -- two arbitrary "input variables" '''m''' and '''n''' that produce an output '''y'''. Unfortunately -- as we see in [[Algorithm characterizations]] -- that the word algorithm implies much more than this, something on the order of (for our addition example):
+:Precise instructions (in language understood by "the computer") for a "fast, efficient, good" ''process'' that specifies the "moves" of "the computer" (machine or  human, equipped with the necessary internally-contained information and capabilities) to find, decode, and then munch arbitrary input integers/symbols '''m''' and '''n''', symbols '''+''' and '''=''' ... and (reliably, correctly, "effectively") produce, in a "reasonable" time, output-integer '''y''' at a specified place and in a specified format.
+
+== Formalization of algorithms ==
+Algorithms are essential to the way [[computer]]s process information, because a [[computer program]] is essentially an algorithm that tells the computer what specific steps to perform (in what specific order) in order to carry out a specified task, such as calculating employees<U+2019> paychecks or printing students<U+2019> report cards. Thus, an algorithm can be considered to be any sequence of operations which can be performed by a [[Turing completeness|Turing-complete]] system. Authors who assert this thesis include Savage (1987) and Gurevich (2000):
+
+:"...Turing's informal argument in favor of his thesis justifies a stronger thesis: every algorithm can be simulated by a Turing machine" (Gurevich 2000 p.1) ...according to Savage [1987], "an algorithm is a computational process defined by a Turing machine."(Gurevich 2000 p.3)
+
+Typically, when an algorithm is associated with processing information, data is read from an input source or device, written to an output sink or device, and/or stored for further processing.  Stored data is regarded as part of the internal state of the entity performing the algorithm. In practice, the state is stored in a [[data structure]], but an algorithm requires the internal data only for specific operation sets called [[abstract data type]]s.
+
+For any such computational process, the algorithm must be rigorously defined: specified in the way it applies in all possible circumstances that could arise. That is, any conditional steps must be systematically dealt with, case-by-case; the criteria for each case must be clear (and computable).
+
+Because an algorithm is a precise list of precise steps, the order of computation will almost always be critical to the functioning of the algorithm. Instructions are usually assumed to be listed explicitly, and are described as starting 'from the top' and going 'down to the bottom', an idea that is described more formally by ''[[control flow|flow of control]]''.
+
+So far, this discussion of the formalization of an algorithm has assumed the premises of [[imperative programming]]. This is the most common conception, and it attempts to describe a task in discrete, 'mechanical' means. Unique to this conception of formalized algorithms is the [[assignment operation]], setting the value of a variable. It derives from the intuition of '[[memory]]' as a scratchpad. There is an example below of such an assignment.
+
+For some alternate conceptions of what constitutes an algorithm see [[functional programming]] and [[logic programming]] .
+
+=== Termination ===
+Some writers restrict the definition of ''algorithm'' to procedures that eventually finish. In such a category Kleene 1952 places the "''decision procedure'' or ''decision method'' or ''algorithm'' for the question" (Kleene p. 136). Others, including Kleene, include procedures that could run forever without stopping; such a procedure has been called a "computational method" (Knuth, Vol.1 p. 5) or "''calculation procedure'' or ''algorithm''" (Kleene p. 137); however, Kleene notes that such a method must eventually exhibit "some object" (Kleene p. 137).
+
+Minksy makes the pertinent observation that if an algorithm hasn't terminated then we cannot answer the question "Will it terminate with the correct answer?":
+:"But if the length of the process is not known in advance, then 'trying' it may not be decisive, because if the process does go on forever -- then at no time will we ever be sure of the answer" (Minsky (1967) p. 105)
+
+Thus the answer is: ''undecidable''. We can never know, nor can we do an analysis beforehand to find out. The analysis of algorithms for their likelihood of termination is called [[Termination analysis]]. See [[Halting problem]] for more about this knotty issue.
+
+In the case of non-halting computation method (calculation procedure) success can no longer be defined in terms of ''halting'' with a meaningful output. Instead, terms of success that allow for unbounded output sequences must be defined.  For example, an algorithm that verifies if there are more zeros than ones in an infinite random binary sequence must run forever to be effective.  If it is implemented correctly, however, the algorithm's output will be useful: for as long as it examines the sequence, the algorithm will give a positive response while the number of examined zeros outnumber the ones, and a negative response otherwise.  Success for this algorithm could then be defined as eventually outputting only positive responses if there are actually more zeros than ones in the sequence, and in any other case outputting any mixture of positive and negative responses.
+
+See the examples of (im-)"proper" subtraction at [[partial function]] for more about what can happen when an algorithm fails for certain of its input numbers -- e.g. (i) non-termination, (ii) production of "junk" (output in the wrong format to be considered a number) or no number(s) at all (halt ends the computation with no output), (iii) wrong number(s), or (iv) a combination of these. Kleene (1952) p. 322-323 proposed that the production of "junk" or failure to produce a number is solved by having the algorithm detect these instances and produce e.g. an error message (he suggested "0"), or preferably, force the algorithm into an endless loop. (Davis (1958) does this to his subtraction algorithm (p. 12-15) -- he fixes his algorithm in a second example so that it is proper subtraction). Along with the logical outcomes "true" and "false" Kleene also proposes the use of a third logical symbol "u" -- undecided (p. 326) -- thus an algorithm will always produce ''something'' when confronted with a "proposition". The problem of wrong answers must be solved with an independent "proof" of the algorithm e.g. using induction:
+:''"We normally require auxiliary evidence for this (that the algorithm correctly defines a [[mu recursive function]]), e.g. in the form of an inductive proof that, for each argument value, the computation terminates with a unique value" (Minsky (1967) p. 186)''
+
+=== Expressing algorithms ===
+Algorithms can be expressed in many kinds of notation, including [[natural language]]s, [[pseudocode]], [[flowchart]]s, and [[programming language]]s. Natural language expressions of algorithms tend to be verbose and ambiguous, and are rarely used for complex or technical algorithms. Pseudocode and flowcharts are structured ways to express algorithms that avoid many of the ambiguities common in natural language statements, while remaining independent of a particular implementation language. Programming languages are primarily intended for expressing algorithms in a form that can be executed by a [[computer]], but are often used as a way to define or document algorithms.
+
+For example, Boolos-Burgess-Jeffrey (2002) (p. 26) give examples of [[Turing machine]] programs written as "machine tables" (see more at [[Turing machine]], [[finite state machine]], [[state transition table]]), as "flow charts" (see more at [[state diagram]]), or as a form of rudimentary [[machine code]] or [[assembly code]] called  "sets of quadruples" (see more at [[Turing machine]]). They give a more detailed outline of their "multiplication machine" (cf figure 3.7 p. 30) drawn as a "flow chart", portions of which are labeled with short natural-language descriptions.
+
+When describing the computations of their "abacus machine" model (see more at [[register machine]]) Boolos-Burgess-Jeffrey (2002) supplement small "flow charts" (state diagrams) with natural-language and/or arithmetic expressions written inside "[[block diagram]]s" to summarize what the "flow charts" are accomplishing. Sometimes they combine both "block diagrams" and "flow charts" in their descriptions.
+
+In his chapter 3.3 titled ''The Definition of Algorithm'' Sipser (2006) describes three levels of Turing machine description (all quotes p. 157):
+*'''1 High-level description''':
+:: "...prose to describe an algorithm, ignoring the implementation details. At this level we do not need to mention how the machine manages its tape or head"
+*'''2 Implementation description''':
+:: "...prose used to define the way the Turing machine uses its head and the way that it stores data on its tape. At this level we do not give details of states or transition function"
+*'''3 Formal description''':
+:: Most detailed, "lowest level", gives the Turing machine's "state table".
+
+:''For a few examples of very precise descriptions of the algorithm "Add m+n" see [[Algorithm examples]].''
+
+=== Implementation ===
+Most algorithms are intended to be implemented as [[computer programs]]. However, algorithms are also implemented by other means, such as in a biological [[neural network]] (for example, the [[human brain]] implementing [[arithmetic]] or an insect looking for food), in an [[electrical circuit]], or in a mechanical device.
+
+== Example ==
+One of the simplest algorithms is to find the largest number in an (unsorted) list of numbers. The solution necessarily requires looking at every number in the list, but only once at each. From this follows a simple algorithm, which can be stated in a high-level description  [[English language|English]] prose, as:
+
+'''High-level description:'''
+# Assume the first item is largest.
+# Look at each of the remaining items in the list and if it is larger than the largest item so far, make a note of it.
+# The last noted item is the largest in the list when the process is complete.
+
+'''(Quasi-) Formal description:'''
+Written in prose but much closer to the high-level language of a computer program, the following is the more formal coding of the algorithm in [[pseudocode]] or [[pidgin code]]:
+
+{{algorithm-begin|name=LargestNumber}}
+   Input: A non-empty list of numbers ''L''.
+   Output: The ''largest'' number in the list ''L''.
+ 
+   ''largest'' <U+2190> ''L''<sub>0</sub>
+   '''for each''' ''item'' '''in''' the list ''L<sub><U+2265>1</sub>'', '''do'''
+     '''if''' the ''item'' > ''largest'', '''then'''
+       ''largest'' <U+2190> the ''item''
+   '''return''' ''largest''
+{{algorithm-end}}
+
+For a more complex example of an algorithm, see [[Euclid's algorithm]] for the [[greatest common divisor]], one of the earliest algorithms known.
+
+:''For detailed examples of the simple algorithm "ADD m+n", precisely defined for a [[Turing machine]] and for a "counter machine" in the manner of the three description-levels of Sipser (2006) and the precise input-output specifications of Boolos-Burgess-Jeffrey (2002) see [[Algorithm examples]].''
+
+=== Algorithm analysis ===
+As it happens, it is important to know how much of a particular resource (such as time or storage) is required for a given algorithm. Methods have been developed for the [[analysis of algorithms]] to obtain such quantitative answers; for example, the algorithm above has a time requirement of O(''n''), using the [[big O notation]] with ''n'' as the length of the list. At all times the algorithm only needs to remember two values: the largest number found so far, and its current position in the input list. Therefore it is said to have a space requirement of ''O(1)''.<ref>In this example the sizes of the numbers themselves could be unbounded and one could therefore argue that the space requirement is O (log ''n''). In practice, however, the numbers considered would be bounded and hence the space taken up each number is fixed.</ref>   (Note that the size of the inputs is not counted as space used by the algorithm.)
+
+Different algorithms may complete the same task with a different set of instructions in less or more time, space, or effort than others.  For example, given two different recipes for making potato salad, one may have ''peel the potato'' before ''boil the potato'' while the other presents the steps in the reverse order, yet they both call for these steps to be repeated for all potatoes and end when the potato salad is ready to be eaten.  <!-- poor example .. who would boil each potato separately? and making a salad in general requires no cooking ... -->
+
+The [[analysis of algorithms|analysis and study of algorithms]] is a discipline of [[computer science]], and is often practiced abstractly (without the use of a specific [[programming language]] or other implementation).  In this sense, it resembles other mathematical disciplines in that the analysis focuses on the underlying principles of the algorithm, and not on any particular implementation. The pseudocode is simplest and abstract enough for such analysis.
+
+== Classes ==
+There are various ways to classify algorithms, each with its own merits.
+
+=== Classification by implementation ===
+One way to classify algorithms is by implementation means.
+
+* '''Recursion''' or '''iteration''': A [[recursive algorithm]] is one that invokes (makes reference to) itself repeatedly until a certain condition matches, which is a method common to [[functional programming]].  [[Iteration|Iterative]] algorithms use repetitive constructs like [[Control flow#Loops|loops]] and sometimes additional data structures like [[Stack (data structure)|stacks]] to solve the given problems. Some problems are naturally suited for one implementation or the other. For example, [[towers of hanoi]] is well understood in recursive implementation. Every recursive version has an equivalent (but possibly more or less complex) iterative version, and vice versa.
+
+* '''Logical''': An algorithm may be viewed as controlled [[Deductive reasoning|logical deduction]].  This notion may be expressed as:<br/><center>'''Algorithm = logic + control'''.<ref name="kowalski1979">{{cite journal|last=Kowalski|first=Robert|authorlink=Robert Kowalski|title=Algorithm=Logic+Control|journal=Communications of the ACM|volume=22|issue=7|pages=424 - 436|publisher= ACM Press|year=1979|id=ISSN 0001-0782|doi=10.1145/359131.359136}}</ref> </center>  The logic component expresses the axioms which may be used in the computation and the control component determines the way in which deduction is applied to the axioms.  This is the basis for the [[logic programming]] paradigm.  In pure logic programming languages the control component is fixed and algorithms are specified by supplying only the logic component.  The appeal of this approach is the elegant [[Formal semantics of programming languages|semantics]]: a change in the axioms has a well defined change in the algorithm.
+
+* '''Serial''' or '''parallel''' or '''distributed''': Algorithms are usually discussed with the assumption that computers execute one instruction of an algorithm at a time. Those computers are sometimes called serial computers.  An algorithm designed for such an environment is called a serial algorithm, as opposed to [[parallel algorithm]]s or [[distributed  algorithms]]. Parallel algorithms take advantage of computer architectures where several processors can work on a problem at the same time, whereas distributed algorithms utilise multiple machines connected with a [[Computer Network|network]]. Parallel or distributed algorithms divide the problem into more symmetrical or asymmetrical subproblems and collect the results back together. The resource consumption in such algorithms is not only processor cycles on each processor but also the communication overhead between the processors. Sorting algorithms can be parallelized efficiently, but their communication overhead is expensive. Iterative algorithms are generally parallelizable. Some problems have no parallel algorithms, and are called inherently serial problems.
+
+* '''Deterministic''' or '''non-deterministic''': [[Deterministic algorithm]]s solve the problem with exact decision at every step of the algorithm whereas [[non-deterministic algorithm]] solve problems via guessing although typical guesses are made more accurate through the use of heuristics.
+
+* '''Exact''' or '''approximate''': While many algorithms reach an exact solution, [[approximation algorithm]]s seek an approximation which is close to the true solution.  Approximation may use either a deterministic or a random strategy. Such algorithms have practical value for many hard problems.
+
+=== Classification by design paradigm ===
+Another way of classifying algorithms is by their design methodology or paradigm. There is a certain number of paradigms, each different from the other. Furthermore, each of these categories will include many different types of algorithms. Some commonly found paradigms include:
+
+* '''Divide and conquer'''. A [[divide and conquer algorithm]] repeatedly reduces an instance of a problem to one or more smaller instances of the same problem (usually [[recursion|recursively]]), until the instances are small enough to solve easily. One such example of divide and conquer is merge sorting. Sorting can be done on each segment of data after dividing data into segments and sorting of entire data can be obtained in conquer phase by merging them. A simpler variant of divide and conquer is called '''decrease and conquer algorithm''', that solves an identical subproblem and uses the solution of this subproblem to solve the bigger problem. Divide and conquer divides the problem into multiple subproblems and so conquer stage will be more complex than decrease and conquer algorithms. An example of decrease and conquer algorithm is [[binary search algorithm]].
+* '''[[Dynamic programming]]'''. When a problem shows [[optimal substructure]], meaning the optimal solution to a problem can be constructed from optimal solutions to subproblems, and [[overlapping subproblems]], meaning the same subproblems are used to solve many different problem instances, a quicker approach called ''dynamic programming'' avoids recomputating solutions that have already been computed. For example, the shortest path to a goal from a vertex in a weighted [[graph (mathematics)|graph]] can be found by using the shortest path to the goal from all adjacent vertices. Dynamic programming and [[memoization]] go together. The main difference between dynamic programming and divide and conquer is, subproblems are more or less independent in divide and conquer, where as the overlap of subproblems occur in dynamic programming. The difference between the dynamic programming and straightforward recursion is in caching or memoization of recursive calls. When subproblems are independent and there is no repetition, memoization does not help; Hence dynamic programming is not a solution for all complex problems. By using memoization or maintaining a [[Mathematical table|table]] of subproblems already solved, dynamic programming reduces the exponential nature of many problems to polynomial complexity.
+* '''The greedy method'''. A [[greedy algorithm]] is similar to a [[dynamic programming|dynamic programming algorithm]], but the difference is that solutions to the subproblems do not have to be known at each stage; instead a "greedy" choice can be made of what looks best for the moment. The difference between dynamic programming and the greedy method is, it extends the solution with the best possible decision (not all feasible decisions) at an algorithmic stage based on the current local optimum and the best decision (not all possible decisions) made in previous stage. It is not exhaustive, and does not give accurate answer to many problems. But when it works, it will be the fastest method. The most popular greedy algorithm is finding the minimal spanning tree as given by [[kruskal's algorithm|Kruskal]].
+* '''Linear programming'''. When solving a problem using [[linear programming]], the program is put into a number of linear [[inequality|inequalities]] and then an attempt is made to maximize (or minimize) the inputs. Many problems (such as the [[Maximum flow problem|maximum flow]] for directed [[graph (mathematics)|graphs]]) can be stated in a linear programming way, and then be solved by a 'generic' algorithm such as the [[simplex algorithm]]. A complex variant of linear programming is called integer programming, where the solution space is restricted to all integers.
+* '''[[Reduction (complexity)|Reduction]]'''. This is another powerful technique in solving many problems by transforming one problem into another problem. For example, one [[selection algorithm]] for finding the median in an unsorted list is first translating this problem into sorting problem and finding the middle element in sorted list. The goal of reduction algorithms is finding the simplest transformation such that complexity of reduction algorithm does not dominate the complexity of reduced algorithm. This technique is also called ''transform and conquer''.
+* '''Search and enumeration'''. Many problems (such as playing [[chess]]) can be modeled as problems on [[graph theory|graphs]]. A [[graph exploration algorithm]] specifies rules for moving around a graph and is useful for such problems. This category also includes the [[search algorithm]]s, [[branch and bound]] enumeration and [[backtracking]].
+* '''The probabilistic and heuristic paradigm'''. Algorithms belonging to this class fit the definition of an algorithm more loosely.
+# [[Probabilistic algorithm]]s are those that make some choices randomly (or pseudo-randomly); for some problems, it can in fact be proven that the fastest solutions must involve some [[randomness]].
+# [[Genetic algorithm]]s attempt to find solutions to problems by mimicking biological [[evolution]]ary processes, with a cycle of random mutations yielding successive generations of "solutions". Thus, they emulate reproduction and "survival of the fittest". In [[genetic programming]], this approach is extended to algorithms, by regarding the algorithm itself as a "solution" to a problem. Also there are
+# [[Heuristic (computer science)|Heuristic]] algorithms, whose general purpose is not to find an optimal solution, but an approximate solution where the time or resources are limited. They are not practical to find perfect solutions. An example of this would be [[local search (optimization)|local search]], [[taboo search]], or [[simulated annealing]] algorithms, a class of heuristic probabilistic algorithms that vary the solution of a problem by a random amount. The name "simulated annealing" alludes to the metallurgic term meaning the heating and cooling of metal to achieve freedom from defects. The purpose of the random variance is to find close to globally optimal solutions rather than simply locally optimal ones, the idea being that the random element will be decreased as the algorithm settles down to a solution.
+
+=== Classification by field of study ===
+{{Seealso|List of algorithms}}
+Every field of science has its own problems and needs efficient algorithms. Related problems in one field are often studied together. Some example classes are  [[search algorithm]]s, [[sorting algorithm]]s, [[merge algorithm]]s, [[numerical analysis|numerical algorithms]], [[graph theory|graph algorithms]], [[string algorithms]], [[computational geometry|computational geometric algorithms]], [[combinatorial|combinatorial algorithms]], [[machine learning]], [[cryptography]], [[data compression]] algorithms and [[parsing|parsing techniques]].
+
+Fields tend to overlap with each other, and algorithm advances in one field may improve those of other, sometimes completely unrelated, fields. For example, dynamic programming was originally invented for optimisation of resource consumption in industry, but is now used in solving a broad range of problems in many fields.
+
+=== Classification by complexity ===
+{{Seealso|Complexity class}}
+This is actually problem classification in the strict sense. Some algorithms complete in linear time proportional to input size, and some do in exponential amount of time, and some never do. Some problems may have multiple algorithms, some problems may have no algorithms, and some problems have no known efficient algorithms. There are also mappings from some problems to other problems. So computer scientists found it is suitable to classify the problems rather than algorithms into equivalence classes based on the complexity.
+
+== Legal issues ==
+Some countries allow algorithms to be [[patented]] when embodied in software or in hardware.  Patents have long been a controversial issue (see, for example, the [[software patent debate]]). Some countries do not allow certain algorithms, such as cryptographic algorithms, to be [[exported]] from that country (see [[export of cryptography]]).
+
+{{sect-stub}}
+
+== History: Development of the notion of "algorithm" ==
+=== Origin of the word ===
+
+{{Seealso|Timeline of algorithms}}
+The word ''algorithm'' comes from the name of the 9th century [[Persian people|Persian]] mathematician [[al-Khwarizmi|Abu Abdullah Muhammad ibn Musa al-Khwarizmi]] whose works introduced Arabic numerals and algebraic concepts. He worked in [[Baghdad]] at the time when it was the centre of scientific studies and trade. The word ''[[algorism]]'' originally referred only to the rules of performing [[arithmetic]] using [[Hindu-Arabic numeral system|Arabic numerals]] but evolved via European Latin translation of al-Khwarizmi's name into ''algorithm'' by the 18th century. The word evolved to include all definite procedures for solving problems or performing tasks.
+
+=== Discrete and distinguishable symbols ===
+
+'''Tally-marks''': To keep track of their flocks, their sacks of grain and their money the ancients used tallying <U+2013> accumulating stones, or marks -- discrete symbols in clay or scratched on sticks. Through the Babylonians and Egyptian use of marks and symbols eventually [[Roman numerals]] and the [[abacus]] evolved. (Dilson, p.16-41) Tally marks appear prominently in [[unary numeral system]] arithmetic used in [[Turing machine]] and [[Post-Turing machine]] computations.
+
+=== Manipulation of symbols as "place holders" for numbers: algebra ===
+The work of the ancient Greek geometers, Persian mathematician [[Al-Khwarizmi]] -- often considered as the "father of [[algebra]]", Chinese and Western European mathematicans culminated in [[Leibniz]]' notion of the [[calculus ratiocinator]] (ca 1680):
+:"A good century and a half ahead of his time, Leibniz proposed an algebra of logic, an algebra that would specify the rules for manipulating logical concepts in the manner that ordinary algebra specifies the rules for manipulating numbers" (Davis (2000) p. 18).
+
+=== Mechanical contrivances with discrete states ===
+
+'''The clock''': Bolter credits the invention of the weight-driven [[clock]] as <U+201C>The key invention [of Europe in the Middle Ages]", in particular the [[verge escapement]] (Bolter p. 24) that provides us with the tick and tock of a mechanical clock. <U+201C>The accurate automatic machine<U+201D> (Bolter p. 26 quoting Mumford) led immediately to "mechanical [[automata]]" beginning in the thirteenth century and finally to <U+201C>computational machines" <U+2013> the [[difference engine]] and [[analytical engine]]s of [[Charles Babbage]] and Countess [[Ada Lovelace]] (Bolter p.33-34, p.204-206).
+
+'''Jacquard loom, Hollerith punch cards, telegraphy and telephony -- the electromechanical relay''': Bell and Newell (1971) indicate that the [[Jacquard loom]] (1801), precursor to [[Hollerith cards]] (punch cards, 1887), and <U+201C>telephone switching technologies<U+201D> were the roots of a tree leading to the development of the first computers (Bell and Newell diagram p. 39, cf Davis (2000)). By the mid-1800<U+2019>s the [[telegraph]], as the precursor of the telephone, was in use throughout the world, its discrete and distinguishable encoding of letters as <U+201C>dots and dashes<U+201D> a common sound.  By the late 1800<U+2019>s the [[ticker tape]] (ca 1870's) was in use, as were the use of [[Hollerith cards]] in the 1890 U.S. census, the [[Teletype]] (ca 1910) with its the use of punched-paper binary encoding [[Baudot code]] on tape.
+
+Telephone-switching networks of electromechanical [[relay]]s (invented 1835) was behind the work of [[George Stibitz]] (1937), the inventor of the digital adding device. As he worked in Bell Laboratories, he observed the <U+201C>burdensome<U+2019> use of mechanical calculators with gears. "He went home one evening in 1937 intending to test his idea.... When the tinkering was over, Stibitz had constructed a binary adding device" (Valley News, p. 13).
+
+Davis (2000) observes the particular importance of the electromechanical relay (with its two "binary states" ''open'' and ''closed''):
+: It was only with the development, beginning in the 1930s, of electromechanical calculators using electrical relays, that machines were built having the scope Babbage had envisioned." (Davis, p. 148)
+
+=== Mathematics during the 1800<U+2019>s up to the mid-1900<U+2019>s ===
+ 
+'''Symbols and rules''': In rapid succession the mathematics of [[George Boole]] (1847, 1854), [[Gottlob Frege]] (1879), and [[Giuseppe Peano]] (1888-9) reduced arithmetic to a sequence of symbols manipulated by rules.  Peano's ''The principles of arithmetic, presented by a new method'' (1888) was "the first attempt at an axiomatization of mathematics in a symbolic language" (Heijenoort, p. 81ff).
+
+But Heijenoort gives Frege (1879) this kudos: Frege<U+2019>s is <U+201C>perhaps the most important single work ever written in logic. ... in which we see a <U+201C> 'formula language', that is a ''lingua characterica'', a language written with special symbols, "for pure thought", that is, free from rhetorical embellishments ... constructed from specific symbols that are manipulated according to definite rules"( p. 1). The work of Frege was further simplified and amplified by [[Alfred North Whitehead]] and [[Bertrand Russell]] in their [[Principia Mathematica]] (1910-1913).
+
+'''The paradoxes''': At the same time a number of disturbing paradoxes appeared in the literature, in particular the [[Burali-Forti paradox]] (1897), the [[Russell paradox]] (1902-03), and the [[Richard Paradox]] (1905, Dixon 1906), (cf Kleene (1952) p. 36-40). The resultant considerations led to [[Kurt G<U+00F6>del]]<U+2019>s paper (1931) -- he specifically cites the paradox of the liar -- that completely reduces rules of [[recursion]] to numbers. In rapid succession the following appeared: Church-Kleene's [[<U+03BB>-calculus]] (cf footnote in [[Alonzo Church]]'s paper, Undecidable p. 90), Church's (1936) theorem (Undecidable, p. 88ff), [[Emil Post]]'s (1936) "process"  (''Undecidable'', p. 289-290), [[Alan Turing]]'s (1936-1937) "a- [automatic-] machine" (''Undecidable'', p. 116ff), [[J. Barkley Rosser]]'s (1939) definition of "effective method" in terms of "a machine" (''Undecidable'', p. 226), and [[S. C. Kleene]]'s (1943) proposal of the "Church-Turing thesis"  (''Undecidable'', p. 273-274)
+
+=== Emil Post (1936) and Alan Turing (1936, 1937)===
+
+Here is a remarkable coincidence of two men not knowing each other but describing a process of men-as-computers working on computations -- and they yield virtually identical definitions.
+
+[[Emil Post]] (1936) described the actions of a "computer" (human being) as follows:
+:"...two concepts are involved: that of a ''symbol space'' in which the work leading from problem to answer is to be carried out, and a fixed unalterable ''set of directions''.
+
+His symbol space would be
+:"a two way infinite sequence of spaces or boxes... The problem solver or worker is to move and work in this symbol space, being capable of being in, and operating in but one box at a time.... a box is to admit of but two possible conditions, i.e. being empty or unmarked, and having a single mark in it, say a vertical stroke.
+
+:"One box is to be singled out and called the starting point. ...a specific problem is to be given in symbolic form by a finite number of boxes [i.e. INPUT] being marked with a stroke. Likewise the answer [i.e. OUTPUT] is to be given in symbolic form by such a configuration of marked boxes....
+
+:"A set of directions applicable to a general problem sets up a deterministic process when applied to each specific problem. This process will terminate only when it comes to the direction of type (C ) [i.e. STOP]."  (U p. 289-290) See more at [[Post-Turing machine]]
+
+[[Alan Turing]]<U+2019>s work (1936-1937) preceded that of Stibitz (1937); it is unknown if  Stibitz knew of the work of Turing. Turing<U+2019>s biographer believed that Turing<U+2019>s use of a typewriter-like model derived from a youthful interest: <U+201C>Alan had dreamt of inventing typewriters as a boy; Mrs. Turing had a typewriter; and he could well have begun by asking himself what was meant by calling a typewriter 'mechanical'" (Hodges, p. 96) Given the prevalence of Morse code and telegraphy, ticker tape machines, and Teletypes we might conjecture that all were influences.
+
+Turing -- his model of computation is now called a [[Turing machine]] -- begins, as did Post, with an analysis of a human computer that he whittles down to a simple set of basic motions and "states of mind". But he continues a step further and creates his machine as a model of computation of numbers (Undecidable p. 116):
+
+:"Computing is normally done by writing certain symbols on paper. We may suppose this paper is divided into squares like a child's arithmetic book....I assume then that the computation is carried out on one-dimensional paper, i.e. on a tape divided into squares. I shall also suppose that the number of symbols which may be printed is finite....
+
+:"The behavior of the computer at any moment is determined by the symbols which he is observing, and his "state of mind" at that moment. We may suppose that there is a bound B to the number of symbols or squares which the computer can observe at one moment. If he wishes to observe more, he must use successive observations. We will also suppose that the number of states of mind which need be taken into account is finite...
+
+:"Let us imagine that the operations performed by the computer to be split up into 'simple operations' which are so elementary that it is not easy to imagine them further divided" (Undecidable p. 136).
+
+Turing's reduction yields the following:
+
+:"The simple operations must therefore include:
+::"(a) Changes of the symbol on one of the observed squares
+::"(b) Changes of one of the squares observed to another square within L squares of one of the previously observed squares.
+"It may be that some of these change necessarily invoke a change of state of mind. The most general single operation must therefore be taken to be one of the following:
+::"(A) A possible change (a) of symbol together with a possible change of state of mind.
+::"(B) A possible change (b) of observed squares, together with a possible change of state of mind"
+
+:"We may now construct a machine to do the work of this computer."(Undecidable p. 137)
+
+=== J. B. Rosser (1939) and S. C. Kleene (1943) ===
+
+'''[[J. Barkley Rosser]]''' boldly defined an <U+2018>effective [mathematical] method<U+2019> in the following manner (boldface added):
+:"'Effective method' is used here in the rather special sense of a method each step of which is precisely determined and which is certain to produce the answer in a finite number of steps. With this special meaning, three different precise definitions have been given to date. [his footnote #5; see discussion immediately below]. The simplest of these to state (due to Post and Turing) says essentially that '''an effective method of solving certain sets of problems exists if one can build a machine which will then solve any problem of the set with no human intervention beyond inserting the question and (later) reading the answer'''. All three definitions are equivalent, so it doesn't matter which one is used. Moreover, the fact that all three are equivalent is a very strong argument for the correctness of any one. (''Undecidable'', p. 225-226)
+
+Rosser's footnote #5 references the work of (1) Church and Kleene and their definition of <U+03BB>-definability, in particular Church's use of it in his ''An Unsolvable Problem of Elementary Number Theory'' (1936); (2) Herbrand and G<U+00F6>del and their use of recursion in particular G<U+00F6>del's use in his famous paper ''On Formally Undecidable Propostions of Principia Mathematica and Related Systems I'' (1931); and (3) Post and Turing in their mechanism-models of computation.
+
+'''[[Stephen C. Kleene]]''' (1943) defined as his now-famous "Thesis I" known as "the [[Church-Turing Thesis]]". But he did this in the following context (boldface in original):
+:"12. '''Algorithmic theories'''... In setting up a complete algorithmic theory, what we do is to describe a procedure, performable for each set of values of the independent variables, which procedure necessarily terminates and in such manner that from the outcome we can read a definite answer, "yes" or "no," to the question, "is the predicate value true?<U+201D>" (''Undecidable'', p. 273)
+
+==See also==
+{{wiktionarypar|algorithm}}
+{{wikibooks|Algorithms}}
+* [[Abstract machine]]
+* [[Algorism]]
+* [[Algorithm characterizations]]
+* [[Algorithm examples]]
+* [[Algorithmic music]]
+* [[Algorithmic trading]]
+* [[Computability theory (computer science)]]
+* [[Data structure]]
+* [[List of important publications in computer science#Algorithms|Important algorithm-related publications]]
+* [[List of algorithms]]
+* [[List of algorithm general topics]]
+* [[List of terms relating to algorithms and data structures]]
+* [[Partial function]] -- a partial function (algorithm)either (i) halts without an output number, or (ii) does not halt. Algorithms of type (i) can always be sent into a non-halting loop (Kleene (1952) p. 324). See more at:
+:* [[Halting problem]]  
+* [[Theory of computation]]
+* [[Introduction to Algorithms]], book
+
+==Notes==
+<div class="references-small">
+<references/>
+</div>
+
+==References==
+*{{cite book|last=Boolos, George and Jeffrey, Richard|authorlink=Boolos and Jeffrey|title=Computability and Logic|edition=First Edition|publisher=Cambridge University Press, London|year=1974, 1980, 1989, 1999|ISBN 0-521-20402-X}}. cf chapter 3 ''Turing machines'' where they discuss "certain enumerable sets not effectively (mechanically) enumerable".
+*[[Andreas Blass]] and [[Yuri Gurevich]] (2003), [http://research.microsoft.com/~gurevich/Opera/164.pdf ''Algorithms: A Quest for Absolute Definitions''], Bulletin of European Association for Theoretical Computer Science 81, 2003. Includes an excellent bibliography of 56 references.
+*{{cite journal|last=Church|first=Alonzo|authorlink=Alonzo Church|title=An Unsolvable Problem of Elementary Number Theory|journal=The American Journal Of Mathematics|volume=58|pages= 345<U+2014>363|year=1936}} Reprinted in ''The Undecidable'', p. 89ff. The first expression of "Church's Thesis". See in particular page 100 (''The Undecidable'') where he defines the notion of "effective calculability" in terms of "an algorithm", and he uses the word "terminates", etc.
+*{{cite book|last=Davis|first=Martin|authorlink=Martin Davis|title=The Undecidable: Basic Papers On Undecidable Propostions, Unsolvable Problems and Computable Functions|publisher=Raven Press|location=New York|year=1965}} Davis gives commentary before each article. Papers of [[G<U+00F6>del]], [[Alonzo Church]], [[Turing]], [[Rosser]], [[Kleene]], and [[Emil Post]] are included.
+*{{cite book|last=Davis|first=Martin|authorlink=Martin Davis|title=Engines of Logic: Mathematicians and the Origin of the Computer|publisher=W. W. Nortion|location=New York|year=2000}} Davis offers concise biographies of [[Leibniz]], [[Boole]], [[Frege]], [[Georg Cantor|Cantor]], [[Hilbert]], [[G<U+00F6>del]] and [[Turing]] with [[von Neumann]] as the show-stealing villain. Very brief bios of [[Joseph-Marie Jacquard]], [[Babbage]], [[Ada Lovelace]], [[Claude Shannon]], [[Howard Aiken]], etc.
+* {{DADS|algorithm|algorithm}}
+*{{cite book|last=Dennett|first=Daniel|authorlink=Daniel Dennett|title=Darwin's Dangerous Idea|publisher=Touchstone/Simon & Schuster|location=New York|year=1995}}
+*[[Yuri Gurevich]], [http://research.microsoft.com/~gurevich/Opera/141.pdf ''Sequential Abstract State Machines Capture Sequential Algorithms''], ACM Transactions on Computational Logic, Vol 1, no 1 (July 2000), pages 77-111. Includes bibliography of 33 sources.
+*{{cite book|last=Kleene|first=Stephen C.|authorlink=Kleene|title=Introduction to Metamathematics|edition=Tenth Edition 1991|publisher=North-Holland Publishing Company|year=First Edition 1952}} Excellent -- accessible, readable -- reference source for mathematical "foundations".
+*[[A. A. Markov]] (1954) ''Theory of algorithms''. [Translated by Jacques J. Schorr-Kon and PST staff] Imprint Moscow, Academy of Sciences of the USSR, 1954 [i.e. Jerusalem, Israel Program for Scientific Translations, 1961; available from the Office of Technical Services, U.S. Dept. of Commerce, Washington] Description 444 p. 28 cm. Added t.p. in Russian Translation of Works of the Mathematical Institute, Academy of Sciences of the USSR, v. 42. Original title: Teoriya algerifmov. [QA248.M2943 Dartmouth College library. U.S. Dept. of Commerce, Office of Technical Services, number OTS 60-51085.]
+*{{cite book|last=Minsky|first=Marvin|authorlink=Minsky|title=Computation: Finite and Infinite Machines|edition=First|publisher=Prentice-Hall, Englewood Cliffs, NJ|year=1967}} Minsky expands his "...idea of an algorithm -- an effective procedure..." in chapter 5.1 ''Computability, Effective Procedues and Algorithms. Infinite machines."
+*{{cite journal|last=Post|first=Emil|authorlink=Emil Post|title=Finite Combinatory Processes, Formulation I|journal=The Journal of Symbolic Logic|volume=1|year=1936|pages=pp.103-105}} Reprinted in ''The Undecidable'', p. 289ff. Post defines a simple algorithmic-like process of a man writing marks or erasing marks and going from box to box and eventually halting, as he follows a list of simple instructions. This is cited by Kleene as one source of his "Thesis I", the so-called [[Church-Turing thesis]].   
+*{{cite journal|last=Rosser|first=J.B.|authorlink=J.B. Rosser|title=An Informal Exposition of Proofs of Godel's Theorem and Church's Theorem|journal=Journal of Symbolic Logic|volume= 4 |year=1939}} Reprinted in ''The Undecidable'', p. 223ff. Herein is Rosser's famous definition of "effective method": "...a method each step of which is precisely predetermined and which is certain to produce the answer in a finite number of steps... a machine which will then solve any problem of the set with no human intervention beyond inserting the question and (later) reading the answer" (p. 225-226, ''The Undecidable'')
+*{{cite book|last=Stone|first=Harold S.|title=Introduction to Computer Organization and Data Structures|edition=1972|publisher=McGraw-Hill, New York}} Cf in particular the first chapter titled: ''Algorithms, Turing Machines, and Programs''. His succinct informal definition: "...any sequence of instructions that can be obeyed by a robot, is called an ''algorithm''" (p. 4).
+
+=== Secondary references ===
+*{{cite book|last=Hodges|first=Andrew|authorlink=Hodges|title=Alan Turing: The Enigma|edition=(1983)|publisher=Simon and Schuster, New York}}, ISBN 0-671-49207-1. Cf Chapter "The Spirit of Truth" for a history leading to, and a discussion of, his proof.
+
+*{{cite book|last=Dilson|first=Jesse|authorlink=Dilson|title=The Abacus|edition=(1968,1994)|publisher=St. Martin's Press, NY}}, ISBN 0-312-10409-X (pbk.)
+
+*{{cite book|last=Bolter|first=David J.|authorlink=Bolter|title=Turing's Man: Western Culture in the Computer Age|edition=(1984)|publisher=The University of North Carolina Press, Chapel Hill NC}}, ISBN 0-8078-4108-0 pbk.
+
+*{{cite book|last=van Heijenoort|first=Jean|authorlink=van Heijenoort|title=From Frege to G<U+00F6>del, A Source Book in Mathematical Logic, 1879-1931|edition=(1967)|publisher=Harvard University Press, Cambridge, MA}}, 3rd edition 1976[?], ISBN 0-674-32449-8 (pbk.)
+
+== External links ==
+* {{MathWorld | urlname=Algorithm | title=Algorithm}}
+* [http://everydaymath.uchicago.edu/educators/Algorithms_final.pdf Algorithms in Everyday Mathematics]
+* {{dmoz|Computers/Algorithms/|Algorithms}}
+
+[[Category:Algorithms|*]]
+[[Category:Arabic words and phrases]]
+[[Category:Discrete mathematics]]
+[[Category:Mathematical logic]]
+[[Category:Theoretical computer science]]
+
+{{Link FA|sr}}
+
+[[af:Algoritme]]
+[[ar:<U+062E><U+0648><U+0627><U+0631><U+0632><U+0645><U+064A><U+0629>]]
+[[an:Algoritmo]]
+[[ast:Algoritmu]]
+[[bn:<U+0985><U+09CD><U+09AF><U+09BE><U+09B2><U+0997><U+09CB><U+09B0><U+09BF><U+09A6><U+09AE>]]
+[[bs:Algoritam]]
+[[bg:<U+0410><U+043B><U+0433><U+043E><U+0440><U+0438><U+0442><U+044A><U+043C>]]
+[[ca:Algorisme]]
+[[cs:Algoritmus]]
+[[da:Algoritme]]
+[[de:Algorithmus]]
+[[et:Algoritm]]
+[[el:<U+0391><U+03BB><U+03B3><U+03CC><U+03C1><U+03B9><U+03B8><U+03BC><U+03BF><U+03C2>]]
+[[es:Algoritmo]]
+[[eo:Algoritmo]]
+[[fa:<U+0627><U+0644><U+06AF><U+0648><U+0631><U+06CC><U+062A><U+0645>]]
+[[fr:Algorithmique]]
+[[gl:Algoritmo]]
+[[ko:<U+C54C><U+ACE0><U+B9AC><U+C998>]]
+[[hr:Algoritam]]
+[[id:Algoritma]]
+[[ia:Algorithmo]]
+[[is:Reiknirit]]
+[[it:Algoritmo]]
+[[he:<U+05D0><U+05DC><U+05D2><U+05D5><U+05E8><U+05D9><U+05EA><U+05DD>]]
+[[ka:<U+10D0><U+10DA><U+10D2><U+10DD><U+10E0><U+10D8><U+10D7><U+10DB><U+10D8>]]
+[[lv:Algoritms]]
+[[lb:Algorithmus]]
+[[lt:Algoritmas]]
+[[hu:Algoritmus]]
+[[mk:<U+0410><U+043B><U+0433><U+043E><U+0440><U+0438><U+0442><U+0430><U+043C>]]
+[[nl:Algoritme]]
+[[ja:<U+30A2><U+30EB><U+30B4><U+30EA><U+30BA><U+30E0>]]
+[[no:Algoritme]]
+[[nn:Algoritme]]
+[[pl:Algorytm]]
+[[pt:Algoritmo]]
+[[ro:Algoritm]]
+[[ru:<U+0410><U+043B><U+0433><U+043E><U+0440><U+0438><U+0442><U+043C>]]
+[[sq:Algoritmi]]
+[[simple:Algorithm]]
+[[sk:Algoritmus]]
+[[sl:Algoritem]]
+[[sr:<U+0410><U+043B><U+0433><U+043E><U+0440><U+0438><U+0442><U+0430><U+043C>]]
+[[sh:Algoritam]]
+[[su:Algoritma]]
+[[fi:Algoritmi]]
+[[sv:Algoritm]]
+[[tl:Algoritmo]]
+[[th:<U+0E2D><U+0E31><U+0E25><U+0E01><U+0E2D><U+0E23><U+0E34><U+0E17><U+0E36><U+0E21>]]
+[[vi:Thu<U+1EAD>t to<U+00E1>n]]
+[[tr:Algoritma]]
+[[uk:<U+0410><U+043B><U+0433><U+043E><U+0440><U+0438><U+0442><U+043C>]]
+[[zh:<U+7B97><U+6CD5>]]

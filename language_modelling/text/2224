@@ -1,0 +1,125 @@
+{{AFC submission|r|||ts=20130228214943|u=Barnescis628|ns=2}}
+'''Internet Rush Hour''' is the time period when the majority of [[Internet]] users are online at the same time.  Typically, the peak hours are between 7 to 9 pm.<ref>{{cite web|author=Tom Lawrence |url=http://www.independent.co.uk/life-style/gadgets-and-tech/news/evening-internet-rushhour-affects-broadband-users-6262838.html |title=Evening internet 'rush-hour' affects Broadband users - News - Gadgets & Tech |publisher=The Independent |date=2011-11-16 |accessdate=2013-03-25}}</ref> During this time frame, users commonly experience slowness while browsing or downloading content.  The congestion experienced during the rush hour is not unlike transportation [[Rush hour]], where demand for resources outweighs capacity.
+
+==Reasons==
+===Growth===
+[[Global Internet usage]] has increased significantly across the Globe from 12,881,000 hosts in 1998 to 908,585,739 hosts in 2012.<ref>{{cite web|url=https://www.isc.org/solutions/survey/history |title=Internet host count history &#124; Internet Systems Consortium |publisher=Isc.org |date=2012-07-06 |accessdate=2013-03-25}}</ref>  Internet use has surged with the introduction of mobile devices and tablet computing.  Internet access has also changed during this time frame from 56KB dial up to high bandwidth access at 100MB or higher.  The increase in Internet users and increase in access bandwidth is a contributing factor to the Internet Rush Hour.<br>
+
+The table below shows the big picture of World Internet usage versus the population.
+
+{|
+|- valign="top" 
+|
+{| style="border: 1px solid darkgray; background: WhiteSmoke"
+|+'''[[WORLD INTERNET USAGE AND POPULATION STATISTICS June 30,2012]]'''
+|-
+! World Regions |!! Population (2012 est) |!! Internet Users (Dec. 31, 2000) |!! Internet Users Latest Data |!! Penetration (% Population) |!! Growth 2000 - 2012 |!! Users % of Table
+|-
+|align=left | '''Africa'''
+|align=center | 1,073,380,925
+|align=center | 4,514,4000
+|align=center | 167,335,676
+|align=center | 15.66%
+|align=center | 3,606.7%
+|align=center | 7.0%
+|-
+|align=left | '''Asia'''
+|align=center | 3,922,066,987
+|align=center | 114,304,000
+|align=center | 1,076,681,059
+|align=center | 27.5%
+|align=center | 841.9%
+|align=center | 44.8%
+|-
+|align=left   | '''Europe'''
+|align=center | 820,918,446
+|align=center | 105,096,093
+|align=center | 518,512,109
+|align=center | 63.2%
+|align=center | 3,606.7%
+|align=center | 7.0%
+|-
+|align=left   | '''Middle East'''
+|align=center | 223,608,203
+|align=center | 3,284,800
+|align=center | 90,000,455
+|align=center | 40.2%
+|align=center | 2,639.9%
+|align=center | 3.7%
+|-
+|align=left   | '''North America'''
+|align=center | 348,280,154
+|align=center | 108,096,800
+|align=center | 273,785,413
+|align=center | 78.6%
+|align=center | 153.3%
+|align=center | 11.4%
+|-
+|align=left   | '''Latin America / Caribbean'''
+|align=center | 593,688,638
+|align=center | 18,068,919
+|align=center | 254,915,745
+|align=center | 42.9%
+|align=center | 1,310.8%
+|align=center | 10.6%
+|-
+|align=left   | '''Oceania / Australia'''
+|align=center | 35,903,569
+|align=center | 7,620,480
+|align=center | 24,287,919
+|align=center | 67.6%
+|align=center | 218.7%
+|align=center | 1.0%
+|-
+|align=left   |'''WORLD TOTAL'''
+|align=center | 7,017,846,922
+|align=center | 360,985,492
+|align=center | 2,405,518,376
+|align=center | 34.3%
+|align=center | 566.4%
+|align=center | 100%
+|-
+| colspan=3 align="left" | <small>Source: Internet World Stats.<ref>{{cite web|url=http://www.internetworldstats.com/stats.htm |title=World Internet Users Statistics Usage and World Population Stats |publisher=Internetworldstats.com |date= |accessdate=2013-03-25}}</ref></small>
+|}
+
+===Infrastructure===
+[[File:Internet Connectivity Distribution & Core.svg|right|thumb|upright=1.6|Relationship between the various tiers on Internet providers]]
+
+End users connect to the Internet through [[Internet Service Provider]]s also known as ISPs.  The Tier 1 ISPs own the infrastructure, which includes routers, switches and fiber optic footprints.  The back bone of the Internet is connected through Tier 1 ISPs that peer with other Tier 1 ISPs in a [[transit-free network]].  These peering agreements between Tier 1 ISPs have no overt settlements, meaning there is no money exchanged for the right to pass traffic between Tier 1 peers.  Tier 2 and Tier 3 ISPs are customers of the Tier 1 ISPs and rely on the Tier 1 ISPs to route their traffic across the Internet.  This is a disadvantage for the lower tier ISP's due to the amount of traffic hops and shared common gateways to Tier 1 ISPs.<ref>http://www.us.ntt.net/downloads/papers/IDC_Tier1_ISPs.pdf</ref> The shared common gateways are a choking point that contributes to the Internet Rush Hour.  Each Tier 1 ISP has a peering policy that defines how IP Traffic exchanges are created and guidelines for managing peer traffic.   
+<br>
+
+===Tier 1 Internet Service Providers===
+* AT&T | AS 7018
+* Century Link | AS 209 / 3561
+* DTAG | AS 3320
+* XO | AS 2828
+* Telecom Italia | AS 6762
+* Inteliquent | AS 3257
+* Verizon | AS 701
+* Sprint | AS 1239
+* Telia | AS 1299
+* NTT | AS 2914
+* Level 3 | AS 1 / 3356 / 3549
+* Tata | AS 6453
+* Telefonica | AS 12956
+* Zayo | AS 6461
+
+===Bandwidth Throttling===
+Internet Service Providers commonly implement [[bandwidth throttling]] to intentionally slow down a users internet service at various points on the network.  ISPs are able to analyze and identify which protocols their users are uploading and downloading like [[BitTorrent]] and tune user bandwidth accordingly.  Comcast went up against the Federal Communications Commission (FCC) in regard to [[net neutrality]] or keeping their networks open regardless of the content.<ref>{{cite web|url=http://www.washingtonpost.com/wp-dyn/content/article/2010/04/06/AR2010040600742.html |title=Court rules for Comcast over FCC in 'net neutrality' case |publisher=Washingtonpost.com |date=2010-04-07 |accessdate=2013-03-25}}</ref> The federal appeals court ruled that the FCC had no authority to stop Comcast from slowing internet traffic.  
+
+==Performance==
+===British Broadband===
+A study with British telecom regulators, Ofcom and [http://www.samknows.com/broadband/ SamKnows Broadband] determined that the average British broadband connection actually achieves less than half its advertised speed.<ref>{{cite web|url=http://www.pcpro.co.uk/news/broadband/244926/british-broadband-running-at-half-the-headline-speed |title=British broadband running at half the headline speed &#124; Broadband &#124; News |publisher=PC Pro |date=2009-01-08 |accessdate=2013-03-25}}</ref>.  That study determined that the average broadband speed was 3.6Mb/sec versus an advertised speed of 7.2Mb/sec with speed declining 30% during Internet Rush hour.
+
+===Netflix===
+Netflix rated various ISPs in 2011 on their ability to stream content to consumers and determine what type of bandwidth the ISPs provide.  Netflix tested HD streams which use about 4800 kilobits per second and averaged what ISPs were able to provide. The top 10 ISPs are rated in the order of performance: [http://www.charter.com Charter], [http://www.comcast.com Comcast], [http://www.timewarner.com Time Warner], [http://www.cox.com Cox], [http://www.suddenlink.com Suddenlink], [http://www.cablevision.com Cablevision], [http://www.cableone.net Cable One], [http://www.verizon.com Verizon], [http://www.att.com AT&T] and [http://www.att.net Bell South].<ref>{{cite web|url=http://www.huffingtonpost.com/2011/01/28/netflix-isp_n_815020.html |title=Netflix Ranks Internet Provider Performance: See Who's Fastest |publisher=Huffingtonpost.com |date= |accessdate=2013-03-25}}</ref>
+
+===FCC Broadband Study===
+The Federal Communication Commission (FCC) measuring Broadband program from August 2011, is a study of performance in the United States covering 80% of the residential market.  The report measures ISPs promise of performance to advertised bandwidth rates.  In 2011, the average ISP delivered 87 percent of advertised rates, increasing to 96 percent performance in 2012.<ref>{{cite web|url=http://www.fcc.gov/measuring-broadband-america/2012/july |title=Measuring Broadband America - July 2012 |publisher=FCC.gov |date= |accessdate=2013-03-25}}</ref>  Average broadband speeds increased from 11.1Mb/s in 2011 to 14.3Mb/s in 2012.  Further increases may be inhibited by customer provided modems which prevent ISPs from controlling broadband performance.
+
+==References==
+{{reflist|2}}
+
+
+
+<!-- This will add a notice to the bottom of the page and won't blank it! The new template which says that your draft is waiting for a review will appear at the bottom; simply ignore the old (grey) drafted templates and the old (red) decline templates. A bot will update your article submission. Until then, please don't change anything in this text box and press "Save page". -->

@@ -1,0 +1,56 @@
+[[Image:Windows SideShow logo.png|48px|left|Windows SideShow logo]]
+{{Windows Vista}}
+'''Windows SideShow''' is a new technology in [[Windows Vista]] that enables Windows PCs to drive a variety of auxiliary display devices connected to the main PC. These devices can be separate from or integrated into the main PC (e.g., a display embedded on the outside of a laptop lid), enabling access to information and media even when the PC is (mostly) turned off. SideShow can also drive the display of PC data on mobile phones and other devices that are connected via Bluetooth or other wireless network protocols.
+
+SideShow display devices can be updated with a number of different kinds of information, such as contacts, maps, calendar appointments, and e-mail messages. They can then be consulted when the PC is otherwise powered down. Since the underlying platform is so power-efficient, SideShow displays integrated into laptops can run for hundreds of hours without draining the laptop battery, while still providing always-on access to data and multimedia content.
+
+SideShow is coupled to the [[Windows Sidebar|Windows Vista Sidebar]]--that is, [[Microsoft Gadgets]] can easily be extended to be compatible with SideShow secondary displays. However, hardware and silicon providers can also provide native capabilities to allow for richer multimedia applications such as text, image, audio and video decode/playback.  For example, a notebook with an in-lid display could be used as an MP3 player while powered down, with the notebook battery providing hundreds of hours of playback time because of the low power footprint that the SideShow platform maintains. 
+
+==SideShow APIs==
+A Windows SideShow gadget is written by programming against the Windows SideShow Platform API, a native COM-based API available with the Microsoft Windows Vista operating system. A beta of a managed API has also been released for separate download.
+
+Windows SideShow devices have different hardware characteristics than devices such as cell phones or PDAs. Windows SideShow devices have their own processor; they do not have to solely rely on the connecting computer for processing tasks. There are online and offline capabilities that allow the device to run larger components on the connecting computer. The following list contains typical device display types and technologies.
+
+{| class="wikitable" style="margin: 1em auto 1em auto"
+|+ '''Display Types'''
+! Type of Device
+! Description
+|-----
+| Enhanced display
+| An auxiliary display device that runs the SPOT firmware and Microsoft's rendering code.
+|-
+| Basic display
+| An auxiliary display device such as a cell phone that runs any other custom firmware but is capable of acting as an auxiliary display.
+|-----
+| Single line display
+| An auxiliary display that is capable of displaying a single line or two lines of text and contains no image support.
+|-
+| Attached display / lid top
+| An auxiliary display device that is physically located on the body of a notebook PC, desktop PC or server, e.g. on the top of a laptop's lid, or a media center's front panel.
+|-----
+| Remote display
+| An auxiliary display that is not physically located on the PC and talks to the PC through a wired or wireless network protocol.
+|}
+Hardware-specific, native applications that provide rich-media experiences like audio and video playback that can be accessed through the SideShow user interface require the SDK from the specific platform vendor. For example, PortalPlayer, Inc. provides the Preface platform that includes capabilities like MP3, AAC, MPEG-4 encode / decode and other digital media formats.
+
+== See also ==
+* [[Windows Sidebar]] for Desktop Gadgets
+* [[Live.com]] for Web Gadgets
+
+==External links==
+* [http://www.microsoft.com/windows/products/windowsvista/features/details/sideshow.mspx Microsoft webpage on Windows SideShow]
+* [http://msdn2.microsoft.com/en-us/library/ms744202.aspx MSDN link for Windows SideShow]
+* [http://www.bargainpda.com/default.asp?newsID=2772 BargainPDA.com] - 'Microsoft Windows Vista SideShow - In-Depth (pics)'
+* [http://channel9.msdn.com/Showpost.aspx?postid=193721 Windows Vista SideShow] &mdash; Channel 9 interview with SideShow developers
+* [http://blogs.msdn.com/sideshow/default.aspx Windows SideShow Team Blog]
+
+===Hardware and Platform Resources===
+* [http://www.sideshowdevices.com Sideshow Devices] - Hardware and Software Gadgets such as SideShow LCD Displays, various appliances of all forms and shapes.
+* [http://www.portalplayer.com PortalPlayer, Inc.] - Provider of the Preface(tm) auxiliary display platform
+* [http://www.clubimate.com/t-WINGADRV.aspx i-mate SideShow Debugger (ALPHA)] - Software debugger to assist gadget developers
+
+===SideShow Compatible Devices===
+* [http://www.momentolive.com i-mate Momento] - Digital Photo Frame and Vista-Certified SideShow Peripheral
+[[Category:Windows Vista|SideShow]]
+
+[[pt:Windows SideShow]]

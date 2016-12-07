@@ -1,0 +1,541 @@
+{{good article}}
+[[File:Logarithms.svg|thumb|300px|alt=Graph showing three exponential curves, which all cross the x-axis where x is one and extend towards minius infinity along the y axis. Nothing is shown where x is less than zero. Lines for smaller bases are more curved and larger bases run closer to the axis.|Logarithm functions, graphed for various bases: <span style="color:red">red</span> is to base <span style="color:red">e</span>, <span style="color:green">green</span> is to base <span style="color:green">10</span>, and <span style="color:purple">purple</span> is to base <span style="color:purple">1.7</span>.]]
+
+The '''logarithm''' (or log) of a number to a given ''[[Radix|base]]'' is the [[exponent|power]] to which the base must be raised in order to produce that number.<ref>{{Citation|last1=Kate|first1=S.K.|last2=Bhapkar|first2=H.R.|title=Basics Of Mathematics|publisher=Technical Publications|isbn=9788184317558|year=2009 |chapter=1}}</ref> For example, the logarithm of 1000 to base 10 is 3, because 10 to the power of 3 is 1000: 10<sup>3</sup>&nbsp;=&nbsp;1000. The logarithm of ''x'' to the base ''b'' is written as log<sub>''b''</sub>(''x''), such as {{nowrap begin}}log<sub>10</sub>(1000) = 3.{{nowrap end}}
+
+Via the following formulas, logarithms reduce [[product (mathematics)|products]] to [[sum]]s:
+:<math> \log_b(xy) = \log_b x + \log_b y \,</math>
+
+and [[exponentiation|powers]] to products:
+:<math> \log_b(x^p) = p \log_b x. \,</math>
+
+[[John Napier]] invented logarithms in the early 17th century. For 300 years, [[logarithm table]]s were used to perform calculations, until replaced in the latter half of the 20th century by [[calculator]]s. For such computational purposes, the logarithm to base {{nowrap begin}}''b'' = 10{{nowrap end}} ([[common logarithm]]) was primarily used. The [[natural logarithm]] uses base {{nowrap begin}}''b'' = [[e (mathematical constant)|e]]{{nowrap end}}. It is critical to [[calculus]] since it is the [[inverse function]] of the [[exponential function]]. The [[binary logarithm]] uses base {{nowrap begin}}''b'' = 2{{nowrap end}} and primarily aids computing applications.
+
+[[Logarithmic scale]]s reduce wide-ranging quantities to smaller scopes. For example the [[Richter scale]] is the common logarithm of the amplitude of a [[seismic]] event. Logarithms are commonplace in [[scientific formula]]s, measure the [[Computational complexity theory|complexity of algorithms]] and of [[fractal]]s, and appear in formulas counting [[prime number]]s. They describe [[Interval (music)|musical intervals]], inform some models in [[psychophysics]] and can aid in [[forensic accounting]].
+
+The [[complex logarithm]] is the inverse of the exponential function applied to complex numbers and generalizes the logarithm to [[complex number]]s. The [[discrete logarithm]] generalizes logarithms to [[cyclic group]]s and has applications in [[public-key cryptography]].
+
+==Positive real numbers==
+The logarithm log<sub>''b''</sub>(''y'') is defined for any [[positive number]] ''y'' and any positive base ''b'' not equal to 1. These restrictions are explained [[#Analytic properties|below]].  For {{nowrap begin}}''b''&nbsp;=&nbsp;2{{nowrap end}} and {{nowrap begin}}''y'' = 8{{nowrap end}}, for example, this means
+:<math>\log_2(8) = 3, \,</math>
+since 2<sup>3</sup>&nbsp;=&nbsp;2&nbsp;<U+00B7>&nbsp;2&nbsp;<U+00B7>&nbsp;2&nbsp;=&nbsp;8. Another example is
+:<math>\log_2 \left( \frac{1}{2} \right) = -1,\, </math>
+since
+: <math>2^{-1} = \frac 1 {2^1} = \frac 1 2.</math>
+
+The first equality is because ''a''<sup><U+2212>1</sup> is the [[Multiplicative inverse|reciprocal]] of ''a'', {{nowrap|1/''a''}}, for any number ''a'' not equal to zero.{{#tag:ref|For rules concerning exponentiation such as ''b''<sup><U+2212>1</sup> <nowiki>=</nowiki> 1/''b'', ''b''<sup>''m'' + ''n''</sup> <nowiki>=</nowiki> ''b''<sup>''m''</sup> &middot; ''b''<sup>''n''</sup>, see [[exponentiation]] or <ref>{{Citation|last1=Shirali| first1=Shailesh|title=A Primer on Logarithms|publisher=Universities Press|isbn=9788173714146|year=2002}}, esp. section 2</ref> for an elementary treatise.|group=nb}} A third example: log<sub>10</sub>(150) is approximately 2.176. This is reasonable given that {{nowrap begin}}10<sup>2</sup> = 100{{nowrap end}} and {{nowrap begin}}10<sup>3</sup> = 1000{{nowrap end}}. Since 150 lies between 100 and 1000, its logarithm lies between 2 and 3.
+
+==Logarithmic identities==
+{{Main|Logarithmic identities}}
+
+Several important formulas, sometimes called ''logarithmic identities'', relate logarithms to one another.<ref>All statements in this section can be found in {{Harvard citations|last1=Shirali| first1=Shailesh |year=2002}}, {{Harvard citations|last1=Downing| first1=Douglas |year=2003}}, or {{Harvard citations|last1=Kate| last2=Bhapkar|year=2009}}, for example.</ref>
+
+===Product, quotient, power and root===
+The logarithm of a product is the sum of the two logarithms:
+:<cite id=labelLogarithmProducts><math> \log_b(x y) = \log_b x + \log_b y. \,</math></cite>
+The logarithm of a division is the difference of the two logarithms:
+:<math>\log_b \left (\frac x y \right) = \log_b x - \log_b y. \,</math>
+The logarithm of the ''p''-th power of a number is ''p'' times the logarithm of that number:
+:<cite id=labelLogarithmPowers><math>\log_b(x^p) = p \log_b x. \,</math></cite>
+The logarithm of the ''p''-th root of a number is the logarithm of that number divided by ''p'':
+:<math>\log_b(\sqrt[p]x) = \frac {\log_b x}p. \, </math>
+
+Examples:
+:<math> \log_3 243 = \log_3(9 \cdot 27) = \log_3 9 + \log_3 27 = 5 \,</math>
+:<math> \log_2 16 = \log_2 \left ( \frac{64}{4} \right ) = \log_2 64 - \log_2 4 = 6 - 2 = 4</math>
+:<math> \log_2 64 = \log_2 (2^6) = 6 \log_2 2 = 6 \,</math>
+:<math> \log_{10}(\sqrt{1000}) =  \frac{1}{2}\log_{10}(1000) = \frac{3}{2} = 1.5 </math>
+
+===Change of base===<!-- This section is linked from [[Mathematica]] -->
+The following formula relates log<sub>''b''</sub>(''x'') to the logarithms of ''x'' and ''b'' with respect to an arbitrary base ''k'':
+: <cite id=labelLogarithmBaseChange><math> \log_b{x} = \frac{\log_k{x}}{\log_k{b}}.\, </math></cite>
+Typical handheld calculators calculate the logarithms to bases {{nowrap begin}}''k'' = 10{{nowrap end}} or {{nowrap begin}}''k'' = ''e''{{nowrap end}}. Logarithms with respect to any base ''b'' can be determined using only base-''k''-logarithms by a special case of the previous formula:
+:<math> \log_b x = \frac{\log_{10} x}{\log_{10} b}. \,</math>
+Also, given a number ''x'' and its logarithm log<sub>''b''</sub>(''x'') to an unknown base ''b'', ''b'' is given by:
+: <math> b = x^\frac{1}{\log_b(x)}.</math>
+
+==Particular bases==
+Among all possible bases ''b'', that is to say positive real numbers unequal to 1, a few particular choices for ''b'' are more commonly used. These are ''b'' = 10, ''b'' = [[e (mathematical constant)|e]] (the mathematical constant <U+2248> 2.71828), and ''b'' = 2. For example, [[common logarithm|base-10 logarithm]]s are easy to use for manual calculations in the [[decimal number]] system:<ref>{{Citation|last1=Downing|first1=Douglas|title=Algebra the Easy Way|publisher=Barron's Educational Series|isbn=978-0-7641-1972-9|year=2003}}, chapter 17, p. 275</ref>
+:<math>\log_{10}(10 x) = 1 + \log_{10}(x).\ </math>
+On the other hand, [[mathematical analysis]] prefers the base {{nowrap begin}}''b'' = e{{nowrap end}} because of the analytical properties explained below. The following table lists common notations for logarithms to these bases and the fields where they are used. Many disciplines commonly write log(''x'') instead of log<sub>''b''</sub>(''x''), when the intended base can be  determined from the context. In some countries, the notation <sup>''b''</sup>log(''x'') is used instead of log<sub>''b''</sub>(''x'').<ref>{{cite web| url=http://www.mathe-online.at/mathint/lexikon/l.html| title="Mathematisches Lexikon" at Mateh_online.at}}</ref> The notations suggested by the [[International Organization for Standardization]] ([[ISO 31-11]]) are underlined in the table below.<ref>{{cite web| title = Guide for the Use of  the International System of Units (SI)|author = B. N. Taylor|work =  NIST Special Publication 811, 1995 Edition|publisher = US Department  of Commerce|year = 1995|url = http://physics.nist.gov/Pubs/SP811/sec10.html#10.1.2}}</ref>
+
+{| class="wikitable" style="text-align:center; margin:1em auto 1em auto;"
+|-
+! scope="col"|Base ''b''
+! scope="col"|Name for log<sub>''b''</sub>(''x'')
+! scope="col"|Notations for log<sub>''b''</sub>(''x'')
+! scope="col"|Used in
+|-
+! scope="row"|2
+| [[binary logarithm]]
+| <u>lb(''x'')</u>,<ref name=gullberg>{{Citation|title = Mathematics: from the birth of numbers.|author =  Gullberg, Jan|publisher = W. W. Norton & Co|year = 1997|isbn = 039304002X}}</ref> ld(''x''), log(''x'')<br>(in computer science), lg(''x'') || [[computer science]], [[information theory]]
+|-
+! scope="row"|e
+| [[natural logarithm]]
+| <u>ln(''x'')</u>,{{#tag:ref|Some mathematicians disapprove of this notation. In his 1985 autobiography, [[Paul Halmos]] criticized what he considered the "childish ln notation," which he said no mathematician had ever used.<ref>
+{{Citation
+|title = I Want to Be a Mathematician: An Automathography
+|author = Paul Halmos
+|publisher =  Springer-Verlag
+|year =  1985
+| isbn = 978-0387960784
+}}</ref>
+In  fact, the notation was invented by a mathematician, [[Irving Stringham]].<ref>
+{{Citation
+|title =  Uniplanar algebra: being part I of a prop<U+00E6>deutic to the higher mathematical analysis
+|author = Irving Stringham
+|publisher =  The Berkeley Press
+|year = 1893
+|page = xiii
+|url = http://books.google.com/?id=hPEKAQAAIAAJ&pg=PR13&dq=%22Irving+Stringham%22+In-natural-logarithm&q=
+}}</ref><ref>
+{{Citation
+|title =  Introduction to Financial Technology
+|author =  Roy S. Freedman
+|publisher = Academic Press
+|year =  2006
+| isbn = 9780123704788
+|page = 59
+|url = http://books.google.com/?id=APJ7QeR_XPkC&pg=PA59&dq=%22Irving+Stringham%22+logarithm+ln&q=%22Irving%20Stringham%22%20logarithm%20ln
+}}</ref>|name=adaa|group=nb}} log(''x'')<br>(in mathematics and many [[programming language]]s{{#tag:ref|For example [[C (programming language)|C]], [[Java (programming language)|Java]],  [[Haskell (programming language)|Haskell]], and [[BASIC programming language|BASIC]].|group=nb}})
+| mathematical analysis, physics, chemistry,<br>[[statistics]], [[economics]] and some engineering fields
+|-
+! scope="row"|10
+| common logarithm
+| <u>lg(''x'')</u>, log(''x'')<br>(in engineering, biology, astronomy),
+| various [[engineering]] fields (see [[decibel]] and see below), <br>logarithm [[Mathematical table|tables]], handheld [[calculators]]
+|}
+
+==Analytic properties==
+A deeper study of logarithms requires the concept of ''[[function (mathematics)|function]]''. A function is a rule that given one number, produces another. For example, a function produces the ''x''-th power of ''b'', ''b''<sup>''x''</sup> from any real number ''x''. This is written as
+:<math>f(x) = b^x. \, </math>
+Here the base ''b'' is considered fixed, so the expression ''b''<sup>''x''</sup> depends only on ''x''.
+
+===Logarithm as a function===
+[[File:Logarithm inversefunctiontoexp.png|right|thumb|The graph of the logarithm function log<sub>''b''</sub>(''x'') (green) is obtained by [[Reflection (mathematics)|reflecting]] the graph of the function ''b''<sup>''x''</sup> (red) at the diagonal line ({{nowrap begin}}''x'' = ''y''{{nowrap end}}).]]
+To justify the definition of logarithms, it is necessary to show that the equation
+:<math>b^x = y \,</math>
+has a solution ''x'' and that this solution is unique, provided that ''y'' is positive and that ''b'' is positive and unequal to 1. A [[proof (mathematics)|proof]] of that fact requires the [[intermediate value theorem]] from [[elementary calculus]].<ref name=LangIII.3>{{Citation|last1=Lang|first1=Serge|author1-link=Serge Lang|title=Undergraduate analysis|publisher=[[Springer-Verlag]]|location=Berlin, New York|edition=2nd|series=Undergraduate Texts in Mathematics|isbn=978-0-387-94841-6|id={{MathSciNet|id = 1476913}}|year=1997}}, section III.3</ref> This theorem says that a [[continuous function]] that produces two values ''m'' and ''n'' also produces any value that lies between ''m'' and ''n''. A function is ''continuous'' if it does not "jump", that is, if its graph can be drawn without lifting the pen.
+
+This property can be shown to hold for the function {{nowrap begin}}''f''(''x'') = ''b''<sup>''x''</sup>{{nowrap end}}. Since ''f'' takes arbitrarily large and arbitrarily small positive values, any number {{nowrap|''y'' > 0}} lies between ''f''(''x''<sub>0</sub>) and ''f''(''x''<sub>1</sub>) for suitable ''x''<sub>0</sub> and ''x''<sub>1</sub>. The intermediate value theorem ensures that the equation ''f''(''x'') = ''y'' has a solution. The function ''f'' is [[monotonic function|strictly increasing]] (for {{nowrap|''b'' > 1}}), or strictly decreasing (for {{nowrap|0 < ''b'' < 1}}). Thus there is only one solution to this equation for each ''x''.
+
+The ''logarithm function'' or ''logarithmic function'' (or just ''logarithm'') assigns to any positive real number ''y'' its base-''b''-logarithm log<sub>''b''</sub>(''y''). That log<sub>''b''</sub>(''y'') is the solution ''x'' to the equation ''f''(''x'') = ''y''
+implies that the logarithm function is the ''[[inverse function]]'' of ''f''. Inverse functions are closely related to the original functions. Their [[graph (mathematics)|graphs]] are reflections of each other along the [[diagonal]] line ''x'' = ''y'', as shown at the right: a point (''t'', ''u'' = ''b''<sup>''t''</sup>) on the graph of ''f'' yields a point (''u'', ''t'' = log<sub>''b''</sub>''u'') on the graph of the logarithm and vice versa. Analytic properties of functions pass to their inverses.<ref name=LangIII.3 /> Thus, as {{nowrap begin}}''f''(''x'') = ''b''<sup>''x''</sup>{{nowrap end}} is a continuous and [[differentiable function]], so is log<sub>''b''</sub>(''y''). Roughly, a differentiable function is one whose graph has no sharp "corners".
+
+===Derivative and antiderivative===
+{{See|List of integrals of logarithmic functions}}
+[[File:Hyperbolic sector.svg|right|thumb|150px|The [[area]] of the hyperbolic sector equals {{nowrap|ln(''b'') <U+2212> ln(''a'')}}.]]
+The natural logarithm {{nowrap begin}}ln(''x'') = log<sub>e</sub>(''x''){{nowrap end}} is the inverse function of e<sup>''x''</sup>. The ''[[chain rule]]'' implies that the [[derivative]] of ln(''x'') is given by<ref>{{Harvard citations|last1=Lang|year=1997 |nb=yes|loc=section IV.2}}</ref>
+:<math>\frac{d}{dx} \ln(x) = \frac{1}{x}.</math>
+This implies that the [[antiderivative]] of 1/''x'' is ln(''x'') + C. An early application of this fact was the [[numerical integration|quadrature]] of a [[hyperbolic sector]] by [[Gregoire de Saint-Vincent|de Saint-Vincent]] in 1647, as shown at the right. The derivative with a generalised functional argument ''f''(''x'') is:
+:<math>\frac{d}{dx} \ln(f(x)) = \frac{f'(x)}{f(x)}.</math>
+The quotient at the right hand side is called [[logarithmic derivative]] of ''f''. The antiderivative of the natural logarithm ln(''x'') is:
+: <math>\int \ln(x) \,dx = x \ln(x) - x + C.</math>
+Derivatives and antiderivatives of logarithms to other bases can be derived from this equation using the formula for change of bases.
+
+===Integral representation of the natural logarithm===
+[[File:Natural logarithm integral.svg|right|thumb|The natural logarithm of ''t'' is the shaded area underneath the graph of the function ''f''(''x'') = 1/''x'' ([[Multiplicative inverse|reciprocal]] of ''x'').]]
+The natural logarithm of ''t'' agrees with the [[integral]] of 1/''x''&nbsp;''dx'' from 1 to ''t'':
+:<cite id=integral_naturallog><math>\ln (t) = \int_1^t \frac{1}{x} \, dx.</math></cite>
+In  other words, ln(''t'') equals the area between the ''x''-axis and the graph of function 1/''x'', ranging from {{nowrap begin}}''x'' = 1{{nowrap end}} to {{nowrap begin}}''x'' = ''t''.{{nowrap end}} This is depicted at the right. The formula is a consequence of the [[fundamental theorem of calculus]] and the derivative of ln(''x''). The right hand side of this equation can serve as a definition of the natural logarithm. Product and power logarithm formulas can be derived from this definition.<ref>{{Citation|last1=Courant|first1=Richard|title=Differential and integral calculus. Vol. I|publisher=[[John Wiley & Sons]]|location=New York|series=Wiley Classics Library|isbn=978-0-471-60842-4|id={{MathSciNet|id = 1009558}}|year=1988}}, see Section III.6</ref> The product formula {{nowrap begin}}ln(''tu'') = ln(''t'') + ln(''u''){{nowrap end}} is deduced as:
+
+:<math> \ln(tu) = \int_1^{tu} \frac{1}{x} \, dx \ \stackrel {(1)} = \int_1^{t} \frac{1}{x} \, dx + \int_t^{tu} \frac{1}{x} \, dx \ \stackrel {(2)} = \ln(t) + \int_1^u \frac{1}{w} \, dw = \ln(t) + \ln(u).</math>
+
+The equality (1) splits the integral into two parts, while the equality (2) is a change of variable ({{nowrap begin}}''w'' = ''x''/''t''{{nowrap end}}). Geometrically, the splitting corresponds to dividing the area into the yellow and blue parts. Rescaling the left hand blue area vertically by the factor ''t'' and shrinking it by the same factor horizontally does not change its size. Moving it appropriately, the area fits the graph of the function {{nowrap begin}}''f''(''x'') = 1/''x''{{nowrap end}} again. Therefore, the left hand area, which is the integral of ''f''(''x'') from ''t'' to ''tu'' is the same as the integral from ''1'' to ''u''. This justifies the equality (2).
+
+[[File:Natural logarithm product formula proven geometrically.svg|thumb|center|500px|A visual proof of the product formula of the natural logarithm.]]
+
+The power formula {{nowrap begin}}ln(''t''<sup>''r''</sup>) = ''r'' ln(''t''){{nowrap end}} is derived similarly:
+
+:<math>
+\ln(t^r) = \int_1^{t^r} \frac{dx}{x} = \int_1^t \frac{1}{w^r} \left(rw^{r - 1} \, dw\right) = r \int_1^t \frac{1}{w} \, dw = r \ln(t).
+</math>
+The second equality uses a change of variables, {{nowrap begin}}''w'' := ''x''<sup>1/''r''</sup>{{nowrap end}}, while the third equality follows from [[integration by substitution]]. The sum over the reciprocals of natural numbers, the so-called [[harmonic series (mathematics)|harmonic series]]:
+:<math>1 + \frac 1 2 + \frac 1  3 + \cdots + \frac 1 n = \sum_{k=1}^n \frac{1}{k},</math>
+is also closely tied to the natural logarithm: as ''n'' tends to [[infinity]], the difference,
+:<math>\sum_{k=1}^n \frac{1}{k} - \ln(n)f,</math>
+[[limit of a sequence|converges]] (i.e., gets arbitrarily close) to a number known as the [[Euler<U+2013>Mascheroni constant]]. Little is known about it<U+2014>not even whether it is a [[rational number]]. This relation aids in analyzing the performance of algorithms such as [[quicksort]].<ref>{{Citation|last1=Havil|first1=Julian|title=Gamma: Exploring Euler's Constant|publisher=[[Princeton University Press]]|isbn=978-0-691-09983-5|year=2003}}, see sections 11.5 and 13.8</ref>
+
+==Calculation==
+
+Logarithms are easy to compute for a [[countable infinity]] of numbers, such as {{nowrap begin}}log<sub>10</sub>(10,000) = 4{{nowrap end}}. Most numbers are more difficult. Logarithms can be calculated using [[power series]], the [[arithmetic-geometric mean]], the [[Binary logarithm#Algorithm|binary logarithm algorithm]], [[Newton's method]]<ref>{{Citation|last1=Zhang|first1=M.|last2=Delgado-Frias|first2=J.G.|last3=Vassiliadis|first3=S.|title=Table driven Newton scheme for high precision logarithm generation|url=http://ce.et.tudelft.nl/publicationfiles/363_195_00326783.pdf|doi=10.1049/ip-cdt:19941268  |journal=IEE Proceedings Computers & Digital Techniques|issn=1350-387 |volume=141|year=1994|issue=5|pages=281<U+2013>292}}, see section 1 for an overview</ref> or retrieved from a precalculated table that provides a fixed precision.
+
+The [[Gelfond<U+2013>Schneider theorem]] states that given two [[algebraic numbers]] ''a'' and ''b'', the ratio {{nowrap begin}}ln(''a'') / ln(''b''){{nowrap end}} is either a [[rational number]] ''p'' / ''q'' (in which case ''a''<sup>''q''</sup> = ''b''<sup>''p''</sup>) or a [[transcendental number]].<ref>{{Citation|last1=Baker|first1=Alan|author1-link=Alan Baker (mathematician)|title=Transcendental number theory|publisher=[[Cambridge University Press]]|isbn=978-0-521-20461-3|year=1975}}, page 10</ref> (Algebraic numbers are a generalization of rational numbers, for example the [[square root of 2]] and 
+:<math>\sqrt{-5+\sqrt[3]{3 / 13}},</math> 
+are algebraic. Complex numbers that are not algebraic are called transcendental<ref>{{cite book
+|title=Selected papers on number theory and algebraic geometry
+|volume=172
+|first1=Katsumi
+|last1=Nomizu
+|publisher=AMS Bookstore
+|year=1996
+|isbn=0-821-80445-6
+|page=21
+|url=http://books.google.com/books?id=uDDxdu0lrWAC&pg=PA21}}, [http://books.google.com/books?id=uDDxdu0lrWAC&pg=PA21 page 21]
+</ref>, for example &pi; and ''[[e (mathematical constant)|e]]'' are such numbers. [[Almost all]] complex numbers are transcendental. Related questions in [[transcendence theory]] such as [[linear forms in logarithms]] are a matter of current research.
+
+===Power series===
+====Taylor series====
+[[File:Taylor approximation of natural logarithm.gif|right|thumb|The Taylor series of ln(''z'') at ''z''&nbsp;=&nbsp;1. The animation shows the first 10 approximations.]]
+For any real number ''z'' that satisfies {{nowrap|0 < ''z'' < 2}},{{#tag:ref|The same series holds the principal value of the complex logarithm for complex numbers ''z'' satisfying <nowiki>|</nowiki>''z'' <U+2212> 1<nowiki>|</nowiki> < 1.|group=nb}} the natural logarithm of can be written as a [[Taylor series]], a series of [[polynomial]]s whose values get arbitrarily close to the exact value:<ref name=AbramowitzStegunp.68>{{Harvard citations|editor1-last=Abramowitz|editor2-last=Stegun|year=1972 |nb=yes|loc=p. 68}}</ref>
+:<math>
+\begin{align}\ln z & = (z-1) - \frac{(z-1)^2}{2} + \frac{(z-1)^3}{3} - \frac{(z-1)^4}{4} + \cdots\\
+& = \sum_{n=1}^\infty (-1)^{n+1} \frac{(z-1)^n}{n} = -\sum_{n=1}^\infty \frac{(1-z)^n}{n}.
+\end{align}</math>
+
+The infinite [[Sigma notation|sum]] means that the logarithm of ''z'' is approximated by the sums:
+:<math>-(1-z) - \frac{(1-z)^2}{2} - \cdots - \frac{(1-z)^n}{n},</math>
+to arbitrary precision, provided ''n'' big is enough. In [[elementary calculus]], ln(''z'') is the [[limit (mathematics)|''limit'']] of the [[sequence (mathematics)|sequence]] of these sums. This series is the [[Taylor series]] expansion of the natural logarithm at {{nowrap begin}}''z'' = 1{{nowrap end}}.
+
+====More efficient series====
+Another series is:
+:<math>
+\ln z = 2 \left ( \frac{z-1}{z+1} + \frac{1}{3}{\left(\frac{z-1}{z+1}\right)}^3 + \frac{1}{5}{\left(\frac{z-1}{z+1}\right)}^5 + \cdots \right ) = 2 \sum_{n=0}^\infty \frac{1}{2n+1} {\left ( \frac{z-1}{z+1} \right ) }^{2n+1},
+</math>
+for complex numbers ''z'' with positive [[real part]].<ref name=AbramowitzStegunp.68 /> This series can be derived from the above Taylor series. It converges more quickly than the Taylor series, especially if ''z'' is close to 1. For example, for {{nowrap begin}}''z'' = 1.5{{nowrap end}}, the first three terms of the second series approximate ln(1.5) with an error of about 3<U+00B7>10<sup><U+2212>6</sup>. The Taylor series needs 13 terms to achieve that precision. The quick convergence for ''z'' close to 1 can be taken advantage of in the following way: given a low-accuracy approximation ''y'' <U+2248> ln(''z'') and putting
+:<math>A = \frac z{\exp(y)}, \,</math>
+the logarithm of ''z'' is:
+:<math>\ln z=y+\ln A \,</math>
+The better the initial approximation ''y'' is, the closer ''A'' is to 1, so its logarithm can be calculated efficiently. ''A'' can be calculated  using the [[exponential function|exponential series]], which
+converges quickly provided ''y'' is not too large. Calculating the logarithm of larger ''z'' can be reduced to smaller values of ''z'' by writing ''z'' = ''a'' <U+00B7> 10<sup>''b''</sup>, so that ln(''z'') = ln(''a'') + ''b'' <U+00B7> ln(10).
+
+===Arithmetic-geometric mean approximation===
+This approach yields high precision approximations of the natural logarithm. ln(''x'') is approximated to a precision of 2<sup><U+2212>''p''</sup> (or ''p'' precise bits) by the following formula (from [[Gauss]]):
+
+:<math>\ln x \approx \frac{\pi}{2 M(1,2^{2-m}/x)} - m \ln 2,</math>
+
+where ''M'' denotes the [[arithmetic-geometric mean]] and ''m'' is chosen such that<ref>{{Citation |first1=T. |last1=Sasaki |first2=Y. |last2=Kanada |title=Practically fast multiple-precision evaluation of log(x) |journal=Journal of Information Processing |volume=5 |pages=247<U+2013>250 |issue=1982}}</ref><ref>{{Citation |first1=Timm |last1=Ahrendt|title=Fast computations of the exponential function|series=Lecture notes in computer science|doi=10.1007/3-540-49116-3_28|volume=1564|year=1999|pages=302<U+2013>312}}</ref>
+
+:<math>x \,2^m > 2^{p/2}.\, </math>
+
+Both the arithmetic-geometric mean and the constants <U+03C0> and ln(2) can be calculated with quickly converging series.
+
+===Binary logarithm===
+The [[Binary logarithm#Algorithm|binary logarithm algorithm]] calculates lb(''x'') [[recursion|recursively]] based on repeated squarings of ''x'', taking advantage of the relation 
+:<math>\log_2(x^2) = 2 \log_2 x. \,</math>
+
+===Newton's method===
+By means of quick ways to calculate the exponential function, the natural logarithm of ''x'' can also efficiently be calculated using [[Newton's method]].<ref>{{Citation|last1=Zhang|first1=M.|last2=Delgado-Frias|first2=J.G.|last3=Vassiliadis|first3=S.|title=Table driven Newton scheme for high precision logarithm generation|url=http://ce.et.tudelft.nl/publicationfiles/363_195_00326783.pdf|doi=10.1049/ip-cdt:19941268  |journal=IEE Proceedings Computers & Digital Techniques|issn=1350-387|volume=141|year=1994|issue=5|pages=281<U+2013>292}}, see section 1 for an overview</ref>
+
+==Complex logarithm==
+{{Main|Complex logarithm}}
+[[File:Complex number illustration modarg.svg|thumb|right|Polar form of complex numbers]]
+
+The ''complex logarithm'' generalizes logarithms of positive real numbers to logarithms of [[complex number]]s. Complex numbers are commonly represented as {{nowrap begin}}''z'' = ''x'' + i''y''{{nowrap end}}, where ''x'' and ''y'' are real numbers and i is the [[imaginary unit]]. Given any real number {{nowrap|''z'' > 0}}, the equation
+
+:<math>e^a=z \,</math>
+
+has exactly one ''real'' solution ''a''. However, infinitely many ''complex'' numbers ''a'' solve it. The [[exponentiation|exponential]] of multiple complex numbers ''a'' equals ''z''.
+
+Complex logarithms are most readily described using the [[polar form]] of ''z'', which encodes a complex number ''z'' by its [[absolute value]], that is, the distance ''r'' to the [[origin (mathematics)|origin]], and the argument &phi;, the angle between the ''x''-axis and the line that connects the origin and ''z''. Using [[trigonometric functions]] [[sine]] and [[cosine]], ''r'' and <U+03C6> are such that<ref>{{Citation|last1=Moore|first1=Theral Orvis|last2=Hadlock|first2=Edwin H.|title=Complex analysis|publisher=[[World Scientific]]|isbn=9789810202460|year=1991}}, see Section 1.2</ref>
+
+:<math>z=r \cos \varphi + i r \sin \varphi. \,</math>
+
+[[File:Complex log.jpg|right|thumb|The principal branch of the complex logarithm, Log(''z''). The [[hue]] of the color shows the argument of Log(''z''), the saturation (intensity) of the color shows the absolute value of the complex logarithm.]]
+The absolute value ''r'' is uniquely determined by ''z'' as:
+
+:<math>r=|z|=\sqrt{x^2+y^2}, \,</math>
+
+but multiple values of <U+03C6> satisfy this<U+2014>given one such <U+03C6>, then <U+03C6>' = <U+03C6> + 2<U+03C0> is another solution. Adding 2<U+03C0> or 360 degrees{{#tag:ref|See [[radian]] for the conversion between 2[[pi|&pi;]] and 360 [[degree (angle)|degrees]].|group=nb}} to the argument corresponds to "winding" around the circle counter-clock-wise by an angle of 2<U+03C0>. However, exactly one argument <U+03C6> satisfies {{nowrap|<U+2212>&pi; < &phi;}} and {{nowrap|&phi; &le; &pi;}}. It is called the ''principal argument'', denoted Arg(''z''), with a capital ''A''.<ref>{{Citation|last1=Ganguly|first1=S.|title=Elements of Complex Analysis|publisher=Academic Publishers|isbn=9788187504863|year=2005}}, Definition 1.6.3</ref> (The normalization {{nowrap|0 &le; Arg(''z'') < 2&pi;}} applies.<ref>{{Citation|last1=Nevanlinna|first1=Rolf Herman|author1-link=Rolf Nevanlinna|last2=Paatero|first2=Veikko|title=Introduction to complex analysis  |publisher=AMS Bookstore|isbn=978-0-8218-4399-4|year=2007}}, section 5.9</ref>) Since
+
+:<math>z=r e^{i \varphi}, \,</math>
+
+if <U+03C6> is the principal argument Arg(''z''), the ''a''-th power of ''e'' equals ''z'', for any [[integer]] ''n'' where ''a'' is:
+
+:<math>a = \ln r + i ( \varphi + 2 n \pi ). \,</math>
+
+Accordingly, ''a'' is called the ''complex logarithm'' of ''z''. If {{nowrap begin}}''n'' = 0{{nowrap end}}, ''a'' is called the ''principal value'' of the logarithm, denoted Log(''z''). The principal argument of any positive real number is 0; hence the principal logarithm of such a number is a real number and equals the real (natural) logarithm. Analogous formulae for principal values of logarithm of products and powers for complex numbers [[Exponentiation#Failure of power and logarithm identities|do in general ''not'' hold]].
+
+The graph at the right depicts Log(''z''). The discontinuity, that is, the jump in the hue at the negative part of the ''x''-axis, is due to the jump of the principal argument at this locus. This behavior can only be circumvented by dropping the range restriction on <U+03C6>. Then Arg(''z'') and, consequently, its logarithm become [[multi-valued function]]s.
+
+==Applications==
+[[File:NautilusCutawayLogarithmicSpiral.jpg|thumb|right|A [[nautilus]] displaying a logarithmic spiral.]]
+Logarithms have applications outside mathematics. The [[logarithmic spiral]], for example, appears (approximately) in nature, such as the [[Seashell|shells]] of [[nautilus]].<ref>
+{{Citation|last1=Maor|first1=Eli|title=E: The Story of a Number|publisher=[[Princeton University Press]]|isbn=978-0-691-14134-3|year=2009}}, see page 135</ref> Logarithms also occur in various scientific formulas, such as the [[Tsiolkovsky rocket equation]], the [[Fenske equation]], or the [[Nernst equation]].
+
+===Logarithmic scale===
+{{Main|Logarithmic scale}}
+[[File:GermanyHyperChart.jpg|A logarithmic chart depicting the value of one [[German gold mark|Goldmark]] in [[Reichsmark]] during the [[Inflation in the Weimar Republic|German hyperinflation in the 1920s]].|right|thumb]]
+Various scientific quantities are expressed as logarithms of other quantities, a concept known as ''logarithmic scale''. For example, the [[Richter magnitude scale|Richter scale]] measures the strength of an [[earthquake]] by taking the common logarithm of the energy emitted at the earthquake. For example, a 5.0 earthquake emits 10 times and a 6.0 releases 100 times the energy of a 4.0.<ref>{{Citation|last1=Crauder|first1=Bruce|last2=Evans|first2=Benny|last3=Noell|first3=Alan|title=Functions and Change: A Modeling Approach to College Algebra|publisher=Cengage Learning|edition=4th|isbn=978-0-547-15669-9|year=2008}}, section 4.4.</ref> Logarithms reduce widely varying quantities to much smaller ranges. 
+
+The [[pH]] in [[chemistry]] is the negative of the common logarithm of the [[Activity (chemistry)|activity]] of [[hydronium]] ions ({{chem|H|3|O|+}}, the form {{chem|H|+|}} takes in water).<ref>{{Citation|author=[[IUPAC]]|title=Compendium of Chemical Terminology ("Gold Book")|edition=2nd|editor=A. D. McNaught, A. Wilkinson|publisher=Blackwell Scientific Publications|location=Oxford|year=1997|url=http://goldbook.iupac.org/P04524.html|isbn=0-9678550-9-8|doi=10.1351/goldbook}}</ref> The activity of hydronium ions in neutral [[water]] is 10<sup><U+2212>7</sup>&nbsp;[[molar concentration|mol<U+00B7>L<sup><U+2212>1</sup>]] at 25&nbsp;<U+00B0>C, hence a pH of 7. On the other hand, [[vinegar]] typically has a pH of about 3. The difference of 4 corresponds to a ratio of 10<sup>4</sup> of the activity, that is, vinegar's hydronium ion activity is about 10<sup><U+2212>3</sup>&nbsp;mol<U+00B7>L<sup><U+2212>1</sup>. 
+
+The [[decibel]] is a [[Units of measurement|unit]] of measure based on the common logarithm of [[ratio]]s: 10 times the common log of a [[power (physics)|power]] ratio or 20 times the common log of a [[voltage]] ratio. For example it is used to quantify the loss of voltage levels in transmitting electrical signals,<ref>{{Citation|last1=Bakshi|first1=U. A.|title=Telecommunication Engineering |publisher=Technical Publications|isbn=9788184317251|year=2009}}, see Section 5.2</ref> to describe power levels of sounds in [[acoustics]],<ref>{{Citation|last1=Maling|first1=George C.|editor1-last=Rossing|editor1-first=Thomas D.|title=Springer handbook of acoustics|publisher=[[Springer-Verlag]]|location=Berlin, New York|isbn=978-0-387-30446-5|year=2007|chapter=Noise}}, section 23.0.2</ref> and the [[absorbance]] of light in the fields of [[spectrometry]] and [[optics]]. 
+
+The [[apparent magnitude]] measures the brightness of [[star]]s logarithmically.<ref>{{Citation|last1=Bradt|first1=Hale|title=Astronomy methods: a physical approach to astronomical observations|publisher=[[Cambridge University Press]]|series=Cambridge Planetary Science|isbn=978-0-521-53551-9|year=2004}}, see section 8.3, p. 231</ref>
+
+[[Semilog]] (log-linear) graphs use this concept for visualization: one axis, typically the vertical one, is scaled logarithmically. This way, [[exponential function]]s of the form {{nowrap begin}}''f''(''x'') = ''a'' <U+00B7> ''b''<sup>''x''</sup>{{nowrap end}} appear as straight lines with [[slope]] proportional to ''b''. [[Log-log]] graphs scale both axes logarithmically, which causes functions of the form {{nowrap begin}}''f''(''x'') = ''a'' <U+00B7> ''x''<sup>''k''</sup>{{nowrap end}} to be depicted as straight lines with slope proportional to the exponent ''k''. This is applied in visualizing [[power law]]s.<ref>{{Citation|last1=Bird|first1=J. O.|title=Newnes engineering mathematics pocket book  |publisher=Newnes|location=Oxford|edition=3rd|isbn=978-0-7506-4992-6|year=2001}}, see section 34</ref>
+
+===Psychology===
+In [[psychophysics]], the [[Weber<U+2013>Fechner law]] proposes a logarithmic relationship between [[stimulus (psychology)|stimulus]] and [[sensation (psychology)|sensation]];<ref>{{Citation|last1=Boring|first1=Edwin Garrigues|title=Psychology <U+2013> A Factual Textbook|publisher=Lightning Source Inc|isbn=978-1-4067-4750-8|year=2007}}, p. 196<U+2014>201</ref> however, this relationship is known to be less accurate than [[Stevens' power law]].<ref>{{Citation|last1=Nadel|first1=Lynn|author1-link=Lynn Nadel|title=Encyclopedia of cognitive science|publisher=[[John Wiley & Sons]]|location=New York|isbn=978-0-470-01619-0|year=2005}}, see the lemmas ''Psychophysics'' and ''Perception: Overview''</ref> According to Weber's model, the smallest noticeable change <U+0394>''S'' of some stimulus ''S'' is proportional to ''S''. This gives rise to logarithms by the relation of the natural logarithm and the integral over d''S'' / ''S''. [[Hick's law]] proposes a logarithmic relation between the time individuals take for choosing an alternative and the number of choices they have.<ref>{{Citation|last1=Welford|first1=A. T.|title=Fundamentals of skill|publisher=Methuen|location=London|isbn=978-0-416-03000-6 |oclc=219156|year=1968}}, p. 61</ref>
+
+Psychological studies found that mathematically unsophisticated individuals tend to estimate quantities logarithmically, that is, they position a number on an unmarked line according to its logarithm, so that 10 is positioned as close to 20 as 100 is to 200. Increasing mathematical understanding shifts this to a linear estimate (positioning 100 10x as far away).<ref>{{Citation | doi=10.1111/1467-9280.02438 | last1=Siegler|first1=Robert S.|last2=Opfer|first2=John E.|title=The Development of Numerical Estimation. Evidence for Multiple Representations of Numerical Quantity|volume=14|issue=3|pages=237<U+2013>43|year=2003|journal=Psychological Science
+|url=http://www.psy.cmu.edu/~siegler/sieglerbooth-cd04.pdf}}</ref><ref>{{Citation|last1=Dehaene| first1=Stanislas|last2=Izard|first2=V<U+00E9>ronique |last3=Spelke| first3=Elizabeth|last4=Pica| first4=Pierre| title=Log or Linear? Distinct Intuitions of the Number Scale in Western and Amazonian Indigene Cultures|volume=320|issue=5880|pages =1217<U+2013>1220|doi=10.1126/science.1156540|pmc=2610411|pmid=18511690| year=2008|journal=Science|postscript=<!--None-->}}</ref>
+
+===Probability theory and statistics===
+[[File:Benfords law illustrated by world's countries population.png|Distribution of first digits (in %, red bars) in the [[List of countries by population|population of the 237 countries]] of the world. Black dots indicate the distribution predicted by Benford's law.|thumb|right]]
+Logarithms also arise in [[probability theory]]: the [[law of large numbers]] dictates that the heads-to-tails ratio approach 0.5 as the number of coin tosses increases. The fluctuations of this ratio around the limiting value are quantified by the [[law of the iterated logarithm]].
+
+Logarithms are used in [[statistics]] to [[estimation theory|estimate]] the [[parametric model|parameters of model]]s for [[statistical data|data]], using the [[maximum&nbsp;likelihood]] method: Modeling the data with [[independence (probability)|independent]] [[random&nbsp;variable]]s  implies that the [[joint distribution|joint]] [[probability density|density]] is the product of the densities for each random variable; this implies that the joint [[likelihood function|likelihood]] function for all the observations is the product of the likelihoods for each observation. Because the logarithm is an increasing function, a maximum of the [[likelihood function]] occurs at the same parameter-value as a maximum of the logarithm of the likelihood (the "''log&nbsp;likelihood''"). Thus, maximizing the product of the likelihoods is equivalent to maximizing the logarithm of the product of the likelihoods, which is equivalent to maximizing the sum of the log&nbsp;likelihoods.<ref>{{Citation|last1=Rose|first1=Colin|last2=Smith|first2=Murray D.|title=Mathematical statistics with Mathematica|publisher=[[Springer-Verlag]]|location=Berlin, New York|series=Springer texts in statistics|isbn=978-0-387-95234-5|year=2002}}, section 11.3</ref>
+
+[[Benford's law]], an [[empirical]] [[statistics|statistical]] description of the occurrence of digits in certain real-life data sources, such as heights of buildings, is based on logarithms: the [[probability]] that the first decimal digit of an item in the data sample is ''d'' (from 1 to 9) equals log<sub>10</sub>(''d'' + 1) <U+2212> log<sub>10</sub>(''d''), ''irrespective'' of the unit of measurement.<ref>{{Citation|last1=Tabachnikov|first1=Serge|title=Geometry and Billiards|publisher=[[American Mathematical Society]]|location=Providence, R.I.|isbn=978-0-8218-3919-5|year=2005|pages=36<U+2013>40}}, see Section 2.1</ref> Thus, according to that law, about 30% of the data can be expected to have 1 as first digit, 18% start with 2 etc. Deviations from this pattern can be used to detect [[accounting]] fraud.<ref>{{Citation|title=The Effective Use of Benford's Law in Detecting Fraud in Accounting Data|first1=Cindy|last1=Durtschi| first2=William|last2=Hillison|first3=Carl|last3=Pacini|url=http://www.auditnet.org/articles/JFA-V-1-17-34.pdf| volume=V |pages =17<U+2013>34|year=2004|journal=Journal of Forensic Accounting|postscript=.}}</ref>
+
+The logarithm of a [[log-normal distribution]] is [[normal distribution|normally distributed]].<ref>{{Citation|last1=Aitchison|first1=J.|last2=Brown|first2=J. A. C.|title=The lognormal distribution|publisher=[[Cambridge University Press]]|isbn=978-0-521-04011-2 |oclc=301100935|year=1969}}</ref> For example, the number of [[syllable]]s in [[German language|German words]] follows such a pattern.<ref>{{Citation | last1=Naranan | first1=S | last2=Balasubrahmanyan | first2=V.K. | editor1-last=K<U+00F6>hler | editor1-first=R. | editor2-last=Altmann | editor2-first=G. | editor3-last=Piotrovski<U+012D> | editor3-first=R.G. | title=Quantitative Linguistik: ein internationales Handbuch | publisher=de Gruyter | location=Berlin | isbn=978-3-11-015578-5 | year=2005 | chapter=Power laws in statistical linguistics and related systems}}, see p. 730</ref>
+
+===Computational complexity===
+
+[[Computational complexity theory]] is a branch of [[computer science]] that studies the [[time complexity|performance of algorithms]].<ref>{{Citation|last1=Wegener|first1=Ingo| title=Complexity theory: exploring the limits of efficient algorithms|publisher=[[Springer-Verlag]]|location=Berlin, New York|isbn=978-3-540-21045-0|year=2005}}, section 2.4.</ref> Logarithms are valuable for describing [[algorithm]]s which [[Divide and conquer algorithm|divide a problem]] into smaller ones, and join the solutions of the subproblems.<ref>{{Citation|last1=Harel|first1=David|last2=Feldman|first2=Yishai A.|title=Algorithmics: the spirit of computing|publisher=[[Addison-Wesley]]|isbn=978-0-321-11784-7|year=2004}}, p. 143</ref>
+
+For example, to find a number in a sorted list, the [[binary search]] algorithm checks the middle entry and proceeds with the half before or after the middle entry if the number is still not found. This algorithm is of [[computational complexity|order]] log(''N''), requiring on average log(''N'') comparisons, where ''N'' is the list's length. Similarly, the [[merge sort]] algorithm sorts an unsorted list by dividing the list into halves and sorting these first before merging the results. Merge sort algorithms typically require a time [[big O notation|approximately proportional to]] {{nowrap|''N'' <U+00B7> log(''N'')}}.
+
+Any [[natural number]] ''N'' can be represented in [[Binary numeral system|binary form]] in no more than {{nowrap|log<sub>2</sub>(''N'') + 1}} [[bit]]s. In other words, the amount of [[memory (computing)|memory]] needed to store ''N'' is order log(''N'').
+
+A function ''f''(''x'') is said to [[Logarithmic growth|grow logarithmically]] if it is (exactly or approximately) proportional to its logarithm. ([[Biology|Biological]] descriptions of organism growth use this term for an exponential function, however.<ref>{{Citation |last1=Mohr|first1=Hans|last2=Schopfer|first2=Peter|title=Plant physiology|publisher=Springer-Verlag|location=Berlin, New York|isbn=978-3-540-58016-4|year=1995}}, see Chapter 19, p. 298</ref>)
+
+===Entropy===
+[[Entropy]] is broadly a measure of the (dis-)order of some system. In [[thermodynamics]], the entropy ''S'' of some physical system is defined as
+:<math> S = - k \sum_i p_i \ln(p_i).\, </math>
+The sum is over all possible states ''i'' of the system in question, where ''p''<sub>''i''</sub> is the [[probability]] that the state ''i'' is attained and ''k'' is the [[Boltzmann constant]]. Similarly, [[entropy (information theory)|entropy in information theory]] measures the quantity of information. If a message recipient may expect any one of ''N'' possible messages with equal likelihood, then the amount of information conveyed by any one such message is quantified as log<sub>2</sub>&nbsp;''N'' [[bit]]s.<ref>{{Citation|last1=Eco|first1=Umberto|author1-link=Umberto Eco|title=The open work  |publisher=[[Harvard University Press]]|isbn=978-0-674-63976-8|year=1989}}, see section III.I</ref>
+
+===Fractals===
+
+[[File:Sierpinski dimension.svg|The Sierpinski triangle (at the right) is constructed by repeatedly replacing [[equilateral triangle]]s by three smaller ones.|right|thumb|400px]]
+
+Logarithms occur in definitions of the [[fractal dimension|dimension]] of [[fractal]]s.<ref> {{Citation|last1=Helmberg|first1=Gilbert|title=Getting acquainted with fractals|publisher=Walter de Gruyter|series=De Gruyter Textbook|isbn=978-3-11-019092-2|year=2007}}</ref> Fractals are geometric objects that are [[self-similarity|self-similar]], that is, that have small parts that reproduce, at least roughly, the entire global structure. The [[Sierpinski triangle]], for example, can be exactly covered by three copies of itself, each having sides half the original length. This causes the [[Hausdorff dimension]] of this structure to be {{nowrap begin}}log(3)/log(2) <U+2248> 1.58{{nowrap end}}. The idea of [[scaling invariance]] is also inherent to [[Benford's law]]. Another logarithm-based notion of dimension is obtained by [[box-counting dimension|counting the number of boxes]] needed to cover the fractal in question.
+
+===Music===
+Logarithms are related to [[music]]al tones and [[interval (music)|intervals]]. In [[equal temperament]], the frequency ratio depends only on the interval between two tones, not on the specific frequency, or [[pitch (music)|pitch]] of the individual tones. Therefore, logarithms can be used to describe the intervals: an interval is measured in [[semitone]]s by taking the base-2<sup>1/12</sup> logarithm of the [[frequency]] ratio, while the base-2<sup>1/1200</sup> logarithm of the frequency ratio expresses the interval in [[cent (music)|cents]], hundredths of a semitone. The latter is used for finer encoding, as it is needed for non-equal temperaments.<ref>{{Citation|last1=Wright|first1=David|title=Mathematics and music|publisher=AMS Bookstore|isbn=978-0-8218-4873-9|year=2009}}, see Chapter 5</ref> The table below lists some musical intervals together with the frequency ratios and their logarithms.
+
+{| class="wikitable" style="text-align:center; margin:1em auto 1em auto;"
+|-
+||'''Interval'''<br>(the two tones are played at the same time)
+||[[72 tone equal temperament|1/72 tone]] {{audio|1_step_in_72-et_on_C.mid|play}}
+||[[Semitone]] {{audio|help=no|Minor_second_on_C.mid|play}}
+||[[Just major third]] {{audio|help=no|Just_major_third_on_C.mid|play}}
+||[[Major third]] {{audio|help=no|Major_third_on_C.mid|play}}
+||[[Tritone]] {{audio|help=no|Tritone_on_C.mid|play}}
+||[[Octave]] {{audio|help=no|Perfect_octave_on_C.mid|play}}
+|-
+|| '''Frequency ratio''' ''r''
+|| <math>2^{\frac 1 {72}} \approx 1.0097</math>
+|| <math>2^{\frac 1 {12}} \approx 1.0595</math>
+|| <math>\tfrac 5 4 = 1.25</math>
+|| <math>\begin{align} 2^{\frac 4 {12}} & = \sqrt[3] 2 \\ & \approx 1.2599 \end{align} </math>
+|| <math>\begin{align} 2^{\frac 6 {12}} & = \sqrt 2 \\ & \approx 1.4142 \end{align} </math>
+|| <math> 2^{\frac {12} {12}} = 2 </math>
+|-
+|| '''Corresponding number of semitones'''<br><math>\log_{\sqrt[12] 2}(r) = 12 \log_2 (r)</math>
+|| <math>\tfrac 1 6 \,</math>
+|| <math>1 \,</math>
+|| <math>\approx 3.8631 \,</math>
+|| <math>4 \,</math>
+|| <math>6 \,</math>
+|| <math>12 \,</math>
+|-
+|| '''Corresponding number of cents'''<br><math>\log_{\sqrt[1200] 2}(r) = 1200 \log_2 (r)</math>
+|| <math>16 \tfrac 2 3 \,</math>
+|| <math>100 \,</math>
+|| <math>\approx 386.31 \,</math>
+|| <math>400 \,</math>
+|| <math>600 \,</math>
+|| <math>1200 \,</math>
+|}
+
+===Number theory===
+Natural logarithms are closely linked to [[prime-counting function|counting prime number]]s, an important topic in [[number theory]]. For any [[integer]] ''x'', the quantity of [[prime number]]s less than or equal to ''x'' is denoted <U+03C0>(''x''). In its simplest form, the [[prime number theorem]] asserts that <U+03C0>(''x'') is approximately given by
+:<math>\frac{x}{\ln(x)},</math>
+in the sense that the ratio of <U+03C0>(''x'') and that fraction approaches 1 when ''x'' tends to [[infinity]].<ref>{{Citation|last1=Bateman|first1=P. T.|last2=Diamond|first2=Harold G.|title=Analytic number theory: an introductory course|publisher=[[World Scientific]]|isbn=9789812560803 |oclc=492669517|year=2004}}, see Theorem 4.1</ref> In other words the probability that a [[randomness|randomly]] chosen number between 1 and ''x'' is [[prime number|prime]] is indirectly proportional to the numbers of [[decimal digit]]s of ''x''. A far better estimate of <U+03C0>(''x'') is given by the
+[[logarithmic integral function|offset logarithmic integral]] function Li(''x''), defined by
+:<math> \mathrm{Li}(x) = \int_2^x \frac1{\ln(t)} \,\mathrm{d}t.  </math>
+The [[Riemann hypothesis]], one of the oldest open mathematical [[conjecture]]s, can be stated in terms of comparing <U+03C0>(''x'') and Li(''x'').<ref>{{Harvard citations|last1=Bateman|first1=P. T.|last2=Diamond|year=2004|nb=yes |loc=Theorem 8.15}}</ref> The [[Erd<U+0151>s<U+2013>Kac theorem]] describing the number of distinct [[prime factor]]s also involves the natural logarithm.
+
+By the formula calculating logarithms of products, the logarithm of ''n'' [[factorial]], {{nowrap begin}}''n''! = 1 <U+00B7> 2 <U+00B7> ...''n''{{nowrap end}}, is given by
+:<math> \ln (n!) = \ln 1 + \ln 2 + \cdots + \ln n. \,</math>
+This can be used to obtain [[Stirling's formula]], an approximation for ''n''! for large ''n''.<ref>{{Citation|last1=Slomson|first1=Alan B.|title=An introduction to combinatorics|publisher=[[CRC Press]]|location=London|isbn=978-0-412-35370-3|year=1991}}, see Chapter 4</ref>
+
+The common logarithm log<sub>10</sub>(''x'') is linked to the number ''n'' of [[numerical digit]]s of ''x'': ''n'' is the smallest [[integer]] strictly bigger than log<sub>10</sub>(''x''), i.e., the one satisfying the inequalities:
+:<math>n-1 < \log_{10} x < n. \,</math>
+
+==Related concepts==
+The ''cologarithm'' of a number is the logarithm of its reciprocal: {{nowrap begin}}colog<sub>''b''</sub>(''x'') = log<sub>''b''</sub>(1/''x'') = <U+2212>log<sub>''b''</sub>(''x'').{{nowrap end}}<ref>{{Citation|url=http://books.google.com/?id=zAM0AAAAMAAJ&pg=PA360&dq=antilog#PPA360,M1 |last1=Wooster|first1=Woodruff B|last2=Smith|first2=David E|title=Academic Algebra|page=360|publisher=Ginn & Company|year=1902}}</ref> The ''antilogarithm'' function antilog<sub>''b''</sub>(''y'') is the [[inverse function]] of log<sub>''b''</sub>(''x''); it can be written in closed form as ''b''<sup>''y''</sup>.<ref>{{Citation|editor1-last=Abramowitz|editor1-first=Milton|editor1-link=Milton Abramowitz|editor2-last=Stegun|editor2-first=Irene A.|editor2-link=Irene Stegun|title=[[Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables]]|publisher=[[Dover Publications]]|location=New York|isbn=978-0-486-61272-0|id=tenth printing|year=1972}}, see section 4.7., p. 89</ref> Both terminologies are dying out.
+
+The ''double'' or ''iterated logarithm'', ln(ln(''x'')), is the inverse function of the [[double exponential function]]. The ''[[super-logarithm|super- or hyper-4-logarithm]]'' is the inverse function of [[tetration]]. The super-logarithm of ''x'' grows even more slowly than the double logarithm for large ''x''. The [[Lambert W function]] is the inverse function of ''<U+0192>''(''w'')&nbsp;=&nbsp;''we<sup>w</sup>''.
+
+From the perspective of [[pure mathematics]], the identity log(''cd'')&nbsp;=&nbsp;log(''c'')&nbsp;+&nbsp;log(''d'') expresses an [[isomorphism]] between the [[multiplicative group]] of the positive real numbers and the group of all the reals under addition. By means of that isomorphism, the [[Lebesgue measure]] d''x'' on '''R''' corresponds to the [[Haar measure]] d''x''/''x'' on the positive reals.<ref>{{Citation|last1=Ambartzumian|first1=R. V.|title=Factorization calculus and geometric probability|publisher=[[Cambridge University Press]]|isbn=978-0-521-34535-4|year=1990}}, see Section 1.4</ref> Logarithmic functions are the only continuous isomorphisms from the multiplicative group of positive real numbers to the additive group of real numbers.<ref>{{Citation|last1=Bourbaki|first1=Nicolas|author1-link=Nicolas Bourbaki|title=General topology. Chapters 5<U+2014>10|publisher=[[Springer-Verlag]]|location=Berlin, New York|series=Elements of Mathematics|isbn=978-3-540-64563-4|id={{MathSciNet|id = 1726872}}|year=1998}}, see section V.4.1</ref>  In [[complex analysis]] and [[algebraic geometry]], [[differential form]]s of the form {{nowrap begin}}(d log(''f'') =) d''f''/''f''{{nowrap end}} are known as forms with logarithmic poles.<ref>{{Citation|last1=Esnault|first1=H<U+00E9>l<U+00E8>ne|last2=Viehweg|first2=Eckart|title=Lectures on vanishing theorems|publisher=Birkh<U+00E4>user Verlag|series=DMV Seminar|isbn=978-3-7643-2822-1|id={{MathSciNet|id = 1193913}}|year=1992|volume=20}}, see section 2</ref> This gives rise to concepts such as [[logarithmic pair]]s, [[log terminal]] [[singularity (mathematics)|singularities]] or logarithmic [[geometry]].
+
+The [[polylogarithm]] is the function defined by<ref>{{dlmf|id= 25.12|first= T.M.|last= Apostol|ref= harv}}</ref>
+:<math>
+\operatorname{Li}_s(z) = \sum_{k=1}^\infty {z^k \over k^s}.
+</math>
+It is related to the natural logarithm by {{nowrap begin}}Li<sub>1</sub>(''z'') = <U+2212>ln(1 <U+2212> ''z''){{nowrap end}}. Moreover, Li<sub>''s''</sub>(1) equals the [[Riemann zeta function]] <U+03B6>(''s'').
+
+Exponentiation occurs in many areas of mathematics and its inverse function is often referred to as the logarithm. For example, the [[logarithm of a matrix]] is the (multi-valued) inverse function of the [[matrix exponential]].<ref>{{Citation|last1=Higham|first1=Nicholas|author1-link=Nicholas Higham|title=Functions of Matrices. Theory and Computation|publisher=[[Society for Industrial and Applied Mathematics|SIAM]]|isbn=978-0-89871-646-7|year=2008}}, see Chapter 11.</ref> Another example is the [[p-adic logarithm function|''p''-adic logarithm]], the inverse function to the [[p-adic exponential function|''p''-adic exponential]]. Both are defined via Taylor series analogous to the real case. Unlike the real case, the ''p''-adic logarithm can be extended to all non-zero [[p-adic number|''p''-adic numbers]].<ref>{{Neukirch ANT}}, Section II.5.</ref>
+
+The [[discrete logarithm]] is a related notion in the theory of [[finite group]]s. It involves solving the equation ''b''<sup>''n''</sup> =&nbsp;''x'', where ''b'' and ''x'' are elements of the group, and ''n'' is an integer specifying a power in the group operation. [[Zech's logarithm]] is related to the discrete logarithm in the multiplicative group of non-zero elements of a [[finite field]].<ref>{{Citation|last1=Lidl|first1=Rudolf|last2=Niederreiter|first2=Harald|title=Finite fields|publisher=Cambridge University Press|isbn=978-0-521-39231-0|year=1997}}</ref> For some finite groups, it is believed that the discrete logarithm is very hard to calculate, whereas discrete exponentials are quite easy. This asymmetry has applications in [[public key cryptography]], more specifically in [[elliptic curve cryptography]].<ref>{{Citation|last1=Stinson|first1=Douglas Robert|title=Cryptography: Theory and Practice|publisher=[[CRC Press]]|location=London|edition=3rd|isbn=978-1-58488-508-5|year=2006}}</ref>
+
+==History==<!-- This section is linked from [[Common logarithm]] -->
+
+===Predecessors===
+The [[Indian mathematics#Ninth to Twelfth Centuries|Indian mathematician]] [[Virasena]] worked with the concept of ''ardhaccheda'': the number of times a number could be halved;  effectively similar to the integer part of logarithms to base 2. He described relations such as the product formula and also introduced logarithms in base 3 (''trakacheda'') and base 4 (''caturthacheda'').<ref>{{citation| contribution=History of Mathematics in India|title=Students' Britannica India: Select essays|editor-first=Dale|editor-last1=Hoiberg|editor3-first=Indu|editor-last2=Ramchandani|first=R. C.|last=Gupta|page=329|publisher=Popular Prakashan|year=2000| contribution-url=http://books.google.co.uk/books?id=-xzljvnQ1vAC&pg=PA329&lpg=PA329&dq=Virasena+logarithm&source=bl&ots=BeVpLXxdRS&sig=_h6VUF3QzNxCocVgpilvefyvxlo&hl=en&ei=W0xUTLyPD4n-4AatvaGnBQ&sa=X&oi=book_result&ct=result&resnum=2&ved=0CBgQ6AEwATgK#v=onepage&q=Virasena%20logarithm&f=false}}</ref><ref>{{Citation|unused_data=Mathematics of Dhavala|first=A. N.|last=Singh|place=Lucknow University|url=http://www.jainworld.com/JWHindi/Books/shatkhandagama-4/02.htm}}</ref> [[Michael Stifel]] published ''Arithmetica integra'' in [[Nuremberg]] in 1544; it contains a table of integers and powers of 2 that is arguably an early version of a logarithmic table.<ref>
+{{Citation
+|title = A short account of the history of mathematics
+|author = Walter William Rouse Ball
+|publisher = Macmillan and Co
+|year = 1908
+|page = 216
+|url = http://books.google.com/?id=egY6AAAAMAAJ&pg=PA216&dq=%22arithmetica+integra%22+logarithms&q=%22arithmetica%20integra%22%20logarithms
+}}</ref><ref>
+{{Citation
+|title = Precalculus mathematics
+|author = Vivian Shaw Groza and Susanne M. Shelley
+|publisher = 9780030776700
+|year = 1972
+|isbn = 9780030776700
+|page = 182
+|url = http://books.google.com/?id=yM_lSq1eJv8C&pg=PA182&dq=%22arithmetica+integra%22+logarithm&q=stifel
+}}</ref>
+
+===Napier and Euler===
+[[File:John Napier.jpg|thumb|right|John Napier (1550<U+2013>1617)]]
+The method of logarithms was publicly propounded in 1614, in a book entitled ''[[Mirifici Logarithmorum Canonis Descriptio]],'' by [[John Napier]].<ref>Ernest William Hobson. ''John Napier and the invention of logarithms. 1614.'' The University Press, 1914.</ref> ([[Joost B<U+00FC>rgi]] independently discovered logarithms; but published only four years after Napier).
+
+By repeated subtractions Napier calculated {{nowrap|10<sup>7</sup>(1 <U+2212> 10<sup><U+2212>7</sup>)<sup>''L''</sup>}} for ''L'' ranging from 1 to 100. The result for ''L''=100 is approximately {{nowrap begin}}0.99999 = 1 <U+2212> 10<sup><U+2212>5</sup>{{nowrap end}}. Napier then calculated the products of these numbers with {{nowrap|10<sup>7</sup>(1 <U+2212> 10<sup><U+2212>5</sup>)<sup>''L''</sup>}} for ''L'' from 1 to 50 and did similarly with {{nowrap|0.9995 <U+2248> (1 <U+2212> 10<sup><U+2212>5</sup>)<sup>20</sup>}} and {{nowrap|0.99 <U+2248> 0.995<sup>20</sup>}}. These computations, which occupied 20 years, allowed him to give, for any number ''N'' from 1-5 million, the number ''L'' that solves the equation
+:<math>N=10^7 {(1-10^{-7})}^L. \,</math>
+Napier first called ''L'' an "artificial number", but later introduced the word ''"logarithm"'' to mean a number that indicates a ratio: {{polytonic|<U+03BB><U+03CC><U+03B3><U+03BF><U+03C2>}} (''[[logos]]'') meaning proportion, and {{polytonic|<U+1F00><U+03C1><U+03B9><U+03B8><U+03BC><U+03CC><U+03C2>}} (''arithmos'') meaning number. In modern notation:
+:<math>L \approx 10^7 \log_{ \frac{1}{e}} \left( \frac{N}{10^7} \right), \,</math>
+because
+:<math>{(1-10^{-7})}^{10^7} \approx \frac{1}{e}.  \,</math>
+
+The invention was quickly met with acclaim in many countries. [[Pierre-Simon Laplace|Laplace]] called logarithms
+{{cquote|[a]n admirable artifice which, by reducing to a few days the labour of many months, doubles the life of the astronomer, and spares him the errors and disgust inseparable from long calculations.<ref>{{Citation|last1=Bryant|first1=Walter W.|title=A History of Astronomy|url=http://www.forgottenbooks.org/ebooks/A_History_of_Astronomy_-_9781440057922.pdf|publisher=Forgotten Books|isbn=978-1-4400-5792-2}}, page 44</ref>}}
+The work of [[Bonaventura Cavalieri|Cavalieri]] (Italy), [[Edmund Wingate|Wingate]] (France), Xue Fengzuo (China), and
+[[Johannes Kepler|Kepler's]] ''Chilias logarithmorum'' (Germany) helped spread the concept further.<ref>{{Harvard citations|last1=Maor|year=2009 |nb=yes |loc=section 2}}</ref>
+
+The number e and the modern definition for logarithms were developed about 100 years later, by mathematician [[Leonhard Euler]] in 1728.<ref name="ReferenceA">{{Harvard citations|last1=Maor|year=2009 |nb=yes |loc=section 1}}</ref><ref>{{Citation|last1=Eves|first1=Howard Whitley|author1-link=Howard Eves|title=An introduction to the history of mathematics|publisher=Saunders|location=Philadelphia|edition=6th|series=The Saunders series|isbn=978-0-03-029558-4 |year=1992}}, section 9-3</ref>
+
+===Logarithm tables, slide rules and historical applications===
+[[Image:Logarithms Britannica 1797.png|frame|right|The 1797 Encyclop<U+00E6>dia Britannica explains logarithms as "a series of numbers in arithmetical progression, corresponding to others in geometrical progression; by means of which, arithmetical calculations can be made with much more ease and expedition than otherwise."]]
+
+[[File:Logarithmen.png|thumb|120px|Page of a 1912 logarithm table.]]
+
+Logarithms contributed to the advance of science, and especially of [[astronomy]]. They were critical to advances in [[surveying]], [[celestial navigation]], and other domains. A key tool that enabled their practical use before calculators and computers were ''[[logarithm tables]]''. These tables listed the values of log<sub>''b''</sub>(''x'') and ''b''<sup>''x''</sup> for any number ''x'' in a certain range, at a certain precision, for a certain base ''b'' (usually {{nowrap begin}}''b'' = 10{{nowrap end}}). The product and quotient of two positive numbers ''c'' and ''d'' were routinely calculated as the sum and difference of their logarithms. The final product/quotient came from raising ''b'' to the power of this sum/difference also via the table. The result is ''cd'' (or ''c''/''d''), as shown by
+:<math> c d = b^{\log_b c} \ b^{\log_b d} = b^{\log_b c + \log_b d} \,</math>
+and
+
+:<math>\frac c d = c d^{-1} = b^{\log_b c - \log_b d}. \,</math>
+
+For manual calculations that demand any appreciable precision, performing three lookups and a sum/difference is much faster than performing the multiplication by methods such as [[prosthaphaeresis]], which relies on [[trigonometric identities]]. Calculation of powers and [[nth root|roots]] are reduced to multiplications or divisions and look-ups by
+:<math>c^d =  b^{d \log_b c} \,</math>
+and
+:<math>\sqrt[d]{c} = c^{\frac 1 d}. \,</math>
+
+For different needs, logarithm tables ranging from small handbooks to multi-volume editions have been compiled:
+
+{| class="wikitable"
+|-
+! Year !! Author !! Range !! Decimal places !! Note
+|-
+| 1617|| [[Henry Briggs (mathematician)|Henry Briggs]] || 1<U+2013>1000 || 8 ||
+|-
+| 1624|| Henry Briggs ''Arithmetica Logarithmica'' || 1<U+2013>20,000, 90,000<U+2013>100,000 || 14 ||
+|-
+| 1628|| [[Adriaan Vlacq]] || 20,000<U+2013>90,000 || 10 || contained only 603 errors<ref>"this cannot be regarded as a great number, when it is considered that the table was the result of an original calculation, and that more than 2,100,000 printed figures are liable to error.", ''Athenaeum,'' 15 June 1872.  See also the ''Monthly Notices of the Royal Astronomical Society'' for May 1872.</ref>
+|-
+| 1792<U+2013>94|| [[Gaspard de Prony]] ''Tables du Cadastre'' || 1<U+2013>100,000 and 100,000<U+2013>200,000 || 19 and 24, respectively  || "seventeen enormous folios",<ref>''English Cyclopaedia, Biography,'' Vol. IV., article "Prony."</ref> never published
+|-
+| 1794 || [[Jurij Vega]] ''Thesaurus Logarithmorum Completus'' ([[Leipzig]]) ||  || || corrected edition of Vlacq's work
+|-
+| 1795 || Fran<U+00E7>ois Callet ([[Paris]]) || 100,000<U+2013>108,000 || 7  ||
+|-
+| 1871 || Sang || 1<U+2013>200,000 || 7  ||
+|}
+
+Many logarithm tables give logarithms by separately providing the characteristic of ''x'' and [[significand]] (also called [[common logarithm|mantissa]]), that is to say, its [[integer part]] and its [[fractional part]] of log<sub>10</sub>(''x''). The characteristic of {{nowrap|10 &middot; ''x''}} is one plus the characteristic of ''x'' and their significands are the same. This extends the scope of logarithm tables: given a table listing log<sub>10</sub>(''x'') for all integers ''x'' ranging from 1 to 1000, the logarithm of 3541 is approximately given by
+:<math>\log_{10}(3542) \approx 1 + \log_{10}(354). \, </math>
+
+[[Image:Slide rule example2.svg|thumb|500px|Schematic depiction of a slide rule.]]
+Another critical application was the [[slide rule]]. The non-sliding logarithmic scale, [[Gunter's rule]], was invented by [[Edmund Gunter]] shortly after Napier's invention. [[William Oughtred]] enhanced it to create the slide rule&mdash;a pair of logarithmic scales movable with respect to each other. Numbers are placed on slide rule scales at distances proportional to the differences between their logarithms. Sliding the upper appropriately amounts to mechanically adding logarithms. For example, adding the distance from 1 to 2 on the lower scale to the distance from 1 to 3 on the upper scale yields a product of 6, which is read off at the lower part. The slide rule was an essential calculating tool for engineers and scientists  until the 1970s, since it allows (at the expense of less precision) much faster computation than techniques based on tables.<ref name="ReferenceA"/>
+
+==See also==
+{{Portal|Mathematics}}
+<div style="-moz-column-count:4; column-count:4;">
+* [[List of logarithm topics]]
+* [[Logit]]
+* [[Lyapunov exponent]]s
+* [[Logarithmic number system]]
+* [[Logarithmic differentiation]]
+* [[Log return]]
+</div>
+
+==Notes==
+{{reflist|group=nb|3}}
+
+==References==
+
+{{Reflist|2}}
+
+==External links==
+{{Wiktionary|logarithm}}
+
+{{Commons category}}
+* {{Citation|url=http://mediasite.oddl.fsu.edu/mediasite/Viewer/?peid=003298f9a02f468c8351c50488d6c479|title=Educational video on logarithms|accessdate=12 October 2010}}
+* {{Citation|url=http://johnnapier.com/table_of_logarithms_001.htm|title=Translation of Napier's work on logarithms|accessdate=12 October 2010}}
+
+[[Category:Logarithms]]
+[[Category:Elementary special functions]]
+
+[[ar:<U+0644><U+0648><U+063A><U+0627><U+0631><U+064A><U+062A><U+0645>]]
+[[zh-min-nan:T<U+00F9>i-s<U+00F2><U+0358>]]
+[[bs:Logaritam]]
+[[br:Logaritm]]
+[[bg:<U+041B><U+043E><U+0433><U+0430><U+0440><U+0438><U+0442><U+044A><U+043C>]]
+[[ca:Logaritme]]
+[[cs:Logaritmus]]
+[[da:Logaritme]]
+[[de:Logarithmus]]
+[[et:Logaritm]]
+[[el:<U+039B><U+03BF><U+03B3><U+03AC><U+03C1><U+03B9><U+03B8><U+03BC><U+03BF><U+03C2>]]
+[[es:Logaritmo]]
+[[eo:Logaritmo]]
+[[eu:Logaritmo]]
+[[fa:<U+0644><U+06AF><U+0627><U+0631><U+06CC><U+062A><U+0645>]]
+[[fr:Logarithme]]
+[[gl:Logaritmo]]
+[[gan:<U+5C0D><U+6578>]]
+[[ko:<U+B85C><U+ADF8>]]
+[[hi:<U+0932><U+0918><U+0941><U+0917><U+0923><U+0915>]]
+[[hr:Logaritam]]
+[[io:Logaritmo]]
+[[id:Logaritma]]
+[[ia:Logarithmo]]
+[[is:Logri]]
+[[it:Logaritmo]]
+[[he:<U+05DC><U+05D5><U+05D2><U+05E8><U+05D9><U+05EA><U+05DD>]]
+[[la:Logarithmus]]
+[[lv:Logaritms]]
+[[lt:Logaritmas]]
+[[hu:Logaritmus]]
+[[mg:Anisa]]
+[[ml:<U+0D32><U+0D4B><U+0D17><U+0D30><U+0D3F><U+0D24><U+0D02>]]
+[[ms:Logaritma]]
+[[nl:Logaritme]]
+[[ja:<U+5BFE><U+6570>]]
+[[no:Logaritme]]
+[[nn:Logaritme]]
+[[pl:Logarytm]]
+[[pt:Logaritmo]]
+[[ro:Logaritm]]
+[[ru:<U+041B><U+043E><U+0433><U+0430><U+0440><U+0438><U+0444><U+043C>]]
+[[sq:Logaritmet]]
+[[scn:Lugar<U+00EC>ttimu]]
+[[si:<U+0DBD><U+0D9D><U+0DD4> <U+0D9C><U+0DAB><U+0D9A>]]
+[[simple:Logarithm]]
+[[sk:Logaritmus]]
+[[sl:Logaritem]]
+[[sr:<U+041B><U+043E><U+0433><U+0430><U+0440><U+0438><U+0442><U+0430><U+043C>]]
+[[fi:Logaritmi]]
+[[sv:Logaritm]]
+[[th:<U+0E25><U+0E2D><U+0E01><U+0E32><U+0E23><U+0E34><U+0E17><U+0E36><U+0E21>]]
+[[tr:Logaritma]]
+[[uk:<U+041B><U+043E><U+0433><U+0430><U+0440><U+0438><U+0444><U+043C>]]
+[[zh:<U+5BF9><U+6570>]]

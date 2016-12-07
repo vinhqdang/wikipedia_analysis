@@ -1,0 +1,325 @@
+A '''price index''' (''plural'': <U+201C>price indices<U+201D> or <U+201C>price indexes<U+201D>) is a numerical measure designed to help compare how the prices of some class of goods and/or services, taken as a whole, differ between time periods or geographical locations. Comparing price indices [[time series|across time]] makes it possible to calculate the [[inflation]] rate. Comparing price indices across geographical regions makes it possible to calculate [[purchasing power parity]] measures. 
+
+The class of goods covered by a price index can be quite broad; in a [[consumer price index]], for instance, the class of goods is roughly "things bought by a typical urban consumer". As an example of a narrower index, the United States [[Bureau of Labor Statistics]] has a price index for "steel mill products". Sometimes an index will be ''very'' specific, as in the US Energy Information Administration index entitled "Gasoline - All Grades".
+
+By design, a price index reduces all the distinct prices for the class of goods in question to a single number. On one hand, doing this has the potential to cut through the noise and make it easy to see the big picture. On the other hand, it has the risk of hiding potentially important details; for instance, a price index can potentially increase even though a sizable minority of the prices are actually decreasing. The usefulness of a price index may therefore depend on both the nature of the particular dataset and the intended use of the index.
+
+Price indices have several potential uses. For particularly broad indices, the index can be said to measure the economy's [[price level]], and the extent to which there is [[inflation]]. This information is useful to [[central bank]]s as they plan out [[monetary policy]]. A broad index can also be used to estimate changes in the [[cost of living]]. This can be useful in, for example, contract negotiation; one party, for instance, may be more willing to accept a certain salary if it's scheduled to automatically increase as costs go up. Price indices can also be used to help measure other economic statistics such as [[Gross Domestic Product]]. 
+
+More narrow price indices can help producers with business plans and pricing. Sometimes they can also be useful to help guide investment.
+
+Some notable price indices include:
+
+* [[Consumer price index]]
+* [[Producer price index]]
+* [[GDP deflator]]
+{{TOCleft}}
+== Introductory treatment ==
+
+=== Unweighted price average ===
+
+Perhaps the simplest way to get a general sense of the price of a class of goods would be to take the (arithmetic) average of the price of each good. For example, let's say the class of goods under consideration is [[apple]]s. Here are some [[Seattle]]-area apple prices from Aug 18, 2007:<ref>Taken from http://www.safeway.com on that same day</ref>
+
+* [[Granny Smith]]: $0.72 each
+* [[Red Delicious]]: $0.75 each
+* [[Fuji (apple)|Fuji]]: $0.50 each
+* [[Gala (apple)|Gala (large)]]: $0.75 each
+* [http://www.nyapplecountry.com/braeburn.htm Breaburn]: $0.90 each
+
+Then one measure of the general price apples, taken as a whole, is
+
+:<math>\frac{$0.72 + $0.75 + $0.50 + $0.75 + $0.90}{5} = \frac{$3.62}{5} = $0.72</math>
+
+The average is $0.72 each.
+
+When the price changes, you can compute the new value of the index by taking the average of the new prices. If <math>p_{granny mith}</math> is the new price of Granny Smith, etc., then the value of the index becomes
+
+:<math>\frac{p_{grannysmith} + p_{reddelicious} + p_{fuji} + p_{gala} + p_{breaburn}}{5}</math>
+
+Note, this approach meets one of the most basic criteria you might like a price index to have: If the price of all the goods in the class goes up, then so does the price index.
+
+=== Fixed basket indices ===
+
+It's perhaps plausible that people would eat about the same amount of each type of apple. For other classes of goods, however, this is not necessarily the case. For instance, consider the class "fruit". If we limit our attention to just apples and bananas, then it may be the case that we tend to eat twice as many apples as bananas. (Okay, this is probably backwards, but stick with it for now.) As such, the price of apples is, in some sense, more important than the price of bananas.
+
+One way to proceed, then, is to think not in terms of prices directly, but in terms of a fixed "basket" of goods, i.e. a list of specific quantities of specific goods. Here our basket would be "two apples and one banana". One can construct a price index from such a basket by simply calculating how much that basket would cost to buy at different points in time. For instance, the following shows the value of our apples-and-banana basket as hypothetical prices change through time:
+
+* 2000: apples are $1, bananas are $0.50, index is 2*$1 + $0.50 = $2.50
+* 2001: apples are $1.10, bananas are $0.50, index is 2*$1.10 + $0.50 = $2.70
+* 2002: apples are $1.20, bananas are $0.30, index is 2*$1.20 + $0.30 = $2.70
+* 2003: apples are $1.20, bananas are $0.40, index is 2*$1.20 + $0.40 = $2.80
+
+Note that the 2001 and 2002 index values are the same, even though the individual prices are different. 
+
+As a whimsical example of a fixed-basket price index, the financial services firm [[PNC Financial Services|PNC]] maintains a [[Christmas Price Index]], which uses, for its basket, the list of goods enumerated in the Christmas song "[[The Twelve Days of Christmas (song)|The Twelve Days of Christmas]]": three French hens, two turtledoves, a partridge in a pear tree, and so on. The price of this basket is evaluated yearly.<ref>See http://www.pncchristmaspriceindex.com/, though note that this page plays potentially annoying music.</ref>
+
+For a more serious example: In 1780 the [[Massachusetts]] state legislature, worried about [[inflation]] created a fixed-basket price index in order to help them track inflation and make sure soldiers' pay was increased to keep up with it. The basket they chose was 5 bushels of corn, 68 and 4/7 pounds of beef, 10 pounds of sheep's wool and 16 pounds of sole leather.<ref>Diewart, chapter 2, citing W. Fisher</ref>
+
+=== Normalizing index numbers ===
+
+Note that sometimes the values of these baskets are normalized so they are reported not in dollars but rather in percentage terms. The most common way to do this is to take one year of the index as the "base" year and make that index value equal to 100. You then express every other year as a percentage of that base year. In our example above, let's take 2000 as our base year. The value of our index will be 100. The price
+* 2000: original index value was $2.50; $2.50/$2.50 = 100%, so our new index value is 100
+* 2001: original index value was $2.60; $2.60/$2.50 = 104%, so our new index value is 104
+* 2002: original index value was $2.70; $2.70/$2.50 = 108%, so our new value is 108
+* 2003: original value was $2.80; $2.80/$2.50 = 112%, so our new value is 112
+
+When an index has been normalized in this manner,  the meaning of the number 108, for instance, is that the total cost for the basket of goods is 4% more in 2001 and 8% more in 2002 than in the base year (in this case, year 2000).
+
+=== Trouble with fixed basket indices ===
+
+Though fixed basket indices are easy to work with, most classes of goods for which people want to make an index can't be modeled by an unchanging basket. Let's consider, for example, the class of goods "things bought by a typical urban consumer". (This is our quick summary of what a [[consumer price index]] is about.) Can this class be represented by a single, fixed basket of goods? There are at least two problems with this idea:
+
+First, over time, the typical urban consumer will start buying certain new things, and stop buying certain old things. For example, at one point there was no such thing as a microwave oven, and yet now microwaves are very much something that a typical urban consumer might buy. If you proposed a fixed basket without a microwave, then it would be a misleading representation of what urban consumers tend to buy now. If you proposed a fixed basket ''with'' a microwave, however, then it would be a misleading representation of what urban consumers would have bought ''before''.
+
+Second, even if the typical consumer doesn't buy any new goods, or stop buying any old ones, the proportion spent on different goods may well change. For instance, as any area gets wealthier, people might buy fewer groceries and more prepared food. Alternatively, if people switch from physically demanding jobs to office work, spending on gym memberships may raise, as people find their exercise off the job, rather than on.
+
+Another more technical problem is that a fixed basket approach may suffer from substitution bias.  For example, in a consumer price index, substitution bias would occur if consumers stopped buying apples and only bought oranges because the cost of apples had risen and oranges were good substitutes.  A price index based on a fixed basket of goods would overstate price change since it would reflect the rising cost of apples even though they were substituted out of the real world market basket. Instead of using a fixed market basket, some price indices attempt to reflect a [[cost of living]] concept. In a cost of living index, the [[standard of living]] for an initial period is gauged. The price index reflects the change in the amount of money required to maintain that standard of living in later periods.  The cost of living index shows the change in the amount of money required to attain a certain level of [[utility]].
+
+The above suggests that a fixed basket won't do for a consumer price index.
+
+An example of another place where a fixed basket may not work is a broad-spectrum [[commodity price index]], such as the [[Dow Jones-AIG Commodity Index]]. To simplify a little, the point of such an index is to give a broad overview of how commodity prices are moving. ...
+
+=== Variable baskets ===
+
+The above suggests that many indices should be constructed based not on a single fixed basket but rather different (but related) baskets at different times. For example, let's say that the popularity of bananas increases fivefold between 2000 and 2004. It might not make sense, then, to use our original apples-and-banana basket (2 apples and 1 banana) to compute an index value for 2004. It might make more sense to start using a new basket, perhaps consisting of 2 apples and 10 bananas, in 2004.
+
+Now we've established that fixed basket indices have their problems, but they do one thing right, which is to, as they say, compare apples to apples. That is, it doesn't seem unreasonable to say that, when the very same thing (in this case, a particular basket of goods) costs different amounts at different times, then this is because prices have changed.
+
+With varying baskets, in contrast, we arguably have a case of apples and oranges. It's not obvious that we're comparing the same things any longer. So we should be wary. Indeed, let's consider what would happen if we compared baskets in this way: we'll compare baskets by comparing how much last year's basket cost at last year's prices to what this year's basket costs at this year's prices.
+
+For instance, from our earlier example, we have that, in 2003, the 2003 basket cost $2.80.
+
+Let's forget about the idea of the popularity of bananas increasing fivefold. Instead, let's say that people got hungrier overall between 2003 and 2004, so that the basket goes from 2 apples and 1 banana to 4 apples and 2 bananas. Suppose also that prices stay the same. This implies that the 2004 basket at 2004 prices costs 4 * $1.20  + 2 * $0.40 = $5.60.
+
+Now compare the change in the basket described above to the following alternative scenario: suppose that the basket stays the same between 2003 and 2004 but the prices doubled. Then the 2004 basket at 2004 prices costs 2 * $2.40 + 1 * $0.80 = $5.60.
+
+What we see is that the cost of the 2004 doubles not only if the prices double from 2003 to 2004 (while the basket stays the same) but also if the quantities constituting the basket double from 2003 to 2004 (while the prices stay the same).  Thus, we see that a given change in the cost of a consumption basket could arise from two very different changes, a change in the consumption basket (a quantity change) or a change in prices.
+
+The primary ways forward here are either calculating several short indices for different baskets and then merging those indices into one through a technique called "linking" or "chaining"; or turning to a more sophisticated price index formula; or both.
+
+==== Laspeyres ====
+
+One way to approximate the price change between the two periods when the basket changes would be to pretend that there wasn't actually basket change. That is, instead of calculating the index with the second basket, we'll use the second prices, but the first basket.
+
+Thus for 2003 our index will still be
+
+:2 * (price of apples) + 1 * (price of bananas) = 2*$1.20 + 1*$0.40 = $2.80
+
+and for 2004 out index (still based on the 2003 basket) will be
+
+:2 * (price of apples) + 1 * (price of bananas) = ...
+
+Since we're comparing apples to apples again, then we are back to measuring what you might call price changes; we've controlled for quantity changes.
+
+Now if we're only comparing two time periods, this is silly; we've forgotten about the second basket!
+
+Let's apply this through time, though. One thought is that, in reality, the quantity of each basket item isn't going to change all that much from year to year. This means that, approximately speaking, we can use the first year's basket as a proxy for the second years basket, and the above approach will give us a reasonable estimate of the change from one year to the next. For instance, if we compare 2003 and 2004 using the 2003 basket, then there could be worse things to do than use the 2003 basket. The ratio of the 2004 index over the 2003 index will give us a sense of by what factor prices have increased from 2003 to 2004.
+
+Now let's suppose we pick a new basket every year, to reflect change in buying habits. Well then the 2004 and 2005 baskets will be different, but we'll guess that, in practice, they won't be too different. Therefore we can get an approximation of the change from 2004 to 2005 by using the 2004 basket and ignoring the 2005 basket. The same will be true between 2005 and 2006, or 2006 and 2007. Thus we have an estimate of how much each year has increased relative to the year prior.
+
+But we can combine these numbers into a general price index. Let the value of the index at 2004 be the price of the 2004 basket. Well we've calculated an estimate of by how much 2005 prices exceed 2004 prices. So if we multiply the 2004 index number by the 2005 factor, we can get a new index number for 2005. We also have calculated an estimate of by how much 2006 prices exceed 2005 prices. So if we multiply the 2005 prices by the that factor, then we'll get a number we can use for the 2006 index value. And so on.
+
+...
+
+Now two notes here. First, there are other ways to average different times together. What we've examined here is called the Laspeyres index, but there are other ways to answer the question "by what factor have prices increased"?
+
+Second, governments often chain their indices less often. In part, this is due to practical considerations.
+
+== History of early price indices ==
+
+No clear consensus has emerged on who created the first price index.  The earliest reported research in this area came from Englishman Rice Vaughan who examined price level change in his [[1675]] book ''A Discourse of Coin and Coinage''.  Vaughan wanted to separate the inflationary impact of the influx of precious metals brought by [[Spain]] from the [[New World]] from the effect due to [[debasement|currency debasement]].  Vaughan compared labor statutes from his own time to [[Statute of Labourers of 1351|similar statutes]] dating back to [[Edward III]]. These statutes set wages for certain tasks and provided a good record of the change in wage levels.  Rice reasoned that the market for basic labor did not fluctuate much with time and that a basic laborers salary would probably buy the same amount of goods in different time periods, so that a laborer's salary acted as a basket of goods.  Vaughan's analysis indicated that price levels in England had risen six to eight fold over the preceding century.<ref>Chance, 108.</ref>
+
+While Vaughan can be considered a forerunner of price index research, his analysis did not actually involve calculating an index.<ref>Chance, 108.</ref>  In [[1707]] Vaughan's fellow Englishman [[William Fleetwood]] probably created the first true price index.  An Oxford student asked Fleetwood to help show how prices had changed.  The student stood to lose his fellowship since a fifteenth century stipulation barred students with annual incomes over five pounds from receiving a fellowship.  Fleetwood, who already had an interest in price change, had collected a large amount of price data going back hundreds of years.  Fleetwood proposed an index consisting of averaged price relatives and used his methods to show that the value of five pounds had changed greatly over the course of 260 years.  He argued on behalf of the Oxford students and published his findings anonymously in a volume entitled ''Chronicon Preciosum''.<ref>Chance, 108-109</ref>
+
+== Formal calculation ==
+{{see|List of price index formulas<U+200E>}}
+Given a set <math>C</math> of goods and services, the total market value of transactions in <math>C</math> in some period <math>t</math> would be
+:<math>\sum_{c\,\in\, C} (p_{c,t}\cdot q_{c,t})</math>
+where
+:<math>p_{c,t}\,</math> represents the prevailing price of <math>c</math> in period t
+:<math>q_{c,t}\, </math> represents the quantity of <math>c</math> sold in period t
+If, across two periods <math>t_0</math> and <math>t_n</math>, the same quantities of each good or service were sold, but under different prices, then
+:<math>q_{c,t_n}=q_c=q_{c,t_0}\, \forall c</math>
+and
+:<math>P=\frac{\sum (p_{c,t_n}\cdot q_c)}{\sum (p_{c,t_0}\cdot q_c)}</math>
+would be a reasonable [[Measurement|measure]] of the price of the set in one period relative to that in the other, and would provide an [[Index (mathematics)|index]] measuring relative prices overall, weighted by quantities sold.
+
+Of course, for any practical purpose, quantities purchased are rarely if ever identical across any two periods. As such, this is not a very practical index formula.
+
+One might be tempted to modify the formula slightly to
+
+:<math>P=\frac{\sum (p_{c,t_n}\cdot q_{c,t_n})}{\sum (p_{c,t_0}\cdot q_{c,t_0})}</math>
+
+This new index, however, doesn't do anything to distinguish growth or reduction in quantities sold from price changes. To see that this is so, consider what happens if all the prices double between <math>t_0</math> and <math>t_n</math> while quantities stay the same: <math>P</math> will double. Now consider what happens if all the ''quantities'' double between <math>t_0</math> and <math>t_n</math> while all the ''prices'' stay the same: <math>P</math> will double. In either case the change in <math>P</math> is identical. As such, <math>P</math> is as much a ''quantity'' index as it is a ''price'' index.
+
+Various indices have been constructed in an attempt to compensate for this difficulty.
+
+=== Paasche and Laspeyres price indices ===
+
+The two most basic formulas used to calculate price indices are the '''Paasche index''' (after the German economist [[Hermann Paasche]]) and the '''Laspeyres index''' (after the German economist
+[[Etienne Laspeyres]]).
+
+The Paasche index is computed as
+:<math>P_P=\frac{\sum (p_{c,t_n}\cdot q_{c,t_n})}{\sum (p_{c,t_0}\cdot q_{c,t_n})}</math>
+while the Laspeyres index is computed as
+:<math>P_L=\frac{\sum (p_{c,t_n}\cdot q_{c,t_0})}{\sum (p_{c,t_0}\cdot q_{c,t_0})}</math>
+where <math>P</math> is the change in price level, <math>t_0</math> is the base period (usually the first year), and <math>t_n</math> the period for which the index is computed.
+
+Note that the only difference in the formulas is that the former uses period n quantities, whereas the latter uses base period (period 0) quantities.
+
+When applied to bundles of individual consumers, a Laspeyres index of 1 would state that an agent in the current period can afford to buy the same bundle as he consumed in the previous period, given that income has not changed; a Paasche index of 1 would state that an agent could have consumed the same bundle in the base period as she is consuming in the current period, given that income has not changed.
+
+Hence, one may think of the Paasche index as the inflation rate when taking the [[numeraire]] as the  bundle of goods using previous prices but current quantities.  Similarly, the Laspeyres index can be thought of as the inflation rate when the numeraire is given by the bundle of goods using current prices and current quantities.
+
+The Laspeyres index systematically overstates inflation, while the Paasche index understates it, because the indices do not account for the fact that consumers typically react to price changes by changing the quantities that they buy.  For example, if prices go up for good c, then [[ceteris paribus]], quantities of that good should go down.
+
+=== Fisher index and Marshall-Edgeworth index ===<!-- This section is linked from [[Marshall-Edgeworth index]] -->
+
+A third index, the '''Marshall-Edgeworth index''' (named for economists [[Alfred Marshall]] and [[Francis Ysidro Edgeworth]]), tries to overcome these problems of under- and overstatement by using the arithmethic means of the quantities:
+:<math>P_{ME}=\frac{\sum [p_{c,t_n}\cdot \frac{1}{2}(q_{c,t_0}+q_{n})]}{\sum [p_{c,t_0}\cdot \frac{1}{2}(q_{c,t_0}+q_{c,t_n})]}=\frac{\sum [p_{c,t_n}\cdot (q_{c,t_0}+q_{c,t_n})]}{\sum [p_{c,t_0}\cdot (q_{c,t_0}+q_{c,t_n})]}</math>
+
+A fourth, the '''Fisher index''' (after the American economist [[Irving Fisher]]), is  calculated as the [[geometric mean]] of <math>P_P</math> and <math>P_L</math>:
+:<math>P_F = \sqrt{P_P\cdot P_L}</math>
+
+However, there is no guarantee with either the Marshall-Edgeworth index or the Fisher index that the overstatement and understatement will thus exactly one cancel the other.
+
+While these indices were introduced to provide overall [[measurement]] of relative prices, there is ultimately no way of measuring the imperfections of any of these indices (Paasche, Laspeyres, Fisher, or Marshall-Edgeworth) against reality.
+
+=== Practical measurement considerations ===
+
+==== Relative ease of calculating the Laspeyres index ====
+
+As can be seen from the definitions above, if one already has price and quantity data (or, alternatively, price and expenditure data) for the base period, then calculating the Laspeyres index for a new period requires only new price data. In contrast, calculating many other indices (e.g., the Paasche index) for a new period requires both new price data and new quantity data (or, alternatively, both new price data and new expenditure data) for each new period. Collecting only new price data is often easier than collecting both new price data and new quantity data, so calculating the Laspeyres index for a new period tends to require less time and effort than calculating these other indices for a new period.<ref>Statistics New Zealand; ''Glossary of Common Terms'', [http://www2.stats.govt.nz/domino/external/omni/omni.nsf/wwwglsry/paasche+index <U+201C>Paasche Index<U+201D>]</ref>
+
+==== Calculating indices from expenditure data ====
+
+Sometimes, especially for aggregate data, expenditure data is more readily available than quantity data.<ref>Statistics New Zealand; ''Glossary of Common Terms'', [http://www2.stats.govt.nz/domino/external/omni/omni.nsf/0/7d11773239ed84eecc256f350016b841?OpenDocument <U+201C>Laspeyres Index<U+201D>]</ref> For these cases, we can formulate the indices in terms of relative prices and base year expenditures, rather than quantities.
+
+Here is a reformulation for the Laspeyres index:
+
+Let <math>E_{c,t_0}</math> be the total expenditure on good c in the base period, then (by definition) we have
+<math>E_{c,t_0} = p_{c,t_0}\cdot q_{c,t_0}</math>
+and therefore also
+<math>\frac{E_{c,t_0}}{p_{c,t_0}} = q_{c,t_0}</math>.
+We can substitute these values into our Laspeyres formula as follows:
+:<math>
+P_L
+=\frac{\sum (p_{c,t_n}\cdot q_{c,t_0})}{\sum (p_{c,t_0}\cdot q_{c,t_0})}
+=\frac{\sum (p_{c,t_n}\cdot \frac{E_{c,t_0}}{p_{c,t_0}})}{\sum E_{c,t_0}}
+=\frac{\sum (\frac{p_{c,t_n}}{p_{c,t_0}} \cdot E_{c,t_0})}{\sum E_{c,t_0}}
+</math>
+
+A similar transformation can be made for any index.
+
+=== Chained vs non-chained calculations ===
+
+So far, in our discussion, we have always had our price indices relative to some fixed base period. An alternative is to take the base period for each time period to be the immediately preceding time period. This can be done with any of the above indices, but here's an example with the Laspeyres index, where <math>t_n</math> is the period for which we wish to calculate the index and <math>t_0</math> is a reference period that anchors the value of the series:
+
+:<math>
+P_{t_n}=
+\frac{\sum (p_{c,t_1}\cdot q_{c,t_0})}{\sum (p_{c,t_0}\cdot q_{c,t_0})}
+\times
+\frac{\sum (p_{c,t_2}\cdot q_{c,t_1})}{\sum (p_{c,t_1}\cdot q_{c,t_1})}
+\times
+\cdots
+\times
+\frac{\sum (p_{c,t_n}\cdot q_{c,t_{n-1}})}{\sum (p_{c,t_{n-1}}\cdot q_{c,t_{n-1}})}
+</math>
+
+Each term 
+
+:<math>\frac{\sum (p_{c,t_n}\cdot q_{c,t_{n-1}})}{\sum (p_{c,t_{n-1}}\cdot q_{c,t_{n-1}})}</math>
+
+answers the question "by what factor have prices increased between period <math>t_{n-1}</math> and period <math>t_n</math>". When you multiply these all together, you get the answer to the question "by what factor have prices increased since period <math>t_0</math>.
+
+Nonetheless, note that, when chain indices are in use, the numbers cannot be said to be "in period <math>t_0</math>" prices.
+
+== Index number theory ==
+
+Price index formulas can be evaluated in terms of their mathematical properties ''per se''.  Several different tests of such properties have been proposed in index number theory literature.  W.E. Diewert summarized past research in a list of nine such tests for a price index <math>I(P_{t_0}, P_{t_m}, Q_{t_0}, Q_{t_m})</math>, where <math>P_0</math> and <math>P_n</math> are vectors giving prices for a base period and a reference period while <math>Q_{t_0}</math> and <math>Q_{t_m}</math> give quantities for these periods.<ref>Diewert (1993), 75-76.</ref>
+
+#Identity test:
+#:<math>I(p_{t_m},p_{t_m},\alpha \cdot q_{t_m},\beta\cdot q_{t_n})=1~~\forall (\alpha ,\beta )\in (0,\infty )^2</math>
+#:The identity test basically means that if prices remain the same and quantities remain in the same proportion to each other (each quantity of an item is multiplied by the same factor of either <math>\alpha</math>, for the first period, or <math>\beta</math>, for the later period) then the index value will be one.
+#Proportionality test:
+#:<math>I(p_{t_m},\alpha \cdot p_{t_m},q_{t_m},q_{t_n})=\alpha \cdot I(p_{t_m},p_{t_n},q_{t_m},q_{t_n})</math>
+#:If each price in the original period increases by a factor <U+03B1> then the index should increase by the factor <U+03B1>.
+#Invariance to changes in scale test:
+#:<math>I(\alpha \cdot p_{t_m},\alpha \cdot p_{t_n},\beta \cdot q_{t_m}, \gamma \cdot q_{t_n})=I(p_{t_m},p_{t_n},q_{t_m},q_{t_n})~~\forall (\alpha,\beta,\gamma)\in(0,\infty )^3</math>
+#:The price index should not change if the prices in both periods are increased by a factor and the quantities in both periods are increased by another factor. In other words, the magnitude of the values of quantities and prices should not affect the price index.
+#Commensurability test:
+#:The index should not be affected by the choice of units used to measure prices and quantities.
+#Symmetric treatment of time (or, in parity measures, symmetric treatment of place):
+#:<math>I(p_{t_n},p_{t_m},q_{t_n},q_{t_m})=\frac{1}{I(p_{t_m},p_{t_n},q_{t_m},q_{t_n})}</math>
+#:Reversing the order of the time periods should produce a reciprocal index value. If the index is calculated from the most recent time period to the earlier time period, it should be the reciprocal of the index found going from the earlier period to the more recent.
+#Symmetric treatment of commodities:
+#:All commodities should have a symmetric effect on the index. Different [[permutations]] of the same set of vectors should not change the index.
+#Monotonicity test:
+#:<math>I(p_{t_m},p_{t_n},q_{t_m},q_{t_n}) \le I(p_{t_m},p_{t_r},q_{t_m},q_{t_r})~~\Leftarrow~~p_{t_n} \le p_{t_r}</math>
+#:A price index for lower later prices should be lower than a price index with higher later period prices.
+#Mean value test:
+#:The overall price relative implied by the price index should be between the smallest and largest price relatives for all commodities.
+#Circularity test:
+#:<math>I(p_{t_m},p_{t_n},q_{t_m},q_{t_n}) \cdot I(p_{t_n},p_{t_r},q_{t_n},q_{t_r})=I(p_{t_m},p_{t_r},q_{t_m},q_{t_r})~~\Leftarrow~~t_m \le t_n \le t_r</math>
+#:Given three ordered periods <math>t_m</math>, <math>t_n</math>, <math>t_r</math>, the price index for periods <math>t_m</math> and <math>t_n</math> times the price index for periods <math>t_n</math> and <math>t_r</math> should be equivalent to the price index for periods <math>t_m</math> and <math>t_r</math>.
+
+== Quality change ==
+
+Price indices often capture changes in price and quantities for goods and services, but they often fail to account for improvements in the quality of goods and services.  Statistical agencies generally use "matched-model" price indices, where one model of a particular good is priced at the same store at regular time intervals.  The matched-model method becomes problematic when statistical agencies try to use this method on goods and services with rapid turnover in quality features. For instance, computers rapidly improve and a specific model may quickly become obsolete. Statisticians constructing matched-model price indices must decide how to compare the price of the obsolete item originally used in the index with the new and improved item that replaces it.  Statistical agencies use several different methods to make such price comparisons.<ref>Triplett (2004), 12.</ref>
+
+The problem discussed above can be represented as attempting how to bridge the gap between the price for the old item in time t, <math>P(M)_{t}</math>, with the price of the new item in the later time period, <math>P(N)_{t+1}</math>.<ref>Triplett (2004), 18.</ref>
+
+The "overlap method" uses prices collected for both items in both time periods, t and t+1.  The price relative <math>{P(N)_{t+1}}</math>/<math>{P(N)_{t}}</math> is used.
+
+The "direct comparison method" assumes that the difference in the price of the two items is not due to quality change, so the entire price difference is used in the index.  <math>P(N)_{t+1}</math>/<math>P(M)_t</math> is used as the price relative.
+
+The "link-to-show-no-change" assumes the opposite of the direct comparison method; it assumes that the entire difference between the two items is do to the change in quality. The price relative based on link-to-show-no-change is 1.<ref>Triplett (2004), 34.</ref>
+
+The "deletion method" simply leaves the price relative for the changing item out of the price index. This is equivalent to using the average of other price relatives in the index as the price relative for the changing item.  Similarly, "class mean" imputation uses the average price relative for items with similar characteristics (physical, geographic, economic, etc.)to M and N.<ref>Triplett (2004), 24-26.</ref>
+
+
+== See also ==
+
+* [[Aggregation problem]] 
+* [[Inflation]]
+* [[GDP deflator]]
+* [[Etienne Laspeyres]]
+* [[Hermann Paasche]]
+* [[Irving Fisher]]
+* [[Real versus nominal value]]
+* [[Volume index]]
+
+== Notes ==
+<references />
+
+== References ==
+
+* Chance, W.A. <U+201C>A Note on the Origins of Index Numbers<U+201D>, ''The Review of Economics and Statistics'', Vol. 48, No. 1. (Feb., 1966), pp. 108-10. [http://links.jstor.org/sici?sici=0034-6535%28196602%2948%3A1%3C108%3AANOTOO%3E2.0.CO%3B2-A Subscription URL]
+* Diewert, W.E. "Chapter 5: Index Numbers" in ''Essays in Index Number Theory''. eds W.E. Diewert and A.O. Nakamura. Vol 1. Elsevier Science Publishers: 1993. ([http://www.econ.ubc.ca/diewert/indexch5.pdf Also online].)
+* McCulloch, James Huston. ''Money and Inflation: A Monetarist Approach'' 2e, Harcourt Brace Jovanovich / Academic Press, 1982.
+* Triplett, Jack E. [http://www.bea.gov/bea/an/0492trip/maintext.htm <U+201C> Economic Theory and BEA's Alternative Quantity and Price indices<U+201D>], ''Survey of Current Business'' April 1992.
+*Triplett, Jack E. [http://www.oecd.org/dataoecd/37/31/33789552.pdf ''Handbook on Hedonic Indexes and Quality Adjustments in Price Indexes: Special Application to Information Technology Products''. OECD Directorate for Science, Technology and Industry working paper. October 2004.
+* U.S. Department of Labor [[Bureau of Labor Statistics|BLS]] [http://www.bls.gov/ppi/ppifaq.htm <U+201C>Producer Price Index Frequently Asked Questions<U+201D>].
+* Vaughn, Rice. [http://www.efm.bris.ac.uk/het/vaughan/coin ''A Discourse of Coin and Coinage''] ([[1675]]). (Also online [http://www.public-domain-content.com/books/discourse_coin_coinage/ by chapter.])
+
+== External links ==
+===Manuals===
+* [http://www.imf.org/external/np/sta/tegeipi/index.htm IMF Export and Import price index]
+* [http://www.imf.org/external/np/sta/tegppi/index.htm IMF PPI manual]
+* [http://www.ilo.org/public/english/bureau/stat/guides/cpi/index.htm ILO CPI manual]
+
+===Data===
+* PPI [http://www.bls.gov/ppi/ data] from [[Bureau of Labor Statistics|BLS]]
+
+[[Category:Pricing]]
+[[Category:Index numbers]]
+[[Category:Economic indicators]]
+
+[[cs:Cenov<U+00E1> hladina]]
+[[da:Prisindeks]]
+[[de:Preisindex]]
+[[es:<U+00CD>ndice de precios]]
+[[fa:<U+0634><U+0627><U+062E><U+0635> <U+0642><U+06CC><U+0645><U+062A>]]
+[[fr:Indice des prix]]
+[[ja:<U+7269><U+4FA1>]]
+[[zh:<U+7269><U+4EF7><U+6307><U+6570>]]

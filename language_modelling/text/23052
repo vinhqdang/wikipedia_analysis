@@ -1,0 +1,43 @@
+In [[mathematics]], the '''sieve of Sundaram''' is a simple [[deterministic algorithm]] for finding all [[prime number]]s up to a specified integer. It was discovered in 1934 by S. P. Sundaram, an Indian student from [[Sathyamangalam]].<ref>{{cite journal |author=V. Ramaswami Aiyar |title=Sundaram's Sieve for Prime Numbers |journal=The Mathematics Student |volume=2 |year=1934 |pages=73 |issn=0025-5742 |issue=2}}</ref><ref>{{cite journal |author=G.|title=Curiosa 81. A New Sieve for Prime Numbers |journal=[[Scripta Mathematica]] |volume=8 |year=1941 |pages=164 |issue=3}}</ref>
+
+==Algorithm==
+[[File:Sieve of Sundaram Animated.gif|right|frame|Sieve of Sundaram: algorithm steps for primes below 202 (unoptimized).]]
+Start with a list of the integers from 1 to ''n''. From this list, remove all numbers of the form ''i'' + ''j'' + 2''ij'' where:
+*<math>i,j\in\mathbb{N},\ 1 \le i \le j</math>
+*<math>i + j + 2ij \le n</math>
+
+The remaining numbers are doubled and incremented by one, giving a list of the odd prime numbers (i.e., all primes except 2) below 2''n'' + 2.
+
+The sieve of Sundaram sieves out the composite numbers just as [[sieve of Eratosthenes]] does, but even numbers are not considered; the work of "crossing out" the multiples of&nbsp;2 is done by the final double-and-increment step. Whenever Eratosthenes' method would cross out ''k'' different multiples of a prime ''2i+1'', Sundaram's method crosses out ''i + j(2i+1)'' for <math>1\le j\le \lfloor k/2\rfloor</math>.
+
+==Correctness==
+If we start with integers from ''1'' to ''n'', the final list contains only odd integers from ''3'' to ''2n + 1''. From this final list, some odd integers have been excluded: we must show these are precisely the ''composite'' odd integers less than ''2n + 2''.
+
+Let ''q'' be an odd integer of the form ''2k + 1''. Then, ''q'' is excluded [[if and only if]] ''k'' is of the form ''i + j + 2ij'', that's it ''q = 2(i + j + 2ij) + 1''. Then we have:
+: ''q = 2(i + j + 2ij) + 1''
+: ''= 2i + 2j + 4ij + 1''
+: ''= (2i + 1)(2j + 1)''.
+
+So, an odd integer is excluded from the final list if and only if it has a factorization of the form ''(2i + 1)(2j + 1)'' <U+2014> which is to say, if it has a non-trivial odd factor. Therefore the list must be composed of exactly the set of odd ''prime'' numbers less than or equal to ''2n + 2''.
+
+==See also==
+* [[Sieve of Eratosthenes]]
+* [[Sieve of Atkin]]
+* [[Sieve theory]]
+
+==References==
+{{reflist}}
+
+* {{cite book |last=Ogilvy |first=C. Stanley | authorlink = C. Stanley Ogilvy |author2=John T. Anderson  |title= Excursions in Number Theory |publisher=[[Dover Publications]], 1988 (reprint from [[Oxford University Press]], 1966) |isbn=0-486-25778-9 |url=http://books.google.com/books?isbn=0-486-25778-9 |pages=98<U+2013>100, 158 |year=1988}}
+* {{cite book |last=Honsberger |first=Ross |title=Ingenuity in Mathematics |publisher=[[Mathematical Association of America]] |series=New Mathematical Library #23 |year=1970 |isbn=0-394-70923-3 |pages=75}}
+* [http://www.primzahlsuche.de/intro.html#sieve2 A new "sieve" for primes], an excerpt from {{cite book |last=Kordemski |first=Boris A. |authorlink=Boris Kordemsky |title=K<U+00F6>pfchen, K<U+00F6>pfchen! Mathematik zur Unterhaltung|publisher=Urania Verlag| year=1974 |series=MSB Nr. 78 | pages=200}} (translation of Russian book {{cite book |last=<U+041A><U+043E><U+0440><U+0434><U+0435><U+043C><U+0441><U+043A><U+0438><U+0439> |first=<U+0411><U+043E><U+0440><U+0438><U+0441> <U+0410><U+043D><U+0430><U+0441><U+0442><U+0430><U+0441><U+044C><U+0435><U+0432><U+0438><U+0447> |title=<U+041C><U+0430><U+0442><U+0435><U+043C><U+0430><U+0442><U+0438><U+0447><U+0435><U+0441><U+043A><U+0430><U+044F> <U+0441><U+043C><U+0435><U+043A><U+0430><U+043B><U+043A><U+0430> |publisher=<U+041C>.: <U+0413><U+0418><U+0424><U+041C><U+041B> |year=1958 |url=http://ilib.mccme.ru/djvu/klassik/smekalka.htm}})
+* {{cite journal |last=Movshovitz-Hadar |first=N. |year=1988 |title=Stimulating Presentations of Theorems Followed by Responsive Proofs |journal=For the Learning of Mathematics |volume=8 |issue=2 |pages=12<U+2013>19}}
+* {{cite conference |last=Ferrando |first=Elisabetta |title=Abductive processes in conjecturing and proving |booktitle=Ph.D. theses |publisher=Purdue University |year=2005 |pages=70<U+2013>72 |url=http://proxy.sv.inge.unige.it/SMA/Sv/AbPCP.pdf}}
+* {{cite journal |last=Baxter |first=Andrew |title=Sundaram<U+2019>s Sieve |journal=[http://banach.millersville.edu/~bob/math478/History/ Topics from the History of Cryptography] |publisher=MU Department of Mathematics |url=http://banach.millersville.edu/~bob/math478/History/Sundaram.html}}
+
+==External links==
+* [http://xojoc.pw/dailyprogrammer/sieve-sundaram.html A C99 implementation of the Sieve of Sundaram using bitarrays]
+
+{{number theoretic algorithms}}
+
+[[Category:Primality tests]]

@@ -1,0 +1,61 @@
+In [[cryptography]], a '''ring signature''' is a type of [[digital signature]] that can be performed by any member of a group of users that each have [[key (cryptography)|keys]].  Therefore, a message signed with a ring signature is endorsed by someone in a particular group of people.  One of the security properties of a ring signature is that it should be difficult to determine ''which'' of the group members' keys was used to produce the signature.  Ring signatures are similar to [[group signature]]s but differ in two key ways: first, there is no way to revoke the anonymity of an individual signature, and second, any group of users can be used as a group without additional setup.
+Ring signatures were invented by [[Ron Rivest]], [[Adi Shamir]], and [[Yael Tauman]], and introduced at [[ASIACRYPT]] in 2001.<ref>[http://www.springerlink.com/content/kxkndv9rgk8lu3h9/ ''How to leak a secret''], [[Ron Rivest]], [[Adi Shamir]], and [[Yael Tauman]], ASIACRYPT 2001.</ref>  The name "ring signature" comes from the ring-like structure of the signature [[algorithm]].
+
+==Definition==
+
+Suppose that a group of entities each have public/private key pairs, (''PK''<sub>1</sub>, ''SK''<sub>1</sub>), (''PK''<sub>2</sub>, ''SK''<sub>2</sub>), ... ,(''PK''<sub>''n''</sub>, ''SK''<sub>''n''</sub>).  Party ''i'' can compute a ring signature <U+03C3> on a message ''m'', on input (''m'', ''SK''<sub>''i''</sub>, ''PK''<sub>1</sub>, ... , ''PK''<sub>''n''</sub>).  Anyone can check the validity of a ring signature given <U+03C3>, ''m'', and the public keys involved, ''PK''<sub>1</sub>, ... , ''PK''<sub>''n''</sub>.  If a ring signature is properly computed, it should pass the check.  On the other hand, it should be hard for anyone to create a valid ring signature on any message for any group without knowing any of the secret keys for that group.  
+
+==Applications==
+
+In the original paper, Rivest, Shamir, and Tauman described ring signatures as a way to leak a secret.  For instance, a ring signature could be used to provide an anonymous signature from "a high-ranking [[White House]] official", without revealing which official signed the message.  Ring signatures are right for this application because the anonymity of a ring signature cannot be revoked, and because the group for a ring signature can be improvised.
+
+Another application, also described in the original paper, is for [[deniable signature]]s.  A ring signature where the group is the sender and the recipient of a message will only seem to be a signature of the sender to the recipient: anyone else will be unsure whether the recipient or the sender was the actual signer.  Thus, such a signature is convincing, but cannot be transferred beyond its intended recipient.  
+
+==Implementation==
+
+Here a [[Python_(language)|Python]] implementation of the original paper using [[Rivest_Shamir_Adleman|RSA]].
+
+<source lang="python">import os,hashlib,random,Crypto.PublicKey.RSA
+
+class ring:
+    def __init__(self,k,l=1024):
+        self.k = k
+        self.l,self.n,self.q = l,len(k),1<<l-1
+
+    def sign(self,m,z):
+        self.permut(m)
+        s,u = [None]*self.n,random.randint(0,self.q)
+        c = v = self.E(u) 
+        for i in range(z+1,self.n)+range(z):
+            s[i] = random.randint(0,self.q)
+            v = self.E(v^self.g(s[i],self.k[i].e,self.k[i].n)) 
+            if (i+1)%self.n == 0: c = v
+        s[z] = self.g(v^u,self.k[z].d,self.k[z].n)
+        return [c,] + s
+
+    def verify(self,m,X):
+        self.permut(m)
+        y = map(lambda i:self.g(X[i+1],self.k[i].e,self.k[i].n),range(len(X)-1))
+        return reduce(lambda x,i:self.E(x^y[i]),range(self.n),X[0]) == X[0]
+
+    def permut(self,m):
+        self.p = int(hashlib.sha1('%s'%m).hexdigest(),16)
+
+    def E(self,x): 
+        return int(hashlib.sha1('%s%s'%(x,self.p)).hexdigest(),16)
+
+    def g(self,x,e,n):
+        q,r = x//n,x%n
+        return q*n + pow(r,e,n) if (q+1)*n <= (1<<self.l)-1 else x</source>
+Sign and verify two messages in a four users ring:
+
+<source lang="python">size,msg1,msg2 = 4,'hello','world!'
+r = ring(map(lambda _:Crypto.PublicKey.RSA.generate(1024, os.urandom),range(size)))
+for i in range(size):
+    s1,s2 = r.sign(msg1,i),r.sign(msg2,i)
+    assert r.verify(msg1,s1) and r.verify(msg2,s2) and not r.verify(msg1,s2)</source>
+
+==References==
+<references />
+
+[[Category:Cryptography]]

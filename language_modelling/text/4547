@@ -1,0 +1,256 @@
+[[Image:csv_delimited000.svg|thumb|right|200px|A stylistic depiction of a fragment from a [[Comma-separated values|CSV]]-formatted text file. The commas (shown in red) are used as field delimiters.]]
+
+A '''delimiter''' is a sequence of one or more [[character (computing)|character]]s used to specify the boundary between separate, independent regions in [[plain text]] or other data stream.<ref>[http://www.its.bldrdoc.gov/fs-1037/dir-011/_1544.htm Federal Standard 1037C ''delimiter'']</ref> An example of a delimiter is the comma character in a sequence of [[comma-separated values]].
+
+An alternative to the use of field delimiters is [[String_literal#Declarative_notation|declarative notation]], which uses a length field at the start of a region to specify the boundary. For word delimiters used in the written form of human languages, see [[interword separation]].
+
+== Overview ==
+Delimiters can be broken down into:
+
+* Field and Record delimiters
+* Bracket delimiters
+
+==Field and record delimiters==
+Field delimiters are used to separate data fields. Record delimiters separate groups of fields.<ref name="FldDelm">{{cite book | last = de Moor | first = Georges J. | title = Progress in Standardization in Health Care Informatics | publisher =IOS Press | year = 1993 | id =ISBN 9051991142}} p. 141</ref>
+
+For example, the (CSV) file format uses a [[comma]] as the delimiter between [[field (computer science)|fields]], and a [[end-of-line]] indicator as the delimiter between [[Row (database)|records]].  For instance:
+<source lang="perl">    fname,lname,age,salary
+nancy,davolio,33,$30000
+erin,borakova,28,$25250
+tony,raphael,35,$28700
+</source>
+specifies a simple [[flat file database]] [[table (information)|table]] using the (CSV) file format.
+
+==Conventions==
+
+Computing platforms historically use certain delimiters by convention.<ref>
+
+International Organization for Standardization ([[December 1]], [[1975]]). "[http://www.itscj.ipsj.or.jp/ISO-IR/001.pdf The set of control characters for ISO 646]". ''Internet Assigned Numbers Authority Registry''. Alternate U.S. version: [http://www.itscj.ipsj.or.jp/ISO-IR/006.pdf]. Accessed [[August 7]], [[2005]].
+</ref> The following tables depict just a few examples for comparison.
+
+'''Programming languages'''
+(''See also'', [[Comparison of programming languages (syntax)]]).
+{| class="wikitable"  
+    !   !! String Literal !! End of Statement
+    |-
+    ! Pascal
+    | doublequote || semicolon
+    |-
+    ! C
+    | doublequote, singlequote || semicolon
+    |-
+|}
+
+'''Field and Record delimiters''' (''See also'', [[ASCII]], [[Control character]]).
+
+{| class="wikitable" 
+    !   !! End of Field !! End of Record !! End of File
+    |-
+    ! Unix (and Mac OS X)
+    | [[Tab_key|Tab]] || [[Line_feed|LF]] || none
+    |-
+    ! Windows
+    | [[Tab_key|Tab]] || [[CRLF]] || none
+    |-
+    ! Classic Mac OS
+    | [[Tab_key|Tab]] || [[Carriage_return|CR]] || none
+    |-
+    ! Unicode
+    | UNIT SEPARATOR<br>Position 31 (U+001F) || RECORD SEPARATOR<br>Position 30 (U+001E) || FILE SEPARATOR<br>Position 28 (U+001C)
+|}
+
+==Bracket delimiters==
+
+Bracket delimiters (also block delimiters, region delimiters, balanced delimiters) are used to mark both the start and end of a region of text.<ref name="BalaDelm">{{cite book | last = Friedl | first = Jeffrey E. F. | title = Mastering Regular Expressions: Powerful Techniques for Perl and Other Tools | publisher = O'Reilly | year = 2002| id = ISBN 0596002890}} p. 319</ref> They are used in almost all programming languages, including [[Wikicode]].<ref name="Scott000">{{cite book
+        | title     = Programming Language Pragmatics
+        | first     = Michael Lee
+        | last      = Scott
+        | publisher = Morgan Kaufmann
+        | year      = 1999
+        | id        = ISBN 1558604421
+        }}</ref>
+
+Common examples of ''bracket'' delimiters include:<ref name="programmingperl">{{cite book | title=Programming Perl, Third Edition | author=[[Larry Wall|Wall, Larry]], [[Tom Christiansen]] and [[Jon Orwant]] | publisher=O'Reilly | month=July | year=2000 | ISBN=0-596-00027-8}}</ref>
+
+<table class="wikitable">
+<tr ><td>'''Delimiters'''</td><td>'''Description'''</td></tr>    
+    
+<tr><td><code>(</code> and <code>)</code></td><td>[[Bracket#Parentheses_.28_.29|Parenthesis]]. The [[Lisp]] programming language syntax is cited as recognizable primarily from its use of parenthesis.<ref name="Kaufmann000">{{cite book 
+        | title     = Computer-Aided Reasoning: An Approach
+        | first     = Matt
+        | last      = Kaufmann
+        | publisher = Springer
+        | year      = 2000
+        | id        = ISBN 0792377443
+        }}p. 3</ref></td></tr>
+<tr><td><code>{</code> and <code>}</code></td><td>[[Bracket#Curly_brackets_or_braces_.7B_.7D|Curly brackets]].<ref>See e.g., [[curly bracket programming language]].</ref></td></tr>
+
+<tr><td><code>[</code> and <code>]</code></td><td>[[Bracket#Box_brackets_or_square_brackets_.5B_.5D|Square brackets]].<ref>See e.g., [[Wikicode]].</ref></td></tr>
+
+<tr><td><code>&lt;</code> and <code>&gt;</code></td><td>[[Bracket#Angle_brackets_or_chevrons_.3C_.3E|Angle brackets]].<ref>See e.g., [[HTML]].</ref></td></tr>
+
+<tr><td><code>"</code> and <code>"</code></td><td>commonly used to denote [[string literal]]s.</td></tr>
+<tr><td><code>'</code> and <code>'</code></td><td>commonly used to denote string literals.</td></tr>
+<tr><td><code><?</code> and <code>?></code></td><td>used to indicate [[XML]] processing instructions.</td></tr>
+<tr><td><code>/*</code> and <code>*/</code></td><td>used to denote [[comment (computer programming)|comment]]s in some programming languages.</td></tr>
+<tr><td><code>{|</code> and <code>|}</code></td><td>used to indicate a table in [[Wikicode]].</td></tr>
+<tr><td><code><%</code> and <code>%></code></td><td>used in some [[web template]]s to specify language boundaries. These are also called ''template delimiters''.<ref name="Smarty000">See e.g., [[Smarty]] template system documentation, {{cite web 
+        | title       = Smarty template system documentation
+        | url         = http://smarty.php.net/manual/en/
+        | accessdate  = 2007-07-19
+        }}, {{cite web 
+        | title       = Text-ScriptTemplate documentation on CPAN
+        | url         = http://search.cpan.org/src/TAIY/Text-ScriptTemplate-0.08/README.TXT
+        | accessdate  = 2007-07-19
+        }}</ref>
+</td></tr>
+</table>
+
+==Delimiter collision==<!-- This section is linked from [[String literal]] -->
+'''Delimiter collision''' is a problem that occurs when an author or programmer introduces delimiters into text without actually intending them to be interpreted as boundaries between separate regions.<ref name="FldDelm"/> In the case of [[Comma-separated values]] files, for example, this can occur whenever an author attempts to include a comma as part of a field value (e.g., salary = "$30,000").
+
+===Solutions===
+
+Because delimiter collision is a very common problem, methods for avoiding it have been invented.
+
+====Escape character====
+One method for avoiding delimiter collision is to use [[escape character]]s. From a language design standpoint, these are adequate, but they have drawbacks:
+
+* text can be rendered unreadable when littered with numerous escape characters;
+* they require a mechanism to 'escape the escapes' when not intended as escape characters; and
+* although easy to type, they can be cryptic to someone unfamiliar with the language.<ref name="Kahrel000">{{cite book 
+        | title     = Automating InDesign with Regular Expressions
+        | first     = Peter
+        | last      = Kahrel
+        | publisher = O'Reilly
+        | year      = 2006
+        | id        = ISBN 0596529376
+        }}p. 11</ref>
+
+====Escape sequence====
+Escape sequences are similar to escape characters, except they usually consist of some kind of mnemonic instead of just a single character.  One use is in [[string literal]]s that include a doublequote (") character. For example in [[Perl]], the code:
+    print "Nancy said \x34Hello World!\x34 to the crowd.";  ### use \x34
+
+produces the same output as:     
+    print "Nancy said \"Hello World!\" to the crowd.";      ### use escape char
+
+One drawback of escape sequences, when used by people, is the need to memorize the codes that represent individual characters (see also: [[character entity reference]], [[numeric character reference]]).    
+
+====Dual quoting delimiters====
+In contrast to escape sequences and escape characters, dual delimiters
+provide yet another way to avoid delimiter collision. Some languages, for example, allow the use of either a singlequote (') or a doublequote (") to specify a string literal. For example in [[Perl]]:
+
+    print 'Nancy said "Hello World!" to the crowd.';
+    
+produces the desired output without requiring escapes. This approach, however, only works when the string does not contain ''both'' types of quotation marks.
+
+====Multiple quoting delimiters====
+In contrast to dual delimiters, multiple delimiters are even more flexible for avoiding delimiter collision.<ref name="ProgPerl001">Wall, ''infra'' p. 63</ref> 
+
+For example in [[Perl]]:
+    print qq^Nancy doesn't want to say "Hello World!" anymore.^;
+
+    print qq@Nancy doesn't want to say "Hello World!" anymore.@;
+
+    print qq<U+00A7>Nancy doesn't want to say "Hello World!" anymore.<U+00A7>;        
+
+all produce the desired output through use of the '''quotelike operator''', which allows characters to act as delimiters. Although this method is more flexible, few languages support it. [[Perl]] and [[Ruby (programming language)|Ruby]] are two that do.<ref name="Ruby000">{{cite book 
+| last      = Yukihiro
+| first     = Matsumoto
+| title     = Ruby in a Nutshell 
+| publisher = O'Reilly
+| year      = 2001
+| id        = 0596002149
+}} In Ruby, these are indicated as ''general delimited strings''. p. 11</ref><ref name="ProgPerl002">Wall, ''infra'' p. 63</ref>
+
+====Content boundary ====
+A '''content boundary''' is a special type of delimiter that is specifically designed to resist delimiter collision. It works by allowing the author to specify a long sequence of characters that is guaranteed to always indicate a boundary between parts in a multi-part message, with no other possible interpretation.<ref name="Mime000">{{cite book 
+| last      = Javvin Technologies
+| first     = Incorporated
+| title     = Network Protocols Handbook
+| publisher = Javvin Technologies Inc.
+| year      = 2005
+| id        = 0974094528
+}} p. 26 </ref>
+
+This is usually done by specifying a random sequence of characters followed by an identifying mark such as a [[UUID]], a [[timestamp]], or some other distinguishing mark. (''See e.g.'', [[MIME#Multipart Messages|MIME]], [[Here_document|Here documents]]).
+
+==== Regular expression syntax ====
+:{{seealso|Regular expression examples}}
+
+In specifying a [[regular expression]], alternate delimiters may also be used to simplify the syntax for '''match''' and '''substitution''' operations in [[Perl]].<ref name="Friedl000">Friedl ''infra''.</ref>
+
+For example, a simple match operation may be specified in perl with the following syntax: 
+
+    $string1 = 'Nancy said "Hello World!" to the crowd.';    # specify a target string
+    print $string1 =~ m/[aeiou]+/;                           # match one or more vowels
+
+The syntax is flexible enough to specify match operations with alternate delimiters, making it easy to avoid delimiter collision:
+
+    $string1 = 'Nancy said "httq://Hello/World.htm" is not a valid address.'; # target string
+    
+    print $string1 =~ m@httq://@;       # match using alternate regular expression delimiter
+    print $string1 =~ m{httq://};       # same as previous, but different delimiter
+    print $string1 =~ m!httq://!;       # same as previous, but different delimiter
+
+==ASCII armor==
+Although principally used as a mechanism for text encoding of binary data,
+"[[ASCII armor]]ing" is a programming and systems administration technique 
+that also helps to avoid delimiter collision in some circumstances.<ref name="Rhee000">{{cite book 
+        | title     = Internet Security: Cryptographic Principles, Algorithms and Protocols
+        | first     = Man
+        | last      = Rhee
+        | publisher = John Wiley and Sons
+        | year      = 2003
+        | id        = ISBN 0470852852
+        }}(an example usage of ASCII armoring in encryption applications)</ref><ref name="Gross000">{{cite book 
+        | title     = Open Source for Windows Administrators
+        | first     = Christian
+        | last      = Gross
+        | publisher = Charles River Media
+        | year      = 2005
+        | id        = 1584503475
+        }}(an example usage of ASCII armoring in encryption applications)</ref> This technique is contrasted from the other approaches described above because it is more complicated, and therefore not suitable for small applications and simple data storage formats. The technique employs a special encoding scheme or [[hash function]], such as [[base64]], to ensure that delimiter characters do not appear in transmitted data.
+
+This technique is used, for example, in [[Microsoft]]'s [[ASP.NET]] web development technology, and is closely associated with the "VIEWSTATE" component of that system.<ref name="Kalani000">{{cite book
+| title     = Developing and Implementing Web Applications with Visual C# . NET and Visual Studio . NET
+| first     = Amit
+| last      = Kalani
+| publisher = Que
+| year      = 2004
+| id        = ISBN 0789729016
+}}(describes the use of Base64 encoding and VIEWSTATE inside HTML source code)</ref>
+
+=== Example ===
+The following is a simplified example demonstrating how this technique works in practice. 
+
+The first code fragment shows a simple HTML tag in which the VIEWSTATE value contains characters that are incompatible with the delimiters of the HTML tag itself:
+<source lang="xml">
+    <input type="hidden" __VIEWSTATE="BookTitle:Nancy doesn't say "Hello World!" anymore." />
+</source>
+
+This first code fragment is not [[Well-formed element|well-formed]], and would therefore not work properly in a "real world" deployed system.
+
+In contrast, the second code fragment shows a similar HTML tag, except this time incompatible characters in the VIEWSTATE value are removed through the application of base64 encoding:
+<source lang="xml">
+    <input type="hidden" __VIEWSTATE="TmFtZTpMYXJyeSAiQnVkIiBNZWxtYW47" />
+</source>
+This prevents delimiter collision and ensures that incompatible characters will not appear inside the HTML code, regardless of what characters appear in the original (decoded) text.<ref name="Kalani000" />
+
+==Notes and references==
+{{reflist}}
+
+==See also==
+* [[Delimiter-separated values]]
+* [[String literal]]
+* [[CamelCase]] (used in [[WikiWikiWeb]] as an alternate method of link creation that does not require delimiters to indicate links)
+* [[Federal Standard 1037C]] (contains a simple definition for "delimiter")
+* [[Naming collision]]
+* [[Sigil (computer programming)|Sigil]]
+
+[[Category:Programming language topics]]
+[[Category:Markup languages]]
+
+[[de:Delimiter]]
+[[pl:Delimiter]]
+[[uk:<U+0420><U+043E><U+0437><U+0434><U+0456><U+043B><U+044F><U+044E><U+0447><U+0438><U+0439> <U+0441><U+0438><U+043C><U+0432><U+043E><U+043B>]]

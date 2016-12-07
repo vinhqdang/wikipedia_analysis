@@ -1,0 +1,371 @@
+{{Redirect|ISDN|other uses}}
+
+'''Integrated Services Digital Network''' ('''ISDN''') is a set of communications standards for simultaneous [[digital]] [[Transmission (telecommunications)|transmission]] of voice, video, data, and other network services over the traditional circuits of the [[public switched telephone network]]. It was first defined in 1988 in the [[CCITT]] red book.<ref>{{cite journal|journal=CCITT Red Book|year=1986|month=May|volume=4|issue=3|pages=320<U+2013>325|issn=0733-8716|doi=10.1109/JSAC.1986.1146333|title=CCITT Recommendations on the ISDN: A Review|last1=Decina|first1=M.|last2=Scace|first2=E.}}</ref>
+Prior to ISDN, the telephone system was viewed as a way to transport voice, with some special services available for data. The key feature of ISDN is that it integrates speech and data on the same lines, adding features that were not available in the [[Plain old telephone service|classic telephone system]]. There are several kinds of access interfaces to ISDN defined as [[Basic Rate Interface]] (BRI), [[Primary Rate Interface]] (PRI) and [[Broadband ISDN]] (B-ISDN).
+
+ISDN is a [[Circuit switching|circuit-switched]] [[telephone network]] system, which also provides access to [[packet switched network]]s, designed to allow digital transmission of voice and [[data]] over ordinary [[Twisted pair|telephone copper wires]], resulting in potentially better voice quality than an analog phone can provide. It offers circuit-switched connections (for either voice or data), and packet-switched connections (for data), in increments of 64 [[kilobit]]/s. A major market application for ISDN in some countries is [[Internet access]], where ISDN typically provides a maximum of 128 kbit/s in both upstream and downstream directions. [[Channel bonding]] can achieve a greater data rate; typically the ISDN B-channels of three or four BRIs (six to eight 64 kbit/s channels) are bonded.
+
+ISDN should not be mistaken for its use with a specific protocol, such as [[Q.931]] whereby ISDN is employed as the network, data-link and physical layers in the context of the [[OSI model]]. In a broad sense ISDN can be considered a suite of digital services existing on layers 1, 2, and 3 of the OSI model. ISDN is designed to provide access to voice and data services simultaneously.
+
+However, common use reduced ISDN to be limited to Q.931 and related protocols, which are a set of [[protocol (computing)|protocol]]s for [[Signalling (telecommunications)|establishing and breaking circuit switched connections]], and for advanced [[calling feature]]s for the user. They were introduced in 1986.<ref>{{cite journal |last=Aaron |first=R. |coauthors=Wyndrum, R. |title=Future trends |journal=IEEE Communications Magazine |year=1986 |month=March |volume=24 |issue=3 |pages=38<U+2013>43 |url=http://ieeexplore.ieee.org/iel5/35/23852/01093028.pdf |accessdate=2 September 2007 |authorlink=[[AT&T Bell Laboratories]] |doi=10.1109/MCOM.1986.1093028}}</ref> 
+
+In a [[videoconference]], ISDN provides simultaneous voice, video, and text transmission between individual desktop videoconferencing systems and group (room) videoconferencing systems.
+
+==ISDN elements==
+''Integrated services'' refers to ISDN's ability to deliver at minimum two simultaneous connections, in any combination of data, voice, [[Videotelephony|video]], and [[fax]], over a [[local loop|single line]]. Multiple devices can be attached to the line, and used as needed. That means an ISDN line can take care of most people's complete communications needs (apart from [[broadband Internet access]] and entertainment [[television]]) at a much higher transmission rate, without forcing the purchase of multiple analog phone lines.  It also refers to integrated switching and transmission<ref>{{Cite journal |title= Pragmatic Introduction of Digital Switching and Transmission in Existing Networks |author1= G. Robin |author2= S. Treves |work=  IEEE Transactions on Communications |date= July 1979 |volume=27 |doi=10.1109/TCOM.1979.1094494 |issue= 7 |journal= IEEE Transactions on Communications |pages= 1071 }}</ref> in that [[telephone switch]]ing and [[carrier wave]] transmission are integrated rather than separate as in earlier technology.
+
+==Basic Rate Interface==
+{{Main|Basic Rate Interface}}
+The entry level interface to ISDN is the Basic(s) Rate Interface (BRI), a 128 [[kilobits per second|kbit/s]] service delivered over a pair of standard telephone copper wires. The 144 kbit/s payload rate is broken down into two 64 kbit/s [[bearer channel]]s ('B' channels) and one 16 kbit/s signaling channel ('D' channel or delta channel).  This is sometimes referred to as 2B+D.
+
+The interface specifies the following network interfaces:
+* The ''[[U interface]]'' is a two-wire interface between the exchange and a ''network terminating unit'', which is usually the [[demarcation point]] in non-North American networks.
+* The ''T interface'' is a serial interface between a computing device and a ''[[terminal adapter]]'', which is the digital equivalent of a modem.
+* The ''[[S interface]]'' is a four-wire bus that ISDN consumer devices plug into; the S & T reference points are commonly implemented as a single interface labeled 'S/T' on an [[Network termination 1]] (NT1).
+* The ''[[R interface]]'' defines the point between a non-ISDN device and a terminal adapter (TA) which provides translation to and from such a device.
+
+BRI-ISDN is very popular in Europe but is much less common in North America. It is also common in Japan - where it is known as INS64.
+
+==Primary Rate Interface==
+{{Main|Primary Rate Interface}}
+The other ISDN access available is the Primary Rate Interface (PRI), which is carried over an [[E-carrier|E1]] (2048 kbit/s) in most parts of the world. An E1 is 30 'B' channels of 64 kbit/s, one 'D' channel of 64 kbit/s and a timing and alarm channel of 64 kbit/s.
+
+In North America PRI service is delivered on one or more [[T-carrier|T1 carriers]] (often referred to as 23B+D) of 1544 kbit/s (24 channels). A PRI has 23 'B' channels and 1 'D' channel for signalling (Japan uses a circuit called a J1, which is similar to a T1). Inter-changeably but incorrectly, a PRI is referred to as T1 because it uses the T1 carrier format.  A true T1 (commonly called "Analog T1" to avoid confusion) uses 24 channels of 64 kbit/s of [[in-band signaling]].  Each channel uses 56 kb for data and voice and 8 kb for signaling and messaging.  PRI uses out of band signaling which provides the 23 B channels with clear 64 kb for voice and data and one 64 kb 'D' channel for signaling and messaging. In North America, [[Non-Facility Associated Signalling]] allows two or more PRIs to be controlled by a single [[D channel]], and is sometimes called "23B+D + n*24B". D-channel backup allows for a second D channel in case the primary fails.  NFAS is commonly used on a [[Digital Signal 3|T3]].
+
+PRI-ISDN is popular throughout the world, especially for connecting [[Private branch exchange|PBXs]] to [[PSTN]].
+
+While the North American PSTN can use PRI or Analog T1 format from PBX to PBX, the [[Plain old telephone service|POTS]] or BRI can be delivered to a business or residence.  North American PSTN can connect from PBX to PBX via Analog T1, T3, PRI, OC3, etc...
+
+Even though many network professionals use the term "ISDN" to refer to the lower-bandwidth BRI circuit, in North America BRI is relatively uncommon whilst PRI circuits serving PBXs are commonplace.
+
+==Data channel==
+The bearer channel (B) is a standard 64 kbit/s voice channel of 8 bits sampled at 8&nbsp;kHz with [[G.711]] encoding. B-Channels can also be used to carry data, since they are nothing more than digital channels.
+
+Each one of these channels is known as a [[DS0]].
+
+Most B channels can carry a 64 kbit/s signal, but some were limited to 56K because they traveled over [[Robbed-bit signaling|RBS]] lines.  This was commonplace in the 20th century, but has since become less so.
+
+==Signaling channel==
+The signaling channel (D) uses [[Q.931]] for [[Signaling (telecommunications)|signaling]] with the other side of the link.
+
+==X.25==
+[[X.25]] can be carried over the B or D channels of a BRI line, and over the B channels of a PRI line.  X.25 over the D channel is used at many point-of-sale (credit card) terminals because it eliminates the modem setup, and because it connects to the central system over a B channel, thereby eliminating the need for modems and making much better use of the central system's telephone lines.
+
+[[X.25]] was also part of an ISDN protocol called "Always On/Dynamic ISDN", or AO/DI.  This allowed a user to have a constant multi-link PPP connection to the internet over X.25 on the D channel, and brought up one or two B channels as needed.
+
+==Frame Relay==
+In theory, [[Frame Relay]] can operate over the D channel of BRIs and PRIs, but it is seldom, if ever, used.
+
+==Consumer and industry perspectives==
+There are two points of view into the ISDN world. The most common is that of the [[end-user]], who wants a digital connection into the [[telephone network]] from home, whose performance would be better than a 20th century analog [[56K modem]] connection.  Discussion on the merits of various ISDN modems, carriers' offerings and tariffs (features, pricing) are from this perspective. Since the principal consumer application is for [[Internet access]], ISDN was mostly superseded by [[Digital Subscriber Line|DSL]] in the early 21st century.  Inexpensive ADSL service offers speeds up to 5 Mbit/s, while more expensive versions are improving in speed all the time. By 2010, ADSL speeds of several millions of bits per second had become commonplace. Thus, ISDN can be seen from this perspective as obsolete before it fairly started, having been overtaken in most places by the [[disruptive technology]] of [[ADSL]]. 
+
+There is a second viewpoint: that of the telephone industry, where ISDN is a core technology. A [[telephone network]] can be thought of as a collection of wires strung between switching systems. The common electrical specification for the signals on these wires is [[Digital Signal 1|T1]] or [[E-carrier|E1]]. Between telephone company switches, the signaling is performed via [[Signaling System No 7|SS7]].  Normally, a PBX is connected via a T1 with [[robbed bit signaling]] to indicate on-hook or off-hook conditions and [[Multi-frequency|MF]] and [[Dual-tone multi-frequency|DTMF]] tones to encode the destination number. ISDN is much better because messages can be sent much more quickly than by trying to [[encoder|encode]] numbers as long (100 [[Millisecond|ms]] per digit) tone sequences. This results in faster call setup times.  Also, a greater number of features are available and fraud is reduced.
+
+ISDN is also used as a smart-network technology intended to add new services to the [[public switched telephone network]] (PSTN) by giving users direct access to end-to-end circuit-switched digital services and as a backup or failsafe circuit solution for critical use data circuits.
+
+===ISDN and broadcast industry===
+ISDN is used heavily by the broadcast industry as a reliable way of switching low latency, high quality, long distance audio circuits. In conjunction with an appropriate [[codec]] using MPEG or various manufacturers proprietary algorithms, an ISDN BRI can be used to send stereo bi-directional audio coded at 128 kbit/s with 20&nbsp;Hz <U+2013> 20&nbsp;kHz audio bandwidth, although commonly the [[G.722]] algorithm is used with a single 64 kbit/s B channel to send much lower latency mono audio at the expense of audio quality. Where very high quality audio is required multiple ISDN BRIs can be used in parallel to provide a higher bandwidth circuit switched connection. [[BBC Radio 3]] commonly makes use of three ISDN BRIs to carry 320 kbit/s audio stream for live outside broadcasts. ISDN BRI services are used to link remote studios, sports grounds and [[Remote broadcast|outside broadcasts]] into the main [[Recording studio|broadcast studio]]. ISDN via satellite is used by field reporters around the world. It's also common to use ISDN for the return audio links to remote satellite broadcast vehicles.
+
+In many countries, such as the UK and Australia, ISDN has displaced the older technology of equalised analogue landlines, with these circuits being phased out by telecommunications providers. IP based streaming codecs are starting to gain a foothold in the broadcast sector, using broadband internet to connect remote studios. However reliability and latency is crucially important for broadcasters and the quality of service offered by ISDN has not yet been matched by packet switched alternatives.
+
+===United States and Canada===
+ISDN-BRI never gained popularity as a general use telephone access technology in Canada and the US, and remains a [[Niche market|niche product]]. The service was seen as ''a solution in search of a problem'',<ref>Computing Japan Magazine, September/October 1995, Article: ''ISDN: A Solution in Search of a Problem'', direct URL to article: http://www.japaninc.com/cpj/magazine/issues/1995/sep95/09isdn.html</ref> and the extensive array of options and features were difficult for customers to understand and use. ISDN has long been known by derogatory [[backronym]]s highlighting these issues, such as '''''I'''t '''S'''till '''D'''oes '''N'''othing, '''I'''nnovations '''S'''ubscribers '''D'''on't '''N'''eed,'' and '''''I''' '''S'''till '''D'''on't k'''N'''ow.''<ref>
+{{cite book|author=James Harry Green|title=The Irwin Handbook Of Telecommunications|url=http://books.google.com/books?id=L1iJaXDV89gC&pg=PA262|edition=5|accessdate=12 May 2012|date=26 October 2005|publisher=McGraw-Hill Professional|isbn=978-0-07-145222-9|page=770}}</ref><ref>{{cite book|author1=Madeline Bodin|author2=Keith Dawson|title=The Call Center Dictionary: The Complete Guide to Call Center & Customer Support Technology Solutions|url=http://books.google.com/books?id=CTXhqkFDQKQC&pg=PA101|accessdate=12 May 2012|date=3 January 2002|publisher=Focal Press|isbn=978-1-57820-095-5|page=227}}</ref>
+
+Once the concept of ''[[broadband Internet access]]'' came to be associated with data rates incoming to the customer at 256 kbit/s or more,<ref>From the article [[Broadband Internet access]]: Although various minimum bandwidths have been used in definitions of broadband, ranging up from 64 kbit/s up to 1.0 Mbit/s, the 2006 OECD report[1] is typical by defining broadband as having download data transfer rates equal to or faster than 256 kbit/s, while the United States FCC, as of 2008, defines broadband as anything above 768 kbit/s.[2] The trend is to raise the threshold of the broadband definition as the marketplace rolls out faster services.[3] Refer to the article for citations.</ref> and alternatives like [[ADSL]] grew in popularity, the consumer market for BRI did not develop. Its only remaining advantage is that while ADSL has a functional distance limitation and can use [[ADSL loop extender]]s, BRI has a greater limit and can use repeaters.  As such, BRI may be acceptable for customers who are too remote for ADSL. Widespread use of BRI is further stymied by some small North American [[CLEC]]s such as [[CenturyTel]] having given up on it and not providing Internet access using it.<ref>CenturyTel Internet Access service offerings quote: ''You may not obtain Internet services over ISDN lines (BRI or PRI), dedicated circuits or special service circuits.'' http://www.centurytel.com/Pages/Disclaimers/internetDisclaimer.jsp</ref> However, AT&T in most states (especially the former SBC/SWB territory) will still install an ISDN BRI line anywhere a normal analog line can be placed and the monthly charge is roughly $55.
+
+ISDN-BRI is currently primarily used in industries with specialized and very specific needs. High-end [[videoconferencing]] hardware made by companies such as [[Sony]], [[Polycom]], [[Tandberg]], and [[LifeSize]] via the [http://www.lifesize.com/en/Products/Infrastructure/Networker.aspx LifeSize Networker] can bond up to 8 B-channels together (using a BRI circuit for every 2 channels) to provide digital, circuit-switched video connections to almost anywhere in the world. This is very expensive, and is being replaced by IP-based conferencing, but where cost concern is less of an issue than predictable quality and where a [[Quality of service|QoS]]-enabled IP does not exist, BRI is the preferred choice.
+
+Most modern non-[[VoIP]] PBXs use ISDN-PRI circuits. These are connected via [[T-carrier|T1 lines]] with the central office switch, replacing older analog two-way and [[direct inward dialing]] (DID) trunks. PRI is capable of delivering [[Calling Line Identification]] (CLID) in both directions so that the telephone number of an extension, rather than a company's main number, can be sent. It is still commonly used in [[recording studio]]s, when a [[voice-over]] actor is in one studio, but the director and producer are in a studio at another location. The ISDN protocol delivers channelized, not-over-the-Internet service, powerful call setup and routing features, faster setup and tear down, superior audio fidelity as compared to [[Plain old telephone service|POTS]] (plain old telephone service), lower delay and, at higher densities, lower cost.
+
+===India===
+[[Bharat Sanchar Nigam Limited]], [[Reliance Communications]] and [[Bharti Airtel]] are the largest communication service providers, and offer both ISDN BRI and PRI services across the country. Reliance Communications and Bharti Airtel uses the DLC technology for providing these services. With the introduction of broadband technology, the load on bandwidth is being absorbed by ADSL. ISDN continues to be an important backup network for point-to-point leased line customers such as banks, Eseva Centers [http://www.esevaonline.com], [[Life Insurance Corporation of India]], and [[State Bank of India|SBI]] ATMs.
+
+===Japan===
+On April 19, 1988, Japanese telecommunications company [[Nippon Telegraph and Telephone|NTT]] began offering nationwide ISDN services trademarked INS Net 64, and INS Net 1500, a fruition of NTT's independent research and trial from the 1970s of what it referred to the INS (Information Network System).<ref>{{web cite|url=http://denwakyoku.jp/kitahama.html|title=NTT<U+6771><U+65E5><U+672C> - <U+5317><U+6D5C><U+30D3><U+30EB>}}</ref>
+
+Previously, on April 1985, Japanese digital telephone exchange hardware made by Fujitsu was used to experimentally deploy the world's first I interface ISDN. The I interface, unlike the older and incompatible Y interface, is what modern ISDN services use today.
+
+Since 2000, NTT's ISDN offering have been known as [[FLET's]] ISDN, incorporating the "[[FLET's]]" brand that NTT uses for all of its ISP offerings.
+
+In Japan, the number of ISDN subscribers dwindled as alternative technologies such as [[ADSL]], [[cable Internet access]], and [[fiber to the home]] gained greater popularity. On November 2, 2010, NTT announced plans to migrate their backend from [[PSTN]] to the [[IP network]] from around 2020 to around 2025. For this migration, ISDN services will be retired, and fiber optic services are recommended as an alternative.<ref>{{web cite|url=http://www.ntt-east.co.jp/release/1011/pdf/101102a_1.pdf|title=PTSN<U+306E><U+30DE><U+30A4><U+30B0><U+30EC><U+30FC><U+30B7><U+30E7><U+30F3><U+306B><U+3064><U+3044><U+3066><U+FF5E><U+6982><U+62EC><U+7684><U+5C55><U+671B><U+FF5E>|date=November 2, 2010|author=NTT East, NTT West}}</ref>
+
+===United Kingdom===
+In the [[United Kingdom]], [[BT Group|British Telecom]] (BT) provides ISDN2e (BRI) as well as ISDN30 (PRI). Until April 2006, they also offered services named [[BT Highway|Home Highway and Business Highway]], which were BRI ISDN-based services that offered integrated analogue connectivity as well as ISDN. Later versions of the Highway products also included built-in [[Universal serial bus]] (USB) sockets for direct computer access. Home Highway was bought by many home users, usually for Internet connection, although not as fast as ADSL, because it was available before ADSL and in places where ADSL does not reach.
+
+===France===
+[[France Telecom]] offers ISDN services under their product name Numeris (2 B+D), of which a professional Duo and home Itoo version is available. ISDN is generally known as RNIS in France and has widespread availability. The introduction of ADSL is reducing ISDN use for data transfer and Internet access, although it is still common in more rural and outlying areas, and for applications such as [[Private branch exchange|business voice]] and [[Point of sale|point-of-sale terminals]].
+
+===Germany===
+[[Image:DBP 1988 1368 ISDN.jpg|thumb|German stamp]]
+In [[Germany]], ISDN is very popular with an installed base of 25 million channels (29% of all subscriber lines in Germany as of 2003 and 20% of all ISDN channels worldwide). Due to the success of ISDN, the number of installed analog lines is decreasing. [[Deutsche Telekom]] (DTAG) offers both BRI and PRI. Competing phone companies often offer ISDN only and no analog lines. However, these operators generally offer free hardware that also allows the use of POTS equipment, such as NTBAs<ref>"Network Termination for ISDN Basic Access", little boxes that bridge the two-wire UK0 line to the four-wire S0 bus, see [[:de:Network Termination for ISDN Basic rate Access]]</ref> with integrated [[terminal adapter]]s. Because of the widespread availability of ADSL services, ISDN is today primarily used for voice and fax traffic, but is still very popular thanks to the pricing policy of German telecommunication providers.
+
+Today ISDN (BRI) and ADSL/[[VDSL]] are often bundled on the same line, mainly because the combination of ADSL with an analog line has no cost advantage over a combined ISDN-ADSL line. Some German operators started to implement [[Next Generation Networking]], generally realized via DSL and [[Local-loop unbundling|unbundled local loop]]. However, a few operators offer the same services via the [[Cable Internet|cable television infrastructure]] or, in selected areas, via [[FTTH]]. Because of the popularity of ISDN, virtually all these telecommunication providers bundle their products with [[residential gateway]]s that include both integrated [[analog telephony adapter]]s and ISDN-NGN adapters.
+
+===Greece===
+[[OTE]], the incumbent telecommunications operator, offers ISDN BRI (BRA) services in [[Greece]]. Following the launch of ADSL in 2003, the importance of ISDN for data transfer began to decrease and is today limited to niche business applications with point-to-point requirements.
+
+Other ISDN providers are [[Reliance Communications|Reliance]], and [[VSNL]].
+
+===International deployment===
+A study<ref>Studie des BMBF: ISDN-Verbreitung http://web.archive.org/web/20081002180402/http://www.bmbf.de/pub/sdi-19-07.pdf</ref> of the German Department of Science shows the following spread of ISDN-channels per 1000 inhabitants in the year 2005:
+* [[Norway]] 401
+* [[Denmark]] 339
+* [[Germany]] 333
+* [[Switzerland]] 331
+* [[Japan]] 240
+* [[UK]] 160
+* [[Finland]] 160
+* [[Sweden]] 135
+* [[Italy]] 105
+* [[France]] 85
+* [[Spain]] 58
+* [[United States]] 47
+
+==Configurations==
+In ISDN, there are two types of channels, ''B'' (for "bearer") and ''D'' (for "data"). ''B channels'' are used for data (which may include voice), and ''D channels'' are intended for signaling and control (but can also be used for data).
+
+There are two ISDN implementations. Basic Rate Interface (BRI), also called basic rate access (BRA) &mdash; consists of two B channels, each with bandwidth of 64 [[kbit/s]], and one D channel with a bandwidth of 16 kbit/s. Together these three channels can be designated as 2B+D. Primary Rate Interface (PRI), also called primary rate access (PRA) in Europe &mdash; contains a greater number of B channels and a D channel with a bandwidth of 64 kbit/s. The number of B channels for PRI varies according to the nation: in North America and Japan it is 23B+1D, with an aggregate bit rate of 1.544 [[Mbit/s]] ([[Digital Signal 1|T1]]); in Europe, India and Australia it is 30B+1D, with an aggregate bit rate of 2.048 Mbit/s ([[E-carrier|E1]]). '''[[Broadband Integrated Services Digital Network]]''' (BISDN) is another ISDN implementation and it is able to manage different types of services at the same time. It is primarily used within [[network backbone]]s and employs [[asynchronous transfer mode|ATM]].
+
+Another alternative ISDN configuration can be used in which the B channels of an ISDN BRI line are [[Channel bonding|bonded]] to provide a total duplex bandwidth of 128 kbit/s. This precludes use of the line for voice calls while the internet connection is in use.  The B channels of several BRIs can be bonded, a typical use is a 384K videoconferencing channel.
+
+Using [[B8ZS|bipolar with eight-zero substitution]] encoding technique, call data is transmitted over the data (B) channels, with the signaling (D) channels used for call setup and management. Once a call is set up, there is a simple 64 kbit/s synchronous bidirectional data channel (actually implemented as two simplex channels, one in each direction) between the end parties, lasting until the call is terminated. There can be as many calls as there are bearer channels, to the same or different end-points. Bearer channels may also be [[multiplexing|multiplexed]] into what may be considered single, higher-bandwidth channels via a process called B channel BONDING, or via use of Multi-Link PPP "bundling" or by using an H0, H11, or H12 channel on a PRI.
+
+The D channel can also be used for sending and receiving [[X.25]] data packets, and connection to X.25 packet network, this is specified in [[X.31]]. In practice, X.31 was only commercially implemented in UK, France and Japan.
+
+==Reference points==
+A set of ''reference points'' are defined in the ISDN [[International standard|standard]] to refer to certain points between the [[Telephone company|telco]] and the end user ISDN equipment.
+*[[R interface|R]] - defines the point between a non-ISDN device and a ''[[terminal adapter]]'' (TA) which provides translation to and from such a device
+*[[S interface|S]] - defines the point between the ISDN equipment (or TA) and a ''Network Termination Type 2'' ([[Network termination 2|NT-2]]) device
+*[[T-interface|T]] - defines the point between the NT-2 and [[network termination 1|NT-1]] devices<sup>1</sup>
+
+''<sup>1</sup> Most NT-1 devices can perform the functions of the NT-2 as well, and so the S and T reference points are generally collapsed into the S/T reference point.''<br>
+''<U+00B2> Inside North America, the NT-1 device is considered [[customer premises equipment]] (CPE) and must be maintained by the customer, thus, the U interface is provided to the customer. In other locations, the NT-1 device is maintained by the telco, and the S/T interface is provided to the customer. In India, service providers provide U interface and an NT1 may be supplied by Service provider as part of service offering ''
+
+==Types of communications==
+Among the kinds of data that can be moved over the 64 kbit/s channels are [[Pulse code modulation|pulse-code modulated]] voice calls, providing access to the traditional voice [[PSTN]]. This information can be passed between the network and the user end-point at call set-up time.
+In North America, ISDN is now used mostly as an alternative to analog connections, most commonly for Internet access. Some of the services envisioned as being delivered over ISDN are now delivered over the Internet instead. In Europe, and in Germany in particular, ISDN has been successfully marketed as a phone with features, as opposed to a POTS phone with few or no features. Meanwhile, features that were first available with ISDN (such as [[Three-Way Calling]], [[Call Forwarding]], [[Caller ID]], etc.) are now commonly available for ordinary analog phones as well, eliminating this advantage of ISDN. Another advantage of ISDN was the possibility of multiple simultaneous calls (one call per B channel), e.g. for big families, but with the increased popularity and reduced prices of mobile telephony this has become less interesting as well, making ISDN unappealing to the private customer.  However, ISDN is typically more reliable than POTS, and has a significantly faster call setup time compared with POTS, and IP connections over ISDN typically have some 30<U+2013>35ms round trip time, as opposed to 120<U+2013>180ms (both measured with otherwise unused lines) over 56k or V.34/V.92 modems, making ISDN more reliable and more efficient for telecommuters.
+
+Where an analog connection requires a [[modem]], an ISDN connection requires a [[terminal adapter]] (TA). The function of an ISDN terminal adapter is often delivered in the form of a PC card with an S/T interface, and single-chip solutions seem to exist, considering the plethora of combined ISDN- and [[ADSL]]-[[Router (computing)|router]]s.
+
+ISDN is commonly used in [[radio broadcasting]]. Since ISDN provides a high quality connection this assists in delivering good quality audio for transmission in radio. Most radio studios are equipped with ISDN lines as their main form of communication with other studios or standard phone lines. Equipment made by companies such as Telos/Omnia (the popular Zephyr codec), Comrex, Tieline and others are used regularly by radio broadcasters. Almost all live sports broadcasts on radio are backhauled to their main studios via ISDN connections.
+
+==Sample call==
+The following is an example of a Primary Rate (PRI) ISDN call showing the [[Q.921]]/[[Link Access Procedures, D channel|LAPD]] and the [[Q.931]]/Network message intermixed (i.e. exactly what was exchanged on the D-channel).  The call is originating from the switch where the trace was taken and goes out to some other switch, possibly an end-office '''[[Local exchange carrier|LEC]]''', who terminates the call.
+
+The first line format is &lt;time&gt; &lt;D-channel&gt; &lt;Transmitted/Received&gt; &lt;LAPD/ISDN message ID&gt;.  If the message is an ISDN level message, then a decoding of the message is attempted showing the various Information Elements that make up the message.  All ISDN messages are tagged with an ID number relative to the switch that started the call (local/remote).  Following this optional decoding is a dump of the bytes of the message in &lt;offset&gt; &lt;hex&gt; ... &lt;hex&gt; &lt;ascii&gt; ... &lt;ascii&gt; format.
+
+The '''RR''' messages at the beginning prior to the call are the keep alive messages.  Then you will see a '''SETUP''' message that starts the call.  Each message is acknowledged by the other side with a '''RR'''.
+
+<small><pre>
+10:49:47.33  21/1/24  R  RR
+0000  02 01 01 a5                                          ....
+
+10:49:47.34  21/1/24  T  RR
+0000  02 01 01 b9                                          ....
+
+10:50:17.57  21/1/24  R  RR
+0000  02 01 01 a5                                          ....
+
+10:50:17.58  21/1/24  T  RR
+0000  02 01 01 b9                                          ....
+
+10:50:24.37  21/1/24  T  SETUP
+    Call Reference       : 000062-local
+    Bearer Capability    : CCITT, Speech, Circuit mode, 64 kbit/s
+    Channel ID           : Implicit Interface ID implies current span, 21/1/5, Exclusive
+    Calling Party Number : 8018023000 National number  User-provided, not screened  Presentation allowed
+    Called Party Number  : 3739120 Type: SUBSCRB
+0000  00 01 a4 b8  08 02 00 3e  05 04 03 80  90 a2 18 03   .......>........
+0010  a9 83 85 6c  0c 21 80 38  30 31 38 30  32 33 30 30   ...l.!.801802300
+0020  30 70 08 c1  33 37 33 39  31 32 30                   0p..3739120
+
+10:50:24.37  21/1/24  R  RR
+0000  00 01 01 a6                                          ....
+
+10:50:24.77  21/1/24  R  CALL PROCEEDING
+    Call Reference       : 000062-local
+    Channel ID           : Implicit Interface ID implies current span, 21/1/5, Exclusive
+0000  02 01 b8 a6  08 02 80 3e  02 18 03 a9  83 85         .......>......
+
+10:50:24.77  21/1/24  T  RR
+0000  02 01 01 ba                                          ....
+
+10:50:25.02  21/1/24  R  ALERTING
+    Call Reference       : 000062-local
+    Progress Indicator   : CCITT, Public network serving local user,
+In-band information or an appropriate pattern is now available
+0000  02 01 ba a6  08 02 80 3e  01 1e 02 82  88            .......>.....
+
+10:50:25.02  21/1/24  T  RR
+0000  02 01 01 bc                                          ....
+
+10:50:28.43  21/1/24  R  CONNECT
+    Call Reference       : 000062-local
+0000  02 01 bc a6  08 02 80 3e  07                         .......>.
+
+10:50:28.43  21/1/24  T  RR
+0000  02 01 01 be                                          ....
+
+10:50:28.43  21/1/24  T  CONNECT_ACK
+    Call Reference       : 000062-local
+0000  00 01 a6 be  08 02 00 3e  0f                         .......>.
+
+10:50:28.44  21/1/24  R  RR
+0000  00 01 01 a8                                          ....
+
+10:50:35.69  21/1/24  T  DISCONNECT
+    Call Reference       : 000062-local
+    Cause                : 16, Normal call clearing.
+0000  00 01 a8 be  08 02 00 3e  45 08 02 8a  90            .......>E....
+
+10:50:35.70  21/1/24  R  RR
+0000  00 01 01 aa                                          ....
+
+10:50:36.98  21/1/24  R  RELEASE
+    Call Reference       : 000062-local
+0000  02 01 be aa  08 02 80 3e  4d                         .......>M
+
+10:50:36.98  21/1/24  T  RR
+0000  02 01 01 c0                                          ....
+
+10:50:36.99  21/1/24  T  RELEASE COMPLETE
+    Call Reference       : 000062-local
+0000  00 01 aa c0  08 02 00 3e  5a                         .......>Z
+
+10:50:36.00  21/1/24  R  RR
+0000  00 01 01 ac                                          ....
+
+10:51:06.10  21/1/24  R  RR
+0000  02 01 01 ad                                          ....
+
+10:51:06.10  21/1/24  T  RR
+0000  02 01 01 c1                                          ....
+
+10:51:36.37  21/1/24  R  RR
+0000  02 01 01 ad                                          ....
+
+10:51:36.37  21/1/24  T  RR
+0000  02 01 01 c1                                          ....
+</pre></small>
+
+==See also==
+===Protocols===
+<!-- international -->
+*[[DSS1]] ([[ETSI]] "[[Europe|Euro]]-ISDN", also used in many non-European countries)
+*[[DSS2]] (Digital Subscriber Signalling System No. 2)
+*[http://portal.etsi.org/mbs/Referenced%20Documents/ets_300_387.pdf ETS 300 specification at ETSI]
+
+<!-- US -->
+*[[NI-1]] ([[United States|US]] National ISDN Phase 1)
+*[[NI-2]] ([[United States|US]] National ISDN Phase 2)
+*[[4ESS]] ([[Lucent]] 4ESS specific protocol defined in AT&T TR 41459)
+
+<!-- other -->
+*[[INS-NET]] 64/1500 ([[Japan]]ese national/[[Nippon Telegraph and Telephone|NTT]] carrier-specific protocol)
+* [[Digital Access Carrier System|DACS]] used in the [[United Kingdom|UK]] by [[British Telecom]] it uses non standard D channel signalling for [[pair gain]]
+
+<!-- ? -->
+* [[QSIG]]
+* [[Remote Operations Service Element protocol]] (ROSE)
+* [[Q.931]]
+
+<!-- obsolete -->
+*[[FTZ 1 TR 6]] (obsolete [[Germany|German]] national protocol)
+*[[TS.013]]/[[TS.014]] (obsolete [[Australia]]n national protocol)
+*[[VN2]]/[[VN3]]/[[VN4]] (obsolete [[France|French]] national protocols)
+
+Specifications defining the physical layer and part of the data link layers of ISDN:
+*'''ISDN BRI''': [[ITU-T]] I.430.
+*'''ISDN PRI''': [[ITU-T]] I.431.
+
+From the point of view of the OSI architecture, an ISDN line has a stack of three protocols
+* physical layer
+* data link layer
+* network layer (the ISDN protocol, properly) {{Citation needed|date=September 2007}}
+<!-- Why is THIS HERE? Where is the CITATION?-->
+
+===Other===
+*[[Common ISDN Application Programming Interface|CAPI]]
+*[[Asymmetric Digital Subscriber Line|ADSL]]
+*[[Asynchronous Transfer Mode|ATM]]
+*[[B-ISDN]]
+*[[Internet]]
+*[[H.320]]
+*[[ETSI]]
+*[[List of device bandwidths]]
+
+==References==
+{{Reflist}}
+
+== External links ==
+{{wikibooks|Nets, Webs and the Information Infrastructure}}
+
+* http://www.itu.int/rec/T-REC-I/e (list of published recommendations available in English, French and Spanish)
+* http://hea-www.harvard.edu/~fine/ISDN/
+* http://www.ralphb.net/ISDN/
+* http://www.roblee.com/isdn.htm
+
+
+{{Internet Access}}
+{{Telecommunications}}
+
+
+{{DEFAULTSORT:Integrated Services Digital Network}}
+[[Category:ITU-T recommendations]]
+[[Category:Network access]]
+[[Category:Telephony]]
+[[Category:Integrated Services Digital Network|*]]
+[[Category:Videotelephony]]
+[[Category:Audio network protocols]]
+
+{{Link FA|de}}
+<!-- interwiki links to this article in other languages, below -->
+
+[[ar:<U+0634><U+0628><U+0643><U+0629> <U+0631><U+0642><U+0645><U+064A><U+0629> <U+0644><U+0644><U+062E><U+062F><U+0645><U+0627><U+062A> <U+0627><U+0644><U+0645><U+062A><U+0643><U+0627><U+0645><U+0644><U+0629>]]
+[[az:<U+0130>nteqrasiya Edilmi<U+015F> R<U+0259>q<U+0259>msal <U+015E><U+0259>b<U+0259>k<U+0259>]]
+[[bn:<U+0987><U+09A8><U+09CD><U+099F><U+09BF><U+0997><U+09CD><U+09B0><U+09C7><U+099F><U+09C7><U+09A1> <U+09B8><U+09BE><U+09B0><U+09CD><U+09AD><U+09BF><U+09B8><U+09C7><U+09B8> <U+09A1><U+09BF><U+099C><U+09BF><U+099F><U+09BE><U+09B2> <U+09A8><U+09C7><U+099F><U+0993><U+09AF><U+09BC><U+09BE><U+09B0><U+09CD><U+0995>]]
+[[be-x-old:ISDN]]
+[[bg:<U+0426><U+0438><U+0444><U+0440><U+043E><U+0432><U+0430> <U+043C><U+0440><U+0435><U+0436><U+0430> <U+0441> <U+0438><U+043D><U+0442><U+0435><U+0433><U+0440><U+0438><U+0440><U+0430><U+043D><U+0438> <U+0443><U+0441><U+043B><U+0443><U+0433><U+0438>]]
+[[bs:ISDN]]
+[[ca:Xarxa Digital de Serveis Integrats]]
+[[cs:ISDN]]
+[[da:ISDN]]
+[[de:Integrated Services Digital Network]]
+[[es:Red Digital de Servicios Integrados]]
+[[eo:ISDN-telefono]]
+[[eu:ISDN]]
+[[fa:<U+0634><U+0628><U+06A9><U+0647> <U+062F><U+06CC><U+062C><U+06CC><U+062A><U+0627><U+0644><U+06CC> <U+062E><U+062F><U+0645><U+0627><U+062A> <U+06CC><U+06A9><U+067E><U+0627><U+0631><U+0686><U+0647>]]
+[[fr:R<U+00E9>seau num<U+00E9>rique <U+00E0> int<U+00E9>gration de services]]
+[[gl:RDSI]]
+[[ko:ISDN]]
+[[hi:<U+0906><U+0907><U+090F><U+0938><U+0921><U+0940><U+090F><U+0928> (ISDN)]]
+[[hr:ISDN]]
+[[id:ISDN]]
+[[it:Integrated Services Digital Network]]
+[[he:ISDN]]
+[[kk:ISDN]]
+[[lt:ISDN]]
+[[hu:ISDN telefon]]
+[[mk:ISDN]]
+[[ml:<U+0D07><U+0D28><U+0D4D><U+0D31><U+200C><U+0D17><U+0D4D><U+0D30><U+0D47><U+0D31><U+0D4D><U+0D31><U+0D21><U+0D4D> <U+0D38><U+0D7C><U+0D35><U+0D40><U+0D38><U+0D38><U+0D4D> <U+0D21><U+0D3F><U+0D1C><U+0D3F><U+0D31><U+0D4D><U+0D31><U+0D7D> <U+0D28><U+0D46><U+0D31><U+0D4D><U+0D31><U+0D4D><U+200C><U+0D35><U+0D7C><U+0D15><U+0D4D><U+0D15><U+0D4D>]]
+[[my:<U+101D><U+1014><U+103A><U+1006><U+1031><U+102C><U+1004><U+103A><U+1019><U+103E><U+102F><U+1019><U+103B><U+102C><U+1038><U+1005><U+102F><U+1005><U+100A><U+103A><U+1038><U+1011><U+102C><U+1038><U+101E><U+1031><U+102C> <U+1012><U+102E><U+1002><U+103B><U+1005><U+103A><U+1010><U+101A><U+103A><U+1000><U+103D><U+1014><U+103A><U+101A><U+1000><U+103A>]]
+[[nl:Integrated Services Digital Network]]
+[[ja:ISDN]]
+[[no:ISDN]]
+[[pl:Integrated Services Digital Network]]
+[[pt:RDIS]]
+[[ro:ISDN]]
+[[ru:ISDN]]
+[[simple:Integrated Services Digital Network]]
+[[sk:Digit<U+00E1>lna sie<U+0165> integrovan<U+00FD>ch slu<U+017E>ieb]]
+[[sl:ISDN]]
+[[sr:<U+0418><U+0421><U+0414><U+041D>]]
+[[sh:ISDN]]
+[[fi:ISDN]]
+[[sv:ISDN]]
+[[ta:<U+0B92><U+0BB0><U+0BC1><U+0B99><U+0BCD><U+0B95><U+0BBF><U+0BA3><U+0BC8> <U+0B9A><U+0BC7><U+0BB5><U+0BC8> <U+0B8E><U+0BA3><U+0BCD><U+0BAE> <U+0BB5><U+0BB2><U+0BC8><U+0BAF><U+0BAE><U+0BC8><U+0BAA><U+0BCD><U+0BAA><U+0BC1>]]
+[[tr:ISDN]]
+[[uk:ISDN]]
+[[vi:ISDN]]
+[[zh:<U+7EFC><U+5408><U+4E1A><U+52A1><U+6570><U+5B57><U+7F51>]]

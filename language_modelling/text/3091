@@ -1,0 +1,49 @@
+In [[functional analysis]], a '''state''' on a [[C*-algebra]] is a [[positive linear functional]] of [[operator norm|norm]] 1.  The set of states of a C*-algebra ''A'', sometimes denoted by ''S''(''A''), is always a [[convex set]]. The extremal points of ''S''(''A'') are called '''pure states'''. If ''A'' has a multiplicative identity, ''S''(''A'')  is compact in the weak*-topology. 
+
+In the C*-algebraic formulation of quantum mechanics, states in this previous sense correspond to physical states, i.e. mappings from physical observables to their expected measurement outcome.
+
+== Jordan decomposition ==
+
+States can be viewed as noncommutative generalizations of [[probability measure]]s. By [[Gelfand representation]], every commutative C*-algebra ''A'' is of the form ''C''<sub>0</sub>(''X'') for some locally compact Hausdorff ''X''. In this case, ''S''(''A'') consists of positive [[Radon measure]]s on ''X'', and the pure states are the evaluation functionals on ''X''.
+
+A bounded linear functional on a C*-algebra ''A'' is said to be '''self-adjoint''' if it is real-valued on the self-adjoint elements of ''A''. Self-adjoint functionals are noncommutative analogues of [[signed measure]]s.
+
+The [[Hahn decomposition theorem|Jordan decomposition]] in measure theory says that every signed measure can be expressed as the difference of two positive measures supported on disjoint sets. This can be extended to the noncommutative setting.
+
+'''Theorem''' Every self-adjoint ''f'' in ''A*'' can be written as ''f'' = ''f''<sub>+</sub> - ''f''<sub>-</sub> where ''f''<sub>+</sub> and ''f''<sub>-</sub> are positive functionals and ||''f''|| = ||''f''<sub>+</sub>|| + ||''f''<sub>-</sub>||.
+
+A proof can be sketched as follows: Let <U+03A9> be the weak*-compact set of positive linear functionals on ''A'' with norm <U+2264> 1, and ''C''(<U+03A9>) be the continuous functions on <U+03A9>. ''A'' can be viewed as a closed linear subspace of ''C''(<U+03A9>) (this is ''[[Richard V. Kadison|Kadison]]'s function representation''). By Hahn-Banach, ''f'' extends to a ''g'' in ''C''(<U+03A9>)* with ||g|| = ||f||. 
+
+Using results from measure theory quoted above, one has
+
+:<math>g(\cdot) = \int \cdot \; d \mu</math>
+
+where, by the self-adjointness of ''f'', ''<U+03BC>'' can be taken to be a signed measure. Write
+
+:<math>\mu = \mu_+ - \mu_-, \;</math>
+
+a difference of positive measures. The restrictions of the functionals <U+222B> <U+00B7> d''<U+03BC>''<sub>+</sub>  and <U+222B> <U+00B7> d''<U+03BC>''<sub>-</sub> to ''A'' has the required properties of ''f''<sub>+</sub> and ''f''<sub>-</sub>. This proves the theorem.
+
+It follows from the above decomposition that ''A*'' is the linear span of states.
+
+==Properties of states==
+* a '''tracial state''' is a state <math>\tau</math> fulfilling 
+
+:<math>\tau(AB)=\tau (BA)\;</math>
+
+* a state <math>\tau</math> is called '''normal''', iff for every monotone, increasing [[net (mathematics)|net]] <math>H_\alpha</math> of operators with upper bound <math>H</math> <math>\tau(H_\alpha)\;</math> converges to <math>\tau(H)\;</math>.
+* a state is said to be faithful, if the image of strictly positive operators is itself strictly positive
+
+==See also== 
+*[[Quantum state]]
+*[[Gelfand-Naimark-Segal construction]]
+*[[Quantum mechanics]]
+**[[Quantum state]]
+**[[Density matrix]]
+
+==References==
+*{{citation|first=H.|last= Lin|title=An Introduction to the Classification of Amenable C*-algebras|publisher=World Scientific|year=2001}}
+
+[[Category:functional analysis]]
+
+[[es:Estado (an<U+00E1>lisis funcional)]]

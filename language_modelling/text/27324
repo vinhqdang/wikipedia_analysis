@@ -1,0 +1,338 @@
+{{featured article}}
+[[Image:Polar graph paper.svg|thumb|right|300px|A polar grid with several angles labeled in degrees]]
+In [[mathematics]], the '''polar coordinate system''' is a [[dimension|two-dimensional]] [[coordinate system]] in which each [[point (mathematics)|point]] on a [[plane (mathematics)|plane]] is determined by an [[angle]] and a [[distance]]. The polar coordinate system is especially useful in situations where the relationship between two points is most easily expressed in terms of angles and distance; in the more familiar [[Cartesian coordinate system|Cartesian]] or rectangular coordinate system, such a relationship can only be found through [[trigonometry|trigonometric]] formulation.
+
+As the coordinate system is two-dimensional, each point is determined by two polar coordinates: the radial coordinate and the angular coordinate. The radial coordinate (usually denoted as ''r'' ) denotes the point's distance from a central point known as the ''pole'' (equivalent to the ''origin'' in the Cartesian system). The angular coordinate (also known as the polar angle or the [[azimuth]] angle, and usually denoted by <U+03B8> or ''t'' ) denotes the [[Positive angle#Conventions on measurement|positive]] or [[clockwise|anticlockwise]] (counterclockwise) angle required to reach the point from the 0<U+00B0> [[ray (geometry)|ray]] or ''polar axis'' (which is equivalent to the positive [[x-axis]] in the Cartesian coordinate plane).<ref name="brown">{{cite book| last = Brown| first = Richard G.| editor = Andrew M. Gleason| year = 1997| title = Advanced Mathematics: Precalculus with Discrete Mathematics and Data Analysis| publisher = McDougal Littell| location = Evanston, Illinois| isbn = 0-395-77114-5}}</ref>
+
+==History==
+{{See also|History of trigonometric functions}}
+The concepts of angle and radius were already used by ancient peoples of the 1st millennium [[BCE]]. The [[Greek astronomy|astronomer]] [[Hipparchus]] (190-120 BCE) created a table of [[chord (geometry)|chord]] functions giving the length of the chord for each angle, and there are references to his using polar coordinates in establishing stellar positions.<ref name="milestones">{{cite web| last = Friendly| first = Michael| title = Milestones in the History of Thematic Cartography, Statistical Graphics, and Data Visualization| url = http://www.math.yorku.ca/SCS/Gallery/milestone/sec4.html| accessdate = 2006-09-10}}</ref>
+In ''[[On Spirals]]'', [[Archimedes]] describes the [[Archimedean spiral]], a function whose radius depends on the angle. The Greek work, however, did not extend to a full coordinate system.
+
+In the 9th century CE, the [[Mathematics in medieval Islam|Persian mathematician]], [[Habash al-Hasib al-Marwazi]], employed [[spherical trigonometry]] and [[map projection]] methods in order to convert polar coordinates to a different coordinate system centred on a specific point on the sphere, in this the [[Qibla]], the direction to [[Mecca]].<ref>{{citation|title=Mathematics and the Divine|last=T. Koetsier|first=L. Bergmans|publisher=[[Elsevier]]|year=2005|isbn=0444503285|page=169}}</ref> The [[Geography in medieval Islam|Persian geographer]], [[Ab<U+016B> Rayh<U+0101>n B<U+012B>r<U+016B>n<U+012B>]] (973-1048), developed ideas which are seen as an anticipation of the polar coordinate system.<ref name=MacTutor>{{MacTutor|id=Al-Biruni|title=Abu Arrayhan Muhammad ibn Ahmad al-Biruni}}</ref> Around 1025 CE, he was the first to describe a polar equi-[[azimuthal equidistant projection]] of the [[celestial sphere]].<ref>David A. King (1996), "Astronomy and Islamic society: Qibla, gnomics and timekeeping", in Roshdi Rashed (ed.), ''[[Encyclopedia of the History of Arabic Science]]'', Vol. 1, pp. 128<U+2013>184 [153], [[Routledge]], London and New York</ref>
+
+There are various accounts of the introduction of polar coordinates as part of a formal coordinate system. The full history of the subject is described in [[Harvard University|Harvard]] professor [[Julian Lowell Coolidge]]'s ''Origin of Polar Coordinates.''<ref name="coolidge">{{cite journal| last = Coolidge| first = Julian| authorlink = Julian Lowell Coolidge| title = The Origin of Polar Coordinates| journal = American Mathematical Monthly| volume = 59| pages = 78<U+2013>85| year = 1952| url = http://www-history.mcs.st-and.ac.uk/Extras/Coolidge_Polars.html| doi = 10.2307/2307104}}</ref> [[Gr<U+00E9>goire de Saint-Vincent]] and [[Bonaventura Cavalieri]] independently introduced the concepts in the mid-seventeenth century. Saint-Vincent wrote about them privately in 1625 and published his work in 1647, while Cavalieri published his in 1635 with a corrected version appearing in 1653. Cavalieri first used polar coordinates to solve a problem relating to the area within an [[Archimedean spiral]]. [[Blaise Pascal]] subsequently used polar coordinates to calculate the length of [[parabola|parabolic arcs]].
+
+In ''[[Method of Fluxions]]'' (written 1671, published 1736), Sir [[Isaac Newton]] examined the transformations between polar coordinates, which he referred to as the "Seventh Manner; For Spirals", and nine other coordinate systems.<ref>{{cite journal| last = Boyer| first = C. B.| title = Newton as an Originator of Polar Coordinates| journal = American Mathematical Monthly| volume = 56| pages = 73<U+2013>78| year = 1949| doi = 10.2307/2306162}}</ref> In the journal ''[[Acta Eruditorum]]'' (1691), [[Jacob Bernoulli]] used a system with a point on a line, called the ''pole'' and ''polar axis'' respectively. Coordinates were specified by the distance from the pole and the angle from the ''polar axis''. Bernoulli's work extended to finding the [[radius of curvature]] of curves expressed in these coordinates.
+
+The actual term ''polar coordinates'' has been attributed to [[Gregorio Fontana]] and was used by 18th-century Italian writers. The term appeared in [[English language|English]] in [[George Peacock]]'s 1816 translation of [[Sylvestre Fran<U+00E7>ois Lacroix|Lacroix]]'s ''Differential and Integral Calculus''.<ref>{{cite web| last = Miller| first = Jeff| title = Earliest Known Uses of Some of the Words of Mathematics| url = http://members.aol.com/jeff570/p.html| accessdate = 2006-09-10}}</ref><ref>{{cite book| last = Smith| first = David Eugene| title = History of Mathematics, Vol II| publisher = Ginn and Co.| year = 1925| location = Boston| pages = 324}}</ref> [[Alexis Clairaut]] was the first to think of polar coordinates in three dimensions, and [[Leonhard Euler]] was the first to actually develop them.<ref name="coolidge" />
+
+==Plotting points with polar coordinates==
+[[Image:CircularCoordinates.svg|thumb|250px|The points (3,60<U+00B0>) and (4,210<U+00B0>) on a polar coordinate system]]
+Each point in the polar coordinate system can be described with the two polar coordinates, which are usually called ''r'' (the radial coordinate) and <U+03B8> (the angular coordinate, polar angle, or [[azimuth]] angle, sometimes represented as <U+03C6> or ''t'' ). The ''r'' coordinate represents the radial distance from the pole, and the <U+03B8> coordinate represents the anticlockwise (counterclockwise) angle from the 0<U+00B0> [[ray (geometry)|ray]] (sometimes called the polar axis), known as the positive x-axis on the [[Cartesian coordinate system|Cartesian coordinate plane]].<ref name="brown" />
+
+For example, the polar coordinates (3, 60<U+00B0>) would be [[point plotting|plotted]] as a point 3 units from the pole on the 60<U+00B0> ray. The coordinates (&minus;3, 240<U+00B0>) would also be plotted at this point because a negative radial distance is measured as a positive distance on the opposite ray (the ray reflected about the origin, which differs from the original ray by 180<U+00B0>).
+
+One important aspect of the polar coordinate system, not present in the Cartesian coordinate system, is that a single point can be expressed with an infinite number of different coordinates. This is because any number of multiple revolutions can be made around the central pole without affecting the actual location of the point plotted. In general, the point (''r'',&nbsp;<U+03B8>) can be represented as {{nowrap|(''r'', <U+03B8> <U+00B1> ''n''<U+00D7>360<U+00B0>)}} or {{nowrap|(<U+2212>''r'', <U+03B8> <U+00B1> (2''n'' + 1)180<U+00B0>)}}, where ''n'' is any [[integer]].<ref>{{cite web| url = http://www.fortbendisd.com/campuses/documents/Teacher/2006%5Cteacher_20060413_0948.pdf| title = Polar Coordinates and Graphing| accessdate = 2006-09-22| date = [[2006-04-13]]| format = PDF}}</ref>
+
+The arbitrary coordinates (0,&nbsp;<U+03B8>) are conventionally used to represent the pole, as regardless of the <U+03B8> coordinate, a point with radius 0 will always be on the pole.<ref>{{cite book|title=Precalculus: With Unit-Circle Trigonometry|last=Lee|first=Theodore|coauthors=David Cohen, David Sklar|year=2005|publisher=Thomson Brooks/Cole|edition=Fourth Edition|isbn=0534402305}}</ref> To get a unique representation of a point, it is usual to limit ''r'' to [[negative and non-negative numbers|non-negative numbers]] {{nowrap|''r'' <U+2265> 0}} and <U+03B8> to the [[interval (mathematics)|interval]] [0,&nbsp;360<U+00B0>) or (<U+2212>180<U+00B0>,&nbsp;180<U+00B0>] (or, in radian measure, [0,&nbsp;2<U+03C0>) or (<U+2212><U+03C0>,&nbsp;<U+03C0>]).<ref>{{cite book|title=Complex Analysis (the Hitchhiker's Guide to the Plane)|first=Ian|last=Stewart|coauthors=David Tall|year=1983|publisher=Cambridge University Press|isbn=0521287634}}</ref>
+
+Angles in polar notation are generally expressed in either degrees or [[radian]]s, using the conversion 2[[pi|<U+03C0>]] rad = 360<U+00B0>. The choice depends largely on the context. [[Navigation]] applications use degree measure, while some [[physics]] applications (specifically rotational mechanics) and almost all mathematical literature on [[calculus]] use radian measure.<ref>{{cite book| last = Serway| first = Raymond A.| coauthors = Jewett, Jr., John W.| title = Principles of Physics| publisher = Brooks/Cole<U+2014>Thomson Learning| year = 2005| isbn = 0-534-49143-X}}</ref>
+
+===Converting between polar and Cartesian coordinates===
+[[Image:Polar to cartesian.svg|right|thumb|250px|A diagram illustrating the relationship between polar and Cartesian coordinates.]]
+The two polar coordinates ''r'' and <U+03B8> can be converted to the [[Cartesian coordinate system|Cartesian coordinates]] ''x'' and ''y'' by using the [[trigonometric function]]s sine and cosine:
+:<math>x = r \cos \theta \,</math>
+:<math>y = r \sin \theta, \,</math>
+
+while the two Cartesian coordinates ''x'' and ''y'' can be converted to polar coordinate ''r'' by
+:<math>r^2 = y^2 + x^2 \,</math> (by a simple application of the [[Pythagorean theorem]]).
+
+To determine the angular coordinate <U+03B8>, the following two ideas must be considered:
+* For {{nowrap|''r'' {{=}} 0}}, <U+03B8> can be set to any [[real number|real value]].
+* For {{nowrap|''r'' <U+2260> 0}}, to get a unique representation for <U+03B8>, it must be limited to an interval of size 2<U+03C0>. Conventional choices for such an interval are [0, 2<U+03C0>) and (&minus;<U+03C0>, <U+03C0>].
+
+To obtain <U+03B8> in the interval [0, 2<U+03C0>), the following may be used (<math>\arctan</math> denotes the inverse of the [[trigonometric function|tangent]] function):
+:<math>\theta =
+\begin{cases}
+\arctan(\frac{y}{x}) & \mbox{if } x > 0 \mbox{ and } y \ge 0\\
+\arctan(\frac{y}{x}) + 2\pi & \mbox{if } x > 0 \mbox{ and } y < 0\\
+\arctan(\frac{y}{x}) + \pi & \mbox{if } x < 0\\
+\frac{\pi}{2} & \mbox{if } x = 0 \mbox{ and } y > 0\\
+\frac{3\pi}{2} & \mbox{if } x = 0 \mbox{ and } y < 0
+\end{cases}</math>
+
+To obtain <U+03B8> in the interval (&minus;<U+03C0>, <U+03C0>], the following may be used:<ref>{{cite book|first=Bruce Follett|last=Torrence|coauthors=Eve Torrence|title=The Student's Introduction to Mathematica|year=1999|publisher=Cambridge University Press|isbn=0521594618}}</ref>
+:<math>\theta =
+\begin{cases}
+\arctan(\frac{y}{x}) & \mbox{if } x > 0\\
+\arctan(\frac{y}{x}) + \pi & \mbox{if } x < 0 \mbox{ and } y \ge 0\\
+\arctan(\frac{y}{x}) - \pi & \mbox{if } x < 0 \mbox{ and } y < 0\\
+\frac{\pi}{2} & \mbox{if } x = 0 \mbox{ and } y > 0\\
+-\frac{\pi}{2} & \mbox{if } x = 0 \mbox{ and } y < 0
+\end{cases}</math>
+
+Many modern programming languages avoid having to keep track of the numerator and denominator signs through the implementation of the [[atan2]] function, which has separate arguments for the numerator and the denominator. In languages which permit optional arguments, the <code>atan</code> function may also optionally be given the x coordinate (such as in [[Common Lisp]]).
+
+==Polar equations==
+The equation defining an [[algebraic curve]] expressed in polar coordinates is known as a ''polar equation''. In many cases, such an equation can simply be specified by defining ''r'' as a [[function (mathematics)|function]] of <U+03B8>. The resulting curve then consists of points of the form (''r''(<U+03B8>),&nbsp;<U+03B8>) and can be regarded as the [[graph of a function|graph]] of the polar function ''r''.
+
+Different forms of [[symmetry]] can be deduced from the equation of a polar function ''r''. If {{nowrap|''r''(<U+2212><U+03B8>) {{=}} ''r''(<U+03B8>)}} the curve will be symmetrical about the horizontal (0<U+00B0>/180<U+00B0>) ray, if {{nowrap|''r''(<U+03C0><U+2212><U+03B8>) {{=}} ''r''(<U+03B8>)}} it will be symmetric about the vertical (90<U+00B0>/270<U+00B0>) ray, and if {{nowrap|''r''(<U+03B8><U+2212><U+03B1><U+00B0>) {{=}} ''r''(<U+03B8>)}} it will be [[rotational symmetry|rotationally symmetric]] <U+03B1><U+00B0> [[clockwise|counterclockwise]] about the pole.
+
+Because of the circular nature of the polar coordinate system, many curves can be described by a rather simple polar equation, whereas their Cartesian form is much more intricate. Among the best known of these curves are the [[Rose (mathematics)|polar rose]], [[Archimedean spiral]], [[Lemniscate of Bernoulli|lemniscate]], [[lima<U+00E7>on]], and [[cardioid]].
+
+For the circle, line, and polar rose below, it is understood that there are no restrictions on the domain and range of the curve.
+
+===Circle===
+[[Image:circle r=1.svg|thumb|right|A circle with equation {{nowrap|''r''(<U+03B8>) {{=}} 1}}]]
+The general equation for a circle with a center at {{nowrap|(''r<sub>0</sub>'', <U+03C6>)}} and radius ''a'' is
+
+:<math>r^2 - 2 r r_0 \cos(\theta - \varphi) + r_0^2 = a^2.\, </math>
+
+This can be simplified in various ways, to conform to more specific cases, such as the equation
+
+:<math>r(\theta)=a \,</math>
+
+for a circle with a center at the pole and radius ''a''.<ref name="ping">{{cite web| first=Johan| last=Claeys| url=http://www.ping.be/~ping1339/polar.htm| title=Polar coordinates| accessdate=2006-05-25}}</ref>
+
+===Line===
+''Radial'' lines (those running through the pole) are represented by the equation
+:<math>\theta = \varphi \,</math>,
+where <U+03C6> is the angle of elevation of the line; that is, {{nowrap|<U+03C6> {{=}} arctan ''m''}} where ''m'' is the [[slope]] of the line in the Cartesian coordinate system. The non-radial line that crosses the radial line {{nowrap|<U+03B8> {{=}} <U+03C6>}} [[perpendicular]]ly at the point (''r<sub>0</sub>'', <U+03C6>) has the equation
+:<math>r(\theta) = {r_0}\sec(\theta-\varphi). \,</math>
+
+===Polar rose===
+[[Image:Rose 2sin(4theta).svg|thumb|right|A polar rose with equation {{nowrap|''r''(<U+03B8>) {{=}} 2 sin 4<U+03B8>}}]]
+A [[rose (mathematics)|polar rose]] is a famous mathematical curve that looks like a petalled flower, and that can be expressed as a simple polar equation,
+
+:<math>r(\theta) = a \cos (k\theta + \phi_0)\,</math>
+
+for any constant <math>\phi_0</math> (including 0). If ''k'' is an integer, these equations will produce a ''k''-petalled rose if ''k'' is [[even and odd numbers|odd]], or a 2''k''-petalled rose if ''k'' is even. If ''k'' is rational but not an integer, a rose-like shape may form but with overlapping petals. Note that these equations never define a rose with 2, 6, 10, 14, etc. petals. The [[variable]] ''a'' represents the length of the petals of the rose.
+{{-}}
+
+===Archimedean spiral===
+[[Image:Archimedian spiral.svg|thumb|right|One arm of an Archimedean spiral with equation {{nowrap|''r''(<U+03B8>) {{=}} <U+03B8>}} for {{nowrap|0 < <U+03B8> < 6<U+03C0>}}]]
+The [[Archimedean spiral]] is a famous spiral that was discovered by [[Archimedes]], which also can be expressed as a simple polar equation. It is represented by the equation
+
+:<math>r(\theta) = a+b\theta. \,</math>
+
+Changing the parameter ''a'' will turn the spiral, while ''b'' controls the distance between the arms, which for a given spiral is always constant. The Archimedean spiral has two arms, one for {{nowrap|<U+03B8> > 0}} and one for {{nowrap|<U+03B8> < 0}}. The two arms are smoothly connected at the pole. Taking the mirror image of one arm across the 90<U+00B0>/270<U+00B0> line will yield the other arm. This curve is notable as one of the first curves, after the [[conic section]]s, to be described in a mathematical treatise, and as being a prime example of a curve that is best defined by a polar equation.
+{{-}}
+
+===Conic sections===
+[[Image:Elps-slr.svg|thumb|right|250px|Ellipse, showing semi-latus rectum]]
+A conic section with one focus on the pole and the other somewhere on the 0<U+00B0> ray (so that the conic's [[semi-major axis|major axis]] lies along the polar axis) is given by:
+
+: <math>r = { \ell\over {1 + e \cos \theta}}</math>
+
+where ''e'' is the [[eccentricity (mathematics)|eccentricity]] and <math>\ell</math> is the [[semi-latus rectum]] (the perpendicular distance at a focus from the major axis to the curve). If {{nowrap|''e'' &gt; 1}}, this equation defines a [[hyperbola]]; if {{nowrap|''e'' {{=}} 1}}, it defines a [[parabola]]; and if {{nowrap|''e'' &lt; 1}}, it defines an [[ellipse]]. The special case {{nowrap|''e'' {{=}} 0}} of the latter results in a circle of radius <math>\ell</math>.
+
+==Complex numbers==
+[[Image:Imaginarynumber2.svg|thumb|right|265px|An illustration of a complex number ''z'' plotted on the complex plane]]
+[[Image:Euler's formula.svg|thumb|right|265px|An illustration of a complex number plotted on the complex plane using [[Euler's formula]]]]
+Every [[complex number]] can be represented as a point in the [[complex plane]], and can therefore be expressed by specifying either the point's Cartesian coordinates (called rectangular or Cartesian form) or the point's polar coordinates (called polar form). The complex number ''z'' can be represented in rectangular form as
+: <math>z = x + iy\,</math>
+where ''i'' is the [[imaginary unit]], or can alternatively be written in polar form (via the conversion formulae given [[#Converting between polar and Cartesian coordinates|above]]) as
+:<math>z = r\cdot(\cos\theta+i\sin\theta)</math>
+and from there as
+: <math>z = re^{i\theta} \,</math>
+where ''e'' is [[e (mathematical constant)|Euler's number]], which are equivalent as shown by [[Euler's formula]].<ref>
+ {{cite book| last = Smith| first = Julius O.| title = Mathematics of the Discrete Fourier Transform (DFT)| accessdate = 2006-09-22| year = 2003| publisher = W3K Publishing| isbn = 0-9745607-0-7| chapter = Euler's Identity| chapterurl = http://ccrma-www.stanford.edu/~jos/mdft/Euler_s_Identity.html}}</ref> (Note that this formula, like all those involving exponentials of angles, assumes that the angle <U+03B8> is expressed in radians.) To convert between the rectangular and polar forms of a complex number, the conversion formulae given [[#Converting between polar and Cartesian coordinates|above]] can be used.
+
+For the operations of [[multiplication]], [[division (mathematics)|division]], and [[exponentiation]] of complex numbers, it is generally much simpler to work with complex numbers expressed in polar form rather than rectangular form. From the laws of exponentiation:
+
+*Multiplication:
+
+:: <math>r_0 e^{i\theta_0} \cdot r_1 e^{i\theta_1}=r_0 r_1 e^{i(\theta_0 + \theta_1)} \,</math>
+
+*Division:
+
+:: <math>\frac{r_0 e^{i\theta_0}}{r_1 e^{i\theta_1}}=\frac{r_0}{r_1}e^{i(\theta_0 - \theta_1)} \,</math>
+
+*Exponentiation ([[De Moivre's formula]]):
+
+:: <math>(re^{i\theta})^n=r^ne^{in\theta} \,</math>
+
+==Calculus==
+[[Calculus]] can be applied to equations expressed in polar coordinates.<ref>{{cite web|url=http://archives.math.utk.edu/visual.calculus/5/polar.1/index.html|title=Areas Bounded by Polar Curves|author=Husch, Lawrence S.|accessdate=2006-11-25}}</ref><ref>{{cite web|url=http://archives.math.utk.edu/visual.calculus/3/polar.1/index.html|title=Tangent Lines to Polar Graphs|author=Lawrence S. Husch|accessdate=2006-11-25}}</ref>
+
+The angular coordinate <U+03B8> is expressed in radians throughout this section, which is the conventional choice when doing calculus.
+
+===Differential calculus===
+We have the following formulas:
+
+:<math>r \tfrac{\partial}{\partial r}= x \tfrac{\partial}{\partial x} + y \tfrac{\partial}{\partial y} \,</math>
+:<math>\tfrac{\partial}{\partial \theta} = -y \tfrac{\partial}{\partial x} + x \tfrac{\partial}{\partial y} .</math>
+
+To find the Cartesian slope of the tangent line to a polar curve ''r''(<U+03B8>) at any given point, the curve is first expressed as a system of [[parametric equations]].
+
+:<math>x=r(\theta)\cos\theta \,</math>
+
+:<math>y=r(\theta)\sin\theta \,</math>
+
+[[Derivative|Differentiating]] both equations with respect to <U+03B8> yields
+
+:<math>\frac{dx}{d\theta}=r'(\theta)\cos\theta-r(\theta)\sin\theta \,</math>
+
+:<math>\frac{dy}{d\theta}=r'(\theta)\sin\theta+r(\theta)\cos\theta. \,</math>
+
+Dividing the second equation by the first yields the Cartesian slope of the tangent line to the curve at the point (''r'',&nbsp;''r''(<U+03B8>)):
+
+:<math>\frac{dy}{dx}=\frac{r'(\theta)\sin\theta+r(\theta)\cos\theta}{r'(\theta)\cos\theta-r(\theta)\sin\theta}.</math>
+
+===Integral calculus===
+[[Image:Polar coordinates integration region.svg|thumb|The integration region ''R'' is bounded by the curve ''r''(<U+03B8>) and the rays <U+03B8> = ''a'' and <U+03B8> = ''b''.]]
+Let ''R'' denote the region enclosed by a curve ''r''(<U+03B8>) and the rays <U+03B8> = ''a'' and <U+03B8> = ''b'', where {{nowrap|0 < ''b'' <U+2212> ''a'' < 2<U+03C0>}}. Then, the area of ''R'' is
+
+:<math>\frac12\int_a^b \left[r(\theta)\right]^2\, d\theta.</math>
+
+[[Image:Polar coordinates integration Riemann sum.svg|thumb|The region ''R'' is approximated by ''n'' sectors (here, ''n'' = 5).]]
+This result can be found as follows. First, the interval {{nowrap|[''a'', ''b'']}} is divided into ''n'' subintervals, where ''n'' is an arbitrary positive integer. Thus <U+0394><U+03B8>, the length of each subinterval, is equal to {{nowrap|''b'' <U+2212> ''a''}} (the total length of the interval), divided by ''n'', the number of subintervals. For each subinterval ''i'' = 1, 2, <U+2026>, ''n'', let <U+03B8><sub>''i''</sub> be the midpoint of the subinterval, and construct a [[circular sector|sector]] with the center at the pole, radius ''r''(<U+03B8><sub>''i''</sub> ), central angle <U+0394><U+03B8> and arc length ''r''(<U+03B8><sub>''i''</sub> )<U+0394><U+03B8>. The area of each constructed sector is therefore equal to <U+00BD>''r''(<U+03B8><sub>''i''</sub> )<sup>2</sup><U+0394><U+03B8>. Hence, the total area of all of the sectors is
+
+:<math>\sum_{i=1}^n \tfrac12r(\theta_i)^2\,\Delta\theta.</math>
+
+As the number of subintervals ''n'' is increased, the approximation of the area continues to improve. In the limit as ''n'' <U+2192> <U+221E>, the sum becomes the [[Riemann sum]] for the above integral.
+
+====Generalization====
+Using [[Cartesian coordinates]], an infinitesimal area element can be calculated as ''dA'' = ''dx'' ''dy''. The [[integration by substitution|substitution rule]] for multiple integrals states that, when using other coordinates, the [[Jacobian]] determinant of the coordinate conversion formula has to be considered:
+: <math>J = \det\frac{\partial(x,y)}{\partial(r,\theta)}
+=\begin{vmatrix}
+ \frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta} \\
+ \frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta}
+\end{vmatrix}
+=\begin{vmatrix}
+ \cos\theta & -r\sin\theta \\
+ \sin\theta & r\cos\theta
+\end{vmatrix}
+=r\cos^2\theta + r\sin^2\theta = r.</math>
+
+Hence, an area element in polar coordinates can be written as
+:<math>dA = J\,dr\,d\theta = r\,dr\,d\theta.</math>
+
+Now, a function that is given in polar coordinates can be integrated as follows:
+:<math>\iint_R f(r,\theta) \, dA = \int_a^b \int_0^{r(\theta)} f(r,\theta)\,r\,dr\,d\theta.</math>
+Here, ''R'' is the same region as above, namely, the region enclosed by a curve ''r''(<U+03B8>) and the rays <U+03B8> = ''a'' and <U+03B8> = ''b''.
+
+The formula for the area of ''R'' mentioned above is retrieved by taking ''f'' identically equal to 1. A more surprising application of this result yields the [[Gaussian integral]]
+:<math> \int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt\pi.</math>
+
+===Vector calculus===
+[[Vector calculus]] can also be applied to polar coordinates. Let <math>\mathbf{r}</math> be the position vector {{nowrap|(''r cos''(<U+03B8>), ''r sin''(<U+03B8>))}}, with ''r'' and <U+03B8> depending on time ''t''.
+
+Using the unit vectors
+:<math>\hat{\mathbf{r}}=(\cos(\theta),\sin(\theta))</math>
+
+in the direction of <math>\mathbf{r}</math> and
+:<math>\hat{\boldsymbol\theta}=(-\sin(\theta),\cos(\theta))</math>
+
+at right angle to <math>\mathbf{r}</math> the first and second derivatives of position are:
+
+:<math>\frac{d\mathbf{r}}{dt} = \dot r\hat{\mathbf{r}} + r\dot\theta\hat{\boldsymbol\theta},</math>
+
+:<math>\frac{d^2\mathbf{r}}{dt^2} = (\ddot r - r\dot\theta^2)\hat{\mathbf{r}} + (r\ddot\theta + 2\dot r \dot\theta)\hat{\boldsymbol\theta} = (\ddot r - r\dot\theta^2)\hat{\mathbf{r}} +
+ \frac{1}{r}\quad \dot {\overbrace{r^2\dot\theta}}\quad \hat{\boldsymbol\theta}</math>
+
+====Centrifugal and Coriolis terms====
+{{seealso|Mechanics of planar particle motion|Centrifugal force (rotating reference frame)}}
+The term <font style="vertical-align:+20%"><math>r\dot\theta^2</math></font> is sometimes referred to as the ''centrifugal term'', and the term <font style="vertical-align:+20%"><math>2\dot r \dot\theta</math></font> as the ''Coriolis term''. For example, see Shankar.<ref name=Shankar>{{cite book|title=Principles of Quantum Mechanics|author=Ramamurti Shankar|edition=2nd Edition|page=81|url=http://books.google.com/books?id=2zypV5EbKuIC&pg=PA81&dq=Coriolis+%22polar+coordinates%22&lr=&as_brr=0|year=1994|isbn=0306447908|publisher=Springer}}</ref> Although these equations bear some resemblance ''in form'' to the [[centrifugal force|centrifugal]] and [[Coriolis effect]]s found in rotating reference frames, nonetheless there is not a necessary physical connection.<ref name=angular>In particular, the angular rate appearing in the polar coordinate expressions is that of the particle under observation, <math>\dot{\theta}</math>, while that in classical Newtonian mechanics is the angular rate <U+03A9> of a rotating frame of reference.</ref> For example, the physical centrifugal and Coriolis forces appear only in [[non-inertial frame]]s of reference. In contrast, these terms that appear when acceleration is expressed in polar coordinates are a ''mathematical consequence of differentiation''; these terms appear wherever polar coordinates are used. In particular, these terms appear even when polar coordinates are used in [[inertial frame]]s of reference, where the physical centrifugal and Coriolis forces ''never'' appear.
+
+[[Image:Co-rotating frame.PNG|thumb|300px|Inertial frame of reference ''S'' and instantaneous non-inertial ''co-rotating'' frame of reference ''S' ''. The co-rotating frame rotates at angular rate &Omega; equal to the rate of rotation of the particle about the origin of '' S' '' at the particular moment ''t''. Particle is located at vector position '''r'''''(t)'' and unit vectors are shown in the radial direction to the particle from the origin, and also in the direction of increasing angle &theta; normal to the radial direction. These unit vectors ''need not'' be related to the tangent and normal to the path. Also, the radial distance ''r'' ''need not'' be related to the radius of curvature of the path.]]
+=====Co-rotating frame=====
+For a particle in planar motion, one approach to attaching physical significance to these terms is based on the concept of an instantaneous ''co-rotating frame of reference''.<ref name=Taylor>For the following discussion, see {{cite book|author=John R Taylor|title=Classical Mechanics|page=<U+00A7>9.10, pp. 358<U+2013>359|isbn=1-891389-22-X|publisher=University Science Books|year=2005}}</ref> To define a co-rotating frame, first an origin is selected from which the distance ''r(t)'' to the particle is defined. An axis of rotation is set up that is perpendicular to the plane of motion of the particle, and passing through this origin. Then, at the selected moment ''t'', the rate of rotation of the co-rotating frame <U+03A9> is made to match the rate of rotation of the particle about this axis, ''d<U+03B8>/dt''. Next, the terms in the acceleration in the inertial frame are related to those in the co-rotating frame. Let the location of the particle in the inertial frame be (''r(t), <U+03B8>(t)''), and in the co-rotating frame be (''r(t), <U+03B8>'(t)''). Because the co-rotating frame rotates at the same rate as the particle, ''d<U+03B8>'/dt'' = 0. The fictitious centrifugal force in in co-rotating frame is ''mr<U+03A9><sup>2</sup>'', radially outward. The velocity of the particle in the co-rotating frame also is radially outward, because ''d<U+03B8>'/dt'' = 0, and has a value -2''m(dr/dt)<U+03A9>'', pointed in the direction of <U+03B8>. Thus, using these forces in Newton's second law we find:
+:<math>\boldsymbol{F} + \boldsymbol{F_{cf}} + \boldsymbol{F_{Cor}} = m \ddot \boldsymbol{r} \ , </math>
+where over dots represent time differentiations, and '''''F''''' is the net real force (as opposed to the fictitious forces). In terms of components, this vector equation becomes:
+:<math>F_r + mr\Omega^2 = m\ddot r</math>
+:<math>F_{\theta}-2m\dot r \Omega = mr \ddot {\theta} \ , </math>
+which can be compared to the equations for the inertial frame:
+:<math>F_r = m \ddot r -mr \dot {\theta}^2 \ </math>
+:<math>F_{\theta} = mr \ddot \theta +2m \dot r \dot {\theta} \ . </math>
+This comparison, plus the recognition that by the definition of the co-rotating frame at time ''t'' it has a rate of rotation <U+03A9> = ''d<U+03B8>/dt'', shows that we can interpret the terms in the acceleration (multiplied by the mass of the particle) as found in the inertial frame as the negative of the centrifugal and Coriolis forces that would be seen in the instantaneous, non-inertial co-rotating frame.
+
+For general motion of a particle (as opposed to simple circular motion), the centrifugal and Coriolis forces in a particle's frame of reference commonly are referred to the instantaneous [[osculating circle]] of its motion, not to a fixed center of polar coordinates. For more detail, see [[Centripetal force#Local coordinates|centripetal force]].
+
+==Three dimensions==
+The polar coordinate system is extended into three dimensions with two different coordinate systems, the cylindrical and spherical coordinate systems, both of which include two-dimensional or planar polar coordinates as a subset. In essence, the cylindrical coordinate system extends polar coordinates by adding an additional distance coordinate, while the spherical system instead adds an additional angular coordinate.
+
+===Cylindrical coordinates===
+[[Image:Cylindrical coordinates2.svg|thumb|right|250px|A point plotted with cylindrical coordinates]]
+{{main|Cylindrical coordinate system}}
+The ''cylindrical coordinate system'' is a coordinate system that essentially extends the two-dimensional polar coordinate system by adding a third coordinate measuring the height of a point above the plane, similar to the way in which the [[Cartesian coordinate system]] is extended into three dimensions. The third coordinate is usually denoted ''h'', making the three cylindrical coordinates (''r'', <U+03B8>, ''h'').
+
+The three cylindrical coordinates can be converted to Cartesian coordinates by
+:<math> \begin{align}
+x &= r \, \cos\theta \\
+y &= r \, \sin\theta \\
+z &= h.
+\end{align} </math>
+
+===Spherical coordinates===
+[[Image:Spherical Coordinates (Colatitude, Longitude).svg|thumb|right|250px|A point plotted using spherical coordinates]]
+{{main|Spherical coordinate system}}
+Polar coordinates can also be extended into three dimensions using the coordinates (<U+03C1>, <U+03C6>, <U+03B8>), where <U+03C1> is the distance from the origin, <U+03C6> is the angle from the z-axis (called the colatitude or zenith and measured from 0 to 180<U+00B0>) and <U+03B8> is the angle from the x-axis (as in the polar coordinates). This coordinate system, called the ''spherical coordinate system'', is similar to the [[latitude]] and [[longitude]] system used for Earth, with the origin in the centre of Earth, the latitude <U+03B4> being the complement of <U+03C6>, determined by <U+03B4> = 90<U+00B0> <U+2212> <U+03C6>, and the longitude ''l'' being measured by ''l'' = <U+03B8> <U+2212> 180<U+00B0>.<ref>{{cite web|url=http://www.math.montana.edu/frankw/ccp/multiworld/multipleIVP/spherical/body.htm|title=Spherical Coordinates|first=Frank|last=Wattenberg|year=1997|accessdate=2006-09-16}}</ref>
+
+The three spherical coordinates are converted to Cartesian coordinates by
+:<math> \begin{align}
+x &= \rho \, \sin\varphi \, \cos\theta \\
+y &= \rho \, \sin\varphi \, \sin\theta \\
+z &= \rho \, \cos\varphi.
+\end{align} </math>
+
+==Applications==
+Polar coordinates are two-dimensional and thus they can be used only where point positions lie on a single two-dimensional plane. They are most appropriate in any context where the phenomenon being considered is inherently tied to direction and length from a center point. For instance, the examples above show how elementary polar equations suffice to define curves <U+2014> such as the Archimedean spiral <U+2014> whose equation in the Cartesian coordinate system would be much more intricate. Moreover, many physical systems <U+2014> such as those concerned with bodies moving around a central point or with phenomena originating from a central point <U+2014> are simpler and more intuitive to model using polar coordinates. The initial motivation for the introduction of the polar system was the study of [[circular motion|circular]] and [[orbital motion]].
+
+===Position and navigation===
+Polar coordinates are used often in [[navigation]], as the destination or direction of travel can be given as an angle and distance from the object being considered. For instance, [[aircraft]] use a slightly modified version of the polar coordinates for navigation. In this system, the one generally used for any sort of navigation, the 0<U+00B0> ray is generally called heading 360, and the angles continue in a [[clockwise]] direction, rather than counterclockwise, as in the mathematical system. Heading 360 corresponds to [[magnetic north]], while headings 90, 180, and 270 correspond to magnetic east, south, and west, respectively.<ref>{{cite web|url=http://www.thaitechnics.com/nav/adf.html|title=Aircraft Navigation System|accessdate=2006-11-26|first=Sumrit|last=Santhi}}</ref> Thus, an aircraft traveling 5 nautical miles due east will be traveling 5 units at heading 90 (read [[NATO phonetic alphabet|zero-niner-zero]] by [[air traffic control]]).<ref>{{cite web|url=http://www.faa.gov/library/manuals/aircraft/airplane_handbook/media/faa-h-8083-3a-7of7.pdf|format=PDF|title=Emergency Procedures|type=pdf|accessdate=2007-01-15}}</ref>
+
+===Modeling===
+[[Image:Bosch 36W column loudspeaker polar pattern.png|thumb|The output pattern of an industrial [[loudspeaker]] shown using spherical polar plots taken at six frequencies]]
+Systems displaying [[radial symmetry]] provide natural settings for the polar coordinate system, with the central point acting as the pole. A prime example of this usage is the [[groundwater flow equation]] when applied to radially symmetric wells. Systems with a [[central force|radial force]] are also good candidates for the use of the polar coordinate system. These systems include [[gravitation|gravitational fields]], which obey the [[inverse-square law]], as well as systems with [[point source]]s, such as [[antenna (radio)|radio antennas]].
+
+Radially asymmetric systems may also be modeled with polar coordinates. For example, a [[microphone]]'s [[Microphone#Microphone polar patterns|pickup pattern]] illustrates its proportional response to an incoming sound from a given direction, and these patterns can be represented as polar curves. The curve for a standard cardioid microphone, the most common unidirectional microphone, can be represented as {{nowrap|''r'' {{=}} 0.5 + 0.5 sin <U+03B8>}} at its target design frequency.<ref>{{cite book|last=Eargle|first=John|title=Handbook of Recording Engineering|year=2005|edition=Fourth Edition|publisher=Springer|isbn = 0387284702}}</ref> The pattern shifts toward omnidirectionality at lower frequencies.
+
+Three dimensional modeling of [[loudspeaker]] output patterns can be used to predict their performance. A number of polar plots are required, taken at a wide selection of frequencies, as the pattern changes greatly with frequency. Polar plots help to show that many loudspeakers tend toward omnidirectionality at lower frequencies.
+
+==References==
+<div class="references-small">
+;General
+*{{cite book|last=Anton|first=Howard|coauthors=Irl Bivens, Stephen Davis|title=Calculus|edition=Seventh Edition|year=2002|publisher=Anton Textbooks, Inc.|isbn=0-471-38157-8}}
+*{{cite book|last=Finney|first=Ross|coauthors=George Thomas, Franklin Demana, Bert Waits|title=Calculus: Graphical, Numerical, Algebraic|edition=Single Variable Version|year=1994|month=June|publisher=Addison-Wesley Publishing Co.|isbn=0-201-55478-X}}
+;Specific
+</div>
+{{reflist|2}}
+
+==External links==
+*{{dmoz|Science/Math/Software/Graphing/|Graphing Software}}
+* [http://www.random-science-tools.com/maths/coordinate-converter.htm Coordinate Converter - converts between polar, Cartesian and spherical coordinates]
+
+==See also==
+*[[List of canonical coordinate transformations]]
+
+[[Category:Coordinate systems]]
+
+{{Link FA|ca}}
+{{Link FA|af}}
+{{Link FA|eo}}
+{{Link FA|ko}}
+[[af:Poolko<U+00F6>rdinatestelsel]]
+[[ar:<U+0646><U+0638><U+0627><U+0645> <U+0625><U+062D><U+062F><U+0627><U+062B><U+064A> <U+0642><U+0637><U+0628><U+064A>]]
+[[bs:Polarne koordinate]]
+[[ca:Coordenades polars]]
+[[cs:Pol<U+00E1>rn<U+00ED> soustava sou<U+0159>adnic]]
+[[da:Pol<U+00E6>rt koordinatsystem]]
+[[de:Polarkoordinaten]]
+[[es:Coordenadas polares]]
+[[eo:Polusa koordinata sistemo]]
+[[fa:<U+062F><U+0633><U+062A><U+06AF><U+0627><U+0647> <U+0645><U+062E><U+062A><U+0635><U+0627><U+062A> <U+0642><U+0637><U+0628><U+06CC>]]
+[[fr:Coordonn<U+00E9>es polaires]]
+[[ko:<U+ADF9><U+C88C><U+D45C><U+ACC4>]]
+[[io:Polala koordinati]]
+[[it:Sistema di coordinate polari]]
+[[he:<U+05E7><U+05D5><U+05D0><U+05D5><U+05E8><U+05D3><U+05D9><U+05E0><U+05D8><U+05D5><U+05EA> <U+05E7><U+05D5><U+05D8><U+05D1><U+05D9><U+05D5><U+05EA>]]
+[[lv:Pol<U+0101>r<U+0101> koordin<U+0101>tu sist<U+0113>ma]]
+[[hu:Pol<U+00E1>rkoordin<U+00E1>t<U+00E1>k]]
+[[nl:Poolco<U+00F6>rdinaten]]
+[[ja:<U+6975><U+5EA7><U+6A19><U+7CFB>]]
+[[no:Polarkoordinatsystem]]
+[[pl:Uk<U+0142>ad wsp<U+00F3><U+0142>rz<U+0119>dnych biegunowych]]
+[[pt:Coordenadas polares]]
+[[ro:Coordonate polare]]
+[[ru:<U+041F><U+043E><U+043B><U+044F><U+0440><U+043D><U+0430><U+044F> <U+0441><U+0438><U+0441><U+0442><U+0435><U+043C><U+0430> <U+043A><U+043E><U+043E><U+0440><U+0434><U+0438><U+043D><U+0430><U+0442>]]
+[[sk:Pol<U+00E1>rna s<U+00FA>stava s<U+00FA>radn<U+00ED>c]]
+[[sl:Polarni koordinatni sistem]]
+[[sr:<U+041F><U+043E><U+043B><U+0430><U+0440><U+043D><U+0438> <U+043A><U+043E><U+043E><U+0440><U+0434><U+0438><U+043D><U+0430><U+0442><U+043D><U+0438> <U+0441><U+0438><U+0441><U+0442><U+0435><U+043C>]]
+[[sh:Polarne koordinate]]
+[[fi:Napakoordinaatisto]]
+[[sv:Pol<U+00E4>ra koordinater]]
+[[tr:Kutupsal koordinat sistemi]]
+[[uk:<U+041F><U+043E><U+043B><U+044F><U+0440><U+043D><U+0430> <U+0441><U+0438><U+0441><U+0442><U+0435><U+043C><U+0430> <U+043A><U+043E><U+043E><U+0440><U+0434><U+0438><U+043D><U+0430><U+0442>]]
+[[zh:<U+6781><U+5750><U+6807><U+7CFB>]]

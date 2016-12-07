@@ -1,0 +1,163 @@
+The [[centripetal force]] is the force needed to move an object in a circle at constant speed.  Hence it is a ''force requirement'', not a physical force in
+its own right.  Any physical force ([[gravity]], [[electrostatics]], [[tension]], [[friction]], etc.) can be used to supply the centripetal force.  The term
+''centripetal force'' comes from the [[Latin]] words ''centrum'' ("center") 
+and ''petere'' ("tend towards").
+
+==Basic idea==
+
+Objects moving in a straight line with constant speed have constant [[velocity]] and require no force to do so, since they experience 
+no acceleration. However, an object moving in a circle at constant 
+speed has a changing direction of motion.  Since velocity is a vector 
+with both speed and direction, a changing direction implies a changing velocity. 
+The rate of this change in velocity is the '''centripetal acceleration'''.   
+
+The centripetal acceleration varies with the radius <math>r</math> of the circle and speed <math>v</math>, becoming larger for higher speed and smaller radius.  More precisely, the centripetal acceleration is given by
+
+:<math> \mathbf{a}_c = - \frac{v^2}{r} \hat{\mathbf{r}} = - \frac{v^2}{r} \frac{\mathbf{r}}{r} = - \omega^2 \mathbf{r}</math>
+
+where <math>\omega = v / r</math> is the [[angular velocity]]. The direction of this acceleration 
+is towards the center of the circle, i.e., opposite to the position vector <math>\mathbf{r}</math>.
+(We assume that the [[origin (mathematics)|origin]] of <math>\mathbf{r}</math> is the center of the circle.)
+
+By [[Newton's second law of motion]] <math>F=ma</math>, a physical force 
+<math>F</math> must be applied to a mass <math>m</math> to 
+produce this acceleration.   The amount of force needed to move at 
+speed <math>v</math> on a circle of radius <math>r</math> is exactly 
+
+:<math> 
+\mathbf{F}_c = - \frac{m v^2}{r} \hat{\mathbf{r}} = - \frac{m v^2}{r} \frac{\mathbf{r}}{r} = - m \omega^2 \mathbf{r} = m \boldsymbol\omega \times   (\boldsymbol\omega \times   \boldsymbol r )
+</math>
+
+where the formula has been written in several equivalent ways; here, <math>\hat{\mathbf{r}}</math> is 
+the [[unit vector]] in the <math>\mathbf{r}</math> direction and <math>\boldsymbol\omega</math> is the angular velocity vector. If the applied force is less or more than <math>F_{c}</math>, the object will "slip outwards"
+or "slip inwards", moving on a larger or smaller circle, respectively.
+
+If an object is traveling in a circle with a varying [[speed]], its acceleration can be divided into
+two components, a radial acceleration (the centripetal acceleration that changes the ''direction'' of
+the velocity) and a tangential acceleration that changes the ''speed'' of the velocity.
+
+
+==Examples==
+
+For an orbiting [[satellite]], the centripetal force is supplied by the gravitational attraction between the satellite and its primary, and acts toward the center of mass which lies in the satellite's primary.  For an object at the end of a rope rotating about a [[Vertical direction|vertical]] [[axis of rotation|axis]], the centripetal force is the [[horizontal]] component of the tension of the rope which acts towards the [[axis of rotation]]. For a spinning object, internal [[tensile stress]] gives the centripetal force that holds the object together in one piece.
+
+==Common misunderstandings==
+
+Centripetal force should not be confused with [[centrifugal force]]. The centrifugal force is a [[fictitious force]] that arises from being in a rotating [[reference frame]].  To eliminate all such fictitious forces,
+one needs to be in a non-accelerating reference frame, i.e., in an [[inertial reference frame]].  Only then 
+can one safely use [[Newton's laws of motion]], such as  <math>F=ma</math>.
+
+Centripetal force should not be confused with [[central force]], either.  Central forces are a class of physical forces between two objects that meet two conditions: (1) their magnitude depends only on the [[distance]] between the two objects and (2) their direction points along the line connecting the two objects.  Examples of central
+forces include the [[gravity|gravitational force]] between two [[mass]]es and the [[electrostatics|electrostatic force]] between two [[electric charge|charge]]s.  Central forces are physical forces, whereas the centripetal force is not.  However, central forces are often used to meet the centripetal force requirement.
+
+==Derivation using calculus==
+One derivation strategy is to use a [[polar coordinate system]], assume a constant radius, and differentiate twice. 
+
+Let '''r'''(t) be a vector that describes the position of a [[point mass]] as a function of time. Since we are assuming uniform [[circular motion]], let '''r'''(t) = R&middot;'''u'''<sub>r</sub>, where R is a constant (the radius of the circle) and '''u'''<sub>r</sub> is the [[unit vector]] pointing from the origin to the point mass. In terms of Cartesian unit vectors where <math> \theta = \omega t </math>:
+
+:<math>\mathbf{u_r} = cos(\theta)\mathbf{u_x} + sin(\theta)\mathbf{u_y} \, </math>
+
+''Note: unlike in [[cartesian coordinates]] where the unit vectors are constants, in [[coordinates (elementary mathematics)|polar coordinates]] the direction of the unit vectors depend on the angle between the x_axis and the point being described; the angle &theta;.''
+
+So we differentiate to find velocity:
+
+:<math>\mathbf{v} = R \frac {d\mathbf{u_r}}{dt} \, </math>
+
+:<math>\mathbf{v} = R \frac{d\theta}{dt} \mathbf{u_\theta} \, </math>
+
+:<math>\mathbf{v} = R \omega \mathbf{u_\theta} \, </math>
+
+where &omega; is the angular velocity (just a short way of writing d&theta;/dt), '''u'''<sub>&theta;</sub> is the unit vector that is perpendicular to '''u'''<sub>r</sub> that points in the direction of increasing &theta;. In cartesian terms:  '''u'''<sub>&theta;</sub> = -sin(&theta;) '''u'''<sub>x</sub> + cos(&theta;) '''u'''<sub>y</sub>
+
+This result for the velocity is good because it matches our expectation that the velocity should be directed around the circle, and that the magnitude of the velocity should be &omega;R. Differentiating again, we find that the acceleration, '''a''' is:
+
+:<math>\mathbf{a} = R \left( \frac {d\omega}{dt} \mathbf{u_\theta} - \omega^2 \mathbf{u_r} \right) \, </math>
+
+Thus, the radial component of the acceleration is:
+
+:<math>a_r = -\omega^2 R \, </math>
+
+==Geometric derivation (without calculus)==
+
+[[Image:centripetal_derivation_circles.png|frame|Figure 1: The position and velocity vectors both move in a circle.]]
+
+The circle on the left in Figure 1 shows an object moving on a circle at 
+constant speed at four different times in its orbit.  Its position is
+given by <math>\mathbf{R}</math> and its velocity is <math>\mathbf{v}</math>.
+
+The velocity vector <math>\mathbf{v}</math> is always perpendicular to the position vector (since the velocity vector is always tangent to the <math>\mathbf{R}</math> circle); thus,
+since <math>\mathbf{R}</math> moves in a circle, so does <math>\mathbf{v}</math>.  The circular motion of the velocity is 
+shown in the circle on the right of Figure 1, along with its 
+acceleration <math>\mathbf{a}</math>.  Just as velocity is the 
+rate of change of position, acceleration is the rate of change of 
+velocity.
+
+Since the position and velocity vectors move in tandem, they go around their 
+circles in the same time <math>T</math>.  That time equals the 
+distance traveled divided by the velocity
+
+:<math>
+T = \frac{2\pi R}{v}
+</math>
+ 
+and, by analogy,
+
+:<math>
+T = \frac{2\pi v}{a}
+</math>
+
+Setting these two equations equal and solving for <math>a</math>, we get
+
+:<math>
+a = \frac{v^{2}}{R}
+</math>
+
+Comparing the two circles in Figure 1 also shows that the acceleration
+points towards the center of the <math>\mathbf{R}</math> circle.  For example, 
+in the left circle in Figure 1, the position vector <math>\mathbf{R}</math> pointing at 12 o'clock has a 
+velocity vector <math>\mathbf{v}</math> pointing at 9 o'clock, which (switching to the circle
+on the right) has an acceleration vector <math>\mathbf{a}</math> pointing at 6 o'clock. 
+So the acceleration vector is opposite to <math>\mathbf{R}</math> and towards the center of 
+the <math>\mathbf{R}</math> circle.
+
+
+== See also ==
+* [[Centrifugal force]]
+* [[Circular motion]]
+* [[Coriolis effect|Coriolis force]]
+
+== References & External Links==
+* {{cite book
+ | author = Serway, Raymond A.; Jewett, John W.
+ | title = Physics for Scientists and Engineers
+ | edition = 6th ed.
+ | publisher = Brooks/Cole
+ | year = 2004
+ | id = ISBN 0534408427
+ }}
+* {{cite book
+ | author = Tipler, Paul
+ | title = Physics for Scientists and Engineers: Mechanics, Oscillations and Waves, Thermodynamics
+ | edition = 5th ed.
+ | publisher = W. H. Freeman | year = 2004
+ | id = ISBN 0716708094
+ }}
+* [http://regentsprep.org/Regents/physics/phys06/bcentrif/default.htm Centripetal force] vs. [http://regentsprep.org/Regents/physics/phys06/bcentrif/centrif.htm Centrifugal force]  - from an online Regents Exam physics tutorial by the Oswego City School District
+
+[[Category:Force]]
+[[Category:Mechanics]]
+
+[[cs:Dost<U+0159>ediv<U+00E1> s<U+00ED>la]]
+[[da:Centripetalkraft]]
+[[de:Zentripetalkraft]]
+[[eo:Centrifuga forto]]
+[[es:Fuerza centr<U+00ED>peta]]
+[[fi:Sentripetaalivoima]]
+[[it:Forza centripeta]]
+[[ja:<U+4E2D><U+5FC3><U+529B>]]
+[[ko:<U+AD6C><U+C2EC><U+B825>]]
+[[no:Sentripetalkraft]]
+[[pl:Si<U+0142>a do<U+015B>rodkowa]]
+[[ru:<U+0426><U+0435><U+043D><U+0442><U+0440><U+043E><U+0441><U+0442><U+0440><U+0435><U+043C><U+0438><U+0442><U+0435><U+043B><U+044C><U+043D><U+0430><U+044F> <U+0441><U+0438><U+043B><U+0430>]]
+[[sl:Centripetalna sila]]
+[[sv:Centripetalkraft]]

@@ -1,0 +1,159 @@
+{{Infobox Software |
+name = Windows Genuine Advantage |
+logo = [[Image:WGA Logo.png]]<br /> |
+caption = Windows Genuine Advantage Notification in Microsoft Windows Vista|
+developer = [[Microsoft]] |
+latest_release_version = 1.8.31.0  |
+latest_release_date = {{release date and age|2008|08|26}} |
+latest_preview_version = |
+latest_preview_date = |
+operating_system =  [[Windows XP]], [[Windows Vista]] |
+platform = [[Microsoft Update]], [[Windows Update]], selected components in Microsoft Download Center |
+genre = Software validation |
+license = Proprietary |
+website = [http://www.microsoft.com/genuine/ www.microsoft.com/genuine/]
+}}
+
+'''Windows Genuine Advantage''' ('''WGA''') is an anti-[[Copyright infringement|piracy]] system created by [[Microsoft]] that enforces [[Microsoft Windows]] online validation of the authenticity of several recent Microsoft [[operating system]]s when accessing several Microsoft Windows services, such as [[Windows Update]], and downloading Windows components from the Microsoft Download Center. Specifically, WGA covers [[Windows XP]] and [[Windows Vista]]. It does not cover [[Windows 2000]], [[Windows Server 2003]] or the [[Windows 9x]] family. However, certain downloads and non-critical updates from the Download Center for Windows 2000 require validation. {{Fact|date=August 2008}}
+
+It also advertises Service Pack 2 for Windows XP, which requires manual intervention to disable. Previously voluntary, it became mandatory for use of these services in July 2005.
+
+==Features==
+[[Image:WGA Notifications.png|thumb|right|Windows Genuine Advantage Notification in Windows XP]]
+<!-- Deleted image removed: [[Image:Windows Genuine Advantage Notification.png|thumb|right|Windows Genuine Advantage Notification in Windows Vista]] -->
+The WGA validation process validates the present installation of Windows and its license key against the [[hardware]] involved. It is accessible by either a stand-alone program, or as an [[ActiveX]] control within [[Internet Explorer]], the latter of which is relevant to any attempt to access Microsoft updates via its [[Web browser|browser]]. It includes the following steps:
+* Upon their first visit to the Microsoft Download or Update Center, the users receive a message requiring them to validate their copy of Windows by downloading an [[ActiveX]] control which checks the authenticity of their Windows software. If successful in validating Windows, it stores a special license file on the PC for future verification.
+* After successful validation, the regular update download can continue.
+If an instance of Windows does not seem to have a valid license, WGA displays a specific notice to the user and prevents non-Critical updates from being downloaded from Microsoft.
+
+The ActiveX control is downloaded on the first validation and when a new version is available, but the validation itself can be performed any time the user connects to a Microsoft website to update.
+
+* On [[Windows Vista]], WGA validation failure has a greater impact. In addition to persistent notification and the disabling of non-critical updates, WGA also disables [[Windows Aero]], [[Windows Defender]], and [[ReadyBoost]]. The user is given a grace period in which to then pass validation, after which most of the operating system is disabled and Windows reverts to ''reduced functionality mode'', which has been removed in [[Windows Vista#Service Pack 1|Service Pack 1 of Windows Vista]] along with its non-genuine state in favor of prominent notices on systems not found to be genuine.
+
+==Software==
+===Windows Genuine Advantage, Validation Tool===
+When a user installs Windows Genuine Advantage, an [[Internet Explorer]] add-on is installed labeled "Windows Genuine Advantage". In early releases the tool could be readily disabled with the IE Add-on Management feature. A Windows [[Group Policy]] was added by later updates, causing this option to be unavailable by default, but still accessible if the policy were removed. As of July 2006, the latest update blocks management by other means.
+
+The program uses either a stand-alone program to generate a key or an [[ActiveX]] control to discover whether the [[Key server (software licensing)|license key]] is valid; either way an Internet connection is required. If WGA determines that a user's copy of Windows is [[Copyright infringement of software|unauthorized]] but was installed from seemingly-legitimate media (i.e., the [[CD-ROM|CD]] and holographic emblem present on real copies of Windows seems genuine), then Microsoft will supply the user with a new CD. Microsoft also offers discounts to people who want to purchase a legitimate copy of Windows but do not have a valid CD. Microsoft has indicated that they will continue to deliver critical security updates through their Automatic Updates service as well as via the Microsoft Download Center, so that all systems, including those that fail to pass validation, will still continue to receive critical security updates.
+
+The company has made installation of Windows Genuine Advantage a requirement for use of the [[Windows Update]] website (and its close cousin [[Microsoft Update]]), in part to be sure that customers who use support resources of the company are aware when their software is unlicensed or counterfeit. According to Microsoft themselves, it is legal to run Microsoft Windows without Windows Genuine Advantage {{Fact|date=September 2007}}. However, since non-critical Windows updates are not presented by Automatic Updates, installation of WGA is required for installation of such non-critical updates, which are only available through Windows Update or the Microsoft Download Center.
+
+===Windows Genuine Advantage Notifications===
+Beginning [[April 25]], [[2006]], Microsoft began distributing Windows Genuine Advantage Notifications<ref>[http://support.microsoft.com/kb/905474/ Microsoft.com - Description of the Windows Genuine Advantage Notifications application], retrieved [[June 13]], [[2006]]</ref> as "critical update" KB905474 to Windows users. Users with pirated copies were exposed to alerts<ref>[http://labnol.blogspot.com/2006/04/wga-notifications-this-copy-of-windows.html Digital Inspiration - Windows Genuine Advantage Notifications], retrieved [[June 13]], [[2006]]</ref> at startup, login, and during use of the Windows OS, stating that they do not have a genuine copy of Windows. Users with legitimate copies are not supposed to see the alerts (although some do anyway<ref>Announcement on usenet entitled "Windows Genuine Advantage - warning appears on activated machine" by Rubert Sland</ref>). On [[May 23]], [[2006]], Microsoft updated the program, closing some forms of circumvention, but reportedly not all.<ref>[http://www.smh.com.au/news/breaking/microsoft-back-to-drawing-board-on-piracy/2005/08/08/1123353252441.html?oneclick=true Sydney Morning Herald - Microsoft back to drawing board on piracy], retrieved [[June 13]], [[2006]]</ref> It was updated again on [[May 30]], [[June 6]] and [[June 27]], [[2006]], though some forms of circumvention are still usable. The latest versions do not roll out worldwide at the same time: the dates given are the earliest dates on which the versions appeared, so the actual version being offered in some places will be an earlier version than the latest release. It is still possible to opt out of receiving this update using the "do not show" option at the Windows Update site.  In addition to these notifications, Windows Genuine Advantage will also notify users with the message "This version of Windows XP is no longer secure" if users on an XP Operating System are not using Service Pack 3, it will provide a link to help users to upgrade their systems to the new service pack.
+
+The version of Windows Genuine Advantage Notifications released [[November 29]], [[2006]] had a changed install process to inform the user of what the program does, and can also be set to automatically update to newer versions of Windows Genuine Advantage Notifications. It also informs users that may have a non-genuine version of Windows why their Windows version isn't being reported as genuine. However, unlike previous releases, it is currently only automatically delivered to Windows machines that are using four widely-distributed product keys. It will be distributed to all other machines in the coming weeks.<ref>[http://blogs.msdn.com/wga/archive/2006/11/29/new-wga-notifications-released.aspx MSDN Blogs - New Windows Genuine Advantage Notifications Released], retrieved [[December 3]], [[2006]]</ref>
+
+A new update was released [[March 27]], [[2007]].
+
+===Windows Genuine Advantage Validation Library===
+Microsoft includes the Windows Genuine Advantage Validation Library in several products like [[Windows Defender]], [[Microsoft Private Folder]] and [[Windows Media Player 11]] to validate about the Windows installation. [[Internet Explorer]] 7 no longer requires the user to pass a Windows Genuine Advantage test in order to download or install the software.  Older versions, however, did.
+
+Microsoft has also launched the [[Office Genuine Advantage]] program, which validates installations of [[Microsoft Office]].
+
+==Circumvention==
+
+In September 2005, Microsoft filed lawsuits against a number of companies that sold unauthorized copies of software to consumers. The cases are important because the leads came from customers who learned they had counterfeit software via the Windows Genuine Advantage program.<ref>[http://www.microsoft.com/presspass/press/2005/sep05/09-19PiracyEnfSept05PR.mspx Microsoft.com - Microsoft Files Lawsuits to Protect Consumers and Software Resellers], retrieved [[June 13]], [[2006]]</ref>
+
+On [[November 16]], [[2005]], Microsoft released a standard Netscape WGA plug-in to complete the Windows validation process from [[Mozilla Firefox]] and other [[Gecko (layout engine)|Gecko]]-based browsers (including [[Netscape]]) - although it does not use the Firefox extensions system, and thus is not supported by the latest version of the browser. This has garnered more criticism, since it still does not work in other [[NPAPI]] supported browsers such as [[Opera (web browser)|Opera]]. Another workaround was released on [[December 25]], [[2005]] to bypass WGA authentication by using a valid hash generated by a remote system. Microsoft responded with a [[cease and desist]] letter to the website host, and the workaround was taken down on [[January 6]], [[2006]]. Many people continue to validate on the Microsoft website from a public computer using a genuine copy of Windows, then write down the hash and continue to use it at home or work. As of July 2006, Microsoft has not devised a way to prevent this method of circumvention. On [[May 4]], [[2006]] Microsoft announced lawsuits for allegedly distributing unauthorized copies of Windows against eDirectSoftware of Montana, and Chicago-area resellers Nathan Ballog and Easy Computers.<ref>[http://www.informationweek.com/story/showArticle.jhtml?articleID=187200796 InformationWeek - Microsoft: Users may have to prove legal Windows use], retrieved [[June 13]], [[2006]]</ref>
+
+Various workarounds to get past WGA authentication have been released on the Internet. Before Microsoft issued official instructions<ref name="disable_wga"/> on removing the WGA Notifier (a desktop application which resides in the system tray and periodically displays messages, reminding users to authenticate their operating system), users simply had to remove 2 files in order to get rid of the software from their system.
+
+In September 2006, Microsoft dropped various required validations on programs such as [[ActiveSync]].
+
+Recently it has been found that it is possible to validate with WGA when running [[Linux]] (see [[Windows Genuine Advantage#False negatives|below]]).
+
+==Notifications and firewalls==
+Some [[personal firewall]]s, though not the basic one in Windows, may alert on the method by which wgatray.exe is started, in the case of Outpost firewall, it is identified as a "hidden process". The wgatray.exe process itself can be firewall blocked, without apparent problems. <!-- Removing the reference to WGALOGON.DLL using [[HijackThis]] appears to effectively de-activate this update, to the point where it will be offered again if it has not been marked "do not show". -->
+
+A tool has been released by a firewall vendor to prevent WGA Notifications transmitting information from one's PC.<ref>[http://www.theregister.co.uk/2006/06/22/wga_remove/ The Register - How to stop Microsoft's WGA phoning home]</ref>
+
+==Data collected==
+Windows Genuine Advantage checks the following components:<ref>[http://www.microsoft.com/genuine/downloads/faq.aspx Microsoft WGA FAQ], retrieved [[June 2007]]</ref><ref>[http://www.groklaw.net/article.php?story=20060608002958907 Microsoft's Calling Home Problem: It's a Matter of Informed Consent], retrieved [[October 20]]</ref>
+*Computer make and model
+*[[BIOS]] [[checksum]].
+*[[MAC address]].
+*A unique number assigned to your computer by the tools (Globally Unique Identifier or [[GUID]])
+*Hard drive serial number.
+*Region and language settings of the operating system.
+*Operating system version.
+*PC BIOS information (make, version, date).
+*PC manufacturer.
+*User locale setting.
+*Validation and installation results.
+*Windows or Office product key.
+*Windows XP product ID.
+
+==Criticisms==
+===Time bomb===
+Even if WGA does not really make the program unusable, no updates except critical ones can be downloaded from Microsoft. Rather than just disallowing updating, [[Windows Vista]] runs in reduced-functionality mode if found by WGA to be compromised<ref>[http://content.zdnet.com/2346-12554_22-56027-3.html] [http://blogs.zdnet.com/Bott/?p=221]</ref> if a product has not been considered genuine which has made some people compare WGA to [[Time bomb (software)|time bomb software]] <ref>[http://www.pcmag.com/article2/0,1895,2031647,00.asp Onerous Vista Activation<U+2014>A Time Bomb? - Columns by PC Magazine<!-- Bot generated title -->]</ref><ref>[http://www.foxnews.com/story/0,2933,222518,00.html FOXNews.com - Windows Genuine Advantage: A Ticking Time Bomb? - Science News | Science & Technology | Technology News<!-- Bot generated title -->]</ref><ref>[http://blogs.zdnet.com/Bott/?p=84 <U+00BB> Is Microsoft about to release a Windows <U+201C>kill switch<U+201D>? | Ed Bott<U+2019>s Microsoft Report | ZDNet.com<!-- Bot generated title -->]</ref>. Windows Vista SP1 has removed this behavior and reverted back to the nag-only methods of Windows XP.<ref>{{cite web |url=http://www.winsupersite.com/showcase/winvista_sp1_wga.asp |title= 	
+New WGA Behavior in Windows Vista Service Pack 1 |accessdate=2008-01-01 |format= |work= }}</ref>
+
+===Spyware accusations=== 
+The notification tool has been accused of [[spyware]]-like behavior, "[[phoning home]]" on a daily basis.<ref>[http://lauren.vortex.com/archive/000178.html Lauren Weinstein's Blog - Windows XP update may be classified as 'spyware'], retrieved [[June 13]], [[2006]]</ref><ref>[http://news.zdnet.com/2100-3513_22-6081286.html?tag=nl.e589 Microsoft's antipiracy tool "phones home" daily], retrieved [[June 13]], [[2006]]</ref><ref>{{cite web
+|url=http://www.windowssecrets.com/comp/060615/#story1
+|title=Windows Secrets - Genuine Advantage is Microsoft spyware
+|date=[[June 15]] [[2006]]
+|accessdate=2007-03-03
+|author=Brian Livingston
+|work=Newsletter
+|publisher=Windows Secrets
+}}</ref> Microsoft subsequently admitted the behavior, but denied that it amounted to spyware.<ref>[http://arstechnica.com/news.ars/post/20060608-7017.html Ars Technica - Microsoft admits Windows Genuine Advantage phones home], retrieved [[June 13]], [[2006]]</ref><ref>[http://lauren.vortex.com/archive/000179.html Lauren Weinstein's Blog - Microsoft responds regarding Windows XP update vs Spyware], retrieved [[June 13]], [[2006]]</ref> Following pressure, Microsoft announced that in future the tool would only phone home once every two weeks, instead of every day.<ref>[http://news.zdnet.com/2100-1009_22-6082334.html ZDNet - Microsoft to ease up on piracy check-ins], retrieved [[June 13]], [[2006]]</ref> Microsoft has also provided removal instructions for the pilot version of WGA.<ref name="disable_wga">{{cite web
+|url=http://support.microsoft.com/kb/921914
+|title=How to disable or uninstall the pilot version of Microsoft Windows Genuine Advantage Notifications
+|date=[[July 12]], [[2006]]
+|publisher=Microsoft
+}}</ref>
+
+Despite this, Microsoft is currently being sued under anti-spyware statutes over WGA's non-disclosed "phone home" behavior.<ref>[http://seattlepi.nwsource.com/business/275780_msftsuit29.html Lawsuit calls Microsoft's anti-piracy tool spyware | Seattle Post-Intelligencer], retrieved [[June 29]], [[2006]]</ref> The outcome of the lawsuit has not been determined.
+
+===False positive rate===
+The WGA program can produce [[Type I and type II errors|false positives]] (incorrectly identifying a genuine copy of Windows as "not genuine"). This can happen for any number of reasons.  Microsoft has established a forum to help users encountering problems.<ref>[http://forums.microsoft.com/Genuine/ShowForum.aspx?ForumID=442&SiteID=25 Microsoft WGA Help Forum]</ref>  Recently,{{When|date=August 2008}} a "Not Sure" section was added to the program, in case of an incorrect reading.
+
+According to an editorial on the [[arstechnica.com]] technology website, WGA reported around 22% of 500 million Windows computers as failing the test; of these less than 0.5% were due to pirate software, with the balance (over 20%, or 90% of all positives) related to non piracy issues. Microsoft "refused to comment on the rate of pure false positives" beyond saying it was "under 1%" (or as stated, at most around 5 million users affected).<ref>[http://arstechnica.com/news.ars/post/20070124-8690.html Windows Genuine Advantage falsely accuses millions<!-- Bot generated title -->]</ref>
+
+===False negatives===
+On the other hand, on [[June 18]], [[2007]], news surfaced that it is possible to positively validate as a "Genuine Microsoft Product" user (and{{ndash}} as a result{{ndash}} be able to download certain software from [[Microsoft]]'s official website) using [[Internet Explorer]] with [http://www.tatanka.com.br/ ies4Linux] and [[Wine (software)|Wine]], running on [[Linux]],<ref>[http://linux.slashdot.org/article.pl?sid=07/06/18/0037223 Slashdot | Ubuntu Linux Validates As Genuine Windows], retrieved June 18, 2007</ref> without even having a [[Microsoft Windows|Windows]]-family system installed.
+
+===Major Failures in WGA System===
+On [[October 5]], [[2006]], a WGA failure occurred, incorrectly flagging some systems as being non-genuine.<ref>[http://blogs.msdn.com/wga/archive/2006/10/05/WGA-service-outage.aspx WGA failure on October 5th, 2006]</ref>
+
+On [[August 25]], [[2007]], the Microsoft WGA servers suffered an outage, resulting in many legitimate copies of Windows XP and Vista being marked as counterfeit.<ref>[http://forums.microsoft.com/Genuine/ShowPost.aspx?PostID=2053834&SiteID=25 Microsoft WGA Help Forum citing response from MS Support]</ref> The issue was solved about twelve hours later. According to Microsoft, "fewer than 12,000 systems were affected worldwide."<ref>[http://blogs.msdn.com/wga/archive/2007/08/27/update-on-validation-issues.aspx Update on Validation Issues]</ref> 
+
+On [[July 18]], [[2008]], reports of Microsoft's WGA and OGA servers being offline surfaced again.  Microsoft later responded that only offline verification was temporarly down.<ref>[http://arstechnica.com/news.ars/post/20080718-microsofts-wga-and-oga-servers-are-down-again.html Users reporting failed Windows and Office validations (Updated)]</ref>
+
+==See also==
+* [[Office Genuine Advantage]]
+* [[Windows Product Activation]]
+
+==References==
+{{reflist|2}}
+
+==External links==
+*[http://www.microsoft.com/genuine/ Windows Genuine Advantage Official Website]
+*[http://www.microsoft.com/genuine/downloads/faq.aspx Windows Genuine Advantage F.A.Q]
+*[http://www.microsoft.com/downloads/details.aspx?FamilyID=f8b8bc77-cfa1-47bd-b325-7a6d3893add8&DisplayLang=en Windows Genuine Advantage Notifications (KB905474)]
+*[http://www.eweek.com/article2/0,1895,1979756,00.asp eWeek article on Utility that disables the Windows Genuine Advantage Callback functionality]
+*[http://www.chotocheeta.com/2007/09/20/windows-genuine-advantage-downloads-now-on-alternate-browsers/ Access Windows genuine advantage under Alternate Browsers]
+*[http://www.linuxgenuineadvantage.org/ Linux Genuine Advantage (a parody)]
+
+[[Category:Microsoft Windows]]
+[[Category:Microsoft criticisms and controversies]]
+
+[[cs:Windows Genuine Advantage]]
+[[de:Windows Genuine Advantage]]
+[[es:Ventajas de Windows Original]]
+[[fr:Windows Genuine Advantage]]
+[[ko:<U+C708><U+B3C4> <U+C815><U+D488> <U+D61C><U+D0DD>]]
+[[it:Windows Genuine Advantage]]
+[[he:Windows Genuine Advantage]]
+[[ms:Windows Genuine Advantage]]
+[[nl:Windows Genuine Advantage]]
+[[ja:Windows Genuine Advantage]]
+[[pl:Windows Genuine Advantage]]
+[[pt:Windows Genuine Advantage]]
+[[ro:Windows Genuine Advantage]]
+[[ru:Windows Genuine Advantage]]
+[[fi:Windows Genuine Advantage]]
+[[sv:Windows Genuine Advantage]]
+[[uk:Windows Genuine Advantage]]
+[[zh:Windows Genuine Advantage]]

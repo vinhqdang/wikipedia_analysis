@@ -1,0 +1,68 @@
+{{Infobox_Software | name = Rosetta
+| logo =
+| screenshot = [[Image:Word OSX intel.jpg|250px]]
+| caption = PowerPC application (Microsoft Word for Mac 2004) running on OS X for Intel
+| developer = [[Apple Inc.]]
+| latest_release_version = 
+| latest_release_date = 
+| operating_system = [[Mac OS X]]
+| genre = [[PowerPC]] [[binary translation]]
+| license = 
+| website = http://www.apple.com/rosetta
+}}
+'''Rosetta''' is a lightweight [[binary translation|dynamic translator]] for [[Mac OS X]] distributed by [[Apple Inc.|Apple]]. It enables applications compiled for the [[PowerPC]] family of processors to run on Apple systems that use [[Intel]] [[central processing unit|processor]]s. Rosetta is based on [[Transitive Corporation]]'s [[QuickTransit]] technology<ref>{{cite web | url=http://news.com.com/The+brains+behind+Apples+Rosetta+Transitive/2100-1016_3-5736190.html | title=The brains behind Apple's Rosetta: Transitive | publisher=CNET News.com | accessdate=2007-07-04}}</ref>, and it is a key part of Apple's strategy for the [[Apple Intel transition|transition of their Macintosh line]] from PowerPC to Intel processors as it enables pre-existing Mac OS X software to run on the new platform without modification. The name is likely a reference to the [[Rosetta Stone]], whose discovery made it possible to comprehend and translate [[Egyptian hieroglyph]]s. Rosetta was formerly the code name for the handwriting recognition engine in the [[Apple Newton]] PDA.<ref>http://query.nytimes.com/gst/fullpage.html?res=9902EEDB1539F930A25752C1A963958260&sec=&spon=&pagewanted=all</ref> Rosetta has no [[GUI]], leading Apple to describe Rosetta as "the most amazing software you'll never see". <ref>{{cite web | url=http://www.apple.com/uk/rosetta/ | title=Apple (UK and Ireland) - Rosetta | publisher=Apple | accessdate=2007-08-25}}</ref>
+
+== Compatibility ==
+{{AppleIntel}}
+Rosetta is part of the Mac OS X for Intel operating system.  It translates [[PowerPC G3|G3]], [[PowerPC G4|G4]] and [[AltiVec]] instructions; however, it does not translate [[PowerPC G5|G5]] instructions. Therefore applications that rely on G5-specific instruction sets must be modified by their developers to work on Intel-based Macs. According to Apple, applications with heavy user interaction but low computational needs (such as [[word processor]]s) are well suited to translation via Rosetta, while applications with high computational needs (such as [[raytracing|raytracers]] or [[Photoshop]]) are not<ref>{{cite web | url=http://developer.apple.com/documentation/MacOSX/Conceptual/universal_binary/universal_binary_exec_a/chapter_950_section_1.html | title=Rosetta | work=Universal Binary Programming Guidelines, Second Edition | publisher=Apple | accessdate=2007-07-04}}</ref>.  Pre-existing PowerPC versions of Apple "Pro" media-production applications (such as Final Cut, Motion, Aperture and Logic Pro, et al) are not supported by Rosetta, and require a [http://www.apple.com/r/store/universal/ "crossgrade"] to a [[universal binary]] version to work on Intel-based Macs. In general, Rosetta does ''not'' run the following<ref>{{cite web 
+| url=http://developer.apple.com/documentation/MacOSX/Conceptual/universal_binary/universal_binary_exec_a/chapter_950_section_2.html 
+| title=What Can Be Translated? 
+| work=Universal Binary Programming Guidelines, Second Edition 
+| publisher=Apple 
+| accessdate=2007-07-04}}</ref>:
+
+*The [[Classic (Mac_OS_X)|Classic environment]], and thus anything built for [[Mac OS 9]] or below.
+*Code that inserts preferences into the System Preferences pane.
+*Applications that require a G5 processor.
+*Applications that require precise exception handling.
+*Screen savers
+*[[Kernel (computer science)|Kernel]] extensions, and applications that depend on them.
+*Bundled [[Java platform|Java]] applications or Java applications with [[Java Native Interface|JNI]] libraries that can<U+2019>t be translated.
+*Java applets in Rosetta-translated applications. That means a PowerPC-only web browser application (such as Microsoft's [[legacy system|legacy]] [[Internet Explorer for Mac]]) will not be able to load Java applets; an Intel-ready browser is needed (such as [[Safari (web browser)|Safari]], [[Camino]], [[Mozilla Firefox|Firefox]] or [[Opera (web browser)|Opera]] from version 9 and on).
+
+The reasons for Rosetta<U+2019>s lesser capabilities as compared with Apple<U+2019>s earlier [[Mac 68K emulator|68k emulator for PPCs]] lie within its implementation - Rosetta is merely a [[userland (computing)|userland]] program that can only intercept and emulate userland code while the older emulator was integrated with the system at a much lower level. The 68k emulator was given access to the very lowest levels of the OS by being at the same level as, and tightly connected to, the [[Mac OS nanokernel]] on PPC Macs (later used for multiprocessing under Mac OS 8.6 and later too), which means that the nanokernel was able to intercept PowerPC interrupts, translate them to 68k interrupts, then doing a mixed mode switch, if necessary, and then executing 68k code to handle the interrupts. This even allowed lines of 68k and PPC code to be mixed within the same source file of a fat application. While a similar effect could likely have been achieved for Mac OS X by running Rosetta within [[XNU]], Apple instead chose to implement Rosetta as a userland process to avoid troublesome debugging and the potential for security holes.
+
+==See also==
+* [[Mac 68K emulator]] - lower level program used for a similar purpose during [[680x0]] to [[PowerPC]] transition.
+* [[Universal binary]] - combined PPC/Intel applications that run natively on both processors.
+* [[Fat binary]] - combined PPC/68k application that ran on older Macintoshes.
+
+==References==
+{{reflist}}
+
+==External links==
+*[http://apple.com/rosetta Apple - Rosetta]
+*[http://developer.apple.com/documentation/MacOSX/Conceptual/universal_binary/universal_binary.pdf Apple Universal Binary Programming Guidelines]
+*[http://www.apple.com/pr/library/2005/jun/06intel.html Apple press release]
+*[http://www.transitive.com/ Transitive Corporation web site]
+* [http://guide.apple.com/universal Apple's list of Universal Applications]
+* [http://wiki.osx86project.org/wiki/index.php/X86_software List of Universal Binary Applications at osx86project.org]
+*[http://guides.macrumors.com/Rosetta_incompatibilities Rosetta compatibility index]
+
+{{Mac OS X}}
+
+[[Category:Apple Inc. software]]
+[[Category:Mac OS X emulation software]]
+[[Category:Mac OS X]]
+[[Category:PowerPC emulators]]
+
+[[de:Rosetta (Apple)]]
+[[es:Rosetta (software)]]
+[[fr:Rosetta (informatique)]]
+[[ko:<U+B85C><U+C81C><U+D0C0> (<U+C18C><U+D504><U+D2B8><U+C6E8><U+C5B4>)]]
+[[it:Rosetta (software)]]
+[[nl:Rosetta (Apple)]]
+[[ja:Rosetta]]
+[[pl:Rosetta (oprogramowanie)]]
+[[ru:Rosetta (Apple)]]
+[[zh:Rosetta]]

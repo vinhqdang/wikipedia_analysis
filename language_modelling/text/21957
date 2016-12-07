@@ -1,0 +1,248 @@
+[[D-subminiature]] connectors are used to carry [[balanced audio|balanced analog]] or [[AES/EBU|digital]] audio on many multichannel professional audio equipment, where the use of [[XLR_connector#XLR3_connectors|XLR connector]]s is impractical, for example due to space constraints.
+The most common usage is the DB25, using [[TASCAM]]'s pinout. To avoid the possibility of bent pins on fixed equipment, the male connector is generally fitted to the cabling and the female connector to the equipment. The DD50 connector is described in AES-2id-1996.
+
+{| class="wikitable"
+| colspan="3" align="center"| DA15
+|-
+! Pin
+! [[Evertz Technologies Ltd|Quartz]]
+Digital<ref name = "quartz">[http://www.evertz.com/resources/quartz/Q1602-small-router-system.pdf Quartz Q1602 small router system]</ref>
+! Bluefish
+Digital<ref>[http://crawley.slyip.com/blog/tech/labels/pinouts.html Bluefish AES breakout cable]</ref>
+|-
+|1       || Out 1/2 + || In 5/6 +
+|-
+|2       || GND       || In 3/4 -
+|-
+|3       || Out 3/4 + || In 3/4 +
+|-
+|4       || GND       || In 1/2 -
+|-
+|5       || GND       || In 1/2 +
+|-
+|6       || Out 5/6 + || In 5/6 -
+|-
+|7       || GND       || Out 5/6 -
+|-
+|8       || Out 7/8 + || In 1/2 GND
+|-
+|9       || Out 1/2 - || Out 1/2 GND
+|-
+|10      || GND       || n/c
+|-
+|11      || Out 3/4 - || Out 5/6 +
+|-
+|12      || GND       || Out 3/4 -
+|-
+|13      || Out 5/6 - || Out 3/4 +
+|-
+|14      || GND       || Out 1/2 -
+|-
+|15      || Out 7/8 - || Out 1/2 +
+|}
+
+{| class="wikitable"
+| colspan="4" align="center"| DB25
+|-
+! Pin
+! [[Yamaha_Pro_Audio|Yamaha]]
+Digital<ref>[http://www.aviom.com/library/Technical-Resources/75_DB25-Pinout-Information.pdf Aviom DB25 pinout information]</ref>
+! [[TASCAM]] / [[Digidesign]]
+Digital<ref name = "tascam">[http://www.google.com/search?q=TASCAM%92s+DB-25+Pinout+Standard+site%3Atascam.com AES/EBU & Analog DB25 Pinouts]</ref>
+! [[TASCAM]]
+Analog<ref name = "tascam" />
+|-
+|1       || In 1/2 +  || Out 7/8 +   || In/Out 8 +
+|-
+|2       || In 3/4 +  || Out 7/8 GND || In/Out 8 GND
+|-
+|3       || In 5/6 +  || Out 5/6 -   || In/Out 7 -
+|-
+|4       || In 7/8 +  || Out 3/4 +   || In/Out 6 +
+|-
+|5       || Out 1/2 + || Out 3/4 GND || In/Out 6 GND
+|-
+|6       || Out 3/4 + || Out 1/2 -   || In/Out 5 -
+|-
+|7       || Out 5/6 + || In 7/8 +    || In/Out 4 +
+|-
+|8       || Out 7/8 + || In 7/8 GND  || In/Out 4 GND
+|-
+|9       || n/c       || In 5/6 -    || In/Out 3 -
+|-
+|10      || GND       || In 3/4 +    || In/Out 2 +
+|-
+|11      || n/c       || In 3/4 GND  || In/Out 2 GND
+|-
+|12      || GND       || In 1/2 -    || In/Out 1 -
+|-
+|13      || GND       || n/c         || n/c
+|-
+|14      || In 1/2 -  || Out 7/8 -   || In/Out 8 -
+|-
+|15      || In 3/4 -  || Out 5/6 +   || In/Out 7 +
+|-
+|16      || In 5/6 -  || Out 5/6 GND || In/Out 7 GND
+|-
+|17      || In 7/8 -  || Out 3/4 -   || In/Out 6 -
+|-
+|18      || Out 1/2 - || Out 1/2 +   || In/Out 5 +
+|-
+|19      || Out 3/4 - || Out 1/2 GND || In/Out 5 GND
+|-
+|20      || Out 5/6 - || In 7/8 -    || In/Out 4 -
+|-
+|21      || Out 7/8 - || In 5/6 +    || In/Out 3 +
+|-
+|22      || GND       || In 5/6 GND  || In/Out 3 GND
+|-
+|23      || GND       || In 3/4 -    || In/Out 2 -
+|-
+|24      || GND       || In 1/2 +    || In/Out 1 +
+|-
+|25      || GND       || In 1/2 GND  || In/Out 1 GND
+|}
+
+{| class="wikitable"
+| colspan="6" align="center"| Lynx AES16(e) Digital I/O Pinout using HD26<ref>[http://www.lynxstudio.com/product_detail.asp?i=13 Lynx Studio Technology, Inc. AES16 pinout]</ref>
+|-
+! Pin
+! Signal
+! Pin
+! Signal
+! Pin
+! Signal
+|-
+| 1 || Clock Gnd     || 10 || Clock      ||    || 
+|-
+| 2 || Out Ch 8 -    || 11 || Out Ch 8 + || 19 || Out Ch 8 GND
+|-
+| 3 || Out Ch 7 GND  || 12 || Out Ch 7 - || 20 || Out Ch 7 +
+|-
+| 4 || Out Ch 6 -    || 13 || Out Ch 6 + || 21 || Out Ch 6 GND
+|-
+| 5 || Out Ch 5 GND  || 14 || Out Ch 5 - || 22 || Out Ch 5 +
+|-
+| 6 || In Ch 4 -     || 15 || In Ch 4 +  || 23 || In Ch 4 GND
+|-
+| 7 || In Ch 3 GND   || 16 || In Ch 3 -  || 24 || In Ch 3 +
+|-
+| 8 || In Ch 2 -     || 17 || In Ch 2 +  || 25 || In Ch 2 GND
+|-
+| 9 || In Ch 1 GND   || 18 || In Ch 1 -  || 26 || In Ch 1 +
+|}
+
+{| class="wikitable"
+| colspan="2" align="center"| DD50
+|-
+! Pin
+! Quartz<ref name = "quartz" /> / AES-2id
+Digital
+|-
+|1       || Ch 1 GND
+|-
+|2       || Ch 2 +
+|-
+|3       || Ch 3 GND
+|-
+|4       || Ch 4 +
+|-
+|5       || Ch 5 GND
+|-
+|6       || Ch 6 +
+|-
+|7       || Ch 7 GND
+|-
+|8       || Ch 8 +
+|-
+|9       || Ch 9 GND
+|-
+|10      || Ch 10 +
+|-
+|11      || Ch 11 GND
+|-
+|12      || Ch 12 +
+|-
+|13      || Ch 13 GND
+|-
+|14      || Ch 14 +
+|-
+|15      || Ch 15 GND
+|-
+|16      || Ch 16 +
+|-
+|17      || GND
+|-
+|18      || Ch 1 -
+|-
+|19      || Ch 2 -
+|-
+|20      || Ch 3 -
+|-
+|21      || Ch 4 -
+|-
+|22      || Ch 5 -
+|-
+|23      || Ch 6 -
+|-
+|24      || Ch 7 -
+|-
+|25      || Ch 8 -
+|-
+|26      || Ch 9 -
+|-
+|27      || Ch 10 -
+|-
+|28      || Ch 11 -
+|-
+|29      || Ch 12 -
+|-
+|30      || Ch 13 -
+|-
+|31      || Ch 14 -
+|-
+|32      || Ch 15 -
+|-
+|33      || Ch 16 -
+|-
+|34      || Ch 1 +
+|-
+|35      || Ch 2 GND
+|-
+|36      || Ch 3 +
+|-
+|37      || Ch 4 GND
+|-
+|38      || Ch 5 +
+|-
+|39      || Ch 6 GND
+|-
+|40      || Ch 7 +
+|-
+|41      || Ch 8 GND
+|-
+|42      || Ch 9 +
+|-
+|43      || Ch 10 GND
+|-
+|44      || Ch 11 +
+|-
+|45      || Ch 12 GND
+|-
+|46      || Ch 13 +
+|-
+|47      || Ch 14 GND
+|-
+|48      || Ch 15 +
+|-
+|49      || Ch 16 GND
+|-
+|50      || GND
+|}
+
+== Notes and references ==
+{{reflist}}
+
+{{AVconn}}
+
+[[Category:Audiovisual connectors]]

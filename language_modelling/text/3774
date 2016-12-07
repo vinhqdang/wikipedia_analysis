@@ -1,0 +1,15 @@
+In [[mathematical analysis]], the '''Whitney covering lemma''' is a [[lemma]] which asserts the existence of a certain type of [[partition of a set|partition]] of an [[open set]] in a [[Euclidean space]].  Originally it was employed in the proof of [[Hassler Whitney]]'s [[Whitney extension theorem|extension theorem]].  The lemma was subsequently applied to prove generalizations of the [[Calder<U+00F3>n-Zygmund lemma|Calder<U+00F3>n-Zygmund decomposition]].
+
+Roughly speaking, the lemma states that it is possible to cover an open set by cubes each of whose [[diameter]] is proportional, within certain bounds, to its distance from the [[boundary (topology)|boundary]] of the open set.  More precisely,
+
+* An open subset ''A'' of '''R'''<sup>''n''</sup> can be written as a disjoint union of countably many [[closed set|closed]] cubes {''Q''<sub>j</sub>} whose corners have [[dyadic rational]] coordinates such that the following inequality holds for all ''j'' &isin; '''N''':
+::<math>\mathrm{diam}(Q_j) \le \text{dist}(Q_j, \partial A)\le 4\text{diam}(Q_j).</math>
+
+==References==
+* {{citation|title=Real analysis|first=Emmanuele|last=DiBenedetto|publisher=Birkh<U+00E4>user|year=2002|isbn=0-8176-4231-5}}.
+* {{citation|title=Harmonic analysis: Real-variable methods, orthogonality, and oscillatory integrals|first=Elias|last=Stein|authorlink=Elias Stein|year=1993|publisher=Princeton University Press}}.
+* {{citation|title=Analytic extensions of functions defined in closed sets|first=Hassler|last=Whitney|authorlink=Hassler Whitney|journal=Transactions of the American Mathematical Society|year=1934|volume=36|pages=63-89|url=http://www.jstor.org/stable/1989708}}.
+
+{{math-stub}}
+
+[[Category:Covering lemmas]]

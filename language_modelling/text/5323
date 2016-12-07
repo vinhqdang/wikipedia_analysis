@@ -1,0 +1,123 @@
+<!-- ***** NOTE: As American spelling was used in creation of article, please retain consistency with that spelling system. ***** -->
+'''SECAM''', also written '''S<U+00C9>CAM''' (''S<U+00E9>quentiel couleur <U+00E0> m<U+00E9>moire'', French for "sequential color with memory"), is an [[analog television|analog color television]] system first used in [[France]].
+A team led by [[Henri de France]] working at [[Compagnie Fran<U+00E7>aise de T<U+00E9>l<U+00E9>vision]] (later bought by [[Thomson SA|Thomson]]) invented SECAM. It is, historically, the first [[Europe]]an color television standard.
+
+[[Image:NTSC-PAL-SECAM.png|thumb|right|300px|{{legend|#70ff70|[[NTSC]]}}{{legend|yellow|[[PAL]], or switching to PAL}}{{legend|orange|SECAM}}{{legend|#9fdba4|no information}}]]
+
+==Technical details==
+Just as the other color standards adopted for broadcast usage over the world, SECAM is a [[Georges Valensi|''compatible'' standard]], which means that Monochrome television receivers predating its introduction are still able to show the programs, although only in black and white. Because of this compatibility requirement, color standards add a second signal to the basic monochrome signal, and this signal carries the color information, called [[chrominance]] or C in short, while the black and white information is called the [[Luminance (video)|luminance]] (Y in short). Old TV receivers only see the luminance, while color receivers process both signals.
+
+Additionally, for compatibility, it is required to use no more bandwidth than the monochrome signal alone; the color signal has to be somehow inserted into the monochrome signal, without disturbing it. This insertion is possible because the spectrum of the monochrome TV signal is not continuous, hence empty space exists which can be utilized. This lack of continuity results from the discrete nature of the signal, which is divided into frames and lines. Analogue color systems differ by the way in which empty space is used. In all cases, the color signal is inserted at the end of the spectrum of the monochrome signal.
+
+In order to be able to separate the color signal from the monochrome one in the receiver, a fixed frequency sub carrier has to be used, this sub carrier being modulated by the color signal.
+
+The color space is three dimensional by the nature of the human vision, so after subtracting the luminance, which is carried by the base signal, the color sub carrier still has to carry a two dimensional signal. Typically the red (R) and the blue (B) information are carried because their signal difference with luminance (R-Y and B-Y) is stronger than that of green (G-Y).
+
+SECAM differs from the other color systems by the way the R-Y and B-Y signals are carried.
+
+First, SECAM uses [[frequency modulation]] to encode [[chrominance]] information on the sub carrier.
+
+Second, instead of transmitting the red and blue information together, it only sends one of them at a time, and uses the information about the other color from the preceding line. It uses a [[delay line]], an analog memory device, for storing one line of color information. This justifies the "Sequential, With Memory" name.
+
+Because SECAM transmits only one color at a time, it is free of the color artifacts present in NTSC and [[PAL]] and resulting from the combined transmission of both signals.
+
+This means that the vertical color resolution is halved relative to [[NTSC]]. It is however not halved compared to PAL. Although PAL does not eliminate half of vertical color information during encoding, it combines color information from adjacent lines at the decoding stage, in order to compensate for "color sub carrier phase errors" occurring during the transmission of the Amplitude-Modulated color sub carrier. This is normally done using a delay line borrowed from SECAM (the result is called ''PAL DL'' or PAL Delay-Line, sometimes interpreted as DeLuxe), but can be accomplished "visually" in cheap TV sets (''PAL standard''). Because the FM modulation of SECAM's color sub carrier is insensitive to phase (or amplitude) errors, phase errors do not cause loss of color saturation in SECAM, although they do in PAL. In NTSC, such errors cause color shifts.
+
+The color difference signals in SECAM are actually calculated in the [[YDbDr]] [[color space]], which is a scaled version of the [[YUV]] color space. This encoding is better suitable to the transmission of only one signal at a time.
+
+FM modulation of the color information allows SECAM to be free of the [[dot crawl]] problem commonly encountered with the other analog standards and first widely noticed with [[Laserdisc]]s. Dot crawl can be removed from PAL and NTSC-encoded signals using a [[comb filter]]. Such filters are usually only included in high-end displays. Dot crawl patterns (''animated checkerboard'') are easily visible along vertical lines in DVD menus displayed even by expensive (eg. plasma) displays if these displays are connected to a signal source (DVD player) using a composite PAL or NTSC connection rather than, for example, RGB.
+
+The idea of reducing the vertical color resolution comes from Henri de France, who observed that color information is approximately identical for two successive lines. Because the color information was designed to be a cheap, backwards compatible addition to the monochrome signal, the color signal has a lower bandwidth than the luminance signal, and hence lower horizontal resolution.  Fortunately, the human visual system is similar in design: it perceives changes in luminance at a higher resolution than changes in chrominance, so this asymmetry has minimal visual impact.  It was therefore also logical to reduce the vertical color resolution.
+
+[[DVD]] and other digital television formats have continued to exploit this visual artifact, sub sampling color both horizontally and vertically. Hence, paradoxically, [[VHS]] [[NTSC]] videos and especially NTSC [[Laserdiscs]] can have a greater vertical color resolution than [[DVD]].
+
+A similar paradox applies to the vertical resolution in television in general: reducing the bandwidth of the video signal will preserve the vertical resolution, even if the image loses sharpness and is smudged in the horizontal direction. Hence, video could be sharper vertically than horizontally. However, because of the interlacing, vertical resolution is effectively not as great as the number of scan lines. Additionally, transmitting an image with too much vertical detail will cause annoying flicker on television screens, as small details will only appear on a single line, and hence be refreshed at half the frequency. Computer-generated text and inserts have to be carefully low-pass filtered to prevent this.
+
+==History==
+Work on SECAM began in [[1956]]. The technology was ready by the end of the fifties, but this was too soon for a wide introduction. Initially, a version of SECAM for the then French 819-line television standard was devised and tested, but not introduced. Following a pan-European agreement to introduce colour TV only in 625 lines, France had to start the conversion by switching over to a 625-line television standard, which happened at the beginning of the [[1960s]] with the introduction of a second network.
+
+Russians were involved in the development of the standard, and even created their own incompatible variant called '''NIR''' or '''SECAM IV''', which was not deployed. The team was working in [[Moscow]]'s [[Telecentrum]] under Professor [[Chmakov]]'s direction.
+
+SECAM was inaugurated in [[France]] on [[October 1]], [[1967]], on ''la seconde cha<U+00EE>ne'' (the second channel), now called [[France 2]]. A group of four men, all dressed in suits, presumably presenters and network officials, were shown standing in a studio. The image was originally black and white and suddenly switched to color; one of the people said something along the lines of "now you can see us as we really are".
+
+The first color television sets cost 5000 Francs. Colour TV was not very popular initially; only about 1500 people watched the inaugural program in color. A year later, only 200,000 sets had been sold of an expected million. This pattern was similar to the earlier slow build-up of color television popularity in the USA.
+
+SECAM was later adopted by former French and [[Belgium|Belgian]] colonies, [[Greece]], [[Eastern Europe]]an countries, the [[Soviet Union]] and [[Middle East]]ern countries. However, with the [[History of the Soviet Union (1985-1991)|fall of communism]], and following a period when multi-standard TV sets became a [[commodity]], many Eastern European countries decided to switch to PAL.
+
+==Why SECAM in France?==
+Some have argued that the primary motivation for the development of SECAM in France was to protect French television equipment manufacturers. However, incompatibility had started with the earlier decision to unusually adopt positive [[video modulation]] for French broadcast signals. The earlier British [[System A]] was the only other system to use positive video modulation.  In addition, SECAM development predates PAL. [[NTSC]] was considered undesirable in Europe because of its tint problem requiring an additional [[tint control|control]], which SECAM and PAL solved.
+
+Nonetheless, SECAM was partly developed for reasons of national pride. Henri de France's personal [[charisma]] and ambition may have been a contributing factor. PAL was developed by [[Telefunken]], a German company, and in the post-war [[Charles de Gaulle|De Gaulle]] era there would have been much political resistance to dropping a French-developed system and adopting a German-developed one instead.
+
+Unlike some other manufacturers, the company where SECAM was invented, Thomson, still sells TV sets worldwide under different brands; this may be due in part to the legacy of SECAM. Thomson bought the company that developed PAL, [[Telefunken]], and today even co-owns the [[RCA]] brand &mdash;RCA being the creator of NTSC. Thomson also co-authored the current American high-definition TV standard [[ATSC]].
+
+==Why SECAM elsewhere?==
+The adoption of SECAM in Eastern Europe has been attributed to [[Cold War]] political machinations: Western TV was popular in the East, authorities were well aware of this, and adopted SECAM rather than the PAL encoding used in [[West Germany]]. This did not hinder mutual reception in black&white, because the underlying TV standard B/G remained the same in both parts of Germany. However, [[East Germany|East Germans]] responded by buying PAL decoders for their SECAM sets. Eventually, the government in East Berlin stopped paying attention to so-called "Republikflucht via Fernsehen", or "defection via television". Later East German produced TV sets even included a dual standard PAL/SECAM decoder. In any case the majority of TV sets in East Germany were monochrome (black & white) until well into the 1980s.
+
+However, PAL and SECAM are just standards for the color sub carrier, used in conjunction with older standards for the base monochrome signals. The names for these monochrome standards are letters, such as M, B/G, D/K, and L. See [[CCIR]], [[OIRT]] and [[Federal Communications Commission|FCC]] (the standardization bodies).
+
+These signals are much more important to compatibility than the color sub carriers are. They differ by [[Amplitude modulation|AM]] or [[Frequency modulation|FM]] modulation, signal [[polarisation]], relative frequencies within the channel, bandwidth, etc. For example, a PAL D/K TV set will be able to receive a SECAM D/K signal (although in black and white), while it will not be able to decode the sound of a PAL B/G signal. So even before SECAM came to Eastern European countries, most viewers could not have received Western programs &mdash;and color TV sets were not exactly widespread in the Communist bloc anyway, so the monochrome-only reception did not pose a significant problem.
+
+Another, speculative political theory is that PAL was originally [[Germany|German]], while SECAM came from a country that had better political relations with Eastern Europe after the [[Second World War|war]].
+
+==SECAM varieties==
+There are three varieties of SECAM:
+# '''French SECAM (SECAM-L)''', used in France and its former colonies
+# '''SECAM-B/G''', used in the [[Middle East]], former [[East Germany]] and [[Greece]]
+# '''SECAM D/K''', used in the [[Commonwealth of Independent States]] and Eastern Europe (this is simply SECAM used with the D and K monochrome TV transmission standards).
+
+Reference is sometimes made to MESECAM as an alternative form of broadcast SECAM used in the [[Middle East]]. This is incorrect, MESECAM is meaningful only in terms of video recording. When a color signal is recorded onto [[VHS]] video tape, the [[Luminance (video)|luminance]] signal is recorded in its original form (albeit with some reduction of bandwidth) but the [[chrominance]] signal of about 4.4&nbsp;MHz is too high in frequency to be recorded directly. Instead, it is first down converted to the lower frequency of 630&nbsp;kHz, and the complex nature of the PAL sub carrier means that the down conversion must be done via a [[superhet]] [[mixer]] to ensure that information is not lost.
+
+The SECAM sub carrier, being a simple FM signal, does not need such complex processing. The VHS specification requires that it be simply divided by 4 on recording to give a sub carrier of approximately 1.1&nbsp;MHz, and multiplied by 4 again on playback. A true dual-standard PAL and SECAM video recorder therefore requires two color processing circuits, adding to complexity and expense. Since some countries in the [[Middle East]] use PAL and others use SECAM, the region has adopted a shortcut, and uses the PAL mixer-down converter approach for both PAL and SECAM. This works well and simplifies [[VCR]] design.
+
+The resultant signal on tape is not, of course, compatible with a true standard SECAM recording, and so is referred to as MESECAM. This is the only time the term MESECAM is meaningful.  It is interesting to note that it is often possible to record S<U+00C9>CAM video on an unmodified PAL VCR, thus creating MESECAM tapes, which can be played back in color through another PAL VCR into a SECAM TV.  Basic PAL VCRs work better for this, ones that are more sophisticated detect the SECAM signal as "not-PAL" and refuse to record it in color.
+
+Around 1983-1984 a new color identification standard ("Line SECAM or SECAM-H") has been introduced in order to make more space available inside the signal for adding [[teletext]] information (originally according to the [[Antiope (teletext)|Antiope]] standard). Identification bursts have been made per-line (like in PAL) rather than per-picture. Very old SECAM TV sets might not be able to display color for today's broadcasts. Although any sets manufactured after the mid-1970s should be able to receive either variant.
+
+France also introduced the SECAM standard to its dependencies.  However, the SECAM standard used in France's overseas possessions (as well as African countries that were once ruled by France) was slightly different from the SECAM used in Metropolitan France.  The SECAM standard used in Metropolitan France used the SECAM-L and a variant of the channel information for VHF channels 2-10.  French overseas possessions and many French-speaking African countries use the SECAM-K standard and a mutually incompatible variant of the channel information for VHF channels 4-9 (not channels 2-10).
+
+==Problems with the standard==
+Unlike PAL or NTSC, analog SECAM television cannot easily be edited in its native analog form. Because it uses  frequency modulation, SECAM is not linear with respect to the input image (this is also what protects it against signal distortion), so electrically mixing two (synchronized) SECAM signals does not yield a valid SECAM signal, unlike with analog PAL or NTSC. For this reason, to mix two SECAM signals, they must be demodulated, the demodulated signals mixed, and are remodulated again. Hence, [[post-production]] is often done in PAL, or in component formats, with the result encoded or transcoded into SECAM at the point of transmission. Reducing the costs of running television stations is one reason for some countries' recent switchovers to PAL.
+
+TVs currently sold in SECAM countries support both SECAM and [[PAL]], and more recently [[baseband]] [[NTSC]] as well (though not usually [[Broadcasting|broadcast]] NTSC, that is, they cannot accept a broadcast signal from an antenna). Although the older analog camcorders ([[VHS]], [[VHS-C]]) were produced in SECAM versions, none of the [[8 mm video format|8 mm]] or Hi-band models ([[S-VHS]], [[S-VHS-C]], and [[Hi-8]]) recorded it directly. Camcorders and VCRs of these standards sold in SECAM countries are internally PAL. They use an internal SECAM to PAL converter for recording of broadcast TV transmitted in SECAM. The result could be converted back to SECAM in some models; most people buying such expensive equipment would have a multistandard TV set anyway and not need such a conversion. Digital camcorders or DVD players do not accept or output a SECAM analog signal. However, this is of dwindling importance: since [[1980]] most European domestic video equipment uses [[SCART]] connectors, allowing the transmission of [[RGB]] signals between devices. This eliminates the legacy of PAL, SECAM, and NTSC color sub carrier standards.
+
+In general, modern professional equipment is now all-digital, and uses component-based digital interconnects such as [[CCIR 601]] to eliminate the need for any analog processing prior to the final modulation of the analog signal for broadcast. However, large installed bases of analog professional equipment still exist, particularly in third world countries.
+
+==Facetious interpretations of the SECAM acronym==
+[[United States|American]] engineers pejoratively claim that SECAM stands for "System Essentially Contrary to the American Method". European non-SECAM countries use the deprecatory "System Even Crappier than American Method" or "Shows Every Colour All Murky" &mdash; a reference to the reduction in vertical color resolution.  A french alternative is "Systeme <U+00C9>legant Contre les AMericains", meaning "An Elegant System to Compete Against the Americans".
+
+==Countries and territories that use or have used SECAM==
+[[Afghanistan]], [[Andorra]], [[Armenia]], [[Azerbaijan]], [[Belarus]], [[Benin]], [[Bulgaria]], [[Burkina Faso]], [[Burundi]], [[Cambodia]] (Kampuchea), [[Central African Republic]], [[Chad]], Congo ([[Democratic Republic of the Congo|Democratic Republic]]), [[Republic of the Congo|Congo]] (People's Republic), [[C<U+00F4>te d'Ivoire]], [[Czech Republic]], [[Djibouti]], [[East Germany]], [[Egypt]], [[Equatorial Guinea]], [[Estonia]], [[France]], [[French Guiana]], [[French Polynesia]], [[Gabon]], [[Georgia (country)|Georgia]], [[Greece]], [[Guadeloupe]], [[Hungary]], [[Iran]], [[Iraq]], [[Kazakhstan]], [[Kyrgyzstan]], [[Latvia]], [[Libya]], [[Lithuania]], [[Luxembourg]], [[Madagascar]], [[Mali]], [[Martinique]], [[Mauritania]], [[Mauritius]], [[Moldova]], [[Monaco]], [[Mongolia]], [[Morocco]], [[New Caledonia]], [[Niger]], [[Poland]], [[R<U+00E9>union]], [[Russia]], [[Rwanda]], [[Saint-Pierre and Miquelon]], [[Saudi Arabia]], [[Senegal]], [[Serbia]], [[Slovakia]], [[Syria]], [[Tahiti]], [[Tajikistan]], [[Togo]], [[Tunisia]], [[Turkmenistan]], [[Ukraine]], [[Uzbekistan]], [[Vietnam]], [[Wallis and Futuna]]. 
+
+Some former SECAM countries are in the process of migrating to [[PAL]] or have already finished doing so. These include: [[East Germany]], [[Poland]], [[Czech Republic]], [[Slovakia]], [[Hungary]], [[Greece]], [[Mongolia]], [[Lithuania]] and [[Estonia]]
+
+== See also ==
+*[[Broadcast television systems]]
+*[[Oldest television station]]
+
+==External links==
+* http://www.pembers.freeserve.co.uk/World-TV-Standards/Colour-Standards.html
+* http://www.nmia.com/~roberts/vidstd
+
+{{TV resolution}}
+
+[[Category:Video formats|SECAM]]
+[[Category:Television technology|SECAM]]
+[[Category:Film and video technology|SECAM]]
+
+[[af:SECAM]]
+[[ca:SECAM]]
+[[da:SECAM]]
+[[de:SECAM]]
+[[es:SECAM]]
+[[fr:S<U+00E9>quentiel couleur <U+00E0> m<U+00E9>moire]]
+[[ko:S<U+00C9>CAM]]
+[[it:S<U+00C9>CAM]]
+[[nl:SECAM]]
+[[ja:SECAM]]
+[[pl:SECAM]]
+[[pt:SECAM]]
+[[ro:SECAM]]
+[[ru:S<U+00C9>CAM]]
+[[sv:SECAM]]
+[[zh:SECAM<U+5236><U+5F0F>]]

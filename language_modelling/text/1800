@@ -1,0 +1,117 @@
+{{Expert-subject-multiple|Physics|Engineering|date=February 2009}}
+{{Cleanup|date=October 2007}}
+'''Compressible fluid mechanics''' is a combination of the fields of traditional [[fluid mechanics]] and [[thermodynamics]].  It is related to the more general study of [[compressibility]].  In [[fluid dynamics]], a flow is considered to be a compressible flow if the [[density]] of the fluid changes with respect to [[pressure]]. This is often the case where the [[Mach number]] (the ratio of the flow speed to the local [[speed of sound]]) of the flow exceeds 0.3.
+==Definition==
+Compressible flow theory is distinguished from incompressible flow theory in that the density can no longer be considered a constant.  As such, where incompressible flow theory is governed mainly by the conservation of mass and conservation of momentum equations, compressible flows require that the conservation of energy and conservation of entropy equations be solved simultaneously.  Maintaining assumption of a calorically perfect gas, these equations can be solved to obtain temperature, pressure and density profiles that vary with local Mach number.
+
+When the Mach number of the flow is high enough so that the effects of [[compressibility]] can no longer be neglected as the flow will even out density differences.  Below Mach 0.3 fluid flows experience less than a 5% change in density{{cite}}. 
+==Subsonic Compressible Flows==
+===Compressible Flow Correction Factors===
+Due to the complexities of compressible flow theory, many times it is easier to first calculate the incompressible flow characteristics, and then employ a correction factor to obtain the actual flow properties.  Several correction factors exist towards this end with varying degrees of complexity and accuracy.
+====Prandtl<U+2013>Glauert transformation====
+The [[Prandtl-Glauert transformation]] is found by linearizing the potential equations associated with compressible, inviscid flow.  It was discovered that the linearized pressures in such a flow were equal to those found from incompressible flow theory multiplied by a correction factor. The Prandtl-Glauert correction factor will always underestimate the magnitude of the pressure within the fluid.  This correction factor is given below.  <ref>Erich Truckenbrodt: Fluidmechanik Band 2, 4. Auflage, Springer Verlag, 1996, p. 178-179 
+</ref>:
+
+:<math>c_{p} = \frac {c_{p0}} {\sqrt {|1-{M}^2|}}.</math>
+where
+*  c<sub>p</sub> is the compressible pressure coefficient
+*  c<sub>p0</sub> is the [[incompressible]] pressure coefficient
+*  ''M'' is the Mach number.  
+
+This correction factor works well for all Mach numbers M<.7 and M>1.3.
+====Karman-Tsien Correction Factor====
+The Karman-Tsien transformation is a nonlinear correction factor to find the pressure coefficient of a compressible, inviscid flow.  It is an empirically derived correction factor that tends to slightly overestimate the magnitude of the fluid's pressure.  In order to employ this correction factor, the incompressible, inviscid fluid pressure must be known from previous investigation.<ref>The Dynamics and Thermodynamics of Compressible Fluid Flow, Volume 1 , p.237</ref>  
+
+:<math>C_P=\frac {C_{P0}} {\sqrt{1-M^2}+\frac{C_{P0}}{2}(1-\sqrt{1-M^2})}</math>
+where
+*  c<sub>p</sub> is the compressible pressure coefficient
+*  c<sub>p0</sub> is the [[incompressible]] pressure coefficient
+*  ''M'' is the Mach number.  
+
+This correction factor is valid for M<.8.
+
+==Supersonic Flows==
+A flow where the local Mach number reaches or exceeds 1 can contain [[shock wave]]s. A shock is an abrupt change in the properties of a flow; the typical thickness of a shock scales with the molecular mean free path in the fluid (typically a few micrometers).
+===Shock Waves===
+Shocks form because 
+information about conditions downstream of a point of sonic or supersonic 
+flow cannot propagate back upstream past the sonic point.
+
+==Transonic Flows==
+The is the behaviour of a fluid changes radically as it starts to move above
+the speed of sound (in that fluid), ie. when the Mach number is greater than 1.  For example, in subsonic flow, a stream tube in an accelerating flow contracts, but in a supersonicflow a stream tube in an accelerating flow expands.  To interpret this
+in another way, consider steady flow in a tube that has a sudden expansion:
+the tube's cross section suddenly widens, so  the cross-sectional area increases, see [[Whitcomb area rule]].
+
+==Applications==
+===Aerodynamics===
+===Nozzles===
+In subsonic flow, the fluid speed drops after the expansion (as expected).
+In supersonic flow, the fluid speed increases.  This sounds like a 
+contradiction, but it isn't: the mass flux is conserved but because
+supersonic flow allows the density to change, the volume flux is not
+constant. This effect is utilized in [[De Laval nozzle]]s.
+===Shock Tubes===
+== See also ==
+* [[Gas dynamics]]
+* [[Transonic flow]]
+* [[Supersonic flow]]
+* [[Hypersonic flow]]
+* [[Fanno flow]]
+* [[Rayleigh flow]]
+* [[Isothermal flow]]
+* [[Mach number]]
+
+==References==
+{{Reflist}}
+{{Unreferenced|date=August 2009}}
+* {{cite book
+  | last = Shapiro | first = Ascher H.
+  | title = The Dynamics and Thermodynamics of Compressible Fluid Flow, Volume 1
+  | publisher = [[Ronald Press]]
+  | isbn = 978-0-471-06691-0 | year = 1953 }}
+* {{cite book
+  | last = Anderson | first = John D.
+  | title = Modern Compressible Flow
+  | publisher = [[McGraw-Hill]]
+  | isbn = 0071241361 | year = 2004 }}
+* {{cite book
+  | last = Liepmann | first = H. W. | coauthors = Roshko A.
+  | title = Elements of Gasdynamics
+  | publisher = [[Dover Publications]]
+  | isbn = 0486419630 | year = 2002 }}
+* {{cite book
+  | last = von Mises | first = Richard
+  | title = Mathematical Theory of Compressible Fluid Flow
+  | publisher = [[Dover Publications]]
+  | isbn = 0486439410 | year = 2004 }}
+* {{cite book
+  | last = Saad | first = Michael A.
+  | title = Compressible Fluid Flow
+  | publisher = [[Prentice Hall]]
+  | isbn = 0-13-163486-0 | year = 1985 }}
+* {{cite book
+  | last = Hodge | first = B. K. | coauthors = Koenig K.
+  | title = Compressible Fluid Dyanmics with Personal Computer Applications
+  | publisher = [[Prentice Hall]]
+  | id = ISBN 013308552X | year = 1995 }}
+* {{cite book
+  | last = Lakshminarayana | first = B.
+  | title = Fluid Dynamics and Heat Transfer of Turbomachinery
+  | publisher = [[Wiley-Interscience]]
+  | isbn = 978-0-471-85546-0| year = 1995}}
+
+==External links==
+*[http://www.grc.nasa.gov/WWW/K-12/airplane/bgc.html  NASA Beginner's Guide to Compressible Aerodynamics]
+
+*[https://engineering.purdue.edu/~wassgren/applet/java/comp_calculator/Index.html  Purdue University Compressible Flow Calculators]
+
+{{DEFAULTSORT:Compressible Flow}}
+[[Category:Fluid mechanics]]
+[[Category:Aerodynamics]]
+
+[[el:<U+03A3><U+03C5><U+03BC><U+03C0><U+03B9><U+03B5><U+03C3><U+03C4><U+03AE> <U+03C1><U+03BF><U+03AE>]]
+[[es:Flujo compresible]]
+[[it:Flusso comprimibile]]
+[[pt:Fluxo compress<U+00ED>vel]]
+[[sv:Kompressibel fluid]]

@@ -1,0 +1,369 @@
+{{Dablink|Not to be confused with [[Information science]].}}
+
+'''Information theory''' is a branch of [[applied mathematics]] and [[electrical engineering]] involving the [[quantification]] of [[information]].  Information theory was developed by [[Claude E. Shannon]] to find fundamental limits on [[signal processing]] operations such as [[data compression|compressing data]] and on reliably [[Computer data storage|storing]] and [[Telecommunication|communicating]] data. Since its inception it has broadened to find applications in many other areas, including [[statistical inference]], [[natural language processing]], [[cryptography]] generally, networks other than communication networks <U+2014> as in [[neurobiology]],<ref>F. Rieke, D. Warland, R Ruyter van Steveninck, W Bialek,  Spikes: Exploring the Neural Code. The MIT press (1997).</ref> the evolution<ref>cf. Huelsenbeck, J. P., F. Ronquist, R. Nielsen and J. P. Bollback (2001) Bayesian inference of phylogeny and its impact on evolutionary biology, ''Science'' '''294''':2310-2314</ref> and function<ref>Rando Allikmets, Wyeth W. Wasserman, Amy Hutchinson, Philip Smallwood, Jeremy Nathans, Peter K. Rogan, [http://www.lecb.ncifcrf.gov/~toms/ Thomas D. Schneider], Michael Dean (1998) Organization of the ABCR gene: analysis of promoter and splice junction sequences, ''Gene'' '''215''':1, 111-122</ref> of molecular codes, model selection<ref>Burnham, K. P. and Anderson D. R. (2002) ''Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach, Second Edition'' (Springer Science, New York) ISBN 978-0-387-95364-9.</ref> in ecology, thermal physics,<ref>Jaynes, E. T. (1957) [http://bayes.wustl.edu/ Information Theory and Statistical Mechanics], ''Phys. Rev.'' '''106''':620</ref> [[quantum computing]], plagiarism detection<ref>Charles H. Bennett, Ming Li, and Bin Ma (2003) [http://sciamdigital.com/index.cfm?fa=Products.ViewIssuePreview&ARTICLEID_CHAR=08B64096-0772-4904-9D48227D5C9FAC75 Chain Letters and Evolutionary Histories], ''Scientific American'' '''288''':6, 76-81</ref> and other forms of [[data analysis]].<ref>
+{{Cite web
+  | author = David R. Anderson
+  | title = Some background on why people in the empirical sciences may want to better understand the information-theoretic methods
+  | date = November 1, 2003
+  | url = http://aicanderson2.home.comcast.net/~aicanderson2/home.pdf
+  | format = pdf
+  | accessdate = 2010-06-23}}
+</ref>
+
+A key measure of information is known as [[Entropy (information theory)|entropy]], which is usually expressed by the average number of bits needed to store or communicate one [[Symbol (data)|symbol]] in a message. Entropy quantifies the uncertainty involved in predicting the value of a [[random variable]]. For example, specifying the outcome of a fair [[coin flip]] (two equally likely outcomes) provides less information (lower entropy) than specifying the outcome from a roll of a {{dice}} (six equally likely outcomes).
+
+Applications of fundamental topics of information theory include [[lossless data compression]] (e.g. [[ZIP (file format)|ZIP files]]), [[lossy data compression]] (e.g. [[MP3]]s and [[JPG]]s), and [[channel capacity|channel coding]] (e.g. for [[DSL|Digital Subscriber Line (DSL)]]).  The field is at the intersection of [[mathematics]], [[statistics]], [[computer science]], [[physics]], [[neurobiology]], and [[electrical engineering]]. Its impact has been crucial to the success of the [[Voyager program|Voyager]] missions to deep space, the invention of the compact disc, the feasibility of mobile phones, the development of the [[Internet]], the study of [[linguistics]] and of human perception, the understanding of [[black hole]]s, and numerous other fields. Important sub-fields of information theory are [[source coding]], [[channel coding]], [[algorithmic complexity theory]], [[algorithmic information theory]], [[information-theoretic security]], and measures of information.
+
+==Overview==
+The main concepts of information theory can be grasped by considering the most widespread means of human communication: language.  Two important aspects of a concise language are as follows:  First, the most common words (e.g., "a", "the", "I") should be shorter than less common words (e.g., "benefit", "generation", "mediocre"), so that sentences will not be too long.  Such a tradeoff in word length is analogous to [[data compression]] and is the essential aspect of [[source coding]].  Second, if part of a sentence is unheard or misheard due to noise <U+2014> e.g., a passing car <U+2014> the listener should still be able to glean the meaning of the underlying message.  Such robustness is as essential for an electronic communication system as it is for a language; properly building such robustness into communications is done by [[Channel capacity|channel coding]]. Source coding and channel coding are the fundamental concerns of information theory.
+
+Note that these concerns have nothing to do with the ''importance'' of messages. For example, a platitude such as "Thank you; come again" takes about as long to say or write as the urgent plea, "Call an ambulance!" while the latter may be more important and more meaningful in many contexts. Information theory, however, does not consider message importance or meaning, as these are matters of the quality of data rather than the quantity and readability of data, the latter of which is determined solely by probabilities.
+
+Information theory is generally considered to have been founded in 1948 by [[Claude Elwood Shannon|Claude Shannon]] in his seminal work, "[[A Mathematical Theory of Communication]]".  The central paradigm of classical information theory is the engineering problem of the transmission of information over a noisy channel. The most fundamental results of this theory are Shannon's [[source coding theorem]], which establishes that, on average, the number of ''bits'' needed to represent the result of an uncertain event is given by its [[information entropy|entropy]]; and Shannon's [[noisy-channel coding theorem]], which states that ''reliable'' communication is possible over ''noisy'' channels provided that the rate of communication is below a certain threshold, called the channel capacity. The channel capacity can be approached in practice by using appropriate encoding and decoding systems.
+
+Information theory is closely associated with a collection of pure and applied disciplines that have been investigated and reduced to engineering practice under a variety of [[Rubric (academic)|rubrics]] throughout the world over the past half century or more: [[adaptive system]]s, [[anticipatory system]]s, [[artificial intelligence]], [[complex system]]s, [[complexity science]], [[cybernetics]], [[Informatics (academic field)|informatics]], [[machine learning]], along with [[systems science]]s of many descriptions. Information theory is a broad and deep mathematical theory, with equally broad and deep applications, amongst which is the vital field of [[coding theory]].
+
+Coding theory is concerned with finding explicit methods, called ''codes'', of increasing the efficiency and reducing the net error rate of data communication over a noisy channel to near the limit that Shannon proved is the maximum possible for that channel. These codes can be roughly subdivided into [[data compression]] (source coding) and [[error-correction]] (channel coding) techniques. In the latter case, it took many years to find the methods Shannon's work proved were possible. A third class of information theory codes are cryptographic algorithms (both [[code (cryptography)|code]]s and [[cipher]]s). Concepts, methods and results from coding theory and information theory are widely used in [[cryptography]] and [[cryptanalysis]]. ''See the article [[ban (information)]] for a historical application.''
+
+Information theory is also used in [[information retrieval]], [[intelligence (information gathering)|intelligence gathering]], [[gambling]], [[statistics]], and even in [[musical composition]].
+
+==Historical background==
+{{Main|History of information theory}}
+
+The landmark event that established the discipline of information theory, and brought it to immediate worldwide attention, was the publication of [[Claude E. Shannon]]'s classic paper "[[A Mathematical Theory of Communication]]" in the ''[[Bell System Technical Journal]]'' in July and October 1948.
+
+Prior to this paper, limited information-theoretic ideas had been developed at [[Bell Labs]], all implicitly assuming events of equal probability.  [[Harry Nyquist]]'s 1924 paper, ''Certain Factors Affecting Telegraph Speed,'' contains a theoretical section quantifying "intelligence" and the "line speed" at which it can be transmitted by a communication system, giving the relation <math>W = K \log m</math>, where ''W'' is the speed of transmission of intelligence, ''m'' is the number of different voltage levels to choose from at each time step, and ''K'' is a constant.  [[Ralph Hartley]]'s 1928 paper, ''Transmission of Information,'' uses the word ''information'' as a measurable quantity, reflecting the receiver's ability to distinguish one sequence of symbols from any other, thus quantifying information as <math>H = \log S^n = n \log S</math>, where ''S'' was the number of possible symbols, and ''n'' the number of symbols in a transmission. The natural unit of information was therefore the decimal digit, much later renamed the [[ban (information)|hartley]] in his honour as a unit or scale or measure of information. [[Alan Turing]] in 1940 used similar ideas as part of the statistical analysis of the breaking of the German second world war [[Cryptanalysis of the Enigma|Enigma]] ciphers.
+
+Much of the mathematics behind information theory with events of different probabilities was developed for the field of [[thermodynamics]] by [[Ludwig Boltzmann]] and [[J. Willard Gibbs]].  Connections between information-theoretic entropy and thermodynamic entropy, including the important contributions by [[Rolf Landauer]] in the 1960s, are explored in ''[[Entropy in thermodynamics and information theory]]''.
+
+In Shannon's revolutionary and groundbreaking paper, the work for which had been substantially completed at Bell Labs by the end of 1944, Shannon for the first time introduced the qualitative and quantitative model of communication as a statistical process underlying information theory, opening with the assertion that
+:"The fundamental problem of communication is that of reproducing at one point, either exactly or approximately, a message selected at another point."
+
+With it came the ideas of
+* the [[information entropy]] and [[redundancy (information theory)|redundancy]] of a source, and its relevance through the [[source coding theorem]];
+* the [[mutual information]], and the [[channel capacity]] of a noisy channel, including the promise of perfect loss-free communication given by the [[noisy-channel coding theorem]];
+* the practical result of the [[Shannon<U+2013>Hartley law]] for the channel capacity of a [[Gaussian channel]]; as well as
+* the [[bit]]<U+2014>a new way of seeing the most fundamental unit of information.
+
+==Quantities of information==
+{{Main|Quantities of information}}
+
+Information theory is based on [[probability theory]] and [[statistics]].  The most important quantities of information are [[Entropy (information theory)|entropy]], the information in a [[random variable]], and [[mutual information]], the amount of information in common between two random variables.  The former quantity indicates how easily message data can be [[data compression|compressed]] while the latter can be used to find the communication rate across a [[Channel (communications)|channel]].
+
+The choice of logarithmic base in the following formulae determines the [[units of measurement|unit]] of [[information entropy]] that is used.  The most common unit of information is the [[bit]], based on the [[binary logarithm]]. Other units include the [[nat (information)|nat]], which is based on the [[natural logarithm]], and the [[deciban|hartley]], which is based on the [[common logarithm]].
+
+In what follows, an expression of the form <math>p \log p \,</math> is considered by convention to be equal to zero whenever <math>p=0.</math>  This is justified because <math>\lim_{p \rightarrow 0+} p \log p = 0</math> for any logarithmic base.
+
+===Entropy===
+[[Image:Binary entropy plot.svg|thumbnail|right|200px|Entropy of a [[Bernoulli trial]] as a function of success probability, often called the '''[[binary entropy function]]''', <math>H_\mbox{b}(p)</math>.  The entropy is maximized at 1 bit per trial when the two possible outcomes are equally probable, as in an unbiased coin toss.]]
+The '''[[Entropy (information theory)|entropy]]''', <math>H</math>, of a discrete random variable <math>X</math> is a measure of the amount of ''uncertainty'' associated with the value of <math>X</math>.
+
+Suppose one transmits 1000 bits (0s and 1s).   If these bits are known ahead of transmission (to be a certain value with absolute probability), logic dictates that no information has been transmitted.  If, however, each is equally and independently likely to be 0 or 1, 1000 bits (in the information theoretic sense) have been transmitted.  Between these two extremes, information can be quantified as follows. If <math>\mathbb{X}</math> is the set of all messages <math>\{x_1, ..., x_n\}</math> that <math>X</math> could be, and <math>p(x)</math> is the probability of <math>x</math> given some <math>x \in \mathbb X</math>, then the entropy of <math>X</math> is defined:<ref name = Reza>{{ cite book | title = An Introduction to Information Theory | author = Fazlollah M. Reza | publisher = Dover Publications, Inc., New York | year = 1961, 1994 | isbn = 0-486-68210-2 | url = http://books.google.com/books?id=RtzpRAiX6OgC&pg=PA8&dq=intitle:%22An+Introduction+to+Information+Theory%22++%22entropy+of+a+simple+source%22}}</ref>
+
+:<math> H(X) = \mathbb{E}_{X} [I(x)] = -\sum_{x \in \mathbb{X}} p(x) \log p(x).</math>
+
+(Here, <math>I(x)</math> is the [[self-information]], which is the entropy contribution of an individual message, and <math>\mathbb{E}_{X}</math> is the [[expected value]].) An important property of entropy is that it is maximized when all the messages in the message space are equiprobable <math>p(x)=1/n</math>,<U+2014>i.e., most unpredictable<U+2014>in which case <math> H(X)=\log n</math>.
+
+The special case of information entropy for a random variable with two outcomes is the '''[[binary entropy function]]''', usually taken to the logarithmic base 2:
+
+:<math>H_\mbox{b}(p) = - p \log_2 p - (1-p)\log_2 (1-p).\,</math>
+
+===Joint entropy===
+The '''[[joint entropy]]''' of two discrete random variables <math>X</math> and <math>Y</math> is merely the entropy of their pairing: <math>(X, Y)</math>.  This implies that if <math>X</math> and <math>Y</math> are [[statistical independence|independent]], then their joint entropy is the sum of their individual entropies.
+
+For example, if <math>(X,Y)</math> represents the position of a [[chess]] piece &mdash; <math>X</math> the row and <math>Y</math> the column, then the joint entropy of the row of the piece and the column of the piece will be the entropy of the position of the piece.
+
+:<math>H(X, Y) = \mathbb{E}_{X,Y} [-\log p(x,y)] = - \sum_{x, y} p(x, y) \log p(x, y) \,</math>
+
+Despite similar notation, joint entropy should not be confused with '''[[cross entropy]]'''.
+
+===Conditional entropy (equivocation)===
+The '''[[conditional entropy]]''' or '''conditional uncertainty''' of <math>X</math> given random variable <math>Y</math> (also called the '''equivocation''' of <math>X</math> about <math>Y</math>) is the average conditional entropy over <math>Y</math>:<ref name=Ash>{{cite book | title = Information Theory | author = Robert B. Ash | publisher = Dover Publications, Inc. | year = 1965, 1990 | isbn = 0-486-66521-6 | url = http://books.google.com/books?id=ngZhvUfF0UIC&pg=PA16&dq=intitle:information+intitle:theory+inauthor:ash+conditional+uncertainty}}</ref>
+
+:<math> H(X|Y) = \mathbb E_Y [H(X|y)] = -\sum_{y \in Y} p(y) \sum_{x \in X} p(x|y) \log p(x|y) = -\sum_{x,y} p(x,y) \log \frac{p(x,y)}{p(y)}.</math>
+
+Because entropy can be conditioned on a random variable or on that random variable being a certain value, care should be taken not to confuse these two definitions of conditional entropy, the former of which is in more common use.  A basic property of this form of conditional entropy is that:
+
+: <math> H(X|Y) = H(X,Y) - H(Y) .\,</math>
+
+===Mutual information (transinformation)===
+'''[[Mutual information]]''' measures the amount of information that can be obtained about one random variable by observing another.  It is important in communication where it can be used to maximize the amount of information shared between sent and received signals.  The mutual information of <math>X</math> relative to <math>Y</math> is given by:
+
+:<math>I(X;Y) = \mathbb{E}_{X,Y} [SI(x,y)] = \sum_{x,y} p(x,y) \log \frac{p(x,y)}{p(x)\, p(y)}</math>
+where <math>SI</math> (''S''pecific mutual ''I''nformation) is the [[pointwise mutual information]].
+
+A basic property of the mutual information is that
+: <math>I(X;Y) = H(X) - H(X|Y).\,</math>
+That is, knowing ''Y'', we can save an average of <math>I(X; Y)</math> bits in encoding ''X'' compared to not knowing ''Y''.
+
+Mutual information is [[symmetric function|symmetric]]:
+: <math>I(X;Y) = I(Y;X) = H(X) + H(Y) - H(X,Y).\,</math>
+
+Mutual information can be expressed as the average [[Kullback<U+2013>Leibler divergence]] (information gain) of the [[posterior probability|posterior probability distribution]] of ''X'' given the value of ''Y'' to the [[prior probability|prior distribution]] on ''X'':
+: <math>I(X;Y) = \mathbb E_{p(y)} [D_{\mathrm{KL}}( p(X|Y=y) \| p(X) )].</math>
+In other words, this is a measure of how much, on the average, the probability distribution on ''X'' will change if we are given the value of ''Y''.  This is often recalculated as the divergence from the product of the marginal distributions to the actual joint distribution:
+: <math>I(X; Y) = D_{\mathrm{KL}}(p(X,Y) \| p(X)p(Y)).</math>
+
+Mutual information is closely related to the [[likelihood-ratio test|log-likelihood ratio test]] in the context of contingency tables and the [[multinomial distribution]] and to [[Pearson's chi-squared test|Pearson's <U+03C7><sup>2</sup> test]]: mutual information can be considered a statistic for assessing independence between a pair of variables, and has a well-specified asymptotic distribution.
+
+===Kullback<U+2013>Leibler divergence (information gain)===
+The '''[[Kullback<U+2013>Leibler divergence]]''' (or '''information divergence''', '''information gain''', or '''relative entropy''') is a way of comparing two distributions: a "true" [[probability distribution]] ''p(X)'', and an arbitrary probability distribution ''q(X)''. If we compress data in a manner that assumes ''q(X)'' is the distribution underlying some data, when, in reality, ''p(X)'' is the correct distribution, the Kullback<U+2013>Leibler divergence is the number of average additional bits per datum necessary for compression.  It is thus defined
+
+:<math>D_{\mathrm{KL}}(p(X) \| q(X)) = \sum_{x \in X} -p(x) \log {q(x)} \, - \, \left( -p(x) \log {p(x)}\right) = \sum_{x \in X} p(x) \log \frac{p(x)}{q(x)}.</math>
+
+Although it is sometimes used as a 'distance metric', KL divergence is not a true [[Metric (mathematics)|metric]] since it is not symmetric and does not satisfy the [[triangle inequality]] (making it a semi-quasimetric).
+
+===Kullback<U+2013>Leibler divergence of a prior from the truth===
+Another interpretation of KL divergence is this: suppose a number ''X'' is about to be drawn randomly from a discrete set with probability distribution ''p(x)''.  If Alice knows the true distribution ''p(x)'', while Bob believes (has a prior) that the distribution is ''q(x)'', then Bob will be more [[Self-information|surprised]] than Alice, on average, upon seeing the value of ''X''.  The KL divergence is the (objective) expected value of the Bob's (subjective) [[surprisal]] minus Alice's surprisal, measured in bits if the ''log'' is in base 2.  In this way, the extent to which Bob's prior is "wrong" can be quantified in terms of how "unnecessarily surprised" it's expected to make him.
+
+===Other quantities===
+Other important information theoretic quantities include [[R<U+00E9>nyi entropy]] (a generalization of entropy), [[differential entropy]] (a generalization of quantities of information to continuous distributions), and the [[conditional mutual information]].
+
+==Coding theory==
+
+{{Main|Coding theory}}
+
+[[Image:CDSCRATCHES.jpg|thumb|right|A picture showing scratches on the readable surface of a CD-R.  Music and data CDs are coded using error correcting codes and thus can still be read even if they have minor scratches using [[error detection and correction]].]]
+
+[[Coding theory]] is one of the most important and direct applications of information theory. It can be subdivided into [[data compression|source coding]] theory and [[error correction|channel coding]] theory. Using a statistical description for data, information theory quantifies the number of bits needed to describe the data, which is the information entropy of the source.
+
+* Data compression (source coding): There are two formulations for the compression problem:
+#[[lossless data compression]]: the data must be reconstructed exactly;
+#[[lossy data compression]]: allocates bits needed to reconstruct the data, within a specified fidelity level measured by a distortion function. This subset of Information theory is called [[rate<U+2013>distortion theory]].
+
+* Error-correcting codes (channel coding): While data compression removes as much [[redundancy (information theory)|redundancy]] as possible, an error correcting code adds just the right kind of redundancy (i.e., [[error correction]]) needed to transmit the data efficiently and faithfully across a noisy channel.
+
+This division of coding theory into compression and transmission is justified by the information transmission theorems, or source<U+2013>channel separation theorems that justify the use of bits as the universal currency for information in many contexts. However, these theorems only hold in the situation where one transmitting user wishes to communicate to one receiving user. In scenarios with more than one transmitter (the multiple-access channel), more than one receiver (the [[broadcast channel]]) or intermediary "helpers" (the [[relay channel]]), or more general [[computer network|networks]], compression followed by transmission may no longer be optimal. [[Network information theory]] refers to these multi-agent communication models.
+
+===Source theory===
+
+Any process that generates successive messages can be considered a '''[[Communication source|source]]''' of information.  A memoryless source is one in which each message is an [[Independent identically-distributed random variables|independent identically-distributed random variable]], whereas the properties of [[ergodic theory|ergodicity]] and [[stationary process|stationarity]] impose more general constraints.  All such sources are [[stochastic process|stochastic]].  These terms are well studied in their own right outside information theory.
+
+====Rate====<!-- This section is linked from [[Channel capacity]] -->
+Information [[Entropy rate|'''rate''']] is the average entropy per symbol.  For memoryless sources, this is merely the entropy of each symbol, while, in the case of a stationary stochastic process, it is
+
+:<math>r = \lim_{n \to \infty} H(X_n|X_{n-1},X_{n-2},X_{n-3}, \ldots);</math>
+
+that is, the conditional entropy of a symbol given all the previous symbols generated.  For the more general case of a process that is not necessarily stationary, the ''average rate'' is
+
+:<math>r = \lim_{n \to \infty} \frac{1}{n} H(X_1, X_2, \dots X_n);</math>
+
+that is, the limit of the joint entropy per symbol.  For stationary sources, these two expressions give the same result.<ref>{{cite book | title = Digital Compression for Multimedia: Principles and Standards | author = Jerry D. Gibson | publisher = Morgan Kaufmann | year = 1998 | url = http://books.google.com/books?id=aqQ2Ry6spu0C&pg=PA56&dq=entropy-rate+conditional#PPA57,M1 | isbn = 1558603697 }}</ref>
+
+It is common in information theory to speak of the "rate" or "entropy" of a language.  This is appropriate, for example, when the source of information is English prose.  The rate of a source of information is related to its [[redundancy (information theory)|redundancy]] and how well it can be [[data compression|compressed]], the subject of '''source coding'''.
+
+===Channel capacity===
+{{Main|Channel capacity}}
+
+Communications over a channel<U+2014>such as an [[ethernet]] [[cable]]<U+2014>is the primary motivation of information theory.  As anyone who's ever used a telephone (mobile or landline) knows, however, such channels often fail to produce exact reconstruction of a signal; noise, periods of silence, and other forms of signal corruption often degrade quality.  How much information can one hope to communicate over a noisy (or otherwise imperfect) channel?
+
+Consider the communications process over a discrete channel. A simple model of the process is shown below:
+
+[[Image:Comm Channel.svg|center|500px]]
+
+Here ''X'' represents the space of messages transmitted, and ''Y'' the space of messages received during a unit time over our channel. Let <math>p(y|x)</math> be the [[conditional probability]] distribution function of ''Y'' given ''X''. We will consider <math>p(y|x)</math> to be an inherent fixed property of our communications channel (representing the nature of the '''[[Signal noise|noise]]''' of our channel). Then the joint distribution of ''X'' and ''Y'' is completely determined by our channel and by our choice of <math>f(x)</math>, the marginal distribution of messages we choose to send over the channel. Under these constraints, we would like to maximize the rate of information, or the '''[[Signal (electrical engineering)|signal]]''', we can communicate over the channel. The appropriate measure for this is the [[mutual information]], and this maximum mutual information is called the '''[[channel capacity]]''' and is given by:
+:<math> C = \max_{f} I(X;Y).\! </math>
+This capacity has the following property related to communicating at information rate ''R'' (where ''R'' is usually bits per symbol).  For any information rate ''R < C'' and coding error <U+03B5> > 0, for large enough ''N'', there exists a code of length ''N'' and rate <U+2265> R and a decoding algorithm, such that the maximal probability of block error is <U+2264> <U+03B5>; that is, it is always possible to transmit with arbitrarily small block error.  In addition, for any rate ''R > C'', it is impossible to transmit with arbitrarily small block error.
+
+'''[[Channel code|Channel coding]]''' is concerned with finding such nearly optimal [[error detection and correction|codes]] that can be used to transmit data over a noisy channel with a small coding error at a rate near the channel capacity.
+
+====Capacity of particular channel models====
+
+* A continuous-time analog communications channel subject to [[Gaussian noise]] <U+2014> see [[Shannon<U+2013>Hartley theorem]].
+
+* A [[binary symmetric channel]] (BSC) with crossover probability ''p'' is a binary input, binary output channel that flips the input bit with probability '' p''. The BSC has a capacity of <math>1 - H_\mbox{b}(p)</math> bits per channel use, where <math>H_\mbox{b}</math> is the [[binary entropy function]] to the base 2 logarithm:
+
+::[[Image:Binary symmetric channel.svg]]
+
+* A [[binary erasure channel]] (BEC) with erasure probability '' p '' is a binary input, ternary output channel. The possible channel outputs are ''0'', ''1'', and a third symbol 'e' called an erasure. The erasure represents complete loss of information about an input bit. The capacity of the BEC is ''1 - p'' bits per channel use.
+
+::[[Image:Binary erasure channel.svg]]
+
+==Applications to other fields==
+===Intelligence uses and secrecy applications===
+
+Information theoretic concepts apply to [[cryptography]] and [[cryptanalysis]].  [[Turing]]'s information unit, the [[Ban (information)|ban]], was used in the [[Ultra]] project, breaking the German [[Enigma machine]] code and hastening the [[Victory in Europe Day|end of WWII in Europe]].  Shannon himself defined an important concept now called the [[unicity distance]]. Based on the [[redundancy (information theory)|redundancy]] of the [[plaintext]], it attempts to give a minimum amount of [[ciphertext]] necessary to ensure unique decipherability.
+
+Information theory leads us to believe it is much more difficult to keep secrets than it might first appear.  A [[brute force attack]] can break systems based on [[public-key cryptography|asymmetric key algorithms]] or on most commonly used methods of [[symmetric-key algorithm|symmetric key algorithms]] (sometimes called secret key algorithms), such as [[block cipher]]s.  The security of all such methods currently comes from the assumption that no known attack can break them in a practical amount of time.
+
+[[Information theoretic security]] refers to methods such as the [[one-time pad]] that are not vulnerable to such brute force attacks.  In such cases, the positive conditional [[mutual information]] between the [[plaintext]] and [[ciphertext]] (conditioned on the [[key (cryptography)|key]]) can ensure proper transmission, while the unconditional mutual information between the plaintext and ciphertext remains zero, resulting in absolutely secure communications.  In other words, an eavesdropper would not be able to improve his or her guess of the plaintext by gaining knowledge of the ciphertext but not of the key. However, as in any other cryptographic system, care must be used to correctly apply even information-theoretically secure methods; the [[Venona project]] was able to crack the one-time pads of the [[Soviet Union]] due to their improper reuse of key material.
+
+===Pseudorandom number generation===
+[[Pseudorandom number generator]]s are widely available in computer language libraries and application programs. They are, almost universally, unsuited to cryptographic use as they do not evade the deterministic nature of modern computer equipment and software. A class of improved random number generators is termed [[cryptographically secure pseudorandom number generator]]s, but even they require external to the software [[random seed]]s to work as intended. These can be obtained via [[Extractor (mathematics)|extractors]], if done carefully. The measure of  sufficient randomness in extractors is [[min-entropy]], a value related to Shannon entropy through [[R<U+00E9>nyi entropy]]; R<U+00E9>nyi entropy is also used in evaluating randomness in cryptographic systems.  Although related, the distinctions among these measures mean that a [[random variable]] with high Shannon entropy is not necessarily satisfactory for use in an extractor and so for cryptography uses.
+
+===Seismic exploration===
+One early commercial application of information theory was in the field seismic oil exploration. Work in this field made it possible to strip off and separate the unwanted noise from the desired seismic signal. Information theory and [[digital signal processing]] offer a major improvement of resolution and image clarity over previous analog methods.<ref>The Corporation and Innovation, Haggerty, Patrick, Strategic Management Journal, Vol. 2, 97-118 (1981)</ref>
+
+===Miscellaneous applications===
+Information theory also has applications in [[Gambling and information theory|gambling and investing]], [[black hole information paradox|black holes]], [[bioinformatics]], and [[music]].
+
+==See also==
+{{Portal|Mathematics}}
+*[[Communication theory]]
+*[[List of important publications in theoretical computer science#Information theory|List of important publications]]
+*[[Philosophy of information]]
+
+===Applications===
+* [[Cryptanalysis]]
+* [[Cryptography]]
+* [[Cybernetics]]
+* [[Entropy in thermodynamics and information theory]]
+* [[Gambling]]
+* [[Intelligence (information gathering)]]
+* [[reflection seismology|Seismic exploration]]
+
+===History===
+* [[Ralph Hartley|Hartley, R.V.L.]]
+* [[History of information theory]]
+* [[Claude Elwood Shannon|Shannon, C.E.]]
+* [[Timeline of information theory]]
+* [[Hubert Yockey|Yockey, H.P.]]
+
+===Theory===
+<div style="-moz-column-count:3; column-count:3;">
+* [[Coding theory]]
+* [[Detection theory]]
+* [[Estimation theory]]
+* [[Fisher information]]
+* [[Information algebra]]
+* [[Information asymmetry]]
+* [[Information geometry]]
+* [[Information theory and measure theory]]
+* [[Kolmogorov complexity]]
+* [[Logic of information]]
+* [[Network coding]]
+* [[Philosophy of Information]]
+* [[Quantum information science]]
+* [[Semiotic information theory]]
+* [[Source coding]]
+</div>
+
+===Concepts===
+<div style="-moz-column-count:3; column-count:3;">
+* [[ban (information)]]
+* [[Channel capacity]]
+* [[Channel (communications)]]
+* [[Communication source]]
+* [[Conditional entropy]]
+* [[Covert channel]]
+* [[Decoder]]
+* [[Differential entropy]]
+* [[Encoder]]
+* [[Information entropy]]
+* [[Joint entropy]]
+* [[Kullback-Leibler divergence]]
+* [[Mutual information]]
+* [[Pointwise Mutual Information]] (PMI)
+* [[Receiver (information theory)]]
+* [[Redundancy (information theory)|Redundancy]]
+* [[R<U+00E9>nyi entropy]]
+* [[Self-information]]
+* [[Unicity distance]]
+* [[Variety (cybernetics)|Variety]]
+</div>
+
+==References==
+
+{{Reflist}}
+
+===The classic work===
+* [[Claude Elwood Shannon|Shannon, C.E.]] (1948), "[[A Mathematical Theory of Communication]]", ''Bell System Technical Journal'', 27, pp.&nbsp;379<U+2013>423 & 623<U+2013>656, July & October, 1948. [http://cm.bell-labs.com/cm/ms/what/shannonday/shannon1948.pdf PDF.] <br />[http://cm.bell-labs.com/cm/ms/what/shannonday/paper.html Notes and other formats.]
+* R.V.L. Hartley, [http://www.dotrose.com/etext/90_Miscellaneous/transmission_of_information_1928b.pdf "Transmission of Information"], ''Bell System Technical Journal'', July 1928
+* [[Andrey Kolmogorov]] (1968), "Three approaches to the quantitative definition of information" in International Journal of Computer Mathematics.
+
+===Other journal articles===
+* J. L. Kelly, Jr., [http://www.racing.saratoga.ny.us/kelly.pdf Saratoga.ny.us], "A New Interpretation of Information Rate" ''Bell System Technical Journal'', Vol. 35, July 1956, pp.&nbsp;917<U+2013>26.
+* R. Landauer, [http://ieeexplore.ieee.org/search/wrapper.jsp?arnumber=615478 IEEE.org], "Information is Physical" ''Proc. Workshop on Physics and Computation PhysComp'92'' (IEEE Comp. Sci.Press, Los Alamitos, 1993) pp.&nbsp;1<U+2013>4.
+* R. Landauer, [http://www.research.ibm.com/journal/rd/441/landauerii.pdf IBM.com], "Irreversibility and Heat Generation in the Computing Process" ''IBM J. Res. Develop.'' Vol. 5, No. 3, 1961
+
+===Textbooks on information theory===
+* [[Claude E. Shannon]], Warren Weaver. ''The Mathematical Theory of Communication.'' Univ of Illinois Press, 1949. ISBN 0-252-72548-4
+* [[Robert Gallager]]. ''Information Theory and Reliable Communication.'' New York: John Wiley and Sons, 1968. ISBN 0-471-29048-3
+* Robert B. Ash. ''Information Theory''. New York: Interscience, 1965. ISBN 0-470-03445-9. New York: Dover 1990. ISBN 0-486-66521-6
+* [[Thomas M. Cover]], Joy A. Thomas. ''Elements of information theory'', 1st Edition.  New York: Wiley-Interscience, 1991. ISBN 0-471-06259-6.
+:2nd Edition. New York: Wiley-Interscience, 2006. ISBN 0-471-24195-4.
+* [[Imre Csiszar]], Janos Korner. ''Information Theory: Coding Theorems for Discrete Memoryless Systems''  Akademiai Kiado: 2nd edition, 1997. ISBN 963-05-7440-3
+* Raymond W. Yeung.  ''[http://iest2.ie.cuhk.edu.hk/~whyeung/book/ A First Course in Information Theory]'' Kluwer Academic/Plenum Publishers, 2002.  ISBN 0-306-46791-7
+* David J. C. MacKay. ''[http://www.inference.phy.cam.ac.uk/mackay/itila/book.html Information Theory, Inference, and Learning Algorithms]'' Cambridge: Cambridge University Press, 2003. ISBN 0-521-64298-1
+* Raymond W. Yeung.  ''[http://iest2.ie.cuhk.edu.hk/~whyeung/book2/ Information Theory and Network Coding]'' Springer 2008, 2002.  ISBN 978-0-387-79233-0
+* Stanford Goldman. ''Information Theory''. New York: Prentice Hall, 1953. New York: Dover 1968 ISBN 0-486-62209-6, 2005 ISBN 0-486-44271-3
+* [[Fazlollah Reza]]. ''An Introduction to Information Theory''. New York: McGraw-Hill 1961. New York: Dover 1994. ISBN 0-486-68210-2
+* Masud Mansuripur. ''Introduction to Information Theory''. New York: Prentice Hall, 1987. ISBN 0-13-484668-0
+* Christoph Arndt: ''Information Measures, Information and its Description in Science and Engineering'' (Springer Series: Signals and Communication Technology), 2004, ISBN 978-3-540-40855-0
+
+===Other books===
+* Leon Brillouin, ''Science and Information Theory'', Mineola, N.Y.: Dover, [1956, 1962] 2004. ISBN 0-486-43918-6
+* [[James Gleick]], ''[[The Information: A History, a Theory, a Flood]]'', New York: Pantheon, 2011. ISBN 978-0375423727
+* A. I. Khinchin, ''Mathematical Foundations of Information Theory'', New York: Dover, 1957. ISBN 0-486-60434-9
+* H. S. Leff and A. F. Rex, Editors, ''Maxwell's Demon: Entropy, Information, Computing'', [[Princeton University Press]], Princeton, NJ (1990). ISBN 0-691-08727-X
+* Tom Siegfried, ''The Bit and the Pendulum'', Wiley, 2000. ISBN 0-471-32174-5
+* Charles Seife, ''Decoding The Universe'', Viking, 2006. ISBN 0-670-03441-X
+* Jeremy Campbell, ''Grammatical Man'', Touchstone/Simon & Schuster, 1982, ISBN 0-671-44062-4
+* Henri Theil, ''Economics and Information Theory'', Rand McNally & Company - Chicago, 1967.
+
+==External links==
+* [http://alum.mit.edu/www/toms/paper/primer alum.mit.edu], Eprint, Schneider, T. D., "Information Theory Primer"
+* [http://www.nd.edu/~jnl/ee80653/tutorials/sunil.pdf ND.edu], Srinivasa, S. "A Review on Multivariate Mutual Information"
+* [http://jchemed.chem.wisc.edu/Journal/Issues/1999/Oct/abs1385.html Chem.wisc.edu], Journal of Chemical Education, ''Shuffled Cards, Messy Desks, and Disorderly Dorm Rooms - Examples of Entropy Increase? Nonsense!''
+* [http://www.itsoc.org/index.html ITsoc.org], IEEE Information Theory Society and [http://www.itsoc.org/review.html ITsoc.org] review articles
+* [http://www.inference.phy.cam.ac.uk/mackay/itila/ Cam.ac.uk], On-line textbook: "Information Theory, Inference, and Learning Algorithms" by [[David MacKay (scientist)|David MacKay]] - giving an entertaining and thorough introduction to Shannon theory, including state-of-the-art methods from coding theory, such as [[arithmetic coding]], [[low-density parity-check code]]s, and [[Turbo code]]s.
+* [http://research.umbc.edu/~erill/Documents/Introduction_Information_Theory.pdf UMBC.edu], Eprint, Erill, I., "A gentle introduction to information content in transcription factor binding sites"
+
+{{Cybernetics}}
+{{Compression Methods}}
+{{Mathematics-footer}}
+
+{{DEFAULTSORT:Information Theory}}
+[[Category:Communication]]
+[[Category:Cybernetics]]
+[[Category:Formal sciences]]
+[[Category:Information Age]]
+[[Category:Information theory|*]]
+
+[[af:Inligtingsteorie]]
+[[ar:<U+0646><U+0638><U+0631><U+064A><U+0629> <U+0627><U+0644><U+0645><U+0639><U+0644><U+0648><U+0645><U+0627><U+062A>]]
+[[bn:<U+09A4><U+09A5><U+09CD><U+09AF> <U+09A4><U+09A4><U+09CD><U+09A4><U+09CD><U+09AC>]]
+[[bg:<U+0422><U+0435><U+043E><U+0440><U+0438><U+044F> <U+043D><U+0430> <U+0438><U+043D><U+0444><U+043E><U+0440><U+043C><U+0430><U+0446><U+0438><U+044F><U+0442><U+0430>]]
+[[bar:Informationstheorie]]
+[[ca:Teoria de la informaci<U+00F3>]]
+[[cs:Teorie informace]]
+[[da:Informationsteori]]
+[[de:Informationstheorie]]
+[[et:Informatsiooniteooria]]
+[[el:<U+0398><U+03B5><U+03C9><U+03C1><U+03AF><U+03B1> <U+03A0><U+03BB><U+03B7><U+03C1><U+03BF><U+03C6><U+03BF><U+03C1><U+03AF><U+03B1><U+03C2>]]
+[[es:Teor<U+00ED>a de la informaci<U+00F3>n]]
+[[fa:<U+0646><U+0638><U+0631><U+06CC><U+0647> <U+0627><U+0637><U+0644><U+0627><U+0639><U+0627><U+062A>]]
+[[fr:Th<U+00E9>orie de l'information]]
+[[gl:Teor<U+00ED>a da informaci<U+00F3>n]]
+[[ko:<U+C815><U+BCF4> <U+C774><U+B860>]]
+[[hr:Teorija informacije]]
+[[io:Informo-teorio]]
+[[id:Teori informasi]]
+[[it:Teoria dell'informazione]]
+[[he:<U+05EA><U+05D5><U+05E8><U+05EA> <U+05D4><U+05D0><U+05D9><U+05E0><U+05E4><U+05D5><U+05E8><U+05DE><U+05E6><U+05D9><U+05D4>]]
+[[ka:<U+10D8><U+10DC><U+10E4><U+10DD><U+10E0><U+10DB><U+10D0><U+10EA><U+10D8><U+10D8><U+10E1> <U+10D7><U+10D4><U+10DD><U+10E0><U+10D8><U+10D0>]]
+[[lv:Inform<U+0101>cijas teorija]]
+[[lt:Informacijos teorija]]
+[[hu:Inform<U+00E1>ci<U+00F3>elm<U+00E9>let]]
+[[ms:Teori maklumat]]
+[[nl:Informatietheorie]]
+[[ja:<U+60C5><U+5831><U+7406><U+8AD6>]]
+[[no:Informasjonsteori]]
+[[nn:Informasjonsteori]]
+[[pl:Teoria informacji]]
+[[pt:Teoria da informa<U+00E7><U+00E3>o]]
+[[ru:<U+0422><U+0435><U+043E><U+0440><U+0438><U+044F> <U+0438><U+043D><U+0444><U+043E><U+0440><U+043C><U+0430><U+0446><U+0438><U+0438>]]
+[[simple:Information theory]]
+[[sk:Te<U+00F3>ria inform<U+00E1>cie]]
+[[sl:Teorija informacij]]
+[[ckb:<U+0628><U+06CC><U+0631><U+062F><U+06C6><U+0632><U+06CC> <U+0632><U+0627><U+0646><U+06CC><U+0627><U+0631><U+06CC>]]
+[[sr:<U+0422><U+0435><U+043E><U+0440><U+0438><U+0458><U+0430> <U+0438><U+043D><U+0444><U+043E><U+0440><U+043C><U+0430><U+0446><U+0438><U+0458><U+0435>]]
+[[fi:Informaatioteoria]]
+[[sv:Informationsteori]]
+[[ta:<U+0BA4><U+0B95><U+0BB5><U+0BB2><U+0BCD> <U+0B95><U+0BCB><U+0B9F><U+0BCD><U+0BAA><U+0BBE><U+0B9F><U+0BC1>]]
+[[th:<U+0E17><U+0E24><U+0E29><U+0E0E><U+0E35><U+0E02><U+0E49><U+0E2D><U+0E21><U+0E39><U+0E25>]]
+[[tr:Bilgi kuram<U+0131>]]
+[[uk:<U+0422><U+0435><U+043E><U+0440><U+0456><U+044F> <U+0456><U+043D><U+0444><U+043E><U+0440><U+043C><U+0430><U+0446><U+0456><U+0457>]]
+[[ur:<U+0646><U+0638><U+0631><U+06CC><U+06C2> <U+0627><U+0637><U+0644><U+0627><U+0639><U+0627><U+062A>]]
+[[vi:L<U+00FD> thuy<U+1EBF>t th<U+00F4>ng tin]]
+[[zh:<U+4FE1><U+606F><U+8BBA>]]

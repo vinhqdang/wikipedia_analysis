@@ -1,0 +1,68 @@
+{{mergefrom|Virtual_drive|Talk:Disk_image_emulator#Merger proposal|date=February 2008}}
+{{Unreferenced|date=January 2007}}
+
+A '''disk image emulator''' is [[computer software]] designed to emulate a [[disk image]], usually of a [[Compact Disc|CD]] or [[DVD]], on a local [[hard drive]] or [[USB flash drive]]. The emulation is usually done by creating a [[virtual drive]] on the system, that to the [[operating system]] looks like an ordinary [[disk drive]].
+
+In short, it puts a permanent copy of a disc on a hard drive, making the disc accessible when the disc isn't in the computer.
+
+Some operating systems such as [[Linux]]<ref name="linuxhelp">{{cite web |url= http://www.linuxhelp.net/linux_downloads/ |title= Linux ISO Images |publisher= LinuxHelp.net |accessdate= 2007-03-23 }}</ref>
+and [[Mac OS X]]<ref name="osx-dim">Although OS X's built-in DiskImageMounter software does not emulate a physical drive</ref>
+have this functionality built-in (see [[loop device]]), while others such as [[Microsoft Windows]] require additional software.
+
+==Uses==
+* Enables users to avoid constantly switching out discs
+* Helps prevent scratching, which can cause permanent damage to a disc
+* Speeds up access times as hard drives are faster than optical drives
+* Provides a backup copy of a disc, in case the original becomes damaged, lost, or stolen
+* Enables users to carry large disc libraries without the physical burden of the discs
+* Emulates multiple disks, which is useful for installing or using software that shipped on multiple disks
+* Can make a disc accessible to users on a [[Computer networking|network]], which is very practical when it is impossible to distribute the discs to all of the users on a network
+* Allows programs that can normally only work with optical discs (like some [[DVD-Video]] applications) to access data on a hard drive
+* For often-used CD and DVD discs, where simply copying the disc to a hard drive won't work
+* A CD/DVD master used to burn physical discs
+* Make disc accessible to machines without disc drive
+* Save power by turning off disc drive, for instance on laptops
+* [[Quiet PC | Makes the computer quieter]], many removable disc drives are noisier than hard disks
+
+==Software distribution==
+Some software programs are available by means of disk images which can be downloaded from the internet. Thanks to the spread of broadband internet, this has become a primary distribution method for [[Linux distribution]]s,<ref name="linuxhelp">{{cite web |url= http://www.linuxhelp.net/linux_downloads/ |title= Linux ISO Images |publisher= LinuxHelp.net |accessdate= 2007-03-23 }}</ref> which typically comprise one or more CDs of data. This has also been used by some companies for software which must be run from CD, such as bootable recovery CDs.<ref name="para-db">{{cite web |url= http://www.drive-backup.com/glossary/recovery_cd.htm |title= Drive Backup 7.0 |publisher= [[Paragon Software GmbH]] |accessdate= 2007-03-23 |quote= Recovery CD self-burning ISO image is available for download online to all registered customers of Paragon products. }}</ref>
+
+===Copyright infringement of software===
+Disk image emulators may be used to aid in [[copyright infringement of software]] by facilitating the use of disk images of [[proprietary software]] distributed over the [[Internet]], often via [[peer-to-peer]] [[file sharing]]. However, since disk image emulation software has many legitimate uses and does not usually promote copyright infringement, it typically is not considered to violate legislation such as the [[Digital Millennium Copyright Act|DMCA]].
+
+==Disk image emulator software==
+{{further|List of [[:Category:Disk image emulators|Disk image emulators]]}}
+* [[Alcohol 120%]]
+* [[CDemu]] ([[Linux]] [[kernel module]])
+* [[Daemon Tools]] (freeware/adware, ads are opt-out)
+* [[DiskImageMounter]] (Mac OS only)
+* [[GameDrive]]
+* [[MagicDISC]] (freeware)
+* [[MagicISO]] (demoware)
+* [[Nero Burning ROM|Nero ImageDrive]]
+* [[PowerISO]]
+* [[UltraISO]]
+* [[ImageMapper]]
+<!-- Dead link!
+*[http://software.otbsupport.com/apps/vcdmount/ VCDMount] - A simple command-line CD emulator for Linux based systems -->
+* Microsoft Virtual CD-ROM Control Panel<ref name="ms-kb916902">{{cite web |url= http://support.microsoft.com/kb/916902 |title= How to customize Windows PE by using the source files that are included with the Microsoft SMS 2003 Operating System Deployment (OSD) Feature Pack |work= Microsoft [[Knowledge Base]] |publisher= [[Microsoft]] |date= 2006-10-30 |accessdate= 2007-03-23 }}</ref>
+
+==See also==
+* [[Virtual drive]]
+* [[Copy protection]]
+** [[CD/DVD copy protection]]
+* [[Read-only memory]]
+* [[Loopback device]]
+
+==Footnotes==
+<!--<nowiki>
+See http://en.wikipedia.org/wiki/Wikipedia:Footnotes for an explanation of how to generate footnotes using the <ref> and </ref> tags, and the template below. 
+</nowiki>-->
+{{FootnotesSmall|resize=100%}}
+
+[[Category:Optical disc authoring]]
+[[Category:Disk image emulators|Disk image emulator]]
+
+[[de:Virtual CD]]
+[[ja:<U+30C7><U+30A3><U+30B9><U+30AF><U+30C9><U+30E9><U+30A4><U+30D6><U+4EEE><U+60F3><U+5316><U+30BD><U+30D5><U+30C8>]]
+[[ko:<U+B514><U+C2A4><U+D06C> <U+C774><U+BBF8><U+C9C0>]]

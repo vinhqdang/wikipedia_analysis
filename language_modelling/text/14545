@@ -1,0 +1,413 @@
+{{Otheruses4|the economic model|the computer interface|Input/output}}
+
+The '''Input-output model''' of economics uses a [[matrix (mathematics)|matrix]] representation of a nation's (or a region's) economy to predict the effect of changes in one industry on others and by consumers, government, and foreign suppliers on the economy. This model, if applied on a region, is also known as the Regional Impact Multiplier System. [[Wassily Leontief]] (1905-1999) is credited with the development of this analysis. [[Francois Quesnay]] developed a cruder version of this technique called Tableau <U+00E9>conomique. Leontief won a [[Nobel Prize in Economics]] for his development of this model. 
+
+Input-output analysis considers inter-industry relations in an economy, depicting  how the output of one industry goes to another industry where it serves as an input, and thereby makes one industry dependent on another both as customer of output and as supplier of inputs. An input-output model is a specific formulation of input-output analysis. 
+
+Each column of the input-output [[Matrix (mathematics)|matrix]] reports the monetary value of an industry's inputs and each row represents the value of an industry's outputs. Suppose there are three industries. Column 1 reports the value of inputs to Industry 1 from Industries 1, 2, and 3. Columns 2 and 3 do the same for those industries. Row 1 reports the value of outputs from Industry 1 to Industries 1, 2, and 3. Rows 2 and 3 do the same for the other industries.
+
+While the input-output matrix reports only the intermediate goods and services that are exchanged among industries, row [[vector (spatial)|vector]]s on the bottom record the disposition of finished goods and services to consumers, government, and foreign buyers. Similarly, column vectors on the right record non-industrial inputs like labor and purchases from foreign suppliers.
+
+In addition to studying the structure of national economies, input-output economics has been used to study regional economies within a nation, and as a tool for national economic planning.
+
+The mathematics of input-output economics is straightforward, but the data requirements are enormous because the expenditures and revenues of each branch of economic activity has to be represented. The tool has languished because not all countries collect the required data, data quality varies, and the data collection and preparation process has lags that make timely analysis difficult. Typically input-out tables are compiled retrospectively as a "snapshot" cross-section of the economy, once every few years. 
+
+==Usefulness==
+
+An '''input-output model''' is widely used in [[economic forecasting]] to predict flows between sectors. They are also used in local [[urban economics]].
+
+[[Irving Hock]] at the [[Chicago Area Transportation Study]] did detailed forecasting by industry sectors using input-output techniques.  At the time, Hock<U+2019>s work was quite an undertaking, the only other work that has been done at the urban level was for [[Stockholm]] and it was not widely known.  Input-output was one of the few techniques developed at the CATS not adopted in later studies.  Later studies used [[economic base analysis]] techniques.
+
+Input-output models at ZIP code level compilations (eg, a city) are also available through the [[IMPLAN]] system.
+
+==Key Ideas==
+The inimitable book by Leontief himself remains the best exposition of input-output analysis. See bibliography.
+
+Input-output concepts are simple.  Consider the production of the  ith sector.  We may isolate (1) the quantity of that production that goes to [[final demand]],<math>c_{i}</math>, (2) to total output, <math>x_{i}</math>, and (3) flows <math>x_{ij}</math> from that industry to other industries.  We may write a transactions tableau
+
+{| border="1" cellpadding="5" cellspacing="0" align="center"
+|+'''Table: Transactions in a Three Sector Economy'''
+!Economic Activities	
+!Inputs to Agriculture
+!Inputs to Manufacturing
+!Inputs to Transport
+!Final Demand
+!Total Output
+|-
+|Agriculture
+|5	   
+|15	    
+|2	  
+|68	  
+|90
+|-
+|Manufacturing
+| 10	   
+|20	   
+|10	  
+|40	  
+|80
+|-
+|Transportation	    
+|10	   
+|15	   
+|5	    
+|0	  
+|30
+|-
+|Labor	    
+|25	   
+|30	    
+|5	    
+|0	  
+|60
+|}                                                                  
+
+or
+
+:<math>
+\begin{matrix}
+x_{11} + x_{12} + x_{13} + c_{1} & = & x_{1} \\
+
+x_{21} + x_{22} + x_{23} + c_{2} & = & x_{2} \\
+
+x_{31} + x_{32} + x_{33} + c_{3} & = & x_{3} \\
+
+x_{41} + x_{42} + x_{43} + c_{4} & = & x_{4}
+\end{matrix}
+</math>
+
+Note that in the example given we have no input flows from the industries to 'Labor'.
+
+We know ''very little'' about [[production function]]s because all we have are numbers representing transactions in a particular instance (single points on the production functions):
+
+:<math>
+\begin{matrix}
+x_{1} & = & f(x_{11}, x_{12}, x_{13}, x_{14}) \\
+
+x_{2} & = & g(x_{21}, x_{22}, x_{23}, x_{24}) \\
+
+\vdots & = & \vdots
+\end{matrix}
+</math>
+
+The [[neoclassical economics|neoclassical]] production function is an explicit function
+
+:<math>
+Q = f(K, L),
+</math>
+
+where
+<math>Q =</math>Quantity,
+<math>K =</math>Capital,
+<math>L =</math>Labor,
+
+and the partial derivatives  (<math>\partial Q/ \partial K = f_K > 0 ;  \partial Q/ \partial L = f_L > 0</math>)  are the demand schedules for input factors. 
+
+Leontief, the innovator of input-output analysis, uses a special production function which depends ''linearly'' on the total output variables <math>x_{i}</math>. Using Leontief coefficients <math>a_{ij}</math>, we may manipulate our transactions information into what is known as an input-output table:
+
+:<math>
+\begin{matrix}
+x_{11} & = & a_{11}x_{1} \\
+
+x_{12} & = & a_{12}x_{2} \\
+
+x_{13} & = & a_{13}x_{3} \\
+
+x_{14} & = & a_{14}x_{4} \\
+
+\vdots & = & \vdots
+\end{matrix}
+</math>
+
+or 
+
+:<math>
+\begin{matrix}
+x_{ij} & = & a_{ij}x_{j}
+\end{matrix}
+</math>
+
+Now
+
+:<math>
+\begin{matrix}
+a_{11}x_{1} + a_{12}x_{2} + a_{13}x_{3} + a_{14}x_{4} + c_{1} & = & x_{1} \\
+\vdots & = & \vdots \\
+a_{41}x_{1} + a_{42}x_{2} + a_{43}x_{3} + a_{44}x_{4} + c_{4} & = & x_{4}
+\end{matrix}
+</math>
+
+gives
+
+:<math>
+\begin{matrix}
+x_{1} - a_{11}x_{1} - a_{12}x_{2} - a_{13}x_{3} - a_{14}x_{4} & = & c_{1} \\
+\vdots & = & \vdots \\
+x_{4} - a_{41}x_{1} - a_{42}x_{2} - a_{43}x_{3} - a_{44}x_{4} & = & c_{4}
+\end{matrix}
+</math>
+
+Rewriting finally yields
+
+:<math>
+\begin{matrix}
+(1-a_{11})x_{1} - a_{12}x_{2} - a_{13}x_{3} - a_{14}x_{4} & = & c_{1} \\
+\vdots & = & \vdots \\
+- a_{41}x_{1} - a_{42}x_{2} - a_{43}x_{3} + (1-a_{44})x_{4} & = & c_{4}
+\end{matrix}
+</math>
+
+Introducing matrix notation, we can see how a solution may be obtained. 
+Let
+
+:<math>
+x = \begin{pmatrix} x_{1}\\ \vdots \\ x_{4}\end{pmatrix};\qquad
+c = \begin{pmatrix} c_{1}\\ \vdots \\ c_{4}\end{pmatrix};
+</math>
+:<math>
+I = \begin{pmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{pmatrix};\qquad
+A = \begin{pmatrix}
+a_{11} & \cdots & a_{14} \\
+\vdots & \ddots & \vdots \\
+a_{41} & \cdots & a_{44}
+\end{pmatrix};
+
+</math>
+
+denote the total output vector, the final demand vector, the unit matrix and the input-output matrix, respectively. Then:
+
+:<math>
+\begin{matrix}
+Ax + c & = & x \\
+
+(I-A)x & = & c \\
+
+x & = & (I-A)^{-1}c
+\end{matrix}
+</math>
+
+provided <math>(I-A)</math> is a regular matrix which can thus be inverted.
+
+There are many interesting aspects of the Leontief system, and there is an extensive literature.  There is the [[Hawkins-Simon Condition]] on producibility.  There has been interest in disaggregation to clustered inter-industry flows, and the study of constellations of industries.  A great deal of empirical work has been done to identify coefficients, and data have been published for the national economy as well as for regions.  This has been a healthy, exciting area for work by economists because the Leontief system can be extended to a model of general equilibrium; it offers a method of decomposing work done at a macro level. 
+
+Transportation is implicit in the notion of inter-industry flows.  It is explicitly recognized when transportation is identified as an industry <U+2013> how much is purchased from transportation in order to produce.  But this is not very satisfactory because transportation requirements differ, depending on industry locations and capacity constraints on regional production.  Also, the receiver of goods generally pays freight cost, and often transportation data are lost because transportation costs are treated as part of the cost of the goods.
+
+[[Walter Isard]] and his student, [[Leon Moses]], were quick to see the spatial economy and transportation implications of input-output, and began work in this area in the [[1950s]] developing a concept of interregional input-output.  Take a one region versus the world case.  We wish to know something about interregional commodity flows, so introduce a column into the table headed <U+201C>exports<U+201D> and we introduce an <U+201C>input<U+201D> row.
+
+{| border="1" cellpadding="5" cellspacing="0" align="center"
+|+'''Table: Adding Export And Import Transactions'''
+|Economic Activities 
+| 1 
+| 2 
+| <U+2026> 
+| <U+2026>	
+| Z 
+| Exports 
+| Final Demand 
+| Total Outputs
+|-
+|1
+|
+|
+|
+|
+|
+|
+|							
+|-
+|2
+|
+|
+|
+|
+|
+|
+|								
+|-
+|<U+2026>	
+|
+|
+|
+|
+|
+|
+|							
+|-
+|<U+2026>
+|
+|
+|
+|
+|
+|
+|								
+|-
+|Z
+|
+|
+|
+|
+|
+|
+|
+|-								
+Imports	
+|
+|
+|
+|
+|
+|
+|							
+|}    
+
+A more satisfactory way to proceed would be to tie regions together at the industry level.  That is, we identify both within region inter-industry transactions and among region inter-industry transactions.  A not-so-small problem here is that the table gets very large very quickly.  
+
+Input-output, as we have discussed it, is conceptually very simple.  Its extension to an overall model of equilibrium in the national economy is also relatively simple and attractive.  But there is a downside.  One who wishes to do work with input-output systems must deal skillfully with industry classification, data estimation, and inverting very large, ill-conditioned matrices.  Two additional difficulties are of interest in transportation work.  There is the question of substituting one input for another, and there is the question about the stability of coefficients as production increases or decreases.  These are intertwined questions.  They have to do with the nature of regional production functions.
+
+== Forecasting and/or Analysis Using Input-Output ==
+
+This discussion focuses on the use of input-output techniques in transportation; there is a vast literature on the technique as such.
+
+{| border="1" cellpadding="5" cellspacing="0" align="center"
+|+'''Table: Interregional Transactions'''
+|Economic Activities 
+| Ag
+|North Mfg
+| ...
+| ...
+| Ag
+|East Mfg
+| ...
+| ...
+| Ag
+|West Mfg
+| ...
+| ...
+|Exports
+|Total Outputs
+|-
+| North Mfg
+|-
+| ...
+|-
+| ...
+|-
+| Ag
+|-
+| East Mfg
+|-
+| ...
+|-
+| ...
+|-
+| Ag
+|-
+| West Mfg
+|-
+|-
+| ...
+|-
+| ...
+|-
+|}
+
+As we see from the use of the economic base study, [[Urban area|Urban]] [[transportation planning]] studies are demand-driven.  The question we want to answer is, <U+201C>What transportation need results from some economic development:  what<U+2019>s the feedback from development to transportation?<U+201D>  For that question, input-output is helpful.  That<U+2019>s the question Hock posed.  There is an increase in the final demand vector, changed inter-industry relations result, and there is an impact on transportation requirements.
+
+[[Rappoport]] et al. (1979) started with consumption projections.  These drove solutions of a national I-O model for projections of [[GNP]] and transportation requirements as per the transportation vector in the I-O matrix.  Submodels were then used to investigate [[modal split]] and energy consumption in the transportation sector.  
+
+Another question asked is: What is the impact of the transportation construction activity on an area?  One of the first studies made of the impact of the [[interstate highway system]] used the national I/O model to forecast impacts measured in increased steel production, cement, employment, etc.
+
+{| border="1" cellpadding="5" cellspacing="0" align="center"
+|+'''Table: Input-Output Model for Hypothetical Economy Total requirements from regional industries per dollar of output delivered to final demand'''
+| Purchasing Industry 
+| Agriculture
+| Transport
+| Manufacturer
+| Services
+|-
+| Selling Industry				
+|-
+| Agriculture 
+| 1.14 
+| 0.22 
+| 0.13 
+| 0.12 
+|-
+| Transportation
+| 0.19
+| 1.10
+| 0.16
+| 0.07
+|-
+| Manufacturing
+| 0.16
+| 0.16
+| 1.16
+| 0.06
+|-
+| Services
+| 0.08
+| 0.05
+| 0.08
+| 1.09
+|- 
+| Total
+| 1.57
+| 1.53
+| 1.53
+| 1.34
+|}
+
+The [[Maritime Administration]] (MARAD) has produced the Port Impact Kit for a number of years.  This software illustrates the use of I/O models.  Simply written, it makes the technique widely available.  It shows how to calculate direct effects from the initial round of spending that<U+2019>s worked out by the vessel/cargo combinations.  The direct expenditures are entered into the I/O table, and indirect effects are calculated.  These are the inter-industry-relations derived activities from the purchases of supplies, purchases, labor, etc.  An I/O table is supplied to aid that calculation.  Then, using the I/O table, induced effects are calculated.  These are effects from household purchases of goods and services made possible from the wages generated from direct and indirect effects. The Corps of Engineers has a similar capability that has been used to examine the impacts of construction or base closing.   The [[US Department of Commerce]] [[Bureau of Economic Analysis]] (BEA) (1997) model discusses how to use their state level I/O models (RIMS II).  The ready availability of BEA and MARAD-like tables and calculation tools says that we will see more and more feedback impact analysis.  The information is meaningful for many purposes.
+
+Feed forward calculations seem to be much more interesting for planning.  The question is, <U+201C>If an investment is made in transportation, what will be its development effects?<U+201D>  An investment in transportation might lower transport costs, increase quality of service, or a mixture of these.  What would be the effect on trade flows, output, earnings, etc.?
+
+The first problem we know of worked on from this point of view was in Japan in the 1950<U+2019>s.  The situation was the building of a bridge to connect two islands, and the core question was of the mixing of the two island economies.
+
+A first consideration is the impact of changed transportation attributes, say, lower cost, on industry location, and/or agricultural or other resource based extra active activity, and/or on markets.  A spatial price equilibrium model ([[linear programming]]) is the tool of choice for that.  Input-output then permits tracing changed inter-industry relations, impacts on wages, etc.
+
+[[Britton Harris]] (1974) uses that analysis strategy.  He begins with industry location forecasting equations:  treats equilibrium of locations, markets, and prices; and pays much attention to transport costs.  An interesting thing about this and other models is that input-output considerations are no more than an accounting add-on; they hardly enter Harris<U+2019> study.  The interesting problems are the location and flow problems.
+
+==Input-output Analysis Versus Consistency Analysis==
+Despite the clear ability of the input-output model to depict and analyze the dependence of one industry or sector on another, Leontief and others ''never managed'' to introduce the full spectrum of dependency relations in a market economy. In 2003, Mohammad Gani[http://sb.iub.edu.bd/Dr_Mohammad_Osman_Gani.html], a pupil of Leontief, introduced [[Consistency Analysis]] in his book 'Foundations of Economic Science' (ISBN 984320655X), which formally looks exactly like the input-output table, but explores the dependency relations in terms of payments and intermediation relations. Consistency analysis explores the consistency of plans of buyers and sellers by decomposing the input-output table into four separate matrices, each for a different kind of means of payment. It integrates micro and macroeconomics in one model and deals with money in a fully ideology-free manner. It deals with the circulation of money vis-a-vis the movement of goods.
+
+In a technical sense, input-output analysis can be seen as a special case of consistency analysis without money and without entrepreneurship and transaction cost.
+
+==Bibliography==
+* Isard, Walter et al., Methods of Regional Analysis: An Introduction to Regional Science MIT Press 1960.
+*  Leontief, Wassily W., Input-Output Economics. 2nd ed., New York: Oxford University Press, 1986. 
+* Miller, R.E., Karen R. Polenske and Adam Z. Rose, eds., Frontiers of Input-Output Analysis. N.Y.: Oxford UP, 1989. [HB142 F76 1989/ Suzz]
+* Polenske, Karen Advances in Input-Output Analysis. 1976. 
+* Rappoport, Paul N. K. J. Rodenrys, and J. H. Savitt, Energy Consumption in the Transportation Services Section, research for the Electric Power Research Institute, 1979.
+* US Department of Commerce, Bureau of Economic Analysis . Regional multipliers: A user handbook for regional input-output modeling system (RIMS II). Third edition. Washington, D.C.: U.S. Government Printing Office. 1997.
+* Implan - A software tool used to perform input-ouput economic impact analysis
+
+== See also ==
+
+* [[Computable general equilibrium]]
+* [[Economic base analysis]]
+* [[Gross Output]]
+* [[Industrial organization]]
+* [[IPO Model]]
+* [[Life cycle analysis]]
+* [[Net output]]
+* [[Shift-share analysis]]
+
+==External links==
+*http://www2.sjsu.edu/faculty/watkins/inputoutput.htm
+* [http://www.eiolca.net/ Economic Input Output-Life Cycle Assessment on-line modeling software]
+* [http://www.doingbusiness.org/ Doing Business project input/output tables for reforms]
+
+[[Category:Economics models]]
+[[Category:Urban, rural, and regional economics]]
+[[Category:Regional science]]
+
+[[fr:Analyse entr<U+00E9>e-sortie]]
+[[ru:<U+041C><U+0435><U+0436><U+043E><U+0442><U+0440><U+0430><U+0441><U+043B><U+0435><U+0432><U+043E><U+0439> <U+0431><U+0430><U+043B><U+0430><U+043D><U+0441>]]

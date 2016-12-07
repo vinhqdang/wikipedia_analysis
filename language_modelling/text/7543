@@ -1,0 +1,86 @@
+{{italic title|force=true}}
+{| class="infobox" style="width: 25em; font-size: 95%;"
+|-
+! colspan="2" bgcolor="6699FF" | '''''Massachusetts Bay Transportation Authority v. Anderson'''''
+|-
+| colspan="2" align="center" |
+'''[[United States District Court for the District of Massachusetts]]'''
+|-
+|'''Filed'''
+|August 8, 2008
+|-
+|'''Decided'''
+|August 19, 2008
+|-
+|'''Case name'''
+|''Massachusetts Bay Transportation Authority v. Zack Anderson, RJ Ryan, Alessandro Chiesa, and the Massachusetts Institute of Technology''
+|-
+|'''Citations'''
+|''Undecided''
+|
+|-
+|'''Holding'''
+|Injunction lifted
+|-
+|'''Judge'''
+|George A. O'Toole, Jr.<ref>{{cite web|url=http://www.fjc.gov/servlet/tGetInfo?jid=1805 |title=Judges of the United States Courts - Biography of Judge George A. O'Toole, Jr |publisher=Federal Judicial Center |accessdate=2008-08-15}}</ref>
+|-
+|'''Laws applied'''
+|[[United States Constitution|U.S. Const.]] [[First Amendment to the United States Constitution|Amend. 1]]; [[Computer Fraud and Abuse Act]]
+|}
+
+'''''Massachusetts Bay Transportation Authority v. Anderson, et al.''''', Civil Action No. 08-11364, was a challenge brought by the [[Massachusetts Bay Transportation Authority]] (MBTA) to prevent three [[Massachusetts Institute of Technology]] (MIT) students from publicly presenting a [[security vulnerability]] they discovered in the MBTA's [[Charlie Card]] [[automated fare collection system]]. The case concerns the extent to which the [[responsible disclosure|disclosure of a computer security flaw]] is a form of [[free speech]] protected by the [[First Amendment to the United States Constitution|First Amendment]] to the [[United States Constitution]].
+
+The MBTA claimed that the MIT students violated the [[Computer Fraud and Abuse Act]] (CFAA) and on August 9, 2008 was granted a [[temporary restraining order]] (TRO) against the students to prevent them from presenting information to [[DEF CON (convention)|DEFCON]] conference attendees that could have potentially been used to defraud the MBTA of transit fares. The MIT students contended that submitting their research for review and approval by a government agency before publication is unconstitutional [[prior restraint]].
+
+The case garnered considerable popular and press attention when the injunction unintentionally increased the dissemination of the sensitive information in the students' presentation because the slides had been both distributed to conference organizers in the weeks before the injunction as well as inadvertently posted to the district court's public website as exhibits to the MBTA's original complaint.
+
+On August 19, the judge rejected the MBTA's request to extend the restraining order and the TRO likewise expired, thus granting the students the right to discuss and present their findings.<ref name="bare_url">{{cite news|url=http://news.yahoo.com/s/nm/20080819/tc_nm/massachusetts_hackers_dc_2 |title=Judge backs hackers in Boston subway dispute |last=Malone |first=Scott |date=2008-08-19 |publisher=Reuters |accessdate=2008-08-19}} {{Dead link|date=October 2010|bot=H3llBot}}</ref>
+
+==Background==
+In December 2007, cautions were published separately by Karsten Nohl<ref>{{cite web|url=http://www.cs.virginia.edu/~kn5f/ |title=Karsten Nohl webpage |publisher=University of Virginia |accessdate=2008-08-15}}</ref> and Henryk Plotz regarding the weak encryption and other vulnerabilities of the particular security scheme as implemented on [[NXP Semiconductors|NXP]]'s [[MIFARE]] [[Chipset|chip set]] and [[Proximity card|contactless electronic card]] system.<ref>{{cite journal|last=Pl<U+00F6>tz |first=Henryk |coauthors=Meriac, Milosch |url=http://events.ccc.de/camp/2007/Fahrplan/events/1957.en.html |title=Practical RFID Attacks |publisher=Chaos Communication Camp |date=August 2007 |location=Berlin, Germany}}</ref><ref>{{Cite journal|last=Courtois |first=Nicolas T. |coauthors=Nohl, Karsten, and O<U+2019>Neil, Sean |url=http://eprint.iacr.org/2008/166 |title=Algebraic Attacks on the Crypto-1 Stream Cipher in MiFare Classic and Oyster Cards |publisher=IACR pre-print archive |date=April 14, 2008 |accessdate=2008-08-15}}</ref> In March 2008, articles on the vulnerabilities appeared in newspapers and computer trade journals.<ref>{{cite news|url=http://www.virginia.edu/uvatoday/newsRelease.php?id=4321 |title=Group Demonstrates Security Hole in World's Most Popular Smartcard |publisher=UVA Today |date=February 26, 2008 |accessdate=2008-08-15}}</ref><ref>{{Cite news|last=Dayal |first=Geeta |url=http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=9069558 |title=How they hacked it: The MiFare RFID crack explained : A look at the research behind the chip compromise |publisher=[[Computerworld]] |date=March 19, 2008 |accessdate=2008-08-15}}</ref> A comparable independent [[cryptanalysis]], focused on the [[MIFARE]] Classic chip, was performed at the [[Radboud University Nijmegen]]. On March 7 the scientists were able to recover a [[cryptographic key]] from the [[RFID]] card without using expensive equipment.<ref>{{cite web|url = http://www2.ru.nl/media/pressrelease.pdf |title = Scientists of the Radboud University Nijmegen break the security of the MIFARE Classic cards}}</ref>. With respect to [[responsible disclosure]] the [[Radboud University Nijmegen]] published the article<ref>{{cite web | last = Garcia| first = Flavio D. | coauthors =  Gerhard de Koning Gans; Ruben Muijrers; Peter van Rossum, Roel Verdult; Ronny Wichers Schreur; Bart Jacobs | url = http://www.cs.ru.nl/~flaviog/publications/Dismantling.Mifare.pdf | title =  Dismantling MIFARE Classic | publisher = 13th European Symposium on Research in Computer Security (ESORICS 2008), LNCS, Springer | date = 2008-10-04 }}</ref> six months later. [[NXP Semiconductors|NXP]] tried to stop the publication of the second article through a preliminary injunction. In [[the Netherlands]], the judge ruled on July 18 that publishing this [[scientific article]] falls under the principle of freedom of expression and that in a democratic society it is of great importance that the results of scientific research can be published.<ref>{{cite web | url = http://zoeken.rechtspraak.nl/ResultPage.aspx?snelzoeken=t&searchtype=ljn&ljn=BD7578 | title = Pronunciation, Primary Claim (dutch) | author = Arnhem Court Judge Services | publisher = Rechtbank Arnhem | date = 2008-07-18}}</ref>
+
+In May 2008, MIT students Zack Anderson,<ref>[http://web.mit.edu/zacka/www/ Zack Anderson homepage at MIT]</ref> Russell J. Ryan,<ref>[http://www.rustyryan.net/ Russell J. Ryan homepage]</ref> Alessandro Chiesa,<ref>[http://web.mit.edu/alexch/www/ Alessandro Chiesa page at MIT]</ref> and Samuel G. McVeety presented a final paper in Professor [[Ron Rivest]]'s ''6.857: Computer and Network Security'' class demonstrating weaknesses in the MBTA's automated fare collection system. The report identified four problems: the value is stored on the card and not in a secure database, the data on the card can be easily read and overwritten, there is no cryptographic signature algorithm to prevent forgeries, and there is no centralized card verification system.<ref>{{cite news|url=http://www.boston.com/news/local/articles/2008/08/12/mit_students_report_makes_security_recommendations_to_t/ |title=MIT students' report makes security recommendations to T|last=Baxter |first=Christopher |date=August 12, 2008 |publisher=Boston Globe |accessdate=2008-08-15}}</ref> Anderson, Ryan, and Chiesa submitted a presentation entitled "Anatomy of a Subway Hack: Breaking Crypto RFID's and Magstripes of Ticketing Systems" to the [[DEF CON (convention)|DEF CON]] [[hacker convention]] which claimed to review and demonstrate how to [[reverse engineer]] the data on the [[magstripe]] card, several attacks to break the MIFARE-based [[Charlie Card]], and brute force attacks using [[Field-programmable gate array|FPGAs]].<ref>{{cite web|url=https://www.defcon.org/html/defcon-16/dc-16-speakers.html#Anderson |title=Speakers for DEFCON 16 |publisher=DEFCON Communications |accessdate=2008-08-16}}</ref>
+
+Before the complaint was filed in August 2008, [[Bruce Schneier]] wrote on the matter that "Publication of this attack might be expensive for NXP and its customers, but it's good for security overall. Companies will only design security as good as their customers know to ask for."<ref>{{Cite web|url=http://www.schneier.com/blog/archives/2008/08/hacking_mifare.html |last=Schneier |first=Bruce |title=Hacking Mifare Transport Cards |publisher=Schneier on Security newsletter |date=August 7, 2008}}</ref>
+
+==Litigation==
+
+On 8 August 2008, the MBTA filed suit seeking a temporary restraining order to prevent the students from presenting or otherwise discussing their findings until its vendors had sufficient time to correct defects as well as seeking monetary damages. The motion was granted on August 9 by Judge [[Douglas Woodlock]]<ref>{{cite web|url=http://www.fjc.gov/servlet/tGetInfo?jid=2643 |title=Judges of the United States Courts - Biography of Judge Douglas Woodlock |publisher=[[Federal Judicial Center]] |accessdate=2008-08-15}}</ref> and while the students appeared as scheduled, they did not speak or present at the convention.<ref>{{cite news|url=http://news.cnet.com/8301-1009_3-10012612-83.html |title=Judge orders halt to Defcon speech on subway card hacking |last=McCullagh |first=Declan |date=August 9, 2008 |accessdate=2008-08-15 |publisher=CNET News}}</ref><ref name="CB1">{{cite web| last=Lundin|first=Leigh |title=Dangerous Ideas |url=http://criminalbrief.com/?p=1892 |work=MBTA v DefCon 16 |publisher=Criminal Brief |accessdate=2010-10-07 |date=2008-08-17 }}</ref> However, the injunction not only garnered more popular and press attention to the case, but the sensitive information in the students' presentation became even more widely disseminated afterwards since it had been both distributed to conference organizers in the weeks before the injunction as well as inadvertently posted to the district court's public website as exhibits to the MBTA's original complaint.<ref>{{cite news|url=http://www.abcnews.go.com/Technology/story?id=5564423&page=1 |title=Injunction to Silence MIT Student Hackers Backfires |date=August 12, 2008 |accessdate=2008-08-15 |publisher=ABC News |last=Heussner |first=Ki Mae}}</ref><ref>{{cite web|url=http://www.sciam.com/article.cfm?id=call-the-cops-on-second-thought-don-2008-08-14 |title=MIT hackers make Massachusetts officials nervous at Defcon |date=August 14, 2008 |last=Stix |first=Gary |publisher=Scientific American: 60-Second Science Blog |accessdate=2008-08-15}}</ref>
+
+The MBTA retained [[Holland & Knight]] to represent them and contended that under the norm of [[responsible disclosure]], the students did not provide sufficient information or time before the presentation for the MBTA to correct the flaw and further alleged that the students transmitted programs to cause damage to (or attempted to transmit and damage) MBTA computers in an amount in excess of $5,000 under the [[Computer Fraud and Abuse Act]]. Furthermore, it was contended that this damage constituted a threat to public health and safety and the MBTA would suffer [[irreparable harm]] if the students were allowed to present; that the students [[Conversion (law)|converted]] and [[trespass to chattels|trespassed]] on MBTA property; that the students illegally profited from their activities; and that MIT itself was negligent in supervising the undergraduates and notifying the MBTA.<ref>Complaint, pp. 12-16</ref>
+
+The MIT students retained the [[Electronic Frontier Foundation]] and [[Fish & Richardson]] to represent them and asserted that the term "transmission" in the CFAA cannot be broadly construed as any form of communication and the restraining order is a [[prior restraint]] infringing their [[First Amendment to the United States Constitution|First Amendment]] right to protected free speech about academic research.<ref>Response, pp. 9-17</ref><ref>{{cite news|url=http://news.yahoo.com/s/cnet/20080813/tc_cnet/8301100931001611483 |title=Transit agency wants MIT students to stay gagged |last=McCullagh |first=Declan |date=August 13, 2008 |accessdate=2008-08-15 |publisher=CNET News}} {{Dead link|date=October 2010|bot=H3llBot}}</ref> An 11 August letter published by 11 prominent computer scientists supported the defendants' assertions and claimed that the precedent of the [[gag order]] will "stifle research efforts and weaken academic computing research programs. In turn, we fear the shadow of the law's ambiguities will reduce our ability to contribute to industrial research in security technologies at the heart of our information infrastructure."<ref>Letter from Computer Science Professors and Computer Scientists, p.7</ref>
+
+On 19 August, the judge rejected the MBTA's request to extend the restraining order and the TRO likewise expired, thus granting the students the right to discuss and present their findings.<ref name="bare_url" />
+
+==See also==
+* [[Responsible disclosure]]
+* [[Security through obscurity]]
+* [[Streisand effect]]
+
+==References==
+{{reflist|30em}}
+
+==Further reading==
+* McGraw-Herdeg, Michael, and Vogt, Marissa, [http://tech.mit.edu/V128/N31/subway.html "MBTA Sues Three Students to Stop Speech on Subway Vulnerabilities"], The Tech, MIT, Volume 128, Issue 31, Monday, August 25, 2008
+
+==External links==
+===Court documents===
+* '''Complaint''': [http://www.eff.org/files/filenode/MBTA_v_Anderson/mbta-v-anderson-complaint.pdf MBTA vs. Anderson, et al.]
+* '''Temporary restraining order''': [http://www.eff.org/files/filenode/MBTA_v_Anderson/mbta-temp-restraining-order.pdf August 9 restraining order]
+* '''Response''': [http://www.eff.org/files/filenode/MBTA_v_Anderson/studentresponse081208.pdf MIT Students' response and Motion to Modify]
+* '''Exhibit''': [http://www.eff.org/files/filenode/MBTA_v_Anderson/letter081208.pdf Letter from Computer Science Professors and Computer Scientists]
+
+===Other links===
+* [http://www.eff.org/cases/mbta-v-anderson Electronic Frontier Foundation case homepage]
+* [http://www.legaltalknetwork.com/modules.php?name=News&file=article&sid=305 Legal Talk Network discussion]
+
+{{DEFAULTSORT:Massachusetts Bay Transportation Authority V. Anderson}}
+[[Category:Cryptography law]]
+[[Category:United States district court cases]]
+[[Category:United States Internet case law]]
+[[Category:United States Free Speech Clause case law]]
+[[Category:Electronic Frontier Foundation]]
+[[Category:Massachusetts Bay Transportation Authority]]
+[[Category:2008 in United States case law]]

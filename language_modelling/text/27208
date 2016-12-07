@@ -1,0 +1,124 @@
+{{Semireg polyhedra db|Semireg polyhedron stat table|grCO}}
+In [[geometry]], the '''truncated cuboctahedron''' is an [[Archimedean solid]]. It has 12 [[Square (geometry)|square]] faces, 8 regular [[hexagon]]al faces, 6 regular [[octagon]]al faces, 48 vertices and 72 edges. Since each of its faces has [[point symmetry]] (equivalently, 180<U+00B0> [[rotation]]al symmetry), the truncated cuboctahedron is a [[zonohedron]].
+
+==Cartesian coordinates==
+The [[Cartesian coordinates]] for the vertices of a truncated cuboctahedron having edge length&nbsp;2 and centered at the origin are all permutations of:
+:(<U+00B1>1, <U+00B1>(1+<U+221A>2), <U+00B1>(1+2<U+221A>2))
+
+==Area and volume==
+The area ''A'' and the volume ''V'' of the truncated cuboctahedron of edge length ''a'' are:
+:<math>A = 12\left(2+\sqrt{2}+\sqrt{3}\right) a^2 \approx 61.7551724a^2</math>
+:<math>V = \left(22+14\sqrt{2}\right) a^3 \approx 41.7989899a^3.</math>
+
+==Vertices==
+To derive the number of vertices, we note that each vertex is the meeting point of a square, hexagon, and octagon.  
+*Each of the 12 squares with their 4 vertices contribute 48 vertices because 12 <U+00D7> 4 = 48.
+*Each of the 8 hexagons with their 6 vertices contribute 48 vertices because 8 <U+00D7> 6 = 48.
+*Each of the 6 octagons with their 8 vertices contribute 48 vertices because 6 <U+00D7> 8 = 48.
+
+Therefore, there may seem to exist {{nowrap|48 + 48 + 48 {{=}} 144}} vertices. However, we have over-counted the vertices thrice since a square, hexagon, and octagon meet at each vertex. Consequently, we divide 144 by 3 to correct for our over-counting: {{nowrap|144 / 3 {{=}} 48.}}
+
+==Dual==
+If the original truncated cuboctahedron has edge length 1, its dual [[disdyakis dodecahedron]] has edge lengths <math>\tfrac{2}{7}\scriptstyle{\sqrt{30-3\sqrt{2}}}</math>, <math>\tfrac{3}{7}\scriptstyle{\sqrt{6(2+\sqrt{2})}}</math> and <math>\tfrac{2}{7}\scriptstyle{\sqrt{6(10+\sqrt{2})}}</math>.
+
+==Uniform colorings==
+There is only one [[uniform coloring]] of the faces of this polyhedron, one color for each face type.
+
+A 2-uniform coloring also exists with alternately colored hexagons.
+
+==Other names==
+Alternate interchangeable names are:
+*''Truncated cuboctahedron'' ([[Johannes Kepler]])
+*''Rhombitruncated cuboctahedron'' ([[Magnus Wenninger]]<ref>{{Citation |last1=Wenninger |first1=Magnus |author1-link=Magnus Wenninger |title=Polyhedron Models |publisher=[[Cambridge University Press]] |isbn=978-0-521-09859-5 |id={{MathSciNet|id=0467493}} |year=1974}} (Model 15, p. 29)</ref>)
+*''Great rhombicuboctahedron'' (Robert Williams<ref>{{The Geometrical Foundation of Natural Structure (book)}} (Section 3-9, p. 82)</ref>)
+*''Great rhombcuboctahedron'' (Peter Cromwell<ref>Cromwell, P.; [http://books.google.com/books?id=OJowej1QWpoC&lpg=PP1&pg=PA82#v=onepage&q=&f=false ''Polyhedra''], CUP hbk (1997), pbk. (1999). (p. 82) </ref>)
+*''Omnitruncated cube'' or ''cantitruncated cube'' ([[Norman Johnson (mathematician)|Norman Johnson]])
+
+The name ''truncated cuboctahedron'', given originally by [[Johannes Kepler]], is a little misleading. If you [[truncation (geometry)|truncate]] a [[cuboctahedron]] by cutting the corners off, you do ''not'' get this uniform figure: some of the faces will be [[rectangle]]s. However, the resulting figure is [[topologically]] equivalent to a truncated cuboctahedron and can always be deformed until the faces are regular. 
+
+The alternative name ''great rhombicuboctahedron'' refers to the fact that the 12 square faces lie in the same planes as the 12 faces of the [[rhombic dodecahedron]] which is dual to the cuboctahedron. Compare to [[small rhombicuboctahedron]].
+
+One unfortunate point of confusion: There is a [[nonconvex uniform polyhedron]] by the same name. See [[nonconvex great rhombicuboctahedron]].
+==Orthogonal projections==
+The truncated cuboctahedron has two special [[orthogonal projection]]s in the A<sub>2</sub> and B<sub>2</sub> [[Coxeter plane]]s with [6] and [8] projective symmetry, and numerous [2] symmtries can be constructed from various projected planes relative to the polyhedron elements.
+{|class=wikitable
+|+ Orthogonal projections
+|-
+!Centered by
+!Vertex
+!Edge<br>4-6
+!Edge<br>4-8
+!Edge<br>6-8
+!Face normal<BR>4-6
+|-
+!Image
+|[[File:Cube_t012_v.png|100px]]
+|[[File:Cube_t012_e46.png|100px]]
+|[[File:Cube_t012_e48.png|100px]]
+|[[File:Cube_t012_e68.png|100px]]
+|[[File:Cube_t012_f46.png|100px]]
+|- align=center
+!Projective<br>symmetry
+|[2]<sup>+</sup>
+|[2]
+|[2]
+|[2]
+|[2]
+|-
+!Centered by
+!Face normal<BR>Square
+!Face normal<BR>Octagon
+!Face<br>Square
+!Face<br>Hexagon
+!Face<br>Octagon
+|-
+!Image
+|[[File:Cube_t012_af4.png|100px]]
+|[[File:Cube_t012_af8.png|100px]]
+|[[File:Cube_t012_f4.png|100px]]
+|[[File:3-cube_t012.svg|100px]]
+|[[File:3-cube_t012_B2.svg|100px]]
+|- align=center
+!Projective<br>symmetry
+|[2]
+|[2]
+|[2]
+|[6]
+|[8]
+|}
+
+== Related polyhedra==
+The truncated cuboctahedron is one of a family of uniform polyhedra related to the cube and regular octahedron.
+
+{{Octahedral truncations}}
+
+This polyhedron can be considered a member of a sequence of uniform patterns with vertex figure (4.6.2p) and [[Coxeter-Dynkin diagram]] {{CDD|node_1|p|node_1|3|node_1}}.  For ''p'' &lt; 6, the members of the sequence are [[Omnitruncation (geometry)|omnitruncated]] polyhedra ([[zonohedron]]s), shown below as spherical tilings. For ''p'' &gt; 6, they are tilings of the hyperbolic plane, starting with the [[truncated triheptagonal tiling]].
+{{Omnitruncated table}}
+{{Omnitruncated4 table}}
+
+==See also==
+{{Commons category|Truncated cuboctahedron}}
+*[[cube (geometry)|Cube]]
+*[[Cuboctahedron]]
+*[[Octahedron]]
+*[[Truncated icosidodecahedron]]
+*[[Truncated octahedron]] <U+2013> truncated tetratetrahedron
+
+==References==
+{{Reflist}}
+*{{cite book|author=Cromwell, P.|year=1997|title=Polyhedra|location=United Kingdom|publisher=Cambridge|pages=79-86 ''Archimedean solids''|isbn=0-521-55432-2}}
+
+==External links==
+*{{mathworld2 |urlname=GreatRhombicuboctahedron |title=Great rhombicuboctahedron |urlname2=ArchimedeanSolid |title2=Archimedean solid}}
+*{{KlitzingPolytopes|polyhedra.htm|3D convex uniform polyhedra|x3x4x - girco}}
+*[http://www.dr-mikes-math-games-for-kids.com/polyhedral-nets.html?net=K1RB4IgXRIYFsRCy4aHC6dnfSy7rq2q4f3v4yl4nRAbEtZul3CvUo1k8TrBjkgTqbZvaXjrwBrfylwUDWC8lfzMM1h1E0NDKFJh7udiMaOsp1DWdM1xR11UHzHVHzVTY4gCc1nRXW879CvTzcUwX9wUb4vJUXWfCEBFZvcR1dJrJyE4FpNhyWBHvw6Qyuph3rT9jgDZRKNn8FaEqBr5dZ1o9SBpnEObkMMx31INNrEf75EZOWGdEXwvDNeJIuKbtorvRJHy4iYcMHnYO1v1axRBQudr31fS0np5Jn7nuzR0Vx&name=Truncated+Cuboctahedron#applet Editable printable net of a truncated cuboctahedron with interactive 3D view]
+*[http://www.mathconsult.ch/showroom/unipoly/ The Uniform Polyhedra]
+*[http://www.georgehart.com/virtual-polyhedra/vp.html Virtual Reality Polyhedra] The Encyclopedia of Polyhedra
+*[http://www.faust.fr.bw.schule.de/mhb/flechten/grko/indexeng.htm great  Rhombicuboctahedron: paper strips for plaiting]
+
+{{Archimedean solids}}
+{{Polyhedron navigator}}
+
+[[Category:Uniform polyhedra]]
+[[Category:Archimedean solids]]
+[[Category:Zonohedra]]

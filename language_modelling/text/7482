@@ -1,0 +1,68 @@
+[[File:Triggertrap.jpg|thumb|Triggertrap]]
+'''Triggertrap''' is a programmable [[camera]] trigger. It has an [[auxiliary]] input built around [[Arduino]] open-source [[architecture]], meaning it can be programmed to trigger a [[camera]] in response to almost any electrical input like [[light]], [[laser]] and [[sound]]<ref>[http://www.geeky-gadgets.com/triggertrap-releases-your-cameras-shutter-any-way-you-like-29-06-2011/]</ref>
+<ref>[http://www.dpreview.com/news/2011/12/05/TriggerTrapentersproduction]</ref>. The triggertrap is [[compatible]] with a large range of [[cameras]], via [[cable]] or [[infra-red]] communication. It also has a built-in [[time-lapse]] function<ref>[http://onespot.wsj.com/gadgets/2011/06/29/2e330/triggertrap-trips-you-camera-with-just]</ref>
+<ref>[http://techcrunch.com/2011/06/29/kickstarter-triggertrap-universal-camera-trigger/],triggertrap Universal Camera Trigger</ref>
+
+==Background==
+The story of Triggertrap starts back in July 2011. The designers wanted to raise some capital for this new product. Therefore in an attempt to raise $25,000 for this project within over a month, nearly 900 supporters had pledged more than $77,000 in exchange for more than 950 Trigger traps via crowd-funding website [[kickstarter]] which is nearly three times more then what they wanted for the project. <ref>[http://www.techradar.com/news/photography-video-capture/cameras/triggertrap-time-lapse-photography-concept-unveiled-975639], Funding</ref>
+<ref>[http://gizmodo.com/5816561/triggertrap-commands-cameras-to-take-photos-in-reaction-to-pretty-much-anything]</ref>
+<ref>[http://www.engadget.com/2011/07/05/insert-coin-triggertrap-open-source-automatic-camera-release-v/]</ref>
+<ref>[http://www.popphoto.com/gear/2011/06/triggertrap-project-will-trigger-your-camera-just-about-anything]</ref>
+<ref>[http://www.slashgear.com/triggertrap-lets-geeky-photogs-control-how-and-when-their-camera-snaps-06163298/]</ref>
+<ref>[http://www.dpreview.com/news/2011/12/05/TriggerTrapentersproduction]</ref>
+Triggertrap has been designed by Ziah Fogel & [[Haje Jan Kamps]] <ref>[http://technabob.com/blog/2011/07/01/triggertrap-camera-trigger/]</ref>
+<ref>[http://gizmodo.com/5816561/triggertrap-commands-cameras-to-take-photos-in-reaction-to-pretty-much-anything]</ref>
+<ref>[http://www.geeky-gadgets.com/triggertrap-releases-your-cameras-shutter-any-way-you-like-29-06-2011/]</ref>
+<ref>[http://www.popphoto.com/gear/2011/06/triggertrap-project-will-trigger-your-camera-just-about-anything]</ref>
+
+[[File:Triggertrap shield on arduino.jpg|thumb|Triggertrap shield on arduino]]
+== Technology overview ==
+Trigger trap can trigger the camera's shutter based on [[light]] (when someone trips its laser beam), [[sound]] (when a loud clap is heard) and [[time]] (at varying time intervals) and can be triggered by anything capable of generating an electronic signal trigger in any other method the user can think of via an [[Aux]] port.<ref>[http://gizmodo.com/5816561/triggertrap-commands-cameras-to-take-photos-in-reaction-to-pretty-much-anything]</ref>
+<ref>[http://www.masteringsplash.com/triggertrap-device-intersting-splash-master/]</ref> The Triggertrap device is based on an Arduino and is an open-source hardware project for photographers and geeks alike.<ref>[http://www.wired.com/gadgetlab/2011/06/triggertrap-trips-you-camera-with-just-about-anything/]</ref>
+The trigger trap is able to respond and fire the external flash such that it would correctly sync at [[shutter]] speeds down to 1/640th of a second- that<U+2019>s a response time of less than 1.6 milliseconds.<ref>[http://www.gizmodo.co.uk/2011/12/triggertrap-breaks-free-of-kickstarter-and-hits-production/]</ref>
+The [[light sensor]] can also be used for being used with a [[laser beam]].
+The device has a built-in sensor which is a [[microphone]] that can trigger the camera whenever the triggertrap senses the [[sound]].<ref>[http://www.tested.com/news/trigger-trap-kickstarter-offers-an-open-source-arduino-camera-trigger/2559/]</ref>
+Trigger trap also has an [[auxiliary]] port, to which the user can connect anything as long as the user can find a way to create an electric signal.
+The device can control hundreds of cameras via [[infra-red]] or wired trigger system (depending upon cameras capability)<ref>[http://www.tested.com/news/trigger-trap-kickstarter-offers-an-open-source-arduino-camera-trigger/2559/]</ref>. 
+
+"Part of the excitement about the Triggertrap", says its inventor, [[Haje Jan Kamps]], "is that I have no idea what people are going to use it for. It's an incredibly versatile piece of photography kit, and because it is so easy to hack, I'm expecting creativity to go off the charts."<ref>[http://www.dpreview.com/news/2011/12/05/TriggerTrapentersproduction]</ref>
+
+== Types ==
+[[File:Triggertrap shield and arduino.jpg|thumb|Triggertrap shield and arduino]]
+There are two types of trigger traps<ref>[http://www.wired.com/gadgetlab/2011/06/triggertrap-trips-you-camera-with-just-about-anything/]</ref>. A triggertrap version and the shield version. Both the versions run on Arduino-compatible software, which makes the barrier to modification very low indeed. The team is planning to release both the [[software]] and hardware under open-source licenses<ref>[http://www.dpreview.com/news/2011/12/05/TriggerTrapentersproduction]</ref>. This allows use of the easy-to-learn [[Arduino]] [[programming language]] to add new functionality to the device - or alter the built-in features - and easily uploads the new firmware to the Triggertrap with a [[USB]] cable.<ref>[http://www.wired.com/gadgetlab/2011/06/triggertrap-trips-you-camera-with-just-about-anything/]</ref>
+<ref>[http://www.petapixel.com/2011/06/28/triggertrap-lets-you-trigger-your-camera-with-anything-you-can-think-of/]</ref>
+
+The 'Shield' version of the Triggertrap takes hack ability to a completely new level. It is a device that is connected at the back of an Arduino rapid prototyping platform board. By choosing the shield version, the user gets the satisfaction of soldering his own Triggertrap . User can choose to build the Triggertrap as specified using step-by-step instructions, or use the [[circuit board]] to create his own versions of the Triggertrap<ref>[http://www.dpreview.com/news/2011/12/05/TriggerTrapentersproduction]</ref>. 
+
+== References ==
+{{reflist}}
+
+*http://onespot.wsj.com/gadgets/2011/06/29/2e330/triggertrap-trips-you-camera-with-just
+*http://technabob.com/blog/2011/07/01/triggertrap-camera-trigger/
+*http://www.popphoto.com/gear/2011/06/triggertrap-project-will-trigger-your-camera-just-about-anything
+*http://www.pixiq.com/article/introducing-triggertrap
+*http://www.wired.com/gadgetlab/2011/06/triggertrap-trips-you-camera-with-just-about-anything/
+*http://techcrunch.com/2011/06/29/kickstarter-triggertrap-universal-camera-trigger/
+*http://www.techradar.com/news/photography-video-capture/cameras/triggertrap-time-lapse-photography-concept-unveiled-975639
+*http://www.fastcodesign.com/1665628/triggertrap-a-camera-controller-takes-candid-shots-to-the-next-level
+*http://www.masteringsplash.com/triggertrap-device-intersting-splash-master/
+*http://www.petapixel.com/2011/12/06/crowd-funded-triggertrap-universal-camera-trigger-now-in-production/
+*http://www.gizmodo.co.uk/2011/12/triggertrap-breaks-free-of-kickstarter-and-hits-production/
+*http://asia.cnet.com/crave/a-universal-camera-trigger-for-geeks-62209883.htm
+*http://www.geeky-gadgets.com/triggertrap-releases-your-cameras-shutter-any-way-you-like-29-06-2011/
+*http://newschoolofphotography.com/rumors-news/31595-article-triggertrap.html
+*http://www.rgbdaily.com/story/kickstarter-triggertrap-universal-camera-trigger
+*http://tech-news.tk/?p=81304
+*http://www.helifreak.com/showthread.php?t=318423
+*http://blog.aaronwalton.org/triggertrap-ok-wish-they-had-this-about-a-year-ago/
+*http://www.slashgear.com/triggertrap-lets-geeky-photogs-control-how-and-when-their-camera-snaps-06163298/
+*http://www.dpreview.com/news/2011/12/05/TriggerTrapentersproduction
+
+== External links ==
+http://triggertrap.com/
+
+[[Category: Film and video technology]]
+[[Category: Photography]]
+[[Category: Image processing]]
+[[Category: Digital media]]
+[[Category: Digital technology]]

@@ -1,0 +1,170 @@
+In [[ring theory]], a branch of [[abstract algebra]], an '''ideal''' is a special [[subset]] of a [[ring (mathematics)|ring]]. Ideals generalize certain subsets of the [[integer]]s, such as the [[even numbers]] or the multiples of 3. Addition and subtraction of even numbers preserves evenness, and multiplying an even number by any other integer results in another even number;  these [[Closure (mathematics)|closure]] and absorption properties are the defining properties of an ideal.
+
+Among the integers, the ideals correspond one-for-one with the [[non-negative integer]]s: in this ring, every ideal is a [[principal ideal]] consisting of the multiples of a single non-negative number. However, in other rings, the ideals may be distinct from the ring elements, and certain properties of integers, when generalized to rings, attach more naturally to the ideals than to the elements of the ring. For instance, the [[prime ideal]]s of a ring are analogous to [[prime number]]s, and the [[Chinese remainder theorem]] can be generalized to ideals.  There is a version of [[fundamental theorem of arithmetic|unique prime factorization]] for the ideals of a [[Dedekind domain]] (a type of ring important in [[number theory]]).
+An ideal can be used to construct a [[quotient ring]] similarly to the way that [[modular arithmetic]] can be defined from integer arithmetic, and also similarly to the way that, in [[group theory]], a [[normal subgroup]] can be used to construct a [[quotient group]].
+
+The concept of an [[order ideal]] in [[order theory]] is derived from the notion of ideal in ring theory. A [[fractional ideal]] is a generalization of an ideal, and the usual ideals are sometimes called '''integral ideals''' for clarity.
+
+== History ==
+Ideals were first proposed by [[Richard Dedekind]] in 1876 in the third edition of his book ''[[Vorlesungen <U+00FC>ber Zahlentheorie]]'' (English: ''Lectures on Number Theory''). They were a generalization of the concept of [[ideal number]]s developed by [[Ernst Kummer]].<ref name="flt">{{cite book
+| author = Harold M. Edwards
+| title = Fermat's last theorem. A genetic introduction to algebraic number theory
+| year = 1977
+| page = 76
+}}</ref><ref name="everest_ward">{{cite book
+| author = Everest G., Ward T.
+| title = An introduction to number theory
+| year = 2005
+| page = 83
+}}</ref>  Later the concept was expanded by [[David Hilbert]] and especially [[Emmy Noether]].
+
+== Definitions ==
+For an arbitrary ring <math>(R,+,\cdot)</math>, let <math>(R,+)</math> be its [[additive group]]. A subset <math>I</math> is called a '''two-sided ideal''' (or simply an '''ideal''') of <math>R</math> if it is an additive subgroup of ''R'' that "absorbs multiplication by elements of ''R''". Formally we mean that <math>I</math> is an ideal if it satisfies the following conditions:
+
+# <math>(I,+)</math> is a [[subgroup]] of <math>(R,+)</math>
+# <math>\forall x \in I, \forall r \in R :\quad x \cdot r \in I </math>
+# <math>\forall x \in I, \forall r \in R : \quad r \cdot x \in I.</math>
+Equivalently, an ideal of ''R'' is a [[bimodule|sub-''R''-bimodule]] of ''R''.
+
+A subset <math>I</math> of <math>R</math> is called a '''right ideal''' of <math>R</math> <ref>See Hazewinkel et al. (2004), p. 4.</ref> if it is an additive subgroup of ''R'' and absorbs multiplication on the right, that is:
+# <math>(I,+)</math> is a subgroup of <math>(R,+)</math>
+# <math>\forall x \in I, \forall r \in R: \quad x \cdot r \in I.</math>
+Equivalently, a right ideal of <math>R</math> is a right <math>R</math>-[[module (mathematics)|submodule]] of <math>R</math>.
+
+Similarly a subset <math>I</math> of <math>R</math> is called a '''left ideal''' of <math>R</math> if it is an additive subgroup of ''R'' absorbing multiplication on the left:
+# <math>(I,+)</math> is a subgroup of <math>(R, +)</math>
+# <math>\forall x \in I, \forall r \in R: \quad r \cdot x \in I.</math>
+Equivalently, a left ideal of <math>R</math> is a left <math>R</math>-submodule of <math>R</math>.
+
+In all cases, the first condition can be replaced by the following well-known criterion that ensures a nonempty subset of a group is a subgroup:
+
+:1. <math>I</math> is [[empty set|non-empty]] and <math>\forall x,y \in I: x - y \in I</math>.<ref>In fact, since ''R'' is assumed to be [[unital ring|unital]], it suffices that {{nowrap|''x'' + ''y''}} is in ''I'', since the second condition implies that &minus;''y'' is in ''I''.</ref>
+
+The left ideals in ''R'' are exactly the right ideals in the [[opposite ring]] ''R''<sup>o</sup> and vice versa. A two-sided ideal is a left ideal that is also a right ideal, and is often called an ideal except to emphasize that there might exist single-sided ideals. When ''R'' is a commutative ring, the definitions of left, right, and two-sided ideal coincide, and the term ''ideal'' is used alone.
+
+== Properties ==
+
+{0} and ''R'' are ideals in every ring ''R''. If ''R'' is a [[division ring]] or a [[Field (mathematics)|field]], then these are its only ideals. The ideal ''R'' is called the '''unit ideal'''.  ''I'' is a '''proper ideal''' if it is a proper subset of ''R'', that is, ''I'' does not equal ''R''.<ref>{{harvnb|Lang|2005|loc=Section III.2}}</ref>
+
+Just as [[normal subgroup]]s of groups are [[Kernel (algebra)|kernels]] of group [[homomorphisms]], ideals have interpretations as kernels. For a nonempty subset ''A'' of ''R'': 
+* ''A'' is an ideal of ''R'' if and only if it is a kernel of a ring homomorphism from ''R''.
+* ''A'' is a right ideal of ''R'' if and only if it is a kernel of a homomorphism from the right ''R'' module ''R''<sub>''R''</sub> to another right ''R'' module.
+* ''A'' is a left ideal of ''R'' if and only if it is a kernel of a homomorphism from the left ''R'' module <sub>''R''</sub>''R'' to another left ''R'' module.
+
+If ''p'' is in ''R'', then ''pR'' is a right ideal and ''Rp'' is a left ideal of ''R''. These are called, respectively, the [[Principal ideal|principal]] right and left ideals generated by ''p''. To remember which is which, note that right ideals are [[invariant (mathematics)#Invariant set|stable under]] right-multiplication (''IR''&nbsp;<U+2286>&nbsp;''I'') and left ideals are stable under left-multiplication (''RI''&nbsp;<U+2286>&nbsp;''I'').
+
+The connection between [[coset]]s and ideals can be seen by switching the operation from "multiplication" to "addition".
+
+== Motivation ==
+Intuitively, the definition can be motivated as follows: Suppose we have a subset of elements ''Z'' of a ring ''R'' and that we would like to obtain a ring with the same structure as ''R'', except that the elements of ''Z'' should be zero (they are in some sense "negligible").
+
+But if <math>z_1=0</math> and <math>z_2=0</math> in our new ring, then surely <math>z_1+z_2</math> should be zero too, and <math>r z_1</math> as well as <math>z_1 r</math> should be zero for ''any'' element <math>r</math> (zero or not).
+
+The definition of an ideal is such that the ideal ''I'' generated (see below) by ''Z'' is exactly the set of elements that are forced to become zero if ''Z'' becomes zero, and the [[quotient ring]] ''R/I'' is the desired ring where ''Z'' is zero, and ''only'' elements that are forced by ''Z'' to be zero are zero. The requirement that ''R'' and ''R/I'' should have the same structure (except that ''I'' becomes zero) is formalized by the condition that the projection from ''R'' to ''R/I'' is a (surjective) [[ring homomorphism]].
+
+== Examples ==
+* In a ring ''R'', the set ''R'' itself forms an ideal of ''R''. Also, the subset containing only the additive identity 0<sub>''R''</sub> forms an ideal. These two ideals are usually referred to as the ''trivial ideals'' of ''R''.
+* The even [[integer]]s form an ideal in the ring '''Z''' of all integers; it is usually denoted by 2'''Z'''. This is because the sum of any even integers is even, and the product of any integer with an even integer is also even. Similarly, the set of all integers divisible by a fixed integer ''n'' is an ideal denoted ''n'''''Z.'''
+* The set of all [[polynomial]]s with real coefficients which are divisible by the polynomial ''x''<sup>2</sup> + 1 is an ideal in the ring of all polynomials.
+* The set of all ''n''-by-''n'' [[matrix (mathematics)|matrices]] whose last row is zero forms a right ideal in the ring of all ''n''-by-''n'' matrices. It is not a left ideal. The set of all ''n''-by-''n'' matrices whose last ''column'' is zero forms a left ideal but not a right ideal.
+* The ring C('''R''') of all [[continuous function]]s ''f'' from '''R''' to '''R''' under [[pointwise multiplication]] contains the ideal of all continuous functions ''f'' such that ''f''(1) = 0. Another ideal in C('''R''') is given by those functions which vanish for large enough arguments, i.e. those continuous functions ''f'' for which there exists a number ''L'' > 0 such that ''f''(''x'') = 0 whenever |''x''| > ''L''.
+* [[Compact operator]]s form an ideal in the ring of [[bounded operators]].
+
+== Ideal generated by a set ==
+Let ''R'' be a (possibly not unital) ring. Any intersection of any nonempty family of left ideals of ''R'' is again a left ideal of ''R''. If ''X'' is any subset of ''R'', then the intersection of all left ideals of ''R'' containing ''X'' is a left ideal ''I'' of ''R'' containing ''X'', and is clearly the smallest left ideal to do so. This ideal ''I'' is said to be the left ideal '''generated''' by ''X''. Similar definitions can be created by using right ideals or two-sided ideals in place of left ideals.
+
+If ''R'' has unity, then the left, right, or two-sided ideal of ''R'' generated by a subset ''X'' of ''R'' can be expressed internally as we will now describe. The following set is a left ideal:
+:<math>\{r_1x_1+\dots+r_nx_n \mid n\in\mathbb{N}, r_i\in R, x_i\in X\}.\,</math>
+
+Each element described would have to be in every left ideal containing ''X'', so this left ideal is in fact the left ideal generated by ''X''. The right ideal and ideal generated by ''X'' can also be expressed in the same way:
+:<math>\{x_1r_1+\dots+x_nr_n \mid n\in\mathbb{N}, r_i\in R, x_i\in X\}\,</math>
+:<math>\{r_1x_1s_1+\dots+r_nx_ns_n \mid n\in\mathbb{N}, r_i\in R,s_i\in R, x_i\in X\}.\,</math>
+The former is the right ideal generated by ''X'', and the latter is the ideal generated by ''X''. 
+
+By convention, 0 is viewed as the [[empty sum|sum of zero such terms]], agreeing with the fact that the ideal of ''R'' generated by <U+2205> is {0} by the previous definition.
+
+If a left ideal ''I'' of ''R'' has a finite subset ''F'' such that ''I'' is the left ideal  generated by ''F'', then the left ideal ''I'' is said to be [[finitely generated module|finitely generated]]. Similar terms are also applied to right ideals and two-sided ideals generated by finite subsets.
+
+In the special case where the set ''X'' is just a singleton {''a''} for some ''a'' in ''R'', then the above definitions turn into the following:
+
+:<math>Ra=\{ra \mid r\in R\}\,</math>
+:<math>aR=\{ar \mid  r\in R\}\,</math>
+:<math>RaR=\{r_1as_1+\dots+r_nas_n \mid n\in\mathbb{N}, r_i\in R,s_i\in R\}.\,</math>
+
+These ideals are known as the left/right/two-sided [[principal ideal]]s generated by ''a''. It is also very common to denote the two-sided ideal generated by ''a'' as (''a'').
+
+If ''R'' does not have a unit, then the internal descriptions above must be modified slightly. In addition to the finite sums of products of things in ''X'' with things in ''R'', we must allow the addition of ''n''-fold sums of the form ''x''+''x''+...+''x'', and ''n''-fold sums of the form (''<U+2212>x'')+(''<U+2212>x'')+...+(''<U+2212>x'') for every ''x'' in ''X'' and every ''n'' in the natural numbers. When ''R'' has a unit, this extra requirement becomes superfluous.
+
+=== Example ===
+* In the ring '''Z''' of integers, every ideal can be generated by a single number (so '''Z''' is a [[principal ideal domain]]), and the only two generators of ''pR'' are ''p'' and ''<U+2212>p''. The concepts of "ideal" and "number" are therefore almost identical in '''Z'''. If ''aR''&nbsp;=&nbsp;''bR'' in an arbitrary domain, then ''au''&nbsp;=&nbsp;''b'' for some [[invertible element|unit]] ''u''. Conversely, for any unit ''u'', ''aR''&nbsp;=&nbsp;''auu''<sup><U+2212>1</sup>''R''&nbsp;=&nbsp;''auR''. So, in a commutative principal ideal domain, the generators of the ideal ''aR'' are just the elements ''au'' where ''u'' is an arbitrary unit. This explains the case of '''Z''' since 1 and <U+2212>1 are the only units of '''Z'''.
+
+== Types of ideals ==
+:''To simplify the description all rings are assumed to be commutative. The non-commutative case is discussed in detail in the respective articles.''
+
+Ideals are important because they appear as kernels of ring homomorphisms and allow one to define [[factor ring]]s. Different types of ideals are studied because they can be used to construct different types of factor rings.
+
+* '''[[Maximal ideal]]''': A proper ideal ''I'' is called a '''maximal ideal''' if there exists no other proper ideal ''J'' with ''I'' a proper subset of ''J''.  The factor ring of a maximal ideal is a [[simple ring]] in general and is a [[field (mathematics)|field]] for commutative rings.<ref>Because simple commutative rings are fields. See Lam (2001), {{Google books quote|id=f15FyZuZ3-4C|page=39|text=simple commutative rings|p. 39}}.</ref>
+* '''[[Minimal ideal]]''': A nonzero ideal is called minimal if it contains no other nonzero ideal.
+* '''[[Prime ideal]]''': A proper ideal ''I'' is called a '''prime ideal''' if for any ''a'' and ''b'' in ''R'', if ''ab'' is in ''I'', then at least one of ''a'' and ''b'' is in ''I''. The factor ring of a prime ideal is a [[prime ring]] in general and is an [[integral domain]] for commutative rings.
+* '''[[Radical of an ideal|Radical ideal]]''' or [[semiprime ideal]]: A proper ideal ''I'' is called '''radical''' or '''semiprime''' if for any ''a'' in ''R'', if ''a''<sup>''n''</sup> is in ''I'' for some ''n'', then ''a'' is in ''I''. The factor ring of a radical ideal is a [[semiprime ring]] for general rings, and is a [[reduced ring]] for commutative rings.
+* '''[[Primary ideal]]''': An ideal ''I'' is called a '''primary ideal''' if for all ''a'' and ''b'' in ''R'', if ''ab'' is in ''I'', then at least one of ''a'' and ''b''<sup>''n''</sup> is in ''I'' for some [[natural number]] ''n''. Every prime ideal is primary, but not conversely. A semiprime primary ideal is prime.
+* '''[[Principal ideal]]''': An ideal generated by ''one'' element.
+* '''Finitely generated ideal''': This type of ideal is [[finitely generated module|finitely generated]] as a module.
+* '''[[Primitive ideal]]''': A left primitive ideal is the [[Annihilator (ring theory)|annihilator]] of a [[simple module|simple]] left [[module (mathematics)|module]].  A right primitive ideal is defined similarly.  Actually (despite the name) the left and right primitive ideals are always two-sided ideals. Primitive ideals are prime. A factor rings constructed with a right (left) primitive ideals is a right (left) [[primitive ring]]. For commutative rings the primitive ideals are maximal, and so commutative primitive rings are all fields.
+* '''[[Irreducible ideal]]''': An ideal is said to be irreducible if it cannot be written as an intersection of ideals which properly contain it.
+* '''Comaximal ideals''': Two ideals <math>\mathfrak{i}, \mathfrak{j}</math> are said to be '''comaximal''' if <math>x + y = 1</math> for some <math>x \in \mathfrak{i}</math> and <math>y \in \mathfrak{j}</math>.
+* '''[[Regular ideal]]''': This term has multiple uses. See the article for a list.
+* '''[[Nil ideal]]''':  An ideal is a nil ideal if each of its elements is nilpotent.
+
+Two other important terms using "ideal" are not always ideals of their ring. See their respective articles for details:
+*'''[[Fractional ideal]]''': This is usually defined when ''R'' is a commutative domain with [[quotient field]] ''K''. Despite their names, fractional ideals are ''R'' submodules of ''K'' with a special property. If the fractional ideal is contained entirely in ''R'', then it is truly an ideal of ''R''.
+*'''[[Invertible ideal]]''': Usually an invertible ideal ''A'' is defined as a fractional ideal for which there is another fractional ideal ''B'' such that ''AB''=''BA''=''R''. Some authors may also apply "invertible ideal" to ordinary ring ideals ''A'' and ''B'' with ''AB''=''BA''=''R'' in rings other than domains.
+
+== Further properties ==
+* In rings with identity, an ideal is proper ''if and only if'' it does not contain 1 or equivalently it does not contain a unit.
+* The set of ideals of any ring are [[partially ordered set|partially ordered]] via [[subset|subset inclusion]], in fact they are additionally a [[complete lattice|complete]] [[modular lattice]] in this order with [[join (lattice theory)|join operation]] given by addition of ideals and [[meet (lattice theory)|meet operation]] given by set intersection. The trivial ideals supply the least and greatest elements: the largest ideal is the entire ring, and the smallest ideal is the zero ideal. The lattice is not, in general, a [[distributive lattice]].
+* Unfortunately [[Zorn's lemma]] does not necessarily apply to the collection of proper ideals of ''R''. However when ''R'' has identity 1, this collection can be reexpressed as "the collection of ideals which do not contain 1". It can be checked that Zorn's lemma now applies to this collection, and consequently there are maximal proper ideals of ''R''. With a little more work, it can be shown that every proper ideal is contained in a maximal ideal. See ''[[Krull's theorem]]'' at [[maximal ideal]].
+* The ring ''R'' can be considered as a left module over itself, and the left ideals of ''R'' are then seen as the [[submodule]]s of this module. Similarly, the right ideals are submodules of ''R'' as a right module over itself, and the two-sided ideals are submodules of ''R'' as a [[bimodule]] over itself. If ''R'' is commutative, then all three sorts of module are the same, just as all three sorts of ideal are the same.
+* Every ideal is a [[pseudo-ring]].
+* The ideals of a ring form a [[semiring]] (with identity element ''R'') under addition and multiplication of ideals.
+
+== Ideal operations ==
+The sum and product of ideals are defined as follows. For  <math>\mathfrak{a}</math> and <math>\mathfrak{b}</math>, ideals of a ring R,
+
+:<math>\mathfrak{a}+\mathfrak{b}:=\{a+b \mid a \in \mathfrak{a} \mbox{ and } b \in \mathfrak{b}\}</math>
+and
+:<math>\mathfrak{a} \mathfrak{b}:=\{a_1b_1+ \dots + a_nb_n \mid a_i \in \mathfrak{a} \mbox{ and } b_i \in \mathfrak{b}, i=1, 2, \dots, n; \mbox{ for } n=1, 2, \dots\},</math>
+
+i.e. the product of two ideals <math>\mathfrak{a}</math> and <math>\mathfrak{b}</math> is defined to be the ideal <math>\mathfrak{a}\mathfrak{b}</math> generated by all products of the form ''ab'' with ''a'' in <math>\mathfrak{a}</math> and ''b'' in <math>\mathfrak{b}</math>. The product <math>\mathfrak{a}\mathfrak{b}</math> is [[subset|contained in]] the intersection of <math>\mathfrak{a}</math> and <math>\mathfrak{b}</math>.
+
+The sum and the [[intersection (set theory)|intersection]] of ideals is again an ideal; with these two operations as join and meet, the set of all ideals of a given ring forms a [[complete lattice|complete]] [[modular lattice]].  Also, the [[union (set theory)|union]] of two ideals is a subset of the sum of those two ideals, because for any element ''a'' inside an ideal, we can write it as ''a''+0, or 0+''a'', therefore, it is contained in the sum as well. However, the union of two ideals is not necessarily an ideal.
+
+== Ideals and congruence relations ==
+There is a bijective correspondence between ideals and [[congruence relation]]s (equivalence relations that respect the ring structure) on the ring:
+
+Given an ideal ''I'' of a ring ''R'', let ''x'' ~ ''y'' if ''x'' <U+2212> ''y'' <U+2208> ''I''.  Then ~ is a congruence relation on ''R''.
+
+Conversely, given a congruence relation ~ on ''R'', let ''I'' = {''x'' : ''x'' ~ 0}.  Then ''I'' is an ideal of ''R''.
+
+== See also ==
+* [[Modular arithmetic]]
+* [[Noether isomorphism theorem]]
+* [[Boolean prime ideal theorem]]
+* [[Ideal theory]]
+* [[Ideal (order theory)]]
+* [[Ideal quotient]]
+* [[Ideal norm]]
+* [[Artinian ideal]]
+* [[Noncommutative ring]]
+* [[Regular ideal]]
+* [[Idealizer]]
+
+== References ==
+{{Reflist}}
+{{Refbegin}}
+* {{Cite book | last=Lang | first =Serge | authorlink=Serge Lang | title=Undergraduate Algebra | edition=Third | publisher=[[Springer-Verlag]] | isbn=978-0-387-22025-3 | year=2005 | place= | ref=harv | postscript=<!-- Bot inserted parameter. Either remove it; or change its value to "." for the cite to end in a ".", as necessary. -->{{inconsistent citations}}}}
+* [[Michiel Hazewinkel]], Nadiya Gubareni, Nadezhda Mikha<U+012D>lovna Gubareni, Vladimir V. Kirichenko. ''Algebras, rings and modules''. Volume 1. 2004. Springer, 2004. ISBN 1-4020-2690-0
+{{Refend}}
+
+[[Category:Ideals| ]]
+[[Category:Algebraic structures]]

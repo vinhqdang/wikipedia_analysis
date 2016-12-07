@@ -1,0 +1,87 @@
+The '''AKS primality test''' (also known as '''Agrawal<U+2013>Kayal<U+2013>Saxena primality test''' and '''cyclotomic AKS test''') is a [[deterministic algorithm|deterministic]] [[primality test|primality-proving]] [[algorithm]] created and published by three [[Indian Institute of Technology Kanpur]] computer scientists, [[Manindra Agrawal]], [[Neeraj Kayal]], and [[Nitin Saxena]], on August 6, 2002, in a paper titled "PRIMES is in P".<ref name="AKS">{{cite journal |first=Manindra |last=Agrawal |first2=Neeraj |last2=Kayal |first3=Nitin |last3=Saxena |url=http://www.cse.iitk.ac.in/users/manindra/algebra/primality_v6.pdf |title=PRIMES is in P |journal=[[Annals of Mathematics]] |volume=160 |year=2004 |issue=2 |pages=781<U+2013>793 |doi=10.4007/annals.2004.160.781 |jstor=3597229 }}</ref> The authors received many accolades, including the 2006 [[G<U+00F6>del Prize]] and the 2006 [[Fulkerson Prize]], for this work.
+
+The algorithm determines whether a number is [[Prime number|prime]] or [[Composite number|composite]] within [[polynomial time]].
+
+==Importance==
+The key significance of AKS is that it was the first published primality-proving algorithm to be simultaneously ''general'', ''polynomial'', ''deterministic'', and ''unconditional''. Previous algorithms had achieved three of these properties at most, but not all four.
+* The AKS algorithm can be used to verify the primality of any '''general''' number given. Many fast primality tests are known that work only for numbers with certain properties. For example, the [[Lucas<U+2013>Lehmer primality test|Lucas<U+2013>Lehmer test for Mersenne numbers]] works only for [[Mersenne number]]s, while [[P<U+00E9>pin's test]] can be applied to [[Fermat number]]s only.
+* The maximum running time of the algorithm can be expressed as a '''[[polynomial]]''' over the number of digits in the target number. [[Elliptic curve primality proving|ECPP]] and [[Adleman<U+2013>Pomerance<U+2013>Rumely primality test|APR]] conclusively prove or disprove that a given number is prime, but are not known to have polynomial time bounds for all inputs.
+* The algorithm is guaranteed to distinguish '''[[Deterministic algorithm|deterministically]]''' whether the target number is prime or composite. Randomized tests, such as [[Miller<U+2013>Rabin primality test|Miller<U+2013>Rabin]] and [[Baillie<U+2013>PSW primality test|Baillie<U+2013>PSW]], can test any given number for primality in polynomial time, but are known to produce only a probabilistic result.
+* The correctness of AKS is '''not conditional''' on any subsidiary unproven [[hypothesis]]. In contrast, the [[Miller<U+2013>Rabin primality test#Deterministic variants of the test|Miller test]] is fully deterministic and runs in polynomial time over all inputs, but its correctness depends on the truth of the yet-unproven [[generalized Riemann hypothesis]].
+
+==Concepts==
+The AKS primality test is based upon the following theorem: An integer ''n'' (<U+2265> 2) is prime if and only if the polynomial [[Congruence relation#Modular arithmetic|congruence relation]]
+:<math>(x - a)^{n} \equiv (x^{n} - a) \pmod{n} \qquad (1)</math>
+holds for all integers ''a'' [[coprime]] to ''n'' (or even just for some such integer ''a'', in particular for ''a'' = 1). Note that ''x'' is a free variable. It is never substituted by a number; instead you have to expand <math>(x-a)^n</math> and compare the coefficients of the ''x'' powers.
+
+This theorem is a generalization to polynomials of [[Fermat's little theorem]], and can easily be proven using the [[binomial theorem]] together with the following property of the [[binomial coefficient]]:
+:<math>{n \choose k} \equiv 0 \pmod{n}</math> for all <math>0<k<n</math> if and only if ''n'' is prime.
+
+While the relation (1) constitutes a primality test in itself, verifying it takes [[exponential time]].  Therefore, to reduce the [[Computational complexity theory|computational complexity]], AKS makes use of the related congruence
+:<math>(x - a)^{n} \equiv (x^{n} - a) \pmod{n, x^{r} - 1} \qquad (2)</math>
+which is the same as:
+:<math>(x - a)^n - (x^n - a) = nf + (x^r - 1)g \qquad (3)</math>
+for some polynomials ''f'' and ''g''. This congruence can be checked in polynomial time with respect to the number of digits in n, because it is provable that r needs be logarithmic with respect to n. Note that all primes satisfy this relation (choosing ''g''&nbsp;=&nbsp;0 in (3) gives (1), which holds for ''n'' prime). However, some composite numbers also satisfy the relation. The proof of correctness for AKS consists of showing that there exists a suitably small ''r'' and suitably small set of integers ''A'' such that, if the congruence holds for all such ''a'' in ''A'', then ''n'' must be prime.
+
+==History and running time==
+In the first version of the above-cited paper, the authors proved the asymptotic time complexity of the algorithm to be [[Big O notation#Extensions to the Bachmann<U+2013>Landau notations|<U+00D5>]]<math>(\log^{12}(n))</math>. In other words, the algorithm takes less time than the twelfth power of the number of digits in ''n'' times a polylogarithmic (in the number of digits) factor. However, the upper bound proved in the paper was rather loose; indeed, a widely held conjecture about the distribution of the [[Sophie Germain prime]]s would, if true, immediately cut the worst case down to <U+00D5><math>(\log^6(n))</math>.
+
+In the months following the discovery, new variants appeared (Lenstra 2002, Pomerance 2002, Berrizbeitia 2003, Cheng 2003, Bernstein 2003a/b, Lenstra and Pomerance 2003), which improved the speed of computation by orders of magnitude. Due to the existence of the many variants, Crandall and Papadopoulos refer to the "AKS-class" of algorithms in their scientific paper "On the implementation of AKS-class primality tests", published in March 2003.
+
+In response to some of these variants, and to other feedback, the paper "PRIMES is in P" was updated with a new formulation of the AKS algorithm and of its proof of correctness. (This version was eventually published in ''[[Annals of Mathematics]]''.) While the basic idea remained the same, ''r'' was chosen in a new manner, and the proof of correctness was more coherently organized. While the previous proof had relied on many different methods, the new version relied almost exclusively on the behavior of cyclotomic polynomials over [[finite fields]]. The new version also allowed for an improved bound on the time complexity, which can now be shown by simple methods to be <U+00D5><math>(\log^{10.5}(n))</math>. Using additional results from [[sieve theory]], this can be further reduced to <U+00D5><math>(\log^{7.5}(n))</math>.
+
+In 2005, [[Carl Pomerance]] and [[Hendrik Lenstra|H. W. Lenstra, Jr.]] demonstrated a variant of AKS that runs in <U+00D5>(log<sup>6</sup>(''n'')) operations, where ''n'' is the number to be tested &ndash; a marked improvement over the initial <U+00D5>(log<sup>12</sup>(''n'')) bound in the original algorithm.<ref name="lenstra_pomerance_2005">H. W. Lenstra jr. and Carl Pomerance, "[http://www.math.dartmouth.edu/~carlp/PDF/complexity12.pdf Primality testing with Gaussian periods]", preliminary version July 20, 2005.</ref>  An updated version of the paper is also available.<ref name="lenstra_pomerance_2011">H. W. Lenstra jr. and Carl Pomerance, "[http://www.math.dartmouth.edu/~carlp/aks041411.pdf Primality testing with Gaussian periods]", version of April 12, 2011.</ref>
+
+Agrawal, Kayal and Saxena suggest a variant of their algorithm which would run in <U+00D5><math>(\log^{3}(n))</math> if a certain conjecture made by Bhattacharjee and Pandey in 2001 is true; however this conjecture has been shown to be heuristically false.<ref name="AKS"/>
+
+==Algorithm==
+The algorithm is as follows:<ref name="AKS" />
+
+: Input: integer ''n''&nbsp;>&nbsp;1.
+# If ''n''&nbsp;=&nbsp;''a''<sup>''b''</sup> for integers ''a''&nbsp;>&nbsp;0 and ''b''&nbsp;>&nbsp;1, output ''composite''.
+# Find the smallest ''r'' such that ''o''<sub>''r''</sub>(''n'')&nbsp;>&nbsp;log<sup>2</sup>(''n'').
+# If 1&nbsp;<&nbsp;[[greatest common divisor|gcd]](''a'',''n'')&nbsp;<&nbsp;''n'' for some ''a'' <U+2264> ''r'', output ''composite''.
+# If ''n'' <U+2264> ''r'', output ''prime''.
+# For ''a''&nbsp;=&nbsp;1 to <math>\scriptstyle\lfloor \scriptstyle\sqrt{\varphi(r)}\log(n) \scriptstyle\rfloor</math> do
+#: if (''X''+''a'')<sup>''n''</sup><U+2260> ''X''<sup>''n''</sup>+''a'' (mod ''X''<sup>''r''</sup> <U+2212> 1,''n''), output ''composite'';
+# Output ''prime''.
+
+Here ''o''<sub>''r''</sub>(''n'') is the [[multiplicative order]] of ''n'' [[modular arithmetic|modulo]] ''r'', ''log'' is the [[binary logarithm]], and <math>\scriptstyle\varphi(r)</math> is [[Euler's totient function]] of ''r''.
+
+If ''n'' is a prime number, the algorithm will always return ''prime'': since ''n'' is prime, steps 1 and 3 will never return ''composite''. Step 5 will also never return ''composite'', because (2) is true for all prime numbers ''n''. Therefore, the algorithm will return ''prime'' either in step 4 or in step 6.
+
+Conversely, if ''n'' is composite, the algorithm will always return ''composite'': if the algorithm returns ''prime'', then this will occur in either step 4 or step 6. In the first case, since ''n'' <U+2264> ''r'', ''n'' has a factor ''a'' <U+2264> ''r'' such that 1 < gcd(''a'',''n'') < ''n'', which will return ''composite''. The remaining possibility is that the algorithm returns ''prime'' in step 6. The authors' article<ref name="AKS" /> proves that this will not happen because the multiple equalities tested in step 5 are sufficient to guarantee that the output is ''composite''.
+
+==References==
+<references />
+
+==External links==
+* {{MathWorld|urlname=AKSPrimalityTest|title=AKS Primality Test}}
+* [http://images.apple.com/acg/pdf/aks3.pdf R. Crandall, Apple ACG, and J. Papadopoulos (March 18, 2003): On the implementation of AKS-class primality tests] (PDF)
+* [http://www.ams.org/notices/200305/fea-bornemann.pdf Article by Borneman, containing photos and information about the three Indian scientists] (PDF)
+* [http://www.ams.org/bull/2005-42-01/S0273-0979-04-01037-7/home.html Andrew Granville: It is easy to determine whether a given integer is prime]
+* [http://www.angelusworld.com/software.php?lang=en&num=12 JAVA implementation of the AKS Primality Test algorithm.]
+* [http://www.scottaaronson.com/writings/prime.pdf The Prime Facts: From Euclid to AKS], by [[Scott Aaronson]] (PDF)
+* [http://www.instantlogic.net/publications/PRIMES%20is%20in%20P%20little%20FAQ.htm The PRIMES is in P little FAQ] by Anton Stiglic
+* [http://sigact.acm.org/prizes/godel/2006.html 2006 G<U+00F6>del Prize Citation]
+* [http://www.ams.org/notices/200611/comm-fulkerson.pdf 2006 Fulkerson Prize Citation]
+* [http://fatphil.org/maths/AKS The AKS "PRIMES in P" Algorithm Resource]
+
+{{number theoretic algorithms}}
+
+[[Category:Primality tests]]
+[[Category:Finite fields]]
+
+[[ar:<U+0627><U+062E><U+062A><U+0628><U+0627><U+0631> <U+0623>.<U+0643>.<U+0623><U+0633> <U+0644><U+0623><U+0648><U+0644><U+064A><U+0629> <U+0639><U+062F><U+062F> <U+0645><U+0627>]]
+[[de:AKS-Primzahltest]]
+[[es:Test de primalidad AKS]]
+[[eo:Primeca provo AKS]]
+[[fr:Test de primalit<U+00E9> AKS]]
+[[it:Algoritmo AKS]]
+[[nl:AKS-test]]
+[[ja:AKS<U+7D20><U+6570><U+5224><U+5B9A><U+6CD5>]]
+[[pl:Test pierwszo<U+015B>ci AKS]]
+[[pt:Teste de primalidade AKS]]
+[[ru:<U+0422><U+0435><U+0441><U+0442> <U+0410><U+0433><U+0440><U+0430><U+0432><U+0430><U+043B><U+0430> <U+2014> <U+041A><U+0430><U+044F><U+043B><U+0430> <U+2014> <U+0421><U+0430><U+043A><U+0441><U+0435><U+043D><U+044B>]]
+[[uk:AKS <U+0442><U+0435><U+0441><U+0442> <U+043F><U+0440><U+043E><U+0441><U+0442><U+043E><U+0442><U+0438>]]
+[[zh:AKS<U+8CEA><U+6578><U+6E2C><U+8A66>]]

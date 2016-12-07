@@ -1,0 +1,144 @@
+[[File:Cloud forest mount kinabalu.jpg|thumb|right|Tropical forests often have high humidity.]]
+'''Humidity'''  is the amount of [[water vapor]] in the [[air]]. Water vapor is the gaseous state of water and is invisible.<ref>{{cite web|title=What is Water Vapor?|url=http://www.weatherquestions.com/What_is_water_vapor.htm|accessdate=2012-08-28}}</ref> Humidity indicates the likelihood of [[precipitation (meteorology)|precipitation]], [[dew]], or [[fog]].  Higher humidity reduces the effectiveness of [[sweating]] in cooling the body by reducing the rate of [[evaporation]] of moisture from the skin.  This effect is calculated in a [[heat index]] table or [[humidex]], used during summer weather.
+
+There are three main measurements of humidity: absolute, relative and specific. '''Absolute humidity''' is the water content of air.<ref>Wyer, S.S., "A treatise on producer-gas and gas-producers", (1906) The Engineering and Mining Journal, London, p.23</ref> '''Relative humidity''', expressed as a percent, measures the current absolute humidity ''relative'' to the maximum for that temperature. '''Specific humidity''' is a [[ratio]] of the water vapor content of the mixture to the total air content on a mass basis.
+
+==Types==
+
+===Absolute humidity===
+Absolute humidity is the mass of water vapor, <math> m_w </math>, per unit volume of total air and water vapor mixture, <math> V_{net} </math>, which can be expressed as:
+
+:<math> AH = {m_w \over V_{net}}. </math>
+
+Absolute humidity in the atmosphere ranges from near zero to roughly 30&nbsp;grams per cubic meter when the air is saturated at 30 <U+00B0>C.[http://www.britannica.com/eb/article-53259/climate#292984.hook]
+(See also [http://www.tis-gdv.de/tis_e/misc/klima.htm Climate/Humidity table])
+
+The absolute humidity changes as air [[temperature]] or [[pressure]] changes.  This makes it unsuitable for [[chemical engineering]] calculations, e.g. for [[clothes dryer]]s, where temperature can vary considerably.  As a result, absolute humidity in chemical engineering may refer to mass of water vapor per unit mass of dry air, also known as the '''mass mixing ratio''' (see "specific humidity" below), which is better suited for heat and mass balance calculations.  Mass of water per unit volume as in the equation above is also defined as '''volumetric humidity'''.  Because of the potential confusion, [[British Standard]] BS 1339 (revised 2002) suggests avoiding the term "absolute humidity".  Units should always be carefully checked.  Many humidity charts are given in g/kg or kg/kg, but any mass units may be used.
+
+The field concerned with the study of physical and thermodynamic properties of gas<U+2013>vapor mixtures is named [[psychrometrics]].
+
+===Relative humidity===
+{{Main|Relative humidity}}
+
+'''Relative humidity''' is the ratio of the [[partial pressure]] of water vapor in the air<U+2013>water mixture to the saturated [[vapor pressure]] of water at those conditions. The relative humidity of air is a function of both its water content and temperature.  
+
+Relative humidity is normally expressed as a percentage and is calculated by using the following formula. It is defined as the ratio of the [[partial pressure]] of water vapor (H<sub>2</sub>O) <math> \left({e_w}\right) </math> in the mixture to the saturated [[vapor pressure]] of water <math> \left({{e^*}_w}\right) </math> at a prescribed temperature.
+:<ref name="Perry">Perry, R.H. and Green, D.W, ''[[Perry's Chemical Engineers' Handbook]]'' (7th Edition), [[McGraw-Hill]], ISBN 0-07-049841-5 , Eqn 12-7</ref>
+
+:::<math> \phi  =  {{e_w} \over {{e^*}_w}} \times 100% </math>
+
+Relative humidity is an important [[Metric (mathematics)|metric]] used in [[weather forecasting|weather forecasts]] and reports, as it is an indicator of the likelihood of [[precipitation (meteorology)|precipitation]], dew, or fog.  In hot summer [[weather]], a rise in relative humidity increases the [[heat index|apparent temperature]] to [[human]]s (and other [[animal]]s) by hindering the [[evaporation]] of [[perspiration]] from the skin. For example, according to the [[Heat Index]], a relative humidity of 75% at 80.0<U+00B0>F (26.7<U+00B0>C) would feel like 83.6<U+00B0>F <U+00B1>1.3 <U+00B0>F (28.7<U+00B0>C <U+00B1>0.7 <U+00B0>C) at ~44% relative humidity.<ref>Lans P. Rothfusz. "The Heat Index 'Equation' (or, More Than You Ever Wanted to Know About Heat Index)", Scientific Services Division (NWS Southern Region Headquarters), 1 July 1990 [http://www.srh.noaa.gov/images/ffc/pdf/ta_htindx.PDF]</ref><ref>R.G. Steadman, 1979. "The assessment of sultriness. Part I: A temperature-humidity index based on human physiology and clothing science," J. Appl. Meteor., 18, 861-873</ref>
+
+===Specific humidity===<!-- This section is linked from [[Relative humidity]] -->
+''Specific humidity'' is the ratio of water vapor, <math> m_v </math>, to unit mass of air (the sum of dry air, <math> m_a </math>, and water vapor), and is sometimes referred to as the humidity ratio.<ref>Wallace, John and Hobbs, Peter, ''Atmospheric Science: An Introductory Survey'', 2006, 2nd edition, Elsevier, pp. 80</ref>  Specific humidity is approximately equal to the "mixing ratio", which is defined as the ratio of the mass of water vapor in an air parcel to the mass of dry air for the same parcel.<ref>Wallace, John and Hobbs, Peter, ''Atmospheric Science: An Introductory Survey'', 2006, 2nd edition, Elsevier, pp. 80</ref>
+
+Specific Humidity is defined as:
+
+:<math> SH = {m_v \over (m_v + m_a)}. </math>
+
+Specific humidity can be expressed in other ways including:
+
+:<math> SH = {0.622 {p_{(H_2O)}} \over {p_{(dry\, air)}}}</math>
+:<math> 0.622 = {{MM_{H_2O}} \over {MM_{dry\, air}}} </math>
+
+or:
+
+:<math> SH = {{0.622 p_{(H_2O)}}\over {p-0.378*p_{(H_2O)}}}. </math>
+
+Using this definition of specific humidity, the relative humidity can be expressed as
+
+:<math> \phi = {{SH*p}\over {(0.622+0.378*SH) p^*_{(H_2O)}}}\times 100 </math>
+
+However, specific humidity is also defined as the ratio of water vapor to the total mass of the system (dry air plus water vapor).<ref>[http://amsglossary.allenpress.com/glossary/search?id=specific-humidity1 AMS Glossary: specific humidity]</ref> For example, the ASHRAE 2009 Handbook, Ch1,1.2, (9a) defines specific humidity as "the ratio of the mass of water vapor to total mass of the moist air sample".
+
+==Measurement==
+[[Image:Umidaderelativa.jpg|thumb|A [[hygrometer]]]]
+
+There are various devices used to measure and regulate humidity. A device used to measure humidity is called a psychrometer or [[hygrometer]]. A [[humidistat]] is a humidity-triggered switch, often used to control a [[dehumidifier]].
+
+Humidity is also measured on a global scale using remotely placed [[satellite]]s. These satellites are able to detect the concentration of water in the [[troposphere]] at altitudes between 4 and 12 kilometers. Satellites that can measure water vapor have sensors that are sensitive to [[infrared|infrared radiation]]. Water vapor specifically absorbs and re-radiates radiation in this spectral band. Satellite water vapor imagery plays an important role in monitoring climate conditions (like the formation of thunderstorms) and in the development of future [[weather forecasts]].
+
+==Climate==
+{{See also|Greenhouse Effect|Precipitation (meteorology)|Humid subtropical climate}}
+While humidity itself is a climate variable, it also interacts strongly with other climate variables. The humidity is affected by winds and by rainfall. At the same time, humidity affects the [[energy budget]] and thereby influences temperatures in two major ways. First, water vapor in the atmosphere contains "latent" energy. During transpiration or evaporation, this [[latent heat]] is removed from surface liquid, cooling the earth's surface. This is the biggest non-radiative cooling effect at the surface. It compensates for roughly 70% of the average net radiative warming at the surface. Second, water vapor is the most important of all [[greenhouse gases]]. Water vapor, like a green lens that allows green light to pass through it but absorbs red light, is a "selective absorber". Along with other greenhouse gases, water vapor is transparent to most solar energy, as you can literally see. But it absorbs the infrared energy emitted (radiated) upward by the earth's surface, which is the reason that humid areas experience very little nocturnal cooling but dry desert regions cool considerably at night. This selective absorption causes the greenhouse effect. It raises the surface temperature substantially above its theoretical radiative equilibrium temperature with the sun, and water vapor is the cause of more of this warming than any other greenhouse gas.
+
+The most humid cities on earth are generally located closer to the equator, near coastal regions. Cities in [[South Asia|South]] and [[Southeast Asia]] are among the most humid. [[Kuala Lumpur]] and [[Singapore]] have very high humidity all year round because of their proximity to water bodies and the [[equator]] and oftentimes overcast weather. Some places experience extreme humidity during their rainy seasons combined with warmth giving the feel of a lukewarm sauna, such as [[Kolkata]], [[Chennai]] and [[Cochin]] in [[India]], and [[Lahore]] in [[Pakistan]]. [[Sukkur]] city located on the [[Indus River]] in Pakistan has some of the highest and most uncomfortable dew point in the country frequently exceeding {{convert|30|C|F|}} in the [[Monsoon]] season.<ref>http://www.wunderground.com/history/airport/OPSK/2013/7/6/DailyHistory.html</ref> High temperatures couple up with bizarre dew point to create heat index in excess of {{convert|65|C|F|}}.
+The cities of [[Manila]] in the [[Philippines]], [[Mogadishu]] in [[Somalia]] and [[Bangkok]] in [[Thailand]]. [[Darwin, Australia]] experiences an extremely humid wet season from December to April. [[Shanghai]] and [[Hong Kong]] in [[China]] also have an extreme humid period in their summer months. During the South-west and North-east Monsoon seasons (respectively, late May to September and November to March), expect heavy rains and a relatively high humidity post-rainfall. Outside the monsoon seasons, humidity is high (in comparison to countries North of the Equator), but completely sunny days abound. In cooler places such as Northern Tasmania, Australia, high humidity is experienced all year due to the ocean between mainland Australia and Tasmania. In the summer the hot dry air is absorbed by this ocean and the temperature rarely climbs above {{convert|35|C|0|abbr=on}}.
+
+In the United States the most humid cities, strictly in terms of [[relative humidity]], are [[Forks, Washington|Forks]] and [[Olympia, Washington]].<ref>[http://www.komotv.com/news/archive/4092941.html What Is The Most Humid City In The U.S.? | KOMO-TV <U+2013> Seattle, Washington | News Archive<!-- Bot generated title -->]</ref> This fact may come as a surprise to many, as the climate in this region rarely exhibits the discomfort usually associated with high humidity. This is because high [[dew point]]s play a more significant role than relative humidity in discomfort, and so the air in these western cities usually does not feel "humid" as a result. In general, dew points are much lower in the Western U.S. than those in the Eastern U.S.
+
+The highest dew points in the US are found in coastal [[Florida]] and [[Texas]]. When comparing [[Key West]] and [[Houston]], two of the most humid cities from those states, coastal Florida seems to have the higher dew points on average. However, Houston lacks the coastal breeze present in Key West, and, as a much larger city, it suffers from the [[urban heat island]] effect.<ref>[http://www.usatoday.com/weather/resources/askjack/2003-09-03-answers-fla-texas-humidity_x.htm Answers: Is Florida or Texas more humid: September 3,2003]</ref>  A dew point of {{convert|88|F|0|abbr=on}} was recorded in Moorhead [[Minnesota]] on July 19, 2011, with a heat index of 133.5, although dew points over {{convert|80|F|0|abbr=on}} are rare there.<ref>[http://www.startribune.com/blogs/125847178.html]</ref> The US city with the lowest annual humidity is [[Las Vegas Valley|Las Vegas]], [[Nevada]], averaging 39% for a high and 21% as a low.<ref>http://www.cityrating.com/relativehumidity.asp</ref>
+
+==Air density and volume==
+{{Main|Volume (thermodynamics)|Density of air}}
+
+Humidity depends on water vaporization and condensation, which, in turn, mainly depends on temperature. Therefore, when applying more pressure to a gas saturated with water, all components will initially decrease in volume approximately according to the [[ideal gas law]]. However, some of the water will condense until returning to almost the same humidity as before, giving the resulting total volume deviating from what the ideal gas law predicted. Conversely, decreasing temperature would also make some water condense, again making the final volume deviate from predicted by the ideal gas law. Therefore, gas volume may alternatively be expressed as the dry volume, excluding the humidity content. This fraction more accurately follows the ideal gas law. On the contrary the saturated volume is the volume a gas mixture would have if humidity was added to it until saturation (or 100% relative humidity).
+
+Humid air is less dense than dry air because a molecule of water ([[molecular mass|M]] <U+2248> 18 [[atomic mass unit|u]] ) is less massive than either a molecule of [[nitrogen]] (M <U+2248> 28) or a molecule of [[oxygen]] (M <U+2248> 32). About 78% of  the molecules in dry air are nitrogen (N<sub>2</sub>). Another 21% of the molecules in dry air are oxygen (O<sub>2</sub>). The final 1% of dry air is a mixture of other gases.
+
+For any gas, at a given temperature and pressure, the number of molecules present in a particular volume is constant <U+2013> see [[ideal gas law]]. So when water molecules (vapor) are introduced into that volume of dry air, the number of air molecules in the volume must decrease by the same number, if the temperature and pressure remain constant.  (The addition of water molecules, or any other molecules, to a gas, without removal of an equal number of other molecules, will necessarily require a change in temperature, pressure, or total volume; that is, a change in ''at least'' one of these three parameters.  If temperature and pressure remain constant, the volume increases, and the dry air molecules that were displaced will initially move out into the additional volume, after which the mixture will eventually become uniform through diffusion.)  Hence the mass per unit volume of the gas<U+2014>its density<U+2014>decreases. [[Isaac Newton]] discovered this phenomenon and wrote about it in his book ''[[Opticks]]''.<ref name="optics">
+{{cite book
+|author=Isaac Newton
+|url=http://books.google.com/books?id=iTpXLrPR2TQC&printsec=frontcover&dq=isaac+newton+optics
+|publisher=Dover
+|title=Opticks
+|year=1704
+|isbn=978-0-486-60205-9
+}}
+</ref>
+
+==Effects==
+
+===Animals and plants===
+Humidity is one of the fundamental [[abiotic factor]]s that defines any habitat, and is a determinant of which animals and plants can thrive in a given environment.<ref>C.Michael Hogan. 2010. [http://www.eoearth.org/article/Abiotic_factor?topic=49461 ''Abiotic factor''. Encyclopedia of Earth. eds Emily Monosson and C. Cleveland. National Council for Science and the Environment]. Washington DC</ref>
+
+The human body dissipates heat through perspiration and its evaporation. [[Heat convection]] to the surrounding air, and [[thermal radiation]] are the primary modes of heat transport from the body. Under conditions of high humidity, the rate of evaporation of sweat from the skin decreases. Also, if the atmosphere is as warm as or warmer than the skin during times of high humidity, [[blood]] brought to the body surface cannot dissipate heat by conduction to the air, and a condition called [[hyperpyrexia]] results. With so much blood going to the external surface of the body, relatively less goes to the active [[muscle]]s, the [[Human brain|brain]], and other internal [[organ (anatomy)|organs]]. [[Physical strength]] declines, and [[Fatigue (physical)|fatigue]] occurs sooner than it would otherwise. Alertness and mental capacity also may be affected, resulting in ''heat stroke'' or [[hyperthermia]].
+
+===Human comfort===
+Humans are sensitive to humid air because the human body uses evaporative cooling as the primary mechanism to regulate temperature. Under humid conditions, the ''rate'' at which perspiration evaporates on the skin is lower than it would be under arid conditions. Because humans perceive the rate of heat transfer from the body rather than temperature itself, we feel warmer when the relative humidity is high than when it is low.
+
+Some people experience difficulty breathing in high humidity environments. Some cases may possibly be related to respiratory conditions such as [[asthma]], while others may be the product of [[anxiety]]. Sufferers will often [[hyperventilation|hyperventilate]] in response, causing sensations of [[numbness]], [[faintness]], and loss of concentration, among others.<ref>{{cite web|title=I have trouble breathing in humidity - Lung & Respiratory Disorders / COPD Message Board - HealthBoards|url=http://www.healthboards.com/boards/showthread.php?t=409092|accessdate=18 July 2011}}</ref>
+
+[[Air conditioning]] reduces discomfort in the summer not only by reducing temperature, but also by reducing humidity.  In winter, heating cold outdoor air can decrease relative humidity levels indoor to below 30%, leading to discomfort such as dry skin and excessive thirst.
+
+===Electronics===
+Many electronic devices have humidity specifications, for example, 5% to 95%.  At the top end of the range, moisture may increase the conductivity of permeable [[Insulator (electrical)|insulators]] leading to malfunction. Too low humidity may make materials brittle. A particular danger to electronic items, regardless of the stated operating humidity range, is [[condensation]]. When an electronic item is moved from a cold place (e.g. garage, car, shed, an air conditioned space in the tropics) to a warm humid place (house, outside tropics), condensation may coat circuit boards and other insulators, leading to [[short circuit]] inside the equipment. Such short circuits may cause substantial permanent damage if the equipment is powered on before the condensation has [[evaporated]]. A similar condensation effect can often be observed when a person wearing glasses comes in from the cold (i.e. the glasses become foggy).<ref>{{cite web|title=Fogging Glasses|url=http://www.newton.dep.anl.gov/askasci/gen01/gen01333.htm}}</ref> It is advisable to allow electronic equipment to acclimatise for several hours, after being brought in from the cold, before powering on. Some electronic devices can detect such a change and indicate, when plugged in and usually with a small droplet symbol, that they cannot be used until the risk from condensation has passed. In situations where time is critical, increasing air flow through the device's internals when, such as removing the side panel from a PC case and directing a fan to blow into the case will reduce significantly the time needed to acclimatise to the new environment.
+
+In contrast, a very low humidity level favors the build-up of [[static electricity]], which may result in spontaneous shutdown of computers when discharges occur. Apart from spurious erratic function, electrostatic discharges can cause dielectric breakdown in solid state devices, resulting in irreversible damage. [[Data center]]s often monitor relative humidity levels for these reasons.
+
+===Building construction===
+Traditional building designs typically had weak [[Building insulation|insulation]], and it allowed air moisture to flow freely between the interior and exterior. The energy-efficient, heavily-sealed architecture introduced in the 20th century also sealed off the movement of moisture, and this has resulted in a secondary problem of [[condensation]] forming in and around walls, which encourages the development of mold and mildew. Additionally, buildings with foundations not properly sealed will allow water to flow through the walls due to [[capillary action]] of pores found in masonry products. Solutions for energy-efficient buildings that avoid condensation are a current topic of architecture.
+
+==See also==
+*[[Relative humidity]]
+*[[Savory brittleness scale]]
+*[[Concentration]]
+*[[Dew point]]
+**[[Dew point depression]]
+*[[Humidity indicator]]
+*[[Hygrometer]]
+**[[Psychrometrics]]
+
+==References==
+{{Reflist}}
+
+*United States Environmental Protection Agency, [http://www.epa.gov/iaq/largebldgs/i-beam_html/ch2-hvac.htm#F2.6 "IAQ in Large Buildings"]. Retrieved Jan. 9, 2006.
+
+==External links==
+{{Wiktionary}}
+*[http://www.nsdl.arm.gov/Library/glossary.shtml#absolute_humidity Glossary definition of absolute humidity] <U+2013> National Science Digital Library
+*[http://nsidc.org/arcticmet/glossary/psychrometric_tables.html Glossary definition of psychrometric tables] <U+2013> National Snow and Ice Data Center
+*[http://nsidc.org/arcticmet/glossary/specific_humidity.html Glossary definition of specific humidity] <U+2013> National Snow and Ice Data Center
+*[http://www.vaisala.com/humiditycalculator/?SectionUri=%2finstruments%2frhcalc FREE Humidity & Dewpoint Calculator] <U+2013> Vaisala
+*[http://www.phymetrix.com/Software.htm Free Windows Program, Dewpoint Units Conversion Calculator] <U+2013> PhyMetrix
+*[http://www.rotronic.com/humidity_measurement-feuchtemessung-mesure_de_l_humidite/humidity-calculator-feuchterechner-mr Free Online Humidity Calculator] <U+2013> Calculate about 16 parameters online with the Rotronic Humidity Calculator
+*[http://www.epluse.com/en/products/humidity-instruments/humidity-sensor/ Calculator for humidity sensor and ebook] <U+2013> Calculator for humidity sensor for rapid conversion of humidity measurements. Uniquely, includes measurement uncertainties and ebook: Principles of Humidity Measurement
+
+{{Meteorological variables}}
+
+[[Category:Atmospheric thermodynamics]]
+[[Category:Physical quantities]]
+[[Category:Psychrometrics]]
+[[Category:Climate]]
+
+{{Link FA|de}}

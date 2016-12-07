@@ -1,0 +1,129 @@
+{{Redirect2|&#061;|<U+FF1D>|double hyphens|Double hyphen}}
+{{Dablink|Due to [[Wikipedia:Naming conventions (technical restrictions)#Other problematic characters|technical restrictions]], ":<nowiki>=</nowiki>" redirects here. For the computer programming assignment operator, see [[Assignment (computer programming)]]. For the definition symbol, see [[List of mathematical symbols#Symbols]].}}
+{{Other uses2|Equals}}
+[[Image:2+2.svg|thumb||right|200px|A well-known [[Equality (mathematics)|equality]] featuring the equals sign]]
+The '''equals sign''' or '''equality sign''' ('''=''') is a [[mathematical symbol]] used to indicate [[equality (mathematics)|equality]]. It was invented in 1557 by [[Robert Recorde]]. The equals sign is placed between two quantities that have the same value, as in an [[equation]]. It is assigned to the [[Unicode]] and [[ASCII]] character 003D in [[hexadecimal]], 0061 in decimal.
+
+==History==
+The etymology of the word "equal" is from the Latin word "''aequalis"'' as meaning "uniform", "identical", or "equal", from ''aequus'' ("level", "even", or "just").
+
+[[Image:First Equation Ever.png|thumb|The first use of an equals sign, equivalent to 14''x''+15=71 in modern notation. From ''The Whetstone of Witte'' by [[Robert Recorde]].]]
+[[Image:Recorde - The Whetstone of Witte - equals.jpg|thumb|Recorde's introduction of "="]]
+
+The "=" symbol that is now universally accepted by mathematics for equality was first recorded by Welsh mathematician [[Robert Recorde]] in ''The Whetstone of Witte'' (1557). The original form of the symbol was much wider than the present form. In his book Recorde explains his design of the "Gemowe lines" (meaning ''twin'' lines, from the [[Latin]] ''gemellus''):  
+<blockquote>
+''<U+2026> to auoide the tediou<U+017F>e repetition of the<U+017F>e woordes : is equalle to : I will <U+017F>ette as I doe often in woorke v<U+017F>e, a paire of paralleles, or Gemowe lines of one lengthe, thus: =, bicau<U+017F>e noe .2. thynges, can be moare equalle.'' 
+</blockquote>
+<blockquote>
+<U+2026> to avoid the tedious repetition of these words: "is equal to", I will set (as I do often in work use) a pair of parallels, or Gemowe lines, of one length (thus =), because no two things can be more equal.
+</blockquote>
+
+According to Scotland's [[University of St Andrews]] History of Mathematics website:<ref>{{cite web | url = http://www-history.mcs.st-and.ac.uk/Mathematicians/Recorde.html | website = [[MacTutor History of Mathematics archive]] | title = Robert Recorde | accessdate = 19 October 2013}}</ref>
+<blockquote>The symbol '=' was not immediately popular. The symbol || was used by some and ''<U+00E6>'' (or ''<U+0153>''), from the Latin word ''aequalis'' meaning equal, was widely used into the 1700s.</blockquote>
+
+==Usage in mathematics and computer programming==
+In mathematics, the equals sign can be used as a simple statement of fact in a specific case (x&nbsp;=&nbsp;2), or to create definitions (let&nbsp;x&nbsp;=&nbsp;2), conditional statements (if&nbsp;x&nbsp;=&nbsp;2, then <U+2026>), or to express a universal equivalence <code>(x&nbsp;+&nbsp;1)<sup>2</sup>&nbsp;=&nbsp;x<sup>2</sup>&nbsp;+&nbsp;2x&nbsp;+&nbsp;1</code>. 
+
+The first important [[computer programming language]] to use the equals sign was the original version of [[Fortran]], FORTRAN&nbsp;I, designed in 1954 and implemented in 1957. In Fortran, "=" serves as an [[assignment (computer science)|assignment]] operator: <code>X&nbsp;=&nbsp;2</code> sets the value of <code>X</code> to 2. This somewhat resembles the use of "=" in a mathematical definition, but with different semantics: the expression following "=" is evaluated first and may refer to a previous value of <code>X</code>. For example, the assignment <code>X&nbsp;=&nbsp;X&nbsp;+&nbsp;2</code> increases the value of <code>X</code> by 2.
+
+A rival programming-language usage was pioneered by the original version of [[ALGOL]], which was designed in 1958 and implemented in 1960. ALGOL included a [[relational operator]] that tested for equality, allowing constructions like <code>if&nbsp;x&nbsp;=&nbsp;2</code> with essentially the same meaning of "=" as the conditional usage in mathematics. The equals sign was reserved for this usage.
+
+Both usages have remained common in different programming languages into the early 21st century. As well as Fortran, "=" is used for assignment in such languages as [[C (programming language)|C]], [[Perl]], [[Python (programming language)|Python]], [[awk]], and their descendants. But "=" is used for equality and not assignment in the [[Pascal (programming language)|Pascal]] family, [[Ada (programming language)|Ada]], [[Eiffel (programming language)|Eiffel]], [[APL (programming language)|APL]], and other languages.
+
+A few languages, such as [[BASIC]] and [[PL/I]], have used the equals sign to mean both assignment and equality, distinguished by context. However, in most languages where "=" has one of these meanings, a different character or, more often, a sequence of characters is used for the other meaning. Following ALGOL, most languages that use "=" for equality use ":=" for assignment, although APL, with its special character set, uses a left-pointing arrow.
+
+Fortran did not have an equality operator (it was only possible to compare an expression to zero, using the [[arithmetic IF]] statement) until FORTRAN&nbsp;IV was released in 1962, since when it has used the four characters ".EQ." to test for equality. The language [[B (programming language)|B]] introduced the use of "==" with this meaning, which has been copied by its descendant C and most later languages where "=" means assignment.
+
+===Usage of several equals signs===
+In [[PHP]], the [[===|triple equals sign (<code>===</code>)]] denotes identity,<ref>{{cite web | url = http://www.php.net/manual/en/language.operators.comparison.php | title = Comparison Operators | website = PHP.net | accessdate = 19 October 2013}}</ref> meaning that not only do the two values evaluate to equal values, they are also of the same data type. For instance, the expression <code>0 == false</code> is true, but <code>0 === false</code> is not, because the number 0 is an integer value whereas false is a Boolean value.
+
+[[JavaScript]] has the same semantics for <code>===</code>, referred to as "equality without type coercion". However in JavaScript the behavior of <code>==</code> cannot be described by any simple consistent rules. The expression <code>0 == false</code> is true, but <code>0 == undefined</code> is false, even though both sides of the <code>==</code> act the same in Boolean context. For this reason it is recommended to avoid the <code>==</code> operator in JavaScript in favor of <code>===</code>.<ref>{{cite web | author = Doug Crockford | title = JavaScript: The Good Parts | website = [[YouTube]] | url = http://www.youtube.com/watch?v=hQVTIJBZook | accessdate = 19 October 2013}}</ref>
+
+In Ruby, equality under <code>==</code> requires both operands to be of identical type, e.g. <code>0 == false</code> is false. The <code>===</code> operator is flexible and may be defined arbitrarily by any given type. For example, a value of type <code>Range</code> is a range of integers, such as <code>1800..1899</code>. <code>(1800..1899) == 1844</code> is false, since the types are different (Range vs. Integer); however <code>(1800..1899) === 1844</code> is true, since Range defines <code>===</code> to mean "inclusion in the range".<ref>{{cite web | title = [[why's (poignant) Guide to Ruby]] | section = 5.1 This One<U+2019>s For the Disenfranchised | author = [[why the lucky stiff]] | url = http://mislav.uniqpath.com/poignant-guide/book/chapter-5.html#section1 | accessdate = 19 October 2013}}</ref> Note that under these semantics, <code>===</code> is [[non-commutative]]; e.g. <code>1844 === (1800..1899)</code> is false, since it is interpreted to mean <code>Integer#===</code> rather than <code>Range#===</code>.<ref>{{cite web | author = Brett Rasmussen | title = Don't Call it Case Equality | date = 30 July 2009 | url = http://www.pmamediagroup.com/2009/07/dont-call-it-case-equality/ | accessdate = 19 October 2013}}</ref>
+
+===Other uses===
+The equals sign is also used in defining [[attribute<U+2013>value pair]]s, in which an [[Attribute (computing)|attribute]] is assigned a [[Value (computer science)|value]].{{ctn|date=June 2013}}
+
+==Tone letter==
+The equals sign is also used as a grammatical [[tone letter]] in the orthographies of [[Budu language|Budu]] in the [[Congo-Kinshasa]], in [[Krumen language|Krumen]], [[Mwan language|Mwan]] and [[Dan language|Dan]] in the [[Ivory Coast]].<ref>{{cite book | author = Peter G. Constable | author2 = Lorna A. Priest | url = http://www.unicode.org/L2/L2006/06259r-mod-letters.pdf | title = Proposal to Encode Additional Orthographic and Modifier Characters | date = 31 July 2006 | accessdate = 19 October 2013}}</ref><ref>{{cite book | editor = Hartell, Rhonda L. | year = 1993 | title = The Alphabets of Africa | location = Dakar | publisher = [[UNESCO]] and SIL | url = http://archive.org/details/rosettaproject_pbi_ortho-1 | accessdate = 19 October 2013}}</ref> The Unicode character used for the tone letter (U+A78A)<ref>{{cite web | title = Unicode Latin Extended-D code chart | website = Unicode.org | url = http://www.unicode.org/charts/PDF/UA720.pdf | accessdate = 19 October 2013}}</ref> is different from the mathematical symbol (U+003D).
+
+==Related symbols==
+{{See also|Unicode mathematical operators}}
+
+===Approximately equal===
+{{Main|Approximation#Unicode}}
+Symbols used to denote items that are [[approximation|approximately equal]] are wavy or dotted equals signs.<ref name = "The Unicode Consortium">{{cite web | title = Mathematical Operators | website = Unicode.org | url = http://www.unicode.org/charts/PDF/U2200.pdf | accessdate = 19 October 2013}}</ref>
+* <span style="font-size: 150%;line-height:50%;">[[<U+2248>]]</span> ([[Unicode|U]]+2248)
+* <span style="font-size: 150%;line-height:50%">[[<U+2243>]]</span> (U+2243), a combination of <U+2248> and =, also used to indicate [[<U+2243>|asymptotically equal to]]
+* <span style="font-size: 150%;line-height:50%">[[Congruence relation|<U+2245>]]</span> (U+2245), another combination of <U+2248> and =, which is also sometimes used to indicate [[isomorphism]] or [[congruence relation|congruence]]
+* <span style="font-size: 150%;line-height:50%">[[<U+223C>]]</span> (U+223C), which is also sometimes used to indicate [[proportionality (mathematics)|proportionality]], being related by an [[equivalence relation]], or to indicate that a [[random variable]] is distributed according to a specific [[probability distribution]]
+* <span style="font-size: 150%;line-height:50%">[[<U+223D>]]</span> (U+223D), which is also used to indicate [[proportionality (mathematics)|proportionality]]
+* <span style="font-size: 150%;line-height:50%">[[<U+2250>]]</span> (U+2250), which can also be used to represent the approach of a variable to a [[Limit (mathematics)|limit]]
+* <span style="font-size: 150%;line-height:50%">[[<U+2252>]]</span> (U+2252), commonly used in [[Japanese language|Japanese]], [[Taiwanese Hokkien|Taiwanese]] and [[Korean language|Korean]]
+* <span style="font-size: 150%;line-height:50%">[[<U+2253>]]</span> (U+2253)
+
+===Not equal===
+The symbol used to denote [[inequation]] (when items are not equal) is a [[Slash (punctuation)|slashed]] equals sign "<U+2260>" (U+2260). In [[LaTeX]], this is done with the "\neq" command.  To get his symbol on the U.S. International Keyboard in Windows select   .  To get the not equal sign on a Mac select   .
+
+Most programming languages, limiting themselves to the [[ASCII]] [[character set]] and [[QWERTY|typeable characters]], use <code>~=</code>, <code>!=</code>, <code>/=</code>, <code>=/=</code>, or <code><></code> to represent their [[Boolean logic|Boolean]] [[inequality operator]].
+
+===Identity===
+The [[triple bar]] symbol "<U+2261>" (U+2261) is often used to indicate an [[identity (mathematics)|identity]], a [[definition]] (which can also be represented by U+225D "[[<U+225D>]]" or ":="), or a [[congruence relation]] in [[modular arithmetic]]. The symbol "[[<U+2258>]]" can be used to express that an item [[Correspondence (mathematics)|corresponds]] to another.
+
+===Isomorphism===
+The symbol "{{Unicode|<U+2245>}}" is often used to indicate [[isomorphic]] algebraic structures or [[Congruence (geometry)|congruent]] geometric figures.
+
+===In logic===
+Equality of [[truth value]]s, i.e. [[bi-implication]] or [[logical equivalence]], may be denoted by various symbols including =, ~, and <U+21D4>.
+
+===In a double-barreled name===
+A possibly unique case of the equals sign in a person's name, specifically in a [[double-barreled name]], was by pioneer aviator [[Alberto Santos-Dumont|Alberto Santos=Dumont]], as he is also known not only to have often used an equals sign (=) between his [[double-barreled name|two surnames]] in place of a hyphen, but also seems to have personally preferred that practice, to display equal respect for his father's French ethnicity and the Brazilian ethnicity of his mother.<ref>{{cite journal |last=Gray |first=Carroll F.|title=The 1906 Santos=Dumont No. 14bis |journal=World War I Aeroplanes |volume=No. 194 |year=2006 |month=November |page=4}}</ref>
+
+===Other related symbols===
+Additional symbols in Unicode related to the equals sign include:<ref name="The Unicode Consortium"/>
+* <span style="font-size: 150%;line-height:50%;">[[<U+224C>]]</span> ({{unichar|224C|ALL EQUAL TO}})
+* <span style="font-size: 150%;line-height:50%;">[[<U+2254>]]</span> ({{unichar|2254|COLON EQUALS}})
+* <span style="font-size: 150%;line-height:50%;">[[<U+2255>]]</span> ({{unichar|2255|EQUALS COLON}})
+* <span style="font-size: 150%;line-height:50%;">[[<U+2256>]]</span> ({{unichar|2256|RING IN EQUAL TO}})
+* <span style="font-size: 150%;line-height:50%;">[[<U+2257>]]</span> ({{unichar|2257|RING EQUAL TO}})
+<!-- U+2258 is mentioned already in the section "Identity" above. -->
+* <span style="font-size: 150%;line-height:50%;">[[<U+2259>]]</span> ({{unichar|2259|ESTIMATES}})
+* <span style="font-size: 150%;line-height:50%;">[[<U+225A>]]</span> ({{unichar|225A|EQUIANGULAR TO}})
+* <span style="font-size: 150%;line-height:50%;">[[<U+225B>]]</span> ({{unichar|225B|STAR EQUALS}})
+* <span style="font-size: 150%;line-height:50%;">[[<U+225C>]]</span> ({{unichar|225C|DELTA EQUAL TO}})
+<!-- U+225D is mentioned already in the section "Identity" above. -->
+* <span style="font-size: 150%;line-height:50%;">[[<U+225E>]]</span> ({{unichar|225E|MEASURED BY}})
+* <span style="font-size: 150%;line-height:50%;">[[<U+225F>]]</span> ({{unichar|225F|QUESTIONED EQUAL TO}}).
+
+==Incorrect usage==
+The equals sign is often used incorrectly within a mathematical argument to connect math steps in a non-standard way, rather than to show equality. For example, if one were finding the sum, step by step, of the numbers 1, 2, 3, 4, and 5, one might write
+:1 + 2 = 3 + 3 = 6 + 4 = 10 + 5 = 15.
+Structurally, this is shorthand for
+:([(1 + 2 = 3) + 3 = 6] + 4 = 10) + 5 = 15,
+but the notation is incorrect, because each part of the equality has a different value. If interpreted strictly as it says, it implies
+:3 = 6 = 10 = 15 = 15.
+A correct version of the argument would be
+:1 + 2 = 3; 3 + 3 = 6; 6 + 4 = 10; 10 + 5 = 15.<ref>{{cite journal | url = http://tamu.academia.edu/SencerCorlu/Papers/522225/Capraro_R._M._Capraro_M._M._Yetkiner_Z._E._Corlu_M._S._Ozel_S._Ye_S._and_Kim_H._G._2011_._An_international_perspective_between_problem_types_in_textbooks_and_students_understanding_of_relational_equality._Mediterranean_Journal_for_Research_in_Mathematics_Education_An_International_Journal_10_187-213 | title = An International Perspective between Problem Types in Textbooks and Students' understanding of relational equality | last = Capraro | first = Robert M. | last2 = Capraro | first2 = Mary Margaret | last3 = Yetkiner | first3 = Ebrar Z. | last4 = Corlu | first4 = Sencer M. | last5 = Ozel | first5 = Serkan | last6 = Ye | first6 = Sun | last7 = Kim | first7 = Hae Gyu | journal = Mediterranean Journal for Research in Mathematics Education | volume = 10 | number = 1<U+2013>2 | pages = 187<U+2013>213 | year = 2011 | accessdate = 19 October 2013}}</ref>
+
+==See also==
+* [[2 + 2 = 5]]
+* [[Double hyphen]]
+* [[Equality (mathematics)]]
+* [[Logical equality]]
+* [[Plus and minus signs]]
+
+==Notes==
+{{Reflist|33em}}
+
+==References==
+*{{Cite book | author=Cajori, Florian| authorlink = Florian Cajori| title=A History of Mathematical Notations | location=New York | publisher=Dover (reprint) | year=1993 | isbn=0-486-67766-4}}
+* Boyer, C. B.: ''A History of Mathematics'', 2nd ed. rev. by Uta C. Merzbach. New York: Wiley, 1989 ISBN 0-471-09763-2 (1991 pbk ed. ISBN 0-471-54397-7)
+
+==External links==
+*[http://jeff560.tripod.com/relation.html Earliest Uses of Symbols of Relation]
+*[http://jeff560.tripod.com/witte.jpg Image of the page of ''The Whetstone of Witte'' on which the equals sign is introduced]
+*[http://www.numericana.com/answer/symbol.htm#equal Scientific Symbols, Icons, Mathematical Symbols]
+*[http://blog.plover.com/math/recorde.html Robert Recorde invents the equals sign]
+
+{{DEFAULTSORT:Equals Sign}}
+[[Category:Mathematical symbols]]

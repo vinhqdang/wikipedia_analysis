@@ -1,0 +1,364 @@
+{{About||a modern but abstract treatment|Tensor (intrinsic definition)|other uses|Tensor (disambiguation)}}
+{{Dablink|Note that in common usage, the term ''tensor'' is also used to refer to a [[tensor field]].}}
+
+[[Image:Components stress tensor cartesian.svg|300px|right|thumb|Stress, a second-order tensor. The tensor's components, in a three-dimensional Cartesian coordinate system, form the matrix
+
+<math>\scriptstyle\sigma = \begin{bmatrix}\mathbf{T}^{(\mathbf{e}_1)} \mathbf{T}^{(\mathbf{e}_2)} \mathbf{T}^{(\mathbf{e}_3)}\end{bmatrix} = \begin{bmatrix} \sigma_{11} & \sigma_{12} & \sigma_{13} \\ \sigma_{21} & \sigma_{22} & \sigma_{23} \\ \sigma_{31} & \sigma_{32} & \sigma_{33} \end{bmatrix}</math>
+
+whose columns are the forces acting on the <math>\mathbf{e}_1</math>, <math>\mathbf{e}_2</math>, and <math>\mathbf{e}_3</math> faces of the cube.]]
+
+'''Tensors''' are [[geometry|geometric]] entities introduced into [[mathematics]] and [[physics]] to extend the notion of [[Scalar (mathematics)|scalars]], [[Euclidean vectors|geometric vectors]], and [[Matrix (mathematics)|matrices]] to higher orders. Tensors were first conceived by [[Tullio Levi-Civita]] and [[Gregorio Ricci-Curbastro]], who continued the earlier work of [[Bernhard Riemann]] and [[Elwin Bruno Christoffel]] and others, as part of the ''absolute differential calculus''. The concept enabled an alternative formulation of the intrinsic [[differential geometry]] of a [[manifold]] in the form of the [[Riemann curvature tensor]].<ref name="Kline">{{cite book|title=Mathematical thought from ancient to modern times, Vol. 3|first=Morris|last=Kline|pages=1122&ndash;1127|publisher=Oxford University Press|year=1972}}</ref>
+
+Many physical quantities are naturally regarded not as vectors themselves, but as correspondences between one set of vectors and another.  For example, the [[Stress (mechanics)#Cauchy<U+2019>s stress theorem <U+2013> stress tensor|stress tensor]] '''T''' takes a direction '''v''' as input and produces the stress '''T'''<sup>(''v'')</sup> on the surface normal to this vector as output and so expresses a relationship between these two vectors. Because they express a relationship between vectors, tensors themselves are [[coordinate-free|independent of a particular choice]] of [[coordinate system]].  It is possible to represent a tensor by examining what it does to a coordinate [[basis of a vector space|basis]] or [[frame of reference]]; the resulting quantity is then an organized [[Array data structure#Multidimensional arrays|multi-dimensional array]] of numerical values.  The coordinate-independence of a tensor then takes the form of a [[covariant transformation|"covariant" transformation law]] that relates the array computed in one coordinate system to that computed in another one.
+
+The order (or degree) of a tensor is the dimensionality of the array needed to represent it. A number is a 0-dimensional array, so it is sufficient to represent a scalar, a 0th-order tensor. A [[coordinate vector]], or 1-dimensional array, can represent a vector, a 1st-order tensor. A 2-dimensional array, or square [[matrix (mathematics)|matrix]], is then needed to represent a 2nd-order tensor. In general, an order-''k'' tensor can be represented as a ''k''-dimensional array of components. The order of a tensor is the number of indices necessary to refer unambiguously to an individual component of a tensor.
+
+==History==
+The concepts of later tensor analysis arose from the work of [[C. F. Gauss]] in differential geometry, and the formulation was much influenced by the theory of [[algebraic form]]s and invariants developed in the middle of the nineteenth century.<ref>Karin Reich, ''Die Entwicklung des Tensorkalk<U+00FC>ls'' (1994).</ref> The word "tensor" itself was introduced in 1846 by [[William Rowan Hamilton]]<ref>[[William Rowan Hamilton]], ''[http://www.emis.de/classics/Hamilton/ExtQuat.pdf On some Extensions of Quaternions]''</ref> to describe something different from what is now meant by a tensor.<ref>Namely, the [[norm (mathematics)|norm operation]] in a certain type of algebraic system (now known as a [[Clifford algebra]]).</ref> The contemporary usage was brought in by [[Woldemar Voigt]] in 1898.<ref>Woldemar Voigt, [http://books.google.com/books?hl=en&id=QhBDAAAAIAAJ&printsec=frontcover&source=web&ots=otxYNFS5zh&sig=HE9YETA1wILEFkD7BVAiKBGrnTU&sa=X&oi=book_result&resnum=4&ct=result ''Die fundamentalen physikalischen Eigenschaften der Krystalle in elementarer Darstellung''] (Leipzig, 1898)</ref>
+
+Tensor calculus was developed around 1890 by [[Gregorio Ricci-Curbastro]] (also called just Ricci) under the title ''absolute differential calculus'', and originally presented by Ricci in 1892.<ref>In volume XVI of the ''Bulletin des Sciences Math<U+00E9>matiques''.</ref> It was made accessible to many mathematicians by the publication of Ricci and [[Tullio Levi-Civita]]'s 1900 classic text ''M<U+00E9>thodes de calcul diff<U+00E9>rentiel absolu et leurs applications'' (Methods of absolute differential calculus and their applications) {{Harv|Ricci|Levi-Civita|1900}} (in French; translations followed).
+
+In the 20th century, the subject came to be known as ''tensor analysis'', and achieved broader acceptance with the introduction of [[Albert Einstein|Einstein]]'s theory of [[general relativity]], around 1915. General relativity is formulated completely in the language of tensors. Einstein had learned about them, with great difficulty, from the geometer [[Marcel Grossmann]].<ref>[[Abraham Pais]], ''Subtle is the Lord: The Science and the Life of Albert Einstein''</ref> Levi-Civita then initiated a correspondence with Einstein to correct mistakes Einstein had made in his use of tensor analysis. The correspondence lasted 1915<U+2013>17, and was characterized by mutual respect, with Einstein at one point writing:<ref name="Goodstein">Judtih R. Goodstein, ''[http://www3.interscience.wiley.com/journal/120043907/abstract The Italian Mathematicians of Relativity]'' (2007)</ref>
+
+{{cquote|I admire the elegance of your method of computation; it must be nice to ride through these fields upon the horse of true mathematics while the like of us have to make our way laboriously on foot.}}
+
+Tensors were also found to be useful in other fields such as [[continuum mechanics]]. Some well-known examples of tensors in [[differential geometry]] are [[quadratic form]]s such as [[metric tensor]]s, and the [[Riemann curvature tensor]]. The [[exterior algebra]] of [[Hermann Grassmann]], from the middle of the nineteenth century, is itself a tensor theory, and highly geometric, but it was some time before it was seen, with the theory of [[differential form]]s, as naturally unified with tensor calculus. The work of [[<U+00C9>lie Cartan]] made differential forms one of the basic kinds of tensor fields used in mathematics.
+
+From about the 1920s onwards, it was realised that tensors play a basic role in [[algebraic topology]] (for example in the [[K<U+00FC>nneth theorem]]). Correspondingly there are types of tensors at work in many branches of [[abstract algebra]], particularly in [[homological algebra]] and [[representation theory]]. Multilinear algebra can be developed in greater generality than for scalars coming from a [[field (mathematics)|field]], but the theory is then certainly less geometric, and computations more technical and less algorithmic.{{Clarify|date=April 2010}} Tensors are generalized within [[category theory]] by means of the concept of [[monoidal category]], from the 1960s.
+
+==Definition==
+There are several different approaches to defining tensors. Although seemingly different, the approaches just describe the same geometric concept using different languages and at different levels of abstraction.
+
+===... as multidimensional arrays===
+Just as a scalar is described by a single number and a vector can be described by a list of numbers, tensors in general can be considered as a multidimensional array of numbers, which are known as its "scalar components" or simply "components." The entries of such an array are symbolically denoted by the name of the tensor with indices giving the position in the array. The total number of indices is equal to the dimension of the array and is called the ''order'' or the ''rank'' of the tensor.<ref group="Note">This article will be using the term ''order'', since the term ''rank'' has a different meaning in the related context of matrices.</ref> For example, the entries (also called ''components'') of an order 2 tensor ''T'' would be denoted ''T''<sub>''ij''</sub>, where ''i'' and ''j'' are indices running from 1 to the dimension of the related vector space.
+
+Just like the components of a vector change when we change the [[basis (linear algebra)|basis]] of the vector space, the entries of
+a tensor also change under such a transformation. Recall that the components of a vector can respond in two distinct ways to a change of basis (see [[covariance and contravariance of vectors]]),
+:<math>\hat{e}_i = \sum_j R^j_i e_j = R^j_i e_j,</math>
+where ''R''{{su|b=''i''|p=''j''}} is a matrix and in the second expression the summation sign was suppressed (a notational convenience [[Einstein summation convention|introduced by Einstein]] that will be used throughout this article). The components, ''v''<sup>''i''</sup>, of a regular (or column) vector, '''v''', transform with the [[matrix inverse|inverse]] of the matrix ''R'',
+:<math>\hat{v}^i = (R^{-1})^i_j v^j,</math>
+where the hat denotes the components in the new basis. While the components, ''w''<sub>''i''</sub>, of a covector or (row vector), '''w''' transform with the matrix R itself,
+:<math>\hat{w}_i = R_i^j w_j.</math>
+The components of a tensor transform in a similar manner with a transformation matrix for each index. If an index transforms like a vector with the inverse of the basis transformation, it is called ''contravariant'' and is traditionally denoted with an upper index, while an index that transforms with the basis transformation itself is called ''covariant'' and is denoted with a lower index. The "transformation law" for a rank ''m'' tensor with ''n'' contravariant indices and ''m-n'' covariant indices is thus given as,
+:<math>\hat{T}^{i_1,\ldots,i_n}_{i_{n+1},\ldots,i_m}= (R^{-1})^{i_1}_{j_1}\cdots(R^{-1})^{i_n}_{j_n} R^{j_{n+1}}_{i_{n+1}}\cdots R^{j_{m}}_{i_{m}}T^{j_1,\ldots,j_n}_{j_{n+1},\ldots,j_m}.</math>
+Such a tensor is said to be of order or ''type'' {{Nowrap|(''n'',''m-n'')}}.<ref group="Note">There is a plethora of different terminology for this around. The terms order, type, rank, valence, and degree are in use for the same concept. This article uses the term "order" or "total order" for the total dimension of the array (or its generalisation in other definitions) ''m'' in the preceding example, and the term type for the pair giving the number contravariant and covariant indices. A tensor of type {{Nowrap|(''n'',''m-n'')}} will also be referred to as a "{{Nowrap|(''n'',''m-n'')}}" tensor for short.</ref>
+
+The definition of a tensor as a multidimensional array satisfying a "transformation law" traces back to the work of Ricci.<ref name="Kline"/> Nowadays, this definition is still popular in physics and engineering text books.<ref>{{cite book
+ |title=Classical Dynamics of Particles and Systems
+ |last1=Marion
+ |first1=J.B.
+ |last2=Thornton
+ |first2=S.T.
+ |page=424
+ |edition=4th
+ |year=1995
+ |publisher=Saunders College Publishing
+ |isbn=9780030989674
+}}</ref><ref>{{cite book
+ |title=Introduction to Electrodynamics
+ |last1=Griffiths
+ |first1=D.J.
+ |isbn=9780138053260
+ |edition=3
+ |page=11--12 and 535--
+ |publisher=Prentice Hall
+ |year=1999
+}}</ref>
+====Tensor fields====
+{{Main|Tensor field}}
+In many applications, especially in differential geometry and physics, it is natural to consider the components of a tensor to be functions. This was, in fact, the setting of Ricci's original work. In modern mathematical terminology such an object is called a [[tensor field]], but they are often simply referred to as tensors themselves. 
+
+In this context the defining transformation law takes a different form. The "basis" for the tensor field is determined by the coordinates of the underlying space, and the defining transformation law is expressed in terms of [[partial derivative]]s of the coordinate functions, <math>\bar{x}_i(x_1,\ldots,x_k)</math>, defining a coordinate transformation,
+:<math>\hat{T}^{i_1\dots i_n}_{i_{n+1}\dots i_m}(\bar{x}_1,\ldots,\bar{x}_k) = 
+\frac{\partial \bar{x}^{i_1}}{\partial x^{j_1}}
+\cdots
+\frac{\partial \bar{x}^{i_n}}{\partial x^{j_n}}
+\frac{\partial x^{j_{n+1}}}{\partial \bar{x}^{i_{n+1}}}
+\cdots
+\frac{\partial x^{j_m}}{\partial \bar{x}^{i_m}}
+T^{j_1\dots j_n}_{j_{n+1}\dots j_m}(x_1,\ldots,x_k).
+</math>
+
+===... as multilinear maps===
+A downside to the definition of a tensor using the multidimensional array approach is that it is not apparent from the definition that the defined object is indeed basis independent, as is expected from an intrinsically geometric object. Although it is possible to show that transformation laws indeed ensure independence from the basis, sometimes a more intrinsic definition is preferred. One approach <!--introduced by ???, -->is to define a tensor as a multilinear map. In that approach a type (''n'',''m'') tensor ''T'' is defined as a map,
+:<math> \begin{matrix} T: & \underbrace{ V^* \times\dots\times V^*} & \times & \underbrace{ V \times\dots\times V} &\rightarrow   \mathbf{R},
+\\ & \text{n copies}& &\text{m copies} & & \end{matrix}</math>
+where ''V'' is a [[vector space]] and ''V''* is the corresponding [[dual space]] of covectors, which is linear in each of its arguments.
+
+By applying a multilinear map ''T'' of type (''n'',''m'') to a basis {''e''<sub>j</sub>} for ''V'' and a canonical cobasis {''<U+03B5>''<sup>i</sup>} for ''V''*,
+:<math>T^{i_1\dots i_n}_{j_1\dots j_m} \equiv T(\varepsilon^{i_1},\ldots,\varepsilon^{i_n},e_{j_1},\ldots,e_{j_m}),</math>
+a ''n''+''m'' dimensional array of components can be obtained. A different choice of basis will yield different components. But, because ''T'' is linear in all of its arguments, the components satisfy the tensor transformation law used in the multilinear array definition. The multidimensional array of components of ''T'' thus form a tensor according to that definition. Moreover, such an array can be realised as the components of some multilinear map ''T''. This motivates viewing multilinear maps as the intrinsic objects underlying tensors.
+
+This approach, defining tensors as multilinear maps, is popular in modern differential geometry textbooks<ref>{{cite book
+ |title=Riemannian Manifolds
+ |last=Lee
+ |first=J.M.
+ |year=1997
+ |publisher=Springer
+ |page=12
+ |isbn=0387983228
+}}</ref> and more mathematically inclined physics textbooks.<ref>{{cite book
+ |title=Spacetime and Geometry
+ |last=Carroll
+ |first=S.M.
+ |year=2004
+ |publisher=Addison Wesley
+ |page=21
+ |isbn=0805387323
+}}</ref>
+
+===... using tensor products===
+{{Main|Tensor (intrinsic definition)}}
+For some mathematical applications, a more abstract approach is sometimes useful. This can be achieved by defining tensors in terms of elements of [[tensor product]]s of vector spaces, which in turn are defined through a [[universal property]]. A type (''n'',''m'') tensor is defined in this context as an element of the tensor product of vector spaces,<ref>{{Springer|id=a/a011120|title=Affine tensor}}</ref>
+:<math> \begin{matrix} T\in & \underbrace{V \otimes\dots\otimes V} & \otimes & \underbrace{V^* \otimes\dots\otimes V^*}.
+\\ & \text{n copies}& &\text{m copies}  \end{matrix}</math>
+
+If ''v''<sub>i</sub> is a basis of ''V'' and ''w''<sub>j</sub> is a basis of ''W'', then the tensor product <math> V\otimes W</math> has a natural basis <math> v_i\otimes w_j</math>. The components of a tensor ''T'' are the coefficients of the tensor with respect to the basis obtained from a basis {''e''<sub>i</sub>} for ''V'' and its dual {''<U+03B5>''<sup>j</sup>}, i.e.
+:<math>T = T^{i_1\dots i_n}_{j_1\dots j_m}\; e_{i_1}\otimes\cdots\otimes e_{i_n}\otimes \varepsilon^{j_1}\otimes\cdots\otimes \varepsilon^{j_m}.</math>
+Using the properties of the tensor product, it can be shown that these components satisfy the transformation law for a type (''m'',''n'') tensor. Moreover, the universal property of the tensor product gives a [[bijection|1-to-1 correspondence]] between tensors defined in this way and tensors defined as multilinear maps.
+
+==Notation==
+===Einstein notation===
+{{Details|Einstein notation}}
+Einstein notation is a convention for writing tensors that dispenses with writing [[summation sign]]s by leaving them implicit. It relies on the idea that any repeated index is summed over: if the index ''i'' is used twice in a given term of a tensor expression, it means that the values are to be summed over ''i''. Several distinct pairs of indices may be summed this way, but commonly only when each index has the same range, so all the omitted summations are sums from 1 to ''N'' for some given ''N''.
+
+===Abstract index notation===
+{{Details|Abstract index notation}}
+The abstract index notation is a way to write tensors such that the indices are no longer thought of as numerical, but rather are indeterminates.  The abstract index notation captures the expressiveness of indices and the basis-independence of index-free notation.
+
+==Operations==
+There are a number of basic operations that may be conducted on tensors that again produce a tensor. The linear nature of tensor implies that two tensors of the same type may be added together, and that tensors may be multiplied by a scalar with results analogous to the [[Scalar multiplication|scaling of a vector]]. On components, this operations are simply performed component for component. These operations do not change the type of the tensor, however there also exist operations that change the type of the tensors.
+
+===Tensor product===
+{{Main|Tensor product}}
+
+The [[tensor product]] takes two tensors, ''S'' and ''T'', and produces a new tensor, ''S'' <U+2297> ''T'', whose order is the sum of the orders of the original tensors. When described as multilinear maps, the tensor product simply multiplies the two tensors, i.e.
+:<math>(S\otimes T)(v_1,\ldots, v_n, v_{n+1},\ldots, v_{n+m}) = S(v_1,\ldots, v_n)T( v_{n+1},\ldots, v_{n+m}),</math>
+which again produces a map that is linear in all its arguments. On components the effect similarly is to multiply the components of the two input tensors, i.e.
+
+:<math>(S\otimes T)^{i_1\ldots i_l i_{l+1}\ldots i_{l+m}}_{j_1\ldots j_k j_{k+1}\ldots j_{k+n}} =
+S^{i_1\ldots i_l}_{j_1\ldots j_k} T^{i_{l+1}\ldots i_{l+m}}_{j_{k+1}\ldots j_{k+n}},</math>
+If ''S'' is of type (''k'',''l'') and ''T'' is of type (''n'',''m''), then the tensor product  ''S'' <U+2297> ''T'' has type (''k''+''n'',''l''+''m'').
+
+===Contraction===
+{{Main|Tensor contraction}}
+
+[[Tensor contraction]] is an operation that reduces the total order of a tensor by two. More precisely, it reduces a type (''n'',''m'') tensor to a type (''n''-1,''m''-1) tensor. In terms of components, the operation is achieved by summing over one contravariant and one covariant index of tensor. For example, a (1,1)-tensor ''T''<sup>i</sup><sub>j</sub> can be contracted to a scalar through
+:<math>T_i^i</math>.
+Where the summation is again implied. When the (1,1)-tensor is interpreted as a linear map, this operation is known as the [[trace (linear algebra)|trace]].
+
+The contraction is often used in conjunction with the tensor product to contract an index from each tensor.
+
+The contraction can also be understood in terms of the definition of a tensor as an element of a tensor product of copies of the space ''V'' with the space ''V''<sup>*</sup> by first decomposing the tensor into a linear combination of simple tensors, and then applying a factor from ''V''<sup>*</sup> to a factor from ''V''.  For example, a tensor
+:<math>T \in V\otimes V\otimes V^*</math>
+can be written as a linear combination
+:<math>T=v_1\otimes w_1\otimes \alpha_1 + v_2\otimes w_2\otimes \alpha_2 +\cdots + v_N\otimes w_N\otimes \alpha_N.</math>
+The contraction of ''T'' on the first and last slots is then the vector
+:<math>\alpha_1(v_1)w_1 + \alpha_2(v_2)w_2+\cdots+\alpha_N(v_N)w_N.</math>
+
+===Raising or lowering an index===
+{{Main|Raising and lowering indices}}
+When a vector space is equipped with an [[inner product]] (or ''metric'' as it often called in this context), there exist operations that convert a contravariant (upper) index into a covariant (lower) index and vice versa. A metric itself is a (symmetric) (0,2)-tensor, it is thus possible to contract an upper index of a tensor with one of lower indices of the metric. This produces a new tensor with the same index structure as the previous, but with lower index in the position of the contracted upper index. This operation is quite graphically known as ''lowering an index''.
+
+Conversely, a metric has an inverse which is a (2,0)-tensor. This inverse metric can be contracted with a lower index to produce an upper index. This operation is called ''raising an index''.
+
+==Applications==
+Tensors are important in physics and engineering. In the field of [[diffusion tensor imaging]], for instance, a tensor quantity that expresses the differential permeability of organs to water in varying directions is used to produce scans of the [[brain]]; in this technique tensors are in effect made visible. That application is of a tensor of second order. While such uses of tensors are the most frequent, tensors of higher order also matter in many fields.
+
+===Continuum mechanics===
+
+Important examples are provided by continuum mechanics. The stresses inside a [[solid body]] or [[fluid]] are described by a tensor. The [[Stress (mechanics)|stress tensor]] and [[strain tensor]] are both second order tensors, and are related in a general linear elastic material by a fourth-order [[elasticity tensor]]. In detail, the tensor quantifying stress in a 3-dimensional solid object has components that can be conveniently represented as a 3<U+00D7>3 array. The three faces of a cube-shaped infinitesimal volume segment of the solid are each subject to some given force. The force's vector components are also three in number. Thus, 3<U+00D7>3, or 9 components are required to describe the stress at this cube-shaped infinitesimal segment. Within the bounds of this solid is a whole mass of varying stress quantities, each requiring 9 quantities to describe. Thus, a second order tensor is needed.
+
+If a particular [[surface element]] inside the material is singled out, the material on one side of the surface will apply a force on the other side. In general, this force will not be orthogonal to the surface, but it will depend on the orientation of the surface in a linear manner. This is described by a tensor of [[type of a tensor|type (2,0)]], in [[linear elasticity]], or more precisely by a tensor field of type (2,0), since the stresses may vary from point to point.
+
+===Other examples from physics===
+Common applications include
+
+* [[Electromagnetic tensor]] (or Faraday's tensor) in [[electromagnetism]]
+* [[Finite deformation tensors]] for describing deformations and [[strain tensor]] for [[Strain (materials science)|strain]] in [[continuum mechanics]]
+* [[Permittivity]] and [[electric susceptibility]] are tensors in [[anisotropic]] media
+* [[Stress-energy tensor]] in [[general relativity]], used to represent [[momentum]] [[flux]]es
+* Spherical tensor operators are the eigenfunctions of the quantum [[angular momentum]] operator in [[spherical coordinates]]
+* Diffusion tensors, the basis of [[Diffusion Tensor Imaging]], represent rates of diffusion in biologic environments
+
+===Applications of tensors of order > 2===
+
+The concept of a tensor of order two is often conflated with that of a matrix. Tensors of higher order do however capture ideas important in science and engineering, as has been shown successively in numerous areas as they develop. This happens, for instance, in the field of [[computer vision]], with the [[trifocal tensor]] generalizing the [[fundamental matrix (computer vision)|fundamental matrix]].
+
+The field of [[nonlinear optics]] studies the changes to material [[Polarization_density#Relation between P and E in various materials|polarization density]] under extreme electric fields. The polarization waves generated are related to the generating [[electric field]]s through the nonlinear susceptibility tensor. If the polarization '''P''' is not linearly proportional to the electric field '''E''', the medium is termed ''nonlinear''.  To a good approximation (for sufficiently weak fields, assuming no permanent dipole moments are present), '''P''' is given by a [[Taylor series]] in '''E''' whose coefficients are the nonlinear susceptibilities:
+
+:<math> \frac{P_i}{\varepsilon_0} = \sum_j  \chi^{(1)}_{ij} E_j  +  \sum_{jk} \chi_{ijk}^{(2)} E_j E_k + \sum_{jk\ell} \chi_{ijk\ell}^{(3)} E_j E_k E_\ell  + \cdots \!</math>
+
+Here <math>\chi^{(1)}</math> is the linear susceptibility, <math>\chi^{(2)}</math> gives the [[Pockels effect]] and  [[second harmonic generation]], and <math>\chi^{(3)}</math> gives the [[Kerr effect]]. This expansion shows the way higher-order tensors arise naturally in the subject matter.
+
+==Generalizations==
+===Tensor densities===
+{{Main|Tensor density}}
+It is also possible for a [[tensor field]] to have a "density". A tensor with density ''r'' transforms as an ordinary tensor under coordinate transformations, except that it is also multiplied by the determinant of the [[Jacobian matrix and determinant|Jacobian]] to the ''r''<sup>th</sup> power.<ref>{{Springer|id=T/t092390|title=Tensor density}}</ref> Invariantly, in the language of multilinear algebra, one can think of tensor densities as [[multilinear map]]s taking their values in a [[density bundle]] such as the (1-dimensional) space of ''n''-forms (where ''n'' is the dimension of the space), as opposed to taking their values in just '''R'''. Higher "weights" then just correspond to taking additional tensor products with this space in the range.
+
+In the language of [[vector bundle]]s, the determinant bundle of the [[tangent bundle]] is a [[line bundle]] that can be used to 'twist' other bundles ''r'' times. While locally the more general transformation law can indeed be used to recognise these tensors, there is a global question that arises, reflecting that in the transformation law one may write either the Jacobian determinant, or its absolute value. Non-integral powers of the (positive) transition functions of the bundle of densities make sense, so that the weight of a density, in that sense, is not restricted to integer values.
+
+Restricting to changes of coordinates with positive Jacobian determinant is possible on [[orientable manifold]]s, because there is a consistent global way to eliminate the minus signs; but otherwise the line bundle of densities and the line bundle of ''n''-forms are distinct. For more on the intrinsic meaning, see [[density on a manifold]].)
+
+===Spinors===
+{{Main|Spinor}}
+Starting with an [[Orthonormality|orthonormal]] coordinate system, a tensor transforms in a certain way when a rotation is applied.  However, there is additional structure to the group of rotations that is not exhibited by the transformation law for tensors: see [[orientation entanglement]] and [[plate trick]].  Mathematically, the [[rotation group]] is not [[simply connected]].  [[Spinor]]s are mathematical objects that generalize the transformation law for tensors in a way that is sensitive to this fact.
+
+==See also==
+* [[Glossary of tensor theory]]
+
+===Notation===
+* [[Abstract index notation]]
+* [[Einstein notation]]
+* [[Voigt notation]]
+* [[Mandel notation]]
+* [[Penrose graphical notation]]
+* [[Raising and lowering indices]]
+
+===Foundational===
+* [[Covariance and contravariance of vectors]]
+* [[Fibre bundle]]
+* [[One-form]]
+* [[Tensor field]]
+* [[Tensor product]]
+* [[Tensor product of modules]]
+
+===Applications===
+* [[Covariant derivative]]
+* [[Application of tensor theory in engineering]]
+* [[Curvature]]
+* [[Diffusion MRI#Mathematical foundation<U+2014>tensors|Diffusion tensor MRI]]
+* [[Einstein field equations]]
+* [[Fluid mechanics]]
+* [[Riemannian geometry]]
+* [[Tensor derivative]]
+* [[Tensor decomposition]]
+* [[Structure Tensor]]
+* [[Tensor software]]
+
+==Notes==
+{{Reflist|group="Note"}}
+
+==References==
+;General
+{{Refbegin}}
+*{{cite book
+ | last = Bishop
+ | first = Richard L.
+ | coauthors = Samuel I. Goldberg
+ | title = Tensor Analysis on Manifolds
+ | date=  1980
+ | publisher = Dover
+ | isbn = 978-0-486-64039-6
+ | origyear = 1968
+ }}
+*{{cite book
+ | last = Danielson
+ | first = Donald A.
+ | title = Vectors and Tensors in Engineering and Physics
+ | edition = 2/e
+ | date=  2003
+ | publisher = Westview (Perseus)
+ | isbn = 978-0-8133-4080-7
+ }}
+*{{cite book
+ | last = Lawden
+ | first = D. F.
+ | title = Introduction to Tensor Calculus, Relativity and Cosmology
+ | edition = 3/e
+ | date=  2003
+ | publisher = Dover
+ | isbn = 978-0-486-42540-5
+ }}
+*{{cite book
+ | last = Lebedev
+ | first = Leonid P.
+ | coauthors = Michael J. Cloud
+ | title = Tensor Analysis
+ | date=  2003
+ | publisher = World Scientific
+ | isbn = 978-981-238-360-0
+ }}
+*{{cite book
+ | last = Lovelock
+ | first = David
+ | coauthors = Hanno Rund
+ | title = Tensors, Differential Forms, and Variational Principles
+ | date=  1989
+ | publisher = Dover
+ | isbn = 978-0-486-65840-7
+ | origyear = 1975
+ }}
+* Munkres, James, ''Analysis on Manifolds,'' Westview Press, 1991. Chapter six gives a "from scratch" introduction to covariant tensors.
+* {{Cite journal
+|title=M<U+00E9>thodes de calcul diff<U+00E9>rentiel absolu et leurs applications
+|last=Ricci
+|first=Gregorio
+|author-link=Gregorio Ricci-Curbastro
+|last2=Levi-Civita
+|first2=Tullio
+|journal=Mathematische Annalen
+|publisher=Springer
+|volume=54
+|issue=1<U+2013>2
+|month=March
+|year=1900
+|pages=125<U+2013>201
+|doi=10.1007/BF01454201
+|url=http://www.springerlink.com/content/u21237446l22rgg7/fulltext.pdf
+|ref=harv
+|postscript=<!--None-->
+}}
+* {{cite book |last=Kay |first=David C |title=Schaum's Outline of Tensor Calculus |publisher=McGraw-Hill |date=1988-04-01 |isbn=978-0070334847}}
+* Schutz, Bernard, ''Geometrical methods of mathematical physics'', Cambridge University Press, 1980.
+* {{cite book |author=Synge JL, Schild A |title=Tensor Calculus |publisher=Dover Publications |date=1978-07-01 |isbn=978-0486636122}}
+{{Refend}}
+;Specific
+{{Reflist}}
+
+{{Planetmath|id=3112|title=tensor}}
+
+==External links==
+* {{Mathworld|Tensor}}
+* [http://repository.tamu.edu/handle/1969.1/2502 Introduction to Vectors and Tensors, Vol 1: Linear and Multilinear Algebra] by Ray M. Bowen and C. C. Wang.
+* [http://repository.tamu.edu/handle/1969.1/3609 Introduction to Vectors and Tensors, Vol 2: Vector and Tensor Analysis] by Ray M. Bowen and C. C. Wang.
+* [http://www.grc.nasa.gov/WWW/K-12/Numbers/Math/documents/Tensors_TM2002211716.pdf An Introduction to Tensors for Students of Physics and Engineering] by Joseph C. Kolecki, released by [[NASA]]
+* [http://nrich.maths.org/askedNRICH/edited/2604.html A discussion of the various approaches to teaching tensors, and recommendations of textbooks]
+* [http://arxiv.org/abs/math.HO/0403252 A Quick Introduction to Tensor Analysis] by R. A. Sharipov.
+* [http://www.e.kth.se/~joakimds Introduction to Tensors] by Joakim Strandberg.
+* [http://www.ece.neu.edu/~kyrgyzov/KyrgyzovO_Dissertation_2010.pdf Non-Redundant Tensor Decomposition (PhD Dissertation)] by Olexiy Kyrgyzov.
+
+[[Category:Fundamental physics concepts]]
+[[Category:Introductory physics]]
+[[Category:Tensors| ]]
+
+[[ar:<U+0645><U+0648><U+062A><U+0631>]]
+[[bg:<U+0422><U+0435><U+043D><U+0437><U+043E><U+0440>]]
+[[ca:Tensor]]
+[[cs:Tenzor]]
+[[de:Tensor]]
+[[et:Tensor]]
+[[eo:Tensoro]]
+[[es:C<U+00E1>lculo tensorial]]
+[[fa:<U+062A><U+0627><U+0646><U+0633><U+0648><U+0631>]]
+[[fr:Tenseur]]
+[[gl:Tensor]]
+[[ko:<U+D150><U+C11C>]]
+[[hi:<U+0906><U+0924><U+093E><U+0928><U+0915> <U+0935><U+093F><U+0936><U+094D><U+0932><U+0947><U+0937><U+0923>]]
+[[hr:Tenzor]]
+[[it:Tensore]]
+[[he:<U+05D8><U+05E0><U+05D6><U+05D5><U+05E8>]]
+[[hu:Tenzor]]
+[[nl:Tensor]]
+[[ja:<U+30C6><U+30F3><U+30BD><U+30EB>]]
+[[pl:Tensor]]
+[[pt:Tensor]]
+[[ru:<U+0422><U+0435><U+043D><U+0437><U+043E><U+0440>]]
+[[sq:Trajtimi klasik i tensor<U+00EB>ve]]
+[[sk:Tenzor]]
+[[sl:Tenzor]]
+[[sr:<U+0422><U+0435><U+043D><U+0437><U+043E><U+0440>]]
+[[fi:Tensori]]
+[[sv:Tensor]]
+[[uk:<U+0422><U+0435><U+043D><U+0437><U+043E><U+0440>]]
+[[zh:<U+5F35><U+91CF>]]

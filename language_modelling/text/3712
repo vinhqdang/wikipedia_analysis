@@ -1,0 +1,132 @@
+'''Web caching''' is the [[Cache|caching]] of [[web document]]s (e.g., [[webpage|HTML pages]], [[digital image|images]]) to reduce [[Bandwidth (computing)|bandwidth]] usage, [[web server|server]] load, and perceived [[lag]]. A web cache stores copies of documents passing through it; subsequent requests may be satisfied from the cache if certain conditions are met.<ref>{{cite web | title=Web Caching | url=http://www.cisco.com/web/about/ac123/ac147/ac174/ac199/about_cisco_ipj_archive_article09186a00800c8903.html | publisher=Cisco. The Internet Protocol Journal - Volume 2, No. 3 | author=Geoff Huston | accessdate=2009-09-10}}</ref>
+
+It should not to be confused with a [[web archive]], a site that keeps old versions of web pages.
+
+==Systems==
+Web caches exist in various systems.
+* A [[search engine]] may cache a website.
+* A forward cache sits close{{where}} to users and accelerates their requests to Internet.
+* A [[reverse proxy|reverse]] cache sits in front of one or more [[Web server]]s and [[web application]]s, accelerating requests from the Internet.<ref>{{cite web | url=http://docforge.com/wiki/Web_application/Caching | title=Web application/Caching | author=Multiple (wiki) | work=Docforge | accessdate=2010-03-06 }}</ref>
+* A client, such as a [[web browser]], can store web content for reuse.  For example, if the back button is pressed, the local cached version of a page may be displayed instead of a new request being sent to the web server.
+* A [[web proxy]] sitting between the client and the server can evaluate [[HTTP header]]s and choose to store web content.
+* A [[content delivery network]] can retain copies of web content at various points throughout a network.
+
+==Cache control==
+[[HTTP]] defines three basic mechanisms for controlling caches: freshness, validation, and invalidation.
+
+*'''Freshness''' allows a response to be used without re-checking it on the origin server, and can be controlled by both the server and the client. For example, the Expires response header gives a date when the document becomes stale, and the Cache-Control: max-age directive tells the cache how many seconds the response is fresh for.
+*'''Validation''' can be used to check whether a cached response is still good after it becomes stale. For example, if the response has a Last-Modified header, a cache can make a ''conditional request'' using the If-Modified-Since header to see if it has changed.  The [[HTTP ETag|ETag]] (entity tag) mechanism also allows for both strong and weak validation.
+*'''Invalidation''' is usually a side effect of another request that passes through the cache. For example, if URL associated with a cached response subsequently gets a POST, PUT or DELETE request, the cached response will be invalidated.
+
+== Browser cache ==
+{{See also|Temporary Internet Files}}
+Web browsers cache content on the client machine, in memory and on disk.
+
+==Legal issues==
+In 1998 the [[DMCA]] added rules to the [[United States Code]] ([[Online_Copyright_Infringement_Liability_Limitation_Act#.C2.A7_512.28b.29_System_Caching_Safe_Harbor|17 U.S.C. <U+00A7>: 512]]) that relinquishes system operators from copyright liability for the purposes of caching.
+
+==Comparison of web caches==
+{| class="sortable wikitable" style="font-size: 85%; text-align: center; width: auto;"
+|-
+! style="width:15em" | Name
+! style="width:7em" | Type
+!Operating System
+!Forward<br/>Mode
+!Reverse<br/>Mode
+! style="width:10em" | License
+|-
+!style="background: #ececec;"| [[ApplianSys]] [[ApplianSys#CACHEbox|CACHEbox]]
+| Appliance
+| Linux
+| {{Yes}}
+| {{Yes}}
+| Commercial
+|-
+!style="background: #ececec;"| [[Ara Networks|Ara Networks Jaguar5000]]
+| Software/Appliance
+| Linux
+| {{Yes}}
+| {{Yes}}
+| Commercial
+|-
+!style="background: #ececec;"| [[Blue Coat Systems|Blue Coat ProxySG]]
+| Appliance
+| SGOS
+| {{Yes}}
+| {{Yes}}
+| Commercial
+|-
+!style="background: #ececec;"| [[Nginx]]
+| Software
+| Linux, Unix
+| {{No}}
+| {{Yes}}
+| 2-clause BSD-like
+|-
+!style="background: #ececec;"| [[Microsoft]] [[Microsoft Internet Security and Acceleration Server|ISA]]
+| Software
+| Windows
+| {{Yes}}
+| {{Yes}}
+| Commercial
+|-
+!style="background: #ececec;"| [[Squid (software)|Squid]]
+| Software
+| Linux, Unix, Windows
+| {{Yes}}
+| {{Yes}}
+| GNU GPL
+|-
+!style="background: #ececec;"| [[Traffic Server]]
+| Software
+| Linux, Unix
+| {{Yes}}
+| {{Yes}}
+| Apache License 2.0
+|-
+!style="background: #ececec;"| [[Varnish (software)|Varnish]]
+| Software
+| Linux, Unix
+| {{No}}
+| {{Yes}}
+| BSD
+|-
+!style="background: #ececec;"| [[WinGate]]
+| Software
+| Windows
+| {{Yes}}
+| {{Yes}}
+| Commercial
+|-
+|}
+
+==See also==
+* [[Web accelerator]]
+* [[Proxy server]]
+* [[Harvest project]]
+
+==References==
+{{Reflist}}
+* Ari Luotonen, ''Web Proxy Servers'' (Prentice Hall, 1997) ISBN 0-13-680612-0
+* Duane Wessels, ''Web Caching'' (O'Reilly and Associates, 2001). ISBN 1-56592-536-X
+* Michael Rabinovich and Oliver Spatschak, ''Web Caching and Replication'' (Addison Wesley, 2001). ISBN 0-201-61570-3
+
+==External links==
+*[http://knol.google.com/k/russell-tewksbury/is-the-internet-heading-for-a-cache/bh3rhpsojtks/1 Is the Internet Heading for a Cache Crunch?]
+*[http://www.mnot.net/cache_docs/ Caching Tutorial for Web Authors and Webmasters]
+*[http://www.web-caching.com Web Caching and Content Delivery Resources]
+*[http://www.visolve.com/squid/whitepapers/ViSolve_Web_Caching.pdf Web Caching], Web caching in general with some references to SQUID
+*[http://palisade.plynt.com/issues/2008Jul/cache-control-attributes/ Cache control directives demystified] Explanations, do's and don't
+
+{{DEFAULTSORT:Web Cache}}
+[[Category:HTTP]]
+[[Category:Cache]]
+[[Category:Proxy servers|*]]
+
+[[ar:<U+0630><U+0627><U+0643><U+0631><U+0629> <U+0627><U+0644><U+0648><U+064A><U+0628> <U+0627><U+0644><U+0645><U+062E><U+0628><U+0626><U+0629>]]
+[[de:Webcache]]
+[[es:Cach<U+00E9> web]]
+[[fr:Cache web]]
+[[ko:<U+C6F9> <U+CE90><U+C2DC>]]
+[[it:Web cache]]
+[[vi:Web caching]]

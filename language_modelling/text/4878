@@ -1,0 +1,204 @@
+{{Copyedit|date=December 2007}}
+<!-- Article needs to be more formal. Removal of "we" as per http://en.wikipedia.org/wiki/Wikipedia:Style#Avoid_first-person_pronouns -->
+{{otheruses}}
+{{redirect|1/0|the webcomic|1/0 (webcomic)}}
+
+<!-- Markup note: See the discussion about how to properly format fractions -->
+In [[mathematics]], a [[division (mathematics)|division]] is called a '''division by zero''' if the divisor is [[0 (number)|zero]]. Such a division can be formally expressed as <math>\textstyle\frac{a}{0}</math> where ''a'' is the dividend. Whether this [[expression (mathematics)|expression]] can be assigned a [[well-defined]] value depends upon the mathematical setting.  In ordinary ([[real number]]) arithmetic, the expression has [[Defined and undefined|no meaning]].
+
+In [[computer programming]], [[integer]] division by zero may cause a program to terminate or, as in the case of [[floating point]] numbers, may result in a special [[NaN|not-a-number]] value (see [[Division by zero#Division by zero in computer arithmetic|below]]).
+
+==Interpretation in elementary arithmetic==
+When division is explained at the [[elementary arithmetic]] level, it is often considered as a description of dividing a [[set]] of objects into equal parts. As an example, if there are 10 apples, and they are to distributed evenly to five people, each person would receive <math>\textstyle\frac{10}{5}</math> = 2 apples. Similarly, if there are 10 apples to distribute to one person, each person would receive <math>\textstyle\frac{10}{1}</math> = 10 apples. 
+
+This can be used to illustrate the problem of dividing by zero. If there are 10 apples to be distributed to zero people, how many apples does each "person" receive? An attempt to calculate <math>\textstyle\frac{10}{0}</math> becomes meaningless because the question itself is meaningless -- each "person" doesn't receive zero, or 10, or an infinite number of apples for that matter, because there are simply no people to receive anything in the first place. This is why as far as elementary arithmetic is concerned, division by zero is said to be meaningless, or undefined.
+
+Another way to understand the undefined nature of division by zero is by looking at division as a repeated [[subtraction]], e.g., to divide 13 by 5, 5 can be subtracted twice, which leaves a [[remainder]] of 3. The divisor is subtracted until the remainder is less than the divisor. The result is often reported as <math>\textstyle\frac{13}{5}</math> = 2 remainder 3. But, in the case of zero, repeated subtraction of zero will never yield a remainder less than or equal to zero, so dividing by zero is not defined. Dividing by zero by repeated subtraction results in a series of subtractions that never ends.
+
+===Early attempts===
+
+The [[Brahmasphutasiddhanta]] of [[Brahmagupta]] (598<U+2013>668) is the earliest known text to treat [[0 (number)|zero]] as a number in its own right and to define operations involving zero. The author failed, however, in his attempt to explain division by zero: his definition can be easily proven to lead to algebraic absurdities. According to Brahmagupta,
+:''"A positive or negative number when divided by zero is a fraction with the zero as denominator. Zero divided by a negative or positive number is either zero or is expressed as a fraction with zero as numerator and the finite quantity as denominator. Zero divided by zero is zero."'' 
+
+In [[830]], [[Mahavira (mathematician)|Mahavira]] tried unsuccessfully to correct Brahmagupta's mistake in his book in ''Ganita Sara Samgraha'':
+:''"A number remains unchanged when divided by zero."''
+
+[[Bhaskara II]] tried to solve the problem by defining <math>\textstyle\frac{n}{0}=\infty</math>. This definition makes some sense, as discussed below, but can lead to paradoxes if not treated carefully. These paradoxes were not treated until modern times.<ref>[http://www-gap.dcs.st-and.ac.uk/%7Ehistory/HistTopics/Zero.html Zero]</ref>
+
+==Algebraic interpretation==
+
+It is generally regarded among mathematicians that a natural way to interpret division by zero is to first define division in terms of other arithmetic operations. Under the standard rules for arithmetic on [[integers]], [[rational numbers]], [[real numbers]] and [[complex numbers]], division by zero is undefined. Division by zero must be left undefined in any mathematical system that obeys the axioms of a [[field (mathematics)|field]]. The reason is that [[division (mathematics)|division]] is defined to be the inverse operation of [[multiplication]]. This means that the value of <math>\textstyle\frac{a}{b}</math> is the solution ''x'' of the equation <math>bx = a</math> whenever such a value exists and is unique. Otherwise the value is left undefined.
+
+For ''b'' = 0, the equation ''bx'' = ''a'' can be rewritten as 0''x'' = ''a'' or simply 0 = ''a''. Thus, in this case, the equation ''bx'' = ''a'' has ''no solution'' if ''a'' is not equal to 0, and has ''any'' ''x'' as a solution if ''a'' equals 0. In either case, there is no unique value, so <math>\textstyle\frac{a}{b}</math> is undefined. Conversely, in a [[field (mathematics)|field]], the expression <math>\textstyle\frac{a}{b}</math> is ''always'' defined if ''b'' is not equal to zero.
+
+===Fallacies based on division by zero===
+
+It is possible to disguise a special case of division by zero in an [[algebra]]ic argument, leading to [[invalid proof|spurious proof]]s that 2 = 1 such as the following:
+
+With the following assumptions:
+
+:<math>0\times 1 = 0</math>
+:<math>0\times 2 = 0</math>
+
+The following must be true:
+
+:<math>0\times 1 = 0\times 2</math>
+
+Dividing by zero gives:
+
+:<math>\textstyle \frac{0}{0}\times 1 = \frac{0}{0}\times 2</math>
+
+Simplified, yields:
+
+:<math>1 = 2\,</math>
+
+The [[fallacy]] is the implicit assumption that dividing by 0 is a legitimate operation with <math>0/0=1</math>.
+
+Although most people would probably recognize the above "proof" as fallacious, the same argument can be presented in a way that makes it harder to spot the error. For example, if 1 is denoted by <math>x</math>, <math>0</math> can be hidden behind <math>x-x</math> and <math>2</math> behind <math>x+x</math>. The above mentioned proof can then be displayed as follows:
+
+:<math>(x-x)x = x^2-x^2 = 0\,</math>
+:<math>(x-x)(x+x) = x^2-x^2 = 0\,</math>
+
+hence:
+
+:<math>(x-x)x = (x-x)(x+x)\,</math>
+
+Dividing by <math>x-x\,</math> gives:
+
+:<math>x = x+x\,</math>
+
+and dividing by <math>x\,</math> gives:
+
+:<math>1 = 2\,</math>
+
+The "proof" above requires the use of the distributive law.  However, this requirement introduces an asymmetry between the two operations in that multiplication distributes over addition, but not the other way around.  Thus, the multiplicative identity element, 1, has an additive inverse, -1, but the additive identity element, 0, does not have a multiplicative inverse.
+
+===Pseudo-division by zero===
+In [[matrix (mathematics)|matrix]] algebra (or [[linear algebra]] in general), one can define a pseudo-division, by setting <math>\textstyle\frac{a}{b}=a b^+</math>, in which ''b''<sup>+</sup> represents the pseudoinverse of ''b''. It can be proven that if ''b''<sup>&minus;1</sup> exists, then ''b''<sup>+</sup> = ''b''<sup>&minus;1</sup>. If ''b'' equals 0, then 0<sup>+</sup> = 0; see [[Generalized inverse]].
+
+===Abstract algebra===
+
+The concepts applied to standard arithmetic are similar to those in more general algebraic structures, such as [[ring (mathematics)|ring]]s and [[field (mathematics)|field]]s. In a field, every nonzero element is invertible under multiplication, so as above, division poses problems only when attempting to divide by zero. This is likewise true in a [[skew field]] (which for this reason is called a [[division ring]]). However, in other rings, division by nonzero elements may also pose problems. Consider, for example, the ring '''Z'''/6'''Z''' of integers mod 6. What meaning should we give to the expression <math>\textstyle\frac{2}{2}</math>? This should be the solution ''x'' of the equation <math>2x = 2</math>.  But in the ring '''Z'''/6'''Z''', 2 is not invertible under multiplication.  This equation has two distinct solutions, ''x'' = 1 and ''x'' = 4, so the expression <math>\textstyle\frac{2}{2}</math> is [[Defined and undefined|undefined]].
+
+Off course, in field theory, the expression <math>\textstyle\frac{a}{b}</math>
+is only shorthand for the formal expression <math>ab^{-1}</math>, where <math>b^{-1}</math>
+is the multiplicative inverse of <math>b</math>. Since the field axioms only guarantee the existence of such inverses for nonzero elements, this expression has no meaning when
+<math>b</math> is zero.  In modern texts, one usually includes the axiom <math>\textstyle 0\neq 1</math>, in order to avoid having to consider the one-element field where the multiplicative identity coincides with the additive identity. In such 'fields' however, <math>0=1</math>, and as such we actually have <math>\textstyle\frac{0}{0}=\frac{0}{1}=0</math>, and division by zero is actually noncontradictory.
+
+==In mathematical analysis==
+
+[[Image:Hyperbola one over x.svg|thumbnail|right|300px|Diagrammatic representation of limits approaching infinity|The function y = <math>\textstyle\frac{1}{x}</math>. As x approaches 0, y approaches infinity (and vice versa).]]
+
+===Extended real line===
+At first glance it seems possible to define <math>\textstyle\frac{a}{0}</math> by considering the [[limit (mathematics)|limit]] of <math>\textstyle\frac{a}{b}</math> as ''b'' approaches 0.
+
+For any positive ''a'', it is known that
+:<math>\lim_{b \to 0^{+}} {a \over b} = {+}\infty</math>
+and for any [[Negative and non-negative numbers|negative]] ''a'',
+<!-- NOTE : Do not change the following! a is negative here, so the limit from ABOVE is negative. -->
+:<math>\lim_{b \to 0^{+}} {a \over b} = {-}\infty.</math>
+Therefore, if <math>\textstyle\frac{a}{0}</math> as +<U+221E> is defined for positive ''a'', and &minus;<U+221E> for negative ''a''.  However, taking the limit from the right is arbitrary. The limits could be taken from the left as well and defined <math>\textstyle\frac{a}{0}</math> to be &minus;<U+221E> for positive ''a'', and +<U+221E> for negative ''a''. This can be further illustrated using the equation (assuming that several natural properties of reals extend to infinities)
+
+:<math>+\infty = \frac{1}{0} = \frac{1}{-0} = -\frac{1}{0} = -\infty</math>
+
+which would lead to the result <math>+\infty = -\infty</math>, inconsistent with standard definitions of limit in the [[Extended real number line|extended real line]]. The only workable extension is introducing an ''unsigned infinity'', discussed below.
+
+Furthermore, there is no obvious definition of <math>\textstyle\frac{0}{0}</math> that can be derived from considering the limit of a ratio. The limit
+:<math> \lim_{(a,b) \to (0,0)} {a \over b} </math>
+does not exist.  Limits of the form
+:<math> \lim_{x \to 0} {f(x) \over g(x)} </math>
+in which both ''f(x)'' and ''g(x)'' approach 0 as ''x'' approaches 0, may equal any real or infinite value, or may not exist at all, depending on the particular functions ''f'' and ''g'' (see [[l'H<U+00F4>pital's rule]] for discussion and examples of limits of ratios). These and other similar facts show that the expression <math>\textstyle\frac{0}{0}</math> cannot be [[well-defined]] as a limit. 
+
+====Formal interpretation====
+A [[formal calculation]] is one which is carried out using rules of arithmetic, without consideration of whether the result of the calculation is well-defined.  Thus, as a rule of thumb, it is sometimes useful to think of <math>\textstyle\frac{a}{0}</math> as being <math>\infty</math>, provided ''a'' is not zero.  This infinity can be either positive, negative or unsigned, depending on context. For example, formally:
+
+:<math>\lim\limits_{x \to 0} {\frac{1}{x} =\frac{\lim\limits_{x \to 0} {1}}{\lim\limits_{x \to 0} {x}}} = \frac{1}{0} = \infty.</math>
+
+As with any formal calculation, invalid results may be obtained.  A logically rigorous as opposed to formal computation would say only that
+
+:<math>\lim\limits_{x \to 0^+} {\frac{1}{x}} = \frac{1}{0^+} = +\infty</math> and <math>\lim\limits_{x \to 0^-} {\frac{1}{x}} = \frac{1}{0^-} = -\infty</math>.
+ 
+(Since the [[one-sided limit]]s are different, the two-sided limit does not exist in the standard framework of the real numbers. Also, the fraction <math>\textstyle\frac{1}{0}</math> is left [[Defined and undefined|undefined]] in the [[extended real line]], therefore it and <math>\textstyle\frac{\lim\limits_{x \to 0} {1}}{\lim\limits_{x \to 0} {x}}</math> are meaningless [[Expression (mathematics)|expressions]] that should not rigorously be used in an equation.)
+
+===Real projective line===
+The set <math>\mathbb{R}\cup\{\infty\}</math> is the [[real projective line]], which is a [[one-point compactification]] of the real line. Here <math>\infty</math> means an ''unsigned infinity'', an infinite quantity which is neither positive nor negative. This quantity satisfies <math>-\infty = \infty</math> which, as we have seen, is necessary in this context. In this structure, we can define <math>\textstyle\frac{a}{0} = \infty</math> for nonzero ''a'', and <math>\textstyle\frac{a}{\infty} = 0</math>. It is the natural way to view the range of the tangent and cotangent functions of [[trigonometry]]: tan(''x'') approaches the single point at infinity as ''x'' approaches either <math>\textstyle+\frac{\pi}{2}</math> or <math>\textstyle-\frac{\pi}{2}</math> from either direction.
+
+This definition leads to many interesting results. However, the resulting algebraic structure is not a field, and should not be expected to behave like one. For example, <math>\infty + \infty</math> has no meaning in the projective line.
+
+===Riemann sphere===
+The set <math>\mathbb{C}\cup\{\infty\}</math> is the [[Riemann sphere]], of major importance in [[complex analysis]]. Here, too, <math>\infty</math> is an unsigned infinity, or, as it is often called in this context, the [[point at infinity]]. This set is analogous to the real projective line, except that it is based on the [[field (mathematics)|field]] of [[complex number]]s. In the Riemann sphere, <math>1/0=\infty</math>, but <math>0/0</math> is undefined, as well as <math>0\infty</math>.
+
+===Extended non-negative real number line===
+The negative real numbers can be discarded, and infinity introduced, leading to the set <math>[0, \infty]</math>, where division by zero can be naturally defined as <math>\textstyle\frac{a}{0} = \infty</math> for positive ''a''. While this makes division defined in more cases than usual, subtraction is instead left undefined in many cases, because there are no negative numbers.
+
+===Distribution theory===
+
+In [[Distribution (mathematics)|distribution theory]] one can extend the function <math>\textstyle\frac{1}{x}</math> to a distribution on the whole space of real numbers (in effect by using [[Cauchy principal value]]s). It does not, however, make sense to ask for a 'value' of this distribution at <math>x = 0</math>; a sophisticated answer refers to the [[singular support]] of the distribution.
+
+==Other number systems==
+Although division by zero cannot be sensibly defined with real numbers and integers, it is possible to consistently define division by zero in other mathematical structures.
+
+===Non-standard analysis===
+In the [[hyperreal number]]s and the [[surreal number]]s, division by zero is still impossible, but division by non-zero [[infinitesimal]]s is possible.
+
+===Abstract algebra===
+Any number system which forms a [[commutative ring]], as do the integers, the real numbers, and the complex numbers, for instance, can be extended to a [[wheel theory|wheel]] in which division by zero is always possible, but division has then a slightly different meaning.
+
+==Division by zero in computer arithmetic==
+The [[IEEE floating-point standard]], supported by almost all modern [[floating-point unit|processor]]s, specifies that every [[floating point]] arithmetic operation, including division by zero, has a well-defined result. In IEEE 754 arithmetic, a <U+00F7> 0 is positive infinity when ''a'' is positive, negative infinity when ''a'' is negative, and [[NaN]] (''not a number'') when ''a'' = 0. The infinity signs change when dividing by [[<U+2212>0 (number)|<U+2212>0]] instead. This is possible because in IEEE 754 there are two zero values, plus zero and [[<U+2212>0 (number)|minus zero]], and thus no ambiguity.
+
+Integer division by zero is usually handled differently from floating point since there is no integer representation for the result. Some processors generate an [[exception handling|exception]] when an attempt is made to divide an integer by zero, although others will simply continue and generate an incorrect result for the division. (That result is often zero.)
+
+Because of the improper algebraic results of assigning any value to division by zero, many computer [[programming language]]s  (including those used by [[calculator]]s) explicitly forbid the execution of the operation and may prematurely halt a program that attempts it, sometimes reporting a "Divide by zero" error. Some programs (especially those that use [[fixed-point arithmetic]] where no dedicated floating-point hardware is available) will use behavior similar to the IEEE standard, using large positive and negative numbers to approximate infinities. In some programming languages, an attempt to divide by zero results in [[undefined behavior]].
+
+In [[two's complement]] arithmetic, attempts to divide the smallest signed integer by <math>-1</math> are attended by similar problems, and are handled with the same range of solutions, from explicit error conditions to [[undefined behavior]].
+
+==Historical accidents==
+* On [[September 21]], [[1997]], a divide by zero error in the [[USS Yorktown (CG-48)]] ''Remote Data Base Manager'' brought down all the machines on the network, causing the ship's propulsion system to fail. <ref>{{cite news|url=http://www.wired.com/news/technology/0,1282,13987,00.html|title=Sunk by Windows NT|date=[[1998-07-24]]|work=[[Wired News]]}}</ref>
+
+== Footnotes ==
+{{reflist}}
+
+== References ==
+* [[Patrick Suppes]] 1957 (1999 Dover edition), ''Introduction to Logic'', Dover Publications, Inc., Mineola, New York. ISBN 0-486-40687-3 (pbk.). This book is in print and readily available. Suppes's <U+00A7>8.5 '''The Problem of Division by Zero''' begins this way: "That everything is not for the best in this best of all possible worlds, even in mathematics,is well illustrated by the vexing problem of defining the operation of division in the elementary theory of artihmetic" (p. 163). In his <U+00A7>8.7 '''Five Approaches to Division by Zero''' he remarks that "...there is no uniformly satisfactory solution" (p. 166)
+
+* Charles Seife 2000, ''Zero: The Biography of a Dangerous Idea'', Penguin Books, NY, ISBN 0 14 02.9647 6 (pbk.). This award-winning book is very accessible. Along with the fascinating history of (for some) an abhorent notion and others a cultural asset, describes how zero is misapplied with respect to multiplication and division. 
+
+* [[Alfred Tarski]] 1941 (1995 Dover edition), ''Introduction to Logic and to the Methodology of Deductive Sciences'', Dover Publications, Inc., Mineola, New York. ISBN 0-486-28462-X (pbk.). Tarski's <U+00A7>53 '''Definitions whose definiendum contains the identity sign''' discusses how mistakes are made (at least with respect to zero). He ends his chapter "(A discussion of this rather difficult problem [exactly one number satisfying a definiens] will be omitted here.*)" (p. 183).  The * points to Exercise #24 (p. 189) wherein he asks for a proof of the following: "In section 53, the definition of the number '0' was stated by way of an example. In order to be certain that this definition does not lead to a contradiction, it should be preceded by the following theorem: ''There exists exactly one number x such that, for any number y, we have: y + x = y.''"
+
+== Further reading ==
+* Jakub Czajko (July 2004) "{{doi-inline|10.1016/j.chaos.2003.12.046|On Cantorian spacetime over number systems with division by zero}}", ''Chaos, Solitons and Fractals'', volume 21, number 2, pages 261<U+2013>271.
+{{wikinews|British computer scientist's new "nullity" idea provokes reaction from mathematicians}}
+*{{cite web|url=http://www.badscience.net/?p=335|title=Maths Professor Divides By Zero, Says BBC|date=[[2006-12-07]]|author=[[Ben Goldacre]]}}
+
+==See also==
+* [[Asymptote]]
+* [[Defined and undefined]]
+* [[Indeterminate form]]
+* [[Zeroth]]
+
+[[Category:Zero]]
+[[Category:Elementary arithmetic]]
+[[Category:Computer arithmetic]]
+[[Category:Fractions]]
+[[Category:Mathematical analysis]]
+[[Category:Software anomalies]]
+[[Category:Internet memes]]
+[[Category:Computer errors]]
+
+[[cs:D<U+011B>len<U+00ED> nulou]]
+[[de:Null#Division]]
+[[es:Divisi<U+00F3>n por cero]]
+[[fa:<U+0628><U+062E><U+0634> <U+0628><U+0631> <U+0635><U+0641><U+0631>]]
+[[fr:Division par z<U+00E9>ro]]
+[[gd:Roinn le neoni]]
+[[ko:0<U+C73C><U+B85C> <U+B098><U+B204><U+AE30>]]
+[[it:Divisione per zero]]
+[[nl:Delen door nul]]
+[[ja:<U+30BC><U+30ED><U+9664><U+7B97>]]
+[[pl:Dzielenie przez zero]]
+[[pt:Divis<U+00E3>o por zero]]
+[[simple:Division by zero]]
+[[fi:Nollalla jakaminen]]
+[[sv:Division med noll]]
+[[th:<U+0E01><U+0E32><U+0E23><U+0E2B><U+0E32><U+0E23><U+0E14><U+0E49><U+0E27><U+0E22><U+0E28><U+0E39><U+0E19><U+0E22><U+0E4C>]]

@@ -1,0 +1,24 @@
+In [[mathematics]], the '''exterior covariant derivative''', sometimes also '''covariant exterior derivative''', is a very useful notion for [[calculus on manifolds]], which makes it possible to simplify formulas which use a [[Connection (principal bundle)|principal connection]]. 
+
+Let ''P'' &rarr; ''M'' be a [[principal bundle|principal ''G''-bundle]] on a [[smooth manifold]] ''M''.  If <math>\phi </math>  is a [[tensorial form|tensorial ''k''-form]] on ''P'', then its exterior covariant derivative is defined by
+:<math>D\phi(X_0,X_1,\dots,X_k)=\mathrm{d}\phi(h(X_0),h(X_1),\dots,h(X_k))</math>
+where ''h'' denotes the projection to the [[Horizontal_space|horizontal subspace]], <math>H_x</math> defined by the connection, with kernel <math>V_x</math> (the vertical subspace) of the tangent bundle of the [[total space]] of the [[fiber bundle]]. Here <math>X_i</math> are any vector fields on ''P''.  ''D''&phi; is a tensorial ''k''+1 form on ''P''.
+
+Unlike the usual [[exterior derivative]], which squares to 0, we have
+:<math>D^2\phi=\Omega\wedge\phi</math>
+where <math>\Omega</math> denotes the [[curvature form]]. In particular <math>D^2</math> vanishes for a [[flat connection]].
+
+==See also==
+*[[Connection_form#Exterior_connections|Exterior connections]]
+
+==References==
+*{{cite book | author=Kobayashi, Shoshichi and Nomizu, Katsumi | title = [[Foundations of Differential Geometry]], Vol. 1 | publisher=Wiley-Interscience | year=1996 (New edition) |isbn = 0-471-15733-3}}
+
+[[Category:connection (mathematics)]]
+[[Category:Differential geometry]]
+[[Category:Fiber bundles]]
+
+
+{{differential-geometry-stub}}
+
+[[zh:<U+5916><U+5171><U+53D8><U+5BFC><U+6570>]]

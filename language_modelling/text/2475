@@ -1,0 +1,258 @@
+'''Combinatorial design theory''' is the part of [[combinatorics|combinatorial]] [[mathematics]] that deals with the existence,  construction and properties of [[set system|systems of finite sets]] whose arrangements satisfy generalized concepts of ''balance'' and/or ''symmetry''. These concepts are not made precise so that a wide range of objects can be thought of as being under the same umbrella. At times this might involve the numerical sizes of set intersections as in [[block design]]s, while at other times it could involve the spatial arrangement of entries in an array as in [[Sudoku|Sudoku grids]].
+
+Combinatorial design theory can be applied to the area of [[design of experiments]].  Some of the basic theory of combinatorial designs originated in the statistician [[Ronald Fisher]]'s work on the design of biological experiments. Modern applications are also found in a wide gamut of areas including; [[Finite geometry]], [[Tournament|tournament scheduling]], [[Lottery|lotteries]], [[mathematical biology]], [[Algorithm design|algorithm design and analysis]], [[Computer network|networking]], [[group testing]] and [[cryptography]].<ref>{{harvnb|Stinson|2003|loc=pg.1}}</ref>
+
+== Example ==
+[[File:Fano plane.svg|thumb|The Fano plane]]
+
+Given a certain number ''n'' of people, is it possible to assign them to sets so that each person is in at least one set, each pair of people is in exactly one set together, every two sets have exactly one person in common, and no set contains everyone, all but one person, or exactly one person? The answer depends on ''n''.
+
+This has a solution only if ''n'' has the form ''q''<sup>2</sup> + ''q'' + 1.  It is less simple to prove that a solution exists if ''q'' is a [[prime power]]. It is conjectured that these are the ''only'' solutions. It has been further shown that if a solution exists for ''q'' congruent to 1 or 2 mod 4, then ''q'' is a sum of two [[square numbers]].  This last result, the [[Bruck<U+2013>Ryser theorem]], is proved by a combination of constructive methods based on [[finite field]]s and an application of [[quadratic form]]s.
+
+When such a structure does exist, it is called a finite [[projective plane]]; thus showing how [[finite geometry]] and combinatorics intersect. When ''q''&nbsp;=&nbsp;2, the projective plane is called the [[Fano plane]].
+
+== Fundamental combinatorial designs ==
+
+The classical core of the subject of combinatorial designs is built around [[block design|balanced incomplete block designs (BIBDs)]], [[Hadamard matrix|Hadamard matrices and Hadamard designs]], [[block design#Symmetric BIBDs|symmetric BIBDs]], [[Latin square]]s, [[block design#Resolvable 2-designs|resolvable BIBDs]], [[difference set]]s, and pairwise balanced designs (PBDs).<ref>{{harvnb|Stinson|2003|loc=pg. IX}}</ref> Other combinatorial designs are related to or have been developed from the study of these fundamental ones. 
+
+* A '''balanced incomplete block design''' or BIBD (usually called for short a [[block design]]) is a collection '''''B''''' of ''b'' subsets (called ''blocks'') of a finite set ''X'' of ''v'' elements, such that any element of ''X'' is contained in the same number ''r'' of blocks, every block has the same number ''k'' of elements, and any two blocks have the same number <U+03BB> of common elements. BIBDs are also known as ''2-designs'' and are often denoted as  2-(''v'',''k'',<U+03BB>) designs.  As an example, when <U+03BB> = 1 and ''b'' = ''v'', we have a [[projective plane]]: ''X'' is the point set of the plane and the blocks are the lines.
+
+* A '''symmetric balanced incomplete block design''' or '''[[block design#Symmetric BIBDs|SBIBD]]''' is a BIBD in which ''v'' &nbsp;=&nbsp; ''b'' (the number of points equals the number of blocks). They are the single most important and well studied subclass of BIBDs. Projective planes, biplanes and Hadamard 2-designs are all SBIBDs. They are of particular interest since they are the extremal examples of [[Fisher's inequality]] (''b'' <U+2265> ''v'').
+
+* A '''[[block design#Resolvable 2-designs|resolvable BIBD]]''' is a BIBD whose blocks can be partitioned into sets (called ''parallel classes''), each of which forms a partition of the point set of the BIBD. The set of parallel classes is called a ''resolution'' of the design. A solution of the famous [[15 schoolgirl problem]] is a resolution of a BIBD with ''v'' &nbsp;=&nbsp;15, ''k'' &nbsp;=&nbsp;3 and  <U+03BB>&nbsp;=&nbsp;1.<ref>{{harvnb|Beth|Jungnickel|Lenz|1986|loc=pg. 40 Example 5.8}}</ref>
+
+* A '''[[Latin rectangle]]''' is an ''r''&nbsp;&times;&nbsp;''n'' [[matrix (mathematics)|matrix]] that has the numbers 1,&nbsp;2,&nbsp;3,&nbsp;...,&nbsp;''n'' as its entries (or any other set of ''n'' distinct symbols) with no number occurring more than once in any row or column where&nbsp;''r''&nbsp;<U+2264>&nbsp;''n''.  An ''n''&nbsp;&times;&nbsp;''n'' Latin rectangle is called a [[Latin square]]. If ''r''&nbsp;<&nbsp;''n'', then it is possible to append ''n''&nbsp;&minus;&nbsp;''r'' rows to an ''r''&nbsp;&times;&nbsp;''n'' Latin rectangle to form a Latin square, using [[Hall's marriage theorem]].<ref>{{harvnb|Ryser|1963|loc=pg. 52, Theorem 3.1}} </ref>
+
+:Two Latin squares of order ''n'' are said to be ''orthogonal'' if the set of all ordered pairs consisting of the corresponding entries in the two squares has ''n''<sup>2</sup> distinct members (all possible ordered pairs occur). A set of Latin squares of the same order forms a set of '''[[orthogonal Latin squares|mutually orthogonal Latin squares (MOLS)]]''' if every pair of Latin squares in the set are orthogonal. There can be at most ''n''&nbsp;-&nbsp;1 squares in a set of MOLS of order ''n''. A set of MOLS of order ''n'' of maximal size can be used to construct a [[projective plane]] of order ''n''. 
+
+* A (''v'', ''k'', <U+03BB>) '''[[difference set]]''' is a [[subset]] '''D''' of a [[group (mathematics)|group]] '''G''' such that the [[order of a group|order]] of '''G''' is ''v'', the [[cardinality|size]] of '''D''' is ''k'', and every nonidentity element of '''G''' can be expressed as a product ''d''<sub>1</sub>''d''<sub>2</sub><sup>-1</sup> of elements of '''D''' in exactly <U+03BB> ways (when '''G''' is written with a multiplicative operation).<ref>When the group '''G''' is an abelian group (or written additively) the defining property looks like d<sub>1</sub> &ndash;d<sub>2</sub> from which the term ''difference set'' comes from.</ref>
+
+:If '''D''' is a difference set, and ''g'' in '''G''', then ''g'' '''D'''&nbsp;=&nbsp;{''gd'': ''d'' in '''D'''} is also a difference set, and is called a '''translate''' of '''D'''. The set of all translates of a difference set '''D''' forms a [[Block design#Symmetric BIBDs|symmetric block design]]. In such a design there are ''v'' elements and ''v'' blocks. Each block of the design consists of ''k'' points, each point is contained in ''k'' blocks. Any two blocks have exactly <U+03BB> elements in common and any two points appear together in <U+03BB> blocks. This SBIBD is called the ''development'' of '''D'''.<ref>{{harvnb|Beth|Jungnickel|Lenz|1986|loc=pg. 262, Theorem 1.6}}</ref>
+
+:In particular, if <U+03BB> = 1, then the difference set gives rise to a [[projective plane]]. An example of a (7,3,1) difference set in the group <math>\mathbb{Z}/7\mathbb{Z}</math> (an abelian group written additively) is the subset {1,2,4}. The development of this difference set gives the [[Fano plane]].
+:Since every difference set gives an SBIBD, the parameter set must satisfy the [[Bruck<U+2013>Ryser<U+2013>Chowla theorem]], but not every SBIBD gives a difference set.
+
+* An '''[[Hadamard matrix]]''' of order ''m'' is an ''m'' <U+00D7> ''m'' matrix '''H''' whose entries are <U+00B1>1 such that '''HH'''<sup><U+22A4></sup> &nbsp;=&nbsp;m'''I'''<sub>m</sub>, where '''H'''<sup><U+22A4></sup> is the transpose of '''H''' and '''I'''<sub>m</sub> is the ''m'' <U+00D7> ''m'' identity matrix. An Hadamard matrix can be put into ''standardized form'' (that is, converted to an equivalent Hadamard matrix) where the first row and first column entries are all +1. If the order ''m'' > 2 then ''m'' must be a multiple of 4.
+
+:Given an Hadamard matrix of order 4''a'' in standardized form, remove the first row and first column and convert every -1 to a 0. The resulting 0-1 matrix '''M''' is the [[incidence matrix]] of a symmetric 2-(4''a''-1, 2''a''-1, ''a''-1) design called an '''Hadamard 2-design'''.<ref>{{harvnb|Stinson|2003|loc=pg. 74, Theorem 4.5}}</ref> This construction is reversible, and the incidence matrix of a symmetric 2-design with these parameters can be used to form an Hadamard matrix of order 4''a''. When ''a''&nbsp;=&nbsp;2 we obtain the, by now familiar, [[Fano plane]] as an Hadamard 2-design.
+
+* A '''pairwise balanced design''' (or PBD) is a set ''X'' together with a family of subsets of ''X'' (which need not have the same size and may contain repeats) such that every pair of distinct elements of ''X'' is contained in exactly <U+03BB> (a positive integer) subsets. The set ''X'' is allowed to be one of the subsets, and if all the subsets are copies of ''X'', the PBD is called ''trivial''. The size of ''X'' is ''v'' and the number of subsets in the family (counted with multiplicity) is ''b''. 
+
+:[[Fisher's inequality]] holds for PBDs:<ref>{{harvnb|Stinson|2003|loc = pg. 193, Theorem 8.20}}</ref> For any non-trivial PBD, ''v'' <U+2264> ''b''.  
+
+:This result also generalizes the famous [[De Bruijn<U+2013>Erd<U+0151>s theorem (incidence geometry)|Erd<U+0151>s<U+2013>De Bruijn theorem]]: For a PBD with ''<U+03BB>'' = 1 having no blocks of size 1 or size ''v'', ''v'' <U+2264> ''b'', with equality if and only if the PBD is a [[projective plane]] or a near-pencil.<ref>{{harvnb|Stinson|2003|loc= pg. 183, Theorem 8.5}}</ref>
+
+== A wide assortment of other combinatorial designs ==
+The Handbook of Combinatorial Designs {{harv|Colbourn|Dinitz|2007}} has, amongst others, 65 chapters, each devoted to a combinatorial design other than those given above. A partial listing is given below:
+
+* [[Association scheme]]s
+* '''Balanced ternary designs'''
+* A '''balanced tournament design''' of order ''n'' (a BTD(''n'')) is an arrangement of all the distinct unordered pairs of a 2''n''-set ''V'' into an ''n'' &times; (2''n''-1) array such that
+# every element of ''V'' appears precisely once in each column, and
+# every element of ''V'' appears at most twice in each row.
+:An example of a BTD(3) is given by
+<center>
+{| class="wikitable"
+|-
+| 1 6 || 3 5 || 2 3 || 4 5|| 2 4
+|-
+| 2 5 || 4 6 || 1 4 || 1 3 || 3 6
+|-
+| 3 4 || 1 2 || 5 6 || 2 6 || 1 5
+|}
+</center> 
+:The columns of a BTD(''n'') provide a [[1-factorization]] of the complete graph on 2''n'' vertices, ''K''<sub>2n</sub>.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 333, Remark 3.3}}</ref>
+:BTD(''n'')s can be used to schedule round robin tournaments: the rows represent the locations, the columns the rounds of play and the entries are the competing players or teams. 
+
+* [[Bent function]]s
+* [[Costas array]]s
+* [[Factorial design]]s
+* A '''frequency square''' ('''F'''-square) is a higher order generalization of a [[Latin square]]. Let ''S'' = {''s''<sub>1</sub>,''s''<sub>2</sub>, ..., ''s''<sub>m</sub>} be a set of distinct symbols and (<U+03BB><sub>1</sub>, <U+03BB><sub>2</sub>, ...,<U+03BB><sub>m</sub>) a ''frequency vector'' of positive integers. A ''frequency square'' of order ''n'' is an ''n'' &times; ''n'' array in which each symbol ''s''<sub>i</sub> occurs <U+03BB><sub>i</sub> times, ''i'' = 1,2,...,m, in each row and column. The ''order'' ''n'' = <U+03BB><sub>1</sub>&nbsp;+&nbsp;<U+03BB><sub>2</sub>&nbsp;+&nbsp;...&nbsp;+&nbsp;<U+03BB><sub>m</sub>. An F-square is in ''standard form'' if in the first row and column, all occurrences of ''s''<sub>i</sub> precede those of ''s''<sub>j</sub> whenever ''i'' < ''j''.
+:A frequency square F<sub>1</sub> of order ''n'' based on the set {''s''<sub>1</sub>,''s''<sub>2</sub>, ..., ''s''<sub>m</sub>} with frequency vector (<U+03BB><sub>1</sub>, <U+03BB><sub>2</sub>, ...,<U+03BB><sub>m</sub>) and a frequency square F<sub>2</sub>, also of order ''n'', based on the set {''t''<sub>1</sub>,''t''<sub>2</sub>, ..., ''t''<sub>k</sub>} with frequency vector (<U+03BC><sub>1</sub>, <U+03BC><sub>2</sub>, ...,<U+03BC><sub>k</sub>) are ''orthogonal'' if every ordered pair (''s''<sub>i</sub>, ''t''<sub>j</sub>) appears precisely <U+03BB><sub>i</sub><U+03BC><sub>j</sub> times when F<sub>1</sub> and F<sub>2</sub> are superimposed.  
+
+* '''Hall triple systems''' (HTSs) are [[Steiner system|Steiner triple systems (STSs)]] (but the blocks are called ''lines'') with the property that the substructure generated by two intersecting lines is isomorphic to the [[Projective plane#Affine planes|finite affine plane]] AG(2,3). 
+:Any affine space AG(''n'',3) gives an example of an HTS. Such an HTS is an ''affine'' HTS. Nonaffine HTSs also exist.
+:The number of points of an HTS is 3<sup>m</sup> for some integer ''m''&nbsp;<U+2265>&nbsp;2. Nonaffine HTSs exist for any ''m''&nbsp;<U+2265>&nbsp;4 and do not exist for ''m''&nbsp;=&nbsp;2 or 3.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 496, Theorem 28.5}}</ref>
+:Every Steiner triple system is equivalent to a Steiner [[quasigroup]] ([[idempotent]], [[commutative]] and satisfying (''xy'')''y''&nbsp;=&nbsp;''x'' for all ''x'' and ''y''). A Hall triple system is equivalent to a Steiner quasigroup which is [[distributive]], that is, satisfies {{nowrap| a(xy) {{=}} (ax)(ay)}} for all a,x,y in the quasigroup.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 497, Theorem 28.15}}</ref>
+
+* Let ''S'' be a set of 2''n'' elements. A '''Howell design''', H(''s'',2''n'') (on symbol set ''S'') is an ''s'' &times; ''s'' array such that:
+# Each cell of the array is either empty or contains an unordered pair from ''S'',
+# Each symbol occurs exactly once in each row and column of the array, and
+# Every unordered pair of symbols occurs in at most one cell of the array.
+
+:An example of an H(4,6) is
+<center>
+{| class="wikitable"
+|-
+| 0 4 ||&nbsp;|| 1 3 || 2 5
+|-
+| 2 3 || 1 4 || 0 5 || &nbsp;
+|-
+| &nbsp; || 3 5 || 2 4 || 0 1
+|-
+| 1 5 || 0 2 ||&nbsp;|| 3 4
+|}
+</center>
+
+:An H(2''n'' - 1, 2''n'') is a [[Room square]] of side 2''n'' - 1, and thus the Howell designs generalize the concept of Room squares.
+
+:The pairs of symbols in the cells of a Howell design can be thought of as the edges of an ''s'' regular graph on 2''n'' vertices, called the ''underlying graph'' of the Howell design.
+
+:Cyclic Howell designs are used as ''Howell movements'' in duplicate bridge tournaments. The rows of the design represent the rounds, the columns represent the boards, and the diagonals represent the tables.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 503, Remark 29.38}}</ref>
+ 
+* [[Linear space]]s
+* An '''(''n'',''k'',''p'',''t'')-lotto design''' is an ''n''-set ''V'' of elements together with a set <U+00DF> of ''k''-element subsets of ''V'' (blocks), so that for any ''p''-subset P of ''V'', there is a block B in <U+00DF> for which |P <U+2229> B | <U+2265> ''t''. '''L(''n'',''k'',''p'',''t'')''' denotes the smallest number of blocks in any (''n'',''k'',''p'',''t'')-lotto design. The following is a (7,5,4,3)-lotto design with the smallest possible number of blocks:<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 512, Example 32.4}}</ref>
+::{1,2,3,4,7} &nbsp; &nbsp; &nbsp; {1,2,5,6,7} &nbsp; &nbsp; &nbsp; {3,4,5,6,7}.
+:Lotto designs model any [[lottery]] that is run in the following way: Individuals purchase ''tickets'' consisting of ''k'' numbers chosen from a set of ''n'' numbers. At a certain point the sale of tickets is stopped and a set of ''p'' numbers is randomly selected from the ''n'' numbers. These are the ''winning numbers''. If any sold ticket contains ''t'' or more of the winning numbers, a prize is given to the ticket holder. Larger prizes go to tickets with more matchs. The value of L(''n'',''k'',''p'',''t'') is of interest to both gamblers and researchers, as this is the smallest number of tickets that are needed to be purchased in order to guarantee a prize.
+
+:The Hungarian Lottery is a (90,5,5,''t'')-lotto design and it is known that L(90,5,5,2) = 100. Lotteries with parameters (49,6,6,''t'') are also popular worldwide and it is known that L(49,6,6,2) = 19. In general though, these numbers are hard to calculate and remain unknown.<ref>{{harvnb|Colbourn|Dinitiz|2007|loc=pg. 512, Remark 32.3}}</ref>
+
+* [[Magic square]]s
+* A '''(''v'',''k'',<U+03BB>)-Mendelsohn design''', or MD(''v'',''k'',<U+03BB>),is a ''v''-set ''V'' and a collection <U+00DF> of ordered ''k''-tuples of distinct elements of ''V'' (called ''blocks''), such that each ordered pair (''x'',''y'') with ''x'' <U+2260> ''y'' of elements of ''V'' is cyclically adjacent in <U+03BB> blocks. The ordered pair (''x'',''y'') of distinct elements is ''cyclically adjacent'' in a block if the elements appear in the block as (...,''x'',''y'',...) or (''y'',...,''x''). An MD(''v'',3,<U+03BB>) is a '''Mendelsohn triple system''', MTS(''v'',<U+03BB>). An example of an MTS(4,1) on V = {0,1,2,3} is:
+:: (0,1,2) &nbsp; &nbsp; (1,0,3) &nbsp; &nbsp; (2,1,3) &nbsp; &nbsp; (0,2,3)
+:Any triple system can be made into a Mendelson triple system by replacing the unordered triple {''a'',''b'',''c''} with the pair of ordered triples (''a'',''b'',''c'') and (''a'',''c'',''b''), but as the example shows, the converse of this statement is not true.
+:If (''Q'',<U+2217>) is an idempotent semisymmetric [[quasigroup]], that is, ''x'' <U+2217> ''x'' = ''x'' (idempotent) and ''x'' <U+2217> (''y'' <U+2217> ''x'') = ''x'' (semisymmetric) for all ''x'', ''y'' in ''Q'', let <U+00DF> = {(''x'',''y'',''x'' <U+2217> ''y''): ''x'', ''y'' in ''Q''}. Then (''Q'', <U+00DF>) is a Mendelsohn triple system MTS(|''Q''|,1). This construction is reversible.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 530, Theorem 35.15}}</ref>
+* A '''quasi-3 design''' is a symmetric design (SBIBD) in which each triple of blocks intersect in either ''x'' or ''y'' points, for fixed ''x'' and ''y'' called the ''triple intersection numbers'' (''x'' < ''y''). Any symmetric design with <U+03BB> <U+2264> 2 is a quasi-3 design with ''x''&nbsp;=&nbsp;0 and ''y''&nbsp;=&nbsp;1. The point-hyperplane design of [[Projective geometry|'''PG'''(''n'',''q'')]] is a quasi-3 design with ''x''&nbsp;=&nbsp;(''q''<sup>n-2</sup>&nbsp;-&nbsp;1)/(''q''&nbsp;-&nbsp;1) and ''y''&nbsp;=&nbsp;<U+03BB>&nbsp;=&nbsp;(''q''<sup>n-1</sup>&nbsp;-&nbsp;1)/(''q''&nbsp;-&nbsp;1). If ''y''&nbsp;=&nbsp;<U+03BB> for a quasi-3 design, the design is isomorphic to '''PG'''(''n'',''q'') or a [[projective plane]].<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 577, Theorem 47.15}}</ref>
+
+* A ''t''-(''v'',''k'',<U+03BB>) design ''D'' is '''quasi-symmetric''' with intersection numbers ''x'' and ''y'' (''x'' < ''y'') if every two distinct blocks intersect in either ''x'' or ''y'' points. These designs naturally arise in the investigation of the duals of designs with <U+03BB> = 1. A non-symmetric (''b'' > ''v'') 2-(''v'',''k'',1) design is quasisymmetric with ''x'' = 0 and ''y'' = 1. A multiple (repeat all blocks a certain number of times) of a symmetric 2-(''v'',''k'',<U+03BB>) design is quasisymmetric with ''x'' = <U+03BB> and ''y'' = ''k''. Hadamard 3-designs (extensions of [[Block design#Symmetric designs|Hadamard 2-designs]]) are quasisymmetric.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pp. 578-579}}</ref> 
+:Every quasisymmetric block design gives rise to a [[strongly regular graph]] (as its block graph), but not all SRGs arise in this way.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 579, Theorem 48.10}}</ref> 
+:The [[incidence matrix]] of a quasisymmetric 2-(''v'',''k'',<U+03BB>) design with ''k'' <U+2261> ''x'' <U+2261> ''y'' (mod 2) generates a binary self-orthogonal [[Error-correcting code|code]] (when bordered if ''k'' is odd).<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 580, Lemma 48.22}}</ref>
+
+* [[Room square]]s
+* A '''[[spherical design]]''' is a finite set ''X'' of points in a (''d''&nbsp;&minus;&nbsp;1)-dimensional [[sphere]] such that, for some integer ''t'', the average value on ''X'' of every polynomial 
+
+::<math>f(x_1, \ldots, x_d)\ </math>
+
+:of total degree at most ''t'' is equal to the average value of ''f'' on the whole sphere, i.e., the [[integral]] of ''f'' divided by the area of the sphere.
+* [[Tur<U+00E1>n system]]s
+* An '''''r'' <U+00D7> ''n'' tuscan-''k'' rectangle''' on ''n'' symbols has ''r'' rows and ''n'' columns such that:
+# each row is a permutation of the ''n'' symbols and
+# for any two distinct symbols ''a'' and ''b'' and for each ''m'' from 1 to ''k'', there is at most one row in which ''b'' is ''m'' steps to the right of ''a''.
+: If ''r'' = ''n'' and ''k'' = 1 these are referred to as '''Tuscan squares''', while if ''r'' = ''n'' and ''k'' = ''n'' - 1 they are '''Florentine squares'''. A '''Roman square''' is a tuscan square which is also a [[latin square]] (these are also known as ''row complete latin squares''). A '''Vatican square''' is a florentine square which is also a latin square. 
+
+: The following example is a tuscan-1 square on 7 symbols which is not tuscan-2:<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 652, Examples 62.4}}</ref>
+<center>
+{| class="wikitable"
+|-
+| 6 || 1 || 5 || 2 || 4 || 3 || 7
+|-
+| 2 || 6 || 3 || 5 || 4 || 7 || 1
+|-
+| 5 || 7 || 2 || 3 || 1 || 4 || 6
+|-
+| 4 || 2 || 5 || 1 || 6 || 7 || 3
+|-
+| 3 || 6 || 2 || 1 || 7 || 4 || 5
+|-
+| 1 || 3 || 2 || 7 || 5 || 6 || 4
+|-
+| 7 || 6 || 5 || 3 || 4 || 1 || 2
+|}
+</center>
+:A tuscan square on ''n'' symbols is equivalent to a decomposition of the complete graph with ''n'' vertices into ''n'' hamiltonian directed paths.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 655, Theorem 62.24}}</ref>
+
+:In a sequence of visual impressions, one flash card may have some effect on the impression given by the next. This bias can be cancelled by using ''n'' sequences corresponding to the rows of an ''n'' <U+00D7> ''n'' tuscan-1 square.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 657, Remark 62.29}}</ref>
+
+* A '''t-wise balanced design''' (or ''t'' BD) of type ''t''-(''v'',K,<U+03BB>) is a ''v''-set ''X'' together with a family of subsets of ''X'' (called ''blocks'') whose sizes are in the set K, such that every ''t''-subset of distinct elements of ''X'' is contained in exactly <U+03BB> blocks. If K is a set of positive integers strictly between ''t'' and ''v'', then the ''t'' BD is ''proper''. If all the ''k''-subsets of ''X'' for some ''k'' are blocks, the ''t'' BD is a ''trivial design''.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 657}}</ref>
+:Notice that in the following example of a 3-{12,{4,6},1) design based on the set ''X'' = {1,2,...,12}, some pairs appear four times (such as 1,2) while others appear five times (6,12 for instance).<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 658, Example 63.5}}</ref>
+::  1 2 3 4 5 6   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1 2 7 8  &nbsp;&nbsp;&nbsp;&nbsp;   1 2 9 11  &nbsp;&nbsp;&nbsp;&nbsp;   1 2 10 12  &nbsp;&nbsp;&nbsp;&nbsp;   3 5 7 8  &nbsp;&nbsp;&nbsp;&nbsp;   3 5 9 11  &nbsp;&nbsp;&nbsp;&nbsp;   3 5 10 12 &nbsp;&nbsp;&nbsp;&nbsp;    4 6 7 8   &nbsp;&nbsp;&nbsp;&nbsp;  4 6 9 11   &nbsp;&nbsp;&nbsp;&nbsp;  4 6 10 12
+::  7 8 9 10 11 12 &nbsp;&nbsp;&nbsp;&nbsp;  2 3 8 9  &nbsp;&nbsp;&nbsp;&nbsp;   2 3 10 7  &nbsp;&nbsp;&nbsp;&nbsp;   2 3 11 12 &nbsp;&nbsp;&nbsp;&nbsp;    4 1 8 9 &nbsp;&nbsp;&nbsp;&nbsp;    4 1 10 7 &nbsp;&nbsp;&nbsp;&nbsp;    4 1 11 12 &nbsp;&nbsp;&nbsp;&nbsp;    5 6 8 9  &nbsp;&nbsp;&nbsp;&nbsp;   5 6 10 7 &nbsp;&nbsp;&nbsp;&nbsp;    5 6 11 12
+::  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;           3 4 9 10 &nbsp;&nbsp;&nbsp;&nbsp;  3 4 11 8 &nbsp;&nbsp;&nbsp;&nbsp;    3 4 7 12  &nbsp;&nbsp;&nbsp;&nbsp;    5 2 9 10 &nbsp;&nbsp;&nbsp;&nbsp;   5 2 11 8 &nbsp;&nbsp;&nbsp;&nbsp;    5 2  7 12  &nbsp;&nbsp;&nbsp;&nbsp;   1 6 9 10 &nbsp;&nbsp;&nbsp;&nbsp;   1 6 11 8 &nbsp;&nbsp;&nbsp;&nbsp;    1 6 7 12
+::    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;                       4 5 10 11 &nbsp;&nbsp;&nbsp;&nbsp;  4 5 7 9   &nbsp;&nbsp;&nbsp;&nbsp;   4 5 8 12 &nbsp;&nbsp;&nbsp;&nbsp;     1 3 10 11 &nbsp;&nbsp;&nbsp;&nbsp;  1 3 7 9 &nbsp;&nbsp;&nbsp;&nbsp;     1 3  8 12  &nbsp;&nbsp;&nbsp;&nbsp;   2 6 10 11 &nbsp;&nbsp;&nbsp;&nbsp;  2 6 7 9   &nbsp;&nbsp;&nbsp;&nbsp;   2 6 8 12
+::    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;                       5 1 11 7  &nbsp;&nbsp;&nbsp;&nbsp;  5 1 8 10  &nbsp;&nbsp;&nbsp;&nbsp;   5 1 9 12  &nbsp;&nbsp;&nbsp;&nbsp;    2 4 11 7 &nbsp;&nbsp;&nbsp;&nbsp;   2 4 8 10  &nbsp;&nbsp;&nbsp;&nbsp;   2 4  9 12 &nbsp;&nbsp;&nbsp;&nbsp;    3 6 11 7 &nbsp;&nbsp;&nbsp;&nbsp;   3 6 8 10   &nbsp;&nbsp;&nbsp;&nbsp;  3 6 9 12 
+       
+* A '''Youden square''' is a ''k'' <U+00D7> ''v'' ''rectangular'' array (''k'' < ''v'') of ''v'' symbols such that each symbol appears exactly once in each row and the symbols appearing in any column form a block of a symmetric (''v'', ''k'', <U+03BB>) design, all the blocks of which occur in this manner. A Youden square is a Latin rectangle. The term "square" in the name comes from an older definition which did use a square array.<ref>{{harvnb|Colbourn|Dinitz|2007|loc=pg. 669, Remark 65.3}}</ref> An example of a 4 <U+00D7> 7 Youden square is given by:
+<center>
+ {| class="wikitable"
+   | 1 || 2 || 3 || 4 || 5 || 6 || 7
+   |-
+   | 2 || 3 || 4 || 5 || 6 || 7 || 1
+   |-
+   | 3 || 4 || 5 || 6 || 7 || 1 || 2
+   |-
+   | 5 || 6 || 7 || 1 || 2 || 3 || 4
+   |}
+</center>
+:The seven blocks (columns) form the order 2 [[Block design#Symmetric BIBDs|biplane]] (a symmetric (7,4,2)-design).
+
+== See also ==
+* [[Algebraic statistics]]
+* [[Hypergraph]]
+
+== Notes ==
+{{reflist}}
+
+{{more footnotes|date=June 2012}}
+== References ==
+* {{citation|last1=Assmus|first1=E.F.|last2=Key|first2=J.D.|title=Designs and Their Codes|publisher=Cambridge University Press|year=1992|place=Cambridge|isbn=0-521-41361-3}}
+
+*{{citation|first1=Thomas|last1=Beth|first2=Dieter|last2=Jungnickel|first3=Hanfried|last3=Lenz|title=Design Theory|publisher=[[Cambridge University Press]]|location=Cambridge|year=1986}}. 2nd ed. (1999) ISBN 978-0-521-44432-3.
+
+* [[R. C. Bose]], "A Note on Fisher's Inequality for Balanced Incomplete Block Designs", ''[[Annals of Mathematical Statistics]]'', 1949, pages 619&ndash;620.
+
+* {{cite book
+|author=Cali<U+0144>ski, Tadeusz and Kageyama, Sanpei
+|title=Block designs: A Randomization approach, Volume '''II''': Design 
+|series=Lecture Notes in Statistics
+|volume=170
+|publisher=Springer-Verlag
+|location=New York
+|year=2003
+|isbn=0-387-95470-8
+}}
+
+* {{citation|last1=Colbourn|first1=Charles J.|last2=Dinitz|first2=Jeffrey H.|title=Handbook of Combinatorial Designs|year=2007|publisher=Chapman & Hall/ CRC|location=Boca Raton|isbn=1-58488-506-8|edition=2nd Edition}}
+
+* R. A. Fisher, "An examination of the different possible solutions of a problem in incomplete blocks", ''[[Annals of Eugenics]]'', volume 10, 1940, pages 52&ndash;75.
+
+* {{citation|last=Hall, Jr. |first=Marshall|title=Combinatorial Theory|edition=2nd|publisher= Wiley-Interscience|place=New York|year=1986|isbn=0-471-09138-3}}
+
+* {{citation|last1=Hughes|first1=D.R.|last2=Piper|first2=E.C.|title=Design theory|publisher=Cambridge University Press|place=Cambridge|year=1985|isbn=0-521-25754-9}}
+
+* {{citation|last=Lander|first=E. S.|title=Symmetric Designs: An Algebraic Approach|year=1983|publisher=Cambridge University Press|location=Cambridge}}
+
+* {{citation|last=Lindner|first=C.C.|last2=Rodger|first2=C.A.|title=Design Theory|year=1997|publisher=CRC Press|location=Boca Raton|isbn=0-8493-3986-3}}
+
+* {{cite book
+|title=Constructions and Combinatorial Problems in Design of Experiments
+|author=[[Damaraju Raghavarao|Raghavarao, Damaraju]]
+|location=New York
+|year=1988
+|edition=corrected reprint of the 1971 Wiley
+|publisher=Dover
+}}
+
+* {{cite book
+|title=Block Designs: Analysis, Combinatorics and Applications
+|author=[[Damaraju Raghavarao|Raghavarao, Damaraju]] and Padgett, L.V.
+|location=
+|year=2005
+|edition=
+|publisher=World Scientific
+}}
+
+* {{citation|last=Ryser|first=Herbert John|title=Combinatorial Mathematics (Carus Monograph #14)|year=1963|publisher=Mathematical Association of America|chapter=Chapter 8: Combinatorial Designs}}
+
+* [[S. S. Shrikhande]], and [[Bhat-Nayak Vasanti N.|Vasanti N. Bhat-Nayak]], Non-isomorphic solutions of some balanced incomplete block designs I <U+2013> [[Journal of Combinatorial Theory]], 1970
+
+* {{citation|last=Stinson|first=Douglas R.|title=Combinatorial Designs: Constructions and Analysis|year=2003|publisher=Springer|location=New York|isbn=0-387-95487-2}}
+
+*{{cite book
+|author=Street, Anne Penfold and Street, Deborah J.
+|title=Combinatorics of Experimental Design
+|publisher=Oxford U. P. [Clarendon]
+|year=1987
+|pages=400+xiv
+|isbn=0-19-853256-3
+}}
+
+* van Lint, J.H., and R.M. Wilson (1992), ''A Course in Combinatorics''.  Cambridge, Eng.: Cambridge University Press.
+
+== External links ==
+*[http://batman.cs.dal.ca/~peter/designdb/ Design DB]: A comprehensive database of combinatorial, statistical, experimental block designs
+
+[[Category:Combinatorics]]
+[[Category:Design theory]]
+[[Category:Set families]]
+[[Category:Design of experiments]]
+{{Experimental design|state=collapsed}}

@@ -1,0 +1,122 @@
+<!-- The PBB_Controls template provides controls for Protein Box Bot, please see Template:PBB_Controls for details. -->
+{{PBB_Controls
+| update_page = yes 
+| require_manual_inspection = no 
+| update_protein_box = yes
+| update_summary = no
+| update_citations = yes
+}}
+
+<!-- The GNF_Protein_box is automatically maintained by Protein Box Bot.  See Template:PBB_Controls to Stop updates. -->
+{{GNF_Protein_box
+ | image = Glucocorticoid_receptor.png
+ | image_source = Crystallographic structures of the glucocorticoid receptor DNA binding domain (DBD, left, {{PDB|1R4O}} bound to DNA) and ligand binding domain [LBD, right, {{PDB2|1M2Z}} bound to [[dexamethasone]] (white sticks) and the [[nuclear receptor coactivator 2|TIF2]] [[coactivator (genetics)|coactivator]] protein (red)].  Dashed yellow lines represent [[hydrogen bond|hydrogen bonding]] interactions between the receptor and ligand.   The 2D structure of dexamethasone is also depicted in the lower right hand side of the picture for reference.
+ | PDB = {{PDB2|1gdc}}, {{PDB2|1glu}}, {{PDB2|1m2z}}, {{PDB2|1nhz}}, {{PDB2|1p93}}, {{PDB2|1r4o}}, {{PDB2|1r4r}}, {{PDB2|1rgd}}, {{PDB2|2gda}}
+ | Name = Nuclear receptor subfamily 3, group C, member 1 (glucocorticoid receptor)
+ | HGNCid = 7978
+ | Symbol = NR3C1
+ | AltSymbols =; GCCR; GCR; GR; GRL
+ | OMIM = 138040
+ | ECnumber =  
+ | Homologene = 30960
+ | MGIid = 95824
+ | GeneAtlas_image1 = PBB_GE_NR3C1_216321_s_at_tn.png
+ | GeneAtlas_image2 = PBB_GE_NR3C1_201865_x_at_tn.png
+ | GeneAtlas_image3 = PBB_GE_NR3C1_201866_s_at_tn.png
+ | Function = {{GNF_GO|id=GO:0003700 |text = transcription factor activity}} {{GNF_GO|id=GO:0004883 |text = glucocorticoid receptor activity}} {{GNF_GO|id=GO:0005496 |text = steroid binding}} {{GNF_GO|id=GO:0005515 |text = protein binding}} {{GNF_GO|id=GO:0008270 |text = zinc ion binding}} {{GNF_GO|id=GO:0008289 |text = lipid binding}} {{GNF_GO|id=GO:0043565 |text = sequence-specific DNA binding}} {{GNF_GO|id=GO:0046872 |text = metal ion binding}} 
+ | Component = {{GNF_GO|id=GO:0005634 |text = nucleus}} {{GNF_GO|id=GO:0005737 |text = cytoplasm}} {{GNF_GO|id=GO:0005759 |text = mitochondrial matrix}} 
+ | Process = {{GNF_GO|id=GO:0006355 |text = regulation of transcription, DNA-dependent}} {{GNF_GO|id=GO:0006366 |text = transcription from RNA polymerase II promoter}} {{GNF_GO|id=GO:0006954 |text = inflammatory response}} {{GNF_GO|id=GO:0007165 |text = signal transduction}} {{GNF_GO|id=GO:0007530 |text = sex determination}} 
+ | Orthologs = {{GNF_Ortholog_box
+    | Hs_EntrezGene = 2908
+    | Hs_Ensembl = ENSG00000113580
+    | Hs_RefseqProtein = NP_000167
+    | Hs_RefseqmRNA = NM_000176
+    | Hs_GenLoc_db =  
+    | Hs_GenLoc_chr = 5
+    | Hs_GenLoc_start = 142637689
+    | Hs_GenLoc_end = 142795270
+    | Hs_Uniprot = P04150
+    | Mm_EntrezGene = 14815
+    | Mm_Ensembl = ENSMUSG00000024431
+    | Mm_RefseqmRNA = NM_008173
+    | Mm_RefseqProtein = NP_032199
+    | Mm_GenLoc_db =  
+    | Mm_GenLoc_chr = 18
+    | Mm_GenLoc_start = 39537961
+    | Mm_GenLoc_end = 39615759
+    | Mm_Uniprot = Q05DD1
+  }}
+}}
+
+The '''glucocorticoid receptor''' ('''GR''') also known as '''NR3C1''' ([[nuclear receptor]] subfamily 3, group C, member 1) is a  [[ligand]]-activated [[transcription factor]]  that binds with high [[affinity]] to [[cortisol]] and other [[glucocorticoids]].<ref name="Lu">{{cite journal |author=Lu NZ, Wardell SE, Burnstein KL, Defranco D, Fuller PJ, Giguere V, Hochberg RB, McKay L, Renoir JM, Weigel NL, Wilson EM, McDonnell DP, Cidlowski JA |title=International Union of Pharmacology. LXV. The pharmacology and classification of the nuclear receptor superfamily: glucocorticoid, mineralocorticoid, progesterone, and androgen receptors |journal=Pharmacol Revl |volume=58 |issue=4 |pages=782-97 |year=2006 |pmid= 17132855 | doi = 10.1124/pr.58.4.9}}</ref>
+
+The GR is expressed in almost every cell in the body and regulates either directly or indirectly genes controlling a wide variety of processes including the [[Developmental biology|development]], [[metabolism]], and [[Immune system|immune response]] of the organism.
+
+The GR protein is encoded by [[gene]] {{Gene|NR3C1}} on [[chromosome 5 (human)|chromosome 5]] (5q31).
+
+==Structure==
+Like the other [[steroid receptors]],<ref name="pmid10406480">{{cite journal | author = Kumar R, Thompson EB | title = The structure of the nuclear hormone receptors | journal = Steroids | volume = 64 | issue = 5 | pages = 310<U+2013>9 | year = 1999 | pmid = 10406480 | doi = 10.1016/S0039-128X(99)00014-8 | issn = }}</ref> the glucocorticoid receptor is modular in structure<ref name="pmid15876404">{{cite journal | author = Kumar R, Thompson EB | title = Gene regulation by the glucocorticoid receptor: structure:function relationship | journal = J. Steroid Biochem. Mol. Biol. | volume = 94 | issue = 5 | pages = 383<U+2013>94 | year = 2005 | pmid = 15876404 | doi = 10.1016/j.jsbmb.2004.12.046 | issn = }}</ref> and contains the following domains (labeled '''A''' - '''F'''):
+* '''A/B''' - [[N-terminus|N-terminal]] regulatory domain
+* '''C''' - [[DNA-binding domain]] (DBD)
+* '''D''' - hinge region
+* '''E''' - ligand-binding domain (LBD)
+* '''F''' - [[C-terminus|C-terminal]] domain
+
+==Ligand binding and response==
+In the absence of hormone, the  glucocorticoid receptor (GR) resides in the cytosol complexed with a variety of proteins including heat shock protein 90 ([[hsp90]]), the heat shock protein 70 ([[hsp70]]) and the protein [[FKBP52]] (FK506-binding protein 52).<ref name="Pratt">{{cite journal |author=Pratt WB, Morishima Y, Murphy M, Harrell M |title=Chaperoning of glucocorticoid receptors |journal=Handb Exp Pharmacol |volume=172 |issue= |pages=111-38 |year=2006 |pmid= 16610357}}</ref>  The endogenous glucocortiod hormone [[cortisol]] diffuses through the cell membrane into the cytoplasm and binds to the  glucocorticoid receptor (GR) resulting in release of the heat shock proteins.  The resulting activated form GR has two principle mechanisms of action:<ref name="Buckingham">{{cite journal |author=Buckingham JC |title=Glucocorticoids: exemplars of multi-tasking |journal= Br J Pharmacol |volume= 147 |issue=Supplement 1 |pages=S258-68 |year=2006 |pmid= 16402112 | doi = 10.1038/sj.bjp.0706456}}</ref><ref name="Hayashi">{{cite journal |author=Hayashi R, Wada H, Ito K, Adcock IM |title=Effects of glucocorticoids on gene transcription |journal= Eur J Pharmacol |volume= 500 |issue=1-3 |pages=51-62 |year= 2004 |pmid= 15464020 | doi = 10.1016/j.ejphar.2004.07.011}}</ref>
+
+===Transactivation===
+A direct mechanism of action involves [[homodimerization]] of the receptor, translocation via active transport into the [[Cell nucleus|nucleus]], and binding to specific [[DNA responsive element]]s activating gene [[Transcription (genetics)|transcription]]. This mechanism of action is referred to as [[transactivation]].  The biologic response depends on the cell type.
+
+===Transrepression===
+In the absence of activated GR, other transcription factors such as [[NF-kB|NF-<U+03BA>B]] or [[AP-1 (transcription factor)|AP-1]] themselves are able to transactivate target genes.  However activated GR can complex with these other transcription factors and prevent them from binding their target genes and hence repress the expression of genes that are normally upregulated by NF-<U+03BA>B or AP-1. This indirect mechanism of action is referred to as [[transrepression]].
+
+==Agonists and antagonists==
+[[Dexamethasone]] is an agonist, and [[RU486]] and [[cyproterone]] are antagonists of the GR. Also, [[progesterone]] and [[DHEA]] have antagonist effects on the GR.
+
+The GR is abnormal in [[familial glucocorticoid resistance]].<ref>{{cite journal |author=Mendonca B, Leite M, de Castro M, Kino T, Elias L, Bachega T, Arnhold I, Chrousos G, Latronico A |title=Female pseudohermaphroditism caused by a novel homozygous missense mutation of the GR gene |journal=J Clin Endocrinol Metab |volume=87 |issue=4 |pages=1805-9 | doi = 10.1210/jc.87.4.1805 |year=2002 |pmid=11932321}}</ref>
+
+==References==
+{{reflist|2}}
+
+==Further reading==
+{{refbegin | 2}}
+{{PBB_Further_reading 
+| citations = 
+*{{cite journal  | author=Adcock IM, Ito K |title=Molecular mechanisms of corticosteroid actions. |journal=Monaldi archives for chest disease = Archivio Monaldi per le malattie del torace / Fondazione clinica del lavoro, IRCCS [and] Istituto di clinica tisiologica e malattie apparato respiratorio, Universit<U+00E0> di Napoli, Secondo ateneo |volume=55 |issue= 3 |pages= 256-66 |year= 2000 |pmid= 10948677 |doi=  }}
+*{{cite journal  | author=Chikanza IC |title=Mechanisms of corticosteroid resistance in rheumatoid arthritis: a putative role for the corticosteroid receptor beta isoform. |journal=Ann. N. Y. Acad. Sci. |volume=966 |issue=  |pages= 39-48 |year= 2002 |pmid= 12114257 |doi=  }}
+*{{cite journal  | author=Neeck G, Kluter A, Dotzlaw H, Eggert M |title=Involvement of the glucocorticoid receptor in the pathogenesis of rheumatoid arthritis. |journal=Ann. N. Y. Acad. Sci. |volume=966 |issue=  |pages= 491-5 |year= 2002 |pmid= 12114309 |doi=  }}
+*{{cite journal  | author=Yudt MR, Cidlowski JA |title=The glucocorticoid receptor: coding a diversity of proteins and responses through a single gene. |journal=Mol. Endocrinol. |volume=16 |issue= 8 |pages= 1719-26 |year= 2003 |pmid= 12145329 |doi=  }}
+*{{cite journal  | author=Torrego A, Pujols L, Picado C |title=[Response to glucocorticoid treatment in asthma. The role of alpha and beta isoforms of the glucocorticoid receptor] |journal=Arch. Bronconeumol. |volume=38 |issue= 9 |pages= 436-40 |year= 2003 |pmid= 12237016 |doi=  }}
+*{{cite journal  | author=Bray PJ, Cotton RG |title=Variations of the human glucocorticoid receptor gene (NR3C1): pathological and in vitro mutations and polymorphisms. |journal=Hum. Mutat. |volume=21 |issue= 6 |pages= 557-68 |year= 2003 |pmid= 12754700 |doi= 10.1002/humu.10213 }}
+*{{cite journal  | author=Kino T, Pavlakis GN |title=Partner molecules of accessory protein Vpr of the human immunodeficiency virus type 1. |journal=DNA Cell Biol. |volume=23 |issue= 4 |pages= 193-205 |year= 2004 |pmid= 15142377 |doi= 10.1089/104454904773819789 }}
+*{{cite journal  | author=Lu NZ, Cidlowski JA |title=The origin and functions of multiple human glucocorticoid receptor isoforms. |journal=Ann. N. Y. Acad. Sci. |volume=1024 |issue=  |pages= 102-23 |year= 2004 |pmid= 15265776 |doi= 10.1196/annals.1321.008 }}
+*{{cite journal  | author=Kino T, Chrousos GP |title=Human immunodeficiency virus type-1 accessory protein Vpr: a causative agent of the AIDS-related insulin resistance/lipodystrophy syndrome? |journal=Ann. N. Y. Acad. Sci. |volume=1024 |issue=  |pages= 153-67 |year= 2004 |pmid= 15265780 |doi= 10.1196/annals.1321.013 }}
+*{{cite journal  | author=Andersen JL, Planelles V |title=The role of Vpr in HIV-1 pathogenesis. |journal=Curr. HIV Res. |volume=3 |issue= 1 |pages= 43-51 |year= 2005 |pmid= 15638722 |doi=  }}
+*{{cite journal  | author=Le Rouzic E, Benichou S |title=The Vpr protein from HIV-1: distinct roles along the viral life cycle. |journal=Retrovirology |volume=2 |issue=  |pages= 11 |year= 2006 |pmid= 15725353 |doi= 10.1186/1742-4690-2-11 }}
+*{{cite journal  | author=Muthumani K, Choo AY, Premkumar A, ''et al.'' |title=Human immunodeficiency virus type 1 (HIV-1) Vpr-regulated cell death: insights into mechanism. |journal=Cell Death Differ. |volume=12 Suppl 1 |issue=  |pages= 962-70 |year= 2006 |pmid= 15832179 |doi= 10.1038/sj.cdd.4401583 }}
+*{{cite journal  | author=Zhou J, Cidlowski JA |title=The human glucocorticoid receptor: one gene, multiple proteins and diverse responses. |journal=Steroids |volume=70 |issue= 5-7 |pages= 407-17 |year= 2005 |pmid= 15862824 |doi= 10.1016/j.steroids.2005.02.006 }}
+*{{cite journal  | author=Chrousos GP, Kino T |title=Intracellular glucocorticoid signaling: a formerly simple system turns stochastic. |journal=Sci. STKE |volume=2005 |issue= 304 |pages= pe48 |year= 2006 |pmid= 16204701 |doi= 10.1126/stke.3042005pe48 }}
+*{{cite journal  | author=Plotkin LL, Labutin AL, Lebedev LV, ''et al.'' |title=[Balloon probe for the removal of emboli and thrombi] |journal=Meditsinskaia tekhnika |volume= |issue= 3 |pages= 42-3 |year= 1975 |pmid= 1152650 |doi=  }}
+*{{cite journal  | author=Subramaniam M, Colvard D, Keeting PE, ''et al.'' |title=Glucocorticoid regulation of alkaline phosphatase, osteocalcin, and proto-oncogenes in normal human osteoblast-like cells. |journal=J. Cell. Biochem. |volume=50 |issue= 4 |pages= 411-24 |year= 1993 |pmid= 1469072 |doi= 10.1002/jcb.240500410 }}
+*{{cite journal  | author=Scherrer LC, Pratt WB |title=Association of the transformed glucocorticoid receptor with a cytoskeletal protein complex. |journal=J. Steroid Biochem. Mol. Biol. |volume=41 |issue= 3-8 |pages= 719-21 |year= 1992 |pmid= 1562545 |doi=  }}
+*{{cite journal  | author=Cadepond F, Gasc JM, Delahaye F, ''et al.'' |title=Hormonal regulation of the nuclear localization signals of the human glucocorticosteroid receptor. |journal=Exp. Cell Res. |volume=201 |issue= 1 |pages= 99-108 |year= 1992 |pmid= 1612132 |doi=  }}
+*{{cite journal  | author=Hurley DM, Accili D, Stratakis CA, ''et al.'' |title=Point mutation causing a single amino acid substitution in the hormone binding domain of the glucocorticoid receptor in familial glucocorticoid resistance. |journal=J. Clin. Invest. |volume=87 |issue= 2 |pages= 680-6 |year= 1991 |pmid= 1704018 |doi=  }}
+*{{cite journal  | author=Enc<U+00ED>o IJ, Detera-Wadleigh SD |title=The genomic structure of the human glucocorticoid receptor. |journal=J. Biol. Chem. |volume=266 |issue= 11 |pages= 7182-8 |year= 1991 |pmid= 1707881 |doi=  }}
+}}
+{{refend}}
+
+==See also==
+[[Chrousos Syndrome or Sporadic /Familial Glucocorticoid (Cortisol) Resistance]]
+
+
+==External links==
+* [http://www.hprd.org/protein/00679 Human Protein Reference Database]
+* {{MeshName|Glucocorticoid+receptors}}
+
+{{Corticosteroids}}
+{{Transcription factors}}
+[[Category:Intracellular receptors]]
+[[Category:Transcription factors]]
+
+[[fr:r<U+00E9>cepteur des glucocortico<U+00EF>des]]

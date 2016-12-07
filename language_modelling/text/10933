@@ -1,0 +1,262 @@
+{{use dmy dates|date=January 2012}}
+{{IPstack}}
+The '''User Datagram Protocol''' ('''UDP''') is one of the core members of the [[Internet Protocol Suite]], the set of network protocols used for the [[Internet]]. With UDP, computer applications can send messages, in this case referred to as ''[[datagram]]s'', to other hosts on an [[Internet Protocol]] (IP) network without requiring prior communications to set up special transmission channels or data paths. The protocol was designed by [[David P. Reed]] in 1980 and formally defined in RFC 768.
+
+UDP uses a simple transmission model without implicit [[handshaking]] dialogues for providing reliability, ordering, or data integrity. Thus, UDP provides an unreliable service and datagrams may arrive out of order, appear duplicated, or go missing without notice. UDP assumes that error checking and correction is either not necessary or performed in the application, avoiding the overhead of such processing at the network interface level. Time-sensitive applications often use UDP because dropping packets is preferable to waiting for delayed packets, which may not be an option in a real-time system.<ref name="kuroseross">{{cite book |last=Kurose |first=J. F. |last2=Ross |first2=K. W. |year=2010 |title=Computer Networking: A Top-Down Approach |edition=5th |location=Boston, MA |publisher=Pearson Education |isbn=9780131365483 }}</ref> If error correction facilities are needed at the network interface level, an application may use the [[Transmission Control Protocol]] (TCP) or [[Stream Control Transmission Protocol]] (SCTP) which are designed for this purpose.
+
+UDP's [[Stateless server|stateless]] nature is also useful for servers answering small queries from huge numbers of clients. Unlike [[Transmission Control Protocol|TCP]], UDP supports [[Broadcasting (networks)|packet broadcast]] (sending to all on local network) and [[multicast]]ing (send to all subscribers).<ref name="forouzan"/>
+
+Common network applications that use UDP include: the [[Domain Name System]] (DNS), [[streaming media]] applications such as [[IPTV]], [[Voice over IP]] (VoIP), [[Trivial File Transfer Protocol]] (TFTP), [[IP tunneling]] protocols and many [[online game]]s.
+
+==Service ports==
+{{Main|TCP and UDP port}}
+UDP applications use [[datagram socket]]s to establish host-to-host communications. An application binds a socket to its endpoint of data transmission, which is a combination of an [[IP address]] and a service port. A port is a software structure that is identified by the [[port number]], a 16 [[bit]] integer value, allowing for port numbers between 0 and {{gaps|65|535}}. Port 0 is reserved, but is a permissible source port value if the sending process does not expect messages in response.
+
+The [[Internet Assigned Numbers Authority]] has divided port numbers into three ranges.<ref name="forouzan">Forouzan, B.A. (2000). ''TCP/IP: Protocol Suite, 1st ed''. New Delhi, India: Tata McGraw-Hill Publishing Company Limited.</ref> Port numbers 0 through 1023 are used for common, well-known services. On [[Unix]]-like [[operating system]]s, using one of these ports requires [[superuser]] operating permission. Port numbers 1024 through {{gaps|49|151}} are the [[registered port]]s used for IANA-registered services. Ports {{gaps|49|152}} through {{gaps|65|535}} are dynamic ports that are not officially designated for any specific service, and can be used for any purpose. They are also used as [[ephemeral port]]s, from which software running on the host may randomly choose a port in order to define itself.<ref name="forouzan"/> In effect, they are used as temporary ports primarily by [[client (computing)|clients]] when communicating with [[server (computing)|servers]].
+
+==Packet structure==
+UDP is a minimal message-oriented [[Transport Layer]] protocol that is documented in [[IETF]] RFC 768.
+
+UDP provides no guarantees to the [[upper layer protocol]] for message delivery and the UDP protocol layer retains no state of UDP messages once sent. For this reason, UDP is sometimes referred to as ''[[Reliability (computer networking)|Unreliable]]'' Datagram Protocol.<ref>{{cite web|author=content@ipv6.com |url=http://ipv6.com/articles/general/User-Datagram-Protocol.htm |title=UDP Protocol Overview |publisher=Ipv6.com |date= |accessdate=17 August 2011}}</ref>
+
+UDP provides application [[multiplexing]] (via [[port number]]s) and integrity verification (via [[checksum]]) of the header and payload.<ref name="clark">Clark, M.P. (2003). ''Data Networks IP and the Internet, 1st ed''. West Sussex, England: John Wiley & Sons Ltd.</ref> If transmission reliability is desired, it must be implemented in the user's application.
+
+{| class="wikitable" style="margin: 0 auto; text-align: center;"
+|- style="text-align:center;"
+! offset (bits)
+! colspan="16" style="width:150px;"|0 &ndash; 15
+! colspan="16" style="width:150px;"|16 &ndash; 31
+|- style="text-align:center;"
+! 0
+| colspan="16" style="background:#fdd;"|Source Port Number
+| colspan="16"|Destination Port Number
+|- style="text-align:center;"
+! 32
+| colspan="16"|Length
+| colspan="16" style="background:#fdd;"|Checksum
+|- style="text-align:center;"
+! 64+
+| colspan="32"|&nbsp;<br />Data<br />&nbsp;
+|}
+
+The UDP header consists of 4 fields, each of which is 2 bytes (16 bits).<ref name="kuroseross"/> The use of two of those is optional in IPv4 (pink background in table). In IPv6 only the source port is optional (see below).
+
+; Source port number : This field identifies the sender's port when meaningful and should be assumed to be the port to reply to if needed. If not used, then it should be zero. If the source host is the client, the port number is likely to be an ephemeral port number. If the source host is the server, the port number is likely to be a well-known port number.<ref name="forouzan"/>
+
+; Destination port number : This field identifies the receiver's port and is required. Similar to source port number, if the client is the destination host then the port number will likely be an ephemeral port number and if the destination host is the server then the port number will likely be a well-known port number.<ref name="forouzan"/>
+
+; Length : A field that specifies the length in bytes of the entire datagram: header and data. The minimum length is 8 bytes since that's the length of the header. The field size sets a theoretical limit of 65,535 bytes (8 byte header + 65,527 bytes of data) for a UDP datagram. The practical limit for the data length which is imposed by the underlying [[IPv4]] protocol is 65,507 bytes (65,535 &minus; 8 byte UDP header &minus; 20 byte IP header).<ref name="forouzan"/>
+
+: In IPv6 Jumbograms it is possible to have UDP packets of size greater than 65,535 bytes.<ref>RFC 2675</ref> This allows for a maximum length value of 4,294,967,295 bytes (2^32 - 1) with 8 bytes representing the header and 4,294,967,287 bytes for data.
+
+; Checksum : The [[checksum]] field is used for error-checking of the header ''and'' data. If no checksum is generated by the transmitter, the field uses the value all-zeros.<ref name="rfc768" /> This field is not optional for IPv6.<ref name="rfc2460" />
+
+==Checksum computation==
+The method used to compute the checksum is defined in RFC 768:
+: ''Checksum is the 16-bit [[one's complement]] of the one's complement sum of a pseudo header of information from the IP header, the UDP header, and the data, padded with zero octets at the end (if necessary) to make a multiple of two octets.''<ref name="rfc768">Postel, J. (August 1980). RFC 768: User Datagram Protocol. ''Internet Engineering Task Force''. Retrieved from http://tools.ietf.org/html/rfc768</ref>
+
+In other words, all 16-bit words are summed using one's complement arithmetic. The sum is then one's complemented to yield the value of the UDP checksum field.
+
+If the checksum calculation results in the value zero (all 16 bits 0) it should be sent as the one's complement (all 1s).
+
+The difference between [[IPv4]] and [[IPv6]] is in the data used to compute the checksum.
+
+===IPv4 PSEUDO-HEADER===
+When UDP runs over IPv4, the checksum is computed using a PSEUDO-HEADER that contains some of the same information from the real IPv4 header.  The PSEUDO-HEADER is not the real IPv4 header used to send an IP packet.  The following table defines the PSEUDO-HEADER used only for the checksum calculation.
+
+{| class="wikitable" style="margin: 0 auto; text-align: center;"
+|- style="text-align:center;"
+! bits
+! colspan="8" style="width:75px;"|0 &ndash; 7
+! colspan="8" style="width:75px;"|8 &ndash; 15
+! colspan="8" style="width:75px;"|16 &ndash; 23
+! colspan="8" style="width:75px;"|24 &ndash; 31
+|- style="text-align:center;"
+! 0
+| colspan="32" style="background:#fdd;"| Source address
+|- style="text-align:center;"
+! 32
+| colspan="32" style="background:#fdd;"| Destination address
+|- style="text-align:center;"
+! 64
+| colspan="8" style="background:#fdd;"| Zeros
+| colspan="8" style="background:#fdd;"| Protocol
+| colspan="16" style="background:#fdd;"| UDP length
+|- style="text-align:center;"
+! 96
+| colspan="16"| Source Port
+| colspan="16"| Destination Port
+|- style="text-align:center;"
+! 128
+| colspan="16"| Length
+| colspan="16"| Checksum
+|- style="text-align:center;"
+! 160+
+| colspan="32"|&nbsp;<br />Data<br />&nbsp;
+|}
+
+The source and destination addresses are those in the IPv4 header. The protocol is that for UDP (see ''[[List of IP protocol numbers]]''): 17 (0x11). The UDP length field is the length of the UDP header and data.
+
+UDP checksum computation is optional for IPv4. If a checksum is not used it should be set to the value zero.
+
+===IPv6 PSEUDO-HEADER===
+When UDP runs over IPv6, the checksum is mandatory. The method used to compute it is changed as documented in RFC 2460:
+:''Any transport or other upper-layer protocol that includes the addresses from the IP header in its checksum computation must be modified for use over IPv6 to include the 128-bit IPv6 addresses.''<ref name="rfc2460">Deering S. & Hinden R. (December 1998). RFC 2460: Internet Protocol, Version 6 (IPv6) Specification. ''Internet Engineering Task Force''. Retrieved from http://tools.ietf.org/html/rfc2460</ref>
+
+When computing the checksum, again a PSEUDO-HEADER is used that mimics the real IPv6 header:
+
+{| class="wikitable" style="margin: 0 auto; text-align: center;"
+|- style="text-align:center;"
+! bits
+! colspan="8" style="width:75px;"|0 &ndash; 7
+! colspan="8" style="width:75px;"|8 &ndash; 15
+! colspan="8" style="width:75px;"|16 &ndash; 23
+! colspan="8" style="width:75px;"|24 &ndash; 31
+|- style="text-align:center;"
+! 0
+| colspan="32" rowspan="4" style="background:#fdd;"| Source address
+|- style="text-align:center;"
+! 32
+|- style="text-align:center;"
+! 64
+|- style="text-align:center;"
+! 96
+|- style="text-align:center;"
+! 128
+| colspan="32" rowspan="4" style="background:#fdd;"| Destination address
+|- style="text-align:center;"
+! 160
+|- style="text-align:center;"
+! 192
+|- style="text-align:center;"
+! 224
+|- style="text-align:center;"
+! 256
+| colspan="32" style="background:#fdd;"| UDP length
+|- style="text-align:center;"
+! 288
+| colspan="24" style="background:#fdd;"| Zeros
+| colspan="8" style="background:#fdd;"| Next Header
+|- style="text-align:center;"
+! 320
+| colspan="16"| Source Port
+| colspan="16"| Destination Port
+|- style="text-align:center;"
+! 352
+| colspan="16"| Length
+| colspan="16"| Checksum
+|- style="text-align:center;"
+! 384+
+| colspan="32"|&nbsp;<br />Data<br />&nbsp;
+|}
+
+The source address is the one in the IPv6 header. The destination address is the final destination; if the IPv6 packet does not contain a Routing header, that will be the destination address in the IPv6 header; otherwise, at the originating node, it will be the address in the last element of the Routing header, and, at the receiving node, it will be the destination address in the IPv6 header. The value of the Next Header field is the protocol value for UDP: 17. The UDP length field is the length of the UDP header and data.
+
+==Reliability and congestion control solutions==
+Lacking reliability, UDP applications must generally be willing to accept some loss, errors or duplication. Some applications such as [[Trivial File Transfer Protocol|TFTP]] may add rudimentary reliability mechanisms into the application layer as needed.<ref name="forouzan"/>
+
+Most often, UDP applications do not employ reliability mechanisms and may even be hindered by them. [[Streaming media]], real-time multiplayer games and [[voice over IP]] (VoIP) are examples of applications that often use UDP. In these particular applications, loss of packets is not usually a fatal problem. If an application requires a high degree of reliability, a protocol such as the [[Transmission Control Protocol]] or [[erasure code]]s may be used instead.
+
+Potentially more seriously, unlike TCP, UDP-based applications don't necessarily have good [[network congestion|congestion]] avoidance and control mechanisms. Congestion insensitive UDP applications that consume a large fraction of available bandwidth could endanger the stability of the internet, as they frequently give a bandwidth load that is inelastic. Network-based mechanisms have been proposed to minimize potential congestion collapse effects of uncontrolled, high rate UDP traffic loads. Network-based elements such as routers using packet queuing and dropping techniques are often the only tool available to slow down excessive UDP traffic. The [[Datagram Congestion Control Protocol]] (DCCP) is being designed as a partial solution to this potential problem by adding end host TCP-friendly congestion control behavior to high-rate UDP streams such as streaming media.
+
+==Applications==
+Numerous key Internet applications use UDP, including: the [[Domain Name System]] (DNS), where queries must be fast and only consist of a single request followed by a single reply packet, the [[Simple Network Management Protocol]] (SNMP), the [[Routing Information Protocol]] (RIP)<ref name="kuroseross"/> and the [[Dynamic Host Configuration Protocol]] (DHCP).
+
+Voice and video traffic is generally transmitted using UDP. Real-time video and audio streaming protocols are designed to handle occasional lost packets, so only slight degradation in quality occurs, rather than large delays if lost packets were retransmitted. Because both TCP and UDP run over the same network, many businesses are finding that a recent increase in UDP traffic from these real-time applications is hindering the performance of applications using TCP, such as [[point of sale]], [[Accounting software|accounting]], and [[Database management system|database]] systems. When TCP detects packet loss, it will throttle back its data rate usage. Since both real-time and business applications are important to businesses, developing [[quality of service]] solutions is seen as crucial by some.<ref>{{cite web|url=http://www.networkperformancedaily.com/2007/08/whiteboard_series_nice_guys_fi.html |title=The impact of UDP on Data Applications |publisher=Networkperformancedaily.com |date= |accessdate=17 August 2011}}</ref>
+
+==Comparison of UDP and TCP==
+{{Main|Transport Layer}}
+[[Transmission Control Protocol]] is a connection-oriented protocol, which means that it requires handshaking to set up end-to-end communications. Once a connection is set up user data may be sent bi-directionally over the connection.
+* ''Reliable'' <U+2013> TCP manages message acknowledgment, retransmission and timeout. Multiple attempts to deliver the message are made. If it gets lost along the way, the server will re-request the lost part. In TCP, there's either no missing data, or, in case of multiple timeouts, the connection is dropped.
+* ''Ordered'' <U+2013> if two messages are sent over a connection in sequence, the first message will reach the receiving application first. When data segments arrive in the wrong order, TCP buffers the out-of-order data until all data can be properly re-ordered and delivered to the application.
+* ''Heavyweight'' <U+2013> TCP requires three packets to set up a socket connection, before any user data can be sent. TCP handles reliability and [[congestion control]].
+* ''Streaming'' <U+2013> Data is read as a [[byte]] stream, no distinguishing indications are transmitted to signal message (segment) boundaries.
+
+UDP is a simpler message-based [[connectionless protocol]]. Connectionless protocols do not set up a dedicated end-to-end connection. Communication is achieved by transmitting information in one direction from source to destination without verifying the readiness or state of the receiver.  However, one primary benefit of UDP over TCP is the application to voice over internet protocol (VoIP) where any handshaking would hinder clear voice communication.  It is assumed in VoIP UDP that the end users provide any necessary real time confirmation that the message has been received.
+* ''Unreliable'' <U+2013> When a message is sent, it cannot be known if it will reach its destination; it could get lost along the way. There is no concept of acknowledgment, retransmission or timeout.
+* ''Not ordered'' <U+2013> If two messages are sent to the same recipient, the order in which they arrive cannot be predicted.
+* ''Lightweight'' <U+2013> There is no ordering of messages, no tracking connections, etc. It is a small transport layer designed on top of IP.
+* ''Datagrams'' <U+2013> Packets are sent individually and are checked for integrity only if they arrive. Packets have definite boundaries which are honored upon receipt, meaning a read operation at the receiver socket will yield an entire message as it was originally sent.
+* ''No congestion control'' <U+2013> UDP itself does not avoid congestion, and it's possible for high bandwidth applications to trigger [[congestion collapse]], unless they implement congestion control measures at the application level.
+
+==See also==
+* [[List of TCP and UDP port numbers]]
+* [[Reliable User Datagram Protocol]] (RUDP)
+* [[SCTP]]
+* [[Transport Layer#Comparison of Transport Layer protocols|Transport protocol comparison table]]
+* [[UDP flood attack]]
+* [[UDP Data Transport]]
+* [[UDP Lite]], a variant that will deliver packets even if they are malformed
+* [[UDP Helper Address]]
+
+==References==
+{{Reflist}}
+
+==RFC references==
+* RFC 768 <U+2013> User Datagram Protocol
+* RFC 2460 <U+2013> Internet Protocol, Version 6 (IPv6) Specification
+* RFC 2675 - IPv6 Jumbograms
+* RFC 4113 <U+2013> Management Information Base for the UDP
+* RFC 5405 <U+2013> Unicast UDP Usage Guidelines for Application Designers
+
+==External links==
+* [http://www.iana.org/assignments/port-numbers IANA Port Assignments]
+* [http://condor.depaul.edu/~jkristof/papers/udpscanning.pdf The Trouble with UDP Scanning (PDF)]
+* [http://www.networksorcery.com/enp/protocol/udp.htm Breakdown of UDP frame]
+* [http://msdn.microsoft.com/en-us/magazine/cc163648.aspx UDP on MSDN Magazine Sockets and WCF]
+* [http://www.faqs.org/docs/iptables/udpconnections.html UDP connections]
+
+[[Category:Internet protocols]]
+[[Category:Internet standards]]
+[[Category:Transport layer protocols]]
+
+[[ar:<U+0628><U+0631><U+0648><U+062A><U+0648><U+0643><U+0648><U+0644> <U+0628><U+064A><U+0627><U+0646><U+0627><U+062A> <U+0627><U+0644><U+0645><U+0633><U+062A><U+062E><U+062F><U+0645>]]
+[[ast:User Datagram Protocol]]
+[[bg:User Datagram Protocol]]
+[[bs:User Datagram Protocol]]
+[[ca:User Datagram Protocol]]
+[[cs:User Datagram Protocol]]
+[[da:UDP]]
+[[de:User Datagram Protocol]]
+[[et:Kasutajadatagrammi protokoll]]
+[[el:UDP]]
+[[es:User Datagram Protocol]]
+[[eo:UDP]]
+[[eu:User Datagram Protocol]]
+[[fa:<U+0642><U+0631><U+0627><U+0631><U+062F><U+0627><U+062F> <U+062F><U+0627><U+062F><U+0647><U+200C><U+0646><U+06AF><U+0627><U+0631> <U+06A9><U+0627><U+0631><U+0628><U+0631>]]
+[[fr:User Datagram Protocol]]
+[[gl:UDP]]
+[[ko:<U+C0AC><U+C6A9><U+C790> <U+B370><U+C774><U+D130><U+ADF8><U+B7A8> <U+D504><U+B85C><U+D1A0><U+CF5C>]]
+[[hr:UDP]]
+[[id:User Datagram Protocol]]
+[[is:UDP]]
+[[it:User Datagram Protocol]]
+[[he:User Datagram Protocol]]
+[[lv:UDP]]
+[[lt:UDP]]
+[[hu:User Datagram Protocol]]
+[[mk:<U+041A><U+043E><U+0440><U+0438><U+0441><U+043D><U+0438><U+0447><U+043A><U+0438> <U+043F><U+0440><U+043E><U+0442><U+043E><U+043A><U+043E><U+043B>]]
+[[ms:Protokol Datagram Pengguna]]
+[[nl:User Datagram Protocol]]
+[[ja:User Datagram Protocol]]
+[[no:UDP]]
+[[nn:User Datagram Protocol]]
+[[uz:UDP]]
+[[pl:User Datagram Protocol]]
+[[pt:User Datagram Protocol]]
+[[ro:Protocolul datagramelor utilizator]]
+[[ru:UDP]]
+[[sq:User Datagram Protocol]]
+[[simple:User Datagram Protocol]]
+[[sk:User Datagram Protocol]]
+[[sl:UDP]]
+[[sr:UDP (protokol)]]
+[[fi:UDP]]
+[[sv:User Datagram Protocol]]
+[[th:User Datagram Protocol]]
+[[tr:UDP]]
+[[uk:UDP]]
+[[ur:<U+0635><U+0627><U+0631><U+0641><U+06CC> <U+062F><U+0633><U+062A><U+0648><U+0631> <U+0645><U+0639><U+0637><U+0637>]]
+[[vi:UDP]]
+[[yo:User Datagram Protocol]]
+[[zh:<U+7528><U+6237><U+6570><U+636E><U+62A5><U+534F><U+8BAE>]]

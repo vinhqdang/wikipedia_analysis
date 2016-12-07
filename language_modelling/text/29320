@@ -1,0 +1,123 @@
+{{refimprove|date=January 2011}}
+{{Inadequate lead|date=March 2011}} 
+A '''[[Relaxation (physics)|relaxation]] oscillator''' is an [[electronic oscillator|oscillator]] based upon the behavior of a physical system's return to equilibrium after being disturbed. That is, a [[dynamical system]] within the oscillator continuously dissipates its internal energy. Normally the system would return to its natural equilibrium; however, each time the system reaches some threshold sufficiently close to its equilibrium, a mechanism disturbs it with additional energy. Hence, the oscillator's behavior is characterized by long periods of dissipation followed by short impulses. The [[Frequency|period]] of the oscillations is set by the time it takes for the system to relax from each disturbed state to the threshold that triggers the next disturbance.
+
+__TOC__
+
+== Implementation ==
+
+Many electronic relaxation oscillators store energy in a [[capacitor]] and then dissipate that energy repeatedly to set up the oscillations. For example, the capacitor can be charged toward a positive power supply until it reaches a threshold voltage sufficiently close to the supply. At that instant, the capacitor can be quickly discharged (e.g., [[electrical short|shorted]]). Alternatively, when the capacitor reaches each threshold, the charging source can be switched from the positive power supply to the negative power supply or vice versa. In all such capacitor-based relaxation oscillators, the period of the oscillations is set by the dissipation rate(s) of the capacitor. Implementations of these two types of relaxation oscillators are shown here, but relaxation oscillators need not be electronic in general. Any oscillator whose oscillations are driven by a system that almost always is dissipating energy may be called a relaxation oscillator.
+
+== Pearson&ndash;Anson electronic relaxation oscillator ==
+
+[[Image:NeonBulbRelaxationOscillator.svg|thumb|[[Circuit diagram]] of a capacitive relaxation oscillator with a neon lamp threshold device]]
+
+This example can be implemented with a [[capacitor|capacitive]] or [[RC circuit|resistive-capacitive integrating circuit]] driven respectively by a constant [[Current source|current]] or [[voltage source]], and a threshold device with [[hysteresis]] ([[neon lamp]], [[thyratron]], [[diac]], reverse-biased [[bipolar transistor]],<ref>http://members.shaw.ca/roma/twenty-three.html</ref> or [[unijunction transistor]]) connected in parallel to the capacitor. The capacitor is charged by the input source causing the voltage across the capacitor to rise. The threshold device does not conduct at all until the capacitor voltage reaches its threshold (trigger) voltage. It then increases heavily its conductance in an avalanche-like manner because of the inherent positive feedback, which quickly discharges the capacitor. When the voltage across the capacitor drops to some lower threshold voltage, the device stops conducting and the capacitor begins charging again, and the cycle repeats [[ad infinitum]].
+
+If the threshold element is a [[neon lamp]],<ref group="nb">When a (neon) cathode glow lamp or thyratron are used as the trigger devices a second resistor with a value of a few tens to hundreds ohms is often placed in series with the gas trigger device to limit the current from the discharging capacitor and prevent the electrodes of the lamp rapidly [[sputter]]ing away or the cathode coating of the thyratron being damaged by the repeated pulses of heavy current.</ref><ref group="nb">Trigger devices with a third control connection, such as the thyratron or unijunction transistor allow the timing of the discharge of the capacitor to be synchronized with a control pulse. Thus the sawtooth output can be synchronized to signals produced by other circuit elements as it is often used as a scan waveform for a display, such as a [[cathode ray tube]].</ref> the circuit also provides a flash of light with each discharge of the capacitor. This lamp example is depicted below in the typical circuit used to describe the [[Pearson&ndash;Anson effect]]. The discharging duration can be extended by connecting an additional resistor in series to the threshold element. The two resistors form a voltage divider; so, the additional resistor has to have low enough resistance to reach the low threshold.
+
+=== Alternative implementation with 555 timer ===
+
+A similar relaxation oscillator can be built with a [[555 timer|555 timer IC]] (acting in astable mode) that takes the place of the neon bulb above. That is, when the capacitor reaches a certain value, [[comparator]]s within the 555 timer cause the latch to activate a transistor switch that discharges the capacitor through a resistor to ground. At the instant the capacitor falls to a sufficiently low value, the switch deactivates to let the capacitor charge again.
+
+== Comparator&ndash;based electronic relaxation oscillator ==
+
+Alternatively, when the capacitor reaches each threshold, the charging source can be switched from the positive power supply to the negative power supply or vice versa. This case is shown in the [[comparator]]-based implementation here. 
+
+[[Image:OpAmpHystereticOscillator.svg|thumb|A comparator-based hysteretic oscillator.]]
+
+This relaxation oscillator is a hysteretic oscillator, named this way because of the [[hysteresis]] created by the [[positive feedback]] loop implemented with the [[comparator]] (similar to, but different from, an [[operational amplifier|op-amp]]). A circuit that implements this form of hysteretic switching is known as a [[Schmitt trigger]]. Alone, the trigger is a [[bistable multivibrator]]. However, the slow [[negative feedback]] added to the trigger by the RC circuit causes the circuit to oscillate automatically. That is, the addition of the RC circuit turns the hysteretic bistable [[multivibrator]] into an [[astable multivibrator]].
+
+=== General Concept ===
+The system is in unstable equilibrium if both the inputs and outputs of the comparator are at zero volts. The moment any sort of noise, be it thermal or [[Electromagnetic radiation|electromagnetic]] [[noise]] brings the output of the comparator above zero (the case of the comparator output going below zero is also possible, and a similar argument to what follows applies), the positive feedback in the comparator results in the output of the comparator saturating at the positive rail.
+
+In other words, because the output of the comparator is now positive, the non-inverting input to the comparator is also positive, and continues to increase as the output increases, due to the [[voltage divider]].  After a short time, the output of the comparator is the positive voltage rail, <math>V_{DD}</math>.
+
+[[Image:Series-RC.svg|thumb|Series RC Circuit]]
+
+The inverting input and the output of the comparator are linked by a [[Series and parallel circuits#Series_circuits|series]] [[RC circuit]].  Because of this, the inverting input of the comparator asymptotically approaches the comparator output voltage with a [[time constant]] RC.  At the point where voltage at the inverting input is greater than the non-inverting input, the output of the comparator falls quickly due to positive feedback. 
+
+This is because the non-inverting input is less than the inverting input, and as the output continues to decrease, the difference between the inputs gets more and more negative. Again, the inverting input approaches the comparator's output voltage asymptotically, and the cycle repeats itself once the non-inverting input is greater than the inverting input, hence the system oscillates.
+
+=== Example: Differential Equation Analysis of comparator-based Relaxation Oscillator ===
+
+[[Image:opamprelaxationoscillator.svg|thumb|300px|Transient analysis of a comparator-based relaxation oscillator.]]
+
+<math>\, \! V_+</math> is set by <math>\, \! V_{out}</math> across a resistive [[voltage divider]]:
+
+:<math>V_+ = \frac{V_{out}}{2}</math>
+
+<math>\, \! V_-</math> is obtained using [[Ohm's law]] and the [[capacitor]] [[differential equation]]:
+
+:<math>\frac{V_{out}-V_-}{R}=C\frac{dV_-}{dt}</math>
+
+Rearranging the <math>\, \! V_-</math> differential equation into standard form results in the following:
+
+:<math>\frac{dV_-}{dt}+\frac{V_-}{RC}=\frac{V_{out}}{RC}</math>
+
+Notice there are two solutions to the differential equation, the driven or particular solution and the homogeneous solution.  Solving for the driven solution, observe that for this particular form, the solution is a constant.  In other words, <math>\, \! V_-=A</math> where A is a constant and <math>\frac{dV_-}{dt}=0</math>.
+
+:<math>\frac{A}{RC}=\frac{V_{out}}{RC}</math>
+
+:<math>\, \! A=V_{out}</math>
+
+Using the [[Laplace transform]] to solve the [[Homogeneous polynomial|homogeneous equation]] <math>\frac{dV_-}{dt}+\frac{V_-}{RC}=0</math> results in
+
+:<math>V_-=Be^{\frac{-1}{RC}t}</math>
+
+<math>\, \!  V_-</math> is the sum of the particular and homogeneous solution.
+
+:<math>V_-=A+Be^{\frac{-1}{RC}t}</math>
+
+:<math>V_-=V_{out}+Be^{\frac{-1}{RC}t}</math>
+
+Solving for B requires evaluation of the initial conditions.  At time 0, <math>V_{out}=V_{dd}</math> and <math>\, \! V_-=0</math>. Substituting into our previous equation,
+
+:<math>\, \! 0=V_{dd}+B</math>
+
+:<math>\, \! B=-V_{dd}</math>
+
+==== Frequency of Oscillation ====
+First let's assume that <math>V_{dd} = -V_{ss}</math> for ease of calculation.  Ignoring the initial charge up of the capacitor, which is irrelevant for calculations of the frequency, note that charges and discharges oscillate between <math>\frac{V_{dd}}{2}</math> and <math>\frac{V_{ss}}{2}</math>.  For the circuit above, V<sub>ss</sub> must be less than 0. Half of the period (T) is the same as time that <math>V_{out}</math> switches from V<sub>dd</sub>. This occurs when V<sub>-</sub> charges up from <math>-\frac{V_{dd}}{2}</math> to <math>\frac{V_{dd}}{2}</math>.
+
+:<math>V_-=A+Be^{\frac{-1}{RC}t}</math>
+
+:<math>\frac{V_{dd}}{2}=V_{dd}(1-\frac{3}{2}e^{\frac{-1}{RC}\frac{T}{2}})</math>
+
+:<math>\frac{1}{3}=e^{\frac{-1}{RC}\frac{T}{2}}</math>
+
+:<math>\ln\left(\frac{1}{3}\right)=\frac{-1}{RC}\frac{T}{2}</math>
+
+:<math>\, \! T=2\ln(3)RC</math>
+
+:<math>\, \! f=\frac{1}{2\ln(3)RC}</math>
+
+When V<sub>ss</sub> is not the inverse of V<sub>dd</sub> we need to worry about asymmetric charge up and discharge times.  Taking this into account we end up with a formula of the form:
+
+:<math>T = (RC)  \left[\ln\left( \frac{2V_{ss}-V_{dd}}{V_{ss}}\right) + \ln\left( \frac{2V_{dd}-V_{ss}}{V_{dd}} \right)  \right]</math>
+
+Which reduces to the above result in the case that <math>V_{dd} = -V_{ss}</math>.
+
+== Practical examples of the use of the relaxation oscillator ==
+
+This type of circuit was used as the [[time base]] in early [[oscilloscope]]s and television receivers. Variants of this circuit find use in [[stroboscope]]s used in machine shops and nightclubs. Electronic camera flashes are a monostable version of this circuit, generating ''one cycle'' of the sawtooth. The rising edge develops as the flash capacitor is charged, and the rapid falling edge as the capacitor is discharged. The flash is produced upon receiving the firing signal from the shutter button.
+Use as a timebase in oscilloscopes was discontinued when the much more linear [[Miller Integrator]]  timebase circuit (invented by [[Alan Blumlein]]), using "hard" valves (vacuum tubes) as a constant current source, was developed.
+<ref>Book: Time Bases, by Owen Standige Puckle, ca. 1946</ref>
+
+== See also ==
+* [[Multivibrator]]
+* [[FitzHugh&ndash;Nagumo model]] &nbsp;&ndash; A hysteretic model of, for example, a neuron.
+* [[Schmitt trigger]]&nbsp;&ndash; The circuit on which the comparator-based relaxation oscillator is based.
+* [[Unijunction transistor]] A transistor capable of relaxation oscillations.
+* [[Robert Kearns]]&nbsp;&ndash; Used relaxation oscillator in intermittent wiper patent dispute.
+* [[stable limit cycle]] &nbsp;&ndash; a more abstract concept; a relaxation oscillator has a stable limit cycle
+
+== Notes ==
+{{reflist|group="nb"}}
+
+== References ==
+{{reflist}}
+
+{{Commons category|Relaxation oscillators}}
+
+[[Category:Oscillators]]

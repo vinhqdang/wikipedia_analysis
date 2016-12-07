@@ -1,0 +1,107 @@
+{{More footnotes|date=March 2010}}
+[[Image:P2ptv.PNG|thumb|right|P2PTV [[overlay network]] serving three video streams.]]
+The term '''P2PTV''' refers to [[peer-to-peer]] (P2P) [[software]] applications designed to redistribute video streams in real time on a P2P network; the distributed video streams are typically [[TV]] channels from all over the world but may also come from other sources. The draw to these applications is significant because they have the potential to make any TV channel globally available. 
+
+==Technology and use==
+In a P2PTV system, each user, while downloading a video stream, is simultaneously also uploading that stream to other users, thus contributing to the overall available [[Bandwidth (computing)|bandwidth]]. The arriving streams are typically a few minutes time-delayed compared to the original sources. The video quality of the channels usually depends on how many users are watching; the video quality is better if there are more users.
+The architecture of many P2PTV networks can be thought of as real-time versions of [[BitTorrent (protocol)|BitTorrent]]: if a user wishes to view a certain channel, the P2PTV software contacts a "tracker server" for that channel in order to obtain addresses of peers who distribute that channel; it then contacts these peers to receive the feed. The tracker records the user's address, so that it can be given to other users who wish to view the same channel.
+In effect, this creates an [[overlay network]] on top of the regular internet for the distribution of real-time video content.
+
+The need for a tracker can also be eliminated by the use of [[distributed hash table]] technology.
+
+Some applications allow users to broadcast their own streams, whether self-produced, obtained from a video file, or through a [[TV tuner card]] or [[video capture card]].
+
+Many of the commercial P2PTV applications were developed in China ([[TVUnetworks|TVUPlayer]], [[PPLive]], [[QQLive]],[[Feidian]],[[PPStream]], [[SopCast]]). The majority of available applications broadcast mainly Asian TV stations, with the exception of TVUPlayer, which carries a number of North American stations including [[CBS]], [[Spike TV]], and [[Fox News]]. Some applications distribute TV channels without a legal license to do so; this utilization of P2P technology is particularly popular to view channels that are either not available locally, or only available by paid subscription, as is the case for some sports channels.<ref>{{cite news |url=http://online.wsj.com/article/0,,SB112560377411829361,00.html |title=Newest Export From China: Pirated Pay TV |publisher=[[The Wall Street Journal]] |date=2 September 2005 |author=Geoffrey A. Fowler |coauthor=Sarah McBride}}</ref> By January 2009, there were about 14,000 P2P channels on PPStream.
+
+Other commercial P2PTV applications outside China are Abroadcasting (USA), [[Zattoo]] (Switzerland/USA), Octoshape (Denmark), LiveStation (UK).
+
+== Issues for broadcasters==
+* Broadcasting via a P2PTV system is usually much cheaper than the alternatives and can be done by private individuals.
+* No [[quality of service]] (QoS). Compared to [[unicast]]ing (the standard server-client architecture used in [[streaming media]]) no one can guarantee a reliable stream, since every user is a rebroadcaster. Each viewer is a part of a chain of viewers which all can have a negative influence on the reliability of the stream (by having a slow PC, a filled downlink or uplink or an unreliable consumer grade DSL or cable connection).
+* Less control. If a broadcaster prefers to limit access to their content based on regions, and would like good data on viewer behaviour, such as volume, trends and viewing time, then a traditional broadcasting solution offers more control. 
+* Professional broadcasters and distributors have used a hybrid solution for many years. Distribution servers are not centrally installed, but are rolled out in a smart, decentralized way. A central management facility manages content distribution over multiple peer servers (also known as Edge servers, or Caches), strategically located near user swarms (generally popular access ISP networks), manages load balancing, redirection of users, view reporting and QoS. Examples are [[Akamai Technologies|Akamai]].
+
+== Notable applications ==
+=== Branded webtv service for end-users ===
+* [[Babelgum]].com (non-live)
+* [[BBC iPlayer]] (live and non-live, used peer-to-peer technology [[BBC_iPlayer#Download_service | until December 2008]])
+* [[Joost]].com (non-live, live trials)
+* [[LiveStation]].com (Windows, Linux, Mac) - based in United Kingdom
+* [[Miro (software)|Miro]] (non-live)
+* [[ReelTime.com]] (non-live)
+* [[Zattoo]].com (Windows, Mac)
+
+=== Commercial solutions for broadcasters ===
+* [[Alluvium (peercasting)|Alluvium]] - based in Texas, USA
+* [[Octoshape]] (Windows, Linux, Mac)
+* [[Pando (application)|Pando]]
+* [[Rawflow]]
+
+=== Unclassified (yet) ===
+* [[CDNetworks]] ([[CDN]] service)
+* [[CoolStreaming]] (discontinued service)
+* [[Cybersky-TV]] - software
+* [[Feidian]] - based in China mainland
+* [[PeerCast]] (Windows, Linux, Mac)
+* [[PPLive]] - based in China mainland, chinese only program.
+* [[PPStream]] - based in China mainland
+* [[Tribler]] - linked to [[P2P-Next]], relies on [[BitTorrent (protocol)|BitTorrent]] protocol
+* [[TVUnetworks]] - Windows and MacOSX P2PTV Software and Network
+* [[PULSE_(P2PTV) | Pulse]] - (Windows, Linux) LGPL P2PTV engine with announcement portal and unrestricted access
+
+== See also ==
+* [[Comparison of streaming media systems]]
+* [[Comparison of video services]]
+* [[Digital television]]
+* [[Grid casting]]
+* [[HTTP(P2P)]]
+* [[Internet television]]
+* [[IPTV]]
+* [[List of music streaming services]]
+* [[List of streaming media systems]]
+* [[Multicast]]
+* [[Protection of Broadcasts and Broadcasting Organizations Treaty]]
+* [[Push technology]]
+* [[Software as a service]]
+* [[Streaming media]]
+* [[Webcast]]
+* [[Web television]]
+
+== References ==
+{{Reflist}}
+
+== External links ==
+* [http://wiki.ebu.ch/p2p/Main_Page EBU Project Group D/P2P (Peer-to-Peer) website]
+* [http://www.abroadcasting.com Abroadcasting]
+* [http://www.octoshape.com Octoshape]
+* [http://www.livestation.com LiveStation]
+
+[[Category:Networks]]
+[[Category:Applications of distributed computing]]
+[[Category:Cloud storage]]
+[[Category:Digital television]]
+[[Category:Distributed algorithms]]
+[[Category:Distributed data storage]]
+[[Category:Distributed data storage systems]]
+[[Category:File sharing networks]]
+[[Category:Film and video technology]]
+[[Category:Internet broadcasting]]
+[[Category:Internet television]]
+[[Category:Multimedia]]
+[[Category:Peer-to-peer computing]]
+[[Category:Peercasting]]
+[[Category:Streaming media systems]]
+[[Category:Video hosting]]
+[[Category:Video on demand services]]
+
+<!-- interwiki -->
+[[ca:P2PTV]]
+[[de:P2PTV]]
+[[es:P2PTV]]
+[[ko:P2PTV]]
+[[it:P2P TV]]
+[[hu:P2PTV]]
+[[ja:P2P<U+30C6><U+30EC><U+30D3>]]
+[[pt:P2PTV]]
+[[fi:P2PTV]]
+[[tr:P2PTV]]

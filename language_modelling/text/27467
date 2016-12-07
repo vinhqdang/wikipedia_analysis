@@ -1,0 +1,138 @@
+{{ infobox software
+| logo = 
+| screenshot             =[[Image:BitLocker_icon.png|250px]]
+| caption                = BitLocker logo
+| developer              = [[Microsoft]]
+| latest_release_date    = January 30, 2007
+| operating_system       = [[Windows Vista]], [[Windows Server 2008]], [[Windows 7 Ultimate]]
+| language               = 
+| genre                  = [[Disk encryption software]]
+| license                = Included with [[Server 2008|Windows Server 2008]] and selected editions of [[Windows Vista]] and [[Windows 7]]
+| website                = [http://windows.microsoft.com/en-US/windows7/products/features/bitlocker BitLocker Drive Encryption]
+}}
+
+'''BitLocker Drive Encryption''' is a [[full disk encryption]] feature included with the Ultimate and Enterprise editions of  [[Microsoft]]'s [[Windows Vista]] and [[Windows 7]] desktop [[operating system]]s, as well as the [[Windows Server 2008]] and [[Windows Server 2008 R2]] server platforms.  It is designed to protect data by providing [[encryption]] for entire [[Volume (computing)|volume]]s. By default it uses the [[Advanced Encryption Standard|AES]] encryption algorithm in [[Block cipher modes of operation#Cipher-block_chaining_.28CBC.29|CBC]] mode with a 128 bit key, combined with the ''Elephant'' diffuser for additional disk encryption specific security not provided by AES.<ref name="FAQ">{{cite web 
+|url = http://technet2.microsoft.com/WindowsVista/en/library/58358421-a7f5-4c97-ab41-2bcc61a58a701033.mspx#BKMK_Form
+|title = Windows BitLocker Drive Encryption Frequently Asked Questions
+|publisher = Microsoft
+|accessdate = 2007-09-05
+}}</ref><ref>{{cite paper|author=Niels Fergusson|title=AES-CBC + Elephant Diffuser: A Disk Encryption Algorithm for Windows Vista|accessdate=2008-02-22|publisher=[[Microsoft]]|date=August 2006|url=http://download.microsoft.com/download/0/2/3/0238acaf-d3bf-4a6d-b3d6-0a0be4bbb36e/BitLockerCipher200608.pdf|format=PDF}}</ref>
+
+BitLocker is available only in the Enterprise and Ultimate editions of Windows Vista and Windows 7.<ref name="FAQ">{{cite web
+| url = http://technet2.microsoft.com/WindowsVista/en/library/58358421-a7f5-4c97-ab41-2bcc61a58a701033.mspx#BKMK_Vista
+| title = Windows BitLocker Drive Encryption Frequently Asked Questions
+| accessdate = 2007-09-05
+| publisher = Microsoft
+}}</ref>  Users of other versions of Windows that don't include BitLocker could use a 3rd party encryption program to satisfy the need for full drive encryption (see [[Comparison of disk encryption software]]). In the [[Software_release_life_cycle#RTM|RTM]] release of Windows Vista, only the operating system volume could be encrypted using the GUI and encrypting other volumes required using [[Windows Management Instrumentation|WMI]]-based scripts included in Windows Vista in the <tt>%Windir%\System32</tt> folder. <ref>{{cite web|publisher=[[Microsoft]]|date=2008-02-19|accessdate=2008-02-22|title=Bitlocker Drive Encryption Provider|url=http://msdn2.microsoft.com/en-us/library/aa376409(VS.85).aspx}}</ref> An example of how to use the WMI interface is in the script <tt>manage-bde.wsf</tt>, that can be used to set up and manage BitLocker from the command line. With Windows Vista Service Pack 1 and [[Windows Server 2008]], volumes other than the [[operating system]] volume can be BitLocker-protected using the graphical Control Panel applet as well. <ref>{{cite journal|url=http://technet.microsoft.com/en-us/magazine/cc510321.aspx|title=Advances in BitLocker Drive Encryption|journal=Technet Magazine|publisher=[[Microsoft]]|author=Byron Hynes|month=June | year=2008|accessdate=2008-07-18}}</ref>
+
+The latest version of Bitlocker, included in Windows 7 and Windows Server 2008 R2, adds the ability to encrypt removable drives.
+
+==Overview==
+There are three authentication mechanisms that can be used as building blocks to implement Bitlocker encryption:<ref name="Security Analysis">{{cite web
+|url = http://www.microsoft.com/technet/security/guidance/clientsecurity/dataencryption/analysis/4e6ce820-fcac-495a-9f23-73d65d846638.mspx
+|title = Security Analysis
+|work = Data Encryption Toolkit for Mobile PCs
+|publisher = Microsoft
+|accessdate = 2007-09-05
+}}</ref>
+*'''Transparent operation mode''': This mode exploits the capabilities of [[Trusted Platform Module]] (TPM) 1.2 hardware to provide for a transparent user experience<U+2014>the user powers up and logs onto Windows as normal. The key used for the disk encryption is sealed (encrypted) by the TPM chip and will only be released to the OS loader code if the early boot files appear to be unmodified. The pre-OS components of BitLocker achieve this by implementing a Static Root of Trust Measurement<U+2014>a methodology specified by the [[Trusted Computing Group]].  This mode is vulnerable to a [[cold boot attack]], as it allows a powered-down machine to be [[booting|booted]] by an attacker.
+*'''User authentication mode''': This mode requires that the user provide some authentication to the pre-boot environment in the form of a pre-boot [[Personal identification number|PIN]].  This mode is vulnerable to a [[bootkit]] attack.
+*'''USB Key Mode''': The user must insert a USB device that contains a startup key into the computer to be able to boot the protected OS. Note that this mode requires that the BIOS on the protected machine supports the reading of USB devices in the pre-OS environment.  This mode is also vulnerable to a bootkit attack.
+
+The following permutations of the above authentication mechanisms are supported, all with an optional [[escrow]] key<ref>{{cite web|url=http://msdn.microsoft.com/en-us/library/aa376467(VS.85).aspx|publisher=[[Microsoft]]|title=ProtectKeyWithNumericalPassword Method of the Win32_EncryptableVolume Class|date=2008-02-19|accessdate=2008-07-18}}</ref> in [[Active Directory]]:
+*TPM only<ref>{{cite web|url=http://msdn.microsoft.com/en-us/library/aa376470(VS.85).aspx|publisher=[[Microsoft]]|title=ProtectKeyWithTPM Method of the Win32_EncryptableVolume Class|date=2008-02-19|accessdate=2008-07-18}}</ref>
+*TPM + PIN<ref>{{cite web|url=http://msdn.microsoft.com/en-us/library/aa376468(VS.85).aspx|publisher=[[Microsoft]]|title=ProtectKeyWithTPMAndPIN Method of the Win32_EncryptableVolume Class|date=2008-02-19|accessdate=2008-07-18}}</ref>
+*TPM + PIN + USB Key<ref>{{cite web|url=http://msdn.microsoft.com/en-us/library/bb931362(VS.85).aspx|publisher=[[Microsoft]]|title=ProtectKeyWithTPMAndPINAndStartupKey Method of the Win32_EncryptableVolume Class|date=2008-02-19|accessdate=2008-07-18}}</ref>
+*TPM + USB Key<ref>{{cite web|url=http://msdn.microsoft.com/en-us/library/aa376469(VS.85).aspx|publisher=[[Microsoft]]|title=ProtectKeyWithTPMAndStartupKey Method of the Win32_EncryptableVolume Class|date=2008-02-19|accessdate=2008-07-18}}</ref>
+*USB Key<ref>{{cite web|url=http://msdn.microsoft.com/en-us/library/aa376466(VS.85).aspx|publisher=[[Microsoft]]|title=ProtectKeyWithExternalKey Method of the Win32_EncryptableVolume Class|date=2008-02-19|accessdate=2008-07-18}}</ref>
+
+==Operation==
+Contrary to the official name, BitLocker Drive Encryption is a logical [[volume (computing)|volume]] encryption system. A volume may or may not be an entire [[hard disk drive|drive]], and can span one or more physical drives. Also, when enabled TPM/Bitlocker can ensure the integrity of the trusted boot path (e.g. BIOS, boot sector, etc.), in order to prevent most offline physical attacks, boot sector malware, etc.
+
+In order for BitLocker to operate, the hard disk requires at least two [[NTFS]]-formatted [[volume (computing)|volumes]]: one for the [[operating system]] (usually C:) and another with a minimum size of 100MB from which the operating system [[booting|boots]].  BitLocker requires the [[bootstrapping (computing)|boot]] volume to remain unencrypted<U+2014>on Windows Vista this volume must be assigned a drive letter, while on Windows 7 it does not.  Unlike previous versions of Windows, Vista's "diskpart" command-line tool includes the ability to shrink the size of an NTFS volume so that the system volume for BitLocker can be created from already-allocated space.  A tool called the "Bitlocker Drive Preparation Tool" is also available from Microsoft that allows an existing volume on Windows Vista to be shrunk to make room for a new boot volume, and for the necessary [[Bootstrapping (computing)|bootstrapping]] files to be transferred to it;<ref>{{cite web|publisher=[[Microsoft]]|title=Description of the BitLocker Drive Preparation Tool|date=2007-09-07|accessdate=2008-02-22|url=http://support.microsoft.com/kb/930063}}</ref> Windows 7 creates the secondary boot volume by default, even if Bitlocker is not used initially.
+
+Once an alternate boot partition has been created, the TPM module needs to be initialized (assuming that this feature is being used), after which the required disk encryption key protection mechanisms such as TPM, PIN or USB key are configured.  The volume is then encrypted as a background task, something that can take a considerable amount of time with a large disk as every logical sector is read, encrypted and rewritten back to disk.  Only once the whole volume has been encrypted are the keys protected, and the volume considered secure.  BitLocker uses a low-level device driver to encrypt and decrypt all file operations, making interaction with the encrypted volume transparent to applications running on the platform.
+
+[[Encrypting File System]] may be used in conjunction with BitLocker to provide protection once the [[kernel (computer science)|operating system kernel]] is running.  Protection of the files from processes/users within the operating system can only be performed using encryption software that operates within Windows, such as Encrypting File System.  BitLocker and Encrypting File System therefore offer protection against different classes of attacks.<ref>{{cite web
+|url=http://articles.techrepublic.com.com/5100-10878_11-6162949.html
+|title=Prevent data theft with Windows Vista's Encrypted File System (EFS) and BitLocker
+|author=George Ou
+|date=February 28, 2007
+|accessdate=2008-06-16
+|publisher=[[TechRepublic]]
+}}</ref>
+
+In [[Active Directory]] environments, BitLocker supports optional [[key escrow]] to [[Active Directory]], although a schema update may be required for this to work (i.e. if the Active Directory Directory Services are hosted on a Windows version previous to Windows Server 2008).
+
+Other systems like BitLocker can have their recovery key/password entry process [[Spoofing attack|spoofed]] by another bootmanager or OS install. Once the spoofed software captured the secret, it could be used to decrypt the VMK, which would then allow access to decrypt or modify any information on the user's BitLocker-encrypted hard disk. By configuring a [[Trusted Platform Module|TPM]] to protect the trusted [[booting|boot]] pathway, including the [[BIOS]] and [[boot sector]], this threat can be removed.
+
+==Security concerns==
+According to Microsoft sources,<ref name="backdoor">{{cite web
+|url = http://blogs.msdn.com/si_team/archive/2006/03/02/542590.aspx
+|title = Back-door nonsense
+|work = System Integrity Team Blog
+|publisher = Microsoft
+|accessdate = 2006-06-19
+}}</ref><ref>{{cite web|url=http://www.news.com/Microsoft-Vista-wont-get-a-backdoor/2100-1016_3-6046016.html|title=Microsoft: Vista won't get a backdoor|date=2006-03-03|accessdate=2008-05-01|publisher=[[CNet]]}}</ref> BitLocker does not contain an intentionally built-in [[Backdoor (computing)|backdoor]]; there is no way for law enforcement to have a guaranteed passage to the data on the user's drives that is provided by Microsoft. The lack of any backdoor has been a concern to the [[UK Home Office]],<ref>{{cite web|url=http://news.bbc.co.uk/1/hi/uk_politics/4713018.stm|title=UK holds Microsoft security talks|accessdate=2009-06-12|date=2006-02-16|publisher=BBC}}</ref> which tried entering into talks with Microsoft to get one introduced, though Microsoft developer [[Niels Ferguson]] and other Microsoft spokesmen state that they have not granted the wish to have one added.<ref>{{cite web|url=http://news.cnet.com/Microsoft-Vista-wont-get-a-backdoor/2100-1016_3-6046016.html|title=Microsoft: Vista won't get a backdoor|accessdate=2009-06-12|date=2006-03-03|publisher=CNET|author=Joris Evers}}</ref><ref>{{cite web|url=http://blogs.msdn.com/si_team/archive/2006/03/02/542590.aspx|title=Back-door nonsense|accessdate=2009-10-31|date=2006-03-02|publisher=Microsoft System Integrity Team Blog|author=Niels Ferguson}}</ref> Although the AES encryption algorithm used in Bitlocker is in the [[public domain]], its actual implementation in BitLocker, as well as other components of the software, are [[proprietary software|closed source]]; however, the code is available for scrutiny by Microsoft partners and enterprises, subject to a [[non-disclosure agreement]].
+
+Notwithstanding the claims of [[Niels Ferguson]] and others, Microsoft Services states in [http://thibault.rouat.com/security-doc/Windows/WIN7-BITLOCKER-EFS-RMS-Draft-V1.pdf Exploration of Windows 7, Advanced Forensics Topic (page 70)], "BitLocker has a number of 'Recovery' scenarios that we can exploit", and "BitLocker, at its core, is a password technology, we simply have to get the password...".
+
+The "Transparent operation mode" and "User authentication mode" of BitLocker use the TPM hardware to detect if there are unauthorized changes to the pre-boot environment, including the [[BIOS]] and [[Master boot record|MBR]].<ref name="TPM-operation">{{cite web
+|url = http://www.microsoft.com/technet/technetmag/issues/2007/06/BitLocker/
+|title = Keys to Protecting Data with BitLocker Drive Encryption
+|work = TechNet Magazine
+|publisher = Microsoft
+|accessdate = 2007-08-21
+}}</ref> If any unauthorized changes are detected, BitLocker requests a recovery [[key (cryptography)|key]] on a USB device, or a recovery password entered by hand. Either of these cryptographic secrets are used to decrypt the Volume Master Key (VMK) and allow the [[booting|bootup]] process to continue.<ref name="TPM-operation"/>
+
+Nevertheless, in February 2008, a group of security researchers published details of a so called "[[cold boot attack]]" that allows a Bitlocker-protected machine to be compromised by booting the machine off removable media, such as a [[Universal Serial Bus|USB]] drive, into another operating system, then dumping the contents of pre-boot memory.<ref name="ColdBoot">{{cite paper|url=http://citp.princeton.edu/memory/|title=Lest We Remember: Cold Boot Attacks on Encryption Keys|author=J. Alex Halderman, [[Seth Schoen|Seth D. Schoen]], Nadia Heninger, William Clarkson, William Paul, Joseph A. Calandrino, Ariel J. Feldman, Jacob Appelbaum, and [[Edward Felten|Edward W. Felten]]|publisher=[[Princeton University]]|date=2008-02-21|accessdate=2008-02-22}}</ref>  The attack relies on the fact that [[DRAM]] [[data remanence|retains information]] for up to several minutes (or even longer if cooled) after power has been removed.  Use of a TPM module alone does not offer any protection, as the keys are held in memory while Windows is running, although [[two-factor authentication]], i.e. using TPM together with a PIN, offers better protection for machines that are not powered on when physical access to them is obtained.  Similar full disk encryption mechanisms of other vendors and other operating systems, including [[Linux]] and [[Mac OS X]], are vulnerable to the same attack.<ref name="ColdBoot"/>  The authors recommend that computers be powered down when not in physical control of the owner (rather than be left in a [[power management|"sleep"]] state) and that a password also be required to boot the machine.
+
+The Recovery Key ID number can be easily obtained according to the procedure outlined in the document "[http://thibault.rouat.com/security-doc/Windows/WIN7-BITLOCKER-EFS-RMS-Draft-V1.pdf Exploration of Windows 7, Advanced Forensics Topic (pages 58-69)]."
+
+==See also==
+*[[Disk encryption]]
+*[[Full disk encryption]]
+*[[Comparison of disk encryption software]]
+*[[Disk encryption software]]
+*[[Features new to Windows Vista]]
+*[[List of Microsoft Windows components]]
+*[[Vista IO technologies]]
+*[[Next-Generation Secure Computing Base|NGSCB]]
+*[[FileVault]]
+
+==References==
+{{Reflist|2}}
+
+==External links==
+*[http://technet2.microsoft.com/WindowsVista/en/library/58358421-a7f5-4c97-ab41-2bcc61a58a701033.mspx BitLocker Drive Encryption Technical Overview]
+*[http://www.microsoft.com/downloads/details.aspx?FamilyID=320b9aa9-47e8-44f9-b8d0-4d7d6a75add0&DisplayLang=en Download Bitlocker Drive Preparation Tool]
+*[http://www.microsoft.com/whdc/system/platform/hwsecurity/default.mspx Windows Hardware Developer Central BitLocker Hub Page]
+*[http://blogs.msdn.com/si_team/default.aspx System Integrity Team Blog]
+*[http://www.nvlabs.in/nodes/9 Bitlocker Bootkit]
+*[http://testlab.sit.fraunhofer.de/downloads/Publications/Attacking_the_BitLocker_Boot_Process_Trust2009.pdf Attacking the BitLocker Boot Process]
+
+
+{{Windows Components}}
+
+[[Category:Windows Server 2008]]
+[[Category:Windows Vista]]
+[[Category:Cryptographic software]]
+[[Category:Microsoft Windows security technology]]
+[[Category:Disk encryption]]
+
+[[Category:Windows 7]]
+
+[[de:BitLocker]]
+[[es:BitLocker Drive Encryption]]
+[[fr:BitLocker Drive Encryption]]
+[[ko:<U+BE44><U+D2B8><U+B85C><U+CEE4> <U+B4DC><U+B77C><U+C774><U+BE0C> <U+C554><U+D638><U+D654>]]
+[[id:BitLocker Drive Encryption]]
+[[it:BitLocker Drive Encryption]]
+[[ms:BitLocker Drive Encryption]]
+[[nl:BitLocker]]
+[[no:Bitlocker]]
+[[pl:BitLocker]]
+[[pt:BitLocker]]
+[[ru:BitLocker Drive Encryption]]
+[[fi:BitLocker]]
+[[vi:M<U+00E3> h<U+00F3>a BitLocker]]

@@ -1,0 +1,57 @@
+{{About|one meaning of "rule of three" in statistics|other meanings in mathematics and beyond|Rule of three (disambiguation){{!}}Rule of three}}
+
+In [[statistical analysis]], the '''rule of three''' states that if a certain event did not occur in a sample with ''n'' [[Design of experiments|subjects]], 0 to 3/''n'' is a 95% [[confidence interval]] for the rate of occurrences in the [[population (statistics)|population]]. When ''n'' is greater than 30, this is a good approximation to results from more sensitive tests.<ref>There are other meanings of the term "rule of three" in mathematics, and a further distinct meaning within statistics:<blockquote>A century and a half ago Charles Darwin said he had "no Faith in anything short of actual measurement and the Rule of Three," by which he appeared to mean the peak of arithmetical accomplishment in a nineteenth-century gentleman, solving for ''x'' in "6&nbsp;is to 3 as 9 is to&nbsp;''x''." Some decades later, in the early 1900s, Karl Pearson shifted the meaning of the rule of three&nbsp;<U+2013> "take 3<U+03C3> <nowiki>[</nowiki>[[three-sigma rule|three standard deviations]]<nowiki>]</nowiki> as definitely significant"&nbsp;<U+2013> and claimed it for his new journal of significance testing, ''Biometrika''. Even Darwin late in life seems to have fallen into the confusion. (Ziliak and McCloskey, 2008, p.&nbsp;26; parenthetic gloss in original)</blockquote>
+
+</ref>
+
+For example, a pain-relief drug is tested on 1500 human subjects, and no [[adverse event]] is recorded. From the rule of three, it can be concluded with 95% confidence that fewer than 1 person in 500 (or 3/1500) will experience an adverse event.
+
+The rule is useful in the interpretation of [[clinical trial]]s generally, particularly in [[Phases of clinical research#Phase II|phase&nbsp;II]] and phase&nbsp;III where often there are limitations in duration or [[statistical power]]. The rule of three applies well beyond medical research, to any trial done ''n'' times. If 300 parachutes are randomly tested and all open successfully, then it is concluded with 95% confidence that fewer than 1 in 100 parachutes with the same characteristics (3/300) will fail.
+
+==Outline of derivation==
+A 95% [[confidence interval]] is sought for the probability ''p'' of an event occurring for any randomly selected single individual in a population, given that it has not been observed to occur in ''n'' [[Bernoulli trial]]s. Denoting the number of events by ''X'', we therefore wish to find the values of the parameter ''p'' of a [[binomial distribution]] that give Pr(''X''&nbsp;=&nbsp;0)&nbsp;<U+2265>&nbsp;0.05. The rule can then be derived<ref>"Professor Mean" (2010) [http://www.pmean.com/01/zeroevents.html "Confidence interval with zero events"], The Children's Mercy Hospital. Retrieved 2013-01-01.</ref> either from the [[binomial distribution#Poisson approximation|Poisson approximation to the binomial distribution]], or from the formula (1<U+2212>''p'')<sup>''n''</sup> for the probability of zero events in the binomial distribution by taking logarithms and keeping only the first term of a [[Taylor series#List of Maclaurin series of some common functions|series expansion of the natural logarithm]]. In either case, the factor of three arises from <U+2212>[[natural logarithm|ln]](0.05)&nbsp;= ln(20)&nbsp;= 2.9957&nbsp;<U+2248> 3.
+
+==See also==
+*[[Binomial proportion confidence interval]]
+*[[Rule of succession]]
+
+==Notes==
+{{reflist}}
+==References==
+
+*{{Cite journal
+| volume = 311
+| issue = 7005
+| pages = 619<U+2013>620
+| last = Eypasch
+| first = Ernst
+| coauthors = Rolf Lefering, C. K. Kum, Hans Troidl
+| title = Probability of adverse events that have not yet occurred: A statistical reminder
+| journal = BMJ
+| accessdate = 2008-04-15
+| date = 1995
+| url = http://www.bmj.com/cgi/content/full/311/7005/619
+| pmid = 7663258
+| pmc = 2550668
+}}
+*{{Cite journal
+| volume = 249
+| issue = 13
+| pages = 1743<U+2013>5
+| last = Hanley
+| first = J. A.
+| coauthors = A. Lippman-Hand
+| title = If nothing goes wrong, is everything alright?
+| journal = JAMA
+| date = 1983
+| pmid = 6827763
+| doi=10.1001/jama.1983.03330370053031 }}
+
+[[Category:Medical research]]
+[[Category:Clinical research]]
+[[Category:Clinical trials]]
+[[Category:Statistical approximations]]
+[[Category:Medical statistics]]
+[[Category:Nursing research]]
+
+* Ziliak, S. T.; D. N. McCloskey (2008). ''The cult of statistical significance: How the standard error costs us jobs, justice, and lives''. University of Michigan Press. ISBN 0472050079

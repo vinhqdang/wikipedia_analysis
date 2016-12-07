@@ -1,0 +1,279 @@
+{{otherusesof|topology}}
+{{Refimprove|date=October 2008}}
+[[Image:NetworkTopologies.png|right|thumb|300px|Diagram of different network topologies.]]
+
+'''Network topology ''' is the study of the ''arrangement'' or ''mapping'' of the elements([[Data link|links]], [[Node (networking)|nodes]], etc.) of a [[Computer networking|network]], especially the physical (real) and logical (virtual) interconnections between nodes.<ref name="Groth">
+{{cite book | last =Groth | first = David | authorlink =  | coauthors =  Toby Skandier | title = Network+ Study Guide, Fourth Edition' | publisher = Sybex, Inc. | date =  2005 | isbn = 0-7821-4406-3 }}</ref><ref name="atis">{{cite web|url=http://www.atis.org/glossary/definition.aspx?id=3516|title=network topology|author=ATIS committee PRQC|publisher=[[Alliance for Telecommunications Industry Solutions]]|work=ATIS Telecom Glossary 2007|accessdate=2008-10-10}}</ref>
+A [[local area network]] (LAN) is one example of a network that exhibits both a physical [[topology]] and a [[logical topology]]. Any given node in the LAN will have one or more links to one or more other nodes in the network and the mapping of these links and nodes onto a graph results in a geometrical shape that determines the physical topology of the network. Likewise, the mapping of the ''flow of data'' between the nodes in the network determines the logical topology of the network. The physical and logical topologies ''might'' be identical in any particular network but they also may be ''different''.
+
+Any particular network topology is determined only by the graphical mapping of the configuration of physical and/or logical connections between nodes. LAN Network Topology is, therefore, technically a part of [[graph theory]]. Distances between nodes, physical interconnections, transmission rates, and/or signal types may differ in two networks and yet their topologies may be identical.
+
+== Basic types of topologies ==
+There are six basic types of topology in networks:
+# Bus topology 
+# Star topology
+# Ring topology
+# Mesh topology
+# Tree topology 
+# Hybrid topology
+
+== Classification of network topologies ==
+
+There are also three basic categories of network topologies: 
+
+:*physical topologies
+:*signal topologies
+:*logical topologies
+
+The terms [[Signal (electrical engineering)|signal]] topology and [[logical topology]] are often used interchangeably even though there is a subtle difference between the two and the distinction is not often made between the two.
+
+=== Physical topologies ===
+The [[mapping]] of the nodes of a network and the physical connections between them <U+2013> i.e., the layout of [[wiring]], [[cable]]s, the locations of nodes, and the interconnections between the nodes and the [[cabling]] or wiring system<ref name="Groth"/>.
+
+==== Classification of physical topologies ====
+===== Point-to-point =====
+
+The simplest topology is a permanent link between two endpoints. Switched [[Point-to-point (telecommunications)|point-to-point]] topologies are the basic model of conventional [[telephony]].  The value of a permanent point-to-point network is the value of guaranteed, or nearly so, communications between the two endpoints. The value of an on-demand point-to-point connection is proportional to the number of potential pairs of subscribers, and has been expressed as [[Metcalfe's Law]].
+
+:'''Permanent (dedicated)'''
+
+::Easiest to understand, of the variations of point-to-point topology, is a point-to-point [[Channel (communications)|communications channel]] that appears, to the user, to be permanently associated with the two endpoints.  Children's "tin-can telephone" is one example, with a microphone to a single public address speaker is another. These are examples of ''physical dedicated'' channels. 
+
+::Within many [[switched telecommunications systems]], it is possible to establish a permanent circuit. One example might be a telephone in the lobby of a public building, which is programmed to ring only the number of a telephone dispatcher. "Nailing down" a switched connection saves the cost of running a physical circuit between the two points. The resources in such a connection can be released when no longer needed, as, for example, a television circuit from a parade route back to the studio.
+
+:'''Switched:''' 
+
+::Using [[circuit-switching]] or [[packet-switching]] technologies, a point-to-point circuit can be set up dynamically, and dropped when no longer needed. This is the basic mode of conventional telephony.
+
+===== Bus =====
+
+:'''Linear bus'''
+
+::The type of network topology in which all of the nodes of the network are connected to a common transmission medium which has exactly two endpoints (this is the 'bus', which is also commonly referred to as the [[Backbone network|backbone]], or [[trunk (telecommunications)|trunk]]) <U+2013> all [[data]] that is [[transmitted]] between nodes in the network is transmitted over this common transmission medium and is able to be [[Receiver (Information Theory)|received]] by all nodes in the network virtually simultaneously (disregarding [[propagation delay]]s)<ref name="Groth"/>.
+
+::'''Note:''' <span id="linear_bus_note"></span>The two endpoints of the common transmission medium are normally terminated with a device called a [[Electrical termination|terminator]] that exhibits the characteristic [[Electrical impedance|impedance]] of the transmission medium and which dissipates or absorbs the energy that remains in the signal to prevent the signal from being reflected or propagated back onto the transmission medium in the opposite direction, which would cause interference with and degradation of the signals on the transmission medium (See [[Electrical termination]]).
+
+:'''Distributed bus'''
+
+::The type of network topology in which all of the nodes of the network are connected to a common transmission medium which has more than two endpoints that are created by adding branches to the main section of the transmission medium <U+2013> the physical distributed bus topology functions in exactly the same fashion as the physical linear bus topology (i.e., all nodes share a common transmission medium).
+
+::'''Notes:'''
+
+:::1.) All of the endpoints of the common transmission medium are normally terminated with a device called a 'terminator' (see [[#linear bus note|the note under linear bus]]).
+
+:::2.) The physical linear bus topology is sometimes considered to be a special case of the physical distributed bus topology <U+2013> i.e., a distributed bus with no branching segments.
+
+:::3.) The physical distributed bus topology is sometimes incorrectly referred to as a physical tree topology <U+2013> however, although the physical distributed bus topology resembles the physical tree topology, it differs from the physical tree topology in that there is no central node to which any other nodes are connected, since this hierarchical functionality is replaced by the common bus.
+
+===== Star =====
+
+:The type of network topology in which each of the nodes of the network is connected to a central node with a point-to-point link in a 'hub' and 'spoke' fashion, the central node being the 'hub' and the nodes that are attached to the central node being the 'spokes' (e.g., a collection of point-to-point links from the peripheral nodes that converge at a central node) <U+2013> all data that is transmitted between nodes in the network is transmitted to this central node, which is usually some type of device that then retransmits the data to some or all of the other nodes in the network, although the central node may also be a simple common connection point (such as a 'punch-down' block) without any active device to repeat the signals.
+
+:'''Notes:'''
+
+::1.) A point-to-point link (described above) is sometimes categorized as a special instance of the physical star topology <U+2013> therefore, the simplest type of network that is based upon the physical star topology would consist of one node with a single point-to-point link to a second node, the choice of which node is the 'hub' and which node is the 'spoke' being arbitrary<ref name="Groth"/>.
+
+::2.) After the special case of the point-to-point link, as in note 1.) above, the next simplest type of network that is based upon the physical star topology would consist of one central node <U+2013> the 'hub' <U+2013> with two separate point-to-point links to two peripheral nodes <U+2013> the 'spokes'.
+
+::3.) Although most networks that are based upon the physical star topology are commonly implemented using a special device such as a [[network hub|hub]] or [[network switch|switch]] as the central node (i.e., the 'hub' of the star), it is also possible to implement a network that is based upon the physical star topology using a computer or even a simple common connection point as the 'hub' or central node <U+2013> however, since many illustrations of the physical star network topology depict the central node as one of these special devices, some confusion is possible, since this practice may lead to the misconception that a physical star network requires the central node to be one of these special devices, which is not true because a simple network consisting of three computers connected as in note 2.) above also has the topology of the physical star.
+
+::4.) Star networks may also be described as either [[broadcast multi-access]] or [[nonbroadcast multi-access]] (NBMA), depending on whether the technology of the network either automatically propagates a signal at the hub to all spokes, or only addresses individual spokes with each communication.
+
+:'''Extended star'''
+
+::A type of network topology in which a network that is based upon the physical star topology has one or more repeaters between the central node (the 'hub' of the star) and the peripheral or 'spoke' nodes, the repeaters being used to extend the maximum transmission distance of the point-to-point links between the central node and the peripheral nodes beyond that which is supported by the transmitter power of the central node or beyond that which is supported by the standard upon which the physical layer of the physical star network is based.
+
+:::'''Note:''' If the repeaters in a network that is based upon the physical extended star topology are replaced with hubs or switches, then a hybrid network topology is created that is referred to as a physical hierarchical star topology, although some texts make no distinction between the two topologies.
+
+:'''Distributed Star'''
+
+::A type of network topology that is composed of individual networks that are based upon the physical star topology connected together in a linear fashion <U+2013> i.e., 'daisy-chained' <U+2013> with no central or top level connection point (e.g., two or more 'stacked' hubs, along with their associated star connected nodes or 'spokes').
+
+===== Ring =====
+
+:The type of network topology in which each of the nodes of the network is connected to two other nodes in the network and with the first and last nodes being connected to each other, forming a ring <U+2013> all data that is transmitted between nodes in the network travels from one node to the next node in a circular manner and the data generally flows in a single direction only.
+
+:'''Dual-ring'''
+
+::The type of network topology in which each of the nodes of the network is connected to two other nodes in the network, with two connections to each of these nodes, and with the first and last nodes being connected to each other with two connections, forming a double ring <U+2013> the data flows in opposite directions around the two rings, although, generally, only one of the rings carries data during normal operation, and the two rings are independent unless there is a failure or break in one of the rings, at which time the two rings are joined (by the stations on either side of the fault) to enable the flow of data to continue using a segment of the second ring to bypass the fault in the primary ring.
+
+===== Mesh =====
+The value of fully meshed networks is proportional to the exponent of the number of subscribers, assuming that communicating groups of any two endpoints, up to and including all the endpoints, is approximated by [[Reed's Law]].
+<span id="Full_mesh"></span>
+:'''Full'''
+:'''Fully connected'''
+
+::The type of network topology in which each of the nodes of the network is connected to each of the other nodes in the network with a point-to-point link <U+2013> this makes it possible for data to be simultaneously transmitted from any single node to all of the other nodes.
+
+::'''Note:''' The physical fully connected mesh topology is generally too costly and complex for practical networks, although the topology is used when there are only a small number of nodes to be interconnected.
+
+:'''Partial'''
+:'''Partially connected'''
+
+::The type of network topology in which some of the nodes of the network are connected to more than one other node in the network with a point-to-point link <U+2013> this makes it possible to take advantage of some of the redundancy that is provided by a physical fully connected mesh topology without the expense and complexity required for a connection between every node in the network.
+
+::'''Note:''' In most practical networks that are based upon the physical partially connected mesh topology, all of the data that is transmitted between nodes in the network takes the shortest path (or an approximation of the shortest path) between nodes, except in the case of a failure or break in one of the links, in which case the data takes an alternate path to the destination. This requires that the nodes of the network possess some type of logical 'routing' algorithm to determine the correct path to use at any particular time.
+
+===== Tree =====
+
+Also known as a '''hierarchical network'''.
+
+The type of network topology in which a central 'root' node (the top level of the hierarchy) is connected to one or more other nodes that are one level lower in the hierarchy (i.e., the second level) with a point-to-point link between each of the second level nodes and the top level central 'root' node, while each of the second level nodes that are connected to the top level central 'root' node will also have one or more other nodes that are one level lower in the hierarchy (i.e., the third level) connected to it, also with a point-to-point link, the top level central 'root' node being the only node that has no other node above it in the hierarchy (The hierarchy of the tree is symmetrical.) Each node in the network having a specific fixed number,  of nodes connected to it at the next lower level in the hierarchy, the number, being referred to as the 'branching factor' of the hierarchical tree.
+
+:'''Notes:'''
+
+::1.) A network that is based upon the physical hierarchical topology must have at least three levels in the hierarchy of the tree, since a network with a central 'root' node and only one hierarchical level below it would exhibit the physical topology of a star.
+
+::2.) A network that is based upon the physical hierarchical topology and with a branching factor of 1 would be classified as a physical linear topology.
+
+::3.) The branching factor,  f, is independent of the total number of nodes in the network and, therefore, if the nodes in the network require ports for connection to other nodes the total number of ports per node may be kept low even though the total number of nodes is large <U+2013> this makes the effect of the cost of adding ports to each node totally dependent upon the branching factor and may therefore be kept as low as required without any effect upon the total number of nodes that are possible.
+
+::4.) The total number of point-to-point links in a network that is based upon the physical hierarchical topology will be one less than the total number of nodes in the network.
+
+::5.) If the nodes in a network that is based upon the physical hierarchical topology are required to perform any processing upon the data that is transmitted between nodes in the network, the nodes that are at higher levels in the hierarchy will be required to perform more processing operations on behalf of other nodes than the nodes that are lower in the hierarchy. Such a type of network topology is very useful and highly recomended
+
+==== Hybrid network topologies ====
+
+The hybrid topology is a type of network topology that is composed of one or more interconnections of two or more networks that are based upon the same physical topology, but where the physical topology of the network resulting from such an interconnection does not meet the definition of the original physical topology of the interconnected networks (e.g., the physical topology of a network that would result from an interconnection of two or more networks that are based upon the physical star topology might create a hybrid topology which resembles a mixture of the physical star and physical bus topologies or a mixture of the physical star and the physical tree topologies, depending upon how the individual networks are interconnected, while the physical topology of a network that would result from an interconnection of two or more networks that are based upon the physical distributed bus network retains the topology of a physical distributed bus network).
+
+:'''Star-bus'''
+
+::A type of network topology in which the central nodes of one or more individual networks that are based upon the physical star topology are connected together using a common 'bus' network whose physical topology is based upon the physical linear bus topology, the endpoints of the common 'bus' being terminated with the characteristic impedance of the transmission medium where required <U+2013> e.g., two or more hubs connected to a common backbone with drop cables through the port on the hub that is provided for that purpose (e.g., a properly configured 'uplink' port) would comprise the physical bus portion of the physical star-bus topology, while each of the individual hubs, combined with the individual nodes which are connected to them, would comprise the physical star portion of the physical star-bus topology.
+
+:'''Star-of-stars'''
+:'''Hierarchical star'''
+
+::A type of network topology that is composed of an interconnection of individual networks that are based upon the physical star topology connected together in a hierarchical fashion to form a more complex network <U+2013> e.g., a top level central node which is the 'hub' of the top level physical star topology and to which other second level central nodes are attached as the 'spoke' nodes, each of which, in turn, may also become the central nodes of a third level physical star topology.
+
+::'''Notes:'''
+
+:::1.) The physical hierarchical star topology is not a combination of the physical linear bus and the physical star topologies, as cited in some texts, as there is no common linear bus within the topology, although the top level 'hub' which is the beginning of the physical hierarchical star topology may be connected to the backbone of another network, such as a common carrier, which is, topologically, not considered to be a part of the local network <U+2013> if the top level central node is connected to a backbone that is considered to be a part of the local network, then the resulting network topology would be considered to be a hybrid topology that is a mixture of the topology of the backbone network and the physical hierarchical star topology.
+
+:::2.) The physical hierarchical star topology is also sometimes  incorrectly referred to as a physical tree topology, since its physical topology is hierarchical, however, the physical hierarchical star topology does not have a structure that is determined by a branching factor, as is the case with the physical tree topology and, therefore, nodes may be added to, or removed from, any node that is the 'hub' of one of the individual physical star topology networks within a network that is based upon the physical hierarchical star topology.
+
+:::3.) The physical hierarchical star topology is commonly used in 'outside plant' (OSP) cabling to connect various buildings to a central connection facility, which may also house the 'demarcation point' for the connection to the data transmission facilities of a common carrier, and in 'inside plant' (ISP) cabling to connect multiple wiring closets within a building to a common wiring closet within the same building, which is also generally where the main backbone or trunk that connects to a larger network, if any, enters the building.
+
+:'''Star-wired ring'''
+
+::A type of hybrid physical network topology that is a combination of the physical star topology and the physical ring topology, the physical star portion of the topology consisting of a network in which each of the nodes of which the network is composed are connected to a central node with a point-to-point link in a 'hub' and 'spoke' fashion, the central node being the 'hub' and the nodes that are attached to the central node being the 'spokes' (e.g., a collection of point-to-point links from the peripheral nodes that converge at a central node) in a fashion that is identical to the physical star topology, while the physical ring portion of the topology consists of circuitry within the central node which routes the signals on the network to each of the connected nodes sequentially, in a circular fashion.
+
+::'''Note:''' In an 802.5 Token Ring network the central node is called a Multistation Access Unit (MAU).
+
+:'''Hybrid mesh'''
+
+::A type of hybrid physical network topology that is a combination of the physical partially connected topology and one or more other physical topologies the mesh portion of the topology consisting of redundant or alternate connections between some of the nodes in the network <U+2013> the physical hybrid mesh topology is commonly used in networks which require a high degree of availability.
+
+=== Signal topology ===
+
+The mapping of the actual connections between the nodes of a network, as evidenced by the path that the signals take when propagating between the nodes.
+
+:'''Note:''' The term 'signal topology' is often used synonymously with the term 'logical topology', however, some confusion may result from this practice in certain situations since, by definition, the term 'logical topology' refers to the apparent path that the data takes between nodes in a network while the term 'signal topology' generally refers to the actual path that the signals (e.g., optical, electrical, electromagnetic, etc.) take when propagating between nodes.
+
+:'''Example'''
+
+=== Logical topology ===
+The mapping of the apparent connections between the nodes of a network, as evidenced by the path that data appears to take when traveling between the nodes.
+
+==== Classification of logical topologies ====
+
+The logical classification of network topologies generally follows the same classifications as those in the physical classifications of network topologies, the path that the ''data'' takes between nodes being used to determine the topology as opposed to the actual ''physical'' connections being used to determine the topology.
+
+:'''Notes:'''
+
+::1.) Logical topologies are often closely associated with media access control (MAC) methods and protocols.
+
+::2.) The logical topologies are generally determined by network protocols as opposed to being determined by the physical layout of cables, wires, and network devices or by the flow of the electrical signals, although in many cases the paths that the electrical signals take between nodes may closely match the logical flow of data, hence the convention of using the terms 'logical topology' and 'signal topology' interchangeably.
+
+::3.) Logical topologies are able to be dynamically reconfigured by special types of equipment such as [[router|routers]] and [[network switch|switches]].
+
+==Daisy chains==
+Except for star-based networks, the easiest way to add more computers into a network is by [[daisy chain|daisy-chaining]], or connecting each computer in series to the next.  If a message is intended for a computer partway down the line, each system bounces it along in sequence until it reaches the destination.  A daisy-chained network can take two basic forms: linear and ring.
+
+*A '''[[linear topology]]''' puts a two-way link between one computer and the next.  However, this was expensive in the early days of computing, since each computer (except for the ones at each end) required two receivers and two transmitters.
+*By connecting the computers at each end, a '''[[ring topology]]''' can be formed.  An advantage of the ring is that the number of transmitters and receivers can be cut in half, since a message will eventually loop all of the way around.  When a [[Node (networking)|node]] sends a message, the message is processed by each computer in the ring. If a computer is not the destination node, it will pass the message to the next node, until the message arrives at its destination. If the message is not accepted by any node on the network, it will travel around the entire ring and return to the sender. This potentially results in a doubling of travel time for data.
+
+==Centralization==
+The '''[[star topology]]''' reduces the probability of a network failure by connecting all of the peripheral nodes (computers, etc.) to a central node.  When the physical star topology is applied to a logical bus network such as [[Ethernet]], this central node (traditionally a [[network hub|hub]]) rebroadcasts all transmissions received from any peripheral node to all peripheral nodes on the network, sometimes including the originating node. All peripheral nodes may thus communicate with all others by transmitting to, and receiving from, the central node only.  The [[failure]] of a [[transmission line]] linking any peripheral node to the central node will result in the isolation of that peripheral node from all others, but the remaining peripheral nodes will be unaffected. However, the disadvantage is that the failure of the central node will cause the failure of all of the peripheral nodes also.
+
+If the central node is ''passive'', the originating node must be able to tolerate the reception of an [[echo (phenomenon)|echo]] of its own transmission, delayed by the two-way [[round-trip time|round trip]] [[transmission time]]  (i.e. to and from the central node) plus any delay generated in the central node. An ''active'' star network has an active central node that usually has the means to prevent echo-related problems.
+
+A '''[[tree topology]]''' (a.k.a. '''hierarchical topology''') can be viewed as a collection of star networks arranged in a [[hierarchy]].  This [[tree (graph theory)|tree]] has individual peripheral nodes (e.g. leaves) which are required to transmit to and receive from one other node only and are not required to act as repeaters or regenerators.  Unlike the star network, the functionality of the central node may be distributed.
+
+As in the conventional star network, individual nodes may thus still be isolated from the network by a single-point failure of a transmission path to the node. 
+If a link connecting a leaf fails, that leaf is isolated; if a connection to a non-leaf node fails, an entire section of the network becomes isolated from the rest.
+
+In order to alleviate the amount of network traffic that comes from broadcasting all signals to all nodes, more advanced central nodes were developed that are able to keep track of the identities of the nodes that are connected to the network.  These [[network switch]]es will "learn" the layout of the network by "listening" on each port during normal data transmission, examining the [[data packets]] and recording the address/identifier of each connected node and which port it's connected to in a [[lookup table]] held in memory. This lookup table then allows future transmissions to be forwarded to the intended destination only.
+
+==Decentralization==
+
+In a '''[[mesh networking|mesh]] topology''' (i.e., a [[#Partial mesh|partially connected mesh]] topology), there are at least two nodes with two or more paths between them to provide redundant paths to be used in case the link providing one of the paths fails.  This decentralization is often used to advantage to compensate for the single-point-failure disadvantage that is present when using a single device as a central node (e.g., in star and tree networks). A special kind of mesh, limiting the number of hops between two nodes, is a [[hypercube]]. The number of arbitrary [[fork (topology)|fork]]s in mesh networks makes them more difficult to design and implement, but their decentralized nature makes them very useful.  This is similar in some ways to a '''[[grid network]]''', where a linear or ring topology is used to connect systems in multiple directions.  A multi-dimensional ring has a [[torus|toroidal]] topology, for instance.
+
+A '''[[fully connected network]]''', '''complete topology''' or [[#Full mesh|'''full mesh topology''']] is a network topology in which there is a direct link between all pairs of nodes. In a fully connected network with n nodes, there are n(n-1)/2 direct links. Networks designed with this topology are usually very expensive to set up, but provide a high degree of reliability due to the multiple paths for data that are provided by the large number of redundant links between nodes. This topology is mostly seen in [[military]] applications.  However, it can also be seen in the [[file sharing]] protocol [[BitTorrent (protocol)|BitTorrent]] in which users connect to other users in the "swarm" by allowing each user sharing the file to connect to other users also involved.  Often in actual usage of BitTorrent any given individual node is rarely connected to every single other node as in a true fully connected network but the protocol does allow for the possibility for any one node to connect to any other node when sharing files.
+
+==Hybrids==
+Hybrid networks use a combination of any two or more topologies in such a way that the resulting network does not exhibit one of the standard topologies (e.g., bus, star, ring, etc.).  For example, a tree network connected to a tree network is still a tree network, but two star networks connected together exhibit a hybrid network topology. A hybrid topology is always produced when two different basic network topologies are connected. Two common examples for Hybrid network are: ''star ring network'' and ''star bus network''
+*A Star ring network consists of two or more star topologies connected using a [[Media Access Unit|multistation access unit]] (MAU) as a centralized hub.
+*A Star Bus network consists of two or more star topologies connected using a bus trunk (the bus trunk serves as the network's backbone).
+
+While grid networks have found popularity in [[high-performance computing]] applications, some systems have used [[genetic algorithm]]s to design custom networks that have the fewest possible hops in between different nodes.  Some of the resulting layouts are nearly incomprehensible, although they function quite well.
+
+==See also==
+<div style="-moz-column-count:2; column-count:2;">
+*[[Bus network]]
+*[[Mesh network]]
+*[[Shared mesh]]
+*[[Switched mesh]]
+*[[Ring network]]
+*[[Star network]]
+*[[Expander graph]]
+*[[Scale-free network]]
+*[[Network diagram]]
+*[[Computer network]]
+*[[Cube-connected cycles]]
+*[[Redundant topologies]]
+</div>
+
+== References ==
+{{reflist}}
+
+== External links ==
+{{Commons|Topology (Network)}}
+*[http://learn-networking.com/network-design/a-guide-to-network-topology A Guide to Network Topology] 
+*[http://www.optical-network.com/topology.php Research network topology]
+*[http://www.entryboot.com/types-of-topology.php Types of topology]
+
+<!--Categories-->
+[[Category:Network topology| ]]
+
+<!--Interwiki-->
+
+[[br:Topologiezh rouedad]]
+[[bg:<U+041C><U+0440><U+0435><U+0436><U+043E><U+0432><U+0438> <U+0442><U+043E><U+043F><U+043E><U+043B><U+043E><U+0433><U+0438><U+0438>]]
+[[ca:Topologia de xarxa]]
+[[cs:Topologie s<U+00ED>t<U+00ED>]]
+[[de:Topologie (Rechnernetz)]]
+[[el:<U+03A4><U+03BF><U+03C0><U+03BF><U+03BB><U+03BF><U+03B3><U+03AF><U+03B1> <U+03B4><U+03B9><U+03BA><U+03C4><U+03CD><U+03BF><U+03C5>]]
+[[es:Topolog<U+00ED>a de red]]
+[[eo:Reta topologio]]
+[[eu:Sare topologia]]
+[[fa:<U+0647><U+0645><U+0628><U+0646><U+062F><U+06CC> (<U+0631><U+0627><U+06CC><U+0627><U+0646><U+0647>)]]
+[[fr:Topologie de r<U+00E9>seau]]
+[[gl:Topolox<U+00ED>a de rede]]
+[[id:Topologi jaringan]]
+[[ia:Topologia de rete]]
+[[it:Topologia di rete]]
+[[he:<U+05D8><U+05D5><U+05E4><U+05D5><U+05DC><U+05D5><U+05D2><U+05D9><U+05D9><U+05EA> <U+05E8><U+05E9><U+05EA>]]
+[[ka:<U+10E2><U+10DD><U+10DE><U+10DD><U+10DA><U+10DD><U+10D2><U+10D8><U+10D0> (<U+10D9><U+10DD><U+10DB><U+10DE><U+10D8><U+10E3><U+10E2><U+10D4><U+10E0><U+10E3><U+10DA><U+10D8> <U+10E5><U+10E1><U+10D4><U+10DA><U+10D4><U+10D1><U+10D8>)]]
+[[lv:T<U+012B>kla topolo<U+0123>ija]]
+[[hu:H<U+00E1>l<U+00F3>zati topol<U+00F3>gia]]
+[[nl:Netwerktopologie]]
+[[ja:<U+30CD><U+30C3><U+30C8><U+30EF><U+30FC><U+30AF><U+69CB><U+6210>]]
+[[pl:Topologia sieci komputerowej]]
+[[pt:Topologia de rede]]
+[[ro:Topologii de re<U+0163>ea]]
+[[ru:<U+0421><U+0435><U+0442><U+0435><U+0432><U+0430><U+044F> <U+0442><U+043E><U+043F><U+043E><U+043B><U+043E><U+0433><U+0438><U+044F>]]
+[[sk:Topol<U+00F3>gia siete]]
+[[sr:Mre<U+017E>ne topologije]]
+[[fi:Verkkotopologia]]
+[[uk:<U+0422><U+043E><U+043F><U+043E><U+043B><U+043E><U+0433><U+0456><U+044F> <U+043C><U+0435><U+0440><U+0435><U+0436>]]
+[[zh:<U+7F51><U+7EDC><U+62D3><U+6251>]]
