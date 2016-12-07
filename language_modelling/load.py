@@ -26,7 +26,7 @@ def get_doc(folder_name):
  
     texts = []
     for index,i in enumerate(doc_list):
-        if i % 1000 == 0:
+        if index % 1000 == 0:
             print ("Processing file " + str (index) + "/" + str(len(doc_list)) + " = " + "{0:.2f}".format(float(index)*100/len(doc_list)) + "%")
         # print (i)
         # print ("----")
