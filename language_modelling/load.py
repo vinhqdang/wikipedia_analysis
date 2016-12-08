@@ -15,12 +15,24 @@ def get_doc_list(folder_name):
     print ('Found %s documents under the dir %s .....'%(len(file_list),folder_name))
     return doc_list
  
-def get_doc(folder_name):
+# folder_name: contains text documents
+# label_file: a file contains label for each document in folder_name
+def get_doc(folder_name, label_file):
  
     doc_list = get_doc_list(folder_name)
     # tokenizer = RegexpTokenizer(r'\w+')
     # en_stop = get_stop_words('en')
     # p_stemmer = PorterStemmer()
+     
+    labels = []
+    with open (label_file, "r") as f:
+        labels = f.read().splitlines()
+
+    if (len(label) != len(doc_list)):
+        print ('Error! Number of labels is not as same as number of documents.')
+        print ('There are ' + str (len(labels)) + ' labels')
+        print ('There are ' + str (len(doc_list)) + ' documents')
+        sys.exit (1)
  
     taggeddoc = []
  
@@ -52,7 +64,7 @@ def get_doc(folder_name):
         # # add tokens to list
         # texts.append(length_tokens)
  
-        td = TaggedDocument(gensim.utils.to_unicode(str.encode(i)).split(),str(index))
+        td = TaggedDocument(gensim.utils.to_unicode(str.encode(i)).split(), labels[index])
         taggeddoc.append(td)
  
     return taggeddoc
