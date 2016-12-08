@@ -94,7 +94,7 @@ for epoch in range(nb_epochs):
     logger.info('Epoch %d' % epoch)
     model.train(sentences.sentences_perm())
 
-model.save('./enwiki_quality.d2v')
+# model.save('./enwiki_quality.d2v')
 
 def convert_array_to_string (data):
     res = ""
