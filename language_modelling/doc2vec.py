@@ -9,7 +9,7 @@ epochs      = 50    # number of training epochs
 label_file = "enwikilabel"
 
 try:
-      opts, args = getopt.getopt(sys.argv[1:],"hd:model_size:epoch:lb",["data_dir=","model_size=","epoch=","label_file="])
+      opts, args = getopt.getopt(sys.argv[1:],"hd:model_size:epoch:lb:",["data_dir=","model_size=","epoch=","label_file="])
 except getopt.GetoptError as e:
       print ("Error of parameters")
       print (e)
@@ -41,7 +41,7 @@ model = gensim.models.Doc2Vec(documents, dm = 1, alpha=0.025, size= model_size, 
  
 # start training
 for epoch in range(nb_epochs):
-    if epoch % 20 == 0:
+    if epoch % 5 == 0:
         print ('Now training epoch %s'%epoch)
     model.train(documents)
     model.alpha -= 0.002  # decrease the learning rate
