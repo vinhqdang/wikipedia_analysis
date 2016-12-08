@@ -34,6 +34,8 @@ def get_doc(folder_name, label_file):
         print ('There are ' + str (len(doc_list)) + ' documents')
         sys.exit (1)
  
+    unique_labels = list (set (labels))
+    index_count = [0] * len (unique_labels)
     taggeddoc = []
  
     texts = []
@@ -63,8 +65,9 @@ def get_doc(folder_name, label_file):
         # length_tokens = [i for i in stemmed_tokens if len(i) &amp;amp;gt; 1]
         # # add tokens to list
         # texts.append(length_tokens)
- 
-        td = TaggedDocument(gensim.utils.to_unicode(str.encode(i)).split(), str(index))
+        label = labels [index]
+        td = TaggedDocument(gensim.utils.to_unicode(str.encode(i)).split(), label + str(index_count[unique_labels.index(label)]))
+        index_count[unique_labels.index(label)] += 1
         taggeddoc.append(td)
  
     return taggeddoc
