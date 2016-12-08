@@ -64,7 +64,7 @@ def get_doc(folder_name, label_file):
         # # add tokens to list
         # texts.append(length_tokens)
  
-        td = TaggedDocument(gensim.utils.to_unicode(str.encode(i)).split(), labels[index])
+        td = TaggedDocument(gensim.utils.to_unicode(str.encode(i)).split(), str(index)
         taggeddoc.append(td)
  
     return taggeddoc
