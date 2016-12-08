@@ -48,10 +48,10 @@ for epoch in range(nb_epochs):
     model.min_alpha = model.alpha  # fix the learning rate, no decay
  
 # shows the similar words
-print (model.most_similar('suppli'))
+print (model.most_similar('preserve'))
  
 # shows the learnt embedding
-print (model['suppli'])
+print (model['preserve'])
  
 # shows the similar docs with id = 2
 print (model.docvecs.most_similar(str(2)))
