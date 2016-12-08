@@ -28,7 +28,7 @@ def get_doc(folder_name, label_file):
     with open (label_file, "r") as f:
         labels = f.read().splitlines()
 
-    if (len(label) != len(doc_list)):
+    if (len(labels) != len(doc_list)):
         print ('Error! Number of labels is not as same as number of documents.')
         print ('There are ' + str (len(labels)) + ' labels')
         print ('There are ' + str (len(doc_list)) + ' documents')
