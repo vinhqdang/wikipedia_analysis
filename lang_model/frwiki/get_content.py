@@ -22,7 +22,7 @@ try:
 except OSError:
     pass
 
-page_missing_cnt = 0
+missing_lines = []
 
 for i in range(len(lines)):
 # for i in [1]: # for debug
@@ -59,7 +59,8 @@ for i in range(len(lines)):
     except Exception, e:
         print ('Missing at line ' + str(i + 1))
         print (url_string)
-        page_missing_cnt += 1
+        missing_lines.append(i+1)
+        print ('So far ' + str (len (missing_lines)) + " missing pages")
         continue    
 
     # print (revisions[1])
@@ -104,4 +105,5 @@ for i in range(len(lines)):
     with open (label_file, "a") as f:
         f.write (quality.encode('utf8') + "\n")
 
-print ('Total missing page = ' + str (page_missing_cnt) + " over " + str(len(lines)) + " pages.")
+print ('Total missing page = ' + str (len(missing_lines)) + " over " + str(len(lines)) + " pages.")
+print (missing_lines)
