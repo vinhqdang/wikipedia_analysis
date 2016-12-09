@@ -9,12 +9,12 @@ label_file = "frwikilabel"
 
 file_list = [in_folder+'/'+name for name in os.listdir(in_folder)]
 
-open (out_folder  + "/" + "adq.txt", "w")
-open (out_folder  + "/" + "ba.txt", "w")
-open (out_folder  + "/" + "bd.txt", "w")
-open (out_folder  + "/" + "a.txt", "w")
-open (out_folder  + "/" + "b.txt", "w")
-open (out_folder  + "/" + "e.txt", "w")
+# open (out_folder  + "/" + "adq.txt", "w")
+# open (out_folder  + "/" + "ba.txt", "w")
+# open (out_folder  + "/" + "bd.txt", "w")
+# open (out_folder  + "/" + "a.txt", "w")
+# open (out_folder  + "/" + "b.txt", "w")
+# open (out_folder  + "/" + "e.txt", "w")
 
 labels = []
 with open (label_file, "r") as f:

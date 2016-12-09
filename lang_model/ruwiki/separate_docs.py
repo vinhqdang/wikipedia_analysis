@@ -5,16 +5,16 @@ import os
 
 in_folder = "text"
 out_folder = "separate"
-label_file = "enwikilabel"
+label_file = "ruwikilabel"
 
 file_list = [in_folder+'/'+name for name in os.listdir(in_folder)]
 
-open (out_folder  + "/" + "fa.txt", "w")
-open (out_folder  + "/" + "ga.txt", "w")
-open (out_folder  + "/" + "sa.txt", "w")
-open (out_folder  + "/" + "i.txt", "w")
-open (out_folder  + "/" + "ii.txt", "w")
-open (out_folder  + "/" + "iii.txt", "w")
+# open (out_folder  + "/" + "fa.txt", "w")
+# open (out_folder  + "/" + "ga.txt", "w")
+# open (out_folder  + "/" + "sa.txt", "w")
+# open (out_folder  + "/" + "i.txt", "w")
+# open (out_folder  + "/" + "ii.txt", "w")
+# open (out_folder  + "/" + "iii.txt", "w")
 
 labels = []
 with open (label_file, "r") as f:
