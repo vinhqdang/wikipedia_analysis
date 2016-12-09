@@ -17,10 +17,10 @@ with open("ruwiki.labelings.8k.json", "r") as json_file:
 
 label_file = "ruwikilabel"
 
-try:
-    os.remove(label_file)
-except OSError:
-    pass
+# try:
+#     os.remove(label_file)
+# except OSError:
+#     pass
 
 missing_lines = []
 
@@ -92,7 +92,7 @@ for i in range(len(lines)):
         missing_lines.append(i+1)
         print ('So far ' + str(len(missing_lines)) + " missing")
         print (url_string)
-        raw_input("Press anykey to skip and continue in next line")
+        # raw_input("Press anykey to skip and continue in next line")
         continue
 
     # got rev_id, now get the data
