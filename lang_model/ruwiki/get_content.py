@@ -91,6 +91,7 @@ for i in range(len(lines)):
         print ("original timestamp: " + str(timestamp))
         missing_lines.append(i+1)
         print ('So far ' + str(len(missing_lines)) + " missing")
+        print (url_string)
         raw_input("Press anykey to skip and continue in next line")
         continue
 
