@@ -8,7 +8,10 @@ from gensim.models.doc2vec import TaggedDocument
  
 def get_doc_list(folder_name):
     doc_list = []
-    file_list = [folder_name+'/'+name for name in os.listdir(folder_name)]
+    # file_list = [folder_name+'/'+name for name in os.listdir(folder_name)]
+    file_list = [int(name) for name in os.listdir(folder_name)]
+    file_list = sorted(file_list)
+    file_list = [folder_name + '/' + str(name) for name in file_list]
     for file in file_list:
         st = open(file,'r').read()
         doc_list.append(st)
