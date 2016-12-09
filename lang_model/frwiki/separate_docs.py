@@ -5,7 +5,7 @@ import os
 
 in_folder = "text"
 out_folder = "separate"
-label_file = "enwikilabel"
+label_file = "frwikilabel"
 
 file_list = [in_folder+'/'+name for name in os.listdir(in_folder)]
 
