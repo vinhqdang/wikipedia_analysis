@@ -89,6 +89,8 @@ for i in range(len(lines)):
         print ("Title: " +  title)
         print ("earliest timestamp: " + str(rev_timestamp))
         print ("original timestamp: " + str(timestamp))
+        missing_lines.append(i+1)
+        print ('So far ' + str(len(missing_lines)) + " missing")
         raw_input("Press anykey to skip and continue in next line")
         continue
 
