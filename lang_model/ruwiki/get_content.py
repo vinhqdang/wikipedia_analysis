@@ -109,7 +109,7 @@ for i in range(len(lines)):
     with open (file_name, "w") as f:
         f.write(content.encode('utf8'))
     with open (label_file, "a") as f:
-        f.write (quality.encode('utf8') + "\n")
+        f.write (str(i+1) + '\t + quality.encode('utf8') + "\n")
 
 print ('Total missing page = ' + str (len(missing_lines)) + " over " + str(len(lines)) + " pages.")
 print (missing_lines)
