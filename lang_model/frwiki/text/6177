@@ -1,0 +1,114 @@
+{{Voir homonymes|preuve}}
+{{À vérifier}}
+{{ébauche|philosophie}}
+
+La '''Preuve [[Ontologie (philosophie)|ontologique]] de [[Kurt Gödel|Gödel]]''' est une démonstration, dans le système de [[logique modale]], de l'existence de [[Dieu]] :
+
+Bien que Gödel ait été croyant, il n'a jamais publié cette preuve car il craignait qu'elle soit interprétée comme l'établissement de l'existence de Dieu au-delà du doute. Au lieu de cela, il ne la voyait que comme une étude logique et une formulation claire des arguments de [[Leibniz]]. Il a à plusieurs reprises présenté cette preuve à des amis vers 1970 mais elle n'a été publiée qu'en 1987, neuf ans après sa mort.
+
+==Démonstration==
+===Écrite===
+*Définition 1 : x est semblable à Dieu si et seulement si x ne contient comme propriétés essentielles que les propriétés qui sont positives.
+*Définition 2 : A est une essence de x si et seulement si pour chaque propriété B, x contient nécessairement B si et seulement si A entraîne B.
+*Définition 3 : x existe nécessairement si et seulement si chaque essence de x est nécessairement exemplifiée.
+*Axiome 1 : Toute propriété entraînée par - c'est-à-dire impliquée uniquement par - une propriété positive est positive.
+*Axiome 2 : Une propriété est positive si et seulement si sa négation n'est pas positive.
+*Axiome 3 : La propriété d'être semblable à Dieu est positive.
+*Axiome 4 : Si une propriété est positive, alors elle est positive nécessairement.
+*Axiome 5 : L'existence nécessaire est positive.
+*Axiome 6 : Pour toute propriété P, si P est positive, alors d'être nécessairement P est positive.
+*Théorème 1 : Si une propriété est positive, alors elle est consistante, c'est-à-dire exemplifiée possiblement
+*Théorème 2 : La propriété d'être semblable à Dieu est consistante.
+*Théorème 3 : Si quelque chose est semblable à Dieu, alors la propriété d'être semblable à Dieu est une essence de cette chose.
+*Théorème 4 : Nécessairement, la propriété d'être semblable à Dieu est exemplifiée<ref>Oppy, Graham. [http://plato.stanford.edu/entries/ontological-arguments/#GodOntArg Ontological arguments ]. Stanford Encyclopedia of Philosophy. </ref>.
+
+===Symbolique===
+<math>
+\begin{array}{rl}
+\mbox{Ax. 1.} & P(\varphi) \land \Box\; \forall x [\varphi(x) \rightarrow \psi(x)] \rightarrow P(\psi)\\
+
+\mbox{Ax. 2.} & P(\neg \varphi) \leftrightarrow \neg P(\varphi)\\
+
+\mbox{Th. 1.} & P(\varphi) \rightarrow \Diamond\; \exists x\; [\varphi(x)]\\
+
+\mbox{Df. 1.} & G(x) \iff \forall \varphi[P(\varphi) \rightarrow \varphi(x)]\\
+
+\mbox{Ax. 3.} & P(G)\\
+
+\mbox{Th. 2.} & \Diamond\; \exists x\; G(x)\\
+
+\mbox{Df. 2.} & \varphi\;\operatorname{ess}\;x \iff \varphi(x) \land \forall\psi\lbrace\psi(x) \rightarrow \Box\; \forall x[\varphi(x) \rightarrow \psi(x)]\rbrace\\
+
+\mbox{Ax. 4.} & P(\varphi) \rightarrow \Box\; P(\varphi)\\
+
+\mbox{Th. 3.} & G(x) \rightarrow G\;\operatorname{ess}\;x\\
+
+\mbox{Df. 3.} & E(x) \iff \forall \varphi[\varphi\;\operatorname{ess}\;x \rightarrow \Box\; \exists x\; \varphi(x)]\\
+
+\mbox{Ax. 5.} & P(E)\\
+
+\mbox{Th. 4.} & \Box\; \exists x\; G(x)
+\end{array}
+</math>
+
+
+Où <math>\Diamond\; A</math> signifie "A est possible" et où <math>\Box\; A</math> signifie "A est nécessaire".
+
+==Critique de la démonstration==
+
+Cette démonstration mathématique datant de [[1970]] mais publiée en [[1987]] provoqua un vif émoi chez les mathématiciens et logiciens, qui n'étaient pas pour autant capables d'expliquer tous les aspects de cette preuve. Il est peut-être même impossible de comprendre une preuve aussi abstraite, qui est donc à prendre avec précaution.
+
+==Critique des définitions et des axiomes==
+
+<small>''Traduit depuis [[:en:Gödel's ontological proof|Gödel's ontological proof]]''</small>
+
+Il y a plusieurs raisons pour que les axiomes de Gödel puissent ne pas être réalistes, selon ce qui suit :
+
+* Il peut être impossible de satisfaire correctement l'axiome 3, qui suppose qu'une conjonction des propriétés positives est également une propriété positive ; pour que la preuve soit recevable, l'axiome doit être pris pour s'appliquer à arbitraire, pas nécessairement fini, des collections de propriétés. D'ailleurs, quelques propriétés positives peuvent être incompatibles avec d'autres. Par exemple la pitié peut être incompatible avec la justice. Dans ce cas la conjonction serait une propriété impossible et G(x) serait faux de chaque x. [[Ted Drange]] a fait cette objection à la concordance d'attribuer toutes les propriétés positives à Dieu - voir [http://www.infidels.org/library/modern/theodore_drange/incompatible.html cet article] pour la liste de Drange de propriétés incompatibles et de quelques contre-arguments. Pour ces raisons, cet axiome a été remplacé dans quelques reworkings de la preuve (Anderson y compris, ci-dessous) par la prétention que G(x) est positif (Pos(G(x)).
+
+* [[Jordan Sobel]] a argumenté que les axiomes de Gödel sont trop forts : ils impliquent que tous les mondes possibles sont identiques. Il s'est avéré que ce résultat en considérant la propriété "est tel que X est vrai", où X est n'importe quel véritable rapport modal au sujet du monde. Si g est un objet divin, et X est en fait vrai, alors g doit posséder cette propriété, et par conséquent doit la posséder nécessairement. Mais alors X est une vérité nécessaire. Un argument semblable prouve que toutes les faussetés sont des faussetés nécessaires. [[C. Anthony Anderson]] a donné un système axiomatique légèrement différent qui essaye d'éviter ce problème.
+
+Dans le système d'Anderson, les axiomes 1, 2, et 5 sont ci-dessus inchangés ; cependant les autres axiomes sont remplacés avec :
+
+* Axiome 3': G(x) est positif.
+* Axiome 4': Si une propriété est positive, sa négation n'est pas positive.
+
+Ces axiomes laissent ouverte la possibilité qu'un objet divin possédera quelques propriétés non positives, à condition que ces propriétés soient contingentes plutôt que nécessaires.
+
+Notons également que la définition de ''être semblable à Dieu'' (''quelque chose qui contient toutes les propriétés vraies'') ne ''définit pas'' nécessairement Dieu, mais seulement un objet que nous appelons ainsi, qui pourrait être appelé ''univers'', ''tout'' ou ''vérité'' sans modifier la preuve.
+
+D'autre part, Gödel pose comme vérités indémontrables l'axiome 3 et 5, c'est-à-dire sans  conditionnelles, contrairement aux axiomes 1,2,4 et 6. À partir de ces deux axiomes, s'apparentant alors à des dogmes, découle le reste de la démonstration. 
+
+Or, on ne peut écrire ouvertement et sans conditions que "la propriété d'être semblable à dieu est positive" ⇔P(G), ni que "l'existence nécessaire est positive" ⇔P(E). '''P(G) et P(E) ne peuvent être vraies''' car la propriété d'être positif(ve) est implicitement soumise à des conditions. En d'autre termes, ''"n'est pas positif qui veut".'' 
+
+Si l'on veut rester logique, il aurait été plus juste d'écrire l'axiome 3 tel que:
+"La propriété d'être semblable à dieu est positive '''si''' elle est consistante c'est-à-dire exemplifiée" (ce qui est vrai), étant alors en accord avec le théorème 1, le corollaire 1 et le théorème 3.
+ 
+De même, l'axiome 5 devient vrai en s'écrivant tel que "L'existence nécessaire est positive '''si''' elle est consistante c'est-à-dire exemplifiée" (ce qui est vrai), étant alors également en accord avec la définition 3.
+
+Pour résumer, Godël pose, volontairement ou pas, deux fausses vérités auto-proclamées (axiomes 3 et 5), non démontrables, non vérifiables et, qui plus est sans conditions, tels deux dogmes religieux, et desquels découle habilement sa démonstration de l'existence de dieu. Logiquement liés à des propositions conditionnelles, ces axiomes deviennent vrais, mais la portée universelle (inconditionnelle) de la démonstration est réduite à néant.
+
+== Notes et références ==
+<references />
+
+==Voir aussi==
+=== Articles connexes ===
+*[[Logique modale]]
+
+=== Liens externes ===
+* [http://www.ontology.co/ontological-proof-contemporary.htm Bibliographie des études sur l'argument ontologique de Gödel]
+* Piergiorgio Odifreddi, [http://www.tribunes.com/tribune/alliage/43/odifreddi_43.htm Une démonstration divine - la preuve ontologique, d'Anselme à Gödel]
+* {{en}} Christopher Small, « ''[http://www.stats.uwaterloo.ca/~cgsmall/Godel.final.revision.PDF Reflections on Gödel’s Ontological Argument]'' », [[Université de Waterloo]].
+
+{{Portail|logique}}
+
+[[Catégorie:Philosophie de la religion]]
+[[Catégorie:Métaphysique]]
+[[Catégorie:Dieu]]
+[[Catégorie:Logique]]
+
+[[ca:Demostració ontològica de Gödel]]
+[[en:Gödel's ontological proof]]
+[[et:Gödeli ontoloogiline jumalatõestus]]
+[[hu:Gödel ontológiai istenérve]]
+[[zh:哥德爾本體論證明]]

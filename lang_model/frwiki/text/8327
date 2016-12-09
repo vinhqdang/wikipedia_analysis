@@ -1,0 +1,178 @@
+{{Article général|IPv6}}
+La '''transition d'IPv4 vers IPv6''' est un processus qui vise au remplacement progressif du protocole [[IPv4]] par [[IPv6]] sur [[Internet]].
+
+== Phases de la transition ==
+Les adresses IPv4 et IPv6 ne sont pas compatibles, la communication entre un hôte ne disposant que d'adresses IPv6 et un hôte ne disposant que d'adresses IPv4 constitue donc un problème. 
+
+Deux approches sont possibles pour permettre la communication : 
+* les traducteurs de protocoles,  
+* la double pile.
+
+La traduction de protocole peut avoir lieu à plusieurs niveaux : réseau (NAT-PT, NAT64), transport (TRT, RFC 3142) ou applicatif (DNS-ALG, RFC 2766). Si elle peut servir à procurer la connectivité pour un nombre d'hôte ou d'applications limitées, la traduction se heurte à des problèmes d'échelle (RFC 4966).
+
+Dans l'approche ''double pile'', la première phase de la transition consiste à doter les hôtes IPv4, et les serveurs en particulier, à la fois d'adresses IPv6 et IPv4 de façon à leur permettre de communiquer aussi bien avec les hôtes IPv4 et IPv6. Les ''îles'' IPv6 sont interconnectées par des tunnels IPv6 sur IPv4. 
+
+La seconde phase voit se généraliser la double pile à la plus grande partie d'Internet. Le recours à des tunnels IPv6 sur IPv4 est donc de moins en moins nécessaire.
+
+Une dernière phase voit l'abandon progressif d'IPv4 sur Internet. Certains réseaux privés continuent à s'en servir, dans la mesure où la connectivité Internet ne leur est pas nécessaire. 
+
+La première phase de cette transition est en cours depuis le début du {{s-|XXI|e}}, le déploiement d'IPv6 étant plus lent qu'initialement escompté. Comme les deux premières phases ne contribuent pas à diminuer la demande en adresses IPv4, l'[[épuisement des adresses IPv4|épuisement imminent des adresses IPv4 publiques]] conduit à la mise au point de mécanismes de partage des adresses.
+
+== Transition pour des hôtes individuels et les réseaux d'entreprise ==
+[[Fichier:Tunnel-ipv6.svg|thumb|Schéma de fonctionnement d'un tunnel statique.]]
+[[Fichier:6to4.svg|thumb|Schéma de fonctionnement de 6to4.]]
+[[Fichier:6to4 convert address.svg|thumb|Encodage d'une adresse IPv4 dans le préfixe 6to4.]]
+La manière la plus simple d'accéder à IPv6 est lors de l'abonnement de choisir un [[Fournisseur d'accès à Internet|FAI]] qui offre de l'IPv6 ''nativement'', c'est-à-dire sans recours à des tunnels.
+
+À défaut, et pendant une phase de transition, il est possible d'obtenir une connectivité IPv6 via un tunnel. Les paquets IPv6 sont alors encapsulés dans des paquets IPv4, qui peuvent traverser le réseau du FAI jusqu'à un serveur qui prend en charge IPv6 et IPv4, et où ils sont décapsulés. Le recours à des tunnels, et donc à un [[réseau overlay]], est de nature à nuire aux performances. La RFC 1933 décrit les mécanismes de transition.
+
+; Tunnels configurés explicitement :
+Plusieurs services du type « ''[[tunnel broker]]'' » sont disponibles, nécessitant en général une inscription. On peut citer SixXS<ref>[http://www.sixxs.net/ SixXS]</ref>, Freenet6<ref>[http://go6.net/ Freenet6]</ref> ou Hurricane Electric<ref>[http://tunnelbroker.net/ Hurricane Electric]</ref>.
+
+Les protocoles utilisés peuvent être :
+* [[6in4]] (RFC 4213) fait usage du numéro de protocole 41 d'IP et est donc parfois bloqué par des [[pare-feu|pare-feux]] et les NAT.
+* [[Anything In Anything|AYIYA]] permet le transport sur UDP ou TCP et gère le changement d'adresse IP. 
+* [[Generic Routing Encapsulation|GRE]] utilise le numéro de protocole 47.
+
+Le [[Tunnel Setup Protocol]] (RFC 5572) facilite la création des tunnels et permet la mobilité et l'authentification. Le ''Tunnel Information and Control protocol'', utilisé par {{Lien|AICCU}}, automatise la création des tunnels.
+
+; Tunnels automatiques :
+* [[6to4]] (RFC 3056) si une adresse IPv4 publique (de préférence fixe) est disponible, 6to4 est simple à mettre en place. Pour l'accès aux adresses IPv6 hors du préfixe 2002::/16 (réservé pour 6to4), une adresse relais [[anycast]] est réservée, 192.88.99.1.
+* {{Lien|6over4}} (RFC 2529) permet la connexion à travers un réseau IPv4 qui prend en charge [[multicast]]
+* [[ISATAP]] (RFC 5214), une amélioration du précédent qui ne requiert pas le support multicast.
+* [[Teredo (protocole)|Teredo]] (RFC 4380) utilisable dans un réseau d'adresses IPv4 privées, relié à Internet via un routeur assurant une traduction d'adresses. Une implémentation de Teredo fait partie de la pile IPv6 des systèmes [[Microsoft Windows|Windows]], et une implémentation pour [[Linux]] et les systèmes [[Berkeley Software Distribution|BSD]] est miredo<ref>[http://www.remlab.net/miredo/ miredo]</ref>.
+
+; Traduction de protocole dans le réseau
+
+* {{Lang|en|Stateless IP/ICMP Translation}} (SIIT, RFC 2765) est un mécanisme de traduction d'en-tête entre IPv6 et IPv4. Le RFC ne décrit pas de manière générale d'associer les adresses IPv6 et IPv4. Le fonctionnement de SIIT ne permet pas d'associer plus de deux adresses uniques de chaque protocole par hôte. Ceci signifie que chaque hôte IPv6 doit également disposer d'une adresses IPv4 publique.
+
+* NAT-PT (RFC 2766) est semblable. Les routeurs intermédiaires entre IPv6 et IPv4 modifient les en-têtes. Un proxy DNS examine les requêtes provenant des hôtes et assigne des adresses IPv4 ou IPv6 fictives quand la réponse DNS indique qu'une famille manque. Le recours à la modification des RR DNS rend cependant [[DNSSEC]] inopérant.
+
+* Dual-Stack Transition Mechanism (DSTM)<ref>[http://tools.ietf.org/html/draft-bound-dstm-exp Dual Stack IPv6 Dominant Transition Mechanism (DSTM)] Internet Draft, 2005</ref> permet également la traduction d'adresse IPv4 et IPv6.
+
+; Traduction de protocole dans l'hôte 
+
+Il n'est pas toujours possible de modifier les applications rapidement pour les rendre compatibles avec IPv6, quand le [[code source]] n'est pas disponible, par exemple.
+ 
+Les techniques suivantes permettent à une application IPv4 de fonctionner sur un système doté d'une double pile et de communiquer avec des clients IPv6. 
+Les techniques sont utilisées en combinaison avec le ''resolver'' [[Domain Name System|DNS]] pour assigner des adresses IPv4 fictives automatiquement et les faire correspondre aux adresses IPv6 qui sont réellement utilisées dans le réseau.
+
+* ''Bump in the Stack'' (BIS, RFC 2767) intervient à l'intérieur du noyau d'un système d'exploitation et permet aux applications IPv4 de fonctionner sans modification, une couche logicielle additionnelle assurant la communication entre les protocoles au niveau TCP ou UDP. Il utilise le mécanisme de SIIT pour traduire les protocole et hérite des limitations de SIIT.
+
+* ''Bump in the API'' (BIA, RFC 3338) fait de même au niveau de l'[[interface de programmation]]. Comme il intervient à un niveau supérieur, il n'est pas nécessaire d'effectuer de la traduction d'en-tête.
+
+* SOCKS (RFC 3089) est fonctionnellement semblable, il se base sur le protocole décrit dans la RFC 1928.
+
+; Passerelles applicatives 
+
+Il est possible de faire usage de serveurs qui disposent d'une double pile et qui font office de passerelle applicative ({{Lang|en|Application-Level gateway}}, ALG), un serveur [[proxy]] web par exemple.
+
+=== NAT64 et DNS64 ===
+[[File:NAT64.svg|thumb|NAT64 et DNS64.]]
+Les RFC 6146 et RFC 6147 décrivent un traducteur de protocole qui permet à des hôtes IPv6 d'accéder à des serveurs IPv4.
+
+Le DNS64 opère une [[Manipulation de l'espace des noms de domaine|manipulation des noms de domaines]] et fournit, dans sa réponse au client, une adresse IPv6 (AAAA) à un nom d'hôte dispose d'une adresse IPv4 (A) mais pas d'adresse IPv6. Celle-ci est construite avec le préfixe réservé 64:ff9b::/96 auquel on ajoute les 32 bits de l'adresse IPv4 (d'autres méthodes sont possibles, tant que l'encasulation de l'adresse IPv4 est cohérentes entre le NAT64 et le DNS64). Quand le NAT64 reçoit une connexion avec une adresse de type 64:ff9b::/96 comme destination, il crée une entrée dans une table d'états et assigne une numéro de port de sortie à ce flux (traduction de port) ou une adresse IPv4 provenant d'un groupe (traduction d'adresse) qui sera prise comme source du flux IPv4. NAT64 fonctionne avec TCP, UDP et ICMP.
+
+Le NAT64 et le DNS64 n'ont pas besoin de communiquer. Si le client fait usage de [[DNSSEC]] et qu'il valide lui-même la réponse, alors DNS64 ne peut pas fonctionner correctement. De même, si AH d'IPsec est actif et protège l'en-tête, le NAT64 ne fonctionnera pas correctement.
+
+{{-}}
+
+== Transition pour les opérateurs et fournisseurs d'accès ==
+Devant l'épuisement des adresses IPv4 et la nécessité de fournir un service IPv6 à leurs clients, les opérateurs adaptent leur réseau IP.
+Les préoccupations principales de ceux-ci sont les suivantes :
+* mettre à disposition des clients un service de transit IPv6 du même niveau que le transit IPv4, 
+* assurer la continuité du service de transit vers l'Internet IPv4 en dépit de l'épuisement des adresses IPv4.
+
+Il existe un certain nombre de scénarios en cours d'étude et qui font l'objet d'Internet drafts. Ceux-ci varient dans la progressivité du déploiement et la durabilité de la solution. 
+
+=== Carrier Grade NAT ===
+[[Fichier:CGN+IPv6.svg|thumb|Carrier Grade NAT en IPv4. Le CGN sert également de passerelle vers IPv6.]]
+{{Voir|Carrier Grade NAT}}
+L'utilisation d'un [[Network address translation|NAT]] à grande échelle ({{Lang|en|Carrier Grade NAT}}, {{Lang|en|Large Scale NAT}} ou NAT44) permet de surmonter le problème du manque d'adresse IPv4 à assigner aux clients. Il consiste à distribuer des [[réseau privé|adresses privées]] à la passerelle des nouveaux clients au lieu d'adresse publique et à traduire ces adresses en adresses publiques vers Internet.
+
+Le CGN utilise la traduction de port, de sorte qu'une seule adresse publique est utilisée par de nombreux clients. Un certain nombre de portes [[Transmission Control Protocol|TCP]] et [[User Datagram Protocol|UDP]] sont réservées dans les adresses publiques pour chacun des clients. Compte tenu du fait qu'il existe 65535 numéros de ports, et en supposant qu'une adresse publique est utilisée par 100 clients, chaque client dispose d'environ 650 numéros de port, c'est-à-dire autant de connexions simultanées possibles. Il n'existe pas de consensus sur le nombre de ports minimal à assigner à chaque client. Certaines applications qui établissent de nombreuses connexions en parallèle peuvent être négativement affectées si ce nombre est trop faible.
+
+Bien qu'il réduise fortement le besoin d'adresse IPv4, le CGN n'est pas un système de transition à proprement parler, mais il est utilisé en combinaison avec d'autres approches pour assurer la continuité de la connectivité avec l'Internet IPv4.
+
+==== CGN pour la transition vers IPv6 ====
+
+Le CGN peut être utilisé pour une transition progressive vers IPv6 en encapsulant le trafic IPv6 dans un tunnel IPv4, dans un schéma similaire à 6rd<ref>[http://tools.ietf.org/html/draft-jiang-v6ops-incremental-cgn An Incremental Carrier-Grade NAT (CGN) for IPv6 Transition]</ref>.
+
+{{-}}
+
+=== A+P ===
+
+A+P est une méthode qui permet d'utiliser un certain nombre de bits du numéro de port TCP ou UDP pour le routage.
+
+Plusieurs CPE peuvent donc utiliser la même adresse IP mais avec des plages de ports différentes. Le routage vers le CPE utilise non seulement l'adresse IP mais aussi plusieurs bits du numéro de port<ref>[http://tools.ietf.org/html/draft-ymbk-aplusp The A+P Approach to the IPv4 Address Shortage] Internet Draft 2011</ref>.
+
+Tout comme le CGN, A+P permet de faire face à l'épuisement des adresses IP mais ne constitue pas une méthode de transition vers IPv6.
+
+=== Traducteur de protocole ===
+[[Fichier:AFTNAT64.svg|thumb|NAT64 ou Address Family Translation.]]
+Le NAT-PT ({{Lang|en|Protocol Translation}}), NAT64, NAT46 ou AFT ({{Lang|en|Address Family Translation}}) permet de traduire IPv4 et IPv6. S'il est sans état, on l'appelle aussi IVI.
+
+Ceci permet d'attribuer des adresses IPv6 aux clients tout en préservant la connectivité avec l'Internet IPv4. 
+
+Il doit cependant exister une façon d'associer certaines adresses IPv4 et IPv6 connue du NAT64, par exemple via le [[Domain Name System]].
+
+Le NAT-PT est associé au DNS la RFC 2766 mais a été rendu obsolète par la RFC 4966 en raison de problèmes causés.
+{{-}}
+
+=== 6rd ===
+[[Fichier:6rd.svg|thumb|6rd.]]
+[[6rd]] (rd pour {{Lang|en|rapid deployment}}, RFC 5569) est une variante de [[6to4]] qui implique le fournisseur de service Internet plutôt que de passerelles d'Internet. Il n'est pas fait usage du préfixe 2002::/16 réservé pour 6to4 mais de l'espace d'adressage IPv6 du fournisseur d'accès. Le routeur du client ({{Lang|en|home gateway}}, HG) encapsule le trafic IPv6 dans un tunnel à destination de l'adresse bien connue de la passerelle 6rd du FAI.
+
+Il peut être utilisé en combinaison avec le CGN.
+
+6rd a été déployé par le fournisseur [[Free (société)|Free]] en 2007.
+{{-}}
+=== Dual-Stack Lite ===
+[[Fichier:DSLite.svg|thumb|Dual-Stack Lite.]]
+{{Lang|en|Dual-Stack Lite}}<ref>[http://tools.ietf.org/html/draft-durand-softwire-dual-stack-lite Dual-stack lite broadband deployments post IPv4 exhaustion]</ref> est une approche dans laquelle le réseau du fournisseur d'accès est initialement migré vers IPv6. Le trafic IPv4 de la passerelle du client est encapsulé dans un tunnel IPv6 appelé ''softwire'' et il aboutit à la passerelle DS-Lite du FAI. Celle-ci fait office de CGN pour IPv4. Ceci évite de devoir attribuer des adresses IPv4 publiques aux routeurs des clients.
+
+{{-}}
+=== MPLS ===
+; [[Virtual Private LAN Service|VPLS]]
+
+On peut transporter les trames ethernet au niveau 2 dans un réseau MPLS. 
+
+; 6 PE
+
+[[Fichier:6PE.svg|thumb|Utilisation de 6PE.]]
+Dans un réseau [[Multiprotocol Label Switching|MPLS]], la technique 6PE (RFC 4798) permet d'interconnecter des clients IPv6 tout en conservant le cœur du réseau (P) en IPv4.
+
+Les routeurs du cœur échangent des labels et n'ont pas connaissance d'IPv6. L'IGP et le LDP restent en IPv4.
+
+Les préfixes IPv6 sont échangés via MP-BGP entre les 6PE, le next-hop étant une [[adresse IPv6 mappant IPv4]] de la forme ::ffff:/96 suivi par les 32 bits de l'adresse IPv4 du PE. Cependant, les préfixes sont inclus dans la GRF et non dans un VPRN IPv6.
+Pour éviter que le {{Lang|en|Penultimate Hop Popping}} au niveau du P ne découvre le paquet IPv6, un label additionnel est ajouté par le 6PE.
+
+Cette façon de procédér est plus efficace qu'un tunnel IPv6 sur IPv4 et permet un déploiement progressif. Cependant, l'absence d'une réelle VPRN IPv6 peut être une limitation.
+
+; 6VPE 
+
+6VPE (RFC 4659) permet de créer un réel VPRN IPv6<ref>[http://www.cisco.com/web/about/ac123/ac147/archived_issues/ipj_8-2/ipv6.html IPv6—A Service Provider View in Advancing MPLS Networks], Internet Protocol Journal, juin 2005</ref>.
+
+=== Autres services ===
+
+Le déploiement d'IPv6 dans le réseau d'un opérateur implique aussi des changements :
+* au niveau du système de surveillance du réseau,
+* au niveau des système d'authentification (comme [[Remote Authentication Dial-In User Service|RADIUS]]),
+* au niveau des enregistrements à des fins légales quant à l'utilisation des adresses IP,
+* au niveau des services de base comme le DNS, SMTP, WWW.
+
+== Notes et références ==
+{{références}}
+
+== Liens externes ==
+* [http://cisco.biz/en/US/prod/collateral/iosswrel/ps6537/ps6553/white_paper_c11-558744-00_ns1017_Networking_Solutions_White_Paper.html Cisco Carrier-Grade IPv6]
+* [http://meeting.afrinic.net/afrinic-11/slides/day1/IPv6_Strategy_Modou_SALL.pdf France Telecom IPv6 Strategy], novembre 2009
+* [https://www.isc.org/software/aftr AFTR] une implementation de CGN / DS-Lite.
+
+{{Portail|Télécommunications|Internet|Informatique}}
+
+[[Catégorie:IPv6]]
+
+[[en:IPv6 transition mechanisms]]
+[[es:Mecanismos de transición IPv6]]
+[[it:Transizione IPv4/IPv6]]

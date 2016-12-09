@@ -1,0 +1,665 @@
+La '''[[racine carrée]] de deux''', notée √{{surligner|2}}, √2 ou 2{{exp|1/2}}, est définie comme le seul [[nombre réel]] [[Nombre positif|positif]] qui, lorsqu’il est multiplié par lui-même, donne le nombre [[2 (nombre)|2]], autrement dit {{nobr|1=√2 × √2 = 2}}. C’est un [[nombre irrationnel]], dont une [[valeur approchée]] à 10<sup>-9</sup> près est 
+: <math>\sqrt{2} = 1,414\,213\,562</math>.
+[[Image:Square root of 2 triangle.svg|thumb|right|L’[[hypoténuse]] d’un [[triangle rectangle]] isocèle de côté 1 vaut √2.]]
+Le calcul d’une valeur approchée de √2 a été un problème mathématique pendant des siècles. Ces recherches ont permis de perfectionner les [[Algorithmique|algorithmes]] de calculs d’extraction de racines carrées. En informatique, ces recherches se sont poursuivies afin d’optimiser ces algorithmes en réduisant les temps de calcul et la consommation de mémoire<ref name="appro">La plupart des logiciels mathématiques, sur ordinateurs ou sur machines à calculer, utilisent des approximations pré-établies de cette constante - au moins jusqu’à un certain rang.</ref>.
+
+La longueur √2 peut être construite géométriquement de plusieurs manières ; par exemple, la diagonale d'un carré de côté 1, qui est l’[[hypoténuse]] d’un [[triangle rectangle]] isocèle, vaut √2 par le [[théorème de Pythagore]].
+
+Le nombre √2 est étudié depuis longtemps par les [[Mathématiques babyloniennes|Babyloniens]], experts en [[équation du second degré|questions du second degré]] et disposant d'un algorithme d'approximation précis. Depuis l'école de [[Pythagore]], les Grecs du {{Ve siècle av. J.-C.}} et du {{IVe siècle av. J.-C.}} l'étudient pour mieux comprendre l'incommensurabilité, concept équivalent à notre [[nombre irrationnel|irrationalité]]. Ils trouvent trois démonstrations différentes, conduisant à divers progrès, comme la mise au point du [[raisonnement par l'absurde]], la [[descente infinie]] ou encore l'anthyphérèse, un algorithme comparable à notre [[fraction continue]]. Pour les Grecs, ni les fractions, ni les irrationnels ne sont des nombres. Ce pas est franchi par les [[Mathématiques arabes|mathématiciens arabes]] à l'origine de l'[[algèbre]].
+
+Ce nombre intervient dans des applications de la vie courante :
+
+* les feuilles de papier au [[Format de papier#Formats internationaux|format international]] ([[ISO 216]]) ont une [[Notion de module|proportion]] longueur/largeur égale à √2 ;
+* en [[musique]], le rapport des fréquences de la [[Quarte (musique)|quarte]] augmentée de la [[gamme tempérée]] vaut √2 ;
+* en [[électricité]], la [[tension électrique|tension]] maximale du [[courant alternatif]] [[monophasé]] domestique vaut √2 de la [[tension efficace]] indiquée (généralement 110 ou {{nombre|230|[[Volt|V]]}}) ;
+* en photographie, la suite des valeurs d’[[Ouverture (photographie)|ouverture]] du diaphragme sont les valeurs approchées d’une [[suite géométrique]] de [[Raison d'une suite|raison]] √2.
+
+== Étymologie ==
+L’expression « racine carrée » est issue de la notation géométrique européenne qui prévalait avant la notation [[algèbre|algébrique]], et plus particulièrement de l’une des constructions de √2 qui sera présentée à la [[#Histoire|section consacrée à l'historique]] ;  en effet, les problèmes mathématiques ont souvent été présentés sous forme géométrique avant d’être ramenés à des expressions algébriques. L’expression « radical de deux » était aussi utilisée.
+
+== √2 dans la vie courante ==
+=== Format de papier ===
+ {{article détaillé|format de papier}}
+[[Image:Academ_from_square_to_standard_paper_format.svg|thumb|320px|left|Quatre lignes : quatre étapes d’une construction d’un format de papier normalisé à l’équerre et au compas, à partir d’un carré. Si la dimension ''d'' du carré initial est {{nombre|21|cm}}, alors le rectangle obtenu est le format A4.]]
+[[Image:A size illustration.svg|thumb|right|Le rapport longueur/largeur d’une feuille de format A est une bonne approximation de √2.]]
+Les formats de papier A, B et C de la norme [[ISO 216]], d’emploi courant hors de l’[[Amérique du Nord]], ont été conçus pour vérifier une propriété remarquable : une feuille coupée en deux parties égales par la largeur, produit deux feuilles [[similitude (géométrie)|semblables]] à l’original ; c’est-à-dire avec le même rapport longueur/largeur. L’aire étant diminuée d’un {{nobr|facteur 2}}, ceci n’est possible que si ce rapport vaut √2 ; dans la pratique, les dimensions sont arrondies.
+
+Ci-dessous sont données les valeurs approximatives des formats A0 à A5 en fonction de √2.
+::{| class="wikitable"
+|+ ''Valeurs approximatives des dimensions des formats A0 à A5 exprimées en fonction de √2. Dans la pratique, les dimensions sont arrondies.''
+|-
+| format || longueur (m) || largeur (m) || aire (m{{exp|2}})
+|-
+| A0     || √√2          || {{fraction|√√2|√2}}      || 1
+|-
+| A1     || {{fraction|√√2|√2}}       ||  {{fraction|√√2|2}}      || {{fraction|1|2}}
+|-
+| A2     || {{fraction|√√2|2}}        ||  {{fraction|√√2|(2√2)}}  || {{fraction|1|4}}
+|-
+| A3     || {{fraction|√√2|(2√2)}}    || {{fraction|√√2|4}}       || {{fraction|1|8}}
+|-
+| A4     || {{fraction|√√2|4}}        || {{fraction|√√2|(4√2)}}   || {{fraction|1|16}}
+|}
+Les séries B et C diffèrent de la série A respectivement d’un facteur √√2 (~ 1,19) et √√√2 (~ 1,09).
+
+Les facteurs d’agrandissement de 200 %, 141 %, 71 %, 50 % proposés par les [[photocopieuse]]s sont des approximations de (√2){{exp|''n''}} qui permettent le passage à des formats de papier supérieurs ou inférieurs — que ce soit physiquement ou par impression de 2{{exp|''n''}} pages par feuille.
+
+Notons qu'en mathématiques, on note plus volontiers <math>\sqrt{\sqrt{2}} = \sqrt[4]{2} = 2^{1/4}</math> et <math>\sqrt{\sqrt{\sqrt{2}}} = \sqrt[8]{2} = 2^{1/8}</math>.
+
+=== Musique ===
+{{article détaillé|gamme tempérée}}
+La gamme du tempérament égal se construit ainsi : le rapport de [[fréquence]]s entre les notes extrêmes de l’[[octave (musique)|octave]] est 2 ; et la gamme est divisée en douze-demi tons de rapports de fréquence égaux &fnof;. Le rapport de fréquences entre la note la plus haute et la plus basse est donc ƒ<sup>&nbsp;12</sup>, qui vaut, comme indiqué précédemment, 2. Le demi-ton a ainsi un rapport ƒ = 2<sup>1/12</sup>.
+::{| class="wikitable"
+|+ ''Rapports de fréquences des notes de la gamme tempérée par rapport à la note la plus basse.''
+|-
+|style="width: 3em"| ''do''
+|style="width: 3em"| ''do''♯
+|style="width: 3em"| ''ré''
+|style="width: 3em"| ''ré''♯
+|style="width: 3em"| ''mi''
+|style="width: 3em"| ''fa'' 
+|style="width: 3em"| ''fa''♯ 
+|style="width: 3em"| ''sol''
+|style="width: 3em"| ''sol''♯
+|style="width: 3em"| ''la''
+|style="width: 3em"| ''la''♯
+|style="width: 3em"| ''si''
+|style="width: 3em"| ''do''
+|-
+|1
+|2<sup>1/12</sup>
+|2<sup>1/6</sup>
+|2<sup>1/4</sup>
+|2<sup>1/3</sup>
+|2<sup>5/12</sup>
+|√2
+|2<sup>7/12</sup>
+|2<sup>2/3</sup>
+|2<sup>3/4</sup>
+|2<sup>5/6</sup>
+|2<sup>11/12</sup>
+|2
+|}
+Dans ce système, la [[quarte (musique)|quarte]] augmentée (''do''–''fa''♯) et la [[quinte]] diminuée (do-sol♭) sont égales et valent six demi-tons ; elles ont un rapport de fréquences de √2. Le [[chant grégorien]] utilise cet intervalle, le [[triton (musique)|triton]], mais à la fin du [[Moyen Âge]] celui-ci est systématiquement évité car jugé trop dissonant. Il reçoit alors le surnom de « {{lang|la|''Diabolus in Musica''}} ».
+
+=== Électricité ===
+[[Image:sin.svg|thumb|
+right|Tension sinusoïdale : valeur efficace.]]
+
+{{article détaillé|tension efficace}}
+
+En [[électricité]], la [[tension efficace]] U<sub>eff</sub> d’un [[courant alternatif]] [[sinusoïde|sinusoïdal]] [[monophasé]] — par exemple les {{nombre|110|V}} ou {{nombre|220|V}} du courant domestique — est reliée à l’amplitude de la tension U<sub>max</sub> par
+: U<sub>max</sub> = U<sub>eff</sub>√2, noté aussi Û=U√2,
+soit, dans la plupart des applications courantes :
+: U<sub>eff</sub> ≃ 0,7 U<sub>max</sub>.
+
+Cela est valable plus généralement pour la valeur efficace des grandeurs linéaires d’une [[onde]] sinusoïdale.
+On remarquera aussi que
+:  {{nobr|20 log (U/√2)}} = {{nobr|20 log U - 20 log √2}} = {{nobr|20 log U - log ((√2)<sup>20</sup>)}} = {{nobr|20 log U - log {{formatnum:1024}}}} ≃ {{nobr|20 log U - 3}}.
+On parle de bande passante à {{nombre|-3|décibels}}.
+
+{{clr}}
+
+=== Photographie ===
+[[Image:Jdd diaphragme photo.jpg|thumb|right|Diaphragme contrôlant l’ouverture d’un appareil photo.]] 
+{{article détaillé|Ouverture (photographie)}}
+Les [[ouverture (photographie)|ouvertures]] des [[appareil photographique|appareils photographiques]] suivent la séquence normalisée f/1,4, f/2 f/2,8 f/4 f/5,6 f/8 f/11 f/16 f/22, f/32{{etc.}} Le rapport entre deux ouvertures consécutives est une valeur proche de √2, qui a été choisie de sorte à ce que le rapport de [[flux lumineux]] soit dans un rapport 2 (flux = diamètre²). En diminuant d’un « cran » l’ouverture on double le temps de pose nécessaire ou diminue d’un facteur 2 la sensibilité de la [[pellicule photographique|pellicule]] requise<ref>{{en}} [http://www.uscoles.com/fstop.htm {{lang|en|''A Tedious Explanation of the f/stop''}}], Matthew Cole, [[2005]] (visité le 29 août 2006).</ref>.
+
+Dans la pratique, l’ouverture indiquée est un arrondi ; l’ouverture réelle peut coller au plus proche de <math>\sqrt{2}</math><ref>{{en}} [http://tangentsoft.net/fcalc/help/ {{lang|en|''f/Calc Manual''}}].</ref>. Il existe des subdivisions sur les appareils modernes, souvent dans des rapports <math>\sqrt{\sqrt{2}}</math> ou <math>\sqrt{2}^{\frac{1}{3}}</math>.
+
+{{clr}}
+::{| class="wikitable" style="text-align: center"
+|+ ''Lien entre ouverture, diamètre du diaphragme et flux lumineux reçu à pose et sensibilités fixés.''
+! style="text-align: left" | Ouverture
+| f/1,4 || f/2 || f/2,8 || f/4 || f/5,6 || f/8 || f/11 || f/16 || f/22 || f/32
+|-
+! style="text-align: left" | Diamètre
+| ''d'' || ''d''/√2 || ''d''/2 || ''d''/2√2 || ''d''/4 || ''d''/4√2 || ''d''/8 || ''d''/8√2 || ''d''/16 || ''d''/16√2
+|-
+! style="text-align: left" | Flux
+| ''I'' || ''I''/2 || ''I''/4 || ''I''/8 || ''I''/16 || ''I''/32 || ''I''/64 || ''I''/128 || ''I''/256 || ''I''/512
+|}
+== Histoire ==
+=== Babylone ===
+[[Image:YBC 7289 sketch.svg|thumb|right|Schéma de la tablette [[YBC 7289]].]]
+{{article détaillé|YBC 7289}}
+La culture mathématique babylonienne est avant tout algorithmique. Elle dispose d'un système de [[Numération mésopotamienne|numération]] ancien et [[Notation positionnelle|positionnelle]]<ref>Crhistine Proust ''[http://www.math.ens.fr/culturemath/histoire%20des%20maths/pdf/chrono_mesopotamie.pdf Mathématiques en Mésopotamie]'' Ecole Normale Supérieure </ref>. Certaines tablettes, comme celle notée [[BM 13901]], montre une bonne connaissance des [[équation du second degré|questions du second degré]], probablement traitées à partir de méthodes géométriques<ref>Cette conclusion est l'oeuvre de Jens Høyrup. Des éléments de traduction de la tablette sont disponibles à : ''[http://akira.ruc.dk/~jensh/Selected%20themes/Mesopotamian%20mathematics/Handout.PDF La pensée algébrique]'' 12ème Colloque Inter-IREM (1998)</ref>. En plus de disposer de méthodes de résolution, les Babyloniens savent calculer des approximations de racines carrées. La tablette [[YBC 7289]] donne l'approximation de √2 sous la forme suivante<ref name="RF">{{en}} [http://www.hps.cam.ac.uk/dept/robson-fowler-square.pdf {{lang|en|''Square root approximations in Old Babylonian mathematics : YBC 7289 in context''}}] - Eleanor Robson & David Fowler, {{lang|la|''Historia Mathematica''}}, 25, {{p.}}366-378, 1998 {{pdf}}.</ref> :
+<center>{{Nombre babylonien|1|24|51|10}}</center>
+
+Cette écriture correspond à la meilleure approximation possible de √2 avec quatre chiffres significatifs en numération babylonienne ([[Base (arithmétique)|base]] 60). L'approximation est précise au millionième. Cette tablette montre plusieurs éléments remarquables, leur préoccupation mathématique n'est pas uniquement pragmatique, une telle précision est trop importante pour une application pratique<ref>Christine Proust aborde cet aspect spéculatif des mathématiques mésopotamiennes sur un autre angle : ''[http://www.math.ens.fr/culturemath/histoire%20des%20maths/pdf/chrono_mesopotamie.pdf Mathématiques en Mésopotamie]'' Ecole Normale Supérieure </ref>. Elle dénote aussi de la connaissance d'un algorithme d'approximation de racine, probablement de type [[méthode de Héron]]<ref>Benoit Rittaud ''[http://www.bibnum.education.fr/files/RITTAUD_YBC7289.pdf À un mathématicien inconnu !]'' l’Université Paris-13 Bibnum p. 5-6</ref> et équivalent à notre [[fraction continue]].
+
+=== Grèce antique ===
+A la fin du {{VIe siècle av. J.-C.}}, l'école pythagoricienne prend connaissance du savoir babylonien<ref>[[Otto Neugebauer]] ''The Exact Sciences in Antiquity'' Dover Publications (1969) p 145-176 {{ISBN|978-0486223322}}</ref>, qui s'ajoute à la tradition grecque naissante, issue de [[Ionie]]. L'orientation ionienne, dont le maître à penser est [[Thalès]], est géométrique. La notion de démonstration entre déjà dans leurs préoccupations<ref>Maurice Caveing ''La figure et le nombre: recherches sur les premières mathématiques des Grecs'' Du Septentrion (1998) p 33-75 {{ISBN|978-2859394943}}</ref>. Dès les débuts de la période pythagoricienne, l'apport babylonien permet des progrès décisifs. La maîtrise des questions du second degré aboutit à une construction rigoureuse du [[pentagone (figure)|pentagone]] régulier<ref>Thomas Little Heath ''A History of Greek Mathematics: From Thales to Euclid'' Dover Publications (réédition de 1981) Vol 1 p 160 {{ISBN|978-0486240732}}</ref>. L'algorithme d'approximation des racines est repris et prend le nom d'anthyphérèse<ref>Sur la notion d'anthyphérèse: Maurice Caveing, ''L'irrationalité dans les mathématiques grecques jusqu'à Euclide'', éd Presses universitaires du Septentrion, 1998, vol.3, p.111 [http://books.google.fr/books?id=ZycSoMNgL2YC&pg=PA112&lpg=PA112&dq=anthyph%C3%A9r%C3%A8se&source=bl&ots=7Xwja3yE2c&sig=ks_ItFM1PCWZhUiMFaUKuM-mWTg&hl=fr&ei=5Ca7S6K7BdSiOIf93P0H&sa=X&oi=book_result&ct=result&resnum=9&ved=0CBwQ6AEwCA#v=onepage&q=anthyph%C3%A9r%C3%A8se&f=false Lire en ligne]</ref>. Il est probablement à l'origine de la découverte de ce que les Grecs appellent les ''in[[commensurabilité (mathématiques)|commensurables]]'' et qui correspond à notre notion de [[nombre irrationnel]].
+
+Si rien n'indique avec certitude que la proportion entre la diagonale d'un carré et de son côté est à l'origine de la découverte des incommensurables<ref>Benoit Rittaud ''[http://www.math.univ-paris13.fr/~rittaud/GazetteSMFRacineDeDeux.pdf Le Fabuleux destin de √2]'' SMF Gazette 107 (Janvier 2006) P. 30</ref>, √2 joue néanmoins un rôle fondamental dans les recherches sur leur nature. Dans un premier temps, les Grecs remarquent que l'anthyphérèse fournit une suite de proportions rationnelles qui s'approche de plus en plus de celle recherchée, sans jamais l'atteindre : un comportement qui ne fait aucun sens<ref>Pour Maurice Caveing, cette découverte, qu'il situe à la fin du {{VIe siècle av. J.-C.}} ou au début du {{Ve siècle av. J.-C.}}, entraine une ''révélation stupéfiante'', mais qui ne peut encore déboucher sur ''aucune découverte scientifique fructueuse'' :  ''L'irrationalité dans les mathématiques grecques jusqu'à Euclide'' Du Septentrion (1998) p 117 {{ISBN|2859395393}}</ref> pour un peuple qui imagine que toute proportion est rationnelle<ref>Paul Tannery  ''Mémoires scientifiques'' Paris-Toulouse : E. Privat, 1912. I. p. 268</ref>. Le [[paradoxe d'Achille et de la tortue]] est probablement une trace de cette époque<ref>Cette idée est exprimée tout d'abord par Tannery, longuement développé par Szabó et est expliquée dans la référence suivante : J.-L. Périllié [http://www.cndp.fr/RevueCPhil/91/00902911.pdf La découverte des incommensurables et le vertige de l'infini] Transcription d’une conférence qui a eu lieu le 16 mai 2001 à Grenoble p. 19-21</ref> où l'incommensurabilité est plus vécue comme un ''scandale logique''<ref>Cette expression est de [[Paul Tannery]] : ''Pour L'Histoire de La Science Hellene'' BiblioBazaar (Réédition 2008) p. 251 {{ISBN|978-0559304156}}</ref> qu'un savoir cohérent. La maîtrise de l'anthyphérèse a néanmoins lieu avant la fin du {{Ve siècle av. J.-C.}}. Au début du {{IVe siècle av. J.-C.}}, elle est non seulement comprise pour √2 mais déjà généralisée à d'autres racines carrées d'entiers par [[Théétète d'Athènes|Théétète]]<ref>D.Roux ''[http://www.animath.fr/old/UE/UE04/roux.pdf Théétète, le Galois grec]'' IGEN</ref>, un mathématicien contemporain de [[Platon]].
+
+Un autre cheminement est envisagé pour la première démonstration de l'irrationalité de √2. Il se fonde sur une remarque arithmétique : ''Le double d'un carré parfait n'est jamais un carré parfait''<ref>Árpád Szabó ''L'aube des mathématiques grecques'' Vrin (2000) p. 158 {{ISBN|978-2711612796}}</ref>. La duplication du carré et cette remarque implique l'irrationalité de √2. Un historien spécialiste de cette période, O. Becker remarque que cette démonstration repose sur un résultat d'arithmétique élémentaire que les premiers pythagoriciens connaissent et qu'ils appellent le ''principe du pair et de l'impair''<ref> O. Becker Quellen und Studien sur Geschichte der Mathematik Astronomy und Physic B 3 (1934) p 533 553</ref>. Ce qui est avéré est que cette démonstration date du {{Ve siècle av. J.-C.}} et qu'elle est consigné par Aristote qui précise : {{Citation| Ils prouvent que le diamètre du carré est incommensurable au côté en montrant que, si l'on admet qu'il lui est commensurable, un nombre impair serait égal à un pair<ref>Aristote, Analytiques Postérieurs I, 23</ref>.}}
+
+Un troisième raisonnement consiste à faire usage d'une [[descente infinie]] à l'aide d'une construction géométrique. Il date d'une période plus tardive que celle des pythagoriciens. Il suppose en effet une méthode de démonstration inexistante avant [[Eudoxe de Cnide]]<ref>Maurice Caveing ''[http://www.persee.fr/web/revues/home/prescript/article/rhs_0151-4105_1979_num_32_2_1618 A propos des débuts des mathématiques grecques. Réflexions sur l'ouvrage de A. Szabo]'' Revue d'histoire des sciences  Vol 32 (1979) p. 168</ref>, un mathématicien du {{IVe siècle av. J.-C.}}.
+
+=== Vers le nombre √2 ===
+[[image:Dedekind.jpeg|thumb|right|[[Richard Dedekind]] propose une construction rigoureuse des [[nombre réel|nombres réels]] à la fin du {{XIXe siècle}}.]]
+L'histoire de la racine de deux se confond alors avec celle de la racine carrée et plus généralement des irrationnels. Elle peut se résumer en quelques lignes :
+
+Les Grecs conçoivent ce que nous appelons les rationnels ou les réels comme des proportions, et non pas des nombres<ref>Pour se faire une idée des concepts dont le Grecs disposaient voir : Wilbur Richard Knorr  ''The Evolution of the Euclidean Elements: A Study of the Theory of Incommensurable Magnitudes and its Significance for Early Greek Geometry'' Springer (1974) p 15 {{ISBN|978-9027705099}}</ref>. La faiblesse des concepts apparaît dans une égalité comme : √2&nbsp;x&nbsp;√3&nbsp;=&nbsp;√6. Pour les Grecs, elle n'est pas démontrable ; √2&nbsp;x&nbsp;√3 désigne une proportion entre aires et √6 n'a pas de sens dans le monde des aires. Le carré d'une surface n'existe pas chez les grecs<ref name="Fowler">D. Fowler ''Dedekind's theorem √2&nbsp;x&nbsp;√3&nbsp;=&nbsp;√6'' The American mathematical monthly (1992) Vol. 99, N°8, pp. 725-733</ref>.
+
+La culture mathématique arabe de l'antiquité est à l'origine du prochain progrès. Au début du {{IXe siècle}}, le perse [[Al-Khawarizmi]] développe les concepts d'[[équation]]<ref>Voir l'article [[théorie des équations (histoire)]]</ref> et d'[[inconnue (mathématiques)|inconnue]]. Ces découvertes, parfois considérées comme la naissance de l'algèbre<ref>Cette idée est exprimée dans la référence suivante, au paragraphe ''Al-Khawarizmi et la naissance de l'al-jabr'' {{DahanPeiffer}} p 84</ref>, amènent petit à petit l'idée de donner un statut de nombre aux fractions puis aux proportions incommensurables. Les propriétés algébriques des racines carrées sont établies. [[Omar Khayyam]] développe au {{XIe siècle}} une théorie où les proportions sont des nombres, même si les incommensurables sont encore considérées comme impropres<ref>{{DahanPeiffer}} p 102</ref>. L'Europe n'assimile ces notions que tardivement, le {{XVIe siècle}} est une période de polémique pour savoir si les incommensurables méritent le statut de nombre<ref>{{DahanPeiffer}} p 103</ref>. C'est à cette époque que l'usage du symbole √ se répand<ref>Il est introduit par Christoph Rudolff en 1525 : {{DahanPeiffer}} p 104</ref>.
+
+Construire un [[nombre réel|univers de nombres]] où l'égalité √2&nbsp;x&nbsp;√3&nbsp;=&nbsp;√6 est démontrée rigoureusement n'est pas simple. Cette construction n'apparaîtra que tardivement ; en [[1876 en science|1876]] [[Richard Dedekind|Dedekind]]<ref name="Fowler" /> résout cette question.
+
+== Calcul babylonien ==
+=== Dupliquer un carré ===
+[[Fichier:DoublingTheSquareV1.svg|thumb|left|Construction d'un carré d'aire 2.]]
+La question de la duplication d'un carré correspond à la construction d'un carré d'aire double de celle d'un carré donné. On suppose que l'on dispose d'un carré d'aire 1 et l'on cherche à construire un carré d'aire 2. Par définition, le carré d'aire 1 possède un côté de longueur 1 et le carré d'aire 2 possède la même aire que celle de deux carrés d'aire 1.
+
+Les Babyloniens savent comment faire, ils savent même calculer le côté du carré d'aire deux avec grande précision. Il existe deux méthodes simples pour s'en persuader. La plus directe consiste à étudier la figure de gauche. Le carré de côté 1 est composé de deux triangles, celui de côté noté √2 est formé d'exactement quatre triangles du même type, il est donc d'aire double. Une autre manière de se rendre compte du rapport deux entre les aires des carrés de la figure est l'usage du [[théorème de Pythagore]]. Un triangle [[isocèle]] [[triangle rectangle|rectangle]] de petit côté de longueur 1 possède une [[hypoténuse]] de carré égal à 1&nbsp;+&nbsp;1&nbsp;=&nbsp;2. Cette hypoténuse est la diagonale d'un carré de côté de longueur 1.
+[[Fichier:DoublingTheSquarev2.svg|thumb|Duplication du carré grâce au cercle|right]]
+L'aire d'un carré s'obtient par multiplication de la longueur du côté par lui-même. La longueur du côté du carré d'aire 2 multiplié par lui même est donc égal à 2. Par définition de √2, la longueur de ce côté est √2.
+
+Il est en outre possible, à l'aide d'un cercle, de dupliquer le carré sans en changer l'orientation. Dans la figure ci-contre le grand carré a une surface double du petit carré.  Il suffit pour s'en convaincre de faire pivoter le petit carré d'un huitième de tour. Le rapport des côtés des deux carrés est donc de √2. La figure de gauche illustrera, pour les mathématiciens futurs la présence de la racine carré de deux dans le sinus et le cosinus du huitième de tour.
+: cos(45°)=sin(45°)=1/√2=√2/2
+
+Plus tard, ce tracé séduit de nombreux architectes comme [[Andrea Palladio]] dans sa [[Villa Rotonda]] ou  dans l’''Église ronde'' de [[Preslav]]. On la retrouve dans le cloître de la [[cathédrale de Cahors]] où la surface de la cour intérieure est égale à la surface de la galerie qui l'entoure<ref>Guillaume Reuiller, ''[http://www.palais-decouverte.fr/fileadmin/fichiers/infos_sciences/mathematiques/textes/formes_matematiques_revue/351_oct_2k7.pdf L'aire de RIEN]'', Palais de la découverte, mesure vérifiable sur un [http://www.mairie-cahors.fr/patrimoine/inventaire/imagcen/img06/ple/1_0560_P.jpg plan de 1841]</ref> ou dans les carnets de [[Villard de Honnecourt]]<ref>{{citation|Par ce moyen on fait un cloître, en donnant autant aux voies qu’au jardin}} in ''[http://halshs.archives-ouvertes.fr/docs/00/37/65/72/PDF/Scheme_operateur2-AR.pdf Le schème, opérateur de la conception architecturale]'', Dominique Raynaud, p 9</ref>.
+
+=== Rendre carré un rectangle ===
+[[Fichier:A square of area 2.jpg|thumb|right|première étape du calcul]]
+Les Babyloniens disposent de puissantes méthodes de calcul et, comme en témoigne la tablette [[YBC 7289]], savent fournir une excellente approximation de √2. Si leur méthode reste encore inconnue, on imagine qu'ils utilisent le raisonnement présenté ici ou un équivalent<ref>Benoit Rittaud ''[http://www.bibnum.education.fr/files/RITTAUD_YBC7289.pdf À un mathématicien inconnu !]'' l’Université Paris-13 Bibnum p. 4</ref>.
+
+La méthode consiste à construire un carré de la même aire qu'un rectangle. On commence par un rectangle de base 1 et de hauteur 2. Ensuite, pour rendre plus ''carré'' ce rectangle, on en construit un deuxième de base la moyenne des longueurs des côtés du premier rectangle, soit 1,5 : la moyenne de 1 et de 2. Sa hauteur est calculée pour que le nouveau rectangle soit d'aire 2, elle vaut 2/1,5&nbsp;=&nbsp;1,3333... A l'image des Babyloniens, les calculs sont ici réalisés en numération positionnelle, à l'image de notre notation décimale, mais eux comptent en base 60, ce que l'on ne fait pas ici pour des raisons de simplicité. Si l'on recommence, on trouve pour base la moyenne de 1,5 et de 1,3333... soit 1,4166... et pour hauteur 2/1,416... soit 1,4117... . L'itération suivante donne 1,4142... une approximation avec cinq chiffres significatifs. Pour obtenir la précision babylonienne, il faudrait itérer encore une fois l'opération.
+
+Cette méthode ne donne jamais exactement la bonne valeur, et la suite des chiffres après la virgule ne s'arrête jamais. Pour les Babyloniens, ces difficultés ne sont pas nouvelles, on les trouve aussi pour certaines divisions. Avec les conventions modernes ce phénomène se produit pour 1/3 qui est un nombre proche de 0,3333, mais notre système décimal ne donne jamais exactement la bonne valeur.
+
+=== Calculer avec √2 ===
+
+[[Fichier:Computing square root of two.jpg|thumb|Un calcul avec √2]]
+
+Les Babyloniens savent résoudre des questions du second degré. Cela les amène à pouvoir calculer des expressions contenant la valeur de √2. Pour les Babyloniens, le calcul de {{nobr|(√2 + 1)(√2 - 1)}}, s'exprime comme la multiplication de 2,414&thinsp;2 par 0,414&thinsp;2. Ils ne disposent en effet d'aucun langage symbolique pour écrire √2 et la différence entre les deux expressions est suffisamment petite pour être acceptable.
+
+Plutôt que de calculer une multiplication longue et fastidieuse, surtout en base 60, ils raisonnent géométriquement. La question revient à mesurer l'aire d'un rectangle de base {{nobr|√2 + 1}} et de hauteur {{nobr|√2 - 1}}, à l'image de la figure de droite. En déplaçant la zone bleue du rectangle habilement, on remarque que le résultat est la différence entre l'aire d'un carré de côté √2 et l'aire d'un carré de côté 1. Le résultat est donc 1, obtenu en évitant des calculs rébarbatifs. Cette démarche géométrique est l'équivalent des calculs algébriques suivants, si ''p'' désigne la longueur de la diagonale d'un carré et ''q'' celle de son côté :
+<center><math>(p+q)(p-q) =p^2 -q^2 = q^2 \quad\text{car}\quad p^2 = 2q^2\;</math></center>
+
+Les Babyloniens utilisent encore d'autres méthodes de calculs, repris et interprétés différemment par les Grecs. Ils ne concernent néanmoins pas directement la racine de deux.
+
+{{boîte déroulante début|align=left|titre=Multiplier avec des carrés<ref>Cette présentation s’inspire de : Claudie Asselin-Missenard, André Deledicq ''Les carrés de Babylone'' Jeu tests & quiz mathématiques Les éditions du Kangourou (2010) p 24</ref>}}
+
+[[Fichier:Continued-fraction-29-12.jpg|right|180px]]
+
+Les calculs chez les babyloniens sont plus complexes que maintenant. Pour réaliser une multiplication en base 10, il suffit de connaître les tables de multiplications jusqu'à 10. L'équivalent chez les babyloniens suppose la connaissance des tables jusqu'à 60. A lieu d'imposer aux apprentis scribes de connaître par cœur des résultats comme 47×59, ils utilisaient des méthodes, fondées sur les [[carré parfait|carrés parfaits]]<ref>Christine Proust ''[http://www.math.ens.fr/culturemath/histoire%20des%20maths/pdf/Calcul%20sexa_Proust.pdf Le calcul sexagésimal en Mésopotamie]'' p 20</ref>.
+
+Les babyloniens disposent de tables des carrés, ils s'en servent pour effectuer des multiplications. Illustrons le pour la multiplication de 12 par 29. On remarque que 29 est égal à {{nobr|2×12 + 5}}. Autrement dit :
+<center><math>29\times 12 = (2\times 12 + 5)\times 12 = 2\times 12^2 + 5\times 12 = 2\times 144 + 5\times 12 = 288 + 5\times 12</math></center>
+
+Graphiquement, cela revient à calculer l'aire en rouge sur le rectangle de droite. De la même manière 12 est égal à {{nobr|2×5 + 2}}. La prise en compte de la zone bleue foncée donne :
+<center><math>29\times 12 = 288 + 5\times (2\times 5 + 2) = 288 + 2\times 5^2 + 5\times 2 = 288 + 50 + 5\times 2 = 338 + 5\times 2</math></center>
+
+Il est possible de prolonger encore la méthode, mais les babyloniens savaient que {{nobr|5×2 = 10}} et le résultat est donc 348.
+{{Boîte déroulante fin}}
+
+== Constructions et démonstrations grecques ==
+=== Construction de √2 à la règle et au compas ===
+[[Image:Square root of two with ruler and compass.svg|right|thumb|300px|Construction à la règle et au compas]] Comme toutes les racines carrées de nombre entier, √2 est [[nombre constructible|constructible à la règle et au compas]] ; ''a contrario'', ce n’est pas le cas de la [[racine cubique]] de 2, par exemple<ref>Voir [[Duplication du cube]]</ref>.
+
+Étant donné un [[Segment (mathématiques)|segment]] AB de longueur unité, voici les différentes étapes pour construire un segment de longueur √2 avec une [[règle (instrument de géométrie)|règle non graduée]] et un [[compas (géométrie)|compas]] :
+# Tracer le symétrique B′ de B par rapport à A
+#* Tracer le cercle C<sub>1</sub> de centre A et de rayon AB, il coupe la [[demi-droite]] ]BA) en B′
+# Tracer la médiatrice (AH) de [BB′]
+#* Tracer le cercle C<sub>2</sub> de centre B et de rayon ''r'' > AB
+#* Tracer le cercle C<sub>3</sub> de centre B′ et de rayon ''r'', il coupe C<sub>2</sub> en deux points, H et H′
+#* Tracer le segment [AH] il intersecte C<sub>1</sub> en un point C. 
+
+À cette étape le segment [BC] de longueur √2 est construit.
+Comme tout nombre constructible à la règle et au compas, √2 est constructible au compas seul.
+
+{{boîte déroulante début|align=left|titre=Construction au compas seul}}
+[[Image:Square root of two with compass only.svg|right|300px]]
+Les étapes d’une construction possible sont :
+# Tracer quatre sommets consécutifs B, G, H, I de l’hexagone régulier de centre A et de sommet B ; ceci permet de construire √3, l’unité étant la longueur AB.
+#* Tracer le cercle C<sub>1</sub> de centre A et de rayon AB ;
+#* Tracer le cercle C<sub>2</sub> de centre B et de rayon AB, il coupe C<sub>1</sub> en deux points, soit G l’un d’entre eux ;
+#* Tracer le cercle C<sub>3</sub> de centre G et de rayon AB, il coupe C<sub>1</sub> en B et H ;
+#* Tracer le cercle C<sub>4</sub> de centre H et de rayon AB, il coupe C<sub>1</sub> en G et I ;
+# Construire un triangle rectangle ABC d’hypoténuse BC = √3 (AB = 1) ; C est l’un des deux points tel que IC = IG et BC = BH (sachant que IG = BH = √3 > IB/2 = 1).
+#* Tracer le cercle C<sub>5</sub> de centre I et de rayon IG ;
+#* Tracer le cercle C<sub>6</sub> de centre B et de rayon BH (= IG), il coupe C<sub>5</sub> en C.
+
+À cette étape le segment [AC] de longueur √2 est construit.
+
+<small>Éléments de démonstration : IC = IG = √3, car d’après le [[théorème de Pythagore]], les hauteurs en I et G des triangles équilatéraux de côté 1, IHA et HAG, qui sont portées par la médiatrice de (H, A), ont pour longueur √3/2. Par construction (A et C sur la médiatrice de BI) (AC) est perpendiculaire à (AI) et le [[théorème de Pythagore]] dans IAC donne AC² = 2.</small>.
+{{Boîte déroulante fin}}
+
+=== Irrationalité ===
+[[Fichier:Algebre-geometrique-intro.jpg|thumb|Un changement d'échelle permet d'obtenir des longueurs entières.]]
+Si les Grecs héritent des méthodes des Babyloniens, elles s'insèrent dans un monde différent, essentiellement géométrique. Ils imaginent dans un premier temps que toutes les longueurs sont des fractions. Ils en déduisent qu'il suffit de choisir adroitement l'unité de longueur pour que les grandeurs présentes dans une figure correspondent à des nombres entiers. Ainsi, si à l'image de la figure de droite ils ont affaire à deux longueurs 3/2 et 4/3 avec la première unité de longueur (en bleu), ils choisissent comme unité de longueur le sixième de la précédente (en rouge), 3/2 devient 9 et 4/3 devient 8.
+
+Avec cette logique, une question naturelle est celle des entiers caractérisant un demi-carré c'est-à-dire mesurant la diagonale et le côté d'un carré. Ces entiers n'existent pas, c'est-à-dire qu'il n'existe aucune unité de longueur tel que le côté et la diagonale s'obtiennent par multiplication de l'unité de longueur avec des entiers. Les grecs disent dans ce cas que la proportion entre la diagonale et le côté ou que les longueurs de la diagonale et du côté sont incommensurables. Dans notre langage, cette proportion est un nombre égal à 
+√2, si ce nombre était commensurable, il s'écrirait
+: ''p''⋅''u''/(''q''⋅''u''&thinsp;),
+où ''p'', ''q'' sont des nombres entiers et ''u'' est un nombre quelconque représentant l'unité. En simplifiant par ''u'', le nombre devient ''p''/''q'', autrement dit un [[nombre rationnel]]. Ainsi, l'incommensurabilité d'une proportion est équivalente à notre notion d'[[nombre irrationnel|irrationnel]].
+
+La fusion de la culture babylonienne, que [[Bartel Leendert van der Waerden|van der Waerden]] qualifie<ref>[[Bartel Leendert van der Waerden]] ''Defence of a "Shocking" Point of View'' Archive for History of Exact Sciences 1976, vol. 15, no3, pp. 199-210</ref> d'algébrique, avec la culture géométrique grecque est à l'origine d'une nouvelle démarche mathématique, appelée [[algèbre géométrique]]. Cette démarche permet de démontrer l'irrationalité de √2.
+
+==== Le pair et l'impair ====
+
+[[Fichier:Double d'un carré parfait pq.jpg|thumb|left|350px|Le double d'un nombre carré n'est jamais un nombre carré.]]
+
+Une des démonstrations candidate pour être la plus ancienne<ref>C'est au moins l'opinion de O. Becker, exprimée dans l'article suivant, qui présente le raisonnement exposé ici : O. Becker ''Quellen und Studien sur Geschichte der Mathematik'' Astronomy und Physic B 3 (1934) p 533 553</ref> est par l'absurde. Elle se fonde sur un principe que les pythagoriciens appellent le pair et l'impair. Ce principe indique que le carré d'un nombre pair est pair et le carré d'un nombre impair est impair<ref>Une démonstration ne faisant usage que du savoir de l'époque contemporaine à Pythagore est proposée dans l'article [[algèbre géométrique]]</ref>.
+
+On suppose qu'il existe une unité telle que la diagonale et le côté d'un carré sont des longueurs entières. On choisit la plus grande de ces unités, on note ''p'' la longueur de la diagonale et ''q'' celle du côté. La duplication du carré montre que
+: ''p''<sup>2</sup> = 2''q''<sup>2</sup>,
+ce qui montre que ''p''<sup>2</sup> est pair et donc ''p'' l'est aussi. On en déduit que ''q'' est impair car sinon le double de l'unité permettrait d'exprimer la diagonale et le côté comme des entiers, ce qui contredit le fait que celle choisie est la plus grande de toutes. Le graphique à gauche montre que le carré de côté ''q'' est d'aire égale au rectangle en bleu de base ''p''/2 et de hauteur ''p''. Ce rectangle se divise en deux carrés de côté ''p''/2, car ''p'' est un nombre pair.
+
+On en déduit que le carré de ''q'' est pair et donc que ''q'' l'est aussi. Le nombre ''q'' est à la fois pair et impair, cette contradiction termine la démonstration.
+
+Il existe aussi des versions plus expéditives de cette démonstration, faisant usage d'un savoir plus grand sur les fractions de nombres entiers.
+
+{{boîte déroulante début|align=left|titre=Variante de la même démonstration}}
+On suppose par l’absurde que la racine carrée de 2 est [[rationnel]]le. Dans ce cas on pourrait écrire √2 sous forme de fraction irréductible, c’est-à-dire que ''p'' et ''q'' n’auraient pas de [[premiers entre eux|facteurs premiers communs]]. Il en serait donc de même pour ''p''² et ''q''², ce qui signifierait que ''p''²/''q''² serait une fraction sous sa forme irréductible. Une telle forme étant unique, l’égalité ''p''²/''q''² = 2/1 entraînerait ''p''² = 2 et ''q''² = 1. La première de ces deux égalités est impossible pour ''p'' entier ; on a donc abouti à une contradiction.
+{{Boîte déroulante fin}}
+
+==== Descente infinie ====
+
+[[Image:Sqrt2 is irrational.svg|thumb|right|250px|Construction d'une [[Méthode de descente infinie|descente infinie]]]]
+
+La démonstration présentée dans ce paragraphe est nécessairement plus tardive<ref>Elle ne peut être antérieure à Eudoxe : Maurice Caveing ''[http://www.persee.fr/web/revues/home/prescript/article/rhs_0151-4105_1979_num_32_2_1618 A propos des débuts des mathématiques grecques. Réflexions sur l'ouvrage de A. Szabo]'' Revue d'histoire des sciences  Vol 32 (1979) p. 168</ref>. Elle se fonde sur le principe de la [[Méthode de descente infinie|descente infinie]] et sur l'égalité
+: (√2 + 1)(√2 - 1) = 1.
+Pour les Grecs, une telle égalité n'a pas de sens, √2 n'est pas un nombre. En revanche, si ''p'' est la longueur d'une diagonale et ''q'' celle d'un côté d'un carré, elle se traduit directement par : 
+: (''p'' + ''q''&thinsp;)(''p'' - ''q''&thinsp;) = ''q''<sup>&thinsp;2</sup>.
+Elle devient une égalité entre l'aire d'un carré et celle d'un rectangle de base la somme d'une diagonale et d'un côté, et de hauteur la différence d'une diagonale et d'un côté d'un carré. Sous forme de proportion, on obtient : 
+<center><math>\frac {p + q}q = \frac q{p - q}</math></center>
+
+Si le côté et la diagonale d'un carré sont [[commensurabilité (mathématiques)|commensurables]], cela signifie qu'il existe une unité de longueur telle que ''p'' et ''q'' soient des entiers. En retirant 1 à cette double expression de la même fraction, on obtient :
+<center><math>\frac {p + q}q -\frac qq= \frac q{p -q} - \frac {p -q}{p -q}\quad\text{et}\quad \frac pq = \frac {2q-p}{p-q}</math></center>
+
+Cette dernière égalité et le [[théorème de Thales]] indiquent que le triangle ABC de la figure de droite est semblable à A'B'C. On obtient un nouveau triangle rectangle isocèle avec des côtés entiers, plus petits que les précédents. En réitérant le processus, on obtient des triangles rectangles isocèles de plus en plus petits et ayant des côtés entiers. Leurs bases forment une suite d'entiers positifs strictement décroissante et infinie, ce qui est absurde.
+
+On peut terminer plus rapidement la démonstration en supposant que l'unité est choisie la plus grande possible, ce qui revient à dire qu'avec cette  convention, le triangle rectangle isocèle d'hypoténuse ''p'' et de [[cathète]] ''q'' est le plus petit possible avec des côtés entiers. La contradiction provient du fait que le triangle isocèle de base {{nobr|2''q'' - ''p''}} et de côtés {{nobr|''p'' - ''q''}} possèdent aussi des côtés entiers et est rectangle, mais en plus il est plus petit. Avec notre langage algébrique, cette contradiction s'exprime de la manière suivante :
+: si ''q'' est le plus petit entier tel que ''q''√2 est entier, qui existe si √2 est rationnel, alors {{nobr|''q''√2 - ''q''}} possède la même propriété et est pourtant plus petit<ref>{{Ouvrage
+ | titre       = A Gardner's workout: training the mind and entertaining the spirit
+ | éditeur     = A K Peters, Ltd.
+ | auteur      = Martin Gardner
+ | langue      = en
+ | année       = 2001
+ | isbn        = 9781568811208
+}}, p. 16</ref>.
+
+{{boîte déroulante début|align=left|titre=Autre version, sans [[algèbre géométrique]]}}
+Il est possible de montrer que le triangle A'B'C est rectangle, sans l'usage de l'algèbre géométrique importée des babyloniens.
+
+On construit la bissectrice intérieure de l'angle <math>\scriptstyle{\widehat {\mathrm{BAC}}}</math> et on appelle A′ le point où elle coupe le côté  [BC]. On note ensuite B′ le symétrique de B par rapport à cette bissectrice : c'est un point de l'hypoténuse. La construction est facile à la règle et au compas ; on peut aussi l'interpréter comme le pliage du triangle ABC dans lequel on ramène le côté [AB] sur l'hypoténuse.
+
+Le quadrilatère ABA′B′ est symétrique par rapport à sa diagonale (AA′) ; on en déduit d'une part que son angle en B′ est égal à son angle en B donc droit, et d'autre part que la longueur AB′ est égale à AB donc à ''q''.
+
+On s'intéresse alors au triangle A′B′C. Son angle en ''B′'' est droit (comme supplémentaire de l'angle droit <math>\scriptstyle{\widehat {\mathrm{AB'A'}}}</math>) et son angle en C est demi-droit. C'est donc un triangle rectangle isocèle.
+
+Les longueurs des côtés de ce triangle sont entières, en effet :
+* B′C =  AC - AB′ = ''p'' - ''q'',
+* B′A′ vaut aussi ''p'' - ''q'' (le triangle est isocèle). Vu la symétrie du quadrilatère ABA′B′ on obtient également BA′ = ''p'' - ''q''
+* A′C = BC - BA′ = ''q'' - (''p'' - ''q'') = 2''q'' - ''p''.
+{{Boîte déroulante fin}}
+
+==== Fraction continue ====
+
+[[Fichier:Continued fraction of square root of 2.jpg|tumb|right|Anthyphérèse de √2]]
+
+Une autre candidate pour être la première démonstration de l'irrationalité de √2, met encore plus en valeur l'apport des Babyloniens et l'interprétation géométrique qu'en font les Grecs. On utilise encore les mêmes notations, ''p'' désigne la longueur de la diagonale et ''q'' du côté d'un carré. Cette fois, le raisonnement est direct et les longueurs ''p'' et ''q'' ne sont plus supposées entières.
+
+On construit un rectangle de base {{nobr|''p'' + ''q''}} et de hauteur ''q''. La proportion {{nobr|(''p'' + ''q''&thinsp;)/''q''}}, égale à {{nobr|1 + √2}}, est appelée [[proportion d'argent]]. Elle dispose de propriétés analogue à la [[nombre d'or|proportion d'or]].
+
+L'objectif est de remplir le rectangle de carrés de côté le plus vaste possible, exactement comme pour une multiplication babylonienne. Le plus grand côté possible pour les premiers carrés est ''q'', car la hauteur est égal à ''q''. Comme {{nobr|''p'' + ''q''}} est plus grand que 2''q'' et strictement plus petit que 3''q'', on peut construire deux carrés de côté ''q'', en rouge sur la figure. La zone restante (en bleu sur la figure) est un rectangle de côté ''q'' et {{nobr|''p'' - ''q''}}. Or on dispose de la formule :
+<center><math>\frac{p + q}{q} = \frac{q}{p - q}</math></center>
+
+Elle indique que le rectangle initial et le bleu sont semblables, la proportion entre les deux étant le rapport {{nobr|(''p'' + ''q''&thinsp;)/''q''}}. Il est alors possible de remplir la zone restante d'exactement deux carrés de taille maximale, comme précédemment et la zone restante est encore un rectangle semblable à l'initial. Finalement on obtient 2 carrés de côté ''q'', puis 2 carrés de côté {{nobr|(''p'' + ''q''&thinsp;)/''q''}} fois plus petits que les premiers, puis 2 carrés de côté {{nobr|(''p'' + ''q''&thinsp;)/''q''}} fois plus petits que les précédents et la suite ne s'arrête jamais.
+
+Dans le cas de grandeurs commensurables le comportement est différent. Il existe alors une unité telle que la longueur de la base et celle de la hauteur soient des entiers. Avec cette unité, les côtés des différents carrés sont toujours des entiers, ce qui garantit que la suite finit par s'arrêter, car les carrés ne peuvent devenir infiniment petits. Ainsi une fraction ''a''/''b'' est entière, si et seulement si la suite construite précédemment s'arrête. Cet algorithme, initialement conçu comme une manière de trouver une commune mesure entre deux longueurs entières, est présent chez Euclide, mais il devient une [[algorithme d'Euclide|méthode pour déterminer son équivalent arithmétique]], c'est-à-dire le [[plus grand commun diviseur|PGCD]] de deux entiers<ref>[[Livre VII des Éléments d'Euclide]] proposition 1</ref>. Ce critère n'est pas rempli pour la proportion ''p''/''q'', cette proportion n'est pas rationnelle.
+
+La construction de la suite 2, 2, 2, … s'appelle pour les Grecs une anthyphérèse et maintenant la [[fraction continue]] de la proportion d'argent. Pour Maurice Caveing, cette anthyphérèse est probablement la première preuve complète<ref>Maurice Caveing ''L'irrationalité dans les mathématiques grecques jusqu'à Euclide'' Du Septentrion (1998) p. 130 {{ISBN|2859395393}}</ref> de l'irrationalité de √2. D'autres arguments convainquent le spécialiste Árpád Szabó du fait que cette démonstration serait aussi la première. Vu sous un angle plus algébrique, la suite 2, 2, 2, correspond exactement à la méthode de calcul babylonienne et porte le nom de ''dunámeis'' ou δυνάμεών chez les Grecs. Ce terme est ancien et se retrouve chez les Éléates, la première démonstration daterait de leur époque, qui est aussi celle des [[paradoxes de Zénon]]<ref>Le développement de cette théorie commence page 44 : Árpád Szabó ''The Beginnings of Greek Mathematics'' Springer (1978) {{ISBN|978-9027708199 }}</ref>. Il est néanmoins peu probable qu'elle disposait originellement de la forme aboutie présentée ici.
+
+{{boîte déroulante début|align=left|titre=Version algébrique}}
+On considère ici le même développement, mais sur un rectangle de base √2 et de hauteur 1. Le premier carré correspond à la partie entière de √2 et la première égalité s'écrit {{nobr|√2 {{=}} 1 + (√2 - 1)}}. En négligeant la partie fractionnaire, on obtient une première approximation 1 déjà trouvée avec la méthode babylonienne. On peut encore écrire ce résultat sous la forme :
+<center><math>\sqrt 2 = 1 + \frac 1{\frac 1{\sqrt 2 -1}}</math></center>
+
+Les dimensions 1 et {{nobr|√2 - 1}} correspondent au carré bleu ainsi qu'aux numérateur et dénominateur de la fraction {{nobr|1/(√2 - 1)}}. Une fois encore, les carrés bleus foncés correspondent à la partie entière de cette fraction. En multipliant au numérateur et au dénominateur par {{nobr|√2 + 1}}, on obtient la nouvelle fraction {{nobr|(√2 + 1)/1}}. La partie entière est donc encore 2 et l'on obtient l'égalité :
+<center><math>\sqrt 2 = 1 + \frac 1{{\color{red}2}+ \sqrt 2 -1}=\sqrt 2 = 1 + \frac 1{{\color{red}2}+ \frac 1{\sqrt 2 +1}}</math></center>
+
+En négligeant le terme {{nobr|√2 - 1}}, on obtient la valeur {{nobr|3/2  {{=}} 1,5}} soit la deuxième approximation déjà trouvée avec la méthode babylonienne. Le même raisonnement permet maintenant de prendre en compte les carrés bleus plus clairs et l'on obtient l'approximation :
+<center><math>\sqrt 2 = 1 + \frac 1{{\color{red}2}+ \frac 1{{\color{red}2} + \sqrt 2 -1}} \quad \text{puis}\quad \sqrt 2 = 1 + \frac 1{{\color{red}2}+ \frac 1{{\color{red}2} + \frac 1{{\color{red}2} + \sqrt 2 -1}}} \simeq \frac{17}{12} = 1,416\,6\dots</math></center>
+
+Une fois encore on obtient l'approximation des babyloniens. Cette présentation est juste une interprétation géométrique différente du même algorithme. Chez les babyloniens, il est connu comme une méthode d'approximation de √2, dans le [[livre X des Éléments d'Euclide]] c'est une méthode, nommée anthyphérèse, pour évaluer une incommensurabilité.
+{{Boîte déroulante fin}}
+
+== Autres propriétés ==
+
+=== Normalité ===
+La [[nombre normal|normalité]] est un concept se basant sur la distribution des chiffres du développement décimal d’un nombre irrationnel, à savoir si tous les chiffres de 0 à 9 apparaissent dans ce développement et avec la même fréquence. En ce qui concerne √2, on ignore s’il est normal dans le [[système décimal]] ou dans toute autre [[base (arithmétique)|base de numération]].
+=== Degré algébrique et degré d'irrationalité ===
+<math>\sqrt{2}\,</math> est un [[nombre algébrique]] de degré 2, dit [[entier quadratique]], car solution de l’équation [[polynôme|polynômiale]] du second degré à coefficients entiers ''x''² − 2 = 0 et de monôme dominant de coefficient égal à ''un'', mais d’aucune de degré 1 de par son irrationalité. On sait ainsi qu’il est difficilement approchable par une suite rationnelle ''p''<sub>''n''</sub>/''q''<sub>''n''</sub> ; l’erreur est en mieux en
+:|√2 − ''p''<sub>''n''</sub>/''q''<sub>''n''</sub>| ~ 1/''q''<sub>''n''</sub>².
+
+Comme pour tout nombre algébrique irrationnel, son [[degré d’irrationalité]] est 2.
+=== Développement en fraction continue ===
+√2 est relié à un certain nombre de développements en [[fraction continue|fractions continues]] périodiques, par propriété des [[entier quadratique|entiers quadratiques]].
+
+√2 est relié au développement en [[fraction continue]] suivant
+:<math>a\sqrt{2} - b = \frac1{2b + \frac1{2b + \frac1{2b + \cdots}}}\,</math>
+pour 2''a''² − ''b''² = 1, (''a'', ''b'') entiers strictement positifs. On notera ce développement de manière plus concise :
+:''a''√2 − ''b'' = [0; 2''b'', 2''b'', 2''b'', …] 
+On en tire les valeurs suivantes de √2 :
+: √2 = [1; 2, 2, 2, …].
+: √2 = 1/5 × [7; 14, 14, 14, …]
+: √2 = 1/29 × [41; 82, 82, 82, …]
+
+Plus généralement, <math>\sqrt{2}</math> se relie à la fraction continue généralisée suivante :
+:<math>a\sqrt{2} - b = \frac k{2b + \frac k{2b + \frac k{2b + \cdots}}}\,</math>
+notée sous forme plus concise
+: ''a''√2 − ''b'' = [0; ''k'', 2''b''; ''k'', 2''b''; ''k'', 2''b''; …] 
+avec ''k'' = 2''a''² − ''b''², et (''a'', ''b'') entiers strictement positifs. On en déduit les quelques développements de <math>\sqrt{2}\,</math> suivants : 
+:√2 = 1/2 × [3; -1, 6; -1, 6; -1, 6; …] 
+:√2 = 1/12 × [17; -1, 34; -1, 34, -1, 34; …] 
+:√2 = 1/70 × [90; -1, 180; -1, 180, -1, 180; …]
+
+Éléments de démonstration : soit la suite (''u''<sub>''n''</sub>) définie par la relation de récurrence ''u''<sub>''n'' + 1</sub> = −k/(2''b'' + ''u''<sub>''n''</sub>) et ''ε''<sub>''n''</sub> = |''u''<sub>''n''</sub> − (''a''√2 − ''b'')|. Alors on peut montrer que ''ε''<sub>''n'' + 1</sub> < ''Kε''<sub>''n''</sub>, avec 1/|1 + 2''b''/(''a''√2 − ''b'')| < ''K'' < 1 dans un voisinage de ''a''√2 − ''b''.
+=== Développements en série et produit infini ===
+==== Produits infinis ====
+L’identité cos(π/4) = sin(π/4) = 1/√2 et la représentation en [[produit infini]] du [[Fonction trigonométrique|sinus]] et du [[Fonction trigonométrique|cosinus]] mènent aux développements suivants
+:<math>\sqrt 2 = 2\prod_{k=0}^\infty
+\frac{(4k+1)(4k+3)}{(4k+2)^2} = 
+2
+\left(1-\frac{1}{4}\right)
+\left(1-\frac{1}{36}\right)
+\left(1-\frac{1}{100}\right) \cdots</math>
+:<math>\sqrt{2} =
+\prod_{k=0}^\infty
+\frac{(4k+2)^2}{(4k+1)(4k+3)} =
+\left(\frac{2 \cdot 2}{1 \cdot 3}\right)
+\left(\frac{6 \cdot 6}{5 \cdot 7}\right)
+\left(\frac{10 \cdot 10}{9 \cdot 11}\right)
+\left(\frac{14 \cdot 14}{13 \cdot 15}\right) \cdots</math>
+
+Le dernier produit peut s’écrire de manière équivalente :
+:<math>\sqrt{2} =
+\prod_{k=0}^\infty
+\left(1+\frac{1}{4k+1}\right)
+\left(1-\frac{1}{4k+3}\right)
+=
+\left(1+\frac{1}{1}\right)
+\left(1-\frac{1}{3}\right)
+\left(1+\frac{1}{5}\right)
+\left(1-\frac{1}{7}\right) \cdots.</math>
+
+==== Séries ====
+Le nombre peut aussi être évalué sous forme de [[Série (mathématiques)|série]] en utilisant le [[développement de Taylor]] d’une fonction trigonométrique en <math>\left({\pi}/{4}\right)</math> :
+:<math>\frac{1}{\sqrt{2}} = \sum_{k=0}^\infty \frac{(-1)^k \left(\frac\pi4\right)^{2k}}{(2k)!}.</math>
+:<math>\frac{1}{\sqrt{2}} = \sum_{k=0}^\infty \frac{(-1)^k \left(\frac\pi4\right)^{2k+1}}{(2k+1)!}.</math>
+
+On peut aussi utiliser la fonction <math>\sqrt{1+x}\,</math> en 1 :
+:<math>\sqrt{2} = \sum_{k=0}^\infty (-1)^{k+1} \frac{\prod_{n=1}^{n=k-1} (2n-1)}{\prod_{n=1}^{n=k} 2n} = 
+1 + \frac{1}{2} - \frac{1}{2\cdot4} + \frac{1\cdot3}{2\cdot4\cdot6} -
+\frac{1\cdot3\cdot5}{2\cdot4\cdot6\cdot8} + \cdots.</math>
+
+La convergence de la dernière série peut être accélérée par le biais d’une [[Transformation d'Euler|transformation d’Euler]] pour donner :
+:<math>\sqrt{2} = \sum_{k=0}^\infty \frac{(2k+1)!}{(k!)^2 2^{3k+1}} = \frac{1}{2} +\frac{3}{8} +
+\frac{15}{64} + \frac{35}{256} + \frac{315}{4096} + \frac{693}{16384} + \cdots.</math>
+
+== Méthodes numériques d'approximation ==
+√2 vaut approximativement 1,414 213 562 373 095 048 801 688 724 209 698 078 569 671 875 376 948 073 176 679 737 990 732 478 462 107 038 850 387 534 327 641 572 7
+
+Ces décimales constituent la {{OEIS|id=A002193}}.
+
+Le calcul d’une valeur approchante de √2 a été un problème mathématique pendant des siècles. Ces recherches ont permis de perfectionner les [[Algorithmique|algorithmes]] de calculs d’extraction de racines carrées. En informatique, ces recherches se sont poursuivies afin d’optimiser ces algorithmes en réduisant les temps de calcul et la consommation de mémoire<ref name="appro"/>.
+
+Les [[calcul numérique|méthodes numériques]] d’approximation présentées ci-dessous sont destinées au calcul d’un nombre important de décimales. Elles se basent généralement sur une [[suite (mathématiques)|suite]] convergente de [[nombre rationnel|nombres rationnels]] ; ainsi l’itération s’affranchit du coût de calcul sur des [[nombre à virgule flottante|nombres à virgule flottante]] — dont il faudrait en plus connaître la précision ''a priori''. Les meilleures approximations par une suite rationnelle ''p''<sub>''n''</sub>/''q''<sub>''n''</sub> donnent une erreur en 1/''q''<sub>''n''</sub>², une propriété de l’[[approximation diophantienne]] des [[entier quadratique|entiers quadratiques]].
+=== Méthodes à convergence linéaire ===
+==== Méthode de Théon de Smyrne ====
+On doit à [[Théon de Smyrne]] ces deux suites (''p''<sub>''n''</sub>) et (''q''<sub>''n''</sub>) définies par récurrence :
+: ''p''<sub>''n'' + 1</sub> = ''p''<sub>''n''</sub> + 2''q''<sub>''n''</sub>, &nbsp; &nbsp; ''p''<sub>0</sub> = 1 ;
+: ''q''<sub>''n'' + 1</sub> = ''p''<sub>''n''</sub> + ''q''<sub>''n''</sub>, &nbsp; &nbsp; ''q''<sub>0</sub> = 1.
+Ces suites sont à valeur entière strictement positive, donc strictement croissantes par récurrence, et vérifient
+:''p''<sub>''n''</sub>² − 2''q''<sub>''n''</sub>² = (−1)<sup>''n''</sup>(''p''<sub>0</sub>² − 2''q''<sub>0</sub>²)
+de sorte que ''p''<sub>''n''</sub>/''q''<sub>''n''</sub> tend vers √2.
+
+On ne sait pas si l’intention de Théon de Smyrne était de calculer une valeur approchée de √2.
+==== Solutions de l'équation diophantienne ''a''²− 2''b''² <nowiki>=</nowiki> ''k'' ====
+Les solutions entières de l’équation ''a''² − 2''b''² = ''k'' sont générées par récurrence 
+:''a''<sub>''m'' + 1</sub> = 3''a''<sub>''m''</sub> + 4''b''<sub>''m''</sub> 
+:''b''<sub>''m'' + 1</sub> = 2''a''<sub>''m''</sub> + 3''b''<sub>''m''</sub> 
+à partir des valeurs initiales (''a''<sub>0</sub>, ''b''<sub>0</sub>) = (1, 1) pour ''k'' = −1 et (3, 2) pour ''k'' = 1.
+
+Cette méthode est déduite de celle de Théon : chaque itération de la présente correspond à deux itérations de celle-là. Ainsi, ''a''<sub>''n''</sub>/''b''<sub>''n''</sub> tend linéairement vers √2.
+
+Les premières solutions sont :
+* ''k'' = −1 :&nbsp; (1, 1),&nbsp; '''(7, 5)''',&nbsp; (41, 29),&nbsp; (239, 169),&nbsp; (1393,985),
+* ''k'' = &nbsp; 1 :&nbsp; (3, 2),&nbsp; (17, 12),&nbsp; '''(99, 70)''',&nbsp; (577, 408),&nbsp; (3363, 2378).
+
+''Les deux approximations mises en gras furent utilisées en pratique par les arpenteurs anciens :''
+* 28 : 20&nbsp; avec l’erreur relative de – 1,0051 %, brièvement au début du {{IIIe millénaire av. J.-C.}} par les Égyptiens Anciens (cf. le [[:en:File:Old Royal Cubit.jpg|remen de construction]]) et
+* 99 : 70&nbsp; avec l’erreur relative de + 0,0051 %, tout au long de l’histoire et dans beaucoup de pays dans la [[Perche (unité)#La triangulation rationnelle du carré|triangulation rationnelle du carré]] selon les arpenteurs.
+==== Méthode de Théon généralisée ====
+
+On se donne (''a'', ''b''), obtenues par la méthode de Théon, qui sont donc solutions de l’une des deux [[équation diophantienne|équations diophantiennes]] précédente ''2b''² = ''a²'' - ''k'' = K, avec ''k'' = ±1 et K > 1. On peut alors écrire
+: √2 = ''a''/''b'' √[K/(K + ''k'')]
+Les suites ''p''<sub>''n''</sub> et ''q''<sub>''n''</sub> définies par 
+: ''p''<sub>''n'' + 1</sub> = (2K + ''k'')''p''<sub>''n''</sub> + 2K''q''<sub>''n''</sub>, &nbsp; &nbsp; ''p''<sub>0</sub> = 1 ;
+: ''q''<sub>''n'' + 1</sub> = (2K + 2''k'')''p''<sub>''n''</sub> + (2K + ''k'')''q''<sub>''n''</sub>, &nbsp; &nbsp; ''q''<sub>0</sub> = 1.
+vérifient 
+: (K + ''k'')''p''<sub>''n'' + 1</sub><sup>2</sup> - K''q''<sub>''n'' + 1</sub><sup>2</sup> = (K + ''k'')''p''<sub>''n''</sub><sup>2</sup> - K''q''<sub>''n''</sub><sup>2</sup> = … = ''k'', 
+et donc, de la même façon que ci-dessus, la suite ''p''<sub>''n''</sub>/''q''<sub>''n''</sub> converge vers √[K/(K + ''k'')]. De plus, si ''k'' = 1, cette suite est croissante donc approche cette valeur par défaut, et si ''k'' = -1, elle est décroissante donc approche cette valeur par excès.
+
+On peut utiliser cette relation pour estimer l’erreur : 
+: ''ε''<sub>''n'' + 1</sub> ≃ ''ε''<sub>''n''</sub> (4K + 3''k'')<sup>−2</sub> 
+et c’est une majoration si ''k''= 1.
+La [[convergence]] est donc linéaire : elle fait gagner un nombre à peu près constant de décimales à chaque itération.
+
+Cette méthode correspond à une généralisation de la méthode du paragraphe précédent au radical √[K/(K + ''k'')]. Pour K plus grand, la suite ''q''<sub>n</sub> croit plus rapidement, donc la convergence est accélérée.
+
+::{| class="wikitable"
+|+ ''Premières approximations de √2 = 17/12 √(288/289) par approximation linéaire de √(288/289). Les paramètres sont a = 17, b = 12, K = 288, k = 1. On a <br /> ε<sub>n + 1</sub> < 7,5 × 10<sup>-7</sup>ε<sub>n</sub> &nbsp; (avant approximation décimale des quotients).''
+|-style="text-align: center"
+| itération || valeur fractionnaire || décimales exactes
+|-
+| 0 || 1 || 1
+|-
+| 1 || {{formatnum:19601}}/1{{formatnum:3860}} || 1,414&thinsp;213&thinsp;56
+|-
+| 2 || {{formatnum:22619537}}/{{formatnum:15994428}} || 1,414&thinsp;213&thinsp;562&thinsp;373&thinsp;09
+|-
+| 3 || {{formatnum:26102926097}}/{{formatnum:18457556052}} || 1,414&thinsp;213&thinsp;562&thinsp;373&thinsp;095&thinsp;048&thinsp;80
+|-
+| 4 || {{formatnum:30122754096401}}/{{formatnum:21300003689580}} || 1,414&thinsp;213&thinsp;562&thinsp;373&thinsp;095&thinsp;048&thinsp;801&thinsp;688&thinsp;72
+|}
+
+==== Développement en fraction continue ====
+
+Une autre méthode consiste à approcher ''a''√2 − ''b'' par sa [[fraction continue]] généralisée pour (''a'', ''b'') solutions de l’équation diophantienne 2''a''² = ''b''² + ''k'', avec ''k'' = ± 1 : 
+:''a''√2 − ''b'' = [0; ''k'', 2''b''; ''k'', 2''b''; ''k'', 2''k'', …].
+''m''√2 − ''n'' est approximé à l’aide de la suite (''p''<sub>''n''</sub>/''q''<sub>''n''</sub>) déterminée par la relation de récurrence
+: ''p''<sub>''n'' + 1</sub> = ''q''<sub>''n''</sub> 
+: ''q''<sub>''n'' + 1</sub> = 2''bq''<sub>''n''</sub> + ''kp''<sub>''n''</sub>
+L’erreur vérifie [[asymptote|asymptotiquement]] 
+:''ε''<sub>''n'' + 1</sub> <  |''a''√2 − ''b''|/(2''b'' − 1) ''ε''<sub>''n''</sub>
+
+::{| class="wikitable"
+|+ ''Premières approximations de √2 par approximation linéaire de 169√2 − 239. Les paramètres sont a = 169, b = 239, k = 1, ε<sub>n + 1</sub> ~ 4 × 10<sup>−6</sup> ε<sub>n</sub>.''
+|-style="text-align: center"
+| itération || valeur fractionnaire || décimales exactes
+|-
+| 0 || 1 || 1
+|-
+| 1 || {{formatnum:114243}}/{{formatnum:80782}} || 1,414&thinsp;213&thinsp;562
+|-
+| 2 || {{formatnum:54608393}}/{{formatnum:38613965}} || 1,414&thinsp;213&thinsp;562&thinsp;373&thinsp;09
+|-
+| 3 || {{formatnum:26102926097}}/{{formatnum:18457556052}} || 1,414&thinsp;213&thinsp;562&thinsp;373&thinsp;095&thinsp;048&thinsp;80
+|-
+| 4 || {{formatnum:12477253282759}}/{{formatnum:8822750406821}} || 1,414&thinsp;213&thinsp;562&thinsp;373&thinsp;095&thinsp;048&thinsp;801&thinsp;688&thinsp;7
+|}
+
+==== Développement en série entière ====
+
+On se donne (''a'', ''b'') solutions de l’[[équation diophantienne]] ''2a''² = ''b²'' + ''k'' = K, avec ''k'' = ±1. On peut alors écrire  √[K/(K − ''k'')] comme somme d'une [[série (mathématiques)|série]] via le développement en [[série entière]] de (1+''z'')<sup>½</sup> (ou la [[formule du binôme généralisée]], simple variante d'exposition).
+: <math>\sqrt{ \frac{\mathrm{K}}{\mathrm{K}-k} } = 1 + \frac{1}{2} \frac{k}{\mathrm{K}} + \frac{1\times 3}{2\times 4} \left(\frac{k}{\mathrm{K}}\right)^2
++ \frac{1\times 3\times 5}{2\times 4\times 6} \left(\frac{k}{\mathrm{K}}\right)^3 + \dots</math>
+et utiliser √2 = ''b''/''a'' √[K/(K − ''k'')].
+
+Dans le cas √2 = 7/5 √(50/49), ce développement se simplifie de façon remarquable comme l’a fait remarquer [[Leonhard Euler]] en [[1755]] :
+: <math>\sqrt{2} = \frac{7}{5} \left( 1 + \frac{1}{100} + \frac{1\times 3}{1 \times 2} 10^{-4} + \frac{1\times 3\times 5}{1\times 2\times 3} 10^{-6} + \dots \right) </math>
+
+::{| class="wikitable"
+|+ ''Approximation √2 = 239/169 √(57122/57121) par le développement en série entière du radical fractionnaire. Les paramètres sont a = 239, b = 169, K = 57122, k = 1.''
+|-style="text-align: center"
+| itération || valeur fractionnaire || décimales exactes
+|-
+| 0 || 1 || 1
+|- 
+| 1 || 239/169 || 1,414 2
+|-
+| 2 || {{formatnum:6238763163557}}/{{formatnum:4411471739168}} || 1,414 213 562 373 09
+|-
+| 3 || {{formatnum:712741258857407103}}/{{formatnum:503984177369508992}} || 1,414 213 562 373 095 048
+|-
+| 4 || {{formatnum:325705649507622468308893}}/{{formatnum:230308673437608741128192}} || 1,414 213 562 373 095 048 801 688
+|}
+
+==== Dichotomie ====
+
+Il est possible d’approcher √2 par [[méthode de dichotomie|bissection]]. Cette méthode est de convergence linéaire lente : on gagne trois décimales à chaque dizaine d’itérations.
+
+=== Méthode à convergence quadratique ===
+La [[méthode de Newton]] appliquée à la fonction racine carrée permet de calculer une valeur approchée de √2 de manière itérative avec une convergence quadratique, c’est-à-dire doublant le nombre de décimales à chaque itération. La récurrence a la forme
+:''u''<sub>''n'' + 1</sub> = ''u''<sub>''n''</sub>/2 + 1/''u''<sub>''n''</sub>
+
+Cet algorithme s’appelle [[méthode de Héron]] ou méthode babylonienne car il semble que ce soit celle utilisée par les babyloniens pour trouver des valeurs approchées de racines carrées.
+
+Si l’on s’intéresse aux fractions successives à partir d’une valeur initiale ''p''<sub>0</sub> et ''q''<sub>0</sub>, la récurrence sur le numérateur et le dénominateur sont
+:''p''<sub>''n'' + 1</sub> = ''p''<sub>''n''</sub>² + 2''q''<sub>''n''</sub>²
+:''q''<sub>''n'' + 1</sub> = 2''p''<sub>''n''</sub>''q''<sub>''n''</sub>
+
+::{| class="wikitable"
+|+ ''Premières approximations de √2 données par la méthode de Newton''.
+|-style="text-align: center"
+| itération || valeur fractionnaire       || décimales exactes
+|-
+|         0 ||                    1       || 1
+|-
+|         1 ||                  3/2       || 1
+|-
+|         2 ||                 17/12       || 1,41
+|-
+|         3 ||              577/408       || 1,41421
+|-
+|         4 ||        665857/470832       || 1,41421356237
+|-
+|         5 ||  886731088897/627013566048 || 1,41421356237309504880168
+|}
+
+=== Méthodes cubiques ===
+
+==== Méthode de Halley ====
+
+Un exemple de méthode cubique s’obtient par l’[[itération de Halley]]. Elle cherche le zéro de ƒ(''x''&thinsp;) = ''x''² − 2 en utilisant les deux premières [[dérivée]]s. La solution itérative est
+:''x''<sub>''n'' + 1</sub> = ''x''<sub>''n''</sub> × (''x''<sub>''n''</sub>² + 6)/(3''x''<sub>''n''</sub>² + 2)
+soit en posant ''x''<sub>''n''</sub> = ''p''<sub>''n''</sub>/''q''<sub>''n''</sub> :
+:''p''<sub>''n'' + 1</sub> = ''p''<sub>''n''</sub>(''p''<sub>''n''</sub>² + 6''q''<sub>''n''</sub>²)
+:''q''<sub>''n'' + 1</sub> = ''q''<sub>''n''</sub>(3''p''<sub>''n''</sub>² + 2''q''<sub>''n''</sub>²)</sub>
+Cette méthode est de convergence cubique : le nombre de décimales exactes triple à chaque itération.
+
+::{| class="wikitable"
+|+ ''Premières approximations de √2 données par la méthode cubique''.
+|-style="text-align: center"
+| itération || valeur fractionnaire || décimales exactes
+|-
+|  0 || 1 || 1
+|-
+| 1 || 7/5 || 1,4
+|-
+| 2 || {{formatnum:1393}}/985 || 1,414 213
+|-
+| 3 || {{formatnum:10812186007}}/{{formatnum:7645370045}} || 1,414 213 562 373 095 048
+|-
+| 4 || —   || 1,414 213 562 373 095 048 8<br />{{formatnum:016887242096980785696}}<br />{{formatnum:718753769480731766797}}
+|}
+
+==== Méthode de Householder ====
+
+L’[[itération de Householder]] appliquée à ƒ(''x''&thinsp;) = 1/''x''&thinsp;² − 1/√2 donne une suite convergeant vers 1/√2 :
+: ''x''<sub>''n'' + 1</sub> = ''x''<sub>''n''</sub> + ''x''<sub>''n''</sub>/8 × (2''x''<sub>''n''</sub>² − 1)(6''x''<sub>''n''</sub>² − 7)
+
+=== Méthodes d'ordre supérieur ===
+
+On utilise une [[méthode de Newton]] modifiée<ref name="GOU01a">{{en}} [http://numbers.computation.free.fr/Constants/Algorithms/newton.html {{lang|en|''Newton’s iteration''}}], Xavier Gourdon & Pascal Sebah, [[2001]], visité le 24 août 2006.</ref> pour trouver le zéro de ƒ(''x''&thinsp;) = 1/''x''&thinsp;² − 1/2. Cela donne la suite récurrente :
+: ''x''<sub>''n'' + 1</sub> = ''x''<sub>''n''</sub> + ''x''<sub>''n''</sub>/16 × (8''h''<sub>''n''</sub> + 6''h''<sub>''n''</sub>² + 5''h''<sub>''n''</sub>³)
+avec
+: ''h''<sub>''n''</sub> = 1 − ''x''<sub>''n''</sub>²/2
+Cette méthode est de [[Vitesse de convergence des suites|convergence quartique]], c’est-à-dire d’ordre 4 : le nombre de chiffres significatifs corrects quadruple (asymptotiquement) à chaque itération.
+
+::{| class="wikitable"
+|+ ''Premières approximations de √2 données par la méthode quartique''.
+|-style="text-align: center"
+| itération || valeur fractionnaire  || décimales exactes
+|-
+| 0 || 3/2 || 1
+|-
+| 1 || {{formatnum:23169/2}}<sup>14</sup> || 1,414
+|-
+| 2 || {{formatnum:57367317478181003155381859082363}}/2<sup>105</sup> || 1,414 213 562 373 09
+|-
+| 3 || — || 1,414 213 562 373 09<br />{{formatnum:5048801688724209}}<br />{{formatnum:6980785696718753}}<br />{{formatnum:76948073176679737}}
+|}
+
+Il existe des méthodes d’ordre supérieur<ref name="GOU01b">{{en}} [http://numbers.computation.free.fr/Constants/Sqrt2/sqrt2.html {{lang|en|''Pythagoras’ Constant √2''}}], Xavier Gourdon & Pascal Sebah, [[2001]], visité le 24 août 2006.</ref>, notamment parmi les méthodes de Householder.
+
+== Notes et références ==
+{{Références|colonnes=2}}
+
+== Bibliographie ==
+* Benoît Rittaud, ''Le Fabuleux Destin de √2'', Le Pommier, 2006, {{ISBN|2746502755}}
+* [[Nicolas Bourbaki]], ''Éléments d’histoire des mathématiques'', Hermann, 1974, {{ISBN|978-2705657789}}
+* [[Bertrand Hauchecorne]] et Daniel Suratteau, ''Des mathématiciens de A à Z'', Ellipses, {{ISBN|978-2729846831}}
+* Denis Daumas, « Sur la démonstration de l’irrationalité chez les grecs », in ''La démonstration mathématique dans l’histoire'', [[Institut de recherche sur l'enseignement des mathématiques|IREM]] de Lyon
+* {{en}} David Henderson {{lang|en|''Square Roots in the Sulbasutra''}}, {{lang|en|Geometry at Work: Papers in Applied Geometry}} ({{lang|en|editor}}, C. A. Gorini), {{lang|en|MAA Notes Number 53}}, {{p.}}39-45, 2000, [http://www.math.cornell.edu/~dwh/papers/sulba/sulba.html en ligne] sur le site de l’auteur
+* {{en}} Eleanor Robson & David Fowler, « {{lang|en|''Square root approximations in Old Babylonian mathematics : YBC 7289 in context''}} », {{lang|la|''Historia Mathematica''}}, 25, {{p.}}366-378, 1998 {{lire en ligne|lien=http://www.hps.cam.ac.uk/dept/robson-fowler-square.pdf}} {{pdf}}
+*{{en}} Apostol Tom M. (November 2000). ''Irrationality of The Square Root of Two — A Geometric Proof''. The American Mathematical Monthly 107 (9): 841–842 [http://www.jstor.org/stable/2695741 accès en ligne restreint]
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Racine carrée]] 
+* [[Livre X des Éléments d'Euclide|Livre X des Éléments d’Euclide]]
+* [[Nombre irrationnel]]
+* [[Nombre algébrique]]
+
+=== Liens externes ===
+* {{fr}} ''[http://www.math.univ-paris13.fr/~rittaud/RacineDeDeux Racine de 2]'', Benoît Rittaud (ressources en ligne autour du livre ''Le Fabuleux Destin de √2'', consulté le 24 août 2006)
+* {{en}} [http://www.cut-the-knot.org/proofs/sq_root.shtml {{lang|en|''Square root of 2 is irrational''}}], Alexander Bogomolny ({{nombre|9|démonstrations}} de l’irrationalité de √2, consulté le 23 août 2006)
+* {{en}} [http://numbers.computation.free.fr/Constants/Sqrt2/sqrt2.html {{lang|en|''Pythagoras’ Constant √2''}}], Xavier Goudon et Pierre Sebah (diverses approximations rationnelles de 2, visité le 23 août 2006)
+* {{en}} [http://mathworld.wolfram.com/PythagorassConstant.html {{lang|en|''Pythagoras’s Constant on Math World''}}] (consulté le 23 août 2006)
+* {{fr}} [http://a.leblanc5.free.fr/ ''Rationnel mon Q''], Ludmila Duchêne et Agnès Leblanc, (démonstrations de l’irrationalité de racine de 2), Editions Hermann, 2009
+
+{{Palette Nombre}}
+
+{{Portail|mathématiques}}
+{{Bon article|vote=BA|oldid=15994985|date=19 avril 2007}}
+
+[[Catégorie:Nombre remarquable]]
+[[Catégorie:Racine carrée]]
+
+[[ar:ثابت فيثاغورس]]
+[[de:Wurzel 2]]
+[[en:Square root of 2]]
+[[eo:Kvadrata radiko de 2]]
+[[es:Raíz cuadrada de 2]]
+[[fa:ریشه دوم ۲]]
+[[fi:Neliöjuuri 2]]
+[[he:השורש הריבועי של 2]]
+[[it:Radice quadrata di 2]]
+[[ja:2の平方根]]
+[[ko:2의 제곱근]]
+[[ms:Punca kuasa dua 2]]
+[[nl:Wortel 2]]
+[[no:Kvadratroten av 2]]
+[[pl:Pierwiastek kwadratowy z 2]]
+[[pt:Raiz quadrada de dois]]
+[[ru:Квадратный корень из 2]]
+[[sl:Kvadratni koren od 2]]
+[[sv:Kvadratroten ur 2]]
+[[th:กรณฑ์ที่สองของสอง]]
+[[tr:Karekök 2]]
+[[zh:2的算術平方根]]

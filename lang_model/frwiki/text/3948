@@ -1,0 +1,97 @@
+En [[physique]] classique, l''''énergie potentielle gravitationnelle''' correspond à une forme d'[[énergie]] associée au champ gravitationnel. Son interprétation la plus naturelle est liée au [[travail d'une force|travail]] qu'il faut fournir pour déplacer un objet plongé dans un [[champ gravitationnel]]. Plus précisément, la variation d'énergie potentielle gravitationnelle d'une masse se déplaçant entre deux points est l'opposé du travail nécessaire pour déplacer cette masse entre ces deux points quand ceux-ci sont plongés dans une région où règne un champ gravitationnel.
+
+== Considérations générales ==
+
+L'énergie potentielle gravitationnelle est, comme toutes les formes d'énergie potentielle, définie à une constante additive arbitraire près. Néanmoins, il est d'usage de fixer la valeur de la constante en prenant la valeur de l'énergie potentielle nulle lorsque la masse est infiniment éloignée du centre de gravité du champ auquel elle est soumise. Dans ce cas-là, l'énergie potentielle gravitationnelle est négative. Cela signifie qu'il faut fournir un travail positif (c'est-à-dire dépenser de l'énergie) pour extraire une masse d'un champ gravitationnel. Ceci est une conséquence directe du fait que, dans la Nature, les masses sont des quantités positives, qui s'attirent toujours. Ainsi, éloigner une masse d'une distribution arbitraire de masses nécessite de dépenser de l'énergie pour s'opposer à la force attractive entre les différentes masses.
+
+== Expression pour une masse ponctuelle ==
+
+Considérant une [[masse]] ''m'', supposée dans un premier temps ponctuelle, placée en un point dont le rayon vecteur est noté '''''r''''', si on appelle Φ le potentiel gravitationnel dans lequel se déplace cette masse, alors, l'énergie potentielle gravitationnelle ''E''{{ind|p}} de celle-ci vaut
+:<math> E_{\rm p}= m \Phi ({\boldsymbol r})</math>.
+Comme annoncé plus haut, cette énergie est définie à une constante près du fait qu'il en est de même pour le potentiel Φ. Si la distribution des masses à l'origine du potentiel Φ est d'extension limitée, alors il est naturel de choisir une valeur nulle pour le potentiel à l'infini, ce qui donne immédiatement d'après la formule ci-dessus une énergie nulle à l'infini.
+
+== Cas d'une distribution générique de masse ==
+
+Dans le cas le plus général d'une distribution continue de matière décrite par une [[densité]] de [[masse]] ''ρ''('''''r'''''), où '''''r''''' représente le [[rayon vecteur]] d'un point quelconque de l'espace, l'énergie potentielle gravitationnelle du système est donnée par la somme de tous les travaux nécessaires pour amener chacune de ses parties depuis l'infini jusqu'à leur position finale. Cette énergie s'écrit alors
+:<math>E_{\rm p} =-\frac{1}{2} \iint G\frac{\rho({\boldsymbol r})\rho({\boldsymbol r'})}{|{\boldsymbol r} - {\boldsymbol r'}|}\;{\rm d}{\boldsymbol r}\;{\rm d}{\boldsymbol r'}</math>.
+Le facteur 1/2 peut se comprendre par le fait que l'on considère l'ensemble des énergie potentielles prises entre deux points de la distribution de masse, chaque paire de points étant comptée deux fois d'où la nécessité de rajouter un facteur 1/2 dans le résultat final. 
+
+=== Autre écriture ===
+
+==== En fonction du potentiel gravitationnel ====
+
+Du fait que la formule générale du potentiel gravitationnel s'écrit
+:<math>\Phi({\boldsymbol r}) = -G \int \frac{\rho({\boldsymbol r'})}{|{\boldsymbol r} - {\boldsymbol r'}|} \;{\rm d}{\boldsymbol r'}</math>, 
+on peut effectuer une des deux intégrations dans la formule précédente, pour obtenir
+:<math>E_{\rm p} =\frac{1}{2} \int \rho({\boldsymbol r}) \Phi({\boldsymbol r}) \;{\rm d}{\boldsymbol r}</math>.
+
+==== En fonction du champ gravitationnel ====
+
+Si l'on connaît le champ gravitationnel '''''g''''' généré par la distribution des sources, on peut réexprimer la formule précédente selon
+:<math>E_{\rm p} =- \frac{1}{8 \pi G} \int |{\boldsymbol g} ({\boldsymbol r})|^2 \;{\rm d}{\boldsymbol r}</math>.
+{{boîte déroulante|titre=Démonstration|contenu=
+En effet, on peut exprimer le potentiel Φ en un point en fonction de la densité de matière, selon l'[[équation de Poisson]], à savoir
+:<math>\Delta \Phi = 4 \pi G \rho</math>. 
+Ainsi, l'expression de départ se réécrit-elle
+:<math>E_{\rm p} =\frac{1}{2} \int \frac{\Delta \Phi}{4 \pi G} \Phi({\boldsymbol r}) \;{\rm d}{\boldsymbol r}</math>.
+Cette expression peut naturellement s'[[intégration par parties|intégrer par parties]], pour donner
+:<math>E_{\rm p} =- \frac{1}{8 \pi G} \int |\nabla \Phi|^2 \;{\rm d}{\boldsymbol r}</math>.
+Or le champ gravitationnel n'est rien d'autre que l'opposé du gradient du potentiel Φ. Ainsi, 
+:<math>E_{\rm p} =- \frac{1}{8 \pi G} \int |{\boldsymbol g} ({\boldsymbol r})|^2 \;{\rm d}{\boldsymbol r}</math>.
+}}
+Cette expression est essentiellement similaires aux énergies [[Énergie potentielle électrostatique|électrostatique]] et magnétostatique, faisant l'une et l'autre intervenir l'intégrale sur tout l'espace du carré de la norme du champ correspondant ([[champ électrique|électrique]] et [[champ magnétique|magnétique]], respectivement), le tout multiplié par la constante appropriée. Par exemple, la constante est ''ε''{{ind|0}}/2 pour l'énergie potentielle électrostatique et -1/8''πG'' pour l'énergie potentielle gravitationnelle, car les forces électrostatiques et gravitationnelles font intervenir les constantes 1/4''πε''{{ind|0}} et ''G'', et que l'une est répulsive pour des charges de même signe, alors que l'autre est attractive.
+
+Cette expression est assez commode dans le cas du calcul de l'énergie potentielle gravitationnelle d'une distribution de matière à symétrie sphérique.
+
+== Exemples ==
+
+=== Satellite en orbite autour de la Terre ===
+
+Dans le cas d'un [[satellite artificiel]] en orbite autour de la [[Terre]] que l'on peut en première approximation considérer comme étant à [[symétrie sphérique]], le potentiel dans lequel il est plongé suit la loi suivante :
+:<math>\Phi = -G \frac{M_{\rm T}}{r}</math>,
+où ''G'' est la [[constante de gravitation]], ''M''{{ind|T}} la [[masse de la Terre]] et ''r'' la distance par rapport au centre de la Terre. Alors l'énergie potentielle du satellite vaut
+:<math>E_{\rm p} = - G\frac{m M_{\rm T}}{r}</math>.
+Cette énergie est certes négative, mais supérieure à l'énergie potentielle du satellite avant son lancement, puisqu'à ce moment-là, sa distance au centre de la Terre était égal au rayon terrestre, plus petit que sa distance ''r'' en orbite.
+
+=== Sphère homogène ===
+
+Pour une sphère homogène de rayon ''R'' et de masse ''M'', l'énergie potentielle gravitationnelle s'écrit
+:<math>E_{\rm p} = - \frac{3}{5}\frac{G M^2}{R}</math>.
+{{boîte déroulante|titre=Démonstration|contenu=La sphère étant homogène, on peut utiliser le [[théorème de Gauss]] pour déterminer le champ en tout point. Ce théorème stipule que le flux sortant du champ au travers d'une shpère centrée sur la distribution de matière est déterminé par la masse interieure à cette sphère. Ainsi, à une distance ''r'' du centre, la composante radiale du champ gravitationnel '''''g''''', notée ''g{{ind|r}}'', s'écrit
+:<math>4 \pi r^2 g_r = - 4 \pi G M(r)</math>,
+''M''(''r'') étant la masse comprise à l'intérieur du rayon ''r''. Du fait que la distribution de matière est ici supposée homogène à l'intérieur du rayon ''R'', on a
+:<math>M(r) = \left\{\begin{array}{lcl} M \frac{r^3}{R^3} & \mathrm{si} & r \leq R \\ M & \mathrm{si} & r \geq R\end{array} \right.</math>.
+En conséquence,
+:<math>g_r = \left\{\begin{array}{lcl} - \frac{G M r}{R^3} & \mathrm{si} & r \leq R \\ - \frac{G M}{r^2} & \mathrm{si} & r \geq R\end{array} \right.</math>.
+L'intégrale du carré de ''g{{ind|r}}'' à l'intérieur et à l'extérieur de la sphère donne ainsi
+:<math>\int_{r \leq R} g_r^2 \; {\rm d} {\boldsymbol r} = 4 \pi \int_{r \leq R} \frac{G^2 M^2}{R^6} r^4 \; {\rm d} r = \frac{4 \pi}{5} \frac{G^2 M^2}{R}</math>,
+et
+:<math>\int_{r \geq R} g_r^2 \; {\rm d} {\boldsymbol r} = 4 \pi \int_{r \geq R} \frac{G^2 M^2} \frac{1}{r^2} \; {\rm d} r = 4 \pi \frac{G^2 M^2}{R}</math>.
+L'énergie potentielle gravitationnelle totale est donc égale à la somme de ces deux quantités, le tout multiplié par -1/(8''πG''), ce qui donne
+:<math>E_{\rm p} = - \frac{3}{5} \frac{G M^2}{R}</math>
+}}
+
+=== Distribution sphérique ===
+
+D'une manière plus générale, pour une distribution de matière quelconque à symétrie sphérique, l'énergie potentielle gravitationnelle est toujours de la forme
+:<math>E_{\rm p} = - \xi\frac{G M^2}{R}</math>,
+la valeur de la quantité ''ξ'' étant déterminée par le détail du profil de densité de la distribution : plus celle-ci est piquée vers le centre, plus cette quantité est grande, ce qui se comprend aisément en remarquant qu'une distribution très piquée de matière est majoritairement confinée dans un rayon notablement plus petit que la rayon total ''R'' de la configuration, où ne se situe qu'une petite partie de la masse, qui ne contribue guère au potentiel gravitationnel (ou à l'énergie) totale.
+
+Se fixer un profil de densité revient en réalité à fixer une [[équation d'état]] pour la matière considérée. En [[astrophysique]] se produisent beaucoup de situations où seule la densité et la [[pression]] interviennent, la [[température]] étant une quantité inessentielle. L'exemple typique de cette situation est celui d'un [[polytrope]], où pression et densité sont reliées par une [[loi de puissance]] du type <math>P \propto \rho^\gamma</math>. Dans ce cas, la quantité ''ξ'' est une fonction de ''γ'', appelé dans ce contexte [[indice adiabatique]]. Dans un tel contexte, il convient de rappeler que l'énergie potentielle gravitationnelle seule ne suffit pas à décrire la configuration (par exemple si l'on s'intéresse à sa stabilité). Il faut en effet considérer l'énergie totale, somme de la contribution gravitationnelle et de l'[[énergie interne]] de la configuration. 
+
+== Voir aussi ==
+
+* [[Énergie potentielle de pesanteur]]
+
+{{Portail|physique|astronomie}}
+
+[[Catégorie:Gravitation|Energie potentielle gravitationnelle]]
+[[Catégorie:Mécanique classique|Energie potentielle gravitationnelle]]
+
+[[ar:طاقة وضع جاذبية]]
+[[en:Gravitational energy]]
+[[it:Energia potenziale gravitazionale]]
+[[pt:Energia potencial gravitacional]]
+[[ru:Гравитационная энергия]]
+[[simple:Gravitational energy]]
+[[zh:引力势能]]

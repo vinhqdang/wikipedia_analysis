@@ -1,0 +1,227 @@
+{{Voir homonymes|Datation}}
+La '''datation des cadavres''' est une des thématiques de la [[médecine légale]]. De telles méthodes de datation ne peuvent ''qu'estimer'' la date à partir de laquelle la décomposition d'un corps a commencé.
+
+== Définition médico-légale de la mort ==
+L’état de la [[mort]] semble ne pas avoir été très bien cerné par la législation. Si tout le monde reconnaît que la mort se caractérise par une décomposition du corps, il est des états menant irrémédiablement à cette décomposition sans que la décomposition soit installée ; c'est par exemple le cas de la mort cérébrale, l'activité cardiaque étant présente. Se posent alors des questions morales, voire religieuses : une personne dans cet état doit-elle être considérée comme morte, ce qui permet par exemple le prélèvement d'organe, ou bien doit-elle être considérée comme vivante, donc maintenue en vie de manière artificielle ?
+
+La datation d'un [[cadavre]] ne peut estimer que la date à partir de laquelle la décomposition commence.
+
+En [[France]], la [[médecine légale]] a donné une définition de la mort permettant de trancher la question. Cette définition est d’une part une définition négative : un individu est mort s’il ne présente pas de signes de vie apparents comme la [[respiration]], la [[circulation sanguine]], l’activité [[cerveau|cérébrale]]. C'est l'arrêt des fonctions vitales. D’autre part on trouve une définition positive qui complète la précédente : un individu est mort s’il possède au niveau de son [[phénotype]] macroscopique des signes dit ''positifs'' de la mort. Ces signes sont tardifs, mais leur présence atteste d’une manière irréfutable la mort.
+
+Le sujet est tout autant délicat que la mort ne survient pas de manière généralisée sur l’ensemble du corps. Tous les [[organe]]s ne meurent pas en même temps et tout dépend du « type de décès » : lors d’un [[arrêt cardio-circulatoire|arrêt cardiaque]], les organes ne meurent pas dans le même ordre que dans le cas d’un accident de voiture ayant entraîné un traumatisme crânien irréversible. Il est important de préciser que l’on distingue plusieurs types de mort : la mort [[cerveau|cérébrale]], la mort [[Cellule (biologie)|cellulaire]], la mort de l’[[organe]], la mort de l’[[organisme vivant|organisme]].
+Toutefois la constatation du décès d’un individu n’est parfois pas suffisante. On pense notamment à la constatation de décès dans le cadre d’une enquête policière. Il est nécessaire de savoir estimer l'heure du décès de la victime pour pouvoir apporter des preuves de l’inculpation ou de l’innocence du suspect. La police criminelle et la [[médecine légale]] collaborent ainsi entre elles. L’objectif de cet article sera de définir comment on peut dater le décès alors que le passage à un état létal n’est pas clairement défini. On étudiera les différentes méthodes de datation selon une chronologie en deux étapes :
+* La phase ''post mortem'' précoce (jusqu'à quelques jours après le décès).
+* La phase ''post mortem'' moyenne (jusqu'à un mois).
+
+== Technique de datation d'un cadavre en phase post-mortem précoce ==
+===Estimation du délai post-mortem par des méthodes thermométriques===
+Après le décès, l’arrêt des phénomènes d’[[homéothermie]] entraîne une égalisation progressive de la [[température]] du corps avec celle de son environnement (dans les pays tempérés il s’agira donc le plus souvent d’un '''refroidissement'''). Bien que ce phénomène soit connu de longue date, son intérêt potentiel dans le champ de la [[médecine légale]] n’a été identifié que vers le milieu du {{XIXe siècle}}. Le principal intérêt du refroidissement en tant que marqueur du délai ''post-mortem'' est qu’il s’agit d’un phénomène aisément quantifiable, à la différence des autres marqueurs cadavériques.
+
+====Modélisation du refroidissement====
+Sous les climats tempérés, la [[température]] de la [[peau]] rejoint celle du milieu environnant en 8 à 12 heures en moyenne mais la température centrale du cadavre nécessite pour ce faire un délai deux à trois fois plus important. Ces constatations ont mené à un certain nombre de simplifications abusives selon lesquelles :
+
+* La [[température]] s’égaliserait avec celle du milieu ambiant en 24 heures.
+* La vitesse de refroidissement serait de 1 °C par heure pendant les 24 premières heures.
+
+Ces simplifications reposaient sur l’idée que le refroidissement cadavérique pouvait être une [[fonction linéaire]] du temps. On sait aujourd’hui qu’il n’en est rien.
+
+Une deuxième approche consiste à utiliser les lois de la [[conduction thermique]] et de supposer que le flux thermique est proportionnel à la différence de température entre le corps et l'air ambiant. Cette approche permet alors de modéliser la baisse de température par une [[fonction exponentielle]] :
+
+: <math>\frac{T_{corps} - T_{ambiant}}{37,2 - T_{ambiant}} = e^{-kt}</math>
+
+Cependant cette modélisation n'apparait pas satisfaisante confrontée à la réalité de l'expérience. En effet, on note, sans pouvoir l'expliquer, que la baisse de température s'effectue en trois phases :
+
+[[Image:temperature postmortem.png|thumb|right|300px|Évolution de la température rectale en fonction du temps]]
+
+* ''Une phase dite de plateau thermique initial'' (durée de 0,5 à 3 heures, avec d’importantes variations interindividuelles) : pendant cette période et pour des raisons encore mal connues, la [[température]] du cadavre décroît très peu ; il en résulte une première limitation de la méthode thermométrique, car celle-ci se révèle inopérante pour dater un décès récent remontant à moins de trois heures.
+* ''Une phase intermédiaire de décroissance rapide'', semi-linéaire, qui est celle où la méthode thermométrique se révèle la plus pertinente pour dater la mort.
+* ''Une phase terminale de décroissance lente''  où la [[température]] du corps finit par s’égaliser très progressivement avec celle du milieu ambiant. À partir de cette phase, la méthode thermométrique n'est plus utilisable.
+Le docteur Claus Henssge, professeur de médecine légale à l'université de Essen (Allemagne) a cherché à modéliser la décroissance thermique sous la forme d'une fonction bi-exponentielle variable selon le poids de l'individu. Il propose alors la modélisation suivante :
+:<math>\frac{T_{corps} - T_{ambiant}}{37,2 - T_{ambiant}} = 1,25 e^{-kt} - 0,25e^{-5kt}</math> 
+où k est un paramètre dépendant de la masse M (en kg) de l'individu : 
+:<math> k = \frac{1,2815}{M^{0,625}} - 0,0284</math>
+
+L'observation de ces deux fonctions permet de remarquer que
+
+* la dérivée au temps t = 0 de la température est nulle, ce qui permet bien de modéliser le palier initial.
+* La décroissance est d'autant plus lente que la masse de l'individu est élevée.
+
+[[Image:Nomogramme de Henssge.png|thumb|upright=1.4|[[Nomogramme]] de Henssge]]
+Comme un médecin légiste n'a pas toujours sous la main une calculatrice scientifique pour déterminer t en fonction de T, Claus Hengsse a créé un système d'[[abaque (calcul)|abaque]] permettant de déterminer, en fonction de la température du corps, de la température ambiante et de la masse de l'individu, le temps probable de la mort. C'est le ''[[nomogramme]] de Henssge''.
+
+À la valeur trouvée par le nomogramme de Henssge, il faudra appliquer des facteurs correctifs en tenant compte du fait que l’évolution de la température dépend de nombreux facteurs tels que :
+
+* ''Des caractéristiques propres au corps'' : température initiale, âge, éventuellement présence de vêtements…
+* ''Des conditions dépendant du milieu extérieur'' : présence de vent ou de courants d'air, présence d'humidité, variabilité de la température extérieure.
+
+====Utilisation pratique====
+Sur le lieu d'un décès, il est essentiel de mesurer la [[température]] centrale du cadavre aussi bien que celle de l’environnement (c’est-à-dire la température de l’[[air]] ambiant). Les deux mesures doivent être réalisées au même moment avec le même instrument, et l’heure de la mesure doit être notée avec précision. Presque toujours, la température du cadavre sera mesurée au niveau rectal tout en sachant que ce site anatomique peut présenter des problèmes lorsque la victime a pu faire l’objet de violences sexuelles. La prise de température ne doit jamais être effectuée avec un [[thermomètre]] médical, car sa gamme de températures est trop restreinte, l’instrument de référence étant le thermomètre électronique à [[sonde de température|thermocouple]], de grande précision et équipé d’une sonde de pénétration souple ou rigide. Cette dernière doit être introduite d’au moins 10 à 15 cm dans le [[rectum]] du cadavre pour obtenir une bonne estimation de la température centrale. Lorsqu'elle est mesurée dans des conditions appropriées, la température du corps doit être considérée comme l’un des meilleurs [[estimateur]]s du délai ''post mortem'' pendant les 24 premières heures.
+
+Cette technique présente cependant un certain nombre de limitations :
+
+* ''Elle n’est valide que pendant la phase intermédiaire de l'évolution du refroidissement'', c'est-à-dire entre 3 et 18 heures.
+* ''La méthode thermométrique suppose que la [[température]] corporelle au moment du décès se trouvait dans les limites physiologiques'' (entre 36,8 et 37,6 °C) ; une [[fièvre|hyperthermie]] (rencontrée par exemple dans le cas d'un décès dans un contexte infectieux) ou une [[hypothermie]] ''ante-mortem'' (par exemple quelqu'un retrouvé mort de froid) peuvent fausser considérablement les estimations, et doivent donc être étudiées chaque fois que des renseignements sur les circonstances de la mort seront disponibles.
+* ''Les équations du refroidissement supposent également que la [[température]] environnementale est restée sensiblement constante pendant toute la période post-mortem.'' Cela peut être le cas lorsque le décès survient dans des bâtiments chauffés ou climatisés, néanmoins des problèmes se posent dans le cas de corps retrouvés dans le milieu extérieur.
+
+La détermination du délai ''post-mortem'' par la méthode thermométrique peut d’autre part être biaisée par un certain nombre de facteurs interférents d’origine endogène (cadavérique) ou exogène (environnementale). Les principaux de ces facteurs sont :
+* ''Les mouvements de l’[[air]]'', qui accélèrent les pertes thermiques par [[convection]]. Pour cette raison, il est important de noter si le temps est venteux lorsque la scène de décès se situe en extérieur, ou s’il existe des courants d’air lorsque celle-ci se situe à l’intérieur d'une habitation.
+* ''L'[[hygrométrie|humidité]] de l’[[air]]'' : les pertes thermiques sont d’autant plus importantes que le degré hygrométrique de l’air est élevé.
+* ''La présence de vêtements'' : les vêtements jouent le rôle d’[[isolant thermique]] et le refroidissement du corps sera d’autant plus retardé que leur épaisseur sera importante (même remarque pour tout autre « enrobage » du corps : draps, couette…).
+* ''Cas d'un corps immergé'' : la déperdition thermique du cadavre est beaucoup plus rapide dans l’[[eau]] que dans l’[[air]], et se voit encore accélérée lorsque le corps se trouve plongé en eau courante.
+
+La méthode la plus pratique pour estimer un délai ''post-mortem'' par la méthode thermométrique consiste à utiliser le normogramme de Henssge. 
+Mais la modélisation précédente ne joue que pour un corps nu dans un air calme. Il est donc souvent nécessaire de faire intervenir des éléments de corrections qui réduisent ou accélère le refroidissement d'un facteur Cf . Si Cf est supérieur à 1, le corps se refroidit plus lentement. Un facteur Cf inférieur à 1 indique que le corps se refroidira plus vite.
+
+* Corps nu, air calme : Cf = 1,0
+* Corps peu habillé, air calme : Cf = 1,1
+* Corps habillé modérément, air calme : Cf = 1,2
+* Corps habillé chaudement (plus de 4 couches de vêtements), air calme : Cf = 1,4
+* Corps très habillé, très couvert, lit : Cf = 2 à 2,4
+
+* Corps nu, air en mouvement : Cf = 0,75
+* Corps peu habillé, air en mouvement : Cf = 0,9
+* Corps habillé modérément, air en mouvement : Cf = 1,2
+* Corps habillé chaudement, air en mouvement : Cf = 1,4
+
+* Corps nu et mouillé, air calme : Cf = 0,5
+* Corps peu habillé et vêtements humides, air calme : Cf = 0,8
+* Corps habillé modérément et vêtements humides, air calme : Cf = 1,2
+* Corps habillé chaudement et vêtements humides, air calme : Cf = 1,2
+
+* Corps nu et mouillé, air en mouvement : Cf = 0,7
+* Corps peu habillé et vêtements humides, air en mouvement : Cf = 0,7
+* Corps habillé modérément et vêtements humides, air en mouvement : Cf = 0,9
+* Corps habillé chaudement et vêtements humides, air en mouvement : Cf = 0,9
+
+* Corps nu dans l'eau stagnante : Cf = 0,5
+* Corps peu habillé dans l'eau stagnante : Cf = 0,7
+* Corps habillé modérément dans l'eau stagnante : Cf = 0,9
+* Corps habillé chaudement dans l'eau stagnante : Cf = 1,0
+
+* Corps nu dans l'eau courante : Cf = 0,35
+* Corps peu habillé dans l'eau courante : Cf = 0,5
+* Corps habillé modérément dans l'eau courante : Cf = 0,8
+* Corps habillé chaudement dans l'eau courante : Cf = 1,0
+
+Il faut cependant prendre conscience que ce calcul ne peut être qu'une estimation. le nomogramme de Hengsse ne propose pas une durée fixe mais une fourchette d'estimation.
+
+De nombreux auteurs ont proposé des solutions alternatives pour améliorer la précision de cette technique :
+
+* Mesure répétée ou continue de la [[température]] ''post-mortem'' ''pendant plusieurs heures''.
+* Mesure de la [[température]] centrale par des ''moyens invasifs'' (introduction de sondes au niveau intra-hépatique, intra-cérébral, etc.).
+
+Ces méthodes ont en commun d'être difficiles à mettre en œuvre en routine sur une scène de décès ; en outre aucune d'entre elles n'a véritablement fait la preuve de sa supériorité par rapport à la méthode thermométrique de référence.
+
+====Exemple====
+On retrouve un corps dans une mare. Celui-ci pèse 80 kg et sa [[température]] [[rectum|rectale]] est de 20 °C. À l'aide de données [[météorologie|météorologiques]], on détermine la température moyenne des quinze derniers jours : on obtient, pour la température de l'eau, <math>T_{\mathrm{moy}}=10 </math>. Sur le nomogramme, on lit 20 heures pour l'estimation, puis on applique le facteur correctif : étant donné que le corps a été retrouvé dans de l'[[eau]] stagnante, il faut multiplier le délai estimé par 0,5.
+
+On obtient donc <math>0,5\times 20 =10</math> heures. La fourchette de fiabilité à 95% est, dans ce cas précis, de + ou - 4,5 h. ce qui place la date de la mort entre 5,5h et 14,5h plus tôt.
+
+===La rigidité cadavérique : un outil dans l'estimation du délai post-mortem précoce===
+La '''rigidité cadavérique''' (ou ''rigor mortis'') est un raidissement progressif de la [[muscle|musculature]] causé par des transformations [[biochimie|biochimiques]] irréversibles affectant les fibres musculaires au cours de la phase ''post-mortem'' précoce. Cet état disparaît habituellement lorsqu'apparaît la putréfaction, c'est-à-dire au bout de deux à quatre jours selon les circonstances.
+
+====Explication de la rigidité cadavérique====
+
+[[Image:LMMP musclevideo.gif|thumb|right|398px|Schéma d'une fibre musculaire]]
+
+La rigidité se caractérise par une perte d'[[déformation élastique|élasticité]] des [[tissu biologique|tissus]], et notamment des [[muscle]]s, causée par la coagulation de la [[myosine]], une [[protéine]] qui y est présente.
+
+Plus précisément, elle est due à l’arrêt des pompes [[adénosine triphosphate|ATPasiques]] (donc de l'approvisionnement des [[Cellule (biologie)|cellules]] en énergie) qui entraîne une accumulation des [[ion]]s [[calcium]] Ca<sup>2+</sup> dans le [[réticulum endoplasmique]] des cellules [[muscle|musculaires]]; ce dernier étant appelé réticulum sarcoplasmique. Par le biais de cette altération et par la perte de l’étanchéité du réticulum endoplasmique, la concentration cytoplasmique du Ca<sup>2+</sup> augmente. Sous l'action de cet ion, des ponts entre les filaments d’[[actine]] et de [[myosine]] se forment ce qui entraîne l'immobilisation du [[muscle]].
+
+La disparition de la rigidité est en rapport avec l’[[autolyse]] et la putréfaction qui détruisent la structure des filaments d’[[actine]] et de [[myosine]] ainsi que les [[liaison chimique|liaisons]] qui les unissent.
+
+====Utilisation pratique====
+La rigidité cadavérique affecte l’ensemble des [[muscle]]s de l’organisme : elle débute à la nuque puis suit une marche descendante vers les membres inférieurs, comme l'indique la loi de Nysten. En effet, elle touche d’abord les petits muscles situés en haut du [[corps humain|corps]] puis les muscles plus importants (en particulier les membres inférieurs) où elle prédomine ce qui explique cette marche descendante.
+* La rigidité débute entre 3 et 4 heures après le décès, presque toujours au niveau de l’extrémité cervico-céphalique (nuque et [[muscle]]s mastiquateurs).
+* Elle atteint son intensité maximale entre 8 et 12 heures.
+* Elle se maintient ensuite entre 12 et 36 heures.
+* Puis elle disparaît progressivement en deux ou trois jours, lorsqu'apparaît la putréfaction.
+
+En cas de rupture artificielle, par exemple un déplacement du cadavre, intervenant moins de 8 à 12 heures après la mort, la rigidité peut réapparaître ; ce n’est pas le cas lorsque la rupture intervient au-delà de ce délai (associée à d'autres méthodes de datation, cette considération permet par exemple de constater que le cadavre a été déplacé).
+Cette chronologie n’est qu’indicative et en réalité on observe des variations interindividuelles considérables en fonction de la [[température]] ambiante (comme tous les phénomènes cadavériques, la rigidité est d’autant plus rapide que la température ambiante est élevée et inversement), d’une éventuelle activité [[muscle|musculaire]] intense avant la mort, de l’importance de la musculature du sujet et de la cause de la mort :
+* La rigidité est plus rapide en cas de convulsions ''ante-mortem'', dans certains décès toxiques ([[strychnine]]…), dans les [[électrocution]]s, dans les décès précédés d’un état de [[stress]] ou lorsque la mort survient au cours d’efforts [[muscle|musculaires]] intenses.
+* Elle est plus lente dans certains décès asphyxiques (pendaison, [[intoxication]] au [[monoxyde de carbone]]…), ou lors d'[[hémorragie]]s massives.
+La rigidité cadavérique présente d'autres limitations :
+* Elle peut varier en intensité : ainsi, elle est très peu importante chez le sujet âgé ou émacié ou lors d’agonies prolongées (dans ce cas, il faut veiller à ne pas la confondre avec la raideur due au [[froid]]).
+* Il n’existe pas d’instrument ou de technique permettant de la quantifier de manière précise.
+Pour ces différentes raisons, la rigidité cadavérique ne doit jamais être utilisée isolément pour tenter de déterminer le délai ''post-mortem'' mais doit être exploitée à la lumière d'autres méthodes de datation.
+
+===Lividités cadavériques===
+Les lividités cadavériques (ou ''livor mortis'') sont une coloration rouge à violacée de la [[peau]] liée à un déplacement passif de la [[sang|masse sanguine]] vers les parties déclives du cadavre, qui débute dès l'arrêt de l'écoulement du [[sang]].
+
+====Explication des lividités cadavériques====
+Le processus d'apparition des lividités cadavériques débute dès la mort de l'individu. En effet :
+* La [[cœur|pompe cardiaque]] fait mouvoir le [[sang]] dans l’organisme et son arrêt en entraîne la stagnation.
+* Après la mort, des ouvertures se forment dans la paroi des [[vaisseau sanguin|vaisseaux sanguins]], constituées de cellules endothéliales.
+* Des [[globule rouge|globules rouges]] s'échappent alors des vaisseaux, leur [[densité]] ''d'' = 1,095 étant supérieure à celle du plasma sanguin et des autres cellules sanguines, comprises entre 1,070 et 1,085.
+* Le [[sang]], en s’accumulant, devient visible par translucidité de la [[peau]], d'où une modification de sa teinte qui caractérise les lividités cadavériques.
+
+====Utilisation pratique====
+Les lividités cadavériques se répartissent de manière caractéristique sur le cadavre :
+* Elles apparaissent d’abord sur le cou et s’étendent ensuite à d’autres régions de l’organisme vers la quinzième heure après le décès.
+* Elles épargnent les points de [[pression]] : ainsi, sous l’effet de la [[gravitation]], le [[sang]] d’une victime allongée s’accumule, s’immobilise et deviendra persistant sous la [[peau]] non comprimée des parties les plus basses.
+
+La vitesse de formation des lividités est variable. De manière générale :
+* Elles sont visibles à partir de la deuxième heure après la mort.
+* Elles deviennent ensuite progressivement de plus en plus marquées pour atteindre le maximum de leur intensité à la douzième heure.
+Par ailleurs, la mobilité des lividités est également intéressante :
+* Elles sont dans un premier temps effaçables à la [[pression]] : un appui appliqué sur une zone de lividité chasse le [[sang]] des [[vaisseau sanguin|vaisseaux]] et la [[peau]] prend une teinte plus pâle par rapport aux zones avoisinantes.
+* À la douzième heure, et suite à la perte d'étanchéité des parois vasculaires, le sang imbibe le tissu interstitiel et l'appui appliqué sur une zone de lividité ne peut plus déplacer le sang. À ce stade, les lividités sont dites ''fixes''.
+Dans les affaires criminelles, les lividités peuvent donc indiquer un éventuel changement de position du cadavre, si leur emplacement constaté ne correspond pas à celui attendu.
+La teinte des lividités cadavériques peut donner des renseignements sur la cause de la mort. Des lividités de teinte rouge-carmin sont typiques d’une intoxication au [[monoxyde de carbone]] (<math>\mathrm{CO}</math>), alors que des lividités cyanosées orientent généralement vers une cause asphyxique ou vers un décès secondaire dû à une pathologie [[cœur|cardiaque]] ou [[poumon|pulmonaire]].
+
+===Dosage du potassium dans l’humeur vitrée de l'œil===
+[[Image:LMMP oeil.png|thumb|right|398px|Coupe sagittale de l'œil]]
+[[Image:LMMP oeilboeuf.png|thumb|right|398px|Prélèvement de l'humeur vitrée contenue dans un œil de bœuf]]
+
+L’utilisation du '''dosage du [[potassium]]''' contenu dans l’humeur vitrée de l'[[œil]] date de plus de  25 ans. C’est une méthode utile mais qui, à elle seule, n’est guère plus précise que les signes cliniques.
+Cette méthode repose sur le principe suivant: lorsque l'organisme cesse son activité, les cellules de la paroi perdent leur semi-perméabilité et par conséquent libère une  partie des ions qu'elles contiennent (notamment le potassium). Et plus le temps s'écoule plus la teneur en  potassium augmente. Il ne peut pas y avoir de contamination possible par l'humeur vitrée, car celle-ci pour être translucide doit contenir très peu d'ions.
+L'avantage essentiel de cette méthode est qu’elle est utilisable pendant quelques jours (jusqu'à une semaine) alors que les méthodes non biologiques ne le sont que pendant 24 à 48 heures maximum.
+* '''Prélèvement''' : le prélèvement se fait au moyen d'une seringue munie d'une aiguille intramusculaire, dans l’angle externe de l’[[œil]], par aspiration douce afin d’éviter toute contamination [[sang]]uine ou [[rétine|rétinienne]]. Il doit être effectué le plus précocement possible c'est-à-dire lors de la découverte du corps, avant sa mise en réfrigération.
+* '''Dosage''' : par un laboratoire habitué (électrodes sélectives) après agitation et homogénéisation.
+* '''[[Conservation]]''' : la technique reposant sur un dosage total d’[[ion]]s dans un liquide biologique, les conditions de conservation n’ont pratiquement aucune influence sur les résultats.
+Les scientifiques ont pu établir, la formule suivante basée sur plus de 200 étalonnages : entre 18 et 20 °C, <math>t=3,23\cdot K-8,2</math>, <math>t</math> étant le délai ''post-mortem'' exprimé en heures et <math>K</math> la [[Concentration molaire|concentration]] de [[potassium]] dans l'humeur vitrée en <math>\mathrm{mmol}\cdot\mathrm{L}^{-1}</math>. Cette formule est relativement imprécise, puisque son [[écart type]] atteint 9 heures. Cependant elle est assez simple à appliquer puisqu'il s'agit d'une fonction linéaire de la concentration en potassium.
+Il est préférable de disposer des résultats d'un étalonnage effectué en laboratoire, afin d'avoir une estimation du délai ''post-mortem'' plus précise que celle donnée par la formule.
+Dans des conditions expérimentales, l’[[écart type]] est plus faible. Le [[potassium]] provenant de la [[lusis|lyse]] cellulaire n’a pas un accroissement linéaire. La [[température]] est un facteur très important puisque le [[froid]] ralentit considérablement l’augmentation de la quantité de potassium présente dans l'humeur vitrée.
+
+==Technique de datation d'un cadavre en phase post-mortem moyenne==
+===Putréfaction===
+La putréfaction est la décomposition des [[tissu biologique|tissus]] organiques sous l’influence prépondérante des [[bactérie]]s hébergées par l’individu, surtout celles de la [[flore intestinale]], ensuite des [[champignon|mycètes]] saprophytes et des bactéries minéralisantes qui envahissent le cadavre.
+
+La putréfaction débute par :
+* L'apparition d'une tache verte abdominale au niveau de la fosse iliaque droite.
+* L'apparition d'une tache verte abdominale au niveau de la fosse iliaque gauche.
+* L'extension de ces deux taches qui finissent par gagner progressivement toute la partie inférieure de l’[[abdomen]].
+
+Les divers [[champignon|mycètes]] se succèdent en groupes déterminés et cette [[flore]] se modifie suivant les altérations progressives du [[substrat]] qui constitue ainsi, à une époque donnée, un habitat d’élection pour certaines espèces de mycètes et pas pour d’autres.
+Il existe trois vagues successives :
+* Au premier stade de la putréfaction colicative et gazeuses, on trouve seulement les espèces suivantes : ''espèces''.
+* À une période plus avancée de la transformation des graisses, se succèdent : ''espèces''.
+* Enfin, au stade de la réduction squelettique, se développent : ''espèces''.
+La putréfaction du cadavre due aux [[bactérie]]s et aux [[champignon|mycètes]] saprophytes accentuant l’altération amorcée par l’[[autolyse]] des déchets que les bactéries minéralisantes feront rentrer dans le cycle des déchets de la biosphère.
+Toutes ces modifications post-mortem et leur succession sont accélérées ou retardées par de nombreux facteurs :
+* Le volume du cadavre est important à considérer, l’altération est plus rapide pour un petit cadavre par exemple
+* L’âge du cadavre.
+* Les causes de la mort.
+* Le lieu de dépôt.
+* Les facteurs extérieurs : saisons, conditions [[météorologie|météorologiques]] notamment la [[température]] et le degré [[hygrométrie|hygrométrique]], l'aération…, sont autant de points à considérer.
+
+=== Entomologie médico-légale ===
+{{loupe|Entomologie médico-légale}}
+L'examen du cadavre seul ne permet que trop rarement une datation précise. C'est pourquoi l'étude des insectes nécrophages s'est avérée indispensable à la résolution de certaines affaires. En effet, ces insectes arrivent par « vagues », faciles à représenter sur échelle de temps, qu'à très bien décrites le vétérinaire '''[[Jean Pierre Mégnin]]''' (1828-1905), qui publia en 1894 ''La faune des cadavres''. Dans cet ouvrage, il décrit les huit vagues d’insectes qui se succèdent sur les cadavres en décomposition et dont l’étude permet de dater précisément la date de la mort.
+
+== Annexes ==
+=== Bibliographie ===
+* Marcel Leclercq (1978), ''Entomologie et Médecine légale. Datation de la mort.'' Masson (Paris), ''Collection de médecine légale et de toxicologie médicale'' : 100 p.
+* Claude Wyss, Daniel Cherix, [http://www.entomologieforensique.ch/page0_0.htm ''Traité d'entomologie forensique. Les insectes sur la scène de crime''], [[Presses Polytechniques et Universitaires Romandes]].
+* Damien CHARABIDZE, ''Entomologie Medico-Legale: Recherche Et Expertises'', Editions Universitaires Européennes, 180 p.
+
+=== Articles connexes ===
+* [http://www.eafe.org/ Association Européenne d'entomologie Médico Légale] (EAFE)
+* [http://www.forenseek.org/Decomposition-d-un-cadavre.html Décomposition d'un cadavre et intervention des insectes à voir sur ForenSeek]
+
+{{Portail|médecine}}
+
+[[Catégorie:Médecine légale]]
+
+[[de:Todeszeichen]]

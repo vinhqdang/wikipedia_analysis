@@ -1,0 +1,401 @@
+'''La titrisation''' (Securitization en anglais) est une [[technique financière]] qui consiste classiquement à transférer à des [[investisseur]]s des [[Actif (comptabilité)|actifs]] financiers tels que des [[créance]]s (par exemple des [[Facture (comptabilité)|factures]] émises non soldées, ou des [[Emprunt (finance)|prêts]] en cours), en transformant ces créances, par le passage à travers une société ''ad hoc'', en [[Valeur mobilière|titres financiers]] émis sur le [[marché des capitaux]]. 
+
+Une telle titrisation s'opère en regroupant un portefeuille (c'est-à-dire un lot) de créances de nature similaire (prêts immobiliers, prêts à la consommation, factures mono-thématique, ...) que l'on cède alors à une structure ''ad hoc'' (société, fonds ou ''trust'') qui en finance le prix d'achat en plaçant des titres auprès d'investisseurs. Les titres ([[obligation]]s, [[billet de trésorerie|billets de trésorerie]], ...) représentent chacun une fraction du portefeuille de créances titrisées et donnent le droit aux investisseurs de recevoir les paiements des créances (par exemple quand les factures sont payées, ou quand les prêts immobiliers versent des mensualités) sous forme d'intérêts et de remboursement de principal. 
+
+La titrisation peut également viser à ne transférer aux investisseurs que le risque financier lié aux actifs concernés, auquel cas les actifs ne sont pas vendus, mais le risque ou partie du risque transféré grâce à une [[titrisation synthétique]].
+
+Née aux [[États-Unis]] dans les [[années 1960]], la titrisation a connu une expansion importante également en Europe à partir de [[2000]], tandis que les produits et les structures devenaient de plus en plus complexes. En France, la titrisation a été introduite par la loi du 23 décembre 1988. Sous l'impulsion de Pierre Bérégovoy, l'idée était de faciliter le développement du crédit immobilier en permettant aux banques de sortir les créances de leurs bilans et d'améliorer leur ratio "Cooke". La [[crise des subprimes]] survenue en [[2007]] a provoqué un ralentissement du marché, tandis que les autorités de marché considèrent la question de savoir si la titrisation devrait être mieux encadrée.
+
+== Présentation détaillée ==
+La titrisation peut s'appliquer à des portefeuilles de créances ou de biens immobiliers, comme à tout actif distribuant des paiements à venir, qu'il s'agisse ou non de créances. Dans sa forme la plus courante, elle consiste, pour une société détentrice d'actifs peu liquides, à vendre ceux-ci à une entité intermédiaire créée pour l'occasion qui finance cet achat en empruntant sur le marché par l'émission de [[titre de créance négociable|titres de créance négociables]] garantis par les actifs. 
+
+Les titres sont acquis par des investisseurs qui participent à l’opération exclusivement sur base de la garantie sur les actifs dont les flux financiers futurs serviront au paiement des intérêts sur les titres et à leur remboursement. Chaque investisseur acquiert donc en quelque sorte une fraction du portefeuille d’actifs titrisés&nbsp;: les titres acquis par les investisseurs sont dits « adossés » au portefeuille d’actifs. Sur les marchés financiers, ces titres adossés sont appelés de manière générique des ''[[asset-backed security]] ''(ABS), la société intermédiaire créée pour l'occasion étant appelée une ''[[Special Purpose Vehicle]]'' (SPV), ''Special Purpose Company'' (SPC), ''Structured Investment Vehicle'' (SIV) ou encore un ''conduit''<ref name="handbook">''The Handbook of Asset-Backed Securities'', Jess Lederman, 1990</ref>.
+
+Pour les investisseurs, la particularité de la titrisation est qu'ils sont rémunérés par le portefeuille cédé et en assument donc les risques, risques qui sont parfois partiellement couverts ou structurés, et généralement évalués par des [[Agence de notation financière|agences de notation financière]] qui publient une note qualitative du risque sur les titres émis.
+
+Afin de faciliter l’analyse du [[risque financier|risque]] lié au portefeuille, c’est-à-dire de prévoir les flux financiers, les actifs ou droits cédés seront de préférence de même nature, comme par exemple :
+* un portefeuille de crédits hypothécaires résidentiels ;
+* un portefeuille de crédits hypothécaires commerciaux ;
+* un ensemble de droits liés à des opérations de [[crédit-bail]] sur machines ;
+* les loyers futurs d'un ou plusieurs immeubles résidentiels ou commerciaux.
+
+Par ailleurs, afin de revendre des titres de qualité, le portefeuille fait l'objet d'une évaluation des risques de non paiement par l'établissement financier qui structure l'opération et, généralement, par au moins deux [[Agence de notation financière|agences de notation financière]]. Un montant équivalent au premier risque (qui a le plus de chances de se produire) est constitué en titres secondaires [[Subordination (banque et finance)|subordonnés]] aux titres principaux et qui subiront les premières pertes du portefeuille. Ils sont alors généralement vendus à l'entreprise cédante, qui garde ainsi à sa charge le premier risque de non paiement de ses créances, la qualité des titres principaux s'en trouvant d'autant augmentée. Le plus souvent, les titres principaux sont eux-mêmes scindés en différentes classes subordonnées entre elles, chaque classe de titre présentant un profil de risque distinct, plus ou moins élevé, sanctionné par une notation de qualité donnée par les agences de notation et qui permet aux investisseurs d'évaluer leur risque (voir section [[Titrisation#Structuration financière des opérations|Structuration financière des opérations]]).
+
+== Vocabulaire d'une opération de titrisation ==
+
+* ''Cédant'' : entreprise qui cède les créances (ou autres actifs) au véhicule de titrisation.
+* ''Critères d'éligibilité'' : liste des conditions requises pour qu'une créance détenue par le cédant puisse être titrisée.
+* ''Débiteur'' : entreprise ou personne qui doit payer une créance titrisée.
+* ''Dépositaire'' : entreprise responsable de la conservation des preuves des créances titrisées (identité des créances, caractéristiques, bordereaux de cession, ...).
+* ''Établissement gestionnaire'' (ou ''servicer''): entreprise chargée de gérer le paiement des créances titrisées. En général il s'agit du cédant lui-même. Parfois, une entreprise (dite ''Backup Servicer'') s'engage à recouvrer les créances en cas de défaillance de l'établissement gestionnaire.
+* ''Réserve de liquidité'' : montant conservé par la SPV pour payer les divers frais de fonctionnement de l'opération de titrisation ou couvrir un manque de fonds temporaire dans la structure (telle une irrégularité dans les flux, mais pas les défauts).
+* ''Originateur'' : entreprise qui a été à l'origine de la création des créances ou des actifs (le prêteur originel dans le cas de créances). Est souvent aussi le cédant.
+* ''Titre prioritaire (ou Senior)'' : titre (part ou obligation) dont le paiement est prioritaire sur les autres versements (titres subordonnés, frais de gestion, commissions) effectués par le SPV. De par leur nature, les titres prioritaires ont le risque le plus faible d'impayé.
+* ''Titre [[Subordination (banque et finance)|subordonné]]'' : titre (part ou obligation) dont le paiement est subordonné au paiement des titres de la classe supérieure. Ce sont donc les titres subordonnés qui subiront en premier le non paiement des créances. Souvent, les titres les plus subordonnés sont rachetés par le cédant lui-même afin qu'il prenne à sa charge le premier risque de non paiement de ses créances.
+* ''Société de gestion'' : Entreprise qui gère l'opération de titrisation ainsi que sa comptabilité jusqu'à son terme. Utilisée surtout dans les régimes juridiques qui utilise la forme de Fonds Commun de Titrisation (anciennement le Fonds Commun de Créances).
+*''SPV'' ou ''SPC'' : Special Purpose Vehicle ou Special Purpose Company, nom générique des véhicules de financement créés pour acquérir les créances du cédant et généralement aussi pour émettre des titres sur le marché. Cette entité intermédiaire entre le cédant et les investisseurs est aussi une garantie de bonne fin de l'opération de titrisation en cas de défaillance du cédant. 
+* ''FCT'' : Fonds Commun de Titrisation, nouvelle forme juridique imposé par le droit français pour une opération de titrisation qui remplace l'ancien fonds commun de créances. Un FCT est un SPV français. 
+* ''Véhicule de refinancement'' : intermédiaire que l'on place parfois (notamment en France) entre le SPV et les investisseurs. Le véhicule de refinancement s'engage à racheter des titres pour les revendre sous une autre forme (billets de trésorerie par exemple) afin de modifier la périodicité de paiement des titres et leur nature. Cela rend les nouveaux titres plus accessibles aux investisseurs.
+* ''Rehaussement de crédit'' : amélioration du degré de sécurité des titres émis. Afin de quantifier cette notion, l'opération de titrisation calcule un Taux de Rehaussement de Crédit (TRC) à atteindre. Par exemple, si on veut atteindre un TRC de 20&nbsp;% sur 100 euros de créances éligibles, on émettra 80 euros sous forme de titres prioritaires vendus aux investisseurs, et 20 euros sous forme de titres subordonnés revendus au cédant. Les titres prioritaires sont ainsi rendus plus sécurisés.
+
+== Une illustration ==
+
+[[Fichier:Titrisation.jpg|320px|right|thumb|Schéma de base d’une titrisation]]
+Prenons l'exemple d'une [[banque]], le cédant, qui souhaite lever un financement basé sur un portefeuille de crédits hypothécaires. 
+* la banque cède à la ''Special Purpose Company'', créée pour l’occasion, le portefeuille de crédits ainsi que tous les droits attachés (tels que les droits liés à une [[assurance-vie]]) ;
+* la ''Special Purpose Company'' émet des obligations dont les intérêts et les remboursements en capital seront assurés exclusivement par les flux financiers du portefeuille de crédit ;
+* avec le résultat de l’émission obligataire, la ''Special Purpose Company'' paie à la banque le prix de vente du portefeuille.
+
+Économiquement, tout se passe pour la banque comme si elle avait obtenu le financement « en direct » et elle s’est assuré un financement sur base de la qualité du portefeuille de crédit.
+
+Juridiquement, il n’y a aucun rapport entre l’investisseur et la banque, puisque la SPC est interposée entre les deux : la [[faillite]] ou le défaut du cédant n’aura d’effet ni sur l’opération, ni sur les investisseurs.
+
+== Avantages ==
+=== Accès à une nouvelle source de financement ===
+
+Vendre des actifs pour se financer n'est pas, ''a priori'', une technique financière complexe. Mais on considère ici la vente d'actifs parfois difficilement vendables, et en portefeuilles importants (500 M€ est un montant ordinaire sur ce marché). Outre le montant de l'opération, se pose la question de la capacité de l’acheteur à analyser les [[risque financier|risques]] du portefeuille, avec pour corollaire la possibilité pour le vendeur d’obtenir un juste prix.
+
+Comme l'indique la définition, la titrisation permet alors de transformer le portefeuille illiquide en des titres liquides, ce qui permet de « vendre » le portefeuille non plus à un investisseur, mais à une multitude d’investisseurs, c'est-à-dire au marché des capitaux, un marché d'un grand nombre d'investisseurs présents dans le monde.
+
+Afin de faire se rencontrer cédant et investisseurs, la titrisation obéit à certaines règles de mise en place et de structuration dont le but est de fournir à tous les acteurs de la transaction une évaluation transparente des risques, et donc l’établissement d’un prix « juste ».
+
+Par ailleurs, dans la mesure où les investisseurs vont prendre leur décision d’investissement non pas sur base de la qualité de l'entreprise, mais sur la base de la qualité des actifs cédés, même une entreprise qui ne serait pas en très bonne situation financière peut lever des fonds à des conditions raisonnables dans la mesure où elle peut identifier des actifs de qualité dans son bilan<ref name="Afic">{{pdf}}''[http://www.afic.asso.fr/Images/Upload/Partenariats/ft36_0907.pdf La fiche thématique du capital-investissement: la titrisation], septembre 2007</ref>.
+
+=== Transfert de risques ===
+
+Second avantage, le risque de perte sur le portefeuille est passé chez les investisseurs, ce qui signifie que si le portefeuille se révèle en définitive de mauvaise qualité et si les flux générés sont insuffisants, c’est l’investisseur qui subira, le cas échéant, une perte financière.
+
+Il est cependant rare que la totalité du risque soit transmise aux investisseurs. En général, certains mécanismes sont mis en place de sorte que le cédant conserve ce qu'on appelle le «premier risque» sur le portefeuille (Cf. supra). 
+
+Cependant, le mécanisme permet en tout cas au cédant de limiter son risque (de le limiter à un certain niveau, ou de le « capper » pour utiliser un terme usuel des marchés financiers) à un certain montant, le risque excédentaire étant supporté par les investisseurs. 
+
+Pour les banques, soumises à un contrôle des risques par leur contrôleur, la titrisation, utilisée comme outil de transfert des risques, est donc particulièrement importante.
+
+=== Gestion de bilan ===
+
+La titrisation permet en principe de gérer le bilan en maîtrisant le gonflement de celui-ci s'il est considéré comme excessif. En effet, en refinançant le portefeuille de crédit, un cédant libère des fonds et peut accroître son activité ou générer de nouveaux actifs tout en maintenant son bilan à un niveau maîtrisé, puisque les actifs sont sortis de son bilan<ref name="Afic"/>.
+
+Par ailleurs, les banques ont utilisé massivement la titrisation comme outil de gestion du capital réglementaire imposé par le [[ratio Cooke]] dans le cadre des recommandations de [[Bâle I]] du [[Comité de Bâle]].
+
+Dans les [[années 1990]], l'aspect de la gestion de bilan a été le moteur le plus important du développement de la titrisation, permettant aux entreprises et aux banques de faire de véritables [[Arbitrage (finance)|arbitrages]]<!--Terme mal choisi à préciser--> réglementaires, tandis qu'une véritable mode de la cession d'actifs provoquait des dérapages. Aussi, dans les [[années 2000]], les autorités aussi bien comptables que financières ont mis en place de nouvelles règles, les normes [[International Financial Reporting Standards|IFRS]] pour l'ensemble des sociétés et les normes de [[Bâle II]] pour les établissements financiers, qui ont fortement réduit ces possibilités d'arbitrage. Depuis lors, les aspects de gestion de bilan, au sens comptable, ont fortement diminué, tandis que les aspects de gestion du bilan réglementaire (ou [[Arbitrage prudentiel|prudentiel]]) dans les banques ont été maintenus mais assainis<ref> Pour approfondir cette question on pourra se référer à cet [http://www.titrisation.com/fr/dossier_n1.html article]</ref>.
+
+=== Discrétion et maintien de la relation avec le client ===
+
+Surtout en Europe, une banque qui cède un portefeuille de crédit préfère que la transaction reste discrète. Ce qu’elle veut surtout c’est que son client (l’emprunteur) n’en sache rien. 
+
+Que ce souhait soit raisonnable ou non, on peut sans doute le lier au fait que pour beaucoup de banques européennes, le crédit est considéré comme le point de départ d’une relation globale que la banque espère rentable.
+
+D’une certaine façon, cette vision du crédit est sans doute partagée par beaucoup de clients des banques, qui considèrent que la relation de crédit qu’ils ont avec leur banquier est de nature confidentielle. C’est spécialement le cas des entreprises.
+
+Les opérations de titrisation sont bien sûr faites dans le respect de la réglementation sur la protection de la vie privée. Par exemple, les investisseurs ou les analystes ne sauront rien de l’identité du client. Ils auront tout au plus un numéro d’ordre, tandis que la liste des clients, éventuellement sur CD ROM, sera conservée sous [[Sceau#Époque contemporaine|scellés]] par un intermédiaire de confiance ([[notaire]] par exemple) et ne sera utilisée que si la banque fait [[faillite]].
+
+Afin de satisfaire ce besoin de discrétion&nbsp;:
+# de manière générale, les clients (emprunteurs) ne sont pas avertis de la cession de leur crédit,
+# la banque continuera à être l’interlocuteur des clients, avec cette distinction que dorénavant, elle percevra les fonds '''pour le compte de la SPC''' en tant que gestionnaire (et non plus propriétaire) des actifs&nbsp;; dans le jargon de la titrisation, on dira que la banque est devenue le ''servicer'' des actifs.
+
+Ceci est largement facilité par l’usage de la titrisation.
+
+=== Extraction de valeur ===
+
+Une opération de titrisation ne répond pas nécessairement à d’autres besoins que l’envie d’extraire de la valeur d’actifs.
+
+Sachant que n’importe quel actif productif de flux financiers peut être titrisé, la titrisation peut servir d’instrument d’[[Arbitrage (finance)|arbitrage]], au sens strict du terme.
+
+'''Exemple''' :
+
+* Achat d’un portefeuille diversifié d’obligations émises par des entreprises.
+* Cession des obligations à une [[SPC]] qui finance l’achat par une émission obligataire titrisée.
+* Si le portefeuille rapporte en moyenne EURIBOR + 0,30&nbsp;% et que le coût de financement de la titrisation est de EURIBOR + 0,20&nbsp;%, l’opérateur qui a mis l’opération en place empoche un gain immédiat provenant de ce différentiel.
+
+Ce type de transaction de titrisation, où les actifs sont des créances quelconques sur des entreprises, est appelé « ''Collateralised Debt Obligations'' » ('''CDO'''). Dans les CDO, on distingue aussi parfois les « ''Collateralised Bond Obligations'' » ('''CBO''', où les actifs titrisés sont des ''bonds'', ou des obligations) et les « ''Collateralised Loan Obligations'' » ('''CLO''', où les actifs titrisés sont des crédits).
+
+Après les [[Residential mortgage-backed security|residential mortgage-backed securities]] (RMBS) et les [[Commercial mortgage-backed security|commercial Mortgage Backed Securities]] (CMBS), qui sont des titrisations de crédits hypothécaires résidentiels et commerciaux, les CDO sont le segment le plus important du marché de la titrisation. On y trouve aussi des CDO d'obligations titrisées (où les actifs titrisés sont eux-mêmes des obligations émises dans le cadre d'une opération de titrisation, par exemple des RMBS), avec aussi des CDOs de CDO (où les actifs titrisés sont eux-mêmes des CDOs, on parle de ''square CDO'' ou de CDOs au carré ('''CDO²'''), certaines opérations « au cube » -CDOs de square CDO- ont même aussi été structurées). Cependant, à la suite de la crise des sub primes, ces structures CDOs au carré ou au cube ont complètement disparu du fait de leur grande complexité et opacité.
+
+== Structuration juridique des opérations ==
+En règle générale, afin d’assurer à l’investisseur la bonne fin de l’opération, la titrisation implique l'interposition, entre cédant(s) et investisseurs, d'une société créée pour l’occasion, ou société ''ad hoc'' (en anglais, « ''[[Special Purpose Vehicle]]'' » ou ''Special Purpose Company'', « '''SPV''' » ou « '''SPC''' »)&nbsp;: les actifs titrisés sont vendus à une SPC qui lève des fonds dans le marché avec des obligations adossées aux actifs et qui utilise ces fonds pour payer au cédant le prix d'achat des actifs titrisés<ref name="AMF">{{pdf}}''[http://www.amf-france.org/documents/general/6476_1.pdf La notation en matière de titrisation]'', Document de l'[[Autorité des marchés financiers (France)|Autorité des marchés financiers]], janvier 2006</ref>.
+
+Le fait qu'une SPC soit devenue propriétaire des actifs assure l'indépendance de l’opération par rapport au cédant&nbsp;: même si ce dernier tombe en faillite, la SPC continuera à exister et les investisseurs sont assurés d’avoir accès aux flux financiers générés par le portefeuille d’actifs cédés. En effet, les créanciers du cédant ne pourront pas récupérer les actifs qui n'appartiennent plus au cédant. Afin d’assurer la pérennité de la SPC en cas de faillite du cédant, une série d’intervenants professionnels sont utilisés dans l’opération, telles que des sociétés spécialisées dans la gestion de sociétés de type SPC.
+
+== Structuration financière des opérations ==
+
+Généralement, plusieurs classes d’obligations seront émises, avec des classes supérieures (ou «senior» en anglais) et des classes [[subordination|subordonnées]].
+
+Par exemple, on pourra émettre 3 classes d'obligation (A, B et C), étant entendu que si le portefeuille subit une perte, c’est la classe « C » qui subira celle-ci d’abord. Lorsque la classe « C » est épuisée (c’est-à-dire que l’investisseur dans cette classe a tout perdu), la classe « B » commencera à perdre de l’argent, et ainsi de suite.
+
+On dira dans ce cas là que la classe « C » est subordonnée aux classes « A » et « B », et que la classe « B » est subordonnée à la classe « A », cette dernière étant la classe supérieure (senior).
+
+Il va sans dire que les investisseurs seront rémunérés différemment selon le risque de perte qu’ils encourent : pour l’investisseur de la classe « C », le taux d’intérêt devra rémunérer le risque relativement élevé qu’il court.
+
+La raison pour laquelle ces classes sont créées est très simple : en créant des classes subordonnées, on améliore la qualité de crédit de la classe « A » jusqu’à réduire la probabilité de perte sur cette classe à un niveau extrêmement bas (voir Notation), ce qui va réduire le coût de financement de cette classe (un risque faible signifie, évidemment, une faible rémunération de risque).
+
+En créant des classes de risque suffisamment hétérogènes de cette manière, on minimise le coût global de financement et on peut créer de la valeur<ref>Adam B. Ashcraft : ''How does tranching create value'', Étude pour la Federal Reserve Bank of New York, 2005</ref>.
+
+La création de classes subordonnées est dite le tranchage («''tranching''» en anglais). La façon dont le tranchage sera faite dépendra de l'analyse opérée par les agences de notation<ref>Voir par exemple cette note de [[Nomura]] : {{pdf}}''[http://www.securitization.net/pdf/content/Nomura_Tranching_8Oct04.pdf Tranching Credit Risk]''</ref>.
+
+=== Notation des produits ===
+{{Article détaillé|Notation financière}}
+Le marché de la titrisation est un marché qui dépend en très grande partie de la capacité des [[Notation financière|agences de notation]] à donner une note financière à l’opération, et de la confiance que les acteurs financiers accordent aux conclusions de ces agences.
+
+Les [[Agence de notation|agences de notation]] sont des sociétés indépendantes spécialisées dans la [[notation financière]] des entreprises ou des opérations. Elles apportent donc une information essentielle aux investisseurs potentiels qui n’ont ni le temps de s’investir dans l’examen d’un portefeuille d’actifs (parfois constitué de dizaine de milliers d’actifs), ni les instruments qui leurs permettent de faire des simulations de performances de portefeuille. En France, la notation est obligatoire en vertu de l'article L 214-44 du code monétaire et financier qui précise : {{Citation|Un document contenant une appréciation des caractéristiques des parts que le fonds est appelé à émettre et des créances qu'il se propose d'acquérir et évaluant les risques que présentent ces dernières est établi par un organisme figurant sur une liste arrêtée par le ministre [..]. Il est annexé à la note d'information et communiqué aux souscripteurs de parts.}}<ref>[http://admi.net/jo/codemonetaire.html Code monétaire et financier]</ref>
+
+Dès lors, quelle que soit l’opération considérée, les agences de notation sont des acteurs obligés. Elles examineront celle-ci et évalueront les risques de perte pour les investisseurs. Dans le cas d’un portefeuille de crédits hypothécaires par exemple, elles examineront la qualité du portefeuille (type de client, revenus, situation géographique, ratio prêt/montant emprunté, etc) et attribueront à chaque prêt un « risque de perte ». Ensuite, selon la façon dont l’opération est structurée, elles attribueront au portefeuille une notation qui ira par exemple de « AAA » (la meilleure qualité) à « BBB » (la plus basse qualité des « investissement raisonnable », aussi appelé « investment grade » : à partir de « BB » on est dans le « spéculatif »).
+
+=== Illustration ===
+Considérons un [[portefeuille (finance)|portefeuille]] de [[crédit]]s de {{formatnum:1000}}. Il est vraisemblable que les agences de notation arrivent à la conclusion que le portefeuille n’a pas, en soi, une qualité suffisante pour atteindre la qualité « AAA ». Par contre, si on indique à l’agence de notation que l'on constituera dans la SPV un « tampon », une « réserve » destinée à absorber les premières pertes, les agences tiendront compte de cet élément de protection pour évaluer les pertes possibles des investisseurs.
+
+On vient de commencer à « ''structurer'' » l’opération. En l’occurrence, on vient d’introduire un facteur (la réserve) qui rehausse la qualité de l’opération du point de vue du [[risque de crédit]] supporté par l’[[investisseur]]. On parlera d’une technique de « [[rehaussement de crédi]]t » («''credit enhancement''»<ref>[http://www.vinodkothari.com/glossary/SCE.htm Définition de Credit enhancement]</ref>).
+
+La réserve qui absorbera les pertes pourra être constituée de diverses façons :
+* il peut s’agir d’une réserve d’argent à disposition de la SPC. Cette réserve sera constituée par exemple d'un [[Subordination (banque et finance)|prêt subordonné]] accordé par le cédant : il s’agit d’un des moyens parmi d’autres de faire en sorte que le premier risque de l’opération soit pris par le cédant.
+* plus simplement, il peut s’agir d’une classe d’[[obligation (finance)|obligations]] subordonnées à toutes les autres obligations.
+
+Supposons dès lors que l’agence ait les critères suivants:
+[[Fichier:Titrisation rehaussement.jpg|370px|left|thumb|Divers niveaux de rehaussement de qualité crédit d’un portefeuille]]
+* Qualité BBB : cette qualité sera atteinte si une réserve de {{unité|0.75|%}} du montant du portefeuille absorbe les premières pertes ;
+* Qualité A : si la réserve est de {{unité|3|%}}
+* Qualité AA : si la réserve est de {{unité|5|%}}
+* Qualité AAA : si la réserve est de {{unité|8|%}}
+
+Ces diverses possibilités sont illustrées ci-contre. 
+
+Comme on le voit dans l’illustration, ceci revient à envisager chaque fois le financement du portefeuille par deux classes, une supérieure et une subordonnée, la subordonnée servant de réserve.
+
+Avec ces informations, nous pouvons commencer à véritablement structurer l’opération.
+
+Cette réserve peut-être financée par une valeur supérieure du portefeuille par rapport au montant de dette levé, ou par la différence entre le rendement du portefeuille et la rémunération des investisseurs (gain d'arbitrage).
+
+Compte tenu des informations dont nous disposons, voici la façon dont nous pourrions structurer l’opération et les classes que nous pourrions émettre, avec chaque fois la notation qui sera donnée par l’agence de notation. L’illustration montre deux possibilités de structuration.
+[[Fichier:Tranching.jpg|550px|right|thumb|Une alternative de « tranchage » et de création de classes pour un portefeuille]]
+
+Le tranchage est opéré de la manière suivante, en tenant compte de l'analyse des agences de notation: 
+
+Pour déterminer la qualité de crédit de chaque classe d’obligations, on regarde le montant qui se trouve « en dessous » de cette classe, que ce soit sous forme de réserve ou de classes subordonnées. On peut donc « trancher » l’opération comme on le souhaite, créer autant de classes qu’on le veut, dans la mesure où on crée différents niveaux de réserves. 
+
+Lorsque l’agence de notation procédera à l'analyse du tranchage opéré, un seul élément sera important quand elle considérera la qualité de risque d’une tranche : le rehaussement de crédit total dont cette classe bénéficie, y compris les tranches qui lui sont subordonnées, et qui détermine sa notation.
+
+Ensuite, on est effectivement libre de structurer l’opération comme on le souhaite. Au moment du choix entre les deux possibilités montrées dans l’illustration par exemple, le critère essentiel sera le coût de [[financement]] respectif de chaque branche de l’alternative selon les conditions du marché à ce moment-là.
+
+Le choix entre les diverses possibilités de tranchage dépendra donc essentiellement de la situation du [[Marché financier|marché]] et du différentiel de [[taux d’intérêt]] à payer aux diverses classes.
+
+== Spécificités de l’investissement ==
+=== Amortissement du portefeuille ===
+
+La seule source de flux financiers disponible étant les flux du portefeuille d’actif, les opérations de titrisation ont certaines particularités importantes pour les investisseurs.
+
+Pour illustrer ce point, prenons un portefeuille de crédits hypothécaires : généralement, chaque mois, chaque emprunteur paiera un montant qui sera représentatif
+* de l’intérêt chargé à l’emprunteur
+* d’un remboursement d’une partie du capital.
+
+C’est-à-dire que le portefeuille va s’amortir avec le temps.
+
+Cet amortissement du portefeuille sera plus ou moins accéléré selon deux autres facteurs :
+* le nombre de défauts (lors d’un défaut, le prêt devient exigible et sera remboursé anticipativement par la vente de la maison financée (réalisation du [[gage]])
+* le nombre de remboursements anticipés (lorsqu’un emprunteur décide de rembourser par anticipation: par exemple, lorsqu’il a trouvé un financement meilleur marché auprès d’un concurrent).
+
+Alors que les intérêts payés par les emprunteurs seront utilisés pour payer l’intérêt payable aux investisseurs, il est évident que chaque remboursement en capital devra être utilisé pour rembourser le capital des obligations.
+
+Les paiements sur des obligations titrisées se faisant généralement à un rythme trimestriel, les investisseurs toucheront chaque trimestre des intérêts et un remboursement en capital dont le montant est incertain.
+
+Par conséquent, l’horizon de placement, la durée et la [[duration]] des obligations sont incertains, ce qui peut être très gênant pour estimer la valeur de l’investissement.
+
+=== Seniorité ===
+
+En règle générale, les remboursements en capital seront utilisés d’abord pour rembourser la classe supérieure ({{Citation|senior}}). Lorsque celle-ci sera remboursée, les classes inférieures seront remboursées.
+
+Par conséquent, l’horizon de placement, incertain, varie aussi selon la classe dans laquelle on investit.
+
+=== Remboursement anticipé ===
+
+En règle générale, ce type d’opération se terminera lorsque le portefeuille d’actifs atteindra un montant égal à 10&nbsp;% de son montant initial.
+
+Les raisons de cette règle sont simples : une opération de titrisation requiert l’intervention d’un certain nombre de parties, ce qui implique des frais fixes qui pèsent de plus en plus lourd sur le coût de financement au fur et à mesure que les obligations se remboursent.
+
+Par conséquent, la structure juridique permet au cédant de racheter le portefeuille lorsque celui-ci atteint le niveau prédéterminé (10&nbsp;%). La SPC utilisera le prix de rachat pour rembourser le reliquat des obligations et l’opération sera liquidée (et la SPC dissoute).
+
+=== Taux ===
+
+Les obligations titrisées, en tout cas en Europe, paient généralement un taux flottant, c’est-à-dire que tous les trois mois, les investisseurs reçoivent un coupon calculé en fonction du principal de l’obligation, et d’un taux qui sera un [[taux de référence]] (tel que [[EURIBOR]]) plus une marge (qui sera d’autant plus haute que le risque est important).
+
+Ceci ne surprendra pas les financiers : étant donné que l’horizon d’investissement est incertain (rythme de remboursement du principal inconnu), une obligation à taux fixe serait extrêmement difficile à gérer pour l’investisseur : lui aussi doit généralement assurer une [[Gestion actifs-passifs|gestion actif-passif]] correcte de son bilan.
+
+=== Exemple ===
+
+L’exemple ci-dessous est tiré d’une opération réelle.
+[[Fichier:Titrisation amortissement.jpg|400px|right|thumb|Amortissement d’une titrisation de crédits hypothécaires]]
+
+Comme on le voit, les paiements en principal sont affectés en priorité au remboursement de la classe A.
+
+Par conséquent, la classe A est dite à remboursement « pass-through » (les flux financiers passent à travers la SPC pour atterrir directement chez les investisseurs) et porte un taux flottant.
+
+Par contre, pour les classes B et C, les éléments suivant sont entrés en ligne de compte :
+* la structure de l’opération impliquait que l’opération serait remboursée intégralement anticipativement avant que les classes B et C commencent leur amortissement (en clair, les classes B et C représentaient moins de 10% du total, limite sous laquelle l’opération pouvait se terminer anticipativement)
+* la modélisation de l’opération (et le taux faible et très stable de défaut et de remboursements anticipés) permettait de prévoir avec une bonne certitude le moment où ce remboursement anticipé interviendrait.
+
+Les classes B et C ont donc été des obligations à taux fixe, et leur remboursement est dit «&nbsp;soft bullet&nbsp;». Une obligation «&nbsp;soft bullet&nbsp;» est une obligation remboursable ''in fine'' (remboursable en une fois à l’échéance, «&nbsp;bullet&nbsp;» en anglais) mais dont la date de remboursement n’est pas totalement certaine : dans certaines circonstances exceptionnelles (tel qu’un amortissement accéléré imprévu du portefeuille), cette date peut varier<ref>On pourra approfondir ces questions avec le {{pdf}}[http://www.securitization.net/pdf/abs_fr.pdf guide pratique de l'ABS], proposé par l'équipe de recherche ABS de la [[Société générale]]</ref>.
+
+=== Classes d’actifs utilisables ===
+
+Les actifs titrisables sont très nombreux puisque tout produit dégageant des [[cash flow]]s réguliers peut être utilisé comme support.
+
+Outre les classiques crédits, on peut ainsi titriser des créances commerciales, des loyers d'actifs mobiliers ou immobiliers, des [[royalties]], des flux futurs, bref à peu près tout actif ou droit dont on peut raisonnablement prévoir les flux financiers futurs.
+
+À titre d’exemples des titrisations les plus « exotiques », le gouvernement italien a titrisé les produits futurs du [[Lotto]] et de la vente d’un portefeuille de propriétés immobilières, [[David Bowie]] a titrisé les revenus futurs de son catalogue de titres en 2002<ref>{{en}}''[http://www.businessweek.com/magazine/content/02_10/b3773145.htm Care to Buy Some David Bowie Bonds?]'', [[Business Week]], 11 mars 2002</ref> (l'opération menée par David Bowie en 2002 ayant donné le nom générique de ''Bowie Bonds'' aux titrisations de droit de royalties), et une banque britannique a titrisé les revenus futurs d’une chaîne de bistrots.
+
+== Principaux types d’opérations ==
+
+Les opérations peuvent se classer selon les actifs sous-jacents.
+* ''[[Asset-backed security]]'' (ABS) : le terme générique
+* ''Residential Mortgage Backed Securities'' (RMBS) : opération adossée à des crédits habitat hypothécaires
+* ''Commercial Mortgage Backed Securities'' (CMBS) : adossé à des crédits hypothécaires commerciaux
+* ''[[Collateralised debt obligation]]'' (CDO) : adossé à des dettes diverses (groupe les CBO et CLO)
+* ''Collateralised Bond Obligation'' (CBO) : adossé à des obligations
+* ''Collateralised Loan Obligation'' (CLO) : adossé à des crédits à des entreprises
+* ''Collateralised Commodity Obligation'' (CCO) : adossé à des options sur matières premières
+* ''Collateralised Fund Obligation'' (CFO) : adossé à des parts de hedge funds ou de fonds de hedge funds
+* ''Collateralised Foreign Exchange Obligation'' (CFXO) : adossé à des options sur devises
+* ''Whole Business Securitisation'' (WBS) : adossé à des flux d’activité commerciale ou industrielle
+
+À la fin 2004, le marché américain était principalement constitué des prêts liés aux [[carte bancaire|cartes bancaires]] (21&nbsp;%), des prêts immobiliers (25&nbsp;%), des prêts pour l'achat de voitures (15&nbsp;%) et des CDO (15&nbsp;%). On trouvait également, avec des parts bien plus faibles, les emprunts étudiants ou le [[leasing]] d'avions<ref name="commonstruct"/>.
+
+Elles peuvent aussi se classer selon le mode de financement.
+
+Ici, il n’existe que deux modes de financement : opération à long ou moyen ou court terme. À long ou moyen terme, l’instrument utilisé est l’[[obligation]] (en général entre 3 et 7 ans).
+
+À court terme, l’instrument utilisé est le papier commercial (''commercial paper''), des titres à court terme (en général de 1 à 30 jours) émis dans le cadre d’un programme d’émission. On parle de programme ABCP (''[[Asset-backed commercial paper]]'').
+
+En règle générale, on financera des actifs « longs » avec des obligations, tandis que les actifs « courts » (telle que des créances commerciales payables à 3 mois) seront financés avec du papier commercial. 
+
+Il arrive cependant que des actifs longs soient financés par papier commercial notamment en raison du taux de financement extrêmement bas que ces titres assurent. Cependant, cette pratique doit être utilisée avec prudence parce qu’elle génère un risque de refinancement et de liquidité dans la structure (puisque du nouveau papier commercial doit être émis régulièrement lors de chaque échéance de titre).
+
+=== Opérations synthétiques ===
+{{Article détaillé|Titrisation synthétique}}
+Il est également possible d'effectuer une opération de titrisation sans qu'il y ait vente de l'actif. On parle alors de [[titrisation synthétique]] par opposition à la {{Citation|''true sale''}} (ou cession parfaite). 
+
+Une opération synthétique est une opération où l’actif n’est pas transféré, mais où l'on se borne à transférer le risque grâce à un instrument financier développé depuis une dizaine d’années dans les marchés financiers : le [[dérivé de crédit]]. C’est un contrat où quelqu’un (le vendeur de protection) s’engage à verser un certain montant à l’acheteur de protection (qui paiera une prime pendant la durée du contrat) au cas où une entreprise tomberait en [[Défaut de paiement|défaut]] pendant la durée du [[dérivé de crédit]].
+
+== Régime juridique ==
+
+Les pays de régimes juridiques continentaux basés sur le [[Code Napoléon]] ont été fort en retard sur les autres pays du fait de la complexité du mécanisme de cession de créance.
+
+Dès lors, afin de permettre la titrisation, le législateur a dû mettre en place un mécanisme particulier qui simplifie cette cession.
+
+En France, le législateur a créé, par la loi du 23 décembre 1988, les ''FCC'' - [[Fonds commun de créances|Fonds Communs de Créances]], qui sont des [[fonds d'investissement]] spécialisés dont l’objet est l’achat et le refinancement de créances, et rendu particulièrement simple le mécanisme de cession de créances, ou des risques sur ces créances, à ces fonds<ref name="AMF"/>. En 2008, le Fonds Commun de Titrisation a remplacé le FCC dans le Code Monétaire et Financier afin d'améliorer l'efficacité juridique du véhicule français de titrisation.
+
+D’autres pays européens ont créé des mécanismes semblables (Belgique : Fonds ou Sociétés d’Investissement en Créances).
+
+== Covered Bonds ==
+Sous cette expression anglaise, on désigne un instrument financier qui se rapproche de la titrisation. Toutefois, à la différence de celle-ci telle que le supposent les ABS et les CDO, les covered bonds sont adossées à des créances immobilières ou des crédits aux collectivités locales qui ne sont pas déconsolidées du bilan de l'émetteur-originateur.
+
+En [[France]], conformément au [[code monétaire et financier]], les Obligations Foncières sont des obligations émises par les Sociétés de Crédit Foncier (établissement de crédit) dont le seul objet est l'acquisition de [[Hypothèque|créances hypothécaires]] et de créances sur des entités publiques. Les actifs de ces banques sont dès lors de très bonne qualité et garantissent les obligations émises par ces banques.
+
+Alors que le rehaussement de crédit d’une titrisation est assuré par une structuration complexe, celui-ci est assuré, dans le cas des obligations foncières, par un régime juridique et des règles de fonctionnement extrêmement sévères des banques spécialisées.
+
+On constate cependant sur le marché que la distinction entre les deux produits est parfois ténue, les émetteurs d’obligations foncières utilisant certaines techniques de [[structuration]].
+
+== La titrisation comme instrument stratégique ==
+
+De nombreuses sociétés financières aux [[États-Unis]] ont besoin de la titrisation pour financer leur activité. Il n’est pas rare dans ce pays que des entreprises soient financées quasi exclusivement par la titrisation : des sociétés de crédit par exemple, qui produisent des crédits liés à des [[carte de crédit|cartes de crédit]] et titrisent le portefeuille dès que celui-ci atteint un certain montant.
+
+On peut analyser cette tendance comme étant un corollaire de la spécialisation des entreprises. On sait que la tendance actuelle est à la [[sous-traitance]] ou à l’[[impartition]], et ce n’est pas un hasard : afin de maximiser ses profits, chaque entreprise détermine son activité-clé (''{{Citation|core business}}'') et tendra à se débarrasser des activités annexes. Pour donner un exemple grossier, une banque n’a pas vocation à tenir un restaurant. Elle sous-traitera donc les activités du [[restaurant d’entreprise]] à une société spécialisée.
+
+Dans une certaine mesure, la titrisation est également révélatrice de cette tendance. Lesdites sociétés de crédit américaines ont décidé que leur activité-clé était l’évaluation du risque crédit et la prise de risques de crédit. On dira que la fonction de cette entreprise est l’«&nbsp;[[origination]]&nbsp;» de crédits.
+
+Dans cette optique, une activité annexe indispensable sera la collecte des fonds nécessaires pour accorder les crédits.
+
+Pour cette activité, on peut envisager les modèles suivants :
+
+<u>'''1{{er}} modèle'''</u> : Collecte de fond sur le marché des capitaux ou par le dépôt des clients, ce qui implique que l’entreprise devient une banque, avec les éléments suivants :
+* le bilan de l’entreprise gonfle au fur et à mesure que les nouveaux crédits sont produits&nbsp;;
+* la gestion de trésorerie et de bilan devra tenir compte des [[différentiel]]s de taux et de maturité entre les sources de financement et les actifs ([[gestion actif-passif]], ou ''Asset and Liability Management'' (ALM) en anglais)&nbsp;;
+* la gestion financière, de laquelle dépend l’accès aux sources de financement, deviendra une autre composante importante de l’activité.
+
+Pour assurer ses activités, l’entreprise devra engager des [[salarié]]s, acheter des [[Système expert|systèmes experts]] et donc s’éloigner de son activité-clé telle qu’elle a été déterminée. Ceci n’est pas mauvais en soi, puisque nous avons décrit ici la naissance d’une banque, mais reste que l’activité-clé va commencer à être délaissée, et l’entreprise va devoir redéfinir ses activités-clés.
+
+<u>'''2{{e}} modèle'''</u> : Titrisation  systématique des actifs dès qu’ils atteignent un certain montant :
+* la taille du bilan reste maîtrisée, puisque dès qu’un certain montant est atteint, les actifs sont vendus&nbsp;;
+* la gestion de trésorerie et [[gestion actif-passif|ALM]] est simplifiée par des accords cadres avec des groupes financiers importants qui couvrent les risques de taux pendant la période de constitution du portefeuille.
+
+La société est donc focalisée sur son activité-clé, et elle maximalise la rentabilité de son activité de prise de risque-crédit en conservant le premier risque sur les portefeuilles titrisés (tout en se couvrant pour les pertes exceptionnelles). Entre ces deux modèles extrêmes, il existe une infinité de possibilités, mais on voit que le succès de la titrisation est aussi d’une certaine façon une conséquence de la spécialisation de plus en plus forte des entreprises. L’exemple ci-dessus montre comment la titrisation est en fait une [[externalisation]] de la fonction [[finance|financière]] de l’entreprise. 
+
+On aurait pu également prendre l’exemple de la fonction de gestion de portefeuille d’actif : une entreprise dont la fonction-clé est l’''origination'' de crédits n’a pas nécessairement pour fonction de vérifier le paiement régulier des crédits ou d’assurer leur recouvrement en cas de défaut de la part de l’emprunteur. 
+
+Or cette fonction suppose aussi l’acquisition de systèmes et de personnel ''qui ne sera pas utilisé pour la fonction-clé de l’entreprise''. 
+
+Par conséquent, cette activité là aussi peut être [[sous-traitance|sous-traitée]]. Dans les faits, on constate effectivement qu’aux [[États-Unis]] et au [[Royaume-Uni]], il est tout à fait commun pour une banque de confier la gestion au jour le jour de son portefeuille de crédit à une entreprise tierce dont cette gestion (on parle en anglais de « ''servicing'' ») constitue l’activité-clé. En [[Europe]], le mouvement est plus tardif et les rares entreprises spécialisées ont du mal à se faire accepter.
+
+== Historique ==
+La titrisation des actifs a débuté aux [[États-Unis]] dans les [[années 1970]]<ref name="Afic"/>. Auparavant les banques prêtaient à des clients et conservaient les portefeuilles de prêts jusqu'à l'échéance, en les finançant par les dépôts de leurs clients. L'envolée du crédit après la [[Seconde Guerre mondiale]] contraignit les banques à trouver de nouvelles ressources, en particulier avec des débuts de titrisation, d'abord appliqués aux prêts immobiliers puis de plus en plus élargis à d'autres produits<ref name="assetsecur">''Asset Securitization Comptroller's Handbook'', Comptroller of the Currency Administrator of National Banks, 1997</ref>.
+
+En février 1970 le département américain au logement et au développement urbain effectua la première véritable titrisation, sur des prêts immobiliers<ref name="germansecur">''Asset-Backed securities in Germany : the sale and securitization of loans by German credit institutions'', Deutsche Bundesbank Monthly Report, juillet 1997</ref>.
+
+Le marché se développa par l'ajout d'améliorations successives comme l'utilisation de [[Special Purpose Vehicle]] ou d'un tiers. Cela permit en 1985 la titrisation pour la première fois d'un actif autre qu'un portefeuille de crédits immobiliers, des crédits pour l'achat de voitures en l'occurrence. Ce type d'actifs reste un des produits les plus titrisés<ref name="assetsecur"/>. L'opération de 1985 était une titrisation d'un montant de 60 millions de dollars effectuée par la Marine Midland Bank<ref name="house">{{guil|Hearing before the U.S. House subcommittee on Policy Research and Insurance}} in ''Asset Securitization and Secondary Markets'', 31 juillet 1991, page 13</ref>. En 1986 eut lieu la première titrisation d'un portefeuille de crédits de cartes bancaires, pour un montant de 50 millions $<ref name="assetsecur"/>.
+
+En 1988, la règlementation française est adaptée pour permettre la titrisation en utilisant le mécanisme du [[Fonds commun de créances]]. 
+
+À partir des [[années 1990]] la titrisation s'étend aux produits issus de l'[[assurance]], avec des émissions qui atteignent 15 milliards de dollars US en 2006. 
+
+Selon les évaluations de la Bond Market Association, le total des montants titrisés aux États-Unis en 2004 s'élevait à 1800 milliards de dollars US, soit environ 8&nbsp;% du total du marché des [[obligation (finance)|obligations]] (23600 milliards) ou 39&nbsp;% du total des dettes des entreprises. C'est le fruit d'une hausse moyenne de 19&nbsp;% en [[valeur nominale]] sur la période 1995-2004. Cette année marque un record  alors historique avec des émissions de 900 milliards $<ref name="commonstruct">''Common Structures of Asset-Backed Securities and Their Risks'', Tarun Sabarwal, 29 décembbre 2005</ref>.
+
+Le marché actuel est principalement américain et européen. Le Royaume-Uni représentait en 2006 52&nbsp;% des émissions hors [[Collateralised debt obligation|CDO]]. Il était suivi de l'[[Espagne]], de l'[[Allemagne]] et des [[Pays-Bas]]. Avec 7,7 millards d'euros d'émissions sur un marché européen de 370,9 milliards d'euros, la France était {{5e}}<ref name="Afic"/>. 
+
+=== Risques liés à la titrisation : l'exemple des subprimes en 2007 ===
+{{Article détaillé|Subprime|Crise des subprimes}}
+La [[crise des subprimes]] d'août 2007 a mis en lumière certaines dérives dans l'utilisation de la titrisation des créances immobilières aux États-Unis <ref>Dominique Doise, associé du cabinet d'avocats Alérion, in ''Subprime : le prix des transgressions/ Subprime: Price of infringments'', Revue de droit des Affaires internationales (RDAI) / International Business Law Journal (IBLJ), N° 4, 2008 {{lire en ligne|lien= http://www.alerionavocats.com/fr/expertise/publications/subprime-le-prix-des-transgressions-price-of-infringements/}}</ref>.
+
+Le marché des [[subprime]]s en particulier a gonflé à des niveaux jamais vus en raison de l'utilisation de la titrisation car plus les organismes de crédits titrisaient leurs prêts déjà octroyés, plus ils avaient de finance pour en octroyer de nouveaux. De plus, les subprimes titrisés ont été mélangés à d’autres produits puis re-titrisés plusieurs fois successives à l’échelle mondiale, de sorte qu’il est devenu très difficile de savoir qui détient des produits liés à des subprimes et en quelle quantité.
+
+Ont été mis en cause dans cette crise des subprimes tant la qualité des créances amalgamées dans les portefeuilles titrisés que la [[Liquidité (finance d'entreprise)|liquidité]] de ces titres sur le marché et le travail des agences de notation financière. En effet, l'évaluation du risque lié à ces produits de plus en plus structurés ([[Collateralised debt obligation|CDO²]] par exemple) est de plus en plus complexe, ce qui a fait naître des craintes sur les capacités des agences à mesurer ces risques <ref> [http://www.presaje.com/zwo_info/modules/compterenduiinextensoiducolloquedu12decembre2007surlesagencesdenotation1/fichier_a_telecharger Les Agences de notation et la crise du crédit, faux procès et vrai débat] , colloque organisé à Paris le 12 décembre 2007 à l'initiative du presaje, du fides-université Paris X et de l'association des docteurs en droit]</ref>. Les représentants du [[Groupe des sept (économie)|G7]] ont ainsi appelé à plus de transparence dans le travail des [[Agence de notation|agences de notation]] ([[Standard & Poor's]], [[Moody's]], [[Fitch]])<ref>''[http://www.challenges.fr/actualites/business/20071009.CHA1674/marches_financiers__le_g7_reclame_plus_de_transparence.html Marchés financiers : le G7 réclame plus de transparence]'', [[Challenges]], 9 octobre 2007</ref>.
+
+Au-delà de cet épisode, des doutes plus généraux se sont installés à l'encontre de véhicules de placement qui peuvent présenter deux lacunes s'ils sont mal maîtrisés<ref>''Les techniques de titrisation montrées du doigt'', [[Les Échos]], 20 août 2007.</ref>&nbsp;: 
+* leurs produits reposent sur les paiements attendus de débiteurs pouvant être peu [[solvabilité|solvables]] 
+* leur valeur d'actif repose sur des biens apportés en garantie risquant d'être surévalués par rapport au montant des créances à récupérer en cas de non remboursement, ou pour le moins d'avoir une valeur de revente très fluctuante.
+
+La seconde partie de l'année 2007 a donc entraîné le retour à des produits plus simples et une certaine baisse de la titrisation<ref>''A flight to simplicity'', [[Financial Times]], 22 octobre 2007</ref> : de 350 milliards $ au 3{{e}} trimestre 2007, le marché des [[Asset-backed security|ABS]] est tombé à 100 milliards au 4{{e}} trimestre 2007.
+
+=== Quel avenir pour la titrisation des risques de crédit? CDO : passé, présent et... futur ===
+
+La crise financière a mis en avant les défauts de la titrisation des risques de crédit et surtout le manque de connaissance en général des acteurs de ce marché. On peut aujourd'hui légitimement s'interroger sur l'avenir de ces certains produits (du type CDO au carré, etc...) au sein de la finance post-crise cependant l'utilité de ces techniques de financement pour les entreprises demeure certaine.  
+
+Depuis le dernier trimestre 2009, on peut noter que le marché européen de la titrisation est reparti progressivement dans des volumes encore faibles mais que des investisseurs reviennent sur ce segment de marché pour les opérations simples et dont la nature des actifs sous-jacents est de qualité (granularité, économie du pays d'origine, etc....).
+
+== Notes et références ==
+{{références|colonnes=2}}
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Finance de marché]]
+* [[Gestion structurée]]
+* [[Asset-backed security]]
+* [[Collateralised debt obligation]]
+* [[Papier commercial adossé à des actifs non bancaire]]
+
+
+=== Liens externes ===
+* [http://finance.sia-conseil.com/20070503/titrisation-evolution-d%e2%80%99un-marche-en-mutation/ Article de Finance & Stratégies sur les évolutions de la titrisation]
+* {{pdf}}[http://www.afic.asso.fr/Images/Upload/Partenariats/ft36_0907.pdf La fiche thématique du capital-investissement: la titrisation], septembre 2007
+* {{pdf}}''[http://coursenligne.sciences-po.fr/2004_2005/risques_bancaires/doc2.pdf Titrisation, un outil de gestion des risques bancaires?]'', Cours de Sciences Po, janvier 2005
+* {{pdf}}''[http://www.amf-france.org/documents/general/6476_1.pdf La notation en matière de titrisation]'', Document de l'[[Autorité des marchés financiers (France)|Autorité des marchés financiers]], janvier 2006
+* {{pdf}}''[http://www.cepii.fr/francgraph/publications/lettre/pdf/2008/let275.pdf Comprendre la crise du crédit structuré]'', par [[Michel Aglietta]], février 2008
+
+{{Bon article|vote=BA|oldid=24136462|date=21 décembre 2007}}
+{{Portail|finance}}
+
+[[Catégorie:Titrisation|*]]
+
+[[bg:Секюритизация]]
+[[de:Verbriefung]]
+[[el:Τιτλοποίηση]]
+[[en:Securitization]]
+[[fi:Arvopaperistaminen]]
+[[he:איגוח]]
+[[it:Cartolarizzazione]]
+[[ja:証券化]]
+[[nl:Securitisatie]]
+[[no:Verdipapirisering]]
+[[pl:Sekurytyzacja]]
+[[ru:Секьюритизация]]
+[[sv:Värdepapperisering]]
+[[tr:Varlığa Dayalı Menkul Kıymet]]
+[[uk:Сек'юритизація активів]]
+[[vi:Chứng khoán hóa]]
+[[zh:资产证券化]]

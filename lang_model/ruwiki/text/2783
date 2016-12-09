@@ -1,0 +1,586 @@
+{{Карточка программы
+|logo                   = [[Файл:Steam logo.svg|150px]]
+|name                   = Steam
+|screenshot             = [[Файл:Steam library.jpg|302px]]  
+|caption                = ''Интерфейс Steam с выбранным стандартным скином.'' 
+|developer              = [[Valve]]
+|released                = {{Start date|2003|09|12}}<ref name="originalrelease">{{cite web|url=http://store.steampowered.com/news/183/|title=Steam Client Released|publisher=Valve Corporation|date=September 12, 2003|accessdate=February 3, 2008|archiveurl=http://www.webcitation.org/612nhrRqF|archivedate=2011-08-19}}</ref>
+|latest_release_version = 1805 / 1805, Steam API: v012
+|latest_release_date = [[8 февраля]] [[2012]]<ref group="!">Компания Valve, как правило, не публикует данные о номерах версий обновлений клиента, однако номер последней версии клиента обычно в ней указан.</ref><ref>[http://www.steampowered.com/platform/update_history/index.php Steam Update History<!-- Заголовок добавлен ботом -->]</ref>
+|latest_preview_version =
+|latest_preview_date =
+|frequently updated = Да
+|programming language = [[C++]]
+|operating_system = [[Microsoft Windows]] / [[Mac OS X]] / [[PlayStation 3]] ([[#PlayStation 3|частично]])<ref name="eurogamer11-ps3" />
+|platform = [[персональный компьютер|ПК]] / [[PlayStation 3]] / [[Mac OS X]]
+|size = 41.5 мегабайт (Windows)<br />153.5 мегабайт (Mac)
+|language = [[#Многоязычность|21 язык]]
+|status = Активно
+|genre = [[Цифровая дистрибуция]] / [[Технические средства защиты авторских прав|DRM]] / [[Средство мгновенного обмена сообщениями|IM]] и [[Социальная сеть (Интернет)|Социальная сеть]]
+|license = [[Проприетарное ПО|Проприетарная]] ([[Freeware]])
+|website = [http://store.steampowered.com/ store.steampowered.com]
+}}
+'''Steam''' ({{IPA|[stiːm]}} {{lang-ru|пар}}) — сервис [[Цифровая дистрибуция|цифровой дистрибуции]] компании [[Valve]], известного разработчика компьютерных игр. Steam выполняет функции службы активации, загрузки через интернет, автоматических обновлений и новостей для игр как самой Valve, так и сторонних разработчиков по соглашению с Valve.
+
+Через Steam продаются все игры, выпущенные [[Valve]], а также игры сторонних разработчиков и издателей, таких как [[1С]], [[2K Games]], [[Activision]], [[CAPCOM]], [[Codemasters]], [[Eidos Interactive]], [[Epic Games]], [[GSC Game World]], [[id Software]], [[SEGA]], [[THQ]], [[Atari]], [[Rockstar Games]], [[UbiSoft]], [[NCSoft]] и многих других фирм, оформивших контракт на дистрибьюцию.
+
+По состоянию на октябрь 2011, через Steam распространяется более трех тысяч товаров<ref name="all-games">{{cite web|url=http://store.steampowered.com/search/?term=&l=russian|title=Все игры Steam|lang=ru|archiveurl=http://www.webcitation.org/5w56cKZbl|archivedate=2011-01-28}}</ref>, а количество зарегистрированных пользователей превысило 35 миллионов<ref name="35m-accounts">{{cite web|url=http://valvesoftware.com/company/|title=Welcome to Valve|publisher=[[Valve Software]]|datepublished=октябрь 2011|accessdate=24 октября 2011||lang=en|archiveurl=http://www.webcitation.org/64tb4XbZN|archivedate=2012-01-23}}</ref>.
+
+Полный список издателей и разработчиков, сотрудничающих со Steam, расположен в открытом доступе на сайте Steam<ref name="steam_partners">{{cite web | url=http://www.steampowered.com/v/index.php?area=all&initial=1&|title=Список издателей и разработчиков, сотрудничающих со Steam}}</ref>.
+
+Через Steam распространяются только игры, трейлеры и модификации к ним, однако Valve несколько раз заявляли, что в дальнейшем планируют расширить специализацию сервиса, начав распространение через него музыки и полнометражных фильмов<ref>{{cite web|url=http://www.igromania.ru/GameNews/20766/Steam_stavit_na_universalnost.htm|title=Steam ставит на универсальность|publisher=[[Игромания.ру]]|datepublished=28 февраля 2008|accessdate=29 сентября 2008|deadlink=404}}</ref><ref>{{cite web|url=http://www.hl-inside.ru/articles/forbes|title=Статьи // Yahoo мира игр?|publisher=HL-Inside|datepublished=30 января 2006|accessdate=3 февраля 2006|archiveurl=http://www.webcitation.org/612nj01R7|archivedate=2011-08-19}}</ref>. Тем не менее, к указанным срокам никаких изменений не последовало.
+
+== История ==
+<div class="floatleft">
+<timeline>
+ImageSize = width:220 height:450
+PlotArea = left:50 bottom:10 top:10 right:0
+
+DateFormat = yyyy
+Period = from:2002 till:2012
+TimeAxis = orientation:vertical order:reverse
+ScaleMajor = unit:year increment:1 start:2002
+ScaleMinor = unit:year increment:1 start:2002
+
+Colors =
+ id:blue value:rgb(0,0,0)
+ id:red value:rgb(0.9,0.05,0.05)
+
+Define $dx = 25
+
+Define $up = shift:($dx,1)
+Define $dw = shift:($dx,-8)
+
+PlotData=
+ bar:Games anchor:till color:red width:15 textcolor:blue align:left fontsize:S mark:(line,white) shift:($dx,-4)
+ from:2002 till:2012
+ at:2002 shift:($dx,-20) text:"Анонс"
+ at:2002 shift:($dx,-35) text:"Период бета-тестирования"
+ at:2003 shift:($dx,-40) text:"Официальный релиз"
+ at:2004 shift:($dx,-40) text:"Выпуск [[Half-Life 2]]"
+ at:2005 shift:($dx,-40) text:"Партнерская программа"
+ at:2006
+ at:2007 shift:($dx,-35) text:"Запуск Steam Community"
+ at:2008 shift:($dx,-15) text:"Запуск Steamworks"
+ at:2008 shift:($dx,-40) text:"Запуск Matchmaking"
+ at:2009 shift:($dx,-15) text:"Запуск Steam Cloud"
+ at:2010 shift:($dx,-15) text:"Запуск UI Update"
+ at:2010 shift:($dx,-30) text:"Клиент для [[Mac OS X]]"
+ at:2010 shift:($dx,-45) text:"Открытие Steam Translation Server"
+ at:2011 shift:($dx,-15) text:"Введение Steam Guard"
+</timeline></div>Сервис пришёл на смену более ранней системе [[World Opponent Network|WON]], которая была более узкоспециализированным сервисом и не являлась системой распространения данных по интернету (цифровой дистрибуции). История Steam началась в [[1999 год]]у с успехом ''[[Team Fortress Classic]]'' и ''[[Counter-Strike]]''. Ещё до выхода финальных версий эти игры стали одними из самых популярных [[Многопользовательская игра|многопользовательских игр]]. В то время популярность игр достигала максимум 2-3 тысяч активных игроков. Число игроков ''TFC'' и ''CS'' спустя пару лет возросло в несколько раз. В результате [[Valve]] приступила к пересмотру традиционных методов организации онлайн-игр. Необходимо было решить проблемы и в свете дальнейшего наплыва игроков. В основном это касалось автоматического обновления, совершенствования [[Читерство в сетевых играх|анти-чит]]-системы.
+
+Когда разработчики работали над этой системой, к ним пришла идея использовать эту платформу для продажи игр. Реализация данной идеи представилась слишком дорогой, поэтому в Valve искали сотрудничества с различными компаниями, такими как [[Amazon]], [[Yahoo]] и [[Cisco]], предлагая данный подход, но все отделывались обещаниями<ref>{{cite web|url=http://www.hl-inside.ru/interviews/gamesindustry|title=Интервью с Дагом Ломбарди и Эриком Джонсоном сайту GamesIndustry.biz|publisher=HL-Inside|datepublished=16 марта 2007|accessdate=29 сентября 2008|archiveurl=http://www.webcitation.org/612nkwEVl|archivedate=2011-08-19}}</ref>. Поскольку система была так необходима Valve, компания решила, что будет сама осуществлять эту идею.[[Файл:Steam v1.jpg|thumb|300px|Интерфейс Steam первой версии.]]
+
+Steam впервые был представлен на [[Game Developers Conference]] [[22 марта]] [[2002 год]]а<ref>{{cite web|url=http://www.gamasutra.com/gdc2002/features/newell/newell_01.htm|title=Valve Introduces "Steam" Online Distribution System|lang=en|publisher=Gamasutra.com|datepublished=22 марта 2002|accessdate=29 сентября 2008|archiveurl=http://www.webcitation.org/5w56eGTxe|archivedate=2011-01-28}}</ref><ref>{{cite web|url=http://cult.compulenta.ru/27192/|title=Создатели Half-Life представили технологию, которая может преобразить игровую индустрию|publisher=Компьюлента|datepublished=25 марта 2002|accessdate=29 сентября 2008}}</ref>. Версия ''Steam 1.0'' стала доступна во время [[бета-тестирование|бета-тестирования]] ''[[Counter-Strike|Counter-Strike 1.4]]''. Установка Steam была обязательна для бета-тестеров ''[[Counter-Strike|CS 1.4]]'', но являлась лишь дополнительным компонентом для финальной версии<ref>{{cite web|url=http://games.times.lv/index.php?Mode=reviews&ArticleID=337|title=Counter-Strike 1.4 beta. Micro preview|publisher=times.lv|datepublished=12 марта 2002|accessdate=29 сентября 2008|archiveurl=http://www.webcitation.org/5w56hc9L9|archivedate=2011-01-28}}</ref><ref>{{cite web|url=http://www.warp2search.net/contentteller/news_story/counter_strike_14_next_week.html|title=Counter-Strike 1.4 Next Week!|lang=en|publisher=Warp2Search|datepublished=20 апреля 2002|accessdate=29 сентября 2008|archiveurl=http://www.webcitation.org/612nmDWbr|archivedate=2011-08-19}}</ref>.
+
+=== Дальнейшая разработка ===
+
+В ''Steam 2.0'' был несколько изменён [[пользовательский интерфейс]] и интегрирована система мгновенного обмена сообщениями с друзьями. В конце [[2003 год]]а Valve объявила о своих планах закрытия WON и обязательной установки Steam для онлайн-игр Valve. Это вызвало гнев многих игроков, которые затем создали WON2 в качестве замены. [[26 июля]] [[2004 год]]а [[World Opponent Network]] была закрыта и заменена на Steam<ref>{{cite web|url=http://www.ag.ru/news/16-07-2004#13704|title=Valve полностью переходит на Steam|work=Новости AG|publisher=AG.ru|datepublished=16 апреля 2004|accessdate=29 сентября 2008|archiveurl=http://www.webcitation.org/5w56iPbtN|archivedate=2011-01-28}}</ref>.[[Файл:Steamscr25.jpg|thumb|300px|Интерфейс Steam версии 2.5]]
+
+В сентябре 2004 года стало известно о суде [[Vivendi Games]] с Valve. Первая компания утверждала, что распространение Half-Life 2 через Steam нарушило издательский контракт<ref>{{cite web|url=http://www.ag.ru/news/21-09-2004#14036|title=Valve судится с Vivendi Universal|publisher=[[AG.ru]]|datepublished=21 сентября 2004|accessdate=5 октября 2008|archiveurl=http://www.webcitation.org/5w5C2W1Qs|archivedate=2011-01-29}}</ref>. Vivendi проиграла дело, и ей было запрещено продолжать [[лицензирование]] игр Valve для [[интернет-кафе]]. Позже контракт между этими двумя компаниями был расторгнут, и Valve выбрали [[Electronic Arts]] в качестве нового [[Розница|розничного]] [[Издатель|издателя]]<ref>{{cite web|url=http://www.ag.ru/news/19-07-2005#15317|title=Гордон Фримен перешёл в ЕА|publisher=[[AG.ru]]|datepublished=19 июля 2005|accessdate=5 октября 2008|archiveurl=http://www.webcitation.org/615rs41hT|archivedate=2011-08-21}}</ref>.
+
+[[Файл:Steamscr.jpg|thumb|300px|Стандартный интерфейс Steam третьей версии.]]
+
+В ноябре 2004 года Valve выпустила [[Half-Life 2]] — первую однопользовательскую игру, требующую Steam клиент в обязательном порядке. Под конец [[2005 год]]а в Steam впервые появились игры сторонних разработчиков: ''[[Rag Doll Kung Fu]]''<ref name=RagDollKungFu>{{cite web|url=http://store.steampowered.com/news/463|title=Rag Doll Kung Fu Available Now|publisher=Steampowered.com|datepublished=12 октября 2005|accessdate=6 октября 2008|lang=en|archiveurl=http://www.webcitation.org/5w56lBvpy|archivedate=2011-01-28}}</ref> ([[12 октября]]) и ''[[Darwinia (игра)|Darwinia]]''<ref name=Darwinia>{{cite web|url=http://store.steampowered.com/news/493|title=Darwinia Available Now On Steam|publisher=Steampowered.com|datepublished=14 декабря 2005|accessdate=6 октября 2008|lang=en|archiveurl=http://www.webcitation.org/5w56m5Rog|archivedate=2011-01-28}}</ref> ([[14 декабря]]).
+
+В августе [[2006 год]]а начался переход к ''Steam 3.0''. Вначале был изменён дизайн официального сайта, а затем, в декабре, значительно переработан и внешний вид программы. Тона оформления программы были изменены с серо-зелёного на тёмно-серый. Также был изменен формат скинов, в результате скины для старой 2 версии перестали работать. Следующий шаг последовал в августе [[2007 год]]а — вышла первая бета-версия сервиса [[#Steam Community|Steam Community]], позволявшего игрокам, в частности, общаться и устраивать состязания; релиз Steam Community состоялся в сентябре.
+
+[[Файл:Steam library.jpg|right|thumb|301px|Меню «Библиотека» в четвёртом поколении Steam.]]
+В начале [[2008 год]]а Valve сделали платформу Steam более открытой, выпустив [[#Steamworks|Steamworks]]. Этот пакет предоставляет разработчикам и издателям функциональность Steam (или его частей) бесплатно. Это касается, прежде всего, статистики и [[Digital Rights Management|DRM]]-функций. Цель этого шага — укрепить рынок компьютерных игр и шире распространить Steam. Первая игра, использующая эти возможности, появилась в середине февраля. Это была музыкальная аркада ''[[Audiosurf]]''. Она распространяется через Steam и использует Steamworks для интеграции со Steam Community и [[Достижения (видеоигры)|системой достижений]].
+
+[[4 октября]] 2008 года через Steam стали доступны первые пять [[мод]]ификаций для [[Source]]-игр<ref>{{cite web|url=http://www.hl-inside.ru/comments/?1223100366|title=Теперь в Steam — Source моды|publisher=[[HL-Inside]]|datepublished=4 октября 2008|accessdate=5 октября 2008|archiveurl=http://www.webcitation.org/5w56mySb5|archivedate=2011-01-28}}</ref> (ранее все модификации необходимо было скачивать и устанавливать вручную). А в начале февраля 2009 к ним прибавилось ещё 2 мода<ref>{{cite web|url=http://www.hl-inside.ru/comments/?1233992522|title=Еженедельные новости Valve|publisher=[[HL-Inside]]|datepublished=7 февраля 2009|accessdate=17 марта 2009|archiveurl=http://www.webcitation.org/5w56ozUum|archivedate=2011-01-28}}</ref>. [[16 марта]] 2009 года в SteamWorks была реализована новая функция для разработчиков игр под названием ''Downloadable Content'' (DLC)<ref>{{cite web|url=http://store.steampowered.com/news/2355|title=Steam offers gamers in-game downloadable content|publisher=SteamPowered.com|datepublished=16 марта 2009|accessdate=17 марта 2009|lang=en|archiveurl=http://www.webcitation.org/5w56qpY45|archivedate=2011-01-28}}</ref>. Это позволило разработчикам публиковать дополнительный внутриигровой контент по небольшим ценам (около 1—15 $), что, по сути, является аналогом [[Микротранзакции|микротранзакций]]<ref name="DLC">{{cite web|url=http://www.gametech.ru/cgi-bin/show.pl?option=news&id=6395|title=Premium DLC в Steam|publisher=Gametech.ru|datepublished=17 марта 2009|accessdate=17 марта 2009|archiveurl=http://www.webcitation.org/5w56rjH2S|archivedate=2011-01-28}}</ref>. Первыми играми с поддержкой ''DLC'' стали [[The Maw]]<ref name="DLC" /> и [[Far Cry 2]]<ref>{{cite web|url=http://store.steampowered.com/app/21960/|title=Buy Far Cry 2 Fortunes Pack|publisher=Steampowered.com|accessdate=20 марта 2009|datepublished=19 марта 2009|lang=en|archiveurl=http://www.webcitation.org/612npMP1M|archivedate=2011-08-19}}</ref>.
+
+[[Файл:Steam - компактный вид.jpg|right|thumb|150px|Библиотека игр Steam четвёртой версии в компактном виде.]]
+
+В конце 2009 года был незначительно изменён дизайн официального сайта — вместо тёмно-жёлтых появились голубые тона, а также появилась возможность онлайн-покупки игр через сайт Steam без использования программы Steam. Одновременно Valve начала разработку четвёртой версии Steam с совершенно новым оформлением. Бета-версия вышла в конце февраля 2010 года, в ней были значительно переработаны все интерфейсные меню<ref>{{cite web|url=http://store.steampowered.com/uiupdate/|title=UI Update|publisher=SteamPowered.com|datepublished=23 февраля 2010|lang=en|archiveurl=http://www.webcitation.org/5w56uBQRV|archivedate=2011-01-28}}</ref>. Одновременно для бета-пользователей был сильно изменён дизайн официального сайта. Почти полностью был переделан дизайн оболочки Steam, а также внутриигрового оверлея. В частности вместо трёх стандартных списков «Игры», «Трейлеры» и «Инструменты» появилось новое меню «Библиотека», в которое помимо этих 3 подразделов добавился новый подраздел — «Загрузки.» При этом стало доступно 3 варианта отображения игр — список с подробной информацией и фоном, крупный список с обновлёнными иконками и сетка с иконками большого размера. Компактный вид перестал поддерживаться. Помимо этого, были исправлены многие ошибки, встроенный браузер стал использовать движок [[WebKit]] вместо [[Microsoft Trident|Trident]], доступного только для [[Windows]], что в разы увеличило производительность и безопасность работы, а также дало возможность [[портирование|портирования]] на другие платформы. Формат скинов для четвёртой версии также претерпел изменения, что сделало нерабочими скины 3 версии. Стабильную версию Valve реализовала [[28 апреля]] 2010 года. Также было сделано обновление дизайна Сообщества Steam и главной веб-страницы Steam для всех пользователей. В релизной версии была восстановлена возможность сворачивания меню «Библиотека» в компактный вид, при этом старые низкоформатные иконки были заменены новыми красочными в объёмном стиле. Данное обновление стало самым крупным с момента запуска Steam в 2003 году.
+
+Данная версия Steam вызвала неоднозначные отзывы со стороны сообщества. С одной стороны, интерфейс стал более интуитивным, логичным, современным и красочным. С другой — присутствовало множество огрехов, недоделок, а также были проблемы с быстродействием на слабых машинах. Эти было исправлено в последующих обновлениях.
+
+В марте 2010 года на официальных сайтах Valve появилась информация о будущем переносе Steam и всех Source-игр на [[Mac OS X]]<ref>{{cite web|url=http://www.l4d.com/blog/post.php?id=3570|title=Переход на Mac в блоге Left 4 Dead|publisher=Valve|datepublished=8 марта 2010|lang=en|archiveurl=http://www.webcitation.org/5w56vG6Vd|archivedate=2011-01-28}}</ref><ref>{{cite web|url=http://teamfortress.com/post.php?id=3578|title=Переход на Mac в блоге Team Fortress 2|publisher=Valve|datepublished=9 марта 2010|lang=en|archiveurl=http://www.webcitation.org/5w56w9wVV|archivedate=2011-01-28}}</ref>. [[12 мая]] 2010 года вышла финальная версия Steam на Mac<ref>{{cite news|url=http://macpages.ru/pages/steam-mac-dostupen-dlya-zagruzki-portal-do-24-maya-besplaten.html|title=Steam for Mac доступен для загрузки (Portal до 24 мая бесплатен!)|date=12-05-2010|publisher=MacPages|lang=ru|accessdate=2011-10-01}}</ref>. <!-- У некоторых пользователей Mac OS X были проблемы с первым обновлением Steam, однако позже Valve исправила эту проблему{{Нет АИ|6|5|2011}}.--> Некоторое время на Mac OS X наблюдались проблемы с производительностью<ref>[http://arstechnica.com/apple/news/2010/05/mac-lags-windows-in-gaming-performance-excels-at-stability.ars Mac lags Windows in gaming performance, excels at stability]</ref><ref>[http://www.anandtech.com/show/3759/mac-os-x-steam-performance-half-life-2-episode-2-still-slower-than-windows/3 Mac OS X Steam Performance: Half Life 2 Episode 2, Still Slower than Windows]</ref>, 18 августа Valve сообщила о том, что стали доступны обновления, улучшающие производительность.<ref>[http://store.steampowered.com/news/4211/ Game Performance Improvements in Latest Mac OS X Update]</ref>
+
+10 сентября был анонсирован и запущен в бета-тест кошелек Steam, с помощью которого пользователи могли бы переводить на него определенные суммы денег, чтобы использовать их позже.<ref>{{cite news|url=http://www.rockpapershotgun.com/2010/09/14/virtu-o-purse-valves-confusing-steam-wallet/|title=Virtu-o-Purse: Valve’s Confusing Steam Wallet|author=Alec Meer|date=September 14th, 2010|publisher=[[RockPaperShotgun]]|lang=en|accessdate=2011-10-24}}</ref><ref>{{cite news|url=http://www.shacknews.com/article/65530/steam-wallet-beta-lets-gamers|title=Steam Wallet Beta Lets Gamers Pre-Load Cash|author=Jeff Mattas|date=Sep 10, 2010|publisher=Shacknews|lang=en|accessdate=2011-10-24}}</ref> Окончательно он появился в Steam 30 сентября вместе с обновление игры [[Team Fortress 2]].<ref>{{cite news|url=http://store.steampowered.com/news/4406/|title=Steam Wallet and in-game transactions are here!|date=30 сентября 2010|publisher=[[Valve]]|lang=en|accessdate=2011-10-24}}</ref>
+
+3 марта 2011 года Valve анонсировала и запустила в бета-тест сервис Steam Guard, который должен был обеспечить дополнительную безопасность учетных записей пользователей. При включении данного сервиса доступ к учетной записи Steam становился возможным только с текущего компьютера; чтобы войти в запись с другого компьютера, необходимо было ввести дополнительный код, который высылался на электронную почту.<ref>{{cite news|url=http://www.1up.com/news/steam-guard-prevents-digital-games-stolen|title=Steam Guard Prevents Your Digital Games From Being Stolen|author=Chris Pereira|date=03/03/2011|publisher=1UP|lang=en|accessdate=2011-11-21}}</ref><ref>{{cite web|url=http://store.steampowered.com/news/5088/|title=Steam Guard Now in Beta|date=4 марта 2011|publisher=[[Valve]]|lang=en|accessdate=2011-11-21|archiveurl=http://www.webcitation.org/64tb5HF0m|archivedate=2012-01-23}}</ref> Steam Guard был также показан на выставке CeBit 2011 [[Гейб Ньювелл|Гейбом Ньювеллом]], который там же опубликовал пароль к своей учетной записи и заявил, что никто не сможет его украсть.<ref>Golem.de — {{youtube|pXkTMhp7QFI|Gabe Newell stellt IPT für Steam auf der Cebit 2011 vor}}</ref> Сервис стал общедоступен 16 марта.<ref>{{cite news|url=http://www.hl-inside.ru/comments/?1300301858|title=Начало работы Steam Guard|author=Dosia36|publisher=HL-inside|lang=ru|accessdate=2011-11-21}}</ref>
+
+26 января 2012 года была анонсирована бета-версия клиента Steam для операционных систем [[Apple iOS|iOS]] и [[Android]].<ref>{{cite web|url=http://store.steampowered.com/news/7231/|title=Valve Announces Steam Mobile App|date=26-01-2012|publisher=Valve|lang=en|accessdate=2012-01-27|archiveurl=http://www.webcitation.org/651wr2wiY|archivedate=2012-01-28}}</ref>
+
+== Название ==
+Steam ({{lang-ru|пар}}) — своеобразная игра слов, используемая компанией-разработчиком. Название фирмы Valve переводится с [[Английский язык|английского языка]] как ''клапан'', кроме этого, «трубопроводная» тематика встречается и в названиях прочих разработок компании: ''Steamworks'' ({{lang-ru|паровые работы}}), ''Steam Cloud'' ({{lang-ru|облако пара}}) и ''Source'' ({{lang-ru|источник}}).
+Также данная тематика встречается в играх от Valve, таких как Half-Life.
+
+== Влияние на игровую индустрию ==
+Появление Steam сильно повлияло на разработки [[Инди-игры|инди-игр]], разработчики которых зачастую не могли найти себе [[Издатель|издателя]]. Распространение нестандартных игр на дисках с точки зрения издателей — рискованный шаг, ведь заранее неизвестно, как отнесутся к игре покупатели. Метод [[Цифровая дистрибуция|цифровой дистрибуции]], позволяющий отказаться от затрат на печать дисков, документации и коробок, а также от издержек на продажу через [[ретейлер|ретейлинговые сети]], позволяет издавать такие игры с меньшим финансовым риском.
+
+После того, как Valve начала распространять через Steam игры [[Darwinia (игра)|Darwinia]] и [[Red Orchestra: Ostfront 41-45|Red Orchestra]], их разработчики получили сразу несколько предложений от розничных издателей, так как эти игры продемонстрировали свою востребованность<ref>{{cite web|url=http://www.hl-inside.ru/interviews/cvg7|title=Интервью // Интервью с Гейбом Ньюэллом сайту Computer and Video Games|archiveurl=http://www.webcitation.org/612nqSdHQ|archivedate=2011-08-19}}</ref>.
+
+Также распространение Steam повлияло и на цифровую дистрибуцию в целом. Сразу после выхода [[Half-Life 2]] (требующей обязательной установки Steam), этот сервис привлёк внимание множества игроков. Steam стал первым удачным проектом в этой области (около 25 % копий Half-Life 2 было продано через Steam<ref>{{cite web
+ | url         = http://www.kriconf.ru/2008/rec/ppt/KRI_2008_BusinessDevelopment_18apr_KZ_03_Lyskovskii_Aleksandr_Alawar_Entertainment.ppt
+ | title       = Цифровая дистрибуция 2008
+ | work        = КРИ 2008
+ | format      = ppt
+ | archiveurl  = http://www.webcitation.org/5w56xYHPB
+ | archivedate = 2011-01-28
+}}</ref>).
+Вскоре после этого о создании своих подобных сервисов заявили несколько крупных компаний, таких как [[Sega]]
+<ref>{{cite web|url=http://www.dtf.ru/news/read.php?id=37240|title=Steam помогает маленьким|archiveurl=http://www.webcitation.org/5w56ysjXc|archivedate=2011-01-28}}</ref>, [[EA Games]]<ref>{{cite web|url=http://www.dtf.ru/news/read.php?id=37205|title=EA - за цифровую дистрибуцию|archiveurl=http://www.webcitation.org/5w570AL8y|archivedate=2011-01-28}}</ref> и [[3D Realms]]<ref>{{cite web|url=http://www.dtf.ru/news/read.php?id=35566|title=Prey будет распространяться через Интернет|archiveurl=http://www.webcitation.org/5w571HVu7|archivedate=2011-01-28}}</ref>. Более мелкие компании, такие как [[Stream Theory]] и [[Virgin Games]], также анонсировали свои проекты<ref>{{cite web|url=http://www.dtf.ru/news/read.php?id=36746|title=Онлайн спасёт Hip Interactive|archiveurl=http://www.webcitation.org/5w572OHRi|archivedate=2011-01-28}}</ref>.
+
+Однако, некоторые из них не довели собственные проекты до завершения. Sega стала продавать свои игры в Steam, а сервис Triton компании Game xStream, распространявший игры 3D Realms, был закрыт<ref>{{cite web
+ | url         = http://gamenavigator.ru/news/reports/9715
+ | title       = Но сначала тот же Prey лишили цифровой дистрибуции
+ | archiveurl  = http://www.webcitation.org/5w573V2Sv
+ | archivedate = 2011-01-28
+}}</ref> (игры 3D Realms также перешли в Steam).
+[[Electronic Arts]] тоже распространяет некоторые свои игры через Steam, несмотря на наличие собственной торговой площадки [[Origin (платформа цифровой дистрибуции)|Origin]] (помимо цифровой дистрибуции, этот сервис предназначен и для онлайн-продаж игр на физических носителях)<ref>{{cite web|url=http://store.steampowered.com/news/2116|title=Steam Launches Hit PC Games from EA|publisher=SteamPowered.com|datepublished=19 декабря 2008|accessdate=28 декабря 2008|lang=en||archiveurl=http://www.webcitation.org/5w574sFgT|archivedate=2011-01-28|archiveurl=http://www.webcitation.org/5w5C5LY0E|archivedate=2011-01-29}}</ref>.
+
+В конце ноября 2008 года Брэд Уорделл ({{lang-en|Brad Wardell}}), глава компании [[Stardock]], которая владеет сервисом цифровой дистрибуции [[Impulse]], заявил, что, по его мнению, «бесспорным лидером на рынке цифровой дистрибуции игрового контента для РС является Steam — у него примерно 70% рынка. Наш сервис Impulse идет на втором месте примерно с 10%. Все остальные разделяют оставшиеся 20%». Он также добавил, что в 2009 году издатели получают около 25 % от суммарного дохода от продаж игр через подобные сервисы<ref>{{cite web|url=http://www.gametech.ru/cgi-bin/show.pl?option=news&id=10008|title=Слух: на долю Steam приходится 70% цифрового рынка|publisher=[[GameTech]]|datepublished=21 ноября 2009 года|accessdate=21 ноября 2009|archiveurl=http://www.webcitation.org/5w575ltzA|archivedate=2011-01-28}}</ref>.
+
+== Возможности ==
+* Steam выступает в роли [[ТСЗАП|технического средства защиты авторских прав]] (DRM) (причём даже если используется коробочная версия игры, нет необходимости все время вставлять в привод диск с игрой)
+* Поскольку Steam позволяет загружать игры непосредственно с серверов [[Valve]], он устраняет необходимость в издателе — промежуточном звене между разработчиком и потребителем.
+* Разработчик получает возможность более оперативно реагировать на потребности игрового сообщества (например, путём выпуска бесплатных дополнений наподобие ''[[Half-Life 2: Lost Coast]]'') и осуществлять полный контроль над распространением самих игр, так как даже коробочные версии [[:Категория:Steam-игры|Steam-игр]] требуют обязательной активации и полного обновления через Steam.
+* Возможность купить игру для другого человека в качестве подарка или подарить кому-либо «лишнюю игру», купленную повторно в составе сборника. Например, владельцы ''[[Half-Life 2]]'' и/или ''[[Half-Life 2: Episode One]]'' могли подарить эти игры другим людям, если приобрели сборник ''[[The Orange Box]]''. Для этого достаточно указать e-mail получателя или выбрать его аккаунт в списке соответствующего диалога (при этом аккаунт получателя должен быть добавлен в список друзей — ''Steam Friends''). Подарки стали самой распространённой формой покупки Steam-игр через третьих лиц среди пользователей, не имеющих возможности купить игру напрямую из-за отсутствия кредитной карты. После перевода денег посреднику тот покупает игру как подарок через кредитную карту и отправляет покупателю по электронной почте или через Steam. Цены у продавцов, покупающих игры легально со своей кредитной карты, как правило, несколько выше цен игр в Steam. У продавцов, занимающихся [[кардинг]]ом, цены могут быть в несколько раз ниже (обычно 5-10 $ за игру), однако при этом появляется риск отзыва подарка и блокировки Steam-аккаунта в случае, если владелец кредитной карты обнаружит снятие средств и выполнит отказ от платежа.
+
+* Также Steam позволяет владельцам интернет-клубов заключить договор на использование системы '''CyberCafe''', позволяющей пользоваться значительной частью Steam-игр<ref name="CyberCafe">{{cite web |url=https://support.steampowered.com/kb_article.php?ref=3806-RYSJ-1102|title=Valve Cyber Cafe Program: Steam For Cafes|date=2008-04-05|work=Сайт CyberCafe|lang=en}}</ref> за определённую ежемесячную абонентскую плату.
+
+=== Многоязычность ===
+Steam в настоящее время доступен на следующих языках: [[Английский язык|английский]], [[Голландский язык|голландский]], [[Датский язык|датский]], [[Итальянский язык|итальянский]], [[Испанский язык|испанский]], [[Корейский язык|корейский]], [[Немецкий язык|немецкий]], [[Норвежский язык|норвежский]], [[Польский язык|польский]], [[Португальский язык|португальский]], [[Русский язык|русский]], [[Тайский язык|тайский]], [[Китайский язык|традиционный китайский]], [[Китайский язык|упрощённый китайский]], [[Финский язык|финский]], [[Турецкий язык|турецкий]], [[Французский язык|французский]], [[Шведский язык|шведский]] и [[Японский язык|японский]].
+
+В Steam реализована [[региональная защита]] ввиду того, что в разных регионах коробочные издания Steam-игр имеют разную стоимость. То есть игры, купленные в России (в коробочном варианте), не будут работать за пределами [[СНГ]] (такая защита была осуществлена к выходу [[Half-Life 2: Episode One]] в [[2006 год]]у<ref>{{cite web|url=http://www.hl-inside.ru/interviews/buka|title=Интервью // Интервью с представителями компании Бука|archiveurl=http://www.webcitation.org/612nrbbJN|archivedate=2011-08-19}}</ref>). В то же время данный подход позволяет издателям сделать доступной любую официальную [[Озвучание|озвучку]], так как издатели могут не опасаться [[реэкспорт]]а игр. Большинство игр, купленных в Steam, мультирегиональны и не имеют ограничений, поскольку продаются по одинаковой цене во всех регионах.
+
+=== Сетевые игры ===
+В обязанности части Steam, ответственной за игры через [[Интернет]], входит получение списка [[сервер]]ов, проверка версий [[Клиент (программный)|клиента]] и сервера для обеспечения их совместимости, а также предоставление серверу сведений об [[Учётная запись|учётной записи]] Steam и блокирование [[аккаунт]]ов, уличённых в [[Читерство в сетевых играх|нечестной игре]] службой [[Valve Anti-Cheat]], доступа ко всем сетевым Steam-играм, поддерживающим технологию VAC.
+Также Steam блокирует доступ к [[#Контент-серверы|Steam-серверам]] пользователям, не имеющим учётной записи Steam (No-Steam версии игр) или на учётной записи которых нет купленной игры, что является ещё одним компонентом [[Технические средства защиты авторских прав|защиты DRM]]. Этот компонент не могут обходить взломанные версии Steam, поскольку это требует [[Взлом программного обеспечения|взлома]] или обхода серверов [[аутентификация|аутентификации]] [[Valve]].
+
+=== Match Making ===
+Данная функция появилась с выходом [[Left 4 Dead]]. Суть её заключается в том, что игроки подключаются не сразу к серверу, а сначала к созданному одним из игроков лобби. Лидер лобби может выбирать параметры игры (карта, уровень сложности и т. д.), «выгонять» кого-либо из подключившихся, сделать доступ к лобби только для друзей или по приглашениям. После того как необходимый состав игроков набран, лидер лобби запускает поиск сервера. Steam подбирает наиболее подходящий пустой сервер, на котором устанавливает требуемые настройки и подключает к нему игроков из лобби.
+
+=== Steam Cloud ===
+Данная функция позволяет сохранять игровые данные (такие, как личные конфигурации, настройки клавиатуры, мыши, и лого-спреи для мультиплеерных игр, файлы сохранений) на серверах Valve<ref>{{cite web|url=http://www.hl-inside.ru/comments/?1225741273|title=Релиз Steam Cloud — на этой неделе|publisher=[[HL-Inside]]|datepublished=3 ноября 2008|accessdate=16 сентября 2010|archiveurl=http://www.webcitation.org/5w577j4qf|archivedate=2011-01-28}}</ref>. Функция полезна тем, кто использует свои Steam-игры на нескольких компьютерах. На данный момент, Steam Cloud поддерживают следующие игры: [[Half-Life 2]], [[Half-Life 2: Episode One]], [[Half-Life 2: Episode Two]], [[Counter-Strike: Source]], [[Portal]], [[Portal 2]], [[Day of Defeat: Source]], [[Left 4 Dead 2]], [[Team Fortress 2]], [[Alien Swarm]], [[Sid Meier’s Civilization V]], [[Plants vs. Zombies]], [[Call of Duty: Modern Warfare 2]]<ref> {{cite web|url=http://store.steampowered.com/news/3873/|title=Half-Life 2, Half-Life 2: Episode 1 & 2 get SteamPlay, Steam Cloud and Achievements|publisher=Steampowered.com|datepublished=27 мая 2010|accessdate=16 сентября 2010|archiveurl=http://www.webcitation.org/5w579hox8|archivedate=2011-01-28}}</ref>, [[Call of Duty: Black Ops]], [[Fallout: New Vegas]], [[Braid]], [[Worms: Reloaded]], [[Metro 2033]], и другие.
+
+=== Steam Community ===
+[[Файл:SteamChat.png|thumb|250px|Steam-Чат.]]
+[[12 сентября]] [[2007 год]]а было выпущено обновление для Steam (официально названное Steam Community), призванное облегчить общение между пользователями сервиса. Обновление внесло следующие изменения:
+* Steam Community позволяет создавать свои персональные [[Web-страница|web-странички]] в системе Steam, создавать группы и вступать в них. В каждой группе есть [[чат]], количество человек в котором отображается на странице группы.
+* Статус каждого участника отображается на его страничке: ''В сети'', ''Отключен от сети'', ''Отошёл'', ''Занят'', ''В игре'' (с указанием названия игры) и ''Сплю'' (недоступный для самостоятельного выбора статус, выставляющийся автоматически после двухчасового бездействия клавиатуры и мыши). Также на личной страничке отображается статистика времени игры за последние 2 недели, отдельно для каждой игры. Время проведённое за No-Steam игрой в статистике не отображается.
+* Чат в Steam был значительно переработан к выходу Steam Community. Была добавлена возможность голосового общения, а возможное количество участников возросло до нескольких десятков (ранее было возможным общение только один-на-один). Главным обновлением Steam-чата является возможность использовать его в любой игре, даже если она не продаётся в Steam: если в меню Steam разрешена соответствующая опция, определённой комбинацией клавиш (по умолчанию Shift+TAB) открывается полупрозрачное меню Steam Overlay — [[интерфейс]] Steam Community поверх изображения игры.
+* Обновление клиента Steam 20 Август 2010. В чате друзей появилась структура вкладок: каждый чат теперь открывается не в новом окне, а во вкладке.
+* Обновление клиента Steam на [[10 января]] [[2011 год]]а была добавлена возможность размещать игровые скриншоты у себя на странице в Steam Community
+
+=== Steam Инвентарь ===
+[[Файл:SteamTrading.png|thumb|200px|Процесс обмена предметами из инвентаря.]]
+Данная функция впервые появилась в Steam в ходе классовых обновлений [[Team Fortress 2]], где за выполнение определённых достижений или просто в процессе убийства противников игроку выдавалось усовершенствованное оружие, которое складывалось в особый рюкзак, ассоциированный с идентификатором Steam. Позже в Team Fortress 2 помимо вооружения появились предметы, не влияющие на игровую механику, такие как одежда персонажей. В 2010 году система инвентаря была значительно переработана — просмотр инвентаря стал доступен через сайт Steam-сообщества для каждой игры, использующей данную функцию, а также появилась возможность торговли и обмена предметами между игроками и покупки их через связанный со Steam внутриигровой магазин. Однако некоторые предметы, такие как особое оружие, обменять нельзя.<ref>{{cite web|url=http://wiki.teamfortress.com/wiki/Trading/ru|title=Система обмена в Team Fortress 2|archiveurl=http://www.webcitation.org/64tb5thcW|archivedate=2012-01-23}}</ref>
+
+В 2011 году инвентарь был вновь переработан, и появилась возможность просмотра и обмена игровых предметов непосредственно через сайт Steam.<ref>[http://www.teamfortress.com/post.php?id=6202 Steam Trading: Out of Beta and available to everyone! — TF2 Team]</ref> Кроме того подарки, гостевые приглашения и купоны на скидки стали также ассоциироваться как предметы инвентаря, относящиеся к категории «Steam», и также появилась возможность их обмена. Также в категорию Steam включаются специальные предметы (например, уголь), приуроченные к особым акциям и дающие возможность выиграть призы или обменять их на дешёвую игру. По умолчанию предметы из категории Steam видны только владельцу аккаунта, в то время как предметы из игр могут быть видны другим игрокам, в зависимости от приватности профиля.<ref>{{cite web|url=https://support.steampowered.com/kb_article.php?ref=6748-ETSG-5417|title=FAQ по системе обмена на сайте поддержки Steam}}</ref>.
+
+На данный момент функцию инвентаря используют [[Team Fortress 2]], [[Portal 2]] и ряд инди-игр.
+
+=== Система достижений ===
+В некоторых играх существуют ''достижения'' — необязательные игровые задания, при выполнении каждого из которых в игре сохраняется информация. При этом если Steam запущен в онлайн режиме, достижение также сохраняется на аккаунте Steam, что позволяет восстановить полученные ранее достижения при переустановке игры. Первыми играми, использующими эту систему, стали игры ''[[Orange Box]]''. Все игры из этого набора, кроме [[Half-Life 2]] и [[Half-Life 2: Episode 1]] (для PC-версий этих игр достижения появились только [[26 мая]] [[2010 год|2010]]<ref>[http://store.steampowered.com/news/3872/ News — Half-Life 2, Half-Life 2: Episode One and Half-Life 2: Episode Two Updates Released<!-- Заголовок добавлен ботом -->]</ref>), предлагали игрокам произвольный набор достижений, выполнение которых не несло абсолютно ничего, кроме информации в статистике Steam. Однако, спустя некоторое время, выполнение достижений отобразилось на игровом процессе [[Многопользовательская игра|сетевого командного]] [[3D-шутер|шутера]] ''[[Team Fortress 2]]'', для которого на данный момент выпускаются обширные обновления, расширяющие вооружение каждого игрового класса. Вместе с каждым таким обновлением разработчики дополняют список достижений набором специально для усовершенствованного класса. Выполнение достижений может открыть новое оружие, кроме того, задания могут заставить поменять игровую тактику. На данный момент ''Team Fortress 2'' является единственной игрой, полноценно использующей возможности достижений. Другой сетевой шутер Valve, ''[[Day of Defeat: Source]]'', после перехода на обновлённый [[игровой движок]] тоже получил набор достижений, однако их выполнение не влияет на игровой процесс.
+
+Позже система была добавлена в набор для разработчиков Steamworks, что позволило добавить достижения в любые Steam-игры. Первой игрой с поддержкой системы, созданной не компанией Valve, стала ''[[Audiosurf]]''.
+
+В играх, движок которых сильно интегрирован со Steam, достижения могут работать только при запущенном в онлайн-режиме клиенте Steam (преимущественно это игры [[Valve]]). В большинстве сторонних игр они могут работать и без Steam, но при этом не сохраняются на Steam-аккаунте. Например в [[Unreal Tournament 3]] достижения привязываются в первую очередь к игровому аккаунту, и только при запущенном в онлайн-режиме клиенте Steam сохраняются также на серверах Steam. При этом в случае удаления достижений из Steam они сохранятся в самой игре.
+
+Существует программа для разблокировки/блокировки достижений Steam на игровом аккаунте — Steam Achievement Manager. С её помощью пользователи могут добавить себе достижения без необходимости их зарабатывания в игре «честным» путём или удалить их. Причём это относится даже к играм, достижения для которых не выпущены и находятся в стадии тестирования. Программа получила распространение в первую очередь среди игроков [[Team Fortress 2]], поскольку разблокировка нового оружия напрямую зависит от количества полученных достижений.
+
+=== Потоковая загрузка ===
+Steam поддерживает [[Поток данных|потоковую]] загрузку контента.<ref>{{cite web|url=http://developer.valvesoftware.com/w/index.php?title=Content_streaming|title=Content streaming|work=Valve Developer Community|lang=en|deadlink=404}}</ref> Это позволяет распределить приоритеты загрузки содержимого. Таким образом, сначала загружается часть игры, необходимая для запуска. Остальные файлы (в правильном порядке) — в фоновом режиме. Загрузка уровня игры приостанавливается, если ещё не загружены необходимые файлы. Потоковое содержание требует дополнительных усилий со стороны разработчика. Поэтому её активно используют не так много игр.
+
+=== Обновления и автономный режим ===
+При запуске клиент Steam проверяет наличие обновлений для самого себя и всех установленных на компьютере игр. Если Steam начал загрузку обновлений, пользователь может запустить игру, но при этом загрузка обновления будет приостановлена. Для сетевых игр обновления являются обязательными; что касается одиночных игр, то Steam предоставляет автономный режим, в котором можно играть в Steam-игры без подключения к Интернету и загрузки обязательных обновлений. Steam может войти в автономный режим и при подключённом интернете, но при каждом запуске в автономном режиме, даже если интернет отключён, Steam предлагает запуск в интернет-режиме (в Steam отсутствуют настройки, позволяющие отключить этот запрос, что создаёт дополнительные неудобства при автозапуске).
+
+=== Проверка целостности и дефрагментация файлов игры ===
+Steam поддерживает проверку файлов игры, сравнивая их контрольную сумму с информацией на серверах Valve. Эта процедура запускается принудительно, если при попытке запустить игру Steam не находит её основные файлы, также пользователь может запустить её вручную. По завершении процедуры Steam перезакачивает повреждённые или изменённые файлы из интернета. Также для игр в формате [[GCF]] имеется возможность [[дефрагментация|дефрагментации]] содержимого GCF-файлов. Эта процедура предлагается пользователю при запуске игры, если фрагментация файлов внутри виртуальной файловой системы слишком высокая. При дефрагментации или проверке файлов игра становится временно недоступной, однако, в отличие от обновления при отмене процедуры, запуск игры становится возможным. Для выполнения обеих процедур требуется информация с серверов Valve, поэтому они могут быть выполнены только в интернет-режиме при наличии интернет-соединения.
+
+=== Изменение интерфейса ===
+Steam поддерживает установку различных [[скин]]ов, которые изменяют внешний вид программы. Это могут быть изменения цветовой схемы (поддерживается как закрашивание определённым цветом, так и вставка изображений в формате [[Truevision TGA|TGA]]), расположения и размера различных кнопок и окон меню, иконок игр и т. п. Скины для старых версий Steam-а текущая версия не поддерживает.
+
+=== Установка дополнительного контента ===
+Для игр на основе [[Game Cache File|GCF-файлов]] Steam поддерживает включение в игру некоторых официальных дополнительных файлов [[контент]]а, если таковые имеются. К таким дополнениям могут относиться изменённые [[Модель|модели]] и [[Текстура (трёхмерная графика)|текстуры]] (например [[Half-Life High Definition Pack]] или Low Violence Pack) или специфические варианты озвучивания (например изменённая русская [[локализация]] [[Half-Life 2]] от фирмы [[Бука (компания)|Бука]]). Для включения такого рода дополнения необходимо в [[интернет-браузер]]е пройти по ссылке ''steam://installaddon/название дополнения'', для отключения — ''steam://removeaddon/название дополнения''.
+
+=== Резервные копии ===
+[[Файл:SteamReserveCopy.png|thumb|200x200px|Окно резервного копирования.]]
+Steam позволяет встроенными средствами создавать неограниченное количество [[Резервная копия|резервных копий]] купленных игр (Как приобретённых через Steam, так и коробочных версий с активацией через Steam). Данная возможность актуальна, прежде всего, для игр купленных непосредственно в Steam, так как при повторной [[Установка программного обеспечения|установке]] можно большую часть файлов установить с диска, а не загружать заново из [[Интернет]]а.
+
+Для удобства создания резервной копии в Steam предусмотрено разбиение архива на файлы размером 640 Мб, 4.7 Гб или по указанию пользователя. Далее [[Архив (информатика)|архивы]] записываются на диски любой программой. Встроенной функции записи на оптические диски в Steam не предусмотрено. Впрочем, резервное копирование можно провести и вручную, записав на диск содержимое папки SteamApps.
+
+=== Разрабатываемые функции ===
+Разработчики периодически сообщают, какие функции собираются внедрить в Steam. Такими объявленными, но ещё не реализованными функциями являются:
+* Автообновление системных [[драйвер]]ов. <!-- Уже работает в клиенте, во всяком случае для видеокарт -->
+* Обмен игровыми файлами между пользователями с помощью технологии [[Одноранговая сеть|peer-to-peer]]<ref name="videogaming247">{{cite web|url=http://www.hl-inside.ru/interviews/videogaming247/|title=Интервью // Интервью с Гейбом Ньюэллом сайту videogaming247|archiveurl=http://www.webcitation.org/5w57Ab42H|archivedate=2011-01-28}}</ref><ref>{{cite web|url=http://steamreview.org/posts/p2pfiles|title=Peer-to-Peer files released|archiveurl=http://www.webcitation.org/612nskZLP|archivedate=2011-08-19}}</ref>.
+* Версия клиента Steam для [[Linux]]<ref>{{cite web|url=http://www.hl-inside.ru/comments/?1210514532|title=Source Engine на Linux — вероятное будущее|archiveurl=http://www.webcitation.org/5w57C1u9T|archivedate=2011-01-28}}</ref>.
+
+До недавнего времени ещё и возможность выбора альтернативного браузера для работы клиента Steam (использовался только [[Internet Explorer]])<ref name="videogaming247" />, но с выходом новой версии клиента 26 апреля 2010 года, который использует собственную оболочку на базе [[WebKit]], необходимость в поиске альтернативного браузера пропала.
+
+== Рекламные акции ==
+; Пропуски
+Пропуски ({{lang-en|Guest Passes}}). Время от времени игрокам, обладающим какой-либо [[мультиплеер]]ной игрой, выдаётся гостевое приглашение, которое можно отослать любому человеку посредством самого Steam или [[Электронная почта|электронной почты]]. Получивший приглашение, в свою очередь, может активировать его и в течение нескольких дней играть в полную версию игры.
+
+; Скидка на выходные
+Скидка на выходные ({{lang-en|Weekend Deal}}). Каждые выходные предоставляется скидка на одну или несколько игр. Как правило, это 50 — 75 %. Таким образом, можно покупать игры намного дешевле, чем обычно.
+
+Иногда Steam проводит крупные массовые распродажи игр, обычно в предновогодний период. Такие акции проводились в конце 2009/начале 2010 и конце 2010/начале 2011 годов. Большинство игр в период акции продаются по сниженным на 33 — 75 % ценам, как правило за исключением недавно вышедших. Кроме того каждый день на определённые игры устанавливаются супер-скидки до 90 % и включается таймер, по истечении которого список игр с супер-скидками меняется.
+
+Иногда скидка идёт на игру разработчика, который не допускает покупку игр из России. Купить такую игру нельзя. Тем не менее, если данную игру купит в качестве подарка пользователь, проживающий в стране, где ограничения на покупку не распространяются, игру можно привязать к аккаунту и играть.
+
+; Срединедельная акция
+
+Каждую среду Steam предлагает существенную скидку на одну или несколько игр. Как правило скидка составляет 50 — 66 %.
+
+; Предложение дня
+
+Каждый день выбирается игра на которую предоставляется скидка. При этом в среду помимо этой акции так же действует и срединедельная акция.
+
+; Неделя издателя
+
+Периодически в Steam целую неделю предоставляются значительные скидки на игры какого-то одного определенного издателя (Ubisoft, EA и т. д.).
+
+; Бесплатные выходные
+Бесплатные выходные ({{lang-en|Free Weekend}}) действуют подобно гостевым приглашениям, однако игра становится доступной сразу для всех желающих на определённый промежуток времени (обычно три дня, с пятницы до понедельника), а в качестве дарителя приглашения выступает уже сам [[разработчик]] игры. Так же, как и в случае гостевых приглашений, игрок может пользоваться полной версией игры вплоть до окончания акции.
+
+; Совместные акции с производителями комплектующих ПК
+Steam ведёт учёт [[Аппаратные средства|аппаратных средств]] в компьютере. Это может использоваться в различных целях, одна из которых даёт возможность изготовителям аппаратных средств провести [[Рекламная акция|рекламную акцию]] для своих клиентов уже после того, как эти аппаратные средства будут проданы.
+
+Обе ведущие компании по производству [[Видеокарта|видеокарт]] используют эту особенность: владельцы [[ATI Technologies|ATI Radeon]] могут бесплатно установить ''[[Half-Life 2: Lost Coast]]'' и ''[[Half-Life 2: Deathmatch]]''<ref name="ATi Steam Offer">{{cite web|url=http://www.steampowered.com/ati_offer1a|title=ATi Steam Offer|lang=en|archiveurl=http://www.webcitation.org/612ntNTmK|archivedate=2011-08-19}}</ref>, в то время как пользователи [[NVIDIA|nVidia GeForce]] получают ''[[Portal: First Slice]]'' (демонстрационная версия ''[[Portal]]''), ''[[Half-Life 2: Deathmatch]]'' и ''[[Half-Life 2: Lost Coast]]''<ref name="nVidia Steam Offer">{{cite web|url=http://www.steampowered.com/nvidia|title=Portal First Slice is free|lang=en|archiveurl=http://www.webcitation.org/612ntyfrS|archivedate=2011-08-19}}</ref>. Активировать игры можно только 1 раз на 1 аккаунт, однако имеется возможность активации на другой аккаунт при наличии той же видеокарты в случае переустановки операционной системы. Следует заметить, что данный способ активации не является полноценной регистрацией [[Source]]-игры. То есть сами игры являются полноценными и предоставляют возможность игры на любых серверах, но при этом они не предоставляют возможности играть в некоторые [[Source]]-моды на Steam-серверах и пользоваться [[Source SDK]], что доступно только для купленных [[Source]]-игр.
+
+Также компания [[ATI Technologies|ATI]] проводила следующую акцию: в коробки с видеокартами Radeon HD2900 XT вкладывались купоны на активацию трёх игр Valve, планировавших выпускаться в составе набора ''[[The Orange Box#The Black Box|The Black Box]]'': ''[[Team Fortress 2]]'', ''[[Portal]]'', ''[[Half-Life 2: Episode Two]]''<ref name="BlackBox and ATi">{{cite web|url=http://www.ag.ru/news/31-05-2007#17079|title=BlackBox владельцам ATi Radeon 2900 XT|date=[[2007-07-31]]|work=Новости ag.ru|archiveurl=http://www.webcitation.org/615ruIp29|archivedate=2011-08-21}}</ref>. На тот момент игры ещё не были выпущены, и купон позволял бесплатно предзаказать эти игры и скачать их через Steam в день всемирного выпуска. И [[ATI Technologies|ATI]], и [[NVIDIA|nVidia]] теперь распространяют [[дистрибутив]] Steam вместе с [[драйвер]]ами для своих видеокарт.
+
+;Внутриигровая реклама
+[[Файл:Реклама в Counter-Strike.jpg|thumb|250px|Реклама [[Half-Life 2: Episode Two]] в [[Counter-Strike 1.6]].]]
+Помимо рекламы и рекламных акций, проводимых через Steam, в программе присутствует возможность осуществлять загрузку рекламных баннеров в игру (так называемая [[Динамическая реклама в играх|динамическая реклама]]). Таким образом, если разработчики позаботились об использовании данной функции, то в игру каждый раз может загружаться различный рекламный контент. Загрузка баннеров зависит от клиента Steam, и не затрагивает содержимое серверов (в случае с мультиплеерными играми).
+
+История появления данной функции:
+
+* В начале [[2006 год]]а компания IGA Worldwide была уличена в использовании рекламы на некоторых серверах ''[[Counter-Strike]]''. Однако это вызвало претензии со стороны Valve, так как это являлось нарушением авторских прав.<ref>{{cite web|url=http://www.dtf.ru/news/read.php?id=37858|title=Незаконная реклама в Counter-Strike|archiveurl=http://www.webcitation.org/5w57Dw1k9|archivedate=2011-01-28}}</ref> Позже, 16 февраля 2006 года Valve и IGA Worldwide подписали контракт о внедрении рекламы в Counter-Strike, таким образом, конфликт был исчерпан<ref>{{cite web|url=http://www.gamershell.com/companies/valve/275789.html|title=Valve and IGA Worldwide Announce In-Game Advertisement Resolution|lang=en|archiveurl=http://www.webcitation.org/5w57F4U3a|archivedate=2011-01-28}}</ref><ref>{{cite web|url=http://www.3dnews.ru/games/games-weekly-27022006/|title=Games Weekly. Игровая индустрия за неделю. 20-26 февраля 2006}}</ref>.
+* В декабре 2006 года Valve подтвердила внедрение рекламы в ''Counter-Strike'' сайту CS-Nation, и объявила о скором выходе бета-версии игры с рекламой<ref>{{cite web|url=http://www.entermedia.ru/journal/?content=article&id=235|title=Реклама появится в Counter-Strike|archiveurl=http://www.webcitation.org/5w57GEu2y|archivedate=2011-01-28}}</ref>.
+* [[5 марта]] [[2007 год]]а для Counter-Strike вышло обновление, добавляющее рекламу<ref>{{cite web|url=http://steampowered.com/v/index.php?area=posts&id=968&cc=RU|title=Half-life 1 Engine And Counter-strike Update Released|lang=en}}</ref>. 9 января 2008 года реклама была добавлена и в ''[[Counter-Strike: Condition Zero]]''<ref>{{cite web|url=http://steampowered.com/v/index.php?area=posts&id=1400&cc=RU|title=Counter-strike And Condition Zero Update Released|lang=en}}</ref>.
+
+В интервью сайту ''GamesIndustry.biz'' Гейб Ньюэлл заявил, что реклама в ''CS'' — лишь эксперимент для реализации внутриигровой рекламы, как функции Steam. А эта функция может быть использована, например, в бесплатных играх, окупающихся за счёт рекламы<ref>{{cite web|url=http://steamreview.org/posts/adverts/|title=Advertisements to become Steam function|lang=en|archiveurl=http://www.webcitation.org/5w57H5h1x|archivedate=2011-01-28}}</ref>.
+
+== Операции с аккаунтом ==
+
+=== Создание аккаунта ===
+Пользователь может создать неограниченное количество [[Учётная запись|учётных записей]]. При первом запуске Steam кнопка создания аккаунта выводится автоматически. Пользователь должен указать имя аккаунта и пароль, адрес [[Электронная почта|электронной почты]], который может использоваться для восстановления пароля, а также секретный вопрос и ответ на него на случай, если он забудет пароль. Аккаунт можно создать как через программу Steam, так и через сайт магазина, однако запрос на восстановление можно отправить только через Steam-клиент. Имя аккаунта может содержать латинские буквы, цифры и знак подчёркивания '''_'''.
+При этом имя аккаунта не должно быть уже зарегистрированным, а также не должно содержать слова '''valve''' и '''steam''' — это сделано для предотвращения возможности выдачи себя за сотрудников и администраторов [[Valve]] с целью кражи пароля.
+
+=== Активация ===
+[[Технические средства защиты авторских прав|DRM]]-функциональность службы Steam помогла в борьбе с [[пиратство]]м, хотя и не до такой степени, как рассчитывалось. Преимущества (доступ к обновлениям и официальным игровым серверам), предоставляемые Steam, оказались достаточно весомыми аргументами в пользу лицензионных версий; более того, Steam настолько лучше традиционно применяемых средств борьбы с пиратством ([[Защита от копирования|защитой от копирования]]), что средства защиты от копирования [[SecuROM]], требовавшие присутствия диска с игрой в [[дисковод]]е для игры в коробочную версию ''[[Half-Life 2]]'', были в конце концов удалены из Steam<ref>{{cite web|url=http://www.hl-inside.ru/comments/?1102720260|title=Очередное обновление Steam|archiveurl=http://www.webcitation.org/5w57I7rtC|archivedate=2011-01-28}}</ref>.
+
+Сам [[Ньюэлл, Гейб|Гейб Ньюэлл]] заявлял, что его не волнуют действия пиратов, так как Steam, по его мнению, надёжно защищает игры компании<ref>{{cite web|url=http://www.ag.ru/news/30-05-2008|title=Valve не боится пиратства и верит в Россию|publisher=[[AG.ru]]|datepublished=30 мая 2008|accessdate=5 октября 2008|archiveurl=http://www.webcitation.org/612nxEZUY|archivedate=2011-08-19}}</ref>.
+
+Однако такая система имеет ряд серьёзных недостатков:
+
+# Для установки игры требуется подключение к интернету, и обязательное обновление до 100 %. В противном случае установить игру невозможно. Таким образом, пользователи, имеющие низкоскоростное модемное или дорогостоящее (при оплате по трафику) подключение к интернету, не могут скачать обновления и начать играть, даже если у них коробочная версия Steam-игры.
+# Невозможность активировать игру или скачать для неё обновления при загруженности серверов Steam.
+
+Именно ввиду этих недостатков пиратские No-Steam версии получили широкое распространение, так как в таких версиях Steam отсутствует. Такие игры можно запустить сразу, без подключения к интернету и запуска Steam.
+Также пиратами для пользователей, имеющих соединение с интернетом, были созданы взломанные версии Steam, позволяющие закачивать игры и играть в них без оплаты. Однако такие версии довольно быстро устаревают, и скачивать новые игры или обновления для некоторых имеющихся игр становится невозможно. Через такие взломанные Steam-клиенты также невозможно играть на лицензионных серверах, контролируемых Valve по учётным записям Steam.
+
+Тем не менее, именно активация вызвала наибольшее число нареканий у пользователей Steam. Будучи узким местом в системе распространения игр [[Valve]], серверы активации Steam оказались перегружены в день выхода ''[[Half-Life 2]]'', несмотря на все усилия и заверения [[Valve]] (в частности, объявленную [[Valve]] задолго до выхода игры предварительную загрузку некоробочной версии), и многие покупатели были вынуждены ждать многие часы, дожидаясь устойчивой связи с серверами и расшифровки файлов игры.
+
+=== Покупка игр ===
+Вместо покупки коробок с играми, дисков, CD-ключей, пользователь Steam получает возможность загружать купленные игры со Steam-серверов из любого места, где возможно использование Steam-клиента. Игры могут быть приобретены как по отдельности (с некоторыми исключениями), так и в составе «пакетов» из нескольких игр (если таковые имеются), стоящих дешевле, чем общая стоимость игр по отдельности, иногда даже в несколько раз. При этом нужно учесть, что объём таких «пакетов» может составлять десятки гигабайт, которые необходимо скачать через интернет. Что в свою очередь требует наличия высокоскоростного дешёвого соединения.
+
+Все покупки производятся с рабочего стола Steam-клиента или на сайте магазина через любой [[браузер]], а данные передаются через зашифрованное соединение. Для обеспечения большей безопасности платёжная информация не сохраняется, поэтому каждый раз её необходимо вводить заново<ref name="Buying Games">{{cite web|url=http://supportwiki.steampowered.com/ru/Buying_Games_through_Steam|title=Покупка игр через Steam|lang=ru|accessdate=2008-4-7|archiveurl=http://web.archive.org/web/20100819095528/http://supportwiki.steampowered.com/ru/Buying_Games_through_Steam|archivedate=19-08-2010|work=Служба поддержки Steam}}</ref>. Покупки производятся посредством виртуальной корзины. В Steam присутствует кошелек, на который пользователи могут переводить деньги и держать их в нем. Оплата покупок возможна либо через этот кошелек, либо переводом денег. Поддерживаются следующие способы оплаты и пополнения кошелька<ref name="Buying Games" /><ref>{{cite web|url=https://support.steampowered.com/kb_article.php?ref=1122-RTSC-0478|title=Steam Wallet|publisher=[[Valve]]|lang=en|accessdate=2011-10-24}}</ref><ref>{{cite web|url=http://store.steampowered.com/subscriber_agreement/russian/|title=Соглашение подписчика службы Steam (раздел 3C)|publisher=[[Valve]]|lang=ru|accessdate=2011-10-24|archiveurl=http://www.webcitation.org/64tb74WZF|archivedate=2012-01-23}}</ref>:
+* Кредитные карты ([[Visa]], [[Mastercard]], [[AMEX]], [[Discover]], [[JCB]])
+* Дебетовые карты с логотипом Visa или Mastercard<ref name="acceptedpayment">{{cite web|url=http://support.steampowered.com/cgi-bin/steampowered.cfg/php/enduser/std_adp.php?p_faqid=429#acceptedforms|title=What forms of payment are accepted on Steam?|work=Steam Credit Card Purchase and Billing FAQ|date=17 October 2006|accessdate=2007-07-16|archiveurl=http://www.webcitation.org/615rwLFfM|archivedate=2011-08-21}}</ref>
+* [[PayPal]]
+* ClickandBuy
+* [[Paysafecard]] — только для [[Европа|Европы]]<ref>{{cite web|url=http://store.steampowered.com/news/4203/|title=Use Paysafecard on Steam and Receive a Free Copy of Portal|date=20 августа 2010|publisher=[[Valve]]|lang=en|accessdate=2011-10-23|archiveurl=http://www.webcitation.org/64tb7hKUk|archivedate=2012-01-23}}</ref>
+* Прямой банковский перевод через [[Visa Electron]]<ref name="newpayment">{{cite web|url=http://steamreview.org/posts/paypalandwire/|title=PayPal and Wire Transfer arriving soon|work="The Steam Review"|date=August 27 2006|accessdate=2007-07-16|archiveurl=http://www.webcitation.org/5w57Jzew2|archivedate=2011-01-28}}</ref>
+* [[Webmoney]] — страны [[СНГ]], [[Латвия]], [[Эстония]], [[Литва]], [[Финляндия]], [[Чешская республика]], [[Германия]], [[Испания]], [[Польша]], [[Франция]], [[Швейцария]], [[Израиль]], [[Турция]], [[ОАЭ]], [[Сингапур]] и [[Таиланд]]<ref>{{cite news|url=http://store.steampowered.com/news/4806/|title=WebMoney Now Available on Steam|date=18 декабря 2010|publisher=[[Valve]]|lang=en|accessdate=2011-10-23}}</ref><ref name="CF steam webmoney">{{cite news|url=http://cyberfight.ru/site/news/72000/|title=Система STEAM теперь официально поддерживает WebMoney|author=Swiss_Larson|date=2 Nov '10|publisher=[[Cyberfight]]|lang=ru|accessdate=2011-10-23}}</ref>
+* [[Яндекс.Деньги]]<ref>{{cite news|url=http://www.rbcdaily.ru/2011/10/24/media/562949981805007|title=Российские геймеры смогут делать покупки в крупнейшем в мире интернет-магазине Steam|author=Виталий Петлевой|date=24-10-2011|publisher=RBK dairy|lang=ru|accessdate=2011-10-23}}</ref>
+* Денежные киоски [[Xsolla]] (только для России)<ref>{{cite web|url=http://store.steampowered.com/news/6568/|title=Xsolla And Valve Announce Cash Payments to Steam in Russia|date=21 октября 2011|publisher=[[Valve]]|lang=en|accessdate=2011-10-23|archiveurl=http://www.webcitation.org/64tb8C02x|archivedate=2012-01-23}}</ref>
+
+Дебетовые карты [[Maestro]], популярные в [[Европа|Европе]], напрямую не поддерживаются, но могут быть использованы при платеже через PayPal. Долгое время способы оплаты были ограничены только кредитными картами и банковскими платёжными системами, использующими аккаунты, привязанные к кредитным картам. Это послужило причиной для критики Steam преимущественно в странах, где на получение кредитных карт установлены жёсткие критерии (например, возрастные) и преимущественно развиты небанковские платёжные интернет-системы (например, [[WebMoney]]). Для [[Российская Федерация|РФ]] и [[СНГ]] ситуация изменилась [[2 ноября]] 2010 года, когда для этих стран Steam разрешил оплату игр посредством [[WebMoney]].<ref name="CF steam webmoney" />
+
+==== Стоимость ====
+Цены на игры и скачиваемый контент в Steam варьируются в некоторых пределах. Сейчас самая малая цена на игру $0,99USD (''[[Fortix]]''), на скачиваемый контент $0,99USD (''[[Just Cause 2#DLC|Just Cause 2: Monster Truck]]''), на скачиваемые руководства $1,99USD (''[[Portal 2#The Final Hours|Portal 2: The Final Hours]]''), или на сборник $2,99USD (''[[Ctulhu Saves the World]] & [[Breath of Death VII]] Double Pack'') и самая большая цена на игру $59,99USD (''[[Call of Duty: Modern Warfare 3]]''), на скачиваемый контент $39,99USD (''[[The Sims 3: Late Night]]''), на скачиваемые руководства $19,99USD (''[[Homefront#Prima Official Strategy Guide|Homefront: Prima Official Strategy Guide]]'') или на сборник $99,99USD (''Valve Complete Pack'').
+
+В разных регионах цена может отличаться от стандартной или быть разной для отличающихся названий одной игры. Например, игра ''[[S.T.A.L.K.E.R.]]'' стоит $9,99USD<ref>{{cite web|url=http://store.steampowered.com/app/4830/?l=russian?cc=ru|title=S.T.A.L.K.E.R. on Steam (RU)|work=Магазин Steam|archiveurl=http://www.webcitation.org/5w57KwYSa|archivedate=2011-01-28}}</ref>, но эта же игра в Америке стоит $19,99USD<ref>{{cite web|url=http://store.steampowered.com/app/4500/?cc=US|title=S.T.A.L.K.E.R.: Shadow of Chernobyl on Steam (US)|work=Магазин Steam|archiveurl=http://www.webcitation.org/612nzpo19|archivedate=2011-08-19}}</ref>, так как носит название ''[[S.T.A.L.K.E.R.: Shadow of Chernobyl]]''. Таким образом, можно купить две одинаковых игры. Первые дни после выхода ''[[Call of Duty 4: Modern Warfare]]'' имела огромный разброс цен: $49,99USD<ref>{{cite web|url=http://store.steampowered.com/app/7940/?cc=RU|title=Call of Duty® 4: Modern Warfare™ on Steam (US)|work=Магазин Steam|archiveurl=http://www.webcitation.org/5w57LohAO|archivedate=2011-01-28}}</ref> в России и Америке, $69,99USD<ref>{{cite web|url=http://store.steampowered.com/app/7940/?l=russian?cc=FR|title=Call of Duty® 4: Modern Warfare™ on Steam (FR)|work=Магазин Steam|archiveurl=http://www.webcitation.org/5w57Muixe|archivedate=2011-01-28}}</ref> во Франции и $88,50USD<ref>{{cite web|url=http://store.steampowered.com/app/7940/?l=russian?cc=AU|title=Call of Duty® 4: Modern Warfare™ on Steam (AU)|work=Магазин Steam|archiveurl=http://www.webcitation.org/5w57NvHJh|archivedate=2011-01-28}}</ref> в Австралии. Также, например, ''[[All Points Bulletin]]'' в Америке продавалась за $49,99USD, а в Европе — за $28,99USD.
+
+* [[13 сентября]] [[2011 год в играх|2011 года]] для пользователей с Российским [[IP-адрес]]ом ''(и стран СНГ)'' в систему были введены [[рубль|рубли]]<ref>[http://www.igromania.ru/news/156760/Steam_idet_navstrechu_narodu.htm Steam идет навстречу народу]</ref>. Также были снижены цены на разные игры, но из-за некоторых разногласий между компаниями в системе стали недоступны более чем 250 наименований игр. Были запрещены целые компании (''например: [[id Software]]''). С введением цены были изменены в лучшую сторону, например самая малая цена за игру составляет 99 рублей (''[[Painkiller: Overdose]]''), на скачиваемый контент — 29 рублей (''[[Just Cause 2#Загружаемый контент|Just Cause 2: Rico’s Signature Gun]]''), на скачиваемые руководства — 199 рублей (''[[Battlefield: Bad Company 2#Руководство|Battlefield: Bad Company 2 — Prima Official Strategy Guide]]'') или на сборник 59 рублей (''[[Ctulhu Saves the World]] & [[Breath of Death VII]] Double Pack'') и самая большая цена за игру составляет 899 рублей (''[[Dead Island]]''), на скачиваемый контент — 699 рублей (''[[The Sims 3#Generations|The Sims 3: Generations]]''), на скачиваемые руководства — 299 рублей (''[[Dead Space 2#Руководство|Dead Space 2: Prima Official Guide]]'') или на сборник 1499 рублей (''[[Valve Software|Valve Complete Pack]]'').
+
+==== Розничные ключи ====
+CD-ключ — это своеобразный код для активации игры в сервисе Steam, который представляет собой набор из 13 символов (''старый вариант Retail-версии [[Half-Life]]''), 18 символов (''[[Prey (игра)|Prey]]''), 25 символов (''[[SiN Episodes: Emergence]]'') и 26 символов (''[[The Witcher 2: Assassins of Kings]]''), которые в свою очередь состоят из латинских букв и цифр. Обычно CD-ключ отпечатан на наклейке под диском (Retail-версия), на задней стороне буклета (DVD-версия) или же на отдельном листе (Коллекционное издание). Также ключ подтверждает вашу покупку игры, при его введении в окошке ''Product Activation'' игра немедленно подключается к вашему Steam-аккаунту. Кроме продуктов [[Valve Corporation]] ключами можно активировать игры сторонних разработчиков. Некоторые игры, которые можно активировать ключами:
+
+{{multicol}}
+* [[Aliens versus Predator (игра, 2010)|Aliens vs. Predator]]
+* [[Audiosurf]]
+* [[Brink]]
+* [[Call of Duty: Modern Warfare 2]]
+* [[Call of Duty: Modern Warfare 3]]
+* [[Call of Duty: Black Ops]]
+* [[Counter-Strike]]
+** [[Counter-Strike: Condition Zero]]
+* [[Counter-Strike: Source]]
+* [[Dark Messiah of Might and Magic]]
+* [[Darksiders]]
+* [[Deus Ex: Human Revolution]]
+* [[Dogfighter]]
+* [[Duke Nukem Forever]]
+* [[Empire: Total War]]
+* [[Fallout: New Vegas]]
+* [[F.E.A.R. 2: Project Origin]]
+* [[F.E.A.R. 3]]
+* [[Football Manager 2010]]
+* [[Football Manager 2011]]
+* [[Just Cause 2]]
+* [[Half-Life]]
+* [[Half-Life 2]]
+* [[Half-Life 2: Episode One]]
+* [[Half-Life 2: Episode Two]]
+* [[Half-Life 2: The Orange Box]]
+* [[Homefront]]
+* [[Kane & Lynch 2: Dog Days]]
+* [[Killing Floor (игра)|Killing Floor]]
+* [[King Arthur: The Role-playing Wargame]]
+* [[Lead and Gold: Gangs of the Wild West]]
+* [[Left 4 Dead]]
+* [[Left 4 Dead 2]]
+* [[Lost Planet: Extreme Condition]]
+* [[Mafia II]]
+* [[Mafia II|Mafia II: Дополнения]]
+{{multicol-break}}
+* [[Magicka]]
+* [[Metro 2033]]
+* [[Napoleon: Total War]]
+* [[Order of War]]
+** [[Order of War: Challenge]]
+* [[Portal]]
+* [[Portal 2]]
+* [[Prey (игра)|Prey]]
+* [[R.U.S.E.]]
+* [[Race 07]]
+* [[Red Orchestra: Ostfront 41-45]]
+* [[Rogue Warrior]]
+* [[Saints Row 2]]
+* [[Serious Sam HD: The First Encounter]]
+* [[Serious Sam HD: The Second Encounter]]
+* [[Shattered Horizon]]
+* [[Civilization V|Sid Meier’s Civilization V]]
+* [[Silent Hill: Homecoming]]
+* [[SiN Episodes: Emergence]]
+* [[Speedball 2: Tournament]]
+* [[Super Meat Boy]]
+* [[Supreme Commander 2]]
+* [[Team Fortress 2]]
+* [[The Ball]]
+* [[The Elder Scrolls V: Skyrim]]
+* [[The Ship]]
+* [[The Witcher 2: Assassins of Kings]]
+* [[Total War: Shogun 2]]
+* [[Unreal Tournament 3]]
+* [[Warhammer 40,000: Dawn of War - Soulstorm]]
+* [[Warhammer 40,000: Dawn of War II]]
+* [[Warhammer 40,000: Dawn of War II - Chaos Rising]]
+* [[Warhammer 40,000: Dawn of War II - Retribution]]
+* [[Worms: Reloaded]]
+{{multicol-end}}
+
+=== Блокировка аккаунта ===
+[[Файл:STEAM заблокированный аккаунт.JPG|thumb|right|Такое окно STEAM выдаёт, если учётная запись заблокирована.]]
+Valve оставляет за собой право блокировать [[аккаунт]]ы пользователей по своему усмотрению<ref>Раздел 13 [http://store.steampowered.com/subscriber_agreement/russian/ соглашения подписчика службы Steam].</ref>. Основными видами нарушений являются<ref>{{cite web|url=http://supportwiki.steampowered.com/ru/Steam_Account_Disabled|title=Блокировка учётной записи Steam|work=Техподдержка Steam|deadlink=404}}</ref>:
+; Мошеннические действия с кредитными картами : Любые мошеннические действия с [[Кредитная карта|кредитными картами]] при оплате Steam-продуктов, в том числе использование чужих кредитных карт, данные которых получены путём [[кардинг]]а, а также совершение операции отказа от платежа (chargebacks) (независимо от того, когда была совершена транзакция).
+; Регистрация на аккаунт подарков, купленных путём кардинга. : До 2010 года в случае совершения отказа от платежа подарок отзывался, но аккаунт получателя не блокировался. Однако в декабре 2009 года Valve изменили политику и началась массовая волна банов. Сами Valve рекомендуют не принимать подарки от неизвестных лиц{{нет АИ|24|04|2011}};
+; Пиратство и взлом : Сюда относится использование взломанной программы-клиента Steam для доступа к сети Steam, попытки зарегистрировать поддельные или найденные в интернете [[Регистрационный ключ|CD-key]].
+; Кража, совместное использование или торговля чужими учётными записями: Любые действия с чужими аккаунтами без разрешения их владельцев: кража и замена пароля, использование аккаунта для входа, любые операции с аккаунтом, разглашение данных аккаунта и&nbsp;т.&nbsp;д. Но совместное использование возможно по очереди<ref>[http://supportwiki.steampowered.com/ru/Steam_Account_Use Использование учётной записи Steam]</ref>.
+; [[Фишинг]]-атаки и намеренный обман пользователей: Сюда входит общение с пользователями Steam под вводящими в заблуждение именами и [[e-mail]] адресами, якобы сотрудников Steam или [[Valve]] (к примеру: «Steam Admin» или «John@Steampowered.com»), с целью выманить [[пароль]] и иную конфиденциальную информацию об аккаунте.
+; Купля-продажа аккаунтов Steam: Ответственность за использование и обеспечение безопасности аккаунта Steam лежит в первую очередь на первоначальном пользователе — все аккаунты, подвергнутые купле или продаже, при выяснении со стороны Valve факта купли-продажи могут быть заблокированы.
+; Любое другое нарушение «Соглашения подписчика Steam» или «Правил поведения в сети Steam»
+
+Также иногда учётная запись может быть временно заблокирована, если например аккаунт был украден и Valve блокируют его до установления настоящего владельца.
+
+После блокировки аккаунта пользователь лишается возможности скачать и играть во все ранее приобретённые игры, имеющие привязку к Steam, включая коробочные версии.
+Деньги в случае блокировки аккаунта не возвращаются.<ref>''Суммы, уплаченные в связи с Учетной записью или Подпиской, не возвращаются в случае расторжения договора.'' Раздел 4B [http://store.steampowered.com/subscriber_agreement/russian/ соглашения подписчика службы Steam].</ref>
+
+== Сбор статистики ==
+; Статистика продаж
+Платформа Steam обеспечивает издателей статистикой продаж продуктов (в том числе и для розничной торговли, если игра требует обязательной регистрации). В результате разработчик получает оперативную информацию о продажах игр, что может использоваться для оценки успеха игры, а также эффективности рекламных акций.
+
+; Аппаратное и программное обеспечение
+Steam собирает определённую информацию с компьютеров пользователей.
+* Собирается статистика «начинки» компьютеров игроков. Раз в несколько месяцев статистика обнуляется и опрос проводится заново. Данные о компонентах компьютера отправляются в Valve только при согласии пользователя. При сборе статистики выводится специальное диалоговое окно, запрашивающее у пользователя информацию о скорости соединения с интернетом, о наличии микрофона. Результаты сбора статистики публикуются Valve в открытом доступе на официальном сайте Steam<ref name="surveys">[http://www.steampowered.com/status/survey.html Результаты сбора статистики] на сайте ''SteamPowered.com''</ref>.
+* Помимо этого, Steam собирает информацию о наличии/отсутствии некоторых программ, таких, как [[Mozilla FireFox]], [[OpenOffice.org]] и&nbsp;пр.
+
+[[Файл:Статистика смертности на карте GoldRush.jpg|thumb|250px|Карта смертности на карте GoldRush ([[Team Fortress 2]]). Изображен коридор на первом этапе карты. Эти и другие данные доступны на сайте [http://www.steampowered.com/status/tf2/tf2_stats.php steampowered.com].]]
+; Игровой процесс
+* Информация о способах прохождения игры, местах игры, вызвавших наибольшие затруднения/смертность. Эти данные, например, могут использоваться разработчиками для принятия решений о правке баланса.
+* Если игра использует [[Достижения (видеоигры)|систему достижений]], привязанную к системе Steam, то на странице статистики игры отображается процент игроков выполнивших то или иное достижение. Часть этой статистики доступна пользователям на официальном сайте.
+* Информация о популярности модов: количество серверов для мода, количество игроков на текущий момент, а также суммарное количество минут в месяц, проведённое за игрой в модификацию всеми игроками.
+
+== Технические особенности ==
+
+=== Системные требования ===
+Системные требования, необходимые для использования Steam<ref>{{cite web|url=http://store.steampowered.com/about/?l=russian|title=Steam, The Ultimate Online Game Platform|accessdate=2010-05-01|archiveurl=http://www.webcitation.org/5w57OrwPs|archivedate=2011-01-28}}</ref>:
+* [[Windows XP|XP]], [[Windows Vista|Vista]], [[Windows 7]] или [[Mac OS X]] версии не ниже 10.5.8
+* 512 Мб [[ОЗУ]]
+* [[Процессор]] 1 Ггц
+* 1 Гб свободного места на [[Жёсткий диск|жёстком диске]], (минимум 200 мб) для программы и место для загруженных игр
+* Подключение к [[интернет]]у (рекомендуется широкополосное соединение)
+
+На данный момент официально поддерживаются только три операционные системы семейства Windows: [[Windows XP|XP]], [[Windows Vista|Vista]], [[Windows 7|7]]. Ранее Steam был доступен и для операционных систем [[Windows 98]]/[[Windows ME|ME]], но в июле [[2007 год]]а Valve объявили об окончании поддержки этих систем<ref>{{cite web|url=https://support.steampowered.com/kb_article.php?ref=6311-YPSD-1357|title=Steam is no longer supported on this computer's operating system|lang=en}}</ref><ref>{{cite web|url=http://www.hl-inside.ru/comments/?1172829356|title=В июле Steam прекращает поддержку Windows 98/ME|archiveurl=http://www.webcitation.org/5w57PpBWs|archivedate=2011-01-28}}</ref>. Так же после крупного обновления, в связи с переходом на [[Mac OS X]], на [[Windows 2000]] показывалось предупреждение о скором прекращении поддержки этой ОС, в августе 2010 Steam прекратил официально поддерживать [[Windows 2000]].
+
+=== Контент-серверы ===
+Steam использует набор сетевых протоколов [[TCP]] и [[UDP]]. Загрузка данных происходит по протоколу TCP. Steam-клиент подключается к так называемым [[контент-сервер]]ам. На [[2008 год]] по всему миру находилось более двухсот таких [[сервер]]ов. Для ускорения загрузки данные сжимаются. Также Steam-клиент может получать данные с нескольких серверов одновременно, загрузка данных автоматически распределяется между наиболее подходящими серверами. [[Авторизация]] Steam, однако, зависит от центрального сервера Valve в [[Белвью (Вашингтон)|Белвью]] ([[Вашингтон (штат)|штат Вашингтон]], [[США]]).
+
+=== Форматы хранения Steam-игр ===
+В Windows OS файлы игр хранятся в папке «''…\корневая_папка_Steam\SteamApps\''». В Mac OS X файлы игр хранятся в директории «/Users/имя/Library/Application Support/Steam/SteamApps/». Существует два формата: [[GCF]] и [[NCF]]. GCF используется в основном для игр Valve, в то время как в формате NCF распространяется большинство сторонних игр. Однако, в настоящее время последние игры от Valve ([[Left 4 Dead]], [[Left 4 Dead 2]], [[Portal 2]]) также стали распространяться в формате NCF.
+
+; Файлы кэша Steam-игр (GCF)
+{{main|Game Cache File}}
+Steam использует для размещения игровых файлов подобие виртуальной [[Файловая система|файловой системы]]. Изначально GCF было сокращением от ''Grid Cache File''<ref name="GCF - Valve Developer">{{cite web|url=http://developer.valvesoftware.com/wiki/GCF|title=GCF - Valve Developer Community|work=О формате GCF на сайте разработчиков|accessdate=6 апреля 2008|lang=en|archiveurl=http://www.webcitation.org/5w5C6Fxt6|archivedate=2011-01-29}}</ref> (''Grid'' (''Решётка'') — раннее кодовое имя Steam) Теперь принято считать, что GCF — аббревиатура от ''Game Cache Files''. Эти файлы расположены в папке ''SteamApps''. Все игры на основе таких файлов не могут работать без Steam даже при полной распаковке GCF — использование их без Steam возможно только с применением [[эмулятор]]ов.
+
+Использование формата GCF решает несколько задач, но в то же время обладает рядом недостатков. В целом формат GCF удобен для автообновлений и восстановления данных, но только для сохранения оригинальной игры в том виде, в котором её создал разработчик — пользователь не может изменить непосредственно сами файлы игры и внедрить [[Модификация|модификацию]] с изменением характеристик прямо внутрь игры. Также использование GCF-файлов требует распаковки файлов библиотек ([[DLL]]) и приложений ([[EXE]]), а также медиафайлов, что уменьшает свободное место на жёстком диске. Формат GCF основан на использовании модификаций при сохранении оригинальной игры, что упрощает её восстановление, но не даёт возможность изменить базовые файлы игры.
+
+; Файлы Steam-игр, не содержащие кэш (NCF)
+Файлы NCF (No-Cache File) не содержат игровой кэш, в отличие от формата GCF. Все файлы игры находятся в папке ''steamapps/common/название игры'', а внутри файла NCF содержится только список этих файлов и информация об их [[Контрольная сумма|контрольной сумме]]. Эти файлы расположены в папке ''SteamApps'' вместе с GCF-файлами и нужны для возможности запуска и обновления игр через Steam, но не являются составной частью игры. Обновления и поиск повреждённых файлов у таких игр проходит сложнее и дольше, чем у файлов GCF. NCF файлы также можно открыть с помощью [http://nemesis.thewavelength.net/index.php?p=26 GCFScape].
+
+=== Установка модификаций ===
+Установка [[мод]]ов для сторонних Steam-игр производится методами, предусмотренными разработчиками этих игр. Steam играет важную роль только при установке модов для игр, разработанных Valve.
+Установку модификаций можно разделить на два типа:
+* Установка/замена отдельных [[файл]]ов, таких, как [[Полигональная модель|модели]], [[Текстура (трёхмерная графика)|текстуры]], [[Уровень (компьютерные игры)|карты]].
+* Отдельные модификации (либо с изменением исходного кода, либо с созданием собственной сюжетной кампании)
+
+==== Установка отдельных файлов для игры ====
+При добавлении файлов, например новых карт для сетевых игр, необходимо скопировать нужные файлы на соответствующее место. Тогда при запуске игры помимо файлов из GCF будут использоваться и добавленные. При необходимости заменить стандартные модели, текстуры и прочее нужно скопировать новый файл на то место, где хранился бы оригинальный файл, если бы игра была распакована. В таком случае игра будет использовать реальный файл, а не содержимое GCF.
+
+==== Установка модов ====
+Движки [[GoldSource]] и [[Source]] поддерживают установку отдельных модов в любую директорию. Для запуска мода достаточно указать директорию папки с модом в параметре запуска. Однако для появления мода в списке Steam необходимо поместить их в соответствующие папки. Как правило, отдельные модификации устанавливаются двумя способами:
+# Папка мода помещается непосредственно в папку игры (корневая_папка_Steam\SteamApps\учётная_запись\название_игры)<ref name="InstallingMods">{{cite web|url=http://supportwiki.steampowered.com/ru/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D1%85_%D0%BC%D0%BE%D0%B4%D0%BE%D0%B2|title=Установка пользовательских модов|work=Тех.поддержка Steam|deadlink=404}}</ref>. При этом моды на движке GoldSource появляются в списке Steam, если игра зарегистрирована на аккаунте пользователя. Также в этом случае мод появляется в списке игр во внутриигровом меню «Сменить игру» (по умолчанию меню отключено, но в коде оно присутствует) у игр на обоих движках, однако возможность смены игры сохраняется только у игр на движке GoldSource (при попытке смены игры на Source перезапускается та же игра).
+# Моды на движке Source на лицензионной версии как правило помещаются в специальную папку (''корневая_папка_Steam\SteamApps\SourceMods'')<ref name="InstallingMods" />. После перезапуска Steam модификация появляется в списке игр. При создании таких модов разработчики указывают, файлы какой игры следует использовать в качестве основы. Если необходимая игра отсутствует на аккаунте, мод в списке не отображается. Запуск мода можно произвести как через Steam, так и через exe-файл игры.
+
+<!-- === Эмуляция клиента Steam ===
+Поскольку для запуска Steam-игры требуется запущенный клиент Steam, исключается возможность запуска не обновлённой игры. Это зачастую делает невозможным запуск игры даже для лицензионных пользователей, которые имеют медленное интернет-соединение или не имеют его вообще. Поэтому для упрощения запуска или создания пиратской версии необходимо эмулировать Steam — либо изменить файлы игры, либо запускать их через специальную программу, являющейся альтернативой Steam-клиента. Эмуляция Steam-клиента запрещается компанией Valve, поэтому эмуляторы создаются сторонними разработчиками.
+
+Наиболее совершенные эмуляторы умеют работать с [[GCF]]-файлами (требуется распаковка базовых файлов) и создавать для игры внутреннюю систему достижений, если таковая используется. Эмуляторы делают возможной игру без интернета и обновлений и позволяют напрямую запускать её без использования аккаунта. Однако они не позволяют играть на официальных лицензионных серверах. <!--без запущенного Steam или с некупленной игрой, поскольку эти серверы рассчитаны на использование именно клиента Steam и не могут проверить, является ли пользователь лицензионным, поскольку для этого они проверяют аккаунт — если же пользователь использует игру с эмулятором при запущенном клиенте с зарегистрированной на аккаунт игрой, игра на таких серверах становится возможной. --><!-- Ну что за бред. Типа у меня есть лиц игра, и стим запущен, но игру, блин, запущу через эмулятор? -->
+<!--==== Файловые эмуляторы ====
+Наиболее распространённый вариант создания Non-Steam-игры — замена её базовых файлов, которые отвечают за обращение к Steam, на файлы, эмулирующие функции клиента Steam внутри самой игры и делающих её самостоятельной. Такой эмулятор как правило включает несколько [[DLL]]-файлов, заменяющих оригинальные для внедрения функций клиента Steam внутрь игры, и файл конфигурации, в котором прописываются директории, способы запуска, необходимые GCF-файлы для использования в игре и т. д. Среди эмуляторов такого типа наиболее распространённым является эмулятор SteamEmu (и его модификации).
+
+==== Программные эмуляторы ====
+Этот вид эмуляторов менее распространён, но также позволяет запускать игры без аккаунта и интернет-соединения. Для запуска игры используется специальная программа, которая либо содержит список игр и позволяет запускать игру через собственный интерфейс, либо позволяет запускать игру напрямую, представляясь ей как Steam-клиент. Зачастую такие программы в своей основе используют такие же файлы, как и файловые эмуляторы, но при этом не заменяют на них оригинальные файлы игры.
+-->
+
+=== Запуск игр ===
+Существуют различные способы запуска игр, как напрямую, так и с использованием Steam.
+# Запуск через собственный .[[EXE|exe-файл]] игры. Этот способ более быстрый, однако если запускается игра на основе [[GCF]], у которой имеются ещё не установленные обновления движка, эти обновления не задействуются. Кроме того, игры на движках [[GoldSource]] и [[Source]] могут быть запущены таким образом только при запущенном Steam-приложении. Эти игры запускаются соответственно через файлы ''hl.exe'' и ''hl2.exe'' с указанием параметра ''«-steam -game папка_с_игрой»''.
+# Запуск с использованием Steam. В этом случае Steam-приложение (игра или видеоклип) автоматически дозагружает и обновляет себя при необходимости, а также внутри игры включается Steam Community. Если приложение не установлено, клиент автоматически переходит на страницу его покупки (если игра не зарегистрирована на аккаунте) или включает её скачивание (для купленных и бесплатных игр и видеоклипов). Перед запуском приложений на основе файлов GCF Steam извлекает все необходимые для запуска файлы, после чего запускает сам exe-файл игры с нужными параметрами — это замедляет время запуска, но гарантированно обновляет извлечённые базовые файлы на текущую версию и восстанавливает их в случае повреждения. В случае, если Steam-клиент установлен, но не запущен, при попытке запустить игру с использованием клиента сначала производится его запуск, после чего сразу выполняется запуск нужного приложения. Существует несколько способов запуска через Steam:
+#* Из списка «Мои игры» клиента Steam.
+#* Через файл Steam.exe с параметром ''-applaunch код_игры''.
+#* Через строку интернет-браузера: ''steam://run/код_игры''.
+
+== Steamworks ==
+[[28 января]] [[2008 год]]а [[Valve]] выпустила Steamworks — набор инструментов для разработчиков, позволяющих использовать в играх некоторые возможности Steam: автообновление, сбор игровой статистики, обеспечение мультиплеерных игр голосовым чатом и доступ к возможностям Steam Community (таким как система достижений)<ref name="steamworks">{{cite web|url=http://www.steampowered.com/steamworks|title=Steamworks|archiveurl=http://www.webcitation.org/612o0Nv11|archivedate=2011-08-19}}</ref>. Также разработчикам, использующим Steamworks, доступна статистика продаж в реальном времени, автоматический сбор данных о системе при «падении» игры (BugReport), и возможность безопасно проводить публичные [[бета-тест]]ы, с доступом к игре только на период теста. Первая игра, использующая возможности Steamworks ([[Audiosurf]]), была выпущена [[15 февраля]] [[2008 год]]а.
+
+=== PlayStation 3 ===
+
+[[Portal 2]] на [[PlayStation 3]] будет включать в себя некоторые возможности '''Steamworks''', кросс-платформеный обмен мгновенными сообщениями, [[Steam Cloud]] для сохранений игр, а также загрузка Portal 2 через Steam (Windows и Mac) без дополнительной платы. Кросс-платформенная игра также поддерживается.<ref name="eurogamer11-ps3">{{cite web|url=http://www.eurogamer.net/articles/2011-01-18-portal-2-ps3-steam-cross-platform-play|title=Portal 2 PS3, Steam cross-platform play|publisher=[[Eurogamer]]|date=January 18, 2011|archiveurl=http://www.webcitation.org/612o0spuH|archivedate=2011-08-19}}</ref> Valve сообщает что «надеемся расширить на этом основании с более Steam функций и возможностей в DLC и будущие релизы контента».
+
+== Steam CDR ==
+<!-- из удаленной статьи [[Steam CDR]], так как незначимо отдельно -->
+'''Steam CDR''' (Content Description Record) — база данных, которая содержит в себе список всех игр, инструментов, видеороликов, доступных в Steam, в ней записаны имена используемых файлов и их контрольные суммы для каждой игры, параметры запуска, доступные языки и другие сведения.
+
+== Критика ==
+Steam получил довольно много негативных отзывов от игроков. В основном критика сводится к следующим пунктам:
+
+; Обязательное наличие Интернета
+Для установки игр, даже купленных в [[Розница|розницу]], необходимо подключение к [[Интернет]]у, и обязательная загрузка обновлений, накопившихся с момента отправки установочного диска в печать, что зачастую требует широкополосного соединения.
+
+; Принудительные обновления и сложность использования автономного режима
+Автономный режим сводится на нет в таких случаях, как переустановка [[Windows]], переключение на другую операционную систему (например с Windows XP на Vista), перемещение папки со Steam в другую директорию, попытка войти под другим аккаунтом даже если его данные сохранены на компьютере, а также при некоторых системных сбоях. В этих случаях происходит сбой регистрационной записи Steam, привязанной к имени аккаунта, версии операционной системы и директории Steam, что вызывает необходимость запустить Steam в интернет-режиме, а это приведёт к неработоспособности игр, к которым вышли обновления, пока эти игры не будут полностью обновлены. Несмотря на то, что в свойствах любой игры можно выбрать пункт «не обновлять автоматически», на практике это означает, что Steam не будет начинать загрузку обновлений автоматически, но при запуске игры начинается обновление. Таким образом, запустить игру без обновления можно только либо напрямую через её [[EXE|exe-файл]], либо переключившись в автономный режим. Это очень неудобно для пользователей, играющих через Интернет и имеющих игры, на обновление которых они установили запрет (например одиночные игры), поскольку поиск серверов у мультиплеерных игр [[Valve]] возможен только если Steam запущен в интернет-режиме. Поэтому невозможность запуска игры через Steam в случае выхода обновления, даже если у игры установлен запрет на загрузку обновлений, является серьёзной недоработкой системы, которая до сих пор не исправлена.
+
+В случае невозможности подключиться к Интернету, программа должна уведомлять об этом пользователя и предлагать перейти в автономный режим. Однако, если прошлый запуск закончился сбоем, Steam выдаёт ошибку, и требует проверки игровых файлов, что приводит к необходимости подключения к Интернету. Кроме того, при первом запуске некоторых игр и приложений (например [[Source SDK]]) может потребоваться интернет-соединение и запуск в интернет-режиме.
+
+Следует заметить, что, хотя на дисках со Steam-играми есть напоминание о необходимости наличия подключения к Интернету для установки игры, в нём ничего не говорится о том, что после установки требуется загрузить накопившиеся со времени выпуска дисков обновления, размер которых может составлять сотни мегабайт, использовать для возможности запуска игры отдельный программный клиент, что послужило причиной для критики Steam, в первую очередь со стороны тех игроков, чьё соединение с Интернетом либо слишком медленное, либо слишком дорогое (при оплате по трафику или по времени). Это также является серьёзным неудобством для пользователей, не имеющих постоянного соединения с Интернетом.
+
+; Ошибки региональной защиты
+Для определения местоположения игрока Steam сверяет [[IP-адрес]] компьютера со своей базой данных соответствия IP и стран. В случае, если [[провайдер]] клиента начинает использовать новые диапазоны IP-адресов, не принадлежавшие ранее провайдерам [[СНГ]], Steam может отказаться запускать купленные в СНГ игры, пока новые диапазоны адресов не добавят в базу данных<ref>{{cite web|url=http://hl2.buka.ru/viewtopic.php?t=380|title=Региональная защита в Steam.|work=Форум техподдержки компании Бука|archiveurl=http://www.webcitation.org/5w5C7LFdx|archivedate=2011-01-29}}</ref><ref>{{cite web|url=http://hl2.buka.ru/viewtopic.php?t=12012&postdays=0&postorder=asc&start=0|title=Проблема с Корбиной|archiveurl=http://www.webcitation.org/5w5CA4p25|archivedate=2011-01-29}}</ref>.
+
+; Системные требования и старые игры
+У Steam есть свои [[системные требования]], и они могут оказаться выше, чем необходимо для запуска некоторых игр. Таким образом, даже [[Wolfenstein 3D]] не удастся запустить на компьютере с операционной системой, выпущенной раньше, чем [[Windows XP]].
+
+; Проблемы при загруженности серверов
+Возможность [[Авторизация|авторизации]] в системе Steam напрямую зависит от сервера Valve в [[Белвью (Вашингтон)|Белвью]], а обновление игр от загруженности контент-серверов.
+
+[[15 декабря]] [[2006 год]]а<ref>{{cite web|url=http://www.nashalife.ru/index.php?name=News&file=article&sid=5333|title=Перебои в работе Steam|archiveurl=http://www.webcitation.org/5w5CFKcGt|archivedate=2011-01-29}}</ref>, [[21 мая]] [[2008 год]]а и [[7 января]] [[2010 год]]а сервер авторизации отключался, в связи с непогодой в Бельвью, в результате чего играть могли только игроки, уже вошедшие в систему или использующие Steam в автономном режиме.
+
+Также очень часто скорость закачки игр может быть очень низкой или вообще отсутствовать даже у пользователей скоростного интернета (например скорость загрузки может колебаться в пределах 0-20 Кбит/с при скорости интернет-соединения 1024 Кбит/c). Особенно часто это происходит в случае релиза на Steam новой ожидаемой игры, при этом также замедляются серверы активации ключей розничных Steam-игр.
+
+; Проблемы проверки целостности игр при сбое или переустановке
+После сбоя или переустановки Steam пользователь может вставить в программу ранее скачанные игры. При этом при отсутствии обновлений игра должна сразу становиться готовой к запуску, однако на практике это происходит не всегда. При этом в некоторых случаях не помогает даже проверка файлов или запуск обновления. Иногда игру удаётся запустить, однако её статус при этом не переходит на 100 % — готово, что делает невозможным её запуск в оффлайн-режиме через интерфейс Steam.
+
+; Несовместимость с некоторыми программами
+Steam не совместим с некоторыми программами. На сайте технической поддержки Steam находится большой список программ (несколько десятков), с которыми могут возникнуть конфликты. Единственное решение проблемы — удалить эти программы из автозагрузки, либо, в некоторых случаях, удалить их вообще. Большая часть списка — различные [[антивирус]]ы, [[файрвол]]ы, и [[BitTorrent]]-клиенты<ref>{{cite web|url=https://support.steampowered.com/kb_article.php?ref=9828-SFLZ-9289|title=Программы, конфликтующие со Steam|publisher=www.steampowered.com}}</ref>.
+
+; Региональные ограничения покупки
+[[Файл:steamregionrus.png|thumb|Пример регионального ограничения на запуск]]
+Некоторые издатели, такие как [[2K Games]], [[Atari]] и [[Rockstar Games]], ограничивают список стран, из которых можно приобрести их игры. В частности поэтому игры данных издателей недоступны для покупки из России. В протест этому в Steam Community была создана группа Rest of World, призывающая снять данные ограничения<ref>{{cite web|url=http://steamcommunity.com/groups/restofworld|title=Steam Group Rest of World|lang=en|archiveurl=http://www.webcitation.org/5w5CH8p1i|archivedate=2011-01-29}}</ref><ref>{{cite web|url=http://www.hl-inside.ru/comments/?1207561146|title=Весь остальной мир|archiveurl=http://www.webcitation.org/5w5CIuWpS|archivedate=2011-01-29}}</ref>.
+Впрочем, есть несколько вполне законных способов обойти региональную защиту. Одним из способов является маскировка IP-адреса под IP той страны, где игру можно приобрести, а также запуск Steam через зарубежный [[прокси-сервер]]. Также, если у Вас есть знакомый в стране, где можно приобретать игры без ограничений (например США), можно попросить его приобрести игру в качестве подарка и затем подарить её Вам. На игры, купленные в виртуальном магазине Steam, региональная защита не распространяется.
+
+;Проблемы с локализованными версиями Steam
+Интерфейс Steam переведён на множество языков, однако это тоже вызывает определённые проблемы.
+
+Например в игре [[Left 4 Dead]] при выходе обновлений для выделенного сервера или SDK могут перезакачиваться не только нужные файлы, но и английская озвучка, при этом она заменяет локализованную и даже процедура проверки кэша не помогает перезакачать локализацию. Данную проблему можно решить либо полной переустановкой игры, либо копированием заранее сохранённых в отдельном месте локализованных файлов. Для предотвращения проблемы в дальнейшем можно установить атрибут «Только чтение» в свойствах папок с локализованными файлами.
+
+Подобная проблема также может возникнуть при переустановке Steam. Например, русскоязычный [[Half-Life 2: Episode One]] может не отображаться как готовый к запуску. Обычно решением проблемы является перевод языка игры в настройках на её основной язык (как правило Английский), а затем возврат к нужному языку. При этом игра становится готовой к запуску.
+
+;Отсутствие полной локализации для некоторых игр
+Локализация поддерживается во всех основных играх, которые требуют обязательной активации через Steam. Тем не менее, у некоторых игр-аддонов к ним локализация может не поддерживаться, если игра основана на [[GCF]]-формате. Например, в [[Half-Life 2: Deathmatch]], [[Garry's mod]] и других сторонних модах, распространяемых через Steam, персонажи говорят на английском, даже если установлена локализация для [[Half-Life 2]]. Проблема решается либо распаковкой игровых файлов локализации и применением соответствующих правок в файле gameinfo.txt, либо применением эмулятора Steam с поддержкой подключения дополнительных GCF-файлов.
+
+Кроме того, большинство игр сторонних производителей, распространяемых через Steam, не содержат локализации и распространяются либо на одном (как правило английском), либо на небольшом количестве языков; при этом игра может иметь локализованную версию в розничном варианте. В этом случае помогает только установка локализации вручную.
+
+;Политика службы Steam Support
+Steam оставляет за собой право расторжения договора с пользователем без предоставления доказательств о нарушениях со стороны пользователя. При этом блокируются все игры, подключенные к заблокированному аккаунту Steam.<ref>{{cite web|url=http://store.steampowered.com/subscriber_agreement/|title=Соглашение подписчика службы Steam|archiveurl=http://www.webcitation.org/612o3lpTx|archivedate=2011-08-19}}</ref>
+
+== См. также ==
+* [[Цифровая дистрибуция]]
+* [[World Opponent Network]]
+
+== Комментарии ==
+{{примечания|group="!"}}
+
+== Примечания ==
+{{примечания|2}}
+
+== Ссылки ==
+* [http://steampowered.com Официальный сайт Steam] {{ref-en}} {{ref-ru}}
+* [http://www.buka.ru/cgi-bin/tech_support.pl?option=Techsup_full_article&id=4 FAQ по Steam]{{ref-ru}} на сайте компании «[[Бука (компания)|Бука]]»
+
+{{Технологии Valve}}
+{{URI scheme}}
+{{Избранная статья|Компьютерная игра}}
+
+[[Категория:Защита от копирования]]
+[[Категория:Электронная коммерция]]
+[[Категория:Steam-игры|*]]
+
+{{Link FA|de}}
+
+[[ar:ستيم (برنامج)]]
+[[bg:Steam]]
+[[ca:Steam]]
+[[cs:Steam]]
+[[da:Steam]]
+[[de:Steam]]
+[[en:Steam (software)]]
+[[es:Steam]]
+[[fi:Steam]]
+[[fr:Steam]]
+[[he:Steam]]
+[[hu:Steam]]
+[[ia:Steam]]
+[[it:Steam (informatica)]]
+[[ja:Steam]]
+[[ko:스팀 (플랫폼)]]
+[[nl:Steam (softwareplatform)]]
+[[no:Valve Corporation#Steam]]
+[[pl:Steam]]
+[[pt:Steam]]
+[[sk:Steam (program)]]
+[[sl:Steam]]
+[[sr:Steam]]
+[[sv:Steam (datorspelsteknik)]]
+[[tr:Steam (yazılım)]]
+[[uk:Steam]]
+[[zh:Steam]]

@@ -1,0 +1,321 @@
+{{Карточка компьютера
+| Photo = [[Файл:ZXSpectrum48k.jpg|300px|Фирменный ZX Spectrum 48 ([[1982]] г.)]]
+| Type = [[Домашний компьютер]] 
+| Released = 23 апреля [[1982 год]]а
+| Discontinued = [[1992 год]]<ref>{{cite web|datepublished=2007|url=http://news.bbc.co.uk/2/hi/technology/6572711.stm|title=How the Spectrum began a revolution|publisher=[[Би-би-си|BBC]]|accessdate=2009-06-15|archiveurl=http://www.webcitation.org/619WH72mX|archivedate=2011-08-23}}</ref>
+| Processor = [[Z80]] на частоте 3,5 [[МГц]]
+| Chipset =
+| Storage = аудиокассета, дискета
+| Memory = 16 [[Кибибайт|КБ]] / 48 КБ / 128 КБ
+| OS = [[Sinclair BASIC]]
+}}
+'''ZX Spectrum''' — 8-разрядный<ref name="ZX">[http://xaygen.nm.ru/Z80-Central-Processor-Unit.pdf Справочное пособие по процессору Z80] — Минск, УКИК «Центр», 1991 г.</ref> [[домашний компьютер]], созданный [[Великобритания|английской]] компанией [[Sinclair Research Ltd]] на основе [[микропроцессор]]а [[Z80]] фирмы «[[Zilog]]». В ходе разработки компьютер назывался «ZX81 Colour» и «ZX82» <ref>[http://www.flickr.com/photos/9574086@N02/697783938/in/set-72157600607571866/ specLOGO02] и [http://www.flickr.com/photos/9574086@N02/696932215/in/set-72157600607571866/ specModel01] в фотоархиве Рика Дикинсона</ref>, название «ZX Spectrum» должно было подчеркнуть одно из главных отличий от его предшественника [[ZX81]] — цветное изображение. Почитатели этого компьютера часто называют его «Спекки» ({{lang-en|Speccy}}).
+
+В начале [[1980-е|1980-х]] «ZX Spectrum» был одним из самых популярных компьютеров в [[Европа|Европе]], а его многочисленные [[Клоны ZX Spectrum|клоны]] в начале [[1990-е|1990-х]] получили широкое распространение на территории бывшего [[СССР]]/[[СНГ]]. Благодаря невысокой цене, за первые 17 месяцев было продано более миллиона этих машин. Низкая стоимость компьютера обусловлена рядом факторов: использованием технологии [[БМК|ULA]] (Uncommitted Logic Array), с помощью которой большая часть схемы размещалась в одном чипе; низкими техническими и пользовательскими характеристиками, по сравнению с более дорогими компьютерами того времени; использованием бытового [[телевизор]]а в качестве [[монитор (дисплей)|монитора]] и [[магнитофон]]а в качестве внешнего накопителя <ref>{{cite book |last=Vickers |first=Steven |coauthors=and Bradbeer, Robin |authorlink=Steve Vickers (academia) |title=Sinclair ZX Spectrum: Introduction |url=http://www.worldofspectrum.org/ZXSpectrumIntroduction/contents.html |accessdate=2007-08-10 |year=1982 |publisher=[[Sinclair Research Ltd]] |pages=21 |chapter=6. Using the cassette recorder |chapterurl=http://www.worldofspectrum.org/ZXSpectrumIntroduction/chapter_six.html}}</ref>.
+
+В 1980-х основным соперником ZX Spectrum на европейском рынке был [[Commodore 64]]. Другими важными конкурентами были [[Atari 400/800|8-битные Atari]], [[BBC Micro]], [[Amstrad CPC]] и в некоторых странах [[MSX]].
+
+== Технические особенности ==
+«Sinclair ZX Spectrum» был представлен в апреле [[1982 год]]а в двух вариантах — с 16 и 48 КБ [[оперативная память|оперативной памяти]].<ref name="spec1648">{{cite web|url=http://www.nvg.ntnu.no/sinclair/computers/zxspectrum/spec1648.htm|work=Planet Sinclair|last=Owen|first=Chris|accessdate=2009-03-23|title=ZX Spectrum 16K/48K|archiveurl=http://www.webcitation.org/619WIm1ZU|archivedate=2011-08-23}}</ref>
+
+[[Файл:ZXspectrum mb.jpg|300px|thumb|Плата ZX Spectrum 48]]
+«ZX Spectrum 48» имел 16 КБ [[Постоянное запоминающее устройство|ПЗУ]], в которые был прошит диалект языка [[Бейсик]], так называемый [[Sinclair BASIC]].<ref name='a_owen-basic_history'>{{cite web|author=Andrew Owen|url=http://scratchpad.wikia.com/index.php?title=Sinclair_BASIC_History&oldid=333809|title=Sinclair BASIC History|description=история создания и эволюция Sinclair BASIC [http://www.worldofspectrum.org/sinclairbasic/]|archiveurl=http://www.webcitation.org/619WJbGsb|archivedate=2011-08-23}}</ref> Эта же программа ПЗУ обеспечивала базовый ввод-вывод и пользовательский интерфейс. Системными процедурами (например, печатью на экран) можно было воспользоваться из машинного кода, вызвав их по абсолютным адресам.<ref>{{статья | заглавие = Machine Code | ссылка = http://www.sincuser.f9.co.uk/047/mcode.htm | издание = Sinclair User | год = 1986 | номер = 47 }}</ref> Архитекторами компьютера была принята политика не изменять программу ПЗУ, несмотря на наличие в ней ошибок.<ref name='adamson-spectrum'>{{книга | автор = Ian Adamson, Richard Kennedy | часть = The Spectrum of Success | заглавие = Sinclair and the "Sunrise" Technology: The Deconstruction of a Myth | издательство = Penguin Books Ltd | год = 1986 | ссылка = http://www.nvg.ntnu.no/sinclair/computers/zxspectrum/spec_sst.htm | isbn = 0140087745}}</ref><ref>Ряд ошибок приводится в тексте [ftp://ftp.worldofspectrum.org/pub/sinclair/books/CompleteSpectrumROMDisassemblyThe.pdf The Complete Spectrum ROM Disassembly]; в описании [http://www.shadowmagic.org.uk/spectrum/roms/48-plus4.txt Spectrum +4 ROM] говорится об исправлении 14-ти ошибок.</ref> Расположение такой «операционной системы» и [[язык программирования|языка программирования]] в постоянной памяти обеспечивало перезагрузку компьютера за пару секунд, включая тестирование [[ОЗУ]], и, что важно, уменьшало размер программ (программист мог использовать «стандартные» процедуры ПЗУ, не расходуя доступную оперативную память и не теряя при этом совместимость).<ref>{{книга |автор = Ian Logan, Frank O’Hara |часть = The executive routines |заглавие = The Complete Spectrum ROM Disassembly |ссылка = ftp://ftp.worldofspectrum.org/pub/sinclair/books/CompleteSpectrumROMDisassemblyThe.pdf |страницы = 59 }}</ref>
+
+Первая модель «ZX Spectrum» имела недорогую в производстве [[Клавиатура|клавиатуру]], состоящую из 40 [[резиновая клавиатура|резиновых клавиш]].<ref name='spec1648' /> Характерной её особенностью была многофункциональность: алфавитно-цифровые клавиши имели до семи значений в различных режимах. При этом режим ввода отображался с помощью курсора. Такими режимами были: '''L''' — для ввода строчных букв, '''C''' — для ввода заглавных букв, '''K''' — для ввода основных ключевых слов [[BASIC]], '''E''' — для ввода дополнительных ключевых слов и операторов и '''G''' — для ввода псевдографических, управляющих символов и символов, определённых пользователем. Режим переключался как автоматически, так и с помощью управляющих клавиш ''Caps Shift'' и ''Symbol Shift''. Например, в начале набора BASIC ждёт номер строки или команду, поэтому курсор находится в режиме '''K'''. Однократное нажатие клавиши «G» в таком режиме приведёт к автоматическому вводу оператора GO TO. После этого курсор перейдёт в режим '''L''' и позволит набрать число, имя переменной по буквам или математическое выражение (в том числе с помощью режима '''Е''').<ref name='vickers_ref'>{{книга | автор = Steven Vickers. | заглавие = Sinclair ZX Spectrum BASIC Programming | ссылка = http://www.worldofspectrum.org/ZXBasicManual/ | год = 1982 | издательство = [[Sinclair Research Ltd]] | часть = [http://www.worldofspectrum.org/ZXBasicManual/zxmanappc.html A description of the ZX Spectrum for reference] }}</ref> Более поздние модели (начиная с ZX Spectrum 128) позволяли в качестве альтернативы набирать команды языка по буквам.<ref>{{статья | заглавие = Launch of the Spectrum 128 in Spain | ссылка = http://www.sincuser.f9.co.uk/044/news.htm | издание = Sinclair User | год = 1985 | номер = 44 }}</ref>
+
+[[Файл:Zx-colors.png|thumb|[[Скриншот]], показывающий все 15 доступных цветов: 8 различных цветов при двух уровнях яркости, чёрный цвет одинаковый при обоих уровнях.]]
+Не менее характерным был единственный графический режим компьютера при отсутствии текстового. Цвета (8 цветов и два уровня яркости, плюс атрибут мерцания) и собственно графика хранились в разных участках памяти.<ref>{{книга | автор = Steven Vickers. | заглавие = Sinclair ZX Spectrum BASIC Programming | ссылка = http://www.worldofspectrum.org/ZXBasicManual/ | год = 1982 | издательство = [[Sinclair Research Ltd]] | часть = [http://www.worldofspectrum.org/ZXBasicManual/zxmanchap24.html The memory] }}</ref> При этом, хотя графическое разрешение составляло 256×192 точек, цветовые атрибуты задавались по знакоместам. Каждое знакоместо размером 8×8 [[пиксель|пикселей]] могло иметь только два приписанных ему цвета (называемые цветами «чернил» и «бумаги» в Sinclair BASIC) и по одному атрибуту яркости и мерцания.<ref name='vickers-colours'>{{книга | автор = Steven Vickers. | заглавие = Sinclair ZX Spectrum BASIC Programming | ссылка = http://www.worldofspectrum.org/ZXBasicManual/ | год = 1982 | издательство = [[Sinclair Research Ltd]] | часть = [http://www.worldofspectrum.org/ZXBasicManual/zxmanchap16.html Colours] }}</ref> Таким образом, область 8×8 пикселей кодировалась 9 байтами ОЗУ (8 байт — побитовая картинка 8×8 пикселей, 1 байт — атрибуты цвета: 3 бита — цвет знака, 3 бита — цвет фона, 1 бит повышенной яркости и 1 бит мерцания знакоместа). Такая организация вызывала определённые сложности ([[конфликт атрибутов]]) при создании компьютерной графики<ref name='james-expert_guide'>{{книга |автор = Mike James |заглавие = An Expert Guide to the Spectrum |ссылка = ftp://ftp.worldofspectrum.org/pub/sinclair/books/ExpertGuideToTheSpectrumAn.pdf |издательство = Granada Publishing |год = 1984 |страницы = 74—76 |isbn = 0-246-12278-1 }}</ref>. С другой стороны, малый объём экранной памяти (около 7 КБ) позволял быстрее обновлять экран и увеличить долю ОЗУ, используемую «собственно программой»,<ref name='james-expert_guide' /> что было существенно для компьютерных игр. Кроме того, особая организация графического режима позволяла сильно оптимизировать вывод текста при отсутствии текстового режима.<ref>{{cite web
+ | author        = Иван Рощин
+ | authorlink    = http://ivr.webzone.ru/index.htm
+ | datepublished = 2002-12-15
+ | url           = http://ivr.webzone.ru/articles/text_out/index.htm
+ | title         = Секреты текстового вывода
+ | format        = 
+ | work          = 
+ | publisher     = zxdn.narod.ru
+ | accessdate    = 2009-11-01
+ | lang          = 
+ | description   = Примеры вывода текста на Ассемблере Z80. Из журнала 'Чёрная Ворона 6' Украина, Донецкая область, г.Дмитров-1, 05.2001
+ | archiveurl    = http://www.webcitation.org/619WK88fL
+ | archivedate   = 2011-08-23
+}}</ref>
+
+Первые модели ZX Spectrum имели однобитный выход звука через встроенный динамик.<ref>{{книга | автор = Steven Vickers. | заглавие = Sinclair ZX Spectrum BASIC Programming | ссылка = http://www.worldofspectrum.org/ZXBasicManual/ | год = 1982 | издательство = [[Sinclair Research Ltd]] | часть = [http://www.worldofspectrum.org/ZXBasicManual/zxmanchap19.html BEEP ] }}</ref> Воспроизведение музыки, особенно многоголосной, требовало использования почти всего времени процессора, так как звук полностью генерировался программно.<ref>{{книга |автор = Евдокимов А., Капульцевич А., Капульцевич И. |часть = Глава 10 |заглавие = Как написать игру на ассемблере для ZX Spectrum |ссылка = http://www.piter.com/lib/978571900038/zxspectr.phtml?fil=wgasm10 |год = 1995 }}</ref> В модели ZX Spectrum 128 была добавлена [[sound chip|микросхема звукогенератора]] [[AY-3-8912]], позволяющая воспроизводить трёхканальный звук без больших затрат процессорного времени.<ref name='sincuser-47-spec128'>{{статья | заглавие = Hands on the 128 | ссылка = http://www.sincuser.f9.co.uk/047/spec128.htm | издание = Sinclair User | год = 1986 | номер = 47 }}</ref><ref name='sincuser-49-helplne'>{{статья | заглавие = Inside the 128 | ссылка = http://www.sincuser.f9.co.uk/049/helplne.htm | издание = Sinclair User | год = 1986 | номер = 49 }}</ref> Подключение этой микросхемы также было возможно и для моделей с объёмом памяти 48 КБ<ref>{{статья
+|автор        = Ю. Дудник
+|заглавие     = ZX Spectrum 128K — что это такое?
+|ссылка       = http://www.emuverse.ru/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C_1991-11/ZX_SPECTRUM_128%D0%9A_%E2%80%94_%D1%87%D1%82%D0%BE_%D1%8D%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5%3F
+|издание      = Радиолюбитель
+|тип          = Журнал
+|место        = Минск
+|издательство = Белорусский Дом печати
+|год          = 1991
+|номер        = 11
+|страницы     = 8-9
+|issn         = 
+}}</ref><ref>{{статья
+|автор        = Ю. Дудник
+|заглавие     = ZX Spectrum 128K — что это такое? Ответы на вопросы
+|ссылка       = http://www.emuverse.ru/wiki/%D0%A0%D0%B0%D0%B4%D0%B8%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C_1991-11/ZX_SPECTRUM_128%D0%9A_%E2%80%94_%D1%87%D1%82%D0%BE_%D1%8D%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5%3F
+|издание      = Радиолюбитель
+|тип          = Журнал
+|место        = Минск
+|издательство = Белорусский Дом печати
+|год          = 1992
+|номер        = 5
+|страницы     = 8
+|issn         = 
+}}</ref><ref>{{статья
+|автор        = Г. Шепелев
+|заглавие     = Особенности подключения AY-3-8910 к «Спектруму»
+|ссылка       = 
+|издание      = Радиолюбитель
+|тип          = Журнал
+|место        = Минск
+|издательство = Белорусский Дом печати
+|год          = 1994
+|номер        = 3
+|страницы     = 13
+|issn         = 
+}}</ref>.
+
+== Модели ==
+[[Файл:ZX Spectrum+.jpg|thumb|right|ZX Spectrum+ (1984)]]
+[[Файл:ZX Spectrum128K.jpg|thumb|right|ZX Spectrum 128K (1986)]]
+
+=== Модели Sinclair Research ===
+Оригинальные модели «ZX Spectrum», выпущенные «Sinclair Research»:
+* ZX Spectrum 16K/48K ([[1982]])
+* ZX Spectrum+ ([[1984]])
+* ZX Spectrum 128 ([[1986]])
+
+Аппаратную часть '''ZX Spectrum 16K/48K''' разработал Ричард Альтвассер (''Richard Altwasser'') из «Sinclair Research», корпус машины был создан промышленным дизайнером Риком Дикинсоном (''Rick Dickinson'').<ref name='adamson-spectrum' /> Программное обеспечение для нового компьютера разработал Стив Викерс (''Steve Vickers'') по контракту с компанией «Nine Tiles Ltd», в которой был создан «Sinclair BASIC».<ref name='a_owen-basic_history' /> Модель имела резиновые клавиши, миниатюрный корпус и характерный логотип в виде спектра.<ref name='spec1648' /> Компьютер был выпущен на рынок в [[1982 год]]у по цене в 125 [[фунт стерлингов|фунтов]] за модель с 16 КБ ОЗУ и 175 фунтов — за модель с 48 КБ; эти цены позже были снижены до £99,95 и £129,95 соответственно.<ref name='adamson-spectrum' /> Владельцы модели с 16 КБ памяти могли приобрести обновление на 32 КБ; для обновления пользователи могли выслать свой «Spectrum» в «Sinclair Research» по почте.<ref name='spec1648' /><ref>{{статья | заглавие = News | ссылка = http://www.sincuser.f9.co.uk/014/news.htm | издание = Sinclair User | год = 1983 | номер = 14 }}</ref> Сторонние фирмы также предлагали ОЗУ-модуль на 32 КБ, подключаемый в порт расширения.<ref>{{статья | заглавие = Hewson's Helpline | ссылка = http://www.sincuser.f9.co.uk/050/helplne.htm | издание = Sinclair User | год = 1986 | номер = 50 }}</ref><ref>{{статья | заглавие = Hardware World | ссылка = http://www.sincuser.f9.co.uk/016/hardwre.htm | издание = Sinclair User | год = 1983 | номер = 16 }}</ref>
+
+С июня [[1984 год]]а разработчики готовили '''ZX Spectrum+''', который был выпущен в октябре того же года.<ref name='adamson-spectrum' /> Это был «Spectrum» c 48 КБ памяти, обновлённым корпусом и клавиатурой; на корпусе появилась кнопка сброса.<ref>{{статья | заглавие = Spectrum+ | ссылка = http://www.sincuser.f9.co.uk/033/spcplus.htm | издание = Sinclair User | год = 1984 | номер = 33 }}</ref> Довольно быстро новая модель стала продаваться вдвое лучше предыдущей;<ref>{{статья | год = 1984 | заглавие = The Secret That Was Spectrum+ | издание = Your Spectrum | номер = 10 | ссылка = http://www.users.globalnet.co.uk/~jg27paw4/yr10/yr10_a4.htm | автор = Sue Denham }}</ref> тем не менее, некоторые продавцы заявляли о высоком проценте поломок.<ref>{{cite web|url=http://www.nvg.ntnu.no/sinclair/computers/zxspectrum/specplus.htm|work=Planet Sinclair|last=Owen|first=Chris|accessdate=2009-05-09|title=ZX Spectrum+|archiveurl=http://www.webcitation.org/619WKiOWM|archivedate=2011-08-23}}</ref>
+
+«Sinclair Research» разрабатывала '''ZX Spectrum 128''' совместно со своим испанским дистрибьютором «[[Investrónica]]».<ref name='ys-21-128k'>{{статья | заглавие = Your New Spectrum | ссылка = http://www.users.globalnet.co.uk/~jg27paw4/yr21/yr21_03.htm#Spectrum128 | издание = Your Spectrum | год = 1985 | номер = 21 }}</ref> «Investrónica» помогла адаптировать «ZX Spectrum+» к испанскому рынку после того, как испанское правительство обложило особым налогом все компьютеры с памятью в 64 КБ и ниже, не поддерживающие испанский язык.<ref>{{статья | автор = David Crookes | заглавие = Why QWERTY? | ссылка = http://www.micromart.co.uk/features/article/default.aspx?id=22913 | издание = Micro Mart }}</ref> Новая модель содержала 128 КБ ОЗУ, трёхканальный звук через [[AY-3-8912]], совместимость с [[MIDI]], порт [[RS-232]], RGB-выход на монитор, а также 32 КБ ПЗУ с улучшенным Бейсик-редактором.<ref name='sincuser-47-spec128' /> Машина была впервые представлена и запущена в продажу в сентябре [[1985 год]]а в Испании.<ref name='ys-21-128k' /> В Великобритании, из-за наличия большого числа нераспроданных «Spectrum+», продажи были отложены до февраля [[1986 год]]а; начальная цена была установлена в £179,95.<ref name='adamson-spectrum' />
+
+Процессор Z80 имеет 16-разрядную шину адреса, что означает что он может напрямую адресовать только 64 КБ памяти. Для доступа к дополнительным 80 КБ ОЗУ использовалась техника переключения банков памяти ({{lang-en|bank switching}}), таким образом, оперативная память была доступна в виде восьми страниц, подключаемых в верхнюю часть адресного пространства. Подобным образом выполнялось переключение между новыми 16 КБ ПЗУ и оригинальными 16 КБ ПЗУ в нижней части адресного пространства.<ref name='sincuser-49-helplne' />
+
+Для использования новых звуковых возможностей в «Sinclair BASIC» появилась инструкция <code>PLAY</code>, для переключения в режим «Spectrum 48K» — <code>SPECTRUM</code>.<ref name='sincuser-47-spec128' /> Новые инструкции заняли место двух существующих «символов определяемых пользователем»,<ref>{{книга |часть = [http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt28.html Spectrum character set] |заглавие = ZX Spectrum+3 Manual |ссылка = http://www.worldofspectrum.org/ZXSpectrum128+3Manual/ |издательство = Amstrad Plc. |год = 1987}}</ref> что вызвало проблемы совместимости с некоторыми старыми BASIC-программами.
+
+=== Модели Amstrad ===
+[[Файл:ZX Spectrum Plus2.jpeg|thumb|right|ZX Spectrum +2 (1986)]]
+[[Файл:ZX Spectrum Plus3.jpeg|thumb|right|ZX Spectrum +3 (1987)]]
+[[Файл:Spectrum 128-2.png|thumb|right|ZX Spectrum +2A]]
+Модели «ZX Spectrum», выпущенные компанией «[[Amstrad]]» после передачи прав на всю линию машин:
+* ZX Spectrum +2 ([[1986]])
+* ZX Spectrum +3 ([[1987]])
+* ZX Spectrum +2A / +2B ([[1987]])
+
+В [[1986 год]]у, вскоре после приобретения бренда «Sinclair» и прав на всю линейку «Spectrum»,<ref>{{cite web|url=http://www.sinclair-research.co.uk/about-srl.php|title=Sir Clive Sinclair & Sinclair Research Ltd|publisher=Sinclair Research Limited|accessdate=2009-05-20|deadlink=unknown-host}}</ref> компания «Amstrad» выпустила '''ZX Spectrum +2'''. Машина имела серый корпус с пружинной клавиатурой, двумя портами джойстиков, а также встроенным кассетным магнитофоном, именуемым «Datacorder» (как в «[[Amstrad CPC 464]]»), но в остальном машина была полностью идентична «ZX Spectrum 128». Цена производства была снижена, в результате чего розничные цены упали до £139-£149.
+
+Новая клавиатура не имела надписей с ключевыми словами BASIC, за исключением <code>LOAD</code>, <code>CODE</code> и <code>RUN</code>, которые были нужны для запуска программ, но это не было большой проблемой, поскольку в «+2» имелась система меню, подобная меню в «ZX Spectrum 128», где можно было переключаться между старым BASIC 48K и BASIC 128K с набором ключевых слов побуквенно.<ref>{{статья | автор = Max Phillips | год = 1986 | заглавие = ZX Spectrum +2 | издание = Your Sinclair | номер = 11 | ссылка = http://www.ysrnry.co.uk/articles/spectrumplustworeview.htm }}</ref>
+
+'''ZX Spectrum +3''' выглядел подобно модели «+2», но вместо магнитофона содержал привод 3-дюймовых гибких дисков (как в «[[Amstrad CPC 6128]]»); корпус был чёрного цвета. Модель была выпущена в [[1987 год]]у с начальной ценой в £249, которая позже упала до £199.<ref>{{статья | год = 1987 | заглавие = It's here... the Spectrum +3 | издание = Your Sinclair | номер = 19 | ссылка = http://www.worldofspectrum.org/showmag.cgi?mag=YourSinclair/Issue19/Pages/YourSinclair1900022.jpg }}</ref><ref name='crash-50-sinchist'>{{статья | год = 1988 | заглавие = Tech Niche: The Spectrum Family | издание = CRASH | номер = 50 | ссылка = http://www.crashonline.org.uk/50/sinchist.htm}}</ref> Это был первый «Spectrum», способный запускать операционную систему [[CP/M]] без дополнительного оборудования.<ref>{{статья | год = 1988 | заглавие = CP/M Emancipation | издание = CRASH | номер = 53 | ссылка = http://www.crashonline.org.uk/53/cpm.htm}}</ref>
+
+В «+3» появилось ещё 2 × 16 КБ ПЗУ, в виде одного чипа на 32 КБ. Половину этого объёма заняла вторая часть реорганизованного 128 ROM, вторую половину — дисковая операционная система +3DOS, которая по сути являлась изменённой версией [[AMSDOS]]. Для возможности использования других операционных систем механизм переключения банков памяти был изменён таким образом, что ОЗУ могло отображаться на все 64 КБ адресного пространства. Такие коренные изменения привели к ряду несовместимостей, некоторые игры для 48K и несколько игр для 128K перестали работать на новой машине.<ref name='crash-50-sinchist' /><ref>{{книга |часть = [http://www.worldofspectrum.org/ZXSpectrum128+3Manual/chapter8pt24.html The memory] |заглавие = ZX Spectrum+3 Manual |ссылка = http://www.worldofspectrum.org/ZXSpectrum128+3Manual/ |издательство = Amstrad Plc. |год = 1987}}</ref>
+
+«ZX Spectrum +3» стал последней официальной моделью «Spectrum», которая пошла в серию; производство модели продолжалось до декабря [[1990 год]]а. Хотя в то время продажи «Spectrum» составляли треть продаж всех домашних компьютеров, «Amstrad» прекратила производство в попытке перевести потребителей на линейку «CPC».<ref>{{статья | год = 1990 | заглавие = Death of the +3 | издание = Your Sinclair | номер = 60 | ссылка = http://www.worldofspectrum.org/showmag.cgi?mag=YourSinclair/Issue60/Pages/YourSinclair6000010.jpg}}</ref>
+
+В [[1987 год]]у{{нет АИ|1|06|2009}} был выпущен '''ZX Spectrum +2A'''. Он был сделан для того, чтобы линейка машин стала более однородной. На корпусе по-прежнему была надпись «ZX Spectrum +2», но цвет корпуса вновь стал чёрным, как у первых моделей. «+2A» был сделан на основе «+3», с моделью ПЗУ 4.1 и с материнской платой, на которой было значительно уменьшено количество чипов — большинство из них было интегрировано в [[ASIC]]-микросхему. Привод диска и оборудование для него из модели «+3» был заменён на кассетный привод, как в оригинальном «+2». Первоначально «Amstrad» планировала вывести интерфейс для диска, но это так и не было сделано. Как и в случае с «ZX Spectrum +3», некоторые игры для 48K и несколько игр для 128K были несовместимы с этой моделью.
+
+Позже, в [[1987 год]]у, появление '''ZX Spectrum +2B''' означало перевод производства из [[Гонконг]]а в [[Тайвань]].
+
+=== Модели, не вышедшие на рынок ===
+
+В [[1983 год]]у Мартин Бреннан (''Martin Brennan'') разрабатывал в Sinclair Research игровую приставку '''LC3''' (Low Cost Colour Computer), реализованную всего на двух микросхемах, с играми на картриджах. Стив Берри (''Steve Berry'') разрабатывал для LC3 многозадачную операционную систему с оконным графическим интерфейсом. Проект был остановлен в ноябре 1983 года — усилия были направлены на [[Sinclair QL]] <ref>[http://www.nvg.ntnu.no/sinclair/computers/ql/ql_sst.htm The Quantum Leap — to where?] — статья о QL, есть пара абзацев об LC3</ref>.
+
+В середине 1980-х в Sinclair Research разрабатывался проект '''Loki''' <ref>[http://www.sincuser.f9.co.uk/051/loki.htm SuperSpectrum! Amstrad has Sinclair’s secret weapon — the £200 SuperSpectrum. It’s everything the Amiga should have been] — статья в Sinclair User</ref>, в качестве намного более дешёвого (около £200) конкурента компьютера [[Amiga]]. Предполагалось, что Loki будет работать на Z80H на частоте 7 МГц, располагать не менее 128 КБ ОЗУ. Для звука и видео использовались две специализированные микросхемы. Проект был закрыт в [[1986 год]]у, после сделки с Amstrad.
+
+== Периферия ==
+[[Файл:Sinclair.zx.thermal.printer.jpg|thumb|right|ZX Printer]]
+[[Файл:Sinclair ZX Microdrive White BG.jpg|thumb|right|ZX Microdrive]]
+[[Файл:Kempston joystick interface.jpeg|thumb|right|Kempston joystick interface]]
+«Sinclair» предоставляла для «ZX Spectrum» следующие модули расширения:
+* [[ZX Printer]] — уже был доступен к моменту выхода «ZX Spectrum» на рынок, поскольку порт расширения сохранял обратную совместимость с портом ZX81.
+* [[ZX Interface 1]] — модуль, включающий 8 КБ ПЗУ, последовательный порт [[RS-232]], контроллер локальной сети (ZX Net), а также интерфейс для подсоединения до 8-ми ZX Microdrive.
+* [[ZX Interface 2]] — модуль с двумя портами для джойстиков и одним портом для картриджа ПЗУ.
+* [[ZX Microdrive]] — не особенно надёжное, но быстрое устройство хранения на картриджах с закольцованной плёнкой, выпущено в июле [[1983 год]]а <ref>[http://www.nvg.ntnu.no/sinclair/computers/peripherals/microdrive.htm Planet Sinclair: Computers: Periferials: Microdrive]</ref>.
+* Keypad — дополнительная цифровая клавиатура для модели 128K.
+
+Помимо этого, предлагался ряд расширений от сторонних производителей, в частности:
+* [[Kempston Interface|Kempston joystick]] — интерфейс для подключения [[джойстик]]а.
+* Morex Peripherals Centronics/RS-232 — параллельный и последовательный порт.
+* [[Currah Microspeech]] — модуль синтеза речи.
+* Videoface Digitiser — [[дигитайзер]].
+* RAM pack — модуль расширения оперативной памяти.
+* Cheetah Marketing SpecDrum — ударная установка.
+* Multiface — отладочный инструмент от компании Romantic Robot.
+Также пользовались популярностью клавиатуры различных производителей <ref>[http://www.sincuser.f9.co.uk/031/hardwre.htm Sinclair User 31 — Hardware World<!-- Заголовок добавлен ботом -->]</ref>.
+
+Существовало несколько интерфейсов для подключения дисковода, в частности:
+* SPDOS (Abbeydale Designers/Watford Electronics, 1985)
+* KDOS (Abbeydale Designers/Kempston, 1985) — обновлённая версия SPDOS со своей операционной системой KDOS
+* Opus Discovery (Opus Supplies Ltd, 1985)
+* [[DISCiPLE]] (Miles Gordon Technology, 1987) — контроллер дисковода, содержащий также два порта джойстика, параллельный порт, интерфейс локальной сети и «волшебную кнопку».
+* [[Beta Disk Interface]] (Technology Research Ltd, 1984) и Beta 128 Disk Interface (1987)
+На Западе наиболее популярным стал интерфейс DISCiPLE, в странах Восточной Европы и в России — Beta Disk Interface.
+
+== Производные и клоны ==
+{{main|Клоны ZX Spectrum}}
+
+[[Файл:Timex Sinclair 2068 Manipulated.jpg|thumb|right|Timex Sinclair 2068]]
+[[Файл:SAM Coupé.jpg|thumb|right|SAM Coupé]]
+
+«Sinclair» лицензировала «Spectrum» американской компании «[[Timex]]». Её модели, порождённые от «Spectrum»:
+* [[Timex Sinclair 2068]] (TS2068) — значительно более сложная машина, чем оригинальный «Spectrum»; добавился порт картриджа, звуковой чип AY-3-8912, а также улучшенная ULA с несколькими графическими режимами. Модель продавалась в основном в США, хотя почти идентичные версии распространялись в Португалии и Польше под названиями «Timex Computer 2068» (TC2068) и «Unipolbrit Komputer 2086» (UK2086).
+* [[Timex Computer 2048]] — машина, очень похожая на «Spectrum», но с улучшенной ULA, позволяющей переключаться в другие графические режимы; продавалась только в Португалии.
+* [[Timex Sinclair 2048]] — версия TS2068 с 16 КБ ОЗУ; не была выпущена на рынок.
+
+В конце [[1989 год]]а в Великобритании компания «[[Miles Gordon Technology]]» (производитель периферии) выпустила компьютер «[[SAM Coupé]]» в качестве потенциального наследника «Spectrum», сохраняющего совместимость с ним. Однако, в то время «[[Commodore Amiga]]» и «[[Atari ST]]» уже вышли на рынок.
+
+В [[Индия|Индии]] в [[1986 год]]у «Decibells Electronics» представила лицензированную версию «Spectrum+» под именем «db Spectrum+». До того, как в начале 1990-х прекратились продажи, было продано несколько тысяч машин.
+
+Благодаря дешевизне и простоте конструкции широкое распространение получили «неофициальные» клоны «Spectrum» в бывшем [[СССР]]/[[СНГ]] сразу после спада «[[Железный занавес|железного занавеса]]». Десятки вариантов компьютера выпускались на предприятиях и [[Сделай сам|собирались радиолюбителями]]. Нелицензионные клоны производились также в [[Польша|Польше]], [[Германская Демократическая Республика|Восточной Германии]], [[Румыния|Румынии]], [[Чехословакия|Чехословакии]], [[Аргентина|Аргентине]], [[Бразилия|Бразилии]] и ряде других стран.
+
+== Пресса ==
+На Западе «ZX Spectrum» быстро получил широкую поддержку сообщества пользователей, появилось несколько специализированных журналов: «[[Sinclair User]]» (апрель [[1982 год]]а — апрель [[1993 год]]а<ref>[http://www.sincuser.f9.co.uk/index.htm Sinclair User Magazine Online]</ref>), «[[Your Sinclair]]» (с января [[1984 год]]а как «Your Spectrum», с начала [[1986 год]]а по сентябрь [[1993 год]]а как «Your Sinclair»<ref>[http://www.ysrnry.co.uk/cover1.htm Your Sinclair Rock’n’Rolls Years]</ref>) и «[[CRASH]]» (февраль [[1984 год]]а — апрель [[1992 год]]а<ref>[http://www.crashonline.org.uk/ CRASH magazine: The Online Edition]</ref>). Первоначально они были ориентированы прежде всего на техническую часть, публиковали тексты программ и руководства по программированию; позже они стали почти полностью посвящены играм.
+
+В [[Содружество Независимых Государств|СНГ]] выходило несколько сот наименований электронных журналов и газет<ref>[http://trd.speccy.cz/press/press.htm Раздел по русской ZX прессе на Virtual TR-DOS]</ref>, самые известные из них — «[[Spectrofon]]» (1994—1996, 23 выпуска)<ref>[http://zx-games.narod.ru/magazines/spectrfon.htm Спектрофон]</ref>, «[[ZX-Format]]» (1995—1998, 9 выпусков)<ref>[http://zxpress.ru/issue.php?id=257 Журнал ZX Format] на zxpress.ru</ref> и «[[Adventurer]]» (1995—2004, 15 выпусков)<ref>[http://zxpress.ru/issue.php?id=9 Adventurer] на zxpress.ru</ref>.
+
+Печатные издания в СНГ:
+* «[[ZX Ревю]]» (Москва, январь [[1991 год]]а — декабрь [[1997 год]]а) — наиболее известное в СНГ периодическое издание, издавалось научно-техническим кооперативом «Инфорком»<ref>[http://trd.speccy.cz/book.htm Virtual TR-DOS: Book 4 ZX] — архив книг и журналов, в том числе ZX Ревю</ref>
+* «Всё о ZX Spectrum» — серия из 9-ти книг издательства [[Питер (издательство)|Питер]], издавались с [[1991]] по [[1995 год]]ы<ref>[http://speccy.info/Всё_о_ZX_Spectrum Цикл книг «Всё о ZX Spectrum» издательства Питер]</ref>
+* «Абзац — газета для спектрумистов» ([[Вологда]], с октября 2000 года по сей день)<ref>[http://abzac.retropc.ru/ Абзац — газета для поклонников ZX Spectrum]</ref>
+
+== Программное обеспечение ==
+{{main|Программное обеспечение ZX Spectrum}}
+
+«Spectrum» был дёшев и лёгок в обучении — как использования, так и программирования. Благодаря этому он стал отправной точкой для многих программистов и инженеров, вспоминающих его с ностальгией. Успех ранних моделей «Spectrum» в качестве игровой платформы пришёл к ним несмотря на отсутствие джойстика, примитивный звук и цвет, ориентированный на отображение текста.
+
+Семейство компьютеров «Spectrum» обладает крупной библиотекой программного обеспечения из более чем 25000 наименований. Хотя большая часть этой коллекции — игры, набор программ очень разнообразен и включает в себя языки программирования, базы данных (например, ''[[VU-File]]''), текстовые процессоры (''[[Tasword II]]''), электронные таблицы (''[[VU-Calc]]''), инструменты рисования (''[[OCP Art Studio]]'' <ref>[http://www.sincuser.f9.co.uk/043/sftwreb.htm Sinclair User 43: Art Studio]</ref>, ''[[The Artist]]'') и даже 3D-моделирования (''[[VU-3D]]'').
+
+=== Наиболее популярные игры ===
+{{Main|Список игр на ZX Spectrum}}
+
+{|class="wikitable"
+| width="33%" valign=top|
+
+Десятка лучших игр [[Your Sinclair Top 100|по версии]] журнала «[[Your Sinclair]]»:
+# ''[[3D Deathchase]]''
+# ''[[Rebelstar]]''
+# ''[[All or Nothing (игра)|All or Nothing]]''
+# ''[[Stop the Express]]''
+# ''[[Head Over Heels (игра)|Head Over Heels]]''
+# ''[[R-Type]]''
+# ''[[The Sentinel (игра)|The Sentinel]]''
+# ''[[Rainbow Islands]]''
+# ''[[Boulder Dash]]''
+# ''[[Tornado Low Level]]''
+| width="33%" valign=top|
+
+Десятка лучших игр [[CRASH Top 100|по версии]] журнала «[[CRASH]]»:
+# ''[[Rainbow Islands]]''
+# ''[[Chase H.Q.]]''
+# ''[[RoboCop]]''
+# ''[[RoboCop 2]]''
+# ''[[Dizzy]]''
+# ''[[Target: Renegade]]''
+# ''[[Magicland Dizzy]]''
+# ''[[Batman (игра, 1986)|Batman: The Movie]]''
+# ''[[Operation Wolf]]''
+# ''[[Midnight Resistance]]''
+|}
+
+Первой отечественной игрой для «ZX Spectrum», по-видимому, является ''[[Тетрис]]'' В. А. Балясова ([[1986]])<ref>[http://www.worldofspectrum.org/infoseekid.cgi?id=0005209 Тетрис В. А. Балясова (1986) на WorldOfSpectrum.org]</ref>.
+Игры для «ZX Spectrum» создаются силами энтузиастов и в настоящее время, как на территории бывшего [[СССР]], так и за рубежом.
+Существуют пакеты для автоматизированного создания игр многих жанров (например, ''[[IF Creator]]'' для интерактивных книг, ''[[3D Construction Kit]]'' для трёхмерных квестов), но чаще используется язык ассемблера. Проводятся конкурсы по написанию игр (например, [[Твоя Игра]], [[Mini Game Compo]], [[Crap Game Compo]], конкурсы в рамках различных [[демопати]], иногда в общем конкурсе с играми для других платформ).
+
+== Эмуляция ==
+{{Main|Список эмуляторов ZX Spectrum}}
+
+Многие современные устройства, включая даже карманные компьютеры и коммуникаторы, располагают достаточной мощностью для эмуляции Z80.
+Благодаря большой базе готового программного обеспечения (в основном игр) «Sinclair ZX Spectrum» является, возможно, наиболее [[эмуляция|эмулируемой]] платформой в мире. Существует более полутора сотен эмуляторов для всех распространённых операционных систем для ПК, в частности под архитектуру Windows 32bit, игровых приставок и мобильных телефонов.<ref>[http://www.worldofspectrum.org/emulators.html World of Spectrum — Emulators<!-- Заголовок добавлен ботом -->]</ref><ref>[http://speccy.info/Список_эмуляторов_ZX_Spectrum Список эмуляторов ZX Spectrum — SpeccyWiki<!-- Заголовок добавлен ботом -->]</ref>
+
+31 августа 1999 года Amstrad разрешила распространять ПЗУ для компьютеров ZX Spectrum<ref>[http://www.worldofspectrum.org/permits/amstrad-roms.txt Amstrad ROM permissions]{{ref-en}}</ref>, поэтому эмуляция этого семейства является легальной.
+
+Последняя официальная реинкарнация «ZX Spectrum» произошла в коммуникаторе «Amstrad e-m@iler plus», выпускавшемся с февраля [[2002]] по сентябрь [[2004 год]]а. Компания «Amstrad» (владелец прав на использование торговой марки «Sinclair ZX Spectrum») позиционировала эмуляцию спектрумовских игр как одну из основных особенностей своего устройства.
+
+== Интересные факты ==
+* За вклад в развитие британской промышленности основатель фирмы [[Sinclair Research Ltd]] [[Клайв Синклер]] по ходатайству [[Маргарет Тетчер]] был награждён королевой Великобритании непередающимся по наследству званием «[[Королевский Викторианский орден|Рыцарь королевского Ордена]]» с присвоением звания «сэр».
+* В [[1983 год]]у [[премьер-министр]] [[Великобритания|Великобритании]] [[Маргарет Тетчер]] презентовала «ZX Spectrum» японскому премьер-министру, как символ британского технологического прогресса<ref name="Sir">[http://www.nvg.ntnu.no/sinclair/computers/zxspectrum/zxspectrum.htm Planet Sinclair]</ref>.
+* Существует несколько «неофициальных» версий ПЗУ для Spectrum 48K, в частности, '''ZX Spectrum +4''', разработанная Эндрю Оуэном в 2000 году.<ref>[http://www.shadowmagic.org.uk/spectrum/roms/48-plus4.txt ZX Spectrum +4 Unofficial ROM]</ref>
+
+== См. также ==
+* [[Видеорежимы ZX Spectrum]]
+* [[Демосцена ZX Spectrum]]
+* [[Набор символов ZX Spectrum]]
+* [[Программное обеспечение ZX Spectrum]]
+
+== Примечания ==
+{{примечания|2}}
+
+== Ссылки ==
+{{Викисклад|Sinclair ZX Spectrum}}
+{{лишние ссылки}}
+* [http://zx.pk.ru/ zx.pk.ru] {{ref-ru}} — русскоязычный форум о ZX Spectrum
+* [http://www.worldofspectrum.org/ World of Spectrum] {{ref-en}} — фэн-сайт, официально одобренный компанией Amstrad
+* [http://www.nvg.ntnu.no/sinclair/computers/zxspectrum/zxspectrum.htm Страница Spectrum на Planet Sinclair] {{ref-en}}
+* [http://vtrdos.ru/ Virtual TR-DOS] {{ref-ru}} — архив программ для ZX Spectrum с дисковой системой TR-DOS
+* [http://abzac.retropc.ru/ «Абзац»] {{ref-ru}} — бумажная газета для спектрумистов
+* [http://speccy.info/ speccy.info] {{ref-ru}} — энциклопедия [[SpeccyWiki]] на [[вики]]движке
+* [http://zxplanet.emuunlim.com/ ZX Planet — Spectrum Heaven] {{ref-en}}
+* [http://www.old-computers.com/museum/computer.asp?st=1&c=223 Страница ZX Spectrum на old-computers.com] {{ref-en}}
+* [http://www.myspeccy.com MySpeccy.com — нескольких десятков игр для ZX Spectrum, запускаемых в браузере] {{ref-ru}}
+* [http://zxnext.narod.ru/ Неизвестный Синклер — история «ZX Spectrum» без фанатизма] {{ref-ru}}
+* [http://zxpress.ru Онлайн библиотека электронных газет и журналов для ZX Spectrum] {{ref-ru}}
+* [http://www.zxaaa.net/ ZXAAA Old Demos] — фэн-сайт, посвященный русской демосцене на ZX Spectrum {{ref-ru}}
+* [http://speccy-live.untergrund.net/ Спектрумовские новости] {{ref-ru}}
+* [http://spectrum4ever.org/ Версии игр и программ, найденные на кассетах]
+
+<!-- ВНИМАНИЕ! Список эмуляторов есть на WorldOfSpectrum, ссылка в Примечаниях; также есть [[Список эмуляторов ZX Spectrum]]. НЕ НУЖНО добавлять сюда ссылки на эмуляторы! -->
+
+{{Хорошая статья|Компьютер}}
+{{Компьютеры Sinclair и их клоны}}
+
+[[Категория:ZX Spectrum|*]]
+[[Категория:История компьютерной техники]]
+[[Категория:Появились в 1982 году]]
+
+{{Link GA|en}}
+
+[[als:Sinclair ZX Spectrum]]
+[[ar:زد اكس سبكتروم]]
+[[bs:ZX Spectrum]]
+[[ca:ZX Spectrum]]
+[[cs:Sinclair ZX Spectrum]]
+[[cu:Спєктроумъ]]
+[[da:ZX Spectrum]]
+[[de:Sinclair ZX Spectrum]]
+[[el:ZX Spectrum]]
+[[en:ZX Spectrum]]
+[[eo:Sinclair ZX Spectrum]]
+[[es:Sinclair ZX Spectrum]]
+[[et:ZX Spectrum]]
+[[eu:ZX Spectrum]]
+[[fi:ZX Spectrum]]
+[[fr:ZX Spectrum]]
+[[gl:ZX Spectrum]]
+[[he:ספקטרום סינקלייר]]
+[[hr:ZX Spectrum]]
+[[hu:Sinclair Spectrum]]
+[[id:ZX Spectrum]]
+[[it:Sinclair ZX Spectrum]]
+[[ja:ZX Spectrum]]
+[[lt:Sinclair ZX Spectrum]]
+[[lv:ZX Spectrum]]
+[[mk:Зет-Икс Спектрум]]
+[[nl:Sinclair ZX Spectrum]]
+[[nn:Sinclair ZX Spectrum]]
+[[no:ZX Spectrum]]
+[[pl:ZX Spectrum]]
+[[pt:ZX Spectrum]]
+[[sh:ZX Spectrum]]
+[[simple:ZX Spectrum]]
+[[sk:ZX Spectrum]]
+[[sl:ZX Spectrum]]
+[[sr:ZX Spectrum]]
+[[sv:ZX Spectrum]]
+[[tr:ZX Spectrum]]
+[[uk:ZX Spectrum]]
+[[zh:Sinclair ZX Spectrum]]

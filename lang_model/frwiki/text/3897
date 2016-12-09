@@ -1,0 +1,77 @@
+{{Voir homonymes|Base}}
+Une '''base''' en [[chimie quantique]] est un ensemble de fonctions utilisées afin de créer des [[orbitale moléculaire|orbitales moléculaires]], qui sont développées comme [[combinaison linéaire d'orbitales atomiques|combinaisons linéaires]] de telles fonctions avec des poids ou coefficients à déterminer. Ces fonctions sont habituellement des [[orbitale atomique|orbitales atomiques]], car centrées sur les atomes, mais des fonctions centrées sur les liaisons ou les fonctions centrées des doublets non liants ont été utilisées comme l'ont été des paires de fonctions centrées sur les deux lobes d'une orbitale p. De plus, des bases composées d'[[onde plane|ondes planes]] jusqu'à une longueur d'onde de coupure sont également utilisées, particulièrement dans les calculs sur des systèmes avec des [[condition périodique aux limites|conditions périodiques aux limites]].
+
+== Introduction ==
+En [[chimie numérique]] récente, les calculs [[chimie quantique|quantiques]] sont typiquement effectués au moyen d'un ensemble fini de [[fonction de base|fonctions de base]]. Dans ces cas, les [[fonction d'onde|fonctions d'onde]] considérées sont toutes représentées comme des [[vecteur]]s, dont les composantes correspondent aux coefficients dans une combinaison linéaire des fonctions de base dans la base utilisée. Les [[opérateur (physique)|opérateurs]] sont ensuite représentés comme des [[matrice (mathématiques)|matrices]] ([[tenseur]]s de rang deux), dans une base finie. Dans cet article, les expressions ''fonction de base'' et ''orbitale atomique'' sont parfois utilisées de manière interchangeable, bien que l'on doive noter que ces fonctions de base ne sont pas réellement les orbitales atomiques exactes, même pour les atomes hydrogénoïdes correspondants, en raison des approximations et simplifications de leurs expressions analytiques. Si la base finie est développée sur un ensemble infini complet de fonctions, les calculs utilisant de telles bases sont dites approchant la limite de la base.<br>
+Lorsque des calculs sur des systèmes sont effectués, il est usuel d'utiliser une base composée d'un nombre fini d'[[orbitale atomique|orbitales atomiques]], centrées sur chaque noyau atomique du système moléculaire ou cristallin ([[ansatz]] de [[combinaison linéaire d'orbitales atomiques]]). Initialement, ces orbitales atomiques étaient typiquement des [[orbitale de Slater|orbitales de Slater]], qui correspondent à un ensemble de fonctions qui décroissent de manière exponentielle lorsque la distance au noyau augmente. Plus tard, [[Samuel Francis Boys|Frank Boys]] réalisa que ces orbitales de type Slater pouvaient être à leur tour approximées comme des combinaisons linéaires d'[[orbitale gaussienne|orbitales gaussiennes]]. Le recouvrement, ainsi que d'autres intégrales par ailleurs, étant plus facile à calculer avec un ensemble de fonctions de base gaussiennes, cela conduisit à de grandes économies en temps de calcul (se référer à l'article [[John Pople]]).<br>
+Aujourd'hui, il existe des centaines de bases composées d'orbitales de type gaussien (GTO - ''gaussian type orbital''). Les plus petites d'entre elles sont appelées ''bases minimales'', et sont typiquement constituées du nombre minimum de fonctions de base requis pour représenter tous les électrons de chaque atome. Les plus grandes d'entre elles peuvent comprendre littéralement jusqu'à plusieurs centaines de fonctions de base pour chaque atome.
+Une base minimale est celle dans laquelle, sur chaque atome du système, une seule fonction de base est utilisée pour chaque orbitale dans un calcul [[méthode Hartree-Fock|Hartree-Fock]] pour un atome libre. Cependant, pour des atomes comme le [[lithium]], des fonctions de base de type ''p'' correspondant aux orbitales 1s et 2s de l'atome libre sont ajoutées aux fonctions de base. Par exemple, chaque atome de la première période de la [[classification périodique|classification]] (de [[lithium|Li]] à [[néon|Ne]]) aurait une base de cinq fonctions (deux fonctions s et trois fonctions p).<br>
+L'ajout le plus commun aux bases minimales est probablement celle des '''fonctions de polarisation''', notées par une astérisque '''*'''. Deux astérisques, '''**''', indiquent que des fonctions de polarisation sont aussi ajoutées aux atomes légers ([[hydrogène]] et [[hélium]]). Elles sont des fonctions auxiliaires avec un nœud supplémentaire. Ainsi par exemple, la seule fonction de base localisée sur un atome d'hydrogène dans une base minimale serait une fonction approximant l'orbitale atomique 1s. Lorsque la [[polarisation (diélectrique)|polarisation]] est ajoutée à la base, une fonction p est aussi ajoutée à cette base. Ceci ajoute une flexibilité supplémentaire nécessaire dans la base, autorisant des orbitales moléculaires impliquant que les atomes d'hydrogène soient plus asymétriques que leurs seuls noyaux. Ceci est un résultat important lorsque l'on considère des représentations précises des liaisons entre atomes, car la présence de ces liaisons rend l'environnement énergétique des atomes sphériquement asymétrique. De manière similaire, des fonctions de type d peuvent être ajoutées à la base avec des orbitales de valence p, et les fonctions f à une base avec des orbitales d, et ainsi de suite. D'autre part, une notation plus précise indique exactement quelles et combien de fonctions sont ajoutées à la base, comme (p, d).
+Un autre ajout commun aux bases est l'ajout de fonctions diffuses, indiqué par un signe '''+'''. Deux plus ('''++''') indiquent que des fonctions de diffusion sont aussi ajoutées aux atomes légers (hydrogène et hélium). Ce sont des fonctions de base gaussiennes très douces, qui représentent plus précisément les {{guil|queues}} des orbitales atomiques, distantes du noyau atomique. Ces fonctions de base supplémentaires peuvent être importantes lorsque l'on considère des anions ou d'autre systèmes moléculaires importants et {{guil|diffus}}.
+
+==Bases minimales==
+Les bases minimales les plus courantes sont les [[Base STO-nG|STO-nG]], où n est un entier. Cette valeur ''n'' représente le nombre de fonctions primitives gaussiennes comportant une fonction de base simple. Dans ces bases, les orbitales de cœur et de valence comprennent le même nombre de primitives gaussiennes. Les bases minimales donnent typiquement des résultats qui sont insuffisants pour des publications de recherche de qualité, mais sont moins coûteuses que leurs homologues plus grandes.<br>
+Les bases minimales de ce type les plus communes sont :
+* STO-3G
+* STO-4G
+* STO-6G
+* STO-3G* - version polarisée de STO-3G
+Il existe de nombreuses autres bases minimales qui ont été utilisées, comme les bases MidiX.
+
+== Bases à valences séparées ==
+Dans la plupart des liaisons chimiques, ce sont les électrons dits {{guil|valence}} (ou électrons externes) qui participe à ce phénomène. Compte tenu de ce fait, il courant de représenter les orbitales de valence par plus qu'une fonction de base, chacune d'entre elle pouvant être à son tour composé d'une combinaison linéaire fixée de fonctions gaussiennes primitives. Les bases dans lesquelles il existe des fonctions de base multiples correspondant à chaque orbitale atomique de valence, sont appelées bases de valence double, triple ou quadruple zéta (ζ). Comme les différentes orbitales de la division ont des développements spatiaux différents, la combinaison permet à la [[densité électronique]] d'ajuster son développement spatial de manière appropriée à l'environnement du système chimique étudié. Les bases minimales sont fixes et donc ne peuvent être ajustées aux environnements imposés par le système. Une des bases ζ les plus communes est la D95 (dont le nom est dû à Dunning).
+
+===Bases de Pople===
+La notation pour les bases {{guil|à valence séparée}} viennent de l'équipe de [[John Pople]], et sont typiquement ''X-YZg''. Dans ce cas, ''X'' représente le nombre de gaussiennes primitives comprenant chaque fonction de base d'orbitale atomique de cœur. Le ''Y'' et le ''Z'' indiquent que les orbitales de valence sont composées chacune de deux fonctions, la première étant composée d'une combinaison linéaire de ''Y'' fonctions gaussiennes primitives, l'autre d'une combinaison linéaire de ''Z'' fonctions gaussiennes primitives. Dans ce cas, la présence de deux nombres après le trait d'union indique que la base est une base ''double zéta à valence séparée''. Des bases triple et quadruple zéta à valence séparée sont également utilisées, et notées ''X-YZWg'', ''X-YZWVg'', etc.<br>
+Voici une liste des bases à valence séparée les plus communes de ce type :
+* 3-21g
+* 3-21g* - polarisée
+* 3-21+g - à fonctions diffuses
+* 3-21+g* - avec polarisation ''et'' fonctions diffuses
+* 6-31g
+* 6-31g*
+* 6-31+g*
+* 6-31g(3df, 3pd)
+* 6-311g
+* 6-311g*
+* 6-311+g*
+
+===Bases à corrélations consistantes ===
+Plus récemment, les bases à corrélations consistantes polarisées (en anglais ''correlation consistent polarized basis sets'') sont devenues largement employées et ceci dans le cadre des calculs corrélés ou [[méthode post-Hartree-Fock|post-Hartree-Fock]]. Le nom de ces bases commencent avec ''cc-p'', pour ''correlation consistent polarized''. Elles sont double/triple/quadruple/quintuple ζ pour les orbitales de valence seulement (le ''V'' est pour valence) et incluent successivement des couches des fonctions de polarisation (corrélées) de plus en plus grandes (d, f, g, etc.) qui peuvent permettre la convergence de l'énergie électronique vers la limite de base complète.<br>
+On pourra citer comme exemple :
+* cc-pVDZ - Double-ζ
+* cc-pVTZ - Triple-ζ
+* cc-pVQZ - Quadruple-ζ
+* cc-pV5Z - Quintuple-ζ, etc.
+* aug-cc-pVDZ, etc. - versions {{guil|augmentées}} des bases précédentes avec l'ajout de fonctions diffuses.
+
+===Autres bases à valence séparée===
+D'autres bases à valence séparée existent aussi, sous les noms :
+* SV(P)
+* SVP
+* DZV
+* TZV
+* TZVPP - Triple-ζ à valence séparée polarisée
+* QZVPP - Quadruple-ζ à valence séparée polarisée
+
+== Bases d'ondes planes==
+En plus des bases localisées, des bases d'[[onde plane|ondes planes]] peuvent aussi être utilisées dans les simulations de chimie quantique. De manière typique, un nombre fini de fonctions d'ondes planes sont utilisées, en deçà d'une énergie de coupure spécifique qui est choisie pour un calcul spécifique. Ces bases sont très utilisées dans des calculs impliquant des [[condition périodique aux limites|conditions périodiques aux limites]]. Certaines intégrales et opérations sont plus faciles à coder et à réaliser avec des fonctions de base d'ondes planes, plutôt qu'avec leurs contreparties localisées. En pratique, les bases d'ondes planes sont parfois utilisées en combinaison avec des [[pseudo-potentiel]]s de cœur, les ondes n'étant alors utilisées que pour décrire la densité de charge de valence. Ceci car les [[électrons de cœur]] tendent à être concentrés très près du noyau atomique, ce qui implique de grandes fonctions d'ondes et de gradients de densité abruptes près du noyau qui ne sont pas facilement décrites par une base d'ondes planes sauf à utiliser une énergie de coupure très élevée (et donc de longueurs d'ondes très faibles). La méthode de combinaison d'une base d'ondes planes avec un pseudo-potentiel de cœur est parfois abrégé en calcul ''PSPW''. De plus, comme toutes les fonctions d'une base sont [[orthogonalité|orthogonales]], les bases d'ondes planes ne produisent pas d'[[erreur de superposition de base]]. Cependant, elles sont moins adaptées aux calculs en phases gazeuses, en raison des espaces vides.
+
+==Voir aussi==
+*[[Erreur de superposition de base]]
+
+==Lien externe==
+* {{en}} [http://www.shodor.org/chemviz/basis/index.html ChemViz - Basis Sets Lab Activity]
+
+{{Traduction/Référence|en|Basis set (chemistry)|148243805}}
+
+{{Portail|chimie|physique}}
+
+[[Catégorie:chimie quantique]]
+[[Catégorie:chimie numérique]]
+
+[[en:Basis set (chemistry)]]
+[[id:Basis set (kimia)]]
+[[pl:Baza funkcyjna]]
+[[ru:Базисный набор]]
+[[zh:量子化学中的基组]]

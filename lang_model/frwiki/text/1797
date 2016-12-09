@@ -1,0 +1,44 @@
+En [[géométrie]], le '''modèle de l'hyperboloïde''', également dénommé '''modèle de Minkowski''' ou '''modèle de Lorentz''' (d'après les noms de [[Hermann Minkowski]] et [[Hendrik Antoon Lorentz|Hendrik Lorentz]]), est un modèle de géométrie hyperbolique dans un [[espace de Minkowski]] de dimension ''n''. Ce modèle dans un espace hyperbolique de dimension ''n'' est étroitement lié au [[modèle de Klein]].
+
+== Forme quadratique de Minkowski ==
+{{Article détaillé|Espace de Minkowski}}
+
+Si (''x''<sub>0</sub>, ''x''<sub>1</sub>, …, ''x''<sub>''n''</sub>) est un vecteur de dimension (''n''+1) dans l'espace '''R'''<sup>''n''+1</sup>, la '''[[forme quadratique]] de Minkowski''' est définie par : 
+
+:<math> Q(x_0, x_1, \ldots, x_n) = x_0^2 - x_1^2 - \ldots - x_n^2</math>
+
+Les vecteurs ''v''∈ '''R'''<sup>''n''+1</sup> tel que ''Q''(''v'') = 1 forment une [[hyperboloïde]] ''S'' de dimension ''n'' constituée de deux [[Connexité (mathématiques)#Composantes connexes|composante connexes]], ou ''feuilles'' : la feuille avant, ou future, ''S''<sup>+</sup>, où ''x''<sub>0</sub>>0 et la feuille arrière , ou passée, ''S''<sup>&minus;</sup>, où ''x''<sub>0</sub><0. Les points du modèle de l'hyperboloide de dimension ''n'' sont les points sur la feuille ''S''<sup>+</sup>.
+
+La '''[[forme bilinéaire]] de Minkowski''' ''B'' est la [[Identité de polarisation|polarisation]] de la forme quadratique de Minkowski ''Q'' :
+
+:<math>B(u, v) = (Q(u+v)-Q(u)-Q(v))/2</math>
+
+Explicitement,
+:<math>B((x_0, x_1, \ldots, x_n), (y_0, y_1, \ldots, y_n)) = x_0y_0 - x_1 y_1 - \ldots - x_n y_n</math>.
+
+La '''distance hyperbolique''' entre deux points ''u'' et ''v'' de ''S''<sup>+</sup> est donné par la formule :
+
+:<math>d(u, v) = \cosh^{-1}(B(u, v))</math>
+
+== Bibliographie ==
+* {{Ouvrage| langue=en | nom1=Alekseevskij | prénom1=D. V. | nom2=Vinberg | prénom2=E. B. | nom3=Solodovnikov | prénom3=A. S. | titre=Geometry of Spaces of Constant Curvature | éditeur=[[Springer Verlag]] | lieu=Berlin, New York | collection=Encyclopaedia of Mathematical Sciences | isbn=3-540-52000-7 | année=1993}}
+* {{Ouvrage| langue=en | nom1=Anderson | prénom1=James | titre=Hyperbolic Geometry  | éditeur=[[Springer Verlag]] | langue=en | lieu=Berlin, New York | édition=2nd | collection=Springer Undergraduate Mathematics Series | isbn=978-1-85233-934-0 | année=2005}}
+* {{Ouvrage| nom1=Ratcliffe | prénom1=John G. | titre=Foundations of hyperbolic manifolds | éditeur=[[Springer Verlag]] | lieu=Berlin, New York | isbn=978-0-387-94348-0 | année=1994 | numéro chapitre=3}}
+* {{Article| langue=en | prénom1=William F. | nom1=Reynolds | titre=Hyperbolic geometry on a hyperboloid | périodique=American Mathematical Monthly | lien périodique=American Mathematical Monthly | année=1993}}, 100:442&ndash;55
+* {{Ouvrage| langue=en | nom1=Ryan | prénom1=Patrick J. | titre=Euclidean and non-Euclidean geometry: An analytical approach | éditeur=[[Cambridge University Press]] | lieu=Cambridge, London, New York, New Rochelle, Melbourne, Sydney | isbn=0-521-25654-2 | année=1986 }}
+* {{Article| langue=en | nom1=V. Varićak | année=1912| titre=On the Non-Euclidean Interpretation of the Theory of Relativity | périodique=Jahresbericht der Deutschen Mathematiker-Vereinigung | volume =21| pages =103–127}}
+* {{Ouvrage| langue=en | prénom1=Scott | nom1=Walter | année=1999 | titre=The Symbolic Universe: Geometry and Physics|pages=91–127|éditeur=Oxford University Press | lire en ligne=http://www.univ-nancy2.fr/DepPhilo/walter/papers/nes.pdf}}
+
+== Voir aussi ==
+* [[Disque de Poincaré]]
+* [[Quaternion hyperbolique]]
+
+== Références ==
+{{Traduction/Référence|en|Hyperboloid model}}
+
+{{Portail|géométrie}}
+
+[[Catégorie:Géométrie hyperbolique]]
+
+[[en:Hyperboloid model]]
+[[zh:双曲面模型]]

@@ -1,0 +1,90 @@
+Le [[problème à deux corps]] est en [[mécanique classique]] un modèle théorique important, notamment en astronomie où il permet d'expliquer le mouvement des planètes autour du Soleil (ou d'une autre étoile), ou encore celui des satellites artificiels, au moins en première approximation. Il s'agit d'étudier le mouvement relatif de deux corps (de positions notées ''M<sub>1</sub> et M<sub>2</sub>)supposés ponctuels (faibles dimensions devant les distances qui les séparent), de masse ''m<sub>1</sub>'' et ''m<sub>2</sub>'' interagissant par l'intermédiaire d'une force conservative ne dépendant que de la distance ''r'' entre ces deux corps, et dirigés suivant la direction ''(M<sub>1</sub>M<sub>2</sub>)'', le système global étant considéré comme isolé.
+
+Les principaux résultats obtenus sont alors les suivants:
+:* Réduction à un problème à un corps: il est possible de séparer le mouvement du centre de masse, rectiligne et uniforme, de celui d'une particule dite fictive, de masse <math>_mu=\frac{m_1 m_2}{m_1 + m_2}</math> (''masse réduite du système''), qui se déplace dans le potentiel central ''V(r)'' dont dérive la force d'interaction entre les deux corps, dans le référentiel barycentrique. Les trajectoires réelles des deux corps dans ce référentiel sont homothétiques de celles de la particule fictive.
+
+:* Planéité de la trajectoire: elle découle de la conservation du [[moment angulaire|moment cinétique]] total du système, elle-même lié au caractère central du champ. On est alors ramené à un problème à deux degrés de liberté.
+
+:* Équivalence à un problème unidimensionnel: la conservation de l'[[énergie mécanique]] combinée à celle du moment cinétique de la particule fictive permet de se ramener, en coordonnées cylindro-polaires ''(r,θ)'', à un problème unidimensionnel d'une particule fictive se déplaçant dans un ''potentiel effectif'' <math>U_{eff}(r)=V(r)+\frac{L^2}{2\mu r^2}</math> (''L'' étant la valeur du moment cinétique), avec ''r>0''. 
+
+En [[mécanique quantique]], cette situation peut également être envisagée: un exemple important est celui de l'[[atome d'hydrogène]]. Il est possible montrer que chacun des résultats classiques précédents a son "pendant" quantique. L'objet de cet article est de mettre en évidence les principales propriétés du problème à deux corps en mécanique quantique dans le cas général du mouvement dans un champ central symétrique.
+
+
+== Hamiltonien du système - introduction de la particule fictive ==
+Le hamiltonien du système s'écrit (on pose <math>r=\left|\vec{r}_1-\vec{r}_2\right|</math>:
+:<math>\widehat{\textbf{\textit{H}}} = \frac{\widehat{\textbf{\textit{p}}}_1^2}{2m_1}+\frac{\widehat{\textbf{\textit{p}}}_2^2}{2m_2}+V(r)</math>,   (1).
+
+Il est possible comme en mécanique classique d'introduire deux observables correspondant d'une part au mouvement du centre d'inertie du système et d'autre part au mouvement relatif (particule fictive):
+:<math>\widehat{\vec{R_C}}\equiv\frac{m_1\widehat{\vec{r}}_1+m_2\widehat{\vec{r}}_2}{m_1+m_2}</math>,   (2),
+:et <math>\widehat{\vec{r}}=\widehat{\vec{r}}_1-\widehat{\vec{r}}_2</math>,   (3).
+
+A ces deux observables, il est possibles d'associer deux opérateurs impulsions correspondants,  notés <math>\widehat{\textbf{\textit{P}}}_C</math> et <math>\widehat{\textbf{\textit{p}}}</math>, le centre d'inertie se voyant attribuer la masse totale ''m<sub>T</sub> = m<sub>1</sub>+m<sub>2</sub>'' du système, et la particule fictive la ''masse réduite'' <math>\mu=\frac{m_1+m_2}{m_T}</math>. En effet on a d'après les définitions (1) et (2) précédentes:
+:<math>m_T \widehat{\vec{R_C}}=m_1\widehat{\vec{r}}_1+m_2\widehat{\vec{r}}_2</math>, par suite on peut poser <math>\widehat{\textbf{\textit{P}}}_C=\widehat{\textbf{\textit{p}}}_1+\widehat{\textbf{\textit{p}}}_2</math>,    (4),
+
+et par ailleurs 
+:<math>\begin{cases}\widehat{\vec{r}}_1=\widehat{\vec{R_C}}+\frac{\mu}{m_1}\widehat{\vec{r}} \text{  ,  (2bis)}\\ 
+\widehat{\vec{r}}_2=\widehat{\vec{R_C}}-\frac{\mu}{m_2}\widehat{\vec{r}} \text{  ,  (3bis)}
+\end{cases}</math>,
+
+d'où:
+:<math>\begin{cases}\widehat{\textbf{\textit{p}}}_1=\frac{m_1}{m_T}\widehat{\textbf{\textit{P}}}_C+\widehat{\textbf{\textit{p}}} \\
+\widehat{\textbf{\textit{p}}}_2=\frac{m_2}{m_T}\widehat{\textbf{\textit{P}}}_C-\widehat{\textbf{\textit{p}}}
+\end{cases}</math>,
+
+au final on a par soustraction et en utilisant (4): <math>\widehat{\textbf{\textit{p}}}=\frac{m_2\widehat{\textbf{\textit{p}}}_1-m_1\widehat{\textbf{\textit{p}}}_2}{m_T}</math>, (5).
+
+Pour vérifier que les opérateurs définis par les relations(4) et (5) correspondent bien à ceux de l'impulsion du centre d'inertie et de la particule fictive dont les observables de positions sont définies par (2) et (3), il convient de s'assurer que les relations de commutations entres les composantes selon le même axe de la position et de l'impulsion soient bien identique aux relations canoniques: <math>\left[\widehat{\textbf{\textit{x}}}_1,\widehat{\textbf{\textit{p}}}_{1x}\right]=\left[\widehat{\textbf{\textit{x}}}_2,\widehat{\textbf{\textit{p}}}_{2x}\right]=i\hbar</math> <ref>En d'autres termes, on vérifie que les nouvelles variables introduites par les relations (2) et (3) sont bien des variables canoniques laissant invariant l'équation de Schrödinger. En mécanique classique, on devrait vérifier que le [[crochet de Poisson]] entre les nouvelles variables conjuguées (position/impulsion) est bien égal à l'unité.</ref>.
+
+En notant respectivement <math>\widehat{\textbf{\textit{x}}}_C</math> et <math>\widehat{\textbf{\textit{p}}}_{Cx}</math> d'une part, <math>\widehat{\textbf{\textit{x}}}</math> et <math>\widehat{\textbf{\textit{p}}}_x</math>, d'autre part, les composantes suivants x des opérateurs position et impulsion du centre d'inertie et de la particule fictive, on a d'après les formule (2) à (5) et en utilisant les relations de commutation canoniques:
+:* <math>\left[\widehat{\textbf{\textit{x}}}_C,\widehat{\textbf{\textit{p}}}_{Cx}\right]=\left[\frac{m_1\widehat{\textbf{\textit{x}}}_1+m_2\widehat{\textbf{\textit{x}}}_2}{m_T},\widehat{\textbf{\textit{p}}}_{1x}+\widehat{\textbf{\textit{p}}}_{2x}\right]=\frac{1}{m_T}\left(m_1\left[\widehat{\textbf{\textit{x}}}_1,\widehat{\textbf{\textit{p}}}_{1x}\right]+m_2\left[\widehat{\textbf{\textit{x}}}_2,\widehat{\textbf{\textit{p}}}_{1x}\right]+m_1\left[\widehat{\textbf{\textit{x}}}_1,\widehat{\textbf{\textit{p}}}_{2x}\right]+m_2\left[\widehat{\textbf{\textit{x}}}_2,\widehat{\textbf{\textit{p}}}_{2x}\right]\right)=\frac{1}{m_T}\left(m_1 i\hbar+0+0+m_2 i\hbar\right)=i\hbar</math>,
+
+:* <math>\left[\widehat{\textbf{\textit{x}}},\widehat{\textbf{\textit{p}}}_{x}\right]=\left[\widehat{\textbf{\textit{x}}}_{1}-\widehat{\textbf{\textit{x}}}_{2},\frac{m_2\widehat{\textbf{\textit{p}}}_{1x}-m_1\widehat{\textbf{\textit{p}}}_{2x}}{m_T}\right]=\frac{1}{m_T}\left(m_2\left[\widehat{\textbf{\textit{x}}}_1,\widehat{\textbf{\textit{p}}}_{1x}\right]+m_1\left[\widehat{\textbf{\textit{x}}}_2,\widehat{\textbf{\textit{p}}}_{2x}\right]-m_2\left[\widehat{\textbf{\textit{x}}}_2,\widehat{\textbf{\textit{p}}}_{1x}\right]-m_1\left[\widehat{\textbf{\textit{x}}}_1,\widehat{\textbf{\textit{p}}}_{2x}\right]\right)=\frac{1}{m_T}\left(m_2 i\hbar+m_1 i\hbar-0-0\right)=i\hbar</math>,
+
+et comme il par ailleurs évident que tous les autres commutateurs entre mêmes opérateurs ou impliquant des composantes distinctes sont nuls, les observables définis par les relations (2) à (5) sont bien ceux de deux particules fictives distinctes. On peut alors exprimer le hamiltonien (1) en fonction de ces nouvelles observables. Comme on a, en élevant au carré les relations (4) et (5) et en tenant compte du fait que les commutateurs entre toutes les composantes de <math>\widehat{\textbf{\textit{p}}}_1</math> et <math>\widehat{\textbf{\textit{p}}}_2</math> sont évidemment nuls:
+:<math>\widehat{\textbf{\textit{P}}}_C^2=\widehat{\textbf{\textit{p}}}_1^2+\widehat{\textbf{\textit{p}}}_2^2+2\widehat{\textbf{\textit{p}}}_1\widehat{\textbf{\textit{p}}}_2</math>,
+: et <math>\frac{m_T}{\mu}\widehat{\textbf{\textit{p}}}^2=\frac{m_2}{m_1}\widehat{\textbf{\textit{p}}}_1^2+\frac{m_1}{m_2}\widehat{\textbf{\textit{p}}}_2^2-2\widehat{\textbf{\textit{p}}}_1\widehat{\textbf{\textit{p}}}_2</math>,
+soit en soustrayant membre à membre et en réarrangeant il vient:
+<math>\frac{\widehat{\textbf{\textit{P}}}_C^2}{m_t}+\frac{\widehat{\textbf{\textit{p}}}^2}{\mu}=\frac{\widehat{\textbf{\textit{p}}}_1^2}{m_1}+\frac{\widehat{\textbf{\textit{p}}}_2^2}{m_2}</math>.
+
+Au final, le hamiltonien (1) se transforme en la somme de deux hamiltoniens indépendants: <math>\widehat{\textbf{\textit{H}}}=\widehat{\textbf{\textit{H}}}_C+\widehat{\textbf{\textit{H}}}_r</math>, avec:
+:* <math>\widehat{\textbf{\textit{H}}}_C=\frac{\widehat{\textbf{\textit{P}}}_C^2}{2m_T}</math>, qui correspond au hamiltonien d'une particule libre , affectée de la masse totale du système,
+:* et <math>\widehat{\textbf{\textit{H}}}_r=\frac{\widehat{\textbf{\textit{p}}}^2}{2\mu}+V(r)</math>, qui correspond au hamiltonien d'une seule particule de masse μ évoluant dans le potentiel central ''V(r)''.
+
+On vérifie aisément que <math>\left[\widehat{\textbf{\textit{H}}}_C,\widehat{\textbf{\textit{H}}}_r\right]=0</math> et par suite il est possible de séparer l'étude du mouvement (trivial) du centre d'inertie de celui de la particule fictive. Le retour aux particules "réelles" est aisé en utilisant les relations d'inversion (2bis) et (3bis). On retrouve donc bien en mécanique quantique la séparation entre le mouvement du centre d'inertie<ref>Le sens physique assigné à cette notion est cependant différent de celui en mécanique classique: il s'agit d'une observable traduisant le mouvement d'ensemble du système.</ref> et celui de la particule fictive. 
+
+== Séparation des variables radiales et angulaires ==
+Dans la suite, on se limite à l'étude du mouvement de la particule fictive de hamiltonien <math>\widehat{\textbf{\textit{H}}}_r</math>, en se plaçant en représentation position<ref>En fait la fonction d'onde "totale" du système est <math>\psi(\vec{R}_C,\vec{r})</math> et peut donc s'écrire comme un produit de deux fonctions d'onde <math>\chi(\vec{R}_C)=C\exp{\left(\tfrac{i\widehat{\textbf{\textit{P}}}_C.\widehat{\textbf{\textit{R}}}_C}{\hbar}\right)}</math> (''C'' étant un facteur de normalisation), correspondant au mouvement libre du centre d'inertie en l'absence de champ extérieur, et la fonction d'onde <math>\psi(\vec{r})</math>, correspondant au mouvement de la particule fictive dans le potentiel V(r). Les niveaux d'énergie sont de la forme <math>E=\frac{\hbar k_C^2}{2m_t}+E_r</math>, <math>E_r</math> étant les niveaux d'énergie de la particule fictive.</ref>. Le hamiltonien étant indépendant du temps, l'étude quantique se ramène à la résolution de l'[[équation de Schrödinger]] indépendante du temps pour la fonction d'onde <math>\psi\left(\vec{r}\right)</math>: <math>\widehat{\textbf{\textit{H}}}_r\psi\left(\vec{r}\right)=E\psi\left(\vec{r}\right)</math>, soit de façon explicite:
+:<math>\left[-\frac{\hbar^2\Delta}{2\mu}+\left(V(r)-E\right)\right]\psi\left(\vec{r}\right)=0</math>,   (6).
+
+Vu l'invariance par rotation autour de l'origine des coordonnées, on se place en [[coordonnées sphériques]] <math>(r,\theta,\phi)</math>, où l'expression du [[laplacien]] est:
+:<math>\Delta=\frac{1}{r}\frac{\partial^2}{\partial r^2}(r.)+\frac{1}{r^2\sin {\theta}}\left[\frac{\partial}{\partial\theta}\left(\sin{\theta}\frac{\partial(.)}{\partial\theta}\right)+\frac{1}{\sin{\theta}}\frac{\partial(.)}{\partial\phi}\right]</math>,<br>
+or on reconnaît l'expression de l'opérateur carré du [[moment cinétique orbital]] de la particule en représentation position et en coordonnées sphériques: <math>\widehat{\textbf{\textit{L}}}^2=-\hbar^2\frac{1}{\sin {\theta}}\left[\frac{\partial}{\partial\theta}\left(\sin{\theta}\frac{\partial(.)}{\partial\theta}\right)+\frac{1}{\sin{\theta}}\frac{\partial(.)}{\partial\phi}\right]</math>, on a donc pour l'opérateur laplacien en coordonnées sphériques l'expression:
+:<math>\Delta=\frac{1}{r}\frac{\partial^2}{\partial r^2}(r.)+\frac{\widehat{\textbf{\textit{L}}}^2}{\hbar^2 r^2}</math><ref>Le fait que le carré du moment cinétique apparaisse dans l'expression du Laplacien en coordonnées sphériques n'est nullement accidentel, en effet les opérateurs constituant les composantes du [[moment cinétique orbital]] sont étroitement liés aux générateurs du groupe des rotation ''O(3)'' dans l'espace à trois dimensions.</ref>.
+
+L'équation de Schrödinger (6) devient ainsi:
+<math>\left[-\frac{\hbar^2}{2\mu r}\frac{\partial^2}{\partial r^2}(r.)+\frac{\widehat{\textbf{\textit{L}}}^2}{2\mu r^2}+\left(V(r)-E\right)\right]\psi\left(r,\theta,\phi\right)=0</math>,   (7).
+
+Par suite, il y a ''séparation des variables radiale et angulaires'' (ces dernières étant "contenues" dans l'opérateur <math>\widehat{\textbf{\textit{L}}}^2</math> dans l'équation de Schrödinger. Les états propres sont donc ceux commun aux opérateurs <math>\widehat{\textbf{\textit{L}}}^2</math>, <math>\widehat{\textbf{\textit{L}}}_z</math>, et <math>\widehat{\textbf{\textit{H}}}_r</math> (qui commutent de façon évidente). On s'attend par suite à ce les niveaux d'énergie correspondant dépendent du nombre quantique <math>\ell</math> mais pas de ''m'', du l'absence de direction privilégiée de l'espace<ref>Il s'agit là d'une ''dégénrescence essentielle'': concrètement elle se traduit par le fait que <math>\widehat{\textbf{\textit{L}}}_z</math> n'intervient pas dans l'expression (7) du hamiltonien/</ref>: chaque niveau d'énergie sera donc (au moins) <math>2\ell+1</math> dégénéré <ref>Toutefois il existe des cas de dégénérescence "accidentelle", lié en fait à l'existence d'une symétrie additionnelle (et donc d'une observable supplémentaire commutant avec le hamiltonien), le cas le plus connu étant celui du champ Coulombien: cf. article [[atome d'hydrogène]].</ref>,<ref>Dans un champ extérieur générant l'existence d'une direction privilégiée de l'espace (magnétique par exemple), cette dégénérescence des niveaux d'énergie pourra être levée, au moins partiellement.</ref>.
+
+Les états propres communs des opérateurs <math>\widehat{\textbf{\textit{L}}}^2</math> et <math>\widehat{\textbf{\textit{L}}}_z</math> sont les [[harmoniques sphériques]] <math>Y_{l,m}(\theta, \phi)</math>, qui constitué la partie ''angulaire'' de la fonction d'onde qui peut se mettre sous la forme: <math>\psi\left(r,\theta,\phi\right)=R_{n,\ell}(r)Y_{l,m}(\theta, \phi)</math>, avec <math>R_{n,\ell}(r)</math> ''fonction d'onde radiale'' (''n'' nombre quantique ''ad hoc'' pour l'énergie) solution de l'équation de Schrödinger unidimensionnelle obtenue en substituant cette expression dans (7):
+:<math>\left[-\frac{\hbar^2}{2\mu r}\frac{d^2}{d r^2}(r.)+\left(V(r)+\frac{\hbar^2\ell(\ell+1)}{2\mu r^2}-E_{n\ell}\right)\right]R_{n,\ell}(r)=0</math>,    (8),
+
+soit encore: 
+:<math>\left[-\frac{\hbar^2}{2\mu r}\frac{d^2}{d r^2}(r.)+\left(U_{eff}(r)-E_{n\ell}\right)\right]R_{n\ell}(r)=0</math>,    (9),<br>
+avec <math>U_{eff}(r)=V(r)+\frac{\hbar^2\ell(\ell+1)}{2\mu r^2}</math>,   (10), ''potentiel effectif''. On est donc ramené, comme en mécanique classique, à un mouvement unidimensionnel de la particule dans un potentiel effectif, le terme en <math>\frac{\hbar^2\ell(\ell+1)}{2\mu r^2}</math> correspondant à une barrière centrifuge (le mouvement de la particule fictive est bien sûr restreint au domaine ''r>0''). 
+== Notes et références ==
+{{références}}
+
+=== Bibliographie ===
+* {{Landau|tome 3}}
+* {{Basdevant}}
+* {{Cohen}}
+* {{Messiah}}
+
+
+{{portail|physique}}
+
+[[en:Particle in a spherically symmetric potential]]
+[[es:Partícula en un potencial de simetría esférica]]
+[[it:Moto in un campo centrale]]
+[[zh:球對稱位勢]]

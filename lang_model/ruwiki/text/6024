@@ -1,0 +1,593 @@
+: ''В этой статье [[вектор]]ы и их абсолютные [[величина|величины]] выделены [[жирный шрифт|жирным шрифтом]] и [[курсив]]ом, например, <math>\left| \mathbf{A} \right| = A</math>''.
+
+В [[классическая механика|классической механике]] '''ве́ктором Лапла́са — Ру́нге — Ле́нца''' называется вектор, в основном используемый для описания формы и ориентации орбиты, по которой одно небесное тело обращается вокруг другого (например, орбиты, по которой планета вращается вокруг звезды). В случае с двумя телами, взаимодействие которых описывается [[закон всемирного тяготения|законом всемирного тяготения Ньютона]], вектор Лапласа — Рунге — Ленца представляет собой [[интеграл движения]], то есть его направление и величина являются постоянными независимо от того, в какой точке орбиты они вычисляются<ref>{{cite book | last = Арнольд | first = В. И. | authorlink = Арнольд, Владимир Игоревич | year = 2003 | title = Математические методы классической механики, 5-е изд. | publisher = Едиториал УРСС | location = Москва | pages = 416 | id = ISBN 5-354-00341-5}}</ref>; говорят, что вектор Лапласа — Рунге — Ленца ''сохраняется'' при гравитационном взаимодействии двух тел. Это утверждение можно обобщить для любой задачи с двумя телами, взаимодействующими посредством [[центральная сила|центральной силы]], которая изменяется обратно пропорционально квадрату расстояния между ними. Такая задача называется [[Кеплерова задача|Кеплеровой задачей]] <ref name="goldstein_1980">{{cite book | last = Голдштейн | first=Г. | authorlink=Голдштейн, Герберт | year=1975 | title=Классическая механика | edition=<!--2<sup>nd</sup> edition -->| publisher=Наука | pages=416}}</ref>. 
+
+Например, такой [[закон Кулона|потенциал]] возникает при рассмотрении классических орбит (без учёта квантования) в задаче о движении отрицательно заряженного электрона движущегося в электрическом поле положительно заряженного ядра. Если вектор Лапласа — Рунге — Ленца задан, то форма их относительного движения может быть получена из простых геометрических соображений, с использованием законов сохранения этого вектора и энергии.
+
+Согласно [[принцип соответствия|принципу соответствия]] у вектора Лапласа — Рунге — Ленца имеется [[квантовая механика|квантовый]] аналог, который был использован в первом выводе [[спектр испускания|спектра]] [[атом водорода|атома водорода]] <ref name="pauli_1926">{{cite journal | last = Pauli | first = W | authorlink = Паули, Вольфганг | year = 1926 | title = Über das Wasserstoffspektrum vom Standpunkt der neuen Quantenmechanik | journal = Zeitschrift für Physik | volume = 36 | pages = 336&ndash;363}}</ref>, ещё перед открытием [[уравнение Шрёдингера|уравнения Шрёдингера]].
+
+В задаче Кеплера имеется необычная особенность: конец вектора импульса <math>\mathbf{p}</math> всегда движется по кругу <ref name="hamilton_1847_hodograph">{{cite journal | last = Hamilton | first = WR | authorlink = Гамильтон, Уильям Роуан | year = 1847 | title = The Hodograph, or a new Method of expressing in symbolical Language the Newtonian Law of Attraction | journal = Proceedings of the Royal Irish Academy | volume = 3 | pages = 344&ndash;353}}</ref>. Из-за расположения этих кругов для заданной полной энергии <math>E</math>, проблема Кеплера математически эквивалентна частице, свободно перемещающейся в [[гиперсфера|четырёхмерной сфере]] <ref name="fock_1935" >{{cite journal | last = Fock | first = V | authorlink = Фок, Владимир Александрович | year = 1935 | title = Zur Theorie des Wasserstoffatoms | journal = Zeitschrift für Physik | volume = 98 | pages = 145&ndash;154}}</ref>. По этой математической аналогии, сохраняющийся вектор Лапласа — Рунге — Ленца эквивалентен дополнительным компонентам [[угловой момент|углового момента]] в четырёхмерном пространстве <ref name="bargmann_1936" >{{cite journal | last = Bargmann | first = V | authorlink = Баргманн, Валентин | year = 1936 | title = Zur Theorie des Wasserstoffatoms: Bemerkungen zur gleichnamigen Arbeit von V. Fock | journal = Zeitschrift für Physik | volume = 99 | pages = 576&ndash;582}}</ref>.
+
+Вектор Лапласа — Рунге — Ленца также известен как ''вектор Лапласа'', ''вектор Рунге — Ленца'' и ''вектор Ленца'', хотя ни один из этих учёных не вывел его впервые. Вектор Лапласа — Рунге — Ленца открывался вновь несколько раз <ref name="goldstein_1975_1976">{{cite journal | last=Goldstein | first=H. | authorlink = Голдштейн, Герберт | year=1975 | title=Prehistory of the Runge-Lenz vector | journal=[[American Journal of Physics]] | volume=43 | pages=735&ndash;738}}<br />{{cite journal | last=Goldstein | first=H. | authorlink=Голдштейн, Герберт  | year=1976 | title=More on the prehistory of the Runge-Lenz vector | journal=[[American Journal of Physics]] | volume=44 | pages=1123&ndash;1124}}</ref>. Он также эквивалентен безразмерному [[вектор эксцентриситета|вектору эксцентриситета]] в [[небесная механика|небесной механике]] <ref name="hamilton_1847_quaternions">{{cite journal | last = Hamilton | first = WR | authorlink = Гамильтон, Уильям Роуан | year = 1847 | title = On the Application of the Method of Quaternions to some Dynamical Questions | journal = Proceedings of the Royal Irish Academy | volume = 3 | pages = Appendix III, pp. xxxvi-l}}</ref>. Точно так же для него нет никакого общепринятого обозначения, хотя обычно используется <math>\mathbf{A}</math>. Для различных обобщений вектора Лапласа — Рунге — Ленца, которые определены ниже, используется символ <math>\mathcal{A}</math>.
+
+== Контекст ==
+Одиночная частица, движущаяся под воздействием любой [[закон сохранения энергии|консервативной]] [[центральная сила|центральной силы]], имеет, по крайней мере, четыре [[интеграл движения|интеграла движения]] (сохраняющиеся при движении величины): полная [[энергия]] <math>E</math> и три компоненты [[угловой момент|углового момента]] (вектора <math>\mathbf{L}</math>). Орбита частицы лежит в плоскости, которая определяется начальным [[импульс]]ом частицы, <math>\mathbf{p}</math> (или, что эквивалентно, [[скорость]]ю <math>\mathbf{v}</math>) и координатами, то есть радиус-вектором <math>\mathbf{r}</math> между центром силы и частицей (см. рис. 1). Эта плоскость перпендикулярна постоянному вектору <math>\mathbf{L}</math> и её уравнение может быть выражено математически с помощью скалярного произведения <math>\mathbf{r}\cdot\mathbf{L}=0</math>.
+
+Как определено [[#Математическое определение|ниже]], вектор Лапласа — Рунге — Ленца <math>\mathbf{A}</math> всегда находится в плоскости движения — то есть, <math>\mathbf{A}\cdot\mathbf{L}= 0</math> — для любой центральной силы. Также <math>\mathbf{A}</math> является постоянным только для силы, зависящей обратно пропорционально квадрату расстояния <ref name="goldstein_1980" />. Если центральная сила ''приблизительно'' зависит от обратного квадрата расстояния, вектор <math>\mathbf{A}</math> является приблизительно постоянным по длине, но медленно вращается. Для большинства центральных сил, однако, [[#Математическое определение|этот вектор]] <math>\mathbf{A}</math> не постоянный, а изменяет длину и направление. ''Обобщённый'' сохраняющийся вектор Лапласа — Рунге — Ленца <math>\mathcal{A}</math> [[#Обобщение на другие потенциалы и СТО|может быть определён]] для всех центральных сил, но этот вектор — сложная функция положения, и обычно не выражается аналитически в элементарных или специальных функциях <ref name="fradkin_1967">{{cite journal | last = Fradkin | first = DM | year = 1967 | title = Existence of the Dynamic Symmetries O<sub>4</sub> and SU<sub>3</sub> for All Classical Central Potential Problems | journal = Progress of Theoretical Physics | volume = 37 | pages = 798&ndash;812}}</ref><ref name="yoshida_1987">{{cite journal | last = Yoshida | first = T | year = 1987 | title = Two methods of generalisation of the Laplace-Runge-Lenz vector | journal = European Journal of Physics | volume = 8 | pages = 258&ndash;259}}</ref>.
+
+== История ==
+
+Вектор Лапласа — Рунге — Ленца <math>\mathbf{A}</math> является сохраняющейся величиной в задаче Кеплера и полезен при описании [[орбита|астрономических орбит]], наподобие движения [[планеты]] вокруг Солнца. Однако он никогда не был широко известен среди физиков, возможно, потому что является менее интуитивно понятным вектором, чем [[импульс]] и [[угловой момент]]. Вектор Лапласа-Рунге-Ленца независимо открывали несколько раз за прошедшие три столетия <ref name="goldstein_1975_1976" />. [[Герман, Яков|Яков Герман]] был первым, кто показал, что <math>\mathbf{A}</math> сохраняется для специального случая центральной силы, зависящей обратно пропорционально квадрату расстояния <ref>{{cite journal| last = Hermann | first = J | authorlink = Jakob Hermann | year = 1710 | title = Metodo d'investigare l'orbite de' pianeti | journal = Giornale de Letterati D'Italia | volume = 2 | pages = 447&ndash;467}}<br />{{cite journal| last = Hermann | first = J | authorlink = Jakob Hermann | year = 1710 | title = Extrait d'une lettre de M. Herman à M. Bernoulli datée de Padoüe le 12. Juillet 1710 | journal = Histoire de l'academie royale des sciences (Paris) | volume = 1732 | pages = 519&ndash;521}}</ref>, и нашёл его связь с эксцентриситетом эллиптической орбиты. Работа Херманна была обобщена до её современной формы [[Бернулли, Иоганн|Иоганном Бернулли]] в [[1710]] году <ref>{{cite journal| last = Bernoulli | first = J | authorlink = Johann Bernoulli | year = 1710 | title = Extrait de la Réponse de M. Bernoulli à M. Herman datée de Basle le 7. Octobre 1710 | journal = Histoire de l'academie royale des sciences (Paris) | volume = 1732 | pages = 521&ndash;544}}</ref>. В свою очередь [[Лаплас, Пьер-Симон|Пьер-Симон Лаплас]] в конце [[XVIII|XVIII столетия]], открыл сохранение <math>\mathbf{A}</math> вновь, доказав это аналитически, а не геометрически, как его предшественники <ref>{{cite book | last = Laplace | first = PS | authorlink = Laplace | year = 1799 | title = Traité de mécanique celeste | pages = Tome I, Premiere Partie,  Livre II, pp.165ff}}</ref>.
+
+В середине [[XIX век]]а, [[Гамильтон, Уильям Роуан|Уильям Гамильтон]] получил эквивалент вектора эксцентриситета определённый [[#Альтернативная формулировка|ниже]] <ref name="hamilton_1847_quaternions" />, использовав его, чтобы показать, что конец вектора импульса <math>\mathbf{p}</math> двигается по кругу под действием центральной силы, зависящей обратно пропорционально квадрату расстояния (рис. 3) <ref name="hamilton_1847_hodograph" />. В начале [[XX|XX столетия]], [[Гиббс, Джозайя Уиллард| Уиллард Гиббс]] получил тот же самый вектор с помощью [[векторный анализ|векторного анализа]] <ref>{{cite book | last = Gibbs | first = JW | authorlink = Josiah Willard Gibbs | coauthors = Wilson EB | year = 1901 | title = Vector Analysis | publisher = Scribners | location = New York | pages = p. 135}}</ref>. Вывод Гиббса использовал [[Рунге, Карл|Карл Рунге]] в популярном немецком учебнике по векторам в качестве примера <ref>{{cite book | last = Runge | first = C | authorlink = Carle David Tolme Runge | year = 1919 | title = Vektoranalysis | publisher = Hirzel | location = Leipzig | pages = Volume I}}</ref>, на который ссылался [[Ленц, Вильгельм|Вильгельм Ленц]] в своей статье о [[Квантовая механика|квантовомеханическом]] (старом) рассмотрении [[атом водорода|атома водорода]] <ref>{{cite journal | last = Lenz | first = W | authorlink = Wilhelm Lenz | year = 1924 | title = Über den Bewegungsverlauf und Quantenzustände der gestörten Keplerbewegung | journal = Zeitschrift für Physik | volume = 24 | pages = 197&ndash;207}}</ref>.
+
+В [[1926]] году, этот вектор использовал [[Паули, Вольфганг|Вольфганг Паули]], чтобы вывести [[спектр]] атома водорода, используя современную [[матричная квантовая механика|матричную квантовую механику]], а не [[уравнение Шрёдингера]] <ref name="pauli_1926" />. После публикации Паули, вектор стал, главным образом, известен как '''вектор Рунге — Ленца'''.
+
+== Математическое определение ==
+[[Изображение:Laplace Runge Lenz vector.svg|thumb|right|400px|Рис. 1: Вектор Лапласа — Рунге — Ленца <math>\scriptstyle\mathbf{A}</math> (показанный красным цветом) в четырёх точках (обозначенных 1, 2, 3 и 4) на эллиптической орбите связанной точечной частицы, движущейся под действием [[центральная сила|центральной силы]], зависящей обратно пропорционально квадрату расстояния. Маленький чёрный круг обозначает центр притяжения. От него начинаются радиус-векторы (выделены чёрным цветом), направленные в точки 1, 2, 3 и 4. Вектор [[угловой момент|углового момента]] <math>\scriptstyle\mathbf{L}</math> направлен перпендикулярно орбите. [[Компланарные векторы]] <math>\scriptstyle\mathbf{p}\times\mathbf{L}</math>, <math>\scriptstyle(mk/r)\mathbf{r}</math> и <math>\scriptstyle\mathbf{A}</math> изображены синим, зелёным и красным цветами, соответственно; эти переменные определены [[#Математическое определение|ниже]]. Вектор <math>\scriptstyle\mathbf{A}</math> является постоянным по направлению и величине.]]
+
+Для одиночной частицы движущейся под действием [[центральная сила|центральной силы]], зависящей обратно пропорционально квадрату расстояния описываемой уравнением <math>\mathbf{F}(r)=\frac{-k}{r^{2}}\mathbf{\hat{r}}</math>, '''вектор Лапласа — Рунге — Ленца''' <math>\mathbf{A}</math> определён математически по формуле <ref name="goldstein_1980" />
+
+: <math> 
+\mathbf{A} = \mathbf{p} \times \mathbf{L} - m k \mathbf{\hat{r}}
+</math>,
+
+где
+
+* <math>m\!\,</math> — [[масса]] точечной частицы, движущейся вод воздействием центральной силы,
+* <math>\mathbf{p}\!\,</math> — вектор [[импульс]]а,
+* <math>\mathbf{L} = \mathbf{r} \times \mathbf{p}\!\,</math> — вектор [[угловой момент|углового момента]],
+* <math>k\!\,</math> — параметр, описывающий величину центральной силы,
+* <math>\mathbf{\hat{r}}\!\,</math> — единичный вектор, то есть <math>\mathbf{\hat{r}} = \frac{\mathbf{r}}{r}</math>, где <math>\mathbf{r}\!\,</math> — радиус-вектор положения частицы, и <math>r</math> его длина.
+
+Поскольку мы предположили, что сила [[консервативные силы|консервативная]], то полная [[энергия]] <math>E</math> сохраняется
+
+: <math>
+E = \frac{p^{2}}{2m} - \frac{k}{r} = \frac{1}{2} mv^{2} - \frac{k}{r}
+</math>
+
+Из центральности силы следует, что вектор углового момента <math>\mathbf{L}</math> также сохраняется и определяет плоскость, в которой частица совершает движение. Вектор Лапласа — Рунге — Ленца <math>\mathbf{A}</math> перпендикулярен вектору углового момента <math>\mathbf{L}</math> и, таким образом, находится в плоскости [[орбита|орбиты]]. Уравнение <math>\mathbf{A}\cdot\mathbf{L}= 0</math> верно, потому что вектора <math>\mathbf{p}\times\mathbf{L}</math> и <math>\mathbf{r}</math> перпендикулярны <math>\mathbf{L}</math>.
+
+Это определение вектора Лапласа — Рунге — Ленца <math>\mathbf{A}</math> применимо для единственной точечной частицы с массой <math>m</math>, движущейся в стационарном (не зависящем от времени) потенциале. Кроме того, то же самое определение может быть расширено на проблему с двумя телами, наподобие проблемы Кеплера, если заменить <math>m</math> на [[приведённая масса|приведённую массу]] этих двух тел и <math>\mathbf{r}</math> на вектор между этими телами.
+
+=== Круговой годограф импульса ===
+
+[[Изображение:Kepler hodograph3.svg|thumb|right|280px|Рис. 2: Конец вектора импульса <math>\scriptstyle\mathbf{p}</math> (показанный синим цветом) двигается по кругу, когда частица совершает движение по эллипсу. Четыре помеченные точки соответствуют точкам на рис. 1. Центр круга находится на оси <math>\scriptstyle y</math> в точке <math>\scriptstyle A/L</math> (показан пурпурным), с радиусом <math>\scriptstyle mk/L</math> (показан зелёным). Угол <math>\scriptstyle\eta</math> определяет эксцентриситет <math>\scriptstyle e</math> эллиптической орбиты (<math>\scriptstyle \cos\eta=e</math>). Из [[теорема о вписанном угле|теоремы о вписанном угле]] для [[круг]]а следует, что <math>\scriptstyle \eta</math> является также углом между любой точкой на окружности и двумя точками пересечения окружности с осью <math>\scriptstyle p_x</math>, <math>\scriptstyle p_x=\pm p_0</math>.]]
+
+Сохранение вектора Лапласа — Рунге — Ленца <math>\mathbf{A}</math> и вектора углового момента <math>\mathbf{L}</math> используется в доказательстве того, что вектор импульса <math>\mathbf{p}</math> движется по [[круг]]у под действием центральной силы, обратно пропорциональной квадрату расстояния. Вычисляя [[векторное произведение]] <math>\mathbf{A}</math> и <math>\mathbf{L}</math>, приходим к уравнению для <math>\mathbf{p}</math>
+
+: <math>
+L^{2} \mathbf{p} = \mathbf{L} \times \mathbf{A} - mk \hat{\mathbf{r}} \times \mathbf{L}
+</math>
+
+Направляя вектор <math>\mathbf{L}</math> вдоль оси <math>z</math>, а главную полуось — по оси <math>x</math> приходим к уравнению
+
+: <math>
+p_{x}^{2} + \left(p_{y} - A/L \right)^{2} = \left( mk/L \right)^{2}.
+</math>
+
+Другими словами, вектор импульса <math>\mathbf{p}</math> ограничен окружностью радиуса <math>mk/L</math>, центр которой расположен в точке с координатами <math>(0,\;A/L)</math>. Эксцентриситет <math>e</math> соответствует косинусу угла <math>\eta</math>, показанного на рис. 2. Для краткости можно ввести переменную <math>p_{0} = \sqrt{2m\left| E \right|}</math>. Круговой [[годограф]] полезен для описания [[симметрия|симметрии]] проблемы Кеплера.
+
+=== Интегралы движения и суперинтегрируемость ===
+
+Семь скалярных величин: энергия <math>E</math>, и компоненты векторов Лапласа — Рунге — Ленца <math>\mathbf{A}</math> и момента импульса <math>\mathbf{L}</math> связаны двумя соотношениями. Для векторов выполняется условие ортогональности <math>\mathbf{A}\cdot\mathbf{L}= 0</math>, а энергия входит в выражение для квадрата длины вектора Лапласа — Рунге — Ленца, полученного выше <math>A^2=m^2k^2+2mEL^2</math>. Тогда существует пять независимых сохраняющихся величин, или [[интегралы движения|интегралов движения]]. Это совместимо с шестью начальными условиями (начальное положение частицы и её скорость являются векторами с тремя компонентами), которые определяют орбиту частицы, так как начальное время не определено интегралами движения. Поскольку величину <math>\mathbf{A}</math> (и эксцентриситет <math>e</math> орбиты) можно определить из полного углового момента <math>L</math> и энергии <math>E</math>, то утверждается, что только направление <math>\mathbf{A}</math> сохраняется независимо. Кроме того, вектор <math>\mathbf{A}</math> должен быть перпендикулярным <math>\mathbf{L}</math> — это приводит к одной дополнительной сохраняющейся величине.
+
+Механическая система с <math>d</math> [[степени свободы|степенями свободы]] может обладать максимум <math>2d-1</math> интегралами движения, поскольку <math>2d</math> начальных условия и начальное время не могут быть определены из интегралов движения. Система с более чем <math>d</math> интегралами движения называется ''суперинтегрируемой'', а система с <math>2d-1</math> интегралами называется ''максимально суперинтегрируемой'' <ref>{{cite journal | last = Evans | first = NW | year = 1990 | title = Superintegrability in classical mechanics | journal = Physical Review A | volume = 41 | pages = 5666&ndash;5676}}</ref>. Поскольку решение [[уравнения Гамильтона — Якоби]] в одной [[система координат|системе координат]] может привести только к <math>d</math> интегралам движения, то переменные должны разделяться для суперинтегрируемых систем в больше чем одной системе координат <ref>{{cite book | last = Sommerfeld | first = A | authorlink = Arnold Sommerfeld | year = 1923 | title = Atomic Structure and Spectral Lines | publisher = Methuen | location = London | pages = 118}}</ref>. Проблема Кеплера — максимально суперинтегрируема, так как она имеет три степени свободы (<math>d=3</math>) и пять независимых интегралов движения; переменные в уравнении Гамильтона — Якоби разделяются в [[сферические координаты|сферических координатах]] и [[параболические координаты|параболических координатах]] <ref name="landau_lifshitz_1976">{{cite book | last=Landau |first=LD | authorlink=Lev Landau | coauthors=[[Evgeny Lifshitz|Lifshitz EM]] | year=1976 | title=Mechanics | edition=3<sup>rd</sup> edition | publisher=Pergamon Press | pages = p. 154 | id= ISBN 0-08-021022-8 (hardcover) and ISBN 0-08-029141-4 (softcover)}}</ref>, как описано [[#Уравнение Гамильтона-Якоби в параболических координатах|ниже]]. <!--Maximally superintegrable systems follow closed, one-dimensional orbits in [[phase space]], since the orbit is the intersection of the phase-space [[isosurface]]s of their constants of motion.--> Максимально суперинтегрируемые системы могут быть [[каноническое квантование|квантованы]] с использованием только [[коммутационные соотношения|коммутационных соотношений]], как показано [[#Квантовая механика атома водорода|ниже]] <ref>{{cite journal | last = Evans | first = NW | year = 1991 | title = Group theory of the Smorodinsky-Winternitz system | journal = Journal of Mathematical Physics | volume = 32 | pages = 3369&ndash;3375}}</ref>.
+
+=== Уравнение Гамильтона — Якоби в параболических координатах ===
+
+Постоянство вектора Лапласа — Рунге — Ленца можно вывести, используя [[уравнение Гамильтона — Якоби|уравнение Гамильтона — Якоби]] в [[параболические координаты|параболических координатах]] <math>(\xi,\;\eta)</math>, которые определяются следующим образом
+
+: <math>
+\xi = r + x
+</math>
+
+: <math>
+\eta = r - x
+</math>
+
+где <math>r</math> — радиус в плоскости орбиты
+
+: <math>
+r = \sqrt{x^{2} + y^{2}}
+</math>
+
+Обратное преобразование этих координат запишется в виде
+
+: <math>
+x = \frac{1}{2} \left( \xi - \eta \right)
+</math>
+
+: <math>
+y = \sqrt{\xi\eta}.
+</math>
+
+Разделение переменных в уравнении Гамильтона — Якоби в этих координатах даёт два эквивалентных уравнения <ref name="landau_lifshitz_1976" /><ref>{{cite journal | last = Dulock | first = VA | coauthors = McIntosh HV | year = 1966 | title = On the Degeneracy of the Kepler Problem | journal = Pacific Journal of Mathematics | volume = 19 | pages = 39&ndash;55}}</ref>
+
+: <math>
+2\xi p_{\xi}^{2} - mk - mE\xi = -\beta
+</math>
+
+: <math>
+2\eta p_{\eta}^{2} - mk - mE\eta = \beta,
+</math>
+
+где <math>\beta</math> — [[интеграл движения]]. Посредством вычитания этих уравнений и выражения в терминах декартовых координат импульса <math>p_x</math> и <math>p_y</math> можно показать, что <math>\beta</math> эквивалентен вектору Лапласа — Рунге — Ленца
+
+: <math>
+\beta = p_{y} \left( x p_{y} - y p_{x} \right) - mk\frac{x}{r} = A_{x}.
+</math>
+
+Этот подход Гамильтона — Якоби может использоваться, чтобы вывести сохраняющийся обобщённый вектор Лапласа — Рунге — Ленца <math>\mathcal{A}</math> в присутствии электрического поля <math>\mathbf{E}</math> <ref name="landau_lifshitz_1976" /><ref>{{cite journal | last = Redmond | first = PJ | year = 1964 | title = Generalization of the Runge-Lenz Vector in the Presence of an Electric Field | journal = Physical Review | volume = 133 | pages = B1352&ndash;B1353}}</ref>
+
+: <math>
+\mathcal{A} = \mathbf{A} + \frac{mq}{2} \left[ \left( \mathbf{r} \times \mathbf{E} \right) \times \mathbf{r} \right]
+</math>,
+
+где <math>q</math> — [[электрический заряд|заряд]] обращающейся частицы.
+
+=== Альтернативная формулировка ===
+
+В отличие от [[импульс]]а <math>\mathbf{p}</math> и [[угловой момент|углового момента]] <math>\mathbf{L}</math>, у вектора Лапласа — Рунге — Ленца нет общепринятого определения. В научной литературе используются несколько различных множителей и символов. Самое общее определение даётся [[#Математическое определение|выше]], но другое определение возникает после деления на постоянную <math>mk</math>, чтобы получить безразмерный сохраняющийся вектор эксцентриситета
+
+: <math> 
+\mathbf{e} = 
+\frac{1}{mk} \left(\mathbf{p} \times \mathbf{L} \right) - \mathbf{\hat{r}} = 
+\frac{m}{k} \left(\mathbf{v} \times \mathbf{r} \times \mathbf{v}\right) - \mathbf{\hat{r}}
+</math>,
+
+где <math>\mathbf{v}</math> — вектор скорости. Направление этого скалированного вектора <math>\mathbf{e}</math> совпадает с направлением <math>\mathbf{A}</math> и его амплитуда равна [[эксцентриситет]]у орбиты. Мы получим другие определения, если поделить <math>\mathbf{A}</math> на <math>m</math>,
+
+: <math> 
+\mathbf{M} = \mathbf{v} \times \mathbf{L} - k\mathbf{\hat{r}}
+</math>
+
+или на <math>p_0</math>
+
+: <math>
+\mathbf{D} = \frac{\mathbf{A}}{p_{0}} = 
+\frac{1}{\sqrt{2m\left| E \right|}} 
+\left\{ \mathbf{p} \times \mathbf{L} - m k \mathbf{\hat{r}} \right\}
+</math>
+
+который имеет ту же размерность, что и [[угловой момент]] (вектор <math>\mathbf{L}</math>). В редких случаях, знак вектора Лапласа — Рунге — Ленца может быть изменён на противоположный. Другие общие символы для вектора Лапласа — Рунге — Ленца включают <math>\mathbf{a}</math>, <math>\mathbf{R}</math>, <math>\mathbf{F}</math>, <math>\mathbf{J}</math> и <math>\mathbf{V}</math>. Однако выбор множителя и символа для вектора Лапласа — Рунге — Ленца, конечно же, не влияет на его сохранение.
+
+[[Изображение:Kepler trivector.svg|thumb|right|250px|Рис. 3: Вектор углового момента <math>\scriptstyle \mathbf{L}</math>, вектор Лапласа — Рунге — Ленца <math>\scriptstyle \mathbf{A}</math> и вектор Гамильтона, [[бинормаль]] <math>\scriptstyle \mathbf{B}</math>, является взаимно перпендикулярными; <math>\scriptstyle \mathbf{A}</math> и <math>\scriptstyle \mathbf{B}</math> указывают на большую и на малую полуоси, соответственно, эллиптической орбиты в задаче Кеплера.]]
+
+Альтернативный сохраняющийся вектор: [[бинормаль]] — вектор <math>\mathbf{B}</math> изучен [[Гамильтон, Уильям Роуан|Уильямом Гамильтоном]] <ref name="hamilton_1847_quaternions" />
+
+: <math>
+\mathbf{B} = \mathbf{p} - \left(\frac{mk}{L^{2}r} \right) \  \left( \mathbf{L} \times \mathbf{r} \right),
+</math>
+
+который сохраняется и указывает вдоль малой полуоси эллипса. Вектор Лапласа — Рунге — Ленца <math>\mathbf{A}=\mathbf{B}\times\mathbf{L}</math> является [[векторное произведение|векторным произведением]] <math>\mathbf{B}</math> и <math>\mathbf{L}</math> (рис. 3). Вектор <math>\mathbf{B}</math> обозначен как ''[[бинормаль]]'', так как он перпендикулярен как <math>\mathbf{A}</math>, так и <math>\mathbf{L}</math>. Подобно вектору Лапласа — Рунге — Ленца, вектор бинормали можно определить с различными множителями.
+
+Два сохраняющиеся вектора, <math>\mathbf{A}</math> и <math>\mathbf{B}</math> можно объединить в сохраняющийся [[двухэлементный тензор]] <math>\mathbf{W}</math>
+
+: <math>
+\mathbf{W} = \alpha \mathbf{A} \otimes \mathbf{A} + \beta \, \mathbf{B} \otimes \mathbf{B},
+</math>,
+
+где <math>\otimes</math> обозначает [[тензорное произведение]], а <math>\alpha</math> и <math>\beta</math> — произвольные множители <ref name="fradkin_1967" />. Записанное в компонетной записи это уравнение читается так
+
+: <math>
+W_{ij} = \alpha A_{i} A_{j} + \beta B_{i} B_{j}
+</math>
+
+Векторы <math>\mathbf{A}</math> и <math>\mathbf{B}</math> ортогональны друг другу и их можно представить, как [[главные оси]] сохраняющегося [[тензор]]а <math>\mathbf{W}</math>, то есть как его [[собственный вектор|собственные вектора]]. <math>\mathbf{W}</math> перпендикулярен <math>\mathbf{L}</math>
+
+: <math>
+\mathbf{L} \cdot \mathbf{W} = 
+\alpha \left( \mathbf{L} \cdot \mathbf{A} \right) \mathbf{A} + \beta \left( \mathbf{L} \cdot \mathbf{B} \right) \mathbf{B} = 0,
+</math>
+
+поскольку <math>\mathbf{A}</math> и <math>\mathbf{B}</math> перпендикалярны, то <math>\mathbf{L} \cdot \mathbf{A} = \mathbf{L} \cdot \mathbf{B} = 0</math>.
+
+== Вывод орбит Кеплера ==
+[[Изображение:Laplace Runge Lenz vector2.svg|thumb|right|350px|Рис. 4: Упрощенная версия рис. 1. Определяется угол <math>\theta</math> между <math>\scriptstyle \mathbf{A}</math> и <math>\scriptstyle \mathbf{r}</math> в одной точке орбиты.]]
+''Форма'' и ''ориентация'' орбиты в [[проблема двух тел|задаче Кеплера]], зная вектор Лапласа — Рунге — Ленца <math>\mathbf{A}</math>, можно определить следующим образом. Рассмотрим скалярное произведение векторов <math>\mathbf{A}</math> и <math>\mathbf{r}</math> (положения планеты):
+
+: <math>
+\mathbf{A} \cdot \mathbf{r} = Ar \cos\theta = 
+\mathbf{r} \cdot \left( \mathbf{p} \times \mathbf{L} \right) - mkr
+</math>,
+
+где <math>\theta</math> является углом между <math>\mathbf{r}</math> и <math>\mathbf{A}</math> (рис. 4). Поменяем порядок множителей в [[смешанное произведение|смешанном произведении]] <math>\mathbf{r}\cdot(\mathbf{p}\times\mathbf{L})=\mathbf{L}\cdot (\mathbf{r}\times\mathbf{p})=\mathbf{L}\cdot\mathbf{L}=L^2</math>, и при помощи несложных преобразований получим определение для [[конические сечения|конического сечения]]:
+
+: <math>
+\frac{1}{r} = \frac{mk}{L^{2}} \left( 1 + \frac{A}{mk} \cos\theta \right)
+</math>
+
+с [[эксцентриситет]]ом <math>e\!\,</math> заданным по формуле:
+
+: <math>
+e = \frac{A}{mk} = \frac{\left|\mathbf{A}\right|}{m k}.
+</math>
+
+Приходим к выражению квадрата модуля вектора <math>\mathbf{A}</math> в виде
+
+: <math>
+A^2= m^2 k^2 + 2 m E L^2,
+</math>
+
+которое можно переписать используя эксцентриситет орбиты
+
+: <math>
+e^{2}  - 1= \frac{2L^{2}}{mk^{2}}E
+</math>
+
+Таким образом, если энергия отрицательна, что соответствует связанным орбитам, эксцентреситет меньше чем единица, и орбита имеет форму [[эллипс]]а. Наоборот, если энергия положительна (несвязанные орбиты, также называемые ''орбитами рассеяния''), эксцентриситет больше чем единица и орбита — [[гипербола]]. Наконец, если энергия точно равно нулю, эксцентриситет — единица, и орбита — [[парабола]]. Во всех случаях, вектор <math>\mathbf{A}</math> направлен вдоль оси симметрии конического сечения и указывает на точку самого близкого положения точечной частицы от начала координат.
+
+=== Сохранение под действием силы обратно пропорцинальной квадрату расстояния ===
+
+Сила <math>\mathbf{F}</math>, действующая на частицу предполагается [[центральная сила|центральной]]. Поэтому
+
+: <math>
+\mathbf{F} = \frac{d\mathbf{p}}{dt} = f(r) \frac{\mathbf{r}}{r} = f(r) \mathbf{\hat{r}}
+</math>
+
+для некоторой функции <math>f(r)</math> радиуса <math>r</math>. Поскольку [[угловой момент]] <math>\mathbf{L} = \mathbf{r} \times \mathbf{p}</math> сохраняется под действием центральных сил, то <math>\frac{d}{dt}\mathbf{L} = 0</math> и
+
+: <math>
+\frac{d}{dt} \left( \mathbf{p} \times \mathbf{L} \right) = \frac{d\mathbf{p}}{dt} \times \mathbf{L}  = f(r) \mathbf{\hat{r}} \times \mathbf{r} \times m \frac{d\mathbf{r}}{dt} = f(r) \frac{m}{r} \left[ \mathbf{r} \left(\mathbf{r} \cdot \frac{d\mathbf{r}}{dt} \right) - r^{2} \frac{d\mathbf{r}}{dt} \right],
+</math>
+
+где [[импульс]] записан в виде <math>\mathbf{p} = m \frac{d\mathbf{r}}{dt}</math>, и [[тройное векторное произведение]] упростилось с помощью [[формула Лагранжа|формулы Лагранжа]]
+
+: <math>
+\mathbf{r} \times \mathbf{r} \times \frac{d\mathbf{r}}{dt} = \mathbf{r} \left(\mathbf{r} \cdot \frac{d\mathbf{r}}{dt} \right) - r^{2} \frac{d\mathbf{r}}{dt}. 
+</math>
+
+Тождество
+
+: <math>
+\frac{d}{dt} \left( \mathbf{r} \cdot \mathbf{r} \right) = 2 \mathbf{r} \cdot \frac{d\mathbf{r}}{dt} = \frac{d}{dt} \left( r^{2} \right) = 2r\frac{dr}{dt}
+</math>
+
+приводит к уравнению
+
+: <math>
+\frac{d}{dt} \left( \mathbf{p} \times \mathbf{L} \right) = 
+-m f(r) r^{2} \left[ \frac{1}{r} \frac{d\mathbf{r}}{dt} -  \frac{\mathbf{r}}{r^{2}} \frac{dr}{dt}\right] = 
+-m f(r) r^{2} \frac{d}{dt} \left( \frac{\mathbf{r}}{r}\right). 
+</math>
+
+Для специального случая центральной силы, зависящей обратно пропорцинальной квадрату расстояния <math>f(r)=\frac{-k}{r^{2}}</math>, последнее выражение равно
+
+: <math>
+\frac{d}{dt} \left( \mathbf{p} \times \mathbf{L} \right) = 
+m k \frac{d}{dt} \left( \frac{\mathbf{r}}{r}\right) = 
+\frac{d}{dt} \left( mk\mathbf{\hat{r}} \right)
+</math>
+
+Тогда <math>\mathbf{A}</math> сохраняется в этом случае
+
+: <math>
+\frac{d}{dt} \mathbf{A} = \frac{d}{dt} \left( \mathbf{p} \times \mathbf{L} \right) - \frac{d}{dt} \left( mk\mathbf{\hat{r}} \right) = 0
+</math>
+
+Как показано [[#Обобщение на другие потенциалы и СТО|ниже]], вектор Лапласа — Рунге — Ленца <math>\mathbf{A}</math> является частным случаем обобщённого сохраняющегося вектора <math>\mathcal{A}</math>, который может быть определён для любой центральной силы <ref name="fradkin_1967" /><ref name="yoshida_1987" />. Однако большинство центральных сил не формируют замкнутых орбит (см. [[теорема Бернарда]]), аналогичный вектор <math>\mathcal{A}</math> редко имеет простое определение и в общем случае представляет собой [[многозначная функция|многозначную функцию]] угла <math>\theta</math> между <math>\mathbf{r}</math> и <math>\mathcal{A}</math>.
+
+=== Изменение под действием возмущающих центральных сил ===
+
+[[Изображение:Precessing ellipse.png|right|thumb|250px|Рис. 5: Медленно [[прецессия|прецессирующая]] эллиптическая орбита, с эксцентриситетом <math>\scriptstyle e=0{,}9</math>. Такая прецессия возникает в проблеме Кеплера, если притягивающая [[центральная сила]] немного отличается от закона тяготения Ньютона. Скорость прецессии можно вычислить, используя приведённые в параграфе формулы.]]
+
+Во многих практических проблемах, типа планетарного движения, взаимодействие между двумя телами только ''приблизительно'' зависит обратно пропорционально квадрату расстояния. В таких случаях, вектор Лапласа — Рунге — Ленца <math>\mathbf{A}</math> не постоянен. Однако, если возмущающий потенциал <math>h(r)</math> зависит только от расстояния, то полная энергия <math>E</math> и вектор [[угловой момент|углового момента]] <math>\mathbf{L}</math>, сохраняются. Поэтому, траектория движение все ещё находится в перпендикулярной к <math>\mathbf{L}</math> плоскости и величина <math>A</math> сохраняется, согласно уравнению <math>A^2= m^2 k^2 +2 m E L^2 \!\,</math>. Следовательно, направление <math>\mathbf{A}</math> медленно вращается по орбите в плоскости. Используя каноническую теорию возмущений и [[координаты действие-угол]], можно прямо показать <ref name="goldstein_1980" />, что <math>\mathbf{A}</math> вращается со скоростью
+
+: <math>
+\frac{\partial}{\partial L} \langle h(r) \rangle = 
+\frac{\partial}{\partial L} \left\{ \frac{1}{T} \int\limits_{0}^{T} h(r) \ dt \right\} = 
+\frac{\partial}{\partial L} \left\{ \frac{m}{L^{2}} \int\limits_{0}^{2\pi} r^{2} h(r) d\theta \right\},
+</math>
+
+где <math>T</math> — период орбитального движения и равенство <math>L\,dt=mr^2\,d\theta</math> использовалось, чтобы преобразовать интеграл по времени в интеграл по углу (рис. 5). Например, принимая во внимание эффекты [[общая теория относительности|общей теории относительности]], приходим к добавке, которая в отличие от обычной гравитационной силы Ньютона зависит обратно пропорционально кубу расстояния <ref name="einstein_1915">{{cite journal | last = Einstein | first = A | authorlink = Albert Einstein | year = 1915 | title = Erklärung der Perihelbeivegung der Merkur aus der allgemeinen Relativitätstheorie. | journal = Sitzungsberichte der der Königlich Preußischen Akademie der Wissenschaften | volume = 47 | issue = 2 | pages = 831&ndash;839}}</ref>:
+
+: <math>
+h(r) = \frac{kL^{2}}{m^{2}c^{2}} \left( \frac{1}{r^{3}} \right). 
+</math>
+
+Подставляя эту функцию в интеграл и используя уравнение
+
+: <math>
+\frac{1}{r} = \frac{mk}{L^{2}} \left( 1 + \frac{A}{mk} \cos\theta \right),
+</math>
+
+чтобы выразить <math>r</math> в терминах <math>\theta</math>, [[Прецессия|скорость прецессии]] [[перицентр]]а, вызванная этим возмущением, запишется в виде <ref name="einstein_1915" />
+
+: <math>
+\frac{6\pi k^{2}}{TL^{2}c^{2}}.
+</math>
+
+которая близка по значению к величине прецессии для [[Меркурий (планета)|Меркурия]] необъяснённой ньютоновской теорией гравитации <ref>{{cite journal | last = Le Verrier | first = UJJ | authorlink = Le Verrier | year = 1859 | title = Sur la théorie de Mercure et sur le mouvement du périhélie de cette planète; Lettre de M. Le Verrier à M. Faye. | journal = Comptes Rendus de l'Academie de Sciences (Paris) | volume = 49 | pages = 379&ndash;383}}[http://gallica.bnf.fr/ark:/12148/bpt6k3006f]</ref>. Это выражение используется для оценки прецессии связанной с поправками [[ОТО|общей теории относительности]] для двойных [[пульсар]]ов <ref>{{cite book | last = Will | first = CM | year = 1979 | title = General Relativity, an Einstein Century Survey | edition = SW Hawking and W Israel, eds. | publisher = Cambridge University Press | location = Cambridge | pages = Chapter 2}}</ref>. Это согласие с экспериментом является сильным аргументом в пользу общей теории относительности <ref>{{cite book | last = Pais | first = A. | authorlink = Abraham Pais | year = 1982 | title = Subtle is the Lord: The Science and the Life of Albert Einstein | publisher = Oxford University Press }}<br />Пайс, Абрахам. (1989) Научная деятельность и жизнь Альберта Эйнштейна. Пер. с англ. В. И. и О. И. Мацарских; Под ред. А. А. Логунова. — М.: Наука, 1989. — 566,[1] с., [4] л. ил., 22 см — ISBN 5-02-014028-7.</ref>.
+
+== Теория групп ==
+=== Преобразование Ли ===
+
+[[Изображение:Scaled ellipses.png|thumb|right|350px|Рис. 6: Преобразование Ли, из которого выводится сохранение вектора Лапласа — Рунге — Ленца <math>\scriptstyle \mathbf{A}</math>. Когда скалируемый параметр <math>\scriptstyle \lambda</math> изменяется, энергия и угловой момент тоже меняются, но эксцентриситет <math>\scriptstyle e</math> и вектор <math>\scriptstyle \mathbf{A}</math> не изменяются.]]
+
+Существует другой метод вывода вектора Лапласа — Рунге — Ленца, использующий вариацию координат без привлечения скоростей <ref name="prince_eliezer_1981" >{{cite journal | last = Prince | first = GE | coauthors = Eliezer CJ | year = 1981 | title = On the Lie symmetries of the classical Kepler problem | journal = Journal of Physics A: Mathematical and General | volume = 14 | pages = 587&ndash;596}}</ref>. Скалирование координат <math>\mathbf{r}</math> и времени <math>t</math> с разной степенью параметра <math>\lambda</math> (рис. 6)
+
+: <math>
+t \rightarrow \lambda^{3}t, \ 
+\mathbf{r} \rightarrow \lambda^{2}\mathbf{r}, \ 
+\mathbf{p} \rightarrow \frac{1}{\lambda}\mathbf{p}. 
+</math>
+
+Это преобразование изменяет полный угловой момент <math>L</math> и энергию <math>E</math>
+
+: <math>
+L \rightarrow \lambda L, \ 
+E \rightarrow \frac{1}{\lambda^{2}} E,
+</math>
+
+но сохраняет произведение <math>EL^2</math>. Отсюда следует, что эксцентриситет <math>e</math> и величина <math>A</math> сохраняются в уже [[#Вывод орбит Кеплера|упомянутом ранее]] уравнении
+
+: <math>
+A^2 = m^2 k^2 e^{2} = m^2 k^2 + 2 m E L^2.
+</math>
+
+Направление <math>\mathbf{A}</math> также сохраняется, поскольку полуоси не изменяются при скалировании. Это преобразование оставляет верным [[Законы Кеплера|третий закон Кеплера]], а именно то, что полуось <math>a</math> и период <math>T</math> формируют константу <math>T^2/a^3</math>.
+
+=== Скобки Пуассона ===
+
+Для трёх компонент <math>L_i</math> вектора углового момента <math>\mathbf{L}</math> можно определить [[скобки Пуассона]]
+
+: <math>
+\left[ L_{i}, L_{j}\right] = \sum_{s=1}^{3} \varepsilon_{ijs} L_{s}
+</math>,
+
+где индекс <math>i</math> пробегает значения = 1, 2, 3 и <math>\varepsilon_{ijs}</math> — абсолютно [[антисимметричный тензор]], то есть [[символ Леви-Чивита]] (третий индекс суммирования <math>s</math>, чтобы не путать с силовым параметром <math>k</math>, определённым [[#Математическое определение|выше]]). В качестве скобок Пуассона используются квадратные скобки (а не фигурные), как и в литературе и, в том числе, чтобы интерпретировать их как [[квантовая механика|квантовомеханические]] [[каноническое коммутационное соотношение|коммутационные соотношения]] в [[#Квантовая механика атома водорода|следующем разделе]].
+
+Как показано [[#Альтернативная формулировка|выше]], изменённый вектор Лапласа — Рунге — Ленца <math>\mathbf{D}</math> можно определить с той же размерностью, что и [[угловой момент]] разделив <math>\mathbf{A}</math> на <math>p_0</math>. Скобка Пуассона <math>\mathbf{D}</math> с вектором углового момента <math>\mathbf{L}</math> запишется в похожем виде
+
+: <math>
+\left[ D_{i}, L_{j}\right] = \sum_{s=1}^{3} \varepsilon_{ijs} D_{s}
+</math>
+
+Скобка Пуассона <math>\mathbf{D}</math> с <math>\mathbf{D}</math> зависит от знака <math>E</math>, то есть когда полная энергия <math>E</math> отрицательна (эллиптические орбиты под действием центральной силы зависящей обратно пропорционально квадрату расстояния) или положительная (гиперболические орбиты). Для ''отрицательных'' энергий скобки Пуассона примут вид
+
+: <math>
+\left[ D_{i}, D_{j}\right] = \sum_{s=1}^{3} \varepsilon_{ijs} L_{s}.
+</math>
+
+В то время как для ''положительных'' энергий скобки Пуассона имеют противоположный знак
+
+: <math>
+\left[ D_{i}, D_{j}\right] = -\sum_{s=1}^{3} \varepsilon_{ijs} L_{s}.
+</math>
+
+[[Инварианты Казимира]] для отрицательных энергий определяются посредством следующих соотношений
+
+: <math>
+C_{1} = \mathbf{D} \cdot \mathbf{D} + \mathbf{L} \cdot \mathbf{L} = \frac{mk^{2}}{2\left|E\right|}
+</math>
+
+: <math>
+C_{2} = \mathbf{D} \cdot \mathbf{L} = 0
+</math>
+
+и мы имеем нулевые скобки Пуассона для всех компонент <math>\mathbf{D}</math> и <math>\mathbf{L}</math>
+
+: <math>
+\left[ C_{1}, L_{i} \right] = \left[ C_{1}, D_{i} \right] = 
+\left[ C_{2}, L_{i} \right] = \left[ C_{2}, D_{i} \right] = 0
+</math>
+
+<math>C_2</math> равен нулю, из-за ортогональности векторов. Однако другой инвариант <math>C_1</math> нетривиален и зависит только от <math>m</math>, <math>k</math> и <math>E</math>. Этот инвариант можно использовать для вывода спектра [[атом водорода|атома водорода]], используя только квантовомеханическое каноническое коммутационное соотношение, вместо более сложного [[уравнение Шрёдингера|уравнения Шрёдингера]].
+
+=== Теорема Нётер ===
+
+[[Теорема Нётер]] утверждает, что инфинитезимальная вариация [[обобщённые координаты|обобщённых координат]] физической системы
+
+: <math>
+\delta q_{i} = \varepsilon g_{i}(\mathbf{q}, \mathbf{\dot{q}}, t)
+</math>
+
+вызывает изменение [[функция Лагранжа|функции Лагранжа]] в первом порядке на полную производную по времени
+
+: <math>
+\delta L = \varepsilon \frac{d}{dt} G(\mathbf{q}, t)
+</math>
+
+соответствует сохранению величины
+
+: <math>
+J = -G + \sum_{i} g_{i} \left( \frac{\partial L}{\partial \dot{q}_{i}}\right).
+</math>
+
+Сохранённая компонента вектора Лапласа — Рунге — Ленца <math>A_s</math> соответствует вариации координат <ref>{{cite journal | last = Lévy-Leblond | first = JM | year = 1971 | title = Conservation Laws for Gauge-Invariant Lagrangians in Classical Mechanics | journal = American Journal of Physics | volume = 39 | pages = 502&ndash;506}}</ref>
+
+: <math>
+\delta x_{i} = \frac{\varepsilon}{2} \left[ 2 p_{i} x_{s} - x_{i} p_{s} - \delta_{is} \left( \mathbf{r} \cdot \mathbf{p} \right), \right]
+</math>
+
+где <math>i</math> равняется 1, 2 и 3, а <math>x_i</math> и <math>p_i</math> — ''i''-ые компоненты векторов положения <math>\mathbf{r}</math> и импульса <math>\mathbf{p}</math>, соответственно. Как обычно, <math>\delta_{is}</math> — [[дельта Кронекера|символ Кронекера]]. Получающееся изменение в первом порядке функции Лагранжа запишем как
+
+: <math>
+\delta L = \frac{1}{2}\varepsilon mk\frac{d}{dt} \left( \frac{x_{s}}{r}+\left[ p^{2} x_{s} - p_{s} \ \left(\mathbf{r} \cdot \mathbf{p}\right) \right] \right).
+</math>
+
+Это приводит к сохранению компоненты <math>A_s</math>
+
+: <math>
+A_{s} = \left[ p^{2} x_{s} - p_{s} \ \left(\mathbf{r} \cdot \mathbf{p}\right) \right] - mk \left( \frac{x_{s}}{r} \right) = 
+\left[ \mathbf{p} \times \mathbf{r} \times \mathbf{p} \right]_{s} - mk \left( \frac{x_{s}}{r} \right).
+</math>
+
+=== Законы сохранения и симметрия ===
+
+Вариация координаты, которая приводит к сохранению вектора Лапласа — Рунге — Ленца (см. [[теорема Нётер]]), можно рассматривать как некоторую [[симметрия|симметрию]] системы. В [[классическая механика|классической механике]], симметрии — непрерывные операции, которые отображают одну орбиту на другую, не изменяя энергию системы; в [[квантовая механика|квантовой механике]], симметрии — непрерывные операции, которые ''смешивают'' [[атомные орбитали]], не изменяя полную энергию. Например, любая [[центральная сила]] является симметрической при действии [[Группа вращений|группы вращения]] [[SO(3)]], приводя к сохранению [[угловой момент|углового момента]] <math>\mathbf{L}</math>. Классически, полное вращение системы не затрагивает энергию орбиты; квантовомеханически, вращения смешивают [[сферические гармоники]] с тем же самым квантовым числом <math>l</math> (вырожденные состояния), не изменяя энергию.
+
+[[Изображение:Kepler hodograph family.png|thumb|right|Рис. 7: Семейство кругов годографа импульса для заданной энергии <math>\scriptstyle l</math>. Все круги проходят через две точки <math>\scriptstyle \pm p_{0} = \pm \sqrt{2m\left| E \right|}</math> на оси <math>\scriptstyle p_x</math> (сравните с рис. 3). Это семейство годографов соответствует семейству [[круги Аполлона|кругов Аполлона]], и <math>\scriptstyle \sigma</math> [[изоповерхность|изоповерхностям]] [[биполярные координаты|биполярных координат]].]]
+
+Симметрия для центральной силы, зависящей обратно квадрату расстояния, является выше и более тонкой. Специфическая симметрия проблемы Кеплера приводит к сохранению как вектора углового момента <math>\mathbf{L}</math>, так и вектора Лапласа — Рунге — Ленца <math>\mathbf{A}</math> (как определено [[#Математическое определение|выше]]) и квантовомеханически гарантирует, что уровни энергии [[атом водорода|атома водорода]] не зависят от квантовых чисел углового момента <math>l</math> и <math>m</math>. Симметрия является более тонкой, потому что операция симметрии должна иметь место в пространстве большей размерности; такие симметрии часто называют ''скрытыми симметриями'' <ref name="prince_eliezer_1981" />. Классически, более высокая симметрия проблемы Кеплера учитывает непрерывные изменения орбит, которые сохраняют энергию, но не угловой момент; другими словами орбиты с одинаковой энергией, но различными угловыми моментами (эксцентриситетом) могут быть преобразованы непрерывно друг в друга. Квантовомеханически это соответствует смешиванию орбиталей, которые отличаются квантовыми числами <math>l</math> и <math>m</math>, [[атомные орбитали]] типа <math>s</math> (<math>l=0</math>) и <math>p</math> (<math>l=1</math>). Такое смешивание нельзя произвести с обычными трёхмерными трансляциями или вращениями, но оно эквивалентно вращению в пространстве с более высоким измерением.
+
+Для ''отрицательных'' энергий — то есть связанная система — симметрия [[SO(4)]], которая сохраняет длину четырёхмерных векторов
+
+: <math>
+\left| \mathbf{e} \right|^{2} = e_{1}^{2} + e_{2}^{2} + e_{3}^{2} + e_{4}^{2}
+</math>
+
+В [[1935]] году, [[Фок, Владимир|Владимир Фок]] показал, что квантовомеханическая проблема Кеплера, эквивалентна проблеме свободной частицы, ограниченной четырёхмерной [[гиперсфера|гиперсферой]] <ref name="fock_1935" />. В частности, Фок показал, что [[волновая функция]] [[уравнение Шрёдингера|уравнения Шрёдингера]] в пространстве импульсов для проблемы Кеплера представляет собой [[стереографическая проекция|стереографическую проекцию]] [[сферические гармоники|сферических гармоник]] на гиперсферу. Вращение гиперсферы и перепроектирование приводит к непрерывному преобразованию эллиптических орбит, не изменяющего энергию; квантовомеханически это соответствует смешиванию всех орбиталей с одинаковым главным квантовым числом <math>n</math>. [[Баргман, Валентин|Валентин Баргман]] отметил впоследствии, что скобки Пуассона для вектора углового момента <math>\mathbf{L}</math> и скалированного вектора Лапласа — Рунге — Ленца <math>\mathbf{D}</math> формируют [[алгебра Ли|алгебру Ли]] для SO(4). <ref name="bargmann_1936" /> Проще говоря, эти шесть величин <math>\mathbf{D}</math> и <math>\mathbf{L}</math> соответствуют шести сохраняющимся угловым импульсам в четырёх измерениях, связанных с шестью, возможными [[SO(4)|простыми вращениями]] в этом пространстве (есть шесть способов выбрать две оси из четырёх). Это заключение не подразумевает, что наша [[вселенная]] — четырёхмерная [[гиперсфера]]; это просто означает, что эта специфическая проблема физики ([[проблема двух тел]] для центральной силы, зависящей обратно квадрату расстояния) математически эквивалентна свободной частице на четырёхмерной гиперсфере.
+
+Для ''положительных'' энергий — то есть, для ''рассеянных'' систем — более высокая симметрия — [[SO(3,1)]], которая сохраняет длину [[4-вектор]]а в пространстве с [[пространство Минковского|метрикой Минковского]]
+
+: <math>
+ds^{2} = e_{1}^{2} + e_{2}^{2} + e_{3}^{2} - e_{4}^{2}
+</math>
+
+Фок <ref name="fock_1935" /> и Баргман <ref name="bargmann_1936" /> рассмотрели как отрицательные, так и положительные энергии. Они также были рассмотрены энциклопедически Бендером и Ициксоном <ref name="bander_itzykson_1966">{{cite journal | last = Bander | first = M | coauthors = Itzykson C | year = 1966 | title = Group Theory and the Hydrogen Atom (I) | journal = Reviews of Modern Physics | volume = 38 | pages = 330&ndash;345}}</ref><ref>{{cite journal | last = Bander | first = M | coauthors = Itzykson C | year = 1966 | title = Group Theory and the Hydrogen Atom (II) | journal = Reviews of Modern Physics | volume = 38 | pages = 346&ndash;358}}</ref>.
+
+==== Симметрия вращений в 4-хмерном пространстве ====
+
+[[Изображение:Kepler Fock projection.svg|thumb|right|300px|Рис. 8: Годограф импульса на рис. 7 соответствует [[стереографическая проекция|стереографической проекции]] больших кругов на четырёхмерную <math>\scriptstyle \eta</math> сферу единичного радиуса. Все большие круги пересекают <math>\scriptstyle \eta_x</math> ось, которая направлена перпендикулярно странице. Проекция из северного полюса (единичный вектор <math>\scriptstyle \mathbf{w}</math>) к <math>\scriptstyle \eta_x</math> — <math>\scriptstyle \eta_y</math> плоскости, как показано для пурпурного годографа пунктирной чёрной линией. Большой круг на широте <math>\scriptstyle \alpha</math> соответствует [[эксцентриситет]]у <math>\scriptstyle e=\sin\alpha</math>. Цвета больших кругов, показанных здесь соответствуют цветам их годографов на рис. 7.]]
+
+Связь между [[проблема двух тел|проблемой Кеплера]] и вращениями в четырёхмерном пространстве [[SO(4)]] можно достаточно просто визуализировать <ref name="bander_itzykson_1966" /><ref name="rogers_1973">{{cite journal | last = Rogers | first = HH | year = 1973 | title = Symmetry transformations of the classical Kepler problem | journal = Journal of Mathematical Physics | volume = 14 | pages = 1125&ndash;1129}}</ref><ref>{{cite book | last = Guillemin | first = V | coauthors = Sternberg S | year = 1990 | title = Variations on a Theme by Kepler | publisher = American Mathematical Society Colloquium Publications, volume 42 | id = ISBN 0-8218-1042-1}}</ref>. Пусть в четырёхмерном пространстве заданы [[декартовы координаты]], которые обозначены <math>(w,\;x,\;y,\;z)</math>, где <math>(x,\;y,\;z)</math> представляют декартовы координаты обычного положения трёхмерного вектора <math>\mathbf{r}</math>. Трёхмерный вектор импульса <math>\mathbf{p}</math> связан с четырёхмерным вектором <math>\boldsymbol{\eta}</math> на четырёхмерной единичной сфере посредством
+
+: <math>
+\boldsymbol\eta = 
+\frac{p^{2} - p_{0}^{2}}{p^{2} + p_{0}^{2}} \mathbf{\hat{w}} + \frac{2 p_{0}}{p^{2} + p_{0}^{2}} \mathbf{p} = 
+\frac{mk - r p_{0}^{2}}{mk} \mathbf{\hat{w}} + \frac{rp_{0}}{mk} \mathbf{p}
+</math>,
+
+где <math>\mathbf{\hat{w}}</math> — единичный вектор вдоль новой оси <math>w</math>. Поскольку <math>\boldsymbol{\eta}</math> имеет только три независимые компоненты, то этот вектор можно обратить, получив выражение для <math>\mathbf{p}</math>. Например, для компененты <math>x</math>
+
+: <math>
+p_{x} = p_{0} \frac{\eta_{x}}{1 - \eta_{w}} 
+</math>
+
+и аналогично для <math>p_y</math> и <math>p_z</math>. Другими словами, трёхмерный вектор <math>\mathbf{p}</math> является стереографической проекцией четырёхмерного вектора <math>\boldsymbol{\eta}</math>, умноженному на <math>p_0</math> (рис. 8).
+
+Без потери общности, мы можем устранить нормальную вращательную симметрию, выбирая [[декартовы координаты]], где ось <math>z</math> направлена вдоль вектора углового момента <math>\mathbf{L}</math>, и годограф импульса расположен как показано на рисунке 7, с центрами кругов на оси <math>y</math>. Так как движение происходит в плоскости, а <math>\mathbf{p}</math> и <math>L</math> ортогональны, <math>p_z=\eta_z=0</math> и внимание можно сосредоточить на трёхмерном векторе <math>\boldsymbol{\eta}=(\eta_w,\;\eta_x,\;\eta_y)</math>. Семейство [[круги Аполлона|кругов Аполлона]] годографов импульса (рис. 7) соответствует множеству [[большой круг|больших кругов]] на трёхмерной сфере <math>\boldsymbol{\eta}</math>, все из которых пересекаются ось <math>\eta_x</math> в этих двух фокусах <math>\eta_x=\pm 1</math>, соответствующих фокусам годографа импульса при <math>p_x=\pm p_0</math>. Большие круги связаны простым вращением вокруг оси <math>\eta_x</math> (рис. 8). Эта вращательная симметрия преобразовывает все орбиты с той же самой энергией в друг друга; однако, такое вращение ортогонально к обычным трёхмерным вращениям, так как она преобразовывает четвёртое измерение <math>\eta_w</math>. Эта более высокая симметрия характерна для проблемы Кеплера и соответствует сохранению вектора Лапласа — Рунге — Ленца.
+
+Изящное решение для проблемы Кеплера с использованием [[переменные угол-действие|переменных угол-действие]] можно получить, избавляясь от избыточной четырёхмерной координаты <math>\boldsymbol{\eta}</math> и используя эллиптические цилиндрические координат <math>(\alpha,\;\beta,\;\varphi)</math> <ref>{{cite journal | last = Lakshmanan | first = M | coauthors = Hasegawa H | title = On the canonical equivalence of the Kepler problem in coordinate and momentum spaces | journal = Journal of Physics A | volume = 17 | pages = L889&ndash;L893}}</ref>
+
+: <math>
+\eta_{w} = \mathrm{cn}\, \alpha \  \mathrm{cn}\, \beta
+</math>
+: <math>
+\eta_{x} = \mathrm{sn}\, \alpha \  \mathrm{dn}\, \beta \  \cos \varphi
+</math>
+: <math>
+\eta_{y} = \mathrm{sn}\, \alpha \  \mathrm{dn}\, \beta \  \sin \varphi
+</math>
+: <math>
+\eta_{z} = \mathrm{dn}\, \alpha \  \mathrm{sn}\, \beta
+</math>,
+
+где используются [[эллиптические функции Якоби]]: sn, cn и dn.
+
+== Применение и обобщения ==
+=== Квантовая механика атома водорода ===
+
+ [[Изображение:Hydrogen energy levels.png|thumb|right|400px|Рис. 9: Уровни энергии водородного атома, предсказанные с использованием коммутационных соотношений углового момента и векторных операторов Лапласа — Рунге — Ленца; эти уровни энергии были проверены экспериментально.]]
+
+Скобки Пуассона дают простой способ для [[каноническое квантование|квантования классической системы]]. [[Коммутационное соотношение]] двух квантовомеханических [[оператор]]ов равняется [[скобки Пуассона|скобке Пуассона]] соответствующих классических переменных, умноженных на <math>i\hbar</math> <ref>{{cite book | last = Dirac | first = PAM | authorlink = Paul Dirac | year = 1958 | title = Principles of Quantum Mechanics, 4th revised edition | publisher = Oxford University Press}}</ref>. Выполняя это квантование и вычисляя собственные значения <math>C_{1}</math> оператора Казимира для проблемы Кеплера, [[Вольфганг Паули]] вывел энергетический спектр [[водородоподобные атомы|водородоподобного атома]] (рис. 9) и, таким образом, его атомный эмиссионный спектр <ref name="pauli_1926" />. Это изящное решение было получено до изобретения [[уравнение Шрёдингера|уравнения Шрёдингера]] <ref>{{cite journal | last = Schrödinger | first = E | authorlink = Erwin Schrödinger | year = 1926 | title = Quantisierung als Eigenwertproblem | journal = Annalen der Physik | volume = 384 | pages = 361&ndash;376}}</ref>.
+
+Особенность квантовомеханического оператора для вектора Лапласа — Рунге — Ленца <math>\mathbf{A}</math> то, что импульс и операторы углового момента не коммутируют друг с другом, следовательно, векторное произведение <math>\mathbf{p}</math> и <math>\mathbf{L}</math> должно быть определено тщательно <ref>{{cite book | last=Bohm | first=A. | year=1986 | title=Quantum Mechanics: Foundations and Applications | edition= 2<sup>nd</sup> edition | publisher=Springer Verlag | pages=208&ndash;222}}</ref>. Как правило, операторы в декартовой системе координат <math>A_s</math> определены с помощью симметризованного произведения
+
+: <math>
+A_{s} = - m k \hat{r}_{s} + \frac{1}{2} \sum_{i=1}^{3} \sum_{j=1}^{3} \varepsilon_{sij} \left( p_{i} l_{j} + l_{j} p_{i} \right), 
+</math>
+
+из которого определяются соответствующие [[лестничные операторы]]
+
+: <math>
+A_{0} = A_{3},
+</math>
+
+: <math>
+A_{\pm 1} = \mp \frac{1}{\sqrt{2}} \left( A_{1} \pm i A_{2} \right).
+</math>
+
+Нормированный оператор первого инварианта Казимира может быть определён подобным образом
+
+: <math>
+C_{1} = - \frac{m k^{2}}{2 \hbar^{2}} H^{-1} - I,
+</math>,
+
+где <math>H^{-1}</math> — оператор обратный к оператору энергии ([[гамильтониан]]) и <math>I</math> — единичный оператор. Применяя эти лестничные операторы к [[собственные состояния|собственным состояниям]] <math>\left| l m n \right.\rangle</math> операторов полного углового момента, азимутального углового момента и энергии, можно показать, что собственные состояния первого оператора Казимира задаются формулой <math>n^2-1</math>. Следовательно, уровни энергии даются выражением
+
+: <math>
+E_{n} = - \frac{m k^{2}}{2\hbar^{2} n^{2}}, 
+</math>
+
+которое идентично [[формула Ридберга|формуле Ридберга]] для [[атом водорода|атома водорода]] (рис 9).
+
+=== Обобщение на другие потенциалы и СТО ===
+
+Вектор Лапласа — Рунге — Ленца был обобщён на другие потенциалы и даже на [[СТО|специальную теорию относительности]]. Наиболее общую форму этого вектора можно записать в виде <ref name="fradkin_1967" />
+
+: <math>
+\mathcal{A} = 
+\left( \frac{\partial \xi}{\partial u} \right) \left(\mathbf{p} \times \mathbf{L}\right)  + 
+\left[ \xi - u \left( \frac{\partial \xi}{\partial u} \right)\right] L^{2}  \mathbf{\hat{r}}, 
+</math>,
+
+где <math>u=1/r</math> (см. [[теорема Бертрана]]) и <math>\xi=\cos\theta</math>, с углом <math>\theta</math> определённым как
+
+: <math>
+\theta = L \int^{u} \frac{du}{\sqrt{m^{2} c^{2} \left(\gamma^{2} - 1 \right) - L^{2} u^{2}}}.
+</math>
+
+Здесь <math>\gamma</math> — [[релятивистский фактор]]. Как и раньше, можно получить, сохраняющийся вектор бинормали <math>\mathbf{B}</math> взяв векторное произведение с сохраняющимся вектором углового момента
+
+: <math>
+\mathcal{B} = \mathbf{L} \times \mathcal{A}.
+</math>
+
+Эти два вектора можно соединить в сохраняющийся двухкомпонентный тензор <math>W</math>
+
+: <math>
+\mathcal{W} = \alpha \mathcal{A} \otimes \mathcal{A} + \beta \, \mathcal{B} \otimes \mathcal{B}.
+</math>
+
+Для примера вычислим вектор Лапласа — Рунге — Ленца для нерелятивистского изотропного гармонического осциллятора. <ref name="fradkin_1967" /> Рассмотрим центральную силу:
+
+: <math>
+\mathbf{F}(r)= -k \mathbf{r}
+</math>
+
+вектор [[угловой момент|углового момента]] сохраняется и поэтому движение происходит в плоскости. Сохраняющийся тензор можно переписать в более простом виде:
+
+: <math>
+\mathbf{W} = \frac{1}{2m} \mathbf{p} \otimes \mathbf{p} + \frac{k}{2} \, \mathbf{r} \otimes \mathbf{r},
+</math>
+
+хотя нужно заметить, что <math>p</math> и <math>r</math> не перпендикулярны, как <math>A</math> и <math>B</math>. Соответствующий вектор Лапласа — Рунге — Ленца имеет более сложную запись
+
+: <math>
+\mathbf{A} = \frac{1}{\sqrt{mr^{2}\omega_{0} A - mr^{2}E + L^{2}}} \left\{ \left( \mathbf{p} \times \mathbf{L} \right) + \left(mr\omega_{0} A - mrE \right) \mathbf{\hat{r}} \right\}
+</math>,
+
+где <math>\omega_{0} = \sqrt{\frac{k}{m}}</math> — частота осциллятора.
+
+== См. также ==
+
+* [[Проблема двух тел]]
+* [[Теорема Бертрана]]
+* [[Квантовая механика]]
+* [[Астрофизика]]
+
+== Литература ==
+{{reflist|2}}
+
+== Дополнительное чтение ==
+* {{cite journal | first=P.G.L. |last=Leach | coauthors=G.P. Flessas | title=Generalisations of the Laplace-Runge-Lenz vector | journal=J. Nonlinear Math. Phys. | volume=10 | year=2003 | pages=340&ndash;423 }} Статья посвящена обобщению вектора Лапласа — Рунге — Ленца на потенциалы отличные от кулоновского. [http://arxiv.org/abs/math-ph/0403028 arxiv.org]
+
+{{Избранная статья}}
+
+[[Категория:Классическая механика]]
+[[Категория:Небесная механика]]
+
+{{Link FA|en}}
+{{Link GA|zh}}
+
+[[de:Laplace-Runge-Lenz-Vektor]]
+[[en:Laplace–Runge–Lenz vector]]
+[[es:Vector de Runge-Lenz]]
+[[fr:Vecteur de Runge-Lenz]]
+[[he:וקטור לפלס-רונגה-לנץ]]
+[[it:Vettore di Lenz]]
+[[ko:라플라스-룽게-렌츠 벡터]]
+[[zh:拉普拉斯-龍格-冷次向量]]

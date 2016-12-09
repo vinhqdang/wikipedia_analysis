@@ -1,0 +1,91 @@
+En [[cristallographie]], pour un [[groupe d'espace]] G, une '''position de {{Lien|Ralph Wyckoff|texte=Wyckoff}}''' désigne un ensemble infini de points pour chacun desquels le [[groupe de symétrie]] « de site » est [[Action par conjugaison|conjugué]] d'un même [[sous-groupe]] du groupe d'espace G<ref>{{Ouvrage | langue = en | prénom1 = | nom1 = | auteur = Lev Kantorovich | titre = Quantum Theory of the Solid State: An Introduction | sous-titre = | éditeur = Springer | lieu = Dordrecht | année = 2004 | pages totales = 644 | format = poche | isbn = 978-1-4020-2153-4 | lccn = 2003070697 | passage = 28 | présentation en ligne = http://www.springer.com/west/home/materials?SGWID=4-10041-22-33589604-0 | lire en ligne = }}</ref>. Les points appartenant à une même position de Wyckoff sont dits « équivalents par symétrie ».
+
+Il existe des positions de Wyckoff générales et spéciales, qui se distinguent par leurs symétrie et multiplicité. Les positions de Wyckoff sont notées pour chaque groupe d'espace par une lettre [[Bas-de-casse|minuscule]]. Chaque groupe d'espace possède un nombre fini de positions de Wyckoff. Les [[tables internationales de cristallographie]] donnent les positions de Wyckoff pour les 17 groupes plans et les 230 groupes d'espace tridimensionnels<ref name="ITC-A">{{ITC-A-5}}</ref>.
+
+Une position de Wyckoff contient soit une seule [[orbite cristallographique]], soit une infinité d'orbites cristallographiques. Si deux orbites cristallographiques se caractérisent par le même groupe de symétrie de site, elles appartiennent à la même position de Wyckoff<ref name="Hans">{{Modèle:Hahn-Wondratschek1994 | passage=28-30}}</ref>.
+
+== Positions générales et spéciales ==
+
+Il existe deux types de positions de Wyckoff :
+* les positions générales ne sont invariantes que par l'application de l'opération [[Application identité|identité]] (''E'').  Tout groupe d'espace possède une et une seule position de Wyckoff générale, de coordonnées <math>(x,y,z)</math> ;
+* les positions spéciales sont invariantes par l'application de l'identité et d'au moins une autre opération de symétrie du groupe d'espace : ce sont les [[Point fixe|points fixes]] des éléments de symétrie (axe de [[Rotation dans l'espace|rotation]] pure, plan de [[Réflexion (mathématiques)|réflexion]] (miroir), centre d'[[Symétrie centrale|inversion]]).
+Parmi les 230 groupes d'espace tridimensionnels, 13 ne possèdent pas de position spéciale : ''P''1, ''P''2{{ind|1}}, ''Pc'', ''Cc'', ''P''2{{ind|1}}2{{ind|1}}2{{ind|1}}, ''Pca''2{{ind|1}}, ''Pna''2{{ind|1}}, ''P''4{{ind|1}}, ''P''4{{ind|3}}, ''P''3{{ind|1}}, ''P''3{{ind|2}}, ''P''6{{ind|1}} et ''P''6{{ind|5}}. Ce n'est pas le cas de tous les groupes d'espace ne contenant que des symboles d'éléments de symétrie translatoire. Par exemple, le groupe d'espace monoclinique ''P''2{{ind|1}}/''c'', contenant un axe hélicoïdal d'ordre 2 parallèle à la direction ''b'' et un miroir translatoire perpendiculaire à ''b'', est centrosymétrique : il possède quatre positions de Wyckoff spéciales dans l'[[Maille (cristallographie)#Unité asymétrique|unité asymétrique]] de la [[maille (cristallographie)|maille]], situées sur les différents centres d'inversion en <math>(0,0,0)</math>, <math>(</math>1/2<math>,0,0)</math>, <math>(0,0,</math>1/2<math>)</math> et <math>(</math>1/2<math>,0,</math>1/2<math>)</math>.
+
+== Symétrie ==
+Une position de Wyckoff se distingue par son [[groupe ponctuel de symétrie]]. Sa symétrie est indiquée en [[Symboles de Hermann-Mauguin|notation de Hermann-Mauguin]] : l'orientation de chaque élément d'opération de symétrie peut se lire à partir du symbole, en sachant que dans chaque [[système réticulaire]] les directions de symétrie sont données dans un ordre conventionnel.
+
+Dans les systèmes réticulaires de symétrie supérieure à monoclinique (orthorhombique, quadratique, hexagonal, trigonal et cubique), il existe trois directions de symétrie. Lorsqu'une position de Wyckoff n'est située que sur un élément de symétrie non translatoire (à l'exception du centre d'inversion), les directions sans élément de symétrie sont représentées par un point. Par exemple, la symétrie ponctuelle d'une position spéciale située uniquement sur un axe de rotation d'ordre 2 parallèle à la direction ''b'' dans un système orthorhombique est notée « .2. » : dans les directions ''a'' et ''c'', il n'y a pas d'élément de symétrie non translatoire passant par cette position.
+
+Le groupe ponctuel d'une position de Wyckoff est un sous-groupe du groupe ponctuel de symétrie associé au groupe d'espace. Le groupe ponctuel de symétrie de la position générale est 1.
+
+== Multiplicité ==
+La multiplicité d'une position de Wyckoff est le nombre de points équivalents générés dans la maille conventionnelle par l'application de tous les éléments de symétrie du groupe d'espace.
+
+Pour un groupe d'espace G, la multiplicité de la position de Wyckoff générale est égale au nombre de [[Classe suivant un sous-groupe|classes à droite]] de G suivant son sous-groupe normal de [[Translation (géométrie)|translations]] T, c'est-à-dire à l'[[Cardinal d'un ensemble fini|ordre]] du groupe quotient G/T ou encore l'[[Indice d'un sous-groupe|indice]] de T dans G, multiplié par le nombre de nœuds dans la maille.
+
+La multiplicité d'une position spéciale d'un groupe d'espace est un [[diviseur]] de la multiplicité de la position générale.
+
+== Notation ==
+Les positions de Wyckoff sont notées pour chaque groupe d'espace par une lettre latine minuscule, dite « lettre de Wyckoff », par ordre croissant des multiplicités. La lettre a désigne la position de Wyckoff possèdant la plus haute symétrie de site. Une exception est faite pour le groupe d'espace ''Pmmm'', qui possède le nombre maximal de positions de Wyckoff (27) : la position générale est dans ce cas notée α<ref name="ITC-A"/>.
+
+== Positions de Wyckoff et orbites cristallographiques ==
+En général, les positions de Wyckoff contiennent une infinité d'[[orbite cristallographique|orbites cristallographiques]]. Si les coordonnées d'une position de Wyckoff sont toutes fixes, alors cette position ne contient qu'une orbite cristallographique<ref name="Hans"/>.
+
+En effet, si on considère la position de Wyckoff générale de coordonnées <math>(x,y,z)</math>, les deux orbites {W{{ind|i}}X{{ind|1}}} et {W{{ind|i}}X{{ind|2}}} générées par les opérations W{{ind|i}} du groupe d'espace G et les points X{{ind|1}} (0,14, 0,23, 0,35) et X{{ind|2}} (0,02, 0,56, 0,24), par exemple, sont différentes mais possèdent le même groupe de symétrie de site : elles appartiennent toutes deux, ainsi qu'une infinité d'autres, à la même position de Wyckoff générale.
+
+Par contre, dans le groupe d'espace ''Pnma'', la position spéciale a, de coordonnées (0,0,0), ne contient qu'une seule orbite cristallographique contenant les points de coordonnées (0,0,0), (1/2,0,1/2), (0,1/2,0) et (1/2,1/2,1/2)<ref>{{en}} {{lien web | url=http://www.cryst.ehu.es/cgi-bin/cryst/programs/nph-wp-list?gnum=62 | titre=''Wyckoff Positions of Group 62 (Pnma)'' | site=Bilbao Crystallographic Server | consulté le=23 août 2011}}</ref>.
+
+== Exemple ==
+Considérons le groupe d'espace orthorhombique ''Pmm''2. Sa décomposition en classes à droite suivant son sous-groupe normal de translations produit un [[Groupe (mathématiques)|groupe]] d'ordre 4 contenant les opérations de symétrie suivantes :
+* [[Application identité|identité]] ;
+* [[Réflexion (mathématiques)|réflexion]] par rapport au plan de coordonnées <math>(0,y,z)</math> ;
+* réflexion par rapport au plan de coordonnées <math>(x,0,z)</math> ;
+* [[Rotation dans l'espace|rotation]] d'ordre 2 (d'angle 180°) autour de l'axe de coordonnées <math>(0,0,z)</math>, intersection des deux plans <math>(0,y,z)</math> et <math>(x,0,z)</math>.
+L'application de ces opérations de symétrie sur la position générale <math>(x,y,z)</math> génère les positions équivalentes <math>(x,y,z)</math>, <math>(-x,y,z)</math>, <math>(x,-y,z)</math> et <math>(-x,-y,z)</math> : la multiplicité de la position de Wyckoff générale dans le groupe d'espace ''Pmm''2 est 4.
+
+L'application des opérations de symétrie sur la position spéciale <math>(x,0,z)</math> génère les positions équivalentes <math>(x,0,z)</math> et <math>(-x,0,z)</math> : la multiplicité de cette position est 2.
+
+La position spéciale <math>(0,0,z)</math> est invariante sous toutes les opérations de symétrie : sa multiplicité est 1.
+
+Toutes les positions de Wyckoff du groupe d'espace ''Pmm''2 possèdent au moins une coordonnée variable (<math>z</math>) : elles contiennent toutes une infinité d'orbites cristallographiques.
+{| class="wikitable" style="text-align:center;"
+|+ Positions de Wyckoff du groupe d'espace ''Pmm''2
+|-
+! scope=col | Multiplicité
+! scope=col | Lettre de Wyckoff
+! scope=col | Symétrie ponctuelle
+! scope=col colspan="4" | Coordonnées
+|-
+| 4 || i || 1 || <math>(x,y,z)</math> || <math>(-x,y,z)</math> || <math>(x,-y,z)</math> || <math>(-x,-y,z)</math>
+|-
+| 2 || h || ''m''.. || <math>(</math>1/2<math>,y,z)</math> || <math>(</math>1/2<math>,-y,z)</math> || ||
+|-
+| 2 || g || ''m''.. || <math>(0,y,z)</math> || <math>(0,-y,z)</math> || ||
+|-
+| 2 || f || .''m''. || <math>(x,</math>1/2<math>,z)</math> || <math>(-x,</math>1/2<math>,z)</math> || ||
+|-
+| 2 || e || .''m''. || <math>(x,0,z)</math> || <math>(-x,0,z)</math> || ||
+|-
+| 1 || d || ''mm''2 || <math>(</math>1/2<math>,</math>1/2<math>,z)</math> || || ||
+|-
+| 1 || c || ''mm''2 || <math>(</math>1/2<math>,0,z)</math> || || ||
+|-
+| 1 || b || ''mm''2 || <math>(0,</math>1/2<math>,z)</math> || || ||
+|-
+| 1 || a || ''mm''2 || <math>(0,0,z)</math> || || ||
+|}
+
+== Notes et références ==
+{{Traduction/Référence|en|Wyckoff positions|349656358}}
+<references />
+
+== Liens externes ==
+* {{en}} {{Lien web|url=http://www.cryst.ehu.es/cryst/get_wp.html |titre=''Wyckoff Positions'' |site=Bilbao Crystallographic Server |auteur= |année= |consulté le=7 septembre 2010}}
+* {{en}} {{Lien web|url=http://reference.iucr.org/dictionary/Wyckoff_position |titre=''Wyckoff position'' |auteur= |année= |site=IUCr Online Dictionary of Crystallography |consulté le=7 septembre 2010}}
+
+{{Portail|chimie|physique|matériaux|minéraux et roches}}
+
+[[Catégorie:Cristallographie]]
+
+[[en:Wyckoff positions]]
+[[de:Punktlage]]

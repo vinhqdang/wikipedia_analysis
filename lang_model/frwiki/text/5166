@@ -1,0 +1,340 @@
+
+Dans les domaines des [[statistique]]s et des [[probabilité]]s, l''''écart type''' est une mesure de la [[dispersion statistique]] d'un ensemble de valeurs autour d'une valeur [[moyenne]]. C'est la racine carrée de la [[Variance (statistiques et probabilités)|variance]] qui apparaît naturellement dans les calculs. L'avantage est qu'il est de même dimension physique que les grandeurs considérées.
+
+En [[statistique descriptive]] la variance est calculée à l'aide d'une formule algébrique appliquée sur une [[population]], en probabilités elle se définit comme une [[espérance mathématique]] à partir d'une [[loi de probabilité]]. Lorsqu'il ne s'agit plus de populations mais de signaux, le terme variance est conservé mais ''écart type'' (en anglais {{lang|en|''standard deviation''}}) est remplacé par ''moyenne quadratique'' (en anglais {{lang|en|''root mean square''}}).
+
+Les écarts types connaissent de nombreuses applications, tant dans les sondages qu'en physique, en biologie ou dans la finance. Ils permettent en général de synthétiser les résultats numériques d'une expérience répétée.
+
+== Histoire ==
+[[Fichier:Comparison standard deviations.svg|thumb|fig.01 - Exemple de deux échantillons ayant la même moyenne mais des écart_types différents illustrant l'écart type comme mesure de la dispersion autour de la moyenne.]]
+C'est à [[Abraham de Moivre]] qu'est attribuée la découverte du concept de mesure de la dispersion, dans son ouvrage {{citation étrangère|lang=en|The Doctrine of Chances}} en 1718<ref name=PBerstein group="b">{{Harvsp|Bernstein|1996|p=127}}</ref>. Mais le terme d'écart type ({{citation étrangère|lang=en|standard deviation}}) a été employé pour la première fois par [[Karl Pearson]] en 1893 devant la {{citation étrangère|lang=en|London Royal Society}}<ref name=Dodge506 group="b">{{Harvsp|Dodge|2010|p=506}}</ref>. C'est aussi Karl Pearson qui utilisa pour la première fois le symbole <math>\scriptstyle \sigma</math> pour représenter l'écart type<ref name=Dodge506 group="b"/>. En 1908 [[William Gosset]], plus connu sous le pseudonyme de [[Student]], définit l'écart type empirique d'un [[Échantillon (statistiques)|échantillon]] et montre  qu'il est important de le distinguer de l'écart type d'une [[population]]<ref name=Dodge506 group="b"/>.
+
+== Généralités ==
+
+En [[statistique]]s comme en [[Probabilité|probabilités]], on définit des critères de position ainsi que des critères de dispersion. Dans le domaine des probabilités, la dispersion d'une [[variable aléatoire réelle]] ''X'' autour de sa moyenne est caractérisée par la [[Variance (statistiques et probabilités)|variance]], dont le calcul repose sur la notion d'[[espérance mathématique]]<ref name=Saporta25 group="b">{{Harvsp|Saporta|2006|p=25}}</ref>.
+<!--------------
+Cette notion apparaît aussi dans l'[[signal|analyse des signaux]], souvent en relation avec la notion de [[processus stochastique|processus aléatoire]], {{référence nécessaire|généralement sous le nom de [[moyenne quadratique]]}}. 
+--------------------->
+
+En [[statistique descriptive]], où l'étude porte sur une population finie parfaitement connue, la moyenne et la médiane sont utilisés comme critères de [[Tendance centrale|position]] et l'écart type, l'écart moyen, l'étendue {{etc}} comme critère de [[dispersion statistique|dispersion]]. Tous ces critères aident ensemble à résumer l'échantillon statistique<ref name=Saporta119 group="b">{{Harvsp|Saporta|2006|p=119}}</ref>.
+
+La [[statistique mathématique]] porte au contraire sur une population infinie qui ne peut être connue qu'imparfaitement à travers un ensemble fini de données <math>\scriptstyle \{x_1;\dots;x_n\}</math>. Pour interpréter ces données imprécises, il faut faire appel à la notion de [[probabilité]]. Les données sont alors considérées comme une réalisation d'un échantillon de n variables aléatoires <math>\scriptstyle X_1,\dots,X_n</math>. Par des calculs arithmétiques analogues à ceux qui sont effectués en statistique descriptive, il est possible de déduire de la réalisation de l'échantillon des estimations de la moyenne empirique et de la variance empirique qui sont elles-mêmes des variables aléatoires. 
+
+Dans la pratique, on préfère l'écart type ''σ'' (lettre grecque [[sigma]]) à la variance ''V'' = ''σ²'', car il possède les mêmes dimensions physiques que la variable<ref name=Saporta121 group="b">{{Harvsp|Saporta|2006|p=121}}</ref>.
+
+== Applications ==
+[[Fichier:Standard deviation diagram.svg|thumb|fig.02 - Représentation graphique d'une [[loi normale]]. Chaque bande colorée a la largeur d'un écart type.]]
+
+L'écart type sert à mesurer la dispersion d'un ensemble de données. Plus il est faible, plus les valeurs sont regroupées autour de la moyenne. 
+
+Par exemple pour la répartition des notes d'une classe, plus l'écart type est faible, plus la classe est homogène. À l'inverse, s’il est plus important, les notes sont moins resserrées. Dans le cas d'une notation de 0 à 20, l'écart type minimal est 0 (notes toutes identiques), et peut valoir jusqu'à 10 si la moitié a 0/20 et l'autre moitié 20/20<ref group="Note"> Si n élèves ont 0/20 et n élèves ont 20/20, c'est-à-dire l'échantillon contient n fois la valeur 20 et n fois la valeur 0, la moyenne est <math>\scriptstyle \frac{n\times 20}{n+n}</math> ; soit <math>\scriptstyle\bar X = 10</math> et <math>\scriptstyle\bar X^2 = 100</math>.<br/> Les valeurs au carré, notées <math>\scriptstyle X^2</math>, sont n fois 400 et n fois 0. La moyenne de <math>\scriptstyle X^2</math> vaut donc <math>\scriptstyle\overline{X^2} = 200</math>. On en déduit que la variance vaut 100 et l'écart type 10.  </ref>.
+
+En [[sciences humaines]], il est fréquent de considérer que les valeurs se répartissent selon une [[courbe de Gauss]]. Dans ce cas, la donnée de la moyenne et de l'écart type permet de déterminer un intervalle dans lequel on trouve une majorité de la population. En effet, si la moyenne est ''m'' et l'écart type est ''σ'', on trouve 95 % de la population dans l'intervalle [''m'' − 1.96''σ'' ; ''m'' + 1.96''σ''] et on trouve 68 % de la population dans l'intervalle [''m'' − ''σ'' ; ''m'' + ''σ'']<ref name=Saporta43 group="b">{{Harvsp|Saporta|2006|p=43-44}}</ref>.
+
+Un autre manière d'aborder ce sujet est de montrer que l'écart type peut-être utilisé pour quantifier un taux de confiance attribuable à une observation. Si l'on se réfère à la figure ci-contre, on voit qu'un sigma d'écart de part et d'autre de la valeur moyenne recouvre 68.2% de la distribution, deux sigmas d'écart ([<math>\scriptstyle -2\sigma</math>, <math>\scriptstyle +2\sigma</math>], 13.6+34.1+34.1+13.6 =) 95.4%,  3 sigmas d'écart ([<math>\scriptstyle -3\sigma</math>, <math>\scriptstyle +3\sigma</math>], 2.1+13.6+34.1+34.1+13.6+2.1 =) 99.8% et ainsi de suite...
+C'est l'usage notamment en [[physique des particules]], où la détection d'évènements est quantifiée en nombre de sigmas, et où un résultat notamment est considéré comme significatif par l'obtention de 5 sigmas, représentant une probabilité d'erreur inférieure à 0,00003 % (niveau de confiance de plus de 99.9999%)<ref group="i">[http://blogs.mediapart.fr/blog/drericsimon/131211/quest-ce-quun-resultat-significatif-pour-le-boson-de-higgs Qu'est-ce qu'un résultat significatif pour le boson de Higgs ?]Mediapart.fr - 13/12/2011</ref>.
+[[Fichier:Bollinger-bands-example2.jpg|left|thumb|fig.03 - La moyenne mobile est en rouge et les bandes de Bollinger, calculées à l'aide de l'écart type, sont en bleu.]]
+Dans le domaine de l'[[analyse technique]] des [[cours de la bourse]], les [[bandes de Bollinger]] sont des outils facilitant l'analyse des prévisions boursières. John Bollinger a construit la courbe des moyennes mobiles sur 20 jours et les courbes, de part et d'autre de cette courbe, situées à deux fois l'écart type sur ces 20 jours. En analyse boursière, l'écart type est une mesure de la volatilité des cours. John Bollinger a utilisé une définition adaptée de l'écart type<ref name=DailyBourse group="i">[http://www.daily-bourse.fr/12-1-1-Ecart-type-vtptc-2186.php Apprendre la Bourse : 12-1-1-Ecart-type] daily-bourse.fr - 24 mars 2012</ref>. D'autre part, le risque d'un actif boursier et le risque associé au marché sont mesurés par l'écart type de la rentabilité attendue, dans le [[modèle d'évaluation des actifs financiers]] de [[Harry Markowitz]]<ref group="i">{{pdf}}{{article|prénom1=P|nom1=Fery|titre=Risque et calcul socioéconomique|périodique=Centre d'analyse stratégique|volume=|numéro=|année=2010|url=http://www.strategie.gouv.fr/content/rapport-le-calcul-du-risque-dans-les-investissements-publics (pour aller plus loin)|consulté le=8 avril 2012}}</ref>. 
+
+Très vite l'industrie effectue des contrôles de qualité sur ses produits manufacturés. L'écart type intervient dans le calcul de l'indice de qualité, ou dans l'indice de fidélité d'un appareil de mesure<ref name=PFerignac group="i">{{pdf}}{{article|prénom1=P|nom1=Ferignac|titre=Contrôle de réception quantitatif ou par mesure.|périodique=Revue de statistique appliquée |volume=7 |numéro=2 |mois=| année=1959| url=http://archive.numdam.org/ARCHIVE/RSA/RSA_1959__7_2/RSA_1959__7_2_27_0/RSA_1959__7_2_27_0.pdf|consulté le=26 mars 2012}}</ref>{{,}}  <ref name=PFerignac2 group="i">{{pdf}}{{article|prénom1=P|nom1=Ferignac|titre=Erreurs de mesure et contrôle de la qualité.|périodique=Revue de statistique appliquée |volume=13 |numéro=2 |mois=| année=1965| url=http://archive.numdam.org/ARCHIVE/RSA/RSA_1965__13_2/RSA_1965__13_2_57_0/RSA_1965__13_2_57_0.pdf|consulté le=26 mars 2012}}</ref>.
+
+Enfin, en [[mécanique quantique]], le [[principe d'incertitude]] d'[[Heisenberg]] exprime que le produit des écarts-types de la [[Vecteur position|position]] x et de l'[[Moment linéaire|impulsion]] p d'une [[Particule subatomique|particule]] est supérieur ou égal à la [[constante de Plank]] divisée par deux, soit <math>\scriptstyle \sigma_{x} \sigma_{p} \ge \frac{\hbar}{2}</math> <ref name=YMeyer group="i">{{pdf}}{{article|prénom1=Yves|nom1=Meyer|titre=Principe d'incertitude, bases hilbertiennes et algèbres d'opérateurs.|périodique=Séminaire Bourbaki |volume=662 |numéro= |mois=Février| année=1986| url=http://archive.numdam.org/ARCHIVE/SB/SB_1985-1986__28_/SB_1985-1986__28__209_0/SB_1985-1986__28__209_0.pdf|consulté le=4 avril 2012}}</ref>.
+
+== En probabilité ==
+Dans la formulation moderne des probabilités, suite aux travaux de [[Henri Léon Lebesgue|Henri Lebesgue]] et à la mise en place de l'[[Axiomes des probabilités|axiomatique de Kolmogorov]], une [[variable aléatoire]] ''X'' est une application à valeurs réelles ou vectorielles, dépendant d'un paramètre ''x'' suivant une loi de probabilité P. Si la compréhension du formalisme fait appel à la [[théorie de la mesure]], son utilisation reste simple. L'application ''X'' ne joue pas un rôle fondamental ; seule sa loi importe : l'image de P par ''X'', notée P<sub>''X''</sub>. Il s'agit d'une mesure sur <math>\scriptstyle \R</math> ou sur <math>\scriptstyle \R^n</math><ref name=Saporta16 group="b">{{Harvsp|Saporta|2006|p=16}}</ref>. 
+
+=== Définition ===
+Deux quantités lui sont associées, premièrement sa [[moyenne]], notée <math>\scriptstyle  E[X]</math>, aussi appelée espérance, et son écart type, généralement noté <math>\scriptstyle \sigma_X</math>, défini comme la racine carrée de l'espérance de (''X''−E[''X''])² , soit:
+<center><math>\sigma_X=\sqrt{ E[\left (X-E[X])^2 \right]}=\sqrt{ E[ X^2 ] - E[ X ]^2}</math><ref group="Note"> la première égalité définit <math>\scriptstyle {\sigma_X}^2</math>, la seconde est donnée par le [[Théorème de König-Huyghens]]</ref>.</center>
+
+L'élévation au carré pour le membre de droite désigne implicitement la norme euclidienne au carré dans le cas où ''X'' est à valeurs vectorielles.
+
+=== Exemples ===
+Cette identité se spécialise dans un grand nombre de cas particuliers, dont celui des variables aléatoires discrètes. Si la variable ''X'' prend un nombre fini de valeurs réelles ''x₁'', …, ''x''<sub>''n''</sub>, avec des probabilités respectives ''p₁'', …, ''p''<sub>''n''</sub>, l'écart type est donné par <math>\scriptstyle \sigma := \sqrt{\sum_{i=1}^n p_i (x_i-\overline{x})^2} = \sqrt{\left( \sum_{i=1}^n p_i {x_i}^2 \right) - \overline{x}^2 }</math>, où <math>\overline{x}</math> désigne la moyenne <math>\scriptstyle \sum_{i=1}^n p_i x_i</math>. En particulier, si la loi de ''X'' est uniforme sur un ensemble fini de valeurs, c'est-à-dire si <math>\scriptstyle p_i = \frac{1}{n}, i=1,..n</math><ref name=Saporta30 group="b">{{Harvsp|Saporta|2006|p=30}}</ref>, alors <math>\scriptstyle \sigma_X:=\sqrt{ \frac{1}{n}\sum_{i=1}^n (x_i-\overline{x})^2} = \sqrt{ \frac{1}{n}\left( \sum_{i=1}^n {x_i}^2 \right) - \overline{x}^2 }</math>, où cette fois, <math>\scriptstyle \overline{x}=\frac{1}{n}\sum_{i=1}^n x_i</math>.
+Ces formules se généralisent immédiatement en dimension supérieure en remplaçant l'élévation au carré par la norme euclidienne au carré.
+
+
+La loi P<sub>''X''</sub> est dite continue lorsque la probabilité que ''X'' appartienne au segment [''a'';''b''] est <math>\scriptstyle \mathrm P_X (a,b) \longmapsto \mathrm P\big(X\in (a,b)\big)=\int_a^b f(x)\mathrm{d}x</math> où ''f'' est une [[fonction localement intégrable]], pour la [[mesure de Lebesgue]] par exemple, mais pas nécessairement une fonction continue<ref name=Rioul45 group="b">{{Harvsp|Rioul|2006|p=45}}</ref>. Cette fonction ''f'' s'appelle la [[densité de probabilité]] de la loi P<sub>''X''</sub>. L'écart type de ''X'' est défini par  <math>\scriptstyle \sigma_X:=\sqrt{\int_{\R} (x- \mu)^2 \mathrm{d}x}</math> où <math>\scriptstyle \mu =\sqrt{\int_{\R} xf(x)\mathrm{d}x}</math> et la formule <math>\scriptstyle \sigma_X:=\sqrt{\int_{\R} x^2 f(x)\mathrm{d}x-{\left(\int_{\R} x f(x) \mathrm{d}x\right)}^2}</math> est équivalente aussi.
+
+Avec ces formules et la définition le calcul des écarts types pour les lois couramment rencontrées est aisée. Le tableau suivant donne les écarts types de quelques-unes de ces lois :
+{| class="wikitable centre" 
+|-align="center" 
+! Nom de la loi
+! Paramètre(s)
+! Description
+! Ecart type
+|-
+| [[Loi de Bernoulli]]<ref name=Saporta30 group="b">{{Harvsp|Saporta|2006|p=30}}</ref> || ''p'' || Loi discrète de valeurs 0 avec probabilité 1-''p'' et 1 avec probabilité ''p'' || <math>\scriptstyle \sigma=\sqrt{p(1-p)}</math>
+|-
+| [[Loi binomiale]]<ref name=Saporta31 group="b">{{Harvsp|Saporta|2006|p=31}}</ref> || ''p'' et <math>\scriptstyle n\in\N^*</math> || Loi de la somme de ''n'' variables indépendantes suivant la loi de Bernoulli de paramètre ''p'' || <math>\scriptstyle \sigma=\sqrt{n p (1-p)}</math>
+|-
+| [[Loi géométrique]]<ref name=Saporta38 group="b">{{Harvsp|Saporta|2006|p=38}}</ref> || ''p'' || Loi discrète sur <math>\N</math> telle que la probabilité d'obtenir l'entier ''n'' soit (1-''p'')''p''<sup>''n''</sup> || <math>\scriptstyle \sigma=\sqrt{\frac{p}{(1-p)^2}}</math>
+|-
+| Loi uniforme sur un segment<ref name=Saporta39 group="b">{{Harvsp|Saporta|2006|p=39}}</ref> || ''a''<''b'' || Loi uniformément continue sur <math>\R</math> de densité un multiple de la fonction indicatrice de [''a'';''b''] || <math>\scriptstyle \sigma=\frac{b-a}{\sqrt{12}}</math>
+|-
+| [[Loi exponentielle]]<ref name=Saporta39 group="b"/> || ''p'' ||Loi uniformément continue de [[support de mesure|support]] <math>\R_+</math> de densité la fonction <math>f\colon x \mapsto p \exp(-p x)</math> || <math>\scriptstyle \sigma=\frac{1}{p}</math>
+|-
+| [[Loi de Poisson]]<ref name=Saporta33 group="b">{{Harvsp|Saporta|2006|p=33}}</ref> || ''<math>\scriptstyle \lambda</math>'' ||Loi sur <math>\N</math>  de densité la fonction <math>\scriptstyle f\colon x \mapsto \exp(-\lambda)\frac{\lambda^x}{x!}</math> où <math>\scriptstyle \lambda \in \R_+</math> || <math>\scriptstyle \sigma=\sqrt{\lambda}</math>
+|-
+| [[Loi du χ²]]<ref name=Dodge71 group="b">{{Harvsp|Dodge|2010|p=71}}</ref> || ''<math>\scriptstyle n</math>'' ||Loi sur <math>\R^+</math>  de densité la fonction <math>\scriptstyle f\colon x \mapsto \frac{1}{2^\frac{n}{2}\Gamma(\frac{n}{2})} x^{\frac{n}{2} - 1} e^{-\frac{x}{2}}\,</math> pour tout ''x'' positif où <math>\scriptstyle \Gamma </math> est la fonction gamma || <math>\scriptstyle \sigma=\sqrt{2n}</math>
+|-
+|}
+<br />
+
+
+Si la variable X suit une [[Loi log-normale]] alors <math>\scriptstyle \ln X</math> suit une [[loi normale|loi de Laplace-Gauss]] et l'écart type de X est relié à l'[[Écart type géométrique]]<ref name=WHFinlay group="b">{{Ouvrage
+ | langue                 = en
+ | prénom1                = Warren H.
+ | nom1                   = Finlay
+ | lien auteur1           = 
+ | titre                  = {{lang|en|The Mechanics of Inhaled Pharmaceutical Aerosols: An Introduction }}
+ | sous-titre             = 
+ | lien titre             = 
+ | numéro d'édition       = 
+ | éditeur                = Academic Press Inc
+ | lien éditeur           = 
+ | lieu                   = San Diego
+ | année                  = 2001
+ | volume                 = 
+ | tome                   = 
+ | pages totales          = 320
+ | passage                = 5
+ | isbn                   = 978-0122569715
+ | lire en ligne          = 
+ | consulté le            = 15 avril 2012
+ | présentation en ligne  = 
+ | id                     = 
+}}  </ref>.
+
+=== Propriétés ===
+L'écart type est toujours positif ou nul, celui d'une constante est nul. L'écart type d'une variable aléatoire X à laquelle a été ajoutée une constante <ref group = "Note"><math>\scriptstyle Y = X + a </math></ref>est égal à l'écart type de la variable X. Cette propriété est nommée ''invariance par translation''. L'écart type d'une variable multipliée par une constante est égal à la valeur absolue de la constante multipliée par l'écart type de la variable. Cette propriété est nommée ''invariance par dilatation''<ref group="Note"> Toutes ces propriétés sont la conséquence directe du théorème de Huygens et des propriétés de l'espérance mathématique .</ref>{{,}}<ref name=Saporta2325 group="b">{{Harvsp|Saporta|2006|p=23-25}}</ref>. Ceci peut se résumer par <math>\scriptstyle \sigma_{cX+b}=|c|\sigma_{X}</math>. 
+
+L'écart type de la somme algébrique de deux variables est égal à <math>\scriptstyle \sigma_{X\pm Y}=\sqrt{\sigma_X^2+\sigma_Y^2\pm 2\sigma_X \sigma_Y \rho(X,Y)}</math> où <math>\scriptstyle \rho(X,Y)</math> est le coefficient de corrélation entre les deux variables X et Y<ref name=Saporta26 group="b">{{Harvsp|Saporta|2006|p=26}}</ref>.
+
+La fonction <math>\scriptstyle \R  \rightarrow  \R^+ : c \rightarrow \sqrt{(|X-c|^2)}</math> admet son minimum au point <math>\scriptstyle c=E(X)</math> et prend donc pour valeur en ce point l'écart type de la variable  <math>\scriptstyle X</math><ref name=Rioul146 group="b">{{Harvsp|Rioul|2006|p=146}}</ref>.  
+
+Enfin, l'écart type est sensible aux [[Donnée aberrante|valeurs aberrantes]]<ref name=DAnderson group="b">{{article|langue=en|prénom1=David R.|nom1=Anderson|prénom2=Dennis J.|nom2=Sweeney|prénom3=Thomas A.|nom3=Williams| titre={{Citation étrangère|lang=en|statistics}}| périodique={{Citation étrangère|lang=en|Encyclopaedia Britannica Ultimate Reference Suite}}| volume=| numéro=| pages=statistics| mois= |année=2010 |url= | consulté le=26 février 2012}}</ref>.
+
+=== Apparition ===
+
+L'écart type intervient en probabilité pour comparer des variables entre elles, ou bien pour comparer les données d'une variable par rapport à sa moyenne.
+
+==== Variable centrée réduite ====
+[[Fichier:Skewness Statistics.svg|thumb|left|fig.04 - exemples de distributions asymériques]]
+[[Fichier:Standard symmetric pdfs.png|thumb|right|fig.05 - exemples de distributions plus ou moins aplaties]]
+
+Si X est une variable aléatoire d'écart type non nul, on peut lui faire correspondre la [[Variable centrée réduite|variable centrée et réduite]] Z définie par <math>\scriptstyle Z= \frac{X - \bar X}{\sigma}</math>. Deux variables aléatoires centrées et réduites <math>\scriptstyle Z_1</math> et <math>\scriptstyle Z_2</math>  sont aisées à comparer, puisque <math>\scriptstyle E(Z_i)=0</math> et <math>\scriptstyle \sigma_{Z_i}=1</math><ref name=Gautier387 group="b">{{Harvsp|Gautier|1975|p=387}}</ref>. Le [[théorème central limite]] a pour objet la limite d'une suite de variables aléatoires centrées réduites<ref name=Saporta66 group="b">{{Harvsp|Saporta|2006|p=66}}</ref>, les [[Asymétrie (statistique)|coefficients de dissymétrie]] et d'[[Kurtosis|aplatissement]] d'une densité de probabilité,  <math>\scriptstyle E[Z^3]~ {et} ~E[Z^4]</math>, permettent de comparer des distributions différentes<ref name=Rioul157 group="b">{{Harvsp|Rioul|2008|p=157}}</ref>.
+
+==== Coefficient de corrélation ====
+{{Article détaillé|Corrélation (statistiques)}}
+Le coefficient de corrélation est une autre application de l'écart type en probabilité. Si ''X'' et ''Y'' sont deux [[Variable aléatoire|variables aléatoires]], on appelle coefficient de corrélation le rapport <math>\scriptstyle \rho = \frac{\operatorname{cov}(X,Y)} {\sigma_X \sigma_Y} </math> où <math>\scriptstyle \operatorname{cov}(X,Y)= \mathbb{E}[(X - \mathbb{E}[X])\,(Y-\mathbb{E}[Y])] = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y]</math> est la [[covariance]] des variables ''X'' et ''Y''. D'après l'[[inégalité de Cauchy-Schwarz]], <math>\scriptstyle |\operatorname{cov}(X,Y)| \le \sigma_X \sigma_Y</math> ; ce qui permet de dire que <math>\scriptstyle \rho</math> prend ses valeurs dans l'intervalle <math>\scriptstyle [-1,+1]</math><ref name=Rioul175 group="b">{{Harvsp|Rioul|2008|p=175}}</ref>. Si <math>\scriptstyle \rho = 0</math> les deux variables ne sont pas corrélées, si <math>\scriptstyle \rho = \pm 1</math> les deux variables sont [[Indépendance linéaire|linéairement dépendantes]]<ref name=Rioul178 group="b">{{Harvsp|Rioul|2008|p=178}}</ref>.
+
+==== Inégalité de Bienaymé-Tchebyshev ====
+{{Article détaillé|Inégalité de Bienaymé-Tchebychev}}
+C'est grâce à l'inégalité de Bienaymé-Tchebyshev que l'écart type apparaît comme une mesure de la dispersion autour de la moyenne. En effet, cette inégalité exprime que <math>\scriptstyle P(|X-E(X)|>k\sigma) \le \frac{1}{k^2}</math><ref name=Saporta25 group="b">{{Harvsp|Saporta|2006|p=25}}</ref> et montre que la probabilité pour que X s'écarte de E(X) de plus de k fois l'écart type est inférieure à  <math>\scriptstyle \frac{1}{k^2}</math><ref name=AJacquard2829 group="b">{{Harvsp|Jacquard|1976|p=28-29}}</ref>.
+
+== En statistique ==
+[[Fichier:Fisher's Iris data with standard deviation error bars around means.png|thumb|left|fig.06 - L'écart type sert à indiquer, à l'aide de [[barre d'erreur|barres d'erreur]], l'[[incertitude]] du positionnement du barycentre de chaque groupe d'iris de l'[[échantillon]] le long de la direction indiquée par la largeur des sépales.]]
+
+Pour une population finie - relativement faible en nombre - le calcul de l'écart type est purement algébrique, sans référence aux probabilités, et le statisticien emploie l'écart type empirique défini par <math>\scriptstyle s:=\sqrt{\frac{1}{n}\sum_{i=1}^n(x_i-\overline{x})^2}</math><ref name=Saporta279 group="b"/>.
+
+Mais, en [[statistique]]s, la population étudiée est souvent très importante en nombre, et il n'est pas possible de connaitre toutes les valeurs de la caractéristique considérée. Le statisticien procède par échantillonnage et estimation pour évaluer les variables analysées telles que la moyenne ou l'écart type.   
+
+
+=== Estimateurs ===
+Un [[Estimateur (statistique)|estimateur]] est une fonction permettant d'approcher un paramètre d'une population à l'aide d'un échantillon tiré au hasard<ref name=Saporta289 group="b">{{Harvsp|Saporta|2006|p=289}}</ref>.
+
+Deux [[Estimateur (statistique)|estimateurs]] de l'écart type sont généralement utilisés. Ils sont obtenus en prenant la racine carrée des estimateurs de la [[Variance (statistiques et probabilités)|variance]], puisque <math>\scriptstyle \sigma = \sqrt{V}</math>. Ces estimateurs appelés '''variance empirique''' et '''variance empirique corrigée''' sont notées respectivement <math>\scriptstyle {S_n}^2</math> (ou ''S'' ²) et <math>\scriptstyle {S_{n-1}}^2</math> (ou ''S′'' ²)<ref name=Saporta279 group="b">{{Harvsp|Saporta|2006|p=279-280}}</ref>. 
+
+Lorsque la population est infinie, ou supposée telle, un estimateur de l'écart type est donné sous la forme corrigée correspondant à celui de la variance <math>\scriptstyle S_{n-1}=\sqrt{\frac{1}{n-1}\sum_{i=1}^n(X_i-\overline{X})^2} = \sqrt{\frac{n}{n-1}}\cdot S_n</math> où <math>\scriptstyle S_n=\sqrt{\frac{1}{n}\sum_{i=1}^n(X_i-\overline{X})^2}</math><ref name="tuff655" group="b">{{Harvsp|Tufféry|2010|p=655}}</ref>. Une réalisation de cette statistique est <math>\scriptstyle s_{n-1}:=\sqrt{\frac{1}{n-1}\sum_{i=1}^n(x_i-\overline{x})^2} = \sqrt{\frac{n}{n-1}}\cdot s</math><ref name=Saporta279 group="b"/>.
+
+=== Propriétés des estimateurs ===
+Deux propriétés importantes des estimateurs sont la [[Estimateur (statistique)#Convergence|convergence]] et l'absence de biais, la première pouvant compenser le biais s'il est présent<ref name=Saporta279 group="b"/>. 
+
+Si <math>\scriptstyle \hat \theta</math> est un estimateur du paramètre <math>\scriptstyle \theta</math>, le [[Biais (statistique)|biais]] est la quantité <math>\scriptstyle E[\hat \theta] - \theta</math>. Si cette quantité est différente de zéro, cela signifie que <math>\scriptstyle \hat \theta</math> se positionne autour de <math>\scriptstyle E[\hat \theta]</math> au lieu de se positionner autour de  <math>\scriptstyle \theta</math>. L'estimateur <math>\scriptstyle \hat \theta</math> est alors entaché d'erreur. Un bon estimateur n'a pas de biais<ref name=Saporta290 group="b">{{Harvsp|Saporta|2006|p=290}}</ref>. Un estimateur naturel de l'écart type est la racine carrée de l'estimateur sans biais de la variance. <math>\scriptstyle S^2_{n}</math> est un estimateur  biaisé de la variance alors que <math>\scriptstyle S^2_{n-1}</math> en est un estimateur non biaisé<ref name=EGrenier group="i">{{pdf}}{{article|prénom1=Emmanuel|nom1=Grenier|titre=Quelle est la « bonne » formule de l’écart-type ?|périodique=La revue MODULAD|volume=|numéro=37|mois=décembre|année=2007|url=http://www.modulad.fr/archives/numero-37/Notule-Grenier-37/Notule-Grenier-37.pdf|consulté le=18 février 2012}}</ref>. La racine carrée de cet estimateur sert à construire un estimateur de l'écart type dont le biais existe mais est acceptable<ref name=Saporta284 group="b">{{Harvsp|Saporta|2006|p=284}}</ref>{{,}}<ref group="Note">d'après G. Saporta on a <math>\scriptstyle E(S_{n-1})=\sigma \sqrt{ \frac{2}{n-1}}\frac{\Gamma(\frac{n}{2})}{\Gamma(\frac{n-1}{2})}</math> qui tend vers <math>\scriptstyle \sigma</math> lorsque <math>\scriptstyle n \to \infty</math> où  <math>\scriptstyle S_{n-1}= \sqrt{\frac{1}{n-1}\sum_{i=1}^n (X_i-\bar X)^2}</math> et <math>\scriptstyle \Gamma</math> la [[Fonction gamma]]</ref>.
+
+Il est utile de rappeler que <math>\scriptstyle {S_n}^2</math> et <math>\scriptstyle {S_{n-1}}^2</math> sont des estimateurs [[Estimateur (statistique)#Convergence|convergents]] de ''σ²''. Autrement dit, <math>\scriptstyle {S_n}^2 \to \sigma^2</math>  et <math>\scriptstyle {S_{n-1}}^2 \to \sigma^2</math> quand <math>\scriptstyle n \to \infty</math><ref name=Saporta290 group="b"/>. Par le [[Convergence de variables aléatoires#Convergence d'une fonction d'une variable aléatoire|théorème de continuité]], et puisque la fonction [[racine carrée]] est continue, les estimateurs <math>\scriptstyle S_n</math> et <math>\scriptstyle S_{n-1}</math> sont convergents eux aussi<ref group="Note">d'après le théorème de continuité on a : {{Théorème|Si {{math|''g''}} est continue, alors :
+<math>\scriptstyle X_n\xrightarrow{\mathbb{P}}X \Longrightarrow g(X_n)\xrightarrow{\mathbb{P}}g(X)</math>}}. Comme la fonction [[racine carrée]] est une fonction [[Continuité|continue]], <math>\scriptstyle S_{n-1}</math> et <math>\scriptstyle S_{n}</math> sont des estimateurs convergents de l'écart type, autrement dit : <math>\scriptstyle S_{n-1} \xrightarrow{\mathbb{P}} \sigma \text{ et } S_{n} \xrightarrow{\mathbb{P}} \sigma</math></ref>{{,}}<ref name=Rioul253 group="b">{{Harvsp|Rioul|2008|p=253}}</ref>. Ce qui conforte le statisticien a utiliser ces estimateurs.
+
+=== Écart type des moyennes ===
+Pour estimer la précision de l'estimation de la moyenne d'une variable, la méthode du calcul de l'écart type de la distribution d'échantillonnage des moyennes est utilisée. Appelé aussi [[Erreur type|erreur type de la moyenne]] ({{Citation étrangère|lang=en|Standard error}}), noté <math>\scriptstyle \sigma_{\bar x} </math>, c'est l'écart type des moyennes des échantillons de tailles identiques d'une population. Si n est la taille des échantillons prélevés sur une population d'écart type <math>\scriptstyle \sigma</math>, et si N est la taille de la population, alors <math>\scriptstyle \sigma_{\bar x} = \frac{\sigma}{\sqrt{n}}\sqrt{\frac{N-n}{N-1}}</math><ref name=Dodge509 group="b">{{Harvsp|Dodge|2010|p=508-509}}</ref>. Lorsque l'écart type <math>\scriptstyle \sigma</math> de la population est inconnu, il peut être remplacé par l'estimateur <math>\scriptstyle S_{n-1}</math><ref name=Dodge509 group="b"/>. Quand n est suffisamment grand (<math>\scriptstyle n \ge 30</math>), la distribution d'échantillonnage suit approximativement une loi de Laplace-Gauss, ce qui permet de déduire un intervalle de confiance, fonction de <math>\scriptstyle \sigma_{\bar x} </math>, permettant de situer la moyenne de la population par rapport à la moyenne de l'échantillon<ref name=Dodge472 group="b">{{Harvsp|Dodge|2010|p=472}}</ref>{{,}}<ref name=AVessereau56 group="b">{{Harvsp|Vessereau|1976|p=56}}</ref>.
+
+=== Écart type des écarts-types ===
+En général, il est très difficile de calculer la loi de distribution des écarts-types empiriques. Mais si <math>\scriptstyle S_n^2</math> est la variance empirique de variables aléatoires distribuées selon la loi normale <math>\scriptstyle \mathcal{N}(\mu,\sigma^2) </math>, alors <math>\scriptstyle (n-1)\frac{S_n^2}{\sigma^2}</math> suit une loi du <math>\scriptstyle \chi^2</math> à n-1 degrés de liberté.
+Cette loi a pour variance 2(n-1) et donc l'écart type de la distribution des écarts types de variables normales est égal à <math>\scriptstyle \sigma_{S_n^2}=\sigma^2\sqrt{\frac{2}{(n-1)}}</math><ref group="i"> 
+{{Lien web
+ | auteur                 = aiaccess
+ | lien auteur            = http://www.aiaccess.net
+ | url                    = http://www.aiaccess.net/French/Glossaires/GlosMod/f_gm_chi2_distri.htm
+ | titre                  = Distribution de la Variance Empirique de la Distribution Normale
+ | page                   = Tutorial 2
+ | consulté le            = 9 Avril 2012
+ }}</ref>
+
+=== Interprétation d'un écart type élevé ===
+En raison de ses liens étroits avec la moyenne, l'écart type peut être grandement influencé si cette dernière donne une mauvaise mesure de tendance centrale.
+Contrairement à l'[[critères de dispersion#Étendue|étendue]] et aux [[critères de position#Quartiles|quartiles]], la variance permet de combiner toutes les valeurs à l'intérieur d'un ensemble de données afin d'obtenir la mesure de dispersion <ref name=DAnderson group="b"/>. Si par convention, un échantillon d’individus suivant une loi normale obtient 100 de QI et que l'écart type équivaut à 15 points de [[Quotient intellectuel|QI]] de différence, cela signifie que les 2/3 environ de la population d'une classe d'âge ont un QI compris entre 85 et 115<ref group="Note"> Voir également à ce sujet l'[[critères de dispersion#Intervalle de confiance ou plage de normalité|intervalle de confiance]] d'une distribution normale gaussienne</ref>.
+
+
+Généralement, plus les valeurs sont largement distribuées, plus l'écart type est élevé. Cependant, il n'est pas toujours facile d'évaluer l'importance que doit avoir l'écart type pour que les données soient largement dispersées. En effet, l'importance de l'écart type dépend aussi de l'importance de la valeur moyenne de l'ensemble des données et de leur [[ordre de grandeur]]. 
+Dans certains cas, il est donc parfois utile de travailler avec l’[[critères de dispersion#Écart type relatif|écart type relatif]] (écart type divisé par la [[moyenne]]), appelé aussi [[coefficient de variation]] qui exprime l'écart type en pourcentage de la moyenne<ref name=Saporta121 group="b"/>.
+
+
+Une autre raison pour laquelle l'écart type peut être élevé est la présence de valeurs aberrantes dans l'échantillon. Une façon de savoir si la valeur x est une valeur aberrante est de calculer la valeur absolue de <math>\scriptstyle \frac{x - \bar x}{\sigma}</math>, qui, si elle est supérieure ou égale à 3, désigne x comme une valeur potentiellement aberrante<ref name=DAnderson group="b"/>.
+
+=== Sondages d'opinion ===
+Dans les [[Sondage d'opinion|sondages d'opinion]], l'écart type <math>\scriptstyle \sigma_{\bar x}</math> évalue l'incertitude des variations accidentelles de <math>\scriptstyle \bar x</math> inhérentes au sondage, ce qu'on appelle la marge d'erreur due aux variations accidentelles<ref name=WEDeming group="i">{{pdf}}{{article|prénom1=W.E.|nom1=Deming|titre=Quelques méthodes de sondage.|périodique=Revue de statistique appliquée |volume=12 |numéro=4 |mois=| année=1964| url=http://archive.numdam.org/ARCHIVE/RSA/RSA_1964__12_4/RSA_1964__12_4_11_0/RSA_1964__12_4_11_0.pdf|consulté le=9 avril 2012}}</ref>
+
+
+D'autre part, avec la méthode d'échantillonnage représentatif, lorsque les différentes strates ont des écarts types très différents, l'écart type est utilisé pour calculer la répartition optimale de Neymam qui permet d'évaluer la population dans les différentes strates en fonction de leur l'écart-type ; en d'autres termes <math>\scriptstyle n_i=n\frac{N_i\sigma_i}{\sum N_j\sigma_j}</math> est la taille de l'échantillon dans la strate i,  où n est la taille totale de l'échantillon, <math>\scriptstyle N_i</math> est la taille de la strate i, <math>\scriptstyle \sigma_i</math> l'écart-type de la strate i<ref name=WEDeming group="i"/>.
+
+== En algorithmique ==
+
+Le calcul de l'écart type par un programme d'ordinateur peut aboutir à des résultats incohérents si on n'utilise pas un algorithme adapté aux données, comme par exemple lorsqu'on utilise celui qui exploite directement la formule <math>\scriptstyle \sqrt{ \frac{1}{n}\left( \sum_{i=1}^n {x_i}^2 \right) - \left( {\frac{1}{n}\sum_{i=1}^n x_i} \right)^2 }</math> sur des grands échantillons de valeurs comprises entre 0 et 1<ref group="i"> {{en}}[http://www.johndcook.com/blog/2008/09/28/theoretical-explanation-for-numerical-results/ Theoretical explanation for numerical results] The Endeavour - 28/09/2008 John D. Cook</ref>{{,}}<ref group="i"> {{en}}[http://www.johndcook.com/blog/2008/09/26/comparing-three-methods-of-computing-standard-deviation/ Comparing three methods of computing standard deviation]  The Endeavour - 26/09/2008 John D. Cook</ref>.
+
+Un des meilleurs algorithme est celui de B.P. Welford qui est décrit par [[Donald Knuth]] dans son livre {{Lang|en|The Art of Computer Programming, Vol 2}}<ref name=Welfod group="i">{{pdf}} {{article|langue=en|prénom1=B.P.|nom1=Welford| titre=Note on a Method for Calculating Corrected Sums of Squares and Products | périodique=Technometrics| volume=4| numéro=3| pages=419-420| mois=Août |année=1962 |url=http://ebookfreetoday.com/view-pdf.php?bt=NOTE-XXX:-WELFORD%E2%80%99S-ALGORITHM-FOR-MEAN-AND-VARIANCE&lj=http://daheiser.info/excel/notes/NOTE%20P.pdf | consulté le=4 Avril 2012}}</ref>{{,}}<ref group="i"> {{en}}[ http://www.johndcook.com/standard_deviation.html Accurately computing running variance] The Endeavour - 28/09/2008 John D. Cook</ref>.
+
+
+Une approximation de l'écart type de la direction du vent est donnée par l'[[Méthode de Yamartino|algorithme de Yamartino]] dont on se sert dans les [[anémomètre]]s modernes<ref>{{Lien web
+ | auteur                 = Campbell scientific
+ | lien auteur            = 
+ | coauteurs              =
+ | url                    = http://www.campbellsci.co.uk/index.cfm?id=668
+ | titre                  = Vitesse et direction du vent - Anémomètre et girouette
+ | série                  = 
+ | jour                   =01
+ | mois                   =03 
+ | année                  =2007 
+ | site                   = 
+ | éditeur                = 
+ | isbn                   = 
+ | page                   =6-8 
+ | citation               = 
+ | en ligne le            = 
+ | consulté le            =15 avril 2012
+ | id                     = 
+}}</ref>{{,}}<ref>{{Lien web
+ | auteur                 = Campbell scientific
+ | lien auteur            = 
+ | coauteurs              =
+ | url                    = ftp://ftp.campbellsci.co.uk/pub/csl/outgoing/fr/manuals/cr200_fr_feb08.pdf
+ | titre                  = Centrales de mesure de la série CR200 : Manuel d’utilisation
+ | série                  = 
+ | jour                   =
+ | mois                   = 
+ | année                  =2012 
+ | site                   = 
+ | éditeur                = 
+ | isbn                   = 
+ | page                   =668 
+ | citation               = 
+ | en ligne le            = 
+ | consulté le            =15 avril 2012
+ | id                     = 
+}}</ref>
+
+== Notes et références ==
+
+=== Notes ===
+
+<references group="Note"/>
+
+=== Références ===
+
+==== Ouvrages spécialisés ====
+
+{{Références|colonnes = 3|group="b"}}
+
+==== Articles publiés sur internet ====
+<references/>
+
+{{Références|colonnes = 1|group="i"}}
+
+== Voir aussi ==
+
+=== Bibliographie ===
+* {{fr}} {{ouvrage|prénom1=Gilbert|nom1=Saporta|titre=Probabilités, Analyse des données et Statistiques|éditeur=Editions Technip|lieu=Paris|année=2006|pages totales=622|isbn=978-2-7108-0814-5|consulté le = 18 Février 2012}}.{{plume}}
+* {{fr}} {{ouvrage|prénom1=Alain|nom1=Monfort|titre=Cours de Statistique Mathématique|éditeur=Editions Economica|lieu=Paris|année=1997|pages totales=333|isbn=2-7178-3217-2|consulté le = 18 Février 2012}}.{{plume}}
+* {{en}} {{ouvrage|prénom1=|nom1=|titre={{Citation étrangère|lang=en|Encyclopaedia Britannica Ultimate Reference Suite}}|éditeur= Encyclopædia Britannica|lieu=Chicago|année=2010|pages totales=|isbn=|consulté le = 26 Février 2012}}.{{plume}}
+* {{fr}} {{ouvrage|prénom1=Olivier|nom1=Rioul|titre=Théorie des probabilités|éditeur=Editions Hermes sciences|lieu=Paris|année=2008|pages totales=364|isbn=978-2-7462-1720-1|consulté le = 5 mars 2012}}.{{plume}}
+* {{en}} {{ouvrage|prénom1=Yadolah|nom1=Dodge|titre={{Citation étrangère|lang=en|The Concise Encyclopaedia of Statistics}}|éditeur= Springer|lieu=New York|année=2010|pages totales=622|isbn=978-0-387-31742-7|consulté le = 8 Mars 2012}}.{{plume}}
+* {{fr}} {{ouvrage|langue=fr|prénom1=Stéphane|nom1=Tufféry|titre=Data Mining et statistique décisionnelle|éditeur=éditions Technip|lieu=Paris|année=2010| pages totales=705|isbn = 978-2-7108-0946-3|consulté le = 14 mai 2011}}{{plume}}
+* {{en}} {{ouvrage|langue=en|prénom1=Peter L.|nom1=Bernstein|lien auteur1=|titre={{citation étrangère|lang=en|Against the Gods}}|sous-titre={{citation étrangère|lang=en|The Remarkable Story of Risk}}|lien titre=|numéro d'édition=|éditeur=John Wiley & sons, inc|lien éditeur=http://eu.wiley.com/WileyCDA/|lieu=New York|année=1996|volume=|tome=|pages totales=383|passage=|isbn=978-0-471-12104-6|lire en ligne=|consulté le=3 mars 2012}}{{plume}}
+* {{fr}} {{ouvrage|langue=fr|prénom1=Albert|nom1=Jacquard|lien auteur1=|titre=Les Probabilités|lien titre=|numéro d'édition=|éditeur=Presses Universitaires de France|lien éditeur=http://www.puf.com/wiki/Accueil|lieu=Paris|année=1976|collection=Que sais-je|numéro dans collection =1571|tome=|pages totales=125|passage=|isbn=2-13-036532-9|lire en ligne=|consulté le=3 mars 2012}}{{plume}}
+* {{fr}} {{ouvrage |langue=fr| prénom1=C.|nom1=Gautier| prénom2=G.|nom2=Girard| prénom3=D.|nom3=Gerll| prénom4=C.|nom4=Thiercé| prénom5=A.|nom5=Warusfel| titre=Aleph1 Analyse|éditeur=éditions Hachette|lieu=Paris|année=1975| pages totales=465|isbn = 2-01-001370-0|consulté le = 11 mars 2012}}{{plume}}
+* {{fr}} {{ouvrage|langue=fr|prénom1=André|nom1=Vessereau|lien auteur1=|titre=La Statistique|lien titre=|numéro d'édition=|éditeur=Presses Universitaires de France|lien éditeur=http://www.puf.com/wiki/Accueil|lieu=Paris|année=1976|collection=Que sais-je|numéro dans collection =281|tome=|pages totales=128|passage=|isbn=2-13-052942-9|lire en ligne=|consulté le=18 mars 2012}}{{plume}}
+
+=== Articles connexes ===
+
+==== Liens internes ====
+* [[Calcul d'erreur]]
+* [[Critères de dispersion]]
+* [[Erreur type]]
+* [[Écart type géométrique]]
+
+==== Liens externes ====
+
+*{{en}} [http://en.wikipedia.org/wiki/Algorithms_for_calculating_variance Algorithms for calculating variance] Wikipedia
+
+{{Palette Probabilités et statistiques}}
+{{portail probabilités}}
+
+{{DEFAULTSORT:Ecart type}}
+
+[[Catégorie:Statistique descriptive]]
+[[Catégorie:Probabilités]]
+
+{{Lien BA|pl}}
+
+[[ar:انحراف معياري]]
+[[be-x-old:Стандартнае адхіленьне]]
+[[bg:Стандартно отклонение]]
+[[bs:Standardna devijacija]]
+[[ca:Desviació tipus]]
+[[cs:Směrodatná odchylka]]
+[[da:Standardafvigelse]]
+[[de:Standardabweichung]]
+[[en:Standard deviation]]
+[[eo:Norma diferenco]]
+[[es:Desviación estándar]]
+[[et:Standardhälve]]
+[[fa:انحراف معیار]]
+[[gl:Desvío estándar]]
+[[he:סטיית תקן]]
+[[hi:मानक विचलन]]
+[[hr:Standardna devijacija]]
+[[hu:Szórás (valószínűség-számítás)]]
+[[id:Simpangan baku]]
+[[is:Staðalfrávik]]
+[[it:Deviazione standard]]
+[[ja:標準偏差]]
+[[kk:Квадраттық ауытқу]]
+[[ko:표준편차]]
+[[la:Deviatio canonica]]
+[[lt:Standartinis nuokrypis]]
+[[lv:Standartnovirze]]
+[[mk:Стандардно отстапување]]
+[[nl:Standaardafwijking]]
+[[nn:Standardavvik]]
+[[no:Standardavvik]]
+[[oc:Desviacion tipica]]
+[[pl:Odchylenie standardowe]]
+[[pt:Desvio padrão]]
+[[ru:Среднеквадратическое отклонение]]
+[[scn:Diviazzioni standard]]
+[[si:සම්මත අපගමනය]]
+[[simple:Standard deviation]]
+[[sk:Smerodajná odchýlka]]
+[[sl:Standardni odklon]]
+[[sq:Devijimi standard]]
+[[sr:Стандардна девијација]]
+[[su:Simpangan baku]]
+[[sv:Standardavvikelse]]
+[[ta:சராசரி அகற்சி]]
+[[th:ค่าเบี่ยงเบนมาตรฐาน]]
+[[tr:Standart sapma]]
+[[uk:Стандартне відхилення]]
+[[ur:معیاری انحراف]]
+[[vi:Độ lệch chuẩn]]
+[[war:Standard deviation]]
+[[zh:標準差]]

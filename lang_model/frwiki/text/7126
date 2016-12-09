@@ -1,0 +1,283 @@
+{{voir homonyme|Théorème de Thalès (cercle)}}
+[[Image:Thales theorem 1.svg|thumb|250px|Configuration possible du théorème]]
+Le '''théorème de Thalès''' ou '''théorème d'intersection''' est un [[théorème]] de [[géométrie]] qui affirme que, dans un plan, une droite parallèle à l'un des côtés d'un triangle sectionne ce dernier en un triangle semblable (voir énoncé précis ci-dessous). Dans certains pays d'Europe, dont la France, ce résultat est appelé théorème de Thalès ; en [[anglais]], il est connu sous le nom de ''théorème d'intersection'', moins commun en français ; en [[allemand]] il est appelé ''Strahlensatz'', c'est-à-dire ''théorème des rayons''.
+
+Ce résultat est attribué au [[mathématicien]] et [[philosophe]] [[Grèce antique|grec]] [[Thalès de Milet]]. Cette attribution s'explique par une légende selon laquelle Thalès aurait calculé la hauteur d'une [[pyramide]] en mesurant la longueur de son ombre au sol et la longueur de l'ombre d'un bâton de hauteur donnée. Cependant, certains documents historiques montrent que les similitudes des triangles avaient déjà été remarquées par les [[Babylone|Babyloniens]]. Mais la première démonstration écrite connue de ce théorème est donnée dans les [[Éléments d'Euclide|''Éléments'' d'Euclide]] (proposition 2 du [[Livre VI des Éléments d'Euclide|livre VI]]). Elle repose sur la proportionnalité d'aires de triangles de hauteur égale (voir ci-dessous le détail de la preuve). 
+
+Le théorème de Thalès se généralise en dimension supérieure. Le résultat est équivalent à des résultats de géométrie projective tels que la conservation du [[birapport]] par les projections. À un niveau plus élémentaire, le théorème de Thalès sert à calculer des longueurs en [[trigonométrie]], à condition de disposer de deux droites parallèles. Cette propriété est utilisée dans des instruments de calcul de longueurs.
+
+En [[anglais]] et en [[allemand]], le [[théorème de Thalès (cercle)|théorème de Thalès]] désigne un autre théorème de géométrie qui affirme qu'un triangle inscrit dans un cercle, et dont un côté est un diamètre, est un triangle rectangle.
+
+==Énoncés et enseignement==
+En pratique, le théorème de Thalès permet de calculer des rapports de longueur et de mettre en évidence des relations de [[proportionnalité]] en présence de [[parallélisme (géométrie)|parallélisme]]. 
+
+:'''Théorème de Thalès :'''Soit un triangle <math>ABC</math>, et deux points ''D'' et ''E'' des droites <math>(AB)</math> et <math>(AC)</math> de sorte que la droite <math>(DE)</math> soit parallèle à la droite <math>(BC)</math> (comme indiqué sur la figure ci-dessous). Alors on a :
+:<center><math>\dfrac{AD}{AB}=\dfrac{AE}{AC}=\dfrac{DE}{BC}</math>.</center>
+
+<center>[[Image:Thales theorem 1.svg|300px]] [[Image:Thales theorem 2.svg|300px]]<br /> Deux configurations possibles du théorème de Thalès.</center>
+
+Le théorème de Thalès démontre que les triangles ABC et ADE sont homothétiques : il existe une [[homothétie]] de centre ''A'' envoyant ''B'' sur ''D'' et ''C'' sur ''E''. L'un des rapports donnés ci-dessus est au signe près le rapport de l'homothétie. Plus précisément, le rapport de l'homothétie est <math>+AD/AB</math> dans la première configuration et <math>-AD/AB</math> dans la seconde. Le théorème de Thalès est parfois énoncé plus simplement en affirmant qu'une droite parallèle à un des côtés du triangle coupe ce triangle en un [[Triangles semblables|triangle semblable]].
+
+Il peut être mis en œuvre dans différentes constructions géométriques faisant intervenir [[compas (géométrie)|compas]] et règle. Par exemple, il peut justifier une construction permettant de diviser un segment en un nombre donné de parts égales.
+
+Pour être plus rigoureux, l'énoncé ci-dessus donné nécessite l'utilisation d'une [[distance euclidienne]] pour donner un sens aux longueurs mentionnées (''AB'', ''BC'', ...). Un énoncé plus général et précis est donné dans le cadre de la géométrie affine. Dans ce cadre, la notion de longueur est remplacée par celle de [[mesure algébrique]], et seul le rapport a un sens (voir plus loin).
+
+===Théorème réciproque===
+Le théorème de Thalès (en dimension 2), dans son sens direct, permet de déduire certaines proportions dès que l'on connaît un certain parallélisme. Sa [[réciproque]] permet de déduire un parallélisme dès que l'on connaît l'égalité de certains rapports.
+
+:'''Réciproque du théorème de Thalès :''' Dans un triangle ABC, supposons donnés des points <math>D</math> et <math>E</math> appartenant respectivement au segment <math>[AB]</math> et <math>[AC]</math>. Si les rapports AD/AB et AE/AC sont égaux, alors les droites (DE) et (BC) sont parallèles.
+
+Il est à remarquer que la démonstration de cette réciproque se déduit du théorème. En effet, considérons un point E' du segment <math>[AC]</math> tel que (DE') soit parallèle à (BC). Alors les points A, E', C sont alignés dans cet ordre et AE'/AC = AD/AB = AE/AC donc il vient que AE' = AE. Or il n'existe qu'un seul point situé entre A et C vérifiant cette propriété donc E' = E . Par conséquent, (DE)=(DE') est parallèle à (BC).
+
+=== Théorème de la droite des milieux ===
+{{Article détaillé|Théorème des milieux}}
+[[Image:Theoreme des milieux-1.png|thumb|right|400px]] Le théorème des milieux est une spécialisation du théorème de Thalès, pour laquelle les points ''D'' et ''E'' correspondent aux milieux des segments <math>[AB]</math> et <math>[AC]</math>. Si une droite passe par les milieux de deux côtés d'un triangle, elle est parallèle à la droite qui supporte le troisième côté ; et la longueur joignant les milieux des deux côtés est égale à la moitié de la longueur du troisième côté:
+
+:'''Théorème de la droite des milieux :''' Soit un triangle ''ABC'', et nommons ''D'' et ''E'' les milieux respectifs de <math>[AB]</math> et <math>[AC]</math>. Alors les droites <math>(DE)</math> et <math>(BC)</math> sont parallèles et on a : <math>2.DE=BC</math>.
+
+La réciproque du théorème de Thalès justifie que les deux droites sont parallèles ; de plus, le théorème de Thalès s'applique et il vient :
+<center><math>\dfrac{DE}{BC}=\dfrac{AD}{AB}=\dfrac{1}{2}</math>.</center>
+
+=== Enseignement et appellations ===
+Ce théorème est connu sous le nom de théorème de Thalès dans l'[[enseignement des mathématiques]] en France, en Suisse, etc.<ref>Plus précisément, le résultat dans la première configuration et le théorème de la droite des milieux sont enseignés dès la [[classe de quatrième française]] et le « théorème de Thalès » à proprement parler et sa réciproque dans la [[classe de troisième française]] cf. Rapport ''L'enseignement des sciences mathématiques'' (mars 2002), p. 162. Les constructions géométriques mettant en œuvre le théorème doivent être vues au collège. Le lien entre le théorème de Thalès et les homothéties doit être enseigné seulement au [[lycée]]. Dans son rapport, [[Jean-Pierre Kahane]] critique ouvertement l'absence du cas d'égalité des triangles dans l'enseignement des mathématiques en France, dont il tient comme responsable la réforme dite des « [[mathématiques modernes]] » Rapport ''L'enseignement des sciences mathématiques'', p. 113 et 163.</ref>.
+
+Aucun texte ancien ne semble attribuer la découverte d'un résultat semblable à [[Thalès]]. La première référence où une telle attribution est faite se trouve dans les ''Éléments de géométrie'' de Rouché et Comberousse en [[1883]]<ref>[http://irem.univ-poitiers.fr/irem/ressourc/histoire_math_college/4ieme/thales/histoire_anecdote/histoire_anecdotes.htm Un site] apportant quelques éléments d'information sur l'histoire de l'appellation du théorème.</ref>. Une des causes de cette attribution serait l'incitation faite aux [[agrégation de mathématiques|agrégatif]]s à la fin du {{s-|XIX|e}} d'attribuer aux résultats des noms de mathématiciens pour qu'ils s'intéressent à l'histoire des mathématiques.
+
+C'est aussi sous le nom de ''théorème de Thalès'' que le résultat est connu dans les pays de la Méditerranée et dans les pays de l'Europe de l’Est ou du Nord. Cependant, dans les pays de langue anglaise et en Allemagne, ce résultat est connu sous le nom de '''théorème d'intersection'''.
+
+L'appellation ''théorème de Thalès'' désigne dans ces pays la propriété selon laquelle tout angle inscrit dans un demi-cercle est droit<ref>[http://perso.wanadoo.fr/therese.eveilleau/pages/truc_mat/pratique/textes/thales_th.htm Courte présentation] des différents énoncés nommés selon Thalès.</ref> (lire [[Théorème de Thalès (cercle)]]).
+
+En Suisse, le théorème est principalement abordé au moyen de la « petite propriété de Thalès » telle qu'elle est enseignée en France. Le « théorème de Thalès suisse » exprime par contre le carré de la hauteur dans un triangle rectangle.
+
+==Origines ==
+Rien n'atteste de la connaissance ou non du théorème de Thalès ou d'un résultat similaire avant la (lente) apparition de l'[[écriture]]. Les premières traces connues et incontestables de l'utilisation de connaissances mathématiques sont des textes pragmatiques provenant des premières grandes civilisations maitrisant l'écriture. Les textes les plus anciens traitent tous de [[numération]], c'est-à-dire de l'art du calcul, en particulier de la multiplication, de la division et de l'extraction de racines. Il n'est pas étonnant que ces textes soient les premiers : sans la maitrise de cet art, le théorème de Thalès n'a pas d'utilité<ref>G. Ifrah ''A universal history of numbers : From prehistory to the invention of the computer'' Harvill Press London 1998 {{ISBN|1-86046-324-X}}</ref>. Les premières traces d'une connaissance du théorème ou d'un substitut proche remontent au  {{IIe millénaire av. J.-C.}}, à l'[[âge du bronze]], à la fois en [[Égypte antique]] et en [[Mésopotamie]] dans la civilisation babylonienne.
+
+=== Civilisation babylonienne ===
+{{Article détaillé|Mathématiques babyloniennes}}
+La tablette MLC 1950 (datée entre -1900 et -1600)<ref>Ibid, paragraphe 10, Il theorema di Talete.</ref> décrit un exercice dans lequel le scribe cherche à calculer les longueurs des bases d'un trapèze rectangle à partir d'informations sur l'aire du trapèze, sa hauteur et la hauteur du triangle correspondant. Les données sont indiquées sur la figure ci-contre (en notation sexagésimale). Le scribe calcule :
+* la demi-somme des longueurs cherchées comme le rapport de l'aire par la hauteur (d'autres tablettes confirment que la formule donnant l'aire du trapèze était connue<ref>Par exemple, la tablette YBC 7290.</ref>) ;
+* la demi-différence par application d'une formule non expliquée ; en notant <math>A</math> l'aire du trapèze <math>BDEC</math>, elle s'écrit aujourd'hui littéralement :
+<center><math>\dfrac{BC-DE}{2}=\dfrac{A}{2AD+BD}</math>.</center>
+[[Roger Caratini]] explique comment obtenir cette formule en appliquant la petite propriété de Thalès aux triangles <math>ABC</math> et <math>ADE</math> d'une part, et aux triangles <math>CBA</math> et <math>CFE</math> d'autre part. Il déduit de ce raisonnement que le scribe possédait {{ Guillemets|un certain nombre de connaissances dans le domaine de la géométrie élémentaire, en particulier les théorèmes fondamentaux sur la similitude des triangles}} (donc, le théorème de Thalès ou un substitut)<ref>Roger Caratini, ''Les mathématiciens de Babylone'', Presses de la Renaissance, Paris, 2002 ; pp. 238-243.</ref>. Cependant, le problème est présenté par sa figure sans que les hypothèses soient énoncées ;
+
+====Démonstration possible de la formule====
+:Le parallélogramme <math>BDEF</math> admet un angle droit en <math>B</math>, et deux de ses côtés sont par hypothèses parallèles : c'est donc un [[rectangle]]. En particulier, la droite <math>(EF)</math> est parallèle à <math>(AB)</math>. L'application de la petite propriété de Thalès aux triangles <math>CBA</math> et <math>CFE</math> donne :
+:<center><math>\dfrac{BC-DE}{DE}=\dfrac{BD}{AD}</math> ou encore <math>\dfrac{BC-DE}{BD}=\dfrac{DE}{AD}</math>.</center>
+:Comme la droite <math>(DE)</math> est parallèle à la droite <math>(BC)</math>, une nouvelle application da la propriété de Thalès donne :
+:<center><math>\dfrac{AD}{AB}=\dfrac{DE}{BC}</math> ou encore <math>\dfrac{BC}{AB}=\dfrac{DE}{AD}</math>.</center>
+:D'où on peut déduire :
+:<center><math>BC+DE=(AB+AD).\dfrac{BC-DE}{BD}=\dfrac{2.A}{BD}</math>.</center>
+:Par conséquent, on en déduit :
+:<center><math>\dfrac{BC-DE}{2}=\dfrac{A}{2AD+BD}</math>.</center>
+
+=== Égypte antique ===
+
+{{Article détaillé|Mathématiques en Égypte antique}}
+
+[[Image:Egyptian A'h-mosè or Rhind Papyrus (1065x1330).png|thumb|right|Le [[papyrus Rhind]] contient un équivalent du théorème de Thalès.]]
+
+De la civilisation égyptienne, seuls quatre [[papyrus (papier)|papyrus]] offrent des résolutions de problèmes mathématiques. Les [[égyptologue]]s déduisent les connaissances mathématiques de l'[[Égypte antique]] indirectement des documents administratifs traitant des crues du [[Nil]], du calcul des impôts, des répartitions de terres cultivables, du dessin des champs après la destruction des repères suite aux crues<ref>A. Erman, H. Ranke, ''La Civilisation égyptienne'', Payot, Paris, 1985 {{ISBN | 2-228-88800-1}}</ref>... Selon certains, les [[pyramides de Gizeh]] démontreraient un savoir géométrique mis au service de l'architecture<ref>J. O'Connor, E. F. Robertson ''[http://www-history.mcs.st-andrews.ac.uk/history/HistTopics/Egyptian_mathematics.html An overview of Egyptian mathematics]'' 2000</ref>. Cependant, selon d'autres, l'absence de tables numériques montre un faible intérêt pour les mathématiques en dehors de ses applications{{référence nécessaire}}.
+
+Le plus célèbre des quatre papyrus est le [[papyrus Rhind]], du nom d'[[Alexander Henry Rhind]] <small>([[1833]]-[[1863]])</small>, un antiquaire [[Écosse|écossais]] qui l'achèta en [[1858]]. Il aurait été rédigé par le [[Scribe dans l'Égypte antique|scribe]] [[Ahmès (scribe)|Ahmès]] sous le pharaon [[Apophis Ier|Apophis Âa-ouser-rê]] (vers -1550), reprenant le contenu d'un papyrus non retrouvé rédigé sous le règne du pharaon [[Amenemhat II|Amenemhat {{II}}]] (vers -1850).
+
+[[Sylvia Couchoud]], une [[égyptologue]], étudie<ref>[[Sylvia Couchoud]] ''Mathématiques Égyptiennes. Recherches sur les connaissances mathématiques de l’Égypte pharaonique'', éditions Le Léopard d’Or 2004 {{ISBN | 2-863-777-118-3}}</ref> ce papyrus avec attention. Outre les informations qu'il fournit sur les connaissances en arithmétique et en algèbre, il offre l'énoncé du théorème de Thalès, appelé ''seqet''<ref>Webmath ''[http://membres.lycos.fr/serge/Histoire_maths.html Une courte histoire des mathématiques]''</ref>, appliqué à un exemple numérique.
+
+=== Grèce antique===
+[[Image:Title page of Sir Henry Billingsley's first English version of Euclid's Elements, 1570 (560x900).jpg|thumb|left|Une édition des Éléments d'Euclide.]]
+La civilisation grecque antique est différente de celle de l'Égypte et de Babylone. La philosophie et la beauté y sont des sujets essentiels. Il n'est donc pas étonnant que les mathématiques grecques n'ont plus pour premier objectif la résolution de problèmes pragmatiques, mais celle de problèmes théoriques<ref name="Lire">Bernard Vitrac, ''L'origine de la géométrie grecque'', Génies de la Science, nov. 2004 [http://www.dma.ens.fr/culturemath/histoire%20des%20maths/htm/Vitrac/grecs-index.htm Lire]</ref>. [[Pythagore]] établit une [[géométrie]] fondée sur des ''principes'', qui deviendront plus tard des [[axiome]]s pour accéder à une approche non [[Empirisme|expérimentale]] et purement spéculative et intellectuelle<ref>[[Proclos]] ''Commentaire sur le premier livre des Éléments d'Euclide'' 65 11</ref>. Pour [[Platon]], les mathématiques constituent la base de l'enseignement des Rois-philosophes de la cité idéale<ref>[[Platon]] ''La République'', chapitre VII [http://plato-dialogues.org/fr/tetra_4/republic/arithm.htm Lire sur le site de David E. Joyce].</ref>. La géométrie prend réellement ses racines dans la civilisation grecque.
+
+Une vision de cette nature modifie radicalement la formulation du théorème de Thalès, dont on trouve la première démonstration écrite connue dans les [[Eléments d'Euclide|''Eléments'' d'Euclide]]<ref>[[Euclide]] ''[[Eléments d'Euclide]]'', livre VI, proposition 2 [http://gallica.bnf.fr/ark:/12148/bpt6k68013g.f220 Lire en page 215] ou [http://aleph0.clarku.edu/~djoyce/java/elements/bookVI/propVI2.html Lire ]</ref>. Trois éléments essentiels ont changé. Le théorème est énoncé de manière parfaitement générale, à la différence des Égyptiens qui décrivent ce résultat à l'aide d'un exemple, ou des Babyloniens qui semblent utiliser implicitement le résultat. Précédemment, les traités de mathématiques se présentaient comme une suite de techniques à même de trouver le bon résultat. La notion de démonstration était absente. Enfin, la réciproque est énoncée, ce qui est aussi une première.
+
+=== Le calcul de la hauteur d'une pyramide, une légende ===
+[[Image:Thales.jpg|thumb|right|le théorème de l'article doit son nom en France à [[Thalès de Milet]].]]
+Certains textes littéraires de l'Antiquité grecque font référence aux travaux de [[Thalès de Milet]] au {{s-|VI|e}} av. J.-C., dont aucun écrit ne nous est parvenu. Cependant, aucun texte ancien n'attribue la découverte du théorème à Thalès<ref>[http://mediamaths.fr/pdf/thales.pdf Proportionnalité en géométrie plane dans les ''Éléments'' d'Euclide], article de Éliane Cousquer.</ref>. Dans son commentaire sur les ''Éléments'' d'Euclide, Proclos<ref>[[Proclos]] ''Commentaire sur le premier livre des Eléments d’Euclide'', traduction P. Ver Eecke, Bruges, Desclée de Brouwer, 1948.</ref> affirme que Thalès aurait rapporté le résultat de son voyage en Égypte. [[Hérodote]] rapporte la même chose et précise qu'il est l'un des sept sages fondateurs de cette civilisation<ref>{{HérEnq}}</ref>. Une anecdote célèbre rapporte que Thalès obtint l'admiration de Pharaon en mesurant la hauteur d'une des pyramides. [[Plutarque]] indique que : 
+{{Citation bloc| Dressant seulement à plomb un bâton au bout de l’ombre de la pyramide et se faisant deux triangles avec la ligne que fait le rayon du soleil touchant aux deux extrémités, tu montreras qu’il y avait telle proportion de la hauteur de la pyramide à celle du bâton, comme il y a de la longueur de l’ombre de l’un à l’ombre de l’autre<ref>[[Plutarque]], ''Le banquet des sept sages'' [http://remacle.org/bloodwolf/historiens/Plutarque/banquet.htm lire]</ref>.}}
+Cette légende est reprise par d'autres auteurs. [[Diogène Laërce]] écrit :
+{{Citation bloc| Hiéronyme dit que Thalès mesura les pyramides d'après leur ombre, ayant observé le temps où notre propre ombre égale notre hauteur.<ref>[[Diogène Laërce]] ''Vie, doctrine et sentence des philosophes illustres ; Thalès, I, 27.</ref>.}}
+[[Image:Thales theorem 6.png|thumb|400 px|right]]
+Bernard Vitrac émet de sérieux doutes sur la réalité de ces précisions : {{Guillemets |Plus ils sont tardifs, plus ils sont capables de donner des détails sur le procédé utilisé}}<ref name="Lire"/>. [[Plutarque]] parle seulement de proportionnalité entre les hauteurs de la pyramide et du bâton, d'une part, et des longueurs de leurs ombres projetées, d'autre part. Laërce évoque l'égalité des côtés adjacents à un angle droit d'un triangle rectangle isocèle. La légende selon laquelle Thalès aurait inventé « son » théorème en voulant calculer la hauteur d'une pyramide est aujourd'hui véhiculée et embellie sur de nombreux sites internet, par de nombreux journaux de vulgarisation et par certains auteurs<ref>[[Claude Allègre]] prend cette histoire pour argent comptant dans son livre ''Un peu de science pour tout le monde'', Fayard, 2006.</ref>.
+
+Selon [[Michel Serres]], cette histoire était utilisée et transmise dans la civilisation grecque antique comme un [[moyen mnémotechnique]] : {{ Guillemets|Dans une culture de tradition orale, récit tient lieu de schéma, scène vaut intuition, où l'espace vient en aide à la mémoire. [...] Mieux vaut reconnaître, alors, dans le récit, moins une légende originaire que la forme même de la transmission ; il communique un élément de science plus qu'il ne témoigne de son émergence}}<ref>Michel Serres, ''Les origines de la géométrie'', Flammarion ,1995.</ref>.
+
+Cette histoire atteste aussi de l'origine probable de la géométrie : le calcul des distances et des tailles caractéristiques d'objets inaccessibles (ici la hauteur d'une pyramide) a probablement conduit l'homme à s'interroger sur les relations des distances entre des points de repère. Cette interrogation l'a naturellement conduit à s'intéresser à la trigonométrie, d'où l'émergence de résultats comparables au théorème de Thalès<ref>Ibid, pp.220-230.</ref>. Par ailleurs, on trouve dans les différentes versions un objet de référence, un axe, un essieu, ou Thalès lui-même, utilisé comme un ''[[gnomon]]'', terme signifiant « instrument du savoir, de la compréhension ». Certains voient dans l'origine babylonienne de ce terme une preuve supplémentaire que l'énoncé du théorème et sa démonstration seraient d'origine babylonienne<ref>Ibid., pp. 235-237 ; 239 ; 245.</ref>
+
+Une version de la légende de la découverte du résultat par Thalès pourrait être la suivante.
+
+==== Version de la légende ====
+{{à sourcer|date=octobre 2010}}
+:Lors d'un voyage en [[Égypte]], Thalès aurait visité les [[pyramides d'Égypte|pyramides]] construites plusieurs siècles plus tôt. Admirant ces monuments, il aurait été mis au défi d'en calculer la hauteur. Thalès aurait donc entrepris une mesure des pyramides, dont le principe reposerait sur le concept de triangles semblables et de proportionnalité. Thalès aurait remarqué qu'à cette époque de l'année, à midi, l'ombre portée d'un homme ou d'un bâton égalait la taille de l'homme ou la longueur du bâton. Les rayons de soleil pouvant être supposés parallèles, Thalès en aurait déduit qu'il en serait de même pour la hauteur de la pyramide et son ombre projetée.
+:Encore fallait-il être capable de mesurer l'ombre projetée : il aurait repéré le sommet de l'ombre projetée de la pyramide, mais pour la mesurer dans son entier, il lui aurait fallu partir du centre de la pyramide qui n'était pas accessible. Thalès aurait bénéficié d'un atout supplémentaire : non seulement l'ombre portée égalait la hauteur de la pyramide, mais les rayons du soleil étaient perpendiculaires à une arête de la base. Le sommet de l'ombre de la pyramide se serait alors trouvé sur la médiatrice d'un côté de la base. Il lui aurait suffi de mesurer la distance séparant l'extrémité de l'ombre et le milieu du côté, d'ajouter à cette longueur un demi-côté pour obtenir la hauteur de la pyramide.
+:Le fait que le sommet de l'ombre de la pyramide soit sur la médiatrice d'un côté à midi ne tient absolument pas du hasard, mais au fait que les pyramides sont orientées plein sud ou plein ouest. La [[pyramide de Khéops]] est située à une [[latitude]] de 30°, la longueur de l'ombre égale celle du bâton lorsque le soleil fait 45° avec la verticale. L'angle que forme le soleil avec la verticale varie au cours de l'année entre 6,73° (au plus fort de l'été) et 53,27° (au plus fort de l'hiver) et ne fait un angle de 45° que deux fois dans l'année (le 21 novembre et le 20 janvier). Ce serait un hasard extraordinaire que Thalès se fût trouvé là à cet instant précis. À toute autre période de l'année, la longueur de l'ombre est proportionnelle à la hauteur. 
+:Thalès aurait lui-même fait ces remarques. Il serait retourné et aurait expliqué que la hauteur de la pyramide est proportionnelle à la longueur de son ombre. En comparant la longueur de l'ombre et la hauteur d'un bâton planté, il lui aurait été facile de connaître le coefficient de proportionnalité et de l'appliquer ensuite à l'ombre de la pyramide pour en déterminer sa hauteur. [[Plutarque]] ne dit d'ailleurs pas autre chose(ou?).
+
+==Démonstrations==
+===Preuve mentionnée par Euclide===
+[[Image:Thales theorem 4.svg|thumb|right|300px|Disposition des points]]
+Dans l'approche d'Euclide, les points sont des éléments indivisibles à partir desquels les objets géométriques se définissent. Dans cette perspective, les notions de segments et de droites ne sont pas différenciées. La propriété démontrée par Euclide n'est pas exactement le théorème comme il est cité de nos jours. Une traduction datant de 1632 est la suivante :
+<blockquote>
+'''Livre VI, Proposition 2 :''' « Si on mène une ligne droite parallèle à l'un des cotez d'un triangle, laquelle coupe les deux autres cotez ; elle les coupera proportionnellement ; & si les deux côtés d'un triangle sont coupés proportionnellement, la ligne coupante sera parallèle a l'autre cotez<ref>Disponible sur Gallica : [http://gallica.bnf.fr/ark:/12148/bpt6k68013g].</ref>. »<br /> ''Si on mène une ligne droite parallèle à l'un des côtés d'un triangle, laquelle coupe les deux autres côtés, elle les coupera proportionnellement. Et si les deux côtés d'un triangle sont coupés proportionnellement, la ligne coupante sera parallèle à l'autre côté.''
+</blockquote>
+Les données de ce théorème sont donc :
+* Un triangle, par définition délimité par trois lignes droites (segments) AB, BC, et CA ;
+* Une ligne droite DE parallèle à la ligne droite BC intersectant AB en D et AC en E.
+Les notations sont celles introduites par Euclide après l'énoncé ; l'illustration ci-contre donne la disposition des points. La conclusion donnée est :
+<blockquote>
+« AD fera à DB ce que AE est à EC. »
+</blockquote>
+Autrement dit, en écriture mathématique actuelle :
+<center><math>\dfrac{BD}{DA}=\dfrac{CE}{EA}</math>.</center>
+
+La démarche d'Euclide se base sur le fait que l'[[Triangle|aire d'un triangle]] est égale à la moitié de la longueur de sa hauteur, par-rapport à une base (ou côté) quelconque, multipliée par la longueur de la base en question. Il constate que les hauteurs des triangles DEB et DEC par rapport à leur base commune DE ont la même longueur. Ces deux triangles ont par conséquent la même aire, et a fortiori, ils ont donc le même ''ratio'' (d'aires) avec n'importe quelle aire non nulle, et en particulier celle du triangle DEA. Comme les hauteurs des triangles DEB et DEA par rapport, respectivement, aux bases BD et DA, sont confondues, Euclide en déduit que le ratio de DEB par DEA est le même que le ratio de BD par DA. Par analogie, le ''ratio'' de DEC par DEA est le même que le ratio de  CE par EA. La proposition 11 du livre V énonce que les ratios qui sont les mêmes qu'un autre ratio sont les mêmes. Euclide en déduit donc que le ratio de BD par DA est le même que le ratio de CE par EA.
+
+Le raisonnement proposé par Euclide se traduit aujourd'hui par les égalités suivantes :
+<center><math>\dfrac{BD}{DA}=\dfrac{Aire(DEB)}{Aire(DEA)}=\dfrac{Aire(DEC)}{Aire(DEA)}=\dfrac{CE}{EA}</math>.</center>
+Les égalités s'appuient sur les constatations suivantes :
+* Les triangles DEB et DEA ont une hauteur commune ''h'' issue de E. Donc, leur aire est respectivement  ½BD×h et ½DA×h.
+* Les triangles DEB et DEC ont une base commune DE, et les sommets opposés B et C sont par hypothèses sur une droite parallèle à (DE).
+* Enfin, les triangles DEC et DEA ont une hauteur commune ''h''' issue de D. Donc, leur aire est respectivement  ½CE×h' et ½EA×h'.
+Sous forme de tableau de [[proportionnalité]] :
+{| border cellspacing="0" width="135"
+|-  style="text-align:center"
+| BD || DEB || DEC || CE
+|- style="text-align:center"
+| DA || DEA || DEA || EA
+|}
+{{clr}}
+
+===Preuve purement vectorielle===
+
+Il faut se poser la question de la validité d'une démonstration vectorielle du théorème de Thalès. En effet, la [[géométrie vectorielle]] s'appuie souvent sur une définition géométrique des vecteurs, définition dans laquelle le théorème de Thalès joue un rôle prépondérant quand il s'agit d'affirmer que <math>k(\vec{u} + \vec{v}) = k\vec{u} + k\vec{v}</math>.
+
+Mais on peut toutefois s'intéresser à une écriture possible du théorème de Thalès et sa justification grâce aux opérations vectorielles. Ce qui pourrait permettre de généraliser le théorème de Thalès à tout [[espace affine]] [[espace euclidien|euclidien]] associé à un [[espace vectoriel]].
+
+Dire que D est sur (AB) c'est écrire qu'il existe un réel x tel que <math>\overrightarrow{AD}=x\overrightarrow{AB}</math>.
+
+De même, dire que E est sur (AC), c'est écrire qu'il existe un réel y tel que <math>\overrightarrow{AE}=y\overrightarrow{AC}</math>.
+
+Enfin, dire que les droites (ED) et (BC) sont parallèles, c'est écrire qu'il existe un réel t tel que  <math>\overrightarrow{DE}= t \overrightarrow{BC}</math>.
+
+Les égalités précédentes et la [[relation de Chasles]] permettent d'écrire que :
+
+:<math>y\overrightarrow{AC}=\overrightarrow{AE}</math>
+:<math>y\overrightarrow{AB}+ y\overrightarrow{BC}=\overrightarrow{AD}+\overrightarrow{DE}</math>
+:<math>y\overrightarrow{AB}+ y\overrightarrow{BC}=x\overrightarrow{AB}+ t\overrightarrow{BC}</math>
+
+L'écriture suivant les vecteurs <math>\overrightarrow{AB}</math> et <math>\overrightarrow{BC}</math> se doit d'être unique car ces vecteurs ne sont pas [[base (algèbre linéaire)|colinéaires]]. Donc <math>y=x\,</math> et <math>y=t\,</math>
+
+On obtient donc les trois égalités: 
+:<math>\overrightarrow{AD}=x\overrightarrow{AB}</math>
+:<math>\overrightarrow{AE}=x\overrightarrow{AC}</math>
+:<math>\overrightarrow{DE}=x\overrightarrow{BC}</math>.
+
+L'avantage de cet énoncé et de cette démonstration est que cela n'oblige pas à traiter les différents cas de configuration évoqués plus haut.
+== Généralisations du théorème de Thalès==
+===Cas de trois droites parallèles===
+[[Image:Thales theorem 3.svg|right|thumb|300px|Disposition des points et des droites.]]
+Toujours en dimension 2, le théorème de Thalès désigne souvent l'énoncé suivant, qui utilise les [[mesure algébrique|mesures algébriques]] :
+:'''Théorème de Thalès :'''{{référence nécessaire}} Soient deux droites <math>d</math> et <math>d'</math> (du plan réel euclidien) et trois droites parallèles <math>(AA')</math>, <math>(BB')</math> et <math>(CC')</math> intersectant <math>d</math> et <math>d'</math> respectivement en <math>A</math> et <math>A'</math>, en <math>B</math> et <math>B'</math>, et en <math>C</math> et <math>C'</math>, comme indiqué sur la figure ci-contre. Alors :
+:<center><math>\dfrac{\overline{AB}}{\overline{AC}}=\dfrac{\overline{A'B'}}{\overline{A'C'}}</math>.</center>
+Cette conclusion équivaut à l'une des deux égalités suivantes :
+<center><math>\dfrac{\overline{AB}}{\overline{BC}}=\dfrac{\overline{A'B'}}{\overline{B'C'}}</math> ou <math>\dfrac{\overline{BC}}{\overline{AC}}=\dfrac{\overline{B'C'}}{\overline{A'C'}}</math> ;</center>
+ou encore à :
+<center><math>\dfrac{\overline{A'B'}}{\overline{AB}}=\dfrac{\overline{B'C'}}{\overline{BC}}=\dfrac{\overline{A'C'}}{\overline{AC}}</math>.</center>
+
+Si on néglige les mesures algébriques, le premier énoncé donné du théorème de Thalès est la spécialisation du second au cas où deux points sont confondus (par exemple <math>A</math> et <math>A'</math>). En considérant la parallèle à <math>d'</math> passant par ''A'' le second énoncé se déduit du premier.
+
+Il est possible de donner une démonstration de ce théorème à partir de l'axiomatique du [[plan affine de Desargues|plan arguésien]] dégagée au {{XXe}} siècle<ref>On pourra en lire une preuve dans un cours pour enseignants (en allemand) de W. Börner, p. 16 [http://www.minet.uni-jena.de/www/fakultaet/hertel/skripten/boerner/geol0102/gfl.pdf disponible en ligne] sur le site de l'Université d'Iéna (consulté le 1{{er}} octobre 2007).</ref>.
+
+===En dimension supérieure===
+Souvent énoncé comme un théorème de géométrie plane, le théorème de Thalès se généralise sans difficulté en [[dimension]] supérieure, notamment en dimension 3. L'utilisation de droites parallèles est remplacée par des hyperplans parallèles ; les droites (d) et (d') n'ont pas à être supposées coplanaires :
+:'''Théorème de Thalès'''<ref>Ce paragraphe présente la version du théorème qu'on pourra lire par exemple dans le traité de Géométrie de [[Marcel Berger]], énoncé 2.5.1 (tome 1, p. 73 dans l'édition de 1979 - CEDIC Fernand Nathan).</ref>''' :''' Soient <math>(d)</math> et <math>(d')</math> deux droites d'un même [[espace affine]] ; et <math> H_a</math>, <math> H_b</math> et <math>H_c</math> trois [[hyperplan]]s [[parallélisme (géométrie)|parallèles]]. On suppose en outre que la droite (d) intersecte les hyperplans respectivement en <math>A</math>, <math>B</math>, <math>C</math>, et de même que la droite (d') respectivement en  <math>A'</math>, <math>B'</math> et <math>C'</math>. Alors, on a :
+{| align="center" border="0"
+|<math>{\overline{AB}\over\overline{AC}}={\overline{A'B'}\over\overline{A'C'}}</math>
+|}
+
+Quand les deux droites (d) et (d') ne sont pas coplanaires, ce théorème connait une réciproque sous la forme suivante : quand les points A, B, C distincts sur (d) et les points A', B', C' distincts sur (d') vérifient l'égalité des rapports de mesure algébrique ci-dessus, il existe alors trois plans parallèles contenant le premier A et A', le second B et B' et le troisième C et C'<ref>Voir par exemple une note à l'usage des étudiants préparant le [[Certificat d'aptitude au professorat de l'enseignement du second degré|CAPES]], par Jérôme Germoni, p. 4, [http://math.univ-lyon1.fr/capes/IMG/pdf/thales.pdf disponible en ligne] sur le site de l'Université de Lyon 1 (consultée le 1{{er}} octobre 2007).</ref>.
+ 
+==== Preuve utilisant une  [[Projecteur (mathématiques)|projection affine]] ====
+
+Dans son livre, [[Marcel Berger]] propose une preuve algébrique de la version du théorème de Thalès en dimension supérieure<ref>Lire proposition 2.5.1.</ref>. Sa preuve ne s'appuie pas sur une approche axiomatique de la géométrie, mais sur la définition actuelle d'[[espace affine]] et [[espace vectoriel|vectoriel]].
+
+La preuve de Marcel Berger consiste à construire une bijection affine ''f'' entre les deux droites ''d'' et ''d'''  envoyant <math>A</math> sur <math>A'</math>, <math>B</math> sur <math>B'</math>, et <math>C</math> sur <math>C'</math>. Il est possible de déduire de la définition d'une application affine qu'une bijection affine entre droites affines préserve le rapport. Donc :
+ 
+{| align="center" border="0"
+|<math>{\overline{AB}\over\overline{AC}}={\overline{f(A)f(B)}\over\overline{f(A)f(C)}}={\overline{A'B'}\over\overline{A'C'}}</math>
+|}
+
+Pour construire effectivement ''f'', Marcel Berger propose de munir l'ensemble des hyperplans parallèles à <math>H_a</math> d'une structure de droite affine (structure quotient), de sorte que l'application qui à un point de ''d'' (ou bien de ''d''') associe l'hyperplan passant par ce point et parallèle à <math>H_a</math> soit une application affine. Sans introduire la notion d'espace quotient, on peut aussi<ref>Claude Tisseron, ''Géométries affine, projective et euclidienne'', Hermann, pp. 56-57.</ref> définir l'application ''f'' comme la restriction à ''d'' de la projection sur la droite <math>d'</math> parallèlement à <math>H_a</math>. Par définition, ''f'' envoie effectivement <math>A</math> sur <math>A'</math>, <math>B</math> sur <math>B'</math>, et <math>C</math> sur <math>C'</math>. L'inverse de ''f'' se définit comme la restriction à la droite <math>d'</math> de la projection sur <math>d</math> parallèlement à <math>H_a</math>.
+
+==== Conservation des birapports par les projections ====
+
+Le [[birapport]] est un invariant projectif associé à quatre points. Le [[Birapport#Rapport_anharmonique_de_quatre_droites_concourantes|théorème de conservation des birapports par projection]] est lié de près au théorème de Thalès, l'un pouvant sans grand mal se déduire de l'autre<ref>Ainsi le traité de Géométrie de Marcel Berger, énoncé 6.5.5 (tome 1, p. 163 dans l'édition de 1979 - CEDIC Fernand Nathan) explique comment déduire Thalès de cette propriété projective et constitue d'ailleurs la source de ce paragraphe. On trouvera dans l'autre sens des éléments de démonstration du théorème projectif à partir de Thalès à l'article [[Faisceau harmonique]].</ref>.
+
+De même que les trois droites parallèles du théorème de Thalès peuvent être remplacées par des hyperplans parallèles dans un espace affine de dimension supérieure à 2, les quatre droites [[concourant]]es de ce théorème de conservation des birapports peuvent être remplacées par des hyperplans appartenant à un même [[faisceau d'hyperplans|faisceau]] en dimension supérieure.
+
+L'intérêt de ce point de vue est de souligner l'analogie du « rapport »  <math>{\overline{AB}}\over{\overline{AC}}</math> intervenant dans le théorème de Thalès avec le birapport utilisé en géométrie projective : le premier est laissé invariant par une transformation affine d'une droite affine vers une autre exactement comme le second est laissé invariant par une transformation projective d'une droite projective vers une autre.
+
+==Applications du théorème de Thalès==
+=== Algèbre géométrique ===
+Le théorème de Thalès offre des égalités entre diverses [[fraction (mathématiques)|fractions]]. Si les droites et les triangles appartiennent à la branche mathématique appelée [[géométrie]], les fractions font partie de l'[[algèbre]]. Le fait que le théorème de Thalès offre des égalités sur les fractions en fait une méthode de démonstration qui s'applique à l'algèbre. Il est possible d'établir toutes les lois régissant le comportement des fractions et par là, les mécanismes qui permettent de venir à bout de toutes les [[équation du premier degré|équations du premier degré]]. Cette démarche est décrite dans l'article [[Algèbre géométrique]].
+
+=== Résultats de géométrie projective et rapport avec les homothéties ===
+
+En [[géométrie]], le théorème de Thalès ou sa réciproque peuvent être utilisés pour établir des conditions d'alignement ou de parallélisme. Sans faire appel aux notions de droite projective, ils permettent d'obtenir des versions satisfaisantes des résultats relevant en réalité de la [[géométrie projective]]. Le théorème de Thalès peut être utilisé comme substitut des [[homothétie]]s dans les démonstrations.
+
+* '''[[Théorème de Ménélaüs]] :''' Étant donnés un triangle ABC et trois points A', B' et C' appartenant respectivement aux droites (BC), (AC) et (AB) ; les points A', B' et C' sont alignés si :
+<center><math>\dfrac{\overline{A'C}}{\overline{A'B}}.\dfrac{\overline{B'A}}{\overline{B'C}}.\dfrac{\overline{C'B}}{\overline{C'A}}=1 </math></center>
+* '''[[Théorème de Ceva]] :''' Étant donnés un triangle ABC et trois points A', B' et C' appartenant respectivement aux droites (BC), (AC) et (AB) ; les droites (AA'), (BB') et (CC') sont concourantes ou parallèles ssi :
+<center><math>\dfrac{\overline{A'C}}{\overline{A'B}}.\dfrac{\overline{B'A}}{\overline{B'C}}.\dfrac{\overline{C'B}}{\overline{C'A}}=-1 </math></center>
+* '''[[Théorème de Pappus]] :''' Soient deux droites d et d' ; trois points A, B et C de d ; trois points A', B', et C' de d'. On note P, Q, et R les intersections respectives de (AB') et (A'B), de (B'C) et (BC'), et de (AC') et (A'C). Alors les points P, Q et R sont alignés.
+* '''[[Théorème de Desargues]] :''' Soient deux triangles ABC et A'B'C' tels que les droites (AB) et (A'B') sont parallèles, de même pour (BC) et (B'C') et pour (AC) et (A'C'). Alors les droites (AA'), (BB') et (CC') sont parallèles ou concourantes.
+
+===Nombres constructibles===
+[[Image:Produit constructible.png|thumb|300px|Construction géométrique du produit]]
+{{Article détaillé|Nombre constructible}}
+Une question qui s'est soulevée durant l'Antiquité, et notamment sous la forme du problème de la [[quadrature du cercle]], est la possibilité de construire une figure à l'aide de la règle (non graduée) et du compas :
+* la règle est un instrument idéalisé permettant de considérer une droite passant par deux points déjà tracés ;
+* le compas est un instrument idéalisé permettant de considérer un cercle de centre un point déjà construit et de rayon le report d'une distance réalisée entre deux points déjà construits.
+
+Un point du plan euclidien est dit [[Construction à la règle et au compas|constructible à la règle et au compas]] s'il peut être obtenu par un nombre fini d'étapes à partir des points de coordonnées (0,0) et (0,1). Suite aux travaux de Georg Cantor, il peut être affirmé que tous les points constructibles à la règle et au compas sont en nombre dénombrable. 
+
+Un nombre constructible est un nombre réel qui peut être obtenu comme coordonnée d'un point constructible. L'ensemble des nombres constructibles est stable par somme, produit et inverse. Le théorème de Thalès montre que le produit de deux nombres constructibles est un nombre constructible. En effet, pour deux réels non nuls constructibles <math>x</math> et <math>y</math>, un calcul donne la justification de la construction ci-contre :
+<center>
+<math>\dfrac{xy}{x}=\dfrac{y}{1}</math>
+</center>
+
+== Notes ==
+{{références|colonnes=2}}
+
+==Voir aussi==
+===Articles connexes===
+*[[Livre VI des Éléments d'Euclide]]
+*[[Théorème des milieux (mathématiques élémentaires)|Théorème des milieux]] : cas particulier du théorème de Thalès.
+
+=== Liens et documents externes ===
+{{Autres projets
+|wikibooks=CMC/3ème/Thalès
+|wikibooks titre=Exposé plus élémentaire sur les théorèmes de Thalès en troisième
+|wikiversity=Triangles et parallèles
+}}
+* [http://www.ilemaths.net/maths_3_thales_cours.php Le théorème de Thalès et sa réciproque]
+* [http://www.kangmath.org/swf/thales2.html Une animation sur le théorème de Thalès]
+* [http://instrumenpoche.sesamath.net/IMG/lecteur_iep.php?anim=application_thales3.xml Construction du nombre 3/7 à la règle et au compas] (animation [[InstrumenPoche]])
+
+{{Portail géométrie}}
+{{Bon article|oldid=23370290|date=25 novembre 2007}}
+
+{{DEFAULTSORT:Theoreme Thales}}
+[[Catégorie:Ligne droite]]
+[[Catégorie:Théorème de géométrie|Thales]]
+[[Catégorie:Géométrie du triangle]]
+[[Catégorie:Mathématiques élémentaires]]
+
+[[ca:Teorema de Tales]]
+[[de:Strahlensatz]]
+[[en:Intercept theorem]]
+[[es:Teorema de Tales]]
+[[he:משפט תאלס]]
+[[it:Teorema di Talete]]
+[[nl:Stelling van Thales]]
+[[pl:Twierdzenie Talesa]]
+[[pt:Teorema de Tales]]
+[[ro:Teorema lui Thales]]
+[[ru:Теорема Фалеса]]

@@ -1,0 +1,1401 @@
+{{Confusion|texte=Cet article concerne seulement la date de Pâques des diverses églises chrétiennes. Pour la Pâque juive, consulter l'article ''[[Pessa'h|Pâque juive]]''.}}
+
+Le '''calcul de la date de [[Pâques]]''' permet de déterminer non seulement le jour de [[Pâques]] mais aussi celui des nombreuses célébrations chrétiennes qui s'y réfèrent. De plus, le calendrier civil de plusieurs pays prend en compte certaines de ces célébrations religieuses en tant que jours fériés. Ce calcul, complexe, est donc important autant pour la vie religieuse des chrétiens que pour la vie civile des pays de tradition chrétienne.
+
+[[Fichier:Der-Auferstandene 1558.jpg|thumb|Alt=La résurrection du Christ, Lucas Cranach, 1558|La résurrection du Christ ; [[Lucas Cranach le Jeune]], 1558.]]
+
+La définition précise du jour de Pâques fut fixée en 325 par le [[Premier concile de Nicée|concile de Nicée]]. Les Pères de l'église réunis par l'empereur [[Constantin Ier (empereur romain)|Constantin]] la fixèrent ainsi :
+
+:Pâques est le dimanche qui suit le {{14e}} jour de la Lune qui atteint cet âge le 21 mars ou immédiatement après.
+
+Cette définition pose des problèmes de calculs astronomiques et mathématiques redoutables auxquels les savants s'attelèrent du {{S-|IV}} au {{S-|XX}} : il fallut attendre le {{S-|VI}} pour qu'une méthode de calcul précise, élaborée, selon la tradition, par le moine byzantin [[Denys le Petit]], soit progressivement adoptée par l'ensemble des églises chrétiennes. Cette méthode de calcul de la date de Pâques, compliquée, mit longtemps à se répandre dans le monde chrétien.
+
+Elle dut être modifiée lors de l'adoption du calendrier grégorien en 1582 : non seulement il fallait répercuter sur le calcul de la date de Pâques les modifications du calendrier introduites par la réforme grégorienne, mais, de plus, les astronomes attachés à [[Grégoire XIII|Grégoire <small>{{XIII}}</small>]], promoteur du changement de calendrier, en profitèrent pour corriger certaines imperfections de la méthode de Denys le Petit, compliquant d'autant le mode de calcul.
+
+Au {{S-|XVIII}}, les mathématiciens cherchèrent des procédés plus simples que les méthodes canoniques pour calculer la date de Pâques tout en respectant rigoureusement la définition du concile de Nicée. Ils préféraient en particulier des [[algorithme]]s fondés sur des opérations arithmétiques élémentaires. En 1800, [[Carl Friedrich Gauss|Gauss]] publia une méthode utilisant uniquement des divisions de nombres entiers. Toutefois, cette méthode initiale était incomplète et produisait des résultats parfois inexacts. En 1814, [[Jean-Baptiste Joseph Delambre|Delambre]] décrivit un procédé simple et exacte pour le calendrier julien. En 1876, la revue scientifique britannique ''[[Nature (revue)|Nature]]'' publia une méthode simple, générale et exacte pour le calendrier grégorien. La réunion de ces deux méthodes forme l'algorithme de [[Jean Meeus|Meeus]]. De la fin du {{S-|XIX}} jusqu'aux années 1970 des mathématiciens diffusèrent des méthodes simplifiées, présentant toutefois des limitations dans leur application. Dans les années 1980 [[John Horton Conway]] publia une présentation originale du calcul de la date de Pâques pour le calendrier grégorien avec l'utilisation de la notion de "Jour-pivot".
+
+Toutes les méthodes de calcul de la date de Pâques se fondent sur une lune théorique et non sur la lune réelle observée. De plus, les grandeurs astronomiques y sont supposée indéfiniment constantes ; or celles-ci (comme la durée du jour terrestre ou celle du jour mois lunaire) varient sur le long terme. Les extrapolations du calcul de la date de Pâques sur plusieurs milliers d'années sont donc purement théoriques.
+
+== Définition de la date de Pâques ==
+La fête de Pâques<ref group=Note>La fête de Pâques chrétienne est normalement orthographiée avec un ''s'' et se distingue de la Pâque juive écrite au singulier. La locution ''date de Pâques'' est une ellipse pour ''date du jour de la fête de Pâques''.</ref> était célébrée de façon diverse par les églises chrétiennes primitives. Certains fêtaient Pâques le même jour que la Pâque juive, même lorsque ce n'était pas un dimanche ; d'autres différaient la célébration au dimanche suivant ; d'autres encore suivaient d'autres coutumes.
+
+=== La définition du concile de Nicée ===
+[[Fichier:THE FIRST COUNCIL OF NICEA.jpg|thumb|alt=Le premier concile de Nicée, icône orthodoxe.|Icône du premier concile de Nicée. Au premier plan, l'évêque saint Spyridon s'exprime devant le concile et confond Arius. Derrière lui, préside à gauche (à droite de l'autel) le représentant de l'évêque de Rome, et en seconde place, à droite, l'empereur Constantin.]]
+
+En 325, lors du [[Premier concile de Nicée|concile de Nicée]], convoqué par [[Constantin Ier (empereur romain)|Constantin le Grand]] pour mettre d'accord entre eux, sur de multiples sujets, les représentants du Christianisme devenu religion d'État, les trois-cent-dix-huit Pères clarifièrent la situation en s'accordant sur la définition suivante<ref> J. Lévy, ''Détermination de la date de Pâques'', Paris, Annuaire du [[Bureau des longitudes]], [http://www.imcce.fr/fr/grandpublic/systeme/promenade/pages4/442.html Lire ici].</ref>{{, }}<ref> Actes du Concile de Nicée. Lire [http://remacle.org/bloodwolf/eglise/anonyme/nicee.htm ici]</ref>.
+{{Citation bloc|Pâques est le dimanche qui suit le {{14e}} jour de la lune qui atteint cet âge le 21 mars ou immédiatement après.}}
+
+Cette définition doit être assortie de quelques précisions : la date du 21 mars est fixe et ne dépend pas de l'équinoxe de printemps (lequel peut tomber, selon les années, parfois le 19 et plus fréquemment le 20 ou le 21 mars)<ref group=Note>L'histoire est en réalité très complexe. Les Pères du concile confièrent à l'évêque d'Alexandrie le soin de fournir une règle selon certaines prescriptions fondées en particulier sur la date du printemps et l'aspect de la Lune. C'est une méthode proche de celle en vigueur alors à Alexandrie qui entra en usage. Si la définition du calcul de la date de Pâques entérinée par l'usage considère la date du 21 mars comme fixe, c'est par souci de simplification, mais il était bien dans l'esprit du concile de prendre comme repère principal la date du printemps.</ref> ; le ''quatorzième jour de la lune'' signifie le treizième jour qui suit la Nouvelle lune<ref group=Note>Pour calculer les intervalles de temps, les Anciens incluaient dans le décompte le jour de début et le jour de fin. Ainsi, d'un dimanche au suivant, ils comptaient huit jours, et non pas sept selon notre méthode moderne de décompte (c'est la raison pour laquelle, dans le langage courant, on dit « dimanche en huit », et non pas « dimanche en sept », pour désigner le dimanche qui suit le dimanche prochain.) Aussi, pour déterminer le ''quatorzième jour de la lune'', il faut ajouter 13 à la date de la Nouvelle lune : par exemple si la Nouvelle lune est le 9 janvier, le quatorzième jour de la lune est le 22 janvier.</ref> ; le terme ''lune'' ne signifie pas ici la lune réelle observée mais une lune fictive, approchant assez bien la lune réelle, appelée ''[[Pleine lune pascale|Lune pascale]]'' ou ''[[Lune ecclésiastique]]'' et déterminée à l'aide du [[cycle métonique|cycle de Méton]].
+
+La décision des Pères ne fut motivée ni par des raisons astronomiques, ni historiques ou théologiques, mais par des raisons politiques : il fallait que Pâques ne tombe pas en même temps que la [[Pessa'h|Pâque juive]], ni que les Pâques des [[Pâque quartodécimaine|Quartodécimains]] et autres mouvements hérétiques. Extrait d'une lettre encyclique de Constantin aux Églises<ref>Voir [http://www.louisg.net/E_Nicee.htm ce site].</ref> : {{Citation|La fête de Pâques des chrétiens doit être célébrée le même jour par tous ; et pour le calcul de la date, il ne faut faire aucune référence aux Juifs. Ce serait humiliant et de plus il est possible pour eux d’avoir deux Pâques une même année. En conséquence, les Églises doivent se conformer aux pratiques suivies par Rome, l’Afrique, l’Italie, les Gaules, la Brittonie, la Lybie, la Grèce, l’Asie, le Pont et la Cilicie.}}
+
+==== Des méthodes de calcul diverses ====
+Les évêques revinrent du concile de Nicée avec une définition claire de la date de Pâques, mais sans méthode précise pour la calculer. Chaque église utilisa sa solution particulière<ref>Observatoire de Paris, ''Le calcul des dates de Pâques''. Lire [http://www.imcce.fr/~procher/Presentations/lesdatesdepaques.pdf ici].</ref> :
+
+Le premier savant qui avait rédigé ses réflexions sur la détermination de la date de Pâques, avant même le concile de Nicée, est [[Anatole de Laodicée|Saint Anatole]]<ref group=Note>[[Irénée de Lyon]] et [[Hippolyte de Rome]], entre autres, avaient aussi déjà suggéré des solutions pour fixer la date de Pâques.</ref>, né à [[Alexandrie]] en 230, sacré évêque en 270, qui avait publié ses travaux dans le ''Canon Paschal''<ref>Jean-Paul Parisot, Françoise Suagher, ''Calendriers et chronologie'', Paris, Masson, 1996 ; {{ISBN|2-225-85225-1}}, {{p.|95}}.</ref> ; il utilisait deux cycles de 19 ans décalés de 3 ans.
+
+Pour déterminer la date de Pâques selon la définition du concile, les Alexandrins<ref name=rocher> P. Rocher, Institut de mécanique céleste et de calcul des éphémérides, Observatoire de Paris. Voir : [http://www.imcce.fr/~procher/Presentations/lesdatesdepaques.pdf ce texte]</ref> utilisèrent le cycle de Méton (19 années terrestres font 235 mois lunaires) dans les tables de l'évêque d'Alexandrie [[Théophile d'Alexandrie|Théophile]] (370-412) (tables allant de 380 à 480), puis dans celles de son neveu et successeur [[Cyrille d'Alexandrie|Cyrille]] (376-444) (tables allant 436 à 531). À Rome<ref name=rocher/>, après avoir utilisé au {{S-|III}} une table pascale élaborée par [[Hippolyte de Rome|Saint Hippolyte]] (fondée sur un cycle de 16 ans), on utilisa un cycle de 84 ans (4 cycles de Méton de 19 ans plus un cycle octaéride de 8 ans) connu sous le nom de « cycle d'Augustalis ». Les dates entre lesquelles la date de Pâques pouvait tomber étaient fixées pour la Lune entre le {{14e}} et le {{20e}} jour du mois lunaire et, pour le Soleil, entre le 25 mars et le 21 avril. Ce système fut modifié en 312 et 343. On utilisa également un cycle de 95 ans (soit 5 fois 19 ans - voir ci-dessous la table pascale universelle de Périgueux). À partir de 457, [[Victorius d'Aquitaine]] fit adopter une nouvelle méthode fondée sur le cycle de Méton de 19 ans et sur le cycle solaire de 28 ans, créant ainsi le ''Computus Paschalis'' de (19 × 28 =) 532 ans.
+
+Au milieu du {{S-|VI}}, les diverses églises chrétiennes adoptèrent progressivement une méthode de calcul de la date de Pâques élaborée, selon la tradition<ref group=Note>S'il est presque certain que c'est Denys le Petit qui a défini l'[[Anno Domini|Ère de l'Incarnation]] comme débutant le 25 décembre 753 [[Ab urbe condita|AUC]], reportée par commodité au {{1er}} janvier 754 [[Ab urbe condita|AUC]], son rôle dans le calcul de la date de Pâques relève de la tradition, les sources sur ce sujet étant sujettes à caution.</ref> par le moine byzantin [[Denys le Petit]] (env. 470 - env. 540) qui travaillait à Rome dans l'entourage du Pape. Cette méthode est compliquée<ref>Voir aussi l'article [[Comput|Comput ecclésiastique]]</ref> mais exacte, car elle respecte exactement la définition du concile de Nicée. Elle prit le statut de méthode canonique mais mit fort longtemps à être comprises et appliquées localement, comme le montre ci-dessous la table pascale perpétuelle gravée sur le mur sud du chœur de l'Église Saint-Étienne-de-la-Cité, ancienne cathédrale de Périgueux. Cette table, gravée au milieu du {{S-|XII}}, plus de six-cents ans après l'adoption de la méthode de Denys le Petit, ne suit pas le ''computus pascalis'' de 532 ans utilisé par celui-ci mais (avec des lacunes) un cycle de 95 ans en vigueur localement depuis huit siècles.
+
+[[Fichier:Périgueux église St Étienne table pascale (3).JPG|thumb|center|upright=3|Table pascale perpétuelle gravée sur le mur sud du chœur de l'[[Église Saint-Étienne-de-la-Cité]], [[Périgueux]], [[Dordogne (département)|Dordogne]], France. Cette table daterait de 1163. Elle suit (avec des lacunes) un cycle de 95 ans proche du cycle d'Augustalis<ref>On trouvera des études détaillées de cette table sur les site suivants : [http://www.persee.fr/web/revues/home/prescript/article/ccmed_0007-9731_1961_num_4_13_1180 Étude classique d'Alfred Cordiolani (1961)] et [http://www.ilya.it/chrono/enpages/Perigueux.html Easter dates in an inscription at Périgueux (en anglais)]</ref>.]]
+
+===La réforme grégorienne===
+[[Fichier:Grégoire XIII.jpg|thumb|Alt=Le pape Grégoire {{XIII}}|Le pape Grégoire {{XIII}}, promoteur de la réforme grégorienne du calendrier.]]
+Par suite du décalage qui ne cessait de croître entre le calendrier et les saisons, le page [[Grégoire XIII|Grégoire <small>{{XIII}}</small>]] promut une réforme du calendrier qui prit effet à Rome le 15 octobre 1582<ref>Voir l'article [[Calendrier grégorien]].</ref>.
+
+Ce nouveau calendrier, et le calcul de la date de Pâques qui en résultait, furent établis par les savants attachés au Pape Grégoire <small>{{XIII}}</small>, principalement le mathématicien allemand [[Christophorus Clavius]]<ref>''Romani Calendarii ad Gregorio {{XIII}}, PM, Restituti explicatio'', Rome, 1603.</ref>{{, }}<ref name=comput_clavius>Voir le fac simile avec traduction en anglais de l'ouvrage de Clavius explicitant les calculs de la date de Pâques sur le site de [http://mathematics.library.nd.edu/clavius/ l'''University of Notre Dame''], [[South Bend (Indiana)]], [[États-Unis]]].</ref> et l'astronome italien [[Luigi Giglio]] ou Lilius<ref name="Lefort">Jean Lefort, ''La saga des calendriers'' ; Paris, Éd. Bibliothèque Pour la Science, 1998, {{ISBN|2-9029-003-5}}.</ref>.
+
+Puisque la réforme grégorienne supprimait trois jours bissextiles tous les quatre-cents ans pour mieux approcher l'équation solaire, il fallait corriger de même l'âge de la lune ; cette correction s'appelle la ''[[métemptose]]''. On savait, de plus, que le cycle de Méton n'est pas absolument exact. Les astronomes promoteurs de la réforme en profitèrent pour introduire une correction du cycle de Méton. Cette correction est appelée ''[[proemptose]]''<ref group=Note name=proemptose>
+
+À l'époque de la réforme grégorienne, la dérive du cycle de Méton sur la lune vraie était connue depuis longtemps. À l'aide des relevés astronomiques dont ils disposaient, parfois très anciens (datant des babyloniens), Clavius et Lilius estimèrent cette dérive à un jour tous les {{unité|312.5|ans}}. Toutefois, soit que les relevés qu'ils utilisèrent aient été entachés d'erreurs soit que cette dérive ait changé dans le temps, leurs calculs paraissent de nos jours très sous-estimés.<br><br>
+
+Avec une année terrestre tropique évaluée aujourd'hui à {{unité|365.242181|jours}} et un mois lunaire synodique de {{unité|29.530589|jours}} un calcul simple conduit à une dérive du cycle de Méton sur la lune vraie d'un jour tous les {{unité|218.9|ans}}.<br><br>
+
+La proemptose est donc sous évaluée et il demeure dans le calcul grégorien de la date de Pâques, malgré cette correction, une dérive de la lune vraie sur la lune théorique d'environ un jour tous les 1043 ans.
+</ref>. Ces modifications rendent le calcul de la date de Pâques grégorienne bien plus compliqué que pour les Pâques juliennes<ref name=comput_clavius/>.
+
+===La date de Pâques au plus tôt et au plus tard===
+Des raisonnements simples, à partir de la définition du concile de Nicée, permettent de définir les valeurs extrêmes que peut prendre la date de Pâques, au plus tôt et au plus tard :
+
+Si le quatorzième jour de la lune de mars se produit le 21 mars et que ce jour est un samedi, le dimanche qui suit est le 22 mars, et Pâques tombe le 22 mars.
+
+Si le quatorzième jour de la lune de mars est le 20 mars alors le prochain quatorzième jour de la lune pascale se produit le 18 avril. Si le 18 avril est un dimanche, Pâques tombe le dimanche suivant, c'est-à-dire le 25 avril.
+
+{{Citation bloc|La date de Pâques est comprise entre le 22 mars et le 25 avril (inclus).}}
+
+===Les versions modernes du calcul de la date de Pâques===
+À partir du {{S-|XVIII}}, les mathématiciens cherchèrent des méthodes moins compliquées que les méthodes canoniques pour calculer la date de Pâques tout en respectant rigoureusement les règles de ce calcul ; il cherchèrent en particulier à établir des [[algorithme]]s qui s'appuieraient sur des opérations arithmétiques élémentaires, telles que les quotients et restes de divisions de nombres entiers (divisions euclidiennes<ref name=division>Voir [[#Annexe : précisions sur la division euclidienne|Annexe : précisions sur la division euclidienne]].</ref>.)
+
+En 1800, [[Carl Friedrich Gauss|Gauss]] publia une méthode pour le calendrier grégorien fondée essentiellement sur des divisions euclidiennes. Toutefois, sa méthode initiale était incomplète : elle tenait mal compte de deux exceptions dans le calcul de l'[[épacte]] grégorienne, la [[proemptose]] et la [[métemptose]] et produisait ainsi des résultats parfois inexacts. À la suite de diverses corrections, il parvint toutefois à une solution exacte<ref name=exact group=Note>C'est-à-dire respectant exactement la définition du concile de Nicée.</ref> tant pour le calendrier julien que pour le calendrier grégorien.
+
+En 1877, [[Samuel Butcher]], évêque de [[Comté de Meath|Meath]] en [[Irlande (île)|Irlande]], montra dans ''The ecclesiastical calendar'' la preuve d'une méthode générale et exacte du calcul de la date de Pâques pour le calendrier grégorien publiée l'année précédente dans la revue ''[[Nature (revue)|Nature]]'' ; complétée par la méthode de [[Jean-Baptiste Joseph Delambre|Delambre]] pour le calendrier julien, ces deux méthodes forment l'algorithme de Delambre-Butcher, la plus utilisée des méthodes parfaitement exactes<ref name="exact" group=Note /> connues à ce jour. Diffusé par [[Jean Meeus]], ce procédé est connu sous le nom d'algorithme de Meeus. (On parle aussi parfois d'algorithme de Spencer-Jones<ref>Cet astronome britannique a publié cette méthode dans son ouvrage : Spencer-Jones, Harold ; ''General Astronomy'', London, Edward Arnold and Company, 1924 ; {{ISBN|0217219276}}.</ref>).
+
+De la fin du {{S-|XIX}} jusque dans les années 1970, divers auteurs publièrent des méthodes simplifiées mais affectées de diverses limitations ; ces solutions simplifiées se justifiaient à l'époque du calcul manuel mais n'ont plus grand intérêt depuis la diffusion des ordinateurs personnels. Dans les années 1980, [[John Horton Conway]] développa une présentation originale du calcul de la date des Pâques grégoriennes avec l'utilisation de la notion de "Jour-pivot".
+
+== Les éléments du calcul canonique de la date de Pâques ==
+[[Image:Comput ecclésiastique 2006.jpg|thumb|upright=1.5|Les éléments du ''comput ecclésiastique'' figurent au bas du mois de février sur un calendrier pour l'année 2006.]]
+Le calcul canonique de la date de Pâques utilise des éléments qui figurent encore fréquemment sur les calendriers, au bas du mois de février. Dans la reproduction ci-contre d'un calendrier (grégorien) de 2006, on trouve les éléments du [[comput]] :
+
+* [[Épacte]] (0 en 2006, dans l'exemple ci-contre) ;
+* [[Lettre dominicale]] (A en 2006)
+* [[Cycle solaire calendaire|Cycle solaire]] (27 en 2006) ;
+* [[Nombre d'or (astronomie)|Nombre d'or]]<ref name=NbOr group=Note>Aucun rapport avec la proportion géométrique de même nom.</ref> (12 en 2006) ;
+* [[Indiction|Indiction romaine]] (14 en 2006).
+
+(L'''épacte'', la ''lettre dominicale'', le ''cycle solaire'' et le ''nombre d'or'' présentés dans cet exemple concernent le calendrier grégorien ; ils auraient d'autres valeurs pour le calendrier julien. Quant à l'indiction romaine, elle est indépendante du calendrier julien ou grégorien et ne sert pas au calcul de la date de Pâques<ref>Voir l'article [[Comput]].</ref>.)
+
+== Calcul canonique de la date de Pâques julienne ==
+Le calcul de la date de Pâques consiste à mettre en correspondance deux cycles : celui de la Lune et celui du Soleil.
+Le premier, appelé ''cycle lunaire'' ou ''cycle de la lune pascale'' ou ''[[cycle métonique]]'' (dû à [[Méton]]) est caractérisé par l{{'}}''épacte'' ou par le ''Nombre d'or'', chacun se déduisant aisément de l'autre grâce au calendrier lunaire perpétuel. Le second, appelé ''cycle solaire'' résulte de la combinaison du cycle hebdomadaire de 7 jours et du cycle des années bissextiles de quatre ans. Il s'agit donc d'un cycle de (7&nbsp;×&nbsp;4&nbsp;=)&nbsp;28&nbsp;ans selon lequel les mêmes jours de la semaine se succèdent aux mêmes dates. Il est caractérisé par la ''Lettre dominicale'' ou par le ''Cycle solaire'', qui se déduisent aisément l'un de l'autre.
+
+{{Boîte déroulante/début|titre=Méthode canonique de détermination de la date de Pâques julienne}}
+=== Calendrier lunaire ===
+Le calcul canonique de la date de Pâques utilise une lune fictive, dite lune de [[Méton]], selon laquelle il y a exactement 235 mois lunaires<ref group=Note>De 29 jours et demi.</ref> en 19 années terrestres. Il s'agit d'une bonne approximation, dérivant toutefois actuellement d'un jour tous les 219 ans environ. Le comput de la date de Pâques julienne ignore cette dérive et considère le cycle de Méton comme valable indéfiniment.
+
+==== Nombre d'or ====
+Selon le Cycle de Méton, au cours d'un cycle 19 années terrestres se produisent 235 mois lunaires. Chaque année du cycle de dix-neuf ans est numérotée de 1 à 19 et le numéro du cycle pour une année donnée est appelé le ''Nombre d'or''<ref name=NbOr group=Note /> de l'année. Par définition, le Nombre d'or de l'an 1 vaut 2 ; on le calcule donc facilement par la formule suivante :
+::Nombre d'or = RESTE [Année / 19] + 1
+
+==== Calendrier lunaire perpétuel julien ====
+Puisque les Nouvelles lunes se reproduisent à date fixe sur un cycle de 19 ans, il est possible de construire un calendrier lunaire perpétuel répartissant 235 mois lunaires sur 19 années terrestres<ref>Pour plus de détails sur la construction du calendrier lunaire, voir Jean Lefort, ''op.&nbsp;cit.'', {{p.|130}}.</ref>. Pour chaque valeur du Nombre d'or, le tableau suivant affiche, pour chaque mois, le quantième de la nouvelle lune.
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Calendrier lunaire perpétuel julien : quantième de la nouvelle lune
+ |-
+ ! scope="col" | Nombre d'or
+ ! scope="col" | Jan
+ ! scope="col" | Fév
+ ! scope="col" | Mar
+ ! scope="col" | Avr
+ ! scope="col" | Mai
+ ! scope="col" | Jun
+ ! scope="col" | Jul
+ ! scope="col" | Aou
+ ! scope="col" | Sep
+ ! scope="col" | Oct
+ ! scope="col" | Nov
+ ! scope="col" | Déc
+ |-
+ ! scope="row" style="text-align:center;"| 1
+ | 23 || 21 || 23 || 21 || 21 || 19 || 19 || 17 || 16 || 15 || 14 || 13
+ |-
+ ! scope="row" style="text-align:center;"| 2
+ | 12 || 10 || 12 || 10 || 10 || 8 || 8 || 6 || 5 || 4 || 3 || 2
+ |-
+ ! scope="row" style="text-align:center;"| 3
+ | 1, 31 ||  || 1, 31 || 29 || 29 || 27 || 27 || 25 || 24 || 23 || 22 || 21
+ |-
+ ! scope="row" style="text-align:center;"| 4
+ | 20 || 18 || 20 || 18 || 18 || 16 || 16 || 14 || 13 || 12 || 11 || 10
+ |-   
+ ! scope="row" style="text-align:center;"| 5
+ | 9 || 7 || 9 || 7 || 7 || 5 || 5 || 3 || 2 || 2, 31 || 30 || 29
+ |-   
+ ! scope="row" style="text-align:center;"| 6
+ | 28 || 26 || 28 || 26 || 26 || 24 || 24 || 22 || 21 || 20 || 19 || 18
+ |-
+ ! scope="row" style="text-align:center;"| 7
+ | 17 || 15 || 17 || 15 || 15 || 13 || 13 || 11 || 10 || 9 || 8 || 7 
+ |-  
+! scope="row" style="text-align:center;"| 8
+ | 6 || 4 || 6 || 5 || 4|| 3 || 2 || 1, 30 || 29 || 28 || 27 || 26 
+ |-  
+! scope="row" style="text-align:center;"| 9
+ | 25 || 23 || 25 || 23 || 23 || 21 || 21 || 19 || 18 || 17 || 16 || 15 
+ |-
+! scope="row" style="text-align:center;"| 10
+ | 14 || 12 || 14 || 12 || 12 || 10 || 10 || 8 || 7 || 6 || 5 || 4 
+ |- 
+! scope="row" style="text-align:center;"| 11
+ | 3 || 2 || 3 || 2 || 1, 31 || 29 || 29 || 27 || 26 || 25 || 24 || 23 
+ |- 
+! scope="row" style="text-align:center;"| 12
+ | 22 || 20 || 22 || 20 || 20 || 18 || 18 || 16 || 15 || 14 || 13 || 12
+ |- 
+! scope="row" style="text-align:center;"| 13
+ | 11 || 9 || 11 || 9 || 9 || 7 || 7 || 5 || 4 || 3 || 2 || 1, 31
+ |- 
+! scope="row" style="text-align:center;"| 14
+ | 30 || 28 || 30 || 28 || 28 || 26 || 26 || 24 || 23 || 22 || 21 || 20
+ |- 
+! scope="row" style="text-align:center;"| 15
+ | 19 || 17 || 19 || 17 || 17 || 15 || 15 || 13 || 12 || 11 || 10 || 9
+ |- 
+! scope="row" style="text-align:center;"| 16
+ | 8 || 6 || 8 || 6 || 6 || 4 || 4 || 2 || 1 || 1, 30 || 29 || 28
+ |- 
+! scope="row" style="text-align:center;"| 17
+ | 27 || 25 || 27 || 25 || 25 || 23 || 23 || 21 || 20 || 19 || 18 || 17
+ |- 
+! scope="row" style="text-align:center;"| 18
+ | 16 || 14 || 16 || 14 || 14 || 12 || 12 || 10 || 9 || 8 || 7 || 6
+ |- 
+! scope="row" style="text-align:center;"| 19
+ | 5 || 3 || 5 || 4 || 3 || 2 || 1, 30 || 28 || 27 || 26 || 25 || 24
+ |-
+ |}
+
+L'alternance des mois de 29 jours et de 30 jours est à peu près respectée. Certains mois où la Nouvelle lune se produit très tôt dans le mois se reproduit en fin du même mois (notation, par exemple : 1, 31 au mois de mars, pour signifier que la Nouvelle lune se produit le {{1er}} ''et'' le 31 mars). Noter que, pour un même mois, d'un Nombre d'or au suivant, le décalage de la Nouvelle Lune est de 11 jours (l'année lunaire étant de 12 × 29,5 jours = 354 jours, tandis que l'année solaire est de 365 jours.) Puisque les Nouvelles lunes suivent un cycle de 19 ans et que le mois d'avril, par exemple, comporte 30 jours, il y a onze jours d'avril où ne se produit jamais de Nouvelle Lune ; comme on le voit dans le calendrier lunaire ci-dessus : ce sont les 1, 3, 8, 11, 13, 16, 19, 22, 24, 27 et 30 avril. Cette bizarrerie se reproduit tous les mois du calendrier lunaire et est due, évidemment, au fait que le cycle de Méton n'est qu'une approximation rationnelle de la lune réelle.
+
+Noter que le calendrier lunaire est une distribution annuelle du cycle de Méton qui est posée par hypothèse : c'est sur ce calendrier lunaire que se fondent tous les calculs de la date de Pâques julienne.
+
+==== Calcul de l'épacte julienne à partir du calendrier lunaire ====
+L'épacte est, par définition, « l'âge de la Lune au {{1er}} janvier ».
+
+Si la première nouvelle lune de janvier tombe le ''q'' janvier, alors l'épacte vaut :
+:E = 31 - q <ref group=Note>
+Comme on peut le remarquer sur le tableau du calendrier lunaire perpétuel julien, toutes les lunaisons de décembre sont de 30 jours, quel que soit le Nombre d'or : par exemple, pour le Nombre d'or 1, le quantième de la Nouvelle lune est le 13 et le quantième de la Nouvelle lune de janvier qui suit (Nombre d'or = 2) est le 12, soit une lunaison de 30 jours. De même, pour le Nombre d'or 2, le quantième de la Nouvelle lune de décembre est le 2 et celui de janvier qui suit (Nombre d'or 3) est le 1 ; etc.
+
+*Si q' est le quantième de la Nouvelle lune de décembre, alors l'âge de la lune le 31 décembre est 31&nbsp;-&nbsp;q' et l'âge de la lune au {{1er}} janvier est 32&nbsp;-&nbsp;q'&nbsp; &nbsp; &nbsp;[1] ;
+*La lunaison de décembre étant toujours de 30 jours ; il en résulte que le quantième de la Nouvelle lune de janvier q vaut : q&nbsp;=&nbsp;q'&nbsp;-&nbsp;1, c'est-à-dire : q'&nbsp;=&nbsp;q&nbsp;+&nbsp;1&nbsp; &nbsp; &nbsp;[2] ;
+*En remplaçant dans [1] q' par sa valeur [2], il vient :
+:E&nbsp;=&nbsp;32&nbsp;-&nbsp;(q&nbsp;+&nbsp;1)&nbsp;=&nbsp;31&nbsp;-&nbsp;q.
+</ref>
+
+Cette formule permet donc d'établir simplement l'épacte en fonction du Nombre d'or à l'aide du calendrier lunaire julien ci-dessus. Ces valeurs sont rassemblées dans le tableau suivant :
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Correspondance entre le Nombre d'or et l'épacte julienne
+ |-
+ ! scope="row" | Nombre d'or
+ | 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 10 || 11 || 12 || 13 || 14 || 15 || 16 || 17 || 18 || 19
+ |-
+ ! scope="row" | Épacte julienne
+ | 8 || 19 || 0 || 11 || 22 || 3 || 14 || 25 || 6 || 17 || 28 || 9 || 20 || 1 || 12 || 23 || 4 || 15 || 26
+ |-
+ |}
+
+L'épacte et le Nombre d'or sont donc équivalents, à une transformation près par l'intermédiaire de cette table. Par convention, le calcul de la date de Pâques julienne utilisent le Nombre d'or.
+
+==== Table des quatorzièmes jours de la lune pascale ====
+À partir du calendrier lunaire julien perpétuel ci-dessus, il est facile de repérer, pour chaque Nombre d'or, la nouvelle lune telles que le quatorzième jour de la lune tombe le 21 mars ou immédiatement après :
+* on repère la nouvelle lune de mars ;
+* on ajoute 13 ;
+* on vérifie que la date obtenue tombe le 21 mars ou immédiatement après (sinon on prend la nouvelle lune suivante).
+
+Par exemples :
+* pour le Nombre d'or 1, la nouvelle lune est le 23 mars ; le quatorzième jour de la lune est le 23&nbsp;+13&nbsp;= 36&nbsp;mars, c'est-à-dire le 5 avril, qui se situe bien après le 21 mars ;
+* pour le Nombre d'or 8, la nouvelle lune de mars est le 6 mars ; le quatorzième jour de la lune est le 6&nbsp;+&nbsp;13&nbsp;=19 mars. C'est trop tôt. Il faut prendre la nouvelle lune suivante, qui a lieu le 5 avril. Le quatorzième jour de la lune a donc lieu le (5&nbsp;+13&nbsp;=) 18 avril.
+
+Le tableau suivant récapitule, pour chacun des Nombres d'or la date du quatorzième jour de la lune qui tombe le 21 mars ou immédiatement après :
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Date des quatorzièmes jours de la lune pascaux (1)
+ |-
+ ! scope="row" | Nombre d'or
+ | 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 10 || 11 || 12 || 13 || 14 || 15 || 16 || 17 || 18 || 19
+ |-
+ ! scope="row" | {{14e}} jour de la lune en jours de mars
+ | 36 || 25 || 44 || 33 || 22 || 41 || 30 || 49 || 38 || 27 || 46 || 35 || 24 || 43 || 32 || 21 || 40 || 29 || 48
+ |-
+ ! scope="row" | {{14e}} jour de la lune en jours de mars (M) ou d'avril (A)
+ | 5A || 25M || 13A || 2A || 22M || 10A || 30M || 18A || 7A || 27M || 15A || 4A || 24M || 12A || 1A ||21M || 9A || 29M || 17A
+ |-
+ |}
+
+Il s'agit maintenant de déterminer la date du dimanche qui suit le quatorzième jour de la lune. On utilise pour cela les éléments du Cycle solaire.
+
+=== Calendrier solaire ===
+==== Cycle solaire ====
+Puisqu'une année ordinaire de 365 jours comporte 52 semaines plus 1 jour, il y a un décalage d'un jour chaque année entre le quantième et le jour de la semaine. Par exemple, si {{date|1|janvier|2013}} étant un mardi, le {{date|1|janvier|2014}} est un mercredi, décalé d'un jour. S'il n'y avait pas les années bissextiles, les mêmes jours de la semaine se retrouveraient aux même quantièmes tous les sept ans. Toutefois les années bissextiles introduisent un décalage supplémentaire : de ce fait les quantièmes et les jours de la semaine ne retrouvent le même cycle que tous les 7 × 4 = 28 ans. C'est le cycle solaire. Le cycle solaire détermine donc la répartition des jours de la semaines au cours de chaque année.
+
+À chaque année est attribué un numéro dans un cycle solaire de 28 ans, numéroté de 1 à 28 et qui débute arbitrairement par le numéro 1 en l'an 20 de notre ère. Il en résulte que le Cycle solaire de chaque année vaut :
+
+::Cycle solaire = RESTE [(Année + 8) / 28 ] + 1
+::Exemple pour l'année 2006
+:: 2006 + 8 = 2014
+:: RESTE [ 2014 / 28 ] = 26
+:: Cycle solaire = 26 + 1 = 27
+:: Le Cycle solaire pour 2006 vaut 27 comme on peut le vérifier dans le reproduction du calendrier ci-dessus.
+
+==== Lettre dominicale ====
+Pour une année donnée, on fait correspondre successivement chacune des sept premières lettres (A, B, C, D, E, F et G) à chacun des jours de l’année, en commençant par A pour le {{1er}} janvier, puis en répétant le cycle tous les sept jours. La Lettre dominicale est la lettre attribuée aux dimanches.
+
+:Exemples :
+:* En 2006, le {{1er}} janvier est un dimanche ; la Lettre dominicale est donc '''A''' ;
+:* En 2013, le {{1er}} janvier est un mardi ; la Lettre dominicale est donc '''F'''.
+
+Lorsque l'année est bissextile, la lettre est redoublée pour le jour bissextile. Aussi l'année comporte alors deux lettres dominicales : la Lettre dominicale ''de janvier'' valable en janvier et février et la Lettre dominicale ''pascale'', décalée d'un rang, pour les dix derniers mois de l'année. Puisque Pâques a toujours lieu après le 21 mars, seule importe, pour le calcul de la date de Pâques, la Lettre dominicale pascale.
+
+Les années sont bissextiles pour les Cycles solaires 1, 5, 9, 13, etc.
+
+==== Correspondance entre Cycle solaire et Lettre dominicale ====
+Le Cycle solaire et la Lettre dominicale sont équivalents. On déduit la Lettre dominicale du Cycle solaire à l'aide de la table suivante. On y trouve, sur deux lignes :
+* la Lettre dominicale ''de l'année'', valable toute l'année pour les années régulières et seulement en janvier et février pour les années bissextiles ;
+* la Lettre dominicale ''pascale'', valable toute l'année pour les années régulières et seulement pour des dix derniers mois pour les années bissextiles.
+
+Seule la lettre dominicale pascale sert au calcul de la date de Pâques julienne.
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Cycle solaire et lettre dominicale
+ |-
+ ! scope="row" | Cycle solaire
+ | 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 10 || 11 || 12 || 13 || 14 || 15 || 16 || 17 || 18 || 19 || 20 || 21 || 22 || 23 || 24 || 25 || 26 || 27 || 28
+ |-
+ ! scope="row" | Lettre dominicale de janvier
+ | F || E || D || C || A || G || F || E || C || B || A || G || E || D || C || B || G || F || E || D || C || A ||G || F || D || C || B || A
+ |-
+ ! scope="row" | Lettre dominicale pascale
+ | G || E || D || C || B || G || F || E || D || B || A || G || F || D || C || B || A || F || E || D || B || A ||G || F || E || C || B || A
+ |-
+ |}
+
+====Algorithme de calcul de la Lettre dominicale====
+Voici un algorithme permettant le calcul de la Lettre dominicale de janvier et de la Lettre dominicale pascale pour l'année A avec la correspondance :
+
+{| class="wikitable" style="text-align:center
+ |-
+ ! scope="row" | S
+ | 0 || 1 || 2 || 3 || 4 || 5 || 6
+ |-
+ ! scope="row" | Lettre dominicale
+ | A || B || C || D || E || F || G
+ |-
+ |}
+
+
+<u>''Lettre dominicale de janvier''</u> :<br>
+Donnée : année '''A'''.
+{| class="wikitable" style="text-align:center"
+ |-
+ ! scope="col" | Dividende || Diviseur ||Quotient || Reste
+ |-
+ ! scope="row" | A
+ | 100 || M || 
+ |-
+ ! scope="row" | M
+ | 4 || q || r
+ |-
+ ! scope="row" | r
+ | 4 || u ||
+ |-
+ ! scope="row" | 2*M - q - r - u
+ | 7 || S || T
+ |}
+Si S < 0, prendre S = 6 - T
+
+
+''<u>Lettre dominicale pascale</u>'' :<br>
+Si RESTE { [ RESTE (A + 8) / 28 ] / 4 } = 0 :
+:S = RESTE [ (S + 1) / 7 ]
+
+=== Date de Pâques julienne ===
+Quelques raisonnements calendaires simples conduisent à la table suivante qui permet de déterminer la date de Pâques à l'aide du Nombre d'or et de la Lettre dominicale. (Noter que puisqu'on a pris en compte la Lettre dominicale "pascale", les raisonnements suivants sont indépendants du caractère bissextile de l'année).
+
+Considérons le cas où le Nombre d'or vaut 1 et la Lettre dominicale vaut A :
+* puisque le Nombre d'or vaut 1, le quatorzième jour de la lune pascale se produit le 5 avril (voir la Table de Date des quatorzièmes jours de la lune pascaux (1) ci-dessus) ;
+* le 5 avril est le {{95e}} jour de l'année et la Lettre dominicale du 5 avril vaut RESTE [95/7] = 4, c'est-à-dire D ;
+* Le dimanche suivant est donc quatre jours plus tard (décompte de D à A), c'est-à-dire le 9 avril.
+
+La table ci-dessous a été établie en généralisant ce raisonnement.
+
+::Date de Pâques julienne en jours de mars (M) ou d'avril (A), en Fonction du Nombre d'or et de la Lettre dominicale
+{| class="wikitable centre" style="text-align:center"
+ |+ Date de Pâques julienne (3)
+ |-
+ |
+ ! scope=col colspan=7 | Lettre dominicale
+ |-
+ ! scope="row" | Nombre d'or
+ | A || B || C || D || E || F || G
+ |-
+ ! scope="row" style="text-align:center;" | 1
+ | 9A || 10A || 11A || 12A || 6A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 2
+ | 26M || 27M || 28M || 29M || 30M || 31M || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 3
+ | 16A || 17A || 18A || 19A || 20A || 14A || 15A
+ |-
+ ! scope="row" style="text-align:center;" | 4
+ | 9A || 3A || 4A || 5A || 6A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 5
+ | 26M || 27M || 28M || 29M || 23M || 24M || 25M
+ |-
+! scope="row" style="text-align:center;" | 6
+ | 16A || 17A || 11A || 12A || 13A || 14A || 15A
+ |-
+! scope="row" style="text-align:center;" | 7
+ | 2A || 3A || 4A || 5A || 6A || 31M || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 8
+ | 23A || 24A || 25A || 19A || 20A || 21A || 22A
+ |-
+ ! scope="row" style="text-align:center;" | 9
+ | 9A || 10A || 11A || 5A || 6A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 10
+ | 2A || 3A || 28M || 29M || 30M || 31M || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 11
+ | 16A || 17A || 18A || 19A || 20A || 21A || 22A
+ |-
+ ! scope="row" style="text-align:center;" | 12
+ | 9A || 10A || 11A || 5A || 6A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 13
+ | 26M || 27M || 28M || 29M || 30M || 31M || 25M
+ |-
+ ! scope="row" style="text-align:center;" | 14
+ | 16A || 17A || 18A || 19A || 13A || 14A || 15A
+ |-
+ ! scope="row" style="text-align:center;" | 15
+ | 2A || 3A || 4A || 5A || 6A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 16
+ | 26M || 27M || 28M || 22M || 23M || 24M || 25M
+ |-
+ ! scope="row" style="text-align:center;" | 17
+ | 16A || 10A || 11A || 12A || 13A || 14A || 15A
+ |-
+ ! scope="row" style="text-align:center;" | 18
+ | 2A || 3A || 4A || 5A || 30M || 31M || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 19
+ | 23A || 24A || 18A || 19A || 20A || 21A || 22A
+ |-
+ |}
+
+=== Application ===
+Calcul de la date de Pâques julienne pour l'année A =1582.
+
+# Nombre d'or :
+::Nombre d'or = RESTE [1582 / 19] + 1
+::Nombre d'or = '''6'''
+
+# Cycle solaire :
+::Cycle solaire = RESTE [(1582 + 8) / 28 ] + 1
+::Cycle solaire = '''23'''
+
+# Lettre dominicale
+::Depuis la table '''Cycle solaire et lettre dominicale (2)''' ci-dessus :
+::Lettre dominicale = '''G'''.
+
+# Date de Pâques julienne, d'après la table '''Date de Pâques julienne (3)''' ci-dessus :
+::Date de Pâques = '''15 avril'''.
+
+{{boîte déroulante/fin}}
+
+== Calcul canonique de la date de Pâques grégorienne ==
+Il est vivement recommandé de lire le chapitre consacré au calcul de la date de Pâques julienne avant d'aborder ce chapitre.
+
+{{Boîte déroulante/début|titre=Méthode canonique de détermination de la date de Pâques grégorienne}}
+
+=== La correction du cycle de Méton ===
+Les réformateurs du calendrier grégorien tentèrent, dans le calcul de la date de Pâques, de corriger non seulement l'erreur du cycle solaire<ref group=Note>Dans le calendrier julien, l'adjonction d'un jour tous les quatre ans est équivalent à considérer une année moyenne de 365 jours + ¼ , c'est-à-dire 365,25 jours, ce qui est trop long. La calendrier grégorien corrige cette erreur en supprimant trois années bissextiles tous les quatre cents ans, lors des années séculaires non bissextiles, ce qui correspond à une année de longueur moyenne 365 jours + 1/4 -3/400, soit en moyenne, 365,2425 jours, ne s'écartant de l'année tropique que de trois dix-millièmes.</ref> -&nbsp;en supprimant trois année bissextiles séculaires sur quatre&nbsp;- mais de corriger aussi la dérive du cycle Méton. À l'aide des tables astronomiques en leur possession, Clavius et Lilius estimèrent à un jour tous les 312, 5 ans la dérive du cycle de Méton sur la Lune réelle<ref group=Note name=proemptose />. Ils reportèrent sur le calcul de l'épacte la correction du cycle solaire (métemptose) et celle du cycle de Méton (proemptose) en fixant des règles de ''saut d'épacte'' destinés à corriger en conséquence l'âge de la Lune.
+
+Puisque le cycle de Méton n'était plus utilisé directement, cela disqualifiait l'usage du Nombre d'or pour caractériser le cycle lunaire, au profit de l'épacte.
+
+=== L'épacte grégorienne ===
+Afin de corriger la bizarrerie du calendrier perpétuel julien selon laquelle la nouvelle lune ne pouvait jamais se produire certains jours, les réformateurs définirent un cycle de 29 épactes -&nbsp;une pour chaque jour du mois lunaire ; une épacte supplémentaire est introduite par le doublement de l'épacte '''25''', (notée '''''25''''' ou XXV) pour respecter la longueur du mois lunaire de 29 jours ½ quand le besoin s'en fait sentir. Ceci conduit à un nouveau calendrier lunaire perpétuel grégorien dans lequel lequel les Nouvelles lunes se produisent tous les jours de l'année<ref group=Note>Ce calendrier n'est pas reproduit dans cet article car il ne sert pas directement au calcul de la date de Pâques grégorienne. Pour plus de détails, voir : Jean Lefort, ''op. cit.''</ref>.
+
+De plus la métemptose et la prétemptose sont appliquées sous formes de sauts d'épacte, qui corrigent l'âge de la Lune, selon les règles ci-après.
+
+==== Les règles du saut d'épacte ====
+Outre les sauts d'épactes séculaires, selon que l'année séculaire est bissextile ou non, il faut prendre en compte les sauts d'épacte destinés à corriger le cycle de Méton. La combinaison des contraintes liées au cycle solaire, d'une part, au cycle de Méton, d'autre part, conduit aux règles de ''saut d'épacte'' suivantes :
+
+# à chaque année séculaire non bissextile, on retranche un jour à l'épacte (opération appelée ''[[métemptose]]'') ;
+# on ajoute un jour à l'épacte à l'année séculaire qui se produit tous les 300 ans (opération appelée ''[[proemptose]]'') ;
+# après avoir effectué 7 fois l'opération '''2''', on attend 400 ans avant de recommencer les cycles de proemptose.
+
+L'étape '''1''' concerne la correction du cycle solaire. Elle est indépendante des étapes '''2''' et '''3''' qui concernent la correction du cycle de Méton. Ces deux dernières étapes reviennent à répartir huit additions d'un jour à l'épacte sur un cycle de 25 siècles (7 ×300 + 400 = 2500). L'addition à l'épacte de 8 jours sur 25 siècles est équivalente, en moyenne, à ajouter à l'épacte (8&nbsp;/&nbsp;2500&nbsp;=) 1 jour tous les 312,5 ans, c'est-à-dire à corriger l'erreur du cycle de Méton avec une très bonne approximation<ref group=Note>Cette correction très simple est excellente puisqu'elle conduit à une dérive d'environ un jour tous les {{formatnum:24000}} ans, durée bien supérieure à celle de la stabilité des mouvements célestes.</ref>.
+
+La dernière addition à l'épacte par proemptose a eu lieu en 1800 ; la prochaine aura lien en 2100<ref>Pour plus de détails, voir Jean Lefort, ''op. cit.'' {{pp.|140-145}}.</ref>.
+
+==== Méthode de calcul de l'épacte grégorienne ====
+Voici un algorithme permettant de déterminer l'épacte grégorienne pour l'année ''Année'' :
+::''c'' = QUOTIENT (''Année'' / 100)
+::''Épacte'' = RESTE ((11&nbsp;×&nbsp;RESTE (''Année'' / 19) + 8 - ''c'' + QUOTIENT (''c'' / 4) + QUOTIENT ((8 × ''c'' + 13) / 25)) / 30)
+::Si ''Épacte'' = 25 et que le nombre d'or ''N'' = RESTE(''Année'' /19) > 10, alors ''Épacte'' = XXV.
+
+=== La lettre dominicale grégorienne ===
+La lettre dominicale grégorienne diffère de la lettre dominicale julienne car il faut tenir compte des années séculaires non bissextiles. La méthode suivante permet de déterminer la lettre dominicale grégorienne selon l'année  :
+
+::L = 7 - RESTE [ (Année + QUOTIENT [ Année / 4 ] + QUOTIENT [ Année / 400 ] - QUOTIENT [ Année / 100] + 6) / 7 ]
+::avec L = 1 : A ; L = 2 : B , etc.
+
+=== Date de Pâques grégorienne ===
+À l'aide de l'épacte et de la Lettre dominicale calculées aux deux chapitres précédents, on détermine la date de Pâques grégorienne à l'aide de la table suivante<ref group=Note>Quelques années sont particulières, avec l'épacte doublée XXV et la lettre dominicale C. Pâques est alors le 18 avril comme indiqué dans la table ci-dessous pour l'épacte XXV et non pas le 25 avril que l'on obtiendrait avec l'épacte 25 (vérifié ponctuellement sur site IMCCE et exhaustivement par l'algorithme de Meeus). Il s'agit, depuis la réforme grégorienne, des années suivantes : 1954, 2049, 2106, 3165, 3260, 3317… Le Nombre d'or permet de distinguer les épactes 25 et XXV ; pour ces dernières on pourrait aussi bien prendre Épacte = 26.</ref> :
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Date des Pâques grégoriennes
+ |-
+ |
+ ! scope=col colspan=7 | Lettre dominicale
+ |-
+ ! scope="row" | Épacte
+ | A || B || C || D || E || F || G
+ |-
+ ! scope="row" style="text-align:center;" | 0
+ | 16A || 17A || 18A || 19A || 20A || 14A || 15A
+ |-
+ ! scope="row" style="text-align:center;" | 1
+ | 16A || 17A || 18A || 19A || 13A || 14A || 15A
+ |-
+ ! scope="row" style="text-align:center;" | 2
+ | 16A || 17A || 18A || 12A || 13A || 14A || 15A
+ |-
+ ! scope="row" style="text-align:center;" | 3
+ | 16A || 17A || 11A || 12A || 13A || 14A || 15A
+ |-
+ ! scope="row" style="text-align:center;" | 4
+ | 16A || 10A || 11A || 12A || 13A || 14A || 15A
+ |-
+ ! scope="row" style="text-align:center;" | 5
+ | 9A || 10A || 11A || 12A || 13A || 14A || 15A
+ |-
+ ! scope="row" style="text-align:center;" | 6
+ | 9A || 10A || 11A || 12A || 13A || 14A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 7
+ | 9A || 10A || 11A || 12A || 13A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 8
+ | 9A || 10A || 11A || 12A || 6A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 9
+ | 9A || 10A || 11A || 5A || 6A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 10
+ | 9A || 10A || 4A || 5A || 6A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 11
+ | 9A || 3A || 4A || 5A || 6A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 12
+ | 2A || 3A || 4A || 5A || 6A || 7A || 8A
+ |-
+ ! scope="row" style="text-align:center;" | 13
+ | 2A || 3A || 4A || 5A || 6A || 7A || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 14
+ | 2A || 3A || 4A || 5A || 6A || 31M || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 15
+ | 2A || 3A || 4A || 5A || 30M || 31M || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 16
+ | 2A || 3A || 4A || 29M || 30M || 31M || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 17
+ | 2A || 3A || 28M || 29M || 30M || 31M || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 18
+ | 2A || 27M || 28M || 29M || 30M || 31M || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 19
+ | 26M || 27M || 28M || 29M || 30M || 31M || 1A
+ |-
+ ! scope="row" style="text-align:center;" | 20
+ | 26M || 27M || 28M || 29M || 30M || 31M || 25M
+ |-
+ ! scope="row" style="text-align:center;" | 21
+ | 26M || 27M || 28M || 29M || 30M || 24M || 25M
+ |-
+ ! scope="row" style="text-align:center;" | 22
+ | 26M || 27M || 28M || 29M || 23M || 24M || 25M
+ |-
+ ! scope="row" style="text-align:center;" | 23
+ | 26M || 27M || 28M || 22M || 23M || 24M || 25M
+ |-
+ ! scope="row" style="text-align:center;" | 24
+ | 23A || 24A || 25A || 19A || 20A || 21A || 22A
+ |-
+ ! scope="row" style="text-align:center;" | 25
+ | 23A || 24A || 25A || 19A || 20A || 21A || 22A
+ |-
+ ! scope="row" style="text-align:center;" | '''''XXV'''''
+ | 23A || 24A || 18A || 19A || 20A || 21A || 22A
+ |-
+ ! scope="row" style="text-align:center;" | 26
+ | 23A || 24A || 18A || 19A || 20A || 21A || 22A
+ |-
+ ! scope="row" style="text-align:center;" | 27
+ | 23A || 17A || 18A || 19A || 20A || 21A || 22A
+ |- 
+ ! scope="row" style="text-align:center;" | 28
+ | 16A || 17A || 18A || 19A || 20A || 21A || 22A
+ |- 
+ ! scope="row" style="text-align:center;" | 29
+ | 16A || 17A || 18A || 19A || 20A || 21A || 15A
+ |-  
+ |}
+
+==== Application : date des Pâques grégoriennes pour l'année 2006 ====
+
+* '''Calcul de l'épacte'''
+::La formule du calcul de l'épacte grégorienne (voir le paragraphe [[#Méthode de calcul de l'épacte grégorienne|Méthode de calcul de l'épacte grégorienne]] ci dessus) donne pour 2006 :
+::c = QUOTIENT [2006 / 100] = 20
+::Épacte = RESTE [ (11 × RESTE [ 2006 / 19 ] + 8 - 20 + QUOTIENT [ 20 / 4 ] + QUOTIENT [ (8 × 20 + 13) / 25 ]) / 30 ]
+::Épacte = 0
+::Épacte étant différente de 25, aucune vérification ne s'impose, sinon si RESTE [ Année / 19 ] est >10, prendre Épacte = 26.
+
+* '''Calcul de la Lettre dominicale'''
+
+:: La formule de calcul de la Lettre dominicale (voir le paragraphe [[#La lettre dominicale grégorienne|La lettre dominicale grégorienne]] ci-dessus) donne pour 2006 :
+::L = 7 - RESTE [ (2006 + QUOTIENT [ 2006 / 4 ] + QUOTIENT [ 2006 / 400 ] - QUOTIENT [ 2006 / 100] + 6) / 7 ]
+::L = 1 → A
+
+* '''Détermination de la date de Pâques grégorienne'''
+::On peut vérifier que les valeurs de l'épacte et de la Lettre dominicale calculées ci-dessus sont bien celles qui figurent dans le calendrier pour 2006 publié en tête de cet article. En se référant au tableau des dates de Pâques grégoriennes en fonction de l'épacte et de la Lettre dominicale publié ci-dessus on trouve :
+
+::Date de Pâques grégorienne pour 2006 : '''16 avril'''.
+
+{{boîte déroulante/fin}}
+
+==Calcul de la date de Pâques orthodoxe==
+Les Églises orthodoxes fêtent Pâques selon le calendrier julien, à l'exception de l'Église orthodoxe de Finlande<ref>Voir [[Pâques#Célébrations religieuses]].</ref> Toutefois, pour des raisons pratiques, la date de Pâques orthodoxe est exprimée dans le calendrier grégorien. Pour calculer la date de Pâques orthodoxe, il faut donc : calculer la date de Pâques julienne par l'un des algorithmes fournis dans cet article ; puis convertir la date du calendrier julien dans le calendrier grégorien<ref group=Note>On pourra à cet effet utiliser les algorithmes donnés dans l'article [[Jour julien]] : convertir la date du calendrier julien en Jours juliens puis convertir les Jours juliens en date du calendrier grégorien.</ref>
+
+En calendrier grégorien, les jours au plus tôt et au plus tard de la date de Pâques orthodoxe sont le 4 avril et le 8 mai.
+
+'''Exemple''' :<br>
+Pour 2006 :
+*la date de Pâques grégorienne est le 16 avril ;
+*la date de Pâques julienne en calendrier julien est le 10 avril ;
+*la date de Pâques julienne en calendrier grégorien (date grégorienne de Pâques orthodoxe) est le 23 avril.
+
+soit un écart d'une semaine. Dans la pratique, l'écart entre les date de Pâques orthodoxe et de Pâques catholique et protestante excède rarement une semaine.
+
+== Propriétés des dates de Pâques juliennes et grégoriennes ==
+
+=== Distribution des dates de Pâques juliennes ===
+
+La date de Pâques julienne peut tomber n'importe lequel des jours de la période du 22 mars au 25 avril (voir le § [[#La date de Pâques au plus tôt et au plus tard|La date de Pâques au plus tôt et au plus tard]] ci-dessus). Les dates de Pâques juliennes suivent un cycle de 532 ans (soit les 19 ans du cycle de Méton combinés aux 28 ans du cycle solaire) ; c'est-à-dire que tous les 532 ans, les dates de Pâques se succèdent aux mêmes jours. Le calcul de la date de Pâques pour toutes les années d'un cycle de 532 ans permet de compter combien de fois Pâques tombe le 22 mars, le 23 mars…, le 24 avril, le 25 avril. Ces calculs sont résumés dans le tableau suivant :
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Nombre d'occurrences des dates de Pâques juliennes pour chaque jour du 22 mars au 25 avril au cours d'un cycle de 532 ans
+ |-
+ ! scope="col" | Date
+ ! scope="col" | Nombre d'occurrences
+ ! scope="col" | Date
+ ! scope="col" | Nombre d'occurrences
+ |-
+ ! scope="row" style="text-align:center;"| 22 mars
+ | 4 || '''8 avril''' || 20
+ |-
+ ! scope="row" style="text-align:center;"| 23 mars
+ | 8 || '''9 avril''' || 16
+ |-
+ ! scope="row" style="text-align:center;"| 24 mars
+ | 8 || '''10 avril''' || 16
+ |-
+ ! scope="row" style="text-align:center;"| 25 mars
+ | 12 || '''11 avril''' || 20
+ |-   
+ ! scope="row" style="text-align:center;"| 26 mars
+ | 16 || '''12 avril''' || 16
+ |-   
+ ! scope="row" style="text-align:center;"| 27 mars
+ | 16 || '''13 avril''' || 16
+ |-
+ ! scope="row" style="text-align:center;"| 28 mars
+ | 20 || '''14 avril''' || 20
+ |-  
+ ! scope="row" style="text-align:center;"| 29 mars
+ | 16 || '''15 avril''' || 16
+ |-  
+ ! scope="row" style="text-align:center;"| 30 mars
+ | 16 || '''16 avril''' || 20
+ |-
+ ! scope="row" style="text-align:center;"| 31 mars
+ | 20 ||| '''17 avril''' || 16
+ |- 
+ ! scope="row" style="text-align:center;"| {{1er}} avril
+ | 16 || '''18 avril''' || 16
+ |- 
+ ! scope="row" style="text-align:center;"| 2 avril
+ | 16 || '''19 avril''' || 20
+ |- 
+ ! scope="row" style="text-align:center;"| 3 avril
+ | 20 || '''20 avril || 16
+ |- 
+ ! scope="row" style="text-align:center;"| 4 avril
+ | 16 || '''21 avril''' ||| 12
+ |- 
+ ! scope="row" style="text-align:center;"| 5 avril
+ | 20 || '''22 avril''' || 12
+ |- 
+ ! scope="row" style="text-align:center;"| 6 avril
+ | 20 || '''23 avril''' || 8
+ |- 
+ ! scope="row" style="text-align:center;"| 7 avril
+ | 16 || '''24 avril''' || 8
+ |- 
+ ! scope="row" style="text-align:center;"| 
+ | || '''25 avril''' || 4
+ |-
+  |}
+
+::Cette distribution apparaît plus clairement sur le diagramme suivant<ref name="Lefort"/> :
+
+[[Fichier:Distribution des Pâques juliennes sur la période 22 mars-25 avril.jpg|thumb|upright=3|alt=Distribution des dates de Pâques juliennes sur la période 22 mars-25 avril.|center|Nombre de fois où la date de Pâques julienne tombe sur chacun des jours de la période 22 mars-25 avril au cours d'un cycle de 532 ans.]]
+
+On constate que les dates extrêmes (proches du 22 mars ou du 25 avril) sont moins susceptibles de recevoir la date de Pâques julienne. On observe aussi un pseudo-cycle de trois ans dû à la combinaison des divers cycles en œuvre.
+
+=== Distribution des dates de Pâques grégoriennes ===
+Comme pour les dates de Pâques juliennes, la date de Pâques grégorienne peut tomber n'importe lequel des jours de la période du 22 mars au 25 avril. Toutefois, le cycle des dates de Pâques grégoriennes est beaucoup plus long que celui de dates de Pâques juliennes ; en effet, la métemptose suit un cycle de 400 ans ; la proemptose suit, elle, un cycle de 25 siècles ; il faut aussi tenir compte de l'épacte, qui a un cycle de 30 ans, et du Nombre d'or qui a un cycle de 19 ans. Finalement, les dates de Pâques grégoriennes suivent un cycle qui est un multiple de ces quatre nombres, soit{{refnec}}  :
+::19 × 30 × {{formatnum:2500}} × 4 = {{formatnum:5700000}} ans<ref group=Note>Noter que ce cycle est purement théorique. Sur le long terme, tout bouge : le rotation de la Terre ralentit, donc la durée du jour s'allonge (de 1 à 2 ms par siècle) et la durée du jour lunaire varie en conséquence ; les divers cycles sur lesquels s'appuie le calcul de la date de Pâques sont variables à long terme. Or ce calcul suppose ces cycles constants. Le calcul de la date de Pâques sur d'aussi longues périodes est donc fictif.</ref>.
+
+Le calcul (par ordinateur) du nombre de fois où la date de Pâques grégorienne tombe sur l'un des jours de la période 22 mars-25 avril lors d'un cycle de {{formatnum:5700000}} ans est résumé dans le tableau suivant ;
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Nombre d'occurrences de la date de Pâques grégorienne pour chaque jour du 22 mars au 25 avril au cours d'un cycle de {{formatnum:5700000}} ans
+ |-
+ ! scope="col" | Date
+ ! scope="col" | Nombre d'occurrences
+ ! scope="col" | Date
+ ! scope="col" | Nombre d'occurrences
+ |-
+ ! scope="row" style="text-align:center;"| 22 mars
+ | 27550 || '''8 avril''' || 192850
+ |-
+ ! scope="row" style="text-align:center;"| 23 mars
+ | 54150 || '''9 avril''' || 186200
+ |-
+ ! scope="row" style="text-align:center;"| 24 mars
+ | 81225 || '''10 avril''' || 192850
+ |-
+ ! scope="row" style="text-align:center;"| 25 mars
+ | 110200 || '''11 avril''' || 186200
+ |-   
+ ! scope="row" style="text-align:center;"| 26 mars
+ | 133000 || '''12 avril''' || 192850
+ |-   
+ ! scope="row" style="text-align:center;"| 27 mars
+ | 165300 || '''13 avril''' || 189525
+ |-
+ ! scope="row" style="text-align:center;"| 28 mars
+ | 186200 || '''14 avril''' || 189525
+ |-  
+ ! scope="row" style="text-align:center;"| 29 mars
+ | 192850 || '''15 avril''' || 192850
+ |-  
+ ! scope="row" style="text-align:center;"| 30 mars
+ | 189525 || '''16 avril''' || 186200
+ |-
+ ! scope="row" style="text-align:center;"| 31 mars
+ | 189525 ||| '''17 avril''' || 192850
+ |- 
+ ! scope="row" style="text-align:center;" | {{1er}} avril
+ | 192850 || '''18 avril''' || 197400
+ |- 
+ ! scope="row" style="text-align:center;"| 2 avril
+ | 186200 || '''19 avril''' || 220400
+ |- 
+ ! scope="row" style="text-align:center;"| 3 avril
+ | 192850 || '''20 avril || 189525
+ |- 
+ ! scope="row" style="text-align:center;"| 4 avril
+ | 186200 || '''21 avril''' ||| 162450
+ |- 
+ ! scope="row" style="text-align:center;"| 5 avril
+ | 192850 || '''22 avril''' || 137750
+ |- 
+ ! scope="row" style="text-align:center;"| 6 avril
+ |189525 || '''23 avril''' || 106400
+ |- 
+ ! scope="row" style="text-align:center;"| 7 avril
+ | 189525 || '''24 avril''' || 82650
+ |- 
+ ! scope="row" style="text-align:center;"| 
+ | || '''25 avril''' || 42000
+ |-
+  |}
+
+::Cette distribution apparaît plus clairement sur le diagramme suivant<ref name="Lefort"/> :
+
+[[Fichier:Distribution des Pâques grégoriennes sur la période 22 mars-25 avril.jpg|thumb|upright=3|alt=Distribution de la date de Pâques grégorienne sur la période 22 mars-25 avril.|center|Nombre de fois où la date de Pâques grégorienne tombe sur chacun des jours de la période 22 mars-25 avril au cours d'un cycle de {{formatnum:5700000}} ans.]]
+
+Comme pour les dates de Pâques julienne, la fréquence des dates de Pâques grégorienne est plus faible à proximité des bornes du 22 mars et du 25 avril. Pour le reste de la période, les occurrences sont à peu près égales, sauf pour le 19 avril qui présente une fréquence plus élevée<ref group=Note>L’histogramme des dates de Pâques sur un cycle de {{formatnum:5700000 années}} a une forme de trapèze.<br>
+Les fréquences de la date de Pâques, plus faibles en début et en fin de période, sont dues à la combinaison des valeurs de l'épacte avec celles de la lettre dominicale : Pâques au 22 mars nécessite que l'épacte vaille 23 et la lettre dominicale D, soit une seule possibilité ; le 23 mars est obtenu avec 2 possibilités : épacte = 22 ou 23 et lettre dominicale E, etc. Il en résulte l'aspect quasi linéaire de l'accroissement des fréquences (''quasi'' car les lettres dominicales ne sont pas équiprobables).<br>
+On atteint ensuite un plateau. Les irrégularités sont dues aux variations de fréquence de la lettre dominicale.<br>
+Pour le 18 avril, la fréquence des dates de Pâques est un peu supérieur à celle obtenue pour le 4 et le 11 avril : c’est l’effet direct de la correction de l'épacte XXV pour la lettre dominicale C qui avance au 18 avril les dates de Pâques qui seraient tombées le 25 avril sans cette correction.<br>
+La fréquence élevée pour le 19 avril résulte du traitement particulier des épactes 24 et 25. L'épacte 24 est assimilé à 25 pour le calcul de la date de Pâques, ce qui augmente d’un facteur 1,94 la probabilité de la pleine lune le 18 avril par rapport à une épacte normale ; ceci accroît en conséquence la fréquence des dates de Pâques liées à cette pleine Lune, du 19 au 25 avril.
+Ce phénomène se produit aussi pour les jours suivant le 19 avril : on peut constater que le trapèze est dissymétrique, les occurrences dans les derniers jours sont plus nombreuses que dans les premiers. Les sept derniers jours de la période, du 19 au 25 avril, reçoivent plus fréquemment Pâques que les sept premiers, mais l’effet est surtout apparent pour le 19 avril.</ref>.
+
+== Les méthodes algorithmiques de calcul de la date de Pâques ==
+<small>Ce chapitre expose les principales méthodes connues de calcul de la date de Pâques. Elles sont rédigés sous forme algorithmique, n'utilisant que des opérations arithmétiques élémentaires<ref name=division/> et sans référence à quelque langage de programmation que ce soit. L'utilisateur qui désire programmer ces algorithmes devra rechercher les instructions appropriées dans le langage qu'il utilise<ref group=Note>Attention : les fonctions intégrées des langages de programmation pour l'arithmétique entière ne donnent pas toujours les résultats escomptés. Il faut être très vigilant à ce sujet. Voir à ce propos l'[[#Annexe : précisions sur la division euclidienne|Annexe : précisions sur la division euclidienne]].</ref>. Le calcul de ces algorithmes ne nécessite nulle programmation compliquée : l'usage d'un simple tableur est suffisant. Quoique ces méthodes de calcul aient fait l'objet de vérifications minutieuses, elles sont, en tout état de cause, fournies ''en l'état'' : il appartient à l'utilisateur de s'assurer de leur exactitude et de leur adéquation à ses usages.</small>
+
+À partir du début du {{S-|XVIII}}, les mathématiciens recherchent des méthodes simplifiant le calcul de la date de Pâques. Le but est à la fois pratique : réduire et simplifier les calculs, et théorique : montrer que ce calcul complexe peut se ramener à une suite d'opérations arithmétiques élémentaires. Ainsi, ces mathématiciens se proposent de réduire le calcul de la date de Pâques à une suite d'opérations simples, essentiellement une série de divisions euclidiennes<ref name=division/>.
+
+La première tentative de [[Carl Friedrich Gauss|Gauss]] pour les Pâques grégoriennes, publiée en 1800, est une semi-réussite : tenant mal compte de la double exception sur l'épacte (la métemptose et la proemptose), sa méthode est mise en défaut. Toutefois, Gauss, suite aux remarques et suggestions de ses élèves et d'autres mathématiciens améliore plusieurs fois sa méthode et en publie une version quasi-définitive en 1816. Diverses améliorations ultérieures permettent finalement de publier un algorithme exact tant pour le calendrier julien que pour le calendrier grégorien. En 1814, [[Jean-Baptiste Joseph Delambre|Delambre]] publie un algorithme simple et exact pour le calendrier julien ; en revanche, sa solution pour le calendrier grégorien, qui fait appel à des tables et souffre d'exceptions, n'est pas satisfaisante<ref>Jean-Baptiste, Joseph Delambre, ''Astronomie théorique et pratique'' ; Paris, Vve Courcier, 1814 ; vol. 3, {{p.|715}}. Fac-simile de l'''Astronomie théorique et pratique'' sur (http://books.google.fr/books/about/Astronomie_th%C3%A9orique_et_pratique.html?hl=fr&id=BDAVAAAAQAAJ Google Books].</ref>. En 1876, le journal ''Nature'' publie un algorithme, dit algorithme de Butcher, pour le calcul de la date de Pâques grégorienne, qui constitue une solution définitive et élégante du problème. La réunion de l'algorithme de Delambre pour les Pâques juliennes et celui de Butcher pour les Pâques grégoriennes est appelée algorithme de Meeus. Au cours du {{S-|XX}} quelques autres algorithmes sont publiés pour apporter des simplifications de calcul au prix de certaines limitations quant aux périodes d'application ; depuis la diffusion des ordinateurs personnels, ces méthodes simplifiées n'ont plus grand intérêt. Dans les années 1980, [[John Horton Conway|John Conway]] publie une présentation originale du calcul de la date de Pâques grégorienne avec l'utilisation des ''jours-pivot''.
+
+Dans la suite, on présente de manière détaillée :
+*l'algorithme de Meeus, parfaitement exact pour la période julienne et la période grégorienne ; c'est algorithme le plus connu et le plus utilisé ; il est très simple à programmer et peut être mis en œuvre avec un simple tableur ;
+*l'algorithme de Gauss dans sa dernière version, à titre historique, parfaitement exact pour la période julienne et la période grégorienne ;
+*l'algorithme de Conway, applicable seulement aux dates de Pâques grégoriennes mais qui utilise une méthode de calcul originale.
+
+On cite ensuite, avec références, divers algorithmes publié de la fin du {{S-|XIX}} jusqu'aux années 1960, dont plusieurs présentent des limitations
+
+=== L'algorithme de Meeus ===
+L'histoire de cet algorithme est curieuse : en 1876, un « correspondant de New York » inconnu envoie au journal ''Nature''<ref>''Nature'', 1876 April 20, vol. 13, {{p.|487}}.</ref> un algorithme de la date de Pâques grégorienne pour une année quelconque. En 1877, [[Samuel Butcher]], évêque de [[Comté de Meath|Meath]], montre dans ''The ecclesiastical calendar''<ref>Samuel Butcher, ''The Ecclesiastical Calendar ; Its theory and construction'' ; Dublin, Hodges, Foster and Figgis, 1877, {{p.|225}}. Fac-simile sur [http://books.google.fr/books?id=qbA-rzFsIoMC&printsec=titlepage&redir_esc=y Google Books.]</ref> que cette méthode est exacte<ref name=exact group=Note /> sans limite de date. L'algorithme est ensuite reproduit en 1922 par [[Harold Spencer Jones|H. Spencer Jones]] dans son ''Astronomie générale''<ref>H. Spencer Jones, ''General Astronomy'' ; London, Longsman, Green, 1922 ; {{p.|73}}. Fac-simile sur [http://books.google.fr/books?id=EM4MAAAAYAAJ&printsec=frontcover&redir_esc=y#PPA73 Google Books].</ref>, en 1977 par ''{{Lien|fr=Old Farmer's Almanac|lang=en}}'', en 1988 par Peter Duffett-Smith, de l'[[Université de Cambridge]]<ref>Voir sa page personnelle [http://www.phy.cam.ac.uk/people/duffettsmithp.php ici]</ref> dans ''Practical Astronomy with your Calculator''<ref>Peter Duffet-Smith ''Practical Astronomy with your Calculator'', Cambridge University Press, 2 février 1989, {{3e}} édition, 200 pages, {{ISBN|978-0521356992}}</ref> et, en 1991, par [[Jean Meeus]] dans ses ''Algorithmes astronomiques''<ref>Jean Meeus, ''Astronomical Algorithms'' ; Richmond (Virginia, États-Unis), Willmann-Bell, 1991, {{pp.|67–68}}.</ref>.
+
+Cette méthode est appelée « algorithme de Butcher ». La réunion de cet algorithme avec la méthode de Delambre constitue l'algorithme de Delambre-Butcher. Il est plus souvent connu sous le nom d'algorithme de Meeus, le livre de Jean Meeus<ref>Jean Meeus, op.&nbsp;cit.</ref> en ayant assuré la diffusion mondiale.
+
+L'algorithme de Meeus a l'avantage de ne présenter aucune limitation de date ni pour les Pâques juliennes ni pour les Pâques grégoriennes<ref group=Note>Logiquement, la date de Pâques julienne n'a pas de sens avant 325 (date du concile de Nicée) et la date de Pâques grégorienne n'a pas de sens avant 1583, le calendrier grégorien ayant pris effet le 15 octobre 1582.</ref>. Cette méthode n'exige aucune instruction conditionnelle ni le recours à aucune table. Sa mise en programme est extrêmement simple. Mathématiquement, c'est la méthode la plus élégante. C'est aussi la plus connue et la plus utilisée des méthodes de calcul de la date de Pâques.
+
+{{Boîte déroulante/début|titre=Présentation détaillée de l'algorithme de Meeus}}
+'''Calcul de la date de Pâques ''julienne'' (326-) en calendrier ''julien'' (Algorithme de Delambre)'''<br />
+<small>L'algorithme de Delambre présenté ici a été rédigé, reformaté et vérifié selon les indications de [http://cosmos2000.chez.com/Vendredi13/DelambreAlgorithme.html ce site].</small>
+
+::''Si'' Année ≥ 326 <ref group=Note>Le calcul de la date de Pâques avant sa définition par le Concile de Nicée n'ayant aucun sens.</ref> ''alors'' :
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Date de Pâques julienne (algorithme de Delambre)
+ |-
+ ! scope="col" | Dividende
+ ! scope="col" | Diviseur
+ ! scope="col" | Quotient
+ ! scope="col" | Reste
+  ! scope="col" | Expression
+ |-
+ | ''Année'' || 19 ||  || ''A'' ||
+ |-
+ | ''Année'' ||  7 ||  || ''B'' ||
+ |-
+ | ''Année''  || 4 ||  || ''C'' ||  
+ |-
+ | 19&nbsp;''A'' + 15 || 30 ||  || ''D'' ||
+ |-   
+ | 2&nbsp;''C'' + 4&nbsp;''B'' - ''D'' + 34 || 7 || || ''E'' ||
+ |-   
+ |  ||  ||  || || ''R'' = 22 + ''D'' + ''E''
+ |-
+ |}
+
+::''R'' est la date du dimanche de Pâques julienne en jours de mars.
+::Si ''R'' ≤ 31 :
+:::Mois = mars
+:::Quantième = ''R''
+::Si ''R'' > 31
+:::Mois = avril
+:::Quantième = ''R'' - 31
+
+::''Exemple pour l'année '''<span style="color:red;">1492</span>'''''
+{| class="wikitable centre" style="text-align:center"
+ |+ Date de Pâques julienne en '''<span style="color:red;">1492</span>''' (algorithme de Delambre)
+ |-
+ ! scope="col" | Dividende
+ ! scope="col" style="color:red;" | Valeur<br />Dividende
+ ! scope="col" | Diviseur
+ ! scope="col" style="color:red;" | Valeur<br />Diviseur
+ ! scope="col" | Quotient
+ ! scope="col" style="color:red;" | Valeur<br />Quotient
+ ! scope="col" | Reste
+ ! scope="col" style="color:red;" | Valeur<br />Reste
+ ! scope="col" | Expression
+ ! scope="col" style="color:red;" | Valeur<br />Expression
+ |-
+ | ''Année'' ||style="color:red;" | 1492 || 19 ||style="color:red;" |19|| || ||''A''||style="color:red;"|10 || ||
+ |-
+ | ''Année'' ||style="color:red;"|1492  ||  7 ||style="color:red;" | 7|| ||  ||''B''||style="color:red;"|1 || ||
+ |-
+ | ''Année'' ||style="color:red;"|1492  ||  7 ||style="color:red;" | 7|| ||  ||''B''||style="color:red;"|0 || || 
+ |-
+ | 19&nbsp;''A'' + 15 ||style="color:red;"|205||30 ||style="color:red;"| 30|| || ||''D'' ||style="color:red;"|25|| || 
+ |-   
+ | 2&nbsp;''C'' + 4&nbsp;''B'' - ''D'' + 34||style="color:red;"|13||7 ||style="color:red;" | 7|| || ||''E'' ||style="color:red;"|6|| ||
+ |-   
+ |  ||  ||  || || || || || ||''R'' = 22 + ''D'' + ''E''||style="color:red;"|''R'' = 53
+ |-
+ |}
+
+::''R'' = 53 > 31
+:::Donc
+:::Mois = avril
+:::Quantième = 53 - 31 =22
+::'''Pâques est le 22 avril 1492'''.
+
+'''Calcul de la date de Pâques ''grégorienne'' en calendrier ''grégorien'' (1583-) (Algorithme de Butcher)'''<br />
+<small>L'algorithme de Butcher présenté ici a été rédigé, reformaté et vérifié selon les indications de l'ouvrage de Jean Lefort, ''La saga des calendriers'', op.&nbsp;cit.</small>
+
+::''Si'' Année ≥ 1583 ''alors'' :
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Date de Pâques grégorienne (algorithme de Butcher)
+ |-
+ ! scope="col" | Dividende
+ ! scope="col" | Diviseur
+ ! scope="col" | Quotient
+ ! scope="col" | Reste
+ ! scope="col" | Explication
+ |-
+ | ''Année'' || 19 ||  || ''n'' || cycle de Méton
+ |-
+ | ''Année'' || 100 || ''c'' || ''u'' || centaine et rang de l'année
+ |-
+ | ''c''  || 4 || ''s'' || ''t'' || siècle bissextil
+ |-
+ | ''c'' + 8 || 25 || ''p'' ||  || proemptose
+ |-   
+ | ''c'' - ''p'' + 1 || 3 || ''q'' ||  || métemptose
+ |-   
+ | 19&nbsp;''n'' + ''c'' - ''s'' - ''q'' + 15 || 30 ||  || ''e'' || épacte
+ |-
+ | ''u'' || 4 || ''b'' || ''d'' || année bissextile
+ |-  
+ | 32 + 2&nbsp;''t'' + 2&nbsp;''b'' - ''e'' - ''d''  || 7 ||  || ''L'' || lettre dominicale
+ |-  
+ | ''n'' + 11&nbsp;''e'' + 22&nbsp;''L'' || 451 || ''h'' ||  || correction
+ |-
+ | ''e'' + ''L'' - 7&nbsp;''h'' +114 || 31 ||| ''m'' || ''j'' || mois et quantième du Samedi saint
+ |-
+ |}
+
+::Si ''m'' = 3, le dimanche de Pâques est le (''j'' + 1) mars
+::Si ''m'' = 4, le dimanche de Pâques est le (''j'' + 1) avril
+
+::''Exemple pour l'année '''<span style="color:red;">2006</span>'''''
+{| class="wikitable centre" style="text-align:center"
+ |+ Date de Pâques grégorienne en '''<span style="color:red;">2006</span>''' (algorithme de Butcher)
+ |-
+ ! scope="col" | Dividende
+ ! scope="col" style="color:red;" | Valeur<br />Dividende 
+ ! scope="col" | Diviseur
+ ! scope="col" style="color:red;" | Valeur<br />Diviseur
+ ! scope="col" | Quotient
+ ! scope="col" style="color:red;" | Valeur<br />Quotient
+ ! scope="col" | Reste
+ ! scope="col" style="color:red;" | Valeur<br />Reste
+ |-
+ | ''Année'' ||style="color:red;" | 2006 || 19 ||style="color:red;" |19|| || ||''n''||style="color:red;"|11
+ |-
+ | ''Année'' ||style="color:red;" | 2006 || 100 ||style="color:red;" |100||''c''||style="color:red;"|20||''u''|| style="color:red;"|6
+ |-
+ | ''c'' ||style="color:red;"|20|| 4 ||style="color:red;" | 4||''s'' ||style="color:red;" |5||''t''||style="color:red;"|0 
+ |-
+ | ''c'' + 8 ||style="color:red;"|28|| 25 ||style="color:red;" | 25||''p'' ||style="color:red;" |1|| || 
+ |-   
+ | ''c'' - ''p'' + 1 ||style="color:red;"|20|| 3 ||style="color:red;" | 3||''q'' ||style="color:red;" |6|| || 
+ |-
+ | 19&nbsp;''n'' + ''c'' - ''s'' - ''q'' + 15 ||style="color:red;"|233|| 30||style="color:red;" |30|| || ||''e'' ||style="color:red;" |23
+ |-
+ | ''u'' ||style="color:red;"|6|| 4||style="color:red;" |4||''b'' ||style="color:red;" |1||''d'' ||style="color:red;" |2
+ |-
+ | 32 + 2&nbsp;''t'' + 2&nbsp;''b'' - ''e'' - ''d''  ||style="color:red;"|9|| 7||style="color:red;" |7|| || ||''L'' ||style="color:red;" |2
+ |-
+ |  ''n'' + 11&nbsp;''e'' + 22&nbsp;''L''  ||style="color:red;"|308|| 451||style="color:red;" |451||''h''||style="color:red;" |0|| ||
+ |-
+ |''e'' + ''L'' - 7&nbsp;''h'' +114 ||style="color:red;"|139|| 31||style="color:red;" |31||''m'' ||style="color:red;" |4|| ''j''||style="color:red;" |15
+ |-
+ |}
+
+::''m'' = 4, donc mois = avril
+::j = 15, donc le quantième du dimanche de Pâques est le 16.
+::Pâques est le '''16 avril 2006.'''
+     
+{{Boîte déroulante/fin}}
+
+===L'algorithme de Gauss===
+La méthode de Gauss présente un grand intérêt historique car c'est la première tentative d'élaboration d'une méthode algorithmique de calcul de la date de Pâques. L'ambition de Gauss était de créer un algorithme unique qui serait universellement valable pour les Pâques juliennes comme pour les Pâques grégoriennes. En 1800<ref>Voir [http://webdoc.sub.gwdg.de/ebook/e/2005/gausscd/html/Osterformel/Seite1.htm l'original du texte de Gauss en allemand.]</ref>, il publie la première méthode de calcul de la date de Pâques essentiellement fondé sur des opérations arithmétiques élémentaires. Toutefois, sa méthode tient mal compte des sauts d'épacte pour la métemptose et la proemptose. Suite à diverses corrections proposées par ses correspondants mathématiciens et ses élèves, il publie une version presque exacte en 1816<ref>Voir : [http://gdz.sub.uni-goettingen.de/no_cache/dms/load/img/?IDDOC=139587 la version révisée de 1816 en allemand.]</ref>. La version publiée ci-dessous<ref>Publiée sur [[:en:Computus#Gauss algorithm|Wikipedia en anglais]].</ref>, après diverses corrections est valide pour toutes les années en calendrier julien et en calendrier grégorien. On pourra noter que le calcul pour les dates de Pâques juliennes est très voisin de l'algorithme de Delambre.
+
+Gauss, prudent, et qui ne disposait pas de nos moyens actuels de calcul, limitait la validité de sa méthode à la période 1700-4099. Toutefois, des vérifications systématiques par ordinateur montrent que cet algorithme est universellement valide pour toute date à partir de 326 pour les Pâques juliennes et pour toute date à partir de 1583 pour les Pâques grégoriennes.
+
+{{Boîte déroulante/début|titre=Présentation détaillée de l'algorithme de Gauss}}
+L'algorithme de Gauss est commun au calcul des dates de Pâques juliennes et grégoriennes. La méthode de calcul de Pâques julienne présente cependant quelques simplifications par rapport au calcul de Pâques grégorienne. On présente ci-dessous :
+*l'algorithme détaillé de calcul de Pâques grégorienne ;
+*l'indication des simplifications à apporter pour le calcul de Pâques julienne ;
+*l'algorithme détaillé de calcul de Pâques julienne.
+
+'''Calcul de la date de Pâques ''grégorienne'' en calendrier ''grégorien''  (Algorithme de Gauss)'''<br />
+<small>L'algorithme de Gauss présenté ici a été rédigé, reformaté et vérifié selon les indications de [[:en:Computus#Gauss algorithm|"Gauss algorithm" sur Wikipedia en anglais]]</small>
+
+::''Pour'' Année' ≥ 1583 :
+
+ {| class="wikitable centre" style="text-align:center"
+ |+ Date de Pâques grégorienne (algorithme de Gauss)
+ |-
+ ! scope="col" | Dividende
+ ! scope="col" | Diviseur
+ ! scope="col" | Quotient
+ ! scope="col" | Reste
+ |-
+ | ''Année'' || 19 ||  || ''a'' 
+ |-
+ | ''Année'' || 4 ||  || ''b'' 
+ |-
+ | ''Année'' || 7 ||  || ''c'' 
+ |-
+ | ''Année'' || 100 || ''k'' ||  
+ |-   
+ | 13 + 8&nbsp;''k'' || 25 || ''p'' ||  
+ |-   
+ | ''k'' || 4 || ''q'' ||  
+ |-
+ | 15 - ''p'' + ''k'' - ''q'' || 30 ||  || ''M'' 
+ |-  
+ | 4 + ''k'' - ''q''  || 7 ||  || ''N'' 
+ |-  
+ | 19&nbsp;''a'' + ''M'' || 30 ||  || ''d'' 
+ |-
+ | 2&nbsp;''b'' + 4&nbsp;''c'' + 6&nbsp;''d'' + ''N'' || 7 ||  || ''e'' 
+ |-
+ |}
+
+:::Les Pâques ''grégoriennes'' en calendrier ''grégorien'' sont le :
+::# ''H'' = (22 + ''d'' + ''e'') mars
+::# ou le ''Q'' = (''d'' + ''e'' − 9) avril ;
+::# Si ''d'' = 29 et ''e'' = 6, remplacer le 26 avril par le 19 avril ;
+::# Si ''d'' = 28, ''e'' = 6 et RESTE (11&nbsp;''M'' + 11) / 30) < 19, remplacer le 25 avril par le 18 avril.
+
+:::Remarquer que ''H'' et ''Q'' fournissent la même date, la première en jours de mars et la seconde en jours d'avril. Par exemple pour 2006, on obtient ''H'' = 47 mars et ''Q'' = 16 avril, ce qui correspond à la même date si l'on considère que la première est en jours de mars (47 - 31 = 16 avril).
+
+::''Exemple pour l'année '''<span style="color:red;">2006</span>'''''
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Pâques grégoriennes en '''<span style="color:red;">2006</span>''' (algorithme de Gauss)
+ |-
+ ! scope="col" | Dividende
+ ! scope="col" style="color:red;" | Valeur<br />Dividende
+ ! scope="col" | Diviseur
+ ! scope="col" style="color:red;" | Valeur<br />Diviseur
+ ! scope="col" | Quotient
+ ! scope="col" style="color:red;" | Valeur<br />Quotient
+ ! scope="col" | Reste
+ ! scope="col" style="color:red;" | Valeur<br />Reste
+ ! scope="col" | Expression
+ ! scope="col" style="color:red;" | Valeur<br />Expression
+ |-
+ | ''Année'' ||style="color:red;" | 2006 || 19 ||style="color:red;" |19|| || ||''a''||style="color:red;"|11|| ||
+ |-
+ | ''Année'' ||style="color:red;" | 2006 || 4 ||style="color:red;" |4|| || ||''b''||style="color:red;"|2|| ||
+ |-
+ | ''Année'' ||style="color:red;" | 2006 || 7 ||style="color:red;" |7|| || ||''c''||style="color:red;"|4|| ||
+ |-
+ | ''Année'' ||style="color:red;" | 2006 || 100 ||style="color:red;" |100||''k'' ||style="color:red;"|20|| || || ||
+ |-
+ | 8&nbsp;''k'' + 13||style="color:red;" | 173 || 25 ||style="color:red;" |25||''p'' ||style="color:red;"|6|| || || ||
+ |-
+ | ''k''||style="color:red;" | 20 || 4 ||style="color:red;" |4||''q'' ||style="color:red;" |5|| || || ||
+ |-
+ | 15 - ''p'' + ''k'' - ''q''||style="color:red;" |24 ||30||style="color:red;" |30|| || || ''M''||style="color:red;" |24 || ||
+ |-
+ | 4 + ''k'' - ''q'' ||style="color:red;" |19 ||7||style="color:red;" |7|| || || ''N''||style="color:red;" |5 || ||
+ |-
+ | 19&nbsp;''a'' + ''M''  ||style="color:red;" |233 ||30||style="color:red;" |30|| || || ''d''||style="color:red;" |23 || ||
+ |-
+ | 2&nbsp;''b'' + 4&nbsp;''c'' + 6&nbsp;''d'' + ''N''  ||style="color:red;" |163 ||7||style="color:red;" |7|| || ||''e''||style="color:red;" |2 || ||
+ |-
+ |  ||  || || || || || || || ''H'' = 22 + ''d'' + ''e''||style="color:red;" |47
+ |-
+ |  ||  || || || || || || || ''Q'' = ''d'' + ''e'' - 9||style="color:red;" |16
+ |-
+ |}
+
+::Les conditions 3. et 4. ne s'appliquent pas.
+::''H'' est le quantième de Pâques en jours de mars (47 -31) = 16.
+::''Q'' est le quantième de Pâques en jours d'avril.
+::'''Pâques est le 16 avril 2006'''.
+
+'''Simplifications pour le calcul de la date de Pâques julienne''' :
+*poser '''M = 15''' et '''N = 6''' ;
+*dès lors, le calcul de ''k'', ''p'' et ''q'' est inutile ;
+*les conditions 4. et 5. ci-dessus sont sans objet.
+
+'''Calcul de la date de Pâques ''julienne'' en calendrier ''julien'' (Algorithme de Gauss)'''<br />
+<small>L'algorithme de Gauss présenté ici a été rédigé, reformaté et vérifié selon les indications de [[:en:Computus#Gauss algorithm|"Gauss algorithm" sur Wikipedia en anglais]]</small>
+
+::''Pour'' Année ≥ 326 :
+
+ {| class="wikitable centre" style="text-align:center"
+ |+ Date de Pâques julienne (algorithme de Gauss)
+ |-
+ ! scope="col" | Dividende
+ ! scope="col" | Diviseur
+ ! scope="col" | Quotient
+ ! scope="col" | Reste
+ ! scope="col" | Expression
+ |-
+ | ''Année'' || 19 ||  || ''a'' 
+ |-
+ | ''Année'' || 4 ||  || ''b'' 
+ |-
+ | ''Année'' || 7 ||  || ''c'' 
+ |-
+ |  ||  ||  ||  || ''M'' = 15 
+ |-  
+ |  ||  ||  || || ''N'' = 6
+ |-  
+ | 19&nbsp;''a'' + ''M'' || 30 ||  || ''d'' 
+ |-
+ | 2&nbsp;''b'' + 4&nbsp;''c'' + 6&nbsp;''d'' + ''N'' || 7 ||  || ''e'' 
+ |-
+ |}
+
+:::La date de Pâques ''grégorienne'' en calendrier ''grégorien'' est le :
+::# ''H'' = (22 + ''d'' + ''e'') mars
+::# ou le ''Q'' = (''d'' + ''e'' − 9) avril ;
+
+:::Remarquer que ''H'' et ''Q'' fournissent la même date, la première en jours de mars et la seconde en jours d'avril. Par exemple pour 1492, on obtient ''H'' = 53 mars et ''Q'' = 22 avril, ce qui correspond à la même date si l'on considère que la première est en jours de mars (53 - 31 = 22 avril).
+
+::''Exemple pour l'année '''<span style="color:red;">1492</span>'''''
+
+{| class="wikitable centre" style="text-align:center"
+ |+ Pâques juliennes en '''<span style="color:red;">1492</span>''' (algorithme de Gauss)
+ |-
+ ! scope="col" | Dividende
+ ! scope="col" style="color:red;" | Valeur<br />Dividende
+ ! scope="col" | Diviseur
+ ! scope="col" style="color:red;" | Valeur<br />Diviseur
+ ! scope="col" | Quotient
+ ! scope="col" style="color:red;" | Valeur<br />Quotient
+ ! scope="col" | Reste
+ ! scope="col" style="color:red;" | Valeur<br />Reste
+ ! scope="col" | Expression
+ ! scope="col" style="color:red;" | Valeur<br />Expression
+ |-
+ | ''Année'' ||style="color:red;" | 1492 || 19 ||style="color:red;" |19|| || ||''a''||style="color:red;"|10|| ||
+ |-
+ | ''Année'' ||style="color:red;" | 1492 || 4 ||style="color:red;" |4|| || ||''b''||style="color:red;"|0|| ||
+ |-
+ | ''Année'' ||style="color:red;" | 1492 || 7 ||style="color:red;" |7|| || ||''c''||style="color:red;"|1|| ||
+ |-
+ | ||  || || || || || || || M = 15 ||
+ |-
+ |  || || || || || || || || N = 6||
+ |-
+ | 19&nbsp;''a'' + ''M''  ||style="color:red;" |205 ||30||style="color:red;" |30|| || || ''d''||style="color:red;" |25 || ||
+ |-
+ | 2&nbsp;''b'' + 4&nbsp;''c'' + 6&nbsp;''d'' + ''N'' ||style="color:red;" |160 ||7||style="color:red;" |7|| || ||''e''||style="color:red;" |6 || ||
+ |-
+ |  ||  || || || || || || || ''H'' = 22 + ''d'' + ''e''||style="color:red;" |53
+ |-
+ |  ||  || || || || || || || ''Q'' = ''d'' + ''e'' - 9||style="color:red;" |22
+ |-
+ |}
+ 
+::''H'' est le quantième de Pâques en jours de mars [53 mars = (53 -31) avril = 22 avril].
+::''Q'' est le quantième de Pâques en jours d'avril = 22 avril.
+::'''Pâques est le 22 avril 1492'''.
+{{Boîte déroulante/fin}}
+
+===L'algorithme de Conway===
+L'intérêt principal de l'algorithme de Conway est d'introduire une présentation nouvelle du calcul de la date de Pâques grégorienne à l'aide du concept de "Jour-pivot".
+
+Il existe chaque année une série de dates mensuelles qui tombent toujours le même jour de la semaine. Cette série de date est constante pour les dix derniers mois de l'année et varie pour janvier et février selon que l'année est ou non bissextile. Pour les années normales, cette série de dates est : (31/01, 28/02, 7/03, 4/04, 9/05, 6/06, 11/07, 8/08, 5/09, 10/10, 7/11, 12/12) et pour les années bissextiles, le 31/01 devient le 1/02 et le 28/02 devient le 29/02. On pourra vérifier sur le calendrier de 2006, année non bissextile, reproduit en tête de cet article, que le jour-pivot pour 2006 est un mardi. De plus les jours-pivot séculaires suivent un cycle de 400 ans. Conway utilise ces propriétés pour déterminer la Lune pascale et le dimanche de Pâques.
+
+La méthode n'est toutefois pas aussi originale qu'il y paraît : en réalité, les jours-pivots se déduisent facilement de la lettre dominicale par la relation :
+::''JP'' = (3 - ''L'') mod 7
+::avec ''JP'' : jour-pivot ; ''L'' : Lettre dominicale, et
+:: A = 1 ; B = 2 ; ... ; G = 0.
+
+Les contrôles effectués par ordinateur prouvent que la méthode, dans la présentation qui en est donnée ci-dessous, est exacte et donne les mêmes résultats que l'algorithme de Butcher pour un cycle de {{formatnum:5700000}} ans à partir de 1583.
+
+{{Boîte déroulante/début|titre=Présentation détaillée de l'algorithme de Conway }}
+'''Calcul de la date de Pâques ''grégoriennes'' en calendrier ''grégorien''. (Algorithme de John Conway)'''<br />
+<small>L'algorithme de Conway présenté ici a été rédigé, reformaté et vérifié selon les indications de [http://www.vendredi13.us/ConwayAlgorithm.html ce site] et quelques améliorations de présentation pour le calcul des jours pivots séculaires (trois premières lignes de l'algorithme) et les conditions sur l'épacte (trois dernières lignes).</small>
+
+::''Pour'' Année ≥ 1583 :
+
+{| class="wikitable centre" style="text-align:left"
+ |+ Date de Pâques grégorienne (Algorithme de Conway)
+ |-
+ ! scope="col" | Dividende
+ ! scope="col" | Diviseur
+ ! scope="col" | Quotient
+ ! scope="col" | Reste
+ ! scope="col" | Expression
+ ! scope="col" | Explication
+ |-
+ | ''Année'' || 100 ||''s''|| ''t'' || ||''s'' : année séculaire, ''t'' : millésime
+ |-
+ | ''t''||4 ||''a'' || || || Terme bissextil
+ |-
+ | ''s''||4 || || ''p'' || ||
+ |-
+ | 9 - 2*p || 7 || || ''jps'' || || jour-pivot séculaire (Note <ref group=Note>Les lignes de calcul précédentes permettent le calcul du Jour-pivot séculaire sans recourir à une table, comme le font la plupart des sources, ce qui simplifie la programmation de l'algorithme.</ref>.)
+ |-
+ | ''jps'' + ''t'' + ''a'' ||7|| ||''jp'' || ||jour-pivot de l'année courante
+ |-
+ |''Année'' ||19 || ||''g'' ||
+ |-
+ | || || || ||''G'' = ''g'' + 1 || Cycle de Méton
+ |-
+ |''s'' ||4 ||''b'' || || ||Métemptose
+ |-
+ |8&nbsp;(''s'' + 11) ||25||''r''|| || ||Proemptose
+ |-
+ | || || || ||''C'' = -''s'' + ''b'' + ''r''||Correction séculaire
+ |-
+ |11&nbsp;''G'' + ''C'' ||30 || ||''d'' || ||
+ |-
+ |''d'' + 30 ||30 || ||''d'' || ||Pleine Lune pascale<ref group=Note>Cette seconde ligne de calcul de la variable ''d'' assure que celle-ci est positive même si le dividende "11&nbsp;''G'' + ''C''" est négatif (voir [[#Annexe : précisions sur la division euclidienne|Annexe : précisions sur la division euclidienne]]). Cette ligne n'est pas rigoureusement nécessaire si l'on respecte scrupuleusement la définition de la division euclidienne lorsque le dividende est négatif. Elle a été ajoutée à titre de sécurité en cas de programmation maladroite.</ref>.
+ |-
+ |551 - 19&nbsp;''d'' + ''G'' ||544 ||''h'' || || ||Correction des exceptions à l'épacte<ref group=Note>Les exceptions aux épactes 24, 25 et XXV sont habituellement traitées dans les sources sous forme d'instructions conditionnelles. On la traite ici sous forme du calcul d'une variable ''h'', valant 0 ou 1, à ajouter à l'épacte, qui assure la même correction que les instructions conditionnelles. Ce mode de traitement facilite la programmation de l'algorithme.</ref>.
+ |-
+ |50 - ''d'' - ''h'' ||7|| ||''e'' || ||Écart de la Pleine Lune pascale au Jour-pivot
+ |-
+ |''e'' + ''jp'' ||7 || ||''f'' || ||Jour de la Pleine Lune pascale
+ |-
+ | || || || ||''R'' = 57 - ''d'' - ''f'' - ''h'' ||Dimanche de Pâques
+ |-
+ |}
+
+::''R'' est la date de Pâques en jours de mars
+::Si ''R'' ≤ 31 alors
+:::Mois = mars
+:::Quantième = ''R''
+::sinon
+:::Mois = avril
+:::Quantième = ''R'' - 31
+
+::''Exemple pour l'année '''<span style="color:red;">2006</span>'''''
+{| class="wikitable centre" style="text-align:center"
+ |+ Date des Pâques grégoriennes pour <span style="color:red;">2006</span> ( Algorithme de Conway)
+ |-
+ ! scope="col" | Dividende
+ ! scope "col style="color:red;"| Valeur<br />Dividende
+ ! scope="col" | Diviseur
+ ! scope "col style="color:red;"| Valeur<br />Diviseur
+ ! scope="col" | Quotient
+ ! scope "col style="color:red;"| Valeur<br />Quotient
+ ! scope="col" | Reste
+ ! scope "col style="color:red;"| Valeur<br />Reste
+ ! scope="col" | Expression
+ ! scope "col style="color:red;"| Valeur<br />Expression
+ |-
+ | ''Année'' ||style="color:red;"|2006||100||style="color:red;"|100||''s'' ||style="color:red;"|20||''t''||style="color:red;"|6|| ||
+ |-
+ | ''t'' ||style="color:red;"|6||4 ||style="color:red;"|4||''a'' ||style="color:red;"|1 || || || ||
+ |-
+ | ''s'' ||style="color:red;"|20||4||style="color:red;"|4|| || || ''p'' ||style="color:red;"|0 || ||
+ |-
+ |9 - 2*''p''||style="color:red;"|9||7||style="color:red;"|7|| || ||''jps''||style="color:red;"|2 || ||
+ |-
+ | ''jps'' + ''a'' + ''t'' ||style="color:red;"|9||7 ||style="color:red;"|7|| || ||''jp'' ||style="color:red;"|2|| ||
+ |- 
+ | ''Année'' ||style="color:red;"|2006||19 ||style="color:red;"|19|| || || ''g'' ||style="color:red;"|11|| ||
+ |- 
+ | || || || || || || || || ''G'' = ''g'' + 1 ||style="color:red;"|12
+ |-
+ |''s'' || style="color:red;"|20|| 4 ||style="color:red;"|4 ||''b'' || style="color:red;"|5 || || ||
+ |-
+ |8&nbsp;(''s'' + 11) ||style="color:red;"|248||25 ||style="color:red;"|25 ||''r'' ||style="color:red;"|9 || || || ||
+ |-
+ |-
+ | || || || || || || || || ''C'' = -''s'' + ''b'' + ''r'' ||style="color:red;"|-6
+ |-
+ |11&nbsp;''G'' + ''C'' ||style="color:red;"|126 ||30 ||style="color:red;"|30 || || ||''d'' ||style="color:red;"|6 || ||
+ |-
+ |''d'' + 30 ||style="color:red;"|36 ||30 ||style="color:red;"|30 || || ||''d'' ||style="color:red;"|6 || ||
+ |-
+ |551 - 19&nbsp;''d'' + ''G'' ||style="color:red;"|449 ||544 ||style="color:red;"|544 ||''h'' ||style="color:red;"|0 || || || ||
+ |-
+ |50 - ''d'' - ''h'' ||style="color:red;"|44 ||7 ||style="color:red;"|7 || || ||''e'' ||style="color:red;"|2 || ||
+ |-
+ |''e'' + ''jp'' ||style="color:red;"|4 ||7 ||style="color:red;"|7 || || ||''f'' ||style="color:red;"|4 || ||
+ |-
+ | || || || || || || || ||''R'' = 57- ''d'' - ''f'' - ''h'' ||style="color:red;"|47
+ |-
+ |}
+
+::Puisque ''R'' > 31 :
+:::Mois = avril
+:::Quantième = ''R'' - 31 = 16
+:::'''Pâques est le 16 avril 2006'''
+{{Boîte déroulante/fin}}
+
+=== Autres méthodes algorithmiques du calcul de la date de Pâques ===
+La recherche de méthodes simplifiées de calcul de la date de Pâques avait un grand intérêt à l'époque du calcul manuel : unifier les calculs, éviter le recours à des tables, gagner sur chaque opération arithmétique épargnait alors labeur, temps et risque d'erreur. Depuis l'apparition du calcul mécanique, la recherche de simplification est moins cruciale : écrire une ligne de programme en plus ou en moins n'est guère coûteux ; de plus, les temps de calcul, même pour des algorithmes peu optimisés, sont raisonnables<ref group=Note>À titre d'exemple, le calcul du nombre d'occurrences de la date de Pâques grégorienne pour {{formatnum:5700000}} ans (voir le § [[#Distribution des dates de Pâques grégoriennes|Distribution des dates de Pâques grégoriennes]] ci-dessus) par la méthode de Butcher prend, avec un PC ordinaire moyennement performant et d'une macro Excel peu rapide moins de 5 minutes (calcul effectué en janvier 2013).</ref>.
+
+Des mathématiciens se sont attaché à mettre sous forme d'algorithmes programmables les méthodes canoniques de Denys le Petit pour le calendrier julien ou de Lilius-Clavius pour le calendrier grégorien (trois algorithmes de Henk Reints) ; d'autres ont proposé des méthodes simplifiées mais susceptibles de certaines restrictions (comme les algorithmes de Carter<ref name="carter">Voir : [http://www.vendredi13.us/CarterAlgorithme.html Algorithme de Carter.]</ref> ou de Thomas O'Beirne<ref>Voir [http://www.recreomath.qc.ca/dict_paques_d.htm Algorithme de O'Beirne].</ref>).
+
+Voici plusieurs de ces méthodes dans l'ordre chronologique de leur publication.
+
+==== Algorithme de Zeller ====
+[[Christian Zeller]] (1822-1899) est un astronome allemand qui travailla et publia également en France. Il œuvra beaucoup sur les problèmes calendaires et la date de Pâques. On trouvera des références bibliographiques dans sa [[Christian Zeller|notice]] ainsi, que dans le bibliographie ci-après, plus particulièrement sur la date de Pâques.
+
+Sa méthode pour le calendrier julien est aussi simple que celle de Delambre. En revanche, sa méthode pour le calendrier grégorien n'est pas universellement valable en l'état : l'algorithme original est limité à l'année 4200.
+
+L'algorithme de Zeller détaillé est disponible sur [http://cosmos2000.chez.com/Vendredi13/ZellerPaques.html ce site].
+
+==== Algorithme de Carter ====
+La seule référence connue à l'algorithme de Carter concerne une ''note de travail'' du ''Royal Greenwich Observatory''<ref>Voir ce [http://www.smart.net/~mmontes/carter.html site.]</ref>. Cet algorithme daterait des années 1920 - 1930.
+
+La méthode de Carter détermine la date de Pâques ''grégorienne'' dans le calendrier ''grégorien''. Toutefois, cette méthode est limitée à la période 1900 - 2099.
+
+L'algorithme de Carter détaillé est disponible sur [http://cosmos2000.chez.com/Vendredi13/CarterAlgorithme.html ce site].
+
+==== Algorithme de Oudin-Tøndering ====
+Dans les années 1930, J.-M. Oudin, pseudonyme de Frère Namase-Marie, décèle précisément les insuffisances de l'algorithme de Gauss concernant la proemptose. Ses corrections paraissent successivement en 1939<ref>J.M. Oudin, ''Annales de la Société Scientifique de Bruxelles'', Série I, 59 ; Bruxelles, 1939, {{pp.|225-226}} ; ''Nouvelles formules, très simples, très rapides, en fonction, du seul millésime & Tables pour calculer la date de Pâques par ces formules''.</ref> et, en 1940, dans le ''[[Bulletin astronomique]]''<ref>''Bulletin astronomique ; mémoires et variétés'',  Volume 12-8 ; Paris, Gauthier-Villars, 1940, ''Étude sur la date de Pâques'', {{pp.|391-410}}.</ref>.
+
+Claus Tøndering est un ingénieur informaticien danois né en 1953 qui a repris, amélioré et diffusé l'algorithme de Oudin<ref>Le site de Claus Tøndering concernant le calendrier est visible [http://www.tondering.dk/claus/calendar.html ici.]</ref>.
+
+Cet algorithme calcule la date de Pâques ''julienne'' en calendrier ''julien'' et la date de Pâques ''grégorienne'' en calendrier ''grégorien''<ref>Voir : [http://www.tondering.dk/claus/cal/easter.php Calcul de la date de Pâques selon l'algorithme de Oudin-T&oslash;ndering.]</ref>.
+
+==== Algorithme de Denys le Petit ====
+Le mathématicien néerlandais Henk Reints a mis sous forme algorithmique la méthode canonique de Denys le Petit pour la date de Pâques julienne. Cet algorithme calcule la date de Pâques ''julienne'' en calendrier ''julien''. Voir [http://www.henk-reints.nl/easter/index.htm ce site].
+
+==== Algorithme de Lilius/Clavius ====
+Le mathématicien néerlandais Henk Reints a aussi mis sous forme algorithmique la méthode canonique de Lilius-Clavius pour Pâques en date grégorienne. Cet algorithme calcule la date de Pâques ''grégorienne'' en calendrier ''grégorien''. Voir [http://www.henk-reints.nl/easter/index.htm ce site].
+
+==== Algorithme de Henk Reints ====
+Cet algorithme grégorien est une simplification de l'algorithme de Lilius/Clavius présenté ci-dessus. Il a été développé par le mathématicien néerlandais Henk Reints. Cet algorithme calcule la date de Pâques ''grégorienne'' en calendrier ''grégorien''.
+
+Voir le [http://www.henk-reints.nl/ site de Henk Reints (en néerlandais), lien Easter date algorithms-Henk Reints].
+
+==== Algorithme de Thomas O'Beirne ====
+Cet algorithme détermine de la date de Pâques ''grégorienne'' dans le calendrier ''grégorien'', pour la période 1900-2099.
+
+Thomas H. O'Beirne, de Glasgow, a publié son algorithme en 1965. Cet algorithme est explicitement limité par son auteur aux années 1900-2099. Une seconde publication, légèrement modifiée, en 1966, n'indique pas de limitation. Dans le doute, on doit considérer que cet algorithme est limité aux années 1900-2099.
+
+Cet algorithme est disponible sur [http://olravet.fr/AideCalendes/Paques.htm#Calcul ce site].
+
+==Annexe : précisions sur la division euclidienne==
+La division euclidienne (division de deux nombres entiers positifs) en ''quotient'' et ''reste'' s'apprend en principe à l'école primaire. Rappel :
+:Soit à diviser deux nombres entiers ''D'' (le dividende) par ''d'' (le diviseur) ;
+:On appelle quotient (''Q'') et reste (''R'') deux nombres entiers positifs tels que :
+::''D'' = ''d'' × ''Q'' + ''R''
+::où ''R'' est le plus grand entier strictement inférieur à ''d''.
+:Soit, par exemple, à diviser 201 par 23 :
+::201 = 23 × 8 + 17
+Lorsque le dividende est négatif (le diviseur étant toujours positif), la définition du quotient et du reste n'est pas univoque. Il est nécessaire de préciser la définition de ces deux termes. Par exemple, les deux égalités ci-après vérifient la définition ci-dessus :
+:: -201 = 23 × (-9) + 6
+:: -201 = 23 × (-8) - 17
+::Laquelle choisir ?
+
+La définition retenue ici est la suivante :
+:Soit à diviser ''D'' (entier relatif éventuellement négatif) par ''d'' (entier positif) ; on appelle ''Q'', quotient, un entier relatif (éventuellement négatif) et ''R'' un entier positif ou nul tel que 0&nbsp;≤&nbsp;''R''&nbsp;<&nbsp;''d''.
+:Voir à ce sujet [[Division euclidienne]].
+
+:On retiendra donc :
+:: -201 = 23 × (-9) + 6
+
+:(Noter que dans une feuille Excel, la formule « =mod(-201;23) » a pour résultat 6, alors qu'en VBA Excel l'instruction « R&nbsp;=&nbsp;-201&nbsp;Mod&nbsp;23 » donne pour résultat R&nbsp;=&nbsp;-17. Il y a donc lieu d'être très vigilant avec les fonctions intégrées dans les divers langages de programmation.)
+
+==Notes et références==
+=== Notes ===
+{{Références|groupe=Note|colonnes=2}}
+=== Références ===
+{{Références|colonnes=2}}
+==Voir aussi==
+=== Bibliographie ===
+====Ouvrages généraux====
+*{{ouvrage|prénom1=Jean-Paul |nom1=Parisot|prénom2=Françoise |nom2=Suagher|langue=fr|titre=Calendriers et chronologie|éditeur=Masson|lieu=Paris|année=1996|mois= |jour= |isbn=2225852251}}.
+*Jean Lefort ; La saga des calendriers ; Paris, Éd. Bibliothèque Pour la Science, 1998, ({{ISBN|2-9029-003-5}}).
+*Spencer-Jones, Harold ; General Astronomy ; London, Edward Arnold and Company, 1924 ; ({{ISBN|0217219276}}).
+*Jean-Baptiste, Joseph Delambre ; Astronomie théorique et pratique ; Paris, Vve Courcier, 1814. Fac-simile de l'Astronomie théorique et pratique sur (http://books.google.fr/books/about/Astronomie_th%C3%A9orique_et_pratique.html?hl=fr&id=BDAVAAAAQAAJ [archive] Google Books].
+
+==== Méthodes canoniques ====
+*[[Denys le Petit]], ''Liber de Paschate''. [http://www.henk-reints.nl/cal/audette/denys.html Texte en latin.] ;
+*[[Christophorus Clavius]] ''{{lang|en|Opera mathematica}}'' (le cinquième volume contient une explication détaillée du calcul de la date de Pâques grégorienne) ; fac-simile de l'original en latin et traduction en anglais sur le site de ''University of Notre Dame'' [archive], South Bend (Indiana), États-Unis [http://mathematics.library.nd.edu/clavius/ ici.]
+*[[Christophorus Clavius]] ''Romani Calendarii ad Gregorio <small>XIII</small>'', PM, Restituti explicatio, Rome, 1603.
+
+====Algorithme de Meeus====
+*Samuel Butcher, ''The Ecclesiastical Calendar ; Its theory and construction'', Dublin, Hodges, Foster and Figgis, 1877, {{p.|225}}. Fac-simile sur [http://books.google.fr/books?id=qbA-rzFsIoMC&printsec=titlepage&redir_esc=y Google Books.]
+*{{ouvrage|prénom1=Jean|nom1=Meeus|langue=en|titre=Astronomical algorithms|éditeur=Willmann-Bell|lieu=Richmond, Virginia|année=1991|mois= |jour= |isbn=0943396352}}.
+
+====Algorithme de Gauss====
+*Fac-simile de l'original du texte de Gauss sur [http://webdoc.sub.gwdg.de/ebook/e/2005/gausscd/html/Osterformel/Seite1.htm ce site].
+
+====Algorithme de Conway====
+* John Horton Conway, ''Calendar Calculations'' (règle du ''Jour-pivot''), Mathematical Surprises, janvier/février 1991, {{p.|46}} ;
+* John Horton Conway, Elwyn R. Berlekamp & Richard K. Guy, ''Winning Ways for your Mathematical Plays'', Volume II, Games in Particular, {{pp.|795-800}} ; London, Academic Press, 1982 ;  {{ISBN|01120911027}} ;
+* S.W. Graham ; ''The Doomsday Rule'' (''La règle du ''jour-pivot'') ; [[Université de Central Michigan]], octobre 1998. À lire en anglais sur [http://people.cst.cmich.edu/graha1sw/Pub/Doomsday/Doomsday.html ce site].
+
+====Algorithme de Zeller====
+* Zeller, Chr., ''Die Grundaufgaben der Kalenderrechnung auf neue und vereinfachte Weise gelöst'', Württembergische Vierteljahrshefte für Landesgeschichte, Jahrgang V (1882), {{pp.|313-314}}.
+* Zeller Chr., ''Problema duplex Calendarii fundamentale'', Bulletin de la Société Mathématique de France, vol.11, (Séance du 16 mars 1883), {{pp.|59-61}}.
+* Zeller Chr. Rektor, ''Kalender-Formeln'' ; Mathematisch-naturwissenschaftliche Mitteilungen des mathematisch-naturwissenschaftlichen Vereins in Württemberg, ser. 1, 1 (1885), {{pp.|54-58}}.
+* Zeller Chr., ''Kalender-Formeln'' ; Acta Mathematica, vol.9 (1886-7), novembre 1886, {{pp.|131-136}}.
+
+====Algorithme de Thomas O'Beirne====
+* O'Beirne, T. H., ''The regularity of Easter'', Bulletin of the Institute of Mathematics and its Applications, 1966, vol 2, numéro 2, {{pp.|46-49}}.
+* O'Beirne, T. H. ''Puzzles and Paradoxes'', New York, Oxford University Press, 1965, 238&nbsp;p., dernière édition : 27/02/2002.
+
+===Articles connexes===
+* [[Pâques]]
+* [[Pessa'h]] (Pâque juive)
+* [[Comput|Comput ecclésiastique]]
+* [[Calendrier liturgique romain]]
+
+=== Liens externes ===
+* [http://www.dioceserimouski.com/ch/paqueslimit.html Années classées par date de Pâques] ;
+* [http://www.chez.com/cosmos2000/Vendredi13/CalculInteractifPaques.html Comparaison de différents algorithmes] (très documenté) ;
+* [http://olravet.free.fr/AideCalendes/Paques.htm#Calcul Plusieurs algorithmes avec explications] (et ponctuellement quelques fautes de frappe dans les formules, dommage) ;
+* Sur le site de l’[[Institut de mécanique céleste et de calcul des éphémérides|IMCCE]] :
+** [http://www.imcce.fr/langues/fr/grandpublic/temps/dates_paques.php Explications et calcul par année] ;
+** [http://bugle.imcce.fr/en/observateur/campagnes_obs/phemu03/Promenade/pages4/455.html#greg1950 Un calendrier perpétuel grégorien des dates de Pâques] ;
+* [http://www.louisg.net/E_Nicee.htm Nicée et la date de Pâques] ;
+* [http://www.janzuidhoek.net/diony4.htm Tableau de Pâques] de Dionysius Exiguus.
+
+{{Portail|mathématiques|religions et croyances|fêtes}}
+{{Article potentiellement de qualité|oldid=95942488|date=25 août 2013}}
+
+[[Catégorie:Calcul de la date d'un événement]]
+[[Catégorie:Élaboration du calendrier chrétien]]
+[[Catégorie:Pâques]]
+[[Catégorie:Wikipédia:Outil de retour des lecteurs]]
+
+[[ast:Cálculu de la fecha de Pascua]]
+[[bs:Računanje datuma Uskrsa]]
+[[ca:Càlcul de la Pasqua]]
+[[ceb:Computus]]
+[[cs:Výpočet data Velikonoc]]
+[[da:Computus]]
+[[en:Computus]]
+[[eo:Kalkulo de la dato de Pasko]]
+[[es:Computus]]
+[[fi:Pääsiäisen laskeminen]]
+[[hr:Računanje datuma Uskrsa]]
+[[hu:Húsvétszámítás]]
+[[id:Computus]]
+[[it:Calcolo della Pasqua]]
+[[ja:コンプトゥス]]
+[[mk:Пресметување на датумот на Велигден]]
+[[nl:Paas- en pinksterdatum]]
+[[no:Påskeformelen]]
+[[pt:Cálculo da Páscoa]]
+[[ro:Calculul datei de Paște]]
+[[ru:Пасхалия]]
+[[sh:Computus]]
+[[simple:Computus]]
+[[sk:Výpočet dátumu Veľkej noci]]
+[[sr:Рачунање датума Ускрса]]
+[[sv:Påsktavla]]
+[[ta:இயேசுவின் உயிர்த்தெழுதல் நாட்கணிப்பு]]
+[[uk:Обчислення дати Великодня]]
+[[zh:復活節計算表冊]]

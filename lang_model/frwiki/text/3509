@@ -1,0 +1,46 @@
+'''Service Data Objects''' ('''SDO''') est une norme lancée par [[International Business Machines Corporation|IBM]], [[BEA Systems|BEA]], Xcalia<ref>* [[Xcalia Intermediation Core]]
+* {{en}} [http://www.xcalia.com Xcalia (site officiel)]</ref> puis supporté par [[Oracle Corporation|Oracle]], Siebel<ref>La société Siebel ([[Éditeur de logiciel|éditeur]] de [[Gestion de la relation client|CRM]]) a été rachetée par Oracle Corporation en début 2006</ref>, [[SAP AG|SAP]] pour faciliter l'adoption des architectures orientées [[Service Oriented Architecture|SOA]].
+
+Avec SDO, la représentation des données est indépendante des systèmes de stockage sous-jacents afin de bénéficier de la flexibilité engendrée par un découplage. De plus, l’approche est dynamique afin de permettre la représentation et la manipulation de données dont la structure n’est pas fixée ''a priori''.
+
+Les objectifs de SDO sont de simplifier l’accès aux données, unifier le modèle de programmation et encourager l’adoption de [[Patron de conception|patterns]] [[Java EE|J2EE]].
+
+== Principes ==
+
+Un client interroge un DAS (Data Access Service) pour obtenir un graphe d'objets.
+Le graphe d'objets obtenu est déconnecté et peut être manipulé en lecture et écriture.
+La structure du graphe peut être connue en interrogeant les [[métadonnée]]s.
+
+Les liens entre les nœuds du graphe sont exclusivement des compositions. Le graphe est en réalité un arbre compositionnel. Un nœud ne peut pas référencer un nœud d'un autre arbre.
+
+== Historique ==
+
+* Juin 2005: SDO 2.0
+* Nov 2005: SDO 2.0.1 (première version publique de la spécification)
+
+== Implementations de SDO ==
+* [[Eclipse (logiciel)|Eclipse]] Modeling [[Framework]]<ref> [http://www.eclipse.org/modeling/emf/?project=sdo EMF (Eclipse Modeling Framework]</ref> fournit une implémentation libre et gratuite de SDO qui s'intègre parfaitement au sein de l'environnement de développement [[Eclipse (environnement de développement)|eclipse]].
+* La [[Xcalia Intermediation Core|plateforme d’intermédiation xcalia]] est une implémentation commerciale d'un éditeur français qui supporte  SDO via un ''Data Access Service'' sous forme d'un [[Service web]].
+
+== Comparaison avec JDO ==
+* [[Java Data Object|JDO]] pour la [[Persistance (informatique)#Java|persistance]] transparente, est utilisé pour Java seulement, alors que SDO est indépendant du langage de programmation.
+
+== Voir aussi ==
+
+=== Liens externes ===
+* {{en}} [http://www.ibm.com/developerworks/library/specification/j-commonj-sdowmt/index.html La spécification SDO (IBM)]
+* {{en}} [http://www.osoa.org/display/Main/Service+Data+Objects+Specifications SDO Specifications (OSOA)] 
+* {{en}} [http://cwiki.apache.org/TUSCANY/sdo-java.html Tuscany Java SDO]
+
+=== Notes ===
+<references/>
+
+{{Portail informatique}}
+
+[[Catégorie:Architecture logicielle]]
+[[Catégorie:Gestion de projet]]
+
+[[de:Service Data Objects]]
+[[en:Service Data Objects]]
+[[ja:Service Data Objects]]
+[[zh:服务数据对象]]

@@ -1,0 +1,52 @@
+[[Image:EUTRAN arch.op.svg|thumb|upright=1.5|Architecture d'un réseau eUTRAN et connexions avec le cœur de réseau LTE (EPC).]]
+
+Le terme '''EUTRAN''' désigne la partie radio d’un [[réseau de téléphonie mobile]] [[LTE (réseaux mobiles)|LTE]] ; c’est l’abréviation de « '''''{{lang|en|Evolved Universal Terrestrial Radio Access Network}}''''' » (réseau universel évolué d'accès radio terrestre, le terme ''EUTRA'' est aussi parfois utilisé) ; ce réseau 4G est normalisé par l’organisme [[3rd Generation Partnership Project|3GPP]]<ref name="3GPP300">{{en}} [http://www.etsi.org/deliver/etsi_ts/136300_136399/136300/10.09.00_60/ts_136300v100900p.pdf ''{{lang|en|EUTRAN Overall Description, 3GPP TS 36.300 rev.10}}''{{pdf}}] 3GPP, etsi.org, février 2013.</ref>. 
+
+Le réseau EUTRAN assure la connexion via des ondes radio [[Ultra haute fréquence|UHF]] entre les terminaux mobiles et le cœur de réseau d'un [[opérateur de réseau mobile|opérateur mobile]].
+
+Un EUTRAN est constitué d’antennes radio, de stations de base « [[eNode B]] », ainsi que des liaisons (fibre optique, cuivre ou [[faisceau hertzien]]) raccordant ces équipements ({{lang|en|[[Réseau d'amenée|réseau de backhaul]]}}).
+
+== Description technique ==
+L'eUTRAN est la partie « accès radio » d'un réseau de [[téléphonie mobile]] [[4G]] LTE ou {{lang|en|[[LTE Advanced]]}}. Il peut transporter de nombreux types de trafics (voix et données) en mode paquet en utilisant exclusivement les protocoles [[Internet Protocol|IP]].
+L'eUTRAN permet la connexion entre le ''{{lang|en|[[User Equipment]]}}'' (l’équipement de l'utilisateur : téléphone mobile ou {{lang|en|[[smartphone]]}}) et le cœur de réseau (EPC : « ''{{lang|en|Evolved Packet Core}}'' ») de l’opérateur mobile. 
+
+Dans les réseaux LTE et LTE {{lang|en|Advanced}}, les techniques de codage radio utilisées entre les terminaux mobiles ([[User Equipment|UE]]) et les [[Antenne-relais de téléphonie mobile|antennes]] du réseau sont l’[[OFDMA]] ([[liaison descendante]] - ''{{lang|en|downlink}}'') et le [[SC-FDMA]] ([[liaison montante]] - ''{{lang|en|uplink}}'')<ref>{{en}}  [http://www.3gpp.org/LTE ''{{lang|en|LTE overview - EUTRAN}}''] 3GPP.org, consulté en juillet 2013.</ref>.
+
+Un EUTRAN peut utiliser de nombreuses bandes de fréquence radio (par exemple les bandes de {{nombre|800|MHz}}, {{unité/2|1800| et =2600|MHz}} en Europe) qui sont généralement attribuées ou vendues aux opérateurs mobiles par une entité gouvernementale (l’[[Autorité de régulation des communications électroniques et des postes|ARCEP]] en France, l’[[Agence nationale de réglementation des télécommunications|ANRT]] au Maroc, la [[Federal Communications Commission|FCC]] aux États-Unis, [[Agence nationale des fréquences (Algérie)|ANF]] en Algérie). Selon les réseaux et les pays, ces bandes de fréquences peuvent être uniques (elles utilisent alors la variante [[TDD (télécommunications)|TDD]] des normes LTE/EUTRAN) ou  duplex et appariées (variante [[FDD (télécommunications)|FDD]] ; dans ce {{2e}} cas une des {{nombre|2|bandes}} est utilisée pour un sens de transmission ([[liaison descendante]]), l’autre pour le sens inverse ([[liaison montante]])<ref name="3GPP300"/>.
+
+Les stations de base ([[eNode B]]) sont le principal constituant d’un EUTRAN ; elles sont réparties sur l’ensemble du réseau (plusieurs dizaines de millier de  stations de base sont nécessaires pour couvrir complètement un pays de la taille de la France).
+
+Il y a deux types principaux d’interfaces normalisées entre les entités fonctionnelles d’un réseau eUTRAN<ref name="3GPP300"/> : 
+Les interfaces S1 (S1-MME et  S1-U) utilisées pour les connexions au cœur de réseau (EPC) et les {{nobr|interfaces X2}} qui relient chaque eNode B aux eNode B voisins et qui sont utilisées notamment pour gérer le ''{{lang|en|[[handover]]}}'' d’un mobile d’une cellule radio vers une autre.
+
+L’interface S1-MME supporte le trafic de signalisation et de contrôle vers le MME (''{{lang|en|Mobility Management Entity}}'') situé dans le cœur du réseau ''{{lang|en|Evolved Packet Core}}'' (EPC).
+L’interface S1-U supporte le flux des données utilisateurs (voix et données) allant ou venant des SGW (''{{lang|en|Serving GateWay}}'') situés dans le cœur du réseau.
+
+La connexion physique des eNode B [[4G]] au cœur du réseau LTE (nommé « EPC ») est réalisée par un réseau de ''{{lang|en|[[backhaul]]}}'' généralement constitué de liaisons en [[fibre optique|fibres optiques]] supportant des protocoles [[Internet Protocol|IP]] ([[IPv6]]).
+
+== Autres type de réseaux d'accès radio ==
+Dans les réseaux 2G ([[Global System for Mobile Communications|GSM]]) et [[Enhanced Data Rates for GSM Evolution|Edge]], la fonction [[Radio access network|RAN]] (''{{lang|en|Radio Access Network}}'') s’appelle [[GERAN]] ; dans les réseaux 3G ([[Universal Mobile Telecommunications System|UMTS]]), elle s'appelle [[Universal Terrestrial Radio Access Network|UTRAN]]. Ces trois générations de réseaux peuvent coexister chez un même [[opérateur de réseau mobile]], Les stations de base 2G, 3G et 4G peuvent être colocalisées, voire être intégrées dans les mêmes équipements mais elles utilisent des bandes de fréquences radio différentes et généralement des antennes différentes ([[MIMO (télécommunications)|MIMO]] en 4G/LTE) ; le fait pour un opérateur d'avoir plusieurs technologies radio reliées à un « cœur du réseau » en partie commun, permet à un abonné de cet opérateur (s'il a un terminal mobile multistandards) de passer de façon quasi transparente d'un type de ''RAN'' vers un autre.
+
+== Améliorations par rapport aux réseaux d'accès radio 2G et 3G ==
+
+Un eUTRAN a une architecture simplifiée (comparé à un [[Universal Terrestrial Radio Access Network|UTRAN]] 3G) par l’intégration dans les stations de base « [[eNode B]] » des fonctions de contrôle qui étaient auparavant implémentées dans les [[Radio Network Controller|RNC]] (''{{lang|en|Radio Network Controller}}'') et les [[Base Station Controller|BSC]] des réseaux RAN [[Universal Mobile Telecommunications System|UMTS]] et [[Global System for Mobile Communications|GSM]]. Il permet des performances supérieures (débits et diminution de la [[Latence (informatique)|latence]]) grâce aux liens généralement optiques vers le cœur de réseau et vers les antennes distantes (liens CPRI) et à la simplification du réseau. Le codage radio [[OFDMA]] et l'utilisation d'antennes multi-modes [[MIMO (télécommunications)|MIMO]] contribuent aussi aux débits plus élevés et à une meilleure adaptation à des conditions radio défavorables (échos, [[multipath|chemins multiples]]) notamment grâce à la décomposition du signal en des centaines de sous-[[porteuse]]s indépendantes (technique proche du codage [[Orthogonal frequency-division multiplexing|DMT]] utilisé sur les liens [[Digital Subscriber Line|xDSL]]). Il offre enfin une plus grande souplesse dans le choix des largeurs de bandes fréquence (de {{unité/2|1.4|à =20|MHz}}) et la possibilité d’attribution dynamique de bande passante à chaque abonné (via le nombre de sous-porteuses et une réattribution temporelle rapide : chaque {{abréviation discrète|ms|milliseconde}}) ce qui en fait un support optimisé pour des usages qui nécessitent des débits variant rapidement tels l’accès à internet, les jeux interactifs ou la cartographie ([[Global Positioning System|GPS]]).  
+
+== Notes et références ==
+<references/>  
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[LTE (réseaux mobiles)|LTE]]
+* [[Radio access network|RAN]] 
+* [[eNode B]]
+* [[OFDMA]]
+* [[Réseau de téléphonie mobile]]
+* [[Liste des sigles de la téléphonie mobile]]
+
+{{Portail|télécommunications}}
+
+{{DEFAULTSORT:Evolved Universal Terrestrial Radio Access Network}}
+
+[[Catégorie:Réseau de téléphonie mobile]]
+[[Catégorie:4G]]
+[[en: E-UTRA]]

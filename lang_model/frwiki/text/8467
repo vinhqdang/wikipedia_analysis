@@ -1,0 +1,545 @@
+{{Voir homonymes|Déterminant}}
+
+En [[mathématiques]], le '''déterminant''' fut initialement introduit en [[algèbre]], pour résoudre un [[système d'équations linéaires]] comportant autant d'équations que d'inconnues. Il se révèle un outil très puissant dans de nombreux domaines. Il intervient ainsi dans l'étude des [[endomorphisme linéaire|endomorphisme]]s, la recherche de leurs [[valeur propre|valeurs propres]], les propriétés d'indépendance linéaire de certaines familles de vecteurs, mais aussi dans le [[calcul différentiel]], par exemple dans la formule de changement de variables dans les intégrales multiples.
+
+Comme pour de nombreuses opérations, le déterminant peut être défini par une collection de propriétés ([[axiome]]s) qu'on résume par le terme « forme n-linéaire alternée ». Cette définition permet d'en faire une étude théorique complète et d'élargir encore ses champs d'applications.
+Mais le déterminant peut aussi se concevoir comme une généralisation à l'espace de dimension ''n'' de la notion de [[surface]] ou de [[volume]] orientés. Cet aspect, souvent négligé, est une approche pratique et éclairante des propriétés du déterminant.
+
+Un domaine spécifique de l'algèbre est consacré à l'étude du déterminant et de ses généralisations : il s'agit de l'[[algèbre multilinéaire]].
+
+== Histoire des déterminants ==
+
+Les déterminants furent introduits en Occident à partir du {{XVIe siècle}}, soit bien avant les matrices, qui n'apparaissent qu'au {{XIXe siècle}}. Il convient de rappeler que les Chinois furent les premiers à utiliser des tableaux de nombres et à appliquer un algorithme maintenant connu sous le nom de procédé d'[[élimination de Gauss-Jordan]].
+
+=== Premiers calculs de déterminants ===
+
+Dans son sens originel, le déterminant ''détermine'' l'unicité de la solution d'un [[système d'équations linéaires]].  Il fut introduit dans le cas de la taille 2 par [[Girolamo Cardano|Cardan]] en 1545 dans son ''[[Ars Magna]]'', sous forme d'une ''règle'' pour la résolution de systèmes de deux équations à deux inconnues<ref>E Knobloch ''Determinants in I Grattan-Guinness (ed.), Companion Encyclopedia of the History and Philosophy of the Mathematical Sciences'' Londres 1994  pp 766-774 {{ISBN|0415037859}}</ref>. Cette première formule porte le nom de ''regula de modo''.
+
+[[Image:Seki.jpeg|thumb|right|Le japonais [[Kowa Seki]] introduit le premier des déterminants de taille 3 et 4, à la même époque que l'Allemand [[Gottfried Leibniz|Leibniz]].]]
+L'apparition des déterminants de taille supérieure demande ensuite plus de cent ans. Curieusement le Japonais [[Kowa Seki]] et l'Allemand [[Gottfried Leibniz|Leibniz]] en donnèrent les premiers exemples presque simultanément. 
+
+Leibniz étudie de nombreux systèmes d'équations linéaires. En l'absence de notation matricielle, il représente les coefficients inconnus par un couple d'indices : il note ainsi ''ij'' pour ''a<sub>i, j</sub>''. En [[1678]], il s'intéresse à un système de trois équations et trois inconnues et donne, sur cet exemple, la formule de développement suivant une colonne. La même année, il écrit un déterminant de taille 4, correct aux signes près<ref>E. Knobloch, ''Der Beginn der Determinantentheorie, Leibnizens nachgelassene Studien zum Determinantenkalkül'' (Hildesheim, 1980)</ref>. Leibniz ne publie pas ces travaux, qui semblent avoir été oubliés avant que les résultats soient redécouverts indépendamment une cinquantaine d'années plus tard.
+
+À la même période, [[Kowa Seki]] publie un manuscrit sur les déterminants, où il énonce une formulation générale difficile à interpréter. Celle-ci semble donner des formules correctes pour des déterminants de taille 3 et 4, et de nouveau des signes erronés pour les déterminants de taille supérieure<ref>Y. Mikami, ''The development of Mathematics in China and Japan'' (1913, 2e éd. Chelsea Pub. Company 1974)</ref>. La découverte restera sans lendemain, à cause de la coupure du Japon avec le monde extérieur.
+
+===Déterminants de taille quelconque===
+
+En [[1748]], un traité d'algèbre posthume de [[Colin Maclaurin|MacLaurin]] relance la théorie des déterminants, avec l'écriture correcte de la solution d'un système de quatre équations et quatre inconnues<ref>C. B. Boyer, ''A History of Mathematics'' (John Wiley, 1968)</ref>.
+
+En [[1750]], [[Gabriel Cramer|Cramer]] formule les règles qui permettent de résoudre un système de ''n'' équations et ''n'' inconnues, mais sans en donner la démonstration<ref>[[Gabriel Cramer]] ''Introduction to the analysis of algebraic curves'' 1750</ref>. Les méthodes de calcul des déterminants sont alors délicates, puisque fondées sur la notion de [[permutations paires et impaires|signature d'une permutation]]<ref>M. Cantor, ''Geschichte der Mathematik'' (Teubner, 1913)</ref>.
+
+Les mathématiciens s'emparent de ce nouvel objet, avec des articles de [[étienne Bézout|Bézout]] en 1764<ref>[[étienne Bézout|Bézout]] ''Recherches sur le degré des équations résultantes de l’évanouissement des inconnues, et sur le moyens qu’il convient d’employer pour trouver ces équations'', Mém. Acad. Roy. Sci Paris, 1764, pp 288–338</ref>, de [[Alexandre-Théophile Vandermonde|Vandermonde]] en [[1771]]<ref>[[Alexandre-Théophile Vandermonde|Vandermonde]] ''Mémoire sur l’élimination, Hist. de l’Acad. Roy. des Sciences Paris 1772, 2e partie, pp 516-532</ref> (étonnamment ne donnant pas le calcul du déterminant de la [[matrice de Vandermonde]] actuelle<ref>''La grande notoriété n'est assurée en Mathématiques qu'aux noms associés à une méthode, à un théorème, à une notation. Peu importe d'ailleurs que l'attribution soit fondée ou non, et le nom de Vandermonde serait ignoré de l'immense majorité des mathématiciens si on ne lui avait attribué ce déterminant que vous connaissez bien, et qui n'est pas de lui !'' V.A. Lebesgue Conférence d'Utrecht 1837</ref>). En 1772, [[Pierre-Simon Laplace|Laplace]] établit les formules de récurrence portant son nom. L'année suivante, [[Joseph-Louis Lagrange|Lagrange]] découvre le lien entre le calcul des déterminants et des volumes<ref>[[Joseph-Louis Lagrange|Lagrange]] ''Nouvelle solution du problème du mouvement de rotation d’un corps de figure quelconque qui n’est animé par aucune force accélératrice'' Nouveaux mémoires de l’Académie royale des sciences et des belles-lettres de Berlin, 1773</ref>.
+
+[[Carl Friedrich Gauss|Gauss]] utilise pour la première fois le mot « déterminant », dans les ''[[Disquisitiones arithmeticae]]'' en [[1801]]. Il l'emploie pour ce que nous qualifions aujourd'hui de [[discriminant]] d'une [[quadrique]] et qui est un cas particulier du déterminant moderne. Il est également près d'obtenir le théorème sur le déterminant d'un produit<ref name="St Andrew">L'essentiel des informations de ce paragraphe provient du site suivant : {{en}} [http://www-groups.dcs.st-and.ac.uk/~history/HistTopics/Matrices_and_determinants.html Matrices and determinants]</ref>.
+
+=== Mise en place de la notion moderne de déterminant === 
+
+[[Augustin Louis Cauchy|Cauchy]] emploie le premier le mot déterminant dans son sens moderne. On peut ainsi lire dans son article de synthèse de plus de quatre-vingts pages sur cette question : {{Citation bloc|M. Gauss s'en est servi avec avantage dans ses Recherches analytiques pour découvrir les propriétés générales des formes du second degré, c'est-à-dire des [[polynôme]]s du second degré à deux ou plusieurs variables, et il a désigné ces mêmes fonctions sous le nom de déterminants. Je conserverai cette dénomination qui fournit un moyen facile d'énoncer les résultats ; j'observerai seulement qu'on donne aussi quelquefois aux fonctions dont il s'agit le nom de résultantes à deux ou à plusieurs lettres. Ainsi les deux expressions suivantes, déterminant et [[Résultant|résultante]], devront être regardées comme synonymes<ref>[[Augustin Louis Cauchy|Cauchy]] ''Mémoire sur les fonctions qui ne peuvent obtenir que deux valeurs égales et des signes contraires par suite des transpositions opérées entre les variables qu'elles renferment'' adressé en [[1812 en science|1812]] et publié dans le Journal de l'Ecole Poytechnique, XVIIe Cahier, Tome X, Paris [[1815 en science|1815]] [http://gallica.bnf.fr/ark:/12148/bpt6k90193x lire sur Gallica]</ref>.}}
+
+Elle représente une synthèse des connaissances antérieures, ainsi que des propositions nouvelles comme le fait que l'[[application transposée]] ne modifie pas le déterminant ainsi que la formule du déterminant d'un produit. [[Jacques Philippe Marie Binet|Binet]] propose également une démonstration cette même année. Plus tard, Cauchy jette les bases de l'étude de la [[réduction d'endomorphisme]]s<ref>[[Augustin Louis Cauchy|Cauchy]] ''Application du calcul des résidus à l’intégration des équations différentielles linéaires à coefficients constants'' [[1826 en science|1826]] [http://gallica.bnf.fr/ark:/12148/bpt6k90198n.f255 Lire sur le site de Gallica]</ref>.
+
+En publiant ses trois traités sur les déterminants en 1841 dans le [[journal de Crelle]], [[Charles Gustave Jacob Jacobi|Jacobi]] donne une véritable notoriété à la notion<ref name="St Andrew" />. Pour la première fois, il présente des méthodes de calcul systématiques, sous forme algorithmique. Il devient également possible d'évaluer des déterminants de fonctions avec la naissance du [[jacobien]].
+
+De 1832 à 1844, les travaux de [[Hermann Grassmann|Grassmann]], fondent l'[[algèbre extérieure]] et donnent un sens plus général aux déterminants au travers de la représentation des [[grassmannienne]]s
+
+Le cadre matriciel est introduit par les travaux de [[Arthur Cayley|Cayley]] et [[James Joseph Sylvester|Sylvester]]. Cayley est également l'inventeur de la notation des déterminants par des barres verticales ; il établit la formule de calcul de l'inverse.
+
+La théorie s'étoffe par l'étude de déterminants ayant des propriétés de symétrie particulières et par l'introduction du déterminant dans de nouveaux champs des mathématiques, comme le [[wronskien]] pour les équations différentielles linéaires.
+
+En 1867, [[Lewis Carroll]], publie  ''An elementary treatise on determinants : with their application to simultaneous linear equations and algebraical geometry'', dans lequel il énonce 17 propriétés dont 7 sont d'après lui, originales<ref>Lewis Carroll, [http://www.archive.org/stream/UTL-Carroll-Reel855#page/n0/mode/2up An elementary treatise on determinants], Introduction</ref> .
+
+== Premiers exemples : aires et volumes ==
+
+Les calculs d'[[Superficie|aire]]s et de [[volume]]s sous forme de déterminants dans des espaces euclidiens apparaissent comme des cas particuliers de la notion plus générale de déterminant. Pour les distinguer, la lettre majuscule D (Det) leur est parfois réservée. 
+
+=== Déterminant de deux vecteurs dans le plan euclidien ===
+[[Image:Determinant de vecteur dim 2.jpg|thumb|300px|right|Fig. 1. Le déterminant est l'aire bleue orientée.]]
+Soit ''P'' le plan euclidien orienté usuel. Le déterminant des vecteurs <math>X</math> et <math>X'</math> est donné par l'expression analytique
+:<math>\det(X,X')=\begin{vmatrix} x & x' \\ y & y'\end{vmatrix}=xy'-yx' </math>
+ou, de façon équivalente, par l'expression géométrique 
+:<math>\det(X,X')=\|X\|\cdot\|X'\|\cdot\sin \theta</math>
+dans laquelle <math>\theta</math> est l'[[angle]] orienté formé par les vecteurs <math>X</math> et <math>X'</math>.
+
+==== Propriétés ====
+* La valeur absolue du déterminant est égale à l'[[Superficie|aire]] du [[parallélogramme]] défini par <math>X</math> et <math>X'</math> (<math>X'\sin \theta</math> est en effet la hauteur du parallélogramme, d'où Aire = Base × Hauteur).
+* Le déterminant est nul si et seulement si les deux vecteurs sont colinéaires (le parallélogramme devient une ligne).
+: En effet cette annulation apparaît comme un simple test de [[proportionnalité]] des composantes des vecteurs par '''produit en croix'''.
+* Son signe est strictement positif si et seulement si la mesure de l'angle <math>(X, X')</math> est comprise dans l'intervalle <math>]0, \pi[</math>.
+* L'application déterminant est [[bilinéaire]] : la linéarité par rapport au premier vecteur s'écrit
+:<math>\det(aX+bY,X')=a\det(X,X')+b\det(Y,X')\;</math>
+et celle par rapport au second vecteur s'écrit
+:<math>\det(X,aX'+bY')=a\det(X,X')+b\det(X,Y')\;</math>
+
+[[Image:Deux parallelogrammes-det.gif|thumb|300px|right|Fig. 2. Somme des aires de deux parallélogrammes adjacents.]]
+La figure 2, dans le plan, illustre un cas particulier de cette formule. Elle représente deux parallélogrammes adjacents, l'un défini par les vecteurs u et v (en vert), l'autre par les vecteurs u' et v (en bleu). Il est aisé de visualiser sur cet exemple l'aire du parallélogramme défini par les vecteurs u+u' et v (en gris) : elle est égale à la somme des aires des deux parallélogrammes précédents, à laquelle est enlevée l'aire d'un triangle, et ajoutée l'aire d'un autre triangle. Les deux triangles se correspondant par translation, la formule suivante est vérifiée <math>\det(u+u', v)=\det(u, v)+\det(u', v)</math>.
+
+Ce dessin correspond à un cas particulier de la formule de bilinéarité puisque les orientations ont été choisies de façon à ce que les aires aient le même signe, mais il aide à en saisir le contenu géométrique.
+
+==== Généralisation ====
+
+Il est possible de définir la notion de déterminant dans un plan euclidien orienté muni d'une [[base orthonormale]] directe ''B'', en utilisant les coordonnées des vecteurs dans cette base. Le calcul de déterminant donne le même résultat quelle que soit la base orthonormale directe choisie pour le calcul.
+
+=== Déterminant de trois vecteurs dans l'espace euclidien ===
+
+Soit ''E'' l'espace euclidien orienté usuel de dimension 3. Le déterminant de trois vecteurs de ''E'' est donné par
+:<math>\begin{align}
+\det(X,X',X'') &= \begin{vmatrix} x & x' & x'' \\ y & y' & y'' \\ z & z' & z''
+\end{vmatrix}=x \begin{vmatrix} y' & y'' \\ z' & z'' \end{vmatrix} - y \begin{vmatrix} x' & x'' \\ z' & z'' \end{vmatrix} + z \begin{vmatrix} x' & x'' \\ y' & y'' \end{vmatrix} \\
+&= x(y'z''-y''z')-y(x'z''-x''z')+z(x'y''-x''y')\\
+&= xy'z''+x'y''z+x''yz'-xy''z'-x'yz''-x''y'z.
+\end{align}</math>
+
+[[Image:Déterminant-3D.jpg|thumb|250px|right|Fig. 3. Illustration graphique de la trilinéarité.]]
+Ce déterminant porte encore le nom de [[produit mixte]] ; un procédé visuel pour retrouver cette formule est connu sous le nom de [[règle de Sarrus]].
+
+==== Propriétés ====
+* La valeur absolue du déterminant est égale au [[volume]] du [[parallélépipède]] défini par les trois vecteurs.
+* Le déterminant est nul si et seulement si les trois vecteurs sont contenus dans un même plan (parallélépipède « plat »).
+* L'application déterminant est [[application multilinéaire|trilinéaire]] : notamment
+:<math>\det(aX+bY,X',X'')=a\det(X,X',X'')+b\det(Y,X',X'')</math>
+
+Une illustration géométrique de cette propriété est donnée en figure 3, par deux parallélépipèdes adjacents, c'est-à-dire possédant une face commune. L'égalité suivante devient intuitive
+:<math>\det(u+u', v,w)=\det(u, v,w)+\det(u', v,w)</math>.
+
+===Interprétation du signe du déterminant : orientation===
+
+{{Article détaillé|orientation (mathématiques)}}
+
+Dans le plan, le signe du déterminant s'interprète comme le signe de l'angle orienté.
+
+Dans l'espace à trois dimensions, le cube unité sert de référence. Son déterminant vaut un. Un parallélépipède non plat possède un déterminant positif s'il est possible de l'obtenir en déformant continûment, sans jamais l'aplatir, le cube unité. 
+
+Le déterminant est au contraire négatif s'il est nécessaire d'appliquer en plus une symétrie, c’est-à-dire si le cube unité ne peut être obtenu qu'en déformant le parallélépipède, puis en observant le résultat de cette déformation dans un miroir.
+
+[[Image:Orientation-déterminant.jpg|thumb|center|450px|Fig. 4. Il est possible de passer du cube jaune au parallélépipède vert par déformation continue. Ce n'est pas possible pour le parallélépipède rouge qui est l'image miroir du vert.]]
+
+===Approche intuitive du déterminant d'une application linéaire===
+
+Une [[application linéaire]] est une application qui transforme les coordonnées d'un vecteur de manière linéaire. Par exemple dans l'espace de dimension 3, l'application est linéaire si les coordonnées x, y et z d'un vecteur ont pour image x', y' et z' avec :
+<center><math>\begin{matrix} x'= ax + by +cz\\ y'= dx + ey+fz \\z'=gx+hy+iz \end{matrix}</math></center>
+où a, b,c,..., i sont des nombres. La figure suivante illustre deux cas de telles applications linéaires.
+
+Dans le premier cas, le cube jaune est transformé en un parallélépipède illustré en vert. Dans le deuxième cas, le cube jaune est transformé en un volume aplati, un carré rouge (c'est-à-dire que certains des sommets du cube initial ont la même image par l'application linéaire). Ces deux cas correspondent à des situations différentes en mathématique. La première fonction du déterminant est de fournir un moyen de séparer ces cas.
+
+[[Image:Determinant (1).jpg|thumb|right|400px|Fig. 5. Exemple d'applications linéaires: La première transforme le cube jaune en un volume vert la seconde en un volume aplati rouge.]]
+
+Pour être plus précis, le déterminant d'une application linéaire est un nombre, qui représente un facteur multiplicatif pour les volumes. Si le cube jaune est de volume 1, alors le volume de l'image du cube vert est la valeur absolue du déterminant de la première application. La deuxième application a un déterminant nul, ce qui correspond à un aplatissement des volumes.
+
+Le signe du déterminant est positif s'il est possible de déformer continûment le cube jaune pour obtenir le vert. Il est au contraire négatif s'il est nécessaire d'y appliquer en plus une symétrie.
+
+En fait cette propriété n'est pas uniquement vraie pour le cube unité jaune. Tout volume transformé par une application linéaire est multiplié par la valeur absolue du déterminant.
+
+Le déterminant existe pour les applications linéaires d'un espace dans lui même dans le cas de toutes les [[dimension]]s finies. En effet, la notion de volume peut être généralisée : ainsi un « hypercube » ayant ses arêtes de longueur 2 dans un espace euclidien de dimension ''n'' aurait un déterminant (sorte d'« hypervolume ») de ''2<sup>n</sup>''. En revanche si l'espace contient une infinité de dimensions, alors le déterminant n'a plus de sens.
+
+==Cadre d'utilisation==
+===Déterminant et équations linéaires===
+Il existe un cas de calcul numérique très fréquent pour les ingénieurs, les physiciens ou les économistes. Il s'agit de la résolution d'un [[Équation linéaire|système d'équations linéaires]]. Si le système possède autant d'équations que de variables, on peut espérer avoir l'existence et l'unicité d'une solution. Mais ce n'est pas toujours le cas, par exemple en cas de répétition de la même équation, plusieurs solutions conviendront. 
+
+Plus précisément, à un système de ''n'' équations et ''n'' inconnues peut être associé un déterminant. L'existence et l'unicité de la solution est obtenue si et seulement si le déterminant est différent de 0. Ce problème est l'origine historique de l'introduction des déterminants.
+
+Il est possible, non seulement de garantir l'existence et l'unicité de la solution, mais la [[règle de Cramer]] fournit un calcul exact de la solution à l'aide de déterminants. Cette méthode n'est ni la plus rapide, ni la plus simple, elle est peu pratiquée pour les calculs explicites, elle est néanmoins utile pour établir certains résultats théoriques, telle que la dépendance par rapport aux paramètres.
+
+==== Lien avec l'aplatissement des volumes ====
+
+Un [[système d'équations linéaires|système de 3 équations linéaires]] à 3 inconnues peut être mis sous forme d'une [[équation linéaire]] ''u(X)=B'' où ''X=(x, y,z)'' est un vecteur dont les composantes sont les inconnues du système, ''u'' une application linéaire de l'espace et ''B'' un vecteur. La résolution du système peut être formulée de façon géométrique : le vecteur ''B'' est-il l'image d'un certain vecteur ''X'' par ''u'' ? Ce dernier est-il unique ? Le déterminant de ''u'' apporte la réponse : l'existence et l'unicité sont obtenues si et seulement s'il est non nul.
+
+La figure 5 permet une approche intuitive de ce résultat. Il suffit de considérer un [[pavage]] de l'espace par le cube jaune et ses images par des translations selon les trois directions. Une famille de cubes jaunes adjacents remplissent alors tout l'espace.
+
+* Si le déterminant n'est pas nul, alors l'image de ce pavage est un pavage de parallélépipèdes de couleur verte, remplissant également tout l'espace. Ceci signifie que tous les vecteurs de l'espace sont des vecteurs images. Notamment, le vecteur ''B'' est bien recouvert par l'un des volumes verts. Il est image d'un vecteur ''X'' du volume jaune correspondant. 
+* En revanche, si le déterminant est nul, alors l'image du pavage ne remplit pas l'espace entier. Dans l'exemple du cube aplati rouge, elle ne remplit qu'un plan. Certains vecteurs ne sont jamais atteints, les autres sont l'image de plusieurs vecteurs à la fois.
+
+Plus généralement, pour un système de n équations et n inconnues, le déterminant indique si les images par ''u'' remplissent l'espace entier ou seulement un sous-espace.
+
+===Déterminant et réduction===
+Les applications linéaires apparaissent non seulement en géométrie élémentaire mais aussi dans de nombreux domaines avancés comme certaines résolutions d'[[équation différentielle|équations différentielles]], la définition d'algorithmes rapides ou la résolution de problèmes théoriques. Il est important de comprendre leur comportement. 
+
+Un outil d'analyse fécond consiste à répertorier les axes privilégiés, selon lesquels l'application se comporte comme une dilatation, multipliant les longueurs des vecteurs par une constante. Ce rapport de dilatation est appelé [[valeur propre]] et les vecteurs auxquels il s'applique [[vecteur propre|vecteurs propres]].
+
+Le phénomène d'aplatissement des volumes peut être mesuré par un déterminant. Il correspond au cas où, selon une certaine direction, les vecteurs sont multipliés par un rapport de dilatation égal à 0 (valeur propre nulle). Plus généralement, toutes les valeurs propres peuvent être obtenues par le calcul d'un déterminant à paramètre, appelé [[polynôme caractéristique]].
+
+===Déterminant et intégrale multiple===
+[[Image:Jacobien.jpg|thumb|right|250px|Fig. 6. Jacobien.]]
+Ainsi que le montre l'approche intuitive, le déterminant caractérise la modification de volume d'un parallélépipède par un [[endomorphisme]]. L'[[intégrale multiple]] est un outil de détermination des volumes dans le cas général. Elle utilise la notion de déterminant dans le cadre du [[intégration par changement de variable|changement de variables]]. Il prend alors le nom de [[jacobien]]. Il peut être imaginé comme le ''rapport des volumes élémentaires'' avant et après changement de variables, en usant de la terminologie des éléments différentiels.
+
+Plus précisément, le comportement d'une application [[différentielle|différentiable]] au voisinage d'un point est au premier ordre, analogue en termes de modification de volume, à une application linéaire ayant comme déterminant le jacobien.
+
+=== Déterminant et amortissement dans les équations différentielles ===
+
+[[Image:Wronskien.png|left|440px|frame|Fig. 7. Exemple du pendule de longueur variable, sans amortissement. En bleu et en rouge sont représentées deux solutions particulières, dans l'espace des phases. L'aire formée par les deux solutions reste constante au cours du temps]]
+En physique, notamment en mécanique du point, l'[[équation différentielle linéaire d'ordre deux]] est fréquente. Elle se présente sous la forme <math>y''=ay'+by+c</math>, dans laquelle <math>a</math>,<math>b</math>,<math>c</math> peuvent être des coefficients constants ou plus généralement des fonctions (par exemple du temps). Le terme <math>a</math> est appelé facteur d'amortissement.
+
+Cette équation différentielle est associée à un déterminant, appelé [[wronskien]]. Il s'interprète comme une aire dans le plan (y, y') appelé [[espace des phases]] par les physiciens. Cette aire reste constante au cours du temps si le terme d'amortissement est nul, elle décroît de façon exponentielle s'il est strictement positif. S'il n'est pas toujours possible d'exhiber une solution explicite, le wronskien est toujours calculable.
+
+Le wronskien peut être généralisé à toutes les [[équation différentielle linéaire|équations différentielles linéaires]].
+
+== Définition du déterminant ==
+=== Origine de la construction du déterminant ===
+
+Les notions de parallélogramme et de parallélépipède sont généralisées à un [[espace vectoriel]] ''E'' de dimension finie ''n'' sur <math>\mathbb{R}</math>. À ''n'' vecteurs ''x<sub>1</sub>, ..., x<sub>n</sub>'' de ''E'' est associé un [[parallélotope]]. Il est défini comme la partie de ''E'' formée par l'ensemble des combinaisons des ''x<sub>i</sub>'' à coefficients compris entre 0 et 1
+:<math>P=\left\{x=\sum_{i=1}^n t_i x_i \Bigg|\,  \forall i , 0\leq t_i \leq 1\right\}</math>
+Il convient de voir dans ce parallélotope une sorte de ''pavé oblique''.
+
+Lorsque l'espace est muni d'un [[produit scalaire]], il est possible de définir le '''volume''' de ce parallélotope, parfois appelé son hypervolume pour souligner que la dimension de l'espace concerné n'est pas forcément 3. Il vérifie les propriétés suivantes :
+* les volumes de deux pavés adjacents par une face, s'ajoutent
+* la multiplication d'un des vecteurs définissant le pavé par une constante induit la multiplication du volume par cette constante
+* le volume d'un pavé formé par la répétition du même vecteur (ce qui constitue un cas particulier de pavé plat), est nul.
+
+Un changement de produit scalaire sur l'espace ''E'' modifie les mesures de longueurs, angles, et par conséquent de volumes. Cependant la théorie des déterminants montrera qu'à une constante multiplicative près, il n'existe qu'une unique méthode de calcul des volumes dans un espace vectoriel de dimension ''n''.
+
+En reprenant un espace vectoriel ''sans structure particulière'', la notion de déterminant a pour objectif de donner un sens intrinsèque au « volume » du parallélotope, sans référence à un produit scalaire par exemple, c'est-à-dire de construire une fonction ''f'', qui à ''x<sub>1</sub>, ..., x<sub>n</sub>'' associe un réel, et vérifie les propriétés précédentes. Une telle application est appelée une forme ''n''-linéaire alternée.
+
+=== Formes ''n''-linéaires alternées ===
+
+La notion de '''forme ''n''-linéaire alternée''' généralise les propriétés précédentes. Elle se définit comme une application de ''E<sup>n</sup>'' dans <math>\mathbb{R}</math>, qui est :
+* [[application linéaire|linéaire]] en chaque variable. Ainsi pour des vecteurs ''x<sub>1</sub>, ..., x<sub>n</sub>, x'<sub>i</sub>'' et deux scalaires ''a'' et ''b''
+:<math>f(x_1,\dots,x_{i-1}, ax_i+bx'_i,x_{i+1}, \dots, x_n )=a f(x_1, \dots, x_n) + bf(x_1, \dots,x'_i,\dots x_n) \;</math>
+* alternée, signifie qu'elle s'annule à chaque fois qu'elle est évaluée sur un ''n''-uplet contenant deux vecteurs identiques
+:<math>[\exists i\neq j, x_i=x_j] \Rightarrow f(x_1,\dots, x_n)=0</math>
+
+L'article [[application multilinéaire]] procède à l'étude systématique des formes ''n''-linéaires alternées sur un espace vectoriel de dimension ''n''.
+
+Le résultat principal est la possibilité de ramener le calcul de l'image de <math>(x_1,..., x_n)</math> à celui d'images des vecteurs de base par ''n''-linéarité. En outre le caractère alterné permet de changer l'ordre des vecteurs, de sorte qu'il suffit de connaître l'image <math>f(e_1, ... , e_n)</math> des vecteurs d'une base, pris dans l'ordre, pour connaître ''f''.  Remettre les vecteurs dans l'ordre fait intervenir la notion de [[permutation]].
+
+'''Théorème'''
+
+L'ensemble ''A<sub>n</sub>(E)'' des formes ''n''-linéaires alternées sur un espace vectoriel de dimension ''n'' constitue un espace vectoriel de dimension 1.
+
+De plus, si <math>(e_{1},\dots,e_{n})</math> est une base de ''E'', on peut exprimer l'image d'un ''n''-uplet de vecteurs par
+:<math>f(x_1,\dots,x_n )=  \left(\sum_{\sigma\in \mathfrak{S}_n} \varepsilon(\sigma) \prod_{j=1}^n X_{\sigma(j),j} \right) f(e_{1},\dots,e_{n})</math> <ref group="Note" name="notations_permutations">Notations : <math>\mathfrak{S}_n</math> désigne l'ensemble des [[permutation]]s de <math>\{1,\cdots,n\}</math> et <math>\varepsilon(\sigma)</math> la [[signature d'une permutation|signature]] de la permutation <math>\sigma</math> (1 pour une permutation paire, -1 pour une permutation impaire).</ref>
+avec ''X<sub>ij</sub>'' la ''i''-ème composante de ''x<sub>j</sub>''.
+
+=== Déterminant d'une famille de ''n'' vecteurs dans une base ===
+
+'''Définition'''
+
+On suppose ''E'' muni d'une base <math>B=(e_{1},\dots,e_{n})</math>. L'application '''déterminant en base ''B''''' est l'unique forme ''n''-linéaire alternée sur ''E'' vérifiant <math>\det{}_B(e_1,... , e_n)=1</math>, abrégé en <math> \det{}_B(B)=1</math> 
+
+Il faut se représenter cette quantité comme une sorte de volume de pavé, relativement à la base ''B''.
+
+'''Formule de Leibniz'''
+
+[[Image:Gottfried Wilhelm von Leibniz.jpg|thumb|left|[[Gottfried Leibniz]] introduit les premiers déterminants de taille 3 et plus]]
+Soient ''x<sub>1</sub>,...x<sub>n</sub>'' des vecteurs de ''E''. Il est possible de représenter ces ''n'' vecteurs par ''n'' matrices colonnes, formant par juxtaposition une matrice carrée ''X''.
+
+Le déterminant de ''x<sub>1</sub>,...x<sub>n</sub>'' relativement à la base ''B'' vaut alors
+:<math>\det{}_B(x_1,\dots, x_n)=\sum_{\sigma\in \mathfrak{S}_n} \varepsilon(\sigma) \prod_{j=1}^n X_{\sigma(j),j} </math> <ref group="Note" name="notations_permutations" />
+Cette formule porte parfois le nom de [[Gottfried Wilhelm von Leibniz|Leibniz]]. Elle présente peu d'intérêt pour le calcul pratique des déterminants, mais permet d'établir plusieurs résultats théoriques.
+
+En physique, on rencontre souvent la formule de [[Gottfried Wilhelm von Leibniz|Leibniz]] exprimée à l'aide du [[symbole de Levi-Civita]], en utilisant la [[convention d'Einstein]] pour la sommation des indices&nbsp;:
+:<math>\det(A)=\epsilon^{i_1\cdots i_n}{A^{1}}_{i_1}\cdots {A^{n}}_{i_n}</math>
+
+'''Formule de changement de base'''
+
+Si ''B'' et ''B ’'' sont deux bases de ''E'', les applications déterminants correspondantes sont proportionnelles (avec un rapport non nul)
+:<math>\det{}_{B'}(x_1,\dots, x_n)=\det{}_{B'}(B)\times \det{}_{B}(x_1,\dots, x_n)\,</math>
+Ce résultat est conforme à l'interprétation en termes de volume relatif.
+
+=== Déterminant d'une matrice ===
+{{Article détaillé|Calcul du déterminant d'une matrice}}
+Soit une [[matrice (mathématiques)|matrice]] ''A''=(a<sub>ij</sub>) carrée d’ordre ''n'' à coefficients réels. Les [[vecteur colonne|vecteurs colonnes]] de la matrice peuvent être identifiés à des éléments de l'espace vectoriel <math>\mathbb{R}^n</math>. Ce dernier est muni d'une [[canonique (mathématiques)|base canonique]].
+
+Il est alors possible de définir le '''déterminant de la matrice ''A''''' comme le déterminant du système de ses vecteurs colonnes relativement à la base canonique. Il est noté det(''A'') puisqu'il n'y a pas d'ambiguïté sur la base de référence.
+
+Par définition même, le déterminant dépend de façon linéaire de chaque colonne, et est nul lorsque deux colonnes sont égales. Le déterminant de la [[matrice identité]] vaut un. Enfin il vérifie la formule de Leibniz :
+:<math>\det(A)=\sum_{\sigma \in \mathfrak{S}_n} 
+\varepsilon(\sigma) \prod_{i=1}^n a_{ \sigma(i),i}</math> <ref group="Note" name="notations_permutations" />
+
+Ce déterminant se note fréquemment avec des barres verticales :
+:<math>\det \begin{bmatrix} m_{1;1} & \cdots & m_{1;n} \\ \vdots & \ddots & \vdots \\ m_{n;1} & \cdots & m_{n;n} \end{bmatrix} = \begin{vmatrix} m_{1;1} & \cdots & m_{1;n} \\ \vdots & \ddots & \vdots \\ m_{n;1} & \cdots & m_{n;n} \end{vmatrix}</math>
+
+La présentation matricielle apporte une propriété essentielle : une matrice a le même déterminant que sa [[matrice transposée|transposée]]
+:<math>\det A = \det \left({}^t{A}\right)\,</math>
+
+Ce qui signifie que le déterminant de ''A'' se voit aussi comme le déterminant du système des vecteurs lignes, relativement à la base canonique.
+
+{{boîte déroulante|align=left|titre=Formule du déterminant de la transposée - démonstration|contenu= 
+En appliquant la formule de Leibniz à la transposée
+:<math>\det({}^t A)=\sum_{\sigma \in \mathfrak{S}_n} 
+\varepsilon(\sigma) \prod_{i=1}^n a_{i,\sigma(i)}</math> 
+On effectue un changement d'indice en posant <math>j=\sigma(i)</math>. Par bijectivité de <math>\sigma</math>, cela conduit à 
+:<math>\det({}^t A)=\sum_{\sigma \in \mathfrak{S}_n} 
+\varepsilon(\sigma) \prod_{j=1}^n a_{\sigma^{-1}(j),j}</math>
+Une deuxième réindexation s'impose : prendre <math>\tau = \sigma^{-1}</math>. L'application qui à <math>\sigma</math> associe son inverse est une bijection de <math>\mathfrak{S}_n</math>, on peut donc effectuer ce changement d'indice et ainsi
+:<math>\det({}^t A)=\sum_{\tau \in \mathfrak{S}_n} 
+\varepsilon(\tau^{-1}) \prod_{j=1}^n a_{\tau(j),j} =\sum_{\tau \in \mathfrak{S}_n} 
+\varepsilon(\tau) \prod_{j=1}^n a_{\tau(j),j}=\det A </math>
+}}
+
+===Déterminant d'un endomorphisme===
+
+Soit ''u'' un [[endomorphisme]] d'un espace vectoriel de dimension finie. Toutes les matrices représentatives de ''u'' ont le même déterminant. Cette valeur commune est appelée déterminant de ''u''.
+
+Le déterminant de ''u'' est la valeur par laquelle ''u'' multiplie les déterminants de vecteurs
+:<math>\det{}_B(u(x_1),\dots, u(x_n))=\det u \times \det{}_B(x_1,\dots, x_n)\,</math>
+
+{{boîte déroulante|align=left|titre=Démonstration de ces deux propriétés|contenu= 
+On introduit l'application <math>d_{u,B}</math> qui à ''x<sub>1</sub>, ..., x<sub>n</sub>'' associe
+:<math>d_{u,B}(x_1,\dots,x_n) = \det{}_B(u(x_1), \dots, u(x_n))\,</math>
+C'est une forme ''n''-linéaire alternée et sa valeur sur les vecteurs de ''B'', qu'on note <math>d_{u,B}(B)</math>, est justement le déterminant de la matrice représentative de ''u'' dans la base ''B''.
+La forme <math>d_{u,B}</math> est donc proportionnelle au déterminant en base ''B'', le rapport de proportionnalité se calculant en prenant l'image des vecteurs de ''B''
+:<math>d_ {u,B}= d_{u,B}(B) \times \det{}_B\,</math>
+Ce qui signifie, pour un ''n''-uplet de vecteurs
+:<math>\det{}_B(u(x_1),\dots, u(x_n))=d_{u,B}(B) \times  \det{}_B(x_1,\dots, x_n) \qquad (1)</math>
+
+Il reste à prouver que si ''B' '' est une autre base de ''E'', ''d<sub>u, B</sub>(B)'' est identique à ''d<sub>u, B ' </sub>(B ' )''. Pour cela on utilise la formule de changement de base dans les deux membres de (1). 
+}}
+
+Notamment les endomorphismes de déterminant 1 conservent le déterminant des vecteurs. Ils forment un sous groupe de ''Gl(E)'', noté ''Sl(E)'', et appelé '''[[groupe spécial linéaire]]'''. Dans un espace réel de dimension deux, ils se conçoivent comme les applications linéaires conservant les aires orientées, en dimension trois les volumes orientés.
+
+On démontre que ce groupe est engendré par les [[transvection]]s, dont la matrice dans une base adaptée est de la forme 
+
+:<math>\begin{bmatrix}
+1 &  &  & &   \\ 
+& 1 &  \lambda  &  \\ 
+&  & . &  &  \\ 
+&  &  & 1 &  \\ 
+&  &  &  & 1 
+\end{bmatrix}=I_n+\lambda E_{ij}</math>
+
+{| border="0" align="center"
+|+ Effet d'une transvection dans l'espace (conservation du volume)
+|
+!
+|-
+| align="center" | [[Image:Transvection-1.jpg|thumb|180px|Fig. 8. Cube avant transvection]]
+| align="center" | [[Image:Transvection-2.jpg|thumb|310px|Fig. 9. Cube après transvection]]
+|}
+
+Par construction même du déterminant des endomorphismes, deux [[matrice semblable|matrices semblables]] ont même déterminant.
+
+==Propriétés==
+
+Quitte à effectuer le choix d'une base, il est possible d'énoncer ces propriétés dans le cadre matriciel.
+
+=== Caractère ''n''-linéaire alterné ===
+
+L'application déterminant sur les familles de vecteurs est une forme multilinéaire alternée. Utiliser cette propriété sur une matrice demande d'exprimer le système de vecteurs colonnes, ou de vecteurs lignes. 
+
+Par exemple si la matrice ''A'' admet pour colonnes ''C<sub>1</sub>, ..., C<sub>n</sub>'' avec ''C<sub>i</sub>'' de la forme ''C<sub>i</sub>=aC '<sub>i</sub>+C ' '<sub>i</sub>''
+:<math>\det(C_1,C_2,\dots,aC'_i+C''_i,\dots,C_n)=a\cdot\det(C_1,\dots,C'_i,\dots, C_n)+\det(C_1,C_2,\dots,C''_i,\dots,C_n)\,</math>
+
+Voici l'effet des [[opération élémentaire|opérations élémentaires]] sur les colonnes de la matrice
+* multiplier une colonne par ''a'', entraîne la multiplication du déterminant par la même valeur
+* échanger deux colonnes, entraîne la multiplication du déterminant par ''-1''
+* ajouter à une colonne une combinaison linéaire des ''autres'' colonnes ne modifie pas le déterminant.
+
+Notamment, si toutes les colonnes sont multipliées par ''a'', le résultat est une multiplication par ''a<sup>n</sup>'' du déterminant
+:<math>\det (a \times M) = a^n \times \det{M}</math>
+
+En revanche, il n'existe ''pas de formule simple exprimant le déterminant de la somme A+B de deux matrices''. En effet, appliquer la multilinéarité par rapport aux colonnes demande d'écrire les colonnes de la somme comme ''A<sub>i</sub>+B<sub>i</sub>'', puis d'appliquer ''n'' fois la propriété de linéarité. Finalement, le déterminant de ''A+B'' se scinde en une somme de ''2<sup>n</sup>'' déterminants hybrides det(''A<sub>1</sub>, A<sub>2</sub>, B<sub>3</sub>, A<sub>4</sub>,..., B<sub>n</sub>''), formés d'un certain nombre de colonnes de ''A'' et de ''B''. Cependant, cette somme peut s'écrire assez simplement à l'aide des [[mineur (algèbre linéaire)|mineurs]] de ''A'' et de ''B''<ref>M. Marcus, ''Determinants of Sums'' (The College Mathematics Journal 21(2), pp. 130-135, 1990)</ref>.
+
+Il est possible d'effectuer également des opérations élémentaires sur les lignes, qui ont les mêmes propriétés que les opérations sur les colonnes. Opérer sur les lignes suivant la technique du [[pivot de Gauss]] fournit une méthode systématique de calcul des déterminants ; c'est la méthode la plus efficace en règle générale.
+
+{{Article détaillé|Calcul des déterminants}}
+
+=== Propriétés de morphisme et d'annulation ===
+
+[[Image:Augustin_Louis_Cauchy.JPG|thumb|right|[[Augustin Louis Cauchy]] prouve que le déterminant constitue un morphisme de groupes]]
+'''Cas d'annulation des déterminants'''
+
+* le déterminant d'un système de ''n'' vecteurs est nul si et seulement si ce [[famille libre|système est lié]] (et ceci est valable quelle que soit la base de référence)
+* le déterminant d'une matrice (ou d'un endomorphisme) est nul si et seulement si cette matrice (ou endomorphisme) est non inversible.
+
+Ces propriétés expliquent le rôle essentiel que peuvent jouer les déterminants en algèbre linéaire. Ils constituent un outil fondamental pour prouver qu'une famille de vecteurs est une base.
+
+:''Démonstration du cas d'annulation'' 
+
+:* si le système est lié, une colonne est combinaison linéaire des autres. Par une opération élémentaire, il est possible de se ramener à un déterminant ayant une colonne nulle, donc nul.
+:* si le système est libre, il est possible de le considérer comme une base ''B''' et lui appliquer la formule de changement de bases : ''det<sub>B</sub>(B&nbsp;').det<sub>B&nbsp;'</sub> (B)=1''.
+
+'''Propriété de morphisme'''
+
+*<math>\det (M \times N) = \det {M} \times \det{N}</math>
+* ainsi si M est inversible alors <math>\det {M^{-1}} = (\det{M})^{-1}\,</math>
+* et le déterminant est un [[morphisme]] de groupes de <math>(GL_n(\mathbb{R}),\times)</math> dans <math>(\mathbb{R}^*,\times)</math>
+
+:''Démonstration de la propriété de morphisme'' 
+
+:La double application de la formule pour l'image d'une famille de vecteurs donne le résultat, en prenant les vecteurs images des vecteurs de la base ''B'' eux-mêmes
+::<math>\det (uv)=\det{}_B (u(v(e_1)),\dots, u(v(e_n)))=\det u . \det{}_B (v(e_1),\dots, v(e_n))=\det u \det v</math>
+
+Il existe une généralisation de la formule de déterminant d'un produit pour le cas de deux matrices rectangulaires : c'est la [[formule de Binet-Cauchy]].
+
+=== Cofacteurs et formule de récurrence===
+
+{{Article détaillé|Comatrice}}
+
+Soit ''A'' une matrice carrée de taille ''n'', et ''A(x)'' la matrice dont les coefficients sont les mêmes que ceux de ''A'', sauf le terme d'indice ''i, j'' qui vaut ''a<sub>i, j</sub>+x'' (c'est la modification d'un des coefficients de la matrice, toutes choses égales par ailleurs). Par la formule de linéarité pour la ''j''-ème colonne, il est possible d'établir 
+:<math>\det A(x)=\det A + x(-1)^{i+j}\begin{vmatrix}a_{1,1} & \dots & a_{1,j-1}& a_{1,j+1}& \dots & a_{1,n} \\\vdots & & \vdots &  \vdots& &\vdots\\
+a_{i-1,1} & \dots & a_{i-1,j-1}& a_{i-1,j+1}& \dots & a_{i-1,n} \\
+a_{i+1,1} & \dots & a_{i+1,j-1}& a_{i+1,j+1}& \dots & a_{i+1,n} \\
+\vdots & & \vdots & \vdots &&\vdots\\
+a_{n,1} & \dots & a_{n,j-1}& a_{n,j+1}& \dots & a_{n,n}\end{vmatrix} = \det A+x {\rm Cof}_{i,j}</math>
+
+Le terme noté Cof<sub>i, j</sub> est appelé '''cofacteur d'indice ''i, j'''''. Il se calcule de la façon suivante : en notant M(i;j) le déterminant de la sous-matrice déduite de M par suppression la ligne i et la colonne j, le cofacteur est ''(-1)<sup>i+j</sup>'' fois M(i;j).
+
+Il admet les interprétations suivantes
+* augmenter de ''x'' le coefficient d'indice ''i, j'' de la matrice (toutes choses égales par ailleurs) revient à augmenter le déterminant de ''x'' fois le cofacteur correspondant
+* le cofacteur est la dérivée du déterminant de la matrice ''A(x)''
+
+'''Formules de Laplace'''
+[[Image:Pierre-Simon Laplace.jpg|right|thumb|[[Pierre-Simon Laplace]]]]
+
+Si n>1 et ''A'' est une matrice carrée de taille ''n'' alors il est possible de calculer son déterminant en fonction des coefficients d'une seule colonne et des cofacteurs correspondants. Cette formule, dite formule de [[Pierre-Simon Laplace|Laplace]], permet ainsi de ramener le calcul du déterminant à ''n'' calculs de déterminants de taille ''n-1''.
+
+*Formule de développement par rapport à la colonne ''j''
+:<math>\det{A}=\sum_{i=1}^{n} a_{i;j} {\rm Cof}_{i,j}</math> 
+* On peut donner également une formule de développement par rapport à la ligne ''i''
+:<math>\det{A}=\sum_{j=1}^{n} a_{i;j} {\rm Cof}_{i,j}</math> 
+
+'''Comatrice et calcul de l'inverse'''
+
+La [[comatrice]] de ''A'', est la matrice constituée des cofacteurs de ''A''. Elle généralise les formules de développement du déterminant par rapport aux lignes ou colonnes
+:<math>A \times {}^t{{\rm com} A} = {}^t{{\rm com} A}\times A =\det{A} \times I_n</math>
+
+La matrice transposée de la comatrice est appelée '''matrice complémentaire''' de ''A''. Notamment si ''A'' est inversible, l'inverse de ''A'' est un multiple de la matrice complémentaire. Cette approche offre une formule de la matrice inverse, ne nécessitant que des calculs de déterminants
+:<math>A^{-1}=\frac1{\det A} \, {}^t{{\rm com} A}</math>
+
+=== Variations de la fonction déterminant ===
+
+La formule de Leibniz montre que le déterminant d'une matrice ''A'' s'exprime comme somme et produit de composantes de ''A''. Il n'est donc pas étonnant que le déterminant ait de bonnes propriétés de régularité.
+
+==== Déterminant dépendant d'un paramètre ====
+
+Si <math>t\mapsto A(t)</math> est une fonction de classe <math>\mathcal C^k</math> à valeurs dans les matrices carrées d'ordre ''n'', alors <math>t\mapsto \det A(t)</math> est également  de classe <math>\mathcal C^k</math>.
+
+La formule de dérivation s'obtient en faisant intervenir les colonnes de ''A''
+:<math>\frac{{\rm d}}{{\rm d}t} \left(\det (A_1(t),\dots, A_n(t))  \right)= \sum_{i=1}^n \det (A_1(t),\dots, A_{i-1}(t),A'_i(t),A_{i+1}(t),\dots, A_n(t))</math>
+Cette formule est formellement analogue à la dérivée d'un produit de ''n'' fonctions numériques.
+
+==== Application déterminant sur l'espace des matrices ====
+
+* L'application qui à la matrice ''A'' associe son déterminant est continue.
+
+Cette propriété présente des conséquences topologiques intéressantes : ainsi le [[groupe général linéaire|groupe GL<sub>n]]</sub>(<math>\mathbb{R}</math>) est un [[ouvert]], la loi de multiplication des matrices en fait un [[groupe de Lie]], et le sous-groupe <math>SL_n(\mathbb{R})</math> est un fermé dans GL<sub>n</sub>(<math>\mathbb{R}</math>).
+
+* Cette application est [[différentielle|différentiable]] et même <math>\mathcal C^\infty</math>.
+
+Le développement limité à l'ordre un du déterminant au voisinage de ''A'' s'écrit
+:<math>\det (A+H)=\det A + {\rm tr } ({}^t{\rm Com }(A).H)+o(\|H\|)</math>
+C'est-à-dire que dans <math>\mathcal{M}_n(\mathbb{R})</math> muni de son produit scalaire canonique, la [[comatrice]] s'interprète comme le [[gradient]] de l'application déterminant
+:<math>\nabla \det (A) = {\rm Com }(A)</math>
+Notamment pour le cas où ''A'' est l'identité
+:<math>\det (I+H)=1 + {\rm tr } (H)+o(\|H\|)\qquad \nabla \det (I) = I</math>
+Le caractère différentiable permet d'affirmer que <math>SL_n(\mathbb{R})</math> est aussi un [[groupe de Lie]].
+
+* Elle est aussi [[polynôme|polynomiale]], ce qui fait de  GL<sub>n</sub>(<math>\mathbb{R}</math>) une [[variété algébrique]].
+
+Ces formules portent parfois le nom d'identités de [[Carl Gustav Jakob Jacobi|Jacobi]]. Elles sont établies dans l'article [[comatrice]].
+
+== Généralisation aux espaces vectoriels sur d'autres corps et aux modules ==
+
+Les différentes définitions et propriétés de la théorie des déterminants s'écrivent de façon identique dans le cadre des espaces vectoriels complexes et des matrices à coefficients complexes. Il en est de même sur tout [[corps commutatif]], sauf pour le paragraphe « variations de la fonction déterminant » qui n'a alors pas de sens.
+
+La quasi-totalité de la théorie des déterminants peut encore être étendue aux matrices à coefficients dans un [[anneau commutatif]] ''A'' et aux modules libres de dimension finie sur ''A''. Le seul point de divergence est la caractérisation de l'annulation des déterminants.
+
+Ainsi une matrice à coefficients dans un anneau commutatif ''A'' est inversible si et seulement si son déterminant est inversible dans ''A''.
+
+La question de l'algorithme de calcul du déterminant est à reprendre. En effet, la méthode du pivot de Gauss demande d'effectuer des divisions, ce qui n'est pas possible dans l'anneau ''A'' lui-même. Les formules de Leibniz ou de Laplace permettent de faire un calcul sans division, mais restent très coûteuses. Il existe des algorithmes bien plus raisonnables, dont le temps d'exécution est d'ordre ''n''<sup>4</sup> ; notamment, l'algorithme du pivot de Gauss s'adapte dans le cas d'un [[anneau euclidien]], cette adaptation est décrite dans l'article sur le [[théorème des facteurs invariants]]. Le site de l'université libre de Berlin propose un [http://page.inf.fu-berlin.de/~rote/Papers/pdf/Division-free+algorithms.pdf document de référence sur la question des algorithmes sans division] (en anglais).
+
+== Notes et références ==
+;Notes
+<references group="Note"/>
+
+;Références
+<references />
+
+== Voir aussi ==
+=== Articles connexes ===
+
+Compléments techniques
+* [[calcul du déterminant d'une matrice]]
+* [[application multilinéaire]]
+* [[comatrice]]
+
+Algèbre :
+* [[matrice de Hankel|Déterminant de Hankel]], lié aux [[suite récurrente linéaire|récurrences linéaires]]
+* [[Résultant]] de deux polynômes, et le [[discriminant]] qui en est un cas particulier
+* [[Mineur (algèbre linéaire)|Mineur]], lié au calcul du [[Rang (mathématiques)|rang]]
+* [[Polynôme caractéristique]]
+* [[Règle de Cramer]]
+* [[Pfaffien]] d'une matrice antisymétrique
+
+Analyse :
+* [[Wronskien]]
+* [[Jacobien]]
+* [[discriminant hessien|Hessien]], lié à l'étude des [[point critique|points critiques]]
+
+Géométrie :
+* [[Déterminant de Gram]]
+* [[Forme volume]]
+* [[Orientation (mathématiques)|Orientation]]
+* [[Produit mixte]]
+* [[Propriétés métriques des droites et plans]]
+
+Chimie :
+* [[Déterminant séculaire]]
+* [[Déterminant de Slater]]
+
+=== Bibliographie ===
+
+* {{Lang1}} ;
+* {{Artin1}} ;
+* [[Henri Cartan]], ''Cours de calcul différentiel'', Paris, Hermann, 1977 ;
+* {{Gabriel}}. {{Commentaire biblio|pour une introduction matricielle basée sur les [[transvection]]s.}}
+
+=== Liens externes ===
+
+* [http://xavier.hubaut.info/coursmath/mat/applin.htm Les mathématiques du secondaire, applications linéaires par Xavier Hubaut]
+* [http://www.les-mathematiques.net/b/e/d/node1.php3 Formes multilinéaires et déterminant dans les mathématiques.net]
+* [http://www.bluebit.gr/matrix-calculator/ Un calcul en ligne de déterminant en anglais]
+* [http://www-groups.dcs.st-and.ac.uk/~history/HistTopics/Matrices_and_determinants.html Un site en anglais sur l'histoire des matrices et des déterminants]
+*[http://www.stud.feec.vutbr.cz/~xvapen02/vypocty/matreg.php?language=english Un calcul en ligne de déterminant (matrice 8x8) - en anglais] 
+
+
+{{Algèbre linéaire}}
+{{Article de qualité|oldid=8182005|date=29 juin 2006|tri=Determinant (mathématiques)}}
+{{Portail mathématiques}}
+
+{{DEFAULTSORT:Determinant}}
+[[Catégorie:Algèbre multilinéaire]]
+[[Catégorie:Déterminant| ]]
+[[Catégorie:Volume]]
+
+{{Lien AdQ|ca}}
+{{Lien AdQ|zh}}
+
+[[ar:محدد]]
+[[bg:Детерминанта]]
+[[bn:নির্ণায়ক]]
+[[ca:Determinant (matemàtiques)]]
+[[cs:Determinant]]
+[[da:Determinant]]
+[[de:Determinante (Mathematik)]]
+[[el:Ορίζουσα]]
+[[en:Determinant]]
+[[eo:Determinanto]]
+[[es:Determinante (matemática)]]
+[[et:Determinant]]
+[[fa:دترمینان]]
+[[he:דטרמיננטה]]
+[[hi:सारणिक]]
+[[hu:Determináns]]
+[[is:Ákveða]]
+[[it:Determinante]]
+[[ja:行列式]]
+[[ko:행렬식]]
+[[lt:Determinantas]]
+[[lv:Determinants]]
+[[nl:Determinant]]
+[[no:Determinant]]
+[[pl:Wyznacznik]]
+[[pt:Determinante]]
+[[ro:Determinant (matematică)]]
+[[ru:Определитель]]
+[[sk:Determinant (matematika)]]
+[[sl:Determinanta]]
+[[sq:Përcaktori]]
+[[sr:Детерминанта]]
+[[sv:Determinant]]
+[[th:ดีเทอร์มิแนนต์]]
+[[tr:Determinant]]
+[[uk:Визначник]]
+[[ur:دترمینان]]
+[[vi:Định thức]]
+[[zh:行列式]]

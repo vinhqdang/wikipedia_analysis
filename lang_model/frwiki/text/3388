@@ -1,0 +1,74 @@
+{{Ébauche|mathématiques}}
+
+Lors de l'étude des [[série de Fourier|séries de Fourier]] et des [[transformée de Fourier|transformées de Fourier]], il apparaît parfois une déformation du signal, connue sous le nom de '''phénomène de Gibbs'''. Ce phénomène est un [[effet de bord]] qui se produit à proximité d'une discontinuité, lors de l'analyse d'une fonction [[régularité par morceaux|dérivable par morceaux]]. 
+
+== Histoire ==
+
+Le phénomène fut mis pour la première fois en évidence en [[1848 en science|1848]] par [[Henry Wilbraham|Wilbraham]]<ref>[[Henry Wilbraham]], ''On a certain periodic function'', Cambridge Dublin Math. J. '''3''', 1848, p. 198-201</ref>, mais cette découverte ne connut guère d'écho. 
+
+En [[1898 en science|1898]], [[Albert Michelson]] développa un système mécanique capable de calculer et sommer la série de Fourier d'un signal donné en entrée. Il observa alors un effet d'amplification des discontinuités, qui persistait malgré l'augmentation du nombre de coefficients calculés. 
+
+Alors que Michelson soupçonnait un défaut dans la fabrication de son engin, [[Josiah Willard Gibbs|Gibbs]] montra que le phénomène était d'origine mathématique et se produisait dans des conditions très générales<ref>[[Josiah Willard Gibbs]], ''Fourier Series'', Nature 59, 200 (1898) and 606 (1899)</ref>. En [[1906 en science|1906]], [[Maxime Bôcher]] donna la première interprétation satisfaisante du phénomène<ref>[[Maxime Bôcher]], ''Introduction to the theory of Fourier's series'', Annals of Math. 7 (1906), p. 81-152</ref> auquel il donna le nom de phénomène de Gibbs.
+
+== Description du phénomène ==
+
+{| border="0" align="center"
+|+ Phénomène de Gibbs
+|[[Image:Gibbs phenomenon 10.png|thumb|200px|center|Approximation du créneau à l'ordre 10]]
+|[[Image:Gibbs phenomenon 50.jpg|thumb|200px|center|Approximation du créneau à l'ordre 50]]
+|[[Image:Gibbs phenomenon 250.png|thumb|200px|center|Approximation du créneau à l'ordre 250]]
+|}
+
+
+Le phénomène de Gibbs est, en quelque sorte, un « défaut d'approximation » pour une fonction continue de classe C1 par morceaux. Pour une telle fonction ''f'', le [[Théorème de Dirichlet sur la convergence des séries de Fourier|théorème de Dirichlet]] assure que la série de Fourier de f converge simplement vers la fonction f sur l'intervalle où f est C1 par morceaux. En tout point ''x'' de continuité la somme de la série de Fourier est ''f(x)''.
+
+Le [[polynôme trigonométrique]] ''n''-ième terme de la série de Fourier, <math>S_n(f)</math>, est une fonction continue, il est donc normal qu'il ne puisse approcher [[convergence uniforme|uniformément]] la fonction aux points de discontinuité. Précisément, sur un segment sur lequel ''f'' est dérivable, on observe une convergence uniforme, conformément au théorème de Weierstrass trigonométrique (c'est le cas des zones de « plateau » dans l'exemple de la fonction créneau). 
+
+Au niveau du point de discontinuité ''x'', <math>S_n(f)</math> subit une forte [[oscillation]], une sorte de « ressaut » qui se mesure en comparant les valeurs en <math>x-\frac{\pi}{n}</math> et <math>x+\frac{\pi}{n}</math>.
+En effet, toujours d'après le [[Théorème de Dirichlet sur la convergence des séries de Fourier|théorème de Dirichlet]], la série de Fourier de f converge aussi simplement aux points de discontinuités mais vers la régularisée de Dirichlet, ie la demi-somme des valeurs de f de part et d'autre du point de dicontinuités. Lorsque ''n'' devient grand, l'amplitude de ces oscillations tend vers une limite strictement plus grande que l'amplitude de la discontinuité, alors que la largeur de la zone d'oscillation tend vers 0.
+
+Il est remarquable que le phénomène s'exprime quantitativement de façon indépendante de la fonction considérée. Si la fonction a une discontinuité d'amplitude <math>\Delta y</math>, alors <math>S_n(f)</math>, tout en restant continue, connaitra un « ressaut » en ordonnée valant de l'ordre de 18% de plus au voisinage de la discontinuité.
+
+<center>[[Image:Synthesis square.gif]]</center>
+
+== Liens avec la causalité ==
+Les appareils de mesure se comportent comme des filtres passe-bas : ils sont incapables de réagir à des signaux de trop haute fréquence. Supposons que l'on mesure un [[échelon de tension]] : il sera déformé et fera apparaître des oscillations avant et après la discontinuité du signal réel.
+
+Cependant, cela signifierait que les oscillations se sont produites ''avant'' que l'échelon ne soit mesuré, ce qui briserait la [[causalité]]. En réalité, cela peut avoir deux interprétations : soit les appareils ne sont pas des filtres parfaits (ce qui est compréhensible), soit l'échelon de tension ne peut être parfaitement discontinu. 
+
+Si on considère l'une ou l'autre de ces corrections, la transformée de Fourier est simplement décalée : les oscillations débutent ''au moment où l'échelon est envoyé'', l'échelon n'étant observé qu'après un léger retard.
+
+== Notes et références ==
+
+<references/>
+
+== Voir aussi ==
+
+=== Articles connexes ===
+
+* [[Série de Fourier]] ;
+* [[Phénomène de Runge]] ;
+* [[Transformée de Fourier]] ;
+* [[Fenêtrage]] ;
+* [[Traitement du signal]] ;
+* [[Convergence simple]] ;
+* [[Somme de Fejér]] ;
+* [[Signal carré]].
+
+== Bibliographie ==
+
+* {{en}} [[Antoni Zygmund]], ''Trigonometrical series'', Dover publications, 1955.
+
+{{Portail|analyse}}
+
+[[Catégorie:Série de Fourier|Phenomene de Gibbs]]
+
+[[de:Gibbssches Phänomen]]
+[[en:Gibbs phenomenon]]
+[[es:Fenómeno de Gibbs]]
+[[fa:پدیده گیبس]]
+[[he:תופעת גיבס]]
+[[it:Fenomeno di Gibbs]]
+[[ja:ギブズ現象]]
+[[pl:Efekt Gibbsa]]
+[[sv:Gibbs fenomen]]

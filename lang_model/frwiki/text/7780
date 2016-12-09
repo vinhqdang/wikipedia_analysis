@@ -1,0 +1,112 @@
+{{Voir homonymes|Einstein (homonymie)}}
+
+La '''loi de Nernst-Einstein''' est une loi qui intervient dans la migration des espèces dans les solides [[cristal]]lins, lorsque les espèces sont soumises à une [[Force (physique)|force]]. Par « espèces », on entend « [[défaut cristallin|défauts cristallins]] ».
+
+Cette loi permet de calculer la vitesse de migration des espèces en fonction de l'intensité de la force et du coefficient de diffusion de l'espèce dans le cristal.
+
+== En l'absence de force ==
+
+Considérons les mouvements sur un axe ''x'' (par exemple par [[projection (géométrie)|projection]] sur cet axe).
+
+En l'absence de force, les défauts migrent aléatoirement, par sauts d'un site à un site voisin. Ces sauts sont possibles grâce à l'agitation thermique.
+
+Par unité de temps, une espèce a une probabilité Γ<sub>''i''</sub> de faire un saut vers un site ''i'' voisin. La vitesse moyenne des particules est nulle (cas similaire au [[mouvement brownien]]) ; la moyenne quadratique des déplacements &lt;''X''<sup>&nbsp;2</sup>&gt; durant un temps ''t'' est non nulle et on a :
+: <math><X^2> = t \cdot \sum_1^n \Gamma_i \cdot \delta \xi_i </math>
+si δξ<sub>''i''</sub> est la longueur algébrique (positive ou négative selon la direction de référence) du saut ''i''.
+
+''Voir les articles détaillés [[Diffusion de la matière]] et [[Loi de Fick]].''
+
+== Effet d'une force ==
+
+Lorsque l'espèce est soumise à une force, cela rompt la symétrie des sauts, les probabilités
+de deux sauts opposés ne sont plus égales. Pour simplifier, on ne considère qu'une seule espèce, et un mouvement dans une direction donnée. Si Γ<sub>+</sub> est la probabilité que la particule se déplace d'une longueur +δ''x'' par unité de temps, et Γ<sub>-</sub> la probabilité qu'elle se déplace d'une longueur -δ''x'', alors le parcours moyen &lt;''X''&gt; après un temps ''t'' vaut :
+: <math><X> = t \cdot (\Gamma_+ - \Gamma_-) \cdot \delta x</math>
+Ce qui permet de définir la [[vitesse]] moyenne ''v'' :
+: <math>v = \frac{<X>}{t} = (\Gamma_+ - \Gamma_-) \cdot \delta x</math>
+Ce mouvement sous l'effet d'une force crée un gradient de concentration. Or, la diffusion aléatoire tend à niveler les concentrations, et donc s'oppose à la migration « forcée », on a donc deux flux :
+* un flux ''j''<sub> 1</sub> créé par la force <br /> ''j''<sub> 1</sub> = ''v'' · ''c'', où ''c'' est la concentration de l'espèce ;
+* un flux ''j''<sub> 2</sub> opposé qui suit la loi de Fick <br /> <math>j_2 = - D \cdot \frac{\partial c}{\partial x}</math> où ''D'' est le [[coefficient de diffusion]] de l'espèce.
+Le flux total vaut donc :
+: <math>j = v \cdot c - D \cdot \frac{\partial c}{\partial x}</math>.
+
+== Régime stationnaire ==
+
+Si l'on attend « suffisamment longtemps », on atteint un régime stationnaire : les flux ''j''<sub> 1</sub> et ''j''<sub> 2</sub> se compensent, on a un gradient de concentration constant. 
+On a donc ''j'' = 0, soit, si ''c''<sup>∞</sup>(''x'') est cette concentration constante :
+: <math> v \cdot c^\infty = D \cdot \frac{\partial c^\infty}{\partial x}</math>
+
+Supposons maintenant que la force soit conservative(cas le plus fréquent). Elle dérive donc d'un [[Potentiel d'un champ vectoriel|potentiel]] η :
+: <math>F = - \frac{\partial \eta}{\partial x}</math>.
+À l'équilibre dynamique, les particules sont réparties suivant une [[statistique de Maxwell-Boltzmann]] :
+: <math>c^\infty (x) = c_0 \cdot \exp \left ( - \frac{\eta}{kT} \right )</math>
+où ''k'' est la [[constante de Boltzmann]] et ''T'' est la [[température]] absolue. En introduisant ceci dans l'équation précédente, on obtient :
+: <math> v \cdot c_0 \cdot e^{- \frac{\eta}{kT}} = - \frac{D}{kT} \cdot \frac{\partial \eta}{\partial x} \cdot c_0 \cdot e^{- \frac{\eta}{kT}} </math>
+ce qui nous donne la '''loi de Nernst-Einstein'''
+
+<center>
+{| border="1"
+|-
+| <math>v = \frac{DF}{kT}</math>
+|}
+</center>
+
+== Frottement ==
+
+Cette loi ressemble à une loi de [[frottement fluide]]. Lors d'un mouvement à faible vitesse dans un fluide non turbulent, on peut estimer que la force de frottement est proportionnelle à la vitesse, et donc que l'on atteint un régime stationnaire où la vitesse est proportionnelle à la force (c'est le principe du [[parachute]]) :
+: ''v'' = ''B'' · ''F''
+où ''B'' est la '''mobilité''' de l'espèce (''Beweglichkeit'' en [[allemand]]).
+
+La loi de Nernst-Einstein nous donne donc :
+: <math>B = \frac{D}{kT}</math>
+d'où l'on déduit la '''loi d'Einstein''' :
+
+<center>
+{| border="1"
+|-
+| ''D'' = ''B'' · ''kT''
+|}
+</center>
+
+== Applications ==
+
+=== Potentiel chimique ===
+
+La force ''F<sub>c</suB>'' résultant du [[potentiel chimique]] μ peut s'écrire, à une dimension :
+:<math>F_c = -\frac{\partial \mu}{\partial x}</math>
+et donc l'équation de Nernst-Einstein devient :
+:<math>v = -\frac{D}{kT} \cdot \frac{\partial \mu}{\partial x}</math>
+
+=== Champ électrique ===
+
+Si une particule porte ''z'' charges élémentaires ''e'', alors elle subit la force ''F<sub>e</sub>'' ([[force électrostatique]] ou [[force de Coulomb]]) :
+:<math>\vec{F_e} = z \cdot e \cdot \vec{E}</math>
+Le champ électrique ''E'' dérive d'un potentiel ''V'', ce qui s'écrit à une dimension :
+:<math>E = -\frac{\partial V}{\partial x}</math>
+donc la loi de Nernst-Einstein devient :
+:<math>v =  -\frac{Dze}{kT} \cdot \frac{\partial V}{\partial x}</math>
+
+Considérons le flux de charges ''j<sub>el</sub>'', également appelé [[vecteur densité de courant|densité de courant électrique]]. On a
+: ''j<sub>el</sub>'' = ''z''·''e''· ''j'' = ''z''·''e''· ''c'' · ''v''
+étant ''c'' la concentration de porteurs de charge, et alors
+:<math>j_{el} =  \frac{Dz^2e^2c}{kT} \cdot \frac{\partial V}{\partial x}</math>
+
+On peut faire un parallèle avec le [[loi d'Ohm]] reliant cette densité de courant électrique ''j<sub>el</sub>'' au gradient de potentiel :
+:<math>j_{el} = - \sigma \cdot \frac{\partial V}{\partial x}</math>
+σ étant la [[conductivité électrique]], ce qui nous donne en unités SI
+:<math>\sigma =  \frac{Dz^2e^2cN_{A}}{kT}</math>
+
+== Voir aussi ==
+
+=== Articles connexes ===
+
+* [[Albert Einstein]]
+* [[Walther Hermann Nernst]]
+* [[Mobilité des porteurs de charge]]
+* [[Théorie de la cinétique d'oxydation de Wagner]]
+
+{{Portail|physique|matériaux}}
+
+[[Catégorie:Science des matériaux|Nernst-Einstein, loi de]]
+[[Catégorie:Électricité|Nernst-Einstein, loi de]]
+[[Catégorie:Loi en physique|Nernst-Einstein]]
+[[Catégorie:Albert Einstein]]

@@ -1,0 +1,219 @@
+[[Image:Caesar3.svg|right|thumbnail|upright=2.0|Le chiffre de César fonctionne par décalage des lettres de l'alphabet. Par exemple dans l'image ci-dessus, il y a une distance de 3 caractères, donc <tt>B</tt> devient <tt>E</tt> dans le texte codé.]]
+
+En [[cryptographie]], le '''chiffrement par décalage''', aussi connu comme le '''chiffre de César''' (voir [[#Dénominations|les différents noms]]), est une méthode de [[chiffrement]] très simple utilisée par [[Jules César]] dans ses correspondances secrètes (ce qui explique le nom « chiffre de César »).
+
+Le texte chiffré s'obtient en remplaçant chaque lettre du texte clair original par une lettre à distance fixe, toujours du même côté, dans l'ordre de l'alphabet. Pour les dernières lettres (dans le cas d'un décalage à droite), on reprend au début. Par exemple avec un décalage de 3 vers la droite, <tt>A</tt> est remplacé par <tt>D</tt>, <tt>B</tt> devient <tt>E</tt>, et ainsi jusqu'à <tt>W</tt> qui devient <tt>Z</tt>, puis <tt>X</tt> devient <tt>A</tt> etc. Il s'agit d'une [[permutation circulaire]] de l'alphabet. La longueur du décalage, 3 dans l'exemple évoqué, constitue la ''clé'' du chiffrement qu'il suffit de transmettre au destinataire — s'il sait déjà qu'il s'agit d'un chiffrement de César — pour que celui-ci puisse déchiffrer le message. Dans le cas de l'[[Écriture latine|alphabet latin]], le chiffre de César n'a que 26 clés possibles (y compris la clé nulle, qui ne modifie pas le texte).
+
+Il s'agit d'un cas particulier de [[chiffrement par substitution]] monoalphabétique : ces substitutions reposent sur un principe analogue, mais sont obtenues par des [[permutation]]s quelconques des lettres de l'alphabet. Dans le cas général, la clé est donnée par la permutation, et le nombre de clés possibles est alors sans commune mesure avec celui des chiffrements de César.
+
+Le chiffrement de César a pu être utilisé comme élément d'une méthode plus complexe, comme le [[chiffre de Vigenère]]. Seul, il n'offre aucune sécurité de communication, à cause du très faible nombre de clés, ce qui permet d'essayer systématiquement celles-ci quand la méthode de chiffrement est connue, mais aussi parce que, comme tout encodage par [[Chiffrement par substitution|substitution monoalphabétique]], il peut être très rapidement « [[Cryptanalyse|cassé]] » par [[analyse fréquentielle|analyse de fréquences]] (certaines lettres apparaissent beaucoup plus souvent que les autres dans une [[langue naturelle]]).
+
+== Exemple ==
+Le chiffrement peut être représenté par la superposition de deux alphabets, l'alphabet clair présenté dans l'ordre normal et l'alphabet chiffré décalé, à gauche ou à droite, du nombre de lettres voulu. Nous avons ci-dessous l'exemple d'un encodage de {{nombre|3|lettres}} vers la droite. Le paramètre de décalage ({{nobr|ici 3}}) est la clé de chiffrement :
+
+ clair   : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ chiffré : DEFGHIJKLMNOPQRSTUVWXYZABC
+
+Pour encoder un message, il suffit de regarder chaque lettre du message clair, et d'écrire la lettre encodée correspondante. Pour déchiffrer, on fait tout simplement l'inverse.
+
+ original : Wikipedia l'encyclopedie libre
+ encodé   : ZLNLSHGLD O'HQFBFORSHGLH OLEUH
+
+Le chiffrement peut aussi être représenté en utilisant les [[congruence sur les entiers|congruences sur les entiers]]. En commençant par transformer chaque lettre en un nombre (A = 0, B = 1,..., Z = 25)<ref>{{article |langue=en|nom1=Luciano |prénom1=Dennis |prénom2=Gordon |nom2=Prichett |année=1987 |mois=janvier |titre=Cryptology: From Caesar Ciphers to Public-Key Cryptosystems |périodique =The College Mathematics Journal |volume=18 |numéro=1 |pages=3| doi=10.2307/2686311}}</ref>, pour encoder une lettre <math>x</math> avec une clé ''n'' il suffit d'appliquer la formule<ref>R. Wobst, op. cit. ''[[#CU|Cryptology Unlocked]]'' p. 19</ref> :
+
+: <math>E_n(x) = (x + n) \mod {26}.</math>
+
+Le déchiffrement consiste à utiliser la clé opposée (<math>-n</math> à la place de <math>n</math>) :
+
+: <math>D_n(x) = (x - n) \mod {26}.</math>
+
+On peut s'arranger pour que le résultat soit toujours représenté par un entier de 0 à 25 : si <math>x + n</math> (respectivement <math>x - n</math>) n'est pas dans l'intervalle <math>[0,25]</math>, il suffit de soustraire (respectivement ajouter) 26.
+
+Le décalage demeurant toujours le même pour un même message, cette méthode est une [[Chiffrement par substitution|substitution monoalphabétique]], contrairement au [[chiffre de Vigenère]] qui constitue une substitution polyalphabétique.
+
+== Dénominations ==
+Le chiffrement par décalage possède plusieurs synonymes :
+* le ''chiffre de César''. César utilisait pour ses correspondances un chiffrement par décalage de 3 vers la droite. Selon David Kahn, ce n'est que récemment que l'expression « chiffre de César » désigne les chiffrements par décalage ayant un décalage différent de 3<ref>{{Citation étrangère|lang=en|To this day, any cipher alphabet that consists of the standard sequence, like Caesar's, is called a Caesar alphabet, even if it begins with a letter other than D.}} dans [[The Codebreakers]]</ref> ;
+* la ''substitution de César'' ;
+* le terme ''code de César'' est un abus de langage : en [[cryptologie]], le [[Chiffre (cryptologie)|chiffre]] est un procédé systématique, alors qu'un [[Code (information)|code]] utilise le symbolisme des mots. À ce sujet, se reporter au chapitre [[Chiffre (cryptologie)#Différence entre chiffre et code|Différence entre chiffre et code]] de l'article « Chiffre ».
+
+== Historique ==
+[[Image:Hw-caesar.png|thumb|Chiffre de César ainsi appelé car [[Jules César]] l'utilisa.]]
+
+=== César ===
+Postérieur et plus simple que la [[scytale]]<ref>{{ouvrage
+ | langue=fr | prénom1=Charles-François | nom1=Vesin
+ | titre=La cryptographie dévoilée
+ | sous-titre=ou, Art de traduire ou de déchiffrer toutes les écritures en quelque caractère et en quelque langue que ce soit ... appliqué aux langues française, allemande, anglaise, latine, italienne, espagnole, suivi d'un précis analytique des écrites ...
+ | année=1857 | pages totales=259
+ | lire en ligne=http://books.google.com/books?id=iMQBAAAAYAAJ&printsec=titlepage&vq=c%C3%A9sar&hl=fr&source=gbs_v2_summary_r&cad=0#v=onepage&q=c%C3%A9sar&f=false
+ | consulté le=10 septembre 2009}}</ref>, le chiffre de César doit son nom à [[Jules César]] qui, selon [[Suétone]] l'utilisait avec un décalage de trois sur la gauche pour certaines de ses correspondances secrètes, notamment militaires :
+{{Citation bloc|Il y employait, pour les choses tout à fait secrètes, une espèce de chiffre qui en rendait le sens inintelligible (les lettres étant disposées de manière à ne pouvoir jamais former un mot), et qui consistait, je le dis pour ceux qui voudront les déchiffrer, à changer le rang des lettres dans l'alphabet, en écrivant la quatrième pour la première, c'est-à-dire le d pour le a, et ainsi de suite<ref>{{en}} [http://www.fordham.edu/halsall/ancient/suetonius-julius.html Texte en anglais]</ref>.|[[Suétone]]|[[Vie des douze Césars]], [[s:Vie des douze Césars - César|{{nobr|Livre {{I}}}}, {{nobr|paragraphe 56}}]].}}
+
+[[Aulu-Gelle]] confirme l'usage par Jules César de méthodes de chiffrement par substitution :
+{{Citation bloc|Nous avons un recueil des lettres de [[Jules César|C. César]] à C. Oppius et [[Lucius Cornelius Balbus|Balbus Cornelius]], chargés du soin de ses affaires en son absence. Dans ces lettres, on trouve, en certains endroits, des fragments de syllabes sans liaison, caractères isolés, qu'on croirait jetés au hasard : il est impossible d'en former aucun mot. C'était un stratagème dont ils étaient convenus entre eux : sur le papier une lettre prenait la place et le nom d'une autre ; mais le lecteur restituait à chacune son nom et sa signification|[[Aulu-Gelle]]|[[s:Nuits Attiques|Nuits attiques]], {{nombre|livre {{XVII}}}}, 9}} 
+
+Bien que César soit le premier personnage connu à utiliser cette technique, on sait que d'autres chiffres par substitution, éventuellement plus complexes, ont été utilisés avant lui, et il n'est donc pas certain qu'il soit le premier à l'avoir conçu, même s'il a pu le réinventer<ref>{{article |langue=en|nom1=Reinke |prénom1=Edgar C. |année=1962 |mois=décembre |titre= Classical Cryptography |périodique = The Classical Journal |volume=58 |numéro=3 |pages=115}}</ref>. 
+
+[[Auguste]], son neveu, utilisait aussi un chiffre, consistant en un décalage de un sans boucler à la fin de l'alphabet :
+{{Citation bloc|Lorsqu'il écrivait en chiffres, il employait le b pour a, le c pour le b, et ainsi de suite pour les autres lettres. Au lieu du z il mettait deux a.|[[Suétone]]|[[s:Vie des douze Césars - Auguste|Vie d'Auguste, 88]]}}
+
+Toujours suivant les écrits d'Aulu-Gelle, on peut penser que Jules César utilisait d'autres clés, et même d'autres techniques de chiffrement plus complexes<ref>{{article |langue=en|nom1=Reinke |prénom1=Edgar C. |année=1962 |mois=décembre |titre= Classical Cryptography |périodique = The Classical Journal |volume=58 |numéro=3 |pages=114}} et note 6 p 121</ref>. En particulier [[Aulu-Gelle]] fait référence à un traité (aujourd’hui perdu) consacré aux chiffres utilisés par César<ref>{{Citation bloc|On trouve même un traité assez bien écrit du grammairien Probus au sujet de la signification cachée des lettres dans la correspondance de César.|[[Aulus Gellius]]|17.9.1–5}}, cité par Reinke, voir note précédente.</ref>.
+
+On ignore quelle était l'efficacité du chiffre de César à son époque. La première trace de techniques de [[cryptanalyse]] date du {{s-|IX|e}} avec le développement dans le monde arabe de l'[[analyse fréquentielle]]<ref>S. Singh, op. cit. ''[[#TCB|The Code Book]]'' pp. 14-20</ref>.
+
+=== Utilisations ===
+Un chiffre de César, avec un décalage de un, apparaît au dos du [[Mezouzah|Mezuzah]]<ref>{{en}} {{Lien web |url=http://www.chabad.org/library/article.asp?AID=312102  |titre={{lang|en|''Mezuzah and Astrology - The Mysterious Name''}} |auteur=Alexander Poltorak |site=http://www.chabad.org/ |consulté le={{date|30|août|2009}} }}</ref>.
+
+Au {{s-|XIX|e}}, les pages d'[[Annonce personnelle|annonces personnelles]] des journaux étaient parfois utilisées pour la transmission de messages cryptés à l'aide de codes simples. [[David Kahn]] donne des exemples d'amants communiquant de manière confidentielle en chiffrant leurs messages à l'aide du chiffre de César dans le quotidien britannique {{lang|en|''[[The Times]]''}}<ref>D. Kahn, op. cit. ''[[#CSSW|The Codebreakers — The Story of Secret Writing]]'' pp. 775-776</ref>. Le chiffre de César fut encore employé en 1915 : l'armée russe le préférait à d'autres codes plus élaborés mais qui s'étaient révélés trop difficiles d'utilisation pour leurs troupes ; les analystes allemands et autrichiens eurent peu de mal à déchiffrer leurs messages<ref>D. Kahn, op. cit. ''[[#CSSW|The Codebreakers — The Story of Secret Writing]]'' pp. 631-632</ref>. Le codage utilisé par [[Enigma (machine)|Enigma]] se base aussi sur la substitution des lettres, mais en suivant une méthode beaucoup plus complexe.
+
+Aujourd'hui, on peut trouver le chiffre de César dans des jouets promotionnels pour enfants. Un tel code avec un décalage de {{nombre|13|caractères}} est aussi employé dans l'[[Algorithmique|algorithme]] [[ROT13]] : cette méthode très simple est utilisée dans certains forums sur Internet pour brouiller tout ou partie d'un texte (comme la chute d'une blague, ou un [[spoiler]]), mais pas comme méthode de chiffrement en tant que tel<ref>R. Wobst, op. cit. ''[[#CU|Cryptology Unlocked]]'' p. 20</ref>.
+
+Le [[chiffre de Vigenère]] utilise le chiffre de César mais avec un décalage différent suivant la position de la lettre décalée dans le texte ; la valeur de ce décalage est définie à l'aide d'un mot-clé, chaque lettre du mot-clé désigne le décalage correspondant à sa position dans l'alphabet (0 pour <tt>A</tt>, 1 pour <tt>B</tt> etc.). Si la longueur du mot clé est ''n'', toutes les lettres du texte clair en position un multiple de ''n'' sont décalées suivant le même entier, de même pour celles en position un multiple de ''n'' plus 1, etc. L'utilisation de plusieurs décalages différents rend inopérante l'[[analyse fréquentielle]] classique, du moins directement. Des méthodes statistiques plus avancées, utilisant l'[[indice de coïncidence]], permettent cependant de casser le code (voir aussi [[cryptanalyse du chiffre de Vigenère]]) .
+
+On peut voir le [[Masque jetable|chiffrement de Vernam]] (ou « masque jetable ») comme un chiffre de Vigenère où le mot-clé est de même longueur que le texte à chiffrer, choisi de façon complètement aléatoire, et utilisé une seule fois. Il est alors théoriquement incassable, mais difficile à utiliser en pratique.
+
+En {{date||avril|2006}}, le chef en fuite de la mafia [[Bernardo Provenzano]] a été capturé en [[Sicile]] grâce notamment au déchiffrement d'une partie de sa correspondance qui utilisait une variante du chiffrement de César basée sur les nombres : A s'écrivait 4, B 5, etc<ref>{{en}}{{Lien web | url = http://www.theregister.co.uk/2006/04/19/mafia_don_clueless_crypto/ | titre =  Mafia boss undone by clumsy crypto | auteur = John Leyden | date = 19 | année = 2006 | mois = avril | éditeur = ''[[The Register]]'' | consulté le = {{date|30|août|2009}}}}</ref>.
+
+== Décryptage ==
+{| class="wikitable droite" style="margin: 0 0 1em 1em"
+! Décalage du<br />déchiffrement
+! Texte de test
+|- align="center"
+|  0
+| <tt>GVCTX SKVEQ QI</tt>
+|- align="center"
+| 1
+| <tt>FUBSW RJUDP PH</tt>
+|- align="center" 
+| 2
+| <tt>ETARV QITCO OG</tt>
+|- align="center"
+| 3
+| <tt>DSZQU PHSBN NF</tt>
+|- align="center"
+| bgcolor="#ffebad" | 4
+| bgcolor="#ffebad" | <tt>[[cryptogramme|CRYPT OGRAM ME]]</tt>
+|- align="center" 
+| 5
+| <tt>BQXOS NFQZL LD</tt>
+|- align="center"
+| 6
+| <tt>APWNR MEPYK KC</tt>
+|- align="center"
+| colspan="2" | …
+|- align="center"
+|  23
+| <tt>JYFWA VNYHT TL</tt>
+|- align="center"
+| 24
+| <tt>IXEVZ UMXGS SK</tt>
+|- align="center"
+| 25
+| <tt>HWDUY TLWFR RJ</tt>
+|}
+Le chiffre de César peut être cassé très facilement, même à l'aide du seul texte chiffré. On peut distinguer deux cas :
+* le [[cryptanalyste]] a connaissance du fait qu'un simple chiffrement par substitution a été employé, mais ignore qu'il s'agit du chiffre de César en particulier ;
+* le cryptanalyste sait que le chiffre de César a été utilisé, mais ignore la valeur du décalage.
+
+=== Par recherche de la méthode de chiffrement ===
+Dans le premier cas, il est possible de casser le chiffre de César à l'aide des mêmes techniques que dans le cas général d'un chiffrement par substitution, à savoir l'[[analyse fréquentielle]] ou la [[Attaque par mot probable|recherche de mots probables]]<ref>A. Beutelspacher, op. cit. ''[[#Cryp|Cryptology]]'' pp. 9-11</ref>. Lors de la résolution, le cryptanalyste ne sera pas sans remarquer une certaine régularité dans les décalages, et en déduira que l'algorithme employé est le chiffre de César.
+
+=== Par recherche de la valeur du décalage ===
+Dans le deuxième cas, comme il n'y a qu'un nombre limité de décalages (vingt six dont un inutile), il suffit de tester tous les chiffrements possibles jusqu'à trouver le bon. C'est ce qu'on appelle une [[attaque par force brute]], technique de test de toutes les combinaisons possibles<ref>A. Beutelspacher, op. cit. ''[[#Cryp|Cryptology]]'' pp. 8-9</ref>. Une méthode simple pour mener l'attaque est de prendre un fragment du texte crypté et d'écrire dans un tableau tous les décalages possibles (voir le tableau ci-contre)<ref>{{article |langue=en|nom1=Leighton |prénom1=Albert C. |année=1969 |mois=avril |titre= Secret Communication among the Greeks and Romans |périodique = Technology and Culture |volume=10 |numéro=2 |pages=153|doi=10.2307/3101474 }}</ref>. Dans ce tableau, on a pris le fragment <tt>GVCTX SKVEQ QI</tt> ; le texte en clair apparaît ainsi facilement à la quatrième ligne. Une autre façon de procéder serait d'écrire toutes les lettres de l'alphabet, en dessous de chaque lettre du fragment, et en commençant par celle-ci. Ce genre d'attaque peut être accélérée en utilisant des bandes avec l'alphabet écrit dessus ; les bandes étant placées en colonne sur le texte chiffré (lettre sur lettre : par exemple, le {{guil|<tt>E</tt>}} de la bande doit être placé au-dessus du {{guil|<tt>E</tt>}} du texte chiffré), la phrase en clair doit apparaître sur une des lignes.
+
+=== Analyse fréquentielle ===
+[[Image:Histogramme fréquence texte francais.png|left|320px|thumb|Analyse de la fréquence d'apparition de lettres dans un texte en français. Un chiffrement de César ne fait que décaler cette distribution, ce qui rend son cassage aisé par analyse fréquentielle.]]
+Une autre attaque possible est de faire une analyse de fréquence d'apparition des lettres : on génère un graphique sur la fréquence d'apparition de chaque lettre dans le texte crypté et un autre avec un texte de référence, dans la langue du message d'origine, et on explore par décalages successifs toutes les possibilités. En les comparant, un humain peut facilement voir la valeur du décalage entre ces deux graphiques, et trouver la clé de chiffrement. Cette technique s'appelle l'[[analyse fréquentielle]]. Par exemple, en anglais, les lettres <tt>E</tt> et <tt>T</tt> sont les plus fréquentes et les lettres <tt>Q</tt> et <tt>Z</tt>, les moins fréquentes<ref>S. Singh, op. cit. ''[[#TCB|The Code Book]]'' pp. 72-77</ref>. Des ordinateurs peuvent aussi faire ce travail de reconnaissance en évaluant la concordance de distribution des deux textes (le texte chiffré et celui de référence) en utilisant, par exemple, une fonction [[Test du χ²|test du χ² de Pearson]]<ref>{{en}} {{Lien web |url= http://starbase.trincoll.edu/~crypto/historical/caesar.html |titre= The Caesar Cipher |auteur=Chris Savarese et Brian Hart |consulté le={{date|30|août|2009}} }}</ref>.
+
+Avec des textes longs, il est très probable qu'il n'y ait qu'une seule possibilité de déchiffrement. Mais pour de courts textes, il peut y avoir plusieurs possibilités de déchiffrement. Par exemple, {{guil|NYHCL}} peut être déchiffré en {{guil|grave}} (par un décalage de 19) ou en {{guil|tenir}} (6) (pour un texte en français) ; ou alors {{guil|DQODG}} peut donner {{guil|bombe}} (24) ou {{guil|recru}} (14) (voir aussi : [[distance d'unicité]]).
+
+=== Composition de chiffrements ===
+Enchaîner les chiffrements (et les déchiffrements) ne donne pas de protection supplémentaire car chiffrer un texte avec un décalage de trois sur la gauche, puis le chiffrer de nouveau avec un décalage de sept sur la droite revient exactement au même que de coder le texte de départ avec un décalage de quatre sur la droite (<math>3 - 7 = -4</math>). En termes mathématiques, l'ensemble des vingt-six opérations de chiffrement (en comprenant le décalage nul c'est-à-dire le texte chiffré identique au texte clair) est stable par [[loi de composition|composition]]. Il forme même un [[Groupe (mathématiques)|groupe]]<ref>R. Wobst, op. cit. ''[[#CU|Cryptology Unlocked]]'' p. 31</ref>, puisque, de plus, une opération de déchiffrement est identique à une opération de chiffrement.
+
+{{Clr}}
+
+== Quelques clés particulières ==
+* Décalage de 1 rang : clé utilisée par Auguste ;
+* Décalage de 2 rangs : Hélène (L vaut N) ;
+* Décalage de 3 rangs : clé utilisée par César ;
+* Décalage de 10 rangs : avocat (A vaut K) ;
+* Décalage de 13 rangs : [[ROT13]] où les fonctions de codage et décodage sont identiques ;
+* Décalage de 15 rangs : [[Hergé]] (R vaut G), Déesse (D vaut S) ou Happé (A vaut P) ;
+* Décalage de -4 rangs : cassette (K 7) ;
+* Décalage de -5 rangs : cassis (K 6).
+
+== Notes et références ==
+{{Traduction/Référence|en|Caesar cipher|187736812|type=note}}
+{{Références|colonnes=2}}
+
+== Voir aussi ==
+
+=== Bibliographie ===
+* {{ouvrage |langue=en |nom1=Bauer |prénom1=Friedrich L. |titre= Decrypted Secrets |éditeur=Springer |id= DS |année=2000|édition=2 |isbn=3-540-66871-3}} 
+* {{ouvrage|langue=en |titre=Cryptology |nom1=Beutelspacher |prénom1=Albrecht |année=1994 |éditeur=Mathematical Association of America |lien éditeur = Mathematical Association of America |id=Cryp |isbn=0-88385-504-6}}
+* {{ouvrage |langue=en |nom1=Kahn |prénom1=David |lien auteur=David Kahn|titre= The Codebreakers — The Story of Secret Writing |éditeur= |id= CSSW |année=1967 |isbn=0-684-83130-9 }}
+* {{ouvrage |langue=en |titre=Fundamentals of Computer Security |nom1=Pieprzyk |prénom1=Josef |nom2=Hardjono|prénom2=Thomas|nom3=Seberry|prénom3=Jennifer |année=2003 |éditeur=Springer |isbn=3540431012 |id=FCS}}
+* {{ouvrage |langue=en|titre=The Code Book |nom1=Singh |prénom=Simon |lien auteur=Simon Singh| année=2000 |éditeur=Anchor |isbn=0385495323 |id=TCB}}. Édition française sous le tite ''Histoire des codes secrets. De l'Égypte des pharaons à l'ordinateur quantique'', Livre de Poche, 2001, {{ISBN |2253150975}}.
+* {{ouvrage |langue=en|titre=Elementary Cryptanalysis: A Mathematical Approach |nom1=Sinkov |prénom1=Abraham |nom2=Irwin |prénom2=Paul L. |année=1966 |éditeur=Mathematical Association of America |lien éditeur = Mathematical Association of America |isbn=0883856220 |id=ECMA }}
+* {{ouvrage |titre=Cryptology Unlocked |langue=en| nom1=Wobst |prénom1=Reinhard |année=2001 |éditeur=Wiley |id=CU |isbn=978-0470060643}}
+
+=== Articles connexes ===
+* [[Distance d'unicité]]
+* [[Chiffre affine]]
+
+=== Liens externes ===
+* [http://www.apprendre-en-ligne.net/crypto/cesar/index.html Chiffrement en ligne sur apprendre-en-ligne.net]
+* [http://www.dcode.fr/?outil=code-cesar Chiffrement en ligne et noms de différentes clés sur dcode.fr]
+
+{{Cryptologie historique}}
+{{Portail|Cryptologie|Rome antique}}
+{{Bon article|vote=BA|oldid=45053796|date=23 septembre 2009}}
+
+[[Catégorie:Algorithme de cryptographie]]
+[[Catégorie:Théorie des groupes]]
+[[Catégorie:Politique de la Rome antique]]
+[[Catégorie:Littérature latine]]
+
+{{Lien BA|es}}
+
+{{Lien AdQ|ca}}
+{{Lien AdQ|en}}
+{{Lien AdQ|pl}}
+{{Lien AdQ|pt}}
+{{Lien AdQ|ro}}
+
+[[az:Sezar şifrəsi]]
+[[bg:Шифър на Цезар]]
+[[ca:Xifratge de Cèsar]]
+[[cs:Caesarova šifra]]
+[[de:Caesar-Verschlüsselung]]
+[[en:Caesar cipher]]
+[[eo:Ĉifro de Cezaro]]
+[[es:Cifrado César]]
+[[eu:Zesar zifratu]]
+[[fa:رمز سزار]]
+[[he:צופן קיסר]]
+[[hr:Cezarova šifra]]
+[[hu:Caesar-rejtjel]]
+[[id:Sandi Caesar]]
+[[it:Cifrario di Cesare]]
+[[ja:シーザー暗号]]
+[[ka:კეისრის კოდი]]
+[[ko:카이사르 암호]]
+[[lb:Code Cäsar]]
+[[lv:Cēzara šifrs]]
+[[nl:Caesarcijfer]]
+[[no:Cæsar-kryptering]]
+[[pl:Szyfr Cezara]]
+[[pt:Cifra de César]]
+[[ro:Cifrul Cezar]]
+[[ru:Шифр Цезаря]]
+[[simple:Caesar cipher]]
+[[sk:Cézarova šifra]]
+[[sl:Cezarjeva šifra]]
+[[sr:Цезарова шифра]]
+[[sv:Caesarrullning]]
+[[th:รหัสซีซาร์]]
+[[uk:Шифр Цезаря]]
+[[zh:凱撒密碼]]

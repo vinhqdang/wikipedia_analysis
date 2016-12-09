@@ -1,0 +1,848 @@
+[[Image:Thermally Agitated Molecule.gif|thumb|right|266px|Agitation thermique d’un [[peptide]] avec une structure en [[hélice alpha]]. Les mouvements sont aléatoires et complexes, l’énergie d’un atome peut fluctuer énormément. Néanmoins, le théorème d’équipartition permet de calculer l’énergie cinétique ''moyenne'' de chaque atome ainsi que l’énergie potentielle ''moyenne'' de nombreux modes de vibration. Les sphères grises, rouges et bleues représentent des [[atome]]s de [[carbone]], d’[[oxygène]] et d’[[azote]] respectivement. Les sphères blanches plus petites représentent des atomes d’[[hydrogène]].]]
+
+En [[physique statistique]] classique, l’'''équipartition de l’énergie''' est un résultat remarquable selon lequel l’[[énergie]] totale d’un système à l’[[équilibre thermodynamique]] est répartie en parts égales en moyenne entre ses différentes composantes. Ce résultat découle très directement du [[Physique statistique#Postulat fondamental|postulat fondamental de la physique statistique]] ; on parle souvent de '''principe d’équipartition de l’énergie'''. 
+
+Plus précisément, le '''théorème d’équipartition''' donne une équation qui permet de relier la [[température]] d’un système macroscopique aux énergies moyennes des particules microscopiques qui le composent, permettant ainsi de faire des prédictions quantitatives. On le résume souvent par la formule : ''1/2 <math>k_B T</math> par terme quadratique dans l'expression de l'énergie'', où <math>k_B</math> est la [[constante de Boltzmann]] et <math>T</math> la [[température]] exprimée en [[kelvin]]. Le théorème permet de calculer l’énergie totale d’un système à une température donnée, d’où l’on peut calculer sa [[chaleur spécifique]]. Mais il donne aussi les valeurs moyennes de composantes de l’énergie, telles que l’énergie cinétique d’une particule ou l’énergie potentielle associée à un mode de vibration particulier. 
+
+Le théorème d’équipartition peut notamment être utilisé pour retrouver la [[loi des gaz parfaits]], la [[loi de Dulong et Petit|loi expérimentale de Dulong et Petit]] sur la chaleur spécifique des solides ou caractériser un [[mouvement brownien]]. De manière générale, il peut être appliqué à n’importe quel système classique à l’équilibre thermodynamique, quelle que soit sa complexité. En revanche, il est mis en défaut quand les effets quantiques deviennent significatifs, notamment pour des températures suffisamment basses ou des [[densité]]s élevées.
+
+Historiquement, le problème de l’équipartition de l’énergie est lié à d’importants développements en physique et en mathématiques. Il a trouvé son origine au milieu du {{s-|XIX|e}} dans la [[théorie cinétique des gaz]], puis accompagné l’émergence de la [[physique statistique]]. Au début du {{s-|XX|e}}, il était encore au cœur de problèmes fondamentaux, dont notamment la [[catastrophe ultraviolette]], qui ont conduit au développement de la [[mécanique quantique]]. En mathématiques, l’examen des conditions de validité du principe d’équipartition a donné naissance à la [[théorie ergodique]], une branche dans laquelle de nombreux problèmes restent encore ouverts.
+
+== Historique ==
+=== Premières formulations ===
+
+
+
+L’équipartition de l’énergie cinétique fut initialement proposée en 1843<ref>{{Ouvrage | auteur = Waterston JJ | année = 1843 | titre = Thoughts on the Mental Functions |lang=en}} (réimprimé dans ses ''Papers'', '''3''', 167, 183.)</ref> par [[John James Waterston]] qui travaillait à une première théorie cinétique des gaz. À cette époque, Waterston était aux Indes où il travaillait en tant qu’ingénieur pour le développement du chemin de fer. Il proposa son mémoire en 1845 à la [[Royal Society]] qui refusa de le publier, mais le conserva dans ses archives. Un court résumé de ses idées fut publié en 1846, puis un autre en 1851 dans laquelle on trouve une première version du principe d’équipartition de l’énergie. Le mémoire d’origine fut redécouvert et finalement publié bien plus tard en 1893, assorti d’une introduction de [[Lord Rayleigh]] qui critique vivement le refus initial en reconnaissant l’antériorité du travail de Waterston (mais aussi certaines erreurs)<ref>Cette publication de 1873 contient à la fois le mémoire, la préface de Rayleigh ainsi que des reproductions des deux résumés de 1846 et 1851. Voir {{Article| auteur = Waterston JJ |titre = On the physics of media that are composed of free and elastic molecules in a state of motion |journal = Philos. Trans. R. Soc. London |date = 1893 |vol =183| pages = 1–79|texte = http://gallica.bnf.fr/ark:/12148/bpt6k55988x}}</ref>. Telle que publiée en 1851, cette première version du principe d’équipartition s’écrit :
+
+{{Citation bloc|L’équilibre […] entre deux gaz est atteint quand […] la ''[[vis viva]]'' de chaque atome est égale. La température dans les deux gaz est alors proportionnelle à la masse d’un atome multipliée par le carré de la vitesse moyenne de l’atome<ref>Texte original : {{Citation|Equilibrium of pressure and heat between two gases takes place when the number of atoms in unity of volume is equal, and ''vis viva'' of each atom equal. Temperature, therefore, in all gases, is proportional to the mass of one atom multiplied by the mean square of the molecular motions, being measured from an ''absolute zero'' 491° below the zero of Fahrenheit’s thermometer.}}</ref>.}}
+
+Ces premiers travaux sont donc inconnus des principaux physiciens de l’époque qui développeront pendant les vingt ans qui suivirent la théorie cinétique des gaz et affineront les arguments, les formulations et les démonstrations du principe d’équipartition. [[Rudolf Clausius]], [[Ludwig Boltzmann]], [[James Clerk Maxwell]] sont de ceux-là. Ce dernier écrit notamment en 1878<ref>{{Ouvrage | auteur = Maxwell JC | année = 2003 | chap = On Boltzmann’s theorem on the average distribution of energy in a system of material points | titre = The Scientific Papers of James Clerk Maxwell (Volume 2) | passage = 716 | éditeur = Dover | lieu = New York | isbn = 978-0486495606 | lire en ligne = http://imgbase-scd-ulp.u-strasbg.fr/displayimage.php?album=442&pos=728}}.</ref> :
+
+{{Citation bloc|À une température donnée, l’énergie cinétique totale d’un système matériel est égale au produit du nombre de degrés de liberté de ce système par une constante qui est la même pour toute substance à cette température, cette constante étant en fait la température de l’échelle thermodynamique multipliée par une constante absolue<ref>Texte original : {{Citation|Hence at a given temperature the total kinetic energy of a material system must be the product of the number of degrees of freedom of that system into a constant which is the same for all substances at that temperature, being in fact the temperature of the thermodynamic scale multiplied by an absolute constant.}}</ref>.}}
+
+Le théorème d’équipartition est considéré pendant le dernier tiers du {{s-|XIX|e}} comme un des résultats principaux de la théorie cinétique des gaz. Sa généralité et sa simplicité en font un résultat séduisant ; il est connu et utilisé couramment par les expérimentateurs<ref>{{Harvsp|texte = Bergia et Navarro 1997|id = Bergia1997|p = 185-186}}</ref>.
+
+Un grand succès du théorème d’équipartition fut la prédiction par Boltzmann de la [[Loi de Dulong et Petit|loi expérimentale de Dulong et Petit]] sur la chaleur spécifique des solides, autre sujet d’étude au {{s-|XIX|e}}. En 1819 en effet, les physiciens français [[Pierre Louis Dulong]] et [[Alexis Thérèse Petit]] avaient découvert que les chaleurs spécifiques molaires des solides à température ambiante étaient quasiment toutes identiques, environ 6 cal/(mol·K)<ref>{{Petit-Dulong1819}}</ref>. Cette loi jusqu’alors expérimentale trouva dans le théorème d’équipartition un fondement théorique. De même, les mesures des chaleurs spécifiques de gaz monoatomiques étaient tout à fait conformes à la théorie. Le théorème prédit que la chaleur spécifique d’un gaz simple monoatomique doit être d’environ 3 cal/(mol·K), ce qui fut en effet confirmé par l’expérience<ref name="kundt_1876" >{{Article | auteur = [[August Kundt|Kundt A]], [[Emil Warburg|Warburg E]] | date = 1876 | titre = Über die spezifische Wärme des Quecksilbergases (De la chaleur spécifique des gaz de mercure) | journal = Annalen der Physik | vol = 157 | pages = 353–369 | texte = http://gallica.bnf.fr/ark:/12148/bpt6k15241h|lang = de}}</ref>.
+
+=== Paradoxes théoriques et expérimentaux ===
+
+Cependant, le théorème d’équipartition fut également mis en défaut. Dès 1840, des mesures de chaleur spécifique de solides avaient mis en évidence des écarts significatifs avec la loi de Dulong et Petit, notamment dans le cas du [[diamant]]<ref>{{Article | auteur = de la Rive A, Marcet F | date = 1840 | titre = Quelques recherches sur la chaleur spécifique | journal = Annales de Chimie et de Physique | vol = 75 | pages = 113–144 | texte=http://books.google.com/books?id=vBwAAAAAMAAJ&pg=RA1-PA3}}</ref>{{,}}<ref>{{Article | auteur = Henri Victor Regnault | date = 1841 | titre = Recherches sur la chaleur spécifique des corps simples et des corps composés (deuxième Mémoire)| journal = Annales de Chimie et de Physique | vol = 1 (3{{e}} Série)| pages = 129–207 | texte = http://gallica.bnf.fr/ark:/12148/bpt6k34742d}} Présenté à l’Académie des Sciences le {{Date|11|janvier|1841}}.</ref>. Au début des années 1870, des études en fonction de la température par [[James Dewar]]<ref>{{Article | auteur = James Dewar | date = 1872 | titre = The Specific Heat of Carbon at High Temperatures | journal = Philosophical Magazine | vol = 44 | pages = 461 | lang = en}}</ref> et [[Heinrich Friedrich Weber]]<ref>{{Article | auteur = Heinrich Friedrich Weber | date = 1872 | titre = Die spezifische Wärme des Kohlenstoffs (Chaleur spécifique du carbone) | journal = Annalen der Physik | vol = 147 | pages = 311–319 | texte = http://gallica.bnf.fr/ark:/12148/bpt6k152316 | lang = de}}</ref>{{,}}<ref>{{Article | auteur = Heinrich Friedrich Weber | date = 1875 | titre = Die spezifische Wärmen der Elemente Kohlenstoff, Bor und Silicium (Chaleur spécifiques des éléments carbone, bore et silicium) | journal = Annalen der Physik | vol = 154 | pages = 367–423, 553–582 | texte = http://gallica.bnf.fr/ark:/12148/bpt6k15238m | lang = de}}</ref> montrèrent que la loi de Dulong et Petit n’était en réalité valable que pour les hautes températures. 
+
+Des mesures de chaleurs spécifiques de gaz diatomiques vinrent également contredire le théorème d’équipartition. Le théorème prédisait une valeur de 7 cal/(mol·K) quand les chaleurs spécifiques mesurées étaient typiquement proches de 5 cal/(mol·K)<ref name="Wueller_1896">{{Ouvrage | auteur = Wüller A. | année = 1896 | titre = Lehrbuch der Experimentalphysik (Physique expérimentale)| volume = 2| éditeur = Teubner | lieu = Leipzig | passage = 507 et suivantes | langue = allemand}}</ref> et tombaient même jusqu’à 3 cal/(mol·K) aux très basses températures<ref name="Eucken_1912" >{{Article | auteur = Eucken A. | date = 1912 | titre = Die Molekularwärme des Wasserstoffs bei tiefen Temperaturen (Chaleur spécifique moléculaire de l’hydrogène à basses températures) | journal = Sitzungsberichte der königlichen Preussischen Akademie der Wissenschaften | vol = 1912 | pages = 141–151 | lang = de}}</ref>.
+
+Un troisième cas de désaccord fut la chaleur spécifique des métaux<ref name="kittel_1996" >{{Physique de l’état solide (Charles Kittel)|édition=en|pages=151-156}}</ref>. Selon le classique [[modèle de Drude]] développé au début des années 1900 et le théorème d’équipartition, les électrons dans les métaux devraient se comporter comme un gaz quasi parfait, et devraient contribuer pour 3/2 <math>N_e k_B</math> à la chaleur spécifique où <math>N_e</math> est le nombre d’électrons. L’expérience montre toutefois que les électrons contribuent peu à la chaleur spécifique : les chaleurs spécifiques molaires de nombreux conducteurs et d’isolants sont quasiment égales<ref name="kittel_1996" />.
+
+Un dernier cas de désaccord, et pas des moindres, était donné par le problème de l’émission de rayonnement du [[corps noir]]. Le paradoxe vient du fait qu’il y a une infinité de modes indépendants du champ électromagnétique dans une cavité fermée, chacun pouvant être traité comme un oscillateur harmonique. Si chaque mode avait une énergie <math>k_B T</math>, la cavité contiendrait donc une énergie infinie<ref name="Einstein1905" />{{,}}<ref>{{Article | auteur = [[John William Strutt Rayleigh|John Rayleigh]] | date = 1900 | titre = Remarks upon the Law of Complete Radiation | journal = [[Philosophical Magazine]] | volume = 49 | lang=en | pages = 539–540}}</ref>. Ce paradoxe est resté dans l’histoire sous le nom de [[catastrophe ultraviolette]]. En 1900, ce paradoxe est le second « nuage » évoqué par [[Lord Kelvin]] lors de sa conférence ''Nineteenth-Century Clouds over the Dynamical Theory of Heat and Light''<ref>The London, Edinburgh and Dublin Philosophical Magazine and Journal of Science, Series 6, volume 2, page 1 (1901)</ref>. Il ne sera résolu que par les développements de [[mécanique quantique]].
+
+Au-delà des cas d’échecs rapportés par l’expérience, le théorème d’équipartition se heurte également à un problème fondamental, souligné dès 1875 par [[James Clerk Maxwell|James Maxwell]]<ref name="maxwell_1875" >{{Ouvrage | auteur = James Clerk Maxwell | année = 1890 | chapitre = On the Dynamical Evidence of the Molecular Constitution of Bodies | titre = The Scientific Papers of James Clerk Maxwell | volume = 2 | directeur = WD Niven | passage = 418–438 | éditeur = At the University Press | lieu = Cambridge | id = ASIN B000GW7DXY | lire en ligne = http://imgbase-scd-ulp.u-strasbg.fr/displayimage.php?album=442&pos=432}} Conférence tenue par JC Maxwell à la Chemical Society le {{Date|18|février|1875}}</ref> : à mesure que l’on décompose les molécules de gaz en constituants élémentaires, on peut trouver de nouveaux degrés de libertés qui devraient eux-aussi contribuer à l’énergie totale. À la limite, celle-ci deviendrait infinie ! Ce paradoxe est insoluble par la physique classique. Et pourtant, la démonstration du théorème ne présente pas de faille apparente, et les succès de la théorie cinétique des gaz sont par ailleurs indéniables.
+
+Face à ces difficultés, plusieurs attitudes sont possibles. Certains, mais pas les plus nombreux, pensent que le théorème est faux. C’est notamment le cas de [[Lord Kelvin]]<ref>{{Harvsp|texte=Bergia et Navarro 1997|id=Bergia1997|p = 187}}. Les idées de Kelvin sur ce point sont notamment données dans les cours qu’il donne à Baltimore. Voir {{Ouvrage | auteur = William Thomson | année = 1904 | titre = Baltimore Lectures | éditeur = Johns Hopkins University Press | lieu = Baltimore | chapitre = 27}} Réédité par la suite en 1987 par MIT Press sous le titre ''Kelvin’s Baltimore Lectures and Modern Theoretical Physics: Historical and Philosophical Perspectives'' (éditeur : Robert Kargon et Peter Achinstein), ISBN 978-0-262-11117-1</ref>. Mais ils ne parviennent pas à démontrer en quoi. D’autres, prenant actes des succès du théorème, préfèrent penser qu’il n’est pas applicable dans les cas qui posent problèmes, pour des raisons qui restent à préciser. [[Ludwig Boltzmann]] avança que les gaz pouvaient ne pas être à l’équilibre thermodynamique à cause de leurs interactions avec l’[[Éther (physique)|éther]]<ref>{{Article | auteur = Boltzmann L | date = 1895 | titre = On certain Questions of the Theory of Gases | journal = Nature | vol = 51 | pages = 413–415 |lang = en}}</ref>. Maxwell pense que le problème ne pourra pas être résolu sans une connaissance précise et complète de la structure interne des molécules. Mais ce problème aussi se révèle de plus en plus compliqué. Certains, plus prudents encore, remettent en cause la pertinence de l’utilisation des lois de la mécanique (chocs) aux molécules et, de là, la nature même de la matière. [[Lord Rayleigh]] quant à lui, dans une conférence qu’il donne en 1900, avance fermement que le théorème d’équipartition et l’hypothèse expérimentale de l’équilibre thermodynamique sont tous les deux corrects, mais pour les réconcilier invoque le besoin d’un nouveau principe qui pourrait fournir une « échappatoire à la simplicité destructrice » du théorème d’équipartition<ref>{{Harvsp|texte = Lord Rayleigh, 1900|id = Rayleigh1900}}</ref>.
+
+=== Naissance de la mécanique quantique ===
+
+[[Image:Einstein 1911 Solvay.jpg|thumb|upright=0.75|[[Albert Einstein]] au premier [[congrès Solvay]] en 1911.]]
+
+Cette échappatoire fut trouvée progressivement à partir des années 1900. Cette année-là, [[Max Planck]] présente un travail sur le rayonnement du corps noir dans lequel il imagine des niveaux d’énergie discrets, ce qui lui permet d’échapper à la catastrophe ultraviolette. C’est alors une hypothèse purement mathématique. Max Planck ne s’intéresse que peu alors au problème de l’équipartition de l’énergie ; il est réticent de manière générale devant les méthodes de la physique statistique<ref>{{Ouvrage|auteur = Klein|titre=Paul Ehrenfest. vol 1, The making of a theoretical physicist (3ème édition)|lieu=Amsterdam|année = 1985|page=237}}</ref>.
+
+C’est notamment à [[Albert Einstein]] que l’on doit le lien avec l’équipartition<ref>{{Harvsp|texte=Bergia et Navarro 1997 | id = Bergia1997 | p = 184}}</ref>. Il insiste en 1905 sur le fait que le théorème d’équipartition associé aux théories classiques du rayonnement conduit nécessairement à la [[loi de Rayleigh-Jeans]] et à la [[catastrophe ultraviolette]]<ref name="Einstein1905">{{Article | auteur =[[Albert Einstein]] | date = 1905 | lang= de | titre = Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt (D’un modèle heuristique de la création et de la transformation de la lumière) | journal = [[Annalen der Physik]] | volume = 17 | pages = 132-148 | texte = http://gallica.bnf.fr/ark:/12148/bpt6k2094597 }}</ref>. Il introduit en 1907 un effet de quantification pour résoudre le problème de la chaleur spécifique des solides : c’est le [[Modèle d'Einstein|modèle d’Einstein]] qui sera par la suite amélioré par [[Peter Debye]]<ref>{{Einstein1907}}<br />{{Article | auteur = Einstein A. | date = 1907 | titre = Berichtigung zu meiner Arbeit: 'Die Plancksche Theorie der Strahlung und die Theorie der spezifischen Wärme' (Corrections à l’article précédent) | journal = Annalen der Physik | vol = 22 | pages = 800 | lang = de}}</ref>. Au premier [[congrès Solvay]] en 1911, il remet en cause la validité du théorème pour les systèmes dont l’énergie est quantifiée. 
+
+Mécanique quantique et équipartition semblent alors incompatibles. L’articulation entre les deux sera trouvée avec la théorie quantique du gaz parfait. Dans un article qu’il publie en 1924 en partant des idées de [[Satyendranath Bose]], Einstein montre que l’équipartition est valable dans la limite des faibles densités et des hautes températures, calculant même un critère de validité. Le théorème d’équipartition perd alors définitivement son statut de formule générale pour devenir une approximation, valable seulement quand la physique classique elle-même est une bonne approximation de la physique quantique<ref>{{Harvsp|texte=Bergia et Navarro 1997 | id = Bergia1997 | p = 219}}</ref>.
+
+{{clr}}
+
+=== Vers la théorie ergodique ===
+
+Avec le développement de la physique statistique, les conditions de validité de l’équipartition de l’énergie sont clairement posées. Elle repose notamment sur l’hypothèse fondamentale selon laquelle la valeur moyenne d’une grandeur prise sur une durée suffisamment longue (celle que l’on mesure) est égale à la valeur moyenne d’ensemble, calculée par la physique statistique. Cette [[Hypothèse d'ergodicité|hypothèse d’ergodicité]], formulée explicitement par Boltzmann dès 1871, est validée a posteriori par la justesse des prédictions qu’elle permet, mais reste une hypothèse. 
+
+Or, il existe très peu de systèmes pour lesquelles on a la certitude que cette hypothèse est effectivement réalisée. On a même la certitude que cette hypothèse n’est pas réalisée dans un certain nombre de cas très simples : par exemple, un gaz rigoureusement parfait dans lequel les molécules ne s’entrechoqueraient pas n’est pas un système ergodique. Les conditions de validité de cette hypothèse restent à explorer.
+
+En 1953, l’[[expérience de Fermi-Pasta-Ulam]] rapporte un exemple d’échec de l’équipartition. Cette première expérience numérique consiste à étudier la répartition à long terme de l’énergie d’un système dynamique unidimensionnel de 64 masses couplées entre elles par des ressorts harmoniques perturbés par une faible [[anharmonicité]], sachant qu’un seul mode du système est initialement excité. L’issue de l’expérience surprend : l’énergie ne se répartit pas également entre les différents modes, contrairement aux prédictions de l’équipartition. 
+
+Une première réponse à ce paradoxe sera suggérée par [[Andreï Kolmogorov|Kolmogorov]] en 1954, puis démontrée indépendamment par [[Vladimir Arnold|Arnold]] et [[Mauser]] en 1963 : c’est le [[théorème KAM]] qui montre que de faibles couplages non linéaires ne suffisent pas à rendre un système ergodique.
+
+Ces travaux ont conduit au développement d’une branche des mathématiques, la [[théorie ergodique]], qui étudie les conditions d’ergodicité d’un système. De nombreux cas d’échec de l’équipartition ont été mis en évidence, souvent au moyen de simulations numériques (chaînes anharmoniques, milieux granulaires…). Dans ce domaine, de nombreux problèmes restent ouverts.
+
+== Première approche ==
+
+Dans une première approche, on résume souvent<ref>Voir par exemple {{Ouvrage| auteur = F Bloch | titre = Fundamentals of Statistical Mechanics | éditeur = Imperial college Press | année = 2000 | lieu = London | passage = 94}}.</ref> le théorème d’équipartition de la façon suivante : 
+
+{{Bloc emphase|Dans un système à l’équilibre à la température <math>T</math>, chaque degré de liberté contribue pour 1/2 <math>k_B T</math> à l’énergie totale, où <math>k_B</math> est la [[constante de Boltzmann]].}}
+
+Cet énoncé n’est qu’un résultat particulier du théorème. Il omet certaines hypothèses. Cependant, il permet déjà de retrouver un certain nombre de résultats et de traiter des cas particuliers importants qui sont détaillés ci-dessous. Bien entendu, on retrouve dans cette affirmation le fait que l’énergie est répartie également entre tous les degrés de liberté, d’où le nom {{guil|équipartition}}.
+
+Dans la suite, le symbole <math>H</math>, pour [[Mécanique hamiltonienne#Hamiltonien|Hamiltonien]], sera utilisé comme symbole pour l’énergie en raison du rôle central que joue le [[Mécanique hamiltonienne|formalisme de Hamilton]] dans la formulation plus générale du théorème d’équipartition qui suivra. D’autre part, on notera avec des crochets <math>\langle X \rangle</math> la valeur moyenne d’une quantité <math>X</math>. On en précisera par la suite le sens mathématique précis.
+
+=== Gaz parfait monoatomique : l’exemple des gaz rares ===
+
+[[Image:Translational motion.gif|frame|right|Les [[gaz rare]]s sont des exemples types pour l’application du théorème d’équipartition. Comme on le voit sur cette simulation, la vitesse, et donc l’énergie cinétique d’un atome donné, peut fluctuer considérablement. Le théorème d’équipartition permet de calculer son énergie cinétique ''moyenne'' à une température donnée. Dans ce schéma, cinq particules ont été colorées en rouge afin de suivre plus facilement leur mouvement. La couleur n’a pas d’autre signification.]]
+
+Un [[gaz rare]] est un gaz des plus simples qui soient : il est constitué uniquement d’atomes dont l’énergie n’est donc composée que de l’énergie cinétique due à leur mouvement de translation. Chaque atome dispose de trois degrés de liberté associés aux trois composantes de la vitesse, c’est-à-dire aux trois directions de l’espace. Si on décompose la vitesse de l’atome suivant ces trois directions en les notant <math>v_x</math>, <math>v_y</math> et <math>v_z</math>, en notant <math>m</math> la masse, alors l’énergie cinétique (newtonienne) s’écrit comme une somme de trois termes dont chacun correspond à un degré de liberté :
+
+:<math>
+H^{\mathrm{cin}} = \tfrac{1}{2} m v_{x}^{2} + \tfrac{1}{2} m v_{y}^{2} + \tfrac{1}{2} m v_{z}^{2}.
+</math>
+
+À l’équilibre thermodynamique, chaque degré de liberté contribue d’après le théorème d’équipartition pour 1/2 <math>k_B T</math> à l’énergie cinétique. L’énergie cinétique moyenne totale d’une particule est donc 3/2 <math>k_B T</math>, et l’énergie totale d’un gaz parfait composé de <math>N</math> particules est 3/2 <math>N k_B T</math>. 
+
+Il s’ensuit que la [[chaleur spécifique]] du gaz est 3/2 <math>N k_B</math> et donc en particulier que la chaleur spécifique d’une mole d’un tel gaz est 3/2 <math>N_A k_B</math> où <math>N_A</math> est le [[Nombre d'Avogadro|nombre d’Avogadro]], ou encore 3/2 <math>R</math> où <math>R</math> est la [[constante des gaz parfaits]]. Puisque <math>R</math> vaut approximativement 2 cal/(mol.K), le théorème prédit que la capacité thermique molaire d’un gaz parfait est environ 3 cal/(mol.K).
+
+Connaissant l’énergie cinétique moyenne, on peut calculer la vitesse quadratique moyenne <math>v_{\mathrm{qm}}</math> des atomes du gaz :
+
+:<math>
+v_{\mathrm{qm}} = \sqrt{\langle v^{2} \rangle} = \sqrt{\frac{3 k_{B} T}{m}} = \sqrt{\frac{3 R T}{M}},
+</math>
+
+où <math>M = m N_A</math> est la masse d’une mole de gaz. La vitesse quadratique moyenne est donc d’autant plus faible que les atomes sont lourds. Les atomes du [[xénon]] auront une vitesse moyenne plus basse que les atomes plus légers de l’[[hélium]] à une même température. Ce résultat est utile dans un grand nombre d’applications, telles que la [[Loi de Graham|loi d’effusion de Graham]] dont a été tirée notamment une méthode d’[[enrichissement de l’uranium#Diffusion gazeuse|enrichissement de l’uranium]]<ref>Cette méthode est toutefois très consommatrice d’énergie ; elle tend à être replacée par des méthodes plus modernes.</ref>.
+
+=== Gaz parfait diatomique et polyatomique ===
+
+On considère maintenant un gaz dont les molécules sont composées de deux atomes ou plus. On suppose que les différents atomes sont liés rigidement entre eux. Une telle molécule dispose comme dans le cas précédent de trois degré de libertés associés à son déplacement dans le conteneur. Mais elle peut aussi tourner sur elle-même et accumuler ainsi de l’énergie. Ces degrés de libertés supplémentaires contribuent aux aussi à l’énergie totale et à la chaleur spécifique.
+
+Dans le cas le plus général, si les [[Moment d'inertie|moments d’inertie]] principaux de la molécule sont <math>I_1</math>, <math>I_2</math> et <math>I_3</math>, alors cette énergie cinétique de rotation est donnée par
+
+:<math>
+H^{\mathrm{rot}} = \tfrac{1}{2}I_{1} \omega_{1}^{2} + \tfrac{1}{2}I_{2} \omega_{2}^{2} + \tfrac{1}{2}I_{3} \omega_{3}^{2},
+</math>
+
+où <math>\omega_1</math>, <math>\omega_2</math> et <math>\omega_3</math> sont les composantes principales de la [[vitesse angulaire]]. Ce cas est formellement très similaire au cas précédent ; l’énergie est proportionnelle au carré de la vitesse angulaire. Par un raisonnement identique, l’équipartition implique donc que l’énergie cinétique moyenne de rotation de chaque molécule est 3/2 <math>k_B T</math> à l’équilibre. 
+
+Il convient de distinguer deux cas, selon que la molécule est linéaire (atomes parfaitement alignés) ou non. Dans le premier cas, la molécule ne peut pas accumuler de l’énergie par rotation autour de son axe : il n’y a que deux degrés de liberté au lieu de trois. La contribution de l’énergie cinétique de rotation à l’énergie totale sera deux fois 1/2 <math>k_B T</math> seulement. Pour une molécule non linéaire, l’énergie moyenne totale de rotation est en revanche 3/2 <math>k_B T</math>.
+
+Dans les gaz diatomiques tels que l’[[Diazote|azote]], l’[[Dioxygène|oxygène]], les molécules sont composées de deux atomes identiques et sont forcément linéaires. Avec le modèle de molécule que l’on vient de décrire, la chaleur spécifique totale d’un tel gaz diatomique est donc 5/2 <math>R</math>.
+
+=== Vibration des molécules ===
+
+[[Image:VibrationModesCO2.svg|thumb|upright=1.4|Modes de vibration d’une molécule de [[Dioxyde de carbone|CO<sub>2</sub>]]. Chaque mode contribue comme un oscillateur harmonique pour <math>k_BT</math> à l’énergie totale du gaz. Le 4{{e}} mode, identique au (c) à une rotation près, n’est pas représenté ici.]]
+
+Si on considère qu’une molécule de gaz est un ensemble de plusieurs atomes liés élastiquement et non plus rigidement, alors cette molécule peut vibrer et accumuler de l’énergie dans son mouvement de [[Vibration moléculaire|vibration]]. On peut alors modéliser un [[mode de vibration]] de la molécule par un [[oscillateur harmonique]]. Dans le cas le plus simple à une dimension, cet oscillateur a deux types d’énergie :
+* de l’[[énergie cinétique]], fonction de sa masse <math>m</math> et sa vitesse <math>v</math>
+* de l’[[énergie potentielle]] associée à la force de rappel qui tend à le ramener vers sa position d’équilibre. Cette énergie est fonction de la raideur du ressort <math>a</math> et de l’écart à la position d’équilibre <math>x</math>.
+
+L’énergie totale est alors obtenue en additionnant ces deux énergies :
+
+:<math>
+H = H^{\mathrm{cin}} + H^{\mathrm{pot}} = \tfrac{1}{2}m v^2 + \tfrac{1}{2} a x^2.
+</math>
+
+Le théorème d’équipartition s’applique de la même manière aux deux composantes de l’énergie, chacune comptant pour un degré de liberté. À l’équilibre, l’oscillateur aura donc une énergie moyenne 
+
+:<math>
+\langle H \rangle = 
+\langle H^{\mathrm{cin}} \rangle + \langle H^{\mathrm{pot}} \rangle = 
+\tfrac{1}{2} k_{B} T + \tfrac{1}{2} k_{B} T = k_{B} T.
+</math>
+
+Chaque oscillateur, donc chaque mode de vibration, a donc une énergie moyenne totale <math>k_B T</math> et contribue pour <math>k_B</math> à la chaleur spécifique du système. Pour connaître la contribution des vibrations moléculaires à l’énergie totale, il suffit donc de connaître le nombre de ses modes propres de vibrations : une molécule composée de <math>n</math> atomes en possède <math>3n-5</math> si tous les atomes sont alignés comme dans le [[Dioxyde de carbone|CO<sub>2</sub>]] représenté ci-contre, et <math>3n-6</math> dans le cas contraire, par exemple pour la [[Molécule d'eau|molécule d’eau]]<ref>{{en}} « Vibration of Polyatomic Molecules » dans {{ouvrage|titre=Introduction to Quantum Mechanics|author=S. M. Blinder|passage=220|isbn=0121060519|éditeur=Academic Press|année=2004}}</ref>.
+
+On verra dans la suite qu’il faut toutefois être prudent : tous les modes ne contribuent pas nécessairement à l’énergie totale selon la température ; la mécanique quantique permettra d’expliquer pourquoi.
+
+{{clr}}
+
+== Équipartition en théorie cinétique des gaz ==
+
+{{Article détaillé|Théorie cinétique des gaz}}
+
+Les présentations modernes du théorème d’équipartition dans le cadre de la physique statistique sont très générales mais abstraites. Elles ne reflètent que peu les raisonnements d’origine qui s’appliquaient au problème beaucoup plus concret de la [[théorie cinétique des gaz]]. Les arguments et démonstrations d’alors, bien que moins généraux, sont utilisés par de nombreux enseignants et auteurs pour leur intérêt pédagogique. Ils permettent de mettre en valeur d’une façon différente les hypothèses fondamentales de l’équipartition. 
+
+Dans le cadre de la théorie cinétique des gaz, on considère un système composé d’un très grand nombre de sphères dures dans un conteneur. Ces sphères sont animées d’un mouvement de translation et entrent en collision les unes avec les autres. On peut supposer ici que les sphères n’interagissent pas entre elles en dehors des collisions. Tout l’enjeu de la théorie est de relier les caractéristiques microscopiques de ces mouvements (masse des particules, vitesses) aux grandeurs macroscopiques que l’on mesure (pression, température).
+
+=== Des collisions à l’équipartition ===
+
+[[Image:Elastischer stoß 2D.gif|thumb|upright=2|Illustration d’un [[choc élastique]] entre deux sphères dures en deux dimensions. Les vitesses des deux sphères après le choc sont déterminées par la conservation de l’énergie totale et de la quantité de mouvement.]]
+
+Lorsque deux particules entrent en collision, elles arrivent toutes deux avec des vitesses différentes, donc des énergies cinétiques différentes, et repartent après le choc avec des directions et des vitesses déterminées par la conservation de la quantité de mouvement et de l’énergie totale. En général, l’énergie d’une particule après le choc est différente de son énergie avant le choc. La collision est donc un moyen d’échanger de l’énergie entre les particules. Dans le modèle le plus simple tel qu’il est proposé ici, c’est même le seul moyen. Pour démontrer l’équipartition de l’énergie dans le cadre de ce modèle, il faut donc montrer comment les collisions tendent à répartir l’énergie équitablement en moyenne entre toutes les particules.
+
+Dans tout ce qui suit, on va considérer des [[Choc élastique|chocs élastiques]] entre deux sphères dures de masses différentes <math>m_1</math> et <math>m_2</math>. On considère le choc par commodité dans le [[référentiel]] du [[centre de masse]] des deux particules, lui-même animé d’un mouvement de translation rectiligne uniforme par rapport au conteneur (tant qu’aucune particule ne rebondit sur une paroi), avec une vitesse qu’on notera <math>v_{\mathrm{cm}}</math>. On notera <math>v_1</math> et <math>v_2</math> les vitesses des particules.
+
+À partir d’un cas particulier, [[James Maxwell]] avait avancé que le choc ne pouvait que réduire la différence d’énergie entre les deux particules. À la suite d’un très grand nombre de chocs, l’énergie ne pouvait donc que tendre vers une égalité en moyenne. Cet argument ne suffit pas à montrer que les chocs conduisent à l’équipartition ; il ne s’agit après tout que d’un cas particulier. Toutefois, de manière plus précise, il est possible de montrer que le choc ne peut que réduire la corrélation entre la différence des vitesses des deux particules et la vitesse de leur centre de masse<ref>Pour la démonstration, voir {{Harvsp|texte = Peliti 2007|id = Peliti2007}}</ref>. À l’équilibre, on peut donc supposer que cette corrélation tend vers 0 :
+
+:<math>
+\langle (v_2 - v_1)\cdot v_{\mathrm{cm}} \rangle_{\mathrm{eq}} = 0
+</math>
+
+En utilisant l’expression de la vitesse du centre de masse, on en conclut que
+
+:<math>
+\frac{1}{m_1 + m_2}\,\langle m_2 v_2^2 - m_1 v_1^2 \rangle_{\mathrm{eq}} + \frac{m_2 - m_1}{m_1 + m_2}\, \langle v_1\cdot v_2 \rangle_{\mathrm{eq}} = 0
+</math>
+
+Le premier terme de cette somme est proportionnel à la différence d’énergie cinétique moyenne entre les deux particules. Le second terme est la corrélation entre les vitesses initiales des particules. Si on suppose que ces deux vitesses sont indépendantes, autrement dit qu’il n’y a aucune relation a priori entre les vitesses de deux particules avant le choc, alors ce second terme s’annule. C’est ce qu’on appelle l’hypothèse du [[chaos moléculaire]]. Dans ce cas, on retrouve donc l’égalité des énergies cinétiques moyennes à l’équilibre :
+
+:<math>
+\tfrac{1}{2} m_1 \langle v_1^2 \rangle_{\mathrm{eq}} = \tfrac{1}{2} m_2 \langle v_2^2 \rangle_{\mathrm{eq}}
+</math>
+
+Notons qu’il n’est pas possible de déduire l’équipartition à partir des équations du choc élastique seulement : ces équations restent réversibles à l’échelle macroscopique, alors que l’évolution vers l’équilibre thermodynamique est un processus [[Irréversibilité|irréversible]].
+
+=== Distribution des vitesses à l’équilibre thermodynamique ===
+
+[[Image:MaxwellBoltzmann-fr.svg|right|thumb|upright=1.5|Densités de probabilité des vitesses des atomes de quatre [[gaz rare]]s à une température de 25°C : l’[[hélium]], le [[néon]], l’[[argon]] et le [[xénon]]. Les exposants précisent leur [[nombre de masse]].]]
+
+Une fois que l’équilibre thermodynamique est atteint, les vitesses des particules suivent la [[Loi de distribution des vitesses de Maxwell|distribution des vitesses de Maxwell-Boltzmann]]<ref>voir par exemple {{harvsp | Diu | 1996 | p=350}} pour une démonstration des résultats principaux de la théorie cinétique des gaz.</ref>. Cette distribution est tracée sur la figure ci-contre pour quatre gaz rares. Elle est la seule solution [[État stationnaire|stationnaire]] de l’[[équation de Boltzmann]]. En d’autres termes, les chocs entre particules ne font que modifier les vitesses de particules prises au hasard, mais ne modifient pas la répartition d’ensemble.
+
+On peut vérifier que la distribution de Maxwell-Boltzmann permet de retrouver le théorème d’équipartition pour le gaz parfait monoatomique. Partant de l’expression explicite de la densité de probabilité 
+
+:<math>
+f (v) = 4 \pi 
+\left( \frac{m}{2 \pi k_\text{B} T}\right)^{3/2}\!\!v^2
+\exp \left(
+\frac{-mv^2}{2k_\text{B} T}
+\right)
+</math>
+
+pour la vitesse d’une particule de masse <math>m</math> dans le système, on peut calculer l’énergie cinétique moyenne d’une particule par la formule intégrale :
+
+:<math>
+\langle H^{\mathrm{cin}} \rangle = 
+\langle \tfrac{1}{2} m v^{2} \rangle = 
+\int _{0}^{\infty} \tfrac{1}{2} m v^{2}\ f(v)\ dv = \tfrac{3}{2} k_\text{B} T.
+</math>
+
+On retrouve ici le fait que chaque particule a exactement la même énergie cinétique moyenne, 3/2 <math>k_B T</math><ref>{{harvsp | Diu | 1996 | p=353}}</ref>.
+
+{{clr}}
+
+== Théorème d’équipartition en physique statistique ==
+
+La formulation du théorème d’équipartition s’appuie sur le formalisme de la [[mécanique hamiltonienne]]. L’état d’un système physique est caractérisé par ses coordonnées dans l’[[espace des phases]], communément séparées en [[Mécanique hamiltonienne|coordonnées généralisées]] <math>q_k</math> et [[Mécanique hamiltonienne|impulsions généralisées]] <math>p_k</math>, où <math>p_k</math> est le [[Mécanique hamiltonienne|moment conjugué]] à <math>q_k</math>. Les <math>(q_k, p_k)</math> décrivent complètement l’état du système. Un degré de liberté noté <math>x_n</math> désignera une de ces coordonnées, autrement dit un <math>q_k</math> ou un <math>p_k</math>.
+
+Les crochets <math>\left\langle \ldots \right\rangle</math> désignent une moyenne d’ensemble sur l’[[espace des phases]]. Dans un système [[Hypothèse d'ergodicité|ergodique]], elle est égale à la moyenne prise sur une durée suffisamment longue, qui est celle que l’on mesure en pratique.
+
+=== Théorème d’équipartition ===
+==== Énoncé ====
+
+Le théorème d’équipartition affirme : à l’équilibre thermodynamique, l’énergie moyenne d’un système dont le hamiltonien <math>H</math> s’écrit comme la somme de fonctions quadratiques de ses coordonnées est répartie également entre toutes ses composantes et vaut 1/2 <math>f k_B T</math> où <math>f</math> est le nombre de termes de la somme. On peut l’écrire
+
+{{Bloc emphase|
+<math>
+\langle H \rangle
+= \left\langle\sum_k a_k q_k^2 + \sum_k b_k p_k^2\right\rangle
+= \tfrac{1}{2} f k_B T
+</math>
+}}
+
+Ce nombre <math>f</math> est souvent désigné comme le nombre de « degrés de liberté » du système, mais c’est un raccourci qui peut être trompeur. Ce nombre compte en réalité le nombre de termes quadratiques du hamiltonien ; il ne correspond pas à la définition habituelle d’un [[Degré de liberté (physique et chimie)|degré de liberté]] en physique.
+
+==== Démonstration ====
+
+Dans l’[[ensemble canonique]], cette formule peut être démontrée par calcul direct de la valeur moyenne à partir de la [[fonction de partition]], classiquement notée <math>Z</math>. Le calcul ramène à des intégrales de fonctions gaussiennes qu’on sait calculer explicitement. On utilise ensuite les relations habituelles de l’ensemble canonique. C’est cette démonstration qui était présentée avant que ne soit introduite la version généralisée du théorème.
+
+{{Boîte déroulante début|titre = Détail du calcul direct de l’énergie moyenne dans l’ensemble canonique}}
+
+On considère un hamiltonien de la forme 
+
+:<math>
+H = \sum_k a_k x_k^2
+</math>
+
+La [[Ensemble canonique|fonction de partition canonique]] se réduit alors à un produit d’intégrales de fonctions gaussiennes :
+
+:<math>
+Z = \prod_k \int e^{-\beta a_k x_k^2} \mathrm dx_k
+</math>
+
+Connaissant la valeur de l’intégrale de la fonction gaussienne, on peut écrire :
+
+:<math>
+Z = \prod_k \sqrt{\frac{\pi}{\beta a_k}}
+</math>
+
+En notant <math>f</math> le nombre de termes du hamiltonien, on a donc 
+
+:<math>
+Z \propto \left[\beta^{-1/2}\right]^f
+</math>
+
+Dans l’ensemble canonique, l’énergie moyenne du système est donnée par 
+
+:<math>
+\langle H \rangle = - \frac{\partial \log Z}{\partial \beta}
+</math>
+
+On retrouve alors le théorème :
+
+:<math>
+\langle H \rangle = \tfrac{1}{2} f k_{B} T.
+</math>
+
+{{Boîte déroulante fin}}
+
+=== Théorème généralisé ===
+==== Énoncé ====
+
+On appelle théorème d’équipartition généralisé une formule démontrée pour la première fois par Tolman en 1918<ref>{{Harvsp|id=Tolman1918|texte = Tolman 1918}}</ref> qui étend l’idée de l’équipartition pour des hamiltoniens de forme générale. Même si la présentation qui en est faite diffère légèrement d’un auteur à l’autre, c’est en général cette formule qui est démontrée dans les ouvrages généraux de physique statistique. Ce théorème généralisé affirme que pour un système à l’équilibre thermodynamique à la température <math>T</math>, décrit par un [[Mécanique hamiltonienne|hamiltonien]] <math>H</math> et des degrés de liberté <math>x_n</math>, on a, pour tous les indices <math>n</math> et <math>m</math>,
+
+{{Bloc emphase|
+:<math>\!
+\Bigl\langle x_{m} \frac{\partial H}{\partial x_{n}} \Bigr\rangle = \delta_{mn} k_{B} T.
+</math>
+}}
+
+<math>\delta_{nm}</math> est le [[symbole de Kronecker]] qui vaut 1 si <math>n = m</math> et 0 dans les autres cas.
+
+Dans ce cas général, aucune hypothèse n’est faite sur la forme du hamiltonien. En contrepartie, l’énergie n’est pas nécessairement répartie de manière égale entre toutes ces composantes : il n’y a pas nécessairement « équipartition » de l’énergie au sens strict. On en verra un exemple dans le cas de la sédimentation de particules. C’est pourquoi plusieurs auteurs ne reprennent pas l’appellation « théorème d’équipartition généralisé » proposée initialement par Tolman. 
+
+Bien entendu, cette formule générale permet de retrouver le résultat particulier du paragraphe précédent.
+
+==== Démonstrations ====
+
+Le résultat général peut se démontrer dans l’[[ensemble microcanonique]] quand l’énergie totale du système est constante, et aussi dans l’[[ensemble canonique]], quand le système est couplé à une [[Thermostat (thermodynamique)|source de chaleur]] avec laquelle il peut échanger de l’énergie. Dans un cas comme dans l’autre, la démonstration procède par le calcul explicite de la moyenne sur l’espace des phases.
+
+Dans tous les cas, on notera <math>\mathrm d\Gamma</math> l’élément de volume infinitésimal de l’espace des phases
+:<math>
+\mathrm d\Gamma = \prod_{i} \mathrm d q_{i} \mathrm d p_{i}
+</math>.
+
+Dans l’[[ensemble microcanonique]], le système est isolé du reste du monde, ou au moins très faiblement couplé. De la sorte, son énergie totale est constante. On dit que l’énergie totale <math>H</math> est confinée entre <math>E</math> et <math>\Delta E</math>. Pour une énergie <math>E</math> donnée et un écart <math>\Delta E</math>, on note <math>\Gamma(E,\Delta E)</math> le volume de la région de l’espace des phases dans laquelle l’énergie du système est comprise entre <math>E</math> et <math>E+\Delta E</math> :
+
+:<math>
+\Gamma (E, \Delta E) = \int_{H \in \left[E, E+\Delta E \right]} \mathrm d\Gamma
+</math>.
+
+La probabilité d’occupation de tous les états de cette région est la même, par définition de l’ensemble microcanonique. La valeur moyenne d’une grandeur <math>X</math> s’écrit alors
+
+:<math>
+\langle X \rangle =
+\frac{1}{\Gamma} \, \int_{H \in \left[ E, E+\Delta E \right]} X \,\mathrm d\Gamma
+</math>
+
+On peut alors montrer que 
+:<math>
+\Bigl\langle x_m \frac{\partial H}{\partial x_n} \Bigr\rangle = \delta_{mn} k_B T
+</math>.
+
+{{Boîte déroulante début|titre = Détail du calcul dans l’ensemble microcanonique}}
+
+On note maintenant <math>\Sigma E</math> le volume total de l’espace des phases dans lequel l’énergie est inférieure à <math>E</math> :
+:<math>
+\Sigma (E) = \int_{H < E} \mathrm d\Gamma
+</math>.
+
+Puisque <math>\Delta E</math> est très petit devant E, les intégrations suivantes sont équivalentes
+
+:<math>
+\int_{H \in \left[ E, E+\Delta E \right]} \ldots \mathrm d\Gamma = \Delta E \frac{\partial}{\partial E} \int_{H < E} \ldots \mathrm d\Gamma,
+</math>
+
+de sorte que <math>\Gamma</math> est proportionnel à <math>\Delta E</math> 
+
+:<math>
+\Gamma = \Delta E \ \frac{\partial \Sigma}{\partial E} = \Delta E \ \rho(E),
+</math>
+
+où <math>\rho(E</math>) est la densité d’états. On introduit enfin la définition usuelle de l’[[entropie]] en physique statistique :
+
+:<math>
+S = k_B \log\Sigma(E)~
+</math> 
+
+et celle de la température microcanonique <math>T</math> : 
+
+:<math>
+\frac{1}{T} = \frac{\partial S}{\partial E} = k_B \frac{\partial \log \Sigma}{\partial E} = k_B \frac{1}{\Sigma}\,\frac{\partial \Sigma}{\partial E}
+</math>.
+
+Avec ces définitions, la moyenne sur les variables <math>x_m</math> et <math>x_n</math> (qui peuvent être des <math>p_k</math> ou des <math>q_k</math>) est donnée par 
+
+:<math>
+\Bigl\langle x_{m} \frac{\partial H}{\partial x_{n}} \Bigr \rangle =
+\frac{1}{\Gamma} \, \int_{H \in \left[ E, E+\Delta E \right]} x_{m} \frac{\partial H}{\partial x_{n}} \,\mathrm d\Gamma
+</math>
+
+En utilisant les résultats précédents, on peut faire apparaître la densité d’état <math>\rho</math> :
+
+:<math>
+\begin{align}
+\Bigl\langle x_{m} \frac{\partial H}{\partial x_{n}} \Bigr \rangle & = \frac{\Delta E}{\Gamma}\, \frac{\partial}{\partial E} \int_{H < E} x_{m} \frac{\partial H}{\partial x_{n}} \,\mathrm d\Gamma\\
+ & = \frac{1}{\rho} \,\frac{\partial}{\partial E} \int_{H < E} x_{m} \frac{\partial \left( H - E \right)}{\partial x_{n}} \,\mathrm d\Gamma,
+\end{align}
+</math>
+
+où la dernière égalité provient de ce que <math>E</math> est constante et ne dépend pas de <math>x_n</math>. Une intégration par parties donne alors
+:<math>
+\int_{H < E} x_{m} \frac{\partial ( H - E )}{\partial x_{n}} \,\mathrm d\Gamma = 
+\int_{H < E} \frac{\partial}{\partial x_{n}} \bigl( x_{m} ( H - E ) \bigr) \,\mathrm d\Gamma - 
+\int_{H < E} \delta_{mn} ( H - E ) \mathrm d\Gamma
+</math>.
+
+La première intégrale est nulle (elle peut être réécrite comme une intégrale de <math>H-E</math> sur l’hypersurface où <math>H = E</math>). Il reste donc 
+
+:<math>
+\int_{H < E} x_{m} \frac{\partial ( H - E )}{\partial x_{n}} \,\mathrm d\Gamma = \delta_{mn} \int_{H < E} ( E - H ) \,\mathrm d\Gamma
+</math>.
+
+La substitution de ce résultat dans l’équation précédente donne 
+
+:<math>
+\Bigl\langle x_{m} \frac{\partial H}{\partial x_{n}} \Bigr\rangle = 
+\delta_{mn} \frac{1}{\rho} \, \frac{\partial}{\partial E} \int_{H < E}\left( E - H \right)\,\mathrm d\Gamma = 
+\delta_{mn} \frac{1}{\rho} \, \int_{H < E} \,\mathrm d\Gamma = 
+\delta_{mn} \frac{\Sigma}{\rho}.
+</math>
+
+Puisque <math> \rho = \frac{\partial \Sigma}{\partial E} </math> le théorème d’équipartition s’ensuit :
+
+:<math>
+\Bigl\langle x_{m} \frac{\partial H}{\partial x_{n}} \Bigr\rangle = 
+\delta_{mn} \Bigl(\frac{1}{\Sigma} \frac{\partial \Sigma}{\partial E}\Bigr)^{-1} = 
+\delta_{mn} \Bigl(\frac{\partial \log \Sigma} {\partial E}\Bigr)^{-1} = \delta_{mn} k_{B} T.
+</math>
+
+On retrouve la formulation générale du théorème.
+
+{{Boîte déroulante fin}}
+
+Dans l’[[ensemble canonique]], on considère le système en équilibre thermodynamique avec une source de chaleur de température fixe <math>T</math> (en Kelvin). La probabilité d’occupation de chaque état dans l’espace des phases est donnée par son [[facteur de Boltzmann]] multiplié par un facteur de normalisation qui assure que la somme des probabilités est bien égale à un et dont la valeur n’importe pas ici ; on le notera <math>\mathcal N</math>. La valeur moyenne d’une quantité <math>X</math> est alors définie par
+
+:<math>
+\langle X \rangle = \mathcal{N} \int X e^{-\beta H(\vec x)} \mathrm d\Gamma.
+</math>
+
+Le calcul explicite (qui fait essentiellement appel à une intégration par parties) donne le résultat souhaité.
+
+{{Boîte déroulante début|titre = Détail du calcul dans l’ensemble canonique}}
+
+On cherche à calculer
+
+:<math>
+\left\langle x_k \frac{\partial H}{\partial x_k} \right\rangle = \mathcal{N} \int x_{k} \frac{\partial H}{\partial x_{k}} e^{-\beta H(\vec x)} \mathrm d\Gamma.
+</math>
+
+Une [[intégration par parties]] sur la variable <math>x_k</math> nous donne 
+
+:<math>
+\left\langle x_k \frac{\partial H}{\partial x_k} \right\rangle = 
+\mathcal{N} \int \left[ -\frac{1}{\beta} x_k e^{-\beta H(\vec x)}\right]_{x_k=x_{k\mathrm{min}}}^{x_k=x_{k\mathrm{max}}} \mathrm d\Gamma_k
++\mathcal{N}\frac{1}{\beta}\int e^{-\beta H(\vec x)}\mathrm d\Gamma.
+</math>
+
+où <math>\mathrm d\Gamma_k = \mathrm d\Gamma / \mathrm d x_k</math> indique que la première intégration n’est pas faite sur <math>x_k</math>. 
+
+Le premier terme est nul ; on peut s’en convaincre en considérant le cas d’un gaz dans un conteneur. Si <math>x_k</math> est une impulsion généralisée, alors l’énergie cinétique associée devient infinie aux bornes. Si <math>x_k</math> est une coordonnée, ses valeurs maximale et minimale sont atteintes aux parois du conteneur pour lesquelles l’énergie potentielle tend vers l’infini. Dans les deux cas, l’exponentielle tend vers 0. De plus, on reconnaît la fonction de partition dans la seconde intégrale qui vaut donc 1. La formule recherchée s’ensuit donc immédiatement :
+
+:<math>
+\Bigl\langle x_{k} \frac{\partial H}{\partial x_{k}} \Bigr\rangle = \frac{1}{\beta} = k_{B} T.
+</math>
+
+{{Boîte déroulante fin}}
+
+== Théorème d’équipartition et théorème du viriel ==
+
+{{article détaillé|Théorème du viriel}}
+
+Le théorème d’équipartition est étroitement lié au [[théorème du viriel]] qui s’applique lui aussi aux systèmes à plusieurs particules. Ce dernier a d’ailleurs été proposé par [[Rudolf Clausius]]<ref>{{Article | auteur = Rudolf Clausius | date = 1870 | titre = Ueber einen auf die Wärme anwendbaren mechanischen Satz | journal = Annalen der Physik | vol = 141 | pages = 124–130 | texte = http://gallica.bnf.fr/ark:/12148/bpt6k152258 | lang = de}}<br />{{Article| auteur = Rudolf Clausius | date = 1870 | titre = On a Mechanical Theorem Applicable to Heat | journal = Philosophical Magazine, Ser. 4 | vol = 40 | pages = 122–127|lang=en}}</ref> lors des développements des fondements de la [[thermodynamique]], alors qu’il cherchait à relier les notions de [[température]] et de [[chaleur]] aux mouvements des molécules de gaz.
+
+Partant du théorème d’équipartition généralisé, en utilisant les relations de la mécanique hamiltonienne, on peut écrire :
+
+:<math>
+k_B T = \Bigl\langle q_{k} \frac{\partial H}{\partial q_{k}} \Bigr\rangle = -\Bigl\langle q_{k} \frac{dp_{k}}{dt} \Bigr\rangle
+</math>
+
+D’après le [[principe fondamental de la dynamique]], la dérivée de <math>p_k</math> par rapport au temps est égale à la force généralisée <math>F_k</math> agissant sur la particule. On peut donc écrire 
+
+:<math>
+k_B T = - \langle q_k F_k \rangle
+</math>
+
+Toujours d’après le théorème d’équipartition, on sait que la valeur moyenne de l’énergie cinétique pour un degré de liberté vaut <math>k_B T /2</math>. En combinant ces deux relations, on obtient donc :
+
+:<math>
+\frac{1}{2}m\langle v^2 \rangle = -\frac{1}{2}\langle q_k F_k \rangle
+</math>
+
+Cette relation est très semblable au théorème du viriel tel qu’énoncé à l’origine par Clausius : pour un ensemble de particules de masse <math>m</math> animées d’un mouvement stable, repérées par leurs positions <math>\vec r</math> et leurs vitesses <math>\vec v</math>, sur lesquelles s’exerce des forces <math>\vec F</math>, on a
+
+:<math>
+\sum \frac{1}{2} m \overline{v^2} = - \frac{1}{2}\sum\overline{\vec{r}\cdot\vec{F}}
+</math>
+
+La différence majeure réside dans le fait qu’il s’agit dans ce dernier cas d’une moyenne temporelle, représentée par le trait horizontal, et non plus d’une moyenne d’ensemble. De manière générale, le [[Théorème ergodique|théorème de Birkhoff]] montre que l’égalité de ces deux moyennes est vérifiée pour les systèmes ergodiques.
+
+== Applications classiques de l’équipartition ==
+=== Loi de Dulong et Petit ===
+
+{{Article détaillé|Loi de Dulong et Petit}}
+
+[[Image:Vätskefas.png|thumb|upright=1.4|right|Dans un cristal, les atomes oscillent autour de leur position d’équilibre. La contribution de ces oscillations à la [[chaleur spécifique]] conduit à la [[loi de Dulong et Petit]].]]
+
+La [[loi de Dulong et Petit]] sur la chaleur spécifique des solides se déduit très simplement de ce qui précède<ref>voir par exemple {{Harvsp | Diu | 1996 | p = 381}} pour ce résultat dans le cadre d'une présentation plus générale du calcul de la chaleur spécifique des solides.</ref>. On considère un cristal composé de <math>N</math> atomes. Chacun de ces atomes occupe une position d’équilibre autour de laquelle il peut osciller. Ce mouvement peut se faire dans les trois directions de l’espace, de manière indépendante. Le solide peut donc être considéré en première approche comme un système de <math>3N</math> [[Oscillateur harmonique|oscillateurs harmoniques]] indépendants. 
+
+On a vu précédemment qu’un oscillateur harmonique a une énergie moyenne <math>k_B T</math>. L’énergie moyenne totale du solide est <math>3Nk_B T</math>, sa chaleur spécifique est <math>3Nk_B</math>. La chaleur spécifique molaire de ce matériau est donc <math>3N_Ak_B</math> où <math>N_A</math> est le [[Nombre d'Avogadro|nombre d’Avogadro]], ce qui s’écrit encore <math>3R</math> où <math>R</math> est la [[constante des gaz parfaits]]. On retrouve bien la [[loi de Dulong et Petit]] selon laquelle la chaleur spécifique molaire des solides est indépendante de la nature du solide et égale à <math>3R</math>, soit environ 6 cal/(mol·K).
+
+{{clr}}
+
+=== Dérivation de la loi des gaz parfaits ===
+
+Le théorème d’équipartition peut être utilisé pour retrouver la [[loi des gaz parfaits]] à partir de la mécanique classique. Ce calcul consiste à calculer le [[viriel]] du gaz de deux façons différentes. 
+
+On note <math>\mathbf q = (q_x, q_y, q_z)</math> et <math>\mathbf p = (p_x, p_y, p_z)</math> les vecteurs positions et quantité de mouvement d’une particule dans le gaz et <math>\mathbf F</math> la force totale s’exerçant sur cette particule, alors
+:<math>
+\begin{align}
+\langle \mathbf{q} \cdot \mathbf{F} \rangle &= \Bigl\langle q_{x} \frac{dp_{x}}{dt} \Bigr\rangle + 
+\Bigl\langle q_{y} \frac{dp_{y}}{dt} \Bigr\rangle + 
+\Bigl\langle q_{z} \frac{dp_{z}}{dt} \Bigr\rangle\\
+&=-\Bigl\langle q_{x} \frac{\partial H}{\partial q_x} \Bigr\rangle -
+\Bigl\langle q_{y} \frac{\partial H}{\partial q_y} \Bigr\rangle - 
+\Bigl\langle q_{z} \frac{\partial H}{\partial q_z} \Bigr\rangle = -3k_{B} T,
+\end{align}
+</math>
+où la première égalité est donnée par la seconde loi de Newton, et la seconde ligne utilise les équations de Hamilton et le théorème d’équipartition. La sommation sur l’ensemble des <math>N</math> particules du système donne 
+:<math>
+- \biggl\langle \sum_{k=1}^{N} \mathbf{q}_{k} \cdot \mathbf{F}_{k} \biggr\rangle = 3Nk_{B} T.
+</math>
+
+En vertu de la troisième loi de Newton et de l’hypothèse du gaz parfait, la force totale sur le système est la force appliquée par les parois du conteneur, et cette force est donnée par la pression <math>P</math> du gaz. En conséquence :
+:<math>
+-\biggl\langle\sum_{k=1}^{N} \mathbf{q}_{k} \cdot \mathbf{F}_{k}\biggr\rangle = P \oint_{\mathrm{surface}} \mathbf{q} \cdot \mathrm d\mathbf S,
+</math>
+où <math>\mathrm d\mathbf S</math> est un élément de surface infinitésimal sur la paroi du conteneur. En utilisant le [[théorème de Green-Ostrogradsky]], on peut calculer
+
+:<math>
+P \oint_{\mathrm{surface}} \mathbf{q} \cdot \mathbf{dS} = P \int_{\mathrm{volume}} \left( \boldsymbol\nabla \cdot \mathbf{q} \right) dV = 3PV,
+</math>
+
+où <math>\mathrm d V</math> est un élément de volume infinitésimal dans le conteneur et <math>V</math> est son volume total. En regroupant des égalités, on obtient
+
+:<math>
+3Nk_{B} T = -\biggl\langle \sum_{k=1}^{N} \mathbf{q}_{k} \cdot \mathbf{F}_{k} \biggr\rangle = 3PV,
+</math>
+
+ce qui nous donne immédiatement la [[loi des gaz parfaits]] pour <math>N</math> particules :
+
+:<math>
+PV = Nk_{B} T = nRT,\,
+</math>
+
+où <math>n = N / N_a</math> est le nombre de moles de gaz et <math>R = N_A k_B</math> est la [[constante des gaz parfaits]].
+
+=== Étude d’un mouvement brownien ===
+
+[[Image:BrownianMotion.png|thumb|right|upright=1.4|[[Mouvement brownien]] typique d’une particule en deux dimensions. Le théorème d’équipartition permet de retrouver en moyenne les caractéristiques de ce mouvement aléatoire au cours du temps.]]
+
+Le [[mouvement brownien]] désigne une description mathématique du mouvement aléatoire d’une grosse particule immergée dans un fluide et qui n’est soumise à aucune autre interaction que des [[choc]]s avec les petites molécules du fluide environnant. Les mécanismes en œuvre dans ce type de mouvement sont proches des idées de la théorie cinétique des gaz. Le théorème d’équipartition fut utilisé très tôt, dès 1879, pour caractériser un tel mouvement<ref>{{Harvsp|texte=Bergia et Navarro 1997|id=Bergia1997|p = 188}}</ref>.
+
+On peut partir de l’[[équation de Langevin]] selon laquelle le mouvement d’une particule de masse <math>m</math> et de vitesse <math>v</math> est régi par la seconde loi de Newton qui s’écrit
+
+:<math>
+\frac{d\mathbf{v}}{dt} = \frac{1}{m} \mathbf{F} = -\frac{\mathbf{v}}{\tau} + \frac{1}{m} \mathbf{F}^{\mathrm{a}},
+</math>
+
+où <math>\mathbf F^{\mathrm a}</math> est une force aléatoire représentant les collisions aléatoires entre la particule et les molécules voisines, et où la constante de temps <math>\tau</math> reflète la force de [[frottement fluide]] qui s’oppose au mouvement de la particule dans la solution. La trainée est souvent notée <math>\mathbf F^{\mathrm{tr}} = - \gamma \mathbf v</math>, la constante de temps est alors <math>m/\gamma</math>.
+
+En faisant le produit scalaire de cette équation avec le vecteur position <math>\mathbf r</math>, puis une moyenne, on obtient
+
+:<math>
+\Bigl\langle \mathbf{r} \cdot \frac{d\mathbf{v}}{dt} \Bigr\rangle + 
+\frac{1}{\tau} \langle \mathbf{r} \cdot \mathbf{v} \rangle = 0
+</math>
+
+pour le mouvement brownien (puisque la force aléatoire <math>\mathbf F^{\mathrm a}</math> et la position <math>\mathbf r</math> ne sont pas corrélées). En utilisant les identités remarquables
+
+:<math>
+\frac{d}{dt} \left( \mathbf{r} \cdot \mathbf{r} \right) = 
+\frac{d}{dt} \left( r^{2} \right) = 2 \left( \mathbf{r} \cdot \mathbf{v} \right)
+</math>
+
+et 
+
+:<math>
+\frac{d}{dt} \left( \mathbf{r} \cdot \mathbf{v} \right) = v^{2} + \mathbf{r} \cdot \frac{d\mathbf{v}}{dt},
+</math>
+
+l’équation de base du mouvement brownien peut être transformée en 
+
+:<math>
+\frac{d^{2}}{dt^{2}} \langle r^{2} \rangle + \frac{1}{\tau} \frac{d}{dt} \langle r^{2} \rangle = 
+2 \langle v^{2} \rangle = \frac{6}{m} k_{B} T,
+</math>
+
+où la dernière égalité provient du théorème d’équipartition pour l’énergie cinétique de translation :
+
+:<math>
+\langle H^{\mathrm{cin}} \rangle = \Bigl\langle \frac{p^{2}}{2m} \Bigr\rangle = \langle \tfrac{1}{2} m v^{2} \rangle = \tfrac{3}{2} k_{B} T.
+</math>
+
+L’équation différentielle ci-dessus pour <math>\langle r^2\rangle</math> a une solution exacte (pour des conditions initiales convenables) :
+
+:<math>
+\langle r^{2} \rangle = \frac{6k_{B} T \tau^{2}}{m} \left( e^{-t/\tau} - 1 + \frac{t}{\tau} \right).
+</math>
+
+À une échelle de temps très courte, i.e. pour <math>t \ll \tau</math>, la particule se comporte comme une particule libre : en utilisant le [[développement de Taylor]] de la fonction exponentielle, le carré de la distance croît quadratiquement :
+
+:<math>
+\langle r^{2} \rangle \approx \frac{3k_{B} T}{m} t^{2} = \langle v^{2} \rangle t^{2}.
+</math>
+
+En revanche, à une échelle de temps plus longue, pour <math>t \gg \tau</math>, l’exponentielle et les termes constants deviennent négligeables et le carré de la distance ne croît que linéairement :
+
+:<math>
+\langle r^{2} \rangle \approx \frac{6k_{B} T\tau}{m} t = 6\gamma k_{B} T t.
+</math>
+
+Ceci décrit la [[diffusion]] de la particule dans le temps. Une équation analogue pour la diffusion de la rotation d’une molécule rigide peut être calculée de la même manière.
+
+=== Étude de la sédimentation de particules ===
+
+Le théorème d’équipartition généralisé a été appliqué à l’étude de la sédimentation de particules en suspension sous l’influence de la gravité<ref>{{Harvsp|texte = Tolman 1918 | id = Tolman1918}}</ref>. On considère pour cela des particules pesantes (par exemple de grosses protéines) dans l’eau. Les chocs entre ces particules produisent un mécanisme de [[diffusion]] qui tend à homogénéiser la concentration des protéines dans tout le récipient. Par ailleurs, la gravité tend à faire tomber toutes les protéines vers le bas du récipient. Une fois que l’équilibre entre ces deux mécanismes antagonistes a été atteint, il est possible de déterminer grâce au théorème d’équipartition l’énergie potentielle moyenne d’une particule et donc sa position moyenne. Pour une bouteille infiniment haute, l’énergie potentielle de gravitation d’une particule de masse <math>m_b</math> est donnée par 
+
+:<math>
+H^{\mathrm{grav}} = m_{b} g z\,,
+</math>
+
+où <math>z</math> est la hauteur d’une particule dans la bouteille et <math>g</math> est l’accélération de la pesanteur. 
+
+Ce processus peut trouver une application dans l’étude de la sédimentation de protéines qui diffusent la lumière et donnent un aspect trouble qu’on peut parfois voir dans la bière<ref>{{Article | auteur = Miedl M, Garcia M, Bamforth C |titre=Haze formation in model beer systems |journal=J. Agric. Food Chem. |vol=53 |issue=26 |pages=10161-5 |date=2005 |pmid=16366710|lang=en}}</ref>. Puisque <math>s=1</math>, l’énergie potentielle moyenne d’un groupe de protéine est <math>k_B T</math>. Donc, si les groupes de protéines ont une masse de 10<sup>7</sup> [[uma]] (à peu près la taille d’un virus), l’aspect sera trouble jusqu’à une hauteur moyenne de 2 cm à l’équilibre. 
+
+Ce processus de sédimentation est plus précisément décrit par l’[[équation de Mason-Weaver]]<ref name="mason_1924" >{{Article | auteur = Mason M, Weaver W | date = 1924 | titre = The Settling of Small Particles in a Fluid | journal = [[Physical Review]] | volume = 23 | pages = 412–426|lang=en}}</ref>.
+
+=== Calcul du bruit thermique dans les composants électroniques ===
+
+{{article détaillé|Bruit thermique}}
+
+Le théorème d’équipartition peut être utilisé pour démontrer l’expression du [[bruit thermique]] dans les composants électroniques<ref name="mandl_1971" >{{Harvsp|texte = Mandl 1971| id = Mandl1971}}</ref>. Dans une résistance, l’agitation thermique des électrons de conductions crée des fluctuations de densité électronique, donc de courant électrique, qui conduisent à la présence d’un [[bruit blanc]] même en l’absence de toute tension appliquée. Aux bornes d’une [[Résistance (électricité)|résistance]], ce bruit est donné par la relation :
+
+<center> <math>\overline{v_b^2} = 4\ k_BT \cdot R \cdot \Delta f\;</math> </center>
+
+où <math>\overline{v^2}</math> est la [[Variance (statistiques et probabilités)|variance]] de la tension aux bornes de la résistance, R est la résistance exprimée en [[Ohm (unité)|ohms]], et <math>\Delta f\;</math>, la [[bande passante]] considérée.
+
+Cette formule permet de prévoir le bruit minimum présent sur un système électronique, et donc sa limite de détection. Le même phénomène de bruit thermique est observé aux bornes d’une [[Capacité électrique|capacité]]. C’est une limitation des [[Capteur photographique|capteurs photographiques]].
+
+=== Problème de l’oscillateur anharmonique ===
+
+Un oscillateur [[Anharmonicité|anharmonique]] est un oscillateur pour lequel l’énergie potentielle n’est pas une fonction quadratique de l’élongation <math>q</math> (la position généralisée qui mesure l’écart de l’oscillateur à la position d’équilibre). Ces oscillateurs donnent un point de vue complémentaire sur le théorème d’équipartition<ref name="tolman_1927" >{{harvsp|Richard Tolman|1927|p=76-77}}</ref>. On peut prendre des exemples simples avec des énergies dont l’expression est de la forme
+
+:<math>
+H^{\mathrm{pot}} = C q^{s}
+</math>
+
+où <math>C</math> et <math>s</math> sont des nombres réels arbitraires. Dans ce cas, le théorème d’équipartition prédit que 
+
+:<math>
+k_{B} T = \Bigl\langle q \frac{\partial H^{\mathrm{pot}}}{\partial q} \Bigr\rangle = 
+\langle q \cdot s C q^{s-1} \rangle = \langle s C q^{s} \rangle = s \langle H^{\mathrm{pot}} \rangle.
+</math>
+
+Ainsi, l’énergie potentielle moyenne est égale à <math>k_B T / s</math> et non plus <math>k_B T / 2 </math> comme pour l’oscillateur harmonique (pour lequel <math>s = 2</math>).
+
+Plus généralement, l’expression de l’énergie d’un système à une dimension a un [[développement de Taylor]] en fonction de l’élongation <math>q</math>
+
+:<math>
+H^{\mathrm{pot}} = \sum_{n=2}^{\infty} C_{n} q^{n}
+</math>
+
+Il n’y a pas de terme pour <math>n = 1</math> car à l’équilibre, la force totale s’exercant sur le système est nulle et donc la dérivée première de l’énergie est nulle. Le terme constant pour <math>n = 0</math> est inutile, puisque l’énergie à l’équilibre peut être posée égale à 0 par convention. Dans ce cas, le théorème d’équipartition affirme que<ref name="tolman_1927" /> 
+
+:<math>
+k_{B} T = \Bigl\langle q \frac{\partial H^{\mathrm{pot}}}{\partial q} \Bigr\rangle = 
+\sum_{n=2}^{\infty} \langle q \cdot n C_{n} q^{n-1} \rangle = 
+\sum_{n=2}^{\infty} n C_{n} \langle q^{n} \rangle.
+</math>
+
+Contrairement aux autres exemples cités ici, la formule de l’équipartition
+:<math>
+\langle H^{\mathrm{pot}} \rangle = \frac{1}{2} k_{B} T - 
+\sum_{n=3}^{\infty} \left( \frac{n - 2}{2} \right) C_{n} \langle q^{n} \rangle
+</math>
+ne permet pas d’écrire l’énergie potentielle moyenne en fonction de constantes connues.
+
+== Échecs de l’équipartition ==
+
+L’équipartition de l’énergie, malgré sa grande généralité, est un résultat valable sous certaines hypothèses (ergodicité, équilibre thermodynamique) et dans certaines limites (effets quantiques négligeables). Les paragraphes qui suivent détaillent différents cas pour lesquels l’équipartition ne s’applique pas. 
+
+=== Dans les systèmes non ergodiques ===
+
+{{Article connexe|hypothèse d'ergodicité}}
+
+Le théorème d’équipartition est valable seulement pour les systèmes [[Hypothèse ergodique|ergodiques]] à l’équilibre thermodynamique, pour lesquels tous les états de même énergie ont la même probabilité d’être occupé. Dans un système ergodique, il doit être possible d’échanger de l’énergie entre ses différentes formes dans le système, afin qu’elle puisse se répartir en parts égales au cours du temps. Dans le cas d’un gaz parfait, ce sont les chocs entre molécules qui assurent ces échanges d’énergie.
+
+Paradoxalement, il existe peu de systèmes dont l’ergodicité a pu être prouvée rigoureusement. Un exemple célèbre est le [[Billard de Sinai|billard]] de [[Iakov Sinaï]]<ref>{{ouvrage | auteurs = Arnold V., Avez A. | année = 1967 | titre = Théorie ergodique des systèmes dynamiques | éditeur = Gauthier-Villars | lieu = Paris}}</ref>. Les conditions qui permettent d’assurer l’ergodicité d’un système isolé - et donc l’équipartition - ont été étudiées et ont donné naissance à la [[théorie ergodique]]. 
+
+Un contre-exemple fréquemment cité où l’énergie n’est pas partagée entre ses différentes formes, et donc où l’équipartition ne s’applique pas dans l’ensemble microcanonique est un système d’oscillateurs harmoniques couplés<ref name="reichl_1998" >{{ouvrage | auteur = Reichl LE | année = 1998 | langue = anglais | titre = A Modern Course in Statistical Physics | éditeur = Wiley Interscience, 2{{e}} édition | isbn = 978-0471595205 | passage = 326–333}}</ref>. Si le système est isolé, l’énergie de chaque [[mode normal]] est constante et fixée à sa valeur initiale.
+
+Si on perturbe un tel système en introduisant des termes de couplage non linéaires suffisamment forts, l’énergie peut être transférée d’un mode à l’autre, on peut alors sous certaines conditions retrouver l’ergodicité et revenir dans le champ d’application du théorème d’équipartition. Mais il ne suffit pas d’une petite perturbation pour rendre un système ergodique : c’est ce que montre le [[Théorème KAM|théorème de Kolmogorov–Arnold–Moser]]. Même un système chaotique, donc extrêmement sensible aux conditions intiales, n’est pas nécessairement ergodique, même si c’est habituellement une hypothèse raisonnable<ref name="reichl_1998" />.
+
+=== Pour des niveaux d’énergie quantifiés ===
+
+Les démonstrations données précédemment supposent que l’énergie est une fonction continue sur l’espace des phases. Or, dans un système quantique, les [[Niveau d'énergie|niveaux d’énergie]] sont au contraire discrets. Pour que le théorème s’applique, il est donc nécessaire que les niveaux d’énergie soient suffisamment rapprochés pour qu’on puisse la considérer tout de même comme continue. On parle alors d’[[approximation classique]]. Ceci n’est réalisé qu’à la condition que l’énergie thermique <math>k_B T</math> soit beaucoup plus grande que l’écart entre deux niveaux d’énergie. Dans le cas contraire, les calculs ne sont plus valides, le degré de liberté considéré est dit {{guil|gelé}}, l’équipartition ne s’applique plus.
+
+==== Oscillateur harmonique quantique ====
+
+[[Image:Et fig2-fr.png|right|upright=1.3|thumb|Énergie moyenne d’un oscillateur harmonique quantique (en rouge) en fonction de la température comparée à la valeur prédite par le théorème d’équipartition (en noir). Les deux courbes se séparent nettement aux basses températures.]]
+
+Le cas de l’oscillateur harmonique est un exemple particulièrement important. On a vu précédemment que selon le théorème d’équipartition, son énergie moyenne est égale à <math>k_B T</math>. Dans le cas quantique, on peut calculer explicitement son énergie moyenne. Ses niveaux d’énergie sont donnés par <math>E_n = n h\nu</math><ref>Les niveaux d’énergie sont rigoureusement <math>E_n = (n+1/2) h\nu</math>. Le terme constant <math>h\nu /2</math> est omis ici car il ne joue aucun rôle dans les calculs qui suivent.</ref> où <math>h</math> est la [[constante de Planck]], <math>\nu</math> est la fréquence de l’oscillateur et <math>n</math> est un entier positif. Dans l’ensemble canonique, la probabilité qu’un niveau d’énergie soit occupé est donné par son [[facteur de Boltzmann]]
+
+:<math>
+P(E_n) = \frac{e^{-\beta E_n}}{Z}.
+</math>
+
+<math>\beta = 1 / (k_B T)</math> est la température statistique et <math>Z</math> est la [[fonction de partition]] donnée par
+
+:<math>
+Z = \sum_{n=0}^{\infty} e^{-n\beta h\nu} = \frac{1}{1 - e^{-\beta h\nu}}.
+</math>
+
+L’énergie moyenne de l’oscillateur est donnée par 
+
+:<math>
+\langle H \rangle = \sum_{n=0}^{\infty} E_{n} P(E_{n})
+</math>
+
+ou encore, en utilisant la relation classique de l’ensemble canonique
+:<math>
+\langle H \rangle = -\frac{\partial \log Z}{\partial \beta}.
+</math>
+
+On peut donc calculer explicitement l’énergie moyenne :
+
+:<math>
+\langle H \rangle = h\nu \frac{e^{-\beta h\nu}}{1 - e^{-\beta h\nu}}.
+</math>
+
+Cette énergie moyenne est tracée sur la figure ci-contre et comparée au cas classique. Pour les hautes températures, quand l’énergie thermique <math>k_B T</math> est très supérieure à l’écart <math>h\nu</math> entre deux niveaux, l’argument de l’exponentielle tend vers 0 et l’énergie moyenne tend vers <math>k_B T</math>, conformément au théorème d’équipartition. En revanche, pour les basses températures, quand <math>k_\text{B}T \ll h\nu</math>, l’énergie moyenne tend vers 0, le degré de liberté est dit « gelé ». On peut ainsi définir une température caractéristique de l’oscillateur <math>T_{\mathrm{osc}} = h \nu / k_B</math> en dessous de laquelle les effets quantiques se font sentir.
+
+==== Retour sur le gaz diatomique ====
+
+[[Image:DiatomicSpecHeat1.png|thumb|upright=1.3|right|Simulation du tracé de la chaleur spécifique d’un gaz diatomique en fonction de la température. Le théorème d’équipartition est vérifié à hautes températures, en général des températures bien plus élevées que la température ambiante. La baisse de la chaleur spécifique aux températures plus basses est due à des effets quantiques.]]
+
+Les gaz diatomiques donnent un bon exemple de cette limitation. On peut modéliser une molécule d’un tel gaz par deux masses reliées par un ressort. Une telle molécule possède trois degrés de liberté en translation, deux degrés de liberté en rotation, et constitue de plus un oscillateur harmonique. Le théorème d’équipartition prédit donc que la chaleur spécifique du gaz est égale à 7/2 <math>R</math>. C’est effectivement le cas dans la limite des hautes températures. 
+
+Si on considère maintenant que la molécule est un oscillateur harmonique quantique, on peut, comme précédemment, associer une température caractéristique <math>T_{\mathrm{vib}}</math> à son mouvement de vibration. Si on descend à des températures plus basses que <math>T_{\mathrm{vib}}</math>, le mouvement de vibration de la molécule est gelé, presque toutes les molécules du gaz sont dans leur état fondamental. Le théorème ne s’applique plus. On peut cependant le retrouver en considérant la molécule, non plus comme deux masses reliées par un ressort, mais comme deux masses reliées par un lien rigide. C’est le modèle du rotateur rigide pour lequel la chaleur spécifique n’est plus que de 5/2 <math>R</math>.
+
+Dans la pratique, la plupart des gaz diatomiques ont des températures <math>T_{\mathrm{vib}}</math> très élevées, de sorte qu’à température ambiante, leur chaleur spécifique est effectivement très proche de 5/2 <math>R</math>. Un exemple typique est le [[monoxyde de carbone]], CO, pour lequel <math>T_{\mathrm{vib}}</math> vaut 3103 K. Pour les molécules avec des atomes lourds ou faiblement liés, <math>T_{\mathrm{vib}}</math> peut approcher la température ambiante ; par exemple, elle vaut 308 K (35°C) pour le [[diiode]] gazeux I<sub>2</sub><ref>{{Harvsp | texte = McQuarrie 2000| id = McQuarrie2000}}</ref>.
+
+Ce qui vient d’être dit pour le mouvement de vibration de la molécule s’applique aussi bien à son mouvement de rotation. Mais les températures caractéristiques sont bien plus basses. Pour le monoxyde de carbone, <math>T_{\mathrm{rot}}</math> vaut environ 1,8 K. Le gel du mouvement de rotation ne s’observe donc qu’à des températures très basses. 
+
+De manière générale, ces effets interviennent chaque fois que la séparation entre deux niveaux d’énergie est beaucoup plus grande que l’agitation thermique. Un autre exemple est donné par les énergies des états excités des électrons dans un atome d’hydrogène. Ceux-ci ne contribuent pas à la chaleur spécifique de l’hydrogène gazeux à température ambiante, car l’énergie thermique <math>k_B T</math> (environ 0,025 eV) est beaucoup plus faible que l’écart entre l’état fondamental et le premier état excité (environ 10 eV).
+
+=== Dans les gaz dégénérés ===
+
+Dans le paragraphe qui précède, on a pris en compte des effets quantiques, mais partiellement seulement : on a traité les particules comme des objets classiques indépendants dont seuls les niveaux d’énergie (de rotation ou de vibration) sont quantifiés, tout en restant dans le cadre de la [[statistique de Maxwell-Boltzmann]]. Cette approche n’est pas valable quand les fonctions d’onde des particules commencent à se superposer : il faut alors tenir compte de leur nature quantique et les traiter dans le cadre des statistiques quantiques : [[statistique de Fermi-Dirac]] pour les [[fermion]]s, [[statistique de Bose-Einstein]] pour les [[boson]]s. On parle de [[matière dégénérée]].
+
+Ces effets dominent dans les limites des fortes densités et des basses températures. Ils sont importants dans la structure des [[Naine blanche|naines blanches]] et des [[Étoile à neutrons|étoiles à neutrons]]. Un cas plus quotidien se présente dans les métaux : les électrons de valence d’un métal peuvent avoir une énergie cinétique moyenne de quelques eV. Cette énergie correspondrait à des températures de plusieurs dizaines de milliers de degrés selon le théorème de l’équipartition.
+
+Un critère de validité de l’équipartition fut initialement calculé par Einstein<ref>{{Harvsp|texte = Bergia et Navarro 1997|id=Bergia1997|page = 218}}</ref> dans sa théorie du gaz parfait quantique. Dans ce travail, il montre que l’équipartition peut être considérée comme valide dans la limite où
+:<math>
+\frac{V}{N}\left(\frac{2\pi m k_B T}{h^2}\right)^{3/2} \gg 1.
+</math>
+Dans le cas de l’hydrogène, le calcul explicite du terme de gauche donne environ 60000, ce qui justifie a posteriori la validité de l’équipartition. Quand on s’approche du cas quantique, la correction à l’équipartition au premier ordre s’écrit
+:<math>
+\frac{\langle E\rangle}{N} = \frac{3}{2}k_B T\left[1-0,1768\, \frac{N}{V}\left(\frac{h^2}{2 \pi m k_B T}\right)^{3/2}\right].
+</math>
+
+Ce critère de validité est plus souvent cité en faisant apparaître la longueur d’onde de de Broglie <math>\lambda_{\mathrm{DB}}</math> associée : 
+:<math>
+\left(\frac{V}{N}\right)^{1/3} \gg \lambda_{\mathrm{DB}}.
+</math>
+On peut alors interpréter ce critère : l’équipartition reste valable tant que cette longueur d’onde reste très inférieure à la distance moyenne entre les particules.
+
+=== Dans les gaz relativistes ===
+
+On n’a utilisé jusque là que des équations de la [[mécanique newtonienne]]. Toutefois, les effets [[Relativité restreinte|relativistes]] peuvent dominer dans certains systèmes lorsque les particules de gaz acquièrent des vitesses comparables à la vitesse de la lumière <math>c</math> ; on parle alors de [[gaz parfait relativiste]]. Dans le cas le plus général, l'équipartition n'est alors pas vérifiée<ref>Pour une présentation des propriétés du [[gaz parfait relativiste]], voir {{Harvsp|texte = Greiner 1999|id = Greiner1999}}.</ref>, mais on peut la retrouver dans les deux cas limite du gaz parfait classique et du gaz ultra-relativiste. 
+
+Dans le gaz parfait classique (monoatomique), on considérait que l'énergie du système n'était constituée que d'énergie cinétique de translation. Dans le cadre de la mécanique relativiste, l'énergie totale est égale à la somme de l'énergie cinétique et d'une énergie qui dépend de la masse au repos de la particule. La prise en compte de cette énergie rompt l'équipartition : si les particules du gaz ont des masses différentes, l'énergie ne peut pas être répartie équitablement. Dans le cas le plus général, l'énergie totale s'écrit 
+
+:<math>H^{\mathrm{tot}} = \frac{mc^2}{\sqrt{1 - (v^2/c^2)}}</math>
+
+Ni l'énergie totale, ni l'énergie cinétique ne sont réparties équitablement entre les différents degrés de liberté. Il est possible néanmoins de définir une grandeur homogène à une énergie qui obéit à une relation similaire à l'équipartition<ref>{{Article | auteur = A. Komar | titre = Relativistic equipartition | journal = General Relativity and Gravitation | vol = 28 | pages = 379-385 | date = 1996 | lang = en | id = Komar1996 | texte = http://www.springerlink.com/content/g2516q865u832u88/}}</ref>.
+
+Dans la limite où les particules ont des vitesses très faibles devant la vitesse de la lumière, on retrouve le résultat classique. L'énergie totale d'une particule s'écrit
+
+:<math>
+H^{\mathrm{tot}} \approx \frac{p^2}{2m} + m c^2
+</math>
+
+L'équipartition est bien respectée pour l'énergie cinétique, mais pas pour l'énergie totale, qui prend en compte le terme supplémentaire dépendant de la masse. 
+
+Dans la limite dite ultra-relativiste pour laquelle les particules ont des vitesses très proches de celle de lumière, on retrouve l'équipartition pour l’énergie totale qui s'écrit :
+
+:<math>
+H^{\mathrm{tot}} \approx c p
+</math>
+
+Le calcul montre que l’énergie moyenne totale d’un gaz ultra-relativiste vaut deux fois celle d’un gaz non relativiste<ref>{{Harvsp|texte = Greiner 1999|id = Greiner1999}}</ref> : pour <math>N</math> particules, elle vaut 3 <math>N k_B T</math>.
+
+=== Dans les simulations numériques ===
+
+On étudie souvent les systèmes en physique statistique aux moyens de techniques de [[simulation numérique]], dont la [[dynamique moléculaire]]. Les [[Condition périodique aux limites|conditions aux limites périodiques]] parfois utilisées dans ces études imposent des contraintes supplémentaires au système (conservation du moment linéaire total et de la position du centre de masse par exemple) qui induisent des effets non négligeables dans la limite des petits systèmes contenant des particules de masses hétérogènes. Dans ces conditions, l’équipartition de l’énergie n’est plus valable<ref>{{Article | auteur = Shirts RB, Burt SR et Johnson AM | date = 2006 | titre = Periodic boundary condition induced breakdown of the equipartition principle and other kinetic effects of finite sample size in classical hard-sphere molecular dynamics simulation | journal = Journal of Chemical Physics | vol = 125 | pages = 164102 | texte = http://scitation.aip.org/getabs/servlet/GetabsServlet?prog=normal&id=JCPSA6000125000016164102000001 | lang = en}}</ref>. D’autres effets sont par exemple des écarts à la distribution de Maxwell-Boltzmann, ou la non équivalence des approches canonique et microcanonique. Il est toutefois possible de démontrer des formules généralisant le théorème d’équipartition à ces cas plus exotiques<ref>{{Article | auteur = Uline JM, Siderius DW et Corti DS | date = 2008 | titre = On the generalized equipartition theorem in molecular dynamics ensembles and the microcanonical thermodynamics of small systems | journal = Journal of Chemical Physics | vol = 128 | pages = 124301 | texte = http://scitation.aip.org/getabs/servlet/GetabsServlet?prog=normal&id=JCPSA6000128000012124301000001 | lang = en}}</ref>.
+
+== Notes et références ==
+
+{{Traduction/Référence|en|Equipartition theorem|161599115}}
+
+{{Références|colonnes = 2}}
+
+== Voir aussi ==
+=== Bibliographie ===
+
+'''Ouvrages de physique statistique'''
+
+* {{fr}} {{landau|tome 5}}
+
+* {{fr}} {{Livre Diu etal}}
+
+* {{Ouvrage | auteur = Walter Greiner, Ludwig Neise, Horst Stöcker | année = 1999 | titre = Thermodynamique et physique statistique | trad = Hans Aksas | éditeur = Springer | lang = fr | passage = 225-230 | id = Greiner1999}}
+
+* {{fr}} [[Cours de physique de Feynman]], volume 1, chap. 39, {{guil|théorie cinétique des gaz}}.
+
+* {{ouvrage | auteur = R. Pathria | lang = en | année = 1972 | titre = Statistical Mechanics | éditeur = Pergamon Press | passage = 43–48, 73–74 | isbn= 0-08-016747-0}}
+
+* {{ouvrage | auteur = Kerson Huang | année = 1987 | lang=en | titre = Statistical Mechanics | édition = 2nd ed. | éditeur = John Wiley and Sons | passage = 136–138 | isbn= 0-471-81518-7}}
+
+* {{ouvrage | auteur = F. Mandl | lang = en | année = 1971 | titre = Statistical Physics | éditeur = John Wiley and Sons | passage = 213–219 | isbn= 0-471-56658-6 | id = Mandl1971}}
+
+* {{ouvrage | auteur = D. A. McQuarrie | année = 2000 | titre = Statistical Mechanics | édition = revised 2nd ed. | éditeur = University Science Books | isbn = 978-1891389153 | passage = 91–128 |lang=en | id = McQuarrie2000}}
+
+* {{Ouvrage | auteur= Richard Tolman | année = 1927 | titre = Statistical Mechanics, with Applications to Physics and Chemistry | éditeur = Chemical Catalog Company | passage = 72–81 |lang = en}} ASIN B00085D6OO
+
+'''Sélection d’articles de périodiques'''
+
+* {{Article | auteur = JWS Rayleigh | date = 1900 | titre = The Law of Partition of Kinetic Energy | journal = Philosophical Magazine | vol = 49 | pages = 98–118 |lang = en | texte = http://www.archive.org/details/scientificpapers04rayliala | id = Rayleigh1900}}
+
+* {{Article | auteur = Richard C. Tolman | date = 1918 | titre = A General Theory of Energy Partition with Applications to Quantum Theory | journal = [[Physical Review]] | vol = 11 | pages = 261–275 |lang = en | id = Tolman1918 | texte = http://link.aps.org/abstract/PR/v11/p261}}
+
+* {{Article | auteur = L. Peliti | titre = On the equipartition of kinetic energy in an ideal gas mixture | journal = European Journal of Physics | vol = 28 | date = 2007 | pages = 249 | texte = http://www.iop.org/EJ/abstract/0143-0807/28/2/010 | lang= en | id = Peliti2007 | commentaire = {{arxiv|physics/0610189}}}}
+
+* {{Article | auteur = A. Komar | titre = Relativistic equipartition | journal = General Relativity and Gravitation | vol = 28 | pages = 379-385 | date = 1996 | lang = en | id = Komar1996 | texte = http://www.springerlink.com/content/g2516q865u832u88/}}
+
+'''Analyses historiques'''
+
+* {{Ouvrage | auteur = S.G. Brush | année = 1976 | titre = The Kind of Motion We Call Heat | éditeur = North Holland | lieu = Amsterdam | passage = 134–159 (vol. 1) et 336–339 (vol. 2) | isbn = 978-0444870094 | lang = en | commentaire = Ouvrage de référence en deux volumes sur l’histoire de la théorie cinétique des gaz et de la physique statistique.}}
+
+* {{Article | auteur = S. Bergia and L. Navarro | titre = Early quantum concepts and the theorem of equipartition of energy in Einstein’s work (1905-1925) | journal = Physis | vol = XXXIV | date = 1997 | pages = 183-223 | texte = http://www.ffn.ub.es/luisnavarro/publicaciones_archivos/Equipartition%20(1997).pdf | id = Bergia1997 | lang = en}}
+
+=== Lien externe ===
+* [http://webphysics.davidson.edu/physlet_resources/thermo_paper/thermo/examples/ex20_4.html Applet d’illustration de l’équipartition en temps réel pour un mélange de gaz monoatomique et diatomique]
+
+{{Bon article|oldid=32981472|date=8 septembre 2008}}
+
+{{portail|physique}}
+
+{{Lien AdQ|en}}
+{{Link AdQ|pt}}
+{{Lien BA|zh}}
+
+{{DEFAULTSORT:Equipartition de l'energie}}
+
+[[Catégorie:Physique statistique]]
+[[Catégorie:Théorème de physique]]
+{{Lien AdQ|pt}}
+
+[[ca:Teorema d'equipartició]]
+[[de:Äquipartitionstheorem]]
+[[en:Equipartition theorem]]
+[[es:Teorema de equipartición]]
+[[he:חוק החלוקה השווה]]
+[[it:Teorema di equipartizione dell'energia]]
+[[ja:エネルギー等配分の法則]]
+[[ko:에너지 등분배법칙]]
+[[nl:Equipartitiebeginsel]]
+[[pl:Zasada ekwipartycji energii]]
+[[pt:Teorema da equipartição]]
+[[ru:Теорема о равнораспределении]]
+[[sl:Ekviparticijski izrek]]
+[[sv:Ekvipartitionsprincipen]]
+[[tr:Eşbölüşüm teoremi]]
+[[uk:Закон рівнорозподілу]]
+[[zh:能量均分定理]]

@@ -1,0 +1,98 @@
+Le '''nombre plastique''', de symbole <math>\psi</math> (à lire [[psi]]), est l'unique solution réelle de l'équation du troisième degré :
+
+<math>\psi^3 = 1 + \psi</math>
+
+et qui s'exprime par :
+
+<math>\psi=\sqrt[3]{\frac{9+\sqrt{69}}{18}}+\sqrt[3]{\frac{9-\sqrt{69}}{18}} \simeq 1,324717957244746025960908854\,</math>
+
+C'est un [[nombre algébrique]] irrationnel.
+
+À l'instar du [[nombre d'or]], il est  à la base d'un système de  [[proportion]]s qui fait partie d’une méthode générale de conception en [[Arts plastiques]]. En ce qui concerne le nombre plastique, ce système a été introduit par [[Hans van der Laan]] ([[1904]]-[[1991]]), moine [[bénédictin]] et [[architecte]] des [[Pays-Bas]]. Il fut également étudié par l’ingénieur [[école polytechnique (France)|polytechnicien]] [[français]] [[Gérard Cordonnier]] qui  appelle ce nombre '''nombre radiant'''<ref name="Ravatin">Revue d'Arkologie, n° 18, juin 1999, [http://www.arkologie.com/revues/livre_18.pdf ''Au-delà du nombre d'or, le nombre radiant''], article de Jacques Ravatin</ref>.
+
+Le nombre plastique est lié à la [[suite de Padovan]].
+
+== Propriétés algébriques ==
+
+Mathématiquement, le nombre plastique est la seule solution réelle de l'équation <math>x^3=x+1\,</math>, les deux autres solutions étant deux [[nombres complexes]], eux aussi lié à <math>\psi</math>:
+: <math>-\frac{\psi}{2}-i\sqrt{\frac{3-\psi}{4\psi}}\,</math>  et <math>-\frac{\psi}{2}+i\sqrt{\frac{3-\psi}{4\psi}}\,</math>
+De l'égalité <math>\psi^3=\psi + 1</math> se déduisent d'autres égalités démontrables en remplaçant <math>\psi^3</math> par <math>\psi + 1</math>. Parmi celles-ci, on peut citer 
+: <math>\psi^4=\psi^2+\psi</math>
+: <math>\psi^5 = \psi^2+\psi+1</math>
+qui sont directement liées au découpage d'un segment imaginé par [[Gérard Cordonnier]].
+
+On peut citer aussi
+: <math>\psi^{-4}= \psi -1</math>
+qui fait de <math>\psi</math> le seul nombre à être, avec le nombre d'or, un nombre morphique. Un nombre morphique est un nombre réel qui est solution conjointe de deux équations de la forme 
+: <math>x^n=x + 1</math> et <math>x^{-p} = x - 1</math> où ''n'' et ''p'' sont des entiers naturels non nuls. 
+Ce résultat fut démontré en 2001 par Jan Aarts, Robbert Fokkink, Godfried Kruijtzer<ref>{{pdf}} [http://www.math.leidenuniv.nl/~naw/serie5/deel02/mrt2001/pdf/archi.pdf Morphic numbers] par Jan Aarts, Robbert Fokkink, Godfried Kruijtzer</ref>.
+
+
+Cette même égalité permet d'exprimer certaines puissances de <math>\psi</math> comme somme infinie de ses puissances négatives:
+
+:<math>\psi^5=\sum^\infty_{k=0} \frac{1}{\psi^k}\,</math>
+
+:<math>\psi^3=\sum^\infty_{k=0} \frac{1}{\psi^{2k}}\,</math>
+
+:<math>\psi^2=\sum^\infty_{k=0} \frac{1}{\psi^{3k}}\,</math>
+
+ou bien comme itération infinie de racines cubiques
+
+: <math>\psi = \sqrt[3]{1+\sqrt[3]{1+\sqrt[3]{1+\sqrt[3]{1+\cdots}}}}</math>
+
+
+Le nombre <math>\psi</math> est la limite de la suite obtenue en prenant le  quotient de termes consécutifs dans la [[suite de Padovan]]
+
+: <math>\frac 11,\, \frac 11,\, \frac 21,\, \frac 22,\, \frac 32,\,  \frac 43,\,  \frac 54,\, \frac 75 ,\, \frac 97,\, \frac {12}9,\,\frac{16}{12},\, \frac{21}{16},\,\frac{28}{21},\, \frac{37}{28},\,\frac{49}{37},\, \frac{65}{49},\,\frac{86}{65},\, \frac{114}{86},\,\frac{151}{114},\, \frac{200}{151},\,\frac{265}{200},\, \dots</math>
+Les deux derniers quotients fournissent un encadrement de <math>\psi</math> inférieur à <math>5 .10^{-4}</math>
+
+C'est aussi le plus petit [[nombre de Pisot-Vijayaraghavan]].
+
+== Propriétés géométriques ==
+[[Image:Nombre plastique2.svg|thumb|300 px|Découpage d'un segment selon Gérard Cordonnier]]
+En 1924, [[Gérard Cordonnier]] invente une variante de la division d'un segment entre [[nombre d'or|moyenne et extrême raison]] en imaginant le découpage d'un segment en trois parties définissant 6 sections en progression géométrique. Il démontre que la progression géométrique est de rapport <math>\psi</math>, racine de <math>X^3 -X - 1</math>. Il appelle ce nombre "nombre radiant" et en étudie les propriétés tant mathématiques, qu'esthétiques et symboliques. En 1958, il décide d'écrire un livre, ''Au-delà du nombre d'or: le nombre radian'' qu'il n'aura jamais le temps de terminer<ref name="Ravatin"/>.   
+
+[[Image:Nombre plastique.svg|thumb|300 px|Pavés en proportion de ψ]]D'après l'architecte et moine [[Hans van der Laan]], les dimensions respectives de deux objets sont perceptibles lorsque la plus grande dimension d'un objet est égale à la somme des deux plus petites dimensions de l'autre<ref> [http://www.nexusjournal.com/conferences/N2002-Padovan.html Richard Padovan, "Dom Hans Van Der Laan and the Plastic Number", pp. 181-193 in Nexus IV : Architecture and Mathematics, eds. Kim Williams and Jose Francisco Rodrigues, Fucecchio (Florence): Kim Williams Books, 2002.]</ref>. Le principe est de construire une pièce dont les dimensions soient telles que, quand on remplace la plus petite dimension de l'une par la somme des deux plus petites, on obtient alors la plus grande dimension d'une pièce de mêmes proportions que la précédente. Si on appelle <math>l_1 \le l_2 \le l_3</math> les trois dimensions de la pièce, cette condition se traduit mathématiquement par <math>(l_1, l_2, l_3)</math> et <math>(l_2, l_3, l_1+l_2)</math> sont proportionnels. Soit encore
+: <math>\frac{l_2}{l_1} = \frac{l_3}{l_2}=\frac{l_1+l_2}{l_3}</math>
+Si l'on appelle <math>\psi</math>, le rapport <math> \frac{l_2}{l_1}</math>, ces égalités se traduisent par 
+: <math>l_2=\psi l_1\quad l_3 = \psi^2 l_1\quad 1+\psi=\psi^3</math>
+où l'on reconnait en <math>\psi</math> l'unique racine réelle du polynôme<math> X^3-X-1</math>.
+
+Les dimensions de la pièce en question sont, donc, en rapport de <math>\psi</math>.
+
+L'architecte Padovan, reprenant les calculs de Van der Laan, montre qu'en partant d'un cube et, en remplaçant systématiquement la plus petite des dimensions par la somme des deux plus petites, on obtient, au bout de plusieurs itérations, un pavé dont les dimensions se rapprochent de celles d'un pavé recherché. Il construit à cet effet une [[suite de Padovan|suite qui porte son nom]].
+
+Cette construction est à rapprocher de celle du [[nombre d'or#Rectangle et spirale d'or|rectangle d'or]], en dimension 2, et de la [[suite de Fibonacci]]. Cette ressemblance fait dire à [[Ian Stewart (mathématicien)|Ian Stewart]] que le nombre plastique est le cousin du [[nombre d'or]]<ref>{{en}} [http://www.fortunecity.com/emachines/e11/86/padovan.html  Tales of a Neglected Number], Mathematical Recreations by Ian Stewart</ref>.
+
+== Notes et références de l'article ==
+<references/>
+
+== Voir aussi ==
+=== Bibliographie ===
+Il existe deux ouvrages étudiant le nombre radiant ou le nombre plastique :
+*''Le Nombre plastique, quinze leçons sur l'ordonnance architectonique'', de [[Hans van der Laan]], trad. du manuscrit hollandais par Dom Xavier Botte, Leiden, E.J. Brill, 1960
+* ''Théorie des formes et des champs de cohérences'', de Jacques Ravatin, Anne-Marie Branca, Éditions du Cosmogone, 1998 
+
+=== Articles connexes ===
+* [[Notion de module]]
+* [[Nombre d'argent]]
+* [[Nombre d'or]]
+* [[Nombre de Pisot-Vijayaraghavan]]
+
+=== Liens et documents externes ===
+* [http://mathworld.wolfram.com/PlasticConstant.html Constante plastique dans MathWorld] (avec d'autres références utiles)
+* [http://www.research.att.com/~njas/sequences/A060006 The Online Encylopedia of integer sequences] (avec d'autres références utiles)
+
+{{Portail|Mathématiques}}
+[[Catégorie:Nombre remarquable]]
+[[Catégorie:Constante mathématique]]
+
+[[bs:Plastični broj]]
+[[en:Plastic number]]
+[[es:Número plástico]]
+[[it:Numero di plastica]]
+[[ja:プラスチック数]]
+[[nl:Plastisch getal]]
+[[ru:Пластическое число]]
+[[th:จำนวนพลาสติก]]
+[[zh:塑膠數]]

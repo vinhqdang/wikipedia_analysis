@@ -1,0 +1,541 @@
+[[Image:Eigenvalue equation.svg|thumb|right|250px|Fig. 1. '''A''' étire le vecteur '''x''' sans changer sa direction. '''x''' est un vecteur propre pour '''A''', pour la valeur propre <math>\lambda</math>.]]
+
+En [[mathématiques]], et plus particulièrement en [[algèbre linéaire]],  le concept de '''vecteur propre''' est une notion [[Algèbre|algébrique]] s'appliquant à une [[application linéaire]] d'un espace dans lui-même. Il correspond à l'étude des axes privilégiés, selon lesquels l'application se comporte comme une dilatation, multipliant les vecteurs par une même constante. Ce rapport de dilatation est appelé '''valeur propre''', les vecteurs auxquels il s'applique vecteurs propres, réunis en un '''espace propre'''. Le graphique de la figure 1 illustre ces notions.
+
+La connaissance des vecteurs et valeurs propres offre une information clé sur l'application linéaire considérée. Il existe de plus de nombreux cas où cette connaissance caractérise totalement l'application linéaire.
+
+Ce concept appartient à l'origine à une branche des mathématiques appelée [[algèbre linéaire]]. Son utilisation, cependant, dépasse maintenant de loin ce cadre. Il intervient aussi bien en [[mathématiques pures]] qu'[[Mathématiques appliquées|appliquées]]. Il apparaît par exemple en géométrie dans l'étude des [[forme quadratique|formes quadratiques]], ou en [[Analyse fonctionnelle (mathématiques)|analyse fonctionnelle]]. Il permet de résoudre des problèmes appliqués aussi variés que celui des mouvements d'une [[corde vibrante]], le classement des pages web par [[PageRank|Google]], la détermination de la structure de l'[[espace-temps]] en théorie de la [[relativité générale]], ou l'étude de l'[[équation de Schrödinger]] en [[mécanique quantique]].
+
+{{article détaillé|contenu=Pour un article synthétique sur le sujet ne traitant que du contenu mathématique, voir : '''[[Valeur propre (synthèse)]]'''.}}
+
+== Histoire ==
+=== Genèse ===
+[[Image:Frans_Hals_-_Portret_van_René_Descartes.jpg|thumb|right|René Descartes associe algèbre et géométrie et démarre l'algèbre linéaire.]]
+
+S'il est habituel de prendre pour acte de naissance officiel de l'[[algèbre]] la publication du livre<ref>[[Abou Jafar Muhammad Ibn Mūsa al-Khuwārizmī|Al-Khuwārizmī]] ''« La transposition et la réduction »''</ref> d'[[Abou Jafar Muhammad Ibn Mūsa al-Khuwārizmī|Al-Khuwārizmī]] <small>([[783 en science|783]]-[[850 en science|850]])</small>, qu'il décrit lui même comme ''« un abrégé englobant les plus fines et les plus nobles opérations du calcul »'', le domaine [[algèbre linéaire|linéaire]] doit attendre le {{XVIe siècle}} pour dépasser le simple cadre de quelques [[Système d'équations (mathématiques élémentaires)|équations]].
+
+L'association entre la géométrie et l'algèbre, à travers la notion de [[Système de coordonnées cartésiennes|coordonnées]], fut introduite<ref>[[René Descartes]] ''La géométrie'' [[1637 en science|1637]]</ref> en [[1637 en science|1637]] par [[René Descartes]] <small>([[1596 en science|1596]]-[[1650 en science|1650]])</small> et [[Pierre de Fermat]] <small>([[1601 en science|1601]]-[[1665 en science|1665]])</small>. Le contexte est donné pour l'apparition<ref>[[Johan de Witt]] ''Commentaire de la version latine de : La géométrie de Descartes'' 1660</ref> de premiers résultats d'algèbre linéaire comme le calcul d'un [[déterminant]]. Ces résultats serviront par la suite d'outil d'analyse des valeurs propres. Cependant, les mathématiques de cette époque ne disposent pas encore des notions indispensables de l'algèbre linéaire, comme une géométrie correspondant à notre [[espace vectoriel]], où les éléments sont définis par leurs opérations.
+
+Le début du {{XIXe siècle}} voit l'apparition d'outils importants pour la théorie des valeurs propres. En [[1799 en science|1799]], [[Carl Friedrich Gauss]] <small>([[1777 en science|1777]]-[[1855 en science|1855]])</small> démontre la [[Théorème de d'Alembert-Gauss|clôture algébrique des nombres complexes]]<ref>[[Carl Friedrich Gauss]] ''Thèse de Doctorat présentée à l'Université de Helmstedt'' [[1799 en science|1799]]</ref>. Des espaces vectoriels plus vastes sont étudiés. Gauss formalise le problème de la résolution d'un système d'équations linéaires avec la [[Élimination de Gauss-Jordan|méthode du pivot]] en retrouvant une méthode décrite par un mathématicien chinois [[Liu Hui]] ({{IIIe}} siècle après J.C) près de 1600 ans auparavant.
+
+Des problématiques où les valeurs propres représentent la bonne approche sont étudiées. [[Joseph Fourier]] <small>([[1768 en science|1768]]-[[1830 en science|1830]])</small> étudie une solution<ref>[[Joseph Fourier]]''Théorie analytique de la chaleur'' en [[1822 en science|1822]]</ref> de l'[[Conduction thermique|équation de propagation]] à l'aide d'un outil que l'on appellera plus tard une base de vecteurs propres. Enfin en [[1834 en science|1834]], [[William Rowan Hamilton|Hamilton]] <small>([[1805 en science|1805]]-[[1865 en science|1865]])</small> utilise<ref>[[William Rowan Hamilton]] ''Sur les méthodes générales de résolution en dynamique'' [[1834 en science|1834]]</ref>, un [[polynôme caractéristique]] pour trouver ce que l'on appelle maintenant les valeurs propres associées à l'[[endomorphisme]] d'une [[Équation différentielle linéaire d'ordre un|équation différentielle linéaire]] issue de la [[mécanique]]. Cependant, l'absence de formalisation suffisante de la notion d'espace vectoriel empêche l'apparition claire du concept.
+
+=== Origine du mot ===
+[[Image:Hilbert.jpg|thumb|left|L'Allemand [[David Hilbert|Hilbert]] donne la formulation anglosaxone : eigenvalue provenant de Eigenwert.]]
+
+La formalisation algébrique d'un espace vectoriel apparait vers le milieu du siècle. [[Arthur Cayley]] <small>([[1821 en science|1821]]-[[1895 en science|1895]])</small> initie l'étude des espaces vectoriels de dimension ''n''<ref>[[Arthur Cayley]] ''Géométrie à n dimensions'' [[1843 en science|1843]]</ref> et de leurs [[application linéaire|applications linéaires]]<ref>[[Arthur Cayley]] ''Théorie des [[Application linéaire|transformations linéaires]]'' [[1845 en science|1845]]</ref>. [[Hermann Günther Grassmann|Grassmann]] <small>([[1809 en science|1809]]-[[1877 en science|1877]])</small> formalise le concept<ref>[[Hermann Günther Grassmann]] ''Sur le principe de l'extension linéaire, une nouvelle branche des mathématiques'' [[1844 en science|1844]]</ref>. Même si, en tant que mathématicien il est peu reconnu à cette époque, dès [[1845 en science|1845]], des idées analogues sont reprises par [[Augustin Louis Cauchy|Cauchy]] <small>([[1789 en science|1789]]-[[1857 en science|1857]])</small> et publiées sous une forme plus définitive<ref>[[Augustin Louis Cauchy]] ''Sur les clefs algébriques'' [[1854 en science|1854]]</ref> neuf ans plus tard. [[James Joseph Sylvester|Sylvester]] <small>([[1814 en science|1814]]-[[1897 en science|1897]])</small> utilise pour la première fois le terme de [[Théorie des matrices|matrice]]<ref>{{article|lang=en|nom=[[James Sylvester]]|titre=Additions to the articles in the September number of this journal, “On a new class of theorems,” and on Pascal's theorem|périodique=Philosophical Magazine|série=3|volume=37|numéro=251|année=1850|pages=363-370}}</ref> en [[1850 en science|1850]]. Il utilise la notion de valeur propre dans le cas des [[Forme bilinéaire|formes bilinéaires]] pour la résolution de problèmes sur le principe mécanique de l'inertie<ref>[[James Joseph Sylvester]] ''Théorie sur les invariants algébriques'' [[1852 en science|1852]]</ref> deux ans plus tard. La notion de matrice est finalement définie de manière générale et abstraite<ref>[[Arthur Cayley]] ''Mémoire sur la théorie des matrices'' en [[1858 en science|1858]]</ref> par Cayley en [[1858 en science|1858]].
+
+[[Image:Camille Jordan.jpeg|thumb|right|Le Français [[Marie Ennemond Camille Jordan|Jordan]] donne la formulation française : valeur propre.]]
+
+[[Marie Ennemond Camille Jordan|Jordan]] <small>([[1838 en science|1838]]-[[1922 en science|1922]])</small> publie un livre<ref>[[Marie Ennemond Camille Jordan]] ''Traité des substitutions et des équations algébriques'' [[1870 en science|1870]]</ref> définitif sur les [[endomorphisme]]s en [[dimension]] finie et pour une large famille de nombres, dont les [[nombre complexe|complexes]] et [[Nombre réel|réels]]. Jordan analyse le rôle des vecteurs propres et de leur exact domaine d'application dans une théorie maintenant connue sous le nom de [[réduction d'endomorphisme]]. La finalité de son texte n'est pas l'algèbre linéaire mais la [[Groupe (mathématiques)|théorie des groupes]] et de leurs [[Représentation des groupes|représentations]]. La théorie est ainsi présentée dans le contexte des [[corps fini]]s. Il termine le chapitre des valeurs propres dans le cas de la dimension finie et des corps de nombres algébriquement clos. La terminologie française provient des travaux de Jordan.
+
+Le début du {{XXe siècle}} apporte un regard nouveau sur la géométrie. La résolution de l'[[équation intégrale]] amène certains mathématiciens à considérer une ''géométrie'' sur les ensembles de fonctions. [[Frigyes Riesz]] <small>([[1880 en science|1880]]-[[1956 en science|1956]])</small> utilise des systèmes orthogonaux de fonctions<ref>[[Frigyes Riesz]] ''Sur les systèmes orthogonaux de fonctions'' Notes au C.R.A.S. 144 pp 615 à 619 [[1907 en science|1907]]</ref>. [[Erhard Schmidt]] <small>([[1876 en science|1876]]-[[1959 en science|1959]])</small> soutient sa thèse sur un sujet<ref>[[Erhard Schmidt]] ''Entwickelung willkürlicher Funktionen nach Systemen vorgeschriebener'' [[1905 en science|1905]]</ref> analogue et sous la direction de [[David Hilbert]] <small>([[1862 en science|1862]]-[[1943 en science|1943]])</small>. Les travaux<ref>[[David Hilbert]] ''Grundezüge einer allgemeinen Theorie der linearen Integralgleichungen'' [[1912 en science|1912]] Réédition Chelsea 1953</ref> de Hilbert <small>([[1862 en science|1862]]-[[1943 en science|1943]])</small> apportent à la notion de valeur propre une nouvelle profondeur. Ils correspondent à  la formalisation de la démarche intuitive qui avait amené Fourier à la résolution de l'[[équation de la chaleur]]. Les ensembles de fonctions deviennent un espace vectoriel dont la géométrie est calquée sur celle d'[[géométrie euclidienne|Euclide]]. L'équation intégrale devient l'analogue d'un système linéaire et l'application linéaire prend le nom d'[[opérateur différentiel]]. Une nouvelle branche des mathématiques est née : l'[[Analyse fonctionnelle (mathématiques)|analyse fonctionnelle]]. Elle devient rapidement le cadre général de résolution d'une large famille de problèmes mathématiques, en particulier l'[[Analyse (mathématiques)|analyse]], les [[équation différentielle|équations différentielles]] ou les [[Équation aux dérivées partielles|équations aux dérivées partielles]]. Les valeurs propres sont un des outils essentiels à la résolution de ces problèmes. Elles s'avèrent indispensables en physique pour des théories comme la [[mécanique quantique]] ou la [[relativité générale]]. Pendant une longue période les anglosaxons utilisent indifféremment les termes de ''proper value'' et ''eigenvalue'', provenant respectivement de la traduction des textes de Jordan et de Hilbert. Le vocabulaire est maintenant fixé au bénéfice de la deuxième expression.
+
+=== Valeur propre et {{XXe siècle}} ===
+À la fois dans le contexte de la dimension finie et pour le cas général, le {{XXe siècle}} voit un développement massif de ces théories. Le cas de dimension finie subit deux évolutions : cette théorie est généralisée à d'autres ensembles de nombres que les réels ou les complexes. De plus, des mathématiciens comme [[Issai Schur]], A. Krilov, W. E. Arnoldi ou N. Dunford développent quantités d'algorithmes pour permettre la détermination des valeurs propres. Le cas général est cependant le plus étudié. Il ouvre la voie à une branche importante tout au long de ce siècle, l'[[Analyse fonctionnelle (mathématiques)|analyse fonctionnelle]]. La théorie des valeurs propres est alors généralisée à la théorie spectrale. [[Paul Dirac]] et [[John von Neumann]] étudient ce concept dans un cadre servant de modélisation à la [[physique]]. [[Israel Gelfand]], Mark Naimark et Irving Segal appliquent ces concepts à des univers plus vastes, les [[C-étoile-algèbre|C<sup>*</sup> Algèbres]]. Sur la base de résultats de [[géométrie algébrique]] trouvés par [[Alexandre Grothendieck]], [[Alain Connes]] développe un cas particulier de C<sup>*</sup> Algèbres, les [[Géométrie non commutative|géométries non commutatives]]. La théorie spectrale reste encore un large champ d'investigations mathématiques, et nombre de problèmes sont toujours ouverts dans ce domaine.
+
+Les valeurs propres, et dans son cas le plus général, la théorie spectrale ouvrent de nombreux champs d'applications à la fois théoriques et appliqués. En mathématique, cette approche permet par exemple la résolution d'[[Équation différentielle|équations différentielles]], ou d'[[Équation aux dérivées partielles|équations aux dérivées partielles]]. La physique utilise très largement la théorie spectrale : elle sert de cadre général à la [[mécanique quantique]] et permet par exemple l'étude de l'[[équation de Schrödinger]]. Les solutions de l'équation de Schrödinger indépendante du temps sont des vecteurs propres. Les théories physiques de la fin du {{XXe siècle}} comme les [[Théorie des supercordes|supercordes]] utilisent largement les notions de spectre dans des cadres mathématiques avancés, par exemple les géométries non commutatives. Les sciences de l'ingénieur ne sont pas en reste, même si elles se cantonnent en général à une approche de dimension finie. Elles utilisent quantité d'algorithmes issus des calculs de valeurs propres et vecteurs propres. Cette approche permet de résoudre de multiples problèmes tirés par exemple de la [[Statique|mécanique statique]] ou [[Systèmes oscillants à un degré de liberté|dynamique]], des [[Électrocinétique|systèmes électriques]] et même dans d'autres secteurs comme l'économie.
+
+== Définition ==
+=== Définition intuitive ===
+Une [[application linéaire]] est une [[Fonction (mathématiques)|application]] qui transforme les vecteurs en ''conservant'' les propriétés d'addition des vecteurs et les rapports de colinéarité entre vecteurs. Ainsi, si un vecteur w est la somme de deux vecteurs u et v, alors l'[[Image (mathématiques)|image]] de w par l'application est la somme de l'image de u et de l'image de v. De plus l'image de av est a fois l'image de v (a scalaire). Plusieurs [[transformation géométrique|transformations géométriques]] usuelles (homothétie de centre ''0'', rotation de centre ''0'') sont des applications linéaires. 
+
+La figure 2 illustre par un exemple une application linéaire. On remarque que le vecteur rouge est la somme des deux vecteurs jaunes avant transformation, et que c'est encore le cas après. De même le vecteur noir est le triple du vecteur vert avant la transformation, et ça reste le cas une fois qu'on l'a appliquée. On voit un vecteur propre en gris de valeur propre -1 : on passe du vecteur initial au vecteur image par multiplication de rapport -1.
+
+* Un vecteur est dit vecteur propre par une application linéaire s'il est non nul et si l'application ne fait que modifier sa taille sans changer sa direction (à ne pas confondre avec son sens !).
+
+* Une valeur propre associée à un vecteur propre est le facteur de modification de taille, c’est-à-dire le nombre par lequel il faut multiplier le vecteur pour obtenir son image. Ce facteur peut être négatif (renversement du sens du vecteur) ou nul (vecteur transformé en un vecteur de longueur nulle).
+
+* Un espace propre associé à une valeur propre est l'ensemble des vecteurs propres qui ont une même valeur propre et le vecteur nul. Ils subissent tous la multiplication par le même facteur.
+
+[[Image:Application linéaire.svg|thumb|center|550px|Fig. 2. Exemple d'application linéaire: une symétrie centrale (homothétie de rapport -1) par rapport au point central (en noir)]]
+
+=== Définition mathématique ===
+Soit ''E'' un [[espace vectoriel]] sur <math>\mathbb{K}</math> et ''u'' un [[endomorphisme]] de ''E'', alors :
+
+* Le vecteur ''x'' de ''E'' non nul est dit vecteur propre de ''u'' si et seulement s'il existe un élément ''λ'' de <math>\mathbb{K}</math> tel que ''u(x) = λx'',
+* le scalaire ''λ'' élément de <math>\mathbb{K}</math> est dit valeur propre de ''u'' si et seulement s'il existe un vecteur ''x'' non nul de ''E'' tel que ''u(x) = λx'',
+* soit λ une valeur propre de ''u'' alors l'ensemble constitué des vecteurs propres de valeur propre ''λ'', et du vecteur nul, forme un sous-espace vectoriel de ''E'' appelé espace propre de ''u'' associé à la valeur propre ''λ''.
+
+=== Le vocabulaire des éléments propres dans différentes disciplines ===
+
+* En mécanique, on étudie les '''[[fréquence propre|fréquences propres]]''' et les '''modes propres''' des [[oscillation|systèmes oscillants]].
+* En [[Analyse fonctionnelle (mathématiques)|analyse fonctionnelle]], une '''[[fonction propre]]''' est un vecteur propre pour un opérateur linéaire, c'est-à-dire une application linéaire agissant sur un espace de fonctions.
+* En géométrie ou en optique, on parle de '''directions propres''' pour rendre compte de la [[courbure]] des surfaces.
+* En [[théorie des graphes]], une '''valeur propre''' est simplement une valeur propre de la [[matrice d'adjacence]] du graphe.
+
+== Exemples ==
+L'image dans un [[miroir]] est un bon exemple d'application linéaire. On peut remarquer que tout vecteur collé au miroir donne comme image lui-même. On en déduit que le plan du miroir est un espace propre associé à la valeur propre 1. En revanche, un vecteur perpendiculaire au miroir donne comme image un vecteur de même longueur, de même direction, mais de sens opposé. On en déduit que ce vecteur est un vecteur propre de valeur propre -1. Enfin un vecteur ni collé ni perpendiculaire donne une image qui n'est pas dans le même axe que lui, ce n'est donc pas un vecteur propre. Dans cet exemple, le comportement des vecteurs propres décrit intégralement l'application, en effet tout vecteur est la somme d'un vecteur dans le plan de la glace et d'un vecteur perpendiculaire. Et la connaissance du comportement dans le plan et dans l'axe perpendiculaire permet la détermination de la transformation de tous les vecteurs, par [[application linéaire|linéarité]].
+
+Il existe une transformation particulière, qui est centrale dans la théorie des valeurs propres. Imaginons comme application linéaire une dilatation qui éloigne par exemple tous les points d'un ballon de baudruche de son centre d'un rapport constant. Cette dilatation grandit tous les vecteurs d'un même rapport sans changer leur direction. Tous les vecteurs à l'exception du vecteur nul sont donc des vecteurs propres et il existe une unique valeur propre. On appelle cette application une [[homothétie]].
+
+La [[Terre]] tourne autour d'elle-même, et donc tout vecteur qui se situe sur la droite passant par les [[Pôle géographique|pôles]] reste immobile, si l'on ne considère pas le mouvement autour du [[Soleil]]. Les vecteurs de cette droite sont donc des vecteurs propres de valeur propre 1. Tout autre vecteur tournera avec la Terre et donc n'est pas propre. Si on limite l'analyse au plan de l'[[Équateur (ligne équinoxiale)|équateur]], alors tous les vecteurs tournent et il n'y a plus de vecteurs propres. Nous retrouverons ce cas particulier dans l'étude des valeurs propres sur les [[Nombre réel|nombres réels]].
+
+[[Image:Standing wave.gif|thumb|270px|Fig. 3. Une onde stationnaire sur une corde vibrante est un vecteur propre de l'équation qui régit le mouvement de la corde. Dans cet exemple, ce vecteur est le quatrième. Les points fixes sont en rouge.]]
+
+Les deux premiers exemples traitent d'un cas de [[Espaces euclidiens|dimension 3]], comme le monde géométrique qui nous entoure. On peut cependant considérer des espaces vectoriels de dimension beaucoup plus vaste. Un exemple d'application est celui de la [[corde vibrante]] par exemple celle d'une guitare. Chaque point de la corde oscille autour de sa position au repos. Pour chaque point de la corde, son mouvement peut être considéré comme une dimension d'un espace vectoriel ; l'espace vectoriel ainsi obtenu regroupe les mouvements de tous les points de la corde, il est de dimension infinie. À partir d'une position initiale obtenue par le doigt du guitariste, le mouvement de la corde suit une équation qu'on appelle une [[équation aux dérivées partielles]] et qui est linéaire. Les vecteurs propres sont dans ce cas des vibrations qui laissent quelques points fixes, on les appelle des [[Propagation des ondes#Ondes progressives et ondes stationnaires|ondes stationnaires]]. La figure 3 illustre un exemple de vibration. Le premier vecteur propre correspond à l'onde avec deux points fixes, les extrémités, le deuxième vecteur propre correspond à l'onde ayant comme point fixe supplémentaire le milieu, le troisième a deux points fixes situés au tiers et au deux tiers en plus des extrémités, etc. Il se trouve que dans ce cas précis, les vecteurs propres décrivent totalement le comportement de la corde. De plus, si l'on tient compte dans l'équation du phénomène d'amortissement alors on remarque que l'essentiel des vecteurs propres se dissipe très vite, seul le premier vecteur propre reste longtemps, il correspond à la note qui sera émise par la corde de la guitare qui dépend donc de la longueur de la corde mais peu de l'impulsion initiale.
+
+== Applications en dimension finie ==
+=== Équation linéaire et valeur propre ===
+Beaucoup de problèmes finissent par se présenter sous la forme de la résolution d'un [[système d'équations linéaires]]. C’est-à-dire dans un cas simple à un système de la forme:
+<center><math>\left\{\begin{matrix} 4x + 2y &=& -1 \\ 3x - y &=& 2 \end{matrix}\right.</math></center>
+et dans le cas général:
+<center><math>\left\{\begin{matrix}  a_{1,1}.x_1+a_{1,2}.x_2+\cdots+a_{1,n}.x_{n} &=& b_1 \\ a_{2,1}.x_1+a_{2,2}.x_2+\cdots+a_{2,n}.x_{n} &=& b_2 \\ \vdots & & \vdots \\ \vdots & & \vdots \\ a_{m,1}.x_{1}+a_{m,2}.x_{2}+\cdots+a_{m,n}.x_{n} &=& b_m\end{matrix}\right.</math></center>
+
+On peut citer comme exemple la [[statique|mécanique statique]] avec l'étude du [[Liaisons mécaniques avec frottement#Étude de cas.|cas d'un pavé]] sur une surface en pente. [[Image:Pave_en_equilibre.jpg|left|450 px]]On trouvera alors trois équations linéaires décrivant les forces de haut en bas, de droite à gauche et d'avant en arrière. Si en revanche, on considère l'équilibre statique d'une [[plate-forme pétrolière]], plusieurs centaines d'équations linéaires sont nécessaires au calcul.
+
+S'il est théoriquement possible de résoudre ces systèmes d'équations avec des calculs de [[déterminant]]s et de [[comatrice]]s, il n'est pas envisageable d'utiliser pratiquement cette méthode. Elle débouche rapidement sur une complexité et une longueur de calcul qui n'est de loin pas traitable par les ordinateurs les plus puissants d'aujourd'hui. Ceci est particulièrement vrai dans le cas d'une plateforme pétrolière par exemple.
+
+Les mathématiciens analysent le problème sous un autre angle, le système d'équations est considéré comme la recherche d'un vecteur ''x'' dont l'image par l'application linéaire ''u'' est égale à ''b''.
+
+''u'', ''x'' et ''b'' sont décrits par une matrice et deux jeux de coordonnées:
+
+<center><math>u: \begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} \end{pmatrix}</math> <math>x: \begin{pmatrix} x_1 \\ x_2\\ \vdots \\ x_n \end{pmatrix}</math> <math>b: \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}</math></center>
+
+Il suffit alors de comprendre l'application ''u'' pour résoudre plus simplement la question posée. Cette application est une application linéaire d'un ensemble dans lui-même. On appelle [[endomorphisme]] une telle application. L'espace vectoriel est décomposé en [[Espace stable par un endomorphisme|sous-espaces stables]] par ''u'', c’est-à-dire que leurs images par ''u'' sont incluses dans eux-mêmes. Ils disposent de propriétés bien particulières. À eux tous ils génèrent l'espace vectoriel tout entier, mais l'endomorphisme restreint à ces sous-espaces est particulièrement simple. Un bon exemple est donné par le cas du miroir. Sur la surface du miroir l'application est simple : elle ne modifie rien ; sur la droite perpendiculaire un vecteur a pour image le vecteur opposé, et tout vecteur est bien la somme d'une composante sur le miroir et d'une composante perpendiculaire.
+
+'''Illustration par un exemple numérique'''
+
+Soit une équation linéaire dont la matrice ''A'' est donnée ci-dessous. La résolution par inversion impose des calculs longs et complexes. Une approche fondée par les valeurs et les vecteurs propres, la [[réduction de Jordan]] (''l'article contient le traitement numérique en exemple n° 2''), montre que cette matrice est semblable à la matrice ''J'':
+:<math>A = P.J.P^{-1} = 
+\begin{pmatrix}
+ 5 &  4 &  2 &  1 \\
+ 0 &  1 & -1 & -1 \\
+-1 & -1 &  3 &  0 \\ 
+ 1 &  1 & -1 &  2 \end{pmatrix}
+\; J=\begin{pmatrix}
+4 & 1 & 0 & 0 \\
+0 & 4 & 0 & 0 \\
+0 & 0 & 2 & 0 \\
+0 & 0 & 0 & 1 \end{pmatrix} \; et \; 
+
+P=\begin{pmatrix}
+-1 &  0 &  1 & -1\\
+ 0 &  0 & -1 &  1\\ 
+ 1 & -1 &  0 &  0\\
+-1 &  1 &  1 &  0\end{pmatrix}</math>
+Le problème, portant initialement sur la matrice <math>A</math> est alors ramené à la matrice <math>J</math>, et est donc largement simplifié. Dans cet exemple, les valeurs propres de <math>A</math> et de <math>J</math> sont les coefficients diagonaux de <math>J</math> : <math>4, 2, 1</math> ; à chacune de ces valeurs propres est associé un sous-espace propre, il est ici de dimension 1 pour chacune : la raison, pour 1 et 2, est que ces coefficients n'apparaissent qu'une fois sur la diagonale de <math>J</math> ; pour 4, bien qu'il apparaisse deux fois, la dimension du sous-espace propre associé ne peut être 2, à cause de la présence du coefficient 1 au-dessus de la diagonale.
+
+Il est toutefois à noter que cette problématique, même si elle est la première à être apparue en algèbre linéaire, n'a pas ouvert la voie de la notion développée dans cet article.
+
+=== Méthode générale de résolution en dynamique ===
+{{article détaillé|Systèmes oscillants à un degré de liberté}}
+[[Image:Systeme_masse-ressort.png|thumb|left|350px|Fig. 3. Une masse oscillante, attachée à un ressort, et avec un frottement visqueux.]]
+
+Si la problématique précédente n'a pas suffi, c'est essentiellement à cause d'une absence de concept de base. La géométrie d'alors est formalisée par le concept de point. Les points ne s'additionnent pas, ils ne possèdent pas de propriétés algébriques. La notion d'espace vectoriel actuel, n'existait pas. Hamilton, le mathématicien anglais s'est penché sur un problème où l'addition et la multiplication scalaire sont naturelles. Ce problème lui a été fourni par la physique: les systèmes oscillants.
+
+Le cas de la figure 3 illustre cette situation. La masse est attachée à un ressort et subit un amortissement visqueux (''ce qui signifie que la dissipation due aux frottements est proportionnelle à la vitesse''). Il n'existe aucune force extérieure, et le système oscillant vérifie l'équation différentielle linéaire suivante avec les notations de l'article [[Systèmes oscillants à un degré de liberté]] :
+
+<math>(1)\quad M \ddot{x} + B \dot{x} + K x \; =\; 0</math>
+
+Cette équation utilise les dérivées secondes, c'est la raison pour laquelle on appelle ce type d'équation, une [[Équation différentielle linéaire d'ordre deux]]. Cependant, il est possible de ramener une équation d'ordre deux, à une équation d'ordre un à condition de doubler la dimension de l'espace (''cf [[Équation différentielle linéaire#Réduction à l'ordre 1|Équation différentielle linéaire]]''). Ici, l'espace vectoriel devient de dimension 2 avec un premier axe correspondant à la vitesse, noté ''v'', et un deuxième à la position, noté ''x''. Si l'analyse du mouvement commence par convention à l'instant t<sub>0</sub> = 0, l'équation (1) s'écrit alors sous la forme:
+[[Image:Equation différentielle linéaire.jpg|thumb|right|350px|Fig. 4. Trajectoire en fonction de l'amortissement.]]
+
+<math>\frac{d}{dt}\phi \; = \;a.\phi \quad et \quad \phi (0)=\phi_0 \;</math>
+
+avec <math> \qquad \phi : \begin{pmatrix} v \\ x \end{pmatrix}\quad a : M^{-1}\begin{pmatrix} -B & -K \\ M & 0 \end{pmatrix}\quad \phi_0:\begin{pmatrix} v_0 \\ x_0 \end{pmatrix}</math>
+
+La solution d'une telle équation est connue, et s'écrit de la manière suivante:
+:<math>\phi (t) = \exp (ta)(\phi_0)\; </math>  avec  <math>\; \exp (ta)=\sum_{n=0}^{+\infty} \frac{t^n a^n}{n!} \;</math>
+
+La preuve du fait que l'exponentielle est bien la solution est donnée dans l'article [[Matrice diagonalisable]]. Il apparaît nécessaire de calculer une exponentielle d'endomorphisme, qui dépend de toutes les puissances de cet endomorphisme. Ce problème est résolu par Hamilton grâce à la notion de valeurs et vecteurs propres : en effet, s'il existe une base de vecteurs propres pour l'endomorphisme <math>a</math>, avec pour valeurs propres ''λ<sub>1</sub>'' et ''λ<sub>2</sub>'' et si A est l'écriture [[Théorie des matrices|matricielle]] de ''a'' ; c'est-à-dire s'il existe une matrice de passage ''P'' telle que:
+:<math> A=P^{-1}\begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}P\;</math>
+alors :
+:<math>\exp(tA)=\sum_{n=0}^{+\infty} \frac{t^n P^{-1}A^nP}{n!}=P^{-1}\left(\sum_{n=0}^{+\infty} \frac{t^n}{n!}\begin{pmatrix} \lambda_1^n & 0 \\ 0 & \lambda_2^n \end{pmatrix}\right)P=P^{-1} \begin{pmatrix} \ e^{\lambda_1 t} & 0 \\ 0 & e^{\lambda_2 t} \end{pmatrix} P\;</math>
+
+La solution, tant pour la position que pour la vitesse est donc une combinaison linéaire d'exponentielles. Le calcul général de l'exponentielle d'un endomorphisme, ainsi que les justifications théoriques sont traités dans l'article [[Réduction d'endomorphisme]].
+
+S'il existe deux valeurs propres réelles, alors la solution est de même nature que la courbe bleue sur la figure 4. L'amortissement ramène sans oscillation la masse à sa position d'équilibre. En revanche, s'il n'existe pas de valeur propre réelle, il est nécessaire d'en trouver dans les nombres complexes. La solution est alors donnée par la partie réelle de la matrice, et on obtient une trajectoire de même nature que la courbe rouge, avec des oscillations avant d'atteindre le point d'équilibre. La physique est source de nombreux exemples de problèmes linéaires de dimension finie où les valeurs propres représentent la bonne approche pour la résolution. On les trouve par exemple dans l'analyse des [[Circuit électrique|circuits électriques]].
+
+=== Principe d'inertie de Sylvester ===
+'''Formulation du principe d'inertie de Sylvester'''
+[[Image:Inertie balai.jpg|thumb|100px|left|Fig 6. Axe des moments d'inertie.]]
+
+Sylvester analyse l'énergie que l'on doit transmettre à un solide pour lui donner une vitesse de rotation ''v<sub>r</sub>''. Il remarque que le vecteur propre représente dans ce contexte un axe de rotation privilégié. La valeur propre correspond à la grandeur appelée en physique ''moment d'inertie'', elle est inversement proportionnelle à l'énergie à fournir pour atteindre une vitesse de rotation ''v<sub>r</sub>''. Pour atteindre cette vitesse avec le moins d'énergie, il est nécessaire de choisir l'axe ayant le plus faible moment d'inertie, c’est-à-dire celui où l'ellipsoïde de la figure 5 est le plus aplati. La théorie montre que l'axe où l'inertie est la plus forte est toujours perpendiculaire à celui du plus faible moment d'inertie. Cette perpendicularité correspond à l'existence d'une base orthonormale de vecteurs propres.
+
+Le cas du balai de la figure 6, illustre par un exemple le phénomène. L'axe de plus faible moment d'inertie est indiqué par la flèche 1. Il est intuitif que l'énergie nécessaire pour obtenir la même vitesse de rotation selon l'axe de la flèche 2 sera largement supérieure. Les vecteurs propres et les valeurs propres apparaissent comme des caractéristiques propres de la géométrie de l'objet, dans ce cas les axes privilégiés de rotations, (il est possible de prendre un axe de rotation au hasard, mais les autres axes imposeront des tensions sur l'axe) et les valeurs propres les moments d'inertie associés.
+
+Une approche similaire s'applique en [[mécanique des milieux continus]] pour l'analyse des [[Déformation élastique|déformations élastiques]] comme la [[torsion]], on parle alors de [[tenseur des contraintes]].
+
+'''Application en statistique'''
+
+''Article détaillé [[Analyse en composantes principales]]''
+
+L'approche de Sylvester est utilisée dans de nombreux domaines pour comprendre la géométrie d'un phénomène. Les techniques statistiques de dépouillements de sondage en sont un parfait exemple. Soit un sondage, réalisé sur un échantillon de cent personnes et contenant six critères. S'il est possible d'évaluer chaque question par un critère numérique, alors une analyse en composante principale est possible. Elle permet d'interpréter les résultats du sondage.
+
+Les résultats du sondage, sont dans un premier temps normalisés pour qu'un critère, qui par exemple prend des valeurs entre un et cent ne soit pas dix fois plus important qu'un autre prenant des valeurs de un à dix. Le résultat du sondage est alors considéré comme un solide dans un espace comportant autant de dimensions que de critères.
+
+{| border="0" align="center"
+|+ Figure 7. Résultat du sondage
+|
+!
+|-
+| align="center" | [[Image:ACP 1.GIF|thumb|180px|ACP Réussie, l'axe principal est explicatif.]]
+| align="center" | [[Image:ACP 2.GIF|thumb|180px|Exemple de deux questions aux réponses corrélées.]]
+| align="center" | [[Image:ACP 3.GIF|thumb|180px|Exemple de deux questions aux réponses non corrélées.]]
+|}
+
+La première figure représente l'ACP sur les deux premiers vecteurs propres, qu'on appelle en statistiques composantes principales. Les valeurs sont rassemblées autour de cet axe, ce qui signifie qu'il est le plus explicatif. Ce caractère explicatif est donné par le carré de la valeur propre. Dans l'exemple ''fictif'', il est dû à deux critères fortement corrélés. Ce phénomème est visible sur la deuxième figure, les deux critères corrélés sont représentés. Là encore ces critères se rassemblent autour d'une droite, dans l'exemple cette droite est la droite de la composante principale (''celle à la valeur propre la plus forte''). Ces coordonnées sur ses deux critères sont respectivement 0,506 et -0,491. Si les critères sont ''revenu'' et ''surcharge pondérale'', alors le sondage indique que l'obésité frappe en priorité les revenus les plus faibles. La troisième figure illustre un cas, ou la corrélation entre deux critères est faible. Si les critères sont ''taille'' et ''niveau d'étude'', alors un tel graphique indique que la taille n'est pas un critère différenciant pour le niveau d'étude.
+
+Cet exemple illustre encore que dans le cas analysé par Sylvester, les valeurs et vecteurs propres ne sont pas uniquement des méthodes de calculs, mais aussi des éléments constitutifs de la géométrie du problème considéré.
+
+'''Application en relativité'''
+[[Image:light_cone.png|thumb|right|Fig 7'. Le principe d'inertie de Sylvester en relativité]]
+''Article détaillé: [[Relativité restreinte]]''
+
+A travers les moments d'inertie d'un solide, Sylvester ne s'est pas trompé sur le titre de son article de [[1852]] ''Théorie des invariants algébriques''. Les valeurs propres, qui sont les invariants, dépassent de loin le cadre des moments d'inertie. La géométrie de l'[[espace-temps]] relativiste est un autre exemple. Ici la forme bilinéaire ne décrit plus le moment d'inertie d'un solide indéformable, mais une modélisation de la géométrie même de notre univers.
+
+La figure 7' représentative de cette géométrie est néanmoins fort différente des illustrations précédentes. Il existe un axe particulier, où le carré de la distance possède une propriété spéciale: il est négatif. La bonne ''distance'' de cette théorie n'est plus toujours positive. Un vecteur de coordonnées ''(x, y,z, t)'' a pour image ''x<sup>2</sup>+y<sup>2</sup>+z<sup>2</sup>-c<sup>2</sup>.t<sup>2</sup>''. [[Hermann Minkowski]] [[1864]]-[[1909]] développe une approche mathématique fondée sur ces principes en [[1907]] dans un article intitulé ''Espace-temps'', et l'applique à la relativité l'année suivante.
+
+Le cône d'inertie de la figure 7 représente l'univers pour un observateur au point A. Le point C possède une ''distance'' négative, pour l'atteindre il faudrait une vitesse supérieure à la lumière, ce qui, dans le contexte de cette théorie n'est pas réalisable. Il est donc inobservable et n'a aucune influence directe ou indirecte sur l'observateur. Le point B est dans ce que l'on appelle le ''cône de lumière'', c'est un point possible, il pourra interagir avec l'observateur.
+
+Dans le cas qui intéresse Minkowski, les endomorphismes qui traduisent les lois physiques d'un observateur à un autre observateur, jouent un rôle important ; ce sont ceux qui vérifient l'équation <math><u(x),u(y)>=<x,y></math>, où <math><,></math> est la forme bilinéaire qui décrit la géométrie considérée. Ces endomorphismes laissent la géométrie invariante, ils correspondent dans une modélisation euclidienne aux [[isométrie]]s. Dans la géométrie de la relativité, 1 est valeur propre et son espace propre associé est de dimension 3 et ''i.c'' est valeur propre de sous-espace propre associé de dimension 1, où i désigne le nombre imaginaire et c la célérité de la lumière. On parle de signature de Sylvester (3,1). Toutes les lois physiques doivent être invariantes par ces endomorphismes. Ces endomorphismes forment une structure de [[Groupe (mathématiques)|groupe]], appelé [[groupe spécial unitaire]], la relativité revient à réécrire la physique en lois laissées invariantes par le groupe spécial unitaire de dimension 4 et de signature (3,1).
+
+=== Représentation des groupes ===
+''Article détaillé: [[Représentation des groupes]]''
+
+[[Image:Groupe Rotation.jpg|thumb|right|Fig. 8. Exemple d'application linéaire: une symétrie par rapport à l'axe horizontal central]]
+L'analyse par vecteurs et valeurs propres possède aussi comme domaine d'application la [[représentation des groupes]]. Une structure de [[Groupe (mathématiques)|groupe]] est parmi celles dont la définition algèbrique est la plus simple, c'est un ensemble muni d'une seule opération notée souvent comme la multiplication. Si la définition est simple, en revanche, ces structures s'avèrent parfois suffisamment complexes pour que leur théorie ne soit pas encore complètement connue. Comme exemple de groupe, il est possible de citer celui des rotations du cube qui laissent son enveloppe invariante. La figure 8 montre que ce groupe est généré par trois permutations, celle qui place la face 1 en position 2, représentée par la flèche rouge, celle représentée par la verte et enfin la bleue. Au total ce groupe comporte 24 éléments. Une représentation d'un groupe consiste à une identification de ses éléments avec des endomorphismes de telle manière à ce que l'opération du groupe corresponde à la composition d'endomorphisme. Ainsi dans l'exemple de la figure, il existe une identification naturelle entre le groupe abstrait des 24 rotations du cube avec un groupe de rotations dans un espace de dimension 3. 
+
+Cette approche permet alors de disposer des outils comme les vecteurs ou valeurs propres pour l'analyse de la structure des groupes. La théorie montre que les espaces propres d'une représentation correspondent à la partie commutative du groupe. Dans le cas d'un groupe entièrement commutatif, il existe une base de vecteurs propres pour toute la représentation. Cette approche démontre, par exemple que les groupes commutatifs finis sont des produits de [[Groupe cyclique|groupes cycliques]]. ''La démonstration est esquissée dans l'article [[Matrice diagonalisable]]''.
+
+La représentation des groupes finis (''c’est-à-dire ayant un nombre fini d'éléments'') joue un rôle important dans la théorie des vecteurs propres. Elle a permis à Jordan, dans un contexte relativement général, de comprendre totalement le champ d'application et les limites d'une approche par vecteurs propres. Des conditions nécessaires et suffisantes d'existence de vecteurs propres ou de bases de vecteurs propres sont alors connues. De plus, les cas où il n'existe pas de base de vecteurs propres sont élucidés ainsi que la structure exacte des endomorphismes entrant dans cette catégorie et la proportion d'endomorphismes de cette nature dans l'ensemble de tous les endomorphismes.
+
+Si le contexte est relativement général, il ne couvre pas tous les cas d'espaces vectoriels connus. La théorie de Jordan se limite à la dimension finie avec un corps de nombre [[Corps algébriquement clos|algébriquement clos]]. Un corps est dit algébriquement clos si tous ses [[polynôme]]s ont au moins une racine. Ce contexte est néanmoins suffisamment général pour couvrir toutes les applications citées dans ce chapitre.
+
+== Théorie en dimension finie ==
+=== Approche élémentaire ===
+{{article détaillé|Polynôme caractéristique}}
+
+Une première remarque simplifie l'étude. Si ''λ'' est une valeur propre d'un endomorphisme ''u'', alors un vecteur propre est un vecteur non nul qui a pour image 0 par l'application ''u - λ.Id'', où ''Id'' désigne l'application identité. L'espace propre associé à ''λ'' est l'ensemble des vecteurs qui ont pour image 0 par cette application. On appelle cet ensemble le [[Noyau (algèbre)#Noyau d'une application linéaire|noyau de l'endomorphisme]] ''u - λ.Id''. Les propriétés générales établissent que cet ensemble est un sous espace vectoriel. Celui-ci est non réduit à 0 par définition d'une valeur propre.
+
+Une fonction importante, en particulier dans notre cadre, est la fonction [[déterminant]]. Elle fut la première à être étudiée systématiquement dans le monde de l'algèbre linéaire. Elle associe à un endomorphisme un nombre. Son intérêt réside notamment dans le fait que le déterminant d'un endomorphisme est nul si et seulement s'il existe des vecteurs non nuls qui ont pour image le vecteur nul par cet endomorphisme, c'est-à-dire si et seulement si 0 est une valeur propre pour cet endomorphisme. Le déterminant de l'application ''u - λ.Id'' est appelé le polynôme caractéristique. Ces remarques fournissent les premières propriétés :
+
+:* Soit ''λ'' une valeur propre, alors l'espace propre de valeur propre ''λ'' est le sous-espace vectoriel égal au noyau de ''u - λ.Id'',
+:* un espace propre est un sous-espace vectoriel,
+:* les racines du polynôme caractéristique sont les valeurs propres.
+
+Cette dernière propriété montre que l'existence de racines de polynômes a une influence sur la théorie des valeurs propres. En fait, l'existence même des valeurs propres dépend de l'existence de racines pour les polynômes, par exemple le polynôme caractéristique. C'est pourquoi dans le cadre du corps des nombres complexes, qui est algébriquement clos d'après le [[théorème de d'Alembert-Gauss]], les propriétés liées aux valeurs propres s'énonceront plus simplement que dans le cadre du corps des réels.
+<div style="clear:both" class="NavFrame">
+<div class="NavHead" align="center">Propriétés supplémentaires</div>
+<div class="NavContent" align="left">
+:* Les espaces propres ''E<sub>i</sub>'' de valeurs propres ''λ<sub>i</sub>'' forment une somme directe de sous-espaces vectoriels stables par ''u''.
+
+Cette propriété se démontre simplement avec les outils développés dans l'article [[Polynôme d'endomorphisme]]. ''X - λ<sub>i</sub>'' est un polynôme annulateur de la restriction de ''u'' à ''E<sub>i</sub>''. Ces polynômes sont tous premiers entre eux, la dernière proposition du paragraphe [[Polynôme d'endomorphisme#Idéaux annulateurs|Idéaux annulateurs]] termine la démonstration.
+
+:* Toute famille de ''p'' vecteurs propres de ''u'' associés à des valeurs propres deux à deux distinctes est une famille libre.
+
+Cette propriété est un corollaire direct de la proposition précédente.
+
+:* Si deux endomorphismes ''u'' et ''v'' [[Commutativité|commutent]], alors un espace propre de ''u'' est stable par ''v''.
+
+Soit ''x'' un vecteur propre de ''u'', de valeur propre ''λ'', alors:
+<center><math> u\circ v(x)\; = \; v\circ u(x) \; = \; \lambda v(x)</math></center>
+Nous avons donc démontré que ''v(x)'' est soit nul soit vecteur propre de valeur propre ''λ'' il est donc bien élément de l'espace propre de ''x''.
+</div>
+<div class="NavEnd">&nbsp;</div>
+</div>
+<noinclude>
+
+=== Cas où l'endomorphisme est diagonalisable ===
+''Article théorique: [[Diagonalisation]], article appliqué: [[Matrice diagonalisable]]''
+[[Image:Endomorphisme diagonalisable.jpg|thumb|left|350px|Fig. 10. Modification d'un parrallélotope dont les côtés sont formés par une base de vecteurs propres par un endomorphisme diagonalisable.]]
+
+Le concept de l'article est particulièrement clair dans le cas où le comportement de l'endomorphisme est entièrement décrit par les vecteurs et valeurs propres. L'endomorphisme est alors dit diagonalisable.
+
+:''Un endomorphisme est dit diagonalisable si et seulement s'il existe une base de vecteurs propres''.
+
+C'est le cas du premier exemple, celui du miroir. Une base peut alors être choisie en prenant deux vecteurs libres dans le plan de la glace et un troisième perpendiculaire à ce plan. Les deux premiers vecteurs ont pour images eux-mêmes et sont donc de valeur propre 1 et le dernier est de valeur propre -1. Cette situation est intéressante à trois titres: elle correspond à un cas '''simple''' à traiter, elle est sous certaines hypothèses '''fréquente''', enfin il existe de multiples '''critères''' pour la repérer.
+
+* La '''simplicité''' de cette situation provient de deux faits. Il existe une décomposition de l'espace en sous-espaces stables, simples en eux-mêmes, et sur lesquels l'endomorphisme est simple à décrire. Ces sous-espaces sont simples car de dimension 1 : ce sont des droites. La linéarité de l'endomorphisme permet de connaître exhaustivement le comportement de la transformation, une fois compris le comportement sur ces droites. Enfin la restriction de l'endomorphisme à ces droites est une homothétie, c’est-à-dire une dilatation, d'un facteur la valeur propre. Un exemple de cette situation est donné par la figure 10 : un parallélotope jaune dont les arêtes sont la base de vecteurs propres, l'image par l'endomorphisme est un parallélotope dont les arêtes ont gardé les mêmes directions, mais dont les longueurs ont été modifiées.
+
+Cette simplicité ouvre la voie à de nombreuses applications évoquées précédemment dans l'article. Elle permet par exemple le calcul d'une exponentielle d'endomorphisme et par conséquent la résolution de nombreux problèmes mécaniques.
+
+[[Image:Nappe non diagonalisable.jpg|thumb|right|300px|Fig. 11. Nappe représentant l'adhérence des endomorphismes non diagonalisables sur le corps des complexes.]]
+
+* Cette situation est aussi '''fréquente'''. La figure 11 en est une illustration dans le cas où l'espace vectoriel est de dimension 2 sur les nombres réels. L'ensemble des endomorphismes est alors un espace de dimension 4 : tout endomorphisme admet une représentation matricielle de la forme <math>\begin{pmatrix}a&b\\c&d\end{pmatrix}</math>. Pour obtenir une représentation graphique en dimension 3, les coefficients ''b'' et ''c'' de la représentation matricielle sont représentés uniquement par un axe à travers la valeur ''-b.c''. En utilisant les critères de diagonalisabilité, on constate qu'une nappe particulière, de dimension 2, apparaît dans cette représentation (elle serait de dimension 3, si on pouvait tout représenter dans l'espace, de dimension 4, des endomorphismes). Cette nappe correspond à une situation limite pour la diagonalisabilité : la zone en dessous de la nappe contient des endomorphismes diagonalisables, la zone au-dessus contient des endomorphismes diagonalisables seulement sur les nombres complexes. Dans la représentation choisie, les endomorphismes diagonalisables sur les nombres complexes occupent donc presque tout l'espace ; c'est en cela que le cas de diagonalisabilité est fréquent. En revanche les endomorphismes qui sont diagonalisables même sur les réels en occupent essentiellement la moitié. Cette situation de fréquence est à mettre en relation avec la situation des polynômes à coefficients réels, dont les racines sont réelles, ou seulement complexes. On trouve en particulier dans la zone des endomorphismes diagonalisables sur les nombres complexes seulement : les rotations, dont un exemple avait été donné par la rotation de la Terre sur elle-même. Enfin, pour ce qui est de la nappe elle-même, deux types de situations s'y présentent. La droite horizontale d'équation ''a'' = ''d'' avec ''b'' = ''c'' = 0 représente la droite des homothéties, du même type que le deuxième exemple de l'article. Les autres points de la nappes représentent les seuls endomorphismes non diagonalisables.
+
+* Enfin il existe de multiple '''critères''' pour caractériser un endomorphisme diagonalisable. Une première approche consiste à étudier le polynôme caractéristique. Une autre largement plus sophistiquée consiste à étudier les [[Polynôme d'endomorphisme|polynômes de l'endomorphisme]]. L'un des concept clé est alors le [[polynôme minimal d'un endomorphisme|polynôme minimal]] qui fournit, par exemple, un critère de diagonalisation particulièrement simple.
+
+Les critères associés à la diagonalisation sont données dans la boite déroulante suivante. Les articles contenant les preuves sont systématiquements cités.
+
+<div style="clear:both" class="NavFrame">
+<div class="NavHead" align="center">Propriétés supplémentaires</div>
+<div class="NavContent" align="left">
+
+Les propositions suivantes sont équivalentes:
+
+:* L'endomorphisme est diagonalisable
+:* Il existe une base de vecteur propre
+:* la somme des espaces propres engendre l'espace entier
+:* la somme des dimensions des espaces propres est égale à la dimension de l'espace entier
+:* toute représentation matricielle de ''u'' est diagonalisable.
+
+Dans le cas complexe (c’est-à-dire ou le corps de nombre est celui des complexes) cette propriété est [[presque partout]] vraie au sens de la mesure. Au sens de la [[topologie]] les endomorphismes diagonalisables sont [[Densité (topologie)|denses]].
+
+''Démonstration dans [[Diagonalisation]].''
+
+:* Les racines du polynôme minimal forment l'ensemble des valeurs propres.
+''Démonstration dans [[Valeur propre (synthèse)]]''
+
+:* Un endomorphisme u est diagonalisable si et seulement son polynôme minimal est scindé sur K et à racines simples.
+''Démonstration dans [[Polynôme d'endomorphisme#Diagonalisabilité|Polynome d'endomorphisme]]''
+
+:* S'il existe n valeurs propres distinctes alors l'endomorphisme est diagonalisable.
+''Démonstration dans [[Valeur propre (synthèse)]]''
+
+:* Si l'endomorphisme est diagonalisable, alors le polynôme caractéristique est scindé.
+''Démonstration dans [[Réduction d'endomorphisme]]''
+
+L' '''ordre de multiplicité algébrique''' d'une valeur propre est l'ordre de multiplicité de la racine dans le polynôme caractéristique. L'ordre de multiplicité algébrique d'une valeur propre ''λ'' correspond donc à la puissance du monôme ''(X-λ)'' dans le polynôme caractéristique. L'adjonction de cette définition permet l'expression d'une condition nécessaire et suffisante de diagonalisabilité.
+
+:* L'endomorphisme est diagonalisable si et seulement si, tout espace propre possède une dimension égale à la multiplicité algèbrique de la valeur propre associée.
+''Démonstration dans [[Réduction d'endomorphisme]]''
+
+''Les démonstrations associées à la nappe de l'adhérence des endomorphismes non diagonalisables sont données dans [[Diagonalisation]].''
+</div>
+<div class="NavEnd">&nbsp;</div>
+</div>
+<noinclude>
+
+=== Cas complexe ===
+[[Image:Endomorphisme nilpotent.jpg|thumb|250px|right|Fig. 12. Exemple d'image d'une base par un endomorphisme nilpotent en dimension 3.]]
+{{article détaillé|Réduction de Jordan}}
+
+La figure 11 montre que, même dans le cas où le corps est celui des nombres complexes, il reste encore des cas à élucider, celui des endomorphismes qui se situent sur la nappe, mais pas sur la droite des homothéties. Dans le cas des systèmes d'équations différentiels linéaires, il n'intervient que comme un cas limite, dans l'approche de Sylvester, il n'apparaît plus du tout. En revanche dans la théorie des groupes, ce cas est important. Ce type d'endomorphisme permet la représentation des groupes non commutatifs. Si ces groupes sont infiniement différentiable, alors ils permettent la représentation d'un cas important, celui des groupes de Lie nilpotent.
+
+Pour élucider cette problématique, les méthodes utilisées sont celles mises au point par Nelson Dunford. L'outil essentiel consiste à considérer les combinaisons linéaires de puissance de l'endomorphisme. On obtient ainsi un polynôme d'endomorphisme. Ces polynômes forment une structure d'[[Algèbre sur un corps|algèbre]] commutative doté d'un morphismes de l'ensemble des polynômes vers cette algèbre. Cette approche est féconde, on la retrouve aussi dans l'étude du cas où la dimension n'est plus finie. La théorie associée à cette approche se trouve dans l'article [[Polynôme d'endomorphisme]], et l'application au cas traité ici dans [[Décomposition de Dunford]].
+
+Le résultat remarquable est qu'il n'existe dans ce contexte qu'une unique exception structurelle au cas diagonalisable. C'est le cas où l'endomorphisme u à la puissance p, où p est un entier, est égal à 0. On dit alors que l'endomorphisme est [[Endomorphisme nilpotent|nilpotent]]. On peut considérer par exemple en dimension 3, si ''(e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>, )'' est une base l'endomorphisme qui vérifie ''u(e<sub>1</sub>)=e<sub>2</sub>'', ''u(e<sub>2</sub>)=e<sub>3</sub>'' et ''u(e<sub>3</sub>)=0''. Cet endomorphisme n'est clairement pas nul son polynôme caractéristique est égal à ''x<sup>3</sup>'' donc la seule valeur propre est 0. Cet exemple est illustré en figure 12.
+
+Camille Jordan a prouvé que dans ce contexte, tout endomorphisme est somme d'un endomorphisme diagonalisable et d'un endomorphisme nilpotent et qu'ils commutent entre eux. L'application de la théorie des endomorphismes montre que le cas nilpotent dispose d'une représentation [[Matrice nilpotente|matricielle]] particulièrement simple et trigonale supérieure. Dans le cas général, cette représentation s'appelle la [[réduction de Jordan]], elle démontre aussi que, dans ce cas, toute matrice est semblable à une [[Trigonalisation|matrice triangulaire]].
+
+<div style="clear:both" class="NavFrame">
+<div class="NavHead" align="center">Propriétés supplémentaires</div>
+<div class="NavContent" align="left">
+:* L'endomorphisme ''u'' est la somme d'un endomorphisme diagonalisable et d'un [[endomorphisme nilpotent]] qui commutent entre eux.
+''Démonstration dans [[Polynôme d'endomorphisme]]''
+:* L'espace ''E'' est somme directe de ses [[Sous-espace caractéristique|espaces caractéristiques]].
+''Démonstration dans [[Décomposition de Dunford]]''
+
+La notion de espace caractéristique généralise l'espace propre. Elle correspond au noyau de l'endomorphisme ''(u - λ.Id)<sup>n</sup>''.
+
+:* Les sous-espaces caractéristiques sont non réduits au vecteur nul et stables par l'endomorphisme. La restriction de l'endomorphisme à l'espace propre associé à la valeur propre ''λ'' est la somme d'une homothétie de rapport ''λ'' et d'un endomorphisme nilpotent.
+
+''Démonstration dans [[Décomposition de Dunford]]''
+
+:* Un espace propre est inclus dans l'espace caractéristique de même valeur propre.
+''Démonstration dans [[Décomposition de Dunford]]''
+
+:* La famille de [[projecteur]]s sur les espaces caractéristiques ainsi que les endomorphismes diagonalisables et nilpotents s'expriment sous forme de polynômes d'endomorphisme de ''u''.
+''Démonstration dans [[Décomposition de Dunford]]''
+
+:* Toute matrice de ''u'' est trigonalisable, il admet une [[Réduction de Jordan|représentation de Jordan]].
+''Démonstration dans [[Réduction de Jordan]]''
+
+:* Le polynôme minimal est le produit des polynômes de degré 1 et de racine les valeurs propres à la puissance l'indice de l'endomorphisme nilpotent associé.
+''Démonstration dans [[Décomposition de Dunford]]''
+
+:* Le polynôme caractéristique est le produit des polynômes de degré 1 et de racine les valeurs propres à la puissance la dimension de l'espace caractéristique associé.
+''Démonstration dans [[Décomposition de Dunford]]''
+
+:* Le déterminant est égal au produit des valeurs propres élevées à la puissance de la dimension de l'espace caractéristique associé.
+''Démonstration dans [[Décomposition de Dunford]]''
+
+:* La trace est égale à la somme des valeurs propres multipliées par la dimension de l'espace caractéristique associé.
+''Démonstration dans [[Décomposition de Dunford]]''
+
+</div>
+<div class="NavEnd">&nbsp;</div>
+</div>
+<noinclude>
+
+=== Cas réel ===
+[[Image:Rotation-de-la-terre.jpg|thumb|180px|right|Fig. 13. Rotation de la terre.]]
+Sur les réels un polynôme n'admet pas toujours de racine. Dans notre troisième exemple, celui de la rotation de la terre, l'espace est de dimension 3, or tout polynôme du troisième degré possède une racine sur les réels. En conséquence, il existe au moins une droite de vecteurs propres. C'est l'axe des pôles dans notre exemple. En revanche, dans le cas de dimension paire, par exemple la restriction de cette application au plan illustré en bleu sur la figure 13 de l'équateur, l'existence de valeur propre n'est plus garantie. Ici, une analyse géométrique nous montre qu'il est vain de chercher un vecteur propre car la rotation modifie la direction de tous les vecteurs non nuls.
+
+Dans le cas complexe, nous avons vu que seul un terme nilpotent peut interdire la diagonalisation. Dans le cas réel, une fois retranché le terme nilpotent, seul les rotations empêchent la diagonaliation. Il existe alors deux manières de réduire le cas réel.
+
+La première solution consiste à plonger l'endomorphisme dans un espace vectoriel complexe. C'est la solution la plus simple et la plus fréquente. La réduction de l'endomorphisme y est alors plus aisée. Une fois cette réduction réalisée, l'application de cette réduction à des vecteurs réels donnent toujours des solutions réelles.
+
+La deuxième solution consiste à affaiblir la réduction. Tout endomorphisme sur les nombres réels est la somme du produit d'un endomorphisme diagonalisable et d'une rotation avec un endomorphisme nilpotent. L'endomorphisme diagonalisable commute avec l'application nilpotente et la rotation. En revanche, l'application nilpotente ne commute pas avec la rotation.
+
+''Démonstration dans [[Réduction d'endomorphisme]]''
+
+=== Cas d'un module sur un anneau ===
+
+Les définitions n'utilisent pas le fait que <math>\mathbb{K}</math> soit un [[corps commutatif]]. Ces définitions ont donc encore un sens dans le cas ou ''E'' n'est pas un espace vectoriel mais un [[module sur un anneau]]. Si l'[[Anneau unitaire|anneau]] n'est pas commutatif, on parlera alors de valeur propre à droite ou de valeur propre à gauche. Si l'anneau est commutatif on parlera simplement de valeur propre.
+
+=== Cas des formes bilinéaires ===
+''Article associé: [[Théorème spectral]]''
+[[Image:Théorème spectral.jpg|thumb|250px|right|Fig 5. L'image d'une sphère par un endomorphisme autoadjoint]]
+
+Les endomorphismes sont aussi utilisés pour représenter des [[Forme bilinéaire|formes bilinéaires]], qui sont des objets de même nature que les distances euclidiennes. Les valeurs et vecteurs propres prennent dans ce contexte une signification particulière.
+
+Les formes bilinéaires sont des fonctions qui ne sont pas linéaires, mais [[quadratique]]s, au sens où la fonction ne s'exprime plus comme une combinaison linéaire de coordonnées, c'est-à-dire un polynôme (à plusieurs variables) de degré 1 en les coordonnées, mais comme un polynôme du second degré en les coordonnées. La distance euclidienne sur l'espace <math>\mathbb{R}^3</math> est par exemple obtenue à partir de la forme bilinéaire <math>\phi((x_1,y_1,z_1),(x_2,y_2,z_2))=x_1x_2+y_1y_2+z_1z_2</math>, expression qui fait effectivement intervenir un polynôme de degré 2.
+
+Certaines propriétés éventuellement vérifiées par les formes bilinéaires, comme par exemple la symétrie, les rendent le cas échéant plus faciles à étudier. La distance euclidienne par exemple est symétrique, ainsi la distance d'un point ''a'' à un point ''b'' est la même que la distance d'un point ''b'' à un point ''a''. Un endomorphisme qui représente une forme bilinéaire symétrique est dit [[Espace euclidien#Adjoint d'un endomorphisme|autoadjoint]]. 
+
+Ces endomorphismes autoadjoints disposent en fait de propriétés fortes concernant valeurs et vecteurs propres: non seulement ils admettent des vecteurs propres, mais de plus ceux-ci suffisent pour comprendre entièrement l'endomorphisme ; un endomorphisme auto-adjoint est diagonalisable. Ensuite, les vecteurs propres peuvent être choisis avec une propriété forte : il existe une [[base orthonormale]] de vecteurs propres. Enfin, pour ce cas particulier, il existe des méthodes de calcul simples et rapides pour obtenir valeurs et vecteurs propres. Cette situation est illustrée graphiquement sur la figure 5. Un endomorphisme autoadjoint transforme la boule unité en un ellipsoïde dont les axes sont les vecteurs propres et les longueurs des demi-axes les valeurs absolues des valeurs propres.
+
+Par ailleurs, la forme bilinéaire initiale décrit ici l'équivalent d'une distance d'un espace géométrique ; l'espace étudié, muni de la forme bilinéaire, est un nouvel espace géométrique. Sylvester montre que les vecteurs et valeurs propres, de l'endomorphisme auto-adjoint associé, sont des ''invariants'', des êtres qui décrivent les grandeurs naturelles et caractéristiques de la géométrie considérée. La signification physique de ces grandeurs dépend du contexte de l'espace étudié. Sylvester a appliqué ce qui précède au principe d'[[Moment d'inertie|inertie]] d'un solide indéformable en mécanique et en avait déduit l'existence d'axes de rotation (vecteurs propres) et de constantes d'inertie (valeurs propres) intrinsèques au solide. Les autres exemples d'applications montre qu'il en est de même dans d'autres situations, par exemple en statistique où les composantes principales révèlent la dimension la plus significative d'un songage, ou la relativité qui montre l'existence d'un invariant, la signature de Sylvester, dans la structure même de la géométrie de notre univers. 
+
+Le rôle des vecteurs et valeurs propres est ainsi modifié. Ils ne sont plus des uniquement des outils de calculs nécessaires pour accélérer un algorithme ou pour résoudre un problème technique de résolution d'équation différentielle, ils acquièrent une autonomie propre, et deviennent des invariants constitutifs d'une géométrie. Ils prennent alors des noms spécifiques au domaine d'application ; on parle par exemple d'axe de rotation en mécanique, de composantes principales en statistiques, ou de directions propres dans le cas d'espaces courbes.
+
+La démonstration de l'existence d'une base de vecteurs propres dans le cas des endomorphismes autoadjoints est donnée dans l'article [[Endomorphisme autoadjoint]].
+
+== Théorie spectrale ==
+=== Positionnement du problème ===
+L'analyse du cas de la dimension finie montre qu'une connaissance des valeurs propres et des espaces de Jordan associés permet une compréhension profonde des endomorphismes. Il est donc naturel d'essayer d'étendre cette approche aux cas d'espaces vectoriels de dimensions non finies.
+
+Ce besoin de généralisation apparaît naturellement en mathématiques. Les espaces deviennent des espaces de fonctions et les endomorphismes les [[Opérateur différentiel|opérateurs de différentiations]], comme les [[dérivée]]s les [[gradient]]s ou les [[Opérateur laplacien|laplaciens]]. L'exemple de la corde vibrante est caractéristique d'une approche de cette nature. Dans ce contexte le vocabulaire évolue, on ne parle plus d'endomorphisme mais d'opérateur, on utilise le terme de [[fonction propre]] pour désigner un vecteur propre et une telle démarche prend le nom de théorie spectrale. Elle est une branche de ce qui s'appelle l'[[Analyse fonctionnelle (mathématiques)|analyse fonctionnelle]].
+
+L'approche spectrale est séduisante à bien des aspects. Analyser non plus les propriétés analytiques des éventuelles solutions, mais la nature même de l'espace géométrique est une approche élégante. Elle offre de nouveaux outils, comme des bases ou des distances pour résoudre des difficultés souvent complexes. Dans le cas de la dimension finie, cette approche apporte des théorèmes puissants, à la fois théoriques et algorithmiques. Joseph Fourier, montre qu'il en est parfois de même dans des cas plus généraux, avec l'étude de l'équation de la chaleur ou des cordes vibrantes. David Hilbert confirme la pertinence de la démarche en ouvrant la voie à une théorie spectrale générale.
+
+=== Difficultés de l'approche ===
+Les propriétés géométriques des espaces fonctionnels sont hélas largement plus faibles que le cas de dimension finie. La première différence est la présence d'une base au sens algébrique du terme. En général, il n'est pas possible de construire une famille libre et génératrice de l'espace par combinaison linéaire finie. Il existe des contre-exemples comme l'espace vectoriel des polynômes. Mais cet espace est trop étroit pour contenir beaucoup de solutions des équations que l'on cherche à résoudre. Par exemple, la position initiale d'une corde de guitare pincée par le musicien a fort peu de chance d'être dans l'univers des polynômes trigonométriques.
+
+On peut alors généraliser ce type d'espace par une bonne ''complétude''. On trouvera alors l'espace des [[Série trigonométrique|séries trigonométriques]] ou celui des [[Série entière|séries entières]]. Les résultats sont alors de bons candidats pour établir les fondements d'une théorie spectrale. Pour comprendre la géométrie de tels espaces, la [[Espace topologique|topologie]] devient essentielle. En effet, par construction de l'espace, les solutions apparaissent comme limites de suites. Cependant la topologie cache bien des surprises pour les espaces fonctionnels.
+
+En dimension finie, toutes les normes définissent la même topologie. En fait, il n'existe véritablement qu'une topologie intéressante pour une analyse en vecteurs propres. En dimension infinie, ce n'est plus le cas, la [[Convergence simple|topologie faible]] par exemple ne possède même plus de distance associée, et parler de complétude n'est plus possible.
+
+La compacité est toujours vraie en dimension finie pour les fermés bornés. Le [[théorème de Riesz]] nous indique que ce n'est jamais le cas si la dimension n'est pas finie. Il devient illusoire de vouloir extraire des sous-suites convergentes pour trouver des vecteurs propres dans le cas général.
+
+Un endomorphisme est toujours continu en dimension finie. Ce n'est plus le cas pour les opérateurs linéaires des espaces fonctionnels. La dérivée, par exemple, ne possède pas cette propriété. Pour s'en assurer, il suffit de considérer la suite des [[monôme (mathématiques)|monômes]] <math>(x^n)\;</math>. Sur l'intervalle [0,1], elle est bornée. Or l'image de la suite par la fonction dérivée ne possède plus cette propriété. Dans le cas général, un opérateur linéaire est continu si et seulement si l'image de la boule unité est bornée, c'est la raison pour laquelle on parle plus souvent d'opérateur borné et que d'opérateur linéaire continu.
+
+=== Spectre et ensemble de valeurs propres ===
+En dimension finie, si un endomorphisme ''a'' est surjectif alors il est bijectif. Ainsi, l'application ''a - λI'' est une bijection si et seulement si λ n'est pas une valeur propre. Ce n'est pas vrai dans le cas général. Considérons par exemple ''E'' l'espace des fonctions infiniment dérivables sur l'intervalle [0,1], et considérons l'opérateur ''A'' (Amofrãn,cf plus bas ), qui, à la fonction ''f(x)'', associe la fonction ''xf(x)''. Il est relativement simple de constater qu'il est borné et ne possède pas de valeur propre. Considérons l'opérateur ''A - λI'' qui, à la fonction ''f(x)'', associe la fonction ''f(x)(x-λ)''. Si λ est compris entre 0 et 1, alors il n'est pas surjectif car son image ne contient pas de fonctions dont l'image de λ est différente de 0. On parle alors de spectre pour rendre compte de ce phénomène. Le spectre contient toujours l'ensemble des valeurs propres, et en dimension finie, ces deux notions coïncident. Dans notre exemple le spectre est l'intervalle [0,1] et l'ensemble des valeurs propres est vide.
+
+La définition précise du spectre est la suivante: Soit ''E'' un [[espace de Banach]] et ''O'' un opérateur linéaire, alors le spectre est l'ensemble des scalaires λ tel que l'opérateur ''O - λI'' n'admet pas de réciproque. Selon le contexte, il est possible d'ajouter la continuité de l'inverse comme condition.
+
+Cas de la dimension quelconque:
+Un espace vectoriel E sur K est dit K_variant si l'on peut trouver un endomorphisme (alors appelé K_variant pour E) ne laissant stable aucun sous espace fini et ne possédant, a fortiori, aucun vecteur propre.
+Un tel espace est aussi communément appelé Espace de [[Baire]]-Amofrãn.
+ 
+Remarque : Un espace qui n'est pas K_variant est dit K_invariant . Tout espace de dimension finie sur un corps algèbriquement clos est K_invariant (le [[polynôme caractéristique]] est scindé sur K!).
+R[X] en revanche est rendu K_variant par l'endomorphisme canonique d'Amofrãn P→X*P .
+
+On appelle famille de K_variance ou famille de Brenef une famille libre d'endomorphismes K_variant pour E. Le théorème de Baire-Brenef énonce alors que E est complet si la boule fermée pour la topologie induite sur l'espace de variance (engendré par une famille de Brenef) est compacte. En effet, le Lemme de Chabran nous assure que l'espace de variance est de dimension dénombrable, et ce quel que soit le corps.
+
+Un espace K_invariant est dit totalement invariant sur K si le spectre de tout endomorphisme K_invariant pour E est un convexe fermé de K.
+
+=== Décomposition spectrale des opérateurs autoadjoints compacts ===
+En dimension finie, le paragraphe sur l'algèbre bilinéaire montre qu'il existe un cas ou il est possible de trouver une base de vecteurs propres sans utiliser les polynômes d'endomorphismes. C'est un bon cadre pour une généralisation car la notion de polynôme s'applique mal dans le cas des espaces fonctionnels. L'espace est alors enrichi d'une distance, euclidienne ou hermitienne et l'endomorphisme possède toujours la ''bonne'' symétrie que l'on appelle autoadjointe. Dans ce contexte, la boule unité est transformée en un ellipsoïde représenté dans la figure 5. Les axes principaux de cet ellipsoïde sont les vecteurs propres et les longueurs de ces demi-axes sont les valeurs propres. Cette approche géométrique guide David Hilbert pour établir un résultat important de théorie spectrale, dans le cas de la dimension infinie.
+
+L'espace vectoriel possède une distance euclidienne ou hermitienne. Dans le cas général, il est nécessaire d'ajouter la complétude et la [[Espace séparable|séparation]]. Un tel espace s'appelle un [[Espace de Hilbert|Hilbert]] séparable. Les séries trigonométriques ou les fonctions définies sur un segment dont le carré est intégrable correspondent à ce type d'espace. C'est aussi le cadre utilisé dans ce paragraphe.
+
+L'opérateur possède une ''bonne'' symétrie. Elle reste la même que celle de la dimension finie, Il est ici autoadjoint.
+
+Enfin l'opérateur dispose d'une ''bonne'' propriété de continuité. Le fait qu'il soit borné ne suffit plus. Il est [[Espace compact|compact]], cela signifie que l'image de la boule unité est compacte. Une des conséquences est qu'il n'est plus inversible.
+
+Dans ce contexte, alors des résultats analogues à la dimension finie sont établis. Citons par exemple:
+
+:* '''Dans un Hilbert, un opérateur autoadjoint compact possède un spectre compact contenant toujours la valeur 0.'''
+
+:* '''Dans un Hilbert, le seul opérateur autoadjoint compact ayant pour spectre {0} est l'opérateur nul.'''
+
+:* '''Soit un opérateur autoadjoint compact dans un Hilbert séparable. Alors il existe une base hilbertienne de vecteurs propres pour l'opérateur.'''
+
+=== Application à la chimie quantique ===
+{{article détaillé|Équation de Schrödinger}}
+[[Image:HAtomOrbitals.png|thumb|270px|Fig. 7. Orbites stables d'un électron de l'atome d'hydrogène.]]
+La théorie spectrale constitue la base mathématique de la mécanique quantique. Les vecteurs propres trouvent donc d'innombrables applications dans ce domaine. Par exemple en chimie, l'étude de l'atome d'hydrogène montre que les états stables des électrons sont modélisés par des vecteurs propres dont les valeurs propres correspondent à des états d'énergie.
+
+Dans le contexte de la mécanique quantique, l'unique solution pour décrire la ''position'' d'un électron, dans notre exemple celui de l'hydrogène, est l'utilisation d'une [[fonction d'onde]] complexe. Le carré du module de cette fonction d'onde peut alors s'interpréter comme la probabilité de présence de l'électron en un point donné de l'espace. L'espace des fonctions d'ondes est un Hilbert séparable, celui des fonctions de notre espace géométrique dans les complexes dont le carré du module est intégrable.
+
+L'équation qui régit cette fonction d'onde (que l'on note ici Ψ<sub>E</sub>) est une version simplifiée de l'[[équation de Schrödinger]] :
+::<math>H\Psi_E = E\Psi_E\;</math>
+
+''H'' est un opérateur linéaire appelé [[Mécanique hamiltonienne|hamiltonien]]. C'est un opérateur différentiel d'ordre 2. Il correspond à une [[transformation de Legendre]] d'un [[lagrangien]]. On peut démontrer qu'un tel opérateur est autoadjoint.
+
+''E'' est un scalaire, qui représente le niveau d'énergie de l'électron.
+
+Ψ<sub>E</sub> est l'inconnue de l'équation. C'est donc par définition une fonction propre, elle correspond alors à ce que les chimistes appellent une [[Orbitale atomique|orbite stable]]. Les électrons ne peuvent que ''sauter'' d'une orbite stable à une autre.
+
+L'équation d'onde qui régit l'électron correspond donc au cadre de la théorie spectrale. Les solutions sont les fonctions propres d'un opérateur linéaire. La géométrie correspond à un contexte favorable, l'espace est un Hilbert séparable et l'opérateur est autoadjoint. On peut par exemple en déduire directement que l'énergie est toujours un réel. En revanche les propriétés de continuité ne sont pas favorables. Par exemple, l'opérateur n'est pas compact. Cette absence de ''bonne'' continuité rend la recherche d'orbites stables difficile.
+
+Le cas de l'atome d'hydrogène est un peu particulier. L'opérateur associé correspond à un cas relativement simple. On peut alors approximer aussi précisément qu'on le souhaite les fonctions propres. La figure 7 représente les premières orbites stables de l'atome d'hydrogène. La couleur représente le carré du module de l'orbite, plus elle est claire, plus la densité est forte. Le centre représente le noyau, ici un proton.
+
+Cette approche ne se limite pas à l'atome d'hydrogène, on peut l'utiliser pour d'autres atomes et même des molécules. C'est le travail qu'a réalisé [[Linus Pauling]] dans son livre ''The Nature of the Chemical Bond '' sur la nature des liaisons chimiques. Le [[Prix Nobel de chimie|prix Nobel de Chimie]], obtenu principalement grâce à cette approche est l'un des plus important dans la chimie du {{XXe siècle}}. La combinaison linéaire des orbites stables permet par exemple, dans le cas des molécules, de mieux décrire des composés [[Alcène|insaturés]] de l'[[éthylène]].
+
+== Valeur propre et recherche mathématique ==
+Les valeurs propres restent un vaste sujet de recherche dans les mathématiques d'aujourd'hui. Ce sujet couvre aussi bien la recherche fondamentale qu'appliquée et la dimension finie comme le cas général en dimension infinie.
+=== Recherche fondamentale et dimension finie ===
+Si dans le cas des corps relativement connus comme les nombres réels ou complexes, la problématique des valeurs propres est maintenant largement connue, il n'en est pas de même pour les corps plus ésotériques ou les anneaux. Dans le cas des corps finis, cette approche offre un regard particulier par exemple sur la [[cryptologie]]. D'autres corps comme les [[Nombre p-adique|p-adiques]] sont encore largement mal connus. Une approche linéaire, avec l'analyse des valeurs propres représente un outil supplémentaire pour l'analyse par exemple de l'anneau des polynômes.
+
+=== Recherche appliquée et dimension finie ===
+L'analyse des valeurs propres et des vecteurs propres représente la meilleure méthode pour la mise au point d'algorithmique rapide de résolution d'équations linéaires. Des critères comme la vitesse de convergence devient alors le premier sujet de recherche. Une technique particulièrement employée consiste à ''éloigner'' les valeurs propres pour accélérer la recherche des solutions. Ce secteur, même s'il n'est pas dominé par des mathématiciens au sens théorique du terme, puisqu'il est plus souvent le domaine des mathématiques de l'ingénieur ou de l'informaticien, est toujours en pleine effervescence. Il rejoint les travaux sur l'anneau des nombres [[Nombre p-adique|di-adiques]] (représentation binaire finie) et s'ouvre sur une branche des mathématiques difficile.
+La cryptologie appliquée utilise aussi les représentations linéaires pour offrir des codes multi-clé efficaces et souples. Ici, les corps sont rarement les réels ou les complexes, mais plutôt des corps finis.
+
+=== Recherche théorique dans le cas général ===
+Ce domaine est celui qui rassemble le plus de mathématiciens théoriques. L'algèbre linéaire contient des problèmes encore largement ouverts dans le cas de la dimension infinie. La voie théorique la plus analysée à l'heure actuelle est celle de l'axiomatisation, qui s'incarne dans la géométrie algébrique. Cette approche considère les opérateurs comme éléments d'une algèbre abstraite, bénéficiant d'un certain nombre de propriétés. L'objectif est la compréhension de cette algèbre pour l'appliquer ensuite à des cas particuliers d'[[algèbre d'opérateurs]]. Cette approche est particulièrement féconde en [[mathématiques appliquées]] à la physique, comme par exemple les travaux du mathématicien russe [[Maxim Kontsevich]] ([[Médaille Fields]] [[1998]]), dont les résultats les plus célèbres traitent des ''déformations quantiques'' sur les ''variétés de Poisson'' à l'aide d'une hiérarchie infinie de structures algèbriques généralisant la notion d'algèbre opérant sur un espace vectoriel.
+
+La géométrie algébrique est particulièrement féconde dans le domaine de l'arithmétique. Le mathématicien [[Laurent Lafforgue]] a reçu la Médaille Fields en [[2002]] pour ses travaux dans cette branche sur les [[Robert Langlands|conjectures de Langlands]].
+
+== Sources ==
+=== Liens internes ===
+
+{{Algèbre linéaire}}
+
+=== Notes ===
+<references />
+=== Liens externes ===
+* {{fr}} [http://c.caignaert.free.fr/chapitre2/node3.html Eléments propres d'un endomorphisme]
+* {{fr}} Michael Eisermann, ''[http://www-fourier.ujf-grenoble.fr/~eiserm/Enseignement/google.pdf Comment fonctionne Google ?]'', utilisation et calcul de vecteurs propres dans l'algorithme [[PageRank]].
+* {{en}} [http://www.arndt-bruenner.de/mathe/scripts/engl_eigenwert.htm Calculateur en ligne de valeurs et vecteurs propres]
+* {{fr}} [http://www.bretagne.ens-cachan.fr/math/people/gregory.vial/files/cplts/jordan.pdf Autour de la réduction de Jordan, traite le cas réel]
+* {{fr}} [http://www-math.unice.fr/~merle/Algebre_et_geometrie/jordan.pdf Réduction des endomorphismes]
+* {{fr}} [http://mathematiques.ac-bordeaux.fr/peda/publica/bulletin/bull15/naissalg.htm Référence sur la naissance de l'algèbre]
+* {{fr}} [http://www-groups.dcs.st-and.ac.uk/~history/HistTopics/Abstract_linear_spaces.html Référence historique sur l'algèbre abstraite]
+* {{en}} [http://www-groups.dcs.st-and.ac.uk/~history/Chronology/index.html Référence historiques de l'université de St Andrews]
+* {{fr}} [http://iml.univ-mrs.fr/~rolland/rr/preprints/analfonc.pdf Le développement de l'analyse fonctionnelle au début du XXe siècle] Robert Rolland CNRS
+
+=== Références ===
+* {{Lang1}}
+* {{Brezis}}
+* {{Rudin2}}
+* Richard Feynman, Robert Leighton, Mathew Sands, ''[[Cours de physique de Feynman]] Vol 5 Mécanique quantique'', Dunod
+* Nelson Dunford, Jacob T. Schwartz, ''Linear Operators, Part I General Theory'', Wiley-Interscience (1988)
+{{portail mathématiques}}
+
+[[Catégorie:Application linéaire]]
+
+{{Lien AdQ|es}}
+{{Lien AdQ|zh}}
+
+[[ar:قيمة ذاتية]]
+[[be-x-old:Уласныя лікі, вэктары й прасторы]]
+[[ca:Valor propi, vector propi i espai propi]]
+[[cs:Vlastní číslo]]
+[[da:Egenværdi, egenvektor og egenrum]]
+[[de:Eigenwertproblem]]
+[[en:Eigenvalues and eigenvectors]]
+[[eo:Ajgeno kaj ajgenvektoro]]
+[[es:Vector propio y valor propio]]
+[[fa:ویژه‌مقدار و ویژه‌بردار]]
+[[fi:Ominaisarvo, ominaisvektori ja ominaisavaruus]]
+[[he:ערך עצמי]]
+[[hu:Sajátvektor és sajátérték]]
+[[it:Autovettore e autovalore]]
+[[ja:固有値]]
+[[ko:고유값]]
+[[lt:Tikrinių verčių lygtis]]
+[[nl:Eigenwaarde (wiskunde)]]
+[[nn:Eigenverdi, eigenvektor og eigerom]]
+[[no:Egenvektor]]
+[[pl:Wektory i wartości własne]]
+[[pt:Valor próprio]]
+[[ro:Vectori și valori proprii]]
+[[ru:Собственные векторы, значения и пространства]]
+[[sl:Lastna vrednost]]
+[[sv:Egenvärde, egenvektor och egenrum]]
+[[th:เวกเตอร์ลักษณะเฉพาะ]]
+[[uk:Власний вектор]]
+[[ur:ویژہ قدر]]
+[[vi:Vectơ riêng]]
+[[zh:特征向量]]
+[[zh-yue:特徵向量]]

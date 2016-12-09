@@ -1,0 +1,208 @@
+En [[mathématiques]], et plus précisément en [[théorie analytique des nombres]], le '''théorème des nombres premiers''', démontré indépendamment par [[Jacques Hadamard|Hadamard]] et [[Charles-Jean de La Vallée Poussin|La Vallée Poussin]] en 1896, est un résultat concernant la [[comparaison asymptotique|distribution asymptotique]] des [[nombre premier|nombres premiers]].
+
+==Énoncé==
+{{article connexe|Fonction de compte des nombres premiers}}
+{{Théorème|Théorème des nombres premiers|Le nombre {{math|π(''x'')}} de nombres premiers inférieurs ou égaux à {{math|''x''}} est [[équivalent]], lorsque le [[nombre réel|réel]] {{math|''x''}} tend vers {{math|+∞}}, au quotient de {{math|''x''}} par son [[logarithme népérien]] . Soit 
+
+<center><math>\pi(x)\sim\frac{x}{\ln(x)}\ (x\to+\infty),</math></center>
+
+c'est-à-dire
+
+<center><math>\lim_{x\to+\infty}\pi(x)\frac{\ln(x)}{x}=1.</math></center>}}
+
+== Approximations asymptotiques ==
+
+Le théorème des nombres premiers permet d'obtenir une formule qui donne le [[comportement asymptotique]] du ''n''{{e}} nombre premier ''p{{ind|n}} '':
+<center><math>p_n\sim n\ln(n).</math></center> 
+
+Un [[Théorie de l'approximation|approximant]] de {{math|π(''x'')}} nettement meilleur que {{math|''x''/ln(''x'')}}<ref>D'après l'[[#Histoire|estimation de 1899 de La Vallée Poussin]], le [[Logarithme intégral#Fonction d'écart logarithmique intégrale|développement asymptotique de {{math|li(''x'')}}]] vaut aussi pour {{math|π(''x'')}}, à tout ordre. Or {{math|''x''/ln''x''}} n'en est que le premier terme.</ref> est la fonction [[logarithme intégral]] {{math|li(''x'')}} ou sa variante, la fonction d'[[Logarithme intégral#Fonction d'écart logarithmique intégrale|écart logarithmique intégrale]] {{math|Li(''x'')}}<ref>Dans la littérature scientifique, notamment anglo-saxonne, la fonction logarithme intégral {{math|li}}(''x'') est parfois notée  {{math|Li}}(''x'') avec une majuscule, alors que cette dernière notation désigne plutôt la fonction d'écart logarithmique intégrale. En cas de doute, il suffit de se souvenir que {{math|Li}}(2) = 0 alors que {{math|li}}(2) = 1,045…</ref> :
+<center><math> \pi(x) \sim{\rm li}(x)\sim {\rm Li}(x)</math></center> 
+
+où
+<center><math>{\rm li}(x)=\int_{0}^{x} \frac{\mathrm dt}{\ln (t)}\text{ et }\mathrm{Li}(x) = \mathrm{li}(x) - \mathrm{li}(2)=\int_{2}^{x} \frac{\mathrm dt}{\ln (t)}.</math></center>
+
+Voir les sections [[#Exemples d'estimations numériques|Exemples d'estimations numériques]] et [[#Histoire|Histoire]] ci-dessous pour des estimations de l'[[Erreur d'approximation|erreur de ces approximations]].
+
+== Exemples d'estimations numériques ==
+
+Voici un tableau qui montre le comportement comparé de {{math|π}}(''x'') et ses approximations, ''x''/{{math|ln}}(''x'') et {{math|li}}(''x''), et les écarts entre ces trois fonctions : 
+
+Les quatrième et sixième colonnes du tableau ci-dessous permettent d'apprécier la précision croissante des approximations asymptotiques.
+
+Le Russe [[Pafnouti Tchebychev]] a établi en [[1852]] que si ''x ''est assez grand, {{math|π}}(''x'') est compris entre 0,921''x''/{{math|ln}}(''x'') et 1,106''x''/{{math|ln}}(''x'')<ref>{{Article|first=Gilles|nom=Lachaud|url=http://iml.univ-mrs.fr/editions/publi2005/LaRechercheHS20_Lachaud.pdf|lien périodique=La Recherche|revue=Les Dossiers de La Recherche|issue=20|titre=L'hypothèse de Riemann – Le Graal des mathématiciens|mois=8|year=2005|p.=26-35}}, {{p.|30}}.</ref>.
+
+Contrairement à ce que peut laisser penser la cinquième colonne de ce même tableau, {{math|li}}(''x'') n'est pas toujours supérieur à {{math|π}}(''x''). Le mathématicien anglais [[John Edensor Littlewood|John Littlewood]] a démontré, dès [[1914]], qu'il y a des ''x'' pour lesquels cette inégalité est inversée<ref>{{Lien web|url=http://ww3.ac-poitiers.fr/math/prof/resso/kah/index.htm|titre=Le nombre, cet inconnu|série=Conférence aux Assises de mathématiques, Poitiers|jour=2|mois=4|année=1999|auteur=[[Jean-Pierre Kahane]]}}.</ref>{{,}}<ref>Voir l'article « [[Nombre de Skewes]] ».</ref>.
+
+{| border="1" cellpadding="3" cellspacing="0" align="center"
+|-----
+! bgcolor="#A0E0A0" | ''x''<ref group=T >Dans le théorème des nombres premiers, « ''x'' » peut représenter un nombre réel positif ; cependant dans ce tableau, les exemples ont été choisis parmi les [[Entier naturel|entiers]] pour simplifier l'illustration. La progression des exemples a été choisie exponentielle (à l'exception des {{2e}}, {{3e}} et {{20e}} lignes) pour être adaptée à l'évolution [[Logarithme|logarithmique]] des nombres premiers.</ref>
+! bgcolor="#A0E0A0" | π(''x'')
+! bgcolor="#A0E0A0" | π(''x'') – ''x''/ln(''x'')<ref group=T>Le résultat de « π(''x'') - ''x''/ln(''x'') » est arrondi à sa [[partie entière]] ; le signe « – » à la {{2e}} ligne indique que le résultat est légèrement négatif (environ –0,3) avant arrondi à 0.</ref>
+! bgcolor="#A0E0A0" | π(''x'')/(''x''/ln(''x''))<ref group=T>Le calcul à 3 décimales « π(''x'')/(''x''/ln(''x'')) » a été réalisé avec une valeur décimale approchée de «  ''x''/ln(''x'') » non présentée dans ce tableau et non pas à l'aide de la seconde colonne du tableau donnant la seule {{souligner|partie entière}} de {{nobr|« π(''x'') – ''x''/ln(''x'') »}} donc de « ''x''/ln(''x'') ».</ref> 
+! bgcolor="#A0E0A0" | li(''x'') – π(''x'')<ref group=T>Le résultat « li(''x'') – π(''x'') » est arrondi à sa partie entière.</ref> 
+! bgcolor="#A0E0A0" | li(''x'')/π(''x'')<ref group=T>Les valeurs approchées de « li(''x'')/π(''x'') » sont arrondies (et non tronquées) à la {{12e}} décimale ; mais le calcul est fait avec la valeur de « li(''x'') » arrondie à sa partie entière, car issu de la colonne précédente. Pour un calcul plus précis, il faut utiliser des tables de « li(''x'') », sous forme imprimée telle que [http://books.google.fr/books?id=g4Q_AAAAcAAJ&pg=PA30&lpg=PA30&dq=Table+de+%22logarithme+int%C3%A9gral%22&source=bl&ots=ckcbnzncUG&sig=dhABvo9al4dhahOtvoh7EsKe4VY&hl=fr&sa=X&ei=62DgUKiUJ-aj0QXN6oGYDw&ved=0CEoQ6AEwAw#v=onepage&q=Table%20de%20%22logarithme%20int%C3%A9gral%22&f=false celle-ci], ou bien calculée en ligne telle que [http://www.wolframalpha.com/input/?i=li%28%29 celle-là].</ref>
+! bgcolor="#A0E0A0" | ''x''/π(''x'')<ref group=T>Ce rapport « ''x''/π(''x'') » mesure la dilution croissante des nombres premiers inférieurs à un nombre entier (ou réel) « ''x'' », lorsque ce nombre augmente.</ref>
+|-
+| 10<sup>0</sup>=1 || 0, car [[1 (nombre)|1]] n'est pas premier|| non défini, car ln(1) = 0 || non défini car ln(1) = 0 || – l'infini || non défini || non défini
+|-
+| 2.10<sup>0</sup>=2 || 1 (le premier « 2 » )|| –2 || 0,347 || 0 || 0 || &nbsp;2,000
+|-
+| 4.10<sup>0</sup>=4 || 2 (les premiers « 2 » et « 3 » ) || –1 || 0,693 || 1 || 1,500 000 000 000 || &nbsp;2,000
+|-
+| 10<sup>1</sup> || 4 || –0 || 0,921 || 2 || 1,500 000 000 000 || &nbsp;2,500
+|-----
+| 10<sup>2</sup> || 25 || 3 || 1,151 || 5 || 1,200 000 000 000 || &nbsp;4,000
+|-----
+| 10<sup>3</sup> || 168 || 23 || 1,161 || 10 || 1,059 523 809 524 || &nbsp;5,952
+|-----
+| 10<sup>4</sup> || 1 229 || 143 || 1,132 || 17 || 1,013 832 384 052 || &nbsp;8,137
+|-----
+| 10<sup>5</sup> || 9 592 || 906 || 1,104 || 38 || 1,003 961 634 696 || 10,430
+|-----
+| 10<sup>6</sup> || 78 498 || 6 116 || 1,084 || 130 || 1,001 656 093 149 || 12,740
+|-----
+| 10<sup>7</sup> || 664 579 || 44 159 || 1,071 || 339 || 1,000 510 097 370 || 15,050
+|-----
+| 10<sup>8</sup> || 5 761 455 || 332 774 || 1,061 || 754 || 1,000 130 869 720 || 17,360
+|-----
+| 10<sup>9</sup> || 50 847 534 || 2 592 592 || 1,054 || 1 701 || 1,000 033 452 950 || 19,670
+|-----
+| 10<sup>10</sup> || 455 052 511 || 20 758 029 || 1,048 || 3 104 || 1,000 006 821 191 || 21,980
+|-----
+| 10<sup>11</sup> || 4 118 054 813 || 169 923 159 || 1,043 || 11 588 || 1,000 002 813 950 || 24,280
+|-----
+| 10<sup>12</sup> || 37 607 912 018 || 1 416 705 193 || 1,039 || 38 263 || 1,000 001 017 419 || 26,590
+|-----
+| 10<sup>13</sup> || 346 065 536 839 || 11 992 858 452 || 1,034 || 108 971 || 1,000 000 314 885 || 28,900
+|-----
+| 10<sup>14</sup> || 3 204 941 750 802 ||  102 838 308 636 || 1,033 || 314 890 || 1,000 000 098 251 || 31,200
+|-----
+| 10<sup>15</sup> || 29 844 570 422 669 ||  891 604 962 452 || 1,031 || 1 052 619 || 1,000 000 035 270 || 33,510
+|-----
+| 10<sup>16</sup> || 279 238 341 033 925 || 7 804 289 844 392 || 1,029 || 3 214 632 || 1,000 000 011 512 || 35,810
+|-----
+| 4.10<sup>16</sup> || 1 075 292 778 753 150 || 28 929 900 579 949 || 1,028 || 5 538 861 || 1,000 000 005 151 || 37,200
+|-
+| 10<sup>17</sup> || 2 623 557 157 654 233 || 68 883 734 693 281 || 1,027 || 7 956 589 || 1,000 000 003 033 || 38,116
+|-
+| 10<sup>18</sup> || 24 739 954 287 740 860 || 612 483 070 893 536 || 1,025 || 21 949 555 || 1,000 000 000 887 || 40,420
+|-
+| 10<sup>19</sup> || 234 057 667 276 344 607 || 5 481 624 169 369 960 || 1,024 || 99 877 775 || 1,000 000 000 427 || 42,725
+|-
+| 10<sup>20</sup> || 2 220 819 602 560 918 840 || 49 347 193 044 659 701 || 1,023 || 222 744 644 || 1,000 000 000 100 || 45,028
+|-
+| 10<sup>21</sup> || 21 127 269 486 018 731 928 || 446 579 871 578 168 707 || 1,022 || 597 394 254 || 1,000 000 000 028 || 47,332
+|-
+| 10<sup>22</sup> || 201 467 286 689 315 906 290 || 4 060 704 006 019 620 994 || 1,021 || 1 932 355 208  || 1,000 000 000 010 || 49,636
+|-
+| 10<sup>23</sup> || 1 925 320 391 606 803 968 923 || 37 083 513 766 578 631 309 || 1,020 || 7 250 186 216  || 1,000 000 000 004 || 51,939
+|-
+| [[OEIS]]
+| {{OEIS|id=A006880}}
+| {{OEIS|id=A057835}}
+| &nbsp;
+| {{OEIS|id=A057752}}
+| &nbsp;
+| &nbsp;
+|-
+|}
+Notes (les indices « i » dans ces notes correspondent aux renvois « Ti » dans le tableau) :
+<References group=T />
+
+== Histoire ==
+Le théorème des nombres premiers a été conjecturé dans la marge d'une table de logarithmes par [[Carl Friedrich Gauss|Gauss]] en 1792 ou 1793 alors qu'il avait seulement 15 ou 16 ans (selon ses propres affirmations ultérieures<ref>{{de}} [http://gdz.sub.uni-goettingen.de/dms/load/img/?PPN=PPN23599524X&DMDID=dmdlog67 Lettre de Gauss de 1849] à [[Johann Franz Encke|Encke]] : {{Citation étrangère|langue=de|Die gütige Mittheilung Ihrer Bemerkungen über die Frequenz der Primzahlen ist mir in mehr als einer Beziehung interessant gewesen. Sie haben mir meine eigenen Beschäftigungen mit demselben Gegenstande in Erinnerung gebracht, deren erste Anfänge in eine sehr entfernte Zeit fallen, ins Jahr 1792 oder 1793, wo ich mir die [[Jean-Henri Lambert|Lambertschen]] Supplemente zu den [[Table de logarithmes|Logarithmentafeln]] angeschafft hatte.}}</ref>) et par [[Adrien-Marie Legendre]] (ébauche en l'[[An VI]] du [[calendrier républicain]], soit 1797-8, conjecture précise en 1808), puis démontré indépendamment par [[Jacques Hadamard|Hadamard]] et [[Charles-Jean de La Vallée Poussin|La Vallée Poussin]] en 1896 à l'aide de méthodes d'[[analyse complexe]], utilisant en particulier la [[fonction zêta de Riemann|fonction {{math|ζ}} de Riemann]].
+
+En 1899, La Vallée Poussin a affiné son résultat en montrant que (avec la [[notations de Landau|notation ''O ''de Landau]]) 
+
+{{retrait|<math>\pi(x)={\rm li}(x)+O\left(x\exp\left(-\sqrt{\frac{\ln x}{2V}}\right)\right)</math>}}
+
+pour une certaine constante ''V''. [[Edmund Landau|Landau]] (en 1909) puis bien d'autres ont travaillé à réduire la taille admissible de cette constante ''V '', avec une méthode dans laquelle ''V '' mesure une propriété extrémale d'une certaine classe de [[Polynôme trigonométrique|polynômes trigonométriques]]<ref>{{Article|lang=en|revue=Serdica Math. J.|vol=33|year=2007|p.=125-162|titre=On some extremal problems of Landau|first=Szilárd|nom=Révész|url=http://www.renyi.hu/~revesz/ChakalovLandauSerdica.pdf}}.</ref>{{,}}<ref>{{lien web|langue=en|titre=The Prime Number Theorem and Landau’s Extremal Problems|auteur=Szilárd Gy. Révész|url=http://www.renyi.hu/~revesz/PNTandLEPlong.pdf}} (Harmonic Analysis Seminar at the [[Alfréd Rényi|Rényi]] Institute Lecture Notes).</ref>. On sait que ''V ''= 34,5036 convient<ref>{{Article|lang=en|revue=Mathematical notes of the Academy of Sciences of the USSR|mois=1|year=1990|vol=47|issue=1|p.=10-20|titre=Certain extremal problem for nonnegative trigonometric polynomials|first=V. V.|nom=Arestov|prénom2=V. P.|nom2=Kondrat'ev|doi=10.1007/BF01157278}}.</ref>.  Le problème de la détermination avec cette méthode de la valeur ''V '' la plus petite possible est connu sous le nom de "Problème extrémal de Landau". C'est un sujet de recherche intéressant en soi, indépendamment de son application à l'estimation de La Vallée Poussin.  Laquelle application est devenue d'ailleurs purement anecdotique depuis qu'on dispose de l'estimation de Vinogradov-Korobov-Richert (voir juste ci-dessous) qui est bien meilleure, et qui implique en particulier qu'on peut remplacer ''V '' par un nombre aussi petit qu'on veut dans celle de La Vallée Poussin.
+
+À cause de la relation entre la fonction {{math|ζ}} et la fonction {{math|π}}, l'[[hypothèse de Riemann]] a une importance considérable en [[théorie des nombres]] : si elle était démontrée, cela produirait de loin une bien meilleure estimation de l'erreur intervenant dans le théorème des nombres premiers.
+
+[[Helge von Koch]] en [[1901]] a montré plus précisément :
+
+<center>L'hypothèse de Riemann équivaut à <math> \pi(x) = {\rm li} (x) + O\left(\sqrt x \ln x\right).</math></center>
+
+On est encore loin d'un tel terme d'erreur. En revanche, on sait que toute amélioration de la région sans zéro de la fonction {{math|ζ}} améliore ''de facto'' le terme d'erreur du théorème des nombres premiers. La meilleure région sans zéro actuellement connue a été obtenue en 1958 par Korobov et [[Ivan Vinogradov|Vinogradov]]
+[Cette région était un peu trop « optimiste » et n'a jamais été rigoureusement établie, ni par Vinogradov, ni par Korobov, ni par  personne d'autre. Elle a été finalement remplacée par une région plus petite (mais établie par une preuve) par {{Lien|Hans-Egon Richert}} en 1967].
+La région de Richert implique le résultat suivant :
+
+{{retrait|<math>\pi(x) ={\rm li}(x)+ O \left ( x \exp \left(-c (\ln x)^{3/5} (\ln \ln x)^{-1/5} \right)\right ),</math>}}
+
+où ''c ''> 0 est une constante absolue.
+
+En ce qui concerne des majorations ''explicites'', mentionnons les travaux de [[John Barkley Rosser|Rosser]] et {{Lien|Lowell Schoenfeld|texte=Schoenfeld}} (1962, 1975, 1976), puis ceux de [[Pierre Dusart|Dusart]] (1998). À l'aide d'ordinateurs de plus en plus puissants, ces chercheurs ont pu déterminer de plus en plus de zéros non triviaux de la fonction {{math|ζ}} sur la droite critique. Cette meilleure connaissance implique de bonnes estimations des fonctions usuelles de nombres premiers, avec ou sans l'hypothèse de Riemann. Ainsi Schoenfeld<ref>{{Article|lang=en|first=Lowell|nom=Schoenfeld|titre=Sharper bounds for the [[Pafnouti Tchebychev|Chebyshev]] functions {{math|θ(''x'')}} and {{math|ψ(''x'')}}. II|lien périodique=Liste des journaux scientifiques en mathématiques#M|revue=Math. Comp.|vol=30|year=1976|p.=337-360|url=http://www.ams.org/journals/mcom/1976-30-134/S0025-5718-1976-0457374-X/}}.</ref> a-t-il pu établir :
+
+<center>si l'hypothèse de Riemann est vraie, alors <math>\forall x\ge2657,\quad|\pi(x)-{\rm li}(x)|<\frac1{8\pi}\sqrt x\ln x</math></center>
+
+alors que, sans condition, Dusart a démontré que<ref>[[Pierre Dusart]]. Autour de la fonction qui compte le nombre de nombres premiers. Thèse de doctorat de l'Université de Limoges, soutenue le 26 mai 1998. Théorème 1.12 p.38</ref>
+
+{{retrait|<math>\forall x\ge59,\quad\left | \pi(x) - {\rm Li(x)} \right | < 2K\frac {x}{(\ln x)^{3/4}} \exp \left ( - \sqrt { \frac {\ln x}{R}} \right ),</math>}}où
+
+{{retrait|<math>R \approx 9,645908801\text{ et }K=\frac{\sqrt{8/(17\pi)}}{R^{1/4}}  \approx 0,2196.</math>}}
+
+En ce qui concerne les sommes des puissances des nombres premiers, une simple [[Formule sommatoire d'Abel|sommation d'Abel]] livre, à partir du théorème des nombres premiers,
+
+{{retrait|<math>\forall \alpha>-1,\quad\sum_{p<x}p^\alpha\sim\frac{x^{\alpha+1}}{(\alpha+1)\ln x}\sim{\rm li}(x^{\alpha+1})</math>.}}
+
+Le cas {{math|α}}=0 de cette équivalence est bien entendu le théorème des nombres premiers; le cas {{math|α}}=1 a été traité par [[Edmund Landau]]<ref>page 226 de: Edmund Landau. Handbuch der Lehre von der Verteilung der Primzahlen. Third corrected edition, two volumes in one, Chelsea 1974.</ref>en 1909. Le cas {{math|α}}=-1, pour lequel cette équivalence ne s'applique pas, est donné par le deuxième [[théorème de Mertens]].
+
+== Ébauche de la preuve ==
+
+On commence par écrire l'égalité entre le [[Fonction zêta de Riemann#Liens avec les nombres premiers|produit d'Euler]] et la [[Théorème de factorisation de Weierstrass|factorisation de Weierstrass]] de la fonction zêta :
+:<math> \zeta(s) = \prod_{p\in\mathbb{P}} \ \frac{1}{1-p^{-s}} = \frac{e^{a+bs}}{s-1}\prod_{\rho\in Z} \left(1-\frac{s}{\rho}\right)e^{\frac{s}{\rho}} </math>
+avec ''s'' de partie réelle strictement supérieure à 1, <math>\mathbb{P}</math> l'ensemble des nombres premiers (1 n'étant pas premier), ''Z'' l'ensemble des zéros (triviaux et non triviaux) de zêta et ''a'', ''b'' des constantes. On prend ensuite la dérivée logarithmique :
+:<math> \frac{\zeta '(s)}{\zeta(s)} = -\sum_{p\in\mathbb{P}}\frac{p^{-s}}{1-p^{-s}}\ln p = b-\frac{1}{s-1} +\sum_{\rho\in Z}\frac{s}{\rho(s-\rho)} </math>
+Grâce à la série entière complexe <math>\frac{z}{1-z} = \sum_{n=1}^\infty z^n</math> pour |''z''| < 1, il vient <math>\sum_{p\in\mathbb{P}}\frac{p^{-s}}{1-p^{-s}}\ln p = \sum_{p\in\mathbb{P},\; n\geq 1}p^{-ns}\ln p </math>. On voit également que <math>b+1 = \zeta '(0) / \zeta(0) = \ln 2\pi</math>, ce qui donne
+:<math> \sum_{p\in\mathbb{P},\; n\geq 1}p^{-ns}\ln p = -\ln 2\pi +\frac{s}{s-1} -\sum_{\rho\in Z}\frac{s}{\rho(s-\rho)} </math>
+pour Re(s) > 1. On veut maintenant intégrer cette égalité contre la fonction x<sup>s</sup> / s (avec ''x'' constante fixée). Le contour d'intégration est un rectangle de côté droit {Re(s) = σ} avec σ > 1 et qui s'étend à l'infini verticalement et à gauche. Après des calculs faisant appel au [[théorème des résidus]], on obtient la célèbre formule explicite de Riemann, pour ''x'' > 0 non puissance d'un nombre premier :
+:<math> \sum_{p\in\mathbb{P}, \; m\geq 1, \; p^m < x} \ln p = x - \sum_\rho \frac{x^\rho}{\rho} - \ln 2\pi - \frac{1}{2}\ln \left(1-\frac{1}{x^2}\right) </math>
+avec cette fois ''ρ'' balayant seulement les zéros non triviaux de zêta (les triviaux ont été regroupés dans le dernier terme). À gauche on reconnaît la [[Fonction de von Mangoldt#Définition|fonction de Tchebychev]] ''ψ(x)'', asymptotiquement équivalente à ''π(x) ln(x)''. Le théorème des nombres premiers est par conséquent presque démontré, puisqu'à droite on voit le terme ''x'' attendu. Le dernier point à montrer est que les autres termes de droite sont négligeables devant ''x'', autrement dit qu'il n'y a pas de zéro ''ρ'' dont la partie réelle est 1. Ce point a été prouvé par Hadamard et La Vallée Poussin.
+
+== Ce qu'il advint de la « profondeur » ==
+
+Il est convenu de distinguer plusieurs types de démonstrations mathématiques, en fonction du degré de sophistication des théories mathématiques auxquelles on fait appel ; le théorème des nombres premiers fournit un prototype pour ce genre de considérations.
+
+On a longtemps cru, au début du {{s-|XX}}, et notamment [[Godfrey Harold Hardy|Godfrey Hardy]], que toute démonstration du théorème des nombres premiers devait forcément faire appel à des théorèmes d'analyse complexe ; ce qui par ailleurs pouvait paraître frustrant pour un énoncé semblant porter essentiellement sur les nombres entiers (quoique nécessitant les nombres rationnels, voire les nombres réels pour pouvoir être énoncé). C'était donc un défi pour les mathématiciens d'essayer de trouver une démonstration ''élémentaire'' de ce théorème — ''élémentaire'' ne voulant pas dire simple, ni peu sophistiquée, mais seulement faisant le moins possible appel à des méthodes externes, à l'arithmétique dans notre cas — ou bien de comprendre précisément pourquoi certains énoncés ne sont accessibles qu'avec des méthodes plus évoluées que ce à quoi on pouvait s'attendre. Hardy parlait donc de « profondeur » des théorèmes et pensait que le théorème des nombres premiers faisait partie des énoncés dont la « profondeur » ne les rendait accessibles que par le biais de l'analyse complexe.
+
+Une première brèche dans cette conception fut la découverte d'une démonstration basée seulement sur le [[théorème taubérien de Wiener]] ; mais il n'était pas clair qu'on ne puisse pas attribuer à ce théorème une « profondeur » équivalente aux théorèmes issus de l'analyse complexe. 
+
+Le débat fut tranché en 1949, quand [[Paul Erdős]] et [[Atle Selberg]] donnèrent chacun une démonstration indéniablement élémentaire du théorème des nombres premiers. Quelle que soit la valeur du concept de « profondeur », celle du théorème des nombres premiers n'exigeait pas d'analyse complexe. De manière plus générale, la découverte de ces démonstrations élémentaires provoqua un regain d'intérêt pour les [[Théorie des cribles|méthodes de crible]], qui trouvèrent ainsi toute leur place dans l'arithmétique.
+
+En dépit du caractère « élémentaire » de cette démonstration, elle restait complexe et souvent jugée artificielle ; en 1980, D. J. Newman découvrit une élégante application d'un [[Théorèmes abéliens et taubériens|théorème taubérien]] permettant (après de nouvelles simplifications) de donner une démonstration très courte n'utilisant guère plus que le [[théorème des résidus]] ; [[Don Zagier]] en a fourni une présentation de deux pages en 1997, pour le centenaire du théorème<ref>{{en}} Don Zagier, ''Newman's Short Proof of the Prime Number Theorem'', [[Mathematical Association of America]] ([http://www.maa.org/sites/default/files/pdf/upload_library/22/Chauvenet/Zagier.pdf lire en ligne])</ref>.
+
+== Approximations du ''n''-ième nombre premier ==
+{{article connexe|Formules pour les nombres premiers}}
+Le théorème des nombres premiers équivaut au fait que le ''n''-ième nombre premier, noté  ''p''<sub>''n''</sub>, vérifie :
+:<math>p_n \sim n \ln n</math> ([[comparaison asymptotique|autrement dit]], <math>\lim_{n\to\infty}p_n /(n \ln n)=1</math> ).
+Des [[#Histoire|résultats de La Vallée Poussin  de 1899]], on déduit [[Logarithme intégral#Fonction d'écart logarithmique intégrale|des développements asymptotiques]] bien plus précis que cet équivalent. Par exemple (avec la [[Fonction négligeable|notation ''o ''de Landau]]) :
+:<math>\frac n{p_n}=\frac1{\ln p_n}+\frac1{(\ln p_n)^2}+\frac2{(\ln p_n)^3}+\frac6{(\ln p_n)^4}+o\left(\frac1{(\ln p_n)^4}\right),
+</math>
+qui permet de démontrer<ref>La démonstration de {{Article|lien auteur=Ernesto Cesàro|first=Ernest|nom=Cesàro|year=1894|titre=Sur une formule empirique de M. Pervouchine|lien périodique=CRAS|revue=Comptes rendus hebdomadaires des séances de l'Académie des sciences|vol=119|p.=848-849|url=http://gallica.bnf.fr/ark:/12148/bpt6k30752/f848.image}} repose sur un développement qu'il énonce comme démontré en 1893 mais qui ne le sera que par les travaux ultérieurs de La Vallée Poussin. Cf. {{en}} Juan Arias de Reyna et Jérémy Toulisse, « {{Lang|en|The {{math|''n''}}-th prime asymptotically}} », 2012, {{Arxiv2|1203.5413}}.</ref>
+
+{{retrait|<math>\frac{p_n}n=\ln n+\ln\ln n-1+\frac{\ln\ln n-2}{\ln n}-\frac{(\ln\ln n)^2-6\ln\ln n+11}{2(\ln n)^2}+o\left(\frac1{(\ln n)^2}\right).</math>}}
+
+Le [[théorème de Rosser]] montre que ''p''<sub>''n''</sub> est supérieur à ''n'' ln&nbsp;''n''. On a pu préciser cette majoration<ref>{{ouvrage|lang=en|nom1={{Lien|Eric Bach}}|lien auteur2=Jeffrey Shallit|prénom2=Jeffrey|nom2=Shallit|titre=Algorithmic Number Theory|volume=1|année=1996|éditeur=MIT Press|isbn=0-262-02405-5|passage=233|url=http://books.google.fr/books?id=iJx1lP9ZcIkC&pg=PA233}}.</ref>, obtenant l'encadrement<ref name=Dusart>{{Article|lang=en|lien auteur=Pierre Dusart|first=Pierre|nom=Dusart|titre=The ''k''{{exp|th}} prime is greater than ''k''(ln ''k ''+ ln ln ''k ''– 1) for ''k ''≥ 2|revue=Math. Comp.|vol=68|year=1999|p.=411-415|url=http://www.ams.org/mcom/1999-68-225/S0025-5718-99-01037-6}}.</ref> :
+{{retrait|<math>\ln n+\ln\ln n-1<\frac{p_n}n<\ln n+\ln\ln n\quad\text{pour } n \ge 6</math>}}
+et même<ref name=Dusart/>,
+{{retrait|<math>\frac{p_n}n<\ln n+\ln\ln n-0,948\quad\text{pour }n\ge40~000.</math>}}
+
+== Notes et références ==
+{{Traduction/Référence|en|Prime number theorem|8018267|type=note}}
+<references/>
+
+== Articles connexes ==
+
+* [[Constante de Legendre]]
+* [[Théorème de la raréfaction des nombres premiers]]
+* {{Lien|trad=Landau prime ideal theorem|Théorème de Landau sur les idéaux premiers}}
+{{Palette|Classes de nombres premiers}}
+{{Portail|nombre|analyse}}
+
+{{DEFAULTSORT:Theoreme des nombres premiers}}
+[[Catégorie:Théorème de la théorie des nombres|Nombres premiers]]
+[[Catégorie:Théorie analytique des nombres]]
+[[Catégorie:Nombre premier|Theoreme]]
+
+[[pl:Liczba pierwsza#Twierdzenie o liczbach pierwszych]]

@@ -1,0 +1,135 @@
+{{Voir homonymes|condition}}
+
+En [[physique]], la '''loi de Bragg''' est une [[loi empirique]] qui interprète le processus de la [[diffraction]] des [[radiation]]s sur un [[cristal]]. Elle fut découverte par [[William Henry Bragg|W.H.]] et [[William Lawrence Bragg|W.L. Bragg]] vers 1915.
+
+Lorsque l'on bombarde un [[cristal]] avec un rayonnement dont la [[longueur d'onde]] est du même ordre de grandeur que la distance inter-atomique, il se produit un phénomène de [[diffraction]]. Les conditions de diffraction donnent les directions dans lesquelles on observe de l'intensité diffractée par le cristal.
+
+Les rayonnements peuvent être électromagnétiques — pour cet ordre de grandeur de longueur d'onde, ce sont des [[rayon X|rayons X]], d'énergie de quelques dizaines de [[électron-volt|keV]] — ou bien des particules ayant une [[énergie cinétique]] adaptée, de l'ordre de {{unité|100|[[électron-volt|keV]]}} pour des [[électron]]s, ou bien des dizaines de [[électron-volt|meV]] pour des [[neutron]]s.
+
+== Diffraction sur un cristal ==
+
+Considérons un monocristal bombardé de [[rayons X]]. Les rayons X frappent chaque [[atome]] avec une [[Phase (onde)|phase]] différente (ils parcourent un [[chemin optique]] plus ou moins long).
+
+Les rayons X, comme toutes les [[onde électromagnétique|ondes électromagnétiques]], provoquent un déplacement du [[nuage électronique]] par rapport au [[Noyau atomique|noyau]] dans les [[atome]]s ; ces oscillations induites provoquent une réémission d'ondes électromagnétiques de même [[fréquence]] : ce phénomène est appelé [[diffusion Rayleigh]].
+
+{{Article détaillé|Interaction rayonnement-matière}}
+
+Les ondes n'ont pas toutes la même phase lorsqu'elles frappent les atomes. En un point de l'espace, les ondes électromagnétiques proviennent de tous ces atomes et subissent encore un déphasage dû à la différence de chemin optique. Du fait de l'organisation régulière du cristal, dans certains endroits de l'espace, les ondes s'annulent ([[interférence]]s destructives), et dans d'autres, les ondes s'additionnent et l'on a une intensité positive. Ces lieux d'intensité positive sont alignés par rapport au « point d'impact » du faisceau incident, on parle donc de « directions de diffraction ».
+
+[[Image:Diffusion rayleigh et diffraction.png|400px]]
+
+On peut retrouver ces directions de diffraction grâce à différentes lois équivalentes.
+
+== Description ==
+=== Énoncé ===
+
+[[Image:Loi de bragg.png|thumb|300px|Selon la déviation 2θ, on a des interférences constructives (figure de gauche) ou destructives (figure de droite)]]
+
+Pour cette loi, on considère des plans imaginaires contenant des atomes et perpendiculaires au vecteur de diffraction (c'est-à-dire à la bissectrice entre le faisceau incident et la direction à laquelle on s'intéresse). Mais il existe aussi d'autres lois décrivant la diffraction.
+
+Si λ est la longueur d'onde de la radiation et ''d'' est la [[distance interréticulaire]] du plan cristallin diffractant, alors les directions 2θ de l'espace dans lesquelles on aura des pics d'intensité (le 0 pour 2θ étant la direction du faisceau incident) vérifient :
+:<math>2 d \sin \theta = n \cdot \lambda </math>
+avec :
+* ''d'' = [[distance interréticulaire]], c'est-à-dire distance entre deux plans cristallographiques ;
+* θ, angle de Bragg = demi-angle de déviation (moitié de l'angle entre le faisceau incident et la direction du détecteur) ;
+* ''n'' = ordre de diffraction ([[nombre entier]]) ;
+* λ = [[longueur d'onde]] des rayons X.
+
+Lorsque le rayonnement n'est pas électromagnétique mais particulaire, la diffusion Rayleigh n'est pas due au déplacement du nuage atomique mais résulte du [[Principe d'incertitude|principe d'incertitude d'Heisenberg]] : comme la particule est bien localisée (elle interagit avec l'atome), l'incertitude sur son [[impulsion (physique)|impulsion]], donc notamment sa direction, est grande, il y a donc une diffusion isotrope. Pour bien comprendre ceci, il faut également bien comprendre la notion de [[dualité onde-particule]].
+
+=== Justification géométrique===
+
+[[Image:Bragg diffraction.png|thumb|démonstration de la loi de Bragg]]
+
+On  peut retrouver la loi de Bragg de manière simple. Considérons deux rayons parallèles frappant deux atomes situés sur une même droite perpendiculaire à la surface. Le chemin supplémentaire parcouru par le rayon « profond » est 2''d''·sin(θ), puisque ce trajet supplémentaire suit les côtés opposés à un angle θ de triangles rectangles d'[[hypoténuse]] ''d''. Les interférences sont constructives si la différence de chemin introduit un déphasage multiple de 2π, c'est-à-dire si le chemin supplémentaire est un multiple de λ.
+
+=== Analogie ===
+
+[[Image:Interference lame air.png|thumb|300px|Interférence par une lame d'air : analogie avec la loi de Bragg]]
+
+On image souvent cette loi en considérant que les plans cristallographiques sont des miroirs semi-transparents ; en effet, la formule est strictement identique aux [[interférences par une lame d'air]] que l'on obtient avec un [[interféromètre de Michelson]]. Cependant, il faut bien comprendre que les plans cristallographiques ne sont qu'une vue de l'esprit, et que dans les faits, les ondes sont diffusées individuellement par les atomes.
+
+== Condition de Laue ==
+
+Le rayonnement incident a un [[vecteur d'onde]] <math>\vec{k}</math>.
+
+Si l'on s'intéresse à l'intensité diffusée dans une direction de l'espace <math>\vec{u}</math>, cela revient à s'intéresser aux ondes dont le vecteur d'onde est 
+: <math>\vec{k'} = || \vec{k} || \cdot \vec{u}</math>.
+En effet, puisque la diffusion est élastique, la longueur d'onde reste la même, donc les vecteurs d'onde ont la même norme.
+
+La [[maille élémentaire]] du cristal est définie par trois vecteurs <math>\vec{e_1}</math>, <math>\vec{e_2}</math> et <math>\vec{e_3}</math> qui forment par ailleurs une [[base (algèbre linéaire)|base]] de l'espace.
+
+On appelle <math>\vec{K}</math> le vecteur de diffusion
+: <math>\vec{K} = \vec{k'} - \vec{k}</math>.
+
+La condition de diffraction de Laue s'exprime ainsi :
+: il y a diffraction dans la direction <math>\vec{u}</math> si les [[produit scalaire|produits scalaires]] de <math>\vec{K}</math> avec les vecteurs <math>\vec{e_1}, \vec{e_2},\vec{e_3}</math> sont entiers, c'est-à-dire
+: si <math>\vec{K} \cdot \vec{e_1}</math>, <math>\vec{K} \cdot \vec{e_2}</math> et <math>\vec{K} \cdot \vec{e_3}</math> sont des [[nombre entier|nombres entiers]].
+On note en général<ref>Il existe deux manières de définir le vecteur d'onde : soit sa norme est 1/λ, on a alors les formules indiquées, soit sa norme est 2π/λ et on a alors <math>\vec{K} \cdot \vec{e_1} = 2 \pi \cdot h</math>, <math>\vec{K} \cdot \vec{e_2} = 2 \pi \cdot k</math> et <math>\vec{K} \cdot \vec{e_3} = 2 \pi \cdot l</math> ce qui ne change rien au résultat.</ref>
+: <math>\vec{K} \cdot \vec{e_1} = h</math>
+: <math>\vec{K} \cdot \vec{e_2} = k</math>
+: <math>\vec{K} \cdot \vec{e_3} = l</math>
+Les indices (''hkl'') sont caractéristiques de la tache (ou du pic) de diffraction. Ce sont aussi les [[indices de Miller]] d'un plan cristallographique, ce qui permet de retrouver la loi de Bragg.
+
+== Théorème de Bloch ==
+
+On peut définir une autre base, appelée [[base réciproque]], par<ref>Si l'on choisit de prendre 2π/λ pour la norme du vecteur d'onde, alors <math>\vec{e_m} \cdot \vec{e_m^*} = \frac{2 \pi}{V} \cdot (\vec{e_m}\cdot \vec{e_n} \wedge \vec{e_p}) = 2 \pi</math> où (''m'', ''n'', ''p'') est une [[permutation circulaire]] de (1, 2, 3).</ref>
+:<math>\vec{e^*_1} = \frac{1}{V} \cdot \vec{e}_2 \wedge \vec{e}_3</math>
+:<math>\vec{e^*_2} = \frac{1}{V} \cdot \vec{e}_3 \wedge \vec{e}_1</math>
+:<math>\vec{e^*_3} = \frac{1}{V} \cdot \vec{e}_1 \wedge \vec{e}_2</math>
+
+Comme <math>\vec{e}_1</math>, <math>\vec{e}_2</math> et <math>\vec{e}_3</math> dépendent de la maille élémentaire, les vecteurs de la base réciproque dépendent eux aussi de la maille élémentaire ; ils sont une caractéristique du cristal.
+
+La condition de diffraction peut alors s'énoncer de la manière suivante<ref>Cette condition est la même quelle que soit la définition de la norme du vecteur d'onde.</ref> :
+: il y a diffraction dans la direction <math>\vec{u}</math> si <math>\vec{K}</math> a des coordonnées entières dans la base réciproque
+soit
+: <math>\vec{K} = h \cdot \vec{e^*_1} + k \cdot \vec{e^*_2} + l \cdot \vec{e^*_3}</math>
+''h'', ''k'' et ''l'' étant des entiers.
+
+Les indices (''hkl'') sont les mêmes que pour la condition de Laue, et mènent donc également à la loi de Bragg.
+
+Les points ayant des coordonnées entières dans le [[repère (mathématiques)|repère]] <math>(O, \vec{e^*_1}, \vec{e^*_2}, \vec{e^*_3})</math> forment un réseau appelé [[réseau réciproque]]. La condition de diffraction est donc :
+: il y a diffraction dans la direction <math>\vec{u}</math> si l'extrémité de <math>\vec{K}</math> est sur un nœud du réseau réciproque.
+
+C'est le [[théorème de Bloch]].
+
+== Applications ==
+
+Lorsque la longueur d'onde de la radiation est de l'ordre de grandeur de la distance inter-atomique dans le cristal, les directions de diffraction sont suffisamment éloignées pour être distinguables, et suffisamment rapprochées pour figurer sur le même cliché. La loi de Bragg est utilisée entre autres pour :
+* la [[microscopie électronique en transmission]] ;
+* l'[[analyse dispersive en longueur d'onde]] ;
+* la [[diffraction de rayons X]] ;
+* la [[diffraction de neutrons]].
+
+== Notes ==
+<references/>
+
+== Articles connexes ==
+* [[Théorie de la diffraction sur un cristal]]
+
+{{Portail|physique|chimie|minéraux et roches}}
+
+[[Catégorie:Mesure physique]]
+[[Catégorie:Radiocristallographie]]
+[[Catégorie:Loi en physique|Bragg]]
+[[Catégorie:Théorème de physique]]
+
+<!--interwiki-->
+
+[[ar:قانون براج]]
+[[ca:Llei de Bragg]]
+[[de:Bragg-Gleichung]]
+[[en:Bragg's law]]
+[[es:Ley de Bragg]]
+[[fa:قانون براگ]]
+[[fi:Braggin laki]]
+[[he:חוק בראג]]
+[[it:Legge di Bragg]]
+[[ja:ブラッグの法則]]
+[[ko:브래그 법칙]]
+[[ms:Hukum Bragg]]
+[[nl:Wet van Bragg]]
+[[pl:Prawo Bragga]]
+[[ru:Условие Вульфа — Брэгга]]
+[[simple:Bragg Diffraction]]
+[[sl:Braggov pogoj]]

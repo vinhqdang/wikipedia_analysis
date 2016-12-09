@@ -1,0 +1,448 @@
+{{voir homonymes|MEB|SEM|Microscope (homonymie)|Microscopie}}
+[[Image:JEOL JSM-6340F.jpg|thumb|right|Microscope électronique à balayage JEOL JSM-6340F]]
+La '''microscopie électronique à balayage''' ('''MEB''' ou '''SEM''' pour ''Scanning Electron Microscopy'' en anglais) est une technique de [[Microscope électronique|microscopie électronique]] capable de produire des images en haute résolution de la surface d’un échantillon en utilisant le principe des [[Interaction rayonnement-matière|interactions électrons-matière]], . 
+
+S'appuyant sur les travaux de [[Max Knoll]] et [[Manfred von Ardenne]] dans les années 1930, la MEB consiste en un faisceau d’[[électron]]s balayant la surface de l’échantillon à analyser qui, en réponse, réémet certaines particules. Ces particules sont analysées par différents détecteurs qui permettent de reconstruire une image en trois dimensions de la surface. 
+
+Les travaux menés dans les années 1960 dans le laboratoire de [[Charles William Oatley|Charles Oatley]] à l’[[université de Cambridge]] ont grandement contribué au développement de la MEB, et ont conduit en 1965 à la commercialisation par ''Cambridge Instrument Co.'' des premiers microscopes à balayage<ref>{{en}} [http://www.geology.wisc.edu/~johnf/g777/ppt/10_Historical_Development.ppt {{lang|en|''Electron microprobe analysis: Merging of discoveries in physics, chemistry and microscopy''}}], {{p.}}19, département de géologie, [[université du Wisconsin-Madison]].</ref>. Aujourd’hui, la microscopie électronique à balayage est utilisée dans des domaines allant de la [[biologie]] à la [[science des matériaux]], et un grand nombre de constructeurs proposent des appareils de série équipés de détecteurs d’électrons secondaires et dont la résolution se situe entre 0,4 [[Mètre#Description de multiples|nanomètre]]<ref name="LabTechnologist">{{en}}[http://www.labtechnologist.com/news/ng.asp?n=58641-hitachi-breaks-sem {{lang|en|''Hitachi breaks SEM resolution barrier''}}], www.labtechnologist.com, 10 mars 2005.</ref> et 20 nanomètres.
+
+== Principe général ==
+Le [[pouvoir de résolution]] (capacité à distinguer des détails fins) de l’[[œil]] humain avec un [[microscope optique]] est limité par la [[longueur d'onde|longueur d’onde]] de la [[lumière visible]] ([[photon]]s) ainsi que par la qualité des lentilles grossissantes. Les plus puissants microscopes optiques peuvent distinguer des détails de 0,1 à {{unité|0.2|µm}}<ref>[http://www.cnrs.fr/cw/dossiers/doscel/decouv/xtxt/zhist/Niv2_2.htm Principes de fonctionnement du microscope photonique], [[Centre national de la recherche scientifique]]</ref>. Si l’on veut observer des détails plus fins, il faut diminuer la longueur d’onde qui éclaire les cibles. Dans le cas des microscopes électroniques, on n’utilise pas des photons, mais des électrons, dont les longueurs d’ondes associées sont beaucoup plus faibles.
+
+[[Image:SEM principle.svg|left|thumb|Schéma de principe « historique » de la microscopie à balayage. À partir des [[années 1980]], le [[tube cathodique]] synchronisé avec le MEB a progressivement disparu pour céder la place à une acquisition numérique d’image.]]
+La figure ci-contre illustre le schéma de principe d’un MEB : une sonde électronique fine (faisceau d’électrons) est projetée sur l’échantillon à analyser. L’[[Interaction rayonnement-matière|interaction]] entre la sonde électronique et l’échantillon génère des [[Électron secondaire|électrons secondaires]], de basse énergie qui sont accélérés vers un [[Détecteur Everhart-Thornley|détecteur d’électrons secondaires]] qui amplifie le signal. À chaque point d’impact correspond un signal électrique. L’intensité de ce signal électrique dépend à la fois de la nature de l’échantillon au point d’impact qui détermine le rendement en électrons secondaires et de la [[topographie]] de l’échantillon au point considéré. Il est ainsi possible, en balayant le faisceau sur l’échantillon, d’obtenir une cartographie de la zone balayée.
+
+La sonde électronique fine est produite par un « canon à électrons » qui joue le rôle d’une source réduite par des « lentilles électroniques » qui jouent le même rôle vis-à-vis du faisceau d’électrons que des lentilles conventionnelles, ''photoniques'' dans un microscope optique. Des bobines disposées selon les deux axes perpendiculaires à l’axe du faisceau et parcourues par des courants synchronisés permettent de soumettre la sonde à un ''balayage'' du même type que celui de la [[télévision]]. Les lentilles électroniques, qui sont généralement des [[lentille magnétique|lentilles magnétiques]] et les bobines de balayage forment un ensemble que l’on appelle la ''colonne électronique''.
+
+[[Image:Schema MEB.svg|thumb|right|Schéma d’un MEB équipé d’un détecteur de rayons X « EDS » (à dispersion d’énergie)]]
+Dans les MEB modernes, la cartographie d’électrons secondaires est enregistrée sous forme numérique, mais le MEB a pu être développé dès le début des [[années 1960]], bien avant la diffusion des moyens de stockage informatique, grâce à un procédé analogique qui consistait, comme sur le schéma de la figure, à synchroniser le balayage du faisceau d’un tube cathodique avec celui du MEB, en modulant l’intensité du tube par le signal secondaire. L’image de l’échantillon apparaissait alors sur l’écran phosphorescent du tube cathodique et pouvait être enregistrée sur une [[pellicule photographique]].
+
+Un microscope électronique à balayage est essentiellement composé d’un [[canon à électrons]] et d’une colonne électronique, dont la fonction est de produire une sonde électronique fine sur l’échantillon, d’une platine porte-objet permettant de déplacer l’échantillon dans les trois directions et de [[détecteur]]s permettant de capter et d’analyser les [[rayonnement]]s émis par l’échantillon. En outre l’appareil doit nécessairement être équipé d’un système de [[Pompe à vide|pompes à vide]]<ref>{{harv|Joseph Goldstein|1992|p=21-24}}</ref>.
+{{clr}}
+
+== Histoire ==
+=== Travaux préliminaires ===
+L’histoire de la microscopie à balayage découle en partie des travaux théoriques du physicien allemand [[Hans Busch]] sur la trajectoire des particules chargées dans les champs électromagnétiques. En [[1926]], il a démontré que de tels champs pouvaient être utilisés comme des lentilles électromagnétiques<ref>{{Busch1926}}.</ref> établissant ainsi les principes fondateurs de l’optique électronique géométrique. Suite à cette découverte, l’idée d’un microscope électronique prit forme et deux équipes, celle de [[Max Knoll]] et [[Ernst August Friedrich Ruska|Ernst Ruska]] de l’[[Université technique de Berlin]] et celle d’[[Ernst Brüche]] des [[Allgemeine Elektrizitäts-Gesellschaft|laboratoires EAG]] envisagèrent de tester cette possibilité. Cette course a mené à la construction en [[1932]], par Knoll et Ruska, du premier [[microscope électronique en transmission]]<ref>{{Knoll1932}}.</ref>. 
+
+=== Premier microscope à balayage ===
+Après avoir rejoint [[Telefunken]] pour mener des recherches sur les [[Tube cathodique|tubes cathodiques]] des [[téléviseur]]s, Max Knoll a développé, afin d’étudier la cible de tubes électroniques analyseurs, un ''analyseur à faisceau d’électrons'' qui réunissait toutes les caractéristiques d’un microscope électronique à balayage : l’échantillon se trouvait à l’extrémité d’un [[Tube électronique|tube de verre scellé]] et un [[canon à électrons]] se trouvait à l’autre extrémité. Les [[électron]]s, accélérés sous une [[Tension électrique|tension]] de l’ordre de 500 à {{formatnum:4000}} [[volt]]s, étaient [[Focalisation (optique)|focalisés]] sur la surface et un système de [[Bobine (électricité)|bobines]] les déviait. Le faisceau balayait la surface de l’échantillon au rythme de 50 images par seconde. Le [[Courant électrique|courant]] transmis par l’échantillon récupéré, amplifié et modulé et permettait de reconstruire une image. Le premier appareil utilisant ce principe a été construit en 1935<ref>{{de}}M. Knoll, {{lang|de|''Aufladepotentiel und Sekundäremission elektronenbestrahlter Körper''}}, {{lang|de|Zeitschrift fur technische Physik}} 16, 467-475 (1935).</ref>.
+ 
+Par la suite, c’est le scientifique allemand [[Manfred von Ardenne]] qui, en en 1938, a construit le premier microscope électronique à balayage<ref>{{de}}M. von Ardenne, {{lang|de|''Das Elektronen-Rastermikroskop''}}, {{lang|de|''Zeitschrift für Physik A Hadrons and Nuclei''}}, 108(9-10):553-572, 1938.</ref>. Mais cet appareil ne ressemblait pas encore aux MEB modernes car il avait été créé pour étudier des échantillons très fins en transmission. Il s’apparente donc plus à un [[microscope électronique à balayage par transmission]] (MEBT ou {{en}} ''STEM'' pour {{lang|en|''scanning transmission electron microscope''}}). De plus, bien que doté d’un [[écran à tube cathodique]], les images étaient enregistrées sur des films photographiques disposés sur un tambour rotatif. Von Ardenne a ajouté des bobines de balayage à un [[Microscopie électronique en transmission|microscope électronique en transmission]]. Le faisceau d’électrons, d’un diamètre de {{unité|0.01|µm}}, balayait la surface de l’échantillon et les électrons transmis étaient récupérés sur le film photographique qui était déplacé au même rythme que le faisceau. La première micrographie obtenue par un MEBT fut l’image d’un [[cristal]] de ZnO grossi {{formatnum:8000}} fois avec une résolution latérale de 50 à 100 [[Mètre#Description de multiples|nanomètres]]. L’image était composée de 400 par 400 lignes et il a fallu 20 minutes pour l’obtenir. Le microscope disposait de deux lentilles électrostatiques entourant les bobines de balayage.
+
+En [[1942]], le physicien et ingénieur russe [[Vladimir Zworykin]], qui travaillait dans les laboratoires de la ''[[RKO Pictures|Radio Corporation of America]]'' à [[Princeton (New Jersey)|Princeton]] aux [[États-Unis]], a publié les détails du premier microscope électronique à balayage pouvant analyser une surface opaque et pas seulement analyser un échantillon fin en transmission. Un canon à électrons à filament de tungstène émettait des électrons qui étaient accélérés sous une tension de {{formatnum:10000}} volts. L’optique électronique de l’appareil était composée de trois bobines électrostatiques, les bobines de balayage étant placées entre la première et la seconde lentille. Ce système donnait une image très réduite de la source de l’ordre de {{unité|0.01|µm}}. Fait assez courant au début de l’histoire des MEB, le canon à électrons se situait en bas du microscope pour que la chambre d’analyse puisse se trouver à la bonne hauteur pour le manipulateur. Mais ceci avait une fâcheuse conséquence car l’échantillon risquait ainsi de tomber dans la colonne du microscope. Ce premier MEB atteignait une résolution de l’ordre de {{unité|50|nm}}. Mais à cette époque, le microscope électronique en transmission se développait assez rapidement et en comparaison des performances de ce dernier, le MEB suscitait beaucoup moins de passion et son développement fut donc ralenti<ref>{{en}}[[Ernst Ruska]], {{lang|en|''The Early Development of Electron Lenses and Electron Microscopy''}} (traduction de Mulvey T), ''Hirzel'', Stuttgart, 1980, ISBN 3-7776-0364-3 </ref>.
+
+=== Développement du microscope électronique à balayage ===
+[[File:ScanningMicroscopeJLM.jpg|thumb|right]]
+
+À la fin des [[années 1940]], [[Charles William Oatley|Charles Oatley]], alors maître de conférence dans le département d’ingénierie de l’[[université de Cambridge]] au [[Royaume-Uni]] s’intéressa au domaine de l’optique électronique et décida de lancer un programme de recherche sur le microscope électronique à balayage, en complément des travaux effectués sur le microscope électronique à transmission par Ellis Cosslett, également à Cambridge dans le département de physique. Un des étudiants de Charles Oatley, Ken Sander, commença à travailler sur une colonne pour MEB en utilisant des lentilles électrostatiques mais il dut s’interrompre un an après en raison de la maladie. C’est Dennis McMullan qui reprit ces travaux en [[1948]]. Charles Oatley et lui-même construisirent leur premier MEB (appelé SEM1 pour {{lang|en|''Scanning Electron Microscope 1''}}) et en [[1952]], cet instrument avait atteint une résolution de {{unité|50|nm}} mais ce qui était le plus important était qu’il rendait enfin ce stupéfiant [[3D|effet de relief]], caractéristique des MEB modernes<ref>{{en}} [http://www2.eng.cam.ac.uk/~bcb/cwo1.htm K.C.A. Smith, {{lang|en|''Charles Oatley:  Pioneer of  scanning electron microscopy''}}, ''EMAG '97 Proceedings'', IOP Publishing Lt, 1997] </ref>.
+
+En [[1960]], l’invention d’un nouveau détecteur par [[Thomas Eugene Everhart]] et [[RFM Thornley]] va accélérer le développement du microscope électronique à balayage : [[détecteur Everhart-Thornley]]. Extrêmement efficace pour collecter les [[Électron secondaire|électrons secondaires]] ainsi que les [[Électron rétrodiffusé|électrons rétrodiffusés]], ce détecteur va devenir très populaire et se retrouver sur presque chaque MEB.
+
+== Interaction électron-matière ==
+[[Image:Sem electrons photons.svg|thumb|280px|right|]]
+{{Article détaillé|Interaction rayonnement-matière}}
+
+En [[Microscope optique|microscopie optique classique]], la [[lumière visible]] réagit avec l’échantillon et les [[photon]]s réfléchis sont analysés par des détecteurs ou par l’[[œil]] humain. En microscopie électronique, le faisceau lumineux est remplacé par un faisceau d’électrons primaires qui vient frapper la surface de l’échantillon et les photons réémis sont remplacés par tout un spectre de particules ou rayonnements : électrons secondaires, électrons rétrodiffusés, [[électron Auger|électrons Auger]] ou [[rayons X]]. Ces différentes particules ou rayonnements apportent différents types d’informations sur la matière dont est constitué l’échantillon<ref>{{harv|Joseph Goldstein|1992|p=69}}</ref>.
+
+=== Électrons secondaires ===
+[[Image:Sem secondary electron.svg|thumb|100px|right|Électron secondaire]]
+{{Article détaillé|Électron secondaire}} 
+Lors d’un choc entre les [[électron]]s primaires du faisceau et les [[atome]]s de l’échantillon, un électron primaire peut céder une partie de son énergie à un électron peu lié de la [[bande de conduction]] de l’atome, provoquant ainsi une [[ionisation]] par éjection de ce dernier. On appelle [[électron secondaire]] cet électron éjecté. Ces électrons possèdent généralement une faible énergie (environ 50 [[électron-volt|eV]]). Chaque électron primaire peut créer un ou plusieurs électrons secondaires. 
+
+De par cette faible énergie, les électrons secondaires sont émis dans les couches superficielles proches de la surface. Les électrons qui peuvent être recueillis par les détecteurs sont souvent émis à une profondeur inférieure à 10 [[Mètre#Description de multiples|nanomètres]]. Grâce à cette faible énergie cinétique, il est assez facile de les dévier avec une faible [[potentiel électrique|différence de potentiel]]. On peut ainsi facilement collecter un grand nombre de ces électrons et obtenir des images de bonne qualité avec un bon [[Rapport signal sur bruit|rapport signal/bruit]] et une [[résolution]] de l’ordre de {{unité|40|Å}} ([[ångström]]) pour un faisceau de {{unité|30|Å}} de diamètre.
+ 
+Étant donné qu’ils proviennent des couches superficielles, les électrons secondaires sont très sensibles aux variations de la surface de l’échantillon. La moindre variation va modifier la quantité d’électrons collectés. Ces électrons permettent donc d’obtenir des renseignements sur la topographie de l’échantillon. En revanche, ils donnent peu d’information sur le contraste de phase (cf électrons rétrodiffusés)<ref>{{harv|Joseph Goldstein|1992|p=106-115}}</ref>.
+
+=== Électrons rétrodiffusés ===
+[[Image:SEM backscattered electron.svg|thumb|100px|right|Électron rétrodiffusé]]
+{{Article détaillé|Électron rétrodiffusé}}
+Les électrons rétrodiffusés ({{en}}{{lang|en|''back-scattered electrons''}}) sont des [[électron]]s résultant de l’interaction des électrons du faisceau primaire  avec des [[Noyau atomique|noyaux d’atomes]] de l’échantillon et qui ont réagi de façon [[Diffusion élastique|quasi élastique]] avec les atomes de l’échantillon . Les électrons sont réémis dans une direction proche de leur direction d’origine avec une faible perte d’énergie.
+
+Ces électrons récupérés ont donc une énergie relativement élevée, allant jusqu’à {{unité|30|[[Électron-volt|KeV]]}}, et beaucoup plus importante que celle des [[électron secondaire|électrons secondaires]]. Ils peuvent être émis à une plus grande profondeur dans l’échantillon. La résolution atteinte avec les électrons rétrodiffusés sera donc relativement faible, de l’ordre du micromètre ou du dixième de micromètre.
+
+De plus, ces électrons sont sensibles au [[numéro atomique]] des [[atome]]s constituant l’échantillon. Les atomes les plus lourds (ceux ayant un nombre important de protons) réémettront plus d’électrons que les atomes plus légers. Cette particularité sera utilisée pour l’analyse en électrons rétrodiffusés. Les zones formées d’atomes avec un nombre atomique élevé apparaîtront plus brillante que d’autres, c’est le contraste de phase. Cette méthode permettra de mesurer l’homogénéité chimique d’un échantillon et permettra une analyse qualitative<ref>{{harv|Joseph Goldstein|1992|p=90-104}}</ref>.
+
+=== Électrons Auger ===
+[[Image:Sem auger electron.svg|thumb|100px|right|Électrons Auger]]
+{{Article détaillé|Électron Auger}}
+
+Lorsqu’un atome est bombardé par un [[électron]] primaire, un électron d’une couche profonde peut être éjecté et l’atome entre dans un état excité. La désexcitation peut se produire de deux façons différentes : en émettant un [[Rayon X|photon X]] (transition radiative ou fluorescence X) ou en émettant un [[électron Auger]] (effet Auger). Lors de la désexcitation, un électron d’une couche supérieure vient combler la lacune créée par l’électron initialement éjecté. Durant cette transition, l’électron périphérique perd une certaine quantité d’énergie qui peut être émise sous forme de photon X ou peut alors être transmise à un électron d’une [[Orbitale atomique|orbite]] plus externe et donc moins énergétique. Cet électron périphérique se retrouve à son tour éjecté et peut être récupéré par un détecteur.
+
+Les électrons Auger possèdent une très faible énergie et sont caractéristiques de l’atome qui les a émis. Ils permettent ainsi d’obtenir des informations sur la composition de l’échantillon et plus particulièrement de la surface de l’échantillon ainsi que sur le type de [[liaison chimique]], dans la mesure évidemment où le MEB est équipé d’un détecteur d’électrons réalisant une discrimination en énergie. Ce sont des MEB spécialisés qui sont équipés d’analyseurs en énergie. On parle alors d’« analyse Auger » ou de « spectrométrie Auger ». Le niveau de vide des microscopes électroniques Auger doit être bien meilleur que pour les MEB ordinaires, de l’ordre de 10{{exp|-10}}&nbsp;[[Torr]]<ref>{{harv|Joseph Goldstein|1992|p=142}}</ref>.
+
+=== Rayon X ===
+[[Image:Sem X photon.svg|thumb|100px|right|Rayon X]]
+{{Article détaillé|Rayon X||Microscope à rayons X}}
+L’impact d’un électron primaire à haute énergie peut ioniser un atome à une couche interne. La désexcitation, le remplissage de l’ordre énergétique de la structure électronique, se produit avec émission de rayons X. L’analyse de ces rayons permet d’obtenir des informations sur la nature chimique de l’atome<ref>{{harv|Joseph Goldstein|1992|p=116-141}}</ref>.
+
+{{clr}}
+
+== Instrumentation ==
+=== Canon à électrons ===
+
+[[Image:Canon.svg|thumb|right|Schéma d’un [[canon à électrons]]]]
+
+{{Article détaillé|Canon à électrons}}
+
+Le [[canon à électrons]] est un des composants essentiels d’un microscope électronique à balayage. C’est en effet la source du faisceau d’[[électron]]s qui viendra balayer la surface de l’échantillon. La qualité des images et la précision analytique que l’on peut obtenir avec un MEB requièrent que la tache électronique sur l’échantillon soit à la fois fine, intense et stable. Une forte intensité dans une tache la plus petite possible nécessite une source « brillante ». L’intensité ne sera stable que si l’émission de la source l’est également.
+
+Le principe du canon à électrons est d’extraire les électrons d’un matériau conducteur (qui en est une réserve quasiment inépuisable) vers le vide où ils sont accélérés par un champ électrique. Le faisceau d’électrons ainsi obtenu est traité par la colonne électronique qui en fait une sonde fine balayée sur l’échantillon.
+
+Il existe deux familles de canon à électrons selon le principe utilisé pour extraire les électrons :
+* l’[[Thermoïonique|émission thermoïonique]], avec les [[filament]]s de [[tungstène]] et pointes LaB{{ind|6}} ;
+* l’[[émission par effet de champ]].
+Il existe également un principe intermédiaire : la source Schottky à émission de champ, de plus en plus employée.
+
+Suivant ces distinctions et le mode de fonctionnement, les canons à électrons ont des propriétés et des caractéristiques différents. Il existe des grandeurs physiques pour les caractériser. La principale est la [[brillance]] mais la durée de vie est également très importante, ainsi que la stabilité. Le courant maximum disponible peut également être pris en considération, ainsi que la dispersion énergétique<ref>{{harv|Joseph Goldstein|1992|p=25-42}}</ref>.
+
+==== Brillance d’une source ====
+
+On peut définir la brillance ''B'' d’une source par le rapport du courant émis par la source au produit de la surface de la source par l’angle solide. Dans le cas général, on ne sait mesurer que la surface d’une « source virtuelle » qui est la zone d’où semblent provenir les électrons. <small>(Définition à revoir)</small>
+<center> <math>B=\frac{\mathrm{courant~\acute{e}mis}}{(\mathrm{surface~de~la~source}) \times (\mathrm{angle~solide})} </math></center>
+Pour une source d’électrons dont les caractéristiques sont :
+* le diamètre de la source virtuelle ''d'' ;
+* le courant émis ''I{{ind|e}}'' ;
+* le demi-angle d’ouverture α.
+l’expression de la brillance devient :
+<center> <math>B=\frac{I_e}{(\pi (\frac{d}{2})^2) (\pi \alpha^2)} </math></center>
+
+Dans les systèmes optiques, la brillance, qui se mesure en A.m{{exp|-2}}.sr{{exp|-1}} (ampères par unité de surface et par angle solide), a la propriété de se conserver lorsque l’énergie d’accélération est constante. Si l’énergie varie, la brillance lui est proportionnelle. Pour obtenir un signal de détection abondant lorsque la tache électronique sur l’échantillon est très petite, il faut que la brillance de la source soit la plus élevée possible. Dans la littérature, on trouve très souvent la brillance exprimée en A⋅cm{{exp|-2}}.sr{{exp|-1}}<ref>{{harv|Joseph Goldstein|1992|p=29}}</ref>.
+
+==== Émission thermoïonique : Filament de tungstène et pointes {{fchim|La||B|6}} ====
+
+Des matériaux tels que le [[tungstène]] et l’[[Bore|hexaborure]] de [[lanthane]] ({{fchim|La||B|6}}) sont utilisés en raison de leur faible [[travail de sortie]], c’est-à-dire de l’énergie nécessaire pour extraire un [[électron]] de la [[cathode]]. En pratique, cette énergie est apportée sous forme d’[[énergie thermique]] en chauffant la cathode à une température suffisamment élevée pour qu’une certaine quantité d’électrons acquière l’énergie suffisante pour franchir la [[barrière de potentiel]] qui les maintient dans le solide. Les électrons qui ont franchi cette barrière de potentiel se retrouvent dans le vide où ils sont ensuite accélérés par un [[champ électrique]].
+
+Dans la pratique, on peut utiliser un filament de tungstène, formé comme une épingle à cheveux, que l’on chauffe par [[effet Joule]], comme dans une ampoule électrique. Le filament est ainsi porté à une température supérieure à {{tmp|2200|°C}}, typiquement {{tmp|2700|°C}}.
+
+Les cathodes au {{fchim|LaB|6}} doivent être chauffées à une température moins élevée mais la technologie de fabrication de la cathode est un peu plus compliquée car le {{fchim|La||B|6}} ne peut pas être formé en filament. En fait, on accroche une pointe de monocristal de {{fchim|LaB|6}} à un filament en carbone. Le [[cristal]] d’hexaborure de lanthane est porté aux alentours de {{tmp|1500|°C}} pour permettre l’émission d’électrons. Cette cathode nécessite un vide plus poussé que pour un filament de tungstène (de l’ordre de 10{{exp|-6}} à {{unité|10<sup>-7</sup>|[[torr]]}} contre 10{{exp|-5}}). Les cathodes en ''hexaborure de Cerium'' ({{fchim|Ce||B|6}}) ont des propriétés très voisines.
+
+Le filament de tungstène porté à une température de {{tmp|2700|°C}} a une brillance typique de {{unité|10<sup>5</sup>|A||(cm|-2|sr|-1}}) pour une tension d’accélération de {{unité|20|kilovolts}}<ref>{{harv|Joseph Goldstein|1992|p=30}}</ref>. Il a, à cette température, une durée de vie entre 40 et {{unité|100|heures}}. Le diamètre de la source virtuelle est de l’ordre de {{unité|40|µm}}. 
+
+La cathode {{fchim|La||B|6}} portée à une température de {{tmp|1500|°C}} a une brillance typique de {{unité|10<sup>6</sup>|A||cm|-2|sr|-1}} pour une durée de vie entre 500 et {{unité|1000|heures}}. Le diamètre de la source virtuelle est de l’ordre de {{unité|15|µm}}<ref name="Postek">Michael T. Postek, ''The Scanning Electron Microscope'' in ''Handbook of Charged Particle Optics'', ''[[CRC Press]]'', [[Université du Maryland]], 1997 </ref>.
+
+==== Canons à émission de champ ====
+
+Le principe d’un canon à émission de champ est d’utiliser une cathode métallique en forme de pointe très fine et d’appliquer une [[Tension électrique|tension]] de l’ordre de {{formatnum:2000}} à {{unité|7000|[[volt]]s}} entre la pointe et l’anode. On produit ainsi, par « effet de pointe », un champ électrique très intense, de l’ordre de {{unité|10<sup>7</sup>|V||cm|-1}}, à l’extrémité de la cathode. Les électrons sont alors extraits de la pointe par [[effet tunnel]]. Il existe deux types de ''canons à émission de champ'' (FEG en anglais pour {{lang|en|''Field Emission Gun''}}) :
+* l’émission de champ à froid (CFE en anglais). La pointe reste à température ambiante :
+* l’émission de champ assistée thermiquement (TFE en anglais). La pointe est alors portée à une température typique de {{unité|1800|K}}.
+
+Le gros avantage des canons à émission de champ est une brillance théorique qui peut être cent fois plus importante que celle des cathodes {{fchim|La||B|6}}. Le deuxième type de canon (assisté thermiquement) est de plus en plus utilisé, car il permet pour un sacrifice en brillance très modeste de mieux maîtriser la stabilité de l’émission. Le courant disponible est également plus élevé. Avec un canon à émission de champ froid, le courant disponible sur l’échantillon n’est en effet jamais supérieur à {{unité|1|nA}}, alors qu’avec l’assistance thermique, il peut approcher les {{unité|100|nA}}<ref>Selon la brochure {{lang|en|''New-Technology Scanning Electron Microscope DSM 982 Gemini''}} de la société Karl Zeiss, 1998</ref>.
+
+Une autre grosse différence entre les canons à émission de champ et les canons thermoïoniques est que la source virtuelle est beaucoup plus petite. Cela provient du fait que toutes les trajectoires sont normales à la surface de la pointe, qui est une sphère d’environ {{unité|1|µm}}. Les trajectoires semblent ainsi provenir d’un point. C’est ainsi que l’on obtient des brillances très élevées : {{unité|10<sup>8</sup>|A||cm|-2|sr|-1}} pour les cathodes froides et {{unité|10<sup>7</sup>|A||cm|-2|sr|-1}} pour les cathodes à émission de champ chauffées. Sur l’échantillon, la brillance est toujours dégradée<ref name="Postek"/>.
+
+Le très petit diamètre de la source virtuelle nécessite moins d’étages de réduction, mais un inconvénient est que la source, moins réduite est plus sensible aux vibrations.
+
+<center>
+{| border="1" class="wikitable" style="text-align:left"
+|+ Comparaison des différentes propriétés des canons à électrons, à {{unité|20|kV}}<ref> Postek, p. 366. Il semble que dans ce tableau {{lang|en|''Comparison of Pertinent Electron Source Characteristics''}} toutes les brillances soient trop fortes d’un facteur 10. Dans le tableau ci-dessous, la ligne brillance a été corrigée de ce facteur 10 </ref> 
+!
+! colspan="2" | Émission thermoïonique
+! colspan="2" | Émission de champ
+|-
+! Matériaux
+! Tungstène
+! {{fchim|La||B|6}}
+! S-FEG
+! C-FEG
+|-
+| Brillance (A⋅cm{{exp|-2}}⋅sr{{exp|-1}})
+| 10{{exp|5}}
+| 10{{exp|6}}
+| 10{{exp|7}}
+| 10{{exp|8}}
+|-
+| Température ([[Degré Celsius|°C]])
+| {{formatnum:1700}}–{{formatnum:2400}}
+| {{formatnum:1500}}
+| {{formatnum:1500}}
+| [[Conditions normales de température et de pression|ambiante]]
+|-
+| Diamètre de la pointe (nm)
+| {{formatnum:50000}}
+| {{formatnum:10000}}
+| 100–200
+| 20–30
+|-
+| Taille de la source ([[Mètre#Description de multiples|Nanomètre]])
+| {{formatnum:30000}}–{{formatnum:100000}}
+| {{formatnum:5000}}–{{formatnum:50000}}
+| 15–30
+| &lt; 5
+|-
+| Courant d’émission ([[Ampère (unité)|µA]])
+| 100–200
+| 50
+| 50
+| 10
+|-
+| Durée de vie ([[Heure (temps)|heure]])
+| 40–100
+| 200–{{formatnum:1000}}
+| &gt; {{formatnum:1000}}
+| &gt; {{formatnum:1000}}
+|-
+| Vide minimal ([[Pascal (unité)|Pa]])
+| 10{{exp|-2}}
+| 10{{exp|-4}}
+| 10{{exp|-6}}
+| 10{{exp|-8}}
+|-
+| Stabilité à court terme (%RMS)
+| &lt;1
+| &lt;1
+| &lt;1
+| 4–6
+|}
+</center>
+
+=== Colonne électronique ===
+==== Colonnes pour canon à émission thermoïoniques ====
+
+La fonction de la colonne électronique est de produire à la surface de l’échantillon une image de la source virtuelle suffisamment réduite pour que la tache électronique (le {{lang|en|''spot''}}) obtenue soit assez fine pour analyser l’échantillon avec la résolution requise, dans la gamme des 0,5 à {{unité|20|nm}}. La colonne doit également contenir des moyens pour balayer le faisceau. 
+
+Comme les sources des canons à émission thermoïonique ont un diamètre typique de {{lang|20|µm}}, la réduction de la colonne électronique doit être d’au moins {{formatnum:20000}}, produite par trois étages comportant chacun une [[lentille magnétique]] (Voir figure [[Microscopie électronique à balayage#Principe général|ci-dessus]]). 
+
+La colonne électronique doit également comporter un diaphragme de limitation d’ouverture, car les lentilles magnétiques ne doivent être utilisées que dans leur partie centrale pour avoir des aberrations plus petites que la résolution recherchée. L’astigmatisme résultant, par exemple de défaut de sphéricité des lentilles peut être compensé par un « stigmateur », mais l’aberration sphérique et l’aberration chromatique ne peuvent être corrigées.
+
+Le balayage de la tache électronique sur l’échantillon résulte de champs magnétiques selon les deux directions transverses, X et Y, produits par des bobines de déflexion qui sont parcourues par des courants électriques. Ces bobines de déflexion sont situées juste avant la dernière lentille<ref name="Postek"/>.
+
+==== Colonnes pour canon à émission de champ ====
+
+[[Image:Gemini 5.JPG|thumb|right|Colonne Gemini de Zeiss. Cette colonne, équipée d’une source à émission de champ, dédiée aux applications basse énergie, contient un détecteur d’électrons secondaire dans la colonne.]]
+Les colonnes électroniques montées avec des canons à émission de champ peuvent avoir une réduction de la source bien inférieure à celle des colonnes conventionnelles<ref name="Postek"/>.
+
+La colonne ''Gemini'' représentée sur la figure ci-contre comporte deux [[Lentille magnétique|lentilles magnétiques]], mais cette paire de lentille, montées en doublet, ne constitue en fait qu’un seul étage de réduction. La structure en doublet permet d’éviter de limiter le nombre de {{lang|en|''cross-over''}}, c’est-à-dire, d’images intermédiaires de la source, comme sur les colonnes conventionnelles, car ces {{lang|en|''cross-over''}} sont générateurs de [[Écart type|dispersion]] en énergie et donc d’[[aberration chromatique]].
+
+La forte brillance des sources à émission de champ les rend particulièrement propices aux applications à basse énergie d’impact, c’est-à-dire inférieure à {{unité|6|keV}}. car la brillance étant proportionnelle à l’énergie d’accélération, l’obtention d’un courant électronique primaire confortable ne saurait tolérer le cumul de deux handicaps, celui d’une source médiocre et d’une faible énergie d’accélération.
+
+Plusieurs raisons peuvent pousser à rechercher les faibles énergies d’impact : 
+* lorsque l’image résulte d’un mode de détection qui met en cause l’ensemble de la poire de pénétration des électrons dans la matière, comme c’est le cas, par exemple, pour l’utilisation en [[microsonde de Castaing|microanalyse par rayons X]] : plus l’énergie d’impact est élevée, et plus la poire est évasée ;
+* pour l’analyse dans les isolants dans le cas où une métallisation superficielle de l’échantillon introduirait un artefact de mesure.
+Il existe un niveau d’énergie, situé aux environs de {{unité|1500|eV}} dans le cas de la silice, pour lequel il y a autant d’électrons secondaires émis que d’électrons primaires incidents.
+
+Pour travailler à basse énergie, par exemple à {{unité|1500|eV}} ou à quelques centaines d’eV, il est intéressant de véhiculer les électrons à énergie plus importante dans la colonne, et de les ralentir juste avant l’échantillon. L’espace de ralentissement forme alors une [[lentille électrostatique]], c’est ce qui est représenté sur la figure de ce paragraphe. Lorsque les électrons restent à énergie constante, les [[lentille magnétique|lentilles magnétiques]] ont des [[Aberration (optique)|aberrations]] plus faibles que les lentilles électrostatiques, mais il se trouve que les lentilles comprenant une zone de ralentissement, nécessairement électrostatique, ont toutes les aberrations relatives à l’ouverture du faisceau considérablement réduite<ref>{{en}}[http://www.htiweb.com/Product_Infor/SEM/SUPRA/SUPRA_GEMINI_Innovative_electron_optical_column.htm {{lang|en|''Gemini optical column''}}]</ref>.
+
+Lorsque l’énergie d’impact est faible, et qu’il y a un champ électrique de ralentissement proche de l’échantillon, la mise en place du détecteur d’électrons secondaires dans l’espace entre la dernière lentille et l’échantillon pose de plus en plus de problèmes. Une solution consiste alors à disposer le détecteur à l’intérieur de la colonne. En effet, le champ électrique qui ralentit les électrons primaires, accélère les électrons secondaires. En anglais, ce type d’arrangement est connu sous le nom d’{{lang|en|''in-lens detector''}} ou {{lang|en|''Through-The-Lens detector''}} (détecteur TTL). En français, on pourrait dire « détecteur dans la colonne ».
+
+=== Détecteur d’électrons secondaires ===
+{{Article détaillé|Détecteur Everhart-Thornley}}
+Le détecteur d’électrons secondaires ou [[détecteur Everhart-Thornley]] a été développé dans le but d’améliorer le système de collection utilisé à l’origine par [[Vladimir Zworykin]] et qui était constitué d’un écran phosphorescent/[[photomultiplicateur]]. En [[1960]], deux étudiants de [[Charles William Oatley|Charles Oatley]], [[Thomas Eugene Everhart]] et [[RFM Thornley]], ont eu l’idée d’ajouter un [[guide d'onde|guide de lumière]] entre cet écran phosphorescent et ce [[photomultiplicateur]]. Ce guide permettait un couplage entre le scintillateur et le photomultiplicateur, ce qui améliorait grandement les performances. Inventé il y a plus d’un demi-siècle, ce détecteur est aujourd’hui celui le plus fréquemment utilisé. 
+
+Un détecteur Everhart-Thornley est composé d’un [[scintillateur]] qui émet des photons sous l’impact d’électrons à haute énergie. Ces photons sont collectés par un [[Guide d'onde|guide de lumière]] et transportés vers un [[photomultiplicateur]] pour la détection. Le scintillateur est porté à une tension de plusieurs kilovolts afin de communiquer de l’énergie aux électrons secondaires détectés - il s’agit en fait d’un procédé d’amplification. Pour que ce potentiel ne perturbe pas les électrons incidents, il est nécessaire de disposer une grille, sorte de [[cage de Faraday]], pour blinder le scintillateur. Dans le fonctionnement normal, la grille est polarisée à quelque + 200 [[volt]]s par rapport à l’échantillon de façon à créer à la surface de l’échantillon un champ électrique suffisant pour drainer les électrons secondaires, mais assez faible pour ne pas créer d’aberrations sur le faisceau incident.  
+
+La polarisation du scintillateur à une tension élevée et le fort champ électrique qui en résulte est incompatible avec un MEB à faible vide : Il se produirait alors une ionisation de l’atmosphère de la chambre d’observation consécutive à l’[[Loi de Paschen|effet Paschen]]. 
+ 
+[[Image:EVT+.svg|thumb|left|Détecteur Everhart-Thornley avec une tension positive]]
+[[Image:EVT-.svg|thumb|right|Détecteur Everhart-Thornley avec une tension négative]]
+
+Polarisée à 250 volts par rapport à l’échantillon (voir schéma de gauche), la grille attire une grande partie des électrons secondaires émis par l’échantillon sous l’impact du faisceau d’électrons primaire. C’est parce que le champ électrique généré par la cage de Faraday est fortement dissymétrique qu’on peut obtenir un effet de relief.
+
+Lorsque la grille est polarisée négativement, typiquement à - 50 volts (voir schéma de droite), le détecteur repousse l’essentiel des électrons secondaires dont l’énergie initiale est souvent inférieure à {{unité|10|[[eV]]}}. Le détecteur Everhart-Thornley devient alors un détecteur d’électrons rétrodiffusés<ref>{{harv|Joseph Goldstein|1992|p=177-180}}</ref>.
+
+== Préparation de l’échantillon ==
+La qualité des images obtenues en microscopie électronique à balayage dépend grandement de la qualité de l’échantillon analysé. Idéalement, celui-ci doit être absolument propre, si possible plat et doit conduire l’électricité afin de pouvoir évacuer les électrons. Il doit également être de dimensions relativement modestes, de l’ordre de 1 à 2 centimètres. Toutes ces conditions imposent donc un travail préalable de découpe et de polissage. Les échantillons isolants (échantillons biologiques, polymères, etc.) doivent en plus être métallisés, c’est-à-dire recouverts d’une fine couche de carbone ou d’or. Cependant cette couche métallique, du fait de son épaisseur, va empêcher la détection de détails très petits. On peut donc utiliser un faisceau d'électrons de plus basse énergie qui évitera de charger l'échantillon (et donc de perdre de la visibilité), la couche métallique ne sera alors plus nécessaire.
+
+=== Échantillons métalliques ===
+{{...}}
+=== Échantillons biologiques ===
+[[Image:Ant SEM.jpg|thumb|rightt|Tête de [[fourmi]] vue au MEB]]
+Par nature, les échantillons biologiques contiennent de l’[[eau]] et sont plus ou moins mous. Ils nécessitent donc une préparation plus attentive qui vise à les [[déshydratation|déshydrater]] sans en détruire la paroi des [[Cellule (biologie)|cellules]]. De plus, comme tous les échantillons destinés à être observés dans un MEB, ceux-ci doivent être [[conducteur (physique)|conducteurs]]. Pour cela, ils doivent donc subir une préparation spécifique en plusieurs étapes. 
+
+La première étape est une étape de [[fixation]] qui vise à tuer les cellules tout en s’efforçant d’en conserver les structures pour que l’on puisse observer l’échantillon dans un état aussi proche que possible de l’état vivant. La seconde étape consiste à extraire de l’échantillon les éléments destinés à l’observation. Il n’est pas rare de ne s’intéresser qu’à un organe ou à un élément précis du spécimen, par exemple, la surface d’un [[œil]], une [[élytre]], une [[écaille]] ou un [[poil]] d’un insecte. Il faut donc souvent isoler cette partie avant de la préparer pour l’observation. Il existe plusieurs techniques pour extraire ces parties. La plus simple étant une dissection manuelle ou la [[dissolution]] des parties molles et les chairs. 
+
+Une condition nécessaire à tous les échantillons mais plus particulièrement les échantillons biologiques est la propreté. La surface de l’échantillon biologique à étudier doit contenir le moins d’impuretés possible, pour permettre une netteté parfaite même avec des agrandissements importants. Pour cela, il existe trois principales techniques : le nettoyage manuel, mécanique ou chimique. 
+
+Les échantillons doivent être absolument secs et ne comporter aucune trace d’eau. En effet, la pression dans la chambre d’observation est très faible et les molécules d’eau contenues dans l’échantillon risqueraient de détruire les cellules en s’évaporant ou de polluer la chambre d’observation. Il existe également différentes méthodes pour y parvenir suivant la nature de l’échantillon biologique : séchage à l’air, par contournement du point critique ou par déshydratation chimique.
+
+Une fois nettoyé, séché, rendu conducteur, l’échantillon est prêt à être monté sur le porte-objet est placé dans la chambre d’observation.
+
+== Différents types d’imageries ==
+Un microscope électronique à balayage peut avoir plusieurs modes de fonctionnement suivant les particules analysées.
+
+=== Imagerie en électrons secondaires ===
+[[Image:meb elec second.svg|thumb|right|Détecteur(GSE) d’électrons secondaires]]
+Dans le mode le plus courant, un [[Détecteur Everhart-Thornley|détecteur d’électrons]] transcrit le flux d’électrons en une [[luminosité]] sur un écran de type télévision. En balayant la surface, on relève les variations de contraste qui donnent une image de la surface avec un effet de relief. La couleur (noir et blanc) sur la micrographie obtenue est une reconstruction par un système électronique et n’a rien à voir avec la couleur de l’objet.
+
+La détection des électrons secondaires est le mode classique d’observation de la morphologie de la surface. Les électrons secondaires captés proviennent d’un volume étroit (environ {{unité|10|nm}}). De fait, la zone de réémission fait à peu près le même diamètre que le faisceau. La résolution du microscope est donc le diamètre du faisceau, soit environ {{unité|10|nm}}. Une grille placée devant le détecteur d’électrons, polarisée positivement (200-{{unité|400|V}}), attire les électrons. De cette manière, la majorité des [[électron secondaire|électrons secondaires]] sont détectés alors que les [[électron rétrodiffusé|électrons rétrodiffusés]], qui ont une énergie plus élevée, ne sont quasiment pas déviés par le champ électrique produit par la grille du collecteur. La quantité d’électrons secondaires produite ne dépend pas de la nature chimique de l’échantillon, mais de l’angle d’incidence du faisceau primaire avec la surface : plus l’incidence est rasante, plus le volume excité est grand, donc plus la production d’électrons secondaires est importante, d’où un effet de [[contraste]] topographique (une pente apparaît plus « lumineuse » qu’un plat). Cet effet est renforcé par le fait que le détecteur est situé sur le côté ; les électrons provenant des faces situées « dos » au détecteur sont réfléchis par la surface et arrivent donc en plus petite quantité au détecteur, créant un effet d’ombre<ref>{{harv|Joseph Goldstein|1992|p=198-214}}</ref>.
+
+=== Imagerie en électrons rétrodiffusés ===
+[[Image:meb elec retrodif.png|frame|right|Détecteur(BSE) d’électrons rétrodiffusés]]
+Les électrons rétrodiffusés proviennent d’un volume plus important ; le volume d’émission fait donc plusieurs fois la taille du faisceau. La résolution spatiale du microscope en électrons rétrodiffusés est d’environ {{unité|100|nm}}. Les électrons rétrodiffusés traversent une épaisseur importante de matière avant de ressortir (de l’ordre de {{unité|450|nm}}). La quantité d’électrons capturés par les atomes rencontrés et donc la quantité d’électrons rétrodiffusés qui ressortent dépend de la nature chimique des couches traversées. Le taux d’émission électronique augmente avec le numéro atomique. On obtient donc un contraste chimique, les zones contenant des atomes légers (''A'' faible) apparaissant en plus sombre. 
+
+Le contraste topographique obtenu dépendra essentiellement du type de détecteur et de sa position. Dans le cas d'un détecteur annulaire placé dans l'axe du faisceau primaire, au dessus de l'échantillon, les électrons rétrodiffusés seront redirigés vers le haut de la colonne : le taux d’émission dépend peu du relief, l’image apparaît donc « plate »<ref>{{harv|Joseph Goldstein|1992|p=191-194}}</ref>.
+
+Dans le cas d'un détecteur en position latérale (Everhart-Thornley polarisé positivement), les électrons rétrodiffusés émis par les faces "cachées" illuminées par le faisceau ne peuvent atteindre le détecteur, en raison de l'absence de déviation opérée par ce dernier sur ces électrons ayant une grande énergie cinétique : il en résulte une image avec des ombres portées très marquées.
+
+=== Imagerie en diffraction d’électrons rétrodiffusés ===
+:''Pour des articles détaillés, voir [[Diffraction d'électrons rétrodiffusés|Diffraction d’électrons rétrodiffusés]] et [[Théorie de la diffraction sur un cristal]]''
+[[Image:EBSD.svg|right|thumb|Principe de l’EBSD]]
+Comme toute [[Physique des particules|particule élémentaire]], les [[électron]]s ont un [[Dualité onde-particule|comportement corpusculaire et ondulatoire]]. Ce mode d’imagerie en diffraction d’électrons rétrodiffusés (plus connu sous le nom de EBSD pour {{lang|en|''Electron BackScatter Diffraction''}} en anglais) utilise la propriété ondulatoire des électrons et leur capacité à diffracter sur un [[Structure cristalline|réseau cristallographique]]. Elle est particulièrement efficace pour caractériser la microstructure des matériaux polycristallins. Elle permet de déterminer l’orientation des différents grains dans un matériau polycristallin et l’identification des phases d’une cristallite dont la composition a préalablement été faite par spectrométrie X. 
+
+Couplé à un [[Capteur photographique|capteur CCD]], le détecteur EBSD est composé d’un écran phosphorescent qui se trouve directement dans la chambre d’analyse du microscope. L’échantillon est incliné en direction du détecteur et l’angle par rapport au faisceau d’électrons primaires est de l’ordre de {{unité|70|°}}. Lorsque les électrons viennent frapper la surface de l’échantillon, ils la pénètrent sur une certaine profondeur et sont [[diffraction|diffractés]] par les [[Système cristallin|plans cristallographiques]] selon un angle <math>\theta_B</math> dont la valeur est donnée par la [[loi de Bragg]] : 
+
+[[Image:Ebsd.jpg|thumb|left|Cliché de diffraction obtenu par EBSD]]<center><math>2 d_{hkl} \sin \theta_B = n \cdot \lambda </math></center>
+
+<math>d_{hkl}</math> représente la [[distance interréticulaire]], <math>\lambda</math> la [[longueur d'onde|longueur d’onde]] et le [[nombre entier]] <math>n</math> l’ordre de diffraction. 
+
+La diffraction se fait sur {{unité|360|°}} et chaque plan diffractant crée un « cône de diffraction » dont le sommet se situe au point d’impact du faisceau d’électrons primaires. Il existe donc autant de cônes de diffraction que de plans diffractants. L’espacement entre ces différents cônes est, par l’intermédiaire de la loi de Bragg, relié à la distance entre les plans cristallins. 
+
+L’inclinaison de l’échantillon et la position de l’écran phosphorescent sont telles que ces cônes viennent frapper l’écran. Les électrons font scintiller l’écran phosphorescent et peuvent être détectés par la caméra CCD. Sur l’écran, ces portions de cônes tronqués apparaissent sous la forme de lignes. Le cliché de diffraction que l’on obtient est une superposition de bandes sombres alternées avec des bandes de plus forte intensité que l’on appelle ''lignes de Kikuchi''. Ces lignes, leurs divers points d’intersection et leurs espacements, peuvent être, en connaissant la distance de l’écran à l’échantillon, convertis en angles et l’on peut ainsi déterminer les paramètres de maille.
+
+Avec cette méthode et du fait de la grande inclinaison de l’échantillon, la résolution spatiale est très asymétrique : de l’ordre de 1 µm latéralement mais de l’ordre de 50 à {{unité|70|µm}} longitudinalement<ref>{{en}} [http://level2.phys.strath.ac.uk/ssd/HTML/charhtml/ebsd.htm {{lang|en|''ELECTRON BACKSCATTERED DIFFRACTION''}} sur le site de l’université de Strathclyde]</ref>.
+
+=== Imagerie en courant d’échantillon ===
+[[Image:EBIC.PNG|right|thumb|Principe du courant d’échantillon]]
+Le principe de l’imagerie en courant d’échantillon (en anglais EBIC pour {{lang|en|''Electron Beam Induced Current''}} ou ''Courant Induit par un Faisceau Électronique'') est différent des précédents modes de fonctionnement car il n’est pas basé sur une analyse des particules éventuellement réémises par la matière mais sur une mesure du courant transmis par l’échantillon. Lorsqu’un échantillon est bombardé par un certain flux d’électrons incidents, environ {{unité|50|%}} de ces éléments sont réémis sous forme d’[[électron rétrodiffusé|électrons rétrodiffusés]] et {{unité|10|%}} sous forme d’[[électron secondaire|électrons secondaires]]. Le reste du flux d’électrons se propage à travers l’échantillon jusqu’à la [[Terre (électricité)|Terre]]. En isolant l’échantillonn on peut canaliser ce courant et en l’amplifiant, on peut l’utiliser pour créer une image de la structure de l’échantillon : c’est le principe de l’imagerie en courant d’échantillon.
+[[Image:EBIC pn junction.PNG|left|thumb|Courant d’échantillon d’une [[jonction P-N]]]]
+Le courant induit au sein de l’échantillon est particulièrement sensible à un éventuel [[champ électrique]]. La technique par courant d’échantillon est principalement utilisée pour représenter des régions où le [[potentiel électrique]] varie. La différence de dopage au sein d’une jonction p-n entre la zone dopée n et la zone dopée p induit une polarisation. Cette technique est particulièrement utilisée pour étudier les [[Jonction P-N|jonctions p-n]] des semi-conducteurs où la [[conductivité électrique]] varie en fonction du [[dopage (semi-conducteur)|dopage]]. Lorsque le faisceau d’électrons se situe sur la zone dopée n, le courant transmis est faible alors que lorsqu’il se trouve sur la zone dopée p, les électrons se propagent plus facilement et la zone apparaît en plus clair.
+
+En dehors de cet exemple des jonctions p-n, l’imagerie en courant d’électrons est particulièrement adaptée pour repérer des défauts (par exemple un [[défaut ponctuel]]) d’un [[réseau cristallin]] qui apparaissent alors sous la forme de points ou de lignes noirs, une hétérogénéité de dopage<ref>{{en}}[http://www.semiconfareast.com/ebic.htm {{lang|en|''Electron Beam-Induced Current (EBIC) Analysis''}}], semiconfareast.com</ref>.
+
+=== Imagerie chimique élémentaire par spectrométrie de rayons X ===
+{{Article détaillé|Analyse dispersive en longueur d'onde|Analyse dispersive en énergie}}
+L’énergie des [[rayons X]] émis lors de la désexcitation des atomes dépend de leur nature chimique (ce sont les [[raie caractéristique|raies caractéristiques]]). En analysant le spectre des rayons X, on peut avoir une analyse élémentaire, c’est-à-dire savoir quels types d’atomes sont présents. Le faisceau balayant l’écran, on peut même dresser une cartographie chimique, avec toutefois une résolution très inférieure à l’image en électrons secondaires (de l’ordre de {{unité|3|μm}}).
+
+L’analyse peut se faire par [[analyse dispersive en longueur d'onde|dispersion de longueur d’onde]] (WDS, {{lang|en|''wavelength dispersive spectroscopy''}}), c’est le principe de la [[microsonde de Castaing]] inventée en [[1951]] par Raymond Castaing, ou par [[analyse dispersive en énergie|sélection d’énergie]] (EDS, {{lang|en|''energy dispersive spectroscopy''}}). 
+La technique utilisant les longueurs d’onde est plus précise et permet des analyses quantitatives alors que celle utilisant l’énergie est plus rapide et moins coûteuse.
+
+En dispersion d’énergie la détection des photons X est réalisée par un détecteur constitué d’une diode de cristal de [[silicium]] dopé en [[lithium]] en surface ou d'un critsal de Germanium.
+
+Ce cristal est maintenu à la température de l’[[azote]] liquide pour minimiser le bruit électronique, et ainsi améliorer la résolution en énergie et donc la résolution spectrale. Le détecteur est protégé par une fenêtre en [[béryllium]] pour éviter son givrage lors d’un contact avec l’air ambiant<ref>{{harv|Joseph Goldstein|1992|p=273-340 et 525-546}}</ref>.
+
+== Mesure sous vide partiel, microscope environnemental (ESEM) ==
+Si un échantillon est peu conducteur (par exemple le verre ou les plastiques), des électrons s’accumulent sur la surface et ne sont pas évacués ; cela provoque une surbrillance qui gêne l’observation. On dit alors que l’échantillon charge. Il peut être alors intéressant de fonctionner avec un vide partiel, c’est-à-dire une pression de quelques Pa à quelques milliers de Pa<ref>[http://www.er.uqam.ca/nobel/r27734/microel/pagevp.html Le microscope électronique à balayage et à vide partiel sur le site de L'Université du Québec à Montréal]</ref> (contre 10{{exp|-3}} à {{unité|10<sup>-4</sup>|Pa}} en conditions habituelles), avec une intensité de faisceau moins forte. Les électrons accumulés sur l’échantillon sont neutralisés par les charges positives de gaz (azote principalement) engendrés par le faisceau incident. L’observation est alors possible par le détecteur d’électrons rétrodiffusés qui reste fonctionnel dans ce mode de pression contrôlée, contrairement au détecteur d'électrons secondaires du type Everheart-Thornley. Le signal provenant des électrons secondaires est formé grâce à des procédés propres à chaque constructeur de microscope<ref>[http://www.up.univ-mrs.fr/wmeb/esem.htm Le microscope électronique environnemental sur le site de l’Université de Provence]</ref>.
+
+L’analyse X dans ce mode reste possible.
+
+Depuis les années 1980, le microscope environnemental connu aussi par l'acronyme [[ESEM]] (''environmental scanning electron microscope'') est caractérisé par un vide de la chambre objet de plusieurs kiloPascals, ce qui permet l'observation d'échantillons hydratés où l'eau est maintenue en phase liquide au-dessus de {{tmp|0|°C}}<ref>[http://www.azom.com/details.asp?ArticleID=1556, Athene M. McDonald, ''Environmental Scanning Electron Microscopy - ESEM'', Materials World, Vol. 6 no. 7, pp. 399-401, July 1998.] </ref>.
+
+
+== Applications ==
+=== Microélectronique, technologie des semiconducteurs et microfabrication ===
+[[Image:Photoresist SEM micrograph.JPG|thumb|left| Images de MEB à faible énergie ({{unité|1|kV}}) : Cette photo de 1995 montre une ligne de [[Photorésist|photorésine]] de {{unité|120|nm}} de large et {{unité|1|µm}} de haut. On voit, sur les flancs de la photorésine, l'effet des ondes stationnaires du rayonnement UV utilisé pour l’exposition de la résine.
+Le MEB est un DSM 982 de chez Zeiss, équipé d’une colonne Gemini]]
+
+La mise sur le marché microsopes électroniques à balayage est à peu près contemporain de l’envol de l’industrie des [[semi-conducteur]]s. C’est dans ce domaine d’activité que le MEB s’est répandu le plus massivement, étant reconnu comme un outil précieux dans la mise au point des procédés de fabrication des dispositifs dont l’élément caractéristique, la grille de [[Metal Oxide Semiconductor Field Effect Transistor|transistor]] est passée d’une largeur typique de quelques micromètres à la fin des [[années 1960]] à moins de 100 nanomètres au {{XXIe siècle}}. Non seulement le MEB a permis de voir au-delà des limites du microscope optique, mais la vision en relief s’est avérée très pratique pour l’aide à la [[Procédés de fabrication des dispositifs à semi-conducteurs|microfabrication]] où il est souvent important de contrôler la verticalité des couches déposées ou des couches gravées. Voir, par exemple, sur la figure ci-contre, une image de MEB d’un motif de photorésine gravée. 
+
+Très populaire dans les laboratoires de recherche et développement, le MEB est également devenu un outil très répandu dans les unités de production fabrication, en tant qu’outil de contrôle industriel. La chambre d’analyse doit alors pouvoir accepter des [[Wafer|tranches de silicium]] ({{en}} {{lang|en|''wafer''}}) entières, c’est-à-dire dont le diamètre est, en 2006, de {{unité|200|mm}} ou {{unité|300|mm}}. On a même donné un nom particulier aux appareils qui effectue du contrôle dimensionnel, c’est-à-dire, qui vérifient la largeur d’une ligne. En anglais, on les appelle des ''CD-SEM''. Ces appareils sont entièrement automatisés : ils ne produisent pas d’images à proprement parler : le calculateur de contrôle amène un motif de test exactement sur l’axe du faisceau qui est alors balayé dans une seule direction. Le signal du détecteur d’électrons secondaires est enregistré et analysé pour générérer la largeur mesurée. Si celle-ci est en dehors du gabarit donné, l’alerte est donnée, et la tranche de silicium, considérée comme mauvaise peut rejetée.
+
+Une autre application des MEB dans les unités de production de semiconducteurs est la caractérisation de microparticules qui contaminent la surface des tranches : le but final est d’identifier la cause de la contamination afin de la supprimer. La particule dont la taille peut varier de 100 nm à 1 µm a été détectée par une machine d’inspection spécialisée qui communique les coordonnées de la particules au MEB d’analyse. Celui-ci est alors utilisé à la fois dans le mode imagerie, pour produire une image de la particule à fort grosissement et en [[microsonde de Castaing]], ce qui implique que le MEB soit équipé d’un spectromètre X. L’image peut aider à l’identification de la particule, mais c’est surtout la caractérisation chimique résultant de l’analyse en longueur d’onde des rayons X qui donnera une piste permettant de remonter à la cause de la contamination.
+
+La sonde électronique d’un MEB peut être utilisée non pas pour observer, mais pour écrire et fabriquer. Il s’agit alors de [[lithographie à faisceau d'électrons|lithographie à faisceau d’électrons]].
+
+=== Science des matériaux ===
+Les MEB utilisés en métallographie sont généralement équipés d’un spectromètre X qui permet leur utilisation en microsonde de Castaing. Ce sont des outils très communément répandus pour la caractérisation microstructurale des matériaux qui permettent d’obtenir à la fois des renseignements relatifs à la morphologie et à la répartition des constituants, et des informations cristallographiques et compositionnelles. 
+
+Pour obtenir certaines figures de diffraction (peudo-Kikuchi, Kossel), on est amené à pervertir le système de balayage de l’instrument : au lieu de générer un balayage en mode rectangulaire, on excite des bobines de déflexion de façon à faire pivoter le faisceau de plusieurs degrés autour d’un point fixe de l’échantillon. L’image générée est alors une figure de diffraction correspondant à une zone de l’échantillon de quelques micromètres. 
+<center>
+<gallery>
+Image:SEMexample.jpg|[[Fibre]]s de [[polyester]] observées au MEB
+Image:SEM picture1.jpg|Surface de fracture d’un acier bainitique
+</gallery>
+</center>
+
+=== Biologie ===
+Au contraire des [[microscope électronique en transmission|microscopes électroniques en transmission]], le MEB se prête peu à l’étude des cellules. Par contre, la vision en relief du MEB se prête bien à l’observation des micro-organismes, pas forcément pour le pouvoir de résolution spatial, mais pour la [[profondeur de champ]] nettement plus élevée que celle des microscopes optiques.
+<center>
+<gallery>
+Image:Misc pollen colorized.jpg|Image prise au MEB de divers sortes de [[pollen]]s (fausses couleurs)
+Image:Diatom0D.JPG|Image prise au MEB de [[Diatomée]]s (grandissement X5000 X)
+Image:Soybean cyst nematode and egg SEM.jpg|Image en fausses couleurs de [[sporocyste]]s de [[nématode]]s du [[soja]]
+Image:FFEYE2.jpg|Image prise au MEB de l’œil d’une [[drosophile]]
+</gallery>
+</center>
+
+=== Divers ===
+Le microscope électronique à balayage est l’un des appareils fondamentaux pour les recherches tribologiques ; voir à ce sujet le [[b:Tribologie|wikilivre de tribologie]] et plus spécialement le chapitre consacré à la [[b:Tribologie - Genèse des frottements|genèse des frottements]].
+
+== Marché ==
+Le marché des microscopes (tous types confondus) est estimé à 811 millions de [[dollar américain|dollars US]], dont environ {{unité|60|%}} sont générés par les microscopes optiques<ref name="LabTechnologist"/>. Avec {{unité|26|%}}, les microscopes électroniques représentent la deuxième part de ce marché, estimée en [[1999]] par ''Global Information Inc.'' à environ 222 millions de dollars<ref>{{en}}[http://www.smalltimes.com/Articles/Article_Display.cfm?ARTICLE_ID=269381&p=109 {{lang|en|''MEMS technology magnifies opportunities for low-cost SEM''}}], ''Small Times'', {{date|6|avril|2004}}.</ref>. ''Global Information Inc.'' estime également que la part des microscopes optiques ira en diminuant, celle des microscopes confocales restera stable tandis que le marché des microscopes électroniques se développera et était estimé à 747 millions de dollars en [[2005]]<ref name="LabTechnologist"/>.  
+
+Le prix moyen d’un MEB est estimé à {{unité|200000|$}} mais peut monter jusqu’à un million de dollars pour les appareils les plus avancés. Cependant, de nouveaux microscopes, qualifiés de microscope à bas prix ({{lang|en|''low-cost miscroscopes''}}) ont été récemment proposés sur le marché, pour un tiers du prix moyen d’un MEB<ref>{{en}}[http://www.smalltimes.com/display_article/296211/109/ARTCL/none/none/FEI-launches- {{lang|en|''FEI launches world’s smallest commercially available SEM''}}], ''Small Times'', {{date|25|juin|2007}}.</ref>.
+
+== Notes et références ==
+{{références|colonnes=2}}
+
+== Bibliographie ==
+* [[Charles William Oatley]], {{lang|en|''The Scanning electron microscope. Pt 1, The instrument.''}}, ''[[Cambridge University Press]]'', Londres, 1972, ISBN 0-521-08531-4
+* {{Ruska1980}}
+* Michael T. Postek, {{lang|en|''The Scanning Electron Microscope''}} in {{lang|en|''Handbook of Charged Particle Optics''}}, ''[[CRC Press]]'', [[Université du Maryland]], 1997, ISBN 0-8493-2513-7
+* {{Ouvrage|auteur=Joseph Goldstein|auteurs=Joseph Goldstein, Dale E. Newbury, Patrick Echlin, Charles E. Lyman, David C. Joy, Eric Lifshin, L. C. Sawyer, J. R. Michael|langue=français|titre=[http://books.google.com/books?id=ruF9DQxCDLQC ''Scanning Electron Microscopy and X-ray Microanalysis'']|éditeur=Springer Verlag|année=1992|ISBN=978-0306472923}}
+* C. Le Gressus, Microscopie électronique à balayage, Techniques de l’Ingénieur, 1995, ''in'' Analyse et caractérisation.
+* {{microscopie électronique}}
+
+== Liens externes ==
+{{synthèse vocale
+|fichier= Microscopie électronique à balayage.ogg
+|date=18 février 2008
+|oldid=26430705
+|article=Microscopie électronique à balayage
+}}
+
+{{Autres projets|commons=Category:Scanning electron microscope}}
+
+;Sur le principe du microscope électronique à balayage :
+
+* {{fr}} [http://www.cmeba.univ-rennes1.fr Principe du MEB et microanalyse], centre de microscopie électronique à balayage et microanalyse, [[Université de Rennes I]].
+* {{fr}} [https://hal.ccsd.cnrs.fr/docs/00/06/71/06/PDF/ThMartinez-Gil060524.pdf Annexe B de la thèse d’A. Martinez-Gil]{{pdf}}
+* {{en}} [http://mse.iastate.edu/microscopy/home.html {{lang|en|''Welcome to the world of Scanning Electron Microscopy''}}], [[Université d'État de l'Iowa|Université d’État de l’Iowa]].
+
+;Sur l’histoire du microscope électronique à balayage 
+
+* {{en}} [http://www2.eng.cam.ac.uk/~bcb/history.htm {{lang|en|''The Early History and Development of The Scanning Electron Microscope''}}], Bernie C. Breton, département d’ingéniérie, [[Université de Cambridge]].
+* {{en}} [http://www-g.eng.cam.ac.uk/125/achievements/mcmullan/mcm.htm {{lang|en|''Scanning Electron Microscopy 1928 - 1965''}}], présentation lors du {{lang|en|''51st Annual Meeting of the Microscopy Society of America''}}, [[Cincinnati]], août 1993, D. McMullan, [[laboratoire Cavendish]], [[Université de Cambridge]].
+
+;Sur la préparation des échantillons 
+
+* {{en}} [http://www.amonline.net.au/evolutionary_biology/sem/prep.htm {{lang|en|''Preparation of specimens for viewing in the SEM''}}], ''[[Australian Museum]]''.
+
+;Sur la diffraction d’électrons rétrodiffusés 
+
+* {{en}} [http://level2.phys.strath.ac.uk/ssd/HTML/charhtml/ebsd.htm {{lang|en|''Electron backscattered diffraction'']}}, Département de physique, [[Université de Strathclyde]]. 
+
+;Sur l’imagerie par courant d’échantillon 
+
+* {{en}} [http://www.semiconfareast.com/ebic.htm {{lang|en|''Electron Beam-Induced Current (EBIC) Analysis''}}], www.siliconfareast.com. 
+* {{en}} [http://www.tf.uni-kiel.de/matwis/amat/def_en/kap_6/illustr/i6_1_7.html {{lang|en|''Principle of Electron Beam Induced Current Microscopy''}}], {{lang|de|''Technische Fakultät''}}, [[Université de Kiel]].
+
+; Galerie d’images 
+
+* {{fr}} [http://semgallery.free.fr/ Galerie], Laboratoire de réactivité et chimie des solides, [[Université de Picardie]].
+* {{en}} [http://www.mos.org/sln/sem/sem.html Image Gallery], [[Musée de la Science (Boston)|Musée de la Science]] de [[Boston]].
+* {{en}} [http://www.tescan.com/an/an_gal.html Image Gallery - Mira FE-SEM images], site du constructeur européen TESCAN.
+
+; Associations (formations et ressources) 
+* {{fr}} [http://mr.gnmeba.free.fr/ Groupement National de Microscopie Électronique à Balayage et de Microanalyse (GN MEBA)]
+
+{{Bon article|vote=BA|oldid=21726630|date=16 octobre 2007}}
+{{Palette microscopes}}
+
+{{Portail|physique|matériaux|chimie}}
+
+[[Catégorie:Science des matériaux]]
+[[Catégorie:Microscope électronique|Balayage]]
+
+[[ar:مجهر إلكتروني ماسح]]
+[[bg:Сканиращ електронен микроскоп]]
+[[ca:Microscopi electrònic de rastreig]]
+[[cs:Rastrovací elektronový mikroskop]]
+[[de:Rasterelektronenmikroskop]]
+[[en:Scanning electron microscope]]
+[[es:Microscopio electrónico de barrido]]
+[[fa:میکروسکوپ الکترونی روبشی]]
+[[ga:Leictreonmhicreascóp scanacháin]]
+[[hu:Pásztázó elektronmikroszkóp]]
+[[it:Microscopio elettronico a scansione]]
+[[ja:走査型電子顕微鏡]]
+[[ms:Mikroskop elektron pengimbas]]
+[[nl:Rasterelektronenmicroscoop]]
+[[pl:Elektronowy mikroskop skaningowy]]
+[[pt:Microscópio eletrônico de varredura]]
+[[ru:Растровый электронный микроскоп]]
+[[simple:Scanning electron microscope]]
+[[sl:Vrstični elektronski mikroskop]]
+[[ta:அலகிடு எதிர்மின்னி நுண்ணோக்கி]]
+[[tr:Taramalı elektron mikroskobu]]
+[[uk:Скануючий електронний мікроскоп]]
+[[vi:Kính hiển vi điện tử quét]]
+[[zh:扫描电子显微镜]]

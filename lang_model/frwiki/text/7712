@@ -1,0 +1,391 @@
+[[Fichier:Coordonnees polaires plan.svg|thumb|right|300px|En coordonnées polaires, la position du point M est définie par la distance r et l'angle θ.]]
+[[Image:Polar graph paper.svg|thumb|right|300px|Un cercle découpé en angles mesurés en degré]]
+
+Les '''coordonnées polaires''' sont, en [[mathématiques]], un [[système de coordonnées]] à [[dimension|deux dimensions]], dans lequel chaque point du [[Plan (mathématiques)|plan]] est entièrement déterminé par un [[angle]] et une [[distance (mathématiques)|distance]]. Ce système est particulièrement utile dans les situations où la relation entre deux points est plus facile à exprimer en termes d’angle et de distance, voir par exemple le [[pendule (physique)|pendule]]. Dans ce cas, le système des [[coordonnées cartésiennes]], plus familier, impliquerait d’utiliser des formules trigonométriques pour exprimer une telle relation.
+
+Comme il s’agit d’un système bidimensionnel, chaque point est déterminé par les coordonnées polaires, qui sont la coordonnée radiale et la coordonnée angulaire. La coordonnée radiale (souvent notée ''r'' ou ρ, et appelée rayon) exprime la distance du point à un point central appelé pôle (équivalent à l’origine des coordonnées cartésiennes). La coordonnée angulaire (également appelée angle polaire ou [[azimut]], et souvent notée ''t'' ou ''θ'') exprime la mesure, dans le [[sens trigonométrique]] (sens positif), de l’angle entre le point et la [[demi-droite]] d’angle 0°, appelé axe polaire (équivalent à l’axe des abscisses en coordonnées cartésiennes)<ref name="brown">{{Ouvrage |auteur=Richard G. Brown | éditeur = Andrew M. Gleason | année = 1997 | titre = Advanced Mathematics: Precalculus with Discrete Mathematics and Data Analysis | éditeur = McDougal Littell | lieu = Evanston, Illinois | isbn = 0-395-77114-5}}</ref>.
+
+== Histoire ==
+{{article détaillé| Histoire des fonctions trigonométriques}}
+
+Le concept d’angle et de rayon était déjà utilisé lors du premier millénaire avant J.C. L’astronome [[Hipparque (astronome)|Hipparque]] créa une table trigonométrique qui donnait la longueur de la [[Cercle#Définitions|corde]] pour chaque angle, et il utilisait les coordonnées polaires pour établir les positions des étoiles<ref name="milestones">{{Lien web |auteur=Michael
+ Friendly | titre = Milestones in the History of Thematic Cartography, Statistical Graphics, and Data Visualization | url = http://www.math.yorku.ca/SCS/Gallery/milestone/sec4.html | consulté le = 10 septembre 2006}}</ref>. Dans ''Des spirales'', [[Archimède]] étudia la [[spirale d'Archimède]], une [[fonction (mathématiques)|fonction mathématique]] dont le rayon dépend de l’angle. Cependant les grecs ne l’étendront pas à un système de coordonnées complet.
+
+Il existe plusieurs versions de l’introduction des coordonnées polaires comme système de coordonnées formel. [[Grégoire de Saint-Vincent]] et [[Bonaventura Cavalieri]] ont indépendamment introduit ce concept dans le milieu du dix-septième siècle. Saint-Vincent a écrit sur ce thème en 1625 et a publié son travail en 1647, pendant que Cavalieri publia ses écrits en 1635, une version corrigée vit le jour en 1653. Cavalieri a d’abord utilisé les coordonnées polaires pour résoudre un problème relatif à l’aire sous une [[spirale d'Archimède]]. Blaise Pascal usait largement des coordonnées polaires pour calculer la longueur de [[parabole]]s.
+
+Dans [[fluxion|''Méthode des Fluxions'']] (écrit en 1671, publié en 1736) Sir [[Isaac Newton]] étudia les transformations entre les coordonnées polaires, qu'il appelait "Seventh Manner; For Spirals", et neuf autres systèmes de coordonnées<ref>{{cite journal |auteur=C. B. Boyer | titre = Newton as an Originator of Polar Coordinates | journal = American Mathematical Monthly | volume = 56 | pages = 73–78 | date = 1949 | url = http://links.jstor.org/sici?sici=0002-9890%28194902%2956%3A2%3C73%3ANAAOOP%3E2.0.CO%3B2-V&size=LARGE
+}}</ref>. Dans le journal ''[[Acta Eruditorum]]'' (1691), [[Jacob Bernoulli]] utilisa un système avec un point et une droite, appelés respectivement le pôle et l'axe polaire. Les coordonnées étaient déterminées par leur distance au pôle et leur angle par rapport à l'axe polaire. Le travail de Bernouilli utilisa même ce système pour déterminer le [[courbure|rayon de courbure]] de courbes exprimées dans ce système.
+
+Le terme actuel de coordonnées polaires a été attribué à [[Gregorio Fontana]] et a été utilisé par les écrivains italiens du {{s-|XIII|e}}. Le terme apparait en anglais pour la première fois dans la traduction de 1816 effectuée par [[George Peacock]] du ''Traité du calcul différentiel et du calcul intégral'' de [[Sylvestre-François Lacroix]]<ref>{{Lien web   |auteur=Jeff Miller  | titre = Earliest Known Uses of Some of the Words of Mathematics  | url = http://members.aol.com/jeff570/p.html  | consulté le = 10 septembre 2006}}</ref>{{,}}<ref>{{Ouvrage  |auteur=David Eugene Smith   | titre = History of Mathematics, Vol II   | éditeur = Ginn and Co.  | date = 1925  | location = Boston  | pages = 324 }}</ref>.
+[[Alexis Clairaut]] fut le premier à penser à étendre les coordonnées polaires en trois dimensions, et Leonhard Euler a été le premier à vraiment les développer<ref name="coolidge">{{cite journal
+  |auteur=Julian Coolidge | lien auteur = Julian Lowell Coolidge | titre = The Origin of Polar Coordinates   | journal = American Mathematical Monthly  | volume = 59  | pages = 78–85   | date = 1952  | url = http://www-history.mcs.st-and.ac.uk/Extras/Coolidge_Polars.html}}</ref>.
+
+== Placer des points en coordonnées polaires ==
+[[Image:CircularCoordinates.png|thumb|250px|Les points (3;60°) et (4;210°) en coordonnées polaires]]
+
+Chaque point du plan est déterminé par les coordonnées polaires, qui sont la coordonnée radiale et la coordonnée angulaire. La coordonnée radiale (souvent notée ''r'' ou ''ρ'', et appelé rayon) exprime la distance du point à un point central appelé pôle (équivalent à l’origine des coordonnées cartésiennes). La coordonnée angulaire (également appelée angle polaire ou [[azimut]], et souvent notée ''t'' ou ''θ'') exprime la mesure, dans le [[sens trigonométrique]], de l’angle entre le point et la [[demi-droite]] d’angle 0°, appelé axe polaire (équivalent à l’axe des abscisses en coordonnées cartésiennes)<ref name="brown" />.
+
+Par exemple, le point de coordonnées polaires (3;{{Unité|60|°}}) sera placé à trois unités de distance du pôle sur la demi-droite d’angle {{Unité|60|°}}. Le point (-3 ;{{Unité|-120|°}}) sera au même endroit car une distance négative sera considérée comme une mesure positive sur la demi-droite opposée par rapport au pôle (tournée de {{Unité|180|°}} par rapport à la demi-droite d’origine).
+
+L’un des aspects importants du système de coordonnées polaires, qui n’est pas présent dans le système cartésien, est qu’il existe une infinité de coordonnées polaires désignant un même et unique point. En effet, on peut rajouter des mesures d’un tour complet sans affecter l’emplacement du point. Par exemple, le point (3;{{Unité|420|°}}) est confondu avec le point (3;{{Unité|60|°}}). En général, le point (''r'';&nbsp;''θ'') peut être représenté par (''r'';&nbsp;''θ''&nbsp;±&nbsp;''n''&nbsp;×&nbsp;360°) ou (−''r'';&nbsp;θ&nbsp;±&nbsp;(2&nbsp;''n''&nbsp;+&nbsp;1)180°), où ''n'' est un [[entier]] quelconque<ref>{{Lien web| url = http://www.fortbendisd.com/campuses/documents/Teacher/2006%5Cteacher_20060413_0948.pdf| titre = Polar Coordinates and Graphing| consulté le = 22 septembre 2006| date = 13 avril 2006}}</ref>. 
+
+Les coordonnées arbitraires (0;&nbsp;''θ'') sont conventionnellement utilisées pour représenter le pôle, sans se soucier de la valeur attribuée dans ce cas à l’angle ''θ'', un point de rayon ''r''&nbsp;=&nbsp;0 sera toujours sur le pôle<ref>{{Ouvrage|titre=Precalculus: With Unit-Circle Trigonometry|auteur=Theodore Lee|coauteurs=David Cohen, David Sklar|année=2005|éditeur=Thomson Brooks/Cole|edition=Fourth Edition|isbn=0534402305}}</ref>. Pour obtenir un unique représentant du point, on limite le rayon aux réels positifs et l’angle entre {{Unité|-180|°}} et {{Unité|180|°}} (ou {{Unité|0|°}} et {{Unité|360|°}}), ou si l’on utilise les [[radian]]s entre –π et π (ou 0 et 2π). On dit que l’angle est donné [[congruence|modulo]] {{Unité|360|°}} ou 2π<ref>{{Ouvrage|titre=Complex Analysis (the Hitchhiker's Guide to the Plane)|auteur=Ian Stewart|coauteurs=David Tall|année=1983|éditeur=Cambridge University Press|isbn=0521287634}}</ref>.
+
+L’angle en notation polaire est généralement donné en degrés ou radians, en utilisant la convention 2[[pi|π]]={{Unité|360|°}}. Le choix dépend du contexte. En [[navigation]], les degrés sont de rigueur, alors que certaines applications physiques (comme l’étude des rotations en mécaniques) et la plupart des mathématiques utilisent les radians<ref>{{Ouvrage |auteur=Raymond A. Serway  | coauteurs = John W. Jewett, Jr. | titre =  Principles of Physics  | éditeur = Brooks/Cole—Thomson Learning  | date = 2005  | isbn = 0-534-49143-X }}</ref>.
+
+=== Conversion entre système polaire et cartésien ===
+[[Image:Polar to cartesian.svg|right|thumb|250px|Un schéma illustrant les formules de conversions]]
+
+Les deux coordonnées polaires ''r'' et θ peuvent être converties en [[coordonnées cartésiennes]] x et y en utilisant les  [[fonction trigonométrique|fonctions trigonométriques]] sinus et cosinus :
+:<math>x = r \cos \theta</math> 
+:<math>y = r \sin \theta</math>
+
+Deux coordonnées cartésiennes ''x'' et ''y'' permettent de calculer la première coordonnée polaire ''r'' par :
+:<math>r = \sqrt{x^2 + y^2} \,</math> (par une simple application du [[théorème de Pythagore]]).
+
+Pour déterminer la seconde (l’angle θ), nous devons distinguer deux cas :
+* Pour ''r''&nbsp;=&nbsp;0, l’angle peut prendre n’importe quelle  [[nombre réel|valeur réelle]].
+* Pour ''r''&nbsp;≠&nbsp;0, pour obtenir une unique valeur de ''θ'', on se restreint à l’intervalle [0;&nbsp;2&nbsp;π[ (ou de manière équivalente ]-π;&nbsp;π]).
+
+Pour obtenir ''θ'' dans l’intervalle [0;&nbsp;2&nbsp;π[, on utilise les formules suivantes (arctan désigne la [[application réciproque|réciproque]] de la fonction [[fonction trigonométrique|tangente]]) :
+:<math>\theta = 
+\begin{cases}
+\arctan(\frac{y}{x})        & \mbox{si } x > 0 \mbox{ et } y \ge 0\\
+\arctan(\frac{y}{x}) + 2\pi & \mbox{si } x > 0 \mbox{ et } y < 0\\
+\arctan(\frac{y}{x}) + \pi  & \mbox{si } x < 0\\
+\frac{\pi}{2}               & \mbox{si } x = 0 \mbox{ et } y > 0\\
+\frac{3\pi}{2}              & \mbox{si } x = 0 \mbox{ et } y < 0
+\end{cases}</math>
+
+Pour l’obtenir dans l’intervalle ]-π;&nbsp;π], on utilise les formules<ref>{{Ouvrage|auteur=Bruce Follett Torrence|coauteurs=Eve Torrence|titre=The Student's Introduction to Mathematica®|année=1999|éditeur=Cambridge University Press|isbn=0521594618}}</ref>:
+:<math>\theta = 
+\begin{cases}
+\arctan(\frac{y}{x}) & \mbox{si } x > 0\\
+\arctan(\frac{y}{x}) + \pi & \mbox{si } x < 0 \mbox{ et } y \ge 0\\
+\arctan(\frac{y}{x}) - \pi & \mbox{si } x < 0 \mbox{ et } y < 0\\
+\frac{\pi}{2} & \mbox{si } x = 0 \mbox{ et } y > 0\\
+-\frac{\pi}{2} & \mbox{si } x = 0 \mbox{ et } y < 0
+\end{cases}</math>
+
+Pour obtenir ''θ'' dans l’intervalle <math>]-\pi;\pi[</math>, on peut également utiliser la formule suivante, plus concise :
+:<math>\theta = 2\arctan\left(\frac{y}{x+ \sqrt{x^2+y^2}} \right) </math>,
+qui est valable pour tout point du plan à l'exception du demi-axe des abscisses (''x''<nowiki>'</nowiki>,&nbsp;O].
+
+== Équation polaire ==
+{{article détaillé|Équation polaire}}
+
+Une équation qui définit une [[courbe algébrique]] exprimée en coordonnées polaires est connue sous le nom d’équation polaire. Dans la plupart des cas, une telle équation peut être spécifiée en définissant ''r'' comme une [[fonction (mathématiques)|fonction]] de θ. La courbe résultante est alors formée des points du type (''r''(''θ'');&nbsp;''θ'') et peut être vue comme le [[graphe d'une fonction|graphe de la fonction polaire]] ''r''.
+
+Différentes formes de symétries peuvent être déduites de l’équation d’une fonction polaire. Si ''r''(-θ)=''r''(θ) alors la courbe est symétrique par rapport à l’axe horizontal (les demi-droites {{Unité|0|°}} et {{Unité|180|°}}). Si ''r''(π&nbsp;-&nbsp;''θ'')=''r''(''θ''), la courbe sera symétrique par rapport à l’axe vertical (90° et 270°). 
+
+À cause du caractère circulaire des coordonnées polaires, beaucoup de courbes peuvent être décrites par une équation polaire simple, alors que leur équation cartésienne serait beaucoup plus compliquée. Quelques courbes polaires les plus connues sont : la [[spirale d'Archimède]], le [[lemniscate de Bernoulli]], le [[limaçon de Pascal]] ou encore la [[cardioïde]].
+
+=== Cercle ===
+[[Image:circle r=1.PNG|thumb|right|Un cercle d'équation ''r''(''θ'')&nbsp;=&nbsp;1]]
+
+L'équation générale d'un cercle de centre (''r''{{ind|0}};&nbsp;''φ'') et de rayon ''a'' est:
+::<math>r^2(\theta) - 2 r(\theta) r_0 \cos(\theta - \varphi) + r_0^2 = a^2</math>.
+
+Dans de nombreux cas, cette équation est simplifiée<ref name="ping">{{Lien web
+ |auteur=Johan Claeys | url=http://www.ping.be/~ping1339/polar.htm | titre=Polar coordinates | consulté le=25 mai 2006}}</ref>. Par exemple, 
+* pour un cercle centré sur le pôle et de rayon ''a'':
+:<math>r(\theta)=a,</math>
+* pour un cercle passant par l'origine (''r''{{ind|0}}&nbsp;=&nbsp;''a'') :
+:<math>r(\theta)=2 r_0 \cos(\theta - \varphi).</math>
+
+{{clr}}
+
+=== Droite ===
+
+Une droite radiale (qui passe par le pôle) est représentée par l'équation :
+:<math>\theta=\varphi</math>
+où ''φ'' est l'angle de la droite. On a ''φ''&nbsp;=&nbsp;arctan ''m'' où ''m'' est la [[pente (mathématiques)|pente]] de la droite en coordonnées cartésiennes.
+
+Une droite non radiale qui coupe [[perpendiculaire]]ment au point (''r''{{ind|0}};&nbsp;''φ'') la droite radiale ''θ''&nbsp;=&nbsp;''φ'' a pour équation:
+:<math>r(\theta) = {r_0}\sec(\theta-\varphi)</math>
+
+{{clr}}
+=== Rosace ===
+[[Image:rose r=2sin(4theta).PNG|thumb|right|Une rose polaire d'équation ''r''(''θ'') = 2&nbsp;sin&nbsp;4''θ'']]
+
+Une [[rosace]] est une courbe très connue qui ressemble à des pétales de fleurs, et qui peut être exprimée par une simple équation polaire :
+:<math>r(\theta) = a \cos (k\theta + \phi_0)</math> 
+Pour n'importe quelle constante réelle ''φ''{{ind|0}}. Si ''k'' est un entier, cette équation produit une fleur avec 2''k''&nbsp;pétale(s) si ''k'' est [[Parité (arithmétique)|pair]], et ''k'' pétale(s ) si ''k'' est [[Parité (arithmétique)|impair]]. Si ''k'' est un [[nombre rationnel]], l'équation produit une courbe en forme de fleur dont les pétales se chevauchent. Ces équations ne peuvent fournir de courbe en forme de fleur à 2, 6, 10, 14,... pétales. La constante réelle ''a'' détermine la longueur d'un pétale du centre à son extrémité.
+
+{{clr}}
+
+=== Spirale d'Archimède ===
+[[Image:Archimedian spiral.PNG|thumb|right|Un bras d'une spirale d'Archimède d'équation ''r''(''θ'')&nbsp;=&nbsp;''θ'' pour 0&nbsp;<&nbsp;''θ''<&nbsp;6π]]
+
+La [[spirale d'Archimède]] est une spirale célèbre découverte par [[Archimède]], qui peut être également exprimée à partir d'une équation polaire simple :
+:<math>r(\theta) = a+b\theta </math>
+Changer le paramètre ''a'' tourne la spirale, alors que ''b'' détermine la distance entre les bras, qui pour une spirale donnée est constante. Une spirale d'Archimède possède deux bras, l'un pour ''θ''&nbsp;>&nbsp;0  et l'autre pour ''θ''&nbsp;<&nbsp;0. Les deux bras sont connectés au pôle. Chaque bras est le symétrique de l'autre par rapport à l'axe vertical (90°/270°). Cette courbe est l'une des premières courbe, après les [[conique]]s, à être décrite par des termes mathématiques ; et à être un exemple de courbe simplement exprimée dans le système des coordonnées polaires.
+
+{{clr}}
+
+=== Conique ===
+[[Image:Elps-slr.svg|thumb|right|250px|Une ellipse, et son paramètre]]
+
+Une [[conique]] avec un foyer confondu avec le pôle et un autre sur l'axe polaire (0°), le grand axe étant confondu avec l'axe polaire) est donnée par l'équation :
+:<math>r(\theta)  = \frac{p}{1 - e \cos \theta}</math>
+où ''e'' est l'[[excentricité]] et ''p'' est appelé paramètre de la conique, et correspond à la longueur du segment perpendiculaire au grand axe joignant le foyer à la courbe. Si ''e''&nbsp;>&nbsp;1 l'équation définit une [[hyperbole]], si ''e''&nbsp;=&nbsp;1, une [[parabole]], si ''e''&nbsp;<&nbsp;1 une [[ellipse]]. Enfin pour ''e''&nbsp;=&nbsp;0 on obtient un [[cercle]] de rayon ''p''.
+
+== Nombre complexe ==
+[[Image:Imaginarynumber2.PNG|thumb|right|265px|Une illustration du nombre complexe ''z'' placé dans le plan complexe]]
+[[Image:Euler's formula.svg|thumb|right|265px|Une illustration d'un nombre complexe placé dans le plan complexe en utilisant la [[formule d'Euler]]]]
+
+Chaque [[nombre complexe]] peut être représenté par un point dans le [[plan complexe]], et de plus peut être exprimé par ses coordonnées cartésiennes (appelé forme algébrique du nombre complexe) ou par ses coordonnées polaires.
+La forme algébrique d'un nombre complexe ''z'' est de la forme :
+:<math>z=x+iy</math>
+où ''x'' et ''y'' sont des réels et ''i'' est l'[[unité imaginaire]].
+Sa forme polaire est (donnée par les formules données [[coordonnées polaires#Conversion entre système polaire et cartésien|plus haut]]) :
+:<math>z=r(\cos\theta+i\sin\theta)</math>
+où ''r'' est un réel positif non nul et θ un réel. De là on en déduit :
+:<math>z=re^{i\theta}</math>
+ce qui est équivalent par [[formule d'Euler]]<ref>{{Ouvrage |auteur=Julius O. Smith | titre = Mathematics of the Discrete Fourier Transform (DFT) | consulté le = 22 septembre 2006 | année = 2003 | éditeur = W3K Publishing | isbn = 0-9745607-0-7 | chapter = Euler's Identity  | chapterurl = http://ccrma-www.stanford.edu/~jos/mdft/Euler_s_Identity.html }}</ref>
+(à noter que toutes ces formules, à l'instar de toutes les autres utilisant l'exponentielle ou les angles, utilisent les radians). Pour convertir d'une forme à l'autre, les formules données [[coordonnées polaires#Conversion entre système polaire et cartésien|plus haut]] conviennent).
+
+L'[[addition]] de nombre complexe est plus aisée en forme algébrique mais la [[multiplication]], la [[division]] et l'[[exposant (mathématiques)|exponentiation]] sont plus faciles à réaliser en forme exponentielle (ou de manière équivalente en forme polaire) :
+
+* Multiplication :
+::<math>r_0 e^{i\theta_0} \times r_1 e^{i\theta_1}=r_0 r_1 e^{i(\theta_0 + \theta_1)}</math>
+
+* Division :
+::<math>\frac{r_0 e^{i\theta_0}}{r_1 e^{i\theta_1}}=\frac{r_0}{r_1}e^{i(\theta_0 - \theta_1)}</math>
+
+* Exponentiation ([[formule de De Moivre]]) avec ''n'' entier :
+
+::<math>{\left(\cos(x)+i\sin (x)\right)}^n=\left(\cos(nx)+i\sin(nx)\right)</math>
+
+{{clr}}
+
+== Calcul infinitésimal ==
+
+Le [[Calcul infinitésimal]] peut être appliqué aux équations exprimées en coordonnées polaires. La coordonnée angulaire ''θ'' est exprimée en radian, qui est le choix naturel en analyse<ref>{{Lien web|url=http://archives.math.utk.edu/visual.calculus/5/polar.1/index.html|titre=Areas Bounded by Polar Curves|auteur=Husch, Lawrence S.|consulté le=2006-11-25}}</ref>{{,}}<ref>{{Lien web|url=http://archives.math.utk.edu/visual.calculus/3/polar.1/index.html|titre=Tangent Lines to Polar Graphs|auteur=Lawrence S. Husch|consulté le=2006-11-25}}</ref>.
+
+=== Calcul différentiel et changement de variables polaire ===
+
+La [[matrice jacobienne]] du changement de variable polaire <math>(r,\theta)\to(x, y) = (r\cos \theta,r\sin \theta)</math> s'écrit
+:<math>M=\begin{pmatrix}\cos\theta&-r\sin\theta\\\sin\theta&r\cos\theta\end{pmatrix}</math> ,
+ce qu'on écrit également sous la forme suivante :
+:<math>r \frac{\partial}{\partial r}= x \frac{\partial}{\partial x} + y \frac{\partial}{\partial y}</math>,
+:<math> \frac{\partial}{\partial \theta} = -y \frac{\partial}{\partial x} + x \frac{\partial}{\partial y}</math>.
+
+Les dérivées secondes s'expriment également au travers d'une matrice. 
+
+Les opérateurs homogènes <math> D_r^2 = \frac{\partial^2}{\partial r^2}</math>, <math> D_{r,\theta}'={1\over r}\left(\frac{\partial^2}{\partial r\partial \theta }-{1\over r}\frac{\partial}{\partial \theta}\right)</math> et <math> {D_{\theta}^2}'={1\over r^2}\left(\frac{\partial^2}{ \partial \theta^2 }+r\frac{\partial}{\partial r}\right)</math> s'obtiennent matriciellement par :
+:<math>
+\begin{pmatrix} D_r^2 \\ D_{r,\theta}' \\ {D_\theta^2}'\end{pmatrix} =
+\begin{pmatrix} {\rm c}^2&2{\rm s} {\rm c}&s^2 \\ -{\rm s}{\rm c}& {\rm c}^2-{\rm s}^2&{\rm s}{\rm c} \\ {\rm s}^2&-2{\rm s}{\rm c}&{\rm c}^2\end{pmatrix} 
+\begin{pmatrix} D_x^2 \\ D_{x,y} \\ {D_y^2}\end{pmatrix} 
+ </math>,
+où l'on a noté pour alléger l'expression c en lieu et place de cos''θ'' et s pour sin''θ''.
+
+On dispose d'ailleurs du même type de changement de dérivées successives au travers de matrices pour tous les ordres de dérivation.
+
+=== Calcul différentiel et courbe en coordonnées polaire ===
+Pour trouver la pente cartésienne de la tangente à la courbe polaire ''r''(''θ'') à un point donné, la courbe doit d'abord être exprimée en un [[paramétrage|système paramétrique]] :
+:<math>x=r(\theta)\cos\theta </math>,
+:<math>y=r(\theta)\sin\theta </math>.
+
+Puis nous [[dérivée|différentions]] les deux équations :
+:<math>\frac{\mathrm dx}{\mathrm d\theta}=r'(\theta)\cos\theta-r(\theta)\sin\theta \,</math>,
+:<math>\frac{\mathrm dy}{\mathrm d\theta}=r'(\theta)\sin\theta+r(\theta)\cos\theta \,</math>.
+
+Divisons la deuxième équation par la première et nous obtenons la pente cartésienne de la tangente à la courbe polaire au point (''r'';&nbsp;''r''(''θ'')) :
+:<math>\frac{\mathrm dy}{\mathrm dx}=\frac{r'(\theta)\sin\theta+r(\theta)\cos\theta}{r'(\theta)\cos\theta-r(\theta)\sin\theta}</math>.
+Ainsi l'angle ''γ'', avec l'axe ''Ox'', de la tangente à la courbe polaire au point ''(r;&nbsp;r(θ))'', est donné par la relation :
+:<math>\gamma=\theta+\arctan\left(\frac{r(\theta)}{r'(\theta)}\right).</math>
+[[Image:anglaucentrepolaire.png|thumb|right|265px|[[Théorème de l'angle inscrit et de l'angle au centre|Angle au centre]] ou formule donnant la tangente à une courbe définie par une équation en coordonnées polaires : deux manières d'obtenir <math>\scriptstyle \gamma=2\theta - \alpha+\pi/2.</math>]]
+{{exemple|nom=Cas du cercle|
+Dans le cas d'un cercle passant par l'origine, de centre ''Ω''&nbsp;{{=}}&nbsp;(''r''{{ind|0}};&nbsp;''α'') et de rayon ''r''{{ind|0}}, d'équation :
+:<math>r(\theta)=2 r_0 \cos(\theta - \alpha)</math>,
+la formule donnant ''γ'' (voir figure ci-contre) conduit à
+:<math>\gamma=2\theta - \alpha+\pi/2,</math>,
+ce qui démontre au passage le [[théorème de l'angle inscrit et de l'angle au centre]].}}
+
+=== Calcul intégral ===
+[[Image:Polar coordinates integration region.svg|thumb|La surface ''R'' est délimitée par la courbe ''r''(''θ'') et les demi-droites ''θ''&nbsp;=&nbsp;''a'' et ''θ''&nbsp;=&nbsp;''b''.]]
+[[Image:Polar coordinates integration Riemann sum.svg|thumb|La surface ''R'' est approchée par ''n'' sections (ici, ''n''&nbsp;=&nbsp;5).]]
+
+Soit ''R'' une [[surface]] du plan délimitée par la courbe [[continuité|continue]] ''r''(''θ'') et les demi-droites ''θ''&nbsp;=&nbsp;''a'' et ''θ''&nbsp;=&nbsp;''b'', où 0&nbsp;<&nbsp;''b''&nbsp;−&nbsp;''a''&nbsp;<&nbsp;2''π'' (''a'' et ''b'' étant des réels). Alors la [[superficie]] ''S'' de cette surface est 
+:<math>S=\frac{1}{2} \int_a^b r^2(\theta) \;\mathrm{d}\theta</math>.
+
+Le résultat peut être retrouvé par le raisonnement suivant. Tout d'abord, l'[[intervalle (mathématiques)|intervalle]] [''a'',&nbsp;''b''] est subdivisé en ''n'' sous-intervalles, où ''n'' est un entier positif quelconque. Alors Δ''θ'', la longueur de chaque sous-intervalle, est égal à ''b''&nbsp;-&nbsp;''a'' divisé par ''n'', le nombre de sous-intervalles. Pour chaque sous-intervalle ''i''&nbsp;=&nbsp;1,&nbsp;2,&nbsp;...,&nbsp;''n'', soit ''θ{{ind|i}}'' le milieu de chaque sous-intervalle ''i''. On peut alors construire un [[secteur circulaire]] où le centre est le pôle, de rayon ''r''(''θ{{ind|i}}''), d'angle Δ''θ'' et de longueur d'arc ''r''(''θ{{ind|i}}i'')&nbsp;Δ''θ''. La surface ''S{{ind|i}}'' de chaque secteur est donc
+:<math>S'_i=\tfrac{1}{2}r(\theta_i)^2\;\Delta\theta</math>,
+et donc la surface totale de tous les secteurs est:
+:<math>S'_n=\sum_{i=1}^n S'_i=\sum_{i=1}^n \frac{1}{2}r(\theta_i)^2\;\Delta\theta</math>.
+Pour ''n'' tendant vers l'infini, l'approximation devient meilleure et cette somme est une [[somme de Riemann]] et donc converge vers l'intégrale demandée :
+:<math>\lim_{n \to +\infty} S'_n=\frac{1}{2} \int_a^b r(\theta)^2 \;\mathrm{d}\theta=S</math>.
+
+=== Généralisation ===
+
+En utilisant les coordonnées cartésiennes, un élément d'aire infinitésimale peut être calculé comme d''A''&nbsp;=&nbsp;d''x''&nbsp;d''y''. La règle du [[Intégration par changement de variable|changement de variable]] pour des intégrales multiples stipule que, lorsque l'on utilise d'autres systèmes de coordonnées, le [[Matrice jacobienne|Jacobien]] de la matrice de conversion des coordonnées est:
+:<math>J = \det\frac{\partial(x,y)}{\partial(r,\theta)}
+=\begin{vmatrix}
+  \frac{\partial x}{\partial r}  & \frac{\partial x}{\partial \theta} \\
+  \frac{\partial y}{\partial r}  & \frac{\partial y}{\partial \theta}
+\end{vmatrix}
+=\begin{vmatrix}
+  \cos\theta & -r\sin\theta \\
+  \sin\theta &  r\cos\theta
+\end{vmatrix}
+=r\cos^2\theta + r\sin^2\theta = r</math>.
+On peut donc voir qu'un élément d'aire infinitésimale peut être vu comme
+:<math>\mathrm{d}A = J \;\mathrm{d}r \;\mathrm{d}\theta = r \;\mathrm{d}r \;\mathrm{d}\theta</math>.
+
+Maintenant une fonction donnée en coordonnées polaires peut être intégrée comme ceci
+:<math>\iint_R f(r,\theta) \;\mathrm{d}A = \int_a^b \int_0^{r(\theta)}  f(r,\theta) \;r \mathrm{d}r \;\mathrm{d}\theta</math>.
+
+Ici ''R'' est la même surface que plus haut, c'est-à-dire la surface comprise entre la courbe ''r''(''θ'') et les demi-droites ''θ''&nbsp;=&nbsp;''a'' et ''θ''&nbsp;=&nbsp;''b''.
+
+La formule pour la superficie de  ''R'' mentionnée plus haut est retrouvé en prenant ''f'' la fonction constante égale à 1. L'une des applications étonnantes de ces formules est le calcul de l'[[intégrale de Gauss]]
+<math>\int_{-\infty}^{+\infty} e^{-x^2} \;\mathrm{d}x = \sqrt\pi</math>.
+
+=== Analyse vectorielle ===
+
+L'[[analyse vectorielle]] peut être également appliquée aux coordonnées polaires. Soit <math>\boldsymbol r</math> le vecteur position <math>(r\cos \theta, r\sin \theta)</math>, avec ''r'' et ''θ'' dépendants du temps ''t'', et soit <math>\boldsymbol{\hat r}</math> un vecteur unitaire de même direction que <math>\boldsymbol r</math> et <math>\boldsymbol{\hat \theta}</math> un vecteur unitaire orthogonal à <math>\boldsymbol r</math>. Les dérivées première et seconde du vecteur position sont données par :
+:<math>\frac{\mathrm{d}\boldsymbol r}{\mathrm{d}t} = \dot r \boldsymbol {\hat r} + r\dot\theta \boldsymbol{\hat \theta}</math>,
+:<math>\frac{\mathrm{d}^2 \boldsymbol r}{\mathrm{d}t^2} = (\ddot r - r\dot\theta^2) \boldsymbol{\hat r} + (r\ddot\theta + 2\dot r \dot\theta) \boldsymbol{\hat\theta}</math>.
+
+== Trois dimensions ==
+
+Le système de coordonnées polaires peut être étendu à l'espace usuel à trois dimensions de deux manières, ce qui donne le système de coordonnées cylindriques et le système de coordonnées sphériques. Le concept des coordonnées cylindriques est de rajouter une coordonnée de distance, alors que le système sphérique rajoute une coordonnée angulaire.
+
+=== Coordonnées cylindriques ===
+{{Article détaillé|Coordonnées cylindriques}}
+[[Image:Cylindrical coordinates2.svg|thumb|right|250px|Un point repéré en coordonnées cylindriques]]
+
+Le système de coordonnées cylindriques est un système de coordonnées qui étend le système de coordonnées polaires à deux dimensions en y ajoutant une troisième dimension qui mesure la hauteur d'un point par rapport au plan repéré par les coordonnées polaires ; de la même manière que l'on étend le système de coordonnées cartésiennes de deux à trois dimensions. La troisième coordonnée est souvent notée ''h'' ou ''z''. La notation ''r'' étant systématiquement utilisée en coordonnées sphériques (voir ci-dessous), on lui préfère ici la lettre grecque ''ρ''.
+
+Les trois coordonnées cylindriques peuvent être converties en coordonnées cartésiennes par:
+:<math> \begin{align}
+x &= \rho  \cos\theta \\
+y &= \rho  \sin\theta \\
+z &= h
+\end{align} </math>
+
+{{clr}}
+
+=== Coordonnées sphériques ===
+[[Image:Spherical Coordinates (Latitude, Longitude).svg|thumb|right|250px|Un point repéré en coordonnées sphériques (mathématiques)  ; ici la latitude est noté d'un <math>\delta</math>, correspondant à <math>\tilde \varphi</math> ]]
+Les coordonnées polaires peuvent aussi être étendues à l'espace tridimensionnel euclidien, suivant diverses conventions de notation.
+
+En [[physique]], on utilise le plus souvent les coordonnées (''r'',&nbsp;''θ'',&nbsp;''φ''), où ''r'' désigne la distance du point au pôle, ''θ'' est l'angle depuis l'axe des ''z'' (appelé [[colatitude]] ou zénith, compris entre 0° et 180°) et ''φ'' est l'angle depuis l'axe des ''x'' (comme dans les coordonnées polaires, entre 0° et 360°). 
+
+En [[mathématiques]], en nommant les coordonnées (''<math>\rho</math>'',&nbsp;''<math>{ \theta}</math>'',&nbsp;''<math>{ \varphi}</math>''), où ''<math>\rho</math>'' désigne toujours la distance du point au pôle, alors que ''<math>{ \theta}</math>'' désigne cette fois la longitude (angle mesuré depuis l'axe des ''x'' et compris entre -180° et 180°) et ''<math>{ \varphi}</math>'' la latitude, l'angle depuis le plan équatorial (entre -90° et 90°).
+
+Un système mixte consiste à utiliser dans l'ordre, le rayon, la longitude et ensuite la colatitude, notés toujours  (''<math>\rho</math>'',&nbsp;''<math>{\theta}</math>'',&nbsp;''φ'').
+
+Ces trois systèmes de coordonnées sont des exemples de coordonnées sphériques et ils sont similaires au système utilisé pour se repérer sur la surface de la [[Terre]]. Ils ont chacun leur utilité propre mais il faut prendre garde qu'en physique, on nomme <math>\theta</math> la colatitude alors qu'en mathématiques, on nomme généralement <math>\theta</math> la longitude. La latitude (<math>\varphi</math> en mathématiques) et la colatitude (<math>\theta</math> en physique) étant complémentaires l'une de l'autre<ref>{{Lien web|url=http://www.math.montana.edu/frankw/ccp/multiworld/multipleIVP/spherical/body.htm|titre=Spherical Coordinates|auteur=Frank Wattenberg|date=1997|consulté le=2006-09-16}}</ref>, il est aisé de passer d'un système à un autre.
+[[Image:Spherical Coordinates.svg|thumb|left|250px|Un point repéré en coordonnées sphériques (système mixte) ]]
+Les trois coordonnées sphériques peuvent être converties en coordonnées cartésiennes par:
+:<math> \begin{cases}
+x &= r  \sin\theta  \cos\varphi \\
+y &= r  \sin\theta  \sin\varphi \\
+z &= r  \cos\theta
+\end{cases} </math>
+dans le système rayon-colatitude-longitude (physique), et
+
+:<math> \begin{cases}
+x &= \rho   \cos \ \tilde \theta \cos\tilde \varphi \\
+y &=  \rho   \sin \tilde \theta \cos\tilde \varphi \\
+z &=  \rho  \sin\tilde \varphi
+\end{cases} </math>
+dans le système rayon-longitude-latitude (mathématiques).
+{{clr}}
+
+
+{{article détaillé|coordonnées sphériques}}
+
+== Applications ==
+
+Les coordonnées polaires sont bidimensionnelles et peuvent donc être uniquement utilisées dans les cas où les points sont dans un même plan. Elles sont plus appropriées dans tous les cas où le phénomène considéré est lié à une direction et une longueur d'un point central. Par exemple, les exemples de courbes polaires définies plus haut montrent comment on peut utiliser les coordonnées polaires pour produire des équations simples produisant ces courbes, comme la spirale d'Archimède. Ces mêmes équations en coordonnées cartésiennes seraient beaucoup plus compliquées. De plus, beaucoup d'études de systèmes physique, comme l'étude du [[pendule (physique)|pendule]] ou bien tout phénomène où des solides se meuvent autour d'un point central, sont simplifiées en passant en coordonnées polaires. L'introduction des coordonnées polaires s'est faite tout d'abord pour étudier les [[mouvement circulaire|mouvements circulaires]] et les [[mouvement orbital|mouvements orbitaux]].
+
+=== Navigation ===
+
+Les coordonnées polaires sont souvent utilisées en [[navigation]]. En effet, un voyage peut être défini par une distance et un angle par rapport à la destination. Par exemple, les [[aéronef]]s utilisent un système de coordonnées polaires quelque peu modifié pour la navigation. 
+
+=== Modélisation ===
+
+Les coordonnées polaires conduisent à une simplification du modèle des systèmes naturels dans lequel un point central joue un rôle particulier. C'est notamment le cas des système possédant une [[symétrie radiale]] qui sont invariants par rotation autour d'un point fixe. 
+
+C'est le cas des systèmes dits à [[force centrale]], c'est-à-dire soumis à une force qui passe par un point fixe. les exemples classiques comprennent le [[problème à deux corps]] en [[gravitation|champs gravitationnels]] et les systèmes possédant un [[point source]], comme les [[Antenne radioélectrique|antennes radioélectriques]].
+
+C'est aussi le cas des mouvements de rotation autour d'un point fixe comme le [[pendule simple]], des surfaces d'équilibres autour d'un puits comme l'[[Hydrogéologie#Équations fondamentales d'état|équation de flux d'eau du sol]] ou de la variation d'une grandeur en fonction d'un angle comme les polaires en aéronautique ou la [[Microphone#La directivité|directivité]] d'un [[microphone]], qui caractérise la sensibilité du microphone en fonction de la provenance du son selon l'axe central du microphone.
+
+Ce phénomène peut être représenté par une courbe polaire. La courbe pour un microphone cardioïde standard, le plus commun des microphones, a pour équation ''r''&nbsp;=&nbsp;(1&nbsp;+&nbsp;sin&nbsp;''θ'')&nbsp;/&nbsp;2<ref>{{Ouvrage |auteur=John Eargle |titre=Handbook of Recording Engineering |année=2005 |edition=Fourth Edition |éditeur=Springer |isbn = 0387284702}}</ref>.
+
+Enfin, il existe des cas particuliers où le passage aux coordonnées polaires peut rendre service. Par exemple, la [[loi de Laplace-Gauss]] en statistique a une distribution qui n'est intégrable au moyen de fonctions élémentaires. Toutefois, en faisant tourner cette courbe autour de l'axe des ''y'' on obtient une ''cloche'' infinie qui, exprimée en coordonnées polaires, est intégrable. C'est de cette façon que Gauss a pu normaliser cette loi statistique dont Laplace avait montré l'universalité.
+
+== Bibliographie ==
+
+<div class="references-small">
+* {{ouvrage|auteur=Howard Anton|coauteurs=Irl Bivens, Stephen Davis|titre=Calculus|edition=Seventh Edition|année=2002|éditeur=Anton Textbooks, Inc.|isbn=0-471-38157-8}}
+* {{ouvrage|auteur=Ross Finney|coauteurs=George Thomas, Franklin Demana, Bert Waits|titre=Calculus: Graphical, Numerical, Algebraic|edition=Single Variable Version|année=1994|month=June|éditeur=Addison-Wesley Publishing Co.|isbn=0-201-55478-X}}
+</div>
+
+== Notes et références ==
+{{Références|2}}
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[harmonique sphérique]]
+* Les [[angles d'Euler]], une généralisation des coordonnées sphériques.
+
+=== Liens et documents externes ===
+* {{en}}[http://www.physics.oregonstate.edu/bridge/papers/spherical.pdf spherical.pdf] Une proposition pour unifier les notations polaires 2D et 3D.
+
+{{Bon article|vote=BA|oldid=21714142|date=15 octobre 2007}}
+{{Portail|Géométrie|Physique}}
+
+[[Catégorie:Système de coordonnées|Polaires]]
+[[Catégorie:Cercle et sphère]]
+
+{{Lien AdQ|af}}
+{{Lien AdQ|ca}}
+{{Lien AdQ|en}}
+{{Lien AdQ|eo}}
+{{Lien AdQ|ko}}
+{{Lien BA|es}}
+{{Lien BA|uk}}
+
+[[af:Poolkoördinatestelsel]]
+[[ar:نظام إحداثي قطبي]]
+[[bg:Полярна координатна система]]
+[[bs:Polarne koordinate]]
+[[ca:Coordenades polars]]
+[[cs:Polární soustava souřadnic]]
+[[da:Polært koordinatsystem]]
+[[de:Polarkoordinaten]]
+[[en:Polar coordinate system]]
+[[eo:Polusa koordinata sistemo]]
+[[es:Coordenadas polares]]
+[[et:Polaarkoordinaadid]]
+[[fa:دستگاه مختصات قطبی]]
+[[fi:Napakoordinaatisto]]
+[[he:קואורדינטות קוטביות]]
+[[hu:Polárkoordináták]]
+[[io:Polala koordinati]]
+[[is:Skauthnitakerfi]]
+[[it:Sistema di coordinate polari]]
+[[ja:極座標系]]
+[[ko:극좌표계]]
+[[lv:Polārā koordinātu sistēma]]
+[[nl:Poolcoördinaten]]
+[[no:Polarkoordinatsystem]]
+[[pl:Układ współrzędnych biegunowych]]
+[[pt:Coordenadas polares]]
+[[ro:Coordonate polare]]
+[[ru:Полярная система координат]]
+[[sh:Polarne koordinate]]
+[[sk:Polárna sústava súradníc]]
+[[sl:Polarni koordinatni sistem]]
+[[sq:Sistemi koordinativ polar]]
+[[sr:Поларни координатни систем]]
+[[sv:Polära koordinater]]
+[[th:ระบบพิกัดเชิงขั้ว]]
+[[tr:Kutupsal koordinat sistemi]]
+[[uk:Полярна система координат]]
+[[vi:Hệ tọa độ cực]]
+[[zh:极坐标系]]
