@@ -77,12 +77,13 @@ class LabeledLineSentence(object):
 
 #sources = {'test-neg.txt':'TEST_NEG', 'test-pos.txt':'TEST_POS', 'train-neg.txt':'TRAIN_NEG', 'train-pos.txt':'TRAIN_POS', 'train-unsup.txt':'TRAIN_UNS'}
 
-sources = {'fa.txt':'FA',
-            'ga.txt':'GA',
-            'b.txt':'B',
-            'c.txt':'C',
-            'start.txt':'START',
-            'stub.txt':'STUB'}
+sources = {'FA.txt':'FA',
+            'GA.txt':'GA',
+            'SA.txt':'SA',
+            'I.txt':'I',
+            'II.txt':'II',
+            'III.txt':'III',
+            'IV.txt':'IV'}
 
 sentences = LabeledLineSentence(sources)
 
@@ -110,7 +111,7 @@ def write_array_to_file (file_name, array_data):
         f.write (str(array_data[i]) + "\n")
     f.close ()
 
-qualities = ['FA','GA','B','C','START','STUB']
+qualities = ['FA','GA','B','I','II','III','IV']
 train_labels = [0] * 23577
 test_labels = [0] * 5891
 train_content_file = "doc2vec_content.txt"
