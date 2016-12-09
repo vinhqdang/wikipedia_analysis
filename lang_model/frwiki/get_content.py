@@ -27,6 +27,8 @@ missing_lines = []
 for i in range(len(lines)):
 # for i in [1]: # for debug
     print ('Processing line number ' + str (i+1) + ' / ' + str(len(lines)))
+    if (os.path.isfile ("text/" + str (i+1)):
+        continue
     json_object = json.loads (lines[i])
     project = json_object["project"]
     title = json_object["page_title"]
@@ -96,7 +98,12 @@ for i in range(len(lines)):
 
 
     page_id = json_response["query"]["pages"].keys()[0]
-    content = json_response["query"]["pages"][page_id]["revisions"][0]["*"]
+    try:
+        content = json_response["query"]["pages"][page_id]["revisions"][0]["*"]
+    except:
+        print (url_string)
+        missing_lines.append(i+1)
+        continue
 
     # write content to file
     file_name = "text/" + str(i+1)

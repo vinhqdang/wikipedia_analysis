@@ -27,6 +27,8 @@ missing_lines = []
 for i in range(len(lines)):
 # for i in [1]: # for debug
     print ('Processing line number ' + str (i+1) + ' / ' + str(len(lines)))
+    if (os.path.isfile ("text/" + str (i+1)):
+        continue
     json_object = json.loads (lines[i])
     project = json_object["project"]
     title = json_object["page_title"]
