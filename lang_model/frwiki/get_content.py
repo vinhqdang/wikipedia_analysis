@@ -27,7 +27,7 @@ missing_lines = []
 for i in range(len(lines)):
 # for i in [1]: # for debug
     print ('Processing line number ' + str (i+1) + ' / ' + str(len(lines)))
-    if (os.path.isfile ("text/" + str (i+1)):
+    if (os.path.isfile ("text/" + str (i+1))):
         continue
     json_object = json.loads (lines[i])
     project = json_object["project"]
@@ -101,6 +101,7 @@ for i in range(len(lines)):
     try:
         content = json_response["query"]["pages"][page_id]["revisions"][0]["*"]
     except:
+        print ('Cannot get text')
         print (url_string)
         missing_lines.append(i+1)
         continue
