@@ -45,7 +45,7 @@ for i in range(len(lines)):
     rvstart = timestamp[0:4] + "-" + timestamp[4:6] + "-" + timestamp [6:8] + "T" + timestamp[8:10] + ":" + timestamp[10:12] + ":" + timestamp[12:14] + "Z"
     datetime_object = parser.parse(rvstart)
     # go further 1 day to makesure that we cover the correct revision
-    datetime_object = datetime_object + datetime.timedelta(days=1)
+    datetime_object = datetime_object + datetime.timedelta(hours=1)
     rvstart = datetime_object.strftime ("%Y-%m-%dT%H:%M:%SZ")
     # print (rvstart)
     # raw_input()
