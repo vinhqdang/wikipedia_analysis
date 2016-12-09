@@ -2,6 +2,7 @@
 # corresponding with 6 quality classes
 
 import os
+import sys
 
 in_folder = "text"
 out_folder = "separate"
