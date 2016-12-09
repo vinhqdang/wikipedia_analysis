@@ -22,6 +22,8 @@ try:
 except OSError:
     pass
 
+page_missing_cnt = 0
+
 for i in range(len(lines)):
 # for i in [1]: # for debug
     print ('Processing line number ' + str (i+1) + ' / ' + str(len(lines)))
@@ -52,7 +54,13 @@ for i in range(len(lines)):
     json_response = json.loads (response)
 
     page_id = json_response["query"]["pages"].keys()[0]
-    revisions = json_response["query"]["pages"][page_id]["revisions"]
+    try:
+        revisions = json_response["query"]["pages"][page_id]["revisions"]
+    except Exception, e:
+        print ('Missing at line ' + str(i + 1))
+        print (url_string)
+        page_missing_cnt += 1
+        continue    
 
     # print (revisions[1])
 
@@ -95,3 +103,5 @@ for i in range(len(lines)):
         f.write(content.encode('utf8'))
     with open (label_file, "a") as f:
         f.write (quality.encode('utf8') + "\n")
+
+print ('Total missing page = ' + str (page_missing_cnt) + " over " + str(len(lines)) + " pages.")
