@@ -31,5 +31,5 @@ for file in file_list:
     print ('Processing file number ' + str (index + 1) + ' / ' + str (len(labels)))
     content = open(file,'r').read()
     with open (out_folder + "/" + labels[index] + ".txt", "a") as f:
-        f.write (content.replace ("\n", " "))
+        f.write (content.replace ("\n", " ") + '\n')
     index += 1
