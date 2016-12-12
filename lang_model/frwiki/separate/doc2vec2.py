@@ -16,6 +16,7 @@ import os.path
 import sys
 import cPickle as pickle
 import getopt
+import os
 
 model_size = 200    # length of output vectors
 nb_epochs      = 50    # number of training epochs
@@ -127,14 +128,23 @@ def write_array_to_file (file_name, array_data):
     f.close ()
 
 qualities = ['ADQ','BA','A','B','E','BD']
-train_labels = [0] * 23577
-test_labels = [0] * 5891
+train_labels = [0] * MAX_KEY
+# test_labels = [0] * 5891
 train_content_file = "doc2vec_content.txt"
 # test_content_file = "doc2vec_test_content.txt"
 train_label_file = "doc2vec_label.txt"
 # test_label_file = "doc2vec_test_label.txt"
 train_cnt = 0
 # test_cnt = 0
+
+# remove previous files
+try:
+    os.remove (train_content_file)
+    os.remove (train_label_file)
+except Exception, e:
+    print "There is no previous doc2vec files"
+    pass
+
 for i in range (len(qualities)):
     for j in range (MAX_KEY):
                 key = qualities[i] + "_" + str(j)
@@ -164,6 +174,8 @@ for i in range (len(qualities)):
                 #     test_labels [test_cnt] = qualities[i]
                 #     test_cnt += 1
 
+# remove all unnecessary 0
+train_labels = [value for value in train_labels if value != 0]
 write_array_to_file (file_name = train_label_file, array_data = train_labels)
 # write_array_to_file (file_name = test_label_file, array_data = test_labels)
 

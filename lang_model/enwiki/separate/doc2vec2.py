@@ -15,12 +15,14 @@ import os.path
 import sys
 import cPickle as pickle
 import getopt
+import os
 
 data_dir = "text"   # directory contains text documents
 model_size = 200    # length of output vectors
 epochs      = 50    # number of training epochs
 label_file = "enwikilabel"
-out_filename = "doc2vec.out"
+# out_filename = "doc2vec.out"
+MAX_KEY = 500000
 
 try:
       opts, args = getopt.getopt(sys.argv[1:],"hd:model_size:epoch:lb:",["data_dir=","model_size=","epoch=","label_file=","out_file="])
@@ -86,6 +88,20 @@ class LabeledLineSentence(object):
 
 #sources = {'test-neg.txt':'TEST_NEG', 'test-pos.txt':'TEST_POS', 'train-neg.txt':'TRAIN_NEG', 'train-pos.txt':'TRAIN_POS', 'train-unsup.txt':'TRAIN_UNS'}
 
+# count number of line of a text file
+# little bit awkward but okay
+def count_lines (file_name):
+    return sum(1 for line in open(file_name))
+
+# a better version but only works on *nix
+def file_len(fname):
+    p = subprocess.Popen(['wc', '-l', fname], stdout=subprocess.PIPE, 
+                                              stderr=subprocess.PIPE)
+    result, err = p.communicate()
+    if p.returncode != 0:
+        raise IOError(err)
+    return int(result.strip().split()[0])
+
 sources = {'fa.txt':'FA',
             'ga.txt':'GA',
             'b.txt':'B',
@@ -120,16 +136,30 @@ def write_array_to_file (file_name, array_data):
     f.close ()
 
 qualities = ['FA','GA','B','C','START','STUB']
-train_labels = [0] * 23577
-test_labels = [0] * 5891
+train_labels = [0] * MAX_KEY
+# test_labels = [0] * 5891
 train_content_file = "doc2vec_train_content.txt"
 # test_content_file = "doc2vec_test_content.txt"
 train_label_file = "doc2vec_train_label.txt"
 # test_label_file = "doc2vec_test_label.txt"
 train_cnt = 0
 # test_cnt = 0
+
+# remove previous files
+try:
+    os.remove (train_content_file)
+    os.remove (train_label_file)
+except Exception, e:
+    print "There is no previous doc2vec files"
+    pass
+
 for i in range (len(qualities)):
-    for j in range (30000):
+    for j in range (MAX_KEY):
+                file_name = qualities[i].lower() + ".txt"
+
+                if j >= count_lines(file_name):
+                    break
+
                 key = qualities[i] + "_" + str(j)
                 data = model.docvecs[key]
                 if (len(data) == DOCUMENT_LENGTH):
@@ -147,6 +177,7 @@ for i in range (len(qualities)):
                 #     test_labels [test_cnt] = qualities[i]
                 #     test_cnt += 1
 
+train_labels = [value for value in train_labels if value != 0]
 write_array_to_file (file_name = train_label_file, array_data = train_labels)
 # write_array_to_file (file_name = test_label_file, array_data = test_labels)
 

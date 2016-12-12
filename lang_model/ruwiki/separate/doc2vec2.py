@@ -16,6 +16,7 @@ import os.path
 import sys
 import cPickle as pickle
 import getopt
+import os
 
 model_size = 200    # length of output vectors
 nb_epochs      = 50    # number of training epochs
@@ -127,6 +128,15 @@ train_label_file = "doc2vec_label.txt"
 # test_label_file = "doc2vec_test_label.txt"
 train_cnt = 0
 # test_cnt = 0
+
+# remove previous files
+try:
+    os.remove (train_content_file)
+    os.remove (train_label_file)
+except Exception, e:
+    print "There is no previous doc2vec files"
+    pass
+
 for i in range (len(qualities)):
     for j in range (MAX_KEY):
                 key = qualities[i] + "_" + str(j)
