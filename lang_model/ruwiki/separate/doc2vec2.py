@@ -119,8 +119,8 @@ def write_array_to_file (file_name, array_data):
     f.close ()
 
 qualities = ['FA','GA','B','I','II','III','IV']
-train_labels = [0] * 23577
-test_labels = [0] * 5891
+train_labels = [0] * MAX_KEY
+# test_labels = [0] * 5891
 train_content_file = "doc2vec_content.txt"
 # test_content_file = "doc2vec_test_content.txt"
 train_label_file = "doc2vec_label.txt"
@@ -153,6 +153,7 @@ for i in range (len(qualities)):
                 #     test_labels [test_cnt] = qualities[i]
                 #     test_cnt += 1
 
+train_labels = [value for value in train_labels if value != 0]
 write_array_to_file (file_name = train_label_file, array_data = train_labels)
 # write_array_to_file (file_name = test_label_file, array_data = test_labels)
 
