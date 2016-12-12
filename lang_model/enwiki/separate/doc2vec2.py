@@ -15,7 +15,7 @@ import os.path
 import sys
 import cPickle as pickle
 import getopt
-import
+import os
 
 data_dir = "text"   # directory contains text documents
 model_size = 200    # length of output vectors
