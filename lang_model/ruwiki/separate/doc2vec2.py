@@ -18,6 +18,7 @@ import getopt
 
 model_size = 200    # length of output vectors
 nb_epochs      = 50    # number of training epochs
+MAX_KEY = 50000
 
 try:
       opts, args = getopt.getopt(sys.argv[1:],"hepoch:",["model_size=","epoch="])
@@ -97,6 +98,11 @@ for epoch in range(nb_epochs):
 
 # model.save('./enwiki_quality.d2v')
 
+# count number of line of a text file
+# little bit awkward but okay
+def count_lines (file_name):
+    return sum(1 for line in open(file_name))
+
 def convert_array_to_string (data):
     res = ""
     for i in range(len(data)):
@@ -121,8 +127,15 @@ train_label_file = "doc2vec_label.txt"
 train_cnt = 0
 # test_cnt = 0
 for i in range (len(qualities)):
-    for j in range (30000):
+    for j in range (MAX_KEY):
                 key = qualities[i] + "_" + str(j)
+
+                # check if key is greater than number of lines (i.e number of wikipedia entries in the file)
+                file_name = qualities[i] + ".txt"
+
+                if key >= count_lines(file_name):
+                    break
+
                 data = model.docvecs[key]
                 if (len(data) == model_size):
                     with open(train_content_file, "a") as myfile:
