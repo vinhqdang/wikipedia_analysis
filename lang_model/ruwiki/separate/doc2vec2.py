@@ -124,7 +124,7 @@ for i in range (len(qualities)):
     for j in range (30000):
                 key = qualities[i] + "_" + str(j)
                 data = model.docvecs[key]
-                if (len(data) == DOCUMENT_LENGTH):
+                if (len(data) == model_size):
                     with open(train_content_file, "a") as myfile:
                         myfile.write(convert_array_to_string (data))
                         myfile.write("\n")

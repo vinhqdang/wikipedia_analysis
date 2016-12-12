@@ -110,7 +110,7 @@ def write_array_to_file (file_name, array_data):
         f.write (str(array_data[i]) + "\n")
     f.close ()
 
-qualities = ['AQD','BA','A','B','E','BD']
+qualities = ['ADQ','BA','A','B','E','BD']
 train_labels = [0] * 23577
 test_labels = [0] * 5891
 train_content_file = "doc2vec_content.txt"
@@ -123,7 +123,7 @@ for i in range (len(qualities)):
     for j in range (30000):
                 key = qualities[i] + "_" + str(j)
                 data = model.docvecs[key]
-                if (len(data) == DOCUMENT_LENGTH):
+                if (len(data) == model_size):
                     with open(train_content_file, "a") as myfile:
                         myfile.write(convert_array_to_string (data))
                         myfile.write("\n")
