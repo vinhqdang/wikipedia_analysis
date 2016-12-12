@@ -2,6 +2,7 @@
 from gensim import utils
 from gensim.models.doc2vec import LabeledSentence
 from gensim.models import Doc2Vec
+import subprocess
 
 # numpy
 import numpy
@@ -18,7 +19,7 @@ import getopt
 
 model_size = 200    # length of output vectors
 nb_epochs      = 50    # number of training epochs
-MAX_KEY = 50000
+MAX_KEY = 500000
 
 try:
       opts, args = getopt.getopt(sys.argv[1:],"hepoch:",["model_size=","epoch="])
