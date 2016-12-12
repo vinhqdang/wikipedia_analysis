@@ -15,7 +15,7 @@ import os.path
 import sys
 import cPickle as pickle
 import getopt
-import os
+import
 
 data_dir = "text"   # directory contains text documents
 model_size = 200    # length of output vectors
@@ -138,9 +138,9 @@ def write_array_to_file (file_name, array_data):
 qualities = ['FA','GA','B','C','START','STUB']
 train_labels = [0] * MAX_KEY
 # test_labels = [0] * 5891
-train_content_file = "doc2vec_train_content.txt"
+train_content_file = "doc2vec_train_content_" + str (model_size) + ".txt"
 # test_content_file = "doc2vec_test_content.txt"
-train_label_file = "doc2vec_train_label.txt"
+train_label_file = "doc2vec_train_label_" + str (model_size) + ".txt"
 # test_label_file = "doc2vec_test_label.txt"
 train_cnt = 0
 # test_cnt = 0
