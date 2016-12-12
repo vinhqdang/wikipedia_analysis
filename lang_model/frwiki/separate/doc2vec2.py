@@ -139,7 +139,7 @@ for i in range (len(qualities)):
     for j in range (MAX_KEY):
                 key = qualities[i] + "_" + str(j)
 
-                file_name = qualities[i] + ".txt"
+                file_name = qualities[i].lower() + ".txt"
 
                 if key >= count_lines(file_name):
                     break
