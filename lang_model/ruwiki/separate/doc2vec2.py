@@ -134,7 +134,7 @@ for i in range (len(qualities)):
                 # check if key is greater than number of lines (i.e number of wikipedia entries in the file)
                 file_name = qualities[i].lower() + ".txt"
 
-                if key >= count_lines(file_name):
+                if j >= count_lines(file_name):
                     break
 
                 data = model.docvecs[key]

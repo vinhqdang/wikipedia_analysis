@@ -141,7 +141,7 @@ for i in range (len(qualities)):
 
                 file_name = qualities[i].lower() + ".txt"
 
-                if key >= count_lines(file_name):
+                if j >= count_lines(file_name):
                     break
 
                 try:
