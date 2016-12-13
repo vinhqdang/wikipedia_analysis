@@ -142,7 +142,7 @@ for i in range (len(qualities)):
                 key = qualities[i] + "_" + str(j)
 
                 # check if key is greater than number of lines (i.e number of wikipedia entries in the file)
-                file_name = qualities[i].lower() + ".txt"
+                file_name = qualities[i] + ".txt"
 
                 if j >= count_lines(file_name):
                     break
