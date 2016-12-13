@@ -119,7 +119,7 @@ def write_array_to_file (file_name, array_data):
         f.write (str(array_data[i]) + "\n")
     f.close ()
 
-qualities = ['FA','GA','B','I','II','III','IV']
+qualities = ['FA','GA','SA','I','II','III','IV']
 train_labels = [0] * MAX_KEY
 # test_labels = [0] * 5891
 train_content_file = "doc2vec_train_content_" + str (model_size) + ".txt"
