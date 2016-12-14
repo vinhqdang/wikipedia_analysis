@@ -6,7 +6,7 @@ from tflearn.data_utils import to_categorical, pad_sequences
 import csv
 import numpy as np
 from sklearn import metrics, cross_validation
-import pandas
+# import pandas
 
 import tensorflow as tf
 # from tf.nn.rnn_* import rnn, rnn_cell
@@ -15,21 +15,22 @@ import tensorflow as tf
 import random
 import time
 
-import cPickle as pickle
+# import cPickle as pickle
 
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 
 import string
 
 import getopt
 import sys
+import os
 
 data_dir = "text"   # directory contains text documents
 model_size = 2000    # length of output vectors
 nb_epochs      = 50    # number of training epochs
 embedding_size = 300
 label_file = "enwikilabel"
-MAX_KEY = 500000
+MAX_FILE_ID = 50000
 
 try:
       opts, args = getopt.getopt(sys.argv[1:],"hd:model_size:epoch:lb:es:",["model_size=","epoch=","es="])
@@ -63,7 +64,7 @@ def load_label (label_file):
 Y = load_label(label_file)
 
 for i in range(len(Y)):
-    Y[i] = qualities.index(Y[i])%2
+    Y[i] = qualities.index(Y[i])
 
 print('Read content')
 
@@ -72,15 +73,16 @@ def load_content (file_name):
         return f.read()
 
 X = []
-for i in range (29468):
-    file_name = "./text/" + str(i + 1)
-    X.append (load_content(file_name)) 
+for i in range (MAX_FILE_ID):
+    file_name = data_dir + '/' + str(i + 1)
+    if os.path.isfile (file_name):
+        X.append (load_content(file_name)) 
 
 X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X, Y,
     test_size=0.2, random_state=2017)
 
-Y_train = to_categorical (Y_train, nb_classes = 2)
-Y_test = to_categorical (Y_test, nb_classes = 2)
+Y_train = to_categorical (Y_train, nb_classes = 6)
+Y_test = to_categorical (Y_test, nb_classes = 6)
 
 ### Process vocabulary
 
@@ -107,15 +109,15 @@ print('Total words: %d' % n_words)
 print('Build model')
 
 net = tflearn.input_data([None, model_size])
-net = tflearn.embedding(net, input_dim=model_size+1, output_dim=128)
+net = tflearn.embedding(net, input_dim=n_words+1, output_dim=128)
 net = tflearn.lstm(net, 128, dropout=0.5)
-net = tflearn.fully_connected(net, 2, activation='softmax')
+net = tflearn.fully_connected(net, 6, activation='softmax')
 net = tflearn.regression(net, optimizer='adam', learning_rate=0.001,
                          loss='categorical_crossentropy')
 
 print ('Train model')
 
-model = tflearn.DNN(net, tensorboard_verbose=3)
+model = tflearn.DNN(net, tensorboard_verbose=3, tensorboard_dir = "/logdir/lstm")
 
 print ('Predict')
 model.fit(X_train, Y_train, validation_set=(X_test, Y_test), show_metric=True,
