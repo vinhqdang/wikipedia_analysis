@@ -79,6 +79,9 @@ for i in range (29468):
 X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X, Y,
     test_size=0.2, random_state=2017)
 
+X_train = pad_sequences(X_train, maxlen=model_size, value=0.)
+X_test = pad_sequences(X_test, maxlen=model_size, value=0.)
+
 Y_train = to_categorical (Y_train, nb_classes = 2)
 Y_test = to_categorical (Y_test, nb_classes = 2)
 
