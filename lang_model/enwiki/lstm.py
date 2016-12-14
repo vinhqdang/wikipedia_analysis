@@ -117,7 +117,7 @@ net = tflearn.regression(net, optimizer='adam', learning_rate=0.001,
 
 print ('Train model')
 
-model = tflearn.DNN(net, tensorboard_verbose=3, tensorboard_dir = "/logdir/lstm")
+model = tflearn.DNN(net, tensorboard_verbose=3, tensorboard_dir = "logdir/lstm")
 
 print ('Predict')
 model.fit(X_train, Y_train, validation_set=(X_test, Y_test), show_metric=True,
