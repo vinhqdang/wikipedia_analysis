@@ -19,7 +19,7 @@ import os
 
 data_dir = "text"   # directory contains text documents
 model_size = 200    # length of output vectors
-epochs      = 50    # number of training epochs
+nb_epochs      = 50    # number of training epochs
 label_file = "enwikilabel"
 # out_filename = "doc2vec.out"
 MAX_KEY = 500000
