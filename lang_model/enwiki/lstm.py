@@ -79,9 +79,6 @@ for i in range (29468):
 X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X, Y,
     test_size=0.2, random_state=2017)
 
-X_train = pad_sequences(X_train, maxlen=model_size, value=0.)
-X_test = pad_sequences(X_test, maxlen=model_size, value=0.)
-
 Y_train = to_categorical (Y_train, nb_classes = 2)
 Y_test = to_categorical (Y_test, nb_classes = 2)
 
@@ -92,6 +89,9 @@ print('Process vocabulary')
 vocab_processor = tflearn.data_utils.VocabularyProcessor(max_document_length = model_size, min_frequency = 0)
 X_train = np.array(list(vocab_processor.fit_transform(X_train)))
 X_test = np.array(list(vocab_processor.fit_transform(X_test)))
+
+X_train = pad_sequences(X_train, maxlen=model_size, value=0.)
+X_test = pad_sequences(X_test, maxlen=model_size, value=0.)
 
 n_words = len(vocab_processor.vocabulary_)
 print('Total words: %d' % n_words)
@@ -107,7 +107,7 @@ print('Total words: %d' % n_words)
 print('Build model')
 
 net = tflearn.input_data([None, model_size])
-net = tflearn.embedding(net, input_dim=model_size, output_dim=128)
+net = tflearn.embedding(net, input_dim=model_size+1, output_dim=128)
 net = tflearn.lstm(net, 128, dropout=0.5)
 net = tflearn.fully_connected(net, 2, activation='softmax')
 net = tflearn.regression(net, optimizer='adam', learning_rate=0.001,
