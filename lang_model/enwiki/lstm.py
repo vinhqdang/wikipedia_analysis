@@ -109,7 +109,7 @@ print('Total words: %d' % n_words)
 print('Build model')
 
 net = tflearn.input_data([None, model_size])
-net = tflearn.embedding(net, input_dim=n_words+1, output_dim=128)
+net = tflearn.embedding(net, input_dim=n_words, output_dim=128)
 net = tflearn.lstm(net, 128, dropout=0.5)
 net = tflearn.fully_connected(net, len (qualities), activation='softmax')
 net = tflearn.regression(net, optimizer='adam', learning_rate=0.001,
