@@ -27,7 +27,7 @@ import os
 
 data_dir = "text"   # directory contains text documents
 model_size = 2000    # length of output vectors
-nb_epochs      = 50    # number of training epochs
+nb_epochs      = 10    # number of training epochs
 embedding_size = 300
 label_file = "ruwikilabel2.txt" # convert Russian character in quality labels to Latin characters
 MAX_FILE_ID = 50000
@@ -121,4 +121,4 @@ model = tflearn.DNN(net, tensorboard_verbose=3, tensorboard_dir = "logdir/lstm")
 
 print ('Predict')
 model.fit(X_train, Y_train, validation_set=(X_test, Y_test), show_metric=True,
-          batch_size=32)
+          batch_size=32, n_epoch = nb_epochs)
