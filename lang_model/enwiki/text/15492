@@ -1,9 +1,0 @@
-{{Unreferenced|date=July 2013}}
-
-'''FLITs''' is an acronym for '''FL'''ow control dig'''IT'''s
-
-Large [[network packet]]s are broken into small pieces called flits (flow control digits). The first flit, called the header flit holds information about this packet's route (namely the destination address) and sets up the routing behavior for all subsequent flits associated with the packet. The head flit is followed by zero or more body flits, containing the actual [[pay load]] of [[data]]. The final flit, called the tail flit, performs some book keeping to close the connection between the two [[Node (networking)|node]]s.
-
-A virtual channel holds the state needed to coordinate the handling of the flits of a packet over a channel. At a minimum, this state identifies the output channel of the current node for the next hop of the route and the state of the virtual channel (idle, waiting for resources, or active). The virtual channel may also include pointers to the flits of the packet that are buffered on the current node and the number of flit buffers available on the next node. (Dally and Towles 2004, p.&nbsp;237)
-
-[[Category:Packets (information technology)]]
