@@ -146,35 +146,6 @@ runRFModel_withoutReadabilityScore = function()
   runRFModel (2:12)
 }
 
-plot_addingReadScoreOneByOne = function () {
-  par(mar=c(12,5,1,1))
-  y=c(0.578,0.58629717,0.5903492,0.59410947,0.59857476,0.6057016,0.62106816,0.6289228,0.63416795,0.63746294)
-  x_labels = c("Base feature set","flesch_reading_ease","flesch_kincaid_grade","smog_index","coleman_liau_index","automated_readability_index",
-            "difficult_words","dale_chall_readability_score","linsear_write_formula","gunning_fog")
-  plot (y, xaxt = "n",type = "b", xlab = "",ylab="Accuracy",las=2, ylim = c(0.57,0.64))
-  # axis(1, at=1:10, labels=x_labels,las=2)
-  
-  axis(1, at=seq(1, 10, by=1), labels = FALSE)
-  text(seq(1, 10, by=1), par("usr")[3] - 0.2, labels = x_labels, srt = -45, pos = 1, xpd = TRUE)
-}
-
-plot_addingSingleReadScore = function () {
-  par(mar=c(12,5,1,1))
-  y=c(0.578,0.5826866,0.58890134,0.58743715,0.58729076,0.58773,0.58909445,0.588679,0.5867051,0.58616817)
-  x_labels = c("Base feature set","flesch_reading_ease","flesch_kincaid_grade","smog_index","coleman_liau_index","automated_readability_index",
-               "difficult_words","dale_chall_readability_score","linsear_write_formula","gunning_fog")
-  plot (y, xaxt = "n",type = "p", xlab = "",ylab="Accuracy",las=2, ylim = c(0.57,0.60))
-  axis(1, at=1:10, labels=x_labels,las=2)
-  # axis(2, at=c(1,3,5,7),labels = c(0.57,0.58,0.59,0.60),las=2)
-  
-  for (i in 1:11) {
-    epsilon = 0.2
-    segments(x0 = i - epsilon, x1 = i + epsilon, y0 = y[i], y1 = y[i])
-    segments(x0 = i-epsilon,x1=i-epsilon, y0 = 0.57, y1=y[i])
-    segments(x0 = i+epsilon,x1=i+epsilon, y0 = 0.57, y1=y[i])
-  }
-  
-}
 
 runKNNModel <- function () {
   library (class)
