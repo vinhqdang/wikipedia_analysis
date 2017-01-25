@@ -148,13 +148,6 @@ for i in range (nfolds):
     X_test = pad_sequences(X_test, maxlen=model_size, value=0.)
 
     n_words = len(vocab_processor.vocabulary_)
-    print('Total words: %d' % n_words)
-
-    # pickle.dump (X_train, open ("xtrain.p", b))
-    # pickle.dump (X_test, open ("xtest.p", b))
-
-    # X_train = pickle.load (open ("xtrain.p", rb))
-    # X_test = pickle.load (open ("xtest.p", rb))
 
     ### Models
 
