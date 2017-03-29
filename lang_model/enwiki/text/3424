@@ -1,0 +1,244 @@
+The '''Banzhaf power index''', named after [[John F. Banzhaf III]] (though originally invented by {{harvtxt|Penrose|1946}}), is a [[power (sociology)|power]] index defined by the [[probability]] of changing an [[outcome]] of a vote where voting rights are not necessarily equally divided among the [[voters]] or [[shareholders]].
+
+To calculate the power of a voter using the Banzhaf index, list all the winning coalitions, then count the critical voters.  A ''critical voter'' is a voter who, if he changed his vote from yes to no, would cause the measure to fail.  A voter's power is measured as the fraction of all swing votes that he could cast.
+
+== Examples ==
+
+A simple voting game, taken from ''Game Theory and Strategy'' by Phillip D. Straffin:
+
+[6; 4, 3, 2, 1]
+
+The numbers in the brackets mean a measure requires 6 votes to pass, and voter A can cast four votes, B three votes, C two, and D one.  The winning groups, with underlined swing voters, are as follows:
+
+<u>AB</u>, <u>AC</u>, <u>A</u>BC, <u>AB</u>D, <u>AC</u>D, <u>BCD</u>, ABCD
+
+There are 12 total swing votes, so by the Banzhaf index, power is divided thus.
+
+A = 5/12    B = 3/12    C = 3/12    D = 1/12
+
+Consider the [[U.S. Electoral College]].  Each state has more or less power than the next state.  There are a total of 538 electoral votes.  A [[majority vote]] is considered 270 votes.  The Banzhaf Power Index would be a mathematical representation of how likely a single state would be able to swing the vote.  For a state such as [[California]], which is allocated 55 electoral votes, they would be more likely to swing the vote than a state such as [[Montana]], which only has 3 electoral votes.
+
+The [[United States]] is having a presidential election between a [[Republican Party (United States)|Republican]] and a [[Democratic Party (United States)|Democrat]].  For simplicity, suppose that only three states are participating: [[California]] (55 electoral votes), [[Texas]] (34 electoral votes), and [[New York]] (31 electoral votes).
+
+The possible outcomes of the election are:
+
+{| class="wikitable" align=center
+! California (55)
+! Texas (34)
+! New York (31)
+! R votes
+! D votes
+! States that could swing the vote
+|- 
+| R
+| R
+| R
+| 120
+| 0
+| none
+|- 
+| R
+| R
+| D
+| 89
+| 31
+| California (D would win 86-34), Texas (D would win 65-55)
+|-
+| R
+| D
+| R
+| 86
+| 34
+| California (D would win 89-31), New York (D would win 65-55)
+|-
+| R 
+| D 
+| D
+| 55
+| 65
+| Texas (R would win 89-31), New York (R would win 86-34)
+|-
+| D
+| R
+| R
+| 65
+| 55
+| Texas (D would win 89-31), New York (D would win 86-34)
+|-
+| D
+| R
+| D
+| 34
+| 86
+| California (R would win 89-31), New York (R would win 65-55)
+|-
+| D
+| D
+| R
+| 31
+| 89
+| California (R would win 86-34), Texas (R would win 65-55)
+|-
+| D
+| D
+| D
+| 0
+| 120
+| none
+|}
+
+The Banzhaf Power Index of a state is the proportion of the possible outcomes in which that state could swing the election.  In this example, all three states have the same index: 4/12 or 1/3.
+
+However, if New York is replaced by Ohio, with only 20 electoral votes, the situation changes dramatically.
+
+{| class="wikitable" align=center
+! California (55)
+! Texas (34)
+! Ohio (20)
+! R votes
+! D votes
+! States that could swing the vote
+|- 
+| R
+| R
+| R
+| 109
+| 0
+| California (D would win 55-54)
+|- 
+| R
+| R
+| D
+| 89
+| 20
+| California (D would win 75-34)
+|-
+| R
+| D
+| R
+| 75
+| 34
+| California (D would win 89-20)
+|-
+| R 
+| D 
+| D
+| 55
+| 54
+| California (D would win 109-0)
+|-
+| D
+| R
+| R
+| 54
+| 55
+| California (R would win 109-0)
+|-
+| D
+| R
+| D
+| 34
+| 75
+| California (R would win 89-20)
+|-
+| D
+| D
+| R
+| 20
+| 89
+| California (R would win 75-34)
+|-
+| D
+| D
+| D
+| 0
+| 109
+| California (R would win 55-54)
+|}
+
+In this example, the Banzhaf index gives California 1 and the other states 0, since California alone has more than half the votes.
+
+== History ==
+
+What is known today as the Banzhaf Power Index has originally been introduced by {{harvtxt|Penrose|1946}} and went largely forgotten. 
+It has been reinvented by  {{harvtxt|Banzhaf|1965}}, but it had to be reinvented once more by {{harvtxt|Coleman|1971}} before it became part of the mainstream literature. 
+
+[[John F. Banzhaf III|Banzhaf]] wanted to prove objectively that the [[Nassau County, New York|Nassau County]] Board's voting system was unfair.  Votes were divided as follows (this information also taken from Game Theory and Strategy, though it can probably be verified elsewhere):
+[Hempstead #1, Hempstead #2, North Hempstead, Oyster Bay, Glen Cove, Long Beach] are A-F in
+[16; 9, 9, 7, 3, 1, 1]
+
+The winning coalitions and their swing voters are:
+
+<u>AB</u> <u>AC</u> <u>BC</u> ABC <u>AB</u>D <u>AB</u>E <u>AB</u>F  <u>AC</u>D <u>AC</u>E <u>AC</u>F <u>BC</u>D <u>BC</u>E <u>BC</u>F ABCD ABCE ABCF <u>AB</u>DE <u>AB</u>DF <u>AB</u>EF <u>AC</u>DE <u>AC</u>DF <u>AC</u>EF <u>BC</u>DE <u>BC</u>DF <u>BC</u>EF ABCDE ABCDF ABCEF <u>AB</u>DEF <u>AC</u>DEF <u>BC</u>DEF ABCDEF
+
+The Banzhaf index gives these values.
+Hempstead #1 = 16/48    Hempstead #2 = 16/48    North Hempstead = 16/48    Oyster Bay = 0/48    Glen Cove = 0/48    Long Beach = 0/48
+
+Obviously, a voting arrangement that gives 0% of the power to 16% of the population is unfair, and Banzhaf sued the board. 
+
+Today, the Banzhaf power index is an accepted way to measure voting power, along with the alternative [[Shapley-Shubik power index]].
+
+However, Banzhaf's analysis has been critiqued as treating votes like coin-flips, and an empirical model of voting rather than a random voting model as used by Banzhaf brings different results {{harv|Gelman|Katz|2002}}.
+
+== See Also ==
+* [[Shapley-Shubik power index]]
+
+==References==
+*{{Citation
+  | last = Banzhaf
+  | first = John F.
+  | authorlink = John F. Banzhaf III
+  | title = Weighted voting doesn't work: A mathematical analysis
+  | journal = Rutgers Law Review
+  | volume = 19
+  | issue = 2
+  | pages = 317-343 
+  | year = 1965
+  | url = 
+}}
+*{{Citation
+  | last = Coleman
+  | first = James S.
+  | authorlink = James S. Coleman
+  | contribution =Control of Collectives and the Power of a Collectivity to Act
+  | editor-last =Lieberman | editor-first=Bernhardt 
+  | title = Social Choice
+  | publisher= Gordon and Breach
+  | place = New York
+  | pages = 192-225 
+  | year = 1971
+  | url = 
+}}
+*{{Citation
+  | last = Gelman
+  | first = Andrew
+  | last2 = Katz
+  | first2 = Jonathan
+  | title = The Mathematics and Statistics of Voting Power
+  | journal = Statistical Science
+  | volume = 17
+  | issue = 4
+  | pages = 420-435 
+  | year = 2002
+  | url = 
+}}
+*{{Citation
+  | last = Penrose
+  | first = Lionel
+  | authorlink = Lionel Penrose
+  | title = The Elementary Statistics of Majority Voting
+  | journal = Journal of the Royal Statistical Society
+  | volume = 109
+  | issue = 1
+  | pages = 53-57 
+  | year = 1946
+  | url =}}
+
+== External links ==
+*[http://www.cs.unc.edu/~livingst/Banzhaf/ Banzhaf Power Index] Includes power index estimates for the 1990s U.S. Electoral College.
+
+[[Category:Game theory]]
+[[Category:Political science theories]]
+
+[[pl:Indeks si<U+0142>y Banzhafa]]
+[[zh:Banzhaf<U+6B0A><U+529B><U+6307><U+6A19>]]

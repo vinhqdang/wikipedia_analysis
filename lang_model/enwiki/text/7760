@@ -1,0 +1,37 @@
+{{refimprove|date=January 2014}}
+The '''Intel 440BX''' (codenamed Seattle), is a [[chipset]] from [[Intel]], supporting [[Pentium II]], [[Pentium III]], and [[Celeron]] processors. It is also known as the i440BX and was released in April 1998. The official part number is 82443BX.
+
+==Features==
+[[Image:Intel440BXnorthbridge.jpg|300px|thumb|Intel 82443BX (440BX northbridge) on an Abit BF6]]
+The 440BX originally supported [[Slot 1]] and later [[Socket 370]] Intel [[P6 (microarchitecture)|P6]]-based processors in single and [[symmetric multiprocessing|SMP]] configurations at speeds of up to 1&nbsp;GHz (and potentially up to 1.4&nbsp;GHz with certain unsupported modifications, up to 1.7GHz can be achieved using Front Side Bus speeds higher than 133 and appropriate cooling). Its [[Southbridge (computing)|southbridge]] counterpart is the [[PCI IDE ISA Xcelerator|PIIX4E]].
+
+==History==
+The Intel 440BX is the third [[Pentium II]] chipset released by Intel, succeeding the [[Intel 440FX|440FX]] and [[List of Intel chipsets#Pentium Pro/II/III chipsets|440LX]]. With the new 100&nbsp;MHz [[front side bus]], Pentium II CPUs were able to scale better in performance by reducing the difference between processor clock and bus speed. The previous 66&nbsp;MHz bus had become a serious bottleneck and dated back to the first [[Intel P5|Pentium "Classic"]] chipsets.
+
+The 440BX had two closely related chipset peers; the [[List of Intel chipsets#Pentium Pro/II/III chipsets|440ZX]] and [[List of Intel chipsets#Pentium Pro/II/III chipsets|440MX]]. 440MX is a mobile chipset for laptops, although a number of notebooks did use 440BX. 440ZX is a cost-reduced version of 440BX. It has a lower maximum RAM limit resulting from having support for only 2 RAM banks. The 440ZX-66, designed for [[Intel Celeron]] processor, is limited to 66&nbsp;MHz FSB speed.<ref>[http://web.archive.org/web/20071024155148/http://www.intel.com/design/chipsets/mature/450_440.htm Intel Chipsets Mature Products - Mature 450 and 440 Chipset Families<!-- Bot generated title -->]</ref>
+
+The 440BX became one of Intel's most popular chipsets. Enthusiasts enjoyed its [[overclocking|overclockability]],  with the chipset capable of running the front-side bus at speeds ranging from 66&nbsp;MHz to well over 133&nbsp;MHz, in stark contrast to the 440LX's struggle to top 75&nbsp;MHz. A common overclock involved the pin-40 hack, or using an [[Universal abit|ABIT]] BH6 or [[ASUS|Asus]] P2B, and setting the bus speed on a 66&nbsp;MHz Covington or Mendocino-core Celeron to 100&nbsp;MHz. The Mendocino-core Celeron 300A became a "sweet spot" for overclockers, with nearly 100% success rates at reaching 450&nbsp;MHz on a 100&nbsp;MHz FSB, allowing it to equate to a much more expensive Pentium II at 450&nbsp;MHz. Other popular overclocks included the SL2W8-stepping Deschutes-core Pentium II that could often run to 450&nbsp;MHz at 100&nbsp;MHz FSB, and the SL35D Katmai-core [[Pentium III]] 450&nbsp;MHz which could frequently manage 600&nbsp;MHz on a 133&nbsp;MHz FSB. The later Pentium III Coppermine-core processor was easily overclocked and performed well on 440BX motherboards. Finally, the unsupported Tualatin-core Pentium III could be used with an adapter and various modifications, with varying degrees of success.
+
+Ironically, the 440BX offered better performance than several of its successors. The i810 and i820 chipsets were unable to beat the 440BX at the 100&nbsp;MHz FSB speed.  The i820 was plagued with a requirement for high cost [[RDRAM]] to reach good performance, along with a string of reliability issues involving an RDRAM-to-SDRAM memory translator hub in designs using that chipset with SDRAM. Unofficially, the 440BX could often be taken to 133&nbsp;MHz FSB. Enthusiast motherboards, such as the Asus P3B-F and Abit BH6/BF6/BE6 series, were equipped with [[BIOS]] options to set the board to this unofficial speed.  With a 133&nbsp;MHz FSB, the 440BX could even match the later i815 chipset, which was designed to accommodate the final Tualatin-core Pentium III. 
+
+Unfortunately, running a 440BX above 100&nbsp;MHz FSB resulted in the [[Accelerated Graphics Port|AGP]] video card being forced to run on an overclocked AGP bus, as the 440BX only had "2/3" and "1/1" bus dividers. Some video cards were tolerant of this, such as various early [[GeForce|NVIDIA GeForce]] cards, but more than a few were unstable with a 35% AGP overclock.<ref>[http://www.tomshardware.com/1999/06/22/preview_of_intel/page2.html Preview of Intel's Upcoming 'Camino'-Chipset |Tom's Hardware<!-- Bot generated title -->]</ref> The PCI bus was not affected by this problem (there was a "1/4" bus divider for the PCI bus on the 440BX) so users could use a PCI graphics card in lieu of an AGP one. However, this inflicted a performance penalty on graphical performance since PCI has significantly lower bandwidth throughput than AGP.
+
+Still, the later i815 was considered the best Pentium III chipset because it offered a better feature set and very similar performance relative to the 440BX. Not only did the i815 support a proper "1/2" AGP divider for the 133&nbsp;MHz FSB clock rate, AGP 4x, and Ultra DMA 100, but the later revisions also directly supported the Tualatin Pentium III.
+
+The success of the 440BX chipset has caused various software emulation and virtualization packages to use it as part of their virtual system. [[VMware]] and [[Microsoft Virtual PC]] present the Intel 440BX chipset virtually to hosted [[virtual machines]], due to its broad compatibility.
+
+==See also==
+*[[List of Intel chipsets]]
+*[[MMC-2]] CPU module containing 443BX chip.
+
+==References==
+<references/>
+
+==External links==
+*[http://arstechnica.com/paedia/celeron_oc_faq.html Celeron overclocking FAQ] at [[Ars Technica]], by Frank Monroe
+*[http://tipperlinne.com/p2bmod Asus P2B-D modification guide]
+*[http://www.intel.com/design/chipsets/datashts/290633.htm Intel(R) 440BX AGPset: 82443BX Host Bridge/Controller Datasheet]
+*[http://www.intel.com/design/chipsets/specupdt/290639.htm Intel 440BX AGPset 82443BX Host Bridge/Controller Specification Update]
+*[http://www.intel.com/design/chipsets/datashts/273219.htm 82443BX Host Bridge/Controller Electrical and Thermal Timing Specification Datasheet Addendum]
+
+[[Category:Intel chipsets|440BX]]

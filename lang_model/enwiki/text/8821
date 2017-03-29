@@ -1,0 +1,306 @@
+:''For other uses, see [[Game theory (disambiguation)]] or [[Game (disambiguation)]].''
+
+'''Game theory''' is often described as a branch of [[applied mathematics]] and [[economics]] that studies situations where multiple players make [[decision]]s in an attempt to maximize their returns. The essential feature is that it provides a formal modelling approach to social situations in which decision makers interact with other agents. Game theory extends the simpler optimisation approach developed in [[neoclassical economics]].
+
+The field of game theory came into being with the 1944 classic ''[[Theory of Games and Economic Behavior]]'' by [[John von Neumann]] and [[Oskar Morgenstern]]. A major center for the development of game theory  was [[RAND|RAND Corporation]] where it helped to define [[nuclear strategies]]. 
+
+Game theory has played, and continues to play a large role in the [[social sciences]], and is now also used in many diverse academic fields. Beginning in the 1970s, game theory has been applied to animal behaviour, including [[evolutionary theory]]. Many games, especially the [[prisoner's dilemma]], are used to illustrate ideas in [[political science]] and [[ethics]]. Game theory has recently drawn attention from [[computer scientist]]s because of its use in [[artificial intelligence]] and [[cybernetics]].
+
+In addition to its academic interest, game theory has received attention in popular culture. A [[Bank of Sweden Prize in Economic Sciences in Memory of Alfred Nobel|Nobel Prize]]<U+2013>winning game theorist, [[John Forbes Nash|John Nash]], was the subject of the 1998 biography by [[Sylvia Nasar]] and the 2001 film ''[[A Beautiful Mind (film)|A Beautiful Mind]]''. Game theory was also a theme in the 1983 film ''[[WarGames]]''. Several [[game show]]s have adopted game theoretic situations, including  ''[[Friend or Foe?]]'' and to some extent ''[[Survivor (TV series)|Survivor]]''.  The character [[Jack Bristow]] on the [[television]] show ''[[Alias (TV series)|Alias]]'' is one of the few fictional game theorists in popular culture.<ref>[http://www.gametheory.net GameTheory.net] has an extensive list of [http://www.gametheory.net/popular/ references to game theory in popular culture].</ref>
+
+Although some game theoretic analyses appear similar to [[decision theory]], game theory studies decisions made in an environment in which players interact. In other words, game theory studies choice of optimal behavior when costs and benefits of each option depend upon the choices of other individuals.
+
+==Representation of games==
+{{seealso|List of games in game theory}}
+The '''games''' studied by game theory are well-defined mathematical objects. A game consists of a set of players, a set of moves (or [[strategy (game theory)|strategies]]) available to those players, and a specification of payoffs for each combination of strategies. There are two ways of representing games that are common in the literature. 
+
+===Normal form===
+<!--{| align=right border="1" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 1em; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse; font-size: 95%;"
+|+ align=bottom |''A normal form game''
+|-
+|
+! scope="col" style="color: #900;width: 90px;"|''Player 2 chooses left''
+! scope="col" style="color: #900;width: 90px;"|''Player 2 chooses right''
+|-
+! scope="col" style="color: #009;width: 90px;"|''Player 1 chooses top''
+|align=center| <span style="color: #009">4</span>, <span style="color: #900">3</span>
+|align=center| <span style="color: #009">-1</span>, <span style="color: #900">-1</span>
+|-
+! scope="col" style="color: #009;width: 100px;"|''Player 1 chooses bottom''
+|align=center| <span style="color: #009">0</span>, <span style="color: #900">0</span>
+|align=center| <span style="color: #009">3</span>, <span style="color: #900">4</span>
+|}-->
+{{Payoff matrix 
+| Name = Normal form or payoff matrix of a 2-player, 2-strategy game
+| 2L = <font color=red>Player 2<br/>chooses ''Left''</font> 
+| 2R = <font color=red>Player 2<br/>chooses ''Right''</font> 
+| 1U = <font color=blue>Player 1<br/>chooses ''Up''</font>  
+| 1D = <font color=blue>Player 1<br/>chooses&nbsp;''Down''</font> 
+| UL = <font color=blue>'''4'''</font>,  <font color=red>'''3'''</font> 
+| UR = <font color=blue>'''<U+2013>1'''</font>, <font color=red>'''<U+2013>1'''</font> 
+| DL = <font color=blue>'''0'''</font>,  <font color=red>'''0'''</font> 
+| DR = <font color=blue>'''3'''</font>,  <font color=red>'''4'''</font> 
+| Float = right | Width = 330}}
+
+{{main|Normal form game}}
+The normal (or strategic form) game is usually represented by a [[Matrix (mathematics)|matrix]] which shows the players, strategies, and payoffs (see the example to the right). More generally it can be represented by any function that associates a payoff for each player with every possible combination of actions. In the accompanying example there are two players; one chooses the row and the other chooses the column. Each player has two strategies, which are specified by the number of rows and the number of columns. The payoffs are provided in the interior. The first number is the payoff received by the row player (Player 1 in our example); the second is the payoff for the column player (Player 2 in our example). Suppose that Player 1 plays ''Up'' and that Player 2 plays ''Left''. Then Player 1 gets a payoff of 4, and Player 2 gets 3.
+
+When a game is presented in normal form, it is presumed that each player acts simultaneously or, at least, without knowing the actions of the other. If players have some information about the choices of other players, the game is usually presented in extensive form.
+
+===Extensive form===
+{{main|Extensive form game}}
+[[Image:Ultimatum Game Extensive Form.svg|thumb|left|An extensive form game]]
+The extensive form can be used to formalise games with some important order. Games here are often presented as [[tree (graph theory)|trees]] (as pictured to the left). Here each [[Graph (mathematics)|vertex]] (or node) represents a point of choice for a player. The player is specified by a number listed by the vertex. The lines out of the vertex represent a possible action for that player. The payoffs are specified at the bottom of the tree.
+
+In the game pictured here, there are two players. ''Player 1'' moves first and chooses either ''F'' or ''U''. ''Player 2'' sees ''Player 1'''s move and then chooses ''A'' or ''R''. Suppose that ''Player 1'' chooses ''U'' and then ''Player 2'' chooses ''A'', then ''Player 1'' gets 8 and ''Player 2'' gets 2.
+
+The extensive form can also capture simultaneous-move games and games with incomplete information. Either a dotted line or circle is drawn around two different vertices to represent them as being part of the same [[information set (game theory)|information set]] (i.e., the players do not know at which point they are).
+
+==Types of games==
+===Symmetric and asymmetric===
+{{Payoff matrix | Name = An asymmetric game
+                | 2L = E          | 2R = F          |
+1U = E          | UL = 1, 2       | UR = 0, 0       |
+1D = F          | DL = 0, 0       | DR = 1, 2       }}
+{{main|Symmetric game}}
+A symmetric game is a game where the payoffs for playing a particular strategy depend only on the other strategies employed, not on who is playing them. If the identities of the players can be changed without changing the payoff to the strategies, then a game is symmetric. Many of the commonly studied 2&times;2 games are symmetric. The standard representations of [[Game of chicken|chicken]], the [[prisoner's dilemma]], and the [[stag hunt]] are all symmetric games. Some scholars would consider certain asymmetric games as examples of these games as well.  However, the most common payoffs for each of these games are symmetric.
+
+Most commonly studied asymmetric games are games where there are not identical strategy sets for both players. For instance, the [[ultimatum game]] and similarly the [[dictator game]] have different strategies for each player. It is possible, however, for a game to have identical strategies for both players, yet be asymmetric. For example, the game pictured to the right is asymmetric despite having identical strategy sets for both players.
+
+===Zero sum and non-zero sum===
+{{Payoff matrix | Name = A zero-sum game
+                | 2L = A          | 2R = B          |
+1U = A          | UL = <U+2013>1, 1      | UR = 3, <U+2013>3      |
+1D = B          | DL = 0, 0       | DR = <U+2013>2, 2      }}
+{{main|Zero-sum}}
+
+Zero sum games are a special case of constant sum games, in which choices by players can neither increase nor decrease the available resources. In [[zero-sum]] games the total benefit to all players in the game, for every combination of strategies, always adds to zero (more informally, a player benefits only at the expense of others). [[Poker]] exemplifies a zero-sum game (ignoring the possibility of the house's cut), because one wins exactly the amount one's opponents lose. Other zero sum games include [[matching pennies]] and most classical board games including [[go (board game)|Go]] and [[chess]]. 
+
+Many games studied by game theorists (including the famous [[prisoner's dilemma]]) are non-zero-sum games, because some [[Outcome (game theory)|outcomes]] have net results greater or less than zero. Informally, in non-zero-sum games, a gain by one player does not necessarily correspond with a loss by another.
+
+Constant sum games correspond to activities like theft and gambling, but not to the fundamental economic situation in which there are potential gains from trade. It is possible to transform any game into a (possibly asymmetric) zero-sum game by adding an additional dummy player (often called "the board"), whose losses compensate the players' net winnings.
+
+===Simultaneous and sequential===
+{{main|Sequential game}}
+
+Simultaneous games are games where both players move simultaneously, or if they do not move simultaneously, the later players are unaware of the earlier players' actions (making them ''effectively'' simultaneous). Sequential games (or dynamic games) are games where later players have some knowledge about earlier actions. This need not be [[perfect information|perfect knowledge]] about every action of earlier players; it might be very little information. For instance, a player may know that an earlier player did not perform one particular action, while he does not know which of the other available actions the first player actually performed.
+
+The difference between simultaneous and sequential games is captured in the different representations discussed above. [[Normal form game|Normal form]] is used to represent simultaneous games, and [[extensive form game|extensive form]] is used to represent sequential ones.
+
+===Perfect information and imperfect information===
+[[Image:PD with outside option.svg|thumb|250px|right|A game of imperfect information (the dotted line represents ignorance on the part of player 2)]]
+{{main|Perfect information}}
+
+An important subset of sequential games consists of games of perfect information. A game is one of perfect information if all players know the moves previously made by all other players. Thus, only sequential games can be games of perfect information, since in simultaneous games not every player knows the actions of the others. Most games studied in game theory are imperfect information games, although there are some interesting examples of perfect information games, including the [[ultimatum game]] and [[centipede game]]. Perfect information games include also [[chess]], [[go (board game)|go]], [[mancala]], and [[arimaa]].
+
+Perfect information is often confused with [[complete information]], which is a similar concept. Complete information requires that every player knows the strategies and payoffs of the other players but not necessarily the actions.
+
+===Infinitely long games===
+{{main|Determinacy}}
+
+Games, as studied by economists and real-world game players, are generally finished in a finite number of moves. Pure mathematicians are not so constrained, and [[set theory|set theorists]] in particular study games that last for infinitely many moves, with the winner (or other payoff) not known until ''after'' all those moves are completed.
+
+The focus of attention is usually not so much on what is the best way to play such a game, but simply on whether one or the other player has a [[Determinacy#Basic notions|winning strategy]]. (It can be proven, using the [[axiom of choice]], that there are games&mdash;even with perfect information, and where the only outcomes are "win" or "lose"&mdash;for which ''neither'' player has a winning strategy.) The existence of such strategies, for cleverly designed games, has important consequences in [[descriptive set theory]].
+
+==Application and challenges of game theory==
+
+Games in one form or another are widely used in many different disciplines.
+
+===Political science===
+The application of game theory to [[political science]] is focused in the overlapping areas of [[fair division]], [[political economy]], [[public choice]], [[positive political theory]], and [[social choice theory]]. In each of these areas, researchers have developed game theoretic models in which the players are often voters, states, interest groups, and politicians. 
+
+For early examples of game theory applied to political science, see the work of [[Anthony Downs]]. In his book [[An Economic Theory of Democracy]] (1957), he applies a Hotelling firm location model to the political process. In the Downsian model, political candidates commit to ideologies on a one-dimensional policy space. He shows how the political candidates will converge to the ideology preferred by the median voter. For more recent examples, see the books by [[George Tsebelis]], [[Gene M. Grossman]] and [[Elhanan Helpman]], or [[David Austen-Smith]] and [[Jeffrey S. Banks]]. 
+
+A game-theoretic explanation for the [[democratic peace theory|democratic peace]] is that the public and open debate in democracies send clear and reliable information regarding the intentions to other states. In contrast, it is difficult to know the intentions of nondemocratic leaders, what effect concessions will have, and if promises will be kept. Thus there will be mistrust and unwillingness to make concessions if at least one of the parties in a dispute is a nondemocracy.[http://papers.ssrn.com/sol3/papers.cfm?abstract_id=433844]
+
+Game theory provides a theoretical description for a variety of observable consequences of changes in governmental policies.  For example, the response to an increase in tax rates would imply an increase in revenues, and vice versa, in a static world where producers were not themselves decision makers attempting to optimize their own expenditure of resources while assuming risks.  Game Theory inclusively weights the decision making of all participants and thus explains the contrary results illustrated by the [[Laffer Curve]].
+
+===Economics and business===
+
+Economists have long used game theory to analyze a wide array of economic phenomena, including [[auction]]s, [[bargaining]], [[duopoly|duopolies]], [[fair division]], [[oligopoly|oligopolies]], [[social network]] formation, and [[voting systems]].  This research usually focuses on particular sets of strategies known as [[solution concept|equilibria]] in games.  These "solution concepts" are usually based on what is required by norms of [[perfect rationality|rationality]].  The most famous of these is the [[Nash equilibrium]].  A set of strategies is a Nash equilibrium if each represents a best response to the other strategies.  So, if all the players are playing the strategies in a Nash equilibrium, they have no incentive to deviate, since their strategy is the best they can do given what others are doing. 
+
+The payoffs of the game are generally taken to represent the [[utility function|utility]] of individual players. Often in modeling situations the payoffs represent money, which presumably corresponds to an individual's utility. This assumption, however, can be faulty.
+
+A prototypical paper on game theory in economics begins by presenting a game that is an abstraction of some particular economic situation.  One or more solution concepts are chosen, and the author demonstrates which strategy sets in the presented game are equilibria of the appropriate type.  Naturally one might wonder to what use should this information be put.  Economists and business professors suggest two primary uses.
+
+====Descriptive====
+[[Image:Centipede game.png|thumb|300px|right|A three stage Centipede Game]]
+The first use is to inform us about how actual human populations behave.  Some scholars believe that by finding the equilibria of games they can predict how actual human populations will behave when confronted with situations analogous to the game being studied.  This particular view of game theory has come under recent criticism.  First, it is criticized because the assumptions made by game theorists are often violated.  Game theorists may assume players always act rationally to maximize their wins (the [[Homo economicus]] model), but real humans often act either irrationally, or act rationally to maximize the wins of some larger group of people ([[altruism]]).  Game theorists respond by comparing their assumptions to those used in physics. Thus while their assumptions do not always hold, they can treat game theory as a reasonable scientific [[Idealization|ideal]] akin to the models used by [[physicist]]s.   However, additional criticism of this use of game theory has been levied because some experiments have demonstrated that individuals do not play equilibrium strategies.  For instance, in the [[Centipede game]], [[Guess 2/3 of the average]] game, and the [[Dictator game]], people regularly do not play Nash equilibria.   There is an ongoing debate regarding the importance of these experiments.<ref>Experimental work in game theory goes by many names, [[experimental economics]], [[behavioural economics]], and [[behavioural game theory]] are several.  For a recent discussion on this field see Camerer 2003.</ref>
+
+Alternatively, some authors claim that Nash equilibria do not provide predictions for human populations, but rather provide an explanation for why populations that play Nash equilibria remain in that state.  However, the question of how populations reach those points remains open.
+
+Some game theorists have turned to [[evolutionary game theory]] in order to resolve these worries.  These models presume either no rationality or [[bounded rationality]] on the part of players.  Despite the name, evolutionary game theory does not necessarily presume [[natural selection]] in the biological sense.  Evolutionary game theory includes both biological as well as cultural evolution and also models of individual learning (for example, [[fictitious play]] dynamics).
+
+====Prescriptive or Normative analysis====
+{{Payoff matrix | Name = The Prisoner's Dilemma
+                | 2L = Cooperate  | 2R = Defect     |
+1U = Cooperate  | UL = 2, 2       | UR = 0, 3       |
+1D = Defect     | DL = 3, 0       | DR = 1, 1       }}
+
+On the other hand, some scholars see game theory not as a predictive tool for the behavior of human beings, but as a suggestion for how people ought to behave.  Since a [[Nash equilibrium]] of a game constitutes one's [[best response]] to the actions of the other players, playing a strategy that is part of a Nash equilibrium seems appropriate.  However, this use for game theory has also come under criticism.  First, in some cases it is appropriate to play a non-equilibrium strategy if one expects others to play non-equilibrium strategies as well.  For an example, see [[Guess 2/3 of the average]].  
+
+Second, the [[Prisoner's Dilemma]] presents another potential counterexample.  In the Prisoner's Dilemma, each player pursuing his own self-interest leads both players to be worse off than had they not pursued their own self-interests.
+
+===Biology===
+{{Payoff matrix | Name = The hawk-dove game
+                | 2L = Hawk       | 2R = Dove       |
+1U = Hawk       | UL = v&minus;c, v&minus;c | UR = 2v, 0      |
+1D = Dove       | DL = 0, 2v      | DR = v, v       }}
+
+Unlike economics, the payoffs for games in [[biology]] are often interpreted as corresponding to [[fitness (biology)|fitness]].  In addition, the focus has been less on [[solution concept|equilibria]] that correspond to a notion of rationality, but rather on ones that would be maintained by [[evolution]]ary forces.  The most well-known equilibrium in biology is known as the [[Evolutionary stable strategy]] or (ESS), and was first introduced by [[John Maynard Smith]] (described in his 1982 book).  Although its initial motivation did not involve any of the mental requirements of the [[Nash equilibrium]], every ESS is a Nash equilibrium.
+
+In biology, game theory has been used to understand many different phenomena.  It was first used to explain the evolution (and stability) of the approximate 1:1 [[sex ratio]]s.  [[Ronald Fisher]] (1930) suggested that the 1:1 sex ratios are a result of evolutionary forces acting on individuals who could be seen as trying to maximize their number of grandchildren.
+
+Additionally, biologists have used [[evolutionary game theory]] and the ESS to explain the emergence of [[animal communication]] ([[John Maynard Smith|Maynard Smith]] & Harper, 2003).  The analysis of [[signaling games]] and [[cheap talk|other communication games]] has provided some insight into the evolution of communication among animals.  
+
+Finally, biologists have used the [[hawk-dove game]] (also known as chicken) to analyze fighting behavior and territoriality.
+
+===Computer science and logic===
+
+Game theory has come to play an increasingly important role in [[logic]] and in [[computer science]]. Several logical theories have a basis in [[game semantics]]. In addition, computer scientists have used games to model [[interactive computation]]s.
+
+Separately, game theory has played a role in [[online algorithm]]s. In particular, the [[k-server problem]], which has in the past been referred to as ''games with moving costs'' and ''request-answer games''.<ref name="BeBoKaTaWi">
+S. Ben-David, [[Allan Borodin|A. Borodin]], [[Richard Karp|R. Karp]], G. Tardos, A. Wigderson. [http://www.math.ias.edu/~avi/PUBLICATIONS/MYPAPERS/BORODIN/paper.pdf On the Power of Randomization in On-line Algorithms]. Algorithmica, Vol. 11, No. 1, pp. 2-14, 1994.
+Proc. of the 22nd STOC, pp. 379-388, May 1990.</ref>
+
+===Philosophy===
+{{Payoff matrix | Name = Stag hunt
+                | 2L = Stag       | 2R = Hare       |
+1U = Stag       | UL = 3, 3       | UR = 0, 2       |
+1D = Hare       | DL = 2, 0       | DR = 2, 2       }}
+Game theory has been put to several uses in [[philosophy]].  Responding to two papers by [[W.V.O. Quine]] (1960, 1967), [[David Kellogg Lewis|David Lewis]] (1969) used game theory to develop a philosophical account of [[Convention (norm)|convention]].  In so doing, he provided the first analysis of [[Common knowledge (logic)|common knowledge]] and employed it in analyzing play in [[coordination game]]s.  In addition, he first suggested that one can understand [[meaning]] in terms of [[signaling game]]s.  This later suggestion has been pursued by several philosophers since Lewis (Skyrms 1996, Grim et al. 2004).
+ 
+In [[ethics]], some authors have attempted to pursue the project, begun by [[Thomas Hobbes]], of deriving morality from self-interest.  Since games like the [[Prisoner's Dilemma]] present an apparent conflict between morality and self-interest, explaining why cooperation is required by self-interest is an important component of this project.  This general strategy is a component of the general [[social contract]] view in [[political philosophy]] (for examples, see Gauthier 1987 and Kavka 1986).<ref>For a more detailed discussion of the use of Game Theory in ethics see the Stanford Encyclopedia of Philosophy's entry [http://plato.stanford.edu/entries/game-ethics/ game theory and ethics].</ref>
+
+Finally, other authors have attempted to use [[evolutionary game theory]] in order to explain the emergence of human attitudes about morality and corresponding animal behaviors.  These authors look at several games including the Prisoner's Dilemma, [[Stag hunt]], and the [[Nash bargaining game]] as providing an explanation for the emergence of attitudes about morality (see, e.g., Skyrms 1996, 2004; Sober and Wilson 1999).
+
+==History of game theory==
+
+The first known discussion of game theory occurred in a letter written by [[James Waldegrave]] in 1713.  In this letter, Waldegrave provides a [[minimax]] [[mixed strategy]] solution to a two-person version of the card game [[le Her]].  It was not until the publication of [[Antoine Augustin Cournot]]'s ''Researches into the Mathematical Principles of the Theory of Wealth'' in 1838 that a general game theoretic analysis was pursued.  In this work Cournot considers a [[duopoly]] and presents a solution that is a restricted version of the [[Nash equilibrium]].
+
+Although Cournot's analysis is more general than Waldegrave's, game theory did not really exist as a unique field until [[John von Neumann]] published a series of papers in 1928. While the French mathematician [[Emile Borel|Borel]] did some earlier work on games, Von Neumann can rightfully be credited as the inventor of game theory. Von Neumann was a brilliant mathematician whose work was far-reaching from set theory to his calculations that were key to development of both the Atom and Hydrogen bombs and finally to his work developing computers. Von Neumann's work in game theory culminated in the 1944 book ''The Theory of Games and Economic Behavior'' by von Neumann and [[Oskar Morgenstern]]. This profound work contains the method for finding optimal solutions for two-person zero-sum games.  During this time period, work on game theory was primarily focused on [[cooperative game]] theory, which analyzes optimal strategies for groups of individuals, presuming that they can enforce agreements between them about proper strategies. 
+
+In 1950, the first discussion of the [[prisoner's dilemma]] appeared, and an experiment was undertaken on this game at the [[RAND corporation]]. Around this same time, [[John Forbes Nash|John Nash]] developed a definition of an "optimum" strategy for multiplayer games where no such optimum was previously defined, known as [[Nash equilibrium]]. This equilibrium is sufficiently general, allowing for the analysis of [[non-cooperative game]]s in addition to cooperative ones.
+
+Game theory experienced a flurry of activity in the 1950s, during which time the concepts of the [[core (economics)|core]], the [[extensive form game]], [[fictitious play]], [[repeated game]]s, and the [[Shapley value]] were developed. In addition, the first applications of Game theory to [[philosophy]] and [[political science]] occurred during this time.
+
+In 1965, [[Reinhard Selten]] introduced his [[solution concept]] of [[subgame perfect equilibrium|subgame perfect equilibria]], which further refined the [[Nash equilibrium]] (later he would introduce [[trembling hand perfection]] as well). In 1967, [[John Harsanyi]] developed the concepts of [[complete information]] and [[Bayesian game]]s.  Nash, Selten and Harsanyi became [[Nobel Prize in Economics|Economics Nobel Laureates]] in 1994 for their contributions to economic game theory.
+
+In the 1970s, game theory was extensively applied in [[biology]], largely as a result of the work of [[John Maynard Smith]] and his [[evolutionary stable strategy]].  In addition, the concepts of [[correlated equilibrium]], trembling hand perfection, and [[Common knowledge (logic)|common knowledge]]<ref>Although common knowledge was first discussed by the philosopher [[David Kellogg Lewis|David Lewis]] in his dissertation (and later book) ''Convention'' in the late 1960s, it was not widely considered by economists until [[Robert Aumann]]'s work in the 1970s.</ref> were introduced and analysed.  
+
+In 2005, game theorists [[Thomas Schelling]] and [[Robert Aumann]] followed Nash, Selten and Harsanyi as Nobel Laureates.  Schelling worked on dynamic models, early examples of [[evolutionary game theory]]. Aumann contributed more to the [[solution concept|equilibrium school]], developing an equilibrium coarsening correlated equilibrium and developing extensive analysis of the assumption of [[Common knowledge (logic)|common knowledge]].
+
+==Notes==
+<!--This article uses the Cite.php citation mechanism. If you would like more information on how to add references to this article, please see http://meta.wikimedia.org/wiki/Cite/Cite.php -->
+<div class="references-small" style="-moz-column-count:2; column-count:2;">
+<references/>
+</div>
+
+==References==
+{{wikibooks|Introduction to Game Theory}}
+{{Wikiversity|Game Theory}}
+;Textbooks and general reference texts
+
+* Bierman, H. S. and L. Fernandez: ''Game Theory with economic applications'', Addison-Wesley, 1998. (suitable for upper-level undergraduates)
+* Dutta, Prajit: ''Strategies and Games: Theory and Practice'', MIT Press, 2000, ISBN 0-262-04169-3 (suitable for undergraduate and business students)
+* Fudenberg, Drew and [[Jean Tirole]]: ''Game Theory'', MIT Press, 1991, ISBN 0-262-06141-4 (the definitive reference text)
+* Gibbons, Robert (1992): ''Game Theory for Applied Economists'', Princeton University Press ISBN 0-691-00395-5 (suitable for advanced undergraduates. Published in Europe by Harvester Wheatsheaf (London) with the title ''A primer in game theory'')
+* Gintis, Herbert (2000): ''Game Theory Evolving'',  Princeton University Press ISBN 0-691-00943-0
+* Hendricks, Vincent F. & Hansen, Pelle G., eds. (2007) ''Game Theory: 5 Questions'', New York, London: Automatic Press / VIP. Read snippets from interviews [http://www.gametheorists.com]. ISBN 87-991013-4-3 
+* Mas-Colell, Whinston and Green (1995): '' Microeconomic Theory'', 1995. Oxford University Press, 1995, ISBN 0-19-507340-1. (Presents game theory in formal way suitable for graduate level)
+* Miller, James (2003): ''Game Theory At Work,  McGraw-Hill ISBN 0-07-140020-6.  (Suitable for a general audience.) 
+* Myerson Roger B.: ''Game Theory: Analysis of Conflict'', Harvard University Press, Cambridge, 1991, ISBN 0-674-34116-3
+* Osborne, Martin J.: ''An Introduction to Game Theory'', Oxford University Press, New York, 2004, ISBN 0-19-512895-8 (undergraduate textbook)
+* Osborne, Martin J. and [[Ariel Rubinstein]]: ''A Course in Game Theory'', MIT Press, 1994, ISBN 0-262-65040-1 (a modern introduction at the graduate level)
+* Poundstone, William ''Prisoner's Dilemma: [[John von Neumann]], Game Theory and the Puzzle of the Bomb'', ISBN 0-385-41580-X (a general history of game theory and game theoreticians)
+* Rasmusen, Eric: ''Games and information'', 4th edition, Blackwell, 2006. Available online [http://www.rasmusen.org/GI/index.html].
+ 
+;Historically important texts
+
+* [[Ronald Fisher|Fisher, Ronald]] (1930) ''[[The Genetical Theory of Natural Selection]]'' Clarendon Press, Oxford.
+* [[R. Duncan Luce|Luce, Duncan]] and Howard Raiffa ''Games and Decisions: Introduction and Critical Survey'' Dover ISBN 0-486-65943-7
+* [[John Maynard Smith|Maynard Smith, John]] ''[[Evolution and the Theory of Games]]'', Cambridge University Press 1982
+* [[Oskar Morgenstern|Morgenstern, Oskar]] and [[John von Neumann]] (1947) ''The Theory of Games and Economic Behavior'' Princeton University Press
+* [[John Forbes Nash|Nash, John]] (1950)  "Equilibrium points in n-person games" ''Proceedings of the National Academy of the USA'' 36(1):48-49.
+
+;Other print references
+
+* Camerer, Colin  (2003) ''Behavioral Game Theory'' Princeton University Press ISBN 0-691-09039-4
+* [[David Gauthier|Gauthier, David]] (1987) ''Morals by Agreement'' Oxford University Press ISBN 0-19-824992-6
+* [http://www.forecastingprinciples.com/paperpdf/Greenforecastinginconflict.pdf Green, Kesten C. (2002).] Forecasting decisions in conflict situations: A comparison of game theory, role-playing, and unaided judgement. ''International Journal of Forecasting, 18'', 321-344.
+* [http://www.kestencgreen.com/gt_update_in_IJF21.pdf Green, Kesten C. (2005).] Game theory, simulated interaction, and unaided judgment for forecasting decisions in conflicts: Further evidence, ''International Journal of Forecasting, 21'', 463-472. 
+* Grim, Patrick, Trina Kokalis, Ali Alai-Tafti, Nicholas Kilb, and Paul St Denis (2004) "Making meaning happen."  ''Journal of Experimental & Theoretical Artificial Intelligence'' 16(4): 209-243.
+* Kaminski, Marek M. (2004) ''Games Prisoners Play''  Princeton University Press. ISBN 0-691-11721-7 http://webfiles.uci.edu/mkaminsk/www/book.html
+* Kavka, Gregory  (1986) ''Hobbesian Moral and Political Theory''  Princeton University Press. ISBN 0-691-02765-X
+* [[David Kellogg Lewis|Lewis, David]] (1969) ''Convention: A Philosophical Study''
+* [[John Maynard Smith|Maynard Smith]], J. and Harper, D. (2003) ''Animal Signals''. Oxford University Press. ISBN 0-19-852685-7
+* [[W.V.O. Quine|Quine, W.v.O]] (1967) "Truth by Convention" in ''Philosophica Essays for A.N. Whitehead'' Russel and Russel Publishers.  ISBN 0-8462-0970-5
+* Quine, W.v.O (1960) "Carnap and Logical Truth"  ''Synthese''   12(4):350-374.
+* Skyrms, Brian (1996)  ''Evolution of the Social Contract'' Cambridge University Press. ISBN 0-521-55583-3
+* Skyrms, Brian (2004) ''The Stag Hunt and the Evolution of Social Structure'' Cambridge University Press.  ISBN 0-521-53392-9.
+* Sober, Elliot and David Sloan Wilson (1999) ''Unto Others: The Evolution and Psychology of Unselfish Behavior''  Harvard University Press. ISBN 0-674-93047-9
+
+;Websites
+
+* Kesten Green's [http://conflictforecasting.com Conflict Forecasting] - See Papers for evidence on the accuracy of forecasts from game theory and other methods.
+* ''Game Theory: 5 Questions'', New York, London: Automatic Press / VIP. Read snippets from interviews [http://www.gametheorists.com]. 
+* Paul Walker: [http://www.econ.canterbury.ac.nz/personal_pages/paul_walker/gt/hist.htm History of Game Theory Page].
+* David Levine: [http://dklevine.com Game Theory. Papers, Lecture Notes and much more stuff.]
+* Alvin Roth: [http://www.economics.harvard.edu/~aroth/alroth.html Game Theory and Experimental Economics page] - Comprehensive list of links to game theory information on the Web
+* Mike Shor: [http://www.gametheory.net Game Theory .net] - Lecture notes, interactive illustrations and other information.
+* Jim Ratliff's [http://virtualperfection.com/gametheory/ Graduate Course in Game Theory] (lecture notes).
+* Valentin Robu's [http://homepages.cwi.nl/~robu/aamas/aamas_demo.html software tool] for simulation of bilateral negotiation (bargaining)
+* Don Ross: [http://plato.stanford.edu/entries/game-theory/ Review Of Game Theory] in the ''Stanford Encyclopedia of Philosophy''.
+* Bruno Verbeek and Christopher Morris: [http://plato.stanford.edu/entries/game-ethics/ Game Theory and Ethics]
+* Chris Yiu's [http://www.yiu.co.uk/gametheory/ Game Theory Lounge]
+* Elmer G. Wiens: [http://www.egwald.com/operationsresearch/gameintroduction.php Game Theory] - Introduction, worked examples, play online two-person zero-sum games.
+* Marek M. Kaminski: [http://webfiles.uci.edu/mkaminsk/www/courses.html Game Theory and Politics] - syllabuses and lecture notes for game theory and political science.
+* [http://www.socialcapitalgateway.org/eng-gametheory.htm Web sites on game theory and social interactions]
+
+{{Game_theory}}
+
+{{featured article}}
+[[Category:Game theory| ]]
+[[Category:Artificial intelligence]]
+[[Category:Psychological theories]]
+
+{{Link FA|he}}
+{{Link FA|es}}
+[[ar:<U+0646><U+0638><U+0631><U+064A><U+0629> <U+0627><U+0644><U+0623><U+0644><U+0639><U+0627><U+0628>]]
+[[bg:<U+0422><U+0435><U+043E><U+0440><U+0438><U+044F> <U+043D><U+0430> <U+0438><U+0433><U+0440><U+0438><U+0442><U+0435>]]
+[[ca:Teoria de jocs]]
+[[cs:Teorie her]]
+[[da:Spilteori]]
+[[pdc:Game Theory]]
+[[de:Spieltheorie]]
+[[el:<U+0398><U+03B5><U+03C9><U+03C1><U+03AF><U+03B1> <U+03C0><U+03B1><U+03B9><U+03B3><U+03BD><U+03AF><U+03C9><U+03BD>]]
+[[es:Teor<U+00ED>a de juegos]]
+[[eo:Ludoteorio]]
+[[eu:Joku-teoria]]
+[[fa:<U+0646><U+0638><U+0631><U+06CC><U+0647> <U+0628><U+0627><U+0632><U+06CC><U+200C><U+0647><U+0627>]]
+[[fr:Th<U+00E9>orie des jeux]]
+[[ko:<U+AC8C><U+C784> <U+C774><U+B860>]]
+[[io:Ludo-teorio]]
+[[id:Teori permainan]]
+[[is:Leikjafr<U+00E6><U+00F0>i]]
+[[it:Teoria dei giochi]]
+[[he:<U+05EA><U+05D5><U+05E8><U+05EA> <U+05D4><U+05DE><U+05E9><U+05D7><U+05E7><U+05D9><U+05DD>]]
+[[lt:<U+017D>aidim<U+0173> teorija]]
+[[hu:J<U+00E1>t<U+00E9>kelm<U+00E9>let]]
+[[nl:Speltheorie]]
+[[ja:<U+30B2><U+30FC><U+30E0><U+7406><U+8AD6>]]
+[[no:Spillteori]]
+[[nn:Spelteori]]
+[[pl:Teoria gier]]
+[[pt:Teoria dos jogos]]
+[[ru:<U+0422><U+0435><U+043E><U+0440><U+0438><U+044F> <U+0438><U+0433><U+0440>]]
+[[scn:Tiur<U+00EC>a di li joca]]
+[[simple:Game theory]]
+[[sk:Te<U+00F3>ria hier]]
+[[sr:<U+0422><U+0435><U+043E><U+0440><U+0438><U+0458><U+0430> <U+0438><U+0433><U+0430><U+0440><U+0430>]]
+[[fi:Peliteoria]]
+[[sv:Spelteori]]
+[[vi:L<U+00FD> thuy<U+1EBF>t tr<U+00F2> ch<U+01A1>i]]
+[[tr:Oyun Kuram<U+0131>]]
+[[uk:<U+0422><U+0435><U+043E><U+0440><U+0456><U+044F> <U+0456><U+0433><U+043E><U+0440>]]
+[[zh:<U+535A><U+5F08><U+8BBA>]]

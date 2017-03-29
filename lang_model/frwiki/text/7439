@@ -1,0 +1,517 @@
+Les '''classes de fonctionnement des amplificateurs électroniques''' sont un système de lettres utilisé pour caractériser les [[Amplificateur électronique|amplificateurs électroniques]]. Ce classement assigne une lettre pour chaque schéma d’amplificateur électronique.  
+
+Ces classes sont définies par la relation entre la forme du signal d’entrée et celle du signal de sortie et par la durée pendant laquelle un composant actif est utilisé lors de l’amplification d’un signal<ref>[http://www.universalis.fr/corpussearch.php {{Citation|Amplificateurs}}], Encyclopædia Universalis, 2008. Sur le site''universalis.fr'', consulté le 18 novembre 2008.</ref>. Cette durée est mesurée en degrés ou en pourcentage d’un [[signal sinusoïdal]] test appliqué à l’entrée de l’amplificateur, 100 % ou 360 degrés représentant un [[Phénomène périodique|cycle complet]]<ref name=Supelec>Pascal Bareau, {{Citation|Amplificateurs}}, ''Techniques de l'ingénieur&nbsp;–&nbsp;Électronique'', éd. Techniques de l'ingénieur, Paris, novembre 2001 {{ISSN|0399-4120}}, vol.&nbsp;1, {{numéro}}E&nbsp;310, {{p.}}E-310-1 à E-310-12, chap.&nbsp;4 : {{Citation|Classes de fonctionnement}}, {{p.}}7-9. {{présentation en ligne|lien=http://cat.inist.fr/?aModele=afficheN&cpsidt=15989643|texte=présentation en ligne sur le site du CNRS, ''cat.inist.fr''}}</ref>{{,}}<ref name=DSu>{{en}}{{pdf}} David Su, [http://www.ewh.ieee.org/r6/scv/ssc/DSu_2002.pdf {{Citation étrangère|lang=en|CMOS RF Power Amplifiers: Non Linear, Linear, Linearized}}], Atheros Communications, Sunnyvale, California, in ''IEEE Local Chapter'', 2002, {{p.}}4-5-6/41. Sur le site ''ewh.ieee.org'', consulté le 18 novembre 2008.</ref>.
+
+Il arrive que l'on décrive un amplificateur contenant plusieurs [[wikt:étage|étages]] amplificateurs de classes différentes par une seule classe. Dans ce cas, cette classe décrit uniquement le fonctionnement de l'étage de sortie de l’amplificateur.
+
+==Introduction==
+À l'origine, les classes d'amplificateurs permettaient de connaître la façon dont était polarisé le [[tube électronique]] servant à amplifier un signal (classe A, B, AB et C). Par la suite, cette façon de distinguer la polarisation a été reprise pour les [[transistor]]s. Avec l'arrivée des amplificateurs à découpage, d'autres classes ont été ajoutées, qui permettent d'inclure les solutions techniques modernes utilisées pour amplifier un signal (classe D, E, etc.)<ref>{{Ouvrage|
+titre=High-Power Audio Amplifier Construction Manual|
+auteur=G. Randy Slone|
+passage=143 : « ''Trade Secret'' »|
+éditeur=Mcgraw-Hill|
+langue=anglais|
+année=1999|
+isbn=0071341196|
+isbn2=978-0071341196|
+}}
+</ref>.
+
+[[Image:Caractéristiques idéalisées d'un transistor bipolaire.svg|thumb|Caractéristiques idéalisées d'un transistor bipolaire.]]
+
+La nécessité de polariser un composant amplificateur (tube ou transistor) vient de leur forte non-linéarité ainsi que de leur unilatéralité en courant. Par exemple, un transistor bipolaire ne commence à conduire qu'au-dessus d'une tension base-émetteur de seuil (voir la caractéristique <math>I_b = f(V_{be})</math> sur la figure ci-contre). Pour que le transistor amplifie (la courbe <math>I_c = \beta I_b</math>), il faut donc lui imposer une tension supérieure à cette tension de seuil. La tension de sortie est fixée par la droite de charge <math>I_c=f(V_{ce})</math> qui n'est pas représentée sur le graphique ci-contre car dépendante du montage utilisé.
+
+Afin de pallier ces défauts, on « polarise » le composant amplificateur. La polarisation fixe son état au repos (lorsque l'on ne lui applique aucun signal). Le choix de ce point de repos influence beaucoup le comportement du composant lors de son fonctionnement. Les classes d'amplification permettent de connaître la façon dont il a été polarisé et donc d'avoir des informations sur les caractéristiques de l'amplificateur global.
+
+[[Image:Classes of amplifier operation.svg|thumb|Vue des zones où le signal est utilisé pour les différentes classes d'amplificateurs.]]
+Pour les amplificateurs linéaires, chaque classe définit la proportion du signal d’entrée qui est utilisée par chaque composant actif pour arriver au signal amplifié (voir figure ci-contre), ce qui est aussi donné par l’angle de conduction ''a''<ref>Dans le cas des classes AB et C, l'angle de conduction dépend de l'amplitude du signal d'entrée</ref> :
+; Classe A : La totalité du signal d’entrée (100 %)<ref name=Supelec/>{{,}}<ref name=DSu/> est utilisée (''a'' = 360°).
+; Classe B : La moitié du signal (50 %)<ref name=Supelec/>{{,}}<ref name=DSu/> est utilisée (''a'' = 180°).
+; Classe AB : Plus de la moitié mais pas la totalité du signal (50–100 %)<ref name=Supelec/>{{,}}<ref name=DSu/> est utilisée (180° < ''a'' < 360°).
+; Classe C : Moins de la moitié (0–50 %)<ref name=Supelec/>{{,}}<ref name=DSu/> du signal est utilisée (0 < ''a'' < 180°).
+
+Pour les amplificateurs « à découpage », le composant amplificateur est utilisé en commutation, il est soit bloqué (aucun courant ne le traverse), soit saturé (la tension à ses bornes est quasiment nulle). Son angle de conduction est donc nul. Pour les amplificateurs à découpage, les classes servent à distinguer les technologies utilisées et non plus l'angle de conduction.
+
+[[Image:Émetteur commun.svg|thumb|Schéma d'un montage [[émetteur commun]].]]
+Dans ce qui suit, afin de simplifier les illustrations, un [[transistor bipolaire]] est utilisé comme composant amplificateur, mais il peut être remplacé par un [[transistor à effet de champ]] ou un [[tube électronique|tube]]. Le montage utilisé ici pour illustrer les classes linéaires est un montage dit « [[émetteur commun]] »<ref>Si on utilise un transistor à effet de champ, on parle alors de [[source commune]]</ref> (voir figure ci-contre). Toujours pour des raisons de simplification, il sera représenté sans son circuit de polarisation (les résistances R<sub>1</sub> et R<sub>2</sub>) et ses condensateurs de liaison C<sub>1</sub> et C<sub>2</sub>. Enfin, la fréquence du signal appliquée en entrée sera supposée suffisamment grande pour considérer que le condensateur de découplage C<sub>3</sub> « court-circuite » la résistance R<sub>4</sub>.
+
+Les caractéristiques du transistor bipolaire utilisé pour illustrer l'article sont des caractéristiques idéalisées. Les caractéristiques du transistor sont représentées en bleu, les différents signaux en rouge et la droite de charge du montage en vert. En pratique, les composants actifs ne sont pas aussi linéaires et ces non-linéarités sont à l’origine de distorsions dans le signal de sortie. Afin de réduire ces distorsions, on a généralement recours à différentes formes de [[contre-réaction]].
+
+== Classe A ==
+Dans un amplificateur de classe A, le ou les composants actifs sont toujours en conduction. Ces amplificateurs amplifient tout le signal d’entrée, limitant ainsi les distorsions sur le signal de sortie. Ils n’ont pas un bon [[rendement]] : ils dissipent une puissance constante quelle que soit l'amplitude du signal d'entrée. Ainsi, ces amplificateurs atteignent leur rendement maximum lorsque l'amplitude du signal de sortie est aux limites de ce que peut fournir l'amplificateur. Le rendement maximum d'un amplificateur de classe A dépend de la topologie du montage utilisé : le rendement maximum théorique de ces amplificateurs est de 50 %<ref name=Supelec/>{{,}}<ref name=DSu/> dans le cas d'une liaison par transformateur, de 25 % dans le cas d'une liaison directe et entre 6 % et 25 % pour une liaison capacitive<ref>{{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+passage=40 : « Inconvénient de la classe A »|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, ISBN: 2-7042-1180-9|
+}}</ref>{{,}}<ref>{{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+Chapitre= 4.1 : « Amplification classe A »|
+passage=220-232 :« Configurations rencontrées »|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, ISBN: 2-7042-1180-9|
+}}</ref>{{,}}<ref name="Audio Power Amplifier Design Handbook-Class-A configurations and efficiency">{{Ouvrage|
+titre=Audio Power Amplifier Design Handbook|
+passage= 260-263 : « ''Class-A configurations and efficiency'' »|
+auteur=Douglas Self|
+éditeur=Newnes|
+langue=anglais|
+année=2006|
+isbn=0750680725|
+}}</ref>.
+
+{| style="border: 1px black solid" align="center" width="500 px"
+| [[Image:Electronic Amplifier Class A - bipolar.svg|center|200px|Amplificateur de classe A.]]
+| [[Image:Classe A-bipolaire.svg|center|200px|Fonctionnement en classe A pour un transistor bipolaire. ]]
+|-
+| align="center"| <small>Amplificateur de classe A.</small>
+| align="center"| <small>Fonctionnement en classe A<br>pour un transistor bipolaire.<br>En vert la droite de charge.</small>
+|}
+
+
+Pour un montage à émetteur commun, une polarisation en classe A signifie que les tensions de repos <math>V_{be_0}</math> et <math>V_{ce_0}</math> ont été choisies de façon à ce que l'amplificateur ne sature pas (n'écrête pas le signal) lorsqu'on lui applique un signal d'entrée d'amplitude maximale. Le point de polarisation est généralement choisi plus important que le strict minimum afin de travailler dans la partie la plus linéaire possible des caractéristiques du composant amplificateur<ref>{{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+Chapitre= 1.4.2.3 : « Classe A réelle »|
+passage=47|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, ISBN: 2-7042-1180-9|
+}}</ref>.
+
+Un montage à émetteur commun est un montage à liaison capacitive. En classe A, la puissance qu'il absorbe est constante et vaut :
+:<math>P_{abs}=V_{cc}*I_{C0}</math>
+Avec <math>V_{cc}</math> la tension d'alimentation et <math>I_{C0}</math> le courant de polarisation. La puissance fournie à la charge dépend de l'amplitude du signal de sortie :
+:<math>P_{s}=V_{S_{eff}}*I_{S_{eff}}</math>
+Avec <math>V_{S_{eff}}</math> la valeur efficace de la tension de sortie et <math>I_{S_{eff}}</math> la valeur efficace du courant de sortie. La puissance maximale dont on peut disposer en sortie est obtenue lorsque le courant et la tension de sortie sont aux limites de ce que l'amplificateur peut fournir. L'amplitude crête-crête de la tension de sortie ne peut dépasser <math>V_{cc}</math> tandis que celle du courant est limitée par <math>I_{C0}</math><ref>Si le courant demandé dépasse <math>I_{C0}</math>, l'amplificateur fonctionne alors en classe AB</ref>.
+:<math>P_{s_{max}}=\frac{V_{cc}}{2*\sqrt{2}}*\frac{I_{C0}}{\sqrt{2}}=\frac{V_{cc}*I_{C0}}{4}</math>
+Le calcul du rendement maximum nous donne :
+:<math>\eta_{max}=\frac{P_{s_{max}}}{P_{abs}}=\frac{\frac{V_{cc}*I_{C0}}{4}}{V_{cc}*I_{C0}}=\frac{1}{4}=25\%</math>
+
+[[Image:Émetteur commun.svg|thumb|200px|Schéma d'un montage émetteur commun.]]
+Ce calcul n'est valable que si la droite de charge statique et la droite de charge dynamique sont confondues. En réalité, lors du régime dynamique, la charge se trouve reliée en parallèle des résistances d'émetteur et de collecteur (<math>R_3</math> et <math>R_4</math> sur la figure ci-contre) augmentant ainsi la pente de la droite de charge dynamique par rapport à celle de la droite de charge statique. Avec un tel montage, l'amplitude crête-crête est forcément inférieure à <math>V_{cc}</math> diminuant ainsi le rendement maximum du montage.
+
+En raison de leur faible rendement, les amplificateurs de classe A sont généralement utilisés pour faire des amplificateurs de petite puissance<ref>{{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+passage=40 : « Domaines d'applications »|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, ISBN: 2-7042-1180-9|
+}}</ref>. Pour un amplificateur classe A de forte puissance, les pertes énergétiques deviennent très importantes. Pour chaque [[watt]] délivré à la charge, l’amplificateur dissipera, au mieux, un autre watt. Les classe A de puissance importante ont besoin d’alimentations de très forte puissance mais aussi de larges [[dissipateur thermique|dissipateurs thermiques]] afin de d'évacuer l’énergie perdue.
+
+Les amplificateurs de classe A sont généralement utilisés pour réaliser des étages préamplificateurs, des amplificateurs audio, des amplificateurs hautes fréquences à large bande ainsi que des oscillateurs hautes fréquences<ref name="Girard-p219-Classe A et C">{{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+passage=219 : « Classe A et C »|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, ISBN: 2-7042-1180-9|
+}}</ref>. Bien que la majorité des amplificateurs audio utilisent un étage de sortie en classe B<ref name="Audio Power Amplifier Design Handbook-Classe B"/>, certains [[audiophile]]s considèrent que ce sont les amplificateurs de classe A qui donnent la meilleure qualité sonore, de par leur linéarité.
+
+== Classe B ==
+Les amplificateurs de classe B n’amplifient que la moitié du signal d’entrée<ref name=Supelec/>{{,}}<ref name=DSu/>. Ils créent donc beaucoup de distorsion, mais leur rendement est grandement amélioré. Le rendement maximum théorique d'un amplificateur de classe B est de 78,5 %<ref name=DSu/>, mais le rendement des amplificateurs réels ne dépasse pas les 70 %<ref>{{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+passage=41 : « Avantage de la classe B »|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, ISBN: 2-7042-1180-9|
+}}</ref>. Les amplificateurs de classe B sont généralement utilisés pour réaliser des amplificateurs de basse et moyenne fréquence<ref>{{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+passage=83 : « Amplificateurs classe B (montage push-pull) »|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, ISBN: 2-7042-1180-9|
+}}</ref>. Dans ce cas, ils sont utilisés dans des configurations dites « ''push-pull'' »<ref name=Supelec/>. Les montages ''push-pull'' disposent de deux transistors : un pour amplifier la partie négative du signal et un second pour sa partie positive. Chaque transistor fonctionne en « classe B ». La totalité du signal étant amplifiée, les montages ''push-pull'' possèdent un taux de distorsion plus faible que les amplificateurs classe B « de base » tout en gardant un bon rendement.
+
+{| style="border: 1px black solid" align="center" width="500 px"
+| [[Image:Electronic Amplifier Class B - bipolar.svg|center|200px|Amplificateur de classe B.]]
+| [[Image:Classe B-bipolaire.svg|center|200px|Fonctionnement en classe B pour un transistor bipolaire.]]
+|-
+| align="center"| <small>Amplificateur de classe B.</small>
+| align="center"| <small>Fonctionnement en classe B<br>pour un transistor bipolaire.</small>
+|}
+
+Pour un montage à émetteur commun, un polarisation en classe B signifie que la tension de repos <math>V_{be_0}</math> a été choisie égale à la tension de seuil de conduction du transistor (voir figure ci-contre). Ainsi, tout signal négatif apposé à la base du transistor l'amènera en dessous de son seuil de conduction et ne sera pas amplifié. ''A contrario'', tout signal positif amènera le transistor dans la zone linéaire de sa caractéristique <math>I_b=f(V_{be})</math> et sera donc amplifié.
+
+Pour un montage à émetteur commun polarisé en classe B et dont tous les composants sont considérés comme parfaits, la puissance fournie à la charge est :
+:<math>P_s=\frac{1}{2\pi}\int_0^\pi \frac{V_s(\theta)^2}{R_l}\mathrm d\theta=\frac{1}{2\pi} \frac{V_s^2}{R_l} \int_0^\pi \sin(\theta)^2\mathrm d\theta</math>
+
+:<math>P_s=\frac{V_s^2}{4 R_l}</math>
+La puissance absorbée se calcule de la façon suivante :
+:<math>P_\text{abs}=\frac{1}{2 \pi}\int_0^\pi V_{cc} i(\theta)\mathrm d\theta = \frac{1}{2 \pi} V_{cc} \int_0^\pi \frac{V_s}{R} \sin(\theta)\mathrm d\theta </math>
+
+:<math>P_\text{abs}=\frac{V_{cc} V_s}{\pi R_l}</math>
+Le rendement s'exprime de la façon suivante :
+:<math>\eta=\frac{P_s}{P_\text{abs}}=\frac{\pi V_s}{4 V_{cc}}</math>
+Le rendement est maximum quand <math>V_s</math> vaut <math>V_{cc}</math> :
+:<math>\eta_\text{max}=\frac{\pi}{4}=78,5 \%</math>
+
+[[Image:Electronic Amplifier Push-pull.png|thumb|right|Amplificateur de classe B ''push-pull''.]]
+Les montages ''push-pull'' peuvent souffrir d’une discontinuité de signal à l’endroit où les deux moitiés de signal issues de chacun des transistors se rejoignent. Ce phénomène s’appelle la [[distorsion de croisement]]. 
+
+On retrouve des amplificateurs de classe B de type ''push-pull'' dans l'étage de sortie des amplificateurs continu utilisés dans : les boucles d'asservissement linéaire, les générateurs de fonction, les amplificateurs en circuits intégrés<ref>{{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+passage=41-42 : « Domaines d'applications »|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, ISBN: 2-7042-1180-9|
+}}</ref>, ainsi que dans l'étage de sortie de la majorité des amplificateurs audio<ref name="Audio Power Amplifier Design Handbook-Classe B">{{Ouvrage|
+titre=Audio Power Amplifier Design Handbook|
+passage= 36 : « ''Class B'' »|
+auteur=Douglas Self|
+éditeur=Newnes|
+langue=anglais|
+année=2006|
+isbn=0750680725|
+}}</ref>.
+{{clr}}
+
+== Classe AB ==
+La classe AB est un compromis entre la classe A et la classe B<ref name=Supelec/> : le point de repos de l'amplificateur se situe entre celui d'un amplificateur de classe A et celui d'un amplificateur de classe B. Une telle méthode de polarisation permet à la classe AB de fonctionner en classe A pour les signaux de faible amplitude puis de se comporter comme un amplificateur de classe B pour les signaux de forte amplitude. Tout comme pour les amplificateurs de classe B, les amplificateurs de classe AB sont souvent utilisés en configuration ''push-pull'' afin de diminuer le taux de distorsion lors de l'amplification de signaux de forte amplitude.
+
+{| style="border: 1px black solid" align="center" width="650 px"
+| [[Image:Electronic Amplifier Class AB - bipolar.svg|center|200px|Amplificateur de classe AB.]]
+| [[Image:Classe AB-bipolaire.svg|200px|center|Fonctionnement en classe AB pour un transistor bipolaire.]]
+| [[Image:Class-AB common-emitter anim.gif|200px|center|Influence de l'amplitude sur la sortie pour un émetteur commun de classe AB.]]
+|-
+| align="center"| <small>Amplificateur de classe AB.</small>
+| align="center"| <small>Fonctionnement en classe AB<br>pour un transistor bipolaire.</small>
+| align="center"| <small>Influence de l'amplitude sur la sortie pour un émetteur commun de classe AB.<br />Cliquer pour voir l'animation.</small>
+|}
+
+Le principal inconvénient des ''push-pull''  de classe AB survient lorsque l'on amplifie des signaux de forte amplitude : une partie du signal est amplifiée par deux transistors (zone de fonctionnement en classe A)  tandis que le reste du signal est amplifié par un seul transistor (zone de fonctionnement en classe B). Ainsi, le gain en courant du montage n'est pas constant au cours d'un « cycle » d'amplification<ref>{{Ouvrage|
+titre=High-Power Audio Amplifier Construction Manual|
+auteur=G. Randy Slone|
+chapitre = 6 : « ''Output stages: configurations, classes, and devices types'' »|
+passage =  14-146: « ''Class AB'' »|
+éditeur=Mcgraw-Hill|
+langue=anglais|
+année=1999|
+isbn=0071341196|
+isbn2=978-0071341196|
+}}</ref>. Cette variation du gain en courant engendre des distorsions hautes fréquences lors du passage entre la zone où deux composants amplifient le signal et celle où un seul composant l'amplifie<ref>{{Ouvrage|
+titre=Audio Power Amplifier Design Handbook|
+passage= 35-36 : « ''Class-AB'' »|
+auteur=Douglas Self|
+éditeur=Newnes|
+langue=anglais|
+année=2006|
+isbn=0750680725|
+}}</ref>.
+
+Pour les amplificateurs à tubes, on rajoute parfois deux sous-classes à la classe AB : la classe AB1, sans apparition de courant grille et la classe AB2 avec courant grille. Ces deux sous-classes n’ont de sens que pour les amplificateurs à tubes. En effet, il existe toujours un courant de base dans un transistor bipolaire, et toute variation de tension sur la grille d’un transistor à effet de champ nécessitera un courant afin de charger ou décharger la capacité grille-source inhérente à cette technologie de transistor.
+
+Il peut exister un phénomène d'emballement thermique lors de l'utilisation d'un montage ''push-pull'' classe AB à base de transistors bipolaires<Ref>{{fr}}[http://www.chireux.fr/mp/cours/electronique/Chap2.pdf Marc Corevon - Cours sur les amplificateurs de puissance §2.6.3]</Ref>. L'ajout d'une résistance Re en série dans l'émetteur de chaque transistor de l'étage final et la stabilisation du courant de repos en fonction de la température sont des solutions à ce problème.
+
+== Classe C ==
+Les amplificateurs de classe C amplifient moins de 50 %<ref name=Supelec/>{{,}}<ref name=DSu/> du signal d’entrée. Le [[Total Harmonic Distortion|taux de distorsion]] est important<ref name=Supelec/>, mais leur rendement maximum théorique est compris entre 78,5 %<ref>Dans ce cas, l'angle de conduction est de 180° et l'amplificateur se comporte comme un classe B</ref> et 100 %<ref>Dans ce cas, l'angle de conduction est nul et l'amplificateur n'amplifie rien</ref> suivant l'angle de conduction de l'amplificateur.
+
+{| style="border: 1px black solid" align="center" width="650 px"
+| [[Image:Electronic Amplifier Class C - bipolar.svg|center|200px|Amplificateur de classe C.]]
+| [[Image:Classe C-bipolaire.svg|center|200px|Fonctionnement en classe C pour un transistor bipolaire.]]
+| [[Image:Class-C common-emitter anim.gif|200px|center|Influence de l'amplitude sur la sortie pour un émetteur commun de classe C.]]
+|-
+| align="center"| <small>Amplificateur de classe C.</small>
+| align="center"| <small>Fonctionnement en classe C<br>pour un transistor bipolaire.</small>
+| align="center"| <small>Influence de l'amplitude sur la sortie pour un émetteur commun de classe C.<br />Cliquer pour voir l'animation.</small>
+|}
+
+Pour un montage à émetteur commun, un polarisation en classe C signifie que la tension de repos <math>V_{be_0}</math> a été choisie inférieure à la tension seuil de conduction du transistor. Ainsi, le signal ne sera pas amplifié tant qu'il ne porte pas la tension base-émetteur du transistor au-dessus de sa tension limite de conduction (voir figure ci-dessus).
+
+Les amplificateurs de classe C sont plus couramment utilisés dans les [[Émetteur radio|émetteurs radio]], où le taux de distorsion peut être réduit grâce à l’utilisation d’une charge accordée dans l’amplificateur. Le signal d’entrée est utilisé pour faire commuter le composant actif de passant à bloqué. Cette tension pulsée crée un courant à travers un [[Circuit LC|circuit accordé]]. Le circuit accordé ne résonne que pour une gamme de fréquences, éliminant ainsi les fréquences non désirées. Le signal désiré (une sinusoïde) est alors transmis à la charge accordée. Si la gamme de fréquences à amplifier n’est pas très importante, ce genre de système fonctionne correctement. Les derniers harmoniques résiduels peuvent être éliminés à l’aide d’un [[Filtre (électronique)|filtre]].
+
+Les amplificateurs de classe C sont utilisés pour réaliser des amplificateurs ultrasoniques, hautes fréquences sélectifs<ref name=Supelec/> et micro-ondes ainsi que des oscillateurs hautes fréquences<ref name="Girard-p219-Classe A et C"/>. Les amplificateurs de classe C sont aussi utilisés pour réaliser des multiplicateurs de fréquence<ref>{{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+chap= 1.4.1.4 Classe C théorique|
+passage=43 : « Domaines d'applications »|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, ISBN: 2-7042-1180-9|
+}}</ref>{{,}}<ref>Dans le cas d'un multiplicateur de fréquence, le filtre sélectif de sortie est accordé sur un harmonique et non sur le fondamental.</ref>.
+
+== Classe D ==
+{{Article détaillé|Hacheur|Onduleur|Modulation de largeur d'impulsion}}
+Les amplificateurs de classe D sont couramment utilisés pour le contrôle des [[Machine électrique|moteurs électriques]] (on parle alors de [[hacheur]] ou d'[[onduleur]]). Ils sont aussi utilisés comme amplificateurs audio.
+
+Un amplificateur de classe D est un amplificateur dont tous les composants de puissance sont utilisés comme des interrupteurs : les composants amplificateurs sont soit bloqués (aucun courant ne les traverse) soit saturés (la tension à leurs bornes est quasi nulle). Les premiers amplificateurs de classe D datent du début des années 1950<ref name="histo-classe D-Girard">{{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+chap = « 3 : Amplificateurs à découpage (classe D) » |
+passage=187-188 : « Historique de la classe D »|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, ISBN: 2-7042-1180-9|
+}}</ref>.
+
+De tels étages de sortie sont utilisés, par exemple, dans les [[Générateur de Marx|générateurs d’impulsions]]. Cependant, la plupart du temps, ce terme s’applique à des amplificateurs qui doivent reproduire des signaux dont la bande passante est plus faible que la fréquence de commutation. C'est cette obligation d'utiliser une fréquence de commutation élevée afin d'obtenir un taux de distorsion acceptable qui a bloqué le développement des amplificateurs de classe D pendant plus de vingt ans<ref name="histo-classe D-Girard"/>. Leur développement s'est fait en deux étapes : une première à la fin des années 1960 avec l'apparition des transistors de puissance à effet de champ puis une seconde dans les années 1980 avec l'introduction sur le marché de [[Circuit intégré|circuits intégrés]] dédiés à la réalisation d'amplificateurs de classe D<ref name="histo-classe D-Girard"/>.
+
+Les amplificateurs de classe D utilisent la [[modulation de largeur d'impulsion]], la modulation de densité d'impulsions ou des formes plus avancées de modulation comme la modulation [[Convertisseur analogique-numérique#Convertisseur Sigma Delta|Sigma delta]]<ref>Voir, par exemple, l’amplificateur audio AD1990 de Analog Devices</ref>. Le signal d’entrée est converti en une série d’impulsions dont la valeur moyenne est directement proportionnelle à l’amplitude du signal à l’instant considéré.
+
+Afin de respecter le [[Théorème d'échantillonnage de Nyquist-Shannon|théorème de Shannon]], la fréquence théorique minimum des impulsions est de deux fois la plus haute fréquence que l’on veut reproduire. En pratique, afin de diminuer le taux de distorsion ou les harmoniques de courants, la fréquence de découpage fait plus du double de la plus haute fréquence que l’on veut reproduire. Par exemple, dans les amplificateurs audio, la fréquence utilisée se situe entre {{unité|50|kHz}} et {{unité|1|MHz}} suivant les amplificateurs<ref>{{Ouvrage|
+titre=Audio Power Amplifier Design Handbook|
+chapitre = « ''Class-D amplifiers'' »|
+passage= 320-321 : « ''Basic principles'' »|
+auteur=Douglas Self|
+éditeur=Newnes|
+langue=anglais|
+année=2006|
+isbn=0750680725|
+}}</ref>. Le spectre de la sortie d’un amplificateur de classe D contient des fréquences non désirées (par exemple, la fréquence de découpage et ses [[harmonique]]s) qui doivent être éliminées par [[Filtre (électronique)|filtrage]]. Ce filtrage peut être réalisé soit par la charge elle-même<ref>Comme, par exemple, les moteurs électriques</ref>, soit par un filtre passe-bas passif. Le choix de la fréquence de découpage est un compromis : son augmentation permet de simplifier le filtrage des harmoniques dus au découpage en les éloignant de la fréquence maximum que l'on veut restituer. Par contre, l'augmentation de la fréquence de découpage augmente aussi les pertes par commutations qui ont lieu à chaque changement d'état des composants utilisés comme interrupteurs diminuant ainsi le rendement de l'amplificateur.
+
+{| style="border: 1px black solid" align="center" width="650 px"
+| [[Image:Principe classe D.svg|center|200px|Schéma de principe d'un amplificateur audio de classe D.]]
+| [[Image:Pwm signal.png|center|200px|Tension de sortie « sinusoïdale » non filtrée d'un onduleur à trois niveaux.]]
+| [[Image:PWM 3L.gif|200px|center|Influence de l'amplitude sur la sortie pour un amplificateur de classe D à trois niveaux.]]
+|-
+| align="center"| <small>Schéma de principe d'un amplificateur audio de classe D.</small>
+| align="center"| <small>Tension de sortie « sinusoïdale » non filtrée d'un onduleur à trois niveaux.</small>
+| align="center"| <small>Influence de l'amplitude sur la sortie pour un amplificateur de classe D à trois niveaux.<br />Cliquer pour voir l'animation.</small>
+|}
+
+Le principal avantage des amplificateurs de classe D est leur rendement. Les impulsions de sortie étant d’amplitude constante, les composants amplificateurs<ref>En général des [[MOSFET]]s, mais les [[Tube électronique|tubes]] ou les [[transistor bipolaire|transistors bipolaires]] sont aussi utilisés</ref> sont utilisés comme des interrupteurs : ils travaillent en mode bloqué (aucun courant ne les traverse) ou saturé (la tension à leurs bornes est quasi nulle) plutôt qu’en mode linéaire. La puissance instantanée dissipée dans un transistor étant le produit du courant par la tension, elle est quasiment nulle lors de ces états. Le peu de pertes engendrées par ce type d’amplificateur permet d’utiliser des dissipateurs et des alimentations plus petits ou d'augmenter la puissance de sortie à dissipateurs et alimentations constants. Comme dans le cas des autres classes de fonctionnement, le rendement d'un amplificateur de classe D augmente avec la puissance demandée en sortie avec cependant la particularité d'augmenter rapidement pour atteindre 80-{{unité|90|%}} sur une large plage de puissance<ref>{{Ouvrage|
+titre=Audio Power Amplifier Design Handbook|
+chapitre = « ''Class-D amplifiers'' »|
+passage= 326-327 : « ''Efficiency'' »|
+auteur=Douglas Self|
+éditeur=Newnes|
+langue=anglais|
+année=2006|
+isbn=0750680725|
+}}</ref>.
+
+''Note : La lettre ''D'' est utilisée pour désigner ce type d’amplificateur car c’est la lettre qui vient après ''C'', cela n’est pas une abréviation de « [[numérique|digital]] ». Les amplificateurs de classe ''D'' et ''E'' sont parfois qualifiés, à tort, de numériques. Cette confusion vient de la forme d’onde de la sortie qui ressemble à un train d’impulsions numériques. En fait, ces amplificateurs fonctionnent sur le principe de la [[modulation de largeur d'impulsion]]. Un signal de sortie numérique serait en [[modulation d'impulsion codée|modulation d’impulsion codée]].''
+
+== Classe E ==
+Les amplificateurs de classe E sont des amplificateurs à haut rendement. Ils sont généralement utilisés pour amplifier les [[Onde radio|fréquences radio]]. Le principe des amplificateurs de classe E a été publié pour la première fois en 1975 par Nathan O. Sokal et [[Alan Sokal|Alan D. Sokal]]<ref>N. O. Sokal and A. D. Sokal, « ''Class E — A New Class of High-Efficiency Tuned Single-Ended Switching Power Amplifiers'' », ''IEEE Journal of Solid-State Circuits'', vol. SC-10, {{p.}}168-176, June 1975. HVK</ref>{{,}}<ref>N. O. Sokal and A. D. Sokal, « ''High-efficiency tuned switching power amplifier'' »,{{US patent|3919656}}, November 11, 1975</ref>. 
+
+[[Image:Perfect class E switch waveforms.svg|thumb|Formes d'ondes recherchées dans l'interrupteur d'un amplificateur de classe E.]]
+Afin de limiter les pertes par commutations, les amplificateurs de classe E sont conçus pour que le changement d'état du transistor se fasse en l'absence de courant. Entre deux commutations, le transistor est soit bloqué (le courant qui le traverse est nul), soit saturé (la tension à ses bornes est quasi nulle). Les pertes dans un transistor étant dues au produit de la tension à ses bornes par le courant le traversant, l'absence de courant lorsque la tension est non nulle, et vice versa permet de minimiser les pertes. Le rendement théorique d’un amplificateur de classe E utilisant des composants parfaits est de 100 %<ref name=DSu/>. Cependant, les circuits réels souffrent de nombreuses imperfections les empêchant d’atteindre un tel rendement. Ces imperfections incluent les temps de commutation finis, la résistance interne et la tension de saturation non nulle du transistor, ainsi que les pertes dans les composants passifs utilisés à haute fréquence. En pratique, les amplificateurs de classe E sont utilisés pour des fréquences allant de {{unité|3|MHz}}<ref>En deçà de {{unité|3|MHz}}, les amplificateurs de classe D obtiennent de plus forts rendements</ref> à {{unité|10|GHz}} et permettent d'obtenir des rendements de l'ordre de {{unité|74|%}} à {{unité|10|GHz}}<ref name="QEX-2001">{{pdf}} {{en}} Nathan O. Sokal, [http://www.arrl.org/tis/info/pdf/010102qex009.pdf ''Class-E RF Power Amplifiers''], ''QEX'', janvier/février 2001</ref>. En général, le [[rapport cyclique]] est de 50 %<ref name=DSu/>.
+
+Cette classe d’amplificateurs est uniquement utilisée pour la gamme de fréquences radioélectriques, où l’analyse de l’amplificateur se fait dans le domaine fréquentiel et non dans le domaine tension/courant.
+
+[[Image:Classe E.svg|thumb|Schéma de principe d'un amplificateur de classe E.]]
+Le schéma de base d'un amplificateur de classe E est donné sur la figure ci-contre. La capacité ''C'' modélise la capacité parasite aux bornes du transistor ainsi que toutes celles qui sont en parallèle avec elle. La bobine repérée ''L<sub>1</sub>'' est une [[bobine d'arrêt|bobine d’arrêt]]. Elle possède une forte impédance afin d’assurer une fonction de source de courant. La bobine ''L<sub>0</sub>'' et la capacité C<sub>0</sub> forment un circuit résonnant dont la fréquence de résonance correspond à la fréquence de travail de l'amplificateur.
+{{clr}}
+
+== Classe F ==
+Comme les amplificateurs de classe E, les amplificateurs de classe F sont également à haut rendement. 
+Ils sont aussi généralement utilisés pour amplifier les [[Onde radio|fréquences radio]]. Cette classe d’amplificateurs est uniquement utilisée pour la gamme de fréquences radioélectriques, où l’analyse de l’amplificateur se fait dans le domaine fréquentiel et non dans le domaine tension/courant.
+
+===Amplificateurs poly-harmoniques===
+[[Image:Tension amplificateur classe f avec harmonique rang 3.svg|thumb|Effet sur la tension de l'ajout de l'harmonique de rang 3.]]
+[[Image:Courant amplificateur bi-harmonique avec harmonique rang 2.svg|left|thumb|Effet sur le courant de l'ajout de l'harmonique de rang 2.]]
+Si l'on ne doit amplifier qu'un signal purement sinusoïdal, il est possible d'augmenter le rendement d'un amplificateur classique en ajoutant des harmoniques au signal à amplifier. Ce signal est ensuite filtré de façon à ce que la charge ne « voie » que le fondamental.
+
+Par exemple, si l'on rajoute des harmoniques de rang impair à la tension amplifiée, il est possible d'en « aplatir » le haut et de disposer d'un fondamental d'amplitude plus grande que la limite classique due à l'écrêtage de l'amplificateur (voir figure ci-contre). C'est cette augmentation de l'amplitude maximale à même tension d'alimentation qui permet d'augmenter le rendement. Si on considère les composants parfaits, le rendement d'un amplificateur linéaire classique rajoutant uniquement un harmonique de rang trois est de 85-{{unité|86|%}} avec un angle de conduction de 180°<ref>Soit {{unité|8|%}} de mieux qu'un classe B dans les mêmes conditions</ref> et de 95-{{unité|96|%}} avec une angle de conduction de 126°<ref>Dans les deux cas, l'amplitude de l'harmonique de rang trois a fait l'objet d'un calcul d'optimisation</ref>{{,}}<ref>{{Ouvrage|
+titre= Switchmode RF power amplifiers|
+auteurs=Andrei Grebennikov, Nathan O. Sokal |
+passage=102|
+éditeur=Newnes|
+langue=anglais|
+année=2007|
+isbn=075067962X|
+isbn2=978-0750679626|
+}}</ref>. Il est possible de tenir le même raisonnement en modifiant la forme du courant absorbé par ajout d'harmoniques de rang pair et en baissant le courant de polarisation à même charge en sortie (voir figure ci-contre).
+{{clr}}
+
+===Amplificateurs de classe F===
+[[Image:Classe F.svg|thumb|Schéma de principe d'un amplificateur de classe F.]]
+Un amplificateur de classe F idéal est un amplificateur à découpage générant une tension en créneaux aux bornes du composant amplificateur, absorbant un courant en arche de sinusoïde déphasé de 180° par rapport à la tension aux bornes du composant actif et délivrant un courant sinusoïdal à la charge. Un tel amplificateur dispose d'un rendement unitaire. Un amplificateur de classe F idéal est l'équivalent d'un amplificateur poly-harmoniques disposant d'une infinité de filtres sélectifs de rang impair.
+
+Malheureusement, il est impossible d'inclure une infinité de filtres sélectifs dans un amplificateur. Dans la pratique, le nombre de filtres est limité et plus l'on ajoute de filtres, plus le rendement de l'amplificateur augmente. Le rendement d'un amplificateur de classe F devient supérieur à celui d'un classe B lorsque l'amplificateur de classe F utilise un filtre de rang trois pour augmenter le fondamental de tension et des filtres de rang deux et quatre pour aplatir le courant<ref>{{Ouvrage|
+titre= Switchmode RF power amplifiers|
+auteurs=Andrei Grebennikov, Nathan O. Sokal |
+passage=108-115|
+éditeur=Newnes|
+langue=anglais|
+année=2007|
+isbn=075067962X|
+isbn2=978-0750679626|
+}}</ref>.
+
+===Amplificateurs de classe F inverse===
+Un amplificateur de classe F inverse idéal est un amplificateur à découpage générant une tension sinusoïdale aux bornes du composant amplificateur, absorbant un courant en créneaux déphasé de 180° par rapport à la tension aux bornes du composant actif et délivrant un courant sinusoïdal à la charge. Un tel amplificateur dispose d'un rendement unitaire. Un amplificateur de classe F inverse idéal est l'équivalent d'un amplificateur poly-harmoniques disposant d'une infinité de filtres sélectifs de rang pair.
+
+== Classe G ==
+[[Image:Classe G.svg|thumb|Schéma de principe d'un amplificateur de classe G.]]
+[[Image:ClassG.svg|left|thumb|Principe de fonctionnement de la classe G.]]
+Le classe G a été inventé en 1976 par [[Hitachi]] afin d'augmenter le rendement des amplificateurs<ref name="Audio Power Amplifier Design Handbook-p37-38-Class-G">{{Ouvrage|
+titre=Audio Power Amplifier Design Handbook|
+passage= 37-38 : « ''Class-G'' »|
+auteur=Douglas Self|
+éditeur=Newnes|
+langue=anglais|
+année=2006|
+isbn=0750680725|
+}}</ref>. Ces amplificateurs possèdent plusieurs bus de tensions différents et ils n'utilisent que le bus de tension ayant la tension la plus faible permettant de fournir la tension désirée en sortie. En agissant ainsi, ces amplificateurs limitent la puissance « perdue » dans les transistors de sortie augmentant de par là même le rendement.
+
+Les amplificateurs de classe G sont composés d'un amplificateur de classe B<ref>Il est aussi possible d'utiliser un amplificateur de classe A ou AB. L'amplificateur de classe B étant le choix le plus courant</ref> ainsi que d'un ou plusieurs amplificateurs de classe C<ref>Le nombre d'amplificateurs de classe C dépend du nombre de bus de tension utilisés</ref>. L'amplificateur de classe B fonctionne tout le temps et utilise, lorsqu'il est le seul à fonctionner, le bus de tension ayant la plus faible valeur. Les amplificateurs de classe C utilisent l'un des bus de tension plus élevée et ne sont activés que suivant les besoins en tension de la charge.
+
+Le principal inconvénient des amplificateurs de classe G est la complexité apportée par la présence de plusieurs bus de tension. Ainsi, le nombre de bus de tension utilisé est généralement de deux<ref>Quatre dans le cas d'une alimentation symétrique</ref> et dépasse rarement trois<ref name="Audio Power Amplifier Design Handbook-p37-38-Class-G"/>.
+{{clr}}
+
+== Classe H ==
+[[Image:Classe H.svg|thumb|Schéma de principe d'un amplificateur de classe H.]]
+[[Image:ClassH.svg|left|thumb|Principe de fonctionnement de la classe H.]]
+Les amplificateurs de classe H sont similaires à ceux de classe G, à la différence qu'ils n'utilisent qu'un seul amplificateur dont la tension d’alimentation « suit », ou est modulée par le signal d’entrée. L’alimentation maintient en permanence sa tension de sortie à un niveau légèrement plus élevé que ce qui est nécessaire. En général, ils possèdent deux tensions d’alimentation, comme ceux de la classe G, mais seule la tension d'alimentation la plus élevée est modulée (V<sup>'</sup><sub>cc</sub> sur la figure ci-contre). L’alimentation modulée est généralement réalisée grâce à un amplificateur de classe D.
+{{clr}}
+
+== Classe S ==
+Les amplificateurs de classe S doivent leur nom à leur concepteur le docteur Sandman<ref>{{Ouvrage|
+titre=Audio Power Amplifier Design Handbook|
+passage= 39-40 : « ''Class-S'' »|
+auteur=Douglas Self|
+éditeur=Newnes|
+langue=anglais|
+année=2006|
+isbn=0750680725|
+}}</ref>. Ils sont constitués d'un amplificateur de classe A  possédant un faible courant de sortie maximum et d'un amplificateur de classe B. L'amplificateur de classe A fournit le courant pour les signaux de faible puissance puis laisse le pas à l'amplificateur de classe B lorsque le courant demandé par la charge devient trop important.
+
+== Les autres classes ==
+[[Image:Sonic Impact T-Amp front.jpg|thumb|Le T-Amp de Sonic Impact.]]
+Il existe une multitude d'autres classes que celles décrites dans les paragraphes précédents. Ces autres classes se basent généralement sur les classes A, B, C ou D dont elles modifient légèrement le principe de base ou les cascadent entre elles afin d'en améliorer les caractéristiques ou  de disposer des avantages de deux classes différentes. Par exemple, la [[Amplificateur de classe T|classe T]], qui est une marque déposée de TriPath, est constituée d'un amplificateur de classe D fonctionnant à une fréquence de 650 kHz, et d'un système de modulation propriétaire<ref>[http://www.tripath.com/downloads/an1.pdf ''Tripath technical information: Class-T digital audio amplifier technology overview'']</ref>{{,}}<ref>[http://www.tnt-audio.com/ampli/t-amp_e.html ''Tnt-audio: Sonic Impact T-Amp - integrated amplifier'']</ref>{{,}}<ref>[http://www.magma.fr/static/french/technique/Connaitre_ampliHiFi.html Magma, ''Connaître l’amplificateur Hi-Fi'']</ref>.
+{{clr}}
+
+== Bibliographie ==
+{{Plume}} : source utilisée pour la rédaction de l’article
+=== En français ===
+* {{Ouvrage|
+titre=Amplificateurs de puissance|
+auteur=Michel Girard|
+pages=435|
+éditeur=Ediscience International|
+langue=français|
+année=1993|
+isbn=2840740419|
+isbn2=978-2840740414|
+commentaire=précédemment (1988) chez McGraw-Hill, {{ISBN|2-7042-1180-9}}
+}}{{Plume}}
+* {{Ouvrage|
+titre=Traité de l’électronique analogique et numérique|
+titre vo=The Art of Electronics|
+volume= 1|
+titre volume=Techniques analogiques|
+éditeur=Publitronic|
+auteurs=Paul Horowitz, Winfield Hill|
+langue=français|
+année=1996|
+isbn=2866610709|
+}}{{Plume}}
+
+=== En anglais ===
+* {{Ouvrage|
+titre=High-Power Audio Amplifier Construction Manual|
+auteur=G. Randy Slone|
+éditeur=Mcgraw-Hill|
+langue=anglais|
+année=1999|
+isbn=0071341196|
+isbn2=978-0071341196|
+}}{{Plume}}
+* {{Ouvrage|
+titre=Audio Power Amplifier Design Handbook|
+auteur=Douglas Self|
+éditeur=Newnes|
+langue=anglais|
+année=2006|
+isbn=0750680725|
+}}{{Plume}}
+* {{Ouvrage|
+titre= Switchmode RF power amplifiers|
+auteurs=Andrei Grebennikov, Nathan O. Sokal |
+éditeur=Newnes|
+langue=anglais|
+année=2007|
+isbn=075067962X|
+isbn2=978-0750679626|
+}}{{Plume}}
+
+== Voir aussi ==
+=== Liens internes ===
+*Amplificateurs 
+**[[Amplificateur électronique]] [[Image:Fairytale bookmark gold.png|nothumb|12px|AdQ !]]
+**[[Amplificateur audio]] 
+**[[Amplificateur d'instrumentation|Amplificateur d’instrumentation]] 
+**[[Amplificateur opérationnel]] [[Image:Fairytale bookmark gold.png|nothumb|12px|AdQ !]]
+**[[Amplificateur optique]] 
+**[[Préamplificateur d'antenne UHF]]
+*Montages amplificateurs 
+**Pour [[transistor bipolaire]] 
+***[[Base commune]] 
+***[[Collecteur commun]] 
+***[[Émetteur commun]]
+**Pour [[transistor à effet de champ]] 
+***[[Drain commun]] 
+***[[Grille commune]] 
+***[[Source commune]]
+
+=== Liens externes ===
+* {{pdf}} Cours sur l'[http://ww3.ac-poitiers.fr/cmrp/gel/ressour/pdf/amplbipo.pdf amplification linéaire à transistor bipolaire] par Laurent Lubrano
+* Cours sur le [http://ww3.ac-poitiers.fr/cmrp/gel/ressour/trancom/trancom.htm transistor bipolaire en commutation] par Laurent Lubrano et C. TIRE
+
+* {{pdf}}{{en}} Nathan O. Sokal, [http://www.arrl.org/tis/info/pdf/010102qex009.pdf ''Class-E RF Power Amplifiers''], ''QEX'', janvier/février 2001
+* {{pdf}}{{en}} [http://www.eecg.toronto.edu/~kphang/papers/2001/poon_RFamps.pdf RF Power Amplifiers] Cours d'Alan Poon et Alan Siu Kei pour l'[[université de Toronto]]
+* {{en}}  [http://www.rane.com/par-a.html#amplifier_classes ''Rane audio’s guide to amplifier classes''] 
+* {{pdf}}{{en}} [http://www.makro.one.pl/sem3/ie/lecture/pdf/PowerAmp.pdf Power amplifiers]  sur le site de Silesian University of Technology
+
+* {{pdf}}{{en}} International Rectifier application note 1071 : [http://www.irf.com/technical-info/appnotes/an-1071.pdf ''Class D Audio Amplifier Basics'']
+* {{pdf}}{{fr}} [http://www.chireux.fr/mp/cours/electronique/Chap2.pdf Cours sur les amplificateurs de puissance] par Marc Correvon.
+
+== Notes et références ==
+{{Références|colonnes=2}}
+{{Traduction/Référence|en|Electronic amplifier|77887022}}
+
+{{Article de qualité|oldid=27129642|date=16 mars 2008}}
+
+{{Portail électricité et électronique}}
+[[Catégorie:Amplificateur électronique]]
+
+[[en:Electronic amplifier#Power amplifier classes]]

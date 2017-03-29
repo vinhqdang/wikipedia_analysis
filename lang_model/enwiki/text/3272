@@ -1,0 +1,67 @@
+In mathematics, a '''separable algebra''' is a kind of [[semisimple algebra]].  It is a generalization to [[associative algebra]]s of the notion of a [[separable extension|separable field extension]].
+
+== Definition and First Properties ==
+
+Let ''K'' be a [[field (mathematics)|field]].  An associative ''K''-algebra ''A'' is said to be '''separable''' if for every [[field extension]] <math>\scriptstyle L/K</math> the algebra <math>\scriptstyle A\otimes_K L</math> is semisimple.
+
+There is a classification theorem for separable algebras: separable algebras are the same as finite products of matrix algebras over [[division algebras]] whose centers are finite dimensional [[separable extension|separable field extensions]] of the field ''K''.  If ''K'' is a [[perfect field]] --- for example a field of characteristic zero, or a finite field, or an algebraically closed field --- then every extension of ''K'' is separable.  As a result, if ''K'' is a perfect field, separable algebras are the same as finite products of matrix algebras over division algebras whose centers are finite-dimensional field extensions of the field ''K''.  In other words, if ''K'' is a perfect field, there is no difference between a separable algebra over ''K'' and a finite-dimensional [[semisimple algebra]] over ''K''.
+
+There are a several equivalent characterizations of separable algebras.  First, an algebra ''A'' is separable if and only if there exists an element 
+
+:<math> p = \sum_{i=1}^n x_i \otimes y_i</math> 
+
+in <math>A^e = A \otimes_K A^{\rm op}</math> such that 
+
+: <math> \sum_{i=1}^n x_i y_i = 1_A</math>  
+
+and ''ap'' = ''pa'' for all ''a'' in ''A''.  Such an element ''p'' is called a '''separability idempotent''', since it satisfies <math>p^2 = p</math>.  A generalized theorem of Maschke shows these this characterization of separable algebras is equivalent to the definition given above. 
+
+Second, an algebra ''A'' is separable if and only if it is [[projective module|projective]] when considered as a left module of <math>A^e</math> in the usual way.
+
+Third, an algebra ''A'' is separable if and only if it is [[flat module|flat]] when considered as a right module of <math>A^e</math> in the usual (but perhaps not quite standard) way.  See Aguiar's note below for more details.
+
+Furthermore, a result of Eilenberg and Nakayama that any separable algebra can be given the structure of a symmetric [[Frobenius algebra]].  Since the underlying vector space of a Frobenius algebra is isomorphic to its dual, any Frobenius algebra is necessarily finite dimensional, and so the same is true for separable algebras.
+
+A separable algebra is said to be '''strongly separable''' if there exists a separability idempotent that is '''symmetric''', meaning
+
+:<math> e = \sum_{i=1}^n x_i \otimes y_i = \sum_{i=1}^n y_i \otimes x_i</math> 
+
+An algebra is strongly separable if and only if its trace form is nondegenerate, thus making the algebra into a special Frobenius algebra.
+
+== Commutative separable algebras ==
+
+If <math>\scriptstyle L/K</math> is a field extension, then ''L'' is separable as an associative ''K''-algebra if and only if the extension of field is [[separable extension|separable]].
+If L/K has [[Primitive element (field theory)|primitive element]] a with irreducible polynomial <math> p(x) = (x - a) \sum_{i=0}^{n-1} b_i x^i</math>, then a separability idempotent is given by <math> \sum_{i=0}^{n-1} a^i \otimes_K \frac{b_i}{p'(a)}</math>.   The tensorands are dual bases for the trace map: if <math> \sigma_1,\ldots,\sigma_{n} </math> are the distinct K-monomorphisms of L into an algebraic closure of K, the trace mapping Tr of L into K is defined by Tr(x) = <math> \sum_{i=1}^{n} \sigma_i(x)</math>.  The trace map and its dual bases make explicit L as a [[Frobenius algebra]] over K.
+
+== Examples ==
+
+If ''K'' is a field and ''G'' is a finite group such that the [[Order (ring theory)|order]] of ''G'' is invertible in ''K'', then the [[group ring]] ''K''[''G''] is a separable ''K''-algebra.
+A separability idempotent is given by <math> \frac{1}{o(G)} \sum_{g \in G} g \otimes_K g^{-1}</math>.
+
+== Separable Extensions for Noncommutative Rings ==
+
+Let R be an associative ring with unit 1, and S a subring of R containing 1. Notice that an R-R-bimodule (see [[module theory]] and [[homological algebra]]) restricts to an S-S-bimodule.  
+The ring extension R over S is said to be a separable extension if all short exact sequences of R-R-bimodules that are split as R-S-bimodules also split as R-R-bimodules. For example, the multiplication mapping m :<math> R \otimes_S R \rightarrow R </math> given by <math>m( \sum_i r_i \otimes_S t_i) = \sum_i r_it_i</math> is an R-R-bimodule epimorphism, which is split as an R-S-bimodule epi by the right inverse mapping <math> R \rightarrow R \otimes_S R</math> given by
+<math> r \mapsto r \otimes 1 </math>.  If R is a separable extension over S, then the multiplication mapping is split as an R-R-bimodule epi, so there is a right inverse s of m satisfying for s(1) := e, re = er for all r in R, and m(e) = 1.  Conversely, if such an element (called a separability element in the tensor-square) exists, one shows by a judicious use of this element (like Maschke, applying its components within and without the splitting maps) that R is a separable extension of S.  
+
+Equivalently, the relative Hochschild cohomology groups <math> H^n(R,S;M)</math> of (R,S) in any coefficient bimodule M is zero for n > 0. Examples of separable extensions are many including first separable algebras where R = separable algebra and S = 1 times the ground field. More interestingly, any ring R with elements a and b satisfying ab = 1, but ba different from 1, is a separable extension over the subring S generated by 1 and bRa.   
+
+
+An interesting theorem in the area is that of J. Cuadra that a separable Hopf-Galois extension R | S has finitely generated natural S-module R.   A fundamental fact about a separable extension R | S is that it is left or right semisimple extension:  a short exact sequence of left or right R-modules that is split as S-modules, is split as R-modules.  In terms of G. Hochschild's relative homological algebra, one says that all R-modules are relative (R,S)-projective. Usually relative properties of subrings or ring extensions, such as the notion of separable extension, serve to promote theorems that say that the over-ring shares a property of the subring.  For example, a separable extension R of a semisimple algebra S has R semisimple, which follows from the preceding discussion.
+
+
+There is the celebrated Jans theorem that a finite group algebra A over a field of 
+characteristic p is of finite representation type if and only if its Sylow p-subgroup is cyclic: the clearest proof is to note this fact for p-groups, then note that the group algebra is a separable extension of its Sylow p-subgroup algebra B as the index is coprime to the characteristic.  The separability condition above will imply every finitely generated A-module M is isomorphic to a direct summand
+in its restricted, induced module.  But if B has finite representation type, the restricted module
+is uniquely a direct sum of multiples of finitely many indecomposables, which induce to a finite number of constituent indecomposable modules of which M is a direct sum.  Hence A is of finite representation type if B is.  The converse if proven by a similar argument noting that every subgroup algebra B is a B-bimodule direct summand of a group algebra A.
+
+== References ==
+
+* Marcelo Aguiar, [http://www.math.tamu.edu/~maguiar/strongly.ps.gz A note on strongly separable algebras], Bolet<U+00ED>n de la Academia Nacional de Ciencias (C<U+00F3>rdoba, Argentina), special issue in honor of Orlando Villamayor, 65 (2000) 51-60. 
+* {{cite book | last1=DeMeyer | first1=F. | last2=Ingraham | first2=E. | title=Separable algebras over commutative rings | series=Lecture Notes in Mathematics | volume=181 | location=Berlin-Heidelberg-New York | location=[[Springer-Verlag]] | year=1971 | isbn=978-3-540-05371-2 | zbl=0215.36602 }}
+* Samuel Eilenberg and Tadasi Nakayama, [http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.nmj/1118799677 On the dimension of modules and algebras. II. Frobenius algebras and quasi-Frobenius rings], Nagoya Math. J. Volume 9 (1955), 1-16. 
+* K. Hirata and K. Sugano, On semisimple and separable extensions of noncommutative rings, J. Math. Soc. Japan 18 (1966), 360-373.  
+* {{Weibel IHA}}
+
+
+[[Category:Algebras]]

@@ -1,0 +1,58 @@
+Le '''[[paradoxe]] de Berry''' a été formulé par [[Bertrand Russell]] en [[1906]]. On le trouve dans un article, paru en français cette même année, de la  ''Revue de métaphysique et de morale''. Russell introduit, dans une discussion à propos du [[paradoxe de Richard]], le « ''plus petit entier non nommable en moins de dix-huit syllabes'' qui paraît être ainsi nommé en dix-sept syllabes »<ref>p 645 de l'article cité</ref>, et attribue cette définition paradoxale à un bibliothécaire londonien, G. G. Berry. 
+
+Toujours selon Russell, c'est une simplification, qui « a le mérite de ne pas dépasser les nombres finis », du  paradoxe du « ''plus petit [[nombre ordinal|ordinal]] indéfinissable'' qui semble défini par la phrase même qui annonce qu'il est indéfinissable » (forme probablement due à Russell lui-même). Ces énoncés sont repris dans l'article de Russell de 1908  sur la théorie des types. 
+==Énoncé==
+<blockquote>
+« Le plus petit [[entier naturel]] non descriptible par une expression de quinze mots ou moins. »
+</blockquote>
+Ce nombre appartient-il à l'ensemble des entiers naturels descriptibles par une expression de quinze mots ou moins ?
+
+==Explications==
+Les entiers naturels peuvent être décrits par des énoncés (en français) tels que : « dix puissance cent » ou « le plus grand nombre premier connu au vingtième siècle ». Comme le vocabulaire disponible est fini (mettons qu'il y ait 200 000 mots en français), les énoncés de N mots ne peuvent décrire plus de <math>200000^N</math> entiers (et en fait beaucoup moins ; la plupart des « phrases » ne voulant en fait rien dire, ou ne parlant pas d'entiers). 
+
+L'ensemble des « nombres entiers naturels descriptibles par une expression de quinze mots ou moins » est donc fini ; aussi existe-t-il forcément de nombreux entiers hors de cet ensemble. Le plus petit d'entre eux est donc « le plus petit entier naturel non descriptible par une expression de quinze mots ou moins ». Mais justement, cet énoncé qui le décrit parfaitement, ne comporte que quinze mots.
+
+On pourrait aussi proposer de créer des mots nouveaux, mais ils ne sont pas en nombre infini si on pose une limite au nombre de lettres: il suffirait de réécrire l'énoncé avec une limite de lettres et non de mots pour contourner cet argument.
+
+Ce paradoxe est très proche du [[paradoxe de Richard]] (il est d'ailleurs parfois donné sous ce nom), dont il peut être considéré comme une variante finie<ref>voir Poincaré 1909 p 481</ref>. Poincaré, qui tenait à voir la raison des paradoxes logiques dans un maniement sans précautions de l'infini, disait, à propos du paradoxe de Berry qui justement n'utilise que des notions finies,  « ''ils [certains logiciens] ont eux-mêmes tendu le piège où ils se sont amusés à tomber, et même ils ont été obligés de faire bien attention pour ne pas tomber à côté du piège'' ».
+
+On peut considérer également qu'il met en jeu le même genre de questions que certaines formes du [[paradoxe du menteur]] (la phrase qui dit d'elle-même qu'elle est fausse). On le résout habituellement en formalisant le langage, ici celui qui permet de décrire les entiers, et en le distinguant du meta-langage dans lequel est énoncée la phrase de Berry qui n'est alors plus paradoxale (voir également l'article sur le [[paradoxe de Richard]]).
+
+== Notes ==
+<references />
+
+==Voir aussi==
+===Articles connexes===
+*[[Paradoxe de Richard]].
+*[[Paradoxe de Russell]].
+*[[Paradoxe de Burali-Forti]]
+*[[Paradoxe de Cantor]]
+
+== Références ==
+*  [[Bertrand Russell]] (1906), ''Les paradoxes de la logique'', revue de métaphysique et de morale 14, VOL 5, pp627-650 ; accessible sur [[Gallica]] : [http://gallica.bnf.fr/ark:/12148/bpt6k11064n.r accès direct] (24 pages).
+* {{en}}[[Bertrand Russell]] (1908), ''Mathematical logic as based on the theory of types'', American journal of mathematics 30, repris dans ''A source Book in Mathematical Logic 1879-1931'', pp 150-182.
+* {{en}}''A source Book in Mathematical Logic 1879-1931'', Heijenoort J. van (ed.), (Harvard Univ. Press, Cambridge, 1967), ISBN 0-674-32450-1, ISBN 0-674-32449-8. 
+* [[Henri Poincaré]] (1909), revue de métaphysique et de morale 17, VOL 5, pp461-482 ; accessible sur [[Gallica]] : [http://gallica.bnf.fr/ark:/12148/bpt6k110999 accès direct] (22 pages).
+<!--
+=={{subst:ucfirst:Liens externes}}==
+* {{en}} http://www.cs.auckland.ac.nz/CDMTCS/chaitin/unm2.html A discussion by [[Gregory Chaitin]]
+* {{en}} http://www.cs.yorku.ca/~peter/Berry.html
+* {{en}} http://mathworld.wolfram.com/BerryParadox.html The entry for the Berry paradox at [[Wolfram Research|Wolfram Research's]] [[MathWorld]]
+* {{en}} http://www.hgsc.bcm.tmc.edu/~kdurbin/texts/alg.info.chiatin.html
+-->
+
+{{Portail|mathématiques|logique}}
+
+[[Catégorie:Paradoxe de la théorie naïve des ensembles|Berry]]
+[[Catégorie:Paradoxe auto-référentiel]]
+
+[[cs:Paradox sta slov]]
+[[de:Berry-Paradoxon]]
+[[en:Berry paradox]]
+[[eo:Paradokso de cent vortoj]]
+[[es:Paradoja de Berry]]
+[[he:הפרדוקס של ברי]]
+[[it:Paradosso di Berry]]
+[[ja:ベリーのパラドックス]]
+[[ko:베리의 역설]]
+[[pl:Paradoks Berry'ego]]

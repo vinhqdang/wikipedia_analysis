@@ -1,0 +1,398 @@
+{{good article}}
+{{Infobox software
+| name                   = Drupal
+| logo                   = [[File:Drupal-wordmark.svg|220px|Drupal logo]]
+| screenshot             = [[File:Drupal 7 screenshot.png|220px]]
+| caption                = Home page of a default Drupal 7 installation
+| collapsible            = yes
+| author                 = [[Dries Buytaert]]
+| developer              =
+| released               = {{Start-date|January 2001}}
+| discontinued           =
+| latest release version = 7.7<ref name=changelog>{{cite web |url=http://drupalcode.org/project/drupal.git/blob/ca9434462a4af269f24b0b616939938a3a4c112f:/CHANGELOG.txt |title=CHANGELOG.txt |work=drupal.org |accessdate=2011-07-28 }}</ref>
+| latest release date    = {{release date|2011|07|27}}
+| latest preview version =
+| latest preview date    =
+| frequently updated     =
+| operating system       = [[Cross-platform]]
+| platform               =
+| size                   = 2.63 MB (core)
+| language               = Multilingual
+| status                 = Active
+| programming language   = [[PHP]]
+| genre                  = [[Content management framework]], [[Content management system]], [[Community]] and [[Blog software]]
+| license                = [[GNU General Public License|GPLv2/GPLv3]]<ref name=licensingfaq />
+| website                = {{URL|http://drupal.org}}
+}}
+
+'''Drupal''' ({{IPAc-en|icon|<U+02C8>|d|r|u<U+02D0>|p|<U+0259>|l}}) is a [[free and open source software|free and open source]] [[content management system]] (CMS) and [[content management framework]] (CMF) written in [[PHP]] and distributed under the [[GNU GPL|GNU General Public License]].<ref name=licensingfaq>{{cite web
+|url=http://drupal.org/licensing/faq |title=Licensing FAQ |work=drupal.org |accessdate=2009-04-08 }}</ref><ref name=over>{{cite web |title=The Drupal Overview |url=http://drupal.org/node/265726 |work=drupal.org |accessdate=2009-04-08 }}</ref><ref name="reqs">{{cite web |url=http://drupal.org/requirements |title=System Requirements |work=drupal.org |accessdate=2009-04-08 }}</ref> It is used as a [[back-end]] system for at least 1.5% of all [[world wide web|websites]] worldwide<ref>{{cite web |url=http://w3techs.com/technologies/overview/content_management/all|title=Usage of content management systems for websites|author=W3Techs|date=2011-07-15|accessdate=2011-07-15 }}</ref><ref>{{cite web |url=http://trends.builtwith.com/cms/Drupal|title=Drupal Usage Statistics|author=BuiltWith|date=2011-03-28|accessdate=2011-03-28 }}</ref> ranging from personal [[blog]]s to corporate, political, and government sites including [[whitehouse.gov]] and [[data.gov.uk]].<ref>[http://www.archive.org/details/Css3TheFutureIsNow The State of Drupal 2010 speech]</ref> It is also used for [[knowledge management]] and business collaboration.
+
+The standard release of Drupal, known as '''Drupal core''', contains basic features common to content management systems. These include user account registration and maintenance, menu management, [[RSS]]-feeds, page layout customization, and system administration. The Drupal core installation can be used as a [[brochureware]] website, a single- or multi-user [[blog]], an [[Internet forum]], or a community website providing for [[user-generated content]].
+
+{{As of|2011|6}} there are more than 10,500 free community-contributed addons, known as '''contrib modules''', available to alter and extend Drupal's core capabilities and add new features or customize Drupal's behavior and appearance. Because of this plug-in extensibility and modular design, Drupal is sometimes described as a [[content management framework]].<ref name=over/><ref name="Modules">{{cite web |url=http://drupal.org/project/Modules |title=Modules |work=drupal.org |accessdate=2010-10-23 }}</ref> Drupal is also described as a [[web application framework]], as it meets the generally accepted [[Web application framework#Features|feature requirements]] for such frameworks.
+
+Although Drupal offers a sophisticated [[Application programming interface|programming interface]] for developers, no programming skills are required for basic website installation and administration.<ref name=features/>
+
+Drupal runs on any [[computing platform]] that supports both a [[web server]] capable of running PHP (including [[Apache HTTP Server|Apache]], [[Internet Information Services|IIS]], [[lighttpd]], and [[nginx]]) and a [[database]] (such as [[MySQL]], [[MariaDB]], [[PostgreSQL]], [[SQLite]], [[MongoDB]] or [[Microsoft SQL Server]]) to store content and settings. Drupal 6 requires PHP 4.4.0+ while Drupal 7 requires PHP 5.2 or higher.<ref name=reqs/>
+
+==History==
+Originally written by [[Dries Buytaert]] as a [[Internet forum|message board]], Drupal became an [[open source]] project in 2001.<ref name=history>{{cite web |url=http://drupal.org/node/769 |title=History |work=drupal.org |accessdate=2009-04-08 }}</ref> ''Drupal'' is an English rendering of the [[Dutch language|Dutch]] word <U+201C>[[wikt:druppel|druppel]]<U+201D>, which means <U+201C>drop<U+201D> (as in <U+201C>a water droplet<U+201D>).<ref>{{cite web |url=http://translation.babylon.com/Dutch/to-English/druppel/ |title=Druppel: Dutch to English Translation |work=Babylon Translation |accessdate=2009-04-08 }}</ref> The name was taken from the now-defunct Drop.org website, whose code slowly evolved into Drupal. Buytaert wanted to call the site <U+201C>dorp<U+201D> (Dutch for <U+201C>village<U+201D>) for its community aspects, but mistyped it when checking the domain name and thought the error sounded better.<ref name=history/>
+
+A community now helps develop Drupal,<ref>{{cite web |url=http://groups.drupal.org/node/1980 |title=Growth Graphs |last=Koenig |first=Josh |work=Groups.Drupal |accessdate=2009-04-08 }}</ref> and Drupal's popularity is growing rapidly. From May 2007 to April 2008, Drupal was downloaded from the Drupal.org website more than 1.4 million times, an increase of approximately 125% from the previous year.<ref>{{cite web |title=Drupal Download Statistics |url=http://buytaert.net/drupal-download-statistics-2008 |last=Buytaert |first=Dries |year=2008 |accessdate=2009-04-08 }}</ref><ref>{{cite web |title=Drupal Download Statistics |url=http://buytaert.net/drupal-download-statistics-2007 |last=Buytaert |first=Dries |year=2007 |accessdate=2009-04-08 }}</ref>
+
+{{As of|2010|7}}, hundreds of well-known organizations use Drupal,<ref>{{cite web |url=http://buytaert.net/tag/drupal-sites?page=27 |title=Drupal Sites |work=Dries Buytaert |accessdate=2010-07-20 }}</ref> including corporations, media & publishing companies, governments, non-profits,<ref>{{cite web |url=http://engineindustries.com/blog/jason/list-nonprofit-npo-ngo-websites-using-drupal |title=List of Nonprofit, NPO, NGO Websites Using Drupal |work=ENGINE Industries |accessdate=2010-07-20 }}{{dead link|date=August 2011}}</ref> schools, and individuals. An estimated 7.2 million sites used Drupal as of July 2010.<ref>{{cite web|url=http://engineindustries.com/blog/jason/how-many-websites-use-drupal-lets-estimate-number-part-one |title=How Many Websites Use Drupal? |work=ENGINE Industries |accessdate=2010-07-20 }}{{dead link|date=August 2011}}</ref> Drupal also won several [[Packt]] Open Source CMS Awards<ref>{{cite web |url=http://www.packtpub.com/open-source-cms-award-previous-winners |title=OSS CMS Award Previous Winners |work=Packt Publishing |accessdate=2009-04-08 }}</ref> and three times (in a row) won the [[Webware 100]].<ref>[http://drupal.org/Drupal-2009-webware-100-winner Drupal is a Webware 100 winner for the third year in a row]</ref><ref>[http://news.cnet.com/8301-13546_109-10237630-29.html?tag=mncol Cnet.com]</ref>
+
+On March 5, 2009, Buytaert announced a [[code freeze]] for Drupal 7 for September 1, 2009.<ref>[http://buytaert.net/drupal-7-code-freeze-september-1st Buytaert.net]</ref>
+
+'''Drupal 7.0''' was released on January 5, 2011, with release parties in multiple countries.<ref>[http://buytaert.net/drupal-7-to-be-released-on-january-5th-with-one-ginormous-party Drupal 7 to be released on January 5th (with one ginormous party)]</ref> As of the release of version 7, maintenance for Drupal 5 has been discontinued, and only Drupal 7 and Drupal 6 are being actively maintained.<ref>{{cite web|url=http://www.scoop.co.nz/stories/SC1012/S00048/xplain-hosting-drupal-7-quickstart-training-seminar.htm|title=Xplain Hosting Drupal 7 Quickstart training seminar|publisher=[[Scoop (website)|Scoop]]|date=2010-12-16}}</ref>
+
+'''Drupal 7.2''' and '''Drupal 6.22''' were released on 25 May 2011.
+
+'''Drupal 7.3''' and '''Drupal 7.4''' were released on 30 June 2011.
+
+'''Drupal 7.5''' and '''Drupal 7.6''' were released on 27 July 2011.
+
+'''Drupal 7.7''' was released on 28 July 2011.<ref>{{cite web|title=Releases for Drupal core|url=http://drupal.org/node/3060/release|work=Drupal.org}}</ref>
+
+'''Drupal 8''' is in development and a release has not yet been set {{As of|2011|3|lc=on}}.<ref>{{cite web |url=http://blog.amazeelabs.com/drupalcon-chicago-2011-part-iiii/  |title=DrupalCon Chicago 2011 Part I/III |work=amazeelabs.com |accessdate=2011-04-29 }}</ref>
+The [[Google Summer of Code]] is sponsoring 20 Drupal projects.<ref>{{cite web |url=http://socghop.appspot.com/gsoc/org/google/gsoc2011/drupal  |title=Drupal Summer of Code projects |work=appspot.com |accessdate=2011-04-29 }}</ref>
+
+==Drupal core==
+Drupal core is the stock element of Drupal. In its default configuration, a Drupal website's content can be contributed by either registered or anonymous users (at the discretion of the administrator) and is made accessible to web visitors by a variety of selectable criteria. Drupal core also includes a hierarchical [[taxonomy]] system, which allows content to be categorized or [[Tag (metadata)|tag]]ged with key words for easier access.<ref name=features>{{cite web |url=http://drupal.org/features |title=Features |work=drupal.org |accessdate=2009-04-08 }}</ref>
+
+Drupal maintains a detailed [[changelog]] of core feature updates by version.<ref name=changelog />
+
+===Core modules===
+Drupal Core includes optional modules which can be enabled by the administrator to extend the functionality of the core website.<ref name=coremodules>{{cite web |url=http://drupal.org/handbook/modules |archiveurl=http://web.archive.org/web/20080728103300/http://drupal.org/handbook/modules |archivedate=2008-07-28 |title=Handbook: Core Modules |work=drupal.org |accessdate=2009-04-08 }}</ref>
+
+The core Drupal distribution provides a number of features, including:<ref name=coremodules/>
+{{columns-list|3|
+* Access statistics and logging
+* Advanced search
+* Blogs, books, comments, forums, and polls
+* Caching and feature throttling for improved performance
+* Descriptive URLs
+* Multi-level menu system
+* Multi-site support<ref name=multisite>
+{{cite web
+ |url=http://drupal.org/node/43816
+ |title=Drupal Multi-site installation recipes
+}}</ref>
+* Multi-user content creation and editing
+* [[OpenID]] support
+* RSS feed and feed aggregator
+* Security and new release update notification
+* User profiles
+* Various access control restrictions (user roles, IP addresses, email)
+* Workflow tools (triggers and actions)
+}}
+
+===Core themes===
+[[Image:Drupal.jpg|thumb|250px|right|The color editor being used to adjust the "Garland" core theme]]
+Drupal core includes core themes, which customize the "look and feel" of Drupal sites.<ref name=coretheme>{{cite web |url=http://drupal.org/node/91964 |title=Garland, the new default core theme |last=Buytaert |first=Dries |work=drupal.org |accessdate=2009-04-08 }}</ref>
+
+The Color Module, introduced in Drupal core 5.0, allows administrators to change the color scheme of certain themes via a browser interface.<ref name=colormodule>{{cite web |url=http://drupal.org/handbook/modules/color |title=Color: Allows the user to change the color scheme of certain themes |work=drupal.org |accessdate=2009-04-08 }}</ref>
+
+===Localization===
+By February 2008, Drupal had been made available in 55 languages and English (the default).<ref>{{cite web |url=http://drupal.org/project/Translations |title=Translations |work=drupal.org |accessdate=2009-04-08 }}</ref> Support is included for right-to-left languages such as Arabic, Persian and Hebrew.<ref name=sixnewfeatures>{{cite web |url=http://drupal.org/drupal-6.0 |title=Drupal 6.0 released |work=drupal.org |accessdate=2009-04-08 }}</ref>
+
+Drupal localization is built on top of [[gettext]], the GNU internationalization and localization (i18n) library.
+
+===Auto-update notification===
+Drupal can automatically notify the administrator when a new version of any module, theme, or the Drupal core itself becomes available. This feature can help keep a Drupal installation up-to-date with the latest features and security fixes.<ref name=sixnewfeatures/>
+
+===Database abstraction===
+Prior to version 7, Drupal has had functions to assist with accessing database tables. These functions can perform tasks such as SQL query cleansing, multi-site table name prefixing, and helpers for generating proper SQL queries for the database. In addition, Drupal 6 introduced an abstraction layer that allowed programmers to create SQL queries without writing SQL.
+
+Drupal version 7 extends the data abstraction layer such that a programmer no longer needs to write SQL queries as text strings. In addition, Drupal 7 makes use of the [[PHP Data Objects]] classes to abstract the physical database from module code. [[Microsoft]] has written a database driver for [[Microsoft SQL Server | SQL Server]].<ref name=d7pdo>{{cite web |url=http://www.microsoft.com/web/drupal |title=Install Drupal for Windows |work=microsoft.com |accessdate=2011-02-14 }}</ref>
+
+===Embracing Windows developers===
+
+With Drupal 7's new database abstraction layer and the ability for Drupal to run on [[Internet Information Services | IIS]], it is now easier for Windows developers to participate in the Drupal community. A group on Drupal.org is dedicated to these issues.<ref name=drupal-windows>{{cite web |url=http://groups.drupal.org/drupal-windows |title=Drupal on Windows Group |work=drupal.org |accessdate=2011-02-14 }}</ref>
+
+==Extending Drupal core==
+Drupal core is [[modular]], defining a system of [[Hooking|hooks]] and [[Callback (computer science)|callbacks]], which are accessed internally via an [[API]].<ref>{{cite web |url=http://api.drupal.org/ |title=API Reference |work=drupal.org |accessdate=2009-04-08 }}</ref> This design allows third-party contributed (often abbreviated to "contrib") [[#Contributed modules|modules]] and [[#Contributed themes|themes]] to extend or override Drupal's default behaviors without changing Drupal core's code.
+
+Drupal isolates core files from contributed modules and themes. This increases flexibility and security and allows administrators to cleanly upgrade to new releases without overwriting their site's customizations.<ref>{{cite web |url=http://drupal.org/node/22283 |title=File and directory management |work=drupal.org }}</ref> To maintain this separation, Drupal does not support altering Drupal core's software.<ref>{{cite web |url=http://drupal.org/node/144376 |title=Do not hack core |work=drupal.org }}</ref>
+
+===Modules===
+Contributed modules offer image galleries, custom content types and content listings, [[WYSIWYG]] editors, private messaging, third-party integration tools,<ref>[http://www.appnovation.com/integrating-drupal-external-systems Integrating Drupal with External Systems]</ref> and more. {{As of|2011|7}} the Drupal website lists over 10,500 free [[Modular programming|modules]].<ref name="Modules"/><ref>{{cite web |url=http://learn.awakenedvoice.com/2007/07/30/drupal-cck-and-views-tutorial/ |title=Drupal CCK and Views Tutorial |last=Safuto |first=Robert |work=Awakened Voice Learning Center |date=2007-07-30 |accessdate=2009-04-08 }}{{dead link|date=August 2011}}</ref>
+
+Some of the most powerful and commonly used contrib modules include:{{Citation needed|date=August 2011}}
+*Content Construction Kit (CCK): allows site administrators to dynamically create content types by extending the database schema. "Content type" describes the kind of information. Content types include, but are not limited to, events, invitations, reviews, articles, and products. The CCK Fields [[API]] is in Drupal core in Drupal 7.<ref>{{cite web |title=Field API |url=http://drupal.org/node/361849 |year=2009 |accessdate=2009-05-08 }}</ref>
+*Views: facilitates the retrieval and presentation, through a database abstraction system, of content to site visitors.
+*Panels: drag and drop layout manager that allows site administrators to visually design their site.
+
+===Themes===
+Contributed themes adapt or replace a Drupal site's default look and feel.
+
+Drupal themes use standardized formats that may be generated by common third-party theme design engines. Many are written in the [[PHPTemplate]] engine<ref>{{cite web |url=http://drupal.org/phptemplate |title=PHPTemplate theme engine |work=drupal.org |accessdate=2009-04-08 }}</ref> or, to a lesser extent, the [[XTemplate]] engine.<ref>{{cite web |url=http://drupal.org/node/6493 |title=XTemplate theme engine |work=drupal.org |accessdate=2009-04-08 }}</ref> Some templates use hard-coded PHP.
+
+The inclusion of the [[PHPTemplate]] and [[XTemplate]] engines in Drupal addressed user concerns about flexibility and complexity.<ref>{{cite web |url=http://drupal.org/node/15689#comment-25704 |title=How does Drupal compare to Mambo? discussion thread |work=drupal.org |date=2005-01-17 |accessdate=2009-04-08 }}</ref> The Drupal theming system utilizes a [[Template engine (web)|template engine]] in an attempt to further separate [[HTML]]/[[CSS]] from [[PHP]]. A Drupal development module, Devel, provides assistance to theme authors who use Drupal.
+
+Community-contributed themes<ref>[http://drupal.org/project/Themes Drupal themes]</ref> at the Drupal website are released under a free [[GNU General Public License|GPL]] license,<ref>{{cite web|url=http://drupal.org/node/14208 |title=Adding your theme to Drupal.org |publisher=Drupal.org}}</ref> and most of them are demonstrated at the Drupal Theme Garden.<ref>[http://themegarden.org/ Drupal Theme Garden]</ref>
+
+===Distributions===
+In the past, those wanting a fully-customized installation of Drupal had to download a pre-tailored version separately from the official Drupal core.  Today, however, a '''distribution''' defines a packaged version of Drupal that upon installation, provides a website or application built for a specific purpose.
+
+The distributions offer the benefit of a new Drupal site without having to manually seek out and install third-party contrib modules or adjust configuration settings. They are collections of modules, themes, and associated configuration settings that prepare Drupal for custom operation.  For example, a distribution could configure Drupal as a "brochureware" site rather than a "news" site or an "online store".
+
+Distributions include OpenPublish,<ref>{{cite web|url=http://www.openpublishapp.com/|title=OpenPublish }}</ref> Drupal Commons,<ref>{{cite web|url=http://drupal.org/project/commons/|title=Drupal Commons }}</ref> Open Atrium,<ref>{{cite web|url=http://www.openatrium.com/|title=Open Atrium }}</ref> Managing News,<ref>{{cite web|url=http://www.managingnews.com/|title=Managing News }}</ref> Tattler,<ref>{{cite web|url=http://tattlerapp.com/|title=Tattler (app) }}</ref> NodeStream,<ref>{{cite web|url=http://www.nodestream.org/|title=NodeStream }}</ref> Pressflow,<ref>{{cite web|url=http://pressflow.org/|title=Pressflow}}</ref> OpenPublic <ref>{{cite web|url=http://www.openpublicapp.com/|title=OpenPublic }}</ref> and the Conference Organizing Distribution (COD)<ref>{{cite web|url=http://usecod.com|title=COD (Conference Organizing Distribution) }}</ref>
+
+==Community==
+Drupal.org has a large community of users and developers, numbering more than 615,000 user accounts and more than 9,000 developer accounts.<ref>[http://drupal.org/home drupal.org, Drupal Homepage]</ref> The semiannual Drupal conference alternates between North America and Europe.<ref>[http://groups.drupal.org/node/17870 drupal.org discussion on Drupalcon event management]</ref> Attendance at DrupalCon grew from 500 at [[Szeged]] in August 2008 to over 3,000 people at [[Chicago]] in March 2011.<ref>{{cite web|url=http://chicago2011.drupal.org/ |title=DrupalCon Chicago 2011}}</ref> The European DrupalCon 2011 will take place in August 2011 in [[London]], [[UK]].
+
+Smaller events, known as "Drupal Camps", occur throughout the year all over the world.
+
+There are a number of active Drupal forums,<ref>[http://drupal.org/forum/ Drupal.org forums]</ref> mailing lists<ref>[http://drupal.org/mailing-lists Drupal.org mailing lists]</ref> and discussion groups.<ref>[http://groups.drupal.org/ Drupal Groups]</ref> Drupal also maintains several [[IRC]] channels<ref>[http://drupal.org/node/108355 Drupal IRC channels on FreeNode]</ref> on the [[Freenode]] network.
+
+There are over 30 national communities<ref>[http://drupal.org/language-specific-communities Language specific communities]</ref> around drupal.org offering language-specific support.
+
+===DrupalCon events===
+{| cellpadding="10"
+|-  style="text-align:left; vertical-align:top;"
+|
+|
+{| cellpadding="1"  style="width:600px; font-size:90%; border:1px solid gray;"
+|-  style="text-align:center; font-size:larger;"
+| colspan=5 | '''DrupalCon event locations and attendance'''
+|- style="background:lightblue;"
+| '''City''' || '''Year''' || '''Month''' || '''Attendance''' || '''Site'''
+|-
+| Denver
+| 2012
+| March
+|
+| http://denver2012.drupal.org/
+|-
+| London
+| 2011
+| August
+|
+| http://london2011.drupal.org/
+|-
+| Chicago
+| 2011
+| March
+| 3000pp
+| http://chicago2011.drupal.org/
+|-
+| Copenhagen
+| 2010
+| August
+| 1200pp
+| http://cph2010.drupal.org/
+|-
+| San Francisco
+| 2010
+| April
+| 3000pp
+| http://sf2010.drupal.org/
+|-
+| Paris
+| 2009
+| September
+| 850pp
+| http://paris2009.drupalcon.org/
+|-
+| Washington, D.C.
+| 2009
+| March
+| 1400pp
+| http://dc2009.drupalcon.org/
+|-
+| Szeged
+| 2008
+| August
+| 500pp
+| http://szeged2008.drupalcon.org/
+|-
+| Boston
+| 2008
+| March
+| 850pp
+| http://boston2008.drupalcon.org/
+|-
+| Barcelona
+| 2007
+| September
+| 450pp
+| http://barcelona2007.drupalcon.org/
+|-
+| Sunnyvale
+| 2007
+| March
+| ~300+pp
+| http://drupal.org/events/oscms2007/
+|-
+| Brussels
+| 2006
+| September
+| 150pp
+| http://groups.drupal.org/drupalcon-brussels-2006
+|-
+| Vancouver
+| 2006
+| February
+| ~150pp
+| http://drupal.org/node/46559
+|-
+| Amsterdam
+| 2005
+| October
+| ~100pp
+| http://drupal.org/conference-amsterdam-2005/
+|-
+| Portland
+| 2005
+| August
+| over 100pp
+| http://drupal.org/conference-portland-2005/
+|-
+| Antwerp
+| 2005
+| February
+| under 50pp
+| http://drupal.org/conference-antwerp-2005/
+|}
+|}<ref>[http://www.listology.com/jwalling/list/drupal-events] Drupal events</ref>
+
+====Drupalgangers====
+Paired with each DrupalCon event, "Drupalgangers" meetups occur. The events are defined by the community as gatherings of "friends, partners, spouses, and other associates of Drupal community members to enjoy the "con" - without ever having to participate in the geekdom of the event - by traveling around the town or city together."<ref>[http://groups.drupal.org/drupalgangers] Drupalgangers</ref>
+
+==Security==
+Drupal's policy is to announce the nature of each security vulnerability once the fix is released.<ref>{{cite web|url=http://drupal.org/security-advisory-policy| title=Security advisories process and permissions policy| author=Drupal}}</ref>
+
+Administrators of Drupal sites are automatically notified of these new releases via the Update Status module (Drupal 6.x) or via the Update Manager (Drupal 7.x).<ref>{{cite web |url=http://drupal.org/documentation/modules/update |title=Update manager (and Update status) |work=drupal.org |accessdate=2011-07-01 }}</ref> Drupal maintains a security announcement mailing list, a history of all security advisories,<ref name=security/> a security team home page,<ref>[http://drupal.org/security-team Drupal security team]</ref> and an RSS feed<ref>[http://drupal.org/security/rss.xml Drupal Security RSS feed]</ref> with the most recent security advisories. In 2008, eleven security vulnerabilities were reported and fixed in the Drupal core.<ref name=security>{{cite web |url=http://drupal.org/security |title=Security advisories |work=drupal.org |accessdate=2009-04-28 }}</ref> Security holes were also found and fixed in 64 of the 2243 user-contributed modules.<ref name=security/><ref>{{cite web |url=http://drupal.org/security |title=Contributed modules |work=drupal.org |accessdate=2009-04-28}}</ref>
+
+When compared to three other well-known open source CMS platforms covered by the MITRE CVE database, Drupal ranked second - after [[Plone (software)|Plone]] but before [[WordPress]] and [[Joomla]].<ref>[http://govfresh.com/2011/03/gov-2-0-guide-to-plone/ Comparison of Severe Security Vulnerabilities for Drupal, Plone, WordPress, and Joomla]</ref>
+
+==Criticism==
+In an article about the adoption of Drupal by the Whitehouse.gov site, associate editor at [[Slate (magazine)|Slate]] Chris Wilson<ref name="slate">[http://www.slate.com/id/2233719/ Message Error, Why running the White House Web site on Drupal is a political disaster waiting to happen] Chris Wilson. [[Slate (magazine)]] October 27, 2009</ref> lists some common criticisms of Drupal (the article itself received criticism for not being accurate, even flawed <ref name="databasepublish">[http://www.databasepublish.com/blog/messengers-errors-chris-wilsons-flawed-rant-about-drupal-and-whitehousegov Messenger's Error(s): Chris Wilson's flawed rant about Drupal and whitehouse.gov] Conor McNamara. [[DPCI]] October 27, 2009</ref>). Penn State University also outlined a number of criticisms (alongside a number of benefits) of Drupal for their environment.<ref>[https://weblion.psu.edu/trac/weblion/wiki/PloneVersusDrupal Comparing Content Management Systems, WebLion]</ref> Other criticisms have included:
+
+* '''Usability:''' Aspects of the Drupal 6 administration interface can be confusing and intimidating to some, particularly for new administrators.<ref name=iw>{{cite web |url=http://www.informationweek.com/blog/main/archives/2008/07/drupal_addresse.html |title=Drupal Addresses Security In 6.3, Usability in 7 |last=Hagopian |first=Peter |work=Information Week |date=2008-07-10 |accessdate=2009-04-08 }}</ref><ref>{{cite web |url=http://groups.drupal.org/files/DrupalUsabilityResearchReport.pdf |title=Drupal Usability Research Report |last=Scollan |first=Becca |coauthors=Abby Byrnes, Malia Nagle, Paul Coyle, Cynthia York, Maleka Ingram |format=PDF |date=2008-05-01 |accessdate=2009-04-08 }}</ref><ref>{{cite web |url=http://drupal.org/usability-test-university-baltimore-community-solutions |title=Drupal usability tests from the University of Baltimore with community solutions |last=Lal |first=Kieran |work=drupal.org |date=2008-06-26 |accessdate=2009-04-08 }}</ref><ref name=uuu>{{cite web |url=http://buytaert.net/usability-usability-and-usability |title=Usability, usability, and usability |last=Buytaert |first=Dries |date=2008-07-03 |accessdate=2009-04-08 }}</ref> According to Dries Buytaert, Drupal 7 will address 90% of the problems identified by the Universities of Minnesota and Baltimore.<ref>{{cite web |url=http://buytaert.net/first-results-from-usability-testing |title=First results from usability testing |last=Buytaert |first=Dries |date=2008-03-10 |accessdate=2009-04-08 }}</ref><ref>{{cite web |url=http://buytaert.net/files/usability-testing-minnesota.pdf |title=Report from Formal Drupal |format=PDF |date=2008-03-03 |accessdate=2009-04-08 }}</ref> Improved usability will close the gap with easier CMSs. To achieve this, [[Acquia]] (the company founded by the project lead of Drupal) hired UX and web designer [http://www.markboulton.co.uk/ Mark Boulton] to work with the Drupal community to design a dramatically improved user interface for Drupal's administration interface.<ref>{{cite web|url=http://acquia.com/blog/mark-boulton-help-drupal-7 |title=Mark Boulton to help with Drupal 7|last=Buytaert |first=Dries |date=2009-02-04}}</ref> The majority of his team's design work has been implemented by the community in Drupal 7. The 2011 usability test results from the University of Minnesota Office of Information Technology show that all of the major usability problems identified in Drupal 6 are either vastly improved or non-existent in Drupal 7, however some new usability problems were identified.<ref>{{cite web |url=http://drupal.org/node/1166656 |title=Usability test at University of Minnesota, may 2011 |last=University of Minnesota Office of Information Technology |work=drupal.org |date=2011-05-23 }}</ref><ref>{{cite web |url=http://drupal.org/node/1175694 |title=Report from the University of Minnesota Drupal Usability Testing |last=University of Minnesota Office of Information Technology |work=drupal.org |date=2011-06-01 }}</ref>
+
+* '''Learning curve:''' Some users describe Drupal as being difficult to master.<ref name=iw/><ref>{{cite web |url=http://newassignment.net/blog/brianchoward/jan2007/24/harnessing_drupa |title=Harnessing Drupal for Citizen Journalism |last=Howard |first=Brian C. |work=NewAssignment.Net |date=2007-01-25 |accessdate=2009-04-08 }}</ref><ref>{{cite web |url=http://www.cmscritic.com/drupal-content-management-system-6-x-series-review/ |title=Drupal Review }}</ref> Drupal's many contributed modules can have overlapping functionality and have been reported as overwhelming to new users.<ref>{{cite web |url=http://acquia.com/blog/heather/203-people-tell-what-i-wish-i-knew-when-i-started-drupal |title=203 people tell What I wish I knew when I started Drupal |last=James |first=Heather |work=Acquia.com |date=2010-11-09 |accessdate=2010-11-11 }}</ref>
+
+* '''Backward compatibility (for software development):''' Drupal does not commit to backward compatibility across major revisions.<ref>{{cite web |url=http://buytaert.net/backward-compatibility |title=Backward Compatibility |last=Buytaert |first=Dries |date=2006-05-26 |accessdate=2009-04-08 }}</ref> This means that module and theme developers may have to rework their code to be compatible. However, Drupal's policy is to not change how it uses one's data. This means that data from previous versions will still be usable without alteration in the new release.<ref>{{cite web |url=http://buytaert.net/the-pain-before-the-payoff |title=The pain before the pay-off |last=Buytaert |first=Dries |date=2006-07-27 |accessdate=2009-04-08 }}</ref><ref>[http://drupal.org/upgrade/ Drupal's Upgrade Instructions (end-user)]</ref> Omitting backward compatibility reduces [[software bloat]]. Drupal documents any incompatibilities, allowing the user to make informed decisions about when and whether to upgrade.
+
+* '''Performance/scalability:''' In 2008, [[Computer performance|performance]] tests between Drupal 6.1 and [[Joomla]] 1.5 demonstrated that Drupal's pages were delivered "significantly faster" than those of [[Joomla!|Joomla]].<ref>{{cite web |url=http://www.alldrupalthemes.com/blog/joomla-15-drupal-61-performance-comparison.html |title=Joomla 1.5 & Drupal 6.1 Performance Comparison}}</ref> Despite this, Drupal is still seen as slow.<ref>{{cite web |url=http://www.nixer.org/is-drupal-slow-bloated |title=Is Drupal Slow & Bloated?}}</ref> It is true that Drupal is likely to be slower than a special-purpose application for a given task. For example, [[WordPress]] typically outperforms Drupal as a single-user blogging tool. Drupal positions itself for broader applications requirements that are outside the scope of more narrowly focused applications.<ref>{{cite web | url=http://drupal.org/node/346217 | title=Is Drupal the right tool for the job?}}</ref> Drupal offers [[Cache|caching]] to store various page elements, the use of which resulted in a 508% improvement in one benchmark. When using Drupal's default Page Cache mechanism, the cached pages are delivered only to anonymous users, so contributed modules must be installed to allow caching content for logged in users.<ref>{{cite web |url=http://drupal.org/project/authcache |title=Authenticated User Page Caching (Authcache) |work=drupal.org |accessdate=2009-09-23 }}</ref><ref>{{cite web |url=http://buytaert.net/drupal-vs-joomla-performance |title=Drupal vs [[Joomla!|Joomla]] performance |last=Buytaert |first=Dries |date=2006-08-11 |accessdate=2009-05-20 }}</ref> Like performance, [[scalability]] (the ability to add servers to handle growing numbers of visitors with consistent response) can become a concern on large, interactive sites. [[MySQL]]'s query caching can help reduce the load on the database server caused by Drupal's high query rate.<ref>{{cite web |url=http://nadeausoftware.com/articles/2007/03/speed_drupal_web_site_enabling_mysql_query_caching |title=Speed up a Drupal web site by enabling MySQL query caching |work=nadeausoftware.com |date=2007-03-07 |accessdate=2009-06-21 }}{{dead link|date=August 2011}}</ref><ref>[http://books.tag1consulting.com/scalability Book on Drupal Performance & Scalability]</ref> Drupal caches database schema [[metadata]] as well as elements such as blocks, forms and menus.<ref>{{cite web |url=http://drupal.org/node/288488 |title=Caching in Drupal 6 |work=drupal.org |date=2008-07-28 |accessdate=2009-06-21 }}</ref> Drupal 7 increases performance in database queries and reduces PHP code usage.<ref>{{cite web |url=http://civicactions.com/blog/2009/may/19/drupal_6_vs_drupal_7_performance_and_comments_vs_nodes |title=Drupal 6 vs Drupal 7 performance and comments vs nodes |work=CivicActions.com |date=2009-05-19 |accessdate=2009-06-21 }}</ref>
+
+==Examples==
+These are examples of websites based on the Drupal CMS:
+<!--======================== {{No more links}} ============================
+    | PLEASE BE CAUTIOUS IN ADDING MORE LINKS TO THIS ARTICLE. Wikipedia  |
+    | is not a collection of links nor should it be used for advertising. |
+    |                                                                     |
+    |           Excessive or inappropriate links WILL BE DELETED.         |
+    | See [[Wikipedia:External links]] & [[Wikipedia:Spam]] for details.  |
+    |                                                                     |
+    | If there are already plentiful links, please propose additions or   |
+    | replacements on this article's discussion page, or submit your link |
+    | to the relevant category at the Open Directory Project (dmoz.org)   |
+    | and link back to that category using the {{dmoz}} template.         |
+    ======================= {{No more links}} =============================-->
+{{columns-list|2|
+*[http://www.alrc.gov.au/ alrc.gov.au], [[Australian Law Reform Commission]]<ref>{{cite web |url=http://www.computerworld.com.au/article/358764/drupal_rise_government_alrc_website_win/?eid=-255 |title=Drupal on the rise in government with ALRC website win|work=computerworld.com.au |accessdate=2011-06-24 }}</ref>
+*[http://data.gov.uk/ data.gov.uk], [[data.gov.uk]]<ref>{{cite web |url=http://data.gov.uk/blog/datagovuk-site-redesign#comment-2838 | title=Data.gov.uk - site redesign|work=Data.gov.uk Blog |accessdate=2011-06-24}}</ref>
+*[http://www.fastcompany.com/ fastcompany.com], [[Fast Company (magazine)|Fast Company]]<ref name="FastCo">{{cite web |last=Eaton|first=Kit|title=Under First Open-Source Prez Obama, White House Adopts Drupal, But at What Cost?|url=http://www.fastcompany.com/blog/kit-eaton/technomix/white-house-web-adds-some-drupal-magic |work=FastCompany.com|accessdate=2011-06-24}}</ref>
+*[http://www.nysenate.gov/ nysenate.gov], [[New York State Senate]] {{Citation needed|date=June 2011}}
+*[http://london.gov.uk/ london.gov.uk], [[Greater London Authority]]<ref>[http://www.london.gov.uk/blog/100213 A new site for London | Greater London Authority<!-- Bot generated title -->]</ref>
+*[http://www.mtv.co.uk/ mtv.co.uk], [[MTV UK]]<ref>[http://www.lullabot.com/articles/press-release-lullabot-drupal-and-mtv-uk Press Release: Lullabot, Drupal, and MTV UK]</ref>
+*[http://www.rutgers.edu/ rutgers.edu], [[Rutgers]]<ref>[http://ur.rutgers.edu/redesign/cms.shtml The New Rutgers.edu - About Content Management Systems]</ref>
+*[http://www.economist.com/ economist.com], [[The Economist]]<ref>[http://drupal.org/node/915102 The Economist.com data migration to Drupal]</ref>
+*[http://www.ubuntu.com/ ubuntu.com], [[Ubuntu (operating system)|Ubuntu]]<ref>{{cite web|last=Nuzum|first=Matthew|title=The New Ubuntu Website|url=http://www.bearfruit.org/2007/03/14/the-new-ubuntu-website/|accessdate=2011-06-24}}</ref>
+*[http://www.whitehouse.gov/ whitehouse.gov], [[whitehouse.gov]]<ref name="FastCo" /><ref>{{cite web |url=http://radar.oreilly.com/2009/10/whitehouse-switch-drupal-opensource.html |title=Thoughts on the Whitehouse.gov switch to Drupal|work=Oreilly |accessdate=2011-06-24 }}</ref><ref>{{cite web |url=http://techpresident.com/blog-entry/whitehousegov-goes-drupal |title=WhiteHouse.gov Goes Drupal|work=TechPresident |accessdate=2011-06-24 }}</ref>
+*[http://www.wfp.org/ wfp.org], [[World Food Programme]]<ref>{{cite web |url=http://www.phase2technology.com/project/world-food-programme-wfporg-cms |title=Case Study: United Nations World Food Programme (WFP.org)|work=Phase2 Technology |accessdate=2011-06-24 }}</ref>
+*[http://ocean.si.edu/ ocean.si.edu], [[Smithsonian Ocean Portal]] {{Citation needed|date=June 2011}}
+*[http://dev.twitter.com/ dev.twitter.com] <ref>{{cite web|title=Twitter Selects Acquia and Drupal to Power Developer Community Website|url=http://www.msnbc.msn.com/id/43715943/ns/business-press_releases/t/twitter-selects-acquia-drupal-power-developer-community-website/|publisher=MSNBC|accessdate=12 July 2011}}</ref>
+}}
+
+==See also==
+{{Portal|Free software}}
+* [[List of content management systems]]
+* [[List of web application frameworks]]
+* [[Web application frameworks]]
+* [[List of applications with iCalendar support]]
+
+==Notes==
+{{Reflist|30em}}
+
+==Further reading==
+* {{cite book |last=Travis |first=Brian |title=Pro Drupal 7 for Windows Developers |location=Berkeley |publisher=APress |year=2011 |isbn=978-1430231530 }}
+* {{cite book |last=Butcher |first=Matt |coauthors=Larry Garfield, John Wilkins, Matt Farina, Ken Rickard, Greg Dunlap |title=Drupal 7 Module Development |location=Birmingham, England |publisher=Packt Publishing |year=2010 |isbn=978-1-84951-116-2 }}
+* {{cite book |last=Bhavin |first=Patel |title=Drupal 6 Panels Cookbook |location=Canada |publisher=Packt Publishing |year=Aug 2010 |isbn=1849511187 }}
+* {{cite book |last=Beighley |first=Lynn |title=Drupal for Dummies |location=New York |publisher=For Dummies |year=2009 |isbn=978-0-470-55611-5 }}
+* {{cite book |last=Roswell|first=Marjorie|title=Drupal 5 Views Recipes |location=Birmingham, England |publisher=Packt Publishing |year=2009 |isbn=978-1847196965 }}
+* {{cite book |last=Herremans |first=D. |title=Drupal 6: Ultimate Community Site Guide |location=Switzerland |year=2009 |isbn=978-2-839-90490-2 }}
+* {{cite book |last=Peacock |first=Michael |title=Selling Online with Drupal e-Commerce |location=Birmingham, England |publisher=Packt Publishing |year=2008 |isbn=978-1-847194-06-0 }}
+* {{cite book |last=VanDyk |first=John K. |title=Pro Drupal Development, Second Edition |location=New York |publisher=Springer Verlag/Apress |year=2008 |isbn=1-430-20989-5 }}
+* {{cite book |last=Kafer |first=Konstantin |coauthors=Emma Hogbin |title=Front End Drupal: Designing, Theming, Scripting |location=Jersey, USA |publisher=Prentice Hall |year=Apr 2009|isbn=0137136692 }}
+* {{cite book |last=Shreves |first=Ric |title=Drupal 5 Themes |location=Birmingham, England |publisher=Packt Publishing |year=2007 |isbn=1-847-19182-7 }}
+* {{cite book |last=Charlton|first=Chris|title=Advanced Flex Application Development: Building Rich Media X with Drupal 5 & Flex 2 |location=London, England |publisher=Friends of ED/Apress |year=2007 |isbn=978-1590598962 }}
+* {{cite book |last=Mercer |first=David |title=Drupal: Creating Blogs, Forums, Portals, and Community Websites |location=Birmingham, England |publisher=Packt Publishing |year=2006 |isbn=1-904-81180-9 }}
+* {{cite book |last=Douglass |first=Robert T. |coauthors=Mike Little and Jared W. Smith |title=Building Online Communities With Drupal, phpBB, and WordPress |location=New York |publisher=Springer Verlag/Apress |year=2005 |isbn=1-590-59562-9 }}
+<!--
+'''Upcoming Books'''
+*Mansfield, Niall. ''Practical Drupal''. Cambridge: UIT Cambridge Ltd, 2008. ISBN 095445295X.
+*Mercer, David. ''Drupal 6''. Birmingham, England: Packt Publishing, 2008. ISBN 1847192971.
+-->
+
+==External links==
+{{Commons category|Drupal}}
+*{{Official website|http://drupal.org/}}
+
+{{Application frameworks}}
+
+[[Category:Open source content management systems]]
+[[Category:PHP Frameworks]]
+[[Category:Web application frameworks]]
+[[Category:Free software programmed in PHP]]
+[[Category:Blog software]]
+[[Category:Content management systems]]
+[[Category:Cross-platform software]]
+
+[[ar:<U+062F><U+0631><U+0648><U+0628><U+0627><U+0644>]]
+[[map-bms:Drupal]]
+[[bg:Drupal]]
+[[ca:Drupal]]
+[[cv:Drupal]]
+[[cs:Drupal]]
+[[da:Drupal]]
+[[de:Drupal]]
+[[el:Drupal]]
+[[es:Drupal]]
+[[eo:Drupalo]]
+[[eu:Drupal]]
+[[fa:<U+062F><U+0631><U+0648><U+067E><U+0627><U+0644>]]
+[[fr:Drupal]]
+[[ko:<U+B4DC><U+B8E8><U+D314>]]
+[[hy:<U+0534><U+0580><U+0578><U+0582><U+0583><U+0561><U+056C>]]
+[[id:Drupal]]
+[[it:Drupal]]
+[[he:<U+05D3><U+05E8><U+05D5><U+05E4><U+05DC>]]
+[[jv:Drupal]]
+[[lv:Drupal]]
+[[lt:Drupal]]
+[[hu:Drupal]]
+[[mk:<U+0414><U+0440><U+0443><U+043F><U+0430><U+043B>]]
+[[ml:<U+0D26><U+0D4D><U+0D30><U+0D41><U+0D2A><U+0D3E><U+0D7D>]]
+[[nl:Drupal]]
+[[ja:Drupal]]
+[[no:Drupal]]
+[[pl:Drupal]]
+[[pt:Drupal]]
+[[ro:Drupal]]
+[[ru:Drupal]]
+[[sk:Drupal]]
+[[sr:<U+0414><U+0440><U+0443><U+043F><U+0430><U+043B>]]
+[[fi:Drupal]]
+[[sv:Drupal]]
+[[ta:<U+0B9F><U+0BC1><U+0BB0><U+0BC2><U+0BAA><U+0BCD><U+0BAA><U+0BB2><U+0BCD>]]
+[[te:<U+0C21><U+0C44><U+0C2A><U+0C32><U+0C4D>]]
+[[th:<U+0E14><U+0E23><U+0E39><U+0E1B><U+0E31><U+0E25>]]
+[[tr:Drupal]]
+[[uk:Drupal]]
+[[vi:Drupal]]
+[[zh:Drupal]]

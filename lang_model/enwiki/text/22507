@@ -1,0 +1,67 @@
+{{Infobox Scientist
+| name                    = Arthur Lee Samuel
+| image                   = 
+| image_width             = 
+| caption                 = 
+| birth_date              = 1901
+| birth_place             = [[Emporia, Kansas]]
+| death_date              = July 29, 1990
+| death_place             = [[Stanford, California]]
+| residence               = 
+| citizenship             = United States
+| nationality             = American
+| ethnicity               =
+| field                   = Computer Science
+| work_institution        = 
+| alma_mater              = [[MIT]]
+| doctoral_advisor        = 
+| doctoral_students       = 
+| known_for               = Samuel Checkers-playing Program
+| author_abbreviation_bot = 
+| author_abbreviation_zoo = 
+| prizes                  = 
+| religion                = 
+| footnotes               = 
+}}
+
+'''Arthur Lee Samuel''' (1901<U+2013>1990) was an American pioneer in the field of computer gaming and artificial intelligence. The Samuel Checkers-playing Program appears to be the world's first self-learning program, and as such a very early demonstration of the fundamental concept of [[artificial intelligence]] (AI).<ref name="memres">{{cite news |coauthors= Gio Wiederhold, John McCarthy, Ed Feigenbaum |title=Memorial Resolution: Arthur L. Samuel |year= 1990 |publisher= [[Stanford University]] Historical Society |url= http://histsoc.stanford.edu/pdfmem/SamuelA.pdf |accessdate = April 29, 2011}}</ref>
+
+==Biography==
+Samuel was born in 1901 in [[Emporia, Kansas]] and graduated from [[College of Emporia]] in Kansas in 1923.
+He received a Master<U+2019>s degree in Electrical Engineering from [[MIT]] in 1926, and taught for two years as instructor.  In 1928, he joined [[Bell Laboratories]], where he worked mostly on hardware; what we would today call [[Computer Engineering]], but before computers.  After a stint at [[University of Illinois at Urbana<U+2013>Champaign]], Samuel went to [[IBM]] in [[Poughkeepsie (town), New York|Poughkeepsie, New York]] in 1949, where he would conceive and carry out his most successful work.  At IBM he made the first [[draughts|checkers]] program on IBM's first commercial computer, the [[IBM 701]].  The program was a sensational demonstration of the advances in both hardware and skilled programming and caused IBM's stock to increase 15 points overnight.  His pioneering non-numerical programming helped shaped the instruction set of processors, as he was one of the first to work with computers on projects other than computation.<ref>{{cite web |title= Arthur Samuel: Pioneer in Machine Learning |author= John McCarthy (with additional material by Ed Feigenbaum) |url= http://infolab.stanford.edu/pub/voy/museum/samuel.html |accessdate = April 29, 2011 }} (includes links to photos)</ref>
+
+In 1966, Samuel retired from IBM and became a professor at [[Stanford]], where he worked the remainder of his life.  He worked with [[Donald Knuth]] on the [[TeX]] project, including writing some of the documentation. He continued to write software past his 80th birthday.<ref>{{cite news |title= Arthur Lee Samuel, 1901-1990 |work= TUGboat |year= 1990 |pages= 497<U+2013>498 |author= [[Donald Knuth]] |url= http://www.tug.org/TUGboat/tb11-4/tb30knut-samuel.pdf |accessdate = April 29, 2011 }}</ref>
+He died of complications from [[Parkinson's disease]] on July 29, 1990.<ref name="memres"/>
+
+==Computer checkers (draughts) development==
+Samuel is most known within the AI community for his groundbreaking work in [[Draughts#Computer_draughts|computer checkers]].  He thought that teaching computers to play games was very fruitful for developing tactics appropriate to general problems, and he chose checkers because it is relatively simple, but has a depth of strategy. The main driver of the machine was a search tree of the board positions reachable from the current state.  Since he had only a very limited amount of available computer memory, Samuel implemented what is now called [[alpha-beta pruning]].  Instead of searching each path until it came to the game<U+2019>s conclusion, Samuel developed a scoring function based on the position of the board at any given time.  This function tried to measure the chance of winning for each side at the given position.  It took into account such things as the number of pieces on each side, the number of kings, and the proximity of pieces to being <U+201C>kinged<U+201D>.  The program chose its move based on a [[minimax]] strategy, meaning it made the move that optimized the value of this function, assuming that the opponent was trying to optimize the value of the same function from its point of view.<ref>{{cite journal|title=Some Studies in Machine Learning Using the Game of Checkers|journal=IBM Journal|date=1959-03-03|first=Samuel|last=Arthur|coauthors=|volume=3|issue=3|pages=210<U+2013>229|id= |url=http://www.research.ibm.com/journal/rd/033/ibmrd0303B.pdf|format=PDF|accessdate=2007-04-26}}</ref>   
+
+Samuel also designed various mechanisms by which his program could become better.  In what he called [[rote learning]], the program remembered every position it had already seen, along with the terminal value of the reward function.  This technique effectively extended the search depth at each of these positions.  Samuel's later programs reevaluated the reward function based on input professional games.  He also had it play thousands of games against itself as another way of learning.  With all of this work, Samuel<U+2019>s program reached a respectable amateur status, and was the first to play any board game at this high of level.  He continued to work on checkers until the mid-1970s, at which point his program achieved sufficient skill to challenge a respectable amateur.<ref>Schaeffer, Jonathan. ''One Jump Ahead:: Challenging Human Supremacy in Checkers'', 1997,2009, Springer, ISBN 978-0-387-76575-4. Chapter 6.</ref>  However, his method of learning through games continued, both in continued work on checkers (which was weakly solved in 2007 by a computer which explored all relevant positions) and in other games like chess and go.
+
+==References==
+{{Reflist}}
+
+==External links==
+*[http://www.cs.ualberta.ca/~sutton/book/11/node3.html  Biography]
+*[http://www.cs.ualberta.ca/~chinook/ Chinook Information]
+
+{{Persondata <!-- Metadata: see [[Wikipedia:Persondata]]. -->
+| NAME              = Samuel, Arthur L.
+| ALTERNATIVE NAMES =
+| SHORT DESCRIPTION =
+| DATE OF BIRTH     = 1901
+| PLACE OF BIRTH    = [[Emporia, Kansas]]
+| DATE OF DEATH     = July 29, 1990
+| PLACE OF DEATH    = [[Stanford, California]]
+}}
+{{DEFAULTSORT:Samuel, Arthur L.}}
+[[Category:Draughts]]
+[[Category:Game artificial intelligence]]
+[[Category:Artificial intelligence researchers]]
+[[Category:History of artificial intelligence]]
+[[Category:1990 deaths]]
+[[Category:1901 births]]
+
+[[de:Arthur L. Samuel]]
+[[es:Arthur L. Samuel]]
+[[ru:<U+0410><U+0440><U+0442><U+0443><U+0440>, <U+0421><U+0430><U+043C><U+0443><U+044D><U+043B><U+044C>]]

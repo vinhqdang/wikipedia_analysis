@@ -1,0 +1,249 @@
+{{Otheruses}}
+In several fields of [[mathematics]] the term '''permutation''' is used with different but closely related meanings. They all relate to the notion of (re-)arranging [[element (mathematics)|element]]s from a given [[finite set]] into a [[sequence]].
+
+==Definitions==
+The general concept of permutation can be defined more formally in different contexts:
+
+===In combinatorics===
+In [[combinatorics]], a permutation is usually understood to be a sequence containing each element from a finite set once, and only once.  The concept of ''sequence'' is distinct from that of a ''set'', in that the elements of a sequence appear in some order: the sequence has a first element (unless it is empty), a second element (unless its length is less than 2), and so on. In contrast, the elements in a set have no order; {1, 2, 3} and {3, 2, 1} are different ways to denote the same set.
+
+However, there is also a traditional more general meaning of the term "permutation" used in combinatorics. In this more general sense, permutations are those sequences in which, as before, each element occurs at most once, but not all elements of the given set need to be used.
+
+For a related notion in which the ordering of the selected elements form a set, for which the ordering is irrelevant, see [[Combination]].
+
+===In group theory===
+In [[group theory]] and related areas, the elements of a permutation need not be arranged in a [[linear order]], or indeed in any order at all.  Under this refined definition, a permutation is a [[bijection]] from a [[finite set]] onto itself.  This allows for the definition of groups of permutations; see [[Permutation group]].
+
+== Counting permutations ==
+In this section only, the traditional definition from combinatorics is used: a permutation is an ordered sequence of elements selected from a given finite set, without repetitions, and not necessarily using all elements of the given set. For example, given the set of letters {<tt>C</tt>, <tt>E</tt>, <tt>G</tt>, <tt>I</tt>, <tt>N</tt>, <tt>R</tt>}, some permutations are <tt>RING</tt>, <tt>RICE</tt>, <tt>NICER</tt>, <tt>REIGN</tt> and <tt>CRINGE</tt>, but also <tt>RNCGI</tt> <U+2013> the sequence need not spell out an existing word. <tt>ENGINE</tt>, on the other hand, is not a permutation, because it uses the elements <tt>E</tt> and <tt>N</tt> twice.
+
+If ''n'' denotes the size of the set <U+2013> the number of elements available for selection <U+2013> and only permutations are considered that use all ''n'' elements, then the total number of possible permutations is equal to ''n''!, where "!" is the [[factorial]] operator. This can be shown informally as follows. In constructing a permutation, there are ''n'' possible choices for the first element of the sequence. Once it has been chosen, {{mbox|''n'' <U+2212> 1}} elements are left, so for the second element there are only {{mbox|''n'' <U+2212> 1}} possible choices. For the first two elements together, that gives us
+:''n'' <U+00D7> (''n'' <U+2212> 1) possible permutations.
+For selecting the third element, there are then {{mbox|''n'' <U+2212> 2}} elements left, giving, for the first three elements together,
+:''n'' <U+00D7> (''n'' <U+2212> 1) <U+00D7> (''n'' <U+2212> 2) possible permutations.
+Continuing in this way until there are only 2 elements left, there are 2 choices, giving for the number of possible permutations consisting of {{mbox|''n'' <U+2212> 1}} elements:
+:''n'' <U+00D7> (''n'' <U+2212> 1) <U+00D7> (''n'' <U+2212> 2) <U+00D7> ... <U+00D7> 2.
+The last choice is now forced, as there is exactly one element left. In a formula, this is the number
+:''n'' <U+00D7> (''n'' <U+2212> 1) <U+00D7> (''n'' <U+2212> 2) <U+00D7> ... <U+00D7> 2 <U+00D7> 1
+(which is the same as before because the factor 1 does not make a difference). This number is, by definition, the same as ''n''!.
+
+In general the number of permutations is denoted by ''P''(''n'', ''r''), <sub>n</sub>P<sub>r</sub>, or sometimes <math>P_r^n</math>,
+where:
+* ''n'' is the number of elements available for selection, and
+* ''r'' is the number of elements to be selected (0 <U+2264> ''r'' <U+2264> ''n'').
+
+For the case where {{mbox|= ''r'' = ''n''}} it has just been shown that {{mbox|= ''P''(''n'', ''n'') = ''n''!}}. The general case is given by the formula: 
+:<math> P(n, r) = \frac{n!}{(n-r)!}.</math>
+As before, this can be shown informally by considering the construction of an arbitrary permutation, but this time stopping when the length ''r'' has been reached.
+The construction proceeds initially as above, but stops at length ''r''. The number of possible permutations that has then been reached is:
+:''P''(''n'', ''r'') = ''n'' <U+00D7> (''n'' <U+2212> 1) <U+00D7> (''n'' <U+2212> 2) <U+00D7> ... <U+00D7> (''n'' <U+2212> ''r'' + 1).
+So:
+:''n''! = ''n'' <U+00D7> (''n'' <U+2212> 1) <U+00D7> (''n'' <U+2212> 2) <U+00D7> ... <U+00D7> 2 <U+00D7> 1
+:&nbsp;&nbsp;&nbsp;&nbsp; = ''n'' <U+00D7> (''n'' <U+2212> 1) <U+00D7> (''n'' <U+2212> 2) <U+00D7> ... <U+00D7> (''n'' <U+2212> ''r'' + 1) <U+00D7> (''n'' <U+2212> ''r'') <U+00D7> ... <U+00D7> 2 <U+00D7> 1
+:&nbsp;&nbsp;&nbsp;&nbsp; = ''P''(''n'', ''r'') <U+00D7> (''n'' <U+2212> ''r'') <U+00D7> ... <U+00D7> 2 <U+00D7> 1
+:&nbsp;&nbsp;&nbsp;&nbsp; = ''P''(''n'', ''r'') <U+00D7> (''n'' <U+2212> ''r'')!.
+But if ''n''! = ''P''(''n'', ''r'') <U+00D7> (''n'' <U+2212> ''r'')!, then {{mbox|= ''P''(''n'', ''r'') =  ''n''! / (''n'' <U+2212> ''r'')!}}.
+
+For example, if there is a total of 10 elements and are selecting a sequence of three elements from this set, then the first selection is one from 10 elements, the next one from the remaining 9, and finally from the remaining 8, giving {{mbox|= 10 <U+00D7> 9 <U+00D7> 8 = 720}}.  In this case, ''n'' = 10 and ''r'' = 3.  Using the formula to calculate ''P''(10,3),
+
+:<math> P(10,3) = \frac{10!}{(10-3)!} = \frac{10!}{7!} = \frac{1 \times 2 \times 3 \times 4 \times 5 \times 6 \times 7 \times 8 \times 9 \times 10}{1 \times 2 \times 3 \times 4 \times 5 \times 6 \times 7} = \frac{3628800}{5040} = 720 </math>
+
+In the special case where ''n'' = ''r'' the formula above simplifies to:
+
+:<math> P(n,r) = \frac{n!}{0!} = \frac{n!}{1} = n! </math>
+
+The reason why 0! = 1 is that 0! is an [[empty product]], which always equals 1.
+
+In the example given in the header of this article, with 6 integers {1..6}, this would be:
+''P''(6,6) = 6! / (6<U+2212>6)! = (1<U+00D7>2<U+00D7>3<U+00D7>4<U+00D7>5<U+00D7>6) / 0! = 720 / 1 = 720.
+
+Other, older notations include <sup>''n''</sup>''P''<sub>''r''</sub>, ''P''<sub>''n'',''r''</sub>, or <sub>''n''</sub>''P''<sub>''r''</sub>. A common modern notation is (''n'')<sub>''r''</sub> which is called a ''[[falling factorial]]''.  However, the same notation is used for the ''[[rising factorial]]'' (also called ''[[Pochhammer symbol]]'') 
+
+:''n''(''n'' + 1)(''n'' + 2)<U+22EF>(''n'' + ''r'' &minus; 1)''r''.  
+
+With the rising factorial notation, the number of permutations is (''n'' &minus; ''r'' + 1)<sub>''r''</sub>.
+
+== Permutations in group theory ==
+As explained in a previous section, in group theory the term ''permutation (of a set)'' is reserved for a [[bijective|bijective map]] ([[bijection]]) from a finite set onto itself. The earlier example, of making permutations out of numbers 1 to 10, would be translated as a map from the set {1, <U+2026>, 10} to itself.
+
+==Notation==
+There are two main notations for such permutations.
+In relation notation, one can just arrange the "natural" ordering of the elements being permuted on a row, and the new ordering on another row:
+: <math>\begin{pmatrix}
+1 & 2 & 3 & 4 & 5 \\ 
+2 & 5 & 4 & 3 & 1\end{pmatrix} = (2,5,4,3,1) = \begin{pmatrix}1 & 2 & 5 \end{pmatrix} \begin{pmatrix}3 & 4 \end{pmatrix} = \begin{pmatrix}3 & 4 \end{pmatrix} \begin{pmatrix}1 & 2 & 5 \end{pmatrix}</math>
+stands for the permutation ''s'' of the set {1,2,3,4,5} defined by ''s''(1)=2, ''s''(2)=5, ''s''(3)=4, ''s''(4)=3, ''s''(5)=1.
+
+If we have a finite set ''E'' of ''n'' elements, it is by definition in [[bijection]]  with the set {1,<U+2026>,''n''}, where this bijection ''f'' corresponds just to numbering the elements. Once they are numbered, we can identify the permutations of the set ''E'' with permutations of the set {1,<U+2026>,''n''}. (In more mathematical terms, the [[Function (mathematics)|function]] that maps a permutation ''s'' of ''E'' to the permutation ''f o s o f<sup><U+2212>1</sup>'' of {1,<U+2026>,''n''} is a [[morphism]] from the [[symmetric group]] of ''E'' into that of {1,<U+2026>,''n''}, see below.) 
+
+Alternatively, we can write the permutation in terms of how the elements change when the permutation is successively applied. This is referred to as the permutation's ''decomposition in a product of disjoint [[cycle (mathematics)|cycle]]s''. It works as follows: starting from one element ''x'', we write the sequence (''x'' ''s''(''x'') ''s''<sup>2</sup>(''x'') <U+2026>) until we get back the starting element (at which point we close the parenthesis without writing it for a second time). This is called the [[cycle (mathematics)|cycle]] associated to ''x'''s [[orbit (group theory)|orbit]] following ''s''.
+Then we take an element we did not write yet and do the same thing, until we have considered all elements. In the above example, we get: ''s'' = (1 2 5) (3 4).
+
+Each cycle (''x''<sub>1</sub> ''x''<sub>2</sub> <U+2026> ''x''<sub>''L''</sub>) stands for the permutation that maps ''x''<sub>''i''</sub> on ''x''<sub>''i''+1</sub> (''i''=1<U+2026>''L''<U+2212>1) and  ''x''<sub>''L''</sub> on ''x''<sub>1</sub>, and leaves all other elements invariant.
+''L'' is called the length of the cycle. Since these cycles have by construction [[disjoint]] [[support (mathematics)|support]]s (i.e. they act non-trivially on disjoint subsets of ''E''), they do commute (for example, (1 2 5) (3 4) = (3 4)(1 2 5)). The order of the cycles in the (composition) product does not matter, while the order of the elements in each cycles does matter ([[up to]] cyclic change; see also [[cycles and fixed points]]).
+
+Obviously, a 1-cycle (cycle of length 1) is the same as fixing the element contained in it, so there is no use in writing it explicitly. Some authors' definition of a cycle do not include cycles of length 1.
+
+Cycles of length two are called [[transposition (mathematics)|transpositions]]; such permutations merely exchange the place of two elements.  (Conversely, a [[in-place matrix transposition|matrix transposition]] is itself an important example of a permutation.)
+
+==Product and inverse of permutations==
+{{main|Symmetric group}}
+
+One can define the product of two permutations as follows. If we have two permutations, ''P'' and ''Q'', the action of first performing ''P'' and then ''Q'' will be the same as performing some single permutation ''R''. The product of ''P'' and ''Q'' is then defined to be that permutation ''R''. Viewing permutations as bijections, the product of two permutations is thus the same as their [[Function composition|composition]] as functions. There is no universally agreed notation for the product operation between permutations, and depending on the author a formula like ''PQ'' may mean either ''P'' <U+2218> ''Q'' or ''Q'' <U+2218> ''P''. Since function composition is [[associative]], so is the product operation on permutations: (''P'' <U+2218> ''Q'') <U+2218> ''R''&nbsp;= ''P'' <U+2218> (''Q'' <U+2218> ''R'').
+
+Likewise, since [[bijections]] have [[Inverse function|inverses]], so do permutations, and both ''P'' <U+2218> ''P''<sup><U+2212>1</sup> and ''P''<sup><U+2212>1</sup> <U+2218> ''P'' are the "identity permutation" (see below) that leaves all positions unchanged. Thus, it can be seen that permutations form a [[group (mathematics)|group]].
+
+As for any group, there is a [[group isomorphism]] on permutation groups, obtained by assigning to each permutation its inverse, and this isomorphism is an [[involution]], giving a dual view on any abstract result. Since (''P'' <U+2218> ''Q'')<sup><U+2212>1</sup>&nbsp;= ''Q''<sup><U+2212>1</sup> <U+2218> ''P''<sup><U+2212>1</sup>, from an abstract point of view it is immaterial whether ''PQ'' represents "''P'' before ''Q''" or "''P'' after ''Q''". For concrete permutations, the distinction is, of course, quite material.
+
+== Special permutations ==
+If we think of a permutation that "changes" the position of the first element to the first element, the second to the second, and so on, we really have not changed the positions of the elements at all. Because of its action, we describe it as the ''identity permutation'' because it acts as an [[identity function]]. Conversely, a permutation which changes the position of all elements (no element is mapped to itself) is called a [[derangement]].
+
+If one has some permutation, called ''P'', one may describe a permutation, written ''P''<sup><U+2212>1</sup>, which undoes the action of applying ''P''.  In essence, performing ''P'' then ''P''<sup><U+2212>1</sup> is equivalent to performing the identity permutation. One always has such a permutation since a permutation is a bijective map. Such a permutation is called the ''[[inverse]] permutation''. It is computed by exchanging each number and the number of the place which it occupies.
+
+An [[Even and odd permutations|even permutation]] is a permutation which can be expressed as the product of an even number of transpositions, and the identity permutation is an even permutation as it equals (1 2)(1 2).  An [[Even and odd permutations|odd permutation]] is a permutation which can be expressed as the product of an odd number of transpositions.  It can be shown that every permutation is either odd or even and can't be both.
+
+One theorem regarding the inverse permutation is the effect of a conjugation of a permutation by a permutation in a permutation group.  If we have a permutation ''Q''=(''i''<sub>1</sub> ''i''<sub>2</sub> <U+2026> ''i''<sub>''n''</sub>) and a permutation ''P'', then  ''PQP''<sup><U+2212>1</sup> = (''P''(''i''<sub>1</sub>) ''P''(''i''<sub>2</sub>) <U+2026> ''P''(''i''<sub>''n''</sub>)).
+
+We can also represent a permutation in [[matrix (mathematics)|matrix]] form; the resulting matrix is known as a ''[[permutation matrix]]''.
+
+==Permutations in computing==
+
+Some of the older textbooks look at permutations as ''assignments'', as mentioned above. In [[computer science]] terms, these are [[assignment operation]]s, with values 
+
+:1, 2, <U+2026>, ''n'' 
+
+assigned to variables
+
+:''x''<sub>1</sub>, ''x''<sub>2</sub>,  <U+2026>, ''x''<sub>''n''</sub>. 
+
+Each value should be assigned only once.
+
+The assignment/substitution difference is then illustrative of one way in which [[functional programming]] and [[imperative programming]] differ &mdash; pure functional programming has no assignment mechanism. The mathematics ''convention'' is nowadays that permutations are just functions and the operation on them is [[function composition]]; functional programmers follow this. In the assignment language a ''substitution'' is an instruction to switch round the values assigned, simultaneously; a well-known problem.
+
+== Numbering permutations ==
+
+[[Factoradic]] numbers can be used to assign unique numbers to permutations, such that given a factoradic of ''k'' one can quickly find the corresponding permutation.
+
+=== Algorithms to generate permutations ===
+==== Unordered generation ====
+
+For every number ''k'', with 0&nbsp;<U+2264>&nbsp;''k''&nbsp;&lt;&nbsp;''n''!, the following algorithm generates a unique permutation of the initial sequence ''s''<sub>''j''</sub>, ''j''=1<U+2026>''n'':
+
+  '''function''' permutation(k, s) {
+      '''var''' ''int'' factorial:= 1;
+      '''for''' j= 2 '''to''' length(s) {
+         factorial:= factorial* (j-1);        // factorial= (j-1)!
+         '''swap''' s[j- ((k / factorial) mod j)] '''with''' s[j];
+      }
+      '''return''' s;
+  }
+
+==== Lexicographical order generation ====
+
+For every number ''k'', with 0&nbsp;<U+2264>&nbsp;''k''&nbsp;&lt;&nbsp;''n''!, the following algorithm generates the corresponding lexicographical permutation of the initial sequence ''s''<sub>''j''</sub>, ''j''= 1<U+2026>''n'':
+
+  '''function''' permutation(k, s) {
+      '''var''' '''int''' n:= length(s); factorial:= 1;
+      '''for''' j= 2 '''to''' n- 1 {             // compute (n- 1)!
+          factorial:= factorial* j;
+      }
+      '''for''' j= 1 '''to''' n- 1 {
+          tempj:= (k/ factorial) mod (n+ 1- j);
+          temps:= s[j+ tempj]
+          '''for''' i= j+ tempj '''to''' j+ 1 '''step''' -1 {
+              s[i]:= s[i- 1];      // shift the chain right
+          }
+          s[j]:= temps;
+          factorial:= factorial/ (n- j);
+      }
+      '''return''' s;
+  }
+
+Notation
+* <tt>k / j</tt> denotes integer division of ''k'' by ''j'', i.e. the integral [[quotient]] without any [[remainder]], and
+* <tt>k mod j</tt> is the [[remainder]] following integer division of ''k'' by ''j''.
+* <tt>s[n]</tt> denotes the ''n''th element of sequence ''s''.
+
+== Software and hardware implementations ==
+=== Calculator functions ===
+Most [[calculator]]s have a built-in function for calculating the number of permutations, called nPr or PERM on many. The permutations function is often only available through several layers of menus; how to access the function is usually indicated in the documentation for calculators that support it.
+
+=== Spreadsheet functions ===
+Most [[Spreadsheet|spreadsheet software]] also provides a built-in function for calculating the number of permutations, called PERMUT in many popular spreadsheets<!-- this is true for excel and ooo calc-->. [[Apple Inc.|Apple's]] [[Numbers (software)|Numbers]] software notably does not currently include such a function.<ref>{{cite web|url=http://curmi.com/blog/wp-content/uploads/2007/08/functions-in-excel-and-numbers.pdf|title=Summary of Functions in Excel and Numbers|accessdate=2007-10-19|format=PDF|date=2007-08-26|last=Curmi|first=Jamie}}</ref>
+
+== See also ==
+<div style="-moz-column-count:4; column-count:4;">
+*[[Alternating permutation]]
+*[[Binomial coefficient]]
+*[[Combination]]
+*[[Combinatorics]]
+*[[Convolution]]
+*[[Cyclic order]]
+*[[Cyclic permutation]]
+*[[Even and odd permutations]]
+*[[Factoradic]]
+*[[Superpattern]]
+*[[Josephus permutation]]
+*[[List of permutation topics]]
+*[[Levi-Civita symbol]]
+*[[Permutation group]]
+*[[Probability]]
+*[[Random permutation]]
+*[[Rencontres numbers]]
+*[[Sorting network]]
+*[[Substitution cipher]]
+*[[Symmetric group]]
+*[[Twelvefold way]]
+*[[Weak order of permutations]]
+</div>
+
+== Notes ==
+
+{{reflist}}
+
+== References ==
+<!-- I'll promote this to references if I add another section to the main text. ~~~~ --> 
+* [[Miklos Bona]]. "Combinatorics of Permutations", Chapman Hall-CRC, 2004. ISBN 1-58488-434-7.
+* [[Donald Knuth]]. ''The Art of Computer Programming'', Volume&nbsp;4: ''Generating All Tuples and Permutations'', Fascicle&nbsp;2, first printing.  Addison-Wesley, 2005. ISBN 0-201-85393-0. 
+* [[Donald Knuth]]. ''The Art of Computer Programming'', Volume&nbsp;3: ''Sorting and Searching'', Second Edition. Addison-Wesley, 1998. ISBN 0-201-89685-0. Section 5.1: Combinatorial Properties of Permutations, pp.11&ndash;72.
+
+== External links ==
+*[http://www.plainmath.net/index.php?page=permutations A review of permutations from plainmath.net]
+*[http://mathforum.org/library/drmath/sets/high_perms_combs.html Many Common types of permutation and combination math problems, with detailed solutions]
+*[http://www.cut-the-knot.org/do_you_know/permutation.shtml Permutations and Puzzles on Graphs]
+*[http://www.singlix.net/download/bcom.html Free Permutation/Combination/Factorial Calculator (with source code)]
+
+[[Category:Abstract algebra]]
+[[Category:Combinatorics]]
+[[Category:Factorial and binomial topics| ]]
+[[Category:Permutations| ]]
+
+[[bg:<U+041F><U+0435><U+0440><U+043C><U+0443><U+0442><U+0430><U+0446><U+0438><U+044F>]]
+[[cs:Permutace]]
+[[da:Permutation]]
+[[de:Permutation]]
+[[es:Permutaci<U+00F3>n]]
+[[eo:Permuta<U+0135>o]]
+[[fr:Permutation]]
+[[ko:<U+C21C><U+C5F4>]]
+[[id:Permutasi]]
+[[it:Permutazione]]
+[[he:<U+05EA><U+05DE><U+05D5><U+05E8><U+05D4> (<U+05DE><U+05EA><U+05DE><U+05D8><U+05D9><U+05E7><U+05D4>)]]
+[[lt:K<U+0117>liniai]]
+[[hu:Permut<U+00E1>ci<U+00F3>]]
+[[nl:Permutatie]]
+[[ja:<U+9806><U+5217>]]
+[[no:Permutasjon]]
+[[pl:Permutacja]]
+[[pt:Permuta<U+00E7><U+00E3>o]]
+[[ru:<U+041F><U+0435><U+0440><U+0435><U+0441><U+0442><U+0430><U+043D><U+043E><U+0432><U+043A><U+0430>]]
+[[sk:Permut<U+00E1>cia (algebra)]]
+[[fi:Permutaatio]]
+[[sv:Permutation]]
+[[ta:<U+0BB5><U+0BB0><U+0BBF><U+0B9A><U+0BC8><U+0BAE><U+0BBE><U+0BB1><U+0BCD><U+0BB1><U+0BAE><U+0BCD>]]
+[[th:<U+0E01><U+0E32><U+0E23><U+0E40><U+0E23><U+0E35><U+0E22><U+0E07><U+0E2A><U+0E31><U+0E1A><U+0E40><U+0E1B><U+0E25><U+0E35><U+0E48><U+0E22><U+0E19>]]
+[[vi:Ho<U+00E1>n v<U+1ECB>]]
+[[tr:Perm<U+00FC>tasyon]]
+[[uk:<U+041F><U+0435><U+0440><U+0435><U+0441><U+0442><U+0430><U+043D><U+043E><U+0432><U+043A><U+0430>]]
+[[ur:<U+062A><U+0628><U+062F><U+0644> <U+06A9><U+0627><U+0645><U+0644>]]
+[[zh:<U+7F6E><U+63DB>]]

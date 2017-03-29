@@ -1,0 +1,256 @@
+[[Image:K-map 6,8,9,10,11,12,13,14 anti-race.svg|thumb|An example Karnaugh map]]
+
+The '''Karnaugh map''', also known as a '''Veitch diagram''' (K-map or KV-map for short), is a tool to facilitate management of [[Boolean algebra]]ic expressions. A Karnaugh map is unique in that only one variable changes value between squares, in other words, the rows and columns are ordered according to the principles of [[Gray code]].
+
+== History and nomenclature ==
+The Karnaugh map was invented in [[1953]] by [[Maurice Karnaugh]], a [[telecommunication]]s engineer at [[Bell Labs]].
+
+== Usage in boolean logic ==
+Normally, extensive calculations are required to obtain the minimal expression of a Boolean function, but one can use a Karnaugh map instead.
+
+Problem solving uses
+* Karnaugh maps make use of the human brain's excellent pattern-matching capability to decide which terms should be combined to get the simplest expression.
+* K-maps permit the rapid identification and elimination of potential [[race hazard]]s, something that boolean equations alone cannot do.
+* A Karnaugh map is an excellent aid for simplification of up to six variables,  but with more variables it becomes hard even for our brain to discern optimal patterns.
+*For problems involving more than six variables,solving the boolean expressions is more preferred than the Karnaugh map.
+
+Karnaugh maps also help teach about Boolean functions and minimization.
+
+==Properties==
+
+[[Image:K-map minterms.svg|thumb|A mapping of minterms on a Karnaugh map]]
+
+A Karnaugh map may have any number of variables, but usually works best when there are only a few - between 2 and 6 for example. Each variable contributes two possibilities to each possibility of every other variable in the system. Karnaugh maps are organized so that all the possibilities of the system are arranged in a grid form and between two adjacent boxes only one variable can change value. This is what allows it to reduce hazards. 
+
+When using a Karnaugh map to derive a minimized function, one "covers" the ones on the map by rectangular "coverings" that contain a number of boxes equal to a power of 2 (for example, 4 boxes in a line, 4 boxes in a square, 8 boxes in a rectangle, etc). Once a person has covered the ones, a term of a sum of products is produced by finding the variables that do not change throughout the entire covering, and taking a 1 to mean that variable and a 0 as the complement of that variable. Doing this for every covering gives you a matching function. 
+
+One can also use zeros to derive a minimized function. The procedure is identical to the procedure for ones except that each term is a term in a product of sums - and a 1 means the complement of the variable while 0 means the variable non-complemented.
+
+Each square in a Karnaugh map corresponds to a [[minterm]] (and maxterm). The picture to the right shows the location of each minterm on the map.
+
+==Size of map==
+In a Karnaugh map with <math>n</math> variables, a Boolean term mentioning <math>k</math> of them will have a corresponding rectangle of area <math>2^{n-k}</math>.
+Common sized maps are of 2 variables which is a 2x2 map; 3 variables which is a 2x4 map; and 4 variables which is a 4x4 map (shown below).
+
+<gallery>
+Image:K-map 2x2 empty.svg|2 variable map
+Image:K-map 2x4 empty.svg|3 variable map
+Image:K-map 4x4 empty.svg|4 variable map
+</gallery>
+
+== Example ==
+Consider the following function of four variables (which, in binary, has a maximum number of combinations of 16):
+
+:<math>f(A, B, C, D) = E(6, 8, 9, 10, 11, 12, 13, 14)</math>
+
+The values inside <math>E</math> lists the [[minterm]]s to map (i.e., which rows have output 1 in the truth table).
+
+===Truth table===
+Using the defined minterms, the truth table can be created:
+{| class="wikitable"
+|-
+!width="35"| # !! <math>A</math> !! <math>B</math> !! <math>C</math> !! <math>D</math> !! <math>f(A, B, C, D)</math>
+|-
+| 0
+| 0 || 0 || 0 || 0
+|style="background: #ffdddd" | 0
+|-
+| 1
+| 0 || 0 || 0 || 1
+|style="background: #ffdddd" | 0
+|-
+| 2
+| 0 || 0 || 1 || 0
+|style="background: #ffdddd" | 0
+|-
+| 3
+| 0 || 0 || 1 || 1
+|style="background: #ffdddd" | 0
+|-
+| 4
+| 0 || 1 || 0 || 0
+|style="background: #ffdddd" | 0
+|-
+| 5
+| 0 || 1 || 0 || 1
+|style="background: #ffdddd" | 0
+|-
+| 6
+| 0 || 1 || 1 || 0
+|style="background: #ddffdd" | 1
+|-
+| 7
+| 0 || 1 || 1 || 1
+|style="background: #ffdddd" | 0
+|-
+| 8
+| 1 || 0 || 0 || 0
+|style="background: #ddffdd" | 1
+|-
+| 9
+| 1 || 0 || 0 || 1
+|style="background: #ddffdd" | 1
+|-
+| 10
+| 1 || 0 || 1 || 0
+|style="background: #ddffdd" | 1
+|-
+| 11
+| 1 || 0 || 1 || 1
+|style="background: #ddffdd" | 1
+|-
+| 12
+| 1 || 1 || 0 || 0
+|style="background: #ddffdd" | 1
+|-
+| 13
+| 1 || 1 || 0 || 1
+|style="background: #ddffdd" | 1
+|-
+| 14
+| 1 || 1 || 1 || 0
+|style="background: #ddffdd" | 1
+|-
+| 15
+| 1 || 1 || 1 || 1
+|style="background: #ffdddd" | 0
+|}
+
+===Map===
+The input variables can be combined in 16 different ways, so our Karnaugh map has to have 16 positions. The most convenient way to arrange this is in a 4x4 grid.
+
+[[Image:K-map 6,8,9,10,11,12,13,14.svg|thumb|K-map showing minterms and boxes covering the desired minterms]]
+
+The binary digits in the map represent the function's output for any given combination of inputs. We write 0 in the upper leftmost corner of the map because <math>f=0</math> when <math>A=0</math>, <math>B=0</math>, <math>C=0</math>, <math>D=0</math>. Similarly we mark the bottom right corner as 1 because <math>A=1</math>, <math>B=0</math>, <math>C=1</math>, <math>D=0</math> gives <math>f=1</math>.  Note that the values are ordered in a [[Gray code]], so that precisely one variable flips between any pair of adjacent cells.
+
+After the Karnaugh map has been constructed our next task is to find the minimal terms to use in the final expression. These terms are found by encircling groups of 1's in the map. The encirclings must be rectangular and must have an area that is a power of two (i.e. 1, 2, 4, 8, <U+2026>). The rectangles should be as large as possible without containing any 0's. The optimal encirclings in this map are marked by the green, red and blue lines.
+
+For each of these encirclings we find those variables that have the same state in each of the fields in the encircling. For the first encircling (the red one) we find that:
+* The variable <math>A</math> maintains the same state (1) in the whole encircling, therefore it should be included in the term for the red encircling.
+* Variable <math>B</math> does not maintain the same state (it shifts from 1 to 0), and should therefore be excluded.
+* <math>C</math> does not change: it is always 0.
+* <math>D</math> changes.
+Thus the first term in the Boolean expression is <math>A\overline{C}</math>.
+
+For the green encircling we see that <math>A</math> and <math>B</math> maintain the same state, but <math>C</math> and <math>D</math> change. <math>B</math> is 0 and has to be negated before it can be included.  Thus the second term is <math>A\overline{B}</math>.
+
+In the same way, the blue rectangle gives the term <math>BC\overline{D}</math> and so the whole expression is: <math>A\overline{C} + A\overline{B} + BC\overline{D}</math>.
+
+===Toroidally connected===
+The grid is [[torus|toroidally]] connected, which means that the rectangles can wrap around edges, so <math>A\overline{D}</math> is a valid term, although not part of the minimal set &mdash; this covers minterms 8, 10, 12, & 14.
+
+Perhaps the hardest-to-visualize wrap-around term is <math>\overline{B}\overline{D}</math> which covers the four corners &mdash; this covers minterms 0, 2, 8, 10.
+
+===Inverse===
+The inverse of a function is solved in the same way by encircling the 0's instead.
+
+The three terms to cover the inverse are all shown with grey boxes with different colored borders:
+* brown &mdash; <math>\overline{A}\,\overline{B}</math>
+* gold &mdash; <math>\overline{A}\,\overline{C}</math>
+* blue &mdash; <math>BCD</math>
+
+This yields the inverse:
+: <math>\overline{F} = \overline{A}\,\overline{B} + \overline{A}\,\overline{C} + BCD</math>
+
+Through the use of [[De Morgan's laws]], the [[product of sums]] can be determined:
+: <math>\overline{\overline{F}} = \overline{ \overline{A}\,\overline{B} + \overline{A}\,\overline{C} + BCD }</math>
+: <math>F = \left(A + B\right)\left(A + C\right)\left(\overline{B} + \overline{C} + \overline{D}\right)</math>
+
+===Don't cares===
+[[Image:K-map 6,8,9,10,11,12,13,14 don't care.svg|thumb|The minterm 15 is dropped and replaced as a don't care, this removes the green term completely but restricts the blue inverse term]]
+
+Karnaugh maps also allow easy minimizations of functions whose truth tables include "don't care" conditions (that is sets of inputs for which the designer doesn't care what the output is) because "don't care" conditions can be included in a ring to make it larger but do not have to be ringed. They are usually indicated on the map with a hyphen/dash/X in place of the number.  The value can be a "0," "1," or the hyphen/dash/X depending on if one can use the "0" or "1" to simplify the KM more.  If the "don't cares" don't help you simplify the KM more, then use the hyphen/dash/X.
+
+The example to the right is the same above example but with minterm 15 dropped and replaced as a don't care.
+This allows the red term to expand all the way down and, thus, removes the green term completely.
+This does impact the blue inverse term and must be restricted by <math>\overline{A}</math>.
+
+This yields the new minimum equation:
+:<math>F = A + BC\overline{D}</math>
+
+Note that the first term is just <math>A</math> not <math>A\overline{C}</math>.
+In this case, the don't care has dropped a term (the green); simplified another (the red); and removed the race hazard (the yellow as shown in a following section).
+<br clear="both" /> <!-- To keep the image from overflowing to another section -->
+
+==Race hazards==
+[[Image:K-map 6,8,9,10,11,12,13,14 anti-race.svg|thumb|Above k-map with the <math>A\overline{D}</math> term added to avoid race hazards]]
+Karnaugh maps are useful for detecting and eliminating [[race hazard]]s. They are very easy to spot using a Karnaugh map, because a race condition may exist when moving between any pair of adjacent, but disjointed, regions circled on the map.
+
+* In the above example, a potential race condition exists when C is 1 and D is 0, A is 1, and B changes from 1 to 0 (moving from the blue state to the green state). For this case, the output is defined to remain unchanged at 1, but because this transition is not covered by a specific term in the equation, a potential for a ''glitch'' (a momentary transition of the output to 0) exists.
+* A harder possible glitch to spot is when D is 0 and A and B are both 1, with C changing from 1 to 0 (moving from the blue state to the red state).  In this case the glitch wraps around from the top of the map to the bottom.
+
+Whether these glitches do occur depends on the physical nature of the implementation, and whether we need to worry about it depends on the application.
+
+In this case, an additional term of <math>A\overline{D}</math> would eliminate the potential race hazard, bridging between the green and blue output states or blue and red output states: this is shown as the yellow region.
+
+The term is redundant in terms of the static logic of the system, but such redundant, or [[consensus theorem|consensus terms]],  are often needed to assure race-free dynamic performance.
+<br clear="both" /> <!-- To keep the image from overflowing to another section -->
+
+==2 variable maps==
+The following are all the possible 2 variable, 2x2 Karnaugh maps.
+Listed with each is the minterms as a function of <math>E()</math> and the race hazard free (''see [[#Race hazards|previous section]]'') minimum equation.
+<gallery>
+Image:K-map 2x2 none.svg|E(); K=0
+Image:K-map 2x2 1.svg|E(1); K=A'B'
+Image:K-map 2x2 2.svg|E(2); K=AB'
+Image:K-map 2x2 3.svg|E(3); K=A'B
+Image:K-map 2x2 4.svg|E(4); K=AB
+Image:K-map 2x2 1,2.svg|E(1,2); K=B'
+Image:K-map 2x2 1,3.svg|E(1,3); K=A'
+Image:K-map 2x2 1,4.svg|E(1,4); K=A'B' + AB
+Image:K-map 2x2 2,3.svg|E(2,3); K=AB' + A'B
+Image:K-map 2x2 2,4.svg|E(2,4); K=A
+Image:K-map 2x2 3,4.svg|E(3,4); K=B
+Image:K-map 2x2 1,2,3.svg|E(1,2,3); K=A' + B'
+Image:K-map 2x2 1,2,4.svg|E(1,2,4); K=A + B'
+Image:K-map 2x2 1,3,4.svg|E(1,3,4); K=A' + B
+Image:K-map 2x2 2,3,4.svg|E(2,3,4); K=A + B
+Image:K-map 2x2 1,2,3,4.svg|E(1,2,3,4); K=1
+</gallery>
+
+== Problems with Karnaugh maps ==
+Karnaugh maps generally become more cluttered and hard to interpret when adding more variables. A general rule is that Karnaugh maps work well for up to four variables, and shouldn't be used at all for more than six variables. For expressions with large numbers of variables, the [[Quine-McCluskey algorithm]] can be used.
+
+==See also==
+* [[List of Boolean algebra topics]]
+* [[Venn diagram]]
+* [[Quine-McCluskey algorithm]]
+
+==External links==
+* [http://www.karnaughmap.eu/ Karnaugh Map Software] - Freeware tool for Karnaugh maps.
+* [http://www.inf.ufrgs.br/lagarto/ Karma (Karnaugh Map Software)]
+*[http://www.ee.calpoly.edu/~rsandige/KarnaughExplorer.html Browser based Karnaugh Map software]
+*[http://www.geocities.com/ResearchTriangle/2608/Karnaugh.html The first Karnaugh Map software, 1999, freeware, downloadable]
+*[http://www.maxmon.com/kmaps1.htm Karnaugh Maps 101]
+*[http://www.world-class-programme.com/Karnaugh-Map.asp Minimisation of Boolean Functions(Karnaugh Map)]
+*[http://k-map.sourceforge.net Open source Karnaugh Maps minimization software]
+*[http://herbert.gandraxa.com/herbert/dor.asp Deriving a formula using Karnaugh Maps to determine if rectangles can overlap], an in-depth article by Herbert Glarner
+*[http://pages.csam.montclair.edu/~antoniou/bfs/ Free Palm-based Software: Boolean Function Simplification Tool v1.0]
+
+=== Applications ===
+*[http://www.sccs.swarthmore.edu/users/06/adem/engin/e15/lab1/ Using Karnaugh maps to control traffic lights]
+
+==References==
+* {{cite journal |last=Karnaugh |first=Maurice |authorlink=Maurice Karnaugh |title=The Map Method for Synthesis of Combinational Logic Circuits |journal=Transactions of [[American Institute of Electrical Engineers]] part I |volume=72 |issue=9 |pages=593-599 |date=November 1953}}
+* {{cite book |last=Katz |first=Randy |authorlink=Randy Katz |title=Contemporary Logic Design |publisher=The Benjamin/Cummings Publishing Company |year=1994 |id=ISBN 0-8053-2703-7 |doi=10.1016/0026-2692(95)90052-7 |pages=70-85}}
+
+[[Category:Boolean algebra]]
+[[Category:Logic in computer science]]
+[[Category:Diagrams]]
+
+[[ar:<U+062E><U+0631><U+064A><U+0637><U+0629> <U+0643><U+0627><U+0631><U+0646><U+0648> <U+0641><U+0627><U+064A><U+062A><U+0634>]]
+[[de:Karnaugh-Veitch-Diagramm]]
+[[et:Karnaugh' kaart]]
+[[es:Mapa de Karnaugh]]
+[[fr:Table de Karnaugh]]
+[[gl:Mapa de Karnaugh]]
+[[it:Mappa di Karnaugh]]
+[[he:<U+05DE><U+05E4><U+05EA> <U+05E7><U+05E8><U+05E0><U+05D5>]]
+[[nl:Karnaugh-diagram]]
+[[ja:<U+30AB><U+30EB><U+30CE><U+30FC><U+56F3>]]
+[[pl:Metoda Karnaugh]]
+[[pt:Mapa de Karnaugh]]
+[[ro:Diagram<U+0103> Karnaugh]]
+[[sr:<U+041A><U+0430><U+0440><U+043D><U+043E><U+043E><U+0432><U+0430> <U+043A><U+0430><U+0440><U+0442><U+0430>]]
+[[sv:Karnaughdiagram]]
+[[zh:<U+5361><U+8BFA><U+56FE>]]

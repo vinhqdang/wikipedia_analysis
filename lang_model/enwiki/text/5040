@@ -1,0 +1,208 @@
+{{redirect|Inductive inference|the technique in mathematical proof|Mathematical induction|the theory introduced by Ray Solomonoff|Solomonoff's theory of inductive inference}}
+{{Use dmy dates|date=July 2013}}
+{{More footnotes|date=November 2010}}
+
+'''Inductive reasoning '''(as opposed to [[deductive reasoning|''deductive ''reasoning]]) is reasoning in which the premises seek to supply strong evidence for (not absolute proof of) the truth of the conclusion. While the conclusion of a deductive argument is supposed to be certain, the truth of the conclusion of an inductive argument is supposed to be ''probable'', based upon the evidence given.<ref>Copi, I. M., Cohen, C., & Flage, D. E. (2007). Essentials of logic (2nd ed.). Upper Saddle River, NJ: Pearson Education, Inc.</ref>
+
+The philosophical definition of inductive reasoning is more nuanced than simple progression from particular/individual instances to broader generalizations. Rather, the premises of an inductive [[logical argument]] indicate some degree of support (inductive probability) for the conclusion but do not [[entailment|entail]] it; that is, they suggest truth but do not ensure it. In this manner, there is the possibility of moving from general statements to individual instances (for example, statistical syllogisms, discussed below).
+
+Many dictionaries define inductive reasoning as reasoning that derives general principles from specific observations, though some sources disagree with this usage.<ref>{{Citation
+|title = Deductive and Inductive Arguments
+|url = http://www.iep.utm.edu/ded-ind/
+|work = Internet Encyclopedia of Philosophy
+|quote = Some dictionaries define "deduction" as reasoning from the general to specific and "induction" as reasoning from the specific to the general. While this usage is still sometimes found even in philosophical and mathematical contexts, for the most part, it is outdated.}}</ref>
+
+==Description==
+
+Inductive reasoning is inherently [[Uncertainty|uncertain]]. It only deals in degrees to which, given the premises, the conclusion is ''credible'' according to some theory of evidence. Examples include a [[many-valued logic]], [[Dempster<U+2013>Shafer theory]], or [[Probability|probability theory]] with rules for inference such as [[Bayes rule|Bayes' rule]]. Unlike deductive reasoning, it does not rely on universals holding over a [[Closed world assumption|closed domain of discourse]] to draw conclusions, so it can be applicable even in cases of [[Open world assumption|epistemic uncertainty]] (technical issues with this may arise however; for example, the [[Axioms of probability#Second axiom|second axiom of probability]] is a closed-world assumption).<ref>Bart Kosko, ''Fuzziness vs. Probability,'' International Journal of General Systems, vol. 17, no. 1, pp. 211-240, 1990.</ref>
+
+A [[statistical syllogism]] is an example of inductive reasoning:
+# Almost all people are taller than 26&nbsp;inches
+# Gareth is a person
+# Therefore, Gareth is almost certainly taller than 26&nbsp;inches
+
+As a stronger example:
+: 100% of biological life forms that we know of depend on liquid water to exist.
+: Therefore, if we discover a new biological life form it will probably depend on liquid water to exist.
+
+This argument could have been made every time a new biological life form was found, and would have been correct every time; however, it is still possible that in the future a biological life form not requiring water could be discovered.
+
+As a result, the argument may be stated less formally as:
+
+: All biological life forms that we know of depend on liquid water to exist.
+: All biological life probably depends on liquid water to exist.
+
+==Inductive vs. deductive reasoning==
+
+Unlike deductive arguments, inductive reasoning allows for the possibility that the conclusion is false, even if all of the premises are true.<ref>John Vickers. [http://plato.stanford.edu/entries/induction-problem/ The Problem of Induction]. The Stanford Encyclopedia of Philosophy.</ref> Instead of being valid or invalid, inductive arguments are either ''strong'' or ''weak'', which describes how ''probable'' it is that the conclusion is true.<ref>{{cite web | url = http://www.dartmouth.edu/~bio125/logic.Giere.pdf | title = Logical Basis of Hypothesis Testing in Scientific Research | last = Herms | first = D. | format = pdf }}</ref>
+
+A classical example of an '''incorrect''' inductive argument was presented by John Vickers:
+: All of the swans we have seen are white.
+: Therefore, all swans are white.
+
+Note that this definition of ''inductive'' reasoning excludes [[mathematical induction]], which is a form of ''[[deductive reasoning|deductive]]'' reasoning.
+
+==Criticism==
+{{Main|Problem of induction}}
+
+Inductive reasoning has been criticized by thinkers as diverse as [[Sextus Empiricus]]<ref>Sextus Empiricus, ''Outlines Of Pyrrhonism''. Trans. R.G. Bury, Harvard University Press, Cambridge, Massachusetts, 1933, p. 283.</ref> and [[Karl Popper]].<ref>Karl R. Popper, David W. Miller. "A proof of the impossibility of inductive probability." ''Nature'' 302 (1983), 687<U+2013>688.</ref>
+
+The classic philosophical treatment of the [[problem of induction]] was given by the Scottish philosopher [[David Hume]].
+
+Although the use of inductive reasoning demonstrates considerable success, its application has been questionable. Recognizing this, Hume highlighted the fact that our mind draws uncertain conclusions from relatively limited experiences. In deduction, the truth value of the conclusion is based on the truth of the premise. In induction, however, the dependence on the premise is always uncertain. As an example, let's assume "all ravens are black." The fact that there are numerous black ravens supports the assumption. However, the assumption becomes inconsistent with the fact that there are white ravens. Therefore, the general rule of "all ravens are black" is inconsistent with the existence of the white raven. Hume further argued that it is impossible to justify inductive reasoning: specifically, that it cannot be justified deductively, so our only option is to justify it inductively. Since this is circular he concluded that our use of induction is unjustifiable with the help of "Hume's Fork".<ref>Vickers, John. [http://plato.stanford.edu/entries/induction-problem/#2HumIndJus "The Problem of Induction"] (Section 2). ''Stanford Encyclopedia of Philosophy''. 21 June 2010</ref>
+
+However, Hume then stated that even if induction were proved unreliable, we would still have to rely on it. So instead of a position of [[Philosophical skepticism|severe skepticism]], Hume advocated a [[Scientific skepticism|practical skepticism]] based on [[common sense]], where the inevitability of induction is accepted.<ref>Vickers, John. [http://plato.stanford.edu/entries/induction-problem/#IndJus "The Problem of Induction"] (Section 2.1). ''Stanford Encyclopedia of Philosophy''. 21 June 2010.</ref>
+
+===Biases===
+Inductive reasoning is also known as hypothesis construction because any conclusions made are based on current knowledge and predictions.{{Citation needed|date=March 2012}} As with deductive arguments, biases can distort the proper application of inductive argument, thereby preventing the reasoner from forming the most [[Logical consequence|logical conclusion]] based on the clues. Examples of these biases include the [[availability heuristic]], [[confirmation bias]], and the predictable-world bias.
+
+The availability heuristic causes the reasoner to depend primarily upon information that is readily available to him/her. People have a tendency to rely on information that is easily accessible in the world around them. For example, in surveys, when people are asked to estimate the percentage of people who died from various causes, most respondents would choose the causes that have been most prevalent in the media such as terrorism, and murders, and airplane accidents rather than causes such as disease and traffic accidents, which have been technically "less accessible" to the individual since they are not emphasized as heavily in the world around him/her.
+
+The confirmation bias is based on the natural tendency to confirm rather than to deny a current hypothesis. Research has demonstrated that people are inclined to seek solutions to problems that are more consistent with known hypotheses rather than attempt to refute those hypotheses. Often, in experiments, subjects will ask questions that seek answers that fit established hypotheses, thus confirming these hypotheses. For example, if it is hypothesized that Sally is a sociable individual, subjects will naturally seek to confirm the premise by asking questions that would produce answers confirming that Sally is in fact a sociable individual.
+
+The predictable-world bias revolves around the inclination to perceive order where it has not been proved to exist, either at all or at a particular level of abstraction. Gambling, for example, is one of the most popular examples of predictable-world bias. Gamblers often begin to think that they see simple and obvious patterns in the outcomes and, therefore, believe that they are able to predict outcomes based upon what they have witnessed. In reality, however, the outcomes of these games are difficult to predict and highly complex in nature. However, in general, people tend to seek some type of simplistic order to explain or justify their beliefs and experiences, and it is often difficult for them to realise that their perceptions of order may be entirely different from the truth.<ref>Gray, Peter. Psychology. New York: Worth, 2011. Print.</ref>
+
+==Types==
+
+===Generalization===
+A generalization (more accurately, an ''inductive generalization'') proceeds from a premise about a [[statistical sample|sample]] to a conclusion about the [[statistical population|population]].
+
+: The proportion Q of the sample has attribute A.
+: Therefore:
+: The proportion Q of the population has attribute A.
+
+;Example
+There are 20 balls<U+2014>either black or white<U+2014>in an urn. To estimate their respective numbers, you draw a sample of four balls and find that three are black and one is white. A good inductive generalization would be that there are 15 black, and five white, balls in the urn.
+
+How much the premises support the conclusion depends upon (a) the number in the sample group, (b) the number in the population, and (c) the degree to which the sample represents the population (which may be achieved by taking a random sample). The [[hasty generalization]] and the [[biased sample]] are generalization fallacies.
+
+===Statistical syllogism===
+{{Main|Statistical syllogism}}
+
+A statistical syllogism proceeds from a generalization to a conclusion about an individual.
+
+: A proportion Q of population P has attribute A.
+: An individual X is a member of P.
+: Therefore:
+: There is a probability which corresponds to Q that X has A.
+
+The proportion in the first premise would be something like "3/5ths of", "all", "few", etc. Two [[dicto simpliciter]] fallacies can occur in statistical syllogisms: "[[accident (fallacy)|accident]]" and "[[converse accident]]".
+
+===Simple induction===
+Simple induction proceeds from a premise about a sample group to a conclusion about another individual.
+
+: Proportion Q of the known instances of population P has attribute A.
+: Individual I is another member of P.
+: Therefore:
+: There is a probability corresponding to Q that I has A.
+
+This is a combination of a generalization and a statistical syllogism, where the conclusion of the generalization is also the first premise of the statistical syllogism.
+
+====Argument from analogy====
+{{Main|Argument from analogy}}
+
+The process of analogical inference involves noting the shared properties of two or more things, and from this basis inferring that they also share some further property:<ref name="Baronett">{{Cite book
+| last = Baronett
+| first = Stan
+| title = Logic
+| publisher = Pearson Prentice Hall
+| location = Upper Saddle River, NJ
+| year = 2008
+| pages = 321<U+2013>325}}</ref>
+
+:P and Q are similar in respect to properties a, b, and c.
+:Object P has been observed to have further property x.
+:Therefore, Q probably has property x also.
+
+Analogical reasoning is very frequent in [[common sense]], [[science]], [[philosophy]] and the [[humanities]], but sometimes it is accepted only as an auxiliary method. A refined approach is [[case-based reasoning]].<ref>For more information on inferences by analogy, see [http://www.cs.hut.fi/Opinnot/T-93.850/2005/Papers/juthe2005-analogy.pdf Juthe, 2005].</ref>
+
+===Causal inference===
+A causal inference draws a conclusion about a causal connection based on the conditions of the occurrence of an effect. Premises about the correlation of two things can indicate a causal relationship between them, but additional factors must be confirmed to establish the exact form of the causal relationship.
+
+===Prediction===
+A prediction draws a conclusion about a future individual from a past sample.
+
+: Proportion Q of observed members of group G have had attribute A.
+: Therefore:
+: There is a probability corresponding to Q that other members of group G will have attribute A when next observed.
+
+==Bayesian inference==
+As a logic of induction rather than a theory of belief, [[Bayesian inference]] does not determine which beliefs are ''a priori'' rational, but rather determines how we should rationally change the beliefs we have when presented with evidence. We begin by committing to a [[prior probability]] for a hypothesis based on logic or previous experience, and when faced with evidence, we adjust the strength of our belief in that hypothesis in a precise manner using [[conditional probability|Bayesian logic]].
+
+==Inductive inference==
+Around 1960, [[Ray Solomonoff]] founded the theory of universal [[Solomonoff's theory of inductive inference|inductive inference]], the theory of prediction based on observations; for example, predicting the next symbol based upon a given series of symbols. This is a formal inductive framework that combines algorithmic information theory with the Bayesian framework. Universal inductive inference is based on solid philosophical foundations<ref>Samuel Rathmanner and [[Marcus Hutter]]. A philosophical treatise of universal induction. Entropy, 13(6):1076<U+2013>1136, 2011</ref> and can be considered as a mathematically formalized [[Occam's razor]]. Fundamental ingredients of the theory are the concepts of [[algorithmic probability]] and [[Kolmogorov complexity]].
+
+==See also==
+{{Portal|Thinking|Logic}}
+* [[Abductive reasoning]]
+* [[Algorithmic information theory]]
+* [[Algorithmic probability]]
+* [[Analogy]]
+* [[Bayesian probability]]
+* [[Counterinduction]]
+* [[Deductive reasoning]]
+* [[Explanation]]
+* [[Failure mode and effects analysis]]
+* [[Falsifiability]]
+* [[Grammar induction]]
+* [[Inductive logic programming]]
+* [[Inductive probability]]
+* [[Inductive programming]]
+* [[Inductive reasoning aptitude]]
+* [[Inquiry]]
+* [[Kolmogorov complexity]]
+* [[Lateral thinking]]
+* [[Laurence Jonathan Cohen]]
+* [[Logic]]
+* [[Logical positivism]]
+* [[Machine learning]]
+* [[Mathematical induction]]
+* [[Mill's Methods]]
+* [[Minimum description length]]
+* [[Minimum message length]]
+* [[Open world assumption]]
+* [[Raven paradox]]
+* [[Recursive Bayesian estimation]]
+* [[Retroduction]]
+* [[Solomonoff's theory of inductive inference]]
+* [[Statistical inference]]
+* [[Stephen Toulmin]]
+* [[Universal artificial intelligence]]
+
+==References==
+{{Reflist|33em}}
+
+==Further reading==
+*Cushan, Anna-Marie (1983/2014). ''Investigation into Facts and Values: Groundwork for a theory of moral conflict resolution''. [Thesis, Melbourne University], Ondwelle Publications (online): Melbourne. [http://www.ondwelle.com/ValueJudgements.pdf]
+*{{cite web |last=Herms |first=D. |title=Logical Basis of Hypothesis Testing in Scientific Research |url=http://www.dartmouth.edu/~bio125/logic.Giere.pdf |format=PDF}}
+*{{cite web |last=Kemerling |first=G. |title=Causal Reasoning |date=27 October 2001 |url=http://www.philosophypages.com/lg/e14.htm}}
+*{{cite book |last1=Holland |first1=J. H. |last2=Holyoak |first2=K. J. |last3=Nisbett |first3=R. E. |last4=Thagard |first4=P. R. |year=1989 |title=Induction: Processes of Inference, Learning, and Discovery |location=Cambridge, MA, USA |publisher=[[MIT Press]] |isbn=0-262-58096-9}}
+*{{cite book |last1=Holyoak |first1=K. |last2=Morrison |first2=R. |year=2005 |title=The Cambridge Handbook of Thinking and Reasoning |location=New York |publisher=[[Cambridge University Press]] |isbn=978-0-521-82417-0}}
+
+==External links==
+{{Wiktionary|inductive reasoning}}
+{{Americana Poster|year=1920|Induction (logic)|Inductive reasoning}}
+* {{IEP|conf-ind|Confirmation and Induction}}
+* {{SEP|logic-inductive|Inductive Logic}}
+* {{PhilPapers|category|induction}}
+* {{InPho|taxonomy|2256}}
+* [http://www.uncg.edu/phi/phi115/induc4.htm ''Four Varieties of Inductive Argument''] from the Department of Philosophy, [[University of North Carolina at Greensboro]].
+
+* {{PDFlink|[http://faculty.ucmerced.edu/sites/default/files/eheit/files/heit2000.pdf ''Properties of Inductive Reasoning'']|166&nbsp;[[Kibibyte|KiB]]<!-- application/pdf, 170607 bytes -->}}, a psychological review by Evan Heit of the [[University of California, Merced]].
+* [http://dudespaper.com/the-mind-limber.html ''The Mind, Limber''] An article which employs the film [[The Big Lebowski]] to explain the value of inductive reasoning.
+* [http://www.academia.edu/4154895/Some_Remarks_on_the_Pragmatic_Problem_of_Induction.html The Pragmatic Problem of Induction], by Thomas Bullemore
+
+{{Logic}}
+{{Philosophy of science}}
+{{Philosophy topics|state=collapsed}}
+{{Positivism}}
+{{Statistics|state=collapsed}}
+
+{{DEFAULTSORT:Inductive Reasoning}}
+[[Category:Epistemology]]
+[[Category:Problem solving]]
+[[Category:Inductive reasoning| ]]
+[[Category:Reasoning]]
+[[Category:Statistical inference]]
+[[Category:Causal inference]]
+[[Category:Epistemology of science]]

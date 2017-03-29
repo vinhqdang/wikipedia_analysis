@@ -1,0 +1,152 @@
+For the majority of numbered [[asteroid]]s, almost nothing is known apart from a few physical parameters. Hundreds of these (See [[:Category:Asteroid stubs]]) have their own Wikipedia page, where the only information is their name and discovery circumstances plus a table of orbital elements and some physical characteristics (often only estimated).
+
+The aim of this page is to provide a reference explaining where the physical data for such generic asteroids comes from.
+
+Please note that due to the various ages of the single asteroid articles, the reference below may not be accurate for all asteroid articles.
+
+==Dimensions==
+Data from the [[IRAS]] minor planet survey<ref name="simps">{{cite web| url=http://www.psi.edu/pds/resource/imps.html| title= IRAS Minor Planet Survey  Supplemental IRAS Minor Planet Survey| accessdate=2006-10-21| publisher=PDS Asteroid/Dust Archive}}</ref>
+or the [[Midcourse Space Experiment]] (MSX) minor planet survey<ref name="mimps">{{cite web| url=http://www.psi.edu/pds/resource/mimps.html| title= Midcourse Space Experiment (MSX) Infrared Minor Planet Survey| accessdate=2006-10-21| publisher=PDS Asteroid/Dust Archive}}</ref> (available at the Planetary Data System Small Bodies Node (PDS)) is the usual source of the diameter.
+
+For many asteroids, lightcurve analysis provides estimates of pole direction and diameter ratios. Pre-[[1995]] estimates collected by [[Per Magnusson]]<ref>{{cite book| url=http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=1989aste.conf.1180M&db_key=AST&link_type=ABSTRACT&high=4326fb2cf918106| first=Per| last=Magnusson| chapter=Pole determinations of asteroids| title=Asteroids II| editor=[[Richard P. Binzel]], [[Tom Gehrels]], and [[Mildred Shapley Matthews|Mildred S. Matthews]]| publisher=University of Arizona Press| location=Tucson| year=1989| pages=1180<U+2013>1190}}</ref> are tabulated in the PDS,<ref>{{cite web| url=http://www.psi.edu/pds/resource/spin.html| title=Asteroid Spin Vectors| accessdate=2006-10-21}}</ref> with the most reliable data being the ''syntheses'' labeled in the data tables as "Synth". More recent determinations for several dozens of asteroids are collected at the web page of a [[Finland|Finnish]] research group in [[Helsinki]] which is running a systematic campaign to determine poles and shape models from lightcurves.<ref name="models">Modeled asteroids. ''rni.helsinki.fi''. 2006-06-18.</ref>
+
+These data can be used to obtain a better estimate of dimensions. A body's dimensions are usually given as a tri-axial [[ellipsoid]], the axes of which are listed in decreasing order as ''a''&times;''b''&times;''c''. If we have the diameter ratios ''<U+03BC>'' = ''a''/''b'', ''<U+03BD>'' = ''b''/''c'' from lightcurves, and an IRAS mean diameter d, one sets the geometric mean of the diameters <math>d = (abc)^\frac{1}{3}\,\!</math> for consistency, and obtains the three diameters:
+
+:<math>a= d\,(\mu^2\nu)^{\frac{1}{3}}\,\!</math>
+
+:<math>b= d\,\left(\frac{\nu}{\mu}\right)^{\frac{1}{3}}\,\!</math>
+
+:<math>c= \frac{d}{(\nu^2\mu)^{\frac{1}{3}}}\,\!</math>
+
+==Mass==
+Barring detailed mass determinations,<ref name="density">For example {{cite web| url=http://www.psi.edu/pds/resource/density.html| title= Asteroid Densities Compilation| accessdate=2006-10-21| publisher=PDS Asteroid/Dust Archive}}</ref> the mass ''M'' can be estimated from the diameter and (assumed) density values ''<U+03C1>'' worked out as below.
+
+:<math>M = \frac{\pi abc\rho}{6}\,\!</math>
+
+Such estimates can be indicated as approximate by use of a tilde "~". Besides these "guesstimates", masses can be obtained for the larger asteroids by solving for the perturbations they cause in each others' orbits,<ref>{{cite web| authorlink=James L. Hilton| first=James L.| last=Hilton| url=http://aa.usno.navy.mil/faq/docs/asteroid_masses.php| title=Masses of the Largest Asteroids| date=November 30, 1999| accessdate=2009-09-05}}</ref> or when the asteroid has an orbiting companion of known orbital radius. The masses of the largest asterois [[1 Ceres]], [[2 Pallas]], and [[4 Vesta]] can also be obtained from perturbations of [[Mars]].<ref>{{cite conference | first=E. V. | last= Pitjeva | authorlink= Elena V. Pitjeva | title= Estimations of masses of the largest asteroids and the main asteroid belt from ranging to planets, Mars orbiters and landers | booktitle= 35th COSPAR Scientific Assembly. Held 18 - [[25 July]] [[2004]], in [[Paris, France]] | pages= 2014 | year= 2004 | url= http://adsabs.harvard.edu/abs/2004cosp.meet.2014P}}</ref>
+While these perturbations are tiny, they can be accurately measured from radar ranging data from the Earth to spacecraft on the surface of Mars, such as the [[Viking lander]]s.
+
+==Density==
+Apart from a few asteroids whose densities have been investigated,<ref name="density"/> one has to resort to enlightened guesswork.
+
+For many asteroids a value of ''<U+03C1>''~2 g/cm<sup>3</sup> has been assumed.
+
+However, a better guess can be obtained by taking into account the asteroid's spectral type. A recent paper gives calculations for the mean densities of C, S, and M class asteroids as 1.38, 2.71, and 5.32 g/cm<sup>3</sup>.<ref>{{cite journal| authorlink= Georgij A. Krasinsky | first=G. A. | last= Krasinsky | coauthors=[[Elena V. Pitjeva|Pitjeva, E. V.]]; Vasilyev, M. V.; Yagudina, E. I. | url=http://adsabs.harvard.edu/abs/2002Icar..158...98K| title=Hidden Mass in the Asteroid Belt| journal=Icarus| volume=158| issue=1| pages=98<U+2013>105| month= July| year= 2002| doi=10.1006/icar.2002.6837}}</ref> (Here "C" included Tholen classes C, D, P, T, B, G, and F, while "S" included Tholen classes S, K, Q, V, R, A, and E). Assuming these values (rather than the present ~2 g/cm<sup>3</sup>) is a better guess.
+
+==Surface gravity==
+{{main|Surface gravity}}
+
+===Spherical body===
+For a spherical body, the [[gravitational acceleration]] at the surface (''g''), is given by 
+
+:<math>g_{\rm spherical} = \frac{GM}{r^2}\,\!</math>
+
+Where ''G'' = 6.6742{{e|&minus;11}} m<sup>3</sup>s<sup><U+2212>2</sup>kg<sup><U+2212>1</sup> is the [[gravitational constant]], ''M'' is the mass of the body, and ''r'' its radius.
+
+===Irregular body===
+For irregularly shaped bodies, the surface gravity will differ appreciably with location. The above formula then is only an approximation, as the calculations become more involved. The value of ''g'' at surface points closer to the center of mass is usually somewhat greater than at surface points farther out.
+
+===Centrifugal force===
+On a rotating body, the apparent [[weight]] experienced by an object on the surface is reduced by the [[centrifugal force]], when one is away from the poles. The centrifugal acceleration experienced at a [[latitude]] <U+03B8> is 
+
+:<math>g_{\rm centrifugal} = -\left(\frac{2\pi}{T}\right)^2 r \sin\theta </math>
+
+where ''T'' is the rotation period in seconds, ''r'' is the equatorial radius, and <U+03B8> is the latitude. Its magnitude is maximized when one is at the equator, and sin<U+03B8>=1. The negative sign indicates that it acts in the opposite direction to the gravitational acceleration ''g''.
+
+The effective acceleration is 
+
+:<math> g_{\rm effective} = g_{\rm gravitational} + g_{\rm centrifugal}\ .</math>
+
+===Close binaries===
+If the body in question is a member of a close binary with components of comparable mass, the effect of the second body may also be non-negligible.
+
+==[[Escape velocity]]==
+For surface gravity ''g'' and radius ''r'' of a spherically symmetric body, the escape velocity is:
+:<math>v_e = \sqrt{2gr}</math>
+
+==Rotation period==
+Rotation period is usually taken from lightcurve parameters at the PDS.<ref>{{cite web| url=http://www.psi.edu/pds/resource/lc.html| title= Asteroid Lightcurve Parameters| accessdate=2006-10-21| publisher=PDS Asteroid/Dust Archive}}</ref>
+
+==Spectral class==
+Spectral class is usually taken from the Tholen classification at the PDS.<ref>Asteroid Taxonomies ''PDS Asteroid/Dust Archive''. 2006-10-21.</ref>
+
+==Absolute magnitude==
+Absolute magnitude is usually given by the [[IRAS]] minor planet survey<ref name="simps"/> or the MSX minor planet survey<ref name="mimps"/> (available at the PDS).
+
+==Albedo==
+Usually given by the [[IRAS]] minor planet survey<ref name="simps"/> or the MSX minor planet survey<ref name="mimps"/> (available at the PDS). These are ''[[geometric albedo]]s''. If there is no IRAS/MSX data a rough average of 0.1 can be used.
+
+==Surface temperature==
+===Mean===
+The simplest method which gives sensible results is to assume the asteroid 
+behaves as a [[greybody]] in equilibrium with the incident [[solar radiation]]. Then, its mean [[temperature]] is then obtained by equating the mean incident and radiated heat power. The total incident power is:
+
+:<math>
+R_{\mbox{in}} = \frac{(1-A)L_0\pi r^2}{4\pi a^2},
+</math>
+
+where <math>A\,\!</math> is the asteroid [[albedo]] (precisely, the [[Bond albedo]]), <math>a\,\!</math> its [[semi-major axis]], <math>L_0\,\!</math> is the [[solar luminosity]] (i.e. total power output 3.827&times;10<sup>26</sup> W), and <math>r</math> the asteroid's radius. It has been assumed that: the [[absorptivity]] is <math>1-A</math>, the asteroid is spherical, it is on a circular orbit, and that the Sun's energy output is [[isotropic]].
+
+Using a greybody version of the [[Stefan-Boltzmann law]], the radiated power (from the entire spherical surface of the asteroid) is:
+
+:<math>
+R_{\mbox{out}} = 4\pi r^2 \epsilon \sigma T^4\frac{}{},
+</math>
+
+where <math>\sigma\,\!</math> is the [[Stefan-Boltzmann constant]] (5.6704&times;10<sup>-8</sup> W/m<U+00B2>K<sup>4</sup>), <math>T</math> is the temperature in [[kelvin]]s, and <math>\epsilon\,\!</math> is the asteroid's infra-red [[emissivity]]. Equating <math>R_{\mbox{in}} = R_{\mbox{out}}</math>, one obtains
+
+:<math>T = \left ( \frac{(1 - A) L_0}{\epsilon \sigma 16 \pi a^2} \right )^{1/4}\,\!</math>
+
+The standard value of <math>\epsilon</math>=0.9, estimated from detailed observations of a few of the large asteroids is used.
+
+While this method gives a fairly good estimate of the average surface temperature, the local temperature varies greatly, as is typical for bodies without [[Celestial body atmosphere|atmosphere]]s.
+
+===Maximum===
+A rough estimate of the maximum temperature can be obtained by assuming that when the sun is overhead, the surface is in [[thermal equilibrium]] with the instantaneous solar radiation. This gives ''average'' "sub-solar" temperature of 
+
+:<math>
+T_{ss} = \sqrt{2}\, T \approx 1.41\, T,
+</math>
+
+where <math>T</math> is the average temperature calculated as above.
+
+At ''perihelion'', the radiation is maximised, and
+
+:<math>
+T_{ss}^{\rm max} = \sqrt{\frac{2}{1-e}}\  T,
+</math>
+
+where <math>e\,\!</math> is the [[Eccentricity (orbit)|eccentricity]] of the orbit.
+
+===Temperature measurements and regular temperature variations===
+Infra-red observations are commonly combined with albedo to measure the temperature more directly. For example L.F.Lim et al. [Icarus, Vo. 173, 385 (2005)] does this for 29 asteroids. However, it should be pointed out that these are measurements for ''a particular observing day'', and that the asteroid's surface temperature will change in a regular way depending on its distance from the Sun. From the Stefan-Boltzmann calculation above, 
+
+:<math>
+T = {\rm constant} \times \frac{1}{\sqrt{d}},
+</math>
+
+where <math>d\,\!</math> is the distance from the Sun on any particular day. If the day of the relevant observations is known, the distance from the Sun on that day can be obtained online from e.g. the NASA orbit calculator,<ref name="orbits">{{cite web| url=http://neo.jpl.nasa.gov/orbits/| publisher=NASA| title=Orbit Diagrams| accessdate=2006-06-18}}</ref> and corresponding temperature estimates at perihelion, aphelion, etc. can be obtained from the expression above.
+
+===Albedo inaccuracy problem===
+There is a snag when using these expressions to estimate the temperature of a particular asteroid. The calculation requires the [[Bond albedo]] ''A'' (the proportion of total incoming power reflected, taking into account all directions), while the IRAS and MSX albedo data that is available for asteroids gives only the [[geometric albedo]] ''p'' which characterises only the strength of light reflected back to the source (the Sun).
+
+While these two albedos are correlated, the numerical factor between them depends in a very nontrivial way on the surface properties. Actual measurements of Bond albedo are not forthcoming for the majority of asteroids because they require measurements from high phase angles that can only be acquired by spacecraft that pass near or beyond the asteroid belt. Some complicated modelling of surface and thermal properties can lead to estimates of the Bond albedo given the geometric one, but this far is beyond the scope of a quick estimate for these articles. It can be obtained for some asteroids from scientific publications.
+
+For want of a better alternative for most asteroids, the best that can be done here is to assume that these two albedos are equal, but keep in mind that there is an inherent inaccuracy in the resulting temperature values.
+
+''How large is this inaccuracy?''
+
+A glance at the examples in [[Bond albedo#Examples|this table]] shows that for bodies in the asteroid albedo range, the typical difference between Bond and geometric albedo is 20% or less, with either quantity capable of being larger.  Since the calculated temperature varies as (1-''A'')<sup>1/4</sup>, the dependence is fairly weak for typical asteroid ''A''<U+2248>''p'' values of 0.05<U+2212>0.3.
+
+The typical inaccuracy in calculated temperature ''from this source alone'' is then found to be about 2%. This translates to an uncertainty of about <U+00B1>5 K for maximum temperatures.
+
+==Other common data==
+Some other information for large numbers of asteroids can be found at the Planetary Data System Small Bodies Node.<ref>{{cite web| url=http://www.psi.edu/pds/archive/asteroids.html| title=Asteroid Data Sets| publisher=PDS Asteroid/Dust Archive| accessdate=2006-10-21}}</ref> Up-to date information on pole orientation of several dozen asteroids is provided by Dr., Doc. Mikko Kaasalainen,<ref name="models"/> and can be used to determine [[axial tilt]].
+
+Another source of useful information is NASA's orbit calculator.<ref name="orbits"/>
+
+==References==
+<references/>
+[[Category:Asteroids]]
+
+[[simple:Standard asteroid physical characteristics]]

@@ -1,0 +1,74 @@
+En [[algèbre]], une '''forme sesquilinéaire''' sur un espace vectoriel complexe '''E''' est une application de ''E'' × ''E'' dans '''<math>\mathbb C</math>''', [[Forme linéaire|linéaire]] selon l'une des variables et semi-linéaire par rapport à l'autre variable. Elle possède donc une propriété de « un-et-demi » linéarité (cf. [[wikt:sesqui-|sesqui]]). C'est l'équivalent complexe aux [[Forme bilinéaire|formes bilinéaires]] réelles.
+
+Les formes sesquilinéaires les plus étudiées sont les formes [[hermitien]]nes. Parmi celles-ci, les formes hermitiennes définies positives permettent de munir ''E'' d'un [[produit scalaire]] et ouvrent à l'étude des [[espace hermitien|espaces hermitiens]], des [[Espace préhilbertien|espaces préhilbertiens]] complexes et des [[Espace de Hilbert|espaces de Hilbert]].
+
+== Définitions et conventions ==
+===Forme semi-linéaire===
+: Soit ''E'' un '''<math>\mathbb C</math>'''-espace vectoriel, une application φ de ''E'' dans '''<math>\mathbb C</math>''' est semi-linéaire<ref>N. Bourbaki, ''Algèbre'', II, p. 32</ref>  (ou antilinéaire) si : 
+: Elle respecte l'addition et ''presque'' la multiplication scalaire : pour tous ''x'', ''y'' de ''E'', pour tout ''λ'' de '''<math>\mathbb C</math>''' : <math>\varphi (x + \lambda y) = \varphi(x) + \bar \lambda \varphi(y)\,</math> où  <math>\overline{\lambda}</math> est le [[conjugué]] de ''λ''
+
+Une application semi-linéaire vérifie : <math>f(ix)=-if(x)</math>, ce qui justifie l'autre terme utilisé :  application anti-linéaire.
+
+Les conventions qui suivent imposent un choix de l'argument qui est linéaire. Le choix ci-dessous (forme sesquilinéaire à gauche : première variable semi-linéaire, deuxième variable linéaire) est utilisé par tous les physiciens<ref>C'est aussi le choix des programmes officiels d'enseignement en France</ref>, ceci étant dû à l'origine à l'utilisation de la [[notation bra-ket]] (peut-être pas universel), mais le choix opposé est courant en mathématiques<ref>Bourbaki qui a introduit le terme ''applications sesquilinéaires'' dans Algèbre, chapitre IX, page 10 parle de forme sesquilinéaire à droite et dans EVT, chapitre V, page 1 choisit ses formes hermitiennes sesquilinéaires à gauche.</ref> depuis les années 1950.
+
+=== Forme sesquilinéaire (à gauche)===
+: Une application ''f'' de ''E'' × ''F'' → '''<math>\mathbb C</math>''' est une forme sesquilinéaire (à gauche) si :
+: a) Elle est linéaire à droite : pour tout ''x'' de ''E'', ''y'', ''y''' de ''F'', pour tout ''λ'' de '''<math>\mathbb C</math>''' : <math>f(x,y+\lambda y') = f(x,y) + \lambda f(x,y')\,</math>
+: b) Elle est semi-linéaire à gauche, ce qui signifie que pour tout ''x'', ''x''' de ''E'' et  ''y'' de ''F'', pour tout ''λ'' de '''<math>\mathbb C</math>''' : <math>f(x+ \lambda x',y) = f(x,y) + \overline{\lambda} f(x',y)</math>.
+
+Les formes sesquilinéaires (à gauche) constituent un sous-espace vectoriel complexe de l'espace des applications de ''E'' x ''F'' dans '''C'''.
+
+== Formes hermitiennes ==
+
+'''Forme hermitienne''' à gauche (resp. à droite) : c'est une forme sesquilinéaire à gauche (resp. à droite, suivant la convention choisie) sur ''E'' x ''E'' qui vérifie la propriété de symétrie hermitienne :
+: c) Pour tous ''x'' et ''y'' de ''E'', <math>f(y,x) = \overline{f(x,y)}</math>
+:: En particulier : <math>f(x,x) = \overline{f(x,x)}</math>, donc <math>f(x,x)</math> est un réel.
+::Réciproquement, une forme sesquilinéaire pour laquelle ''f(x,x)'' est réel pour tout vecteur ''x'' est nécessairement hermitienne<ref>Bourbaki, EVT, chapitre V, page 2, remarque.</ref>.
+
+Les formes hermitiennes (à gauche) constituent un espace vectoriel '''réel'''.
+
+'''Forme hermitienne positive''' : c'est une forme hermitienne telle que :
+: d) pour tout ''x'' de ''E'', <math>f(x,x) \ge 0</math>
+
+'''Forme hermitienne définie''' : c'est une forme hermitienne telle que
+: e) pour tout ''x'' de ''E'', <math>f(x,x) = 0\,</math> implique <math>x = 0\,</math>
+
+'''Forme hermitienne non dégénérée''' : c'est une forme hermitienne telle que :
+: f) pour tout ''x'' de ''E'', si pour tout ''y'' de ''E'', <math>f(x,y)=0\,</math>, alors <math>x = 0\,</math>
+
+Toute forme hermitienne définie est donc non dégénérée. Pour une forme hermitienne ''positive'', la réciproque est vraie grâce à l'[[inégalité de Cauchy-Schwarz]] : toute forme hermitienne positive non dégénérée est définie.
+
+Une forme hermitienne définie positive (ou positive non dégénérée) est encore appelée [[produit scalaire]] (sous-entendu au sens complexe).
+
+== Exemples ==
+
+* En dimension finie, on prouve que les seules formes sesquilinéaires à gauche sont les applications définies dans une base par :
+<center><math>f(x,y) =^t \overline X AY</math></center> où ''X'' et ''Y'' sont les vecteurs colonnes, coordonnées de ''x'' et ''y'' dans la base <math>(e_1, ..., e_n)</math>,  et où ''A'' est la matrice définie par <math>a_{i,j} = f(e_i,e_j)\,</math>. 
+
+L'espace vectoriel complexe des formes sesquilinéaires (à gauche) sur un espace vectoriel de dimension n est donc isomorphe à l'espace vectoriel des matrices carrées <math>n \times n</math>. Les formes sesquilinéaires hermitiennes correspondent aux matrices telles que <math>{}^t\bar{A}=A</math>.
+
+* Soit ''B'' un ensemble non vide et <math>\mathbb C^B</math> le <math>\mathbb C</math>-espace vectoriel des applications de ''B'' dans <math>\mathbb C</math>, et soient ''a'' et ''b'' deux éléments de ''B''. La forme <math>f _{a,b}</math> définie par <math>f_{a,b}(x,y) =\overline{ x(a)}y(b)</math> est une forme sesquilinéaire (à gauche) à symétrie hermitienne.
+
+== Notes et références ==
+{{Références}}
+== Articles connexes==
+* [[produit scalaire]]
+* [[Hermitien]]
+* [[Espace de Hilbert]]
+* [[Espace préhilbertien]]
+
+{{Algèbre bilinéaire}}
+
+[[Catégorie:Algèbre bilinéaire]]
+
+{{Portail mathématiques}}
+
+[[de:Sesquilinearform]]
+[[en:Sesquilinear form]]
+[[eo:Seskvilineara formo]]
+[[it:Forma sesquilineare]]
+[[nl:Sesquilineair]]
+[[pt:Forma sesquilinear]]
+[[ru:Эрмитова форма]]
+[[uk:Ермітів скалярний добуток]]
+[[zh:半双线性形式]]

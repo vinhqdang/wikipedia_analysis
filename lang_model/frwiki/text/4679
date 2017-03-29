@@ -1,0 +1,515 @@
+{{Notation échiquéenne}}
+[[Fichier:Chess tile pd.svg|right|Pion d'échecs]]
+Aux [[échecs]], la '''structure de pions''' (parfois connue sous le nom de '''squelette de pions''') est la configuration des [[pion (échecs)|pions]] sur l'[[échiquier]]. Les pions étant les pièces les moins mobiles, la structure de pions est relativement statique, et détermine fortement la nature [[stratégie échiquéenne|stratégique]] de la position.
+
+[[François-André Danican Philidor|Philidor]] fut le premier à reconnaître l'importance de la structure de pions. Avant lui, les pions étaient considérés comme une gêne dans le développement des pièces, que l'on pouvait sacrifier pour gagner ne serait-ce qu'un [[Lexique du jeu d'échecs#T|tempo]].
+
+==Considérations générales==
+
+Les faiblesses dans la structure de pion, comme un [[pion isolé]], des [[pions doublés]] ou un [[pion arriéré]] et des trous, sont habituellement permanentes une fois créées. On doit dont prendre soin de les éviter (mais il existe des exceptions, comme le ''trou de Bolesvalsky'', voir plus bas). En l'absence de ces faiblesses structurelles, il n'est pas possible de classer les structures comme bonnes ou mauvaises, beaucoup dépendra de la position des pièces.
+Cependant, une formation de pions détermine de façon importante la stratégie générale, indépendamment de l'ouverture qui l'a fait naître. Les formations de pions symétriques autour d'une ligne verticale (comme la chaîne e5 ou la chaîne d5) peuvent être trompeusement similaires, mais avoir des caractéristiques complètement différentes en raison de la propension au petit [[roque (échecs)|roque]].
+
+Des ''transpositions'' entre structures de pions arrivent fréquemment, telles l'''isolani'' en ''pions pendants'' et réciproquement. De telles transpositions doivent être considérées avec attention et marquent un infléchissement dans la stratégie du jeu.
+
+==Principales structures de pions==
+Dans son livre ''Pawn structure chess'', [[Andrew Soltis]] classe les principales formations en seize catégories détaillées plus bas. Pour que la structure tombe dans l'une ou l'autre catégorie, il n'est pas indispensable que les pions soient exactement sur les mêmes cases, seulement que la nature du jeu et les thèmes essentiels soient les mêmes. Ce sont les pions du centre qui ont le plus d'influence sur la nature du jeu.
+
+Les structures avec des attaques mutuelles de pion sont dites « tendues ». Elles sont d'ordinaire instables et ont tendance à transposer dans une structure stable avec une poussée de pion ou un échange. Le jeu est souvent centré autour de la transition dans des circonstances favorables. Par exemple, dans le [[gambit dame refusé]], les Noirs attendent que les Blancs développent leur fou f1 pour effectuer la capture d5xc4, transposant dans une formation slave (voir plus bas)
+
+===Formation Caro===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|pd|pd|=
+|  |  |pd|  |pd|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|  |  |  |pl|  |  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|pl|  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation Caro}}
+
+* Ouvertures: 
+** principale : [[défense Caro-Kann]]
+** autres : [[défense française]], [[défense scandinave]], [[gambit dame]]
+* Type : jeu lent
+* Thèmes pour les Blancs : poste avancé en e5, avantage d'espace sur l'aile roi, poussée d4-d5, possibilité d'une majorité sur l'aile dame en finale (typiquement après l'échange du pion blanc d contre le pion noir c)
+* Thèmes pour les Noirs : faiblesse du pion d4, poussées c6-c5 et e6-e5. La première est habituellement préférable et plus facile à réaliser pour les Noirs.
+
+{{clr}}
+
+===Formation slave===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|pd|pd|=
+|  |  |pd|  |pd|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|  |  |  |pl|  |  |  |  |=
+|  |  |  |  |pl|  |  |  |=
+|pl|pl|  |  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation slave}}
+
+* Ouvertures : 
+** principale : [[défense slave]]
+** autres : [[partie catalane]], [[défense Grünfeld]], [[système Colle]] (avec couleurs inversées)
+* Type : jeu lent
+* Thèmes pour les Blancs : pression sur la colonne c, faiblesse du pion Noir c (après b7-b5 ou bien d4-d5xc6 en réponse à e6-e5), la poussée d4-d5.
+* Thèmes pour les Noirs : poussées e6-e5 et c6-c5
+
+{{clr}}
+
+===Sicilienne Scheveningue===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|pd|pd|=
+|  |  |  |pd|pd|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|  |  |  |  |pl|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|pl|  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation Scheveningue}}
+
+* Ouvertures : 
+** principales : [[Défense sicilienne]] ([[Sicilienne Najdorf]], variantes Richter-Rauzer et Sozin), [[Sicilienne Scheveningue]] et d'autres variantes de la défense sicilienne,
+* Type : complexe, dynamique, milieu de jeu aigu
+* Thèmes pour les Blancs : pression sur la colonne d, avantage d'espace, poussée e4-e5 (souvent préparée par f2-f4), poussée f2-f4-f5, attaque sur l'aile roi d2-g4-g5 (voir [[attaque Keres]])
+* Thèmes pour les Noirs : pression sur la colonne c, attaque de minorité (et contre-jeu en général) sur l'aile dame, pression sur les pions blancs en e4 ou e5, poussées d6-d5, e6-e5 avec transposition dans un ''trou de Boleslavsky''
+
+Il n'est pas prudent pour les Blancs d'échanger une pièce en c6 en permettant la recapture bxc6, parce que la phalange de pions centraux noirs devient très forte.
+
+{{clr}}
+
+===Sicilienne dragon===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |pd|pd|  |pd|=
+|  |  |  |pd|  |  |pd|  |=
+|  |  |  |  |  |  |  |  |=
+|  |  |  |  |pl|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|pl|  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation dragon}}
+
+* Ouvertures : 
+** principales : [[défense sicilienne]], [[sicilienne dragon]]
+** autres : [[partie anglaise]]
+* Type : soit un jeu extrêmement aigu avec des roques opposés, ou bien un jeu aigu avec des roques du même côté. La sicilienne dragon exige une très bonne connaissance des variantes pour un jeu correct. C'est particulièrement vrai dans l' ''attaque yougoslave'' dans laquelle les Blancs jouent Fe3, f3, Dd2 et O-O-O. Il existe d'autres variantes, telles le ''dragon classique'' où les Blancs jouent Fe2 et O-O, l'''attaque Tal'' qui consiste à jouer Fc4 et O-O, et la défense en fianchetto où les Blancs jouent g3 et O-O; ces variantes moins courantes mènent à des positions moins tactiques.
+* Thèmes pour les Blancs : poste avancé en d5, attaque sur l'aile roi (soit avec f2-f4-f5 avec petit roque noir, ou h2-h4-h5) avec grand roque, faiblesse des pions de l'aile dame noire en finale.
+* Thèmes pour les Noirs : pression sur la grande diagonale, contre-jeu sur l'aile dame, exploitation des pions trop avancés sur l'aile roi en finale.
+
+{{clr}}
+
+===Étau de Maróczy===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |pd|pd|pd|pd|=
+|  |  |  |pd|  |  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|  |  |pl|  |pl|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|  |  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|L'étau de [[Géza Maróczy|Maróczy]]}}
+
+* Ouvertures : 
+** principale : [[sicilienne Maroczy]]
+* Type : jeu semi-ouvert
+* Thèmes pour les Blancs : Cd4-c2-e3, fianchetto d'un ou des deux fous, le saut de Marco (Cc3-d5, suivi par e4xd5 avec une très forte pression sur la colonne e), attaque de l'aile roi, poussées c4-c5 et e4-e5,
+* Thèmes pour les Noirs : poussées b7-b5, f7-f5 (en particulier avec un fou roi en fianchetto), d6-d5 (préparé par e7-e6)
+
+L'étau de Maróczy, a une redoutable réputation. On pensait autrefois que permettre l'étau donnait toujours aux Blancs un avantage significatif. En effet, si les Noirs ne réalisent pas rapidement une poussée libératoire, les pièces vont suffoquer. Cependant, la formation prend du temps à mettre en place et limite l'activité du fou roi blanc, ce qui peut donner du temps aux Noirs pour la poussée.
+{{clr}}
+
+===Trou de Boleslavsky===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|pd|pd|=
+|  |  |  |pd|  |  |  |  |=
+|  |  |  |  |pd|  |  |  |=
+|  |  |  |  |pl|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|pl|  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|Le trou de [[Isaac Boleslavsky|Boleslavsky]]}}
+
+* Ouverture : 
+** principales: [[défense sicilienne]], [[sicilienne Najdorf]], Classique, [[sicilienne Sveshnikov]],
+** autres : Sicilienne O'Kelly (2...a6)
+* Type : jeu ouvert et dynamique
+* Thèmes pour les Blancs : prendre le contrôle du trou d5, exploiter le [[pion arriéré]] d6, poussée f2-f4
+* Thèmes pour les Noirs : poussée d6-d5, attaque de minorité à l'aile dame, case c4,
+
+L'idée que les Noirs créent délibérément un trou en d5 et doivent ensuite se battre pour l'égalité est paradoxale. Le jeu est axé sur la case d5 : les Noirs doivent jouer très précisément ou les Blancs vont placer un cavalier à demeure en d5 et obtenir un avantage de position important. Les Noirs égalisent presque toujours s'il peuvent réaliser la poussée d6-d5, et peuvent même obtenir un jeu légèrement meilleur. Les Noirs ont deux options pour le fou dame : e6 ou b7 (après a7-a6 et b7-b5). 
+Contrairement à l'habitude dans les positions ouvertes, les fous ont tendance à être inférieurs aux cavaliers en raison de l'extrême importance de la case d5 : les Blancs échangent fréquemment Fg5xf6 et les Noirs préfèrent abandonner leur fou dame plutôt qu'un cavalier pour échanger le cavalier blanc qui parviendrait en d5.
+
+Quand les blancs choisissent le grand roque, les Noirs retardent le roque car le roi est en sécurité au centre.
+
+{{clr}}
+
+===Chaîne d5===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|pd|  |  |pd|pd|pd|=
+|  |  |  |pd|  |  |  |  |=
+|  |  |  |pl|pd|  |  |  |=
+|  |  |  |  |pl|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|pl|  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La chaîne d5}}
+
+* Ouvertures : 
+** principale : [[défense est-indienne]]
+** autre : [[défense Benoni]], [[partie espagnole]]
+* Type : jeu fermé avec activité sur les flancs opposés
+* Thèmes pour les Blancs : avantage d'espace important sur l'aile dame, poussée c2-c4-c5 (éventuellement préparée avec b2-b4), prophylaxie avec g2-g4 (après f2-f3), poussée f2-f4
+* Thèmes pour les Noirs : attaque sur l'aile roi, poussées f7-f5, g7-g5-g4 (après f2-f3), c7-c6, prophylaxie avec c7-c6 ou c7-c5, transposant dans une formation Benoni complète
+
+La chaîne survient dans un nombre d'ouvertures variées, mais le plus couramment dans les variantes de la défense est-indienne qui ont fait l'objet d'analyses poussées. Le thème est une course pour une percée sur les flancs opposés, les Noirs doivent tenter une attaque rapide sur l'aile roi avant que les pièces blanches ne pénètrent de façon dévastatrice par la colonne c. On pensait que cette formation était favorable aux Blancs jusqu'à une partie d'école entre Taimanov et Tal en 1953, dans laquelle les Noirs introduisent la manœuvre Tf8-f7, Fg7-f8, Tf7-g7. Quand la formation est issue d'une partie espagnole, le jeu est beaucoup plus lent, le temps est de moindre importance et est employé à des manœuvres de pièces de part et d'autre, les Noirs se préoccupant de la poussée c7-c6 et les Blancs tentant habituellement un jeu sur l'aile roi avec la poussée f2-f4.
+
+{{clr}}
+
+===Chaîne e5===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|pd|  |  |pd|pd|pd|=
+|  |  |  |  |pd|  |  |  |=
+|  |  |  |pd|pl|  |  |  |=
+|  |  |  |pl|  |  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|pl|  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La chaîne e5}}
+
+* Ouverture : [[défense française]]
+* Type : fermé ou semi-ouvert mais aigu
+* Thèmes pour les Blancs : attaque de mat sur l'aile roi, poussée f2-f4-f5
+* Thèmes pour les Noirs : échanger le fou dame cloîtré, poussées c7-c5 et f7-f6
+
+En raison de l'avantage d'espace et de développement des Blancs sur l'aile roi, les Noirs doivent créer du contre-jeu pour éviter de se faire mater. Les débutant se font souvent surprendre par un [[sacrifice (échecs)|sacrifice]] de fou en h7. L'attaque de la tête de la [[chaîne de pions]] avec f7-f6 arrive aussi fréquemment que l'attaque par la base, parce qu'il est plus difficile aux Blancs de défendre la tête de la chaîne qu'avec la chaîne d5. En réponse à exf6, les Noirs acceptent le [[pion arriéré]] e6 en échange de la libération de leur position (l'ouverture de la diagonale b8-h2 et la colonne semi-ouverte) et la possibilité d'une poussée e6-e5 future. Si les Blancs échangent d4xc5, la formation est dite ''en coin''. Les Blancs obtiennent un avant-poste en d4 et la possibilité d'exploiter les cases noires tandis que les Noirs ont un pion avancé en e5 comme cible.
+
+{{clr}}
+
+===Formation Rauzer de la défense est-indienne===
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|pd|pd|=
+|  |  |pd|  |  |  |  |  |=
+|  |  |  |  |pd|  |  |  |=
+|  |  |pl|  |pl|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|  |  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation Rauzer (couleurs inversées)}}
+
+* Ouvertures : 
+** principales : [[défense est-indienne]], [[défense ouest-indienne]] (couleurs inversées), [[partie espagnole]]
+** autres : [[partie espagnole]] (couleurs inversées) 
+Le reste du texte se base sur la formation avec l'inversion des couleurs
+* Type : jeu semi-ouvert
+* Thèmes pour les Blancs : faiblesse d6, poussée c4-c5, diagonale a3-f8, avancée des pions de l'aile dame
+* Thèmes pour les Noirs : faiblesse en d4, diagonale a1-h8, case f4, attaque sur l'aile roi, échange des pièces pour le passage dans une finale supérieure.
+
+La formation a été introduite par [[Vsevolod Rauzer]] dans la partie espagnole. Elle peut aussi survenir avec les couleurs inversées dans la même ouverture, bien que cela soit rare.
+
+{{clr}}
+
+{{Diagramme d'échecs petit|=
+|tleft
+|
+|=
+|rd|  |bd|  |rd|  |kd|  |=
+|pd|pd|  |nd|  |pd|bd|pd|=
+|  |  |pd|rl|  |nd|pd|  |=
+|  |  |  |  |pd|  |  |  |=
+|  |  |pl|  |pl|  |  |  |=
+|  |  |nl|  |bl|nl|  |pl|=
+|pl|pl|  |  |  |pl|pl|  |=
+|  |  |kl|  |  |bl|  |rl|=
+|Tarrasch - Euwe, Pistyan 1922}}
+
+On considère qu'elle donne aux Noirs d'excellentes chances, car le trou d6 est bien moins grave que d4 chez les Blancs. Si le fou roi des Noirs est en fianchetto, il est courant de le voir revenir sur sa case initiale f8 pour contrôler les cases vitales c5 et d6, ou pour échanger le fou dame des Blancs qui défend le trou.
+
+La formation Rauzer est souvent mal jugée par les novices. Dans le diagramme de gauche, il semble que les Blancs aient un avantage de développement tandis que la la position des Noirs est remplie de trous. En réalité, les Noirs sont beaucoup mieux, parce que les Blancs n'ont pas de possibilité réelle d'améliorer leur position tandis que les Noirs peuvent exploiter la case d4<ref>[http://www.chessgames.com/perl/chessgame?gid=1006866 voir la partie complète]</ref>.
+
+{{clr}}
+
+===Mur de Boleslavsky===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|pd|pd|=
+|  |  |pd|pd|  |  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|  |  |pl|  |pl|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|  |  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|Le mur de Boleslavsky}}
+
+* Ouverture : 
+** principale : la [[défense est-indienne]]
+** autres : la [[partie anglaise]], la [[défense Pirc]], la [[partie espagnole]]
+* Type : jeu semi-ouvert, développement lent
+* Thèmes pour les Blancs : faiblesse en d6, poussées e4-e5 et c4-c5, attaque de minorité avec b2-b4-b5
+* Thèmes pour les Noirs : attaque des pions e4 et c4, poussées d6-d5 et f7-f5, jeu sur l'aile dame avec a7-a5-a4
+
+Le mur est encore une autre structure qui laisse les Noirs avec un pion d faible, mais empêche aux Blancs de contrôler le centre et donne aux Noirs un jeu de pièces actif et l'opportunité de jouer sur l'un ou l'autre flanc.
+
+{{clr}}
+
+===Gambit dame avec pion dame isolé===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|pd|pd|=
+|  |  |  |  |pd|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|  |  |  |pl|  |  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|  |  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation ''isolani''}}
+
+Le pion d isolé est parfois appelé ''isolani''.
+
+* Ouvertures : 
+** principale : [[gambit dame]]
+** autre : [[défense française]]
+* Type : jeu ouvert
+* Thèmes pour les Blancs : poussée d4-d5, sacrifice de l'''isolani'', avant-poste en e5 et c5, attaque sur l'aile roi
+* Thèmes pour les Noirs : blocus de l'isolani, échange de pièces pour une finale supérieure.
+
+{{clr}}
+
+{{Diagramme d'échecs petit|=
+|tleft
+|
+|=
+|  |  |rd|qd|kd|bd|  |rd|=
+|pd|pd|  |  |  |pd|pd|  |=
+|  |  |nd|  |bd|nd|  |pd|=
+|  |  |  |pd|  |  |  |  |=
+|  |  |  |pd|  |  |  |  |=
+|  |pl|nl|  |  |nl|pl|  |=
+|pl|bl|  |  |pl|pl|bl|pl|=
+|rl|  |  |ql|  |rl|kl|  |=
+|[[Efim Bogoljubov]] - Rosenthal, Saint-Pétersbourg 1914. Les Blancs ont réalisé un blocus avec 11. Cb5!}}{{Diagramme d'échecs petit|=
+|tleft
+|
+|=
+|rd|  |  |qd|  |rd|kd|  |=
+|pd|  |  |  |  |pd|pd|  |=
+|  |pd|bd|  |nd|  |  |pd|=
+|  |  |  |pd|  |  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|  |  |nl|  |pl|  |  |  |=
+|pl|pl|  |rl|  |pl|pl|pl|=
+|  |  |  |ql|kl|bl|  |rl|=
+|[[Elmar Maguerramov]] - [[Garry Kasparov]], Bakou 1977. Les Noirs ont obtenu une attaque dévastatrice avec 17...d4!}}
+
+{{clr}}
+
+L'isolani aboutit à un jeu vif autour de la case d5. Si les Noirs peuvent bloquer le pion, leurs forces positionnelles et les menaces d'échanges leur donnent l'avantage. Sinon, la menace d4-d5 est permanente, et l'isolani peut parfois être sacrifié pour permettre aux pièces blanches une attaque dévastatrice. [[Garry Kasparov|Kasparov]] est réputé pour ce sacrifice spéculatif d4-d5.
+
+{{clr}}
+
+===Gambit dame avec pions pendants===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|pd|pd|=
+|  |  |  |  |pd|  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|  |  |pl|pl|  |  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|  |  |  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation avec pions pendants}}
+
+* Ouvertures : 
+** principale : [[gambit dame]] refusé, 
+** autre: [[défense ouest-indienne]]
+* Thèmes pour les Blancs : poussée avec ouverture de ligne au centre, attaque sur l'aile roi
+* Thème pour les Noirs : forcer une avance de pions et blocus de la paire, conversion en isolani
+
+Comme l'isolani, les pions pendants sont une faiblesse structurelle et ne doivent pas être créés à moins qu'ils soient compensés par une meilleure position des pièces. 
+Les Noirs vont tenter de forcer une avancée de pion adverse. Si les Noirs peuvent créer un blocus permanent, le partie est gagnée positionnellement. D'autre part, les Blancs tentent de maintenir les pions tels quels et de lancer une attaque sur l'aile roi, exploitant leur meilleur contrôle du centre. Il existe d'autres thèmes pour les Blancs à base de possibilités tactiques et d'ouverture de ligne au centre.
+
+{{clr}}
+
+===Gambit dame orthodoxe===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|pd|pd|=
+|  |  |pd|  |  |  |  |  |=
+|  |  |  |pd|  |  |  |  |=
+|  |  |  |pl|  |  |  |  |=
+|  |  |  |  |pl|  |  |  |=
+|pl|pl|  |  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation orthodoxe}}
+
+* Ouverture : 
+** principale : [[gambit dame refusé]]
+** autre : [[défense Caro-Kann]] (avec couleurs inversées)
+* Type : jeu semi-ouvert
+* Thèmes pour les Blancs : attaque de minorité, poussée e3-e4
+* Thèmes pour les Noirs : avant-poste en e4, attaque sur l'aile roi
+
+{{clr}}
+
+===Formation Panov===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |  |pd|pd|pd|=
+|  |  |  |  |pd|  |  |  |=
+|  |  |pl|pd|  |  |  |  |=
+|  |  |  |pl|  |  |  |  |=
+|  |  |  |  |  |  |  |  |=
+|pl|pl|  |  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation Panov}}
+
+* Ouvertures :
+** principales : [[gambit dame refusé]], [[défense Caro-Kann]],
+** autres : [[défense Alekhine]], [[défense Tarrasch]] (couleurs inversées)
+* Type : jeu semi-ouvert, dynamique
+* Thèmes pour les Blancs : exploitation des cases noires, majorité sur l'aile dame en finale avec un pion avancé
+* Thèmes pour les Noirs : avant-poste en e4, attaque sur l'aile roi, pion blanc avancé, poussées e6-e5 et b7-b5
+
+{{clr}}
+
+===Formation Stonewall===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|pd|  |  | |pd|pd|=
+|  |  |  |  |pd|  |  |  |=
+|  |  |  |pd|  |pd|  |  |=
+|  |  |  |pl|  |pl|  |  |=
+|  |  |  |  |pl|  |  |  |=
+|pl|pl|pl|  |  |  |pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation Stonewall}}
+
+* Ouvertures :
+** principale : [[défense hollandaise]]
+** autre : [[système Colle]]
+* Thèmes : échange du mauvais fou, avant-postes en e4/e5, poussées sur les colonnes c et g
+
+Les joueurs doivent réfléchir soigneusement à la façon dont ils recapturent sur les cases e4/e5, car cela brise la symétrie de la structure et crée des subtilités stratégiques.
+
+{{Détails|Attaque Stonewall}}
+
+{{clr}}
+
+===Sicilienne fermée===
+
+{{Diagramme d'échecs petit|=
+|tright
+|
+|=
+|  |  |  |  |  |  |  |  |=
+|pd|pd|  |  |pd|pd|pd|pd|=
+|  |  |  |pd|  |  |  |  |=
+|  |  |pd|  |  |  |  |  |=
+|  |  |  |  |pl|  |  |  |=
+|  |  |  |pl|  |  |  |  |=
+|pl|pl|pl|  |  |pl|pl|pl|=
+|  |  |  |  |  |  |  |  |=
+|La formation sicilienne fermée}}
+
+* Ouvertures : [[sicilienne fermée]], [[partie anglaise]] fermée (couleurs inversées)
+* Type : fermé et compliqué
+* Thèmes pour les Blancs : avancées de pions sur l'aile roi, poussées c2-c3 et d3-d4.
+* Thèmes pour les Noirs : avancées de pions sur l'aile dame, diagonale a1-h8.
+{{clr}}
+
+== Notes et références ==
+<references />
+
+== Voir aussi ==
+
+=== Bibliographie ===
+* {{Ouvrage|auteur=[[Andrew Soltis]]|titre=Pawn Structure Chess|éditeur=Tartan Books|année=1976|isbn=0-679-14475-7}}
+* {{Ouvrage|auteur=M. Yudovich|titre=Garri Kasparov|éditeur=Raduga Publishers|année=1988|isbn=5-05-001722-X}}
+* {{Ouvrage|auteur=[[Max Euwe]]|titre=The Development of Chess Style|éditeur=David McKay Company|année=1968|isbn=0-679-14045-X}}
+* {{Ouvrage|auteur=[[Hans Kmoch]]|titre=Pawn Power in Chess|année=1959,1990|éditeur=Dover|isbn=ISBN 0-486-26486-6}}
+
+=== Articles connexes ===
+* [[Pion isolé]]
+* [[Pions doublés]]
+* [[Pion arriéré]]
+* [[Stratégie échiquéenne]]
+
+
+{{Portail|échecs}}
+
+[[Catégorie:Lexique d'une partie d'échecs]]
+
+[[ca:Estructura de peons]]
+[[cs:Pěšcová struktura]]
+[[en:Pawn structure]]
+[[es:Estructura de peones]]
+[[hu:Gyalogstruktúra]]
+[[mk:Пешачка структура]]
+[[pt:Estrutura de peões]]
+[[zh:兵形]]

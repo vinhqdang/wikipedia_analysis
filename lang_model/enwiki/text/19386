@@ -1,0 +1,147 @@
+{{Unreferenced|date=May 2007}}
+{{Cleanup|date=May 2007}}
+{{Expand|date=November 2006}}
+
+The '''Intelligent Transportation Systems (ITS)''' program is a worldwide initiative to add [[information and communications technology]] to [[transport]] [[infrastructure]] and [[vehicle]]s. It aims to manage factors that are typically at odds with each other such as vehicles, loads, and routes to improve safety and reduce vehicle wear, transportation times and [[fuel]] consumption. 
+
+==Background==
+Interest in ITS comes from the problems caused by [[traffic]] congestion worldwide and a synergy of new [[information technologies]] for simulation, real-time control and communications networks. [[Traffic congestion]] has been increasing world-wide as a result of increased [[motorization]], [[urbanization]], [[population growth]] and changes in [[population density]]. Congestion reduces efficiency of [[transportation infrastructure]] and increases travel time, [[air pollution]] and [[fuel consumption]]. 
+
+The United States, for example, saw large increases in both motorization and urbanization starting in the [[1920s]] that led to migration of the population from the sparsely populated [[rural]] areas and the densely packed [[Urban area|urban]] areas into [[suburbs]]. The [[industrial economy]] replaced the [[agricultural economy]] leading the population to move from rural locations into urban centers. At the same time, motorization was causing cities to expand because motorized transportation could not support the [[population density]] that the existing [[mass transit]] systems could support. Suburbs provided a reasonable compromise between population density and access to a wide variety of employment, goods and services that were available in the more densely populated urban centers. Further, suburban infrastructure can be built quickly, supporting a rapid transition from a rural/agricultural economy to an industrial/urban economy.
+
+Recent governmental activity in the area of ITS&mdash;specifically in the [[USA]]&mdash;is further motivated by the perceived need for [[Homeland Security]]. Many of the ITS systems proposed also involve surveillance of the roadways, which is a priority of homeland security. Funding of many systems comes either directly through homeland security organizations or comes with their approval. Further, ITS can play a role in the rapid [[mass evacuation]] of people in urban centers after mass casualty events or as a result of a natural disaster or threat. Much of the infrastructure and planning involved with ITS parallels that needed for homeland security.
+
+In the [[Developing World]], the migration of people from rural to urbanized habitats has progressed differently. Many areas of the Developing World have urbanized without significant motorization and the formation of suburbs. In areas like [[Santiago, Chile]] a high population density is supported by a [[multimodal]] system of walking, [[bicycle]] transportation, [[motorcycle]]s, [[bus]]es and [[trains]]. A small portion of the population can afford automobiles, but the automobiles greatly increase the congestion in these multimodal transportation systems. They also produce a considerable amount of air pollution, pose a significant safety risk and exacerbate feelings of inequities in the society.
+
+Other parts of the Developing World such as [[China]] remain largely rural, but are rapidly urbanizing and industrializing. In these areas a motorized infrastructure is being developed alongside motorization of the population. Great disparity of wealth means that only a fraction of the population can motorize, and therefore the highly dense multimodal transportation system for the poor is cross-cut by the highly motorized transportation system for the rich. In these areas the urban infrastructure is being rapidly developed, providing an opportunity for building new systems incorporating ITS from the beginning.
+
+==Intelligent transportation technologies==
+Intelligent transportation systems vary in technologies applied, from basic management systems such as [[car navigation]], [[traffic light]] control systems, container management systems, variable message signs or [[speed cameras]] to monitoring applications such as security [[CCTV]] systems, and then to more advanced applications which integrate live data and feedback from a number of other sources, such as [[Parking Guidance and Information]] systems, weather information, bridge de-icing systems, and the like. Additionally, predictive techniques are being developed, to allow advanced modeling and comparison with historical baseline data. Some of the constituent technologies typically implemented in ITS are described in the following sections.
+
+In the period from 1992 to around 1995 the ITS sector was known as Intelligent Vehicle Highway Systems (IVHS). At the time it was recognized that all forms of transport could benefit from the application of information and communications technologies (ICT).  However the term ICT had not yet been described in popular vernacular.  The global leaders in ITS at the time then determined that there needed to be a term to describe the application of ICT to transport and coined the term Intelligent Transportation Systems.
+
+===Wireless communications===
+Various forms of wireless communications technologies have been proposed for intelligent transportation systems. Short-range communications (less than 500 yards) can be accomplished using [[IEEE 802.11]] protocols, specifically [[IEEE 802.11p|WAVE]] or the [[Dedicated Short Range Communications]] standard being promoted by the [[Intelligent Transportation Society of America]] and the [[United States Department of Transportation]]. Theoretically the range of these protocols can be extended using [[Mobile ad-hoc network]]s or [[Mesh networking]]. 
+
+Longer range communications has been proposed using infrastructure networks such as [[WiMAX]] ([[IEEE 802.16]]), [[Global System for Mobile Communications]] (GSM) or [[3G]]. Long-range communications using these methods is well established, but, unlike the short-range protocols, these methods require extensive and very expensive infrastructure deployment. There is lack of consensus as to what business model should support this infrastructure.
+
+===Computational technologies===
+Recent advances in [[vehicle electronics]] have lead to a move toward fewer more capable computer processors on a vehicle. A typical vehicle in the early 2000s would have between 20 and 100 individual networked [[microcontroller]]/[[Programmable logic controller]] modules with non-real-time [[operating system]]s. The current trend is toward fewer more costly [[microprocessor]] modules with hardware [[memory management]] and [[Real-Time Operating System]]s. The new [[embedded system]] [[platforms (computing)|platforms]] allow for more sophisticated [[software application]]s to be implemented, including model-based [[process control]], [[artificial intelligence]] and [[ubiquitous computing]]. Perhaps the most important of these for Intelligent Transportation Systems is [[artificial intelligence]].
+
+===Floating car data; floating cellular data (FCD)===
+Virtually every car contains one or more mobile phones. These mobile phones routinely transmit their location information to the network <U+2013> even when no voice connection is established. These cellular phones in cars are used as anonymous traffic probes. As the car moves, so does the signal of the mobile phone. By measuring and analyzing [[triangulation]] network data <U+2013> in an anonymized format <U+2013> the data is converted into accurate traffic flow information. The more congestion, the more cars, the more phones and thus more probes. In metropolitan areas the distance between antennas is shorter and, thus, accuracy increases. No infrastructure need be built along the road - only the mobile phone network is leveraged. The FCD technology provides great advantages over existing methods of traffic measurement: 
+- much less expensive than sensors or cameras
+- more coverage: all locations and streets
+- faster to set up (no work zones) and less maintenance
+- works in all weather conditions, including heavy rain
+
+:See also [[Floating Car Data]]
+:See also [[Floating Cellular Data]]
+
+===Sensing technologies===
+State-of-the-art sensor technologies have greatly enhanced the technical capabilities and safety benefits awaiting Intelligent transportation systems around the world. Sensing systems for ITS can be either infrastructure based or vehicle based systems, or both - see, for example, [[Intelligent vehicle technologies]]. Infrastructure sensors are devices that are installed or embedded on the road, or surrounding the road (buildings, posts, and signs for example). These sensing technologies may be installed during preventive [[road construction]] maintenance or by sensor injection machinery for rapid deployment of road in-ground sensors. While vehicle sensors are those devices installed on the road or in the vehicle, new technology development has also enabled cellular phones to become anonymous traffic probes, such as [[floating car data]].
+
+===Inductive loop detection===
+[[Inductive loop]]s can be placed in a roadbed to detect vehicles as they pass over the loop by measuring the vehicle's magnetic field. The simplest detectors simply count the number of vehicles during a unit of time (typically 60 seconds in the [[United States]]) that pass over the loop, while more sophisticated sensors estimate the speed, length and weight of vehicles and the distance between them. Loops can be placed in a single lane or across multiple lanes, and they work with very slow or stopped vehicles as well as vehicles moving at high-speed.
+
+===Video vehicle detection===
+Traffic flow measurement using video [[cameras]] is another form of vehicle detection.  Since video detection systems do not involve installing any components directly into the road surface or roadbed, this type of system is known as a "non-intrusive" method of traffic detection.  Video from black-and-white or color cameras is fed into [[processors]] that analyze the changing characteristics of the video image as vehicles pass.  The cameras are typically mounted on [[utility pole|poles]] or structures above or adjacent to the roadway.  Most video detection systems require some initial configuration to "teach" the processor the baseline background image.  This usually involves inputting known measurements such as the distance between [[lane]] lines or the height of the camera above the roadway.  A single video detection processor can detect traffic simultaneously from four to eight cameras, depending on the brand and model. The typical output from a video detection system is lane-by-lane vehicle speeds, counts and lane occupancy readings.  Some systems provide additional outputs including gap, headway, stopped-vehicle detection and wrong-way vehicle alarms.
+
+==Intelligent transportation applications==
+===[[Electronic toll collection]]===
+Electronic toll collection (ETC) makes it possible for vehicles to drive through toll gates at traffic speed, reducing congestion at toll plazas and automating toll collection. Originally ETC systems were used to automate toll collection, but more recent innovations have used ETC to enforce [[cordon zones]] in city centers and [[ETC Lanes]]. 
+
+Until recent years most ETC systems were based on using radio devices in vehicles that would use proprietary protocols to identify a vehicle as it passed under a [[gantry]] over the roadway. More recently there has been a move to standardize ETC protocols around the [[Dedicated Short Range Communications]] protocol that has been promoted for vehicle safety by the [[Intelligent Transportation Society of America]], ERTICO and ITS Japan.
+
+Whilst communication frequencies and standards do differ around the world there has been a broad push toward [[Vehicle Infrastructure Integration]] (VII) around the 5.9GHz frequency (802.11.x WAVE)   
+
+[[ITS Australia]] also facilitated via its National Electronic Tolling Committee representing all jurisdictions and toll road operators interoperability of toll tags in Australia for the multi lane free flow tolls roads.
+
+Other systems that have been used include [[barcode]] stickers, [[license plate recognition]], [[Infrared#Communications|infrared communication]] systems and [[Radio Frequency Identification]] Tags (''see [[M6 Toll tag]]'').
+
+===Emergency vehicle notification systems===
+===Cordon zones===
+Cordon zones are used primarily in urban centers where [[mass transit]] is an alternative to driving. Drivers entering a cordon zone are charged a toll that exceeds the cost of mass transit 
+
+Cordon zones have been implemented in [[Singapore]] and in [[London]] where a special toll is collected ([[London Congestion Charge|Congestion Charge]]) when entering a congested city center using Electronic Toll Collection, licence plate
+
+==See also==
+{{col-begin}}
+{{col-3}}
+* [[Driverless car]]
+* [[Intelligent vehicle technologies]]
+* [[ISO 14813]]
+* [[ISO 14814]]
+* [[ISO 14815]]
+* [[ISO 14816]]
+* [[ISO 14817]]
+* [[ISO 14819]]
+* [[ISO 14825]]
+* [[ISO 14827]]
+* [[ISO 14906]]
+* [[ISO 15075]]
+{{col-3}}
+* [[ISO 15622]]
+* [[ISO 15623]]
+* [[ISO 15628]]
+* [[ISO 15662]]
+* [[ISO 17361]]
+* [[ISO 17386]]
+* [[ISO 17687]]
+* [[ISO 21214]]
+* [[ISO 24014]]
+* [[ISO 24531]]
+{{col-3}}
+* [[Map database management]]
+*[[National Transportation Communications for Intelligent Transportation System Protocol]] (NTCIP)
+* [[Parking Guidance and Information]]
+* [[Telematics]]
+* [[Traffic Message Channel]]
+* [[Vehicular communication systems]]
+* [[Vehicle Infrastructure Integration]]
+{{col-end}}
+
+==External links==
+====ITS Societies====
+* [http://www.itsa.org ITS America - This is a public/private ITS policy setting group]
+* [http://www.itscanada.ca ITS Canada - National organization for groups and individuals interested in ITS]
+* [http://www.ertico.com ERTICO - ITS Europe]
+* [http://www.itsnetwork.org Network of National ITS Associations]
+* [http://www.ieee.org/its IEEE Intelligent Transportation Systems Society]
+
+====ITS Government====
+* [http://www.its.dot.gov/ U.S. DOT's ITS website]
+* [http://www.its-australia.com.au Australian ITS Source - 1 terabyte library website ITS research]
+* [http://www.mlit.go.jp/road/ITS/ Japanese Government ITS Program]
+
+====ITS News & information====
+*[http://www.telematicsupdate.com Telematics Update (news, analysis, events)]
+*[http://www.telematicswire.com Telematics Wire Industry News and Links]
+*[http://groups.yahoo.com/group/transport-communications Transportation Communications Newsletter]
+*[http://www.itsreport.com ITS Report (aggregated ITS news from 1000s of sources worldwide)]
+
+====ITS Education====
+* [http://its.ou.edu University of Oklahoma ITS Lab]
+* [http://faculty.washington.edu/~jbs/itrans/ Professor Jerry Schneider at the University of Washington - links to innovative transportation projects worldwide]
+* [http://www.njtide.org Cooperative traffic systems lab of [[Rutgers University|Rutgers]], [[Princeton University|Princeton]], and the [[New Jersey Institute of Technology]] ]
+* [http://www.its.umn.edu/ The Intelligent Transportation Systems Institute at the University of Minnesota]
+*  [http://www.umich.edu/~driving/guidelines/guidelines.html Transportation Research Institute]
+* [http://www.itsregistry.org.uk The UK [[Intelligent transportation systems|ITS]] Registry, following the ISO 14871 approach]
+* [http://www.ebu.ch/en/technical/projects/b_tpeg.php TPEG Draft Specifications]
+* [http://www.lith.liu.se/en/master/its.html Master's Programme in Intelligent Transport Systems, Link<U+00F6>pings universitet]
+
+==Related journals==
+* [http://www.tandf.co.uk/journals/titles/15472450.asp Journal of Intelligent Transportation Systems]
+* [http://www.tandf.co.uk/journals/titles/15568318.asp International Journal of Sustainable Transportation]
+* [http://www.ewh.ieee.org/tc/its/trans.html IEEE Transactions on Intelligent Transportation Systems]
+
+[[Category:Transportation engineering]]
+[[Category:Intelligent transportation systems| ]]
+
+[[da:Intelligente transportsystemer]]
+[[de:Verkehrstelematik]]
+[[es:Intelligent Transportation System]]
+[[fr:Syst<U+00E8>me de transport intelligent]]
+[[it:Intelligent transportation system]]
+[[nl:Intelligente Transport Systemen]]
+[[ja:<U+9AD8><U+5EA6><U+9053><U+8DEF><U+4EA4><U+901A><U+30B7><U+30B9><U+30C6><U+30E0>]]

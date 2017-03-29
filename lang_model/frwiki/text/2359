@@ -1,0 +1,419 @@
+L''''analyse de la variance''' (terme souvent abrégé par le terme [[anglais]] '''ANOVA''' : '''''AN'''alysis '''O'''f '''VA'''riance'') est un [[test (statistique)|test statistique]] permettant de vérifier que plusieurs échantillons sont issus d'une même population. 
+
+Ce test s'applique lorsque l'on mesure une ou plusieurs variables explicatives catégorielles (appelées alors facteurs de variabilité, leurs différentes modalités étant parfois appelées « niveaux ») qui ont de l'influence sur la distribution d'une variable continue à expliquer. On parle d'analyse à un facteur, lorsque l'analyse porte sur un modèle décrit par un facteur de variabilité, d'analyse à deux facteurs ou d'analyse multifactorielle.
+
+== Principe ==
+L'analyse de la variance permet d'étudier le comportement d'une variable à expliquer continue en fonction d'une ou plusieurs variables explicatives catégorielle. Lorsque l'on souhaite étudier le comportement de plusieurs variables à expliquer en même temps, on utilisera une [[analyse de la variance multiple]] ([[MANOVA]]). Si un modèle contient des variables explicatives catégorielles et continues et que l'on souhaite étudier les lois liant les variables explicatives continues avec la variable à expliquer en fonction de chaque modalité des variables catégorielles, on utilisera alors une [[analyse de la covariance]] ([[ANCOVA]]).
+
+=== Modèle ===
+La première étape d'une analyse de la variance consiste à écrire le modèle théorique en fonction de la problématique à étudier. Il est souvent possible d'écrire plusieurs modèles pour un même problème, en fonction des éléments que l'on souhaite intégrer dans l'étude.
+
+Le modèle général s'écrit :
+{{Bloc emphase|<math>y_{ijk...} = \mu + f(i, j, k, ...) + \epsilon ~</math>|border=0}}
+avec <math>Y_{ijk...}</math> la variable à expliquer, <math>\mu</math> une constante, <math>f()</math> une relation entre les variables explicatives et <math>\epsilon</math> l'erreur de mesure. On pose l'hypothèse fondamentale que l'erreur suit une loi normale : <math>\epsilon = N(0, \sigma^2)</math>.
+
+=== Variables explicatives ===
+On distingue deux types de variables catégorielles : avec ou sans effet aléatoire.
+
+Pour une variable à '''effet fixe''', pour chaque modalité, il existe une valeur fixe correspondante. Elles s'écrivent dans le modèle théorique avec une lettre majuscule :
+{{Bloc emphase|<math>y_i = \mu + A_i + \epsilon_i ~</math>|border=0}}
+avec <math>A_0 = A</math> pour i=0, <math>A_1 = A</math> pour i=1, etc.
+
+Dans le cas d'une variable à '''effet aléatoire''', la variable est issue d'une loi supposée normale qui s'ajoute à la valeur fixe. Elles s'écrivent dans le modèle théorique avec une lettre grecque minuscule :
+{{Bloc emphase|<math>y_i = \mu + \alpha_i + \epsilon_i ~</math>|border=0}}
+avec <math>\alpha_i = \mu_a + \epsilon_\alpha</math> et <math>\epsilon_\alpha = N(0, \sigma_\alpha^2)</math>
+
+Un modèle basé seulement sur des variables explicatives à effets fixes et effets aléatoires est appelé modèle mixte.
+
+=== Hypothèses fondamentales ===
+La forme générale de l'analyse de variance repose sur le [[test de Fisher]] et donc sur la normalité des distributions et l'indépendance des échantillons.
+
+* Normalité de la distribution : on suppose, sous l'hypothèse nulle, que les échantillons sont issus d'une même population et suivent une loi normale. Il est donc nécessaire de vérifier la [[Test de normalité|normalité]] des distributions et l'[[homoscédasticité]] (homogénéité des variances, par des tests de [[Test de Bartlett|Bartlett]] ou de [[Test de Levene|Levene]] par exemple). Dans le cas contraire, on pourra utiliser les variantes non paramétriques de l'analyse de variance ([[ANOVA de Kruskal-Wallis]] ou [[ANOVA de Friedman]]).
+
+* Indépendance des échantillons : on suppose que chaque échantillon analysé est indépendant des autres échantillons. En pratique, c'est la problématique qui permet de supposer que les échantillons sont indépendants. Un exemple fréquent d'échantillons dépendants est le cas des mesures avec répétitions (chaque échantillon est analysé plusieurs fois). Pour les échantillons dépendants, on utilisera l'[[analyse de variance à mesures répétées]] ou l'[[ANOVA de Friedman]] pour les cas non paramétriques.
+
+=== Hypothèses à tester ===
+L'hypothèse nulle correspond au cas où les distributions suivent la même loi normale.
+
+L'hypothèse alternative est qu'il existe au moins une distribution dont la moyenne s'écarte des autres moyennes :
+{{Bloc emphase|<math>\begin{cases} {H_0~:~m_{1}=m_{2}=...=m_{k}=m} \\ {H_1~:~\exists (i,j)~\text{tel que}~m_i \neq m_j} \end{cases}</math>.}}
+
+=== Décomposition de la variance ===
+La première étape de l'analyse de la [[Variance (statistiques et probabilités)|variance]] consiste à expliquer la [[Variance (statistiques et probabilités)|variance]] totale sur l'ensemble des échantillons en fonction de la [[Variance (statistiques et probabilités)|variance]] due aux facteurs (la [[Variance (statistiques et probabilités)|variance]] expliquée par le modèle), de la [[Variance (statistiques et probabilités)|variance]] due à l'interaction entre les facteurs et de la [[Variance (statistiques et probabilités)|variance]] résiduelle aléatoire (la [[Variance (statistiques et probabilités)|variance]] non expliquée par le modèle). <math>S_n^2</math> étant un [[Estimateur (statistique)|estimateur]] biaisé de la [[Variance (statistiques et probabilités)|variance]], on utilise la somme des carrés des écarts (''SCE'' en français, ''SS'' pour ''Sum Square'' en anglais) pour les calculs et l'[[Estimateur (statistique)|estimateur]] non biaisé de la [[Variance (statistiques et probabilités)|variance]] <math>S_{n-1}^2</math> (également appelé ''carré moyen'' ou ''CM'').
+
+L'écart (sous entendu l'écart à la moyenne) d'une mesure est la différence entre cette mesure et la moyenne :
+{{Bloc emphase|<math>e = y_{ijk...} - \overline{y}</math>.|border="0"}}
+
+La somme des carrés des écarts SCE et l'[[Estimateur (statistique)|estimateur]] <math>S_{n-1}^2</math> se calculent à partir des formules :
+{{Bloc emphase| <math>SCE = \sum_{ijk...} (y_{ijk...} - \overline{y})^2 \qquad \text{et} \qquad S_{n-1}^2 = \frac{SCE}{n-1}</math> |border=0}}
+
+Il est alors possible d'écrire la somme des carrés des écarts total <math>SCE_\text{total}</math> comme étant une composition linéaire de la somme des carrés des écarts de chaque variable explicative <math>SCE_\text{factor}</math> et de la somme des carrés des écarts pour chaque interaction <math>SCE_\text{interaction}</math> :
+{{Bloc emphase| <math>SCE_\text{total} = \sum_i { SCE_{\text{facteur}_i} } + \sum_{ij} { SCE_{\text{interaction}_{ij}} }</math> |border=0}}
+Cette décomposition de la [[Variance (statistiques et probabilités)|variance]] est toujours valable, même si les variables ne suivent pas de loi normale.
+
+=== Test de Fisher ===
+Par hypothèse, la variable observée <math>y_i</math> suit une [[loi normale]]. La [[loi du χ²]] à <math>k</math> [[degré de liberté (statistiques)|degrés de liberté]] étant définie comme étant la somme de <math>k</math> [[loi normale|lois normales]] au carré, les sommes des carrés des écarts <math>SCE</math> suivent des [[Loi du χ²|lois du χ²]], avec <math>DDL</math> le nombre de [[degré de liberté (statistiques)|degrés de liberté]] :
+{{Bloc emphase|<math>SCE \sim \chi^2(DDL)~</math>|border=0}}
+
+La [[loi de Fisher]] est définie comme le rapport de deux [[Loi du χ²|lois du χ²]]. Dans le cas de l'hypothèse nulle <math>H_0</math>, le rapport entre deux [[Estimateur (statistique)|estimateurs]] non biaisés de la [[Variance (statistiques et probabilités)|variance]] <math>S_{DDL}^2~</math> doit donc suivre une [[Loi de Fisher]] :
+{{Bloc emphase|<math>F = \frac {S^2_1} {S^2_2} = \frac {\dfrac {SCE_1} {DDL_1}} {\dfrac {SCE_2} {DDL_2}} \sim F(DDL_1, DDL_2)</math>}}
+
+Si la valeur de <math>F</math> n'est pas compatible avec cette [[loi de Fisher]] (c'est-à-dire que la valeur de <math>F</math> est supérieure au seuil de rejet), alors on rejette l'hypothèse nulle : on conclut qu'il existe une différence statistiquement significative entre les distributions. Le [[facteur de variabilité]] ne sépare pas la population étudiée en groupes identiques. Pour rappel, la valeur de seuil de rejet <math>F_\alpha(DDL_1, DDL_2)</math> est précalculée dans les tables de référence, en fonction du risque de première espèce <math>\alpha</math> et des deux degrés de libertés <math>DDl_1</math> et <math>DDL_2</math>.
+
+=== Tests « post-hoc » ===
+L'analyse de variance permet simplement de répondre à la question de savoir si tous les échantillons suivent une même loi normale. Dans le cas où l'on rejette l'hypothèse nulle, cette analyse ne permet pas de savoir quels sont les échantillons qui s'écartent de cette loi.
+
+Pour identifier les échantillons correspondant, on utilise différents tests «post-hoc» (ou tests de comparaisons multiples, ''MCP'' pour ''Multiple Comparison Test''). Ces tests obligent en général à augmenter les risques de l'analyse (en termes de risque statistique). Il s'agit d'une généralisation à k populations du [[test t|test ''t'' de Student]] de comparaison de moyennes de deux échantillons avec ajustement de l'erreur (FDR, FWER, etc.) Par exemple : les tests LSD de Ficher, les tests de Newman-Keuls, les tests HSD de Tukey, les tests de Bonferroni et Sheffé.
+
+Dans la biologie moderne, notamment, des tests MCP permettent de prendre en compte le risque de façon correcte malgré le grand nombre de tests effectués (par exemple pour l'analyse de biopuces).
+
+; Pourquoi ne pas faire directement ces tests, sans passer par une analyse de la variance avant ?
+Lorsque l'on analyse plusieurs variables explicatives ayant plusieurs modalités chacune, le nombre de combinaison possible devient rapidement très grand.
+
+== Analyse de la variance à un facteur ==
+Également appelé ''one-way ANOVA'' {{en}}, l'analyse de la variance à un facteur s'applique lorsque l'on souhaite prendre en compte un seul [[facteur de variabilité]].
+
+; Notation
+Considérons ''I'' échantillons <math>Y_i</math> d'effectifs <math>n_i</math>, issu des ''I'' populations qui suivent ''I'' lois normales <math>\mathcal{N}(\mu_i, \sigma^2)</math> de même variance. Chaque individu s'écrit <math>y_{ij}</math>, avec <math>i \in [1, I]</math> et <math>j \in [1, n_i]</math>. L'effectif total est <math>N = \sum_{i=1}^I n_i</math>.
+
+Les moyennes par échantillon et totale s'écrivent :
+{{Bloc emphase| <math>\overline{y_{i.}} = \frac 1 n_i \sum_{j=1}^{n_i} {y_{ij}} \sim \mathcal{N}\left( \mu_i, \frac {\sigma^2} {n_i} \right)</math> |border=0}}
+{{Bloc emphase| <math>\overline{y_{..}} = \frac 1 N \sum_{i=1}^I \sum_{j=1}^{n_i} {y_{ij}} \sim \mathcal{N}\left( \mu, \frac {\sigma^2} N \right) \qquad \text{avec} ~ N = \sum_{i=1}^I n_i ~ \text{et} ~ \mu = \frac 1 N \sum_{i=1}^I (n_i \mu_i)</math>|border=0}}
+
+=== Décomposition de la variance ===
+Le modèle s'écrit :
+{{Bloc emphase| <math>y_{ij} = \alpha_i + \epsilon_{ij} ~</math> |border=1}}
+
+Dans ces conditions, on montre que la somme des carrés des écarts (et donc la [[Variance (statistiques et probabilités)|variance]]) peut être calculée simplement par la formule :
+{{Bloc emphase| <math>SCE_\text{total} = SCE_\text{facteur} + SCE_\text{residu} ~</math> }}
+
+La part de la [[Variance (statistiques et probabilités)|variance]] totale <math>SCE_\text{total}</math> qui peut être expliquée par le modèle (<math>SCE_\text{facteur}</math>, aussi appelée ''variabilité inter-classe'', ''SSB'' ou ''Sum of Square Between class'') et la part de la [[Variance (statistiques et probabilités)|variance]] totale <math>SCE_\text{total}</math> qui ne peut être expliquée par le modèle (<math>SCE_\text{residu}</math> aussi appelée ''variabilité aléatoire'', ''variabilité intra-classe'', ''bruit'', ''SSW'' ou ''Sum of Square Within class'') sont données par les formules :
+{{Bloc emphase|<math>SCE_\text{facteur} = \sum_{i=1}^p n_i (\overline{y_i} - \overline{y})^2</math> |border=0}}
+{{Bloc emphase|<math>SCE_\text{residu} = \sum_{i=1}^p \sum_{j=1}^{n_i} (y_{ij}- \overline{y_i})^2</math> |border=0}}
+
+{{démonstration|
+: <math>SCE_{total} = \sum_{i=1}^p \sum_{j=1}^{n_i} (y_{ij} - \overline{y})^2</math>.
+:&nbsp;
+: En décomposant <math>~ y_{ij} - \overline{y} = (y_{ij} - \overline{y_i}) + (\overline{y_i} - \overline{y})</math>,
+: &nbsp;
+: on peut écrire <math>~ SCE_{total} = \sum_{i=1}^p \sum_{j=1}^{n_i} ((y_{ij}- \overline{y_i}) + (\overline{y_i} - \overline{y}))^2</math>
+: &nbsp;
+: <math> = \sum_{i=1}^p \sum_{j=1}^{n_i} (y_{ij}- \overline{y_i})^2 + \sum_{i=1}^p \sum_{j=1}^{n_i} (\overline{y_i} - \overline{y})^2 + \sum_{i=1}^p \sum_{j=1}^{n_i} 2( y_i^j - \overline{y_i}).(\overline{y_i} - \overline{y}) </math>.
+: &nbsp;
+: En remarquant que <math>~ \sum_{i=1}^p \sum_{j=1}^{n_i} ( y_{ij} - \overline{y_i}).(\overline{y_i} - \overline{y}) = \sum_{i=1}^p (\overline{y_i} \sum_{j=1}^{n_i} (y_{ij} - \overline{y_i}) - \overline{y} \sum_{j=1}^{n_i} (y_{ij} - \overline{y_i})) = 0 </math>,
+: &nbsp;
+: on peut écrire <math>~ SCE_{total} = \sum_{i=1}^p \sum_{j=1}^{n_i} (y_{ij} - \overline{y_i})^2 + \sum_{i=1}^p \sum_{j=1}^{n_i} (\overline{y_i} - \overline{y})^2 </math>
+: &nbsp;
+: <math> = \sum_{i=1}^p \sum_{j=1}^{n_i} (y_{ij} - \overline{y_i})^2 + \sum_{i=1}^p n_i (\overline{y_i} - \overline{y})^2 </math>
+: &nbsp;
+: <math> = SCE_\text{residu} + SCE_\text{facteur} ~</math>.
+}}
+
+=== Analyse des résidus ===
+Il est toujours possible que le modèle ne soit pas correct et qu'il existe un [[facteur de variabilité]] inconnu (ou supposé a priori inutile) qui ne soit pas intégré dans le modèle. Il est possible d'analyser la normalité de la distribution des résidus pour rechercher ce type de biais. Les résidus, dans le modèle, doivent suivre une loi normale <math>\mathcal{N}(0, \sigma^2)~</math>). Tout écart significatif par rapport à cette loi normale peut être testé ou visualisé graphiquement :
+[[Fichier:analyse residus.png|center]]
+
+{{boîte déroulante|titre=Script R|contenu=
+: layout(matrix(1:3, 1, 3))
+: produc ← c(20.1, 19.8, 21.3, 20.7, 22.6, 24.1, 23.8, 22.5, 23.4, 24.5, 22.9, 31.2, 31.6, 31.0, 32.1, 31.4, 22.8, 21.7, 23.3, 23.1, 24.1, 22.3, 22.7, 23.1, 22.9, 21.9, 23.4, 23.0, 31.7, 33.1, 32.5, 35.1, 32.2, 32.6)
+: race ← as.factor(c("A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "C", "C", "C", "C", "C", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "C", "C", "C", "C", "C", "C"))
+: plot(residuals(lm(produc~race)), ylab="Residus", col="blue")
+: abline(0, 0, col="red")
+: hist(residuals(lm(produc~race)), nclass=20, xlab="Residus", ylab="Frequence", xlim=c(-3,3), pro=T, col="blue", main="Analyse des residus")
+: lines(seq(-3,3,le=100), dnorm(seq(-3,3,le=100), 0, sqrt(var(residuals(lm(produc~race))))), col="red")
+: qqnorm(residuals(lm(produc~race)))
+: qqline(residuals(lm(produc~race)), col="red")
+}}
+
+{{voir|Tests de normalité}}
+
+=== Test de Fisher ===
+; [[degré de liberté (statistiques)|Degrés de liberté]] et [[Variance (statistiques et probabilités)|variances]]
+Par hypothèse, la variable observée <math>y_i</math> suit une [[loi normale]]. La [[loi du χ²]] à <math>k</math> [[degré de liberté (statistiques)|degrés de liberté]] étant définie comme étant la somme de <math>k</math> [[loi normale|lois normales]] au carré, les sommes des carrés des écarts <math>SCE</math> suivent les [[Loi du χ²|lois du χ²]] suivantes, avec <math>p</math> le nombre de niveaux du [[facteur de variabilité]] et <math>n</math> le nombre total d'individu :
+
+{{Bloc emphase|<math>SCE_\text{facteur} = \sum_{i=1}^p n_i (\overline{y_i} - \overline{y})^2 \sim \chi^2(DDL_\text{facteur}) \qquad \text{avec} ~ DDL_\text{facteur} = \sum_{i=1}^{p-1} 1 = p-1</math>|border=0}}
+{{Bloc emphase|<math>SCE_\text{residu} = \sum_{i=1}^p \sum_{j=1}^{n_i} (y_i^j - \overline{y_i})^2 \sim \chi^2(DDL_\text{residu}) \quad \text{avec} ~ DDL_\text{residu} = \sum_{i=1}^p (n_i - 1) = (n_1-1)+(n_2-1)+\cdots+(n_p-1) = n - p</math>|border=0}}
+
+Les [[variance]]s s'obtiennent en faisant le rapport de la somme des carrés des écarts sur le nombre de [[degré de liberté (statistiques)|degrés de liberté]] :
+{{Bloc emphase|<math>S^2_\text{facteur} = \frac {SCE_\text{facteur}} {p-1} = \frac 1 {p-1} \sum_{i=1}^p n_i (\overline{y_i} - \overline{y})^2</math>|border=0}}
+{{Bloc emphase|<math>S^2_\text{residu} = \frac {SCE_\text{residu}} {n-p} = \frac 1 {n-p} \sum_{i=1}^p \sum_{j=1}^{n_i} (y_i^j - \overline{y_i})^2</math>|border=0}}
+
+La [[Loi de Fisher]] étant défini comme le rapport de deux [[Loi du χ²|lois du χ²]], le rapport <math>\frac {S^2_\text{facteur}} {S^2_\text{residu}}</math> soit donc une [[Loi de Fisher]] :
+{{Bloc emphase|<math>F = \frac {S^2_\text{facteur}} {S^2_\text{residu}} = \frac {\dfrac {SCE_\text{facteur}} {p-1}} {\dfrac {SCE_\text{residu}} {n-p}} \sim F(p-1, n-p)</math>}}
+
+; Remarque
+Pour les amateurs de géométrie vectorielle, la décomposition des degrés de liberté correspond à la décomposition d'un espace vectoriel de dimension ''nm'' en sous espaces supplémentaires et orthogonaux de dimensions respectives <math>m-1</math> et <math>m(n-1)</math>. Voir par exemple le cours dispensé par Toulouse III : [http://www.univ-tlse1.fr/GREMAQ/Statistique/Eveweb/slimodlin.pdf univ-tlse1.fr] pages 8 et 9. On peut se reporter aussi au livre classique de Scheffé (1959)
+
+; Test d'adéquation à la loi de Fisher
+<math>F = \frac {\frac {SCE_\text{facteur}} {DDL_\text{facteur}}} {\frac {SCE_\text{total}} {DDL_\text{total}}}</math>
+
+Il se trouve (comme on peut le voir dans la décomposition mathématique) que les deux termes sont tous les deux une estimation de la variabilité résiduelle si le facteur A n'a pas d'effet. De plus, ces deux termes suivent chacun une loi de χ², leur rapport suit donc une loi de F (voir plus loin pour les degrés de liberté de ces lois). Résumons :
+* Si le facteur A n'a pas d'effet, le rapport de <math>S_{a}</math> et <math>S_{r}</math> suit une loi de F et il est possible de vérifier si la valeur du rapport est « étonnante » pour une loi de F
+* Si le facteur A a un effet, le terme <math>S_{a}</math> n'est plus une estimation de la variabilité résiduelle et le rapport <math>\frac{S_{a}}{S_{r}}</math>ne suit plus une loi de F. On peut comparer la valeur du rapport à la valeur attendue pour une loi de F et voir, là aussi, à quel point le résultat est « étonnant ».
+
+Résumer les choses ainsi permet de clarifier l'idée mais renverse la démarche : on obtient en pratique une valeur du rapport <math>\frac{S_{a}}{S_{r}}</math> qu'on compare à une loi de F, en se donnant un risque α (voir [[Test (statistique)|l'article sur les tests et leurs risques]]). Si la valeur obtenue est trop grande, on en déduit que le rapport ne suit vraisemblablement pas une loi de F et que le facteur A a un effet. On conclut donc à une différence des moyennes.
+
+<math>CM_{B}</math> est l'estimateur <math>S_A</math> présenté au paragraphe précédent (première approche technique) et <math>CM_{W}</math> l'estimateur <math>S_{B}</math>. On en déduit le F de Fisher, dont la distribution est connue et tabulée sous les hypothèses suivantes : 
+* Les résidus <math>\epsilon</math> sont distribués normalement
+* Avec une espérance nulle
+* Avec une [[Variance (statistiques et probabilités)|variance]] <math>\sigma^2</math> indépendante de la catégorie ''i''
+* Avec une [[covariance]] nulle deux à deux (indépendance)
+Le respect de ces hypothèses assure la validité du test d'analyse de la [[Variance (statistiques et probabilités)|variance]]. On les vérifie ''a posteriori'' par diverses méthodes (tests de normalité, examen visuel de l'histogramme des résidus, examen du graphique des résidus en fonction des estimées)
+voir '''condition d'utilisation''' ci-dessous.
+
+=== Table d'ANOVA ===
+La table d'ANOVA permet de résumer les calculs nécessaires :
+{| class="wikitable" |
+! Source de la variance
+! Sommes des<br />carrés des écarts
+! Degrés de liberté
+! Variance
+! F
+! p-value
+|-
+| Inter-classes
+| <math>SCE_\text{facteur}</math>
+| <math>DDL_\text{facteur}</math>
+| <math>S^2_\text{facteur} = \frac {SCE_\text{facteur}} {DDL_\text{facteur}}</math>
+| <math>F = \frac {S^2_\text{facteur}} {S^2_\text{residu}}</math>
+| <math>P_{H_0}(F>F_{obs})</math>
+|- {{ligne grise}}
+| Intra-classe
+| <math>SCE_\text{residu}</math>
+| <math>DDL_\text{residu}</math>
+| <math>S^2_\text{residu} = \frac {SCE_\text{residu}} {DDL_\text{residu}}</math>
+| 
+| 
+|-
+| Total
+| <math>SCE_\text{total}</math>
+| <math>DDL_\text{total}</math>
+| 
+| 
+| 
+|}
+
+=== Exemple illustratif ===
+Prenons un exemple pour illustrer la méthode. Imaginons un éleveur qui souhaite acheter de nouvelles vaches pour sa production laitière. Il possède trois races différentes de vaches et se pose donc la question de savoir si la race est importante pour son choix. Il possède comme informations la race de chacune de ses bêtes (c'est la variable explicative discrète ou [[facteur de variabilité]], qui peut prendre 3 valeurs différentes) et leurs productions de lait journalières (c'est la variable à expliquer continue, qui correspond au volume de lait en litre).
+
+Dans notre exemple, l'hypothèse nulle revient à considérer que toutes les vaches produisent la même quantité de lait journalière (au facteur aléatoire près) quelle que soit la race. L'hypothèse alternative revient à considérer qu'une des races produit significativement plus ou moins de lait que les autres.
+
+Supposons que les productions sont :
+* Pour la race A : 20,1 ; 19,8 ; 21,3 et 20,7
+* Pour la race B : 22,6 ; 24,1 ; 23,8 ; 22,5 ; 23,4 ; 24,5 et 22,9
+* Pour la race C : 31,2 ; 31,6 ; 31,0 ; 32,1 et 31,4
+
+{| class="wikitable" |
+! Race
+! Taille
+! Moyenne
+! Variance
+|-
+| A
+| 4
+| 20,475
+| 0,4425
+|- {{ligne grise}}
+| B
+| 7
+| 23,4
+| 0,59333
+|-
+| C
+| 5
+| 31,46
+| 0,178
+|- {{ligne grise}}
+| Total
+| 16
+| 25,1875
+| 20,90117
+|}
+
+; Table d'ANOVA
+{| class="wikitable" |
+! Source de la variance
+! Sommes des<br />carrés des écarts
+! Degrés de liberté
+! Variance
+! F
+! p-value
+|-
+| Inter-classes
+| 307,918
+| 2
+| 153,959
+| 357,44
+| 4,338e-12
+|- {{ligne grise}}
+| Intra-classe
+| 5,6
+| 13
+| 0,431
+| 
+| 
+|-
+| Total
+| 313.518
+| 15
+| 
+| 
+| 
+|}
+
+; Analyse réalisée avec [[R (logiciel)|R]] :
+ > produc ← c(20.1, 19.8, 21.3, 20.7, 22.6, 24.1, 23.8, 22.5, 
+ 23.4, 24.5, 22.9, 31.2, 31.6, 31.0, 32.1, 31.4)
+ > race ← as.factor(c("A", "A", "A", "A", "B", "B", "B", "B", "B", 
+ "B", "B", "C", "C", "C", "C", "C"))
+ 
+ # Regardons les moyennes par groupe:
+ > tapply(produc, race, mean)
+ A         B         C 
+ 20.475    23.400    31.460
+ # On remarque des différences entre groupes, mais sont-elles statistiquement significatives?
+ 
+ # Testons le par l'ANOVA:
+ > anova(lm(produc~race))
+ Analysis of variance Table
+ 
+ Response: produc
+ '''{{Rouge|}}             {{Bleu|Df}}     Sum Sq    Mean Sq    {{Vert|F value}}    {{Marron|   Pr(>F)}}'''
+ {{Rouge|race}}          {{Bleu|2}}    307.918    153.959     {{Vert|357.44}}    {{Marron|4.338e-12 ***}}
+ {{Rouge|Residuals}}    {{Bleu|13}}      5.600      0.431 
+ 
+ Signif. Codes: 0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Les résultats de l'analyse sont présentés dans un tableau (les couleurs ont été ajoutées pour faciliter l'explication). Le tableau contient 3 lignes : la première contient les titres des colonnes, la dernière contient l'analyse des résidus. Le tableau contient également une ligne par facteur de variabilité (une seule dans cet exemple).
+
+* La première colonne ({{Rouge|en rouge}}) indique les facteurs analysés : le facteur "race" et les résidus ("Residuals" {{en}}).
+* La seconde colonne ({{Bleu|en bleu}}) indique le nombre de degrés de liberté : 3 races différentes - 1 = 2 degrés de libertés pour le facteur "race" ; 16 individus dans l'étude - 3 niveaux pour le facteur "race" = 13 degrés de liberté pour les résidus.
+* La cinquième colonne ({{Vert|en vert}}) indique le <math>F</math> calculé dans cet exemple.
+* La sixième colonne ({{Marron|en marron}}) indique la probabilité que l'hypothèse nulle soit vraie ([[p-value]]). Dans cet exemple, la valeur très basse indique que l'on peut rejeter l'hypothèse nulle avec très peu de risque : l'agriculteur peut conclure "les 3 races de vaches ne produisent pas la même quantité journalière de lait". Le nombre d'étoiles à côté de la valeur de <math>p</math> indique la confiance que l'on peut accorder au résultat : 3 étoiles indiquent que le résultat est très sûr (p-value < 0,001).
+
+== Analyse de la variance à deux facteurs ==
+Également appelé ''two-way ANOVA'' {{en}}, l'analyse de la variance à deux facteurs s'applique lorsque l'on souhaite prendre en compte deux [[Facteur de variabilité|facteurs de variabilité]].
+
+=== Décomposition de la variance ===
+Soit un premier [[facteur de variabilité]] pouvant prendre les niveaux <math>i = 1..p</math>, un second [[facteur de variabilité]] pouvant prendre les niveaux <math>j = 1..q</math>, <math>n_{ij}</math> le nombre d'individu dans le niveau <math>i</math> du premier facteur et le niveau <math>j</math> du second facteur, <math>n</math> le nombre d'individu total et <math>r</math> le nombre d'individu dans chaque sous-groupe (pour un niveau i et un niveau j donné). La variable à expliquer s'écrit <math>y_{ijk}</math> avec <math>i = 1..p</math>, <math>j = 1..n_i</math> et <math>k = 1..m_j</math>.
+
+La variable à expliquer peut être modélisée par la relation : 
+{{Bloc emphase|<math>Y_{ijk} = \alpha_i + \beta_j + \gamma_{ij} + \epsilon_{ijk} ~</math> |border=0}}
+
+avec <math>\alpha_i</math> l'effet du niveau <math>i</math> du premier facteur, <math>\beta_j</math> l'effet du niveau <math>j</math> du second facteur, <math>\gamma_{ij}</math> l'effet d'interaction entre les deux facteurs et <math>\epsilon_{ijk}</math> l'erreur aléatoire (qui suit alors une loi normale <math>\mathcal{N}(0, \sigma^2)~</math>).
+
+Le calcul présenté dans le cas à un facteur peut être transposé au cas à deux facteurs :
+{{Bloc emphase| <math>SCE_\text{total} = SCE_\text{facteur 1} + SCE_\text{facteur 2} + SCE_\text{interaction} + SCE_\text{residu}~</math> }}
+
+La part de la [[Variance (statistiques et probabilités)|variance]] totale expliquée par le premier facteur (<math>SCE_\text{facteur 1}</math>), la part de la [[Variance (statistiques et probabilités)|variance]] totale expliquée par le second facteur (<math>SCE_\text{facteur 2}</math>), l'interaction entre les deux facteurs (<math>SCE_\text{interaction}</math>) et la part de la [[Variance (statistiques et probabilités)|variance]] totale qui ne peut être expliquée par le modèle (<math>SCE_\text{residu}</math>, appelé aussi ''variabilité aléatoire'' ou ''bruit'') sont données par les formules :
+{|
+| {{Bloc emphase|<math>SCE_\text{facteur 1} = rq \sum_{i=1}^p (\overline{y_i} - \overline{y})^2</math> |border=0}}
+| {{Bloc emphase|<math>SCE_\text{facteur 2} = rp \sum_{j=1}^q (\overline{y_j} - \overline{y})^2</math> |border=0}}
+|-
+| {{Bloc emphase|<math>SCE_\text{interaction} = r \sum_{i=1}^p \sum_{j=1}^q (\overline{y_{ij}} - \overline{y_i} - \overline{y_j} + \overline{y})^2</math> |border=0}}
+| {{Bloc emphase|<math>SCE_\text{residu} = \sum_{i=1}^p \sum_{j=1}^q \sum_{k=1}^{n_{ij}} (y_{ijk} - \overline{y_{ij}})^2</math> |border=0}}
+|}
+
+L'analyse de l'interaction entre facteurs est relativement complexe<ref name="lyon1">Voir par exemple : [http://pbil.univ-lyon1.fr/R/pdf/bs7.pdf Cours] et [http://pbil.univ-lyon1.fr/R/pdf/tdr33.pdf TD de statistique de Lyon 1] pour un exemple d'analyse d'interaction dans un modèle à deux facteurs.</ref>. Dans le cas où les facteurs sont indépendants, on peut s'intéresser qu'aux effet principaux des facteurs. La formule devient alors :
+{{Bloc emphase|<math>SCE_\text{total} = SCE_\text{facteur 1} + SCE_\text{facteur 2} + SCE_\text{residu} ~</math> |border=0}}
+
+=== Exemple illustratif ===
+Notre exploitant laitier souhaite améliorer la puissance de son analyse en augmentant la taille de son étude. Pour cela, il inclut les données provenant d'une autre exploitation. Les chiffres qui lui sont fournis sont les suivants :
+* Pour la race A : 22,8 ; 21,7 ; 23,3 ; 23,1 ; 24,1 ; 22,3 et 22,7
+* Pour la race B : 23,1 ; 22,9 ; 21,9 ; 23,4 et 23,0
+* Pour la race C : 31,7 ; 33,1 ; 32,5 ; 35,1 ; 32,2 et 32,6
+
+Analyse réalisée avec [[R]] :
+ > produc ← c(20.1, 19.8, 21.3, 20.7, 22.6, 24.1, 23.8, 22.5, 23.4, 
+ 24.5, 22.9, 31.2, 31.6, 31.0, 32.1, 31.4, 22.8, 21.7, 23.3, 23.1, 
+ 24.1, 22.3, 22.7, 23.1, 22.9, 21.9, 23.4, 23.0, 31.7, 33.1, 32.5, 
+ 35.1, 32.2, 32.6)
+ 
+ > race ← as.factor(c("A", "A", "A", "A", "B", "B", "B", "B", "B", 
+ "B", "B", "C", "C", "C", "C", "C", "A", "A", "A", "A", "A", "A", 
+ "A", "B", "B", "B", "B", "B", "C", "C", "C", "C", "C", "C"))
+ 
+ > centre ← as.factor(c(rep("premier", 16), rep("second", 18)))
+ 
+ > anova(lm(produc~race*centre))
+ Analysis of variance Table
+ 
+ Response: produc
+                Df    Sum Sq    Mean Sq     F value       Pr(>F)    
+ race            2    696.48     348.24    559.6811    < 2.2e-16 ***
+ centre          1      8.46       8.46     13.6012    0.0009636 ***
+ race:centre     2     12.23       6.11      9.8267    0.0005847 ***
+ Residuals      28     17.42       0.62                       
+ ---
+ Signif. Codes:    0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+== Analyse de la variance multifactorielle ==
+=== Décomposition de la variance ===
+On peut encore décomposer la [[Variance (statistiques et probabilités)|variance]] en ajoutant un terme pour chaque facteur et un terme pour chaque interaction possible :
+{{Bloc emphase|<math>Y_i = \mu + \sum_j \alpha_j + \sum_{j,k} \gamma_{jk} + \epsilon_i</math> |border=0}}
+avec <math>\alpha_j</math> l'effet du j<sup>ème</sup> facteur et <math>\gamma_{jk}</math> l'interaction entre le j<sup>ème</sup> et le k<sup>ème</sup> facteur.
+
+L'analyse de la [[Variance (statistiques et probabilités)|variance]] dans le cas de plusieurs [[facteur de variabilité|facteurs de variabilité]] est relativement complexe : il est nécessaire de définir un modèle théorique correct, étudier les interactions entre les facteurs, analyser la [[covariance]]<ref name="lyon1" />.
+
+== Limites d'utilisation de l'analyse de la variance ==
+; Normalité des distributions
+La décomposition de la [[Variance (statistiques et probabilités)|variance]] est toujours valable, quelle que soit la distribution des variables étudiées. Cependant, lorsqu'on réalise le [[test de Fisher]], on fait l'hypothèse de la normalité de ces distributions. Si les distributions s'écartent légèrement de la normalité, l'analyse de la [[Variance (statistiques et probabilités)|variance]] est assez robuste pour être utilisée. Dans le cas où les distributions s'écartent fortement de la normalité, on pourra effectuer un changement de variables (par exemple, en prenant les variables <math>y'_i = log(y_i)~</math> ou <math>y''_i = y_i^2</math>) ou utiliser un équivalent non paramétrique de l'analyse de la [[Variance (statistiques et probabilités)|variance]].
+
+{{voir|Tests de normalité}}
+
+; [[Homoscédasticité]]
+A l'opposé, l'ANOVA fait une autre hypothèse très forte et moins évidente. Il est en effet nécessaire que la [[Variance (statistiques et probabilités)|variance]] dans les différents groupes soit la même. C'est l'hypothèse d'homoscedasticité. L'ANOVA y est très sensible. Il est donc nécessaire de la tester avant toute utilisation.
+
+Contrairement à ce que le nom de cette méthode laisse penser, celle-ci ne permet pas d'analyser la [[Variance (statistiques et probabilités)|variance]] de la variable à expliquer mais de comparer les moyennes des distributions de la variable à expliquer en fonction des variables explicatives.
+
+; Approches non paramétriques
+Lorsque les pré-supposés de l'ANOVA ne sont pas respectés ([[homoscédasticité]] par exemple), on entend souvent dire qu'il peut être plus judicieux d'utiliser l'équivalent non-paramétrique de l'ANOVA: le test de Kruskal Wallis pour le cas à un facteur ou, pour le cas à deux facteurs sans répétition, le test de Friedman. Pourtant, ces tests ne regardent pas la même chose. Comme il est écrit plus haut, l'ANOVA permet de comparer une mesure univariée entre des échantillons d'au moins deux populations statistiques. Le test de Kruskal-Wallis a pour hypothèse nulle l'homogénéité stochastique, c'est-à-dire que chaque population statistique est égale stochastiquement (on peut dire 'aléatoirement' pour simplifier) à une combinaison des autres populations. Ce test s'intéresse donc à la distribution contrairement à l'ANOVA et ne peut donc pas être considéré comme un équivalent au sens strict.
+
+== Voir aussi ==
+* [[Test (statistique)]]
+* [[Analyse de la covariance]] ([[ANCOVA]]) pour les modèles de régression avec variables explicatives catégorielles.
+* [[Analyse de la variance multiple]] ([[MANOVA]]) pour les modèles à plusieurs variables à expliquer.
+
+== Sources ==
+* SCHERRER, B. (1984). Comparaison des moyennes de plusieurs échantillons indépendants. ''Tiré de "Biostatistiques". Gaëtan Morin Éditeur.'' {{p.}}422–463.
+* RUXTON, G.D. & BEAUCHAMP, G. (2008). Some suggestions about appropriate use of the Kruskal-Wallis test.'' Animal Behaviour'' '''76''', 1083-1087.
+
+=== Notes et références ===
+<references />
+
+
+{{Probabilités et statistiques}}
+{{portail probabilités}}
+
+[[Catégorie:Statistiques]]
+
+[[ar:تحليل الفرق]]
+[[bg:Дисперсионен анализ]]
+[[ca:Anàlisi de la variància]]
+[[cs:Analýza rozptylu]]
+[[de:Varianzanalyse]]
+[[en:Analysis of variance]]
+[[es:Análisis de la varianza]]
+[[eu:Bariantza analisi]]
+[[gl:Análise da varianza]]
+[[gu:અંતરનું વિશ્લેષણ]]
+[[hi:भिन्नता का विश्लेषण]]
+[[hu:Varianciaanalízis]]
+[[id:Analisis varians]]
+[[it:Analisi della varianza]]
+[[ja:分散分析]]
+[[ko:분산분석]]
+[[lv:Dispersiju analīze]]
+[[nl:Variantie-analyse]]
+[[no:Variansanalyse]]
+[[pl:Analiza wariancji]]
+[[pt:Análise de variância]]
+[[ru:Дисперсионный анализ]]
+[[sl:Analiza variance]]
+[[su:Analisis varian]]
+[[sv:Variansanalys]]
+[[ta:மாறும் அளவுப் பகுப்பாய்வு]]
+[[te:అంతర్భేధం యొక్క విశ్లేషణము]]
+[[tr:Varyans analizi]]
+[[uk:Дисперсійний аналіз]]
+[[zh:方差分析]]

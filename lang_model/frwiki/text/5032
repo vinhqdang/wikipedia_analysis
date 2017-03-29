@@ -1,0 +1,186 @@
+{{Infobox Famille Pokémon
+| famille= MissingNo.
+| image=
+| légende=
+| pokémon1 nom=
+| pokémon1 japonais= けつばん
+| pokémon1 anglais= MissingNo.
+| pokémon1 type=''{{langue|en|Bird}}''
+| pokémon1 type2=Normal
+| pokémon1 génération=Première
+| pokémon1 pokédex= 000
+| pokémon1 taille=
+| pokémon1 poids=
+}}
+
+{{Japonais|'''MissingNo.''' |けつばん|Ketsuban}}, parfois orthographié '''MissingNO''', est le nom d'une [[Liste des Pokémon|espèce]] de [[Pokémon]] présente dans les [[jeux vidéo]] ''[[Pokémon Rouge et Bleu]]''. Signifiant « numéro manquant » et décrit comme une « erreur de programmation », MissingNo. est utilisé en tant que [[système de gestion d'exceptions]] par les développeurs de [[Game Freak]] ; il est conçu pour apparaître au cours du jeu en cas d'accès aux données d'une espèce de Pokémon inexistante. Des failles dans la programmation du jeu permettent au joueur de rencontrer MissingNo. via un [[glitch]].
+
+MissingNo. a été évoqué par Nintendo pour la première fois dans le numéro de mai 1999 du ''[[Nintendo Power]]'', qui décrit la méthode pour l'obtenir ainsi que les [[Bug (informatique)|bugs]] qu'il peut provoquer. Son apparition dans ''[[Pokémon Rouge et Bleu]]'' a été désignée comme l'un des glitchs les plus célèbres du jeu vidéo par [[IGN Entertainment|IGN]] et a été étudiée dans plusieurs travaux de sociologie. Les fans de la série ont également tenté de trouver une explication logique à la présence de MissingNo. dans l'univers du jeu.
+
+==Création==
+
+La franchise ''Pokémon'', développée par Game Freak pour Nintendo et introduite au Japon en 1996, tourne autour du concept de capture et d'entraînement de 150 [[Liste des Pokémon|espèces]] de créatures appelées Pokémon, afin de les utiliser pour combattre des Pokémon sauvages et ceux d'autres [[Dresseur Pokémon|dresseurs Pokémon]], qu'il s'agisse de [[Personnage non-joueur|personnages non-joueurs]] ou d'autres joueurs humains<ref>{{en}} {{Ouvrage
+ | titre       = Pokémon Red and Blue, Instruction manual
+ | éditeur     = Nintendo
+ | auteur      = Game Freak
+ | jour        = 30
+ | mois        = septembre
+ | année       = 1998
+}}, {{pp.|6-7}}</ref>. La puissance des Pokémon au combat est déterminée par leurs statistiques d'attaque, de défense et de vitesse et ils peuvent apprendre de nouvelles capacités en accumulant des [[Expérience (jeu de rôle)|points d'expérience]] ou si leur dresseur leur donne [[Capsule Pokémon|certains objets]]<ref>{{en}} Game Freak, {{opcit}}, {{p.|11}}</ref>. Ces capacités peuvent aussi permettre aux joueurs d'interagir avec l'univers du jeu, par exemple en se déplaçant instantanément entre deux villes<ref>{{citation|CS02 : VOL Cette technique permet de revenir dans une ville.}} ''Pokémon Rouge et Bleu'', Game Freak, Nintendo, 30 septembre 1998</ref>.
+
+MissingNo. ne figure pas parmi les 150 Pokémon<ref name="tech">{{en}} {{Lien web
+ | url         = http://www.nintendo.com/consumer/systems/gameboy/trouble_specificgame.jsp#missingno
+ | titre       = Customer Service - Specific GamePak Troubleshooting
+ | auteur      = [[Nintendo]]
+ | consulté le = 27 juin 2009
+}}</ref> : il a été conçu comme un [[système de gestion d'exceptions]]. L'exception en cause est l'accès par le jeu aux données d'une espèce de Pokémon inexistante : si elle se produit, MissingNo. doit apparaître<ref name="why"/>. Son nom fait référence à cette fonction puisqu'il signifie « nombre manquant » en japonais comme en anglais. En japonais, {{Japonais|''Ketsuban''|けつばん}} assemble les [[kanjis]] {{japonais|« ''ketsu'' »|欠||manquant}} et {{japonais|« ''ban'' »|番||nombre}} ; en anglais « MissingNo. » est la contraction de « ''{{lang|en|missing {{numéro}}}}'' »<ref name="why"/>{{,}}<ref name="NP"/>. Le Pokémon conserve ce nom, parfois orthographié, « MissingNO<ref name="tech"/> », dans les autres langues.
+
+==Apparition==
+
+La méthode pour déclencher l'apparition de MissingNo. est décrite pour la première fois par Nintendo dans le numéro de [[1999|mai 1999]] du magazine ''[[Nintendo Power]]'', en réponse à un lecteur<ref name="NP">{{article
+ |langue=en
+ |nom1=Staff
+ |titre=Pokechat
+ |périodique=[[Nintendo Power]]
+ |numéro=120
+ |mois=mai
+ |année=1999
+ |pages=101
+}}</ref>, tout en précisant que {{Citation|tout contact avec lui peut facilement effacer votre fichier de sauvegarde ou corrompre les graphismes du jeu}}<ref group="note">{{Citation|lang=en|''Any contact with it... could easily erase your game file or corrupt your graphics''}}</ref>. Le magazine explique que pour rencontrer MissingNo., le joueur doit se rendre à la ville de [[Lieux de Pokémon|Jadielle]] afin de parler à un vieil homme qui explique comment capturer un Pokémon ; ensuite, il doit utiliser la capacité « Vol » pour se rendre à [[Lieux de Pokémon|Cramois'île]], puis utiliser la capacité « Surf » pour longer la côte est de l'île, où se trouve MissingNo.<ref name="why"/>{{,}}<ref name="NP"/>
+
+Cette apparition est due à une faille dans le système de rencontre aléatoire de Pokémon sauvages. Dans chaque zone du monde, les données relatives aux Pokémon sauvages qui y sont présents sont stockées dans une [[mémoire tampon]] à laquelle le jeu accède lorsque le joueur rencontre un Pokémon. Toutefois, sur la côte est de Cramois'île, aucune donnée n'est placée dans la mémoire tampon ; ce sont donc les informations relatives à la zone précédemment traversée qui sont utilisées à la place<ref name="guide">{{en}} Casey Loe, {{opcit}}, {{p.|125}}</ref>. Or, l'explication du vieil homme de Jadielle stocke dans la mémoire tampon le nom du joueur. Par conséquent, si aucune zone n'est visitée entre temps, les données utilisées pour déterminer les Pokémon sauvages rencontrés sur la côte de Cramois'île sont les valeurs hexadécimales attribuées à chaque lettre du nom du joueur. Si ces valeurs ne correspondent pas à un Pokémon déterminé, le [[système de gestion d'exceptions]] se déclenche et fait apparaître MissingNo.<ref name="why"/>
+
+Une fois le Pokémon rencontré, le joueur peut choisir de le combattre avec ses propres Pokémon, de le capturer ou de s'enfuir, comme avec n'importe quel autre Pokémon du jeu<ref name="unauthorized"/>. S'il est capturé, MissingNo. est un Pokémon pleinement fonctionnel pour le joueur : il peut être utilisé en combat et figure sous le numéro « 000 » dans le [[Pokédex]], l'encyclopédie fictive recensant l'ensemble des Pokémon. Ses [[Types de Pokémon|types]] sont « ''{{langue|en|Bird}}'' » et « Normal », le type « ''{{langue|en|Bird}}'' », (« oiseau » en anglais) étant lui-même spécifique à ce Pokémon<ref group="note">Le type « ''Bird'' » est parfois confondu avec le type « ''Flying'' » (« Vol » en français), l'un des dix-sept types officiels.</ref>. MissingNo. apparaît le plus souvent sous une forme rectangulaire brouillée, bien que certaines valeurs de rencontre présentent une autre forme telle un spectre, un squelette de [[Ptéra]] ou un squelette de [[Kabuto et Kabutops|Kabutops]]<ref name="unauthorized">{{en}} Hank Schlesinger, {{opcit}}, {{pp.|184-188}}</ref>{{,}}<ref>{{img}} [http://cdn.bulbagarden.net/media/upload/b/b7/Missingno.png Les différentes formes de MissingNo.]</ref>.
+
+Quelle que soit l'issue du combat, le jeu est affecté par le recours au [[glitch]] : ainsi, l'objet en sixième position dans le sac du joueur est dupliqué en 128 exemplaires<ref name="why"/>, et la galerie des Pokémon vainqueurs de la Ligue Pokémon subit d'importantes altérations graphiques. D'autres problèmes graphiques temporaires peuvent également apparaître<ref>{{en}} {{Lien web
+ | url         = http://www.destructoid.com/other-worlds-than-these-to-be-a-pokemon-master-131455.phtml
+ | titre       = Other Worlds Than These: To be a Pokemon Master
+ | auteur      = Staff
+ | année       = 2009
+ | éditeur     = Destructoid
+ | consulté le = 8 juin 2009
+}}</ref> mais l'affichage des statistiques d'un autre Pokémon ou la réinitialisation de la [[Game Boy]] suffisent à les éliminer.
+
+== Accueil ==
+
+[[Fichier:ASA conference 2008 - 42.JPG|thumb|upright|Le sociologue américain William Sims Bainbridge a étudié les effets des glitchs comme MissingNo. sur les joueurs.]]
+Bien qu'il n'apparaisse que dans deux jeux de la série, le glitch a connu un écho significatif. Nintendo a décrit MissingNo. comme une {{Citation|erreur de programmation}}<ref group="note">{{Citation|lang=en|''Programming quirk''}}</ref> et a mis en garde les joueurs contre la rencontre avec ce Pokémon<ref name="tech"/>{{,}}<ref name="NP"/>, supprimant le glitch dans le jeu suivant, ''[[Pokémon Jaune]]''<ref name="guide"/>. En dépit des avertissements de Nintendo, la méthode pour rencontrer MissingNo. a été publiée dans de nombreux magazines et guides de jeu<ref name="guide"/>{{,}}<ref name="Pocket">{{article
+ |langue=en
+ |nom1=Staff
+ |titre=Top 50 Games
+ |périodique=Pocket Games
+ |numéro=1
+ |mois=été/automne
+ |année= 1999
+ |pages=96
+}}</ref>{{,}}<ref name="rb">{{en}} {{Lien web
+ | url         = http://guides.ign.com/guides/16708/page_172.html
+ | titre       = Guides: Pokemon Blue and Red
+ | éditeur     = IGN
+ | consulté le = 8 juin 2009
+}}</ref>, et certains joueurs ont même tenté de vendre des astuces — vraies ou fausses — pour le capturer, pour des montants s'élevant jusqu'à {{unité|200|$}}<ref>{{article
+ |langue=en
+ |prénom1=Kim
+ |nom1=Sweetman
+ |titre=The latest Pokemon trend: if you can't beat 'em, cheat
+ |périodique=[[The Daily Telegraph (Australie)|The Daily Telegraph]]
+ |jour=28
+ |mois=décembre
+ |année=1999
+ |pages=11
+}}</ref>. En 2009, le site spécialisé [[IGN Entertainment|IGN]] a inclus MissingNo. dans leur top dix des [[easter egg]]s dans les jeux vidéo, le décrivant comme un « ''glitchimon'' » et notant son utilité pour dupliquer les objets disponibles en quantité limitée dans le jeu<ref name="topten">{{en}} {{Lien web
+ | url         = http://games.ign.com/articles/971/971383p2.html
+ | titre       = Gaming's Top 10 Easter Eggs
+ | auteur      = Staff
+ | année       = 2009
+ | éditeur     = IGN
+ | consulté le = 7 juin 2009
+}}</ref>. Dans un autre article, IGN relève que MissingNo. {{Citation|nous en apprend beaucoup sur les fans de Pokemon, qui sont prêts à employer un glitch qui aurait pu potentiellement détruire leur jeu pour augmenter la puissance de leurs Pokémon}} <ref group="note">{{Citation|lang=en|''It really says something about Pokemon fans that they took what is a potentially game ruining glitch and used it as a shortcut to level up their Pokemon''}}</ref>{{,}}<ref name="why">{{en}} {{Lien web
+ | url         = http://ds.ign.com/articles/933/933126p1.html
+ | titre       = Pokemon Report: OMG Hacks
+ | auteur      = Jack DeVries
+ | année       = 2008
+ | éditeur     = IGN
+ | consulté le = 7 juin 2009
+}}</ref>.
+
+L'accueil de MissingNo. par les joueurs a été l'objet de plusieurs [[Sociologie|études sociologiques]] portant sur les individus et les jeux vidéo. Le sociologue [[William Sims Bainbridge]] a déclaré dans une étude sur les glitchs dans les jeux vidéo que Game Freak {{Citation|a donné naissance à un des glitchs les plus célèbres de l'histoire du jeu vidéo}}<ref group="note">{{Citation|lang=en|''One of the most popular glitches ever in game history''}}</ref>, citant son utilisation créative par les joueurs<ref>{{article
+ |langue=en
+ |prénom1=William Sims
+ |nom1=Bainbridge
+ |prénom2=Wilma Alice
+ |nom2=Bainbridge
+ |titre=Creative Usage of Software Errors: Glitches and Cheats
+ |périodique=Social Science Computer Review
+ |mois=juillet
+ |année=2007
+ |doi=10.1177/0894439306289510
+ |consulté le=7 juin 2009
+}}</ref>. Le livre ''Playing with Videogames'' étudie l'accueil de MissingNo. en profondeur, décrivant la tendance des joueurs à réagir à son apparition avec curiosité<ref>{{en}} James Newman, {{opcit}}, {{pp.|117-118}}</ref>. Le livre décrit également la mesure dans laquelle les communautés de joueurs de Pokémon ont tenté d'en faire un véritable aspect du monde Pokémon grâce à des éléments tels que des [[fanfiction]]s ou des [[fanart]]s, ajoutant que le Pokémon inspirait la créativité<ref>{{en}} James Newman, {{opcit}}, {{p.|118}}</ref>. Il relève également que les gens ont contribué à faire connaître les imperfections du jeu et que les circonstances entourant la popularité de MissingNo. forment un cas unique qui a peu de chance de se reproduire<ref>{{en}} James Newman, {{opcit}}, {{p.|119}}</ref>.
+
+{{clr}}
+
+== Notes et références ==
+{{Traduction/Référence|en|MissingNo.}}
+===Notes===
+{{références|groupe="note"|colonnes=2}}
+
+===Références===
+{{références|colonnes=2}}
+
+== Annexes ==
+=== Articles connexes ===
+* [[Pokémon]]
+* ''[[Pokémon Rouge et Bleu]]''
+
+=== Liens externes ===
+* [http://www.pokepedia.fr/index.php/MissingNo. MissingNo.] sur Poképédia
+
+=== Bibliographie ===
+{{Légende plume}}
+* {{en}} {{Ouvrage
+ | titre       = Playing with Videogames
+ | éditeur     = Taylor & Francis
+ | auteur      = James Newman
+ | année       = 2008
+ | isbn        = 0415385237
+}} {{Plume}}
+* {{en}} {{Ouvrage
+ | titre       = Pokémon Perfect Guide Includes Red-Yellow-Blue
+ | éditeur     = Versus Books
+ | auteur      = Casey Loe
+ | année       = 1999
+ | isbn        = 1930206151
+}} {{Plume}}
+* {{en}} {{Ouvrage
+ | titre       = Pokemon Future: The Unauthorized Guide
+ | éditeur     = St. Martin's Paperbacks
+ | auteur      = Hank Schlesinger
+ | année       = 2001
+ | isbn        = 0312977581
+}} {{Plume}}
+
+{{Article de qualité|oldid=81867964|date=28 août 2012}}
+
+{{Portail|Pokémon|Programmation informatique}}
+
+[[Catégorie:Espèce de Pokémon]]
+
+{{Lien AdQ|en}}
+{{Lien AdQ|pt}}
+{{Lien BA|es}}
+{{Lien BA|ru}}
+
+[[ca:Missingno.]]
+[[en:MissingNo.]]
+[[es:MissingNo.]]
+[[it:Missingno.]]
+[[ja:けつばん]]
+[[ko:미싱노]]
+[[nl:MissingNo.]]
+[[pl:Pokémon Red i Blue#Błędy]]
+[[pt:MissingNo.]]
+[[ru:MissingNo.]]
+[[simple:MissingNo.]]
+[[ta:மிசிங்னம்பர்]]
+[[zh:MissingNo.]]

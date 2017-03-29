@@ -1,0 +1,34 @@
+A '''phylogenetic network''' is any [[Graph (mathematics)|graph]] used to visualize evolutionary relationships (either [[abstract object|abstractly]] or explicitly)<ref name="phylogenetic networks">Huson, DH and Scornavacca, C (2011). A survey of combinatorial methods for phylogenetic networks Genome Biology and Evolution, 3:23-35.</ref> between [[nucleotide sequence]]s, [[gene]]s, [[chromosome]]s, [[genome]]s, or [[species]].<ref name="network">D. H. Huson, R. Rupp and C. Scornavacca, [http://www.phylogenetic-networks.org/ Phylogenetic Networks], Cambridge University Press (2010).</ref>  They are employed when reticulate events such as [[Hybrid (biology)|hybridization]], [[horizontal gene transfer]], [[genetic recombination|recombination]], or [[gene duplication]] and loss are believed to be involved. They differ from [[phylogenetic trees]] by the explicit modeling, by means of the addition of hybrid nodes (nodes with two parents) instead of only tree nodes (nodes with only one parent).<ref name="char_reticulate">{{cite journal|coauthors=Miguel Arenas, Gabriel Valiente, and David Posada|date=2008-10-15|title=Characterization of Reticulate Networks Based on the Coalescent with Recombination|journal=Mol Biol Evol|volume=25|issue=12|pages=2517<U+2013>2520|doi=10.1093/molbev/msn219|pmid=18927089|last1=Arenas|first1=M|pmc=2582979}}</ref> [[Phylogenetic tree]]s are a subset of [[phylogenetic]] networks. Phylogenetic networks can be inferred and visualised with software such as [[SplitsTree]]<ref name="SplitsTree"> D. H. Huson and D. Bryant, [http://dx.doi.org/10.1093/molbev/msj030 Application of Phylogenetic Networks in Evolutionary Studies], ''Mol. Biol. Evol.'', '''23'''(2):254-267, 2006.</ref> and, more recently, [[Dendroscope]].  A standard format for representing phylogenetic networks is a variant of [[Newick format]] which is extended to support networks as well as trees.<ref name="ext_newick">{{cite journal|coauthors=Gabriel Cardona, Francesc Rossell<U+00F3>, and Gabriel Valiente|date=2008-12-15|title=Extended Newick: it is time for a standard representation of phylogenetic networks|journal=BMC Bioinformatics|volume=9|doi=10.1186/1471-2105-9-532 |pmid=19077301|last1=Cardona|first1=G|pages=532|pmc=2621367}}</ref>
+
+Many kinds and subclasses of phylogenetic networks have been defined based on the biological phenomenon they represent or which data they are built from (hybridization networks, usually built from rooted trees, recombination networks from binary sequences, [[median graph|median networks]] from a set of [[Split (phylogenetics)|split]]s, optimal realizations and reticulograms from a [[distance matrix]]), or restrictions to get computationally tractable problems (galled trees, and their generalizations level-k phylogenetic networks, tree-child or tree-sibling phylogenetic networks).
+
+==Microevolution==
+Phylogenetic trees also have trouble depicting [[microevolution]]ary events, for example the geographical distribution of muskrat or fish populations of a given species among river networks, because there is no [[species]] boundary to prevent gene flow between populations.  Therefore, a more general phylogenetic network better depicts these situations.<ref>{{Cite journal | pmid = 12028728 | year = 2002 | month = Apr | author = Legendre, P; Makarenkov, V | title = Reconstruction of biogeographic and evolutionary networks using reticulograms | volume = 51 | issue = 2 | pages = 199<U+2013>216 | issn = 1063-5157 | doi = 10.1080/10635150252899725 | journal = Systematic Biology | postscript = <!--None-->}}</ref>
+
+==Rooted vs unrooted==
+;Unrooted phylogenetic network
+:Let X be a set of [[taxon|taxa]]. An unrooted phylogenetic network N on X is any undirected graph whose leaves are [[bijective]]ly labeled by the taxa in X. A number of different types of unrooted phylogenetic networks are in use like [[split networks]] and [[quasi-median networks]].
+
+;Rooted phylogenetic network
+:Let X be a set of taxa. A rooted phylogenetic network N on X is a rooted DAG where the set of leaves is bijectively labeled by the taxa in X.
+[[File:Phylogenetic Network Types.png]]
+
+==Software to compute phylogenetic networks==
+*[http://www.fluxus-engineering.com/sharenet.htm Network], Free Phylogenetic Network Software. Network generates evolutionary trees and networks from genetic, linguistic, and other data.
+*[http://evolution.genetics.washington.edu/phylip/software.html Phylogeny programs], some of which compute phylogenetic networks
+*[http://www.lirmm.fr/~gambette/PhylogeneticNetworks/show.php?keyword=programs List of programs for phylogenetic network reconstruction, evaluation, visualization, etc.]
+*[[SplitsTree]]
+*[[Dendroscope]]
+*[http://www.trex.uqam.ca/index.php?action=hgt&project=trex Network inferring on the T-REX server]
+*[http://darwin.uvigo.es TCS], Phylogenetic networks from DNA sequences or nucleotide distances using statistical parsimony.
+*[http://darwin.uvigo.es NetTest], Characterization of phylogenetic networks.<ref>Arenas, M; Patricio, M; Posada, D; Valiente, G (2010) Characterization of phylogenetic networks with NetTest. [http://www.biomedcentral.com/1471-2105/11/268 ''BMC Bioinformatics'' '''11''': 268]</ref>
+
+==References==
+<references/>
+
+==Further reading==
+*Makarenkov, V., Kevorkov, D. and Legendre, P. (2006),[http://biol10.biol.umontreal.ca/makarenv/MKL_article.pdf Phylogenetic Network Reconstruction Approaches], Applied Mycology and Biotechnology, International Elsevier Series, vol. 6. Bioinformatics, 61-97.
+
+{{Phylogenetics}}
+
+[[Category:Phylogenetics]]

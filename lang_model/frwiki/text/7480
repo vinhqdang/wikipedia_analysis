@@ -1,0 +1,605 @@
+{{Entête label|AdQ}}
+{{Infobox Série de jeux vidéo
+| titre                     = Tetris
+| image                     = The Tetris Company Logo.png
+| éditeur                   = Divers
+| développeur               = [[Alekseï Pajitnov]] <small>({{1re}} version)</small><br /> Divers <small>(versions commercialisées)</small>
+| personnalité              = Dmitri Pavlovski<br />[[Vadim Guerassimov]]<br />[[Henk Rogers]]
+| lancement                 = {{date||juin|1984|en jeu vidéo}}
+| jeu phare 1               = Liste de jeux vidéo Tetris
+| jeu phare 1 affiché       = Liste des jeux vidéo ''Tetris''
+| genre                     = [[Jeu de puzzle]]
+| site officiel             = {{en}} [http://www.tetris.com tetris.com]
+}}
+'''''Tetris''''' est un [[jeu vidéo]] de [[jeu de puzzle|puzzle]] conçu par [[Alekseï Pajitnov]] à partir de {{date||juin|1984|en jeu vidéo}}. Lors de la création du concept, Pajitnov est aidé de Dmitri Pavlovski et [[Vadim Guerassimov]] pour le développement. Le jeu est édité par plusieurs sociétés au cours du temps, à la suite d'une guerre pour l'appropriation des droits à la fin des [[années 1980]]. Le déroulement précis du développement et des premières commercialisations est encore débattu dans les années 2010. Après une exploitation importante par [[Nintendo]], les droits appartiennent depuis [[1996 en jeu vidéo|1996]] à la société [[The Tetris Company]]. Cette société a vendu les droits d'exploitation sur mobiles à [[Electronic Arts]] et sur consoles à [[Ubisoft]].
+
+''Tetris'' met le joueur au défi de réaliser des lignes complètes en déplaçant des pièces de formes différentes, les [[tétromino|tétriminos]], qui défilent depuis le haut jusqu'au bas de l'écran. Les lignes complétées disparaissent tout en rapportant des points et le joueur peut de nouveau remplir les cases libérées. Le jeu n'a pas de fin : le joueur perd la partie lorsqu'un tétrimino reste bloqué en haut. Il doit donc résister le plus longtemps à la chute continue des tétriminos, afin de réaliser le meilleur score. Dans le cas d'une partie à plusieurs, le but est de résister plus longtemps que son adversaire, sachant qu'il est possible de s'envoyer des malus en réalisant des combinaisons de lignes. Selon le journaliste [[Bill Kunkel (journaliste)|Bill Kunkel]], {{citation|''Tetris'' répond parfaitement à la définition du meilleur en matière de jeu : une minute pour l'apprendre, une vie entière pour le maîtriser}}.
+
+Bâti sur des règles simples et exigeant intelligence et adresse, il est considéré comme un des grands classiques de l'[[histoire du jeu vidéo]] aux côtés de ''[[Pong]]'', ''[[Space Invaders]]'' ou encore ''[[Pac-Man]]''. Le jeu est adapté sur la plupart des supports de jeu, aussi bien sur [[ordinateur]]s que sur [[Console de jeux vidéo|consoles de jeux]] et [[téléphone mobile|téléphones mobiles]]. Certaines versions apportent des variantes comme un affichage 3D, un système de réserve ou encore du jeu [[multijoueur]].
+
+En [[2010 en jeu vidéo|2010]], ''Tetris'' compte plus de 170 millions d'exemplaires vendus dans le monde depuis [[1984 en jeu vidéo|1984]]. Disponible [[Liste de jeux vidéo Tetris|sur plus de 65 plates-formes]], sa version la plus mémorable est sur [[Game Boy]], classée comme étant le {{4e}} jeu vidéo le plus vendu de l'histoire, avec {{unité|30260000|unités}} écoulées. Dans le même temps, en {{date||avril|2014|en jeu vidéo}}, il est annoncé que la franchise a atteint plus de 425 millions de téléchargements payants sur téléphone mobile depuis [[2005 en jeu vidéo|2005]], le classant [[Liste des jeux vidéo les plus vendus|{{1er}} des jeux vidéo les plus vendus]].
+
+''Tetris'' est ancré dans la culture populaire et sa notoriété dépasse celle de la sphère vidéoludique, avec des imitations du jeu sur des bâtiments, de nombreuses reprises du thème original ou encore des [[costume]]s de tétriminos. Le jeu fait également l'objet de différents travaux de recherches : plusieurs chercheurs ont analysé sa complexité théorique, alors que d'autres ont montré les effets sur le cerveau après une session de jeu, notamment l'[[Effet Tetris|effet ''Tetris'']].
+
+== Système du jeu ==
+=== Généralités ===
+[[Fichier:Tetris basic game.gif|thumb|alt=Représentation animée d'un plateau de jeu de ''Tetris''.|Exemple de partie de ''Tetris'' sur le clone libre ''JsTetris''<ref name="JsTetris" group="n">[http://make.it/tetris/tetris.html Js Tetris 1.19]</ref>.]]
+''Tetris'' est principalement composé d'un champ de jeu où des pièces de formes différentes, appelées « [[tétromino|tétriminos]] », descendent du haut de l'écran<ref name="UltimateHisto P377">{{Harvsp|Kent|2001|p=377|id=UltimateHisto}}.</ref>. Durant cette descente le joueur peut uniquement déplacer les pièces latéralement et leur faire effectuer une rotation sur elles-mêmes jusqu'à ce qu'elles touchent le bas du champ de jeu ou une pièce déjà placée<ref name="about-tetris" />. Le joueur ne peut ni ralentir la chute des pièces, ni l'empêcher, mais il peut dans certaines versions l'accélérer<ref name="manuel-gameboy-p4">{{Harvsp|Nintendo|1989|texte=Manuel du jeu Game Boy|p=4|id=ManuelGameBoy}}.</ref>{{,}}<ref name="manuel-ds-p6">{{Harvsp|Manuel ''Tetris DS''|2006|p=6|id=ManuelDS}}</ref>.
+
+Le but pour le joueur est de réaliser le plus de lignes possibles, afin de garder de l'espace pour placer les futures pièces<ref name="about-tetris" />. Une fois une ligne complétée, elle disparaît, et les blocs placés au-dessus chutent d'un rang. Si le joueur ne parvient pas à faire disparaître les lignes suffisamment vite, l'écran peut alors se remplir jusqu'en haut. Lorsqu'un tétrimino dépasse du champ de jeu, et empêche l'arrivée de tétriminos supplémentaire, la partie se termine<ref name="about-tetris" />{{,}}<ref name="SagaJV P84">{{Harvsp|Ichbiah|2001|p=84|id=SagaJV}}.</ref>. Le joueur obtient un score, qui dépend essentiellement du nombre de lignes réalisées lors de la partie<ref name="manuel-gameboy-p16">{{Harvsp|Nintendo|1989|texte=Manuel du jeu Game Boy|p=16|id=ManuelGameBoy}}.</ref>.
+
+Le jeu ne se termine donc jamais par la victoire du joueur. Avant de perdre, le joueur doit tenter de compléter un maximum de lignes. Pour ce faire, il peut éliminer plusieurs lignes d'un coup, ce qui lui rapporte des points de bonus dans la plupart des versions du jeu<ref name="UltimateHisto P377" />. Il est possible de compléter jusqu'à 4 lignes en même temps, grâce au tétrimino en I : ce coup est appelé un ''Tetris'', comme le nom du jeu<ref name="manuel-gameboy-p16" />. 
+
+[[Fichier:TetrisJS-GameOver.png|thumb|left|alt=Représentation fixe d'une partie terminée, où les tétriminos sont arrivés en haut de la zone de jeu.|Fin de partie sur le clone libre ''JsTetris''<ref name="JsTetris" group="n" />.]]
+Au fur et à mesure que le joueur complète des lignes, son niveau augmente, accroissant le nombre de points réalisés par ligne complétée<ref name="manuel-gameboy-p16" />. Dans la plupart des versions sur jeu, la vitesse de chute des pièces augmente à chaque prise de niveau, laissant moins de temps au joueur pour réfléchir au placement<ref name="about-tetris" />. Le principal objectif pour le joueur consiste alors non pas à gagner, comme dans la plupart des jeux vidéo, mais à obtenir le plus grand score, via des combinaisons et de l’[[endurance]].
+
+Selon le journaliste [[Bill Kunkel (journaliste)|Bill Kunkel]], {{citation|''Tetris'' répond parfaitement à la définition du meilleur en matière de jeu : une minute pour l'apprendre, une vie entière pour le maîtriser}}<ref name="SagaJV P84" />. Contrairement à beaucoup de jeux, le joueur doit construire plutôt que détruire. Mais, lorsque le joueur arrive à remplir une ligne, elle disparait, laissant au final à la vue du joueur uniquement les lignes non finalisées et ses erreurs<ref name="TVRussiaWithLove-8min">{{Harvsp|Temple|2004|loc=à partir de la {{8e}} minute|id=TVFromRussiaWithLove}}</ref>. Le rôle du joueur est donc de constamment corriger ses erreurs<ref name="TVRussiaWithLove-8min" />.
+
+Depuis [[1996 en jeu vidéo|1996]], [[The Tetris Company]] a défini en interne des spécifications (ou ''{{langue|en|guidelines}}'') que les éditeurs doivent respecter afin de se voir octroyer les droits sur la licence<ref name="30-years-tetris">{{lien web|url=http://press.tetris.com/30-years-of-tetris/|titre=30 years of Tetris|langue=en|site=press.tetris.com|consulté le=20 avril 2015}}</ref>. Plusieurs interviews de [[Henk Rogers]] permettent d'en connaître une partie du contenu : correspondance des boutons et des actions, taille du champ de jeu, système de rotation{{etc}}<ref name="itw-rogers-nwr" />{{,}}<ref name="guideline">{{lien web|url=http://tetris.wikia.com/wiki/Tetris_Guideline|titre=Tetris Guideline|site=tetris.wikia.com|consulté le=13 mars 2015}}</ref>.
+
+=== Pièces du jeu ===
+Les pièces de ''Tetris'', sur lesquelles repose entièrement le jeu, sont des « [[tétromino|tétriminos]] ». Le nom a évolué au cours du temps : alors que les mathématiciens préfèrent le terme « tétromino », les jeux ''Tetris'' des années 1990 utilisent différents termes : « blocs », « tétramino »{{etc}}<ref>{{Harvsp|Nintendo|1989|texte=Manuel du jeu Game Boy|id=ManuelGameBoy}}</ref>{{,}}<ref>{{Harvsp|Nintendo|1993|texte=Manuel du jeu Tetris 2|id=ManuelTetris2}}</ref>{{,}}<ref>{{lien web|url=http://service.mattel.com/instruction_sheets/I5012.pdf|titre=Manuel ''Lighted Tetris''|année=2004|langue=anglais}}</ref> Dans les années [[2000]], le terme officiel devient « tétrimino » dans les {{lang|en|guidelines}}<ref name="guideline" />. Il en existe sept formes différentes, toutes basées sur un assemblage de quatre carrés, d'où le mot « Tetris » du préfixe [[grec ancien|grec]] ''tetra-'' qui signifie « quatre »<ref name="about-tetris" />. Le joueur peut faire tourner plusieurs fois, à gauche et/ou à droite selon la version, de 90° n'importe quel bloc pour le poser de la façon désirée pendant qu'il descend.
+
+{| class="wikitable centre"
+|+ Liste des tétriminos existants
+|- 
+! scope="col" | Forme   || scope="col" | Appellation    || scope="col" | Autres appellations    || scope="col" | Construction
+|-
+| [[Fichier:Tetris I.svg|65px|alt=Tétrimino I|link=|Tétrimino I]] || Tétrimino I || « Bâton », « ordinaire », « barre », « long » || Quatre carrés alignés.
+|-
+| [[Fichier:Tetris O.svg|52px|center|alt=Tétrimino O|link=|Tétrimino O]] || Tétrimino O || « Carré », « bloc » || Méta-carré de 2x2.
+|-
+| [[Fichier:Tetris T.svg|65px|alt=Tétrimino T|link=|Tétrimino T]] || Tétrimino T ||  « Té »
+|| Trois carrés en ligne et un carré sous le centre
+|-
+| [[Fichier:Tetris L.svg|65px|alt=Tétrimino L|link=|Tétrimino L]] || Tétrimino L ||  « L » , « lambda »
+|| Trois carrés en ligne et un carré sous le côté gauche.
+|-
+| [[Fichier:Tetris J.svg|65px|alt=Tétrimino J|link=|Tétrimino J]] || Tétrimino J || « L inversé », « gamma » || Trois carrés en ligne et un carré sous le côté droit.
+|-
+| [[Fichier:Tetris Z.svg|65px|alt=Tétrimino Z|link=|Tétrimino Z]] || Tétrimino Z || « Biais » || Méta-carré de 2x2, dont la rangée supérieure est glissée d'un pas vers la gauche.
+|-
+| [[Fichier:Tetris S.svg|65px|alt=Tétrimino S|link=|Tétrimino S]] || Tétrimino S || « Biais inversé » || Méta-carré de 2x2, dont la rangée supérieure est glissée d'un pas vers la droite.
+|}
+
+Tous les tétriminos sont capables de remplir au moins deux lignes : hormis le tétrimino I, ils se placent tous obligatoirement sur 2 ou 3 lignes et permettent ainsi de faire des coups rapportant plus de points. Les tétriminos J et L permettent de remplir 3 lignes, après une rotation de 90° ou de 270°. De la même façon, le tétrimino I peut compléter jusqu'à 4 lignes en vertical, réalisant le coup nommé « ''Tetris'' ».
+
+Chacune des sept pièces est d'une couleur propre, et certains joueurs désignent les pièces seulement par ce détail. Cependant, dans les premières versions du jeu, la couleur des pièces varie généralement d'un jeu à l'autre. Pour éviter ce problème, [[The Tetris Company]] a associé une couleur à chaque pièce dans ses ''guidelines''<ref name="guideline" />.
+
+=== Champ de jeu et chute des tétriminos ===
+Le champ de jeu, ou « puits » dans les anciens ''Tetris'' et « matrice » dans les plus récents, est l'espace dans lequel tombent les tétriminos. Il dispose toujours d'une grille en arrière-plan, visible ou non, dont les cases sont de la même grandeur que les carrés des tétriminos, et que ceux-ci suivent dans leur chute. Ce champ de jeu est de dix cases de largeur et de vingt-deux cases de hauteur selon les ''Tetris Guidelines'', bien que certains fassent exception, comme ''[[Tetrinet]]'' (douze cases de largeur) et ''Tetris Jr.'' (huit cases de largeur)<ref name="guideline" />.
+
+Dans ce champ de jeu, les tétriminos chutent à partir du haut, avec une vitesse déterminée par le niveau de la partie<ref name="manuel-game-boy-7">{{Harvsp|Nintendo|1989|texte=Manuel du jeu Game Boy|p=7|id=ManuelGameBoy}}.</ref>. Plus le niveau est élevé, plus les pièces tombent vite, obligeant le joueur à placer de plus en plus vite les tétriminos<ref name="manuel-game-boy-7" />. La plupart des versions accordent un bonus de points lorsque le joueur accélère la vitesse de la chute d'un bloc (appelé ''{{langue|en|soft drop}}'', habituellement assigné à la touche bas de la flèche directionnelle de la manette de jeu). Ce bonus est habituellement proportionnel au temps d'appui. De la même façon, le mouvement ''{{lang|en|hard drop}}'', en appuyant sur la touche haut, permet de poser directement le tétrimino dans la colonne et la position dans laquelle elle est lors de la chute<ref>{{Harvsp|Nintendo|2006|texte=Manuel du jeu Tetris DS|p=11|id=ManuelDS}}.</ref>. Cette action rapporte également un bonus de points dans la plupart des versions.
+
+Au-delà du champ de jeu, la majorité des versions de ''Tetris'' disposent de plusieurs informations contextuelles. L’élément le plus courant est l'affichage du nombre de lignes complétées depuis le début du jeu, le score (en fonction du nombre de lignes complétées et la vitesse de placement du joueur) et le niveau courant qui détermine la vitesse de chute des pièces.
+
+Ce cadre d'information peut également indiquer le tétrimino suivant, permettant au joueur d'anticiper le coup suivant. Les versions récentes du jeu, notamment ''[[Tetris DS]]'', peuvent donner une vue sur les 4 ou 6 pièces suivantes, et intègrent une réserve dans laquelle une pièce peut être stockée temporairement, affichée à côté du champ de jeu<ref>{{Harvsp|Nintendo|2006|texte=Manuel du jeu Tetris DS|p=10-11|id=ManuelDS}}.</ref>.
+
+=== Mode multijoueur ===
+[[Fichier:Tetris multiplayer blocks.png|thumb|right|alt=Vue d'une partie de ''Tetris'', où les 4 lignes inférieurs sont grisées|Simulation d'une partie multijoueur, où le joueur actuel a reçu 4 lignes de malus de la part de l'adversaire.]]
+Certaines versions intègrent des modes de jeu à plusieurs. Le mode multijoueur apparaît la première fois sur [[Game Boy]], où deux joueurs peuvent s'affronter avec deux consoles via le [[Câble link]]<ref name="manuel-tetris-gameboy">{{Harvsp|Nintendo|1989|texte=Manuel du jeu Game Boy|id=ManuelGameBoy}}</ref>. Tout comme dans la version [[solo (jeu vidéo)|solo]], le but est de contenir les pièces dans le champ de jeu le plus longtemps possible. Le gagnant peut être déterminé selon plusieurs critères : nombres de points, de lignes réalisées{{etc}} Sur Game Boy, par exemple, le vainqueur est le premier à réaliser 30 lignes ou à faire perdre l'adversaire<ref name="manuel-tetris-gameboy" />.
+
+Chaque joueur a son terrain de jeu et peut envoyer des malus à son adversaire en réalisant plusieurs lignes. Ces malus sont des lignes incomplètes, où il manque un bloc, qui s'ajoutent en bas du tableau de jeu de l'adversaire. Ainsi, réaliser 2 lignes en un coup, en ajoute une chez l'adversaire. De même, 3 lignes en ajoutent 2 et un ''Tetris'' en ajoute 4<ref name="manuel-tetris-gameboy" />. Dans ces lignes, le bloc manquant n'est pas nécessairement à la même place à chaque fois, afin d'éviter de fournir au joueur des possibilités de combinaisons. Ces lignes sont identifiables facilement du fait que l'ensemble des blocs qui les composent sont de la même couleur.
+
+Les adversaires peuvent également voir l'avancée de l'un par rapport à l'autre. Sur Game Boy, une jauge, affichée à gauche du champ de jeu, indique la hauteur maximale à laquelle se trouve l'adversaire<ref name="manuel-tetris-gameboy" />{{,}}<ref>{{YouTube|sn1jyxxloGU|Tetris DX - 2 Players and the "POWER" System}}, où la jauge rouge est visible dans la première partie. Consulté le 17 mars 2015</ref>. Sur consoles de salon, où tous les concurrents jouent sur un même écran, il est possible de voir le jeu complet de chaque joueur et donc de prévoir quand un adversaire s'apprête à faire un ''Tetris''. Cette disposition est également adoptée par ''[[Tetris DS]]'', où le joueur joue sur l'écran du bas de la console tout en pouvant observer les écrans de jeu de ses différents adversaires sur l'écran du haut<ref name="test-tetrisds-jvc">{{lien web|url=http://www.jeuxvideo.com/articles/0000/00006477_test.htm|titre=Test du jeu Tetris DS|site=jeuxvideo.com|date=21 avril 2006|auteur=Romendil|consulté le=17 mars 2015}}</ref>.
+
+Des versions plus récentes permettent le [[jeu en ligne]] à plusieurs dans différents modes, c'est le cas de ''Tetris DS'' et ''[[Tetris Ultimate]]''<ref name="test-tetrisds-jvc" />{{,}}<ref name="test-ultimate-gamespot" />. L'arrivée du jeu en ligne coïncide également avec l'arrivée du jeu à plus de 2 joueurs, peu importe qu'ils soient en ligne. Dans ''Tetris DS'', il est possible de jouer des parties jusqu'à dix, aussi bien hors-ligne avec une seule [[cartouche de jeu vidéo|cartouche]], qu'en ligne<ref name="test-tetrisds-jvc" />.
+
+== Réflexions autour du jeu ==
+=== Musique et audio : un thème devenu historique ===
+[[Fichier:Dance Of The Sugar Plum Fairy.oga|thumb|''Danse de la Fée Dragée'']]
+Les premières versions du jeu ne possèdent pas de [[musique de jeu vidéo|musique]]<ref name="analyse-musique">{{lien web|url=http://ingame-music.over-blog.com/article-themes-tetris-game-boy-38109549.html|titre=Thèmes Tetris - Game boy|site=ingame-music.over-blog.com|date=24 octobre 2009|consulté le=24 mars 2015}}</ref>. C'est sur console que les premiers fonds sonores apparaissent pour rendre le jeu plus vivant. La version [[Nintendo Entertainment System|NES]] intègre trois musiques en jeu, notamment ''Danse de la Fée Dragée'' de l'[[Casse-noisette#Acte I 2|acte 2 de Casse-noisette]], composée par [[Piotr Ilitch Tchaïkovski|Tchaïkovski]]<ref name="nes-dance-sugar">{{lien web|url=http://www.vgmpf.com/Wiki/index.php?title=Dance_of_the_Sugar_Plum_Fairy|titre=Dance of the Sugar Plum Fairy|site=vgmpf.com|langue=en|consulté le=25 mars 2015}}</ref>{{,}}<ref name="vgmpf-nes">{{lien web|url=http://www.vgmpf.com/Wiki/index.php?title=Tetris_%28NES%29|titre=Tetris (NES)|site=vgmpf.com|langue=en|consulté le=25 mars 2015}}</ref>. Le jeu possède deux autres musiques de fond qui sont des compositions originales de [[Hirokazu Tanaka]]<ref name="vgmpf-nes" />, un compositeur japonais ayant déjà travaillé sur d'autres jeux de [[Nintendo]]. Chacune de ces mélodies est déclinée en deux versions : une au rythme normal et une autre avec un rythme accéléré qui s'enclenche lorsque le joueur est sur le point de perdre, afin de rendre le jeu plus intense<ref name="vgmpf-nes" />. Le jeu possède d'autres compositions de Tanaka pour les menus<ref name="vgmpf-nes" />. La console possède deux autres versions du jeu (une de [[Tengen (entreprise)|Tengen]] et la version japonaise pour [[Famicom]]) qui contiennent des musiques conçues pour le jeu<ref name="vgmpf-tengen">{{lien web|url=http://www.vgmpf.com/Wiki/index.php?title=Tetris:_Tengen_%28NES%29|titre=Tetris: Tengen (NES)|site=vgmpf.com|langue=en|consulté le=25 mars 2015}}</ref>{{,}}<ref name="vgmpf-famicom">{{lien web|url=http://www.vgmpf.com/Wiki/index.php?title=Tetris:_BPS_%28FC%29|titre=Tetris: BPS (FC)|site=vgmpf.com|langue=en|consulté le=25 mars 2015}}</ref>, à l'exception de [[Kalinka]] dans la version de Tengen<ref>{{lien web|url=http://www.mobygames.com/game/tetris_______|titre=Tetris|site=mobygames.com|consulté le=25 mars 2015}}</ref>. Ces musiques resteront anecdotiques et ne seront pas nécessairement reprises par la suite.
+
+[[Fichier:Korobeïniki music sample.ogg|thumb|right|Partie principale de la mélodie de ''{{lang|ru|Korobeïniki}}''.]]
+[[Fichier:Korobeiniki Music.png|thumb|left|Partition de ''{{lang|ru|[[Korobeïniki]]}}''.]]
+À l'occasion de l'adaptation sur [[Game Boy]] du jeu, Nintendo reprend la même idée, en incorporant trois musiques de fond, dont deux inspirées de morceaux classiques<ref name="origine-musique">{{lien web|url=http://hitek.fr/bonasavoir/provenance-musique-tetris-korobeiniki-nekrassov_673|titre=Bon à Savoir : D'où vient la musique de Tetris ?|date=3 janvier 2015|site=hitek.fr|auteur=Clémence Quemin|consulté le=24 mars 2015}}</ref> :
+
+* ''Type-A (v1.1)'' : ''{{lang|ru|[[Korobeïniki]]}}'' de [[Nikolaï Nekrassov]]
+* ''Type-B'' : Origine inconnue
+* ''Type-C'' : [[Suites_françaises#Suite_française_n°_3_en_si_mineur.2C_BWV_814|''Suite française'' {{n°|3}} en si mineur]] (BWV 814) de [[Johann Sebastian Bach]]
+
+''Type-A'' est reprise dans la plupart des versions ultérieures du jeu. ''{{lang|ru|Korobeïniki}}'' est une chanson russe, composée en [[1861]], que Nintendo a très probablement utilisé comme hommage aux origines soviétiques du jeu<ref name="origine-musique" />. Elle est de nouveau reprise par Hirokazu Tanaka, qui a travaillé sur la version NES<ref name="analyse-musique" />. Cette mélodie devient l'emblème sonore du jeu, grâce à son rythme plongeant les joueurs dans l'ambiance d'un jeu rapide et stressant<ref name="analyse-musique" />.
+
+Ce thème est par la suite repris au-delà du jeu : il arrive même en {{6e}} position des ventes de singles au Royaume-Uni en [[1992 en musique|1992]], via la reprise d'[[Andrew Lloyd Webber]], sous son pseudonyme ''Doctor Spin''<ref name="25ans-theguardian" />. Il apparait également dans d'autres jeux, albums et films comme hommage à ''Tetris''<ref>{{lien web|url=https://itunes.apple.com/us/album/tribute-to-music-tetris/id816438012|titre=A Tribute to the Music of Tetris|auteur=Brado Popcorn|langue=en|date=7 février 2014|consulté le=25 mars 2015}}</ref>. Dans les [[années 2000]], [[The Tetris Company]] ajoute comme pré-requis à l'attribution de la licence qu'une version de ''{{lang|ru|Korobeïniki}}'' soit disponible dans tout nouveau jeu<ref name="guideline" />{{,}}<ref name="25ans-theguardian" />. Elle dépose un brevet en 2006 pour protéger le thème<ref>{{lien web|url=http://tsdr.uspto.gov/#caseNumber=77037539&caseType=SERIAL_NO&searchType=statusSearch|titre=Trademark Status & Document Retrieval (TSDR)|site=tsdr.uspto.gov|langue=en|consulté le=24 mars 2015}}</ref>.
+
+=== Débat sur la possibilité d'une partie infinie ===
+[[Fichier:Tetris with only kinks.gif|thumb|left|alt=Image animée représentant une partie de ''Tetris'' avec les tétriminos S et Z uniquement|Partie avec uniquement les tétriminos S et Z, rendant le jeu plus difficile.]]
+Le système de jeu de ''Tetris'' a été examiné par plusieurs chercheurs. Une question régulièrement abordée est celle portant sur la possibilité d'une partie infinie, notamment par John Brzustowski dans un [[mémoire (écrit)|mémoire]] de [[Maîtrise dans les systèmes universitaires anglo-saxons|master]] en [[1992]]<ref name="ThesisCanYouWin Ouvrage">{{Harvsp|Brzustowski|1992|id=ThesisCanYouWin}}.</ref>. L'étudiant prouve au long de son mémoire qu'une partie de ''Tetris'' peut être infinie si l'[[aléa]] du jeu est clément avec le joueur<ref name="ThesisCanYouWin P48">{{Harvsp|Brzustowski|1992|p=48|id=ThesisCanYouWin}}.</ref>. Il existe une suite de pièces qui, quel que soit l'agencement choisi par le joueur, mène à la fin de la partie. En effet, les tétriminos S et Z seuls ne permettent pas de réaliser de lignes et obligent le joueur à laisser des espaces vides à chaque ligne<ref name="ThesisCanYouWin ch5">{{Harvsp|Brzustowski|1992|loc=ch. 5|id=ThesisCanYouWin}}.</ref>. Avec une séquence suffisamment longue de S et de Z, le joueur se retrouve alors bloqué et la partie se termine<ref name="ThesisCanYouWin ch5" />.
+
+En effet, si le choix de la pièce suivante est aléatoire, il existe une séquence de S et de Z suffisamment longue pour remplir le tableau. Un joueur peut placer jusqu'à 150 tétriminos S ou Z avant de perdre<ref group="n">Avec une matrice de taille 10 × 22 cases, lorsque le joueur a perdu, il peut y avoir 5 pièces par ligne, donc une centaine de pièces sur le champ de jeu. En incluant plusieurs lignes réussies, grâce à l'alternance aléatoire des S et Z, on arrive à un total avoisinant les 150 pièces.</ref>. En pratique, ce scénario n'arrive jamais, car la probabilité d'avoir une suite de 150 pièces S ou Z est de <math>(2/7)^{150}</math> (environ <math>2,4 \times 10^{-82}</math>). De plus, la majorité des jeux utilisent des [[générateur de nombres pseudo-aléatoires|générateurs de nombres pseudo-aléatoires]], où la probabilité que cette séquence de 150 pièces soit présente est très faible, aussi bien sur des appareils utilisant des processeurs {{unité|32|bits}} que {{unité|64|bits}}. Il est donc bien plus probable que le joueur perde à cause de la vitesse croissante de la chute des pièces.
+
+Un [[Adage (expression)|adage]] courant à propos de ''Tetris'' est {{citation|le seul coup gagnant est de ne pas jouer}}<ref name="PhDMarioIA">{{Ouvrage 
+ | langue                 = en 
+ | titre                  = The First Level of Super Mario Bros. is Easy with Lexicographic Orderings and Time Travel
+ | sous-titre             = ... after that it gets a little tricky
+ | auteur1                = Tom Murphy
+ | mois                   = avril
+ | année                  = 2013
+ | lire en ligne          = http://www.cs.cmu.edu/~tom7/mario/mario.pdf
+ | id                     = PhDMarioIA
+}}</ref>. En {{date||avril|2013}}, Tom Murphy développe un programme capable de gagner sur la [[Nintendo Entertainment System|NES]], ou tout du moins à ne pas perdre<ref name="PhDMarioIA" />. Cette [[intelligence artificielle]] (IA) peut compléter le premier niveau de ''[[Super Mario Bros.]]'' Sur ''Tetris'', le programme place de façon aléatoire et dès que possible les pièces, provoquant une augmentation du compteur de points. L'IA n'étant pas spécialement conçue pour ce jeu, elle ne tente pas de réaliser des lignes. Lorsqu'elle ne peut ajouter de pièce à la dernière ligne, l'IA conclut que le seul mouvement gagnant est de mettre le jeu en pause<ref name="PhDMarioIA" />.
+
+Avec le ''{{langue|en|easy spin}}'', consistant à bloquer une pièce dans sa chute, une partie peut en théorie être infinie. L'intérêt est cependant limité : le but pour le joueur est d'obtenir le meilleur score possible. Or, le seul moyen de gagner des points est de placer les tétriminos pour réaliser des lignes. La vitesse croissante du jeu permet de supposer que le joueur commettra plusieurs erreurs menant à la fin de la partie au bout d'un certain temps.
+
+=== ''{{langue|en|Easy spin}}'' : contournement du système de jeu ===
+[[Fichier:Tetris easy spin.gif|thumb|Exemple de ''{{langue|en|easy spin}}'', où le S de gauche est stoppé lors de sa chute. Le jeu de droite sert de référence pour se rendre compte de la vitesse normale de la chute.]]
+Certaines versions de ''Tetris'' possèdent des différences de ''[[gameplay]]'' dans leurs implémentations. Une des plus notables est le ''{{langue|en|easy spin}}'', ou ''{{langue|en|infinite spin}}'' ({{langue|en|to spin}} en anglais signifie tourner) selon certains magazines, disponible dans ''[[Tetris Worlds]]'' notamment<ref>{{lien web|auteur=Ryan Davis|langue=en|url=http://www.gamespot.com/reviews/tetris-worlds-review/1900-2831450/|title=Tetris Worlds Review|site=gamespot.com||date=10 décembre 2001|consulté le=13 mars 2015}}</ref>. Dans la version originale de ''Tetris'', la chute des pièces est continue, quelle que soit l'action en cours (déplacement ou rotation). Dans certains versions, dont ''Tetris World'', le délai est réinitialisé à chaque rotation, voire à chaque déplacement, rendant le jeu bien plus facile. Le joueur peut en effet bloquer la pièce en l'air afin de réfléchir à sa position, quelle que soit la vitesse réelle du jeu.
+
+Ce comportement n'est toutefois pas forcément un avantage. Certains modes du jeu requièrent de compléter un nombre de lignes en un minimum de temps. Dans son test de ''[[Tetris DS]]'', qui possède le même comportement, le site Web ''[[GameSpot]]'' relativise<ref name="gamespot-tetrisds" />. Il explique que cet avantage n'est utilisable qu'en solo : il est plus dangereux de réaliser un nombre important de lignes que de tenter de ralentir au maximum la chute des pièces en multijoueur. En effet, les blocs envoyés par le joueur adverse feront perdre le joueur s'il ne réalise pas de lignes à la même vitesse que lui<ref name="gamespot-tetrisds">{{lien web|author=|url=http://www.gamespot.com/reviews/tetris-ds-review/1900-6146173/|titre=Tetris DS Review|site=gamespot.com|langue=en|date=20 mars 2006|consulté le=13 mars 2015}}</ref>.
+
+Cette particularité est incorporée dans les spécifications de [[The Tetris Company]], qui statue sur les points qu'un jeu doit respecter pour être considéré comme conforme<ref name="itw-rogers-nwr">{{lien web|url=http://www.nintendoworldreport.com/interview/11267/tetris-from-the-top-an-interview-with-henk-rogers|langue=en|site=nintendoworldreport.com|titre=Tetris from the Top|date=6 avril 2006|consulté le=13 mars 2015}}</ref>. Lors d'une interview, [[Henk Rogers]] répond que même si cette caractéristique n'est pas désirée, elle permet aux joueurs novices de prendre plus de temps pour réfléchir<ref name="itw-rogers-nwr" />. Il ajoute que ce comportement n'est pas observé en compétition puisque les experts du jeu n'ont pas besoin de temps supplémentaire pour savoir où placer les tétriminos<ref name="itw-rogers-nwr" />.
+
+== Historique ==
+=== Conception ===
+[[Fichier:Alexey Pajitnov - 2575833305 (crop).jpg|thumb|alt=Photo de Alekseï Pajitnov, un homme barbu souriant face à la caméra|Alekseï Pajitnov, principal créateur de ''Tetris''.]]
+[[Alekseï Pajitnov]] est diplômé en [[1979]] du centre informatique de l'[[Académie des sciences de Russie|Académie des sciences de l'URSS]] où il devient aussitôt chercheur en [[Reconnaissance automatique de la parole|reconnaissance de la parole]]. Cependant, sa motivation profonde est de rendre les gens heureux avec les ordinateurs<ref name="SagaJV P85">{{Harvsp|Ichbiah|1997|p=85|id=SagaJV}}.</ref>. Il développe alors plusieurs jeux de réflexion et casse-têtes sur l'ordinateur de l'institut, un [[Elektronika 60]], ressource rare à l'époque<ref name="GameOver P298">{{Harvsp|Sheff|1999|p=298|id=GameOver}}.</ref>. Pour Pajitnov, {{citation|Les jeux permettent aux gens de mieux se connaître et agissent comme des révélateurs de choses que vous ne pourriez remarquer en temps normal, comme la façon de penser}}<ref name="SagaJV P85" />.
+
+En [[1984 en jeu vidéo|1984]], en cherchant à reproduire l'un de ses jeux favoris, le [[pentomino]]<ref name="theguardian">{{lien web
+|url=http://www.theguardian.com/culture/2014/jun/02/how-we-made-tetris|site=theguardian.com
+|titre=Tetris: how we made the addictive computer game
+|nom1=Hoad|prénom1=Phil|langue=en
+|date=2 juin 2014|consulté le={{1er}} mars 2015}}</ref>{{,}}<ref name="VintageGames P293" />, il imagine un jeu qui consiste en une chute de formes aléatoires à base de quatre carrés que le joueur doit tourner afin de remplir des lignes<ref name="SagaJV P86">{{Harvsp|Ichbiah|1997|p=86|id=SagaJV}}.</ref>. Il décide de l'appeler ''Tetris'', mot inventé qui provient de la contraction de « ''[[tétromino|tetramino]]'' » et « [[tennis]] », son sport favori. Il réalise alors un prototype sur l'Elektronika 60 du laboratoire<ref name="VintageGames P293">{{Harvsp|Loguidice|Barton|2001|p=293|id=VintageGames}}.</ref>. N'ayant pas d'interface graphique, Pajitnov modélise les pièces et le plateau avec des espaces et les crochets « [ ] »<ref name="GameOver P299">{{Harvsp|Sheff|1999|p=299|id=GameOver}}.</ref>{{,}}<ref name="images-tetris-officiel">{{lien web|url=http://press.tetris.com/game-photos/|titre=Game Images|site=press.tetris.com|consulté le=8 avril 2015}}</ref>. Le jeu ne possède ni système de score ni niveau, mais c'est suffisant pour le rendre dépendant à sa propre création<ref name="25ans-theguardian">{{lien web |url=http://www.theguardian.com/technology/gamesblog/2009/jun/02/tetris-25anniversary-alexey-pajitnov|titre=How Tetris conquered the world, block by block|langue=en|date=2 juin 2009|auteur=Bobbie Johnson|site=theguardian.com|consulté le=24 mars 2015}}</ref>.
+
+[[Fichier:E60M.JPG|thumb|left|alt=Photo d'un ordinateur sans écran|L'''Elektronika 60'', première machine à disposer de ''Tetris''.]]
+Ravi par son jeu, Pajitnov le présente à ses collègues qui deviennent très vite dépendants au concept<ref name="SagaJV P87">{{Harvsp|Ichbiah|1997|p=87|id=SagaJV}}.</ref>. Le jeu connait un succès dans tous les bureaux de l'Académie des sciences et atteint en quelques semaines tous les instituts disposant d'un ordinateur à [[Moscou]]<ref name="SagaJV P87" />{{,}}<ref>{{Harvsp|Temple|2004|loc={{9e}} minute|id=TVFromRussiaWithLove}}, {{citation étrangère|langue=en|After that, kind of, every place in Moscow - like a wood fire, you know? Tetris, in two weeks, was on every single computer in Moscow.}}, A. Pajitnov</ref>. Un ami de Pajitnov, Vladimir Pokhilko, ayant demandé une version pour l'Institut médical de Moscou, voit les gens arrêter de travailler pour jouer à ''Tetris''. Il lui confiera que {{citation|Je ne peux plus vivre sans ton ''Tetris''}}<ref name="SagaJV P87" />. Pokhilko ira jusqu'à supprimer sa création de l'Institut afin de rétablir de la productivité mais de nouvelles versions du jeu apparaissent<ref name="SagaJV P87" />.
+
+Face à ce succès, Pajitnov espère adapter son jeu pour l'ordinateur personnel [[IBM PC]], disposant d'un affichage de meilleure qualité que l'Elektronika 60<ref name="UltimateHisto P479">{{Harvsp|Kent|2001|p=479|id=UltimateHisto}}.</ref>. Il demande alors de l'aide à [[Vadim Guerassimov]], un lycéen prodige de 16 ans, déjà connu pour ses compétences en informatique<ref name="SagaJV P87" /> et réputé pour être un ''[[Hacker (université)|hacker]]''<ref name="GameOver P300">{{Harvsp|Sheff|1999|p=300|id=GameOver}}.</ref>. Pajitnov a rencontré Guerassimov auparavant grâce à une connaissance commune et ont travaillé ensemble sur d'autres jeux<ref name="vadim-story">{{lien web|url=http://vadim.oversigma.com/Tetris.htm|titre=Tetris Story|site=vadim.oversigma.com|auteur=Vadim Guerassimov|consulté le={{1er}} mars 2015}}</ref>. Le lycéen adapte le jeu en quelques semaines pour le PC, en y intégrant de la couleur et un tableau de scores<ref name="GameOver P300" />. 
+
+Pajitnov souhaite alors exporter le jeu. Cependant, il n'a aucune connaissance du monde des affaires et ses supérieurs à l'Académie ne sont pas forcément heureux du succès du jeu, puisque les chercheurs ne sont pas censés en produire<ref name="SagaJV P87" />. De plus, la [[propriété intellectuelle]] n'existe pas en URSS et les chercheurs soviétiques ne sont pas censés vendre leurs créations<ref name="GameOver P301">{{Harvsp|Sheff|1999|p=301|id=GameOver}}.</ref>{{,}}<ref>{{Harvsp|Temple|2004|loc={{10e}} minute|id=TVFromRussiaWithLove}}, {{citation étrangère|langue=en|We didn't have the idea that the software could be considered as a product and sold or protected or whatever. It made no sense for us at all.}}, A. Pajitnov</ref>. Il demande alors à Victor Brjabrin, qui supervise une équipe de 20 personnes à l'Académie et qui connaît le monde en dehors de l'URSS<ref group="n">Dans le contexte de la [[guerre froide]], peu de gens pouvaient prétendre avoir des relations en dehors de l'URSS.</ref>, de l'aider à faire publier ''Tetris''<ref name="SagaJV P88">{{Harvsp|Ichbiah|1997|p=88|id=SagaJV}}.</ref>. Il lui propose de lui céder ses droits sur le jeu et serait ravi de toucher une rémunération sur les droits, sans pour autant que ce soit obligatoire<ref name="SagaJV P88" />.
+
+=== Acquisition des droits par Mirrorsoft et Spectrum Holobyte ===
+[[Fichier:Home screen Tetris IBM.jpg|thumb|alt=Photo d'un écran plat, affichant le menu principal du jeu|Écran de démarrage de la version IBM de ''Tetris''.]]
+En [[1986]], Victor Brjabrin envoie une copie de ''Tetris'' à [[Novotrade]], un éditeur de jeu hongrois<ref name="SagaJV P88" />. Des clones du jeu circulent déjà dans toute la [[Hongrie]] et jusqu'en [[Pologne]], créés par des programmeurs ; ces copies circulent par [[disquette]]<ref name="SagaJV P89">{{Harvsp|Ichbiah|1997|p=89|id=SagaJV}}.</ref>. Robert Stein, agent international de vente de logiciels pour la société londonienne {{lang|en|Andromeda Software}}, prend conscience du potentiel commercial du jeu, même s'il n'y connait rien en jeu vidéo, lors d'une visite en Hongrie en {{date||juin|1986|en jeu vidéo}}<ref name="GameOver P302">{{Harvsp|Sheff|1999|p=302|id=GameOver}}.</ref>{{,}}<ref name="DocTV-min11">{{Harvsp|Temple|2004|loc={{11e}} minute|id=TVFromRussiaWithLove}}</ref>. 
+
+Face à l'indifférence de l'Académie<ref>{{Harvsp|Temple|2004|loc={{12e}} minute|id=TVFromRussiaWithLove}}, {{citation étrangère|langue=en|Nobody gave a shit about the stuff! A small, little game... The Computer Centre were very busy with the serious kind of physical, differential equation of the entire outer space or nuclear war! Games were something absolutely alien for their nature!}}, A. Pajitnov</ref>, Stein contacte Pajitnov et Brjabrin par fax afin d'obtenir les droits de la licence<ref name="DocTV-min11" />. Les chercheurs répondent alors qu'ils aimeraient bien trouver un accord avec Stein<ref>{{Harvsp|Temple|2004|loc={{12e}} minute|id=TVFromRussiaWithLove}}</ref>. Cependant, ils ignorent qu'un fax a une valeur légale en [[Occident]] et Stein commence alors à démarcher d'autres sociétés pour produire le jeu<ref name="SagaJV P89-90">{{Harvsp|Ichbiah|1997|p=89-90|id=SagaJV}}.</ref>. Pajitnov ne digère pas ce malentendu : lors d'une interview pour le site Kikizo, il déclare : {{citation étrangère|langue=en|I don’t really like to talk about that because when I think about those things I lose my sense of humour}}, pouvant être traduit par {{citation|Je n'aime pas vraiment parler de ça car quand j'y pense, je perds mon sens de l'humour}}<ref name="VintageGames P294">{{Harvsp|Kent|2001|p=294|id=VintageGames}}.</ref>.
+
+Stein profite ainsi du [[Consumer Electronics Show|CES]] à [[Las Vegas]] en [[1987 en jeu vidéo|1987]] pour démarcher plusieurs éditeurs. Gary Carlston, fondateur de [[Broderbund]], en récupère une copie qu'il amène en [[Californie]]. Malgré l'engouement parmi ses employés, il reste sceptique à cause des origines soviétiques du jeu. De même, Martin Alper, de la société [[Mastertronic]], déclare : {{citation|Aucun produit soviétique ne marchera jamais dans le monde occidental}}<ref name="SagaJV P90">{{Harvsp|Ichbiah|1997|p=90|id=SagaJV}}.</ref>. L'agent londonien signe pourtant deux accords : il vend les droits en Europe à l'éditeur [[Mirrorsoft]]<ref name="UltimateHisto P479" />{{,}}<ref name="SagaJV P90" /> et les droits aux [[États-Unis]] à [[Spectrum HoloByte]]<ref name="UltimateHisto P479" />{{,}}<ref name="VintageGames P294" />. Cette dernière obtient les droits après la visite de Phil Adams, le dirigeant de [[Mirrorsoft]]<ref name="SagaJV P90" />, qui y joue pendant des heures la première fois<ref>{{Harvsp|Temple|2004|loc={{15e}} minute|id=TVFromRussiaWithLove}}, {{citation étrangère|langue=en|so I sat and I played Tetris for... oh, a couple of hours.}}, P. Adams</ref>.
+
+À cette époque, Stein n'a pas encore signé de contrat avec les Soviétiques<ref name="UltimateHisto P479" />. Il vend tout de même les droits à ces deux sociétés pour {{unité|3000|£}} et une redevance de 7,5 à 15 % sur les ventes<ref name="GameOver P304">{{Harvsp|Sheff|1999|p=304|id=GameOver}}.</ref>.
+
+Avant de sortir le jeu aux États-Unis, Gilman Louie, PDG de Spectrum HoloByte, demande une refonte des graphismes et des musiques<ref name="SagaJV P90" />. L'esprit soviétique est conservé, avec des fonds illustrant des parcs et bâtiments russes ainsi que des mélodies ancrées dans le folklore russe de l'époque<ref name="Histoire-TV-origines-russe">{{Harvsp|Temple|2004|loc={{16e}} minute|id=TVFromRussiaWithLove}}</ref>. Le but est de donner envie aux gens d'acheter un produit russe, avec une boite rouge et un nom en cyrillique, chose rare de l'autre côté du [[mur de Berlin]]<ref name="Histoire-TV-origines-russe" />. Le jeu est disponible en {{date||janvier|1988|en jeu vidéo}} sur IBM PC<ref name="VintageGames P294" />{{,}}<ref name="SagaJV P91">{{Harvsp|Ichbiah|1997|p=91|id=SagaJV}}.</ref>. Dans le même temps, Mirrorsoft lance une version sur la même plate-forme en Europe en {{date||novembre|1987|en jeu vidéo}}<ref name="SagaJV P91" />. Le jeu est par la suite adapté sur d'autres supports, notamment sur [[Amiga]], [[Atari ST]], [[Sinclair Spectrum]], [[Commodore 64]] et [[Amstrad CPC]]<ref name="SagaJV P91" />. À l'époque, le jeu ne fait pas mention de Pajitnov et annonce : {{citation|Fabriqué aux États-Unis d'Amérique, conçu à l'étranger}}<ref name="SagaJV P91" />.
+
+[[Fichier:Tetris Arcade Machine.jpg|thumb|left|alt=Photo d'une machine d'arcade Tetris|Exemple de jeu d'arcade ''Tetris'', commercialisé par [[Sega]] en 1988<ref name="GameOver P309">{{Harvsp|Sheff|1999|p=309|id=GameOver}}.</ref>.]]
+Le jeu vidéo devient un succès commercial en Europe et aux États-Unis : Mirrorsoft vend plusieurs dizaines de milliers de copies en deux mois<ref name="SagaJV P91" />, sur un marché restreint<ref group="n">Le nombre de possesseurs d'ordinateurs dans les années 1980 est anecdotique. Un logiciel avec des milliers de ventes est alors un succès à l'époque.</ref>. Le jeu atteint les {{unité|100000|ventes}} en l'espace d'une année<ref>{{Harvsp|Temple|2004|loc={{18e}} minute|id=TVFromRussiaWithLove}}</ref>. Selon Spectrum HoloByte, le profil type du joueur de ''Tetris'' est un adulte de 25 à 45 ans, manager ou ingénieur<ref name="SagaJV P91" />. Lors de la [[Software and Information Industry Association|Software Publishers Association]] en {{date||mars|1988|en jeu vidéo}}, ''Tetris'' obtient quatre récompenses : meilleur logiciel de loisirs, meilleur jeu original, meilleur programme de stratégie, meilleur logiciel grand public<ref name="SagaJV P91" />.
+
+Robert Stein fait cependant face à un problème : l'unique document attestant un droit de licence est le fax de Pajitnov et Brjabrin. Il a donc vendu la licence d'un jeu qu'il ne possède pas encore. Il contacte alors Pajitnov, en demandant aux chercheurs un contrat pour les droits. Il commence les négociations via un fax le {{date|5|novembre|1986|en jeu vidéo}}, proposant 75 % de l'argent généré par Stein sur la licence<ref name="GameOver P304" />. Les Soviétiques ne sont pas convaincus par cette offre et tentent de surenchérir à 80 %<ref name="GameOver P305">{{Harvsp|Sheff|1999|p=305|id=GameOver}}.</ref>. L'agent londonien effectue plusieurs allers-retours à Moscou et entame de longues discussions avec les Soviétiques<ref name="GameOver P305" />.
+
+Le {{date|24|février|1988|en jeu vidéo}}<ref name="GameOver P308">{{Harvsp|Sheff|1999|p=308|id=GameOver}}.</ref>, Stein obtient un accord, qu'il signe le {{date|10|mai|1988}}<ref name="DocTV-min22">{{Harvsp|Temple|2004|loc={{22e}} minute|id=TVFromRussiaWithLove}}</ref>, pour une licence mondiale et sur tous les ordinateurs actuels et futurs, pour une période de dix ans<ref name="SagaJV P92">{{Harvsp|Ichbiah|1997|p=92|id=SagaJV}}.</ref>. C'est l'Académie des sciences qui est à l'origine de l'accord, puisque la création intellectuelle de ses chercheurs lui revient. Cependant Pajitnov et Brjabrin ne savent pas que le jeu est déjà en vente et que Stein a prétendu avoir les droits avant l'accord<ref name="UltimateHisto P479" />. Pajitnov ne touchera cependant aucun pourcentage sur les ventes et ne sera jamais rétribué<ref name="SagaJV P92" />, bien qu'il en soit fier : {{citation|le fait que tant de gens apprécient mon jeu me suffit amplement}}<ref name="SagaJV P96">{{Harvsp|Ichbiah|1997|p=96|id=SagaJV}}.</ref>.
+{{clr}}
+
+=== Reprise des droits par Nintendo et bataille juridique ===
+[[Fichier:Henk Rogers face crop.png|thumb|Henk Rogers en 2010.|alt=Photo de la tête de Henk Rogers, souriant.]]
+La situation se complexifie aux alentours de l'année [[1988 en jeu vidéo|1988]]. Spectrum HoloByte a vendu ses droits sur les ordinateurs et les bornes d'arcade au Japon à [[Henk Rogers]], en recherche de jeux pour le marché nippon<ref>{{Harvsp|Temple|2004|loc={{20e}} minute|id=TVFromRussiaWithLove}}</ref>. Mirrorsoft a vendu les siens à [[Atari]], plus précisément sa filiale [[Tengen (entreprise)|Tengen]]<ref group="n">Dans la suite de cet article, Atari représente en réalité cette filiale.</ref>, et ces derniers céderont les droits sur les arcades à [[Sega]] et sur les consoles à Rogers. Au final, près d'une dizaine de sociétés estiment avoir les droits sur le jeu alors que Stein n'a les droits que sur les ordinateurs<ref name="UltimateHisto P480">{{Harvsp|Loguidice|Barton|2001|p=480|id=UltimateHisto}}.</ref>. Les Soviétiques n'ont toujours pas conscience des accords que Stein a négociés, qui ne rapportent pas d'argent à l'Académie des sciences. Le jeu est pourtant un succès commercial sur les trois continents principaux du globe<ref name="DocTV-min22" />.
+
+La même année, [[Nintendo]] se prépare à lancer sa première console portable, la [[Game Boy]]. Pensant pouvoir réitérer les performances de la [[NES]], Nintendo est attirée par ''Tetris'' grâce à sa simplicité et son succès déjà international<ref name="SagaJV P92" />{{,}}<ref name="UltimateHisto P480" />. Henk Rogers, proche du président de Nintendo [[Hiroshi Yamauchi]], est alors en charge de récupérer les droits<ref name="SagaJV P92" />. Il cherche tout d'abord à négocier avec [[Atari]], qui vient tout juste d'acheter la licence à Robert Stein. Il n'obtient les droits que pour la NES, qui n'est pas son objectif<ref name="SagaJV P93" />.
+
+Entre temps, le gouvernement russe a mis en place une nouvelle entité, [[Elektronorgtechnica]], aussi appelée ELORG, chargée entre autres des droits du jeu<ref name="VintageGames P295">{{Harvsp|Kent|2001|p=295|id=VintageGames}}.</ref>{{,}}<ref name="SagaJV P93">{{Harvsp|Ichbiah|1997|p=93|id=SagaJV}}.</ref>. Rogers contacte Stein en {{date||novembre|1988|en jeu vidéo}}, qui est d'accord pour signer un contrat, mais il lui explique qu'il doit d'abord finaliser son contrat avec ELORG et qu'il reviendra vers Rogers ensuite<ref>{{Harvsp|Temple|2004|loc={{24e}} minute|id=TVFromRussiaWithLove}}</ref>{{,}}<ref name="GameOver P313">{{Harvsp|Sheff|1999|p=313|id=GameOver}}.</ref>. Après avoir relancé plusieurs fois Stein, Rogers estime qu'il peut y avoir une faille dans le contrat entre Robert Stein et l'Académie et décide en {{date||février|1989}}<ref name="grospixels">{{lien web|url=http://www.grospixels.com/site/tetris.php|titre=Tetris|site=grospixels.com|auteur=Laurent|consulté le=4 mars 2015}}</ref> de se rendre en Russie pour négocier les droits avec ELORG<ref name="SagaJV P93" />{{,}}<ref name="GameOver P313" />.
+
+Rogers arrive aux bureaux d'ELORG sans invitation, alors que Stein et Kevin Maxwell (de Mirrorsoft) ont pris rendez-vous le même jour, sans se concerter<ref>{{Harvsp|Temple|2004|loc={{29e}} minute|id=TVFromRussiaWithLove}}</ref>. Lors des discussions, Rogers explique qu'il souhaite obtenir les droits pour la nouvelle console de Nintendo, à la suite du succès du jeu sur NES<ref name="SagaJV P95" />. Les discussions partent dans le bon sens et Rogers obtient rapidement une entente avec ELORG<ref name="GameOver P316">{{Harvsp|Sheff|1999|p=316|id=GameOver}}.</ref>. Il montre alors une cartouche du jeu au président d'ELORG, Nikolaievitch Belikov<ref name="SagaJV P94">{{Harvsp|Ichbiah|1997|p=94|id=SagaJV}}.</ref>. Ce dernier est surpris, puisqu'il pense à ce moment que les droits de ''Tetris'' n'ont été signés que pour les ordinateurs<ref>{{Harvsp|Temple|2004|loc={{31e}} minute|id=TVFromRussiaWithLove}}</ref>. 
+
+[[Fichier:Tetris on Game Boy.jpg|thumb|left|Le jeu ''Tetris'' sur Game Boy.|alt=Console portable Game Boy, sur laquelle le jeu ''Tetris'' est lancé, et à l'écran titre.]]
+Les gens en présence accusent Nintendo de publication illicite, mais Rogers se défend en expliquant que sa société a obtenu les droits via [[Atari]], qui avait elle-même signé un accord avec Robert Stein<ref name="SagaJV P94" />. Les Soviétiques réalisent alors le schéma complexe que la licence a suivi en quatre ans, notamment à cause des contrats de Stein. Belikov construit alors un stratagème pour reprendre possession des droits et obtenir des accords commerciaux plus intéressants. ELORG a alors face à elle trois sociétés différentes qui souhaitent acheter les droits<ref>{{Harvsp|Temple|2004|loc={{35e}} minute|id=TVFromRussiaWithLove}}</ref>.
+
+Dans le même temps, Rogers, amateur du [[jeu de go]], se lie d'amitié avec Pajitnov qui le soutiendra dans les discussions, au détriment de Kevin Maxwell, fils de [[Robert Maxwell]] venu sécuriser les droits pour Mirrorsoft<ref name="SagaJV P93" />. Il propose à Rogers d'annuler les droits de Stein et d'accorder à Nintendo les droits sur consoles, aussi bien de salon que portables<ref name="SagaJV P94" />. Rogers s'envole alors vers les États-Unis pour convaincre la branche américaine de Nintendo de signer ces droits. Le contrat avec ELORG est signé par les dirigeants américains de l'époque, [[Minoru Arakawa]] et [[Howard Lincoln]], pour un montant de {{unité|500000|dollars}} et de {{unité|50|cents}} par cartouche vendue<ref name="SagaJV P95">{{Harvsp|Ichbiah|1997|p=95|id=SagaJV}}.</ref>{{,}}<ref>{{Harvsp|Temple|2004|loc={{42e}} minute|id=TVFromRussiaWithLove}}</ref>.
+
+Par la suite, ELORG envoie un avenant au contrat à la société Andromeda, dont fait partie Robert Stein. Une des clauses définit la composition d'un ordinateur<ref group="n">Pour rappel, Stein n'a les droits que sur les ordinateurs. Selon l'avenant, un ordinateur est défini comme étant une machine avec un écran et un clavier. Cette définition permet alors de distinguer un ordinateur d'une console, qui ne possède pas de clavier notamment.</ref> et retire du coup les droits sur les consoles pour la société Andromeda<ref name="avenant-andromeda">{{Harvsp|Temple|2004|loc={{37e}} minute|id=TVFromRussiaWithLove}}, {{citation étrangère|langue=en|The clause resulted in the exclusion of some of the products for Tetris. It was on and I didn't notice it, which I will never forgive myself, so there we go. But they made it so...matter of fact.}}, R. Stein</ref>. Stein signe sans prêter attention à cette clause et ne conserve les droits que sur ordinateur<ref name="SagaJV P95" />. Il réalise plus tard que toutes les autres clauses, notamment sur les paiements, ne sont qu'un « écran de fumée » pour le tromper<ref name="avenant-andromeda" />{{,}}<ref name="GameOver P319">{{Harvsp|Sheff|1999|p=319|id=GameOver}}.</ref>.
+
+En {{date||mars|1989|en jeu vidéo}}, Nintendo envoie un fax à son grand rival, Atari, lui demandant d'arrêter la production du jeu ''Tetris'' sur NES, les droits appartenant désormais à la société nippone<ref>{{Harvsp|Temple|2004|loc={{47e}} minute|id=TVFromRussiaWithLove}}</ref>. Atari contacte alors Mirrorsoft qui répond de ne pas s'inquiéter puisqu'ils pensent que les droits leur appartiennent<ref name="SagaJV P95" />. Nintendo maintient cependant ses positions et [[Robert Maxwell]], fondateur de la société mère de Mirrorsoft, fait pression auprès de [[Mikhaïl Gorbatchev]], alors à la tête de l'[[Union des républiques socialistes soviétiques|URSS]], pour faire annuler le contrat entre ELORG et Nintendo<ref name="SagaJV P95" />. Malgré les menaces que subit Belikov<ref>{{Harvsp|Temple|2004|loc={{45e}} minute|id=TVFromRussiaWithLove}}</ref>, ELORG ne cédera pas en avançant les avantages financiers du contrat comparé à celui signé avec Stein et donc Mirrorsoft<ref name="SagaJV P95" />.
+
+En {{date||novembre|1989|en jeu vidéo}}, Atari et Nintendo commencent une bataille judiciaire devant les tribunaux de [[San Francisco]]. Pour Atari, l'objectif est de prouver que la NES est un ordinateur, comme son nom en japonais l'indique (Famicom, abréviation de {{lang|en|Family Computer}})<ref name="grospixels" />{{,}}<ref name="SagaJV P96" />. Si c'est le cas, la licence initiale autorise alors Atari à sortir ce jeu. Le principal argument de la société est que la Famicom a été conçue pour être transformable en ordinateur via son port d'extension<ref name="grospixels" />. Cet argument ne sera pas retenu et Pajitnov souligne également que le contrat initial ne concerne que les ordinateurs et aucune autre machine<ref name="SagaJV P96" />. De son côté, Nintendo fait venir Belikov témoigner en sa faveur<ref>{{Harvsp|Temple|2004|loc={{48e}} minute|id=TVFromRussiaWithLove}}</ref>. Le juge Fern Smith déclare alors que Mirrorsoft et Spectrum HoloByte n'ont jamais reçu d'autorisation explicite pour une commercialisation sur consoles<ref name="grospixels" />. Nintendo sort donc vainqueur du procès<ref name="grospixels" />. Un second procès est ensuite initié par Mirrorsoft, complexifiant un peu plus l'affaire. Il n'existe cependant pas de sources claires sur les débouchés de ce nouveau jugement<ref name="SagaJV P96" />.
+
+Le {{date|21|juin|1989|en jeu vidéo}}, Atari retire sa version NES de la vente et des milliers de cartouches restent invendues, dans les entrepôts de la société<ref name="grospixels" />.
+
+=== Succès commercial et reprise des droits par Pajitnov ===
+Par les antécédents juridiques pour la licence, la réputation de Pajitnov arrive en Occident. Il est alors régulièrement invité par les journalistes et les éditeurs, où il découvre que son jeu est vendu à des millions d'exemplaires alors qu'il n'a pas touché d'argent<ref name="SagaJV P96" />. Il reste cependant humble et fier de son jeu, qu'il considère comme « ambassadeur électronique de bienveillance »<ref name="SagaJV P96" />. 
+
+En {{date||janvier|1990}}, il est invité par Spectrum HoloByte au [[Consumer Electronics Show|CES]] et est plongé pour la première fois dans la vie américaine<ref name="SagaJV P97">{{Harvsp|Ichbiah|1997|p=97|id=SagaJV}}.</ref>. Après un temps d'adaptation, Pajitnov s'y plait et visite plusieurs villes : [[Las Vegas]], [[San Francisco]], [[New York]], le [[Massachusetts Institute of Technology|MIT]] près de [[Boston]]<ref name="GameOver P347">{{Harvsp|Sheff|1999|p=347|id=GameOver}}.</ref>{{etc}} Il répond à des dizaines d'interviews et découvre la culture américaine avec plusieurs hôtes, dont les dirigeants de {{lang|en|Nintendo of America}}<ref name="GameOver P347" />. Il s’émerveille devant cette liberté et les avancées de la société occidentale<ref name="SagaJV P98">{{Harvsp|Ichbiah|1997|p=98|id=SagaJV}}.</ref>. De retour en URSS, il ne cessera de raconter son voyage à ses collègues<ref name="SagaJV P98" />. Il réalise alors qu'{{citation|il n'existe pas de marché en Russie pour [leurs] programmes}}<ref name="SagaJV P98" />.
+
+Dans le même temps, Nintendo voit les ventes de la [[Game Boy]] exploser, dépassant trois fois les prévisions de ventes<ref name="SagaJV P98" />. La société lance la console et le jeu en France à la fin de l'année 1990, à [[Paris]], en présence du créateur russe. La console se vend à 1,4 million d'exemplaires la première année, rien que pour la France<ref name="SagaJV P98" />.
+
+En [[1991 en jeu vidéo|1991]], Pajitnov et Pokhilko, son collègue à l'Académie des sciences, émigrent aux États-Unis<ref name="SagaJV P98" />. Pajitnov s'installe à [[Seattle]] où il réalise des jeux pour la société Spectrum HoloByte. En [[1996 en jeu vidéo|1996]], comme convenu avec l'Académie dix ans auparavant et à la suite d'un accord obtenu par Henk Rogers<ref name="story-rogers-part5">{{lien web|url=http://www.sramanamitra.com/2009/09/20/the-story-of-tetris-henk-rogers-part-5/|langue=en|titre=The Story of Tetris: Henk Rogers (Part 5)|date=20 septembre 2009|site=sramanamitra.com|consulté le=10 mars 2015}}</ref>, il récupère ses droits d'auteur. Après dix ans de redevances, le gouvernement soviétique perd les droits sur le jeu en {{date||avril|1996|en jeu vidéo}}, sans avoir reversé d'argent à Pajitnov<ref name="SagaJV P99">{{Harvsp|Ichbiah|1997|p=99|id=SagaJV}}.</ref>. Il fonde avec Rogers [[The Tetris Company]] en {{date||juin|1996}}, société qui gère les droits du jeu sur toutes les plate-formes, les accords précédents ayant expiré. Pajitnov touche désormais une redevance pour chaque jeu ''Tetris'' et objet dérivé vendu dans le monde<ref name="SagaJV P100">{{Harvsp|Ichbiah|1997|p=100|id=SagaJV}}.</ref>. 
+
+En [[2002 en jeu vidéo|2002]], ils fondent également Tetris Holding après le rachat de l'ensemble des droits au gouvernement russe, transféré à une entité privée à la suite de la [[dislocation de l'URSS]]<ref name="story-rogers-part5" />. Les deux associés ont désormais tous les droits sur la marque ''Tetris''. La société se charge principalement de faire supprimer les clones utilisant la marque de façon illégale<ref name="story-rogers-part5" />{{,}}<ref name="SagaJV P100" />. La société sollicite par exemple régulièrement [[Apple]] et [[Google]] pour censurer les versions illégales de ''Tetris'' sur leurs [[Store (informatique)|boutiques d'applications]] mobile<ref name="android-purge">{{lien web|url=http://arstechnica.com/gadgets/2010/06/google-blocks-tetris-clones-from-android-market/|titre=Google blocks Tetris clones from Android market|langue=en|date=2 juin 2010|site=Ars Technica|auteur=Ryan Paul|consulté le=19 avril 2015}}</ref>{{,}}<ref name="iphone-purge">{{lien web|url=http://arstechnica.com/apple/2008/10/tetris-co-strikes-again-another-iphone-app-clone-is-pulled/|titre=Tetris Co. strikes again: another iPhone app clone is pulled|langue=en|date=8 octobre 2008|site=Ars Technica|auteur=David Chartier|consulté le=19 avril 2015}}</ref>.
+
+En {{date||décembre|2005|en jeu vidéo}}, [[Electronic Arts]] rachète Jamdat, entreprise spécialisée dans le jeu sur mobile<ref>{{lien web|url=http://www.businesswire.com/news/home/20051208005771/en/EA-Acquire-JAMDAT-Mobile----Leader-North|titre=EA to Acquire JAMDAT Mobile Inc. -- the Leader in North American Mobile Interactive Entertainment; Accelerates EA's Objective of Global Expansion in Mobile|langue=en|date=9 décembre 2005|site=businesswire.com|consulté le=10 mars 2015}}</ref>. Celle-ci a auparavant racheté une société fondée par Rogers en [[2001 en jeu vidéo|2001]] qui a géré la licence de ''Tetris'' sur mobile<ref name="story-rogers-part5" />. De ce fait, Electronic Arts dispose pendant 15 ans de la licence du jeu sur tous les téléphones mobiles<ref name="story-rogers-part5" />.
+
+Le jeu a depuis été adapté sur tous types de supports et de nombreux objets dérivés ont vu le jour.
+
+{{clr}}
+
+== Accueil ==
+=== Critiques ===
+{{Infobox Notes de jeu vidéo
+     | titre = Aperçu des notes reçues<br /><small>jusqu'à l'édition Game Boy uniquement</small>
+     | Tilt 1                       = 19/20<br /><small>(Game Boy)</small><ref>{{Article|titre=Tetris|périodique=Tilt|numéro=85|mois=décembre|année=1990|page=85}}</ref>
+     | CVG 1                        = 95 %<br /><small>(Game Boy)</small><ref>{{Article|titre=Tetris|auteur=Paul Rand|périodique=CVG|numéro=96|mois=novembre|année=1989|pages=119}}</ref>
+     | Joystick 1                   = 94 %<br /><small>(Spectrum HoloByte)</small><ref>{{article|titre=Super Tetris|périodique=Joystick|numéro=26|mois=avril|année=1992|page=162-163}}</ref>
+     | Your Sinclair 1              = 9/10<br /><small>(Mirrorsoft)</small><ref>{{lien web|last=Worrall|first=Tony|titre=Tetris|url=http://www.ysrnry.co.uk/articles/tetris.htm|site=The Your Sinclair Rock'n'Roll Years|date=avril 1988}}</ref>
+     | Zzap!64 1                    = 98 %<br /><small>(Mastertronic)</small><ref>{{lien web|titre=Gold Standard|url=http://www.zzap64.co.uk/zzap100/100thspec5.html|site=The Def Gui to Zzap!64}}</ref>{{,}}<ref>{{article|titre=Tetris|périodique=Zzap!64|numéro=50|mois=juin|année=1989}}</ref>
+     | Allgame 1                    = <p style="text-align:left">Arcade: {{Rating|4|5}}<ref>{{lien web|last=Cook|first=Brad|titre=Tetris|url=https://web.archive.org/web/20141211121731/http://www.allgame.com/game.php?id=16887&tab=review|site=AllGame}} <!-- Le saut de ligne ci-après évite la création d'un nouveau paragraphe au saut de ligne -->
+</ref><br />C64:  {{Rating|3|5}}<ref>{{lien web|last=Sutyak|first=Jonathan|titre=Tetris|url=https://web.archive.org/web/20141211121731/http://www.allgame.com/game.php?id=16887&tab=review|site=AllGame}}
+</ref><br />Macintosh: {{Rating|4|5}}<ref>{{lien web|last=Savignano|first=Lisa Karen|titre=Tetris|url=https://web.archive.org/web/20141211121738/http://www.allgame.com/game.php?id=11800&tab=review|site=AllGame}}
+</ref><br />NES : {{Rating|4.5|5}}<ref>{{lien web|last=Miller|first=Skyler|titre=Tetris|url=https://web.archive.org/web/20141211121739/http://www.allgame.com/game.php?id=14911&tab=review|site=AllGame}}
+</ref>{{,}}<ref>{{lien web|last=Weiss|first=Brett Alan|titre=Tetris|url=https://web.archive.org/web/20141210162434/http://www.allgame.com/game.php?id=1331&tab=review|site=AllGame}}
+</ref><br />Game Boy : {{Rating|5|5}}<ref>{{lien web|titre=Tetris (Game Boy)|url=https://web.archive.org/web/20141210162439/http://www.allgame.com/game.php?id=112|site=AllGame|consulté le=8 avril 2015}}</ref></p>
+     | Jeuxvideo.com 1              = 19/20<ref name="test-tetrisgb-jvc">{{lien web|url=http://www.jeuxvideo.com/articles/0001/00012660-tetris-test.htm|titre=Test du jeu Tetris sur GB|site=jeuxvideo.com|date=8 avril 2010}}</ref>
+
+
+     | GameRankings 1               = 89,73 %<br /><small>(Game Boy)</small><ref>{{lien web|url=http://www.gamerankings.com/gameboy/585960-tetris/index.html|titre=Tetris|site=gamerankings.com|langue=en}}</ref>
+
+     | MobyGames 1                  = 94 %<br /><small>(Game Boy)</small><ref>{{lien web|url=http://www.mobygames.com/game/tetris________/mobyrank|titre=Tetris|site=mobygames.com|langue=en|consulté le=6 mai 2015}}</ref>
+     | MobyGames 2                  = 85%<br /><small>(NES)</small><ref>{{lien web|url=http://www.mobygames.com/game/nes/tetris______/mobyrank|titre=Tetris|site=mobygames.com|langue=en|consulté le=6 mai 2015}}</ref>
+}}
+
+Dès ses débuts sur [[Elektronika 60]], le jeu rend fou les collègues de Pajitnov qui ne se lassent pas d'y jouer<ref name="SagaJV P87" />. Bien avant le succès planétaire, Robert Stein et [[Henk Rogers]] sauront déceler en ''Tetris'' le potentiel commercial du jeu et en négocieront la licence. 
+
+En [[1989 en jeu vidéo|1989]], {{lang|en|[[Computer Gaming World]]}} accorde le ''{{lang|en|Compute! Choice Award for Arcade Game}}'', en qualifiant le jeu comme étant {{citation|de loin, le plus addictif [des jeux] jamais créés}}<ref name="compute198901">{{Article |langue=en|auteur1=|titre=The 189 Compute! Choice Awards|périodique=Compute!|mois=janvier|année=1989|lire en ligne=https://archive.org/stream/1989-01-compute-magazine/Compute_Issue_104_1989_Jan#page/n25/mode/2up|pages=28|consulté le=10 mars 2015|id= }}</ref>. Dans le magazine ''{{lang|en|Compute!}}'', [[Orson Scott Card]] explique, sur le ton de l'humour, qu'il {{citation|frémit à l'idée de l'éclatement de notre économie à la suite de la chute de la productivité informatique}}. Il conclut en expliquant que le jeu est fait pour tous les foyers américains<ref name="card198904">{{article|langue=en|lire en ligne=https://archive.org/stream/1989-04-compute-magazine/Compute_Issue_107_1989_Apr#page/n11/mode/2up | titre=Gameplay | périodique=Compute! | mois=avril|année=1989 |consulté le=10 mars 2015 |auteur1=Orson Scott Card| pages=11}}</ref>.
+
+''Tetris'' devient un véritable succès commercial avec la sortie de la [[Tetris (Game Boy)|version Game Boy]]. Vendu avec la console, le jeu est propulsé comme jeu ambassadeur pour montrer l'intérêt de ce nouveau type de console. Cette version reste la plus vendue de la licence avant l'ère du mobile, avec plus de 30 millions d'exemplaires<ref>{{lien web|url=http://www.vgchartz.com/game/4534/tetris/|titre=Tetris|langue=en|site=VGChartz.com}}</ref>. 
+
+Pendant son voyage aux [[États-Unis]], Pajitnov est invité par plusieurs journalistes pour parler de son jeu, avec 4 à 5 interviews par jour<ref name="GameOver P347" />. Le jeu sera en première page de plusieurs magazines, dont ''Nintendo {{lang|en|Power}}'' à la fin de l'année 1989. La couverture arbore l'expression {{citation étrangère|langue=en|Get Tetrisized}} et un visuel montrant plusieurs joueurs en ligne de façon uniforme, afin de représenter le succès du jeu<ref>{{Article |langue=en|auteur1=|titre=Tetris. Get Tetrisized|périodique=Nintendo Power|mois=novembre|année=1989|lire en ligne=http://www.gamingmagz.com/video-game-magazines/nintendo-power-issue-9-nov-dec-1989.html|pages=1|consulté le=10 mars 2015|id= }}</ref>. L'édition suivante du magazine, le numéro 10 de {{date||janvier|1990}}, contient un guide stratégique de 16 pages consacré à ''Tetris''<ref>{{Article |langue=anglais |titre=An Adventure in Tetris World |périodique=Nintendo Power |numéro=10 |mois=janvier |année=1990 |consulté le=31 mai 2015}}</ref>. Le magazine français ''Club Nintendo'' reprend l'expression {{citation|être tétrisé}} dans son premier hors-série de 1990<ref>{{Article|titre=Attention à vous !!!... Vous pourriez bien être tetrisé|périodique=Club Nintendo|numéro=HS 001|page=10|année=1990}}</ref>.
+
+Les versions du jeu dans les [[années 2000]] se voient attribuer de bonnes critiques par la presse et les joueurs. ''[[Tetris DS]]'', sorti en [[2006 en jeu vidéo|2006]], obtient un score de 84/100 sur [[Metacritic]]<ref>{{lien web|url=http://www.metacritic.com/game/ds/tetris-ds|titre=Tetris DS|langue=en|site=metacritic.com|consulté le=12 mars 2015}}</ref>, la presse soulignant un rafraichissement de la série, avec l'ajout de nouveaux modes et l'arrivée du jeu en ligne<ref name="test-tetrisds-jvc" />{{,}}<ref name="test-tetrisds-gamekult">{{lien web|url=http://www.gamekult.com/jeux/test-tetris-ds-J74878t.html|titre=Test Tetris DS|site=Gamekult|date=14 avril 2006|auteur=Frédéric Luu|consulté le=8 avril 2015}}</ref>. ''[[Tetris Party]]'', sorti en [[2008 en jeu vidéo|2008]] en téléchargement [[WiiWare]], obtient des critiques similaires et un score de 86/100 sur Metacritic<ref>{{lien web|url=http://www.metacritic.com/game/wii/tetris-party|titre=Tetris Party|langue=en|site=metacritic.com|consulté le=12 mars 2015}}</ref>. Ce dernier est considéré comme un jeu {{citation|à posséder absolument}} selon [[IGN (site web)|IGN]], grâce à son faible prix<ref>{{lien web|url=http://www.gamekult.com/jeux/test-tetris-party-J89102t.html#ww|titre=Test Tetris Party|date=28 octobre 2008|auteur=Sylvain Chatelain|consulté le=8 avril 2015}}</ref>{{,}}<ref>{{lien web|url=http://www.ign.com/articles/2008/10/20/tetris-party-review|titre=Tetris Party Review|langue=en|date=20 octobre 2008|auteur=Mark Bozon|consulté le==8 avril 2015}}</ref>.
+
+Cependant, la presse est de plus en plus critique dans les [[années 2010]], soulignant le manque de nouveautés sur les nouvelles plate-formes. ''[[Tetris Ultimate]]'' sur [[Xbox One]], édité par [[Ubisoft]], obtient le score de 59/100 sur Metacritic, par exemple<ref>{{lien web|url=http://www.metacritic.com/game/xbox-one/tetris-ultimate|titre=Tetris Ultimate|langue=en|site=metacritic.com|consulté le=12 mars 2015}}</ref>. {{lang|en|[[Game Revolution]]}} estime que cet opus a été développé afin d'arriver en premier sur le marché des [[consoles de jeux vidéo de huitième génération]]<ref>{{lien web|url=http://www.gamerevolution.com/review/tetris-ultimate|titre=Tetris Ultimate Review|site=gamerevolution.com|auteur=Daniel Bischoff|langue=en|date=6 janvier 2015|consulté le=12 mars 2015}}</ref>. De même, [[GameSpot]] évoque un jeu de bonne qualité, fidèle à l'original et à un prix acceptable mais sans nouveauté<ref name="test-ultimate-gamespot">{{lien web|url=http://www.gamespot.com/reviews/tetris-ultimate-review/1900-6415996/|titre=Tetris Ultimate Review|site=gamespot.com|auteur=Britton Peele|langue=en|date=19 décembre 2014|consulté le=12 mars 2015}}</ref>.
+
+=== Ventes ===
+Jusqu'en {{date||octobre|2010|en jeu vidéo}}, le jeu est commercialisé sur plus de 65 plate-formes différentes<ref name="guinness-record-portage" />. Cette diversité rend difficile le comptage du nombre de jeux vendus. Il est impossible de retracer par exemple le nombre de ventes de la plupart des versions avant [[1989 en jeu vidéo|1989]], année de sortie de ''Tetris'' sur [[Game Boy]]. Certaines étaient des copies illégales, d'autres illégitimes aux yeux des Soviétiques, comme celles d'Andromeda Software et [[Spectrum HoloByte]]. De plus, les arcades et les jeux en ligne ne sont pas comptabilisés comme des ventes dans la plupart des classements.
+
+Le plus gros succès sur console de la série reste de loin la version [[Game Boy]], vendue à {{unité|30260000|exemplaires}}, se positionnant à la {{4e}} place des jeux les plus vendus dans le monde en [[2009 en jeu vidéo|2009]]<ref>{{Lien web|url=http://www.jeuxvideo.com/dossiers/00011025/les-50-jeux-les-plus-vendus-de-l-histoire-4-tetris-gameboy-30-260-000-unites-047.htm|titre=Les 50 jeux les plus vendus de l'histoire - Tetris|site=jeuxvideo.com|date=17 juin 2009|consulté le=20 mars 2015}}</ref>. Ce succès s'explique par le fait que ''Tetris'' a été vendu avec la console dans certains packs, lui permettant d'être le {{2e}} jeu le plus vendu de la console, après ''[[Pokémon Rouge et Bleu]]''<ref>{{lien web|url=http://www.vgchartz.com/gamedb/?name=&publisher=&platform=GB&genre=&minSales=0&results=200|titre=Tetris - Game Database, Best Selling Video Games|site=vgchartz.com|langue=en|consulté le=18 avril 2015}}</ref>. 
+La seconde version la plus vendue est celle sur [[NES]], avec plus de 5,5 millions d'exemplaires<ref name="vgchartz" />. La majorité des versions célèbres ont été éditées par [[Nintendo]] : sur les 8 meilleures ventes de la licence, 6 sont sur les consoles de la marque nippone. 
+
+{| class="wikitable centre" style="text-align: center;"
+|-
+|+ Ventes des jeux ''Tetris'', en millions d'exemplaires, hors mobile, d'après VGChartz<ref name="vgchartz">{{lien web|url=http://www.vgchartz.com/gamedb/?name=tetris|titre=Tetris - Game Database, Best Selling Video Games|site=vgchartz.com|langue=en|consulté le=18 avril 2015}}</ref>.<br /> <small>Seuls les jeux à plus d'un million d'exemplaires vendus dans le monde sont listés.</small>
+|-
+! scope="col" rowspan="2" | Année<br />de sortie !! scope="col" rowspan="2" | Nom !! scope="col" rowspan="2" | Plate-forme !! scope="col" colspan="5" | Ventes
+|-
+! scope="col" width="160" | {{Drapeau|États-Unis}} Amérique du Nord !! scope="col" width="150" | {{Europe}} 
+! scope="col" width="150" | {{Japon}} !! scope="col" width="150" | Autres
+! scope="col" width="150" | {{Monde}} Monde
+|-
+| [[1989 en jeu vidéo|1989]] || ''[[Tetris (Game Boy)|Tetris]]'' || [[Game Boy]] || 23,20 || 2,26 || 4,22 || 0,58 || 30,26
+|-
+| [[1988 en jeu vidéo|1988]] || ''Tetris'' || [[NES]] || 2,97 || 0,69 || 1,81 || 0,11 || 5,58
+|-
+| [[1996 en jeu vidéo|1996]] || ''[[Tetris Plus]]'' || [[PlayStation]] || 2,10 || 0,24 || 0,00 || 0,07 || 2,40
+|-
+| [[2006 en jeu vidéo|2006]] || ''[[Tetris DS]]'' || [[Nintendo DS]] || 0,63 || 0,05 || 1,35 || 0,08 || 2,10
+|-
+| [[2002 en jeu vidéo|2002]] || ''[[Tetris Worlds]]'' || [[PlayStation 2]] || 1,11 || 0,71 || 0,00 || 0,27 || 2,08
+|-
+| [[1998 en jeu vidéo|1998]] || ''[[Tetris DX]]'' || [[Game Boy]] || 1,06 || 0,60 || 0,20 || 0,07 || 1,93
+|-
+| [[2001 en jeu vidéo|2001]] || ''[[Tetris Worlds]]'' || [[Game Boy Advance]] || 1,25 || 0,39 || 0,00 || 0,06 || 1,71
+|-
+| [[1992 en jeu vidéo|1992]] || ''[[Tetris 2]]'' || [[Game Boy]] || 0,56 || 0,22 || 0,43 || 0,03 || 1,24
+|-
+|}
+
+Depuis l'arrivée des [[smartphones]] et du jeu sur mobile, ''Tetris'' connait un nouveau succès. [[Electronic Arts]] détient les droits de l'ensemble des versions mobiles du jeu et connaît les plus grosses ventes de la licence. En effet, l'éditeur annonce en [[2010 en jeu vidéo|2010]] que le jeu de puzzle dépasse les 100 millions de téléchargements<ref>{{lien web | url=http://www.maximejohnson.com/techno/2010/01/tetris-atteint-les-100-millions-de-telechargements-payants-et-une-petite-histoire-du-jeu/|titre=Tetris atteint les 100 millions de téléchargements payants (et une petite histoire du jeu)|site=maximejohnson.com|date=21 janvier 2010|auteur=Maxime Johnson|consulté le=18 avril 2015}}</ref> puis 425 millions en {{date||avril|2014}}<ref name="mcetvfr">{{lien web|url=http://mcetv.fr/mon-mag-gamers-time/0904-tetris-vendu-un-demi-milliard-fois-monde/ | titre=Tetris vendu un demi milliard de fois dans le monde|site=mcetv.fr|auteur=Julie Minvielle|date=09 avril 2014|consulté le=18 avril 2015}}</ref>. En y ajoutant les ventes sur consoles, la licence ''Tetris'' a été vendue à plus de 500 millions d'exemplaires dans le monde en 25 ans, depuis l'acquisition des droits par [[Nintendo]]<ref name="mcetvfr" />.
+
+Ces chiffres ne prennent pas en compte les jeux gratuits, comme ''[[Tetris Friends]]'', version officielle du jeu disponible d'abord sur [[Facebook]] jusqu'en [[2012 en jeu vidéo|2012]] puis sur son site officiel, qui a attiré en [[2010 en jeu vidéo|2010]] plus d'un million d'utilisateurs<ref name="tetris-friends-1million">{{lien web|url=http://www.marketwired.com/press-release/Tetris-Friends-Online-Games-Hits-1-Million-Milestone-Launches-Tetris-Arena-1167945.htm|titre=Tetris® Friends Online Games Hits 1 Million Milestone, Launches Tetris Arena|langue=en|auteur=Katie Musselman|date=13 avril 2010|consulté le=18 avril 2015}}</ref>.
+
+=== Distinctions ===
+Les succès commerciaux de la licence ont été accompagnés de plusieurs distinctions : ''Tetris'' se voit régulièrement attribuer les premières places des classements par les magazines et médias<ref>{{lien web|url=http://tetrisbattleworld.blogspot.fr/2012/02/tetris-award-history.html|titre=Tetris Award History|langue=en|auteur=Felix Palgan Jr.|site=tetrisbattleworld.blogspot.fr|consulté le=12 mars 2015}}</ref>{{,}}<ref>{{lien web|url=http://www.euronews.com/2013/06/05/tetris-anniversary-29years-videogames-birthday/|titre=Is Tetris the greatest computer game ever?|langue=en|site=euronews.com|date=5 juin 2013|consulté le=12 mars 2015}}</ref>.
+
+En {{date||mars|1988|en jeu vidéo}}, le jeu reçoit ses premières récompenses de la [[Software and Information Industry Association|{{lang|en|Software Publishers Association}}]], qui lui décerne quatre prix : meilleur logiciel de loisirs, meilleur jeu original, meilleur programme de stratégie et meilleur logiciel grand public<ref name="SagaJV P91" />. L'année suivante, en [[1989 en jeu vidéo|1989]], {{lang|en|[[Computer Gaming World]]}} accorde le ''{{lang|en|Compute! Choice Award for Arcade Game}}'', le qualifiant comme étant {{citation|de loin, le plus addictif [des jeux] jamais créés}}<ref name="compute198901" />. En {{date||décembre|1988|en jeu vidéo}}, le magazine [[Tilt (magazine)|Tilt]] décerne à la version de [[Mirrorsoft]] deux prix [[Tilt d'or]] : meilleur jeu de réflexion/stratégie et jeu le plus original. Le magazine parle d'un jeu {{citation|très prenant}} et affirme que {{citation|l'originalité dont fait preuve [''Tetris''] est incontestable}}<ref>{{Article |titre=Tilt d'or |périodique=Tilt |numéro=60 |mois=décembre |année=1988 |pages=7,10 |issn= |lire en ligne= |consulté le=4 mai 2015}}</ref>.
+
+En [[2007 en jeu vidéo|2007]], Alekseï Pajitnov reçoit le ''{{lang|en|First Penguin Award}}'' à la {{lang|en|[[Game Developers Conference]]}}, décerné aux personnes ayant développé une technologie ou une idée de jeu révolutionnaire<ref name="30-years-tetris" />{{,}}<ref name="gamechoiceawards">{{lien web|url=http://www.gamechoiceawards.com/pr/pr_2007_0212.htm|titre=Game Developers Choice Awards To Honor Alexey Pajitnov, Greg Costikyan, George "The Fatman" Sanger and Shigeru Miyamoto|langue=en|date=12 février 2007|consulté le=20 avril 2015}}</ref>. Selon le jury, ''Tetris'' a popularisé le jeu grand public, aujourd'hui connu sous le terme de ''{{lang|en|[[casual gaming]]}}''<ref name="gamechoiceawards" />. En {{date||mars|2007|en jeu vidéo}}, un comité dirigé par l'un des conservateurs muséaux de l'[[université Stanford]] publie une liste de dix jeux vidéo qui ont créé un nouveau genre, dont ''Tetris''<ref>{{lien web | url=http://www.engadget.com/2007/03/12/10-most-important-video-games-of-all-time-as-judged-by-2-design/ | titre=10 most important video games of all time, as judged by 2 designers, 2 academics, and 1 lowly blogger | langue=en | auteur=James Ransom-Wiley|site=engadget.com|date=12 mars 2007|consulté le=22 avril 2015}}</ref>. Il suggère que ces titres soient conservés à la [[Bibliothèque du Congrès]] aux [[États-Unis]], car sa collection dépasse 3,000 titres<ref>{{lien web|url=http://blogs.loc.gov/digitalpreservation/2012/09/yes-the-library-of-congress-has-video-games-an-interview-with-david-gibson/ |titre=Yes, The Library of Congress Has Video Games: An Interview with David Gibson |langue=en|date=26 septembre 2012|consulté le=22 avril 2015|site=blogs.loc.gov |auteur=Owens Trevor}}</ref>.
+
+L'anniversaire des 25 ans de ''Tetris'' est l'occasion pour de nombreux médias d'accorder des distinctions à la licence. En [[2007 en jeu vidéo|2007]], [[IGN (site web)|IGN]] classe ''Tetris'' comme étant le {{2ème}} jeu de son top 100, derrière ''[[Super Mario Bros.]]''<ref>{{lien web|url=http://top100.ign.com/2007/ign_top_game_2.html|titre=IGN Top 100 Games 2007 | 2# Tetris|langue=en|date=2007|site=top100.ign.com}}</ref>. La même année, le tétrimino L gagne la {{6e}} édition du concours du meilleur personnage de tous les temps, organisé par [[GameFAQs]]<ref>{{lien web|url=http://www.gamefaqs.com/features/cb6.html|titre=Fall 2007: The Great GameFAQs Character Battle VI|site=GameFAQs|langue=en|date=août 2007|consulté le=20 avril 2015}}</ref>. Cette victoire est étonnante, car ce concours est habituellement gagné par [[Link (The Legend of Zelda)|Link]] de la série ''[[The Legend of Zelda (série)|{{lang|en|The Legend of Zelda}}]]'' car, un tétrimino n'étant pas un personnage, la proposition était une « blague »<ref>{{lien web|url=http://www.engadget.com/2007/11/05/tetris-l-block-wins-gamefaqs-character-battle/|titre=Tetris L-block wins GameFAQs character battle|langue=en|site=engadget.com|auteur=Ross Miller|date=5 novembre 2007|consulté le=20 avril 2015}}</ref>.
+
+En [[2009 en jeu vidéo|2009]], ''Tetris'' est classé {{2ème}} sur 50 au classement des jeux vidéo sur console du ''[[Livre Guinness des records]]'', derrière la série ''[[Mario Kart]]''<ref name="usatoday-numbers">{{lien web|url=http://content.usatoday.com/communities/gamehunters/post/2009/06/68024593/1|titre='Tetris' by the numbers|date=12 juin 2009|site=usatoday.com|auteur=Marc Saltzman}}</ref>{{,}}<ref>{{lien web|url=http://www.neoseeker.com/news/9980-guinness-ranks-top-50-console-games-of-all-time/|titre=Guinness ranks top 50 console games of ALL TIME|langue=en|site=neoseeker.com|auteur=Leo Chan|date=26 février 2009|consulté le=20 avril 2015}}</ref>. Au même moment, le magazine ''{{lang|en|[[Game Informer]]}}'' place en {{3e}} position ''Tetris'' dans son classement des 200 meilleurs jeux, ajoutant que {{citation|si un jeu pouvait être considéré intemporel, ça serait ''Tetris''}}<ref name="gi_best">{{ouvrage|auteur=''Game Informer''|titre=The Top 200 Games of All Time|pages=44–79|date=décembre 2009|journal=Game Informer|issn=1067-6392|oclc=27315596}}</ref>. L'équipe du magazine avait déjà accordé en [[2001 en jeu vidéo|2001]] la {{3e}} place à sa liste des 100 meilleurs jeux de tous les temps<ref>{{lien web|titre=Game Informer's Top 100 Games of All Time (Circa Issue 100)|url=http://www.gameinformer.com/b/features/archive/2009/11/16/game-informer-s-top-100-games-of-all-time-circa-issue-100.aspx|langue=en|site=[[Game Informer]]|auteur=Jeff Cork|date=16 novembre 2009|consulté le=21 avril 2015}}</ref>.
+
+== Versions de ''Tetris'' ==
+=== Liste des jeux existants ===
+{{article détaillé|Liste de jeux vidéo Tetris{{!}}Liste de jeux vidéo ''Tetris''}}
+''Tetris'' a été décliné sur une multitude de plate-formes depuis sa version originale sur [[Elektronika 60]]. Le jeu est disponible sur la plupart des consoles de jeu mais également sur ordinateur, smartphone et [[iPod]]. Chaque [[Histoire des consoles de jeux vidéo|génération de consoles de jeux]] a sa version de ''Tetris'', apportant plus ou moins de nouveautés. Selon le ''[[Livre Guinness des records]]'', ''Tetris'' est la licence portée sur le plus grand nombre d'appareils, avec plus de 65 plate-formes en {{date||octobre|2010}}<ref name="guinness-record-portage">{{lien web|url=http://www.guinnessworldrecords.com/world-records/most-ported-computer-game/|titre=Most ported videogame|langue=en|site=guinnessworldrecords.com|date={{1er}} octobre 2010|consulté le=19 mars 2015}}</ref>. Les plus grands succès de la licence sont cependant les versions sur consoles portables, avec les versions sur [[Game Boy]], ''[[Tetris Worlds]]'' et ''[[Tetris DS]]'', établissant 5 des 8 meilleurs ventes de la licence<ref name="vgchartz" />.
+
+Depuis les [[années 2000]], ''Tetris'' s'est également développé sur Internet, avec des versions du jeu sur navigateur. Les versions commerciales non approuvées par [[The Tetris Company]] tendent à disparaître cependant, du fait de la politique de la société<ref name="android-purge" />{{,}}<ref name="iphone-purge" />. La version la plus célèbre, ''[[Tetris Friends]]'' par [[Tetris Online]], a attiré des millions de joueurs sur les réseaux sociaux<ref name="tetris-friends-1million" />. Cette même société développe également plusieurs versions sur consoles de jeu en [[Dématérialisation|version dématérialisée]], téléchargeable via les magasins en ligne<ref>{{lien web|url=http://www.tetrisonline.com/games/tetris_party_dsi.php|titre=Tetris® Party Live|site=tetrisonline.com|langue=anglais|consulté le=27 avril 2015}}</ref>{{,}}<ref>{{lien web|url=http://www.tetrisonline.com/games/tetris_splash_xbla.php|titre=Tetris® Splash|site=tetrisonline.com|langue=anglais|consulté le=27 avril 2015}}</ref>.
+
+<gallery>
+|Cartouche de [[NES]] incluant ''Tetris''.
+Fichier:Gameboy Original shipped with Tetris.jpg|[[Game Boy]] vendu avec le jeu inclus.|alt=Carton de la Game Boy avec le jeu Tetris inclus.
+Fichier:Tetris DS box.jpg|Boite de la version DS.|alt=Boite du jeu ouverte, où l'on peut voir le livret et la cartouche du jeu aux emplacements prévus.
+Fichier:Gtetrinet.png|Jeu libre [[Tetrinet]].|alt=Capture d'écran d'une partie de Tetrinet à 6 joueurs.
+Fichier:Tetris on an iPod.jpg|''Tetris'' sur [[iPod]].|alt=Photo d'un iPod, avec le jeu Tetris à l'écran, et d'une main sur la zone de contrôle de l'appareil.
+</gallery>
+
+À cause de sa popularité et la simplicité de développement, le jeu est souvent choisi comme exercice par les développeurs novices. Il existe ainsi des milliers de versions sur Internet, conçues par des amateurs<ref>{{lien web|url=https://github.com/search?utf8=%E2%9C%93&q=tetris|titre=Recherche « tetris »|site=github.com|consulté le=14 mars 2015}}</ref>. Dans un autre contexte, certains logiciels intègrent le jeu, en version minimaliste, sous la forme d'un {{lang|en|[[easter egg]]}}, par exemple [[µTorrent]]<ref>{{lien web|url=http://www.eeggs.com/items/47291.html|titre=utorrent Easter Egg - Tetris in uTorrent|langue=en|site=eeggs.com|date=16 mars 2006|auteur=Nicolas Barengo|consulté le=31 mars 2015}}</ref>.
+
+=== Évolution et uniformisation du concept ===
+Au sein des franchises officielles, chaque version a pu apporter ses améliorations, grâce aux avancées technologiques et par la volonté de fournir un jeu plus complet. Certains des concepts développés sur des versions officielles ont été intégrés aux ''{{lang|en|guidelines}}'' du jeu, afin d'uniformiser les futurs jeux<ref name="itw-rogers-nwr" />. Les versions deviennent de plus en plus proches, permettant aux joueurs de passer d'une  à l'autre avec peu d'effort. Cependant, les développeurs restent assez libres d'ajouter de nouveaux modes et ainsi revisiter le concept sous un autre angle<ref name="itw-rogers-nwr" />.
+
+Les premiers jeux apportent beaucoup d'évolutions au concept original. Dès la version [[IBM PC]], le jeu est doté d'une interface plus fournie. L'interface est désormais graphique et les [[tétromino|tétrimino]]s sont en couleur, ce qui n'était pas possible sur la machine de l'Académie des sciences affichant uniquement des caractères. Cette version intègre également plus de statistiques que la version de Pajitnov, avec le nombre de tétriminos posés pour chaque type existants, ainsi qu'un guide avec les touches<ref name="vadim-story" />. 
+
+En [[1989 en jeu vidéo|1989]], Nintendo intègre le multijoueur via le [[Câble link]] sur [[Game Boy]]. ''Tetris'' est par ailleurs le premier jeu à utiliser cet accessoire. ''Tetris DS'' ira plus loin en permettant de faire une partie jusqu'à 10 joueurs mais aussi de jouer en ligne, via [[Wi-Fi]]. En [[2014 en jeu vidéo|2014]], [[Ubisoft]] poursuit avec ''[[Tetris Ultimate]]'' qui offre les modes multijoueur local et en ligne.
+
+==== Boutons de contrôles ====
+[[Fichier:Tetris Soft and Hard drop example.gif|thumb|Différence entre ''{{langue|en|soft}}'' et ''{{langue|en|hard drop}}''. Le premier tétrimino utilise le ''{{langue|en|soft}}'', tandis que les suivants utilisent le ''{{langue|en|hard drop}}''.]]
+De nouveaux contrôles apparaissent également pour améliorer la jouabilité. Alors que les premières versions ne permettaient de tourner les tétriminos que dans un sens, la norme est désormais d'avoir deux boutons qui permettent une rotation dans les deux sens. Certains jeux permettent également la double rotation, effectuant un 180° en une touche, par exemple sur le clone ''Quadra''<ref>{{lien web|url=http://tetrisconcept.net/wiki/Quadra|titre=Quadra|site=tetrisconcept.net|langue=en|consulté le=15 avril 2015}}</ref>. De même, le ''{{langue|en|soft drop}}'', permettant de faire tomber une pièce plus rapidement, et le ''{{langue|en|hard drop}}'', qui consiste à faire chuter immédiatement le tétrimino, permettent de glaner plus de points<ref>{{lien web|url=http://harddrop.com/wiki/Drop|titre=Drop|site=harddrop.com|langue=en|consulté le=15 avril 2015}}</ref>. Ces deux mécanismes sont désormais répandus dans les jeux après les années 2000. Ainsi, les ''guidelines'' de [[The Tetris Company]] définissent les 4 actions sur la croix directionnelle des manettes : la touche Haut réalise un ''{{langue|en|hard drop}}'', la touche Bas active le ''{{langue|en|soft drop}}'' et les touches Gauche et Droite décalent le tétrimino. Deux autres touches sont nécessaires pour assigner les deux sens de rotation<ref name="guideline" />.
+
+Pour faciliter le jeu, des versions intègrent une réserve, afin de permettre au joueur de stocker temporairement une pièce, qu'il peut réutiliser plus tard. Apparue pour la première fois dans ''[[The New Tetris]]'', cette fonction est devenue indispensable selon The Tetris Company<ref>{{lien web|url=http://www.ign.com/articles/1999/08/04/the-new-tetris|titre=The New Tetris|date=3 août 1999|auteur=Aaron Boulding|langue=en|consulté le=18 avril 2015}}</ref>{{,}}<ref name="guideline" />. Enfin, les jeux les plus récents intègrent la notion de ''{{lang|en|ghost piece}}'' (pièce fantôme), permettant au joueur de voir où va atterrir le tétrimino<ref name="ghost-piece">{{lien web|url=http://tetris.wikia.com/wiki/Ghost_piece|titre=Ghost piece|langue=en|site=tetris.wikia.com|consulté le=18 avril 2015}}</ref>. Ceci facilite le jeu des débutants mais également des plus avancés qui utilisent énormément le ''{{langue|en|hard drop}}''<ref name="ghost-piece" />.
+
+==== Modes de jeux ====
+Les principaux changements au cours du temps sont sur les modes de jeux proposés. À partir des [[années 1990]], plusieurs nouveaux modes de jeux font leurs apparitions. La version Game Boy instaure 2 modes, appelés ''Type A'' et ''Type B''<ref>{{Harvsp|Nintendo|1989|texte=Manuel du jeu sur Game Boy|p=7-9|id=ManuelGameBoy}}.</ref>. Le ''Type A'' est le mode marathon, où le joueur doit réaliser le meilleur score possible sans limite de temps. Le ''Type B'', plus communément appelé ''sprint'', ajoute une limite de 25 lignes (pouvant différer dans les versions suivantes du jeu), à réaliser le plus rapidement possible<ref name="test-tetrisgb-jvc" />. Cette version ajoute également la possibilité d'initialiser le tableau de jeu avec des tétriminos de base<ref name="test-tetrisgb-jvc" />.
+
+En [[2006 en jeu vidéo|2006]], la [[Tetris DS|version DS]] de Nintendo propose de nouveaux modes, pour un total de 6<ref>{{Harvsp|Nintendo|2006|texte=Manuel du jeu ''Tetris DS''|p=12|id=ManuelDS}}.</ref>{{,}}<ref name="test-tetrisds-jvc" />. En plus du mode standard, 5 modes inédits voient le jour<ref name="test-tetrisds-jvc" /> :
+
+* ''Mission'' : le joueur doit réaliser certaines actions (effectuer une ou plusieurs lignes avec un tétrimino précis par exemple) dans un temps limité ;
+* ''Pousser'' : le joueur doit réaliser des combinaisons pour repousser l'ennemi, comme dans le multijoueur classique, mais avec un plateau de jeu rappelant le [[tir à la corde]] ;
+* ''Toucher'' : profitant de la fonction tactile de la console, ce mode consiste à déplacer au stylet les tétriminos déjà en place afin de faire chuter une cage en moins de coups possible ;
+* ''Attraper'' : au lieu de tourner les tétriminos, le joueur tourne le plateau de jeu et doit réaliser des cubes autour du noyau ;
+* ''Puzzle'' : le joueur choisit l'ordre des pièces et leurs rotations afin de compléter un tableau.
+
+Désormais, les jeux comportent plusieurs modes afin de varier les parties : entre le jeu seul et à plusieurs, ''[[Tetris Friends]]'' propose 11 modes différents, ''[[Tetris Ultimate]]'' en a 6 et 4 modes exclusifs à la version [[Nintendo 3DS]]<ref>[http://www.tetrisfriends.com/ Site officiel de ''Tetris Friends''], consulté le 18 avril 2015</ref>{{,}}<ref name="test-ultimate-gamespot" />.
+
+== Postérité ==
+=== Dans la culture populaire ===
+Le jeu est devenu au fil des années une référence incontournable du jeu vidéo, au même rang que ''[[Pac-Man]]'', [[Mario (personnage)|Mario]] ou ''[[Pokémon]]''. En plus des jeux sur support informatique, ''Tetris'' se décline dans un ensemble d'objets : [[mug]], [[lampe]], bibliothèque{{etc}} Il trouve également écho dans la population, car des fans se déguisent en [[tétromino|tétrimino]]<ref>{{YouTube|byur9T5kzQ8|Tetris carnival costume}}</ref>. Comme pour les jeux, [[The Tetris Company]] surveille l'utilisation de sa marque et se charge de fournir des autorisations pour les utilisations commerciales dérivées de ''Tetris''. En [[2013]], la société signe un accord avec [[Hasbro]] pour éditer les jeux [[Jenga]] et ''{{langue|en|Bop It}}'', vendus à partir du mois d'août de la même année<ref>{{lien web|url=http://www.maxigadget.com/2013/02/hasbro-jenga-tetris-bopit-tetris-jeu-societe.html|titre=Hasbro décline Tetris en Jeu de Société avec Jenga et Bop it|date=février 2013|site=maxigadget.com|consulté le=19 avril 2015}}</ref>.
+<gallery>
+Fichier:Tetris lamp.jpg|Lampe formée de tétriminos.|alt=Lampe allumée, composée de blocs de couleurs rappelant les tétriminos.
+Fichier:Tetris costumes (DragonCon Parade 2012).jpg|Costumes de tétriminos lors d'un défilé.|alt=Défilé dans la rue, avec des personnes déguisées en tétriminos.
+Fichier:Tetris Dress.jpg|Robe ''Tetris''.|alt=Robe noire en exposition, arboré de tétriminos (de plus en plus dense vers le bas) mimant la chute de ces derniers.
+Fichier:Tetris Jenga.jpg|Jeu de société [[Jenga]] ''Tetris''|alt=Partie du jeu de société Jenga, avec des blocs colorés rappelant les tétriminos.
+</gallery>
+[[Fichier:Mikontalolights.JPG|thumb|Bâtiment diffusant une partie de ''Tetris'' via la lumière de ses bureaux.|alt=Vue nocturne d'une façade de bâtiment éclairé de façon à afficher une partie de Tetris.]]
+La simplicité de ''Tetris'' a amené des fans à simuler des parties sur de plus grandes surfaces qu'une console de jeu. Le {{date|15|septembre|2010}}, la plus grande partie de ''Tetris'', certifiée par le ''[[Livre Guinness des records]]'', est jouée avec un plateau de jeu de {{unité|105.79|m|2}}, lors de l'émission ''{{lang|en|The Gadget Show}}'' filmée à [[Birmingham]]<ref>{{lien web|url=http://www.guinnessworldrecords.com/world-records/largest-game-of-tetris|titre=Largest game of Tetris|langue=en|site=guinnessworldrecords.com|consulté le=22 mars 2015}}</ref>{{,}}<ref>{{lien web|url=http://www.ja-productions.co.uk/events/39/gadget-show-tetris-world-record.html|titre=Gadget Show Tetris World Record|langue=en|site=ja-productions.co.uk|consulté le=22 mars 2015}}</ref>. Un autre exemple bien connu est la prestation au [[MIT]], sur le {{lang|en|Green Building}} dans la soirée du {{date|20|avril|2012|en jeu vidéo}}<ref name="MIT-Building">{{lien web|url=http://hacks.mit.edu/by_year/2012/tetris/|titre=Tetris on the Green Building|site=hacks.mit.edu|consulté le=3 mars 2015}}</ref>. Le bâtiment était composé de 17 étages avec 9 pièces en largeur sur une de ses faces. Chaque pièce, équipée d'un système d'éclairage, affichait une couleur unie différente, selon l'état du jeu<ref group="n">Ce système avait été installé pour afficher le drapeau américain en hommage aux [[attentats du 11 septembre 2001]].</ref>{{,}}<ref name="source-MITris" />. Un programme, gérant l'éclairage de chaque pièce, simulait les pièces et le plateau de jeu de ''Tetris''. Les passants pouvaient modifier la disposition des pièces grâce à une console à {{unité|70|mètres}} du bâtiment<ref name="source-MITris" />. Le jeu comportait trois niveaux : le second rendait le jeu plus complexe avec des couleurs atténuées et le troisième modifiait les couleurs de toutes les pièces du plateau à chaque image. L'ensemble du code du projet, réalisé par des chercheurs du MIT, est disponible librement sur [[GitHub]]<ref name="source-MITris">{{lien web|url=https://github.com/mitrisdev/d54/|titre=Display 54|site=github.com}}</ref>. Ces performances ont inspiré de nombreux étudiants et autres résidents d'immeubles, qui ont effectué la même activité avec les fenêtres de dortoirs<ref name="lemonde-culture">{{lien web|url=http://www.lemonde.fr/technologies/article/2009/06/02/25-ans-apres-tetris-est-toujours-un-jeu-culte_1201109_651865.html|titre=25 ans après, Tetris est toujours un jeu culte|date=2 juin 2009|auteur=Hélène Franchineau|site=Le Monde|consulté le=5 avril 2015}}</ref>.
+
+Le jeu télévisé ''{{lang|en|The Brain Wall}}'', diffusé au [[Japon]], force les candidats à devenir des pièces de ''Tetris'', afin de passer à travers des obstacles et ainsi éviter de chuter dans l'eau<ref name="lemonde-culture" />. Le concept sera repris dans plusieurs pays, dont en France, sur la chaine [[TMC (chaîne de télévision)|TMC]] avec ''[[Le Mur Infernal]]''. Avec le développement des vidéos ''{{lang|en|[[timelapse]]}}'', plusieurs réalisations amateures apparaissent sur [[Internet]], mettant en scène plusieurs personnes formant des tétriminos « humains »<ref>{{Youtube|G0LtUX_6IXY|The Original Human TETRIS|auteur=Guillaume Reymond}}</ref>.
+
+''Tetris'' se répand également au-delà du jeu vidéo. Le {{date|30|septembre|2014|au cinéma}}, Larry Kasanoff, le producteur du film ''[[Mortal Kombat (film)|Mortal Kombat]]'', annonce au ''[[The Wall Street Journal|Wall Street Journal]]'' que sa société, Threshold Entertainment, et la Tetris Company allaient adapter ''Tetris'' au cinéma sous forme de film de [[science-fiction]]<ref>{{lien web|url=http://blogs.wsj.com/speakeasy/2014/09/30/tetris-movie/?mod=e2tw|titre=A ‘Tetris’ Movie Is in the Works|langue=en|date=30 septembre 2014|site=Wall Street Journal|consulté le=5 avril 2015}}</ref>.
+
+=== Dans la recherche académique ===
+En plus de sa conception au sein de l'[[Académie des sciences de Russie|Académie des sciences de l'URSS]], ''Tetris'' est fréquemment étudié dans la recherche académique. [[Vladimir Pokhilko]] est le premier à mener des études de [[psychologie]] avec le jeu, quelques années après sa sortie<ref name="tetris-recherche">{{Ouvrage| auteur=Mark J. P. Wolf | titre=Encyclopedia of Video Games: The Culture, Technology, and Art of Gaming | langue=en|url=http://books.google.com/books?id=deBFx7QAwsQC&pg=PA642 | consulté le=4 avril 2015| date=31 août 2012 | éditeur=ABC-CLIO | isbn=978-0-313-37936-9 | passage=642 }}</ref>. D'autres recherches seront ensuite menées en [[calculabilité]], en [[algorithmique]] ou en [[psychologie cognitive]]<ref name="tetris-recherche" />. 
+
+''Tetris'' fait régulièrement l'objet d'études en [[Théorie de la complexité (informatique théorique)|théorie de la complexité]]. Bien qu'une partie soit en pratique infinie, comme le démontre Brzustowski<ref name="ThesisCanYouWin Ouvrage" />, Liban-Nowell ''et al.'' prouvent en [[2002]] que déterminer le placement optimal des pièces pour faire le plus de lignes, maximiser les combos et limiter la hauteur maximale du plateau de jeu sont des [[problème NP-complet|problèmes NP-complet]]<ref name="libanNowell">{{article|année=2002|titre=Tetris is Hard, Even to Approximate|journal=International Journal of Computational Geometry & Applications|langue=en|auteur=Erik D. Demaine, Susan Hohenberger, David Liben-Nowell|lire en ligne=http://arxiv.org/abs/cs/0210020}}</ref>. Cela signifie que, malgré la simplicité des règles du jeu, il est difficile pour un ordinateur de fournir la combinaison parfaite avec une suite de [[tétromino|tétriminos]] donnée.
+
+L'[[effet Tetris|effet ''Tetris'']] est étudié en psychologie. En cas de trop longues sessions de jeux vidéo, le joueur peut souffrir d'un syndrome qui altère les pensées et les rêves en fonction du jeu auquel il a joué. Expérimenté pour la première fois avec ''Tetris'', les joueurs peuvent s'imaginer ranger les objets de leur quotidien par empilement à la manière du jeu ou rêver de briques chutant<ref>{{lien web|url=http://www.citypaper.net/articles/032196/article038.shtml|titre=Do computer games fry your brain?|auteur=Annette Earling|langue=en|site=Philadelphia City Paper|date=21-28 mars 1996|consulté le=4 avril 2015}}</ref>. Plusieurs recherches montrent que ''Tetris'' interviendrait au niveau de la [[mémoire procédurale]], permettant à des gens ayant des troubles de mémoires de rêver de chutes de pièces sans se souvenir d'y avoir joué<ref name="stickgold">{{article | nom1 = Stickgold | prénom1 = Robert | nom2 = Malia | prénom2 = April | nom3 = Maguire | prénom3 = Denise | nom4 = Roddenberry | prénom4 = David | nom5 = O'Connor | prénom5 = Margaret | titre = Replaying the Game: Hypnagogic Images in Normals and Amnesics | doi = 10.1126/science.290.5490.350 | journal = Science | volume = 290 | numéro = 5490 | pages = 350–353 | année = 2000 | pmid =  11030656}}.</ref>. Une étude de Holmes ''et al.'' de [[2009]] montre que ''Tetris'' peut également empêcher les souvenirs de traumatismes de ressurgir si le patient joue au jeu après un choc<ref name="holmes">{{article|année=2009|titre=Can Playing the Computer Game "Tetris" Reduce the Build-Up of Flashbacks for Trauma? A Proposal from Cognitive Science|journal=PLoS ONE |volume=4|page=e4153|doi=10.1371/journal.pone.0004153|langue=en|auteur=Holmes EA,  James EL,  Coode-Bate T,  Deeprose C, | pmid=19127289 | numéro=1 | pmc=2607539 | editor1-last=Bell | editor1-first=Vaughan}}</ref>.
+
+En [[2013]], une étude de l'[[université de Plymouth]] avance que jouer à ''Tetris'' permettrait de réduire les addictions<ref name="tetris-reduce-addiction">{{article|année=2013|titre=Playing ‘Tetris’ reduces the strength, frequency and vividness of naturally occurring cravings|doi=10.1016/j.appet.2014.01.073|périodique=Appetite|volume=76|pages=161-165|langue=en|auteur1=Jessica Skorka-Brown|auteur2=Jackie Andrade|auteur3=Jon May|consulté le=22 avril 2015}}</ref>. Les chercheurs ont demandé à un groupe de 119 personnes leurs degrés d'envie pour divers besoins : nourriture, caféine, nicotine{{etc}} Les participants ayant joué à ''Tetris'' pendant trois minutes voient leurs envies diminuer de 24 % alors que les autres, restés inactifs devant un programme qui charge, n'observent aucun changement. Les chercheurs concluent que jouer à ''Tetris'', ou plus généralement faire travailler la [[Habileté de construction visuo-spatiale|mémoire visuo-spatiale]], peut permettre de faire oublier la sensation de faim, de soif et le manque de nicotine<ref name="tetris-reduce-addiction" />.
+
+=== Records ===
+À cause de son aspect addictif, ''Tetris'' a rapidement amené des joueurs à tenter d'établir des records<ref>{{lien web|url=http://www.gizmodo.fr/2012/10/25/tetris.html|titre=Pourquoi sommes-nous addicts à Tetris ?|date=25 octobre 2012|auteur=F. Corvisier|site=gizmodo.fr|consulté le=27 avril 2015}}</ref>. La mesure la plus facile pour comparer les performances est le score, puisque c'est l'une des informations fournies par le jeu. Le temps n'est pas représentatif du niveau dans certaines versions, à cause du ''[[#Easy spin : contournement du système de jeu|{{langue|en|easy spin}}]]'' qui bloque une pièce dans sa chute. 
+
+Le nombre de points devient cependant vite une limite : pour des raisons techniques, les premières versions limitent le score à un nombre à 6 ou 7 chiffres. La version originale sur [[Game Boy]] est par exemple limitée à {{formatnum:999999}}<ref>{{Youtube|keeSEJG4XzU|Game Boy Tetris - 999,999 points}}</ref>. Par la suite, ''[[Tetris DX]]'' ajoute un chiffre supplémentaire, permettant d'aller jusqu'à {{formatnum:9999999}}<ref name="record-tetris-dx" />. Cependant les joueurs atteignent vite ce palier, en quelques heures de jeu. ''[[Tetris DS]]'' accorde un chiffre de plus au score mais ne mémorise qu'un nombre de lignes sur 3 chiffres, jusqu'à 999<ref name="recod-max-tetris-ds">{{Youtube|KcCvuhSl44c|Tetris DS Max High Score}}</ref>. Cette limitation ne permet pas d'effectuer de classement pour les joueurs de haut niveau. Le jeu possède par ailleurs un [[bug (informatique)|bug]], puisque le record n'est pas enregistré s'il égale {{formatnum:999999999}}<ref name="recod-max-tetris-ds" />.
+
+Pour résoudre ces problèmes, certains jeux mettent alors en place des parties limitées en temps<ref>{{lien web|url=http://www.gamespot.com/reviews/the-new-tetris-review/1900-2544908/|titre=The New Tetris Review |langue=en|site=gamespot.com|auteur=Jeff Gerstmann|date=9 août 1999|consulté le=14 avril 2015}}</ref>. Le joueur doit alors réaliser le plus grand score ou réaliser le plus grand nombre de lignes. Néanmoins, le nombre important de versions rend difficile la comparaison des scores de chaque joueur. Le ''[[Livre Guinness des records]]'' attribue le record du plus grand nombre de lignes effectuées à Harry Hong, sur ''[[Tetris DX]]''<ref name="record-tetris-dx">{{lien web|url=http://www.guinnessworldrecords.com/world-records/most-lines-cleared-in-tetris-dx/|titre=Most lines cleared in Tetris DX|langue=en|site=guinnessworldrecords.com|date=13 septembre 2007|consulté le=14 avril 2015}}</ref>. Le {{date|13|septembre|2007}}, le joueur américain réalise {{formatnum:4988}} lignes ainsi que le score maximum de {{formatnum:9999999}}<ref name="record-tetris-dx" />.
+
+Selon le site {{lang|en|Twin Galaxies}}, le record sur borne d'arcade est détenu par Jeff Craggy, depuis le {{date|3 avril 2012|en jeu vidéo}}, avec un score de {{formatnum:2072133}}<ref name="world-record-arcade">{{Lien web|url=http://www.twingalaxies.com/scores.php?scores=5011|titre=Scores of Points - Tetris|site=twingalaxies.com|langue=en|consulté le=14 avril 2015}}</ref>, alors que fureur.org attribue le record à Matthieu Valles, avec {{unité|2289756|points}}<ref name="fureur-records" />. Le précédent record, par Stephen Krogman le {{date|5 juin 1999|en jeu vidéo}}, s'élevait à {{formatnum:1648905}}<ref name="world-record-arcade" />. Pour illustrer les différences entre les versions, le record certifié sur Game Boy est {{formatnum:748757}} points, par Uli Horner<ref name="world-record-gb">{{Lien web|url=http://www.twingalaxies.com/scores.php?scores=392|titre=Scores of Points - Tetris Game Boy|site=twingalaxies.com|langue=en|consulté le=14 avril 2015}}</ref>. Dans la catégorie féminine, en prenant en compte la performance de Valles, Clémence Larrat détient le record mondial, avec un score de {{unité|2194094|points}}<ref name="fureur-records">{{Lien web|url=http://www.fureur.org/dossier/article-oldies-goodies-2-tetris|titre=Scores Tetris|langue=en|site=http://www.fureur.org}}</ref> obtenu lors de la Tetris {{lang|en|World Cup}} de Tampa, en Floride, le {{date|4 avril 2010|en jeu vidéo}}.
+
+Depuis sa sortie en {{date|novembre 2014|en jeu vidéo}}, la version ''[[Tetris Ultimate]]'' dispose d'un classement général international<ref name="ubi-ultimate-itw">{{lien web|url=http://blog.ubi.com/tetris-ultimate-alexey-pajitnov-henk-rogers-interview/|titre=Tetris Ultimate – Alexey Pajitnov and Henk Rogers On 30 Years of Dropping Blocks|date=30 juin 2014|auteur=Mikel Reparaz|site=blog.ubi.com|langue=en|consulté le=17 mars 2015}}</ref>. Au début du développement du jeu, Pajitnov a demandé de pouvoir {{citation|savoir qui est le meilleur joueur au monde}}<ref name="ubi-ultimate-itw" />. Ainsi, le jeu permet de voir le meilleur score de l'ensemble des joueurs du globe, indépendamment de la plate-forme, et de voir la partie afin d'étudier la stratégie de jeu par exemple<ref name="ubi-ultimate-itw" />.
+
+=== Polémique sur l'histoire de la série ===
+Depuis la reprise des droits par Pajitnov, via [[The Tetris Company]], le créateur tente à plusieurs reprises de réécrire l'histoire de ''Tetris''<ref name="lemonde-réécriture-histoire">{{lien web|url=http://www.lemonde.fr/pixels/article/2014/11/26/comment-le-createur-de-tetris-reecrit-l-histoire-du-jeu-a-son-profit_4529835_4408996.html|titre=Comment le créateur de « Tetris » réécrit l’histoire du jeu à son profit|site=Le Monde|date=26 novembre 2011|consulté le=20 mars 2015}}</ref>{{,}}<ref name="gamekult-réécriture-histoire">{{lien web|url=http://www.gamekult.com/actu/tetris-faux-trentenaire-vraie-anomalie-historique-A133165.html|titre=Tetris, faux trentenaire, vraie anomalie historique|date=5 juin 2014|auteur=William Audureau|site=[[Gamekult]]|consulté le=23 mars 2015}}</ref>. Depuis la fin des [[années 2000]], le site officiel ne fait aucune mention de Dmitri Pavlovski et [[Vadim Guerassimov]], qui l'ont pourtant aidé à concevoir et promouvoir les premières versions du jeu<ref name="lemonde-réécriture-histoire" />{{,}}<ref name="about-tetris">{{lien web|url=http://tetris.com/about-tetris/|titre=About Tetris|langue=en|site=tetris.com|consulté le=20 mars 2015}}</ref>.
+
+[[Fichier:Tetris09.gif|thumb|upright=1.3|alt=Logo Google sous la forme de tétriminos|Le [[logo de Google]] du {{date|6|juin|2009}} célébrant le {{25e}} anniversaire de ''Tetris''.]]
+De la même façon, la date de création du concept suscite le débat. Plusieurs sources se contredisent : le site officiel évoque {{date||juin|1984}}, alors que d'autres sources évoquent 1985 voire 1986<ref name="lemonde-réécriture-histoire" />. Selon Guerassimov, le co-développeur original, le jeu n'aurait été finalisé qu'après ''Antix'', un autre jeu élaboré au sein de l'Académie des sciences, en [[1985 en jeu vidéo|1985]]<ref name="gamekult-réécriture-histoire" />. Ces contradictions sont d'autant plus étranges que la date de [[1984 en jeu vidéo|1984]] apparaît sur le site officiel en 2009, à la veille des 25 ans du jeu, fixé le 6 juin<ref name="lemonde-réécriture-histoire" />. Plusieurs anonymes ont conclu que le service communication de la société a voulu établir une date de naissance fixe<ref name="gamekult-réécriture-histoire" />. 
+
+Cette date est celle désormais utilisée pour les hommages. Le 6 juin 2009, [[Google]] rend hommage à ''Tetris''<ref>{{Lien web|url=http://searchengineland.com/google-celebrates-25-years-of-tetris-with-doodle-20569|titre=Google Celebrates 25 Years Of Tetris With Doodle|langue=en|auteur=Barry Schwartz|éditeur=SearchEngineLand|date=5 juin 2009|consulté le=8 février 2014}}</ref>. En {{date||juin|2014}}, [[Ubisoft]] annonce la sortie de ''[[Tetris Ultimate]]'' pour souligner les 30 ans de la licence<ref>{{lien web|url=http://www.gamespot.com/articles/tetris-turns-30-creator-says-he-still-plays-every-week/1100-6420154/|titre=Tetris Turns 30, Creator Says He Still Plays Every Week|site=gamespot.com|date=6 juin 2014|auteur=Eddie Makuch|consulté le=23 mars 2015}}</ref>.
+
+Le site officiel met également de côté les problèmes de droits qu'a subis la licence à la fin des [[années 1980]]. Selon la page d'informations de 2014, la licence aurait été développée uniquement par Pajitnov avant que [[Nintendo]] ne s'intéresse au jeu<ref name="about-page-2014">{{lien web|url=http://web.archive.org/web/20140625071153/http://tetris.com/about-tetris/|titre=About Tetris, en 2014|langue=en|site=tetris.com|date=25 juin 2014|consulté le=19 avril 2015}}</ref>. [[Spectrum HoloByte]] et [[Mirrorsoft]] ne sont pas cités une seule fois, alors qu'ils ont fortement contribué à populariser ''Tetris'' en Occident.
+
+== Notes et références ==
+=== Notes ===
+{{Références|colonnes=2|group=n}}
+
+=== Références ===
+{{Références|colonnes=3}}
+
+=== Bibliographie ===
+{{légende plume}}
+
+==== Livres ====
+* {{Ouvrage
+ | langue                 = fr
+ | auteur1                = Daniel Ichbiah
+ | titre                  = La Saga des Jeux Vidéo
+ | éditeur                = Pix'N Love Editions
+ | année                  = 1997
+ | numéro d'édition       = 1
+ | pages totales          = 410
+ | passage                = 84-100
+ | isbn                   = 2266087630
+ | présentation en ligne  = http://www.editionspixnlove.com/Tous-nos-ouvrages/La-Saga-des-Jeux-Video/flypage.tpl.html
+ | id                     = SagaJV
+ |plume=oui
+}}
+*
+* {{Ouvrage
+ | langue                 = en
+ | auteur1                = Bill Loguidice
+ | auteur2                = Matt Barton
+ | titre                  = Vintage Games
+ | sous-titre             = An insider look at the history of the most influential games of all time
+ | éditeur                = Focal press
+ | mois                   = 02
+ | année                  = 2009
+ | numéro d'édition       = 1
+ | pages totales          = 408
+ | passage                = 291-301
+ | isbn                   = 0240811461
+ | présentation en ligne  = http://www.focalpress.com/books/details/9780415856003/
+ | id                     = VintageGames
+ |plume=oui
+}}
+*
+* {{Ouvrage
+ | langue                 = en
+ | auteur1                = Steven Kent
+ | titre                  = The Ultimate History of Video Games: From Pong to Pokemon
+ | sous-titre             = The Story Behind the Craze That Touched Our Lives and Changed the World
+ | éditeur                = Three Rivers Press
+ | mois                   = octobre
+ | année                  = 2001
+ | numéro d'édition       = 1
+ | pages totales          = 624
+ | passage                = 377-381
+ | isbn                   = 9780761536437
+ | id                     = UltimateHisto
+ |plume=oui
+}}
+*
+* {{Ouvrage
+ | langue                 = en
+ | auteur1                = David Sheff
+ | auteur2                = Andy Eddy
+ | titre                  = Game Over
+ | sous-titre             = Press start to continue
+ | éditeur                = Cyberactive Media Group Inc/Game Pr
+ | mois                   = avril
+ | année                  = 1999
+ | numéro d'édition       = 1
+ | pages totales          = 494 
+ | passage                = 295-348
+ | isbn                   = 0966961706
+ | id                     = GameOver
+ |plume=oui
+}} 
+*
+* {{Ouvrage
+ | langue                 = en
+ | auteur1                = Gregory Trefry
+ | titre                  = Casual Game Design
+ | sous-titre             = Designing Play for the Gamer in ALL of Us
+ | éditeur                = CRC Press
+ | mois                   = janvier
+ | année                  = 2010
+ | numéro d'édition       = 1
+ | pages totales          = 264
+ | passage                = 179-185
+ | isbn                   = 0123749530
+ | lire en ligne          =
+ | présentation en ligne  = http://www.crcpress.com/product/isbn/9780123749536
+ | id                     = CasualGameDesign
+}}
+*
+* {{Ouvrage 
+ | langue                 = en 
+ | titre                  = Can you win at Tetris?
+ | auteur1                = John Brzustowski
+ | année                  = 1992
+ | nature ouvrage         = Thèse de {{lang|en|Master of Sciences}}
+ | éditeur                = University of British Columbia
+ | lire en ligne          = http://circle.ubc.ca/handle/2429/3263
+ | id                     = ThesisCanYouWin
+}}
+
+==== Manuels d'instructions de jeux ====
+* {{Ouvrage
+ | langue                 = en 
+ | titre                  = Instructions booklet
+ | sous-titre             = Notice du jeu [[Tetris (Game Boy)]]
+ | éditeur                = Nintendo
+ | année                  = 1990
+ | pages totales          = 18
+ | lire en ligne          = http://www.superluigibros.com/downloads/manuals/gameboy/Tetris_-_Manual_-_GB.pdf
+ | id                     = ManuelGameBoy
+}} {{plume}}
+* {{Ouvrage
+ | langue                 = en 
+ | titre                  = Instructions booklet
+ | sous-titre             = Notice du jeu Tetris 2
+ | éditeur                = Nintendo
+ | année                  = 1993
+ | pages totales          = 28
+ | lire en ligne          = http://www.nesfiles.com/NES/Tetris_2/Tetris_2.pdf
+ | id                     = ManuelTetris2
+}}
+* {{Ouvrage
+ | langue                 = en 
+ | titre                  = Instructions booklet
+ | sous-titre             = Notice du jeu [[Tetris DS]]
+ | éditeur                = Nintendo
+ | année                  = 2006
+ | pages totales          = 39
+ | lire en ligne          = http://www.nintendo.com/consumer/gameslist/manuals/DS_Tetris_DS.pdf
+ | id                     = ManuelDS
+}}
+
+=== Documentaires vidéo ===
+* {{DVDBibliographie
+ | langue                = en
+ | vo                    = en
+
+ | prénom réalisateur    = Magnus 
+ | nom réalisateur       = Temple
+ | distributeur          = BBC
+ | lien distributeur     = British Broadcasting Corporation
+
+ | titre                 = Tetris
+ | sous-titre            = From Russia with Love 
+
+ | année                 = 2004
+ | mois                  = février
+ | jour                  = 9
+
+ | format                = Documentaire
+ | durée                 = 60 min
+
+ | présentation en ligne = http://www.imdb.com/title/tt0409371/
+ | commentaire           = 
+ | id                    = TVFromRussiaWithLove
+}} {{plume}}
+
+* {{DVDBibliographie
+ | langue                = en
+ | vo                    = en
+ 
+ | prénom réalisateur    = Adam 
+ | nom réalisateur       = Cornelius
+
+ | titre                 = Ecstasy of Order
+ | sous-titre            = The Tetris Masters
+
+ | année                 = 2011
+ | mois                  = octobre
+ | jour                  = 
+
+ | format                = Documentaire
+ | durée                 = 
+
+ | présentation en ligne = http://www.imdb.com/title/tt1836974/
+ | commentaire           = 
+ | id                    = TVEcstasyOfOrder
+}}
+
+== Voir aussi ==
+=== Articles connexes ===
+{{Autres projets|commons=Category:Tetris|wikibooks=Tetris}}
+* [[Effet Tetris]] : ''Tetris'' employé comme exemple dans les domaines de la [[psychologie]] et de la [[sélection naturelle]].
+* ''[[Tetrinet]]'' : version multijoueur jouable en ligne de ''Tetris''.
+* ''[[Korobeïniki]]'' et ''[[Kalinka]]'', reprises musicales d'airs russes qui ont servi au jeu.
+
+=== Liens externes ===
+* {{Site officiel |langue=en |url=http://www.tetris.com|titre=Site officiel de ''Tetris''}}
+* {{en}} [http://tetris.com/play-tetris/ Jeu en ligne officiel]
+* {{en}} [http://tetris.wikia.com Wiki non officiel sur le jeu]
+* {{Lien web|url=http://www.grospixels.com/site/tetris.php|titre=Histoire de ''Tetris''|site=[http://www.grospixels.com/ www.grospixels.com]}}
+
+{{Palette|Tetris}}
+{{Portail|jeu vidéo|années 1980|Russie}}
+{{Article de qualité|oldid=115759385|date=6 juin 2015}}
+
+[[Catégorie:Jeu de puzzle]]
+[[Catégorie:Jeu vidéo sorti en 1984]]
+[[Catégorie:Jeu Amiga]]
+[[Catégorie:Jeu Amstrad CPC]]
+[[Catégorie:Jeu Apple II]]
+[[Catégorie:Jeu vidéo d'arcade]]
+[[Catégorie:Jeu Atari ST]]
+[[Catégorie:Jeu Commodore 64]]
+[[Catégorie:Jeu DOS]]
+[[Catégorie:Jeu FM-7]]
+[[Catégorie:Jeu Game Boy]]
+[[Catégorie:Jeu Mac OS]]
+[[Catégorie:Jeu Mega Drive]]
+[[Catégorie:Jeu MSX]]
+[[Catégorie:Jeu Nintendo Entertainment System]]
+[[Catégorie:Jeu Nintendo DS]]
+[[Catégorie:Jeu Xbox One]]
+[[Catégorie:Jeu PC-98]]
+[[Catégorie:Jeu ZX Spectrum]]
+[[Catégorie:Jeu NP-complet]]
+[[Catégorie:Jeu vidéo développé en Russie]]

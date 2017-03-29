@@ -1,0 +1,21 @@
+A '''Bob''' (contraction of '''''B'''litter '''ob'''ject'') was a graphical element (GEL) first used by the [[Amiga]] computer. Bobs were [[sprite (computer graphics)|hardware sprite]]-like objects, movable on the screen with the help of the [[blitter]] [[coprocessor]].
+
+The [[AmigaOS]] GEL system consisted of VSprites, Bobs, AnimComps (''animation components'') and AnimObs (''animation objects''), each extending the preceding with additional functionality. While VSprites were a virtualization of hardware sprites Bobs were drawn into a playfield by the blitter, saving and restoring the background of the GEL as required. The Bob with the highest video priority was the last one to be drawn, which made it appear to be in front of all other Bobs.
+
+In contrast to hardware sprites Bobs were not limited in size and number. Bobs required more [[Clock rate|processing power]] than sprites, because they required at least one [[Direct memory access|DMA]] memory copy operation to draw them on the screen. Sometimes three distinct memory copy operations were needed: one to save the screen area where the Bob would be drawn, one to actually draw the Bob, and one later to restore the screen background when the Bob moved away.
+
+An AnimComp added animation to a Bob and an AnimOb grouped AnimComps together and assigned them velocity and acceleration.
+
+== References ==
+Rob Peck (1986). ''ROM Kernel Reference Manual: Libraries and Devices'', [[Pearson PLC|Addison-Wesley]], ISBN 0-201-11078-4
+
+== See also ==
+* [[Original Amiga chipset]]
+
+[[Category:Commodore Amiga]]
+[[Category:Computer graphics]]
+[[Category:Demo effects]]
+
+{{Compu-graphics-stub}}
+
+[[de:BOB (Computergrafik)]]

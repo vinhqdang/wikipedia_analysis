@@ -1,0 +1,211 @@
+{{Essay-like|date=October 2008}}
+
+'''Programming style''' is a set of rules or guidelines used when writing the [[source code]] for a [[computer program]]. It is often claimed that following a particular programming style will help [[programmer]]s to read and understand source code conforming to the style, and help to avoid introducing errors.
+
+A classic work on the subject was ''[[The Elements of Programming Style]]'', written in the 1970s, and illustrated with examples from the [[Fortran]] and [[PL/I]] languages prevalent at the time.
+
+The programming style used in a particular program may be derived from the [[coding conventions]] of a company or other computing organization, as well as the preferences of the author of the code. Programming styles are often designed for a specific [[programming language]] (or language family): style considered good in [[C (programming language)|C]] source code may not be appropriate for [[BASIC programming language|BASIC]] source code, and so on. However, some rules are commonly applied to many languages.
+
+==Elements of good style==
+Good style is a subjective matter, and is difficult to define. However, there are several elements common to a large number of programming styles. The issues usually considered as part of programming style include the layout of the source code, including indentation; the use of white space around operators and keywords; the capitalization or otherwise of keywords and variable names; the style and spelling of user-defined identifiers, such as function, procedure and variable names; and the use and style of [[Comment (computer programming)|comments]].
+
+==Code appearance==
+Programming styles commonly deal with the visual appearance of source code, with the goal of requiring less human cognitive effort to extract information about the program. Software has long been available that formats source code automatically, leaving coders to concentrate on naming, logic, and higher techniques. As a practical point, using a computer to format source code saves time, and it is possible to then enforce company-wide standards without [[Flaming (Internet)#Holy Wars|debates]].
+
+===Indentation===
+{{Main|Indent style}}
+[[Indent style]]s assist in identifying control flow and blocks of code. In some programming languages indentation is used to delimit logical blocks of code; correct indentation in these cases is more than a matter of style. In other languages indentation and [[Whitespace character|white space]] do not affect function, although logical and consistent indentation makes code more readable. Compare:
+
+<source lang="c">
+if (hours < 24 && minutes < 60 && seconds < 60) {
+    return true;
+} else {
+    return false;
+}
+</source>
+
+or
+<source lang="c">
+if (hours < 24 && minutes < 60 && seconds < 60)
+{
+    return true;
+}
+else
+{
+    return false;
+}
+</source>
+with something like
+<!-- Note that the following code block is intentionally mis-indented. Do not "fix" it to use correct indentation. -->
+<source lang="c">
+if  ( hours   < 24
+   && minutes < 60
+   && seconds < 60
+)
+{return    true
+;}         else
+{return   false
+;}
+</source>
+
+The first two examples are probably much easier to read because they are indented in an established way (a "hanging paragraph" style). This indentation style is especially useful when dealing with multiple nested constructs.
+
+====ModuLiq====
+The ModuLiq Zero Indent Style groups with carriage returns rather than indents. Compare all of the above to:
+
+<source lang="c">
+if (hours < 24 && minutes < 60 && seconds < 60)
+return true;
+
+else
+return false;
+</source>
+
+====Python====
+[[Python language|Python]] uses indentation to indicate control structures, so correct indentation is ''required''. By doing this, the need for bracketing with [[curly braces]] (i.e. <code>{</code> and <code>}</code>) is eliminated. On the other hand copying and pasting Python code can lead to problems, because the indentation level of the pasted code may not be the same as the indentation level of the current line. Such reformatting can be tedious to do by hand, but some [[text editor]]s and [[Integrated development environment|IDE]]s have features to do it automatically. There are also problems when Python code could be rendered unusable when posted on a forum or web page that removes white space, though this problem can be avoided where it is possible to enclose code in white space-preserving tags such as "&lt;pre&gt; ... &lt;/pre&gt;" (for [[HTML]]), "[code]" ... "[/code]" (for [[bbcode]]), etc.
+
+====Haskell====
+[[Haskell (programming language)|Haskell]] similarly has the [[off-side rule]] which lets indentation define blocks; however, unlike in Python, indentation is not compulsory in Haskell &mdash; curly braces and semicolons can be (and occasionally are) used instead.
+
+===Vertical alignment===
+
+It is often helpful to align similar elements vertically, to make typo-generated bugs more obvious. Compare:
+<source lang="php">
+$search = array('a', 'b', 'c', 'd', 'e');
+$replacement = array('foo', 'bar', 'baz', 'quux');
+
+// Another example:
+
+$value = 0;
+$anothervalue = 1;
+$yetanothervalue = 2;
+</source>
+with:
+<source lang="php">
+$search      = array('a',   'b',   'c',   'd',   'e');
+$replacement = array('foo', 'bar', 'baz', 'quux');
+
+// Another example:
+
+$value           = 0;
+$anothervalue    = 1;
+$yetanothervalue = 2;
+</source>
+
+The latter example makes two things intuitively clear that were not clear in the former:
+* the search and replace terms are related and match up: they are not discrete variables;
+* there is one more search term than there are replacement terms. If this is a bug, it is now more likely to be spotted.
+
+However, note that there are many arguments ''against'' vertical alignment:
+
+* '''Inter-line false dependencies'''; tabular formatting creates dependencies across lines. For example, if an identifier with a long name is added to a tabular layout, the column width may have to be increased to accommodate it. This forces a bigger change to the source code than necessary, and the essential change may be lost in the noise. This is detrimental to [[Revision control]] where inspecting differences between versions is essential.
+
+* '''Brittleness'''; if a programmer does not neatly format the table when making a change, maybe legitimately with the previous point in mind, the result becomes a mess that deteriorates with further such changes. Simple refactoring operations, such as search-and-replace, may also break the formatting.
+
+* '''Resistance to change'''; tabular formatting requires more effort to maintain. This may put off a programmer from making a beneficial change, such as adding, correcting or improving the name of an identifier, because it will mess up the formatting.
+
+* '''Reliance on mono-spaced font'''; tabular formatting assumes that the editor uses a fixed-width font. Many modern code editors support proportional fonts, and the programmer may prefer to use a proportional font for readability.
+
+* '''Tool dependence'''; some of the effort of maintaining alignment can be alleviated by tools (e.g. a [[source code editor]] that supports [[elastic tabstop]]s), although that creates a reliance on such tools.
+
+For example, if a simple refactoring operation is performed on the code above, renaming variables "$replacement" to "$r" and "$anothervalue" to "$a", the resulting code will look like this:
+
+<source lang="php">
+$search      = array('a',   'b',   'c',   'd',   'e');
+$r = array('foo', 'bar', 'baz', 'quux');
+
+// Another example:
+
+$value           = 0;
+$a    = 1;
+$yetanothervalue = 2;
+</source>
+
+The original sequential formatting will still look fine after such change:
+
+<source lang="php">
+$search = array('a', 'b', 'c', 'd', 'e');
+$r = array('foo', 'bar', 'baz', 'quux');
+
+// Another example:
+ 
+$value = 0;
+$a = 1;
+$yetanothervalue = 2;
+</source>
+
+===Spaces===
+In those situations where some [[Whitespace character|white space]] is required the grammars of most [[free-format language]]s are unconcerned with the amount that appears.  Style related to white space is commonly used to enhance [[readability]]. There are currently no known hard facts (conclusions from studies) about which of the whitespace styles are having the best readability.
+
+For instance, compare the following syntactically equivalent examples of C code:
+
+<source lang="c">
+int i;
+for(i=0;i<10;++i){
+    printf("%d",i*i+i);
+}
+</source>
+versus 
+<source lang="c">
+int i;
+for (i=0; i<10; ++i) {
+    printf("%d", i*i+i);
+}
+</source>
+versus
+<source lang="c">
+int i;
+for (i = 0; i < 10; ++i) {
+    printf("%d", i * i + i);
+}
+</source>
+versus
+<source lang="c">
+int i;
+for( i = 0; i < 10; ++i ) {
+    printf( "%d", i * i + i );
+}
+</source>
+
+===Tabs===
+The use of [[Tab key|tabs]] to create white space presents particular issues when not enough care is taken because the location of the tabulation point can be different depending on the tools being used and even the preferences of the user.
+
+As an example, one programmer prefers [[tab stop]]s of four and has his toolset configured this way, and uses these to format his code.
+
+<source lang="c">
+int     ix;     // Index to scan array
+long    sum;    // Accumulator for sum
+</source>
+
+Another programmer prefers tab stops of eight, and his toolset is configured this way.  When he examines his code, he may well find it difficult to read.
+
+<source lang="c">
+int             ix;             // Index to scan array
+long    sum;    // Accumulator for sum
+</source>
+
+One widely used solution to this issue may involve forbidding the use of tabs for alignment or rules on how tab stops must be set. Note that tabs work fine provided they are used consistently, restricted to logical indentation, and not used for alignment:
+
+<source lang="cpp">
+class MyClass {
+	int foobar(int qux,     // first parameter
+	           int quux);   // second parameter
+	int foobar2(int qux,    // first parameter
+	            int quux,   // second parameter
+	            int quuux); // third parameter
+};
+</source>
+
+==See also==
+* [[Coding conventions]]
+* [[Indent style]]
+* [[MISRA C]]
+* [[Naming convention (programming)]]
+
+==External links==
+*{{dmoz|/Computers/Programming/Development_Tools/Source_Code_Formatters/|Source Code Formatters}}
+
+[[Category:Source code]]
+[[Category:Articles with example C code]]
+[[Category:Articles with example PHP code]]
+[[Category:Articles with example pseudocode]]

@@ -1,0 +1,112 @@
+In [[mathematics]], a '''Young tableau''' (pl.: ''tableaux'') is a [[combinatorics|combinatorial]] object useful in [[representation theory]] and [[Schubert calculus]]. It provides a convenient way to describe the [[group representation]]s of the [[symmetric group|symmetric]] and [[general linear group|general linear]] groups and to study their properties. Young tableaux were introduced by [[Alfred Young]], a [[mathematician]] at [[University of Cambridge|Cambridge University]], in 1900. They were then applied to the study of the symmetric group by [[Georg Frobenius]] in 1903. Their theory was further developed by many mathematicians, including [[Percy MacMahon]], [[W. V. D. Hodge]], [[Gilbert de Beauregard Robinson|G. de B. Robinson]], [[Gian-Carlo Rota]], [[Alain Lascoux]], [[Marcel-Paul Sch<U+00FC>tzenberger]] and [[Richard P. Stanley]].
+
+==Definitions==
+
+''Note: this article uses the English convention for displaying Young diagrams and tableaux''.
+
+=== Diagrams <!-- [[Young diagram]] currently redirects to this section]]--> ===
+[[Image:Young diagram for 541 partition.svg|thumb|right|150px|Young diagram of shape (5, 4, 1), English notation]]
+[[Image:Young diagram for 541 partition-French.svg|thumb|right|150px|Young diagram of shape (5, 4, 1), French notation]]
+
+A '''Young diagram''' (also called [[Ferrers diagram]], particularly when represented using dots) is a finite collection of boxes, or cells, arranged in left-justified rows, with the row lengths weakly decreasing (each row has the same or shorter length than its predecessor). Listing the number of boxes in each row gives a [[partition (number theory)|partition]] {{mvar|''<U+03BB>''}} of a non-negative integer {{mvar|''n''}}, the total number of boxes of the diagram. The Young diagram is said to be of shape {{mvar|''<U+03BB>''}}, and it carries the same information as that partition. Containment of one Young diagram in another defines a [[partial ordering]] on the set of all partitions, which is in fact a [[lattice (order)|lattice]] structure, known as [[Young's lattice]]. Listing the number of boxes of a Young diagram in each column gives another partition, the '''conjugate''' or ''transpose'' partition of {{mvar|''<U+03BB>''}}; one obtains a Young diagram of that shape by reflecting the original diagram along its main diagonal.
+
+There is almost universal agreement that in labeling boxes of Young diagrams by pairs of integers, the first index selects the row of the diagram, and the second index selects the box within the row. Nevertheless two distinct conventions exist to display these diagrams, and consequently tableaux: the first places each row below the previous one, the second stacks each row on top of the previous one. Since the former convention is mainly used by [[English-speaking world|Anglophones]] while the latter is often preferred by [[Francophone]]s, it is customary to refer to these conventions respectively as the ''English notation'' and the ''French notation''; for instance, in his book on [[symmetric function]]s, [[Ian G. Macdonald|Macdonald]] advises readers preferring the French convention to "read this book upside down in a mirror" (Macdonald 1979, p.2). This nomenclature probably started out as jocular. The English notation corresponds to the one universally used for matrices, while the French notation is closer to the convention of [[Cartesian coordinates]]; however, French notation differs from that convention by placing the vertical coordinate first. The figure on the right shows, using the English notation, the Young diagram corresponding to the partition (5, 4, 1) of the number 10. The conjugate partition, measuring the column lengths, is (3, 2, 2, 2, 1).
+
+=== Tableaux ===
+[[Image:Young tableaux for 541 partition.svg|thumb|right|150px|A standard Young tableau of shape (5, 4, 1)]]
+
+A '''Young tableau''' is obtained by filling in the boxes of the Young diagram with symbols taken from some ''alphabet'', which is usually required to be a [[totally ordered set]]. Originally that alphabet was a set of indexed variables {{mvar|''x''<sub>1</sub>}}, {{mvar|''x''<sub>2</sub>}}, {{mvar|''x''<sub>3</sub>}}..., but now one usually uses a set of numbers for brevity. In their original application to [[representations of the symmetric group]], Young tableaux have {{mvar|''n''}} distinct entries, arbitrarily assigned to boxes of the diagram.  A tableau is called '''standard''' if the entries in each row and each column are increasing. The number of distinct standard Young tableaux on {{mvar|''n''}} entries is given by the [[involution number]]s
+:1, 1, 2, 4, 10, 26, 76, 232, 764, 2620, 9496, ... {{OEIS|A000085}}.
+
+In other applications, it is natural to allow the same number to appear more than once (or not at all) in a tableau.  A tableau is called '''semistandard''', or ''column strict'', if the entries weakly increase along each row and strictly increase down each column.  Recording the number of times each number appears in a tableau gives a sequence known as the '''weight''' of the tableau.   Thus the standard Young tableaux are precisely the semistandard tableaux of weight (1,1,...,1), which requires every integer up to {{mvar|''n''}} to occur exactly once.
+
+=== Variations ===
+
+There are several variations of this definition: for example, in a row-strict tableau the entries strictly increase along the rows and weakly increase down the columns. Also, tableaux with ''decreasing'' entries have been considered, notably, in the theory of [[plane partition]]s. There are also generalizations such as domino tableaux or ribbon tableaux, in which several boxes may be grouped together before assigning entries to them.
+
+=== Skew tableaux ===
+[[Image:Skew tableau 5422-21.svg|thumb|right|150px|Skew tableau of shape (5, 4, 2, 2) / (2, 1), English notation]]
+
+A '''skew shape''' is a pair of partitions ({{mvar|''<U+03BB>''}},{{mvar|''<U+03BC>''}}) such that the Young diagram of {{mvar|''<U+03BB>''}} contains the Young diagram of {{mvar|''<U+03BC>''}}; it is denoted by {{mvar|''<U+03BB>''}}/{{mvar|''<U+03BC>''}}.  If {{mvar|''<U+03BB>''}}=({{mvar|''<U+03BB>''<sub>1</sub>}},{{mvar|''<U+03BB>''<sub>2</sub>}},...) and {{mvar|''<U+03BC>''}}=({{mvar|''<U+03BC>''<sub>1</sub>}},{{mvar|''<U+03BC>''<sub>2</sub>}},...), then the containment of diagrams means that {{mvar|''<U+03BC>''<sub>''i''</sub>}}&nbsp;<U+2264>&nbsp;{{mvar|''<U+03BB>''<sub>''i''</sub>}} for all {{mvar|''i''}}. The '''skew diagram''' of a skew shape {{mvar|''<U+03BB>''}}/{{mvar|''<U+03BC>''}} is the set-theoretic difference of the Young diagrams of {{mvar|''<U+03BB>''}} and {{mvar|''<U+03BC>''}}: the set of squares that belong to the diagram of {{mvar|''<U+03BB>''}} but not to that of {{mvar|''<U+03BC>''}}. A '''skew tableau''' of shape {{mvar|''<U+03BB>''}}/{{mvar|''<U+03BC>''}} is obtained by filling the squares of the corresponding skew diagram; such a tableau is semistandard if entries increase weakly along each row, and increase strictly down each column, and it is standard if moreover all numbers from 1 to the number of squares of the skew diagram occur exactly once. While the map from partitions to their Young diagrams is injective, this is not the case from the map from skew shapes to skew diagrams;<ref>For instance the skew diagram consisting of a single square at position (2,4) can be obtained by removing the diagram of {{mvar|''<U+03BC>''}}<math>=(5,3,2,1)</math> from the one of {{math|''<U+03BB>'' {{=}} (5,4,2,1)}}, but also in (infinitely) many other ways. In general any skew diagram whose set of non-empty rows (or of non-empty columns) is not contiguous or does not contain the first row (respectively column) will be associated to more than one skew shape.</ref> therefore the shape of a skew diagram cannot always be determined from the set of filled squares only. Although many properties of skew tableaux only depend on the filled squares, some operations defined on them do require explicit knowledge of {{mvar|''<U+03BB>''}} and {{mvar|''<U+03BC>''}}, so it is important that skew tableaux do record this information: two distinct skew tableaux may differ only in their shape, while they occupy the same set of squares, each filled with the same entries.<ref>A somewhat similar situation arises for matrices: the 3-by-0 matrix {{mvar|''A''}} must be distinguished from the 0-by-3 matrix {{mvar|''B''}}, since {{math|''AB''}} is a 3-by-3 (zero) matrix while {{math|''BA''}} is the 0-by-0 matrix, but both {{mvar|''A''}} and {{mvar|''B''}} have the same (empty) set of entries; for skew tableaux however such distinction is necessary even in cases where the set of entries is not empty.</ref> Young tableaux can be identified with skew tableaux in which {{mvar|''<U+03BC>''}} is the empty partition (0) (the unique partition of 0).
+
+Any skew semistandard tableau {{mvar|''T''}} of shape {{mvar|''<U+03BB>''}}/{{mvar|''<U+03BC>''}} with positive integer entries gives rise to a sequence of partitions (or Young diagrams), by starting with {{mvar|''<U+03BC>''}}, and taking for the partition {{mvar|''i''}} places further in the sequence the one whose diagram is obtained from that of {{mvar|''<U+03BC>''}} by adding all the boxes that contain a value&nbsp; <U+2264>&nbsp;{{mvar|''i''}} in {{mvar|''T''}}; this partition eventually becomes equal to&nbsp;{{mvar|''<U+03BB>''}}. Any pair of successive shapes in such a sequence is a skew shape whose diagram contains at most one box in each column; such shapes are called '''horizontal strips'''. This sequence of partitions completely determines {{mvar|''T''}}, and it is in fact possible to define (skew) semistandard tableaux as such sequences, as is done by Macdonald (Macdonald 1979, p.4). Note that this definition incorporates the partitions {{mvar|''<U+03BB>''}} and {{mvar|''<U+03BC>''}} in the data comprising the skew tableau.
+
+== Overview of applications ==
+
+Young tableaux have numerous applications in [[combinatorics]], [[representation theory]], and [[algebraic geometry]]. Various ways of counting Young tableaux have been explored and lead to the definition of and identities for [[Schur polynomial|Schur functions]]. Many combinatorial algorithms on tableaux are known, including Sch<U+00FC>tzenberger's [[jeu de taquin]] and the [[Robinson<U+2013>Schensted<U+2013>Knuth correspondence]]. Lascoux and Sch<U+00FC>tzenberger studied an [[associative]] product on the set of all semistandard Young tableaux, giving it the structure called the ''[[plactic monoid]]'' (French: ''le mono<U+00EF>de plaxique''). 
+
+In representation theory, standard Young tableaux of size {{mvar|''k''}} describe bases in irreducible representations of the [[symmetric group]] on {{mvar|''k''}} letters. The [[standard monomial basis]] in a finite-dimensional [[irreducible representation]] of the [[general linear group]] {{math|''GL''<sub>''n''</sub>}} are parametrized by the set of semistandard Young tableaux of a fixed shape over the alphabet {1, 2, ..., {{mvar|''n''}}}. This has important consequences for [[invariant theory]], starting from the work of [[W. V. D. Hodge|Hodge]] on the [[homogeneous coordinate ring]] of the [[Grassmannian]] and further explored by [[Gian-Carlo Rota]] with collaborators, [[Corrado de Concini|de Concini]] and [[Claudio Procesi|Procesi]], and [[David Eisenbud|Eisenbud]]. The [[Littlewood<U+2013>Richardson rule]] describing (among other things) the decomposition of [[tensor product]]s of irreducible representations of {{math|''GL''<sub>''n''</sub>}} into irreducible components is formulated in terms of certain skew semistandard tableaux. 
+
+Applications to algebraic geometry center around [[Schubert calculus]] on Grassmannians and [[flag varieties]]. Certain important [[cohomology class]]es can be represented by [[Schubert polynomial]]s and described in terms of Young tableaux.
+
+==Applications in representation theory==
+{{seealso|Representation theory of the symmetric group}}
+Young diagrams are in one-to-one correspondence with [[irreducible representation]]s of the [[symmetric group]] over the [[complex number]]s. They provide a convenient way of specifying the [[Young symmetrizer]]s from which the [[representation theory of the symmetric group|irreducible representations]] are built. Many facts about a representation can be deduced from the corresponding diagram. Below, we describe two examples: determining the dimension of a representation and restricted representations. In both cases, we will see that some properties of a representation can be determined by using just its diagram.
+
+Young diagrams also parametrize the irreducible polynomial representations of the [[general linear group]] {{math|''GL''<sub>''n''</sub>}} (when they have at most {{mvar|''n''}} nonempty rows), or the irreducible representations of the [[special linear group]] {{math|''SL''<sub>''n''</sub>}} (when they have at most {{math|''n'' <U+2212> 1}} nonempty rows), or the irreducible complex representations of the [[special unitary group]] {{math|''SU''<sub>''n''</sub>}} (again when they have at most {{math|''n'' <U+2212> 1}} nonempty rows). In these case semistandard tableaux with entries up to {{mvar|''n''}} play a central role, rather than standard tableaux; in particular it is the number of those tableaux that determines the dimension of the representation.
+
+===Dimension of a representation===
+{{Main|Hook length formula}}
+<div class="floatright">
+[[Image:Hook length for 541 partition.svg|Hook-lengths of the boxes for the partition ''10=5+4+1'']]<br>''Hook lengths''</div>
+
+The dimension of the irreducible representation {{math|''<U+03C0>''<sub>''<U+03BB>''</sub>}} of the symmetric group {{math|''S''<sub>''n''</sub>}} corresponding to a partition {{mvar|''<U+03BB>''}} of {{mvar|''n''}} is equal to the number of different standard Young tableaux that can be obtained from the diagram of the representation. This number can be calculated by the [[hook length formula]].
+
+A '''hook length''' {{math|hook(''x'')}} of a box {{mvar|''x''}} in Young diagram {{math|''Y''(''<U+03BB>'')}} of shape {{mvar|''<U+03BB>''}} is the number of boxes that are in the same row to the right of it plus those boxes in the same column below it, plus one (for the box itself). By the hook-length formula, the dimension of an irreducible representation is {{math|''n''!}} divided by the product of the hook lengths of all boxes in the diagram of the representation:
+
+:<math>\dim\pi_\lambda = \frac{n!}{\prod_{x \in Y(\lambda)} \mathrm{hook}(x)}.</math>
+
+The figure on the right shows hook-lengths for all boxes in the diagram of the partition 10 = 5 + 4 + 1. Thus
+:<math>\dim\pi_\lambda = \frac{10!}{7\cdot5\cdot 4 \cdot 3\cdot 1\cdot 5\cdot 3\cdot 2\cdot 1\cdot1} = 288.</math>
+
+Similarly, the dimension of the irreducible representation {{math|''W''(''<U+03BB>'')}} of {{math|GL<sub>''r''</sub>}} corresponding to the partition ''<U+03BB>'' of ''n'' (with at most ''r'' parts) is the number of semistandard Young tableaux of shape ''<U+03BB>'' (containing only the entries from 1 to ''r''), which is given by the hook-length formula:
+
+:<math>\dim W(\lambda) = \prod_{(i,j) \in Y(\lambda)} \frac{r+j-i}{\mathrm{hook}(i,j)},</math>
+
+where the index ''i'' gives the row and ''j'' the column of a box.<ref>{{cite book|author=[[Predrag Cvitanovi<U+0107>]] |year=2008 |title=Group Theory: Birdtracks, Lie's, and Exceptional Groups | publisher=Princeton University Press | url=http://birdtracks.eu/}}, eq. 9.28 and appendix B.4</ref> For instance, for the partition (5,4,1) we get as dimension of the corresponding irreducible representation of {{math|GL<sub>7</sub>}} (traversing the boxes by rows):
+:<math>\dim W(\lambda) = \frac{7\cdot 8\cdot 9\cdot 10\cdot 11\cdot 6\cdot 7\cdot 8\cdot 9\cdot 5}{7\cdot5\cdot 4 \cdot 3\cdot 1\cdot 5\cdot 3\cdot 2\cdot 1\cdot1} = 66 528.</math>
+
+===Restricted representations===
+
+A representation of the symmetric group on {{mvar|''n''}} elements, {{math|''S''<sub>''n''</sub>}} is also a representation of the symmetric group on {{math|''n'' <U+2212> 1}} elements, {{math|''S''<sub>''n''<U+2212>1</sub>}}. However, an irreducible representation of {{math|''S''<sub>''n''</sub>}} may not be irreducible for {{math|''S''<sub>''n''<U+2212>1</sub>}}. Instead, it may be a [[direct sum of representations|direct sum]] of several representations that are irreducible for {{math|''S''<sub>''n''<U+2212>1</sub>}}. These representations are then called the factors of the [[restricted representation]] (see also [[induced representation]]).
+
+The question of determining this decomposition of the restricted representation of a given irreducible representation of ''S''<sub>''n''</sub>, corresponding to a partition {{mvar|''<U+03BB>''}} of {{mvar|''n''}}, is answered as follows. One forms the set of all Young diagrams that can be obtained from the diagram of shape {{mvar|''<U+03BB>''}} by removing just one box (which must be at the end both of its row and of its column); the restricted representation then decomposes as a direct sum of the irreducible representations of {{math|''S''<sub>''n''<U+2212>1</sub>}} corresponding to those diagrams, each occurring exactly once in the sum.
+
+== See also ==
+* [[Robinson<U+2013>Schensted correspondence]]
+* [[Schur<U+2013>Weyl duality]]
+* [[Young's lattice]]
+
+==Notes==
+{{Reflist}}
+
+==References==
+* [[William Fulton]]. ''Young Tableaux, with Applications to Representation Theory and Geometry''. Cambridge University Press, 1997, ISBN 0-521-56724-6. 
+* {{Fulton-Harris}} Lecture 4
+* Howard Georgi, Lie Algebras in Particle Physics, 2nd Edition - Westview 
+* [[Ian G. Macdonald|Macdonald, I. G.]] ''Symmetric functions and Hall polynomials.'' Oxford Mathematical Monographs. The Clarendon Press, Oxford University Press, Oxford, 1979. viii+180 pp. ISBN 0-19-853530-9 {{MathSciNet|id=84g:05003}}
+* Laurent Manivel. ''Symmetric Functions, Schubert Polynomials, and Degeneracy Loci''.  American Mathematical Society.
+* Jean-Christophe Novelli, [[Igor Pak]], Alexander V. Stoyanovkii, "[http://www.liafa.jussieu.fr/web9/rapportrech/description_en.php?idrapportrech=151 A direct bijective proof of the Hook-length formula]", ''Discrete Mathematics and Theoretical Computer Science'' '''1''' (1997), pp.53<U+2013>67.
+* [[Bruce Sagan|Bruce E. Sagan]]. ''The Symmetric Group''. Springer, 2001, ISBN 0-387-95067-2
+*{{eom|id=Y/y099100|first=E.B.|last= Vinberg| authorlink=Ernest Vinberg}}
+* {{cite journal
+   | last = Yong
+   | first = Alexander
+   | title = What is...a Young Tableau?
+   | journal = [[Notices of the American Mathematical Society]]
+   |date=February 2007
+   | volume = 54
+   | issue = 2
+   | pages = pp.240&ndash;241
+   | url = http://www.ams.org/notices/200702/whatis-yong.pdf
+   | format = [[PDF]]
+   | accessdate = 2008-01-16 }}
+*[[Predrag Cvitanovi<U+0107>]], ''Group Theory: Birdtracks, Lie's, and Exceptional Groups''. Princeton University Press, 2008.
+
+==External links==
+* Eric W. Weisstein. "[http://mathworld.wolfram.com/FerrersDiagram.html Ferrers Diagram]". From MathWorld&mdash;A Wolfram Web Resource.
+* Eric W. Weisstein. "[http://mathworld.wolfram.com/YoungTableau.html Young Tableau]." From MathWorld&mdash;A Wolfram Web Resource.
+* [http://www.findstat.org/SemistandardTableaux Semistandard tableaux] entry in the [http://www.findstat.org/ FindStat] database
+* [http://www.findstat.org/StandardTableaux Standard tableaux] entry in the [http://www.findstat.org/ FindStat] database
+[[Category:Representation theory of finite groups]]
+[[Category:Symmetric functions]]

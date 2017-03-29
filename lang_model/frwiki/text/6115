@@ -1,0 +1,79 @@
+{{Infobox Distribution statistiques
+  |name       = Loi Bates
+  |type       = density
+  |pdf_image  = [[Fichier:Densite Bates.gif|230px]]
+  |cdf_image  = No image available
+  |parameters = <math>\scriptstyle -\infty < a < b < \infty \, </math> <br> n>1 réel
+  |support    = <math>x \in [a,b]</math>
+  |pdf        = <math>\scriptstyle \frac{n^n}{\left(n-1\right)!}\sum_{k=0}^{\lfloor nx\rfloor}\left(-1\right)^k{n \choose k}\left(x-\frac{k}{n}\right)^{n-1}</math><br> pour <math>\scriptstyle x\in ]0,1[</math>
+  |cdf        = 
+  |mean       = <math>\tfrac{1}{2}(a+b)</math>
+  |median     = 
+  |mode       = 
+  |variance   = <math>\tfrac{1}{12n}(b-a)^2</math>
+  |skewness   = 0
+  |kurtosis   = <math>-\tfrac{6}{5n}</math>
+  |entropy    = 
+  |mgf        = 
+  |char       = <math>\left(-\frac{in (e^{\tfrac{ibt}{n}}-e^{\tfrac{iat}{n}}) }{(b-a)t}\right)^n</math>
+}}
+En [[théorie des probabilités]] et en [[statistique]], la '''loi Bates''', dénommée suivant la probabiliste Grace E. Bates, est la [[loi de probabilité]] de la [[Moyenne arithmétique|moyenne]] de [[variable aléatoire|variables aléatoires]] [[Indépendance (probabilités)|indépendantes]] et de [[loi uniforme continue]] sur <math>\scriptstyle [0,1]</math><ref>{{Ouvrage
+ | langue                 = en
+ | prénom1                = N.
+ | nom1                   = Balakrishnan
+ | prénom2                = N.L.
+ | nom2                   = Jonhson
+ | prenom3                = S.
+ | nom3                   = Kotz
+ | titre                  = Continuous Univariate Distributions
+ | numéro d'édition       = 2
+ | éditeur                = Wiley
+ | année                  = 1995
+ | volume                 = 2
+ | passage                = section 26.9
+ | isbn                   = 0-471-58494-0
+}}</ref>.
+
+Il ne faut pas confondre cette loi avec la [[loi Irwin-Hall]] qui est la somme de telles variables aléatoires.
+
+== Définition ==
+La loi Bates est la [[loi de probabilité]] de la [[moyenne arithmétique]] de {{formule|''n''}} [[variable aléatoire|variables aléatoires]] <math>U_1,U_2,\dots,U_n</math> [[iid]] de [[loi uniforme continue]] sur l'intervalle <math>\scriptstyle [0,1]</math> :
+:<math> X = \frac{1}{n}\sum_{k=1}^n U_k. </math>
+La [[densité de probabilité]] de la loi Bates est donnée par la formule suivante<ref>{{Article
+ | langue                 = en
+ | prénom1                = Grace E.
+ | nom1                   = Bates
+ | titre                  = Joint Distributions of Time Intervals for the Occurrence of Successive Accidents in a Generalized Polya Scheme
+ | périodique             = Annal of Mathematical Statistics
+ | volume                 = 26
+ | numéro                 = 4
+ | année                  = 1955
+ | pages                  = 705-720
+ | url texte              = http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.aoms/1177728429
+ | consulté le            = 01/03/12
+}}</ref> :
+:<math> f_X(x;n)=
+\begin{cases}\displaystyle\frac{n^n}{\left(n-1\right)!}\sum_{k=0}^{\lfloor nx\rfloor}\left(-1\right)^k{n \choose k}\left(x-\frac{k}{n}\right)^{n-1} & \text{ pour }x\in ]0,1[ \\
+0 & \text{sinon.}
+\end{cases}</math>
+
+Plus généralement, la moyenne de <math>n</math> variables aléatoires indépendantes et uniformes sur <math>\scriptstyle [a,b]</math> :
+:<math> X_{(a,b)} = \frac{1}{n}\sum_{k=1}^n U_k(a,b) </math>
+a pour densité de probabilité
+:<math> g(x;n,a,b) = f_X\left(\frac{x-a}{b-a};n\right) \text{ pour } a \leq x \leq b .\,</math>
+
+== Notes et références ==
+{{Références}}
+* {{Lien web
+ | url         = http://reference.wolfram.com/mathematica/ref/BatesDistribution.html
+ | titre       = (en) BatesDistribution
+ | site        = Wolfram Mathematica-Documentation center
+ | consulté le = 02/03/12
+}}
+
+{{Palette|Lois de probabilités}}
+{{Portail|probabilités et statistiques}}
+
+[[Catégorie:Loi de probabilité|Bates]]
+
+[[en:Bates distribution]]

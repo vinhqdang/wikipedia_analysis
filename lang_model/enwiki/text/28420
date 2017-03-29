@@ -1,0 +1,330 @@
+{{Classical mechanics}}
+<!--{{Expert-subject|physics|date=November 2008}}-->
+
+'''Rigid-body dynamics''' studies the movement of systems of interconnected bodies under the action of external forces.  The assumption that the bodies are rigid, which means that they do not deform under the action of applied forces, simplifies the analysis by reducing the parameters that describe the configuration of the system to the translation and rotation of reference frames attached to each body.<ref> B. Paul, Kinematics and Dynamics of Planar Machinery, Prentice-Hall, NJ, 1979</ref><ref>L. W. Tsai, Robot Analysis: The mechanics of serial and parallel manipulators, John-Wiley, NY, 1999.</ref>
+
+<!-----This paragraph has been replaced by the following paragraph-----Unlike [[Point particle|particles]], which move only in three [[Degrees of freedom (mechanics)|degrees of freedom]] ([[Translation (physics)|translation]] in three directions), rigid bodies occupy space and have geometrical properties, such as a [[center of mass]], [[moment of inertia|moments of inertia]], etc., that characterize motion in six [[Degrees of freedom (mechanics)|degrees of freedom]] (translation in three directions plus [[rotation]] in three directions). Rigid bodies are also characterized as being non-deformable, as opposed to [[deformable bodies]]. As such, '''rigid-body dynamics''' is used heavily in analyses and [[computer simulation]]s of physical systems and machinery where rotational motion is important but [[Deformation (engineering)|material deformation]] does not have a significant effect on the motion of the system.------>
+The dynamics of a rigid body system is defined by its [[equations of motion]], which are derived using either [[Newtons laws of motion]] or [[Lagrangian mechanics]].  The solution of these equations of motion defines how the configuration of the system of rigid bodies changes as a function of time.  The formulation and solution of rigid body dynamics is an important tool in the computer simulation of [[mechanical systems]].
+[[File:SteamEngine_Boulton&Watt_1784.png|thumb|300px|right|alt=Boulton & Watt Steam Engine|Movement of each of the components of the Boulton & Watt Steam Engine (1784) is modeled by a continuous set of rigid displacements]]
+
+==Planar rigid body dynamics==
+If a rigid system of particles moves such that the trajectory of every particle is parallel to a fixed plane, the system is said to be constrained to planar movement.  In this case, Newton's laws for a rigid system of N particles, P{{sub|i}}, i=1,...,N, simplify because there is no movement in the ''k'' direction.  Determine the [[resultant force]] and torque at a reference point '''R''', to obtain
+:<math> \mathbf{F} = \sum_{i=1}^N m_i\mathbf{A}_i,\quad \mathbf{T} = \sum_{i=1}^N (\mathbf{r}_i-\mathbf{R})\times (m_i\mathbf{A}_i), </math>
+where '''r'''{{sub|i}} denotes the planar trajectory of each particle.
+
+The [[kinematics]] of a rigid body yields the formula for the acceleration of the particle P{{sub|i}} in terms of the position '''R''' and acceleration '''A''' of the reference particle as well as the angular velocity vector <U+03C9> and angular acceleration vector <U+03B1> of the rigid system of particles as,
+:<math> \mathbf{A}_i = \alpha\times(\mathbf{r}_i-\mathbf{R})  + \omega\times\omega\times(\mathbf{r}_i-\mathbf{R})  + \mathbf{A}.</math>
+For systems that are constrained to planar movement, the angular velocity and angular acceleration vectors are directed along ''k'' perpendicular to the plane of movement, which simplifies this acceleration equation.  In this case, the acceleration vectors can be simplified by introducing the unit vectors '''e'''{{sub|i}} from the reference point '''R''' to a point '''r'''{{sub|i}} and the unit vectors '''t'''{{sub|i}}=''k''x'''e'''{{sub|i}}, so
+:<math> \mathbf{A}_i =  \alpha(\Delta r_i\mathbf{t}_{i}) - \omega^2(\Delta r_i\mathbf{e}_{i}) + \mathbf{A}.</math>
+
+This yields the resultant force on the system as
+:<math> \mathbf{F} = \alpha\sum_{i=1}^N m_i (\Delta r_i\mathbf{t}_{i}) - \omega^2\sum_{i=1}^N m_i (\Delta r_i\mathbf{e}_{i}) + (\sum_{i=1}^N m_i)\mathbf{A},</math>
+and torque as
+:<math> \mathbf{T} =\sum_{i=1}^N (m_i\Delta r_i\mathbf{e}_i)\times (\alpha(\Delta r_i\mathbf{t}_{i}) - \omega^2(\Delta r_i\mathbf{e}_{i}) + \mathbf{A}) = (\sum_{i=1}^N m_i\Delta r_i^2)\alpha\vec{k} + (\sum_{i=1}^N m_i\Delta r_i\mathbf{e}_i)\times\mathbf{A}, </math>
+where '''e'''{{sub|i}}x'''e'''{{sub|i}}=0, and '''e'''{{sub|i}}x'''t'''{{sub|i}}=''k'' is the unit vector perpendicular to the plane for all of the particles P{{sub|i}}.
+
+Use the [[center of mass]] '''C''' as the reference point, so these equations for Newton's laws simplify to become
+:<math> \mathbf{F} = M\mathbf{A},\quad \mathbf{T} = I_C\alpha\vec{k},</math>
+where M is the total mass and I{{sub|C}} is the [[moment of inertia]] about an axis perpendicular to the movement of the rigid system and through the center of mass.
+
+==Newton's second law in three dimensions==
+To consider rigid body dynamics in three dimensional space, Newton's second law must be extended to define the relationship between the movement of a rigid body and the system of forces and torques that act on it.
+
+Newton's formulated his second law for a particle as, "The change of motion of an object is proportional to the force impressed and is made in the direction of the straight line in which the force is impressed."<ref> Encyclopedia Britannica, [http://www.britannica.com/EBchecked/topic/371907/mechanics/77534/Newtons-laws-of-motion-and-equilibrium Newtons laws of motion].</ref>  Because Newton generally referred to mass times velocity as the "motion" of a particle, the phrase "change of motion" refers to the mass times acceleration of the particle, and so this law is usually written as
+:<math>\mathbf{F} = m\mathbf{a},</math>
+where '''F''' is understood to be the only external force acting on the particle, ''m'' is the mass of the particle, and '''a''' is its acceleration vector.  The extension of Newton's second law to rigid bodies is achieved by considering a rigid system of particles.
+
+===Rigid system of particles===
+If a system of ''N'' particles, P<sub>i</sub>, i=1,...,''N'', are assembled into a rigid body, then Newton's second law can be applied to each of the particles in the body.  If '''F'''<sub>i</sub> is the external force applied to particle P<sub>i</sub> with mass ''m''<sub>i</sub>, then
+:<math> \mathbf{F}_i + \sum_{j=1}^N \mathbf{F}_{ij} = m_i\mathbf{a}_i,\quad i=1, \ldots, N,</math>
+where '''F'''<sub>ij</sub> is the internal force of particle P<sub>j</sub> acting on particle P<sub>i</sub> that maintains the constant distance between these particles.
+
+[[File:Rigid bodies.jpg|thumb|Human body modelled as a system of rigid bodies of geometrical solids. Representative bones were added for better visualization of the walking person.]]
+An important simplification to these force equations is obtained by introducing the [[resultant force]] and torque that acts on the rigid system.  This resultant force and torque is obtained by choosing one of the particles in the system as a reference point, '''R''', where each of the external forces are applied with the addition of an associated torque.  The resultant force '''F''' and torque '''T''' are given by the formulas,
+:<math> \mathbf{F} = \sum_{i=1}^N \mathbf{F}_i,\quad  \mathbf{T} = \sum_{i=1}^N (\mathbf{R}_i-\mathbf{R})\times \mathbf{F}_i, </math>
+where '''R'''<sub>i</sub> is the vector that defines the position of particle to P<sub>i</sub>.
+
+Newton's second law for a particle combines with these formulas for the resultant force and torque to yield,
+:<math> \mathbf{F} = \sum_{i=1}^N m_i\mathbf{a}_i,\quad \mathbf{T} = \sum_{i=1}^N (\mathbf{R}_i-\mathbf{R})\times (m_i\mathbf{a}_i), </math>
+where the internal forces '''F'''<sub>ij</sub> cancel in pairs.  The [[kinematics]] of a rigid body yields the formula for the acceleration of the particle P<sub>i</sub> in terms of the position '''R''' and acceleration '''a''' of the reference particle as well as the angular velocity vector <U+03C9> and angular acceleration vector <U+03B1> of the rigid system of particles as,
+:<math> \mathbf{a}_i = \alpha\times(\mathbf{R}_i-\mathbf{R})  + \omega\times\omega\times(\mathbf{R}_i-\mathbf{R})  + \mathbf{a}.</math>
+
+===Mass properties===
+The mass properties of the rigid body are represented by its [[center of mass]] and [[moment of inertia|inertia matrix]].  Choose the reference point '''R''' so that it satisfies the condition
+:<math> \sum_{i=1}^N m_i(\mathbf{R}_i-\mathbf{R})=0,</math>
+then it is known as the center of mass of the system.
+The inertia matrix [I<sub>R</sub>] of the system relative to the reference point '''R''' is defined by
+:<math>[I_R] =-\sum_{i=1}^N m_i[R_i-R][R_i-R], </math>
+where the matrix [R<sub>i</sub><U+2013>R] is the skew symmetric matrix constructed from the relative position vector '''R'''<sub>i</sub><U+2013>'''R'''.
+
+===Force-torque equations===
+Using the center of mass and inertia matrix, the force and torque equations for a single rigid body take the form
+:<math> \mathbf{F} = m\mathbf{a},\quad \mathbf{T}=[I_R]\alpha + \omega\times[I_R]\omega,</math>
+and are known as Newtons second law of motion for a rigid body.
+
+The dynamics of an interconnected system of rigid bodies, B<sub>i</sub>, j=1, ..., ''M'',  is formulated by isolating each rigid body and introducing the interaction forces.  The resultant of the external and interaction forces on each body, yields the force-torque equations
+:<math> \mathbf{F}_j = m_j \mathbf{a}_j, \quad \mathbf{T}_j =[I_R]_j\alpha_j + \omega_j\times[I_R]_j\omega_j,\quad j=1,\ldots,M.</math>
+
+Newton's formulation yields 6''M'' equations that define the dynamics of a system of ''M'' rigid bodies.<ref>K. J. Waldron and G. L. Kinzel, [http://www.amazon.com/Kinematics-Dynamics-Design-Machinery-Waldron/dp/0471583995 Kinematics and Dynamics, and Design of Machinery], 2nd Ed., John Wiley and Sons, 2004.</ref>
+
+==Virtual work of forces acting on a rigid body==
+An alternate formulation of rigid body dynamics that has a number of convenient features is obtained by considering the [[virtual work]] of forces acting on a rigid body.
+
+The virtual work of forces acting at various points on a single rigid body can be calculated using the velocities of their point of application and the [[resultant force|resultant force and torque]].  To see this, let the forces '''F'''<sub>1</sub>, '''F'''<sub>2</sub> ... '''F'''<sub>n</sub> act on the points '''R'''<sub>1</sub>, '''R'''<sub>2</sub> ... '''R'''<sub>n</sub> in a rigid body.
+
+The trajectories of  '''R'''<sub>i</sub>, i=1,...,n  are defined by the movement of the rigid body.  The velocity of the points '''R'''<sub>i</sub> along their trajectories  are 
+:<math>\mathbf{V}_i = \vec{\omega}\times(\mathbf{R}_i-\mathbf{R}) + \mathbf{V},</math>
+where '''<U+03C9>''' is the angular velocity vector of the body.
+
+===Virtual work===
+Virtual work is computed from the dot product of each force with the virtual displacement of its point of application
+:<math> \delta W = \sum_{i=1}^n \mathbf{F}_i \cdot \delta\mathbf{r}_i.</math>
+If the trajectory of a rigid body is defined by a set of [[generalized coordinates]] q<sub>j</sub>, j=1, ..., m, then the virtual displacements <U+03B4>'''r'''<sub>i</sub> are given by
+:<math> \delta\mathbf{r}_i=\sum_{j=1}^m \frac{\partial \mathbf{r}_i}{\partial q_j}\delta q_j =\sum_{j=1}^m \frac{\partial \mathbf{V}_i}{\partial \dot{q}_j}\delta q_j.</math>
+The virtual work of this system of forces acting on the body in terms of the generalized coordinates becomes
+:<math> \delta W = \mathbf{F}_1\cdot(\sum_{j=1}^m \frac{\partial \mathbf{V}_1}{\partial \dot{q}_j}\delta q_j) + \ldots + \mathbf{F}_n\cdot(\sum_{j=1}^m \frac{\partial \mathbf{V}_n}{\partial \dot{q}_j}\delta q_j)</math>
+or collecting the coefficients of <U+03B4>q<sub>j</sub>
+:<math> \delta W = (\sum_{i=1}^n \mathbf{F}_i\cdot \frac{\partial \mathbf{V}_i}{\partial \dot{q}_1})\delta q_1 + \ldots + (\sum_{1=1}^n \mathbf{F}_i\cdot \frac{\partial \mathbf{V}_i}{\partial \dot{q}_m})\delta q_m. </math>
+
+===Generalized forces===
+For simplicity consider a trajectory of a rigid body that is specified by a single generalized coordinate q, such as a rotation angle, then the formula becomes
+:<math> \delta W = (\sum_{i=1}^n \mathbf{F}_i\cdot \frac{\partial \mathbf{V}_i}{\partial \dot{q}})\delta q =   (\sum_{i=1}^n \mathbf{F}_i\cdot \frac{\partial  (\vec{\omega}\times(\mathbf{R}_i-\mathbf{R}) + \mathbf{V})}{\partial \dot{q}})\delta q. </math>
+Introduce the resultant force '''F''' and torque '''T''' so this equation takes the form
+:<math> \delta W =  (\mathbf{F}\cdot \frac{\partial \mathbf{V}}{\partial \dot{q}} + \mathbf{T}\cdot\frac{\partial \vec{\omega}}{\partial \dot{q}} )\delta q. </math>
+The quantity Q defined by
+:<math> Q = \mathbf{F}\cdot \frac{\partial \mathbf{V}}{\partial \dot{q}} + \mathbf{T}\cdot\frac{\partial \vec{\omega}}{\partial \dot{q}},</math>
+is known as the [[generalized forces|generalized force]] associated with the virtual displacement <U+03B4>q.  This formula generalizes to the movement of a rigid body defined by more than one generalized coordinate, that is
+:<math> \delta W =  \sum_{j=1}^m Q_j \delta q_j, </math>
+where
+:<math> Q_j = \mathbf{F}\cdot \frac{\partial \mathbf{V}}{\partial \dot{q}_j} + \mathbf{T}\cdot\frac{\partial \vec{\omega}}{\partial \dot{q}_j}, \quad j=1,\ldots, m.</math>
+
+It is useful to note that conservative forces such as gravity and spring forces are derivable from a potential function V(q<sub>1</sub>, ..., q<sub>n</sub>), known as a [[potential energy]].  In this case the generalized forces are given by,
+:<math> Q_j = -\frac{\partial V}{\partial q_j}, \quad j=1,\ldots, m.</math>
+
+==D'Alembert's form of the principle of virtual work==
+The equations of motion for a mechanical system of rigid bodies can be determined using D'Alembert's form of the principle of virtual work.  The principle of virtual work is used to study the static equilibrium of a system of rigid bodies, however by introducing acceleration terms in Newton's laws this approach is generalized to define dynamic equilibrium.
+
+===Static equilibrium===
+The static equilibrium of a mechanical system rigid bodies is defined by the that condition that the virtual work of the applied forces is zero for any virtual displacement of the system.  This is known as the ''principle of virtual work.''<ref name="Torby1984">{{cite book |last=Torby |first=Bruce |title=Advanced Dynamics for Engineers |series=HRW Series in Mechanical Engineering |year=1984 |publisher=CBS College Publishing |location=United States of America  |isbn=0-03-063366-4 |chapter=Energy Methods}}</ref>  This is equivalent to the requirement that the generalized forces for any virtual displacement are zero, that is ''Q''<sub>i</sub>=0.
+
+Let a mechanical system be constructed from n rigid bodies, B<sub>i</sub>, i=1,...,n, and let the resultant of the applied forces on each body be the force-torque pairs, '''F'''<sub>i</sub> and '''T'''<sub>i</sub>, i=1,...,n.  Notice that these applied forces do not include the reaction forces where the bodies are connected.  Finally, assume that the velocity '''V'''<sub>i</sub> and angular velocities '''<U+03C9>'''<sub>i</sub>, i=,1...,n, for each rigid body, are defined by a single generalized coordinate q.  Such a system of rigid bodies is said to have one [[degree of freedom (mechanics)|degree of freedom]].  
+
+The virtual work of the forces and torques, '''F'''<sub>i</sub> and '''T'''<sub>i</sub>, applied to this one degree of freedom system is given by
+:<math> \delta W = \sum_{i=1}^n (\mathbf{F}_i\cdot \frac{\partial \mathbf{V}_i}{\partial \dot{q}} + \mathbf{T}_i\cdot\frac{\partial \vec{\omega}_i}{\partial \dot{q}})\delta q = Q\delta q,</math>
+where 
+:<math> Q = \sum_{i=1}^n (\mathbf{F}_i\cdot \frac{\partial \mathbf{V}_i}{\partial \dot{q}} + \mathbf{T}_i\cdot\frac{\partial \vec{\omega}_i}{\partial \dot{q}}),</math>
+is the generalized force acting on this one degree of freedom system.
+
+If the the mechanical system is defined by m generalized coordinates, q<sub>j</sub>, j=1,...,m, then the system has m degrees of freedom and the virtual work is given by,
+:<math> \delta W = \sum_{j=1}^m Q_j\delta q_j,</math>
+where
+:<math> Q_j = \sum_{i=1}^n (\mathbf{F}_i\cdot \frac{\partial \mathbf{V}_i}{\partial \dot{q}_j} + \mathbf{T}_i\cdot\frac{\partial \vec{\omega}_i}{\partial \dot{q}_j}),\quad j=1, \ldots, m.</math>
+is the generalized force associated with the generalized coordinate q<sub>j</sub>.  The principle of virtual work states that static equilibrium occurs when these generalized forces acting on the system are zero, that is
+:<math> Q_j = 0,\quad j=1, \ldots, m.</math>
+These m equations define the static equilibrium of the system of rigid bodies.
+
+===Generalized inertia forces===
+Consider a single rigid body which moves under the action of a resultant for '''F''' and torque '''T''', with one degree of freedom defined by the generalized coordinate q.  Assume the reference point for the resultant force and torque is the center of mass of the body, then the generalized inertia force Q* associated with the generalized coordinate q is given by
+:<math> Q^* = -(M\mathbf{A})\cdot  \frac{\partial \mathbf{V}}{\partial \dot{q}}   -   ([I_R]\alpha+ \omega\times[I_R]\omega)\cdot \frac{\partial \vec{\omega}}{\partial \dot{q}}.</math>
+This inertia force can be computed from the kinetic energy of the rigid body,
+:<math> T = \frac{1}{2}M\mathbf{V}\cdot\mathbf{V} + \frac{1}{2}\vec{\omega}\cdot [I_R]\vec{\omega},</math>
+by using the formula
+:<math> Q^* = -\left(\frac{d}{dt} \frac{\partial T}{\partial \dot{q}} -\frac{\partial T}{\partial q}\right).</math>
+
+A system of n rigid bodies with m generalized coordinates has the kinetic energy
+:<math>T = \sum_{i=1}^n(\frac{1}{2}M\mathbf{V}_i\cdot\mathbf{V}_i + \frac{1}{2}\vec{\omega}_i\cdot [I_R]\vec{\omega}_i),</math>
+which can be used to calculate the m generalized inertia forces<ref>T. R. Kane and D. A. Levinson, [http://www.amazon.com/Dynamics-Theory-Applications-Mechanical-Engineering/dp/0070378460 Dynamics, Theory and Applications], McGraw-Hill, NY, 2005.</ref>
+:<math> Q^*_j = -\left(\frac{d}{dt} \frac{\partial T}{\partial \dot{q}_j} -\frac{\partial T}{\partial q_j}\right),\quad j=1, \ldots, m.</math>
+
+===Dynamic equilibrium===
+D'Alembert's form of the principle of virtual work states that a system of rigid bodies is in dynamic equilibrium when the virtual work of the sum of the applied forces and the inertial forces is zero for any virtual displacement of the system.  Thus, dynamic equilibrium of a system of n rigid bodies with m generalized coordinates requires that
+:<math> \delta W = (Q_1 + Q^*_1)\delta q_1 + \ldots + (Q_m + Q^*_m)\delta q_m = 0,</math>
+for any set of virtual displacements <U+03B4>q<sub>j</sub>.  This condition yields m equations,
+:<math> Q_j + Q^*_j = 0, \quad j=1, \ldots, m,</math>
+which can also be written as
+:<math>  \frac{d}{dt} \frac{\partial T}{\partial \dot{q}_j} -\frac{\partial T}{\partial q_j} = Q_j, \quad j=1,\ldots,m.</math>
+The result is a set of m equations of motion that define the dynamics of the rigid body system.
+
+===Lagrange's equations===
+If the generalized forces Q<sub>j</sub> are derivable from a potential energy V(q<sub>1</sub>,...,q<sub>m</sub>), then these equations of motion take the form
+:<math>  \frac{d}{dt} \frac{\partial T}{\partial \dot{q}_j} -\frac{\partial T}{\partial q_j} = -\frac{\partial V}{\partial q_j}, \quad j=1,\ldots,m.</math>
+
+In this case, introduce the [[Lagrangian]], L=T-V, so these equations of motion become
+:<math>  \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_j} -\frac{\partial L}{\partial q_j} =0 \quad j=1,\ldots,m.</math>
+These are known as [[Lagrangian mechanics|Lagrange's equations of motion]].
+
+==Linear and angular momentum==
+===System of particles===
+The linear and angular momentum of a rigid system of particles is formulated by measuring the position and velocity of the particles relative to the center of mass.  Let the system of particles P<sub>i</sub>, i=1,...,n be located at the coordinates '''r'''<sub>i</sub> and velocities '''v'''<sub>i</sub>.  Select a reference point '''R''' and compute the relative position and velocity vectors,
+:<math> \mathbf{r}_i = (\mathbf{r}_i - \mathbf{R}) + \mathbf{R}, \quad \mathbf{v}_i = \frac{d}{dt}(\mathbf{r}_i - \mathbf{R}) + \mathbf{V}.</math>
+The total linear and angular momentum vectors relative to the reference point '''R''' are
+:<math> \mathbf{p} = \frac{d}{dt}(\sum_{i=1}^n m_i (\mathbf{r}_i - \mathbf{R})) + (\sum_{i=1}^n m_i) \mathbf{V},</math>
+and
+:<math> \mathbf{L} = \sum_{i=1}^n m_i (\mathbf{r}_i-\mathbf{R})\times \frac{d}{dt}(\mathbf{r}_i - \mathbf{R}) + (\sum_{i=1}^n m_i (\mathbf{r}_i-\mathbf{R}))\times\mathbf{V}.</math>
+If '''R''' is chosen as the center of mass these equations simplify to
+:<math> \mathbf{p} = M\mathbf{V},\quad \mathbf{L} = \sum_{i=1}^n m_i (\mathbf{r}_i-\mathbf{R})\times \frac{d}{dt}(\mathbf{r}_i - \mathbf{R}).</math>
+
+===Rigid system of particles===
+To specialize these formulas to a rigid body, assume the particles are rigidly connected to each other so P{{sub|i}}, i=1,...,n are located by the coordinates '''r'''{{sub|i}} and velocities '''v'''{{sub|i}}.  Select a reference point '''R''' and compute the relative position and velocity vectors,
+:<math> \mathbf{r}_i = (\mathbf{r}_i - \mathbf{R}) + \mathbf{R}, \quad \mathbf{v}_i = \omega\times(\mathbf{r}_i - \mathbf{R}) + \mathbf{V},</math>
+where <U+03C9> is the angular velocity of the system.<ref>{{cite book |last=Marion |first=JB |last2=Thornton |first2=ST |year=1995 |title=Classical Dynamics of Systems and Particles |edition=4th |publisher=Thomson |isbn=0-03-097302-3}}.</ref><ref>{{cite book |last=Symon |first=KR |year=1971 |title=Mechanics |edition=3rd |publisher=Addison-Wesley |isbn=0-201-07392-7}}.</ref><ref>{{cite book |last=Tenenbaum |first=RA |year=2004 |title=Fundamentals of Applied Dynamics |publisher=Springer |isbn=0-387-00887-X}}.</ref> 
+
+The [[linear momentum]] and  [[angular momentum]] of this rigid system measured relative to the center of mass '''R''' is
+:<math>\mathbf{p} = (\sum_{i=1}^n m_i) \mathbf{V},\quad \mathbf{L} = \sum_{i=1}^n m_i(\mathbf{r}_i-\mathbf{R})\times \mathbf{v}_i = \sum_{i=1}^n m_i (\mathbf{r}_i-\mathbf{R})\times(\omega\times(\mathbf{r}_i - \mathbf{R})).</math>
+These equations simplify to become,
+:<math> \mathbf{p} = M\mathbf{V},\quad \mathbf{L} =  [I_R]\omega,</math>
+where M is the total mass of the system and [I{{sub|R}}] is the [[moment of inertia]] matrix defined by
+:<math> [I_R] = -\sum_{i=1}^n m_i[r_i-R][r_i-R],</math>
+where [r<sub>i</sub>-R] is the skew-symmetric matrix constructed from the vector '''r'''<sub>i</sub>-'''R'''.
+<!--the previous section presents rigid body linear and angular momentum---------
+== Rigid-body linear momentum ==
+
+[[Newton's Second Law]] states that the rate of change of the [[linear momentum]] of a particle with constant [[mass]] is equal to the sum of all external [[forces]] acting on the particle:
+
+:<math>\frac{\mathrm{d}(m \mathbf{v})}{\mathrm{d}t}=\sum_{i=1}^N \mathbf{f}_i </math>
+
+where ''m'' is the particle's mass, '''v''' is the particle's velocity, their product ''m'''''v''' is the linear momentum, and '''f'''<sub>''i''</sub> is one of the ''N'' number of forces acting on the particle.
+
+Because the mass is constant, this is equivalent to
+
+:<math>m \frac{\mathrm{d}\mathbf{v}}{\mathrm{d}t}=\sum_{i=1}^N \mathbf{f}_i.</math>
+
+To generalize, assume a body of finite mass and size is composed of such particles, each with [[infinitesimal]] mass d''m''. Each particle has a position vector '''r'''. There exist internal forces, acting between any two particles, and external forces, acting only on the outside of the mass. Since velocity '''v''' is the [[derivative]] of position '''r''' with respect to time, the derivative of velocity d'''v'''/d''t'' is the second derivative of position d<sup>2</sup>'''r'''/dt<sup>2</sup>, and the linear momentum equation of any given particle is
+
+:<math>\mathrm{d}m \frac{\mathrm{d}^2\mathbf{r}}{\mathrm{d}t^2}= \sum_{i=1}^M \mathbf{f}_{i,\text{internal}} + \sum_{j=1}^N \mathbf{f}_{j,\mathrm{external}}.</math>
+
+When the linear momentum equations for all particles are added together, the internal forces sum to zero according to [[Newton's third law]], which states that any such force has opposite magnitudes on the two particles. By accounting for all particles, the left side becomes an integral over the entire body, and the second derivative operator can be moved out of the integral, so 
+
+:<math> \frac{\mathrm{d}^2}{\mathrm{d}t^2} \int \mathbf{r}\, \mathrm{d}m = \sum_{j=1}^N \mathbf{f}_{j,\mathrm{external}}</math>.
+
+Let ''M'' be the total mass, which is constant, so the left side can be multiplied and divided by ''M'', so 
+
+:<math> M \frac{\mathrm{d}^2}{\mathrm{d}t^2}\!\left(\frac{\int \mathbf{r}\, \mathrm{d}m}{M}\right) = \sum_{j=1}^N \mathbf{f}_{j,\mathrm{external}}</math>.
+
+The expression <math>\frac{\int \mathbf{r}\, \mathrm{d}m}{M}</math> is the formula for the position of the [[center of mass]]. Denoting this by '''r'''<sub>cm</sub>, the equation reduces to
+
+:<math> M \frac{\mathrm{d}^2 \mathbf{r}_\mathrm{cm}}{\mathrm{d}t^2} = \sum_{j=1}^N \mathbf{f}_{j,\mathrm{external}}.</math>
+
+Thus, linear momentum equations can be extended to [[rigid bodies]] by denoting that they describe the motion of the ''center of mass'' of the body. This is known as [[Euler's laws#Euler's first law|Euler's first law]].
+
+== Rigid-body angular momentum ==
+
+The most general equation for rotation of a rigid body in three dimensions about an arbitrary origin ''O'' with axes ''x'', ''y'', ''z'' is
+
+:<math>M b_{G/O} \times \frac{\mathrm{d}^2 R_O}{\mathrm{d}t^2} + \frac{\mathrm{d}(\mathbf{I}\boldsymbol{\omega})}{\mathrm{d}t}  = \sum_{j=1}^N \tau_{O,j} </math>
+
+where the [[moment of inertia tensor]], <math>\mathbf{I}</math>, is given by
+:<math> \mathbf{I} = \begin{pmatrix}
+I_{xx} & I_{xy} & I_{xz} \\
+I_{yx} & I_{yy} & I_{yz} \\
+I_{zx} & I_{zy} & I_{zz} 
+\end{pmatrix}</math>
+
+:<math> \mathbf{I} = 
+\begin{pmatrix} 
+\int (y^2+z^2)\, \mathrm{d}m & -\int xy\, \mathrm{d}m & -\int xz\, \mathrm{d}m\\ -\int xy\, \mathrm{d}m & \int (x^2+z^2)\, \mathrm{d}m & -\int yz\, \mathrm{d}m \\ -\int xz\, \mathrm{d}m & -\int yz\, \mathrm{d}m & \int (x^2+y^2)\, \mathrm{d}m 
+\end{pmatrix}</math>
+
+Given that [[Euler's rotation theorem]] states that there is always an [[Instant axis of rotation|instantaneous axis of rotation]], the [[angular velocity]], <math>\boldsymbol{\omega}</math>, can be given by a vector over this axis
+:<math>\quad \boldsymbol{\omega} = \omega_x \mathbf{\hat{i}} + \omega_y \mathbf{\hat{j}} + \omega_z \mathbf{\hat{k}} </math>
+
+where <math>\scriptstyle{(\mathbf{\hat{i}},\  \mathbf{\hat{j}},\  \mathbf{\hat{k}})}</math> is a set of mutually [[perpendicular]] [[unit vectors]] fixed in a [[Frame of reference|reference frame]].
+
+Rotating a rigid body is equivalent to rotating a [[Poinsot's construction|Poinsot ellipsoid]].
+-->
+
+<!-- this section has many assumptions that make it difficult to clarify the meaning---
+== Angular momentum and torque ==
+The [[angular momentum]] of a system of particles with linear momenta '''p'''<sub>i</sub> and with position vector '''r'''<sub>i</sub> from the rotation axis is defined
+:<math>
+\mathbf{L} = \sum_{i=1}^{N} \mathbf{r}_{i} \times \mathbf{p}_{i} = 
+\sum_{i=1}^{N} m_{i} \mathbf{r}_{i} \times \mathbf{v}_{i}
+</math>
+For a rigid body rotating with angular velocity <U+03C9> about the rotation axis '''n''', the velocity of each particle is given by
+:<math>
+\mathbf{v}_{i} = \omega \mathbf{\hat{n}} \times \mathbf{r}_{i} = \boldsymbol\omega \times \mathbf{r}_{i}.
+</math>
+
+Substitute this in to the definition of angular momentum to obtain 
+:<math>
+\mathbf{L} = 
+\sum_{i=1}^{N} m_{i} \mathbf{r}_{i} \times (\boldsymbol\omega \times \mathbf{r}_{i}) = 
+\boldsymbol\omega \sum_{i=1}^{N} m_{i} r_{i}^{2} = 
+I \omega \mathbf{\hat{n}}
+</math>
+where the position vectors of all particles are measured perpendicular to the rotation axis. 
+
+The [[torque]] <math>\mathbf{N}</math> is defined as the rate of change of the angular momentum <math>\mathbf{L}</math>
+:<math>
+\mathbf{N} \ \stackrel{\mathrm{def}}{=}\  \frac{d\mathbf{L}}{dt}
+</math>
+
+If I is constant (because the inertia tensor is the identity, because we work in the intrinsecal frame, or because the torque is driving the rotation around the same axis <math>\mathbf{\hat{n}}</math> so that <math>\mathrm{I}</math> is not changing) then we may write 
+
+:<math>
+\mathbf{N} \ \stackrel{\mathrm{def}}{=}\  I \frac{d\omega}{dt}\mathbf{\hat{n}} = 
+I \alpha \mathbf{\hat{n}}
+</math>
+
+where
+:<math>\alpha</math> is called the ''angular acceleration'' (or ''rotational acceleration'') about the rotation axis <math>\mathbf{\hat{n}}</math>.
+
+Notice that if I is not constant in the external reference frame (i.e. the three main axes of the body are different) then we cannot take the I outside the derivate. In this cases we can have [[torque-free precession]].
+-->
+== Applications ==
+* For the analysis of robotic systems 
+* For the biomechanical analysis of animals , humans or humanoid systems 
+* For the analysis of space objects 
+* for the design and development of dynamics-based sensors like gyroscopic sensors etc.
+* For the design and development of various stability enhancement applications in automobiles etc
+* For improving the graphics of video games which involves rigid bodies
+
+== See also ==
+* [[Analytical mechanics]]
+* [[Analytical dynamics]]
+* [[Calculus of variations]]
+* [[Classical mechanics]]
+* [[Dynamics (physics)]]
+* [[History of classical mechanics]]
+* [[Lagrangian mechanics]]
+* [[Lagrangian]]
+* [[Hamiltonian mechanics]]
+* [[Rigid body]]
+* [[Rigid rotor]]
+* [[Soft body dynamics]]
+* [[Multibody dynamics]]
+* [[Polhode]]
+* [[Herpolhode]]
+* [[Precession]]
+* [[Poinsot's construction]]
+* [[Gyroscope]]
+* [[Physics engine]]
+* [[Physics processing unit]]
+* [[PAL (software)|Physics Abstraction Layer]] - Unified multibody simulator
+* [[Dynamechs]] - Rigid-body simulator
+* [[RigidChips]] - Japanese rigid-body simulator
+
+==References==
+{{reflist}}
+
+== Further reading ==
+* E. Leimanis (1965).  ''The General Problem of the Motion of Coupled Rigid Bodies about a Fixed Point.''  (Springer, New York).
+* W. B. Heard (2006).  ''Rigid Body Mechanics: Mathematics, Physics and Applications.''  (Wiley-VCH).
+
+== External links ==
+*[http://www.d6.com/users/checker/dynamics.htm Chris Hecker's Rigid Body Dynamics Information]
+*[http://www.cs.cmu.edu/~baraff/sigcourse/index.html Physically Based Modeling: Principles and Practice]
+*[http://sbel.wisc.edu/Courses/ME751/2010/index.htm Lectures, Computational Rigid Body Dynamics at University of Wisconsin-Madison]
+*[http://www.digitalrune.com/KnowledgeBase/Overview/tabid/471/Default.aspx DigitalRune Knowledge Base] contains a master thesis and a collection of resources about rigid body dynamics.
+
+
+{{DEFAULTSORT:Rigid Body Dynamics}}
+[[Category:Rigid bodies]]
+[[Category:Rotational symmetry]]
+
+[[ast:Mec<U+00E1>nica del s<U+00F3>lidu r<U+00ED>xidu]]
+[[ca:Din<U+00E0>mica del s<U+00F2>lid r<U+00ED>gid]]
+[[de:Starrk<U+00F6>rpersimulation]]
+[[es:Mec<U+00E1>nica del s<U+00F3>lido r<U+00ED>gido]]
+[[ja:<U+525B><U+4F53><U+306E><U+529B><U+5B66>]]
+[[pt:Din<U+00E2>mica de corpo r<U+00ED>gido]]

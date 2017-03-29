@@ -1,0 +1,97 @@
+In [[mathematics]], the '''Schwarz lemma''', named after [[Hermann Amandus Schwarz]], is a result in [[complex analysis]] about [[holomorphic functions]] from the [[open set|open]] [[unit disk]] to itself. The lemma is less celebrated than stronger theorems, such as the [[Riemann mapping theorem]], which it helps to prove. It is however one of the simplest results capturing the rigidity of holomorphic functions.
+
+==Statement==
+<blockquote>'''Schwarz Lemma.''' Let '''D''' = {''z'' : |''z''| < 1} be the open [[unit disk]] in the [[complex number|complex plane]] '''C''' centered at the [[origin (mathematics)|origin]] and let ''f'' : '''D''' <U+2192> '''D''' be a [[holomorphic map]] such that ''f''(0) = 0.
+
+Then, |''f''(''z'')| <U+2264> |''z''| for all ''z'' in '''D''' and |''f<U+2032>''(0)| <U+2264> 1.
+
+Moreover, if  |''f''(''z'')| = |''z''| for some non-zero ''z'' or |''f<U+2032>''(0)| = 1, then ''f''(''z'') = ''az'' for some ''a'' in '''C''' with |''a''| = 1.</blockquote>
+
+'''Note.''' Some authors replace the condition ''f'' : '''D''' <U+2192> '''D''' with |''f''(''z'')| <U+2264> 1 for all ''z'' in '''D''' (where ''f'' is still holomorphic in '''D'''). The two versions can be shown to be equivalent through an application of the [[maximum modulus principle]].
+
+==Proof==
+The proof is a straightforward application of the [[maximum modulus principle]] on the function
+
+:<math>g(z) = \begin{cases}
+  \frac{f(z)}{z}\, & \mbox{if } z \neq 0 \\
+  f'(0) & \mbox{if } z = 0,
+\end{cases}</math>
+
+which is holomorphic on the whole of '''D''',  including at the origin (because ''f'' is differentiable at the origin and fixes zero). Now if  '''D'''<sub>''r''</sub> = {''z'' : |''z''| <U+2264> ''r''} denotes the closed disk of radius ''r'' centered at the origin, then the maximum modulus principle implies that, for ''r'' < 1, given any ''z'' in '''D'''<sub>''r''</sub>, there exists ''z''<sub>''r''</sub> on the boundary of '''D'''<sub>''r''</sub> such that
+
+:<math> |g(z)| \le |g(z_r)| = \frac{|f(z_r)|}{|z_r|} \le \frac{1}{r}.</math>
+
+As ''r'' <U+2192> 1 we get |''g''(''z'')| <U+2264> 1.
+
+Moreover, suppose that |''f''(''z'')| = |''z''| for some non-zero ''z'' in '''D''', or |''f<U+2032>''(0)| = 1. Then, |''g''(''z'')| = 1 at some point of '''D'''. So by the maximum modulus principle, ''g''(''z'') is equal to a constant ''a'' such that |''a''| = 1. Therefore, ''f''(''z'') = ''az'', as desired.
+
+==Schwarz&ndash;Pick theorem==
+A variant of the Schwarz lemma can be stated that is invariant under analytic automorphisms on the unit disk, i.e. [[bijective]] [[holomorphic]] mappings of the unit disc to itself.  This variant is known as the '''Schwarz&ndash;Pick theorem''' (after [[Georg Pick]]):
+
+Let ''f'' : '''D''' <U+2192> '''D''' be holomorphic.  Then, for all ''z''<sub>1</sub>,&nbsp;''z''<sub>2</sub>&nbsp;<U+2208>&nbsp;'''D''',
+
+:<math>\left|\frac{f(z_1)-f(z_2)}{1-\overline{f(z_1)}f(z_2)}\right| \le \left|\frac{z_1-z_2}{1-\overline{z_1}z_2}\right|</math>
+
+and, for all ''z''&nbsp;<U+2208>&nbsp;'''D''',
+
+:<math>\frac{\left|f'(z)\right|}{1-\left|f(z)\right|^2} \le \frac{1}{1-\left|z\right|^2}.</math>
+
+The expression
+
+:<math> d(z_1,z_2)=\tanh^{-1} \left|\frac{z_1-z_2}{1-\overline{z_1}z_2}\right| </math>
+
+is the distance of the points ''z''<sub>1</sub>,&nbsp;''z''<sub>2</sub> in the [[Poincar<U+00E9> metric]], i.e. the metric in the Poincar<U+00E9> disc model for [[hyperbolic geometry]] in dimension two. The Schwarz&ndash;Pick theorem then essentially states that a holomorphic map of the unit disk into itself ''decreases'' the distance of points in the Poincar<U+00E9> metric. If equality holds throughout in one of the two inequalities above (which is equivalent to saying that the holomorphic map preserves the distance in the Poincar<U+00E9> metric), then ''f'' must be an analytic automorphism of the unit disc, given by a [[M<U+00F6>bius transformation]] mapping the unit disc to itself.
+
+An analogous statement on the [[upper half-plane]] '''H''' can be made as follows:
+
+<blockquote>Let ''f'' : '''H''' <U+2192> '''H''' be holomorphic. Then, for all ''z''<sub>1</sub>,&nbsp;''z''<sub>2</sub> <U+2208> '''H''',
+
+:<math>\left|\frac{f(z_1)-f(z_2)}{\overline{f(z_1)}-f(z_2)}\right|\le \frac{\left|z_1-z_2\right|}{\left|\overline{z_1}-z_2\right|}.</math>
+</blockquote>
+
+This is an easy consequence of the Schwarz&ndash;Pick theorem mentioned above: One just needs to remember that the [[Cayley transform]] ''W''(''z'')&nbsp;=&nbsp;(''z''&nbsp;<U+2212>&nbsp;''i'')/(''z''&nbsp;+&nbsp;''i'') maps the upper half-plane '''H''' conformally onto the unit disc&nbsp;'''D'''. Then, the map ''W''&nbsp;o&nbsp;''f''&nbsp;o&nbsp;''W''<sup><U+2212>1</sup> is a holomorphic map from '''D''' onto&nbsp;'''D'''.  Using the Schwarz&ndash;Pick theorem on this map, and finally simplifying the results by using the formula for ''W'', we get the desired result. Also, for all ''z''&nbsp;<U+2208>&nbsp;'''H''',
+
+:<math>\frac{\left|f'(z)\right|}{\text{Im}(f(z))} \le \frac{1}{\text{Im}(z)}. </math>
+
+If equality holds for either the one or the other expressions, then ''f'' must be a [[M<U+00F6>bius transformation]] with real coefficients.  That is, if equality holds, then
+
+:<math>f(z)=\frac{az+b}{cz+d}</math>
+
+with ''a'',&nbsp;''b'',&nbsp;''c'',&nbsp;''d'' <U+2208> '''R''', and ''ad''&nbsp;<U+2212>&nbsp;''bc''&nbsp;>&nbsp;0.
+
+==Proof of Schwarz&ndash;Pick theorem==
+The proof of the Schwarz&ndash;Pick theorem follows from Schwarz's lemma and the fact that a [[M<U+00F6>bius transformation]] of the form
+
+:<math>\frac{z-z_0}{\overline{z_0}z-1}, \qquad |z_0| < 1,</math>
+
+maps the unit circle to itself. Fix ''z''<sub>1</sub> and define the M<U+00F6>bius transformations
+
+: <math>M(z)=\frac{z_1-z}{1-\overline{z_1}z}, \qquad \varphi(z)=\frac{f(z_1)-z}{1-\overline{f(z_1)}z}.</math>
+
+Since ''M''(''z''<sub>1</sub>)&nbsp;=&nbsp;0 and the M<U+00F6>bius transformation is invertible, the composition <U+03C6>(''f''(''M''<sup><U+2212>1</sup>(''z''))) maps 0 to 0 and the unit disk is mapped into itself. Thus we can apply Schwarz's lemma, which is to say
+
+:<math>\left |\varphi\left(f(M^{-1}(z))\right) \right|=\left|\frac{f(z_1)-f(M^{-1}(z))}{1-\overline{f(z_1)}f(M^{-1}(z))}\right| \le |z|.</math>
+
+Now calling ''z''<sub>2</sub>&nbsp;=&nbsp;''M''<sup><U+2212>1</sup>(''z'') (which will still be in the unit disk) yields the desired conclusion
+
+:<math>\left|\frac{f(z_1)-f(z_2)}{1-\overline{f(z_1)}f(z_2)}\right| \le \left|\frac{z_1-z_2}{1-\overline{z_1}z_2}\right|.</math>
+
+To prove the second part of the theorem, we just let ''z''<sub>2</sub> tend to ''z''<sub>1</sub>.
+
+==Further generalizations and related results==
+The [[Schwarz<U+2013>Ahlfors<U+2013>Pick theorem]] provides an analogous theorem for hyperbolic manifolds.
+
+[[De Branges' theorem]], formerly known as the Bieberbach Conjecture, is an important extension of the lemma, giving restrictions on the higher derivatives of ''f'' at 0 in case ''f'' is [[injective]]; that is, [[univalent mapping|univalent]].
+
+The [[Koebe 1/4 theorem]] provides a related estimate in the case that ''f'' is univalent.
+
+==References==
+* Jurgen Jost, ''Compact Riemann Surfaces'' (2002), Springer-Verlag, New York. ISBN 3-540-43299-X ''(See Section 2.3)''
+*{{cite book | author = S. Dineen | title = The Schwarz Lemma | publisher = Oxford | year = 1989 | isbn=0-19-853571-6 }}
+
+{{PlanetMath attribution|title=Schwarz lemma|id=3047}}
+
+[[Category:Riemann surfaces]]
+[[Category:Lemmas]]
+[[Category:Theorems in complex analysis]]
+[[Category:Articles containing proofs]]

@@ -1,0 +1,265 @@
+:''This page is about the physical properties of gas as a state of matter. For the uses of gases, and other meanings, see [[Gas (disambiguation)]].''
+[[Image:Gas particle movement.svg|right|thumb|Gas phase particles ([[atoms]], [[molecule]]s, or [[ion]]s) move around freely]]
+A '''gas''' is a state of matter, consisting of a collection of particles ([[molecule]]s, [[atom]]s, [[ion]]s, [[electron]]s, etc.) without a definite shape or volume that are in more or less random motion.
+
+== Physical characteristics ==
+Due to the electronic nature of the aforementioned particles, a "[[Force field (physics)|force field]]" is present throughout the space around them. Interactions between these "force fields" from one particle to the next give rise to the term [[intermolecular force]]s. Dependent on distance, these intermolecular forces influence the motion of these particles and hence their [[List of thermodynamic properties|thermodynamic properties]]. It must be noted that at the temperatures and pressures characteristic of many applications, these particles are normally greatly separated. This separation corresponds to a very weak attractive force. As a result, for many applications, this intermolecular force becomes negligible.
+
+A gas also exhibits the following characteristics:
+* Relatively low [[density]] and [[viscosity]] compared to the [[solid]] and [[liquid]] states of matter. 
+* Will expand and contract greatly with changes in [[temperature]] or [[pressure]], thus the term "compressible".
+* Will [[diffuse]] readily, spreading apart in order to homogeneously distribute itself throughout any container.
+
+== Macroscopic ==
+When analyzing a system, it is typical to specify a [[length scale]]. A ''larger'' length scale may correspond to a [[macroscopic]] view of the system, while a ''smaller'' length scale corresponds to a [[microscopic]] view.
+
+On a macroscopic scale, the quantities measured are in terms of the ''large scale'' effects that a gas has on a system or its surroundings such as its velocity, pressure, or temperature. Mathematical equations, such as the [[Extended hydrodynamics|Extended hydrodynamic equations]], [[Navier-Stokes equations]] and the [[Euler equations]] have been developed to attempt to model the relations of the pressure, density, temperature, and velocity of a moving gas.
+
+=== Pressure ===
+{{main|Pressure}}
+
+The pressure exerted by a gas uniformly across the surface of a container can be described by simple [[kinetic theory]]. The particles of a gas are constantly moving in random directions and frequently collide with the walls of the container and/or each other. These particles all exhibit the [[Physical property|physical properties]] of [[mass]], [[momentum]], and [[energy]], which all must be [[Conservation law|conserved]]. In [[classical mechanics]], ''Momentum'', by definition, is the product of mass and velocity. [[Kinetic_energy#Newtonian kinetic energy|Kinetic energy]] is one half the mass multiplied by the square of the velocity.
+
+The sum of all the [[normal component]]s of force exerted by the particles impacting the walls of the container divided by the area of the wall is defined to be the pressure. The pressure can then be said to be the average [[linear momentum]] of these moving particles. A common misconception is that the collisions of the molecules with each other is essential to explain gas pressure, but in fact their random velocities are sufficient to define this quantity.
+
+=== Temperature ===
+{{main|Thermodynamic temperature}}
+
+The temperature of any [[physical system]] is the result of the motions of the molecules and atoms which make up the system. In [[statistical mechanics]], temperature is the measure of the average kinetic energy stored in a particle. The methods of storing this energy are dictated by the [[Degrees of freedom (physics and chemistry)|degrees of freedom]] of the particle itself ([[Energy_level#Molecules|energy modes]]). These particles have a range of different velocities, and the velocity of any single particle constantly changes due to collisions with other particles. The range in speed is usually described by the [[Maxwell-Boltzmann distribution]].
+
+=== Specific Volume ===
+{{main|Specific volume}}
+
+When performing a thermodynamic analysis, it is typical to speak of [[intensive and extensive properties]]. Properties which depend on the amount of gas are called ''extensive'' properties, while properties that do not depend on the amount of gas are called ''intensive'' properties. '''Specific volume''' is an example of an ''intensive'' property because it is the volume occupied by a ''unit of mass'' of a material, meaning we have divided through by the mass in order to obtain a quantity in terms of, for example,<math>\textstyle \frac{m^3}{kg} </math>. Notice that the difference between '''volume''' and '''specific volume''' differ in that the specific quantity is mass ''independent''.
+
+=== Density ===
+{{main|Density}}
+
+Because the molecules are free to move about in a gas, the mass of the gas is normally characterized by its '''density'''. Density is the mass per volume of a substance or simply, the inverse of specific volume. For gases, the density can vary over a wide range because the molecules are free to move. Macroscopically, density is a [[state variable]] of a gas and the change in density during any process is governed by the laws of thermodynamics. Given that there are many particles in completely random motion, for a [[Fluid statics|static gas]], the density is the same throughout the entire container. Density is therefore a [[Scalar (physics)|scalar quantity]]; it is a simple physical quantity that has a magnitude but no direction associated with it. It can be shown by '''kinetic theory''' that the density is proportional to the size of the container in which a fixed mass of gas is confined.
+
+== Microscopic ==
+{{main|Microscopic}}
+
+On the microscopic scale, the quantities measured are at the molecular level. Different theories and mathematical models have been created to describe molecular or particle motion. A few of the gas-related models are listed below.
+
+=== Kinetic theory ===
+{{main|Kinetic theory}}
+
+Kinetic theory attempts to explain macroscopic properties of gases by considering their molecular composition and motion.
+
+=== Brownian motion ===
+{{main|Brownian motion}}
+
+Brownian motion is the mathematical model used to describe the random movement of particles suspended in a fluid often called [[particle theory]]. 
+
+Since it is at the limit of (or beyond) current technology to observe individual gas particles (atoms or molecules), only theoretical calculations give suggestions as to how they move, but their motion is different from Brownian Motion. The reason is that Brownian Motion involves a smooth drag due to the frictional force of many gas molecules, punctuated by violent collisions of an individual (or several) gas molecule(s) with the particle. The particle (generally consisting of millions or billions of atoms) thus moves in a jagged course, yet not so jagged as we would expect to find if we could examine an individual gas molecule.
+
+=== Intermolecular forces ===
+''Main article: [[Van der Waals force]]''
+''See Also: [[Intermolecular force]]''
+
+As discussed earlier, momentary attractions (or repulsions) between particles have an effect on [[gas dynamics]]. In [[physical chemistry]], the name given to these "intermolecular forces" is the "Van der Waals force".
+
+== Simplified models ==
+{{main|Equation of state}}
+
+An ''equation of state'' (for gases) is a mathematical model used to roughly describe or predict the state of a gas. At present, there is no single equation of state that accurately predicts the properties of all gases under all conditions. Therefore, a number of much more accurate equations of state have been developed for gases under a given set of assumptions. The "gas models" that are most widely discussed are "Real Gas", "Ideal Gas" and "Perfect Gas". Each of these models have their own set of assumptions to, basically, make our lives easier when we want to analyze a given thermodynamic system.
+
+=== Real gas ===
+{{main|Real gas}}
+
+'''Real gas effects''' refers to an assumption base where the following are taken into account:
+* [[Compressibility factor|Compressibility effects]]
+* Variable [[heat capacity]] 
+* Van der Waal forces
+* [[Non-equilibrium thermodynamics|Non-equilibrium thermodynamic effects]] 
+* Issues with molecular [[Dissociation (chemistry)|dissociation]] and [[elementary reaction]]s with variable composition. 
+
+For most applications, such a detailed analysis is excessive. An example where "Real Gas effects" would have a significant impact would be on the [[Space Shuttle]] [[Atmospheric reentry|re-entry]] where extremely high temperatures and pressures are present.
+
+=== Ideal gas ===
+<!-- PLEASE DO NOT INSERT the {{main|Ideal gas}} link here until the dispute has been resolved! Thanks! --Katanada -->''
+
+An "ideal gas" is a simplified "real gas" with the assumption that the [[compressibility factor]] <math>Z</math> is set to 1. So the state variables follow the [[ideal gas law]].
+
+This approximation is more suitable for applications in engineering although simpler models can be used to produce a "ball-park" range as to where the real solution should lie. An example where the "ideal gas approximation" would be suitable would be inside a [[Jet_engine#Combustors|combustion chamber]] of a [[jet engine]]. It may also be useful to keep the elementary reactions and chemical dissociations for calculating [[Exhaust gas|emissions]].
+
+=== Perfect gas ===
+{{main|Perfect gas}}
+
+By definition, A '''perfect gas''' is one in which intermolecular forces are neglected. So, along with the assumptions of an ''Ideal Gas'', the following assumptions are added:
+* Neglected intermolecular forces
+
+By neglecting these forces, the equation of state for a ''perfect gas'' can be simply derived from kinetic theory or statistical mechanics.
+
+This type of assumption is useful for making calculations very simple and easy to do. With this assumption we can apply the ''Ideal gas law'' without restriction and neglect many complications that may arise from the Van der Waals forces.
+
+Along with the definition of a perfect gas, there are also two more simplifications that can be made although various textbooks either ''omit'' or ''combine'' the following simplifications into a general "perfect gas" definition. For sake of clarity, these simplifications are defined separately.
+
+==== Thermally perfect ====
+{{main|Thermally perfect gas}}
+
+* The gas is in [[Thermodynamic equilibrium]]
+* Not chemically reacting
+* [[Internal energy]], [[Enthalpy]], and [[Specific Heat]] are functions of Temperature ''only''.
+
+<math>e = e(T)</math>
+<math>h = h(T)</math>
+<math>de = C_vdT</math>
+<math>dh = C_pdT</math>
+
+This type of approximation is useful for modeling, for example, an [[axial compressor]] where temperature fluctuations are usually not large enough to cause any significant deviations from the ''Thermally perfect'' gas model. Heat capacity is still allowed to vary, though only with temperature and molecules are not permitted to dissociate. 
+
+==== Calorically perfect ====
+{{main|Calorically perfect gas}}
+
+Finally, the most restricted gas model is one where all the above assumptions apply and we also apply:
+* Constant Specific Heats
+
+<math>e = C_vT</math>
+<math>h = C_pT</math>
+
+Although this may be the most restrictive model, it still may be accurate enough to make reasonable calculations. For example, if a model of one compression stage of the axial compressor mentioned in the previous example was made (one with variable <math>C_p</math>, and one with constant <math>C_p</math>) to compare the two simplifications, the deviation may be found at a small enough order of magnitude that other factors that come into play in this compression would have a greater impact on the final result than whether or not <math>C_p</math> was held constant. (compressor tip-clearance, boundary layer/frictional losses, manufacturing impurities, etc.)
+
+== Historical Synthesis ==
+{{main|Boyle's Law}}
+
+Boyle's Law was perhaps the first expression of an equation of state. In 1662 Robert Boyle, an Irishman, performed a series of experiments employing a J-shaped glass tube, which was sealed on one end. Mercury was added to the tube, trapping a fixed quantity of air in the short, sealed end of the tube. Then the volume of gas was carefully measured as additional mercury was added to the tube. The pressure of the gas could be determined by the difference between the mercury level in the short end of the tube and that in the long, open end. Through these experiments, Boyle noted that the gas volume varied inversely with the pressure. In mathematical form, this can be stated as: <math>pV = constant</math>. 
+
+This law is used widely to describe different [[thermodynamic process]]es by adjusting the equation to read <math>pV^n = constant</math> and then varying the <math>n</math> through different values such as the [[Heat capacity ratio|specific heat ratio]], ''<U+03B3>''.
+
+{{main|Charles Law}}
+
+In 1787 the French physicist [[Jacques Charles]] found that oxygen, nitrogen, hydrogen, carbon dioxide, and air expand to the same extent over the same 80 kelvin interval. 
+
+{{main|Gay-Lussac's Law}}
+
+In 1802, [[Joseph Louis Gay-Lussac]] published results of similar experiments, indicating a linear relationship between volume and temperature: <math>V_1/T_1 = V_2/T_2</math>
+
+{{main|Dalton's law}}
+
+In 1801 [[John Dalton]] published the Law of Partial Pressures: The pressure of a mixture of gases is equal to the sum of the pressures of all of the constituent gases alone. Mathematically, this can be represented for n species as: <math>Pressure_{total} = Pressure_1 + Pressure_2 + ... + Pressure_n</math>
+
+== Special Topics ==
+==== Compressibility ====
+{{main|Compressibility factor}}
+
+The compressibility factor (<math>Z</math>) is used to alter the ideal gas equation to account for the real gas behavior. It is sometimes referred to as a "fudge-factor" to make the ideal gas law more accurate for the application. ''Usually'' this <math>Z</math> value is very close to unity.
+
+==== Reynolds Number ====
+{{main|Reynolds number}}
+
+In fluid mechanics, the Reynolds number is the ratio of inertial forces (''v<sub>s</sub><U+03C1>'') to viscous forces (''<U+03BC>/L''). It is one of the most important dimensionless numbers in fluid dynamics and is used, usually along with other dimensionless numbers, to provide a criterion for determining dynamic similitude.
+
+==== Viscosity ====
+{{main|Viscosity}}
+
+As we saw earlier: Pressure acts perpendicular (normal) to the wall. The tangential (shear) component of the force that is left over is related to the ''viscosity'' of the gas. As an object moves through a gas, viscous effects become more prevalent.
+
+==== Turbulence ====
+{{main|Turbulence}}
+
+In fluid dynamics, '''turbulence''' or turbulent flow is a flow regime characterized by chaotic, stochastic property changes. This includes low momentum diffusion, high momentum convection, and rapid variation of pressure and velocity in space and time.
+
+==== Boundary Layer ====
+{{main|Boundary layer}}
+
+Particles will, in effect, "stick" to the surface of an object moving through it. This layer of particles is called the '''boundary layer'''. At the surface of the object, it is essentially static due to the friction of the surface. The object, with its boundary layer is effectively the new shape of the object that the rest of the molecules "see" as the object approaches. This boundary layer ''can'' separate from the surface, essentially creating a new surface and completely changing the flow path. The classical example of this is a [[Stall_(flight)#Formal definition|stalling airfoil]].
+
+==== Maximum Entropy Principle ====
+{{main|Principle of maximum entropy}}
+
+As the total number of degrees of freedom approaches infinity, the system will be found in the [[macrostate]] that corresponds to the highest [[multiplicity]].
+
+==== Thermodynamic Equilibrium ====
+{{main|Thermodynamic equilibrium}}
+
+Equilibrium thermodynamics applies if the energy change within a system occurs on a timescale large enough for a sufficient number of molecular collisions to occur so that the energy transfer between molecules and between energy modes to allow the new energy value to be distributed in equilibrium among the molecules. (For typical systems, this is on the order of a few nanoseconds)
+
+{{wiktionary}}
+<div style="-moz-column-count:3; column-count:3;">
+<!-- I'd like to see some relevant articles posted in a See Also section. Not things that were already mentioned in the article. -->
+</div>
+
+==See also==
+*[[Thermodynamics]]
+
+== References ==
+* [[John D. Anderson]]. ''Modern Compressible Flow: Third Edition'' New York, NY : McGraw-Hill, 2004. ISBN 007-124136-1
+* Philip Hill and Carl Peterson. ''Mechanics and Thermodynamics of Propulsion: Second Edition'' Addison-Wesley, 1992. ISBN 0-201-14659-2
+* John D. Anderson. ''Fundamentals of Aerodynamics: Fourth Edition'' New York, NY : McGraw-Hill, 2007. ISBN-13: 978-0-07-295046-5 ISBN-10: 0-07-295046-3
+* National Aeronautics and Space Administration (NASA). [http://www.grc.nasa.gov/WWW/K-12/airplane/Animation/frglab.html Animated Gas Lab]. Accessed February, 2008.
+* Georgia State University. [http://hyperphysics.phy-astr.gsu.edu/hbase/hframe.html HyperPhysics]. Accessed February, 2008.
+* Antony Lewis [http://www.wordwebonline.com/en/GASEOUSSTATE WordWeb]. Accessed February, 2008.
+* Northwestern Michigan College [http://www.nmc.edu/~bberthelsen/c9n03.htm The Gaseous State]. Accessed February, 2008.
+<references/>
+{{State of matter}}
+
+[[Category:Fundamental physics concepts]]
+[[Category:Dutch loanwords]]
+[[Category:Gases|*]]
+
+[[ar:<U+063A><U+0627><U+0632>]]
+[[ast:Gas]]
+[[bs:Plin]]
+[[bg:<U+0413><U+0430><U+0437>]]
+[[ca:Gas]]
+[[cs:Plyn]]
+[[cy:Nwy]]
+[[da:Gas]]
+[[de:Gas]]
+[[et:Gaas]]
+[[el:<U+0391><U+03AD><U+03C1><U+03B9><U+03BF>]]
+[[es:Gas]]
+[[eo:Gaso]]
+[[eu:Gas]]
+[[fa:<U+06AF><U+0627><U+0632>]]
+[[fr:Gaz]]
+[[gd:Gas]]
+[[gl:Gas]]
+[[ko:<U+AE30><U+CCB4>]]
+[[hr:Plin]]
+[[io:Gaso]]
+[[id:Gas]]
+[[is:Gas]]
+[[it:Gas]]
+[[he:<U+05D2><U+05D6>]]
+[[kn:<U+0C85><U+0CA8><U+0CBF><U+0CB2>]]
+[[ka:<U+10D0><U+10D8><U+10E0><U+10D8>]]
+[[la:Gasium]]
+[[sw:Gesi]]
+[[ku:Gaz]]
+[[lv:G<U+0101>ze]]
+[[lt:Dujos]]
+[[jbo:gapci]]
+[[hu:G<U+00E1>z]]
+[[mk:<U+0413><U+0430><U+0441>]]
+[[ms:Gas]]
+[[nl:Gasvormig]]
+[[ja:<U+6C17><U+4F53>]]
+[[no:Gass]]
+[[nn:Gass]]
+[[nov:Gase]]
+[[oc:Gas]]
+[[nds:Gas]]
+[[pl:Gaz]]
+[[pt:G<U+00E1>s]]
+[[qu:Wapsi]]
+[[ru:<U+0413><U+0430><U+0437>]]
+[[scn:Gas]]
+[[simple:Gas]]
+[[sk:Plyn]]
+[[sl:Plin]]
+[[sr:<U+0413><U+0430><U+0441>]]
+[[sh:Gas]]
+[[fi:Kaasu]]
+[[sv:Gas]]
+[[ta:<U+0BB5><U+0BB3><U+0BBF><U+0BAE><U+0BAE><U+0BCD>]]
+[[th:<U+0E41><U+0E01><U+0E4A><U+0E2A>]]
+[[vi:Ch<U+1EA5>t kh<U+00ED>]]
+[[tr:Gaz]]
+[[uk:<U+0413><U+0430><U+0437>]]
+[[yi:<U+05D2><U+05D0><U+05D6>]]
+[[yo:<U+1EB8>f<U+00FA><U+00F9>f<U+00F9>]]
+[[zh:<U+6C14><U+4F53>]]
+eat your pie

@@ -1,0 +1,49 @@
+[[Image:Line-shape.png|325px|thumb|'''Figure 1.''' Schematic representation of the line shape of an electronic excitation. The narrow component at the frequency <U+03C9><U+02C8> is the zero-phonon line and the broader feature is the phonon sideband. In emission the relative positions of the two components are reversed.]]
+The '''zero-phonon line''' and the '''[[phonon]] sideband''' jointly constitute the [[spectral linewidth|line]] shape of individual light absorbing and emitting molecules ([[chromophore]]s) embedded into a transparent solid matrix. When the host matrix contains many chromophores, each will contribute a zero-[[phonon]] line and a phonon sideband to the absorption and emission [[spectrum|spectra]].  The spectra originating from a collection of identical chromophores in a matrix is said to be inhomogeneously broadened because each chromophore is surrounded by a somewhat different matrix environment which modifies the energy required for an electronic transition. In an inhomogeneous distribution of chromophores, individual zero-phonon line and phonon sideband positions are therefore shifted and overlapping.
+
+Figure 1 shows the typical line shape for electronic transitions of individual chromophores in a solid matrix. The zero-phonon line is located at a [[frequency]] <U+03C9><U+2019> determined by the intrinsic difference in energy levels between ground and excited state as well as by the local environment. The phonon side band is shifted to a higher frequency in absorption and to a lower frequency in fluorescence. The frequency gap <U+0394> between the zero-phonon line and the peak of the phonon side band is determined by [[Franck-Condon principle]]s.
+
+The distribution of intensity between the zero-phonon line and the phonon side band is strongly dependent on temperature. At room temperature there is enough thermal energy to excite many phonons and the probability of zero-phonon transition is close to zero. For organic chromophores in organic matrices, the probability of a zero-phonon electronic transition only becomes likely below about 40 [[kelvin]]s, but depends also on the strength of coupling between the chromophore and the host lattice. 
+
+==Energy diagram== 
+[[Image:Phonon-energy-diagram.png|325px|thumb|'''Figure 2.''' Energy diagram of an electronic transition with phonon coupling along the configurational coordinate ''q''<sub>''' i'''</sub>, a [[normal mode]] of the lattice. The upwards arrows represent absorption without phonons and with four phonons. The downwards arrows represent the symmetric process in emission.]]
+[[Image:Lattice-modes.png|325px|thumb|'''Figure 3.''' Representation of three lattice normal modes (''i'', ''j'', ''k'') and how their intensities combine at the zero-phonon frequency, but are distributed within the phonon side band due to their different characteristic harmonic oscillator frequencies ''<U+03A9>''.]]
+
+The transition between the [[ground state|ground]] and the [[excited state]] is based on the [[Franck-Condon principle]], that the electronic transition is very fast compared with the motion in the lattice. The energy transitions can then be symbolized by vertical arrows between the ground and excited state, that is, there is no motion along the configurational coordinates during the transition. Figure 2 is an energy diagram for interpreting absorption and emission with and without phonons in terms of the configurational coordinate q<sub>i</sub>. The energy transitions originate at the lowest phonon energy level of the electronic states. As represented in the figure, the largest wavefunction overlap (and therefore largest transition probability) occurs when the [[photon]] energy is equal the energy difference between the two electronic states (''E''<sub>'''1'''</sub> <U+2013> ''E''<sub>'''0'''</sub>) plus four [[quanta]] of lattice mode ''i'' vibrational energy (<math>\hbar \Omega _i</math>). This four phonon transition is mirrored in emission when the excited state quickly decays to its zero point lattice vibration level by means of a radiationless process, and from there, via photon emission to the ground state. The zero phonon transition is depicted as having a lower wavefunction overlap and therefore a lower transition probability.
+
+In addition to the Franck-Condon assumption, three other approximations are commonly assumed and are implicit in the figures. The first is that each lattice vibrational mode is well described by a [[quantum harmonic oscillator]]. This approximation is implied in the [[parabolic]] shape of the potential wells of Figure 2, and in the equal energy spacing between phonon energy levels. The second approximation is that only the lowest (zero-point) lattice vibration is excited. This is called the low temperature approximation and means that electronic transitions do not originate from any of the higher phonon levels. The third approximation is that the interaction between the chromophore and the lattice is the same in both the ground and the excited state. Specifically, the harmonic oscillator potential is equal in both states. This approximation, called linear coupling, is represented in Figure 2 by two equally shaped parabolic potentials and by equally spaced phonon energy levels in both the ground and excited states. 
+
+The strength of the zero-phonon transition arises in the superposition of all of the lattice modes. Each lattice [[normal mode|mode]] ''m'' has a characteristic vibrational frequency <U+03A9><sub>'''m'''</sub>  which leads to an energy difference between phonons <math>\hbar \Omega _m</math>. When the transition probabilities for all the modes are summed, the zero-phonon transitions always add at the electronic origin (''E''<sub>'''1'''</sub> <U+2013> ''E''<sub>'''0'''</sub>), while the transitions with phonons contribute at a distribution of energies. Figure 3 illustrates the superposition of transition probabilities of several lattice modes. The phonon transition contributions from all lattice modes constitute the phonon sideband.
+
+The frequency separation between the maxima of the absorption and fluorescence phonon sidebands is the phonon contribution to the [[stokes shift|Stokes<U+2019> shift]]. 
+
+==Line shape==
+The shape of the zero-phonon line is [[Lorentzian]] with a width determined by the excited state lifetime ''T''<sub>10</sub> according to the Heisenberg [[uncertainty principle]]. Without the influence of the lattice, the natural line width (full width at half maximum) of the chromophore is ''<U+03B3>''<sub>0</sub> = 1/''T''<sub>10</sub> . The lattice reduces the lifetime of the excited state by introducing radiationless decay mechanisms. At [[absolute zero]] the lifetime of the excited state influenced by the lattice is ''T''<sub>1</sub>. Above absolute zero, thermal motions will introduce random perturbations to the chromophores local environment. These perturbations shift the energy of the electronic transition, introducing a temperature dependent broadening of the line width. The measured width of a single chromophore<U+2019>s zero phonon line, the homogeneous line width, is then ''<U+03B3>''<sub>h</sub>(''T'') <U+2265> 1/''T''<sub>1</sub> .
+
+The line shape of the phonon side band is that of a [[Poisson distribution]] as it expresses a discrete number of events, electronic transitions with phonons, during a period of time. At higher temperatures, or when the chromophore interacts strongly with the matrix, the probability of multiphonon is high and the phonon side band approximates a [[normal distribution|Gaussian distribution]].
+
+The distribution of intensity between the zero-phonon line and the phonon sideband is characterized by the [[Debye-Waller factor]] <U+03B1>. 
+
+==Analogy to the M<U+00F6>ssbauer effect==
+The zero-phonon line is an optical analogy to the [[Mossbauer effect|M<U+00F6>ssbauer lines]], which originate in the recoil-free emission or absorption of [[gamma ray]]s from the nuclei of atoms bound in a solid matrix. In the case of the optical zero-phonon line, the [[Coordinates (mathematics)|coordinates]] of the chromophore is the physical parameter that may be perturbed, whereas in the gamma transition, the [[momentum|momenta]] of the atoms may be changed. More technically, the key to the analogy is the symmetry between position and momentum in the [[Hamiltonian (quantum mechanics)|Hamiltonian]] of the [[quantum harmonic oscillator]]. Both position and momentum contribute in the same way (quadratically) to the total energy.
+
+== See also ==
+*[[Phonon]]
+*[[Mossbauer effect]]
+*[[Shpolskii matrix]]
+
+==References==
+
+Journal links may require subscription (DOI-[[Digital object identifier]]).
+
+J. Friedrich and D. Haarer (1984). <U+201C>Photochemical Hole Burning: A Spectroscopic Study of Relaxation Processes in Polymers and Glasses<U+201D>. ''Angewandte Chemie International Edition in English'' '''23''', 113-140. [http://dx.doi.org/10.1002/anie.198401131 DOI Link]
+
+Olev Sild and Kristjan Haller, Eds. (1988) ''Zero-Phonon Lines and Spectral Hole Burning in Spectroscopy and Photochemistry'', Springer Verlag, Berlin. ISDN 3-540-19214-X.
+
+==External links==
+*[http://www.physics.montana.edu/faculty/rebane/Research/Tutorials/Hole_burning/HoleBurning_00.htm Aleksander Rebane's site at Montana State University, Bozeman ]
+*[http://hyperphysics.phy-astr.gsu.edu/hbase/molecule/molspecon.html#c1 Hyperphysics: Molecular Spectra]
+
+[[Category:Spectroscopy]]
+[[Category:Optics]]
+[[Category:Condensed matter physics]]

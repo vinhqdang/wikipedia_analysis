@@ -1,0 +1,147 @@
+{{Infobox programming language
+|name = Clean
+|logo = [[Image:Cleanlang logo.jpg|250px]]
+|paradigm = [[functional programming|functional]]
+|year = 1987
+|designer = Software Technology Research Group of [[Radboud University Nijmegen]]
+|developer =
+|latest_release_version = 2.4
+|latest_release_date =  {{release_date|2011|12|23}}
+|typing = [[strong typing|strong]], [[static typing|static]], [[dynamic typing|dynamic]]
+|implementations =
+|dialects =
+|influenced_by = [[Lean (programming language)|Lean]], [[Haskell (programming language)|Haskell]]
+|influenced =
+|file_ext = .icl, .dcl, .abc, .obj
+}}
+
+In [[computer science]], '''Clean''' is a [[general-purpose programming language|general-purpose]] [[purely functional]] [[computer]] [[Computer programming|programming]] [[Programming language|language]].
+
+==Features==
+The language Clean first appeared in 1987 and is still being further developed; it shares many properties with [[Haskell (programming language)|Haskell]]:
+[[Referential transparency (computer science)|referential transparency]], [[list comprehension]], [[Guard (computing)|guard]]s, [[garbage collection (computer science)|garbage collection]], [[higher order functions]] and [[currying]] and  [[lazy evaluation]].
+
+An [[integrated development environment]] (IDE) is included in the Clean distribution.
+
+Clean's method for dealing with mutable state and I/O is done through a [[Uniqueness type|uniqueness typing system]], in contrast to Haskell's use of [[Monads in functional programming|monads]].
+"The uniqueness type system also allows the Clean compiler to generate efficient code because uniquely
+attributed data structures can be [[Destructive update|destructively updated]]."<ref name="CleanHaskellGuide">http://www.st.cs.ru.nl/papers/2007/achp2007-CleanHaskellQuickGuide.pdf</ref>
+
+==Examples==
+[[hello world program|Hello world]]:
+
+ module hello<br>
+ Start :: {#Char}<br>
+ Start = "Hello, world!"
+
+[[Factorial]]:
+  module factorial<br>
+  fac 0 = 1
+  fac n = n * fac (n-1)
+
+  // find the factorial of 10
+  Start = fac 10
+
+[[Factorial]]:
+  module factorial2<br>
+  import StdEnv
+  fac 0 = 1
+  fac n = prod [1..n]//Generate a list that goes from 1 to n and returns the product of the elements
+
+  // find the factorial of 6
+  Start = fac 6
+
+[[Fibonacci sequence]]:
+  module fibonacci<br>
+  fib 0 = 0
+  fib 1 = 1
+  fib n = fib (n - 2) + fib (n - 1) <br>
+  Start = fib 7
+
+[[Infix notation|Infix]] operator:
+  (^) infixr 8 :: Int Int -> Int
+  (^) x 0 = 1
+  (^) x n = x * x ^ (n-1)
+
+The type declaration states that the function is a right associative infix operator with priority 8: this states that <code>x*x^(n-1)</code> is equivalent to <code>x*(x^(n-1))</code> as opposed to <code>(x*x)^(n-1)</code>; this operator is  pre-defined in the Clean standard environment.
+
+==How Clean works==
+Computation is based on [[graph rewriting]] and [[graph reduction|reduction]]. Constants such as numbers are graphs and functions are graph rewriting formulas. This, combined with compilation to native code, makes Clean programs relatively fast, even with high abstraction.<ref>[http://shootout.alioth.debian.org/u32/which-programming-languages-are-fastest.php?python=on&jruby=on&yarv=on&perl=on&php=on&ruby=on Boxplot Summary | Ubuntu : Intel Q6600 Computer Language Benchmarks Game<!-- Bot generated title -->]</ref>
+
+==Compiling==
+# Source files (.icl) and project files (.dcl) are converted into Clean's platform-independent bytecode (.abc), implemented in [[C (programming language)|C]] and Clean.
+# Bytecode is converted to object code (.obj) using [[C (programming language)|C]].
+# object code is linked with other files in the module and the runtime system and converted into a normal executable in Clean.
+Earlier Clean system versions were written completely in [[C (programming language)|C]], thus avoiding bootstrapping issues.
+
+==Platforms==
+Clean is available for [[Microsoft Windows]].  It is also available with limited [[input/output]] capabilities and without the "Dynamics" feature for [[Apple Macintosh]], [[Solaris (operating system)|Solaris]] and [[Linux]].
+
+==License==
+Clean is [[dual license]]d: it is available under the terms of the [[GNU Lesser General Public License|GNU LGPL]], and also under a proprietary license.
+
+==Versus Haskell==
+===Speed===
+Some state that Clean is faster than Haskell,<ref>[http://sequence.complete.org/node/119 Why is Clean faster than Haskell?]</ref> but other research show that this depends on the kind of program that is tested.<ref>[http://www-users.cs.york.ac.uk/~mfn/hacle/ Hacle - A Translator from Haskell to Clean]</ref>
+
+===Syntactic differences===
+The syntax of Clean is very similar to Haskell, with some notable differences:<ref name="CleanHaskellGuide" />
+
+{| class="wikitable" border="1"
+|-
+! Haskell
+! Clean
+! Remarks
+|-
+| (a -> b) -> [a] -> [b]
+| (a -> b) [a] -> [b]
+| [[higher order function]]
+|-
+| f . g
+| f o g
+| [[Function composition (computer science)|function composition]]
+|-
+| -5
+| ~5
+|unary minus
+|-
+| <nowiki>[ x | x <- [1..10] , isOdd x]</nowiki>
+| <nowiki>[ x \\ x <- [1..10] | isOdd x]</nowiki>
+| [[list comprehension]]
+|-
+| x:xs
+| <nowiki>[x:xs]</nowiki>
+| [[cons]] operator
+|}
+
+==See also==
+* [[Haskell (programming language)|Haskell programming language]]
+* [[List of functional programming topics]]
+
+==References==
+{{Reflist}}
+
+==External links==
+*[http://wiki.clean.cs.ru.nl/ Clean Wiki]
+*[http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?Clean Clean in FOLDOC]
+*[http://shootout.alioth.debian.org/u32/clean.php Clean in The Computer Language Benchmarks Game]
+*[http://www.nabble.com/Why-can't-Haskell-be-faster--tf4723820.html Clean vs. Haskell discussion (haskell-cafe)]
+*[http://www.discenda.org/Clean/ Programming in Clean]
+
+{{DEFAULTSORT:Clean (Programming Language)}}
+[[Category:Functional languages]]
+[[Category:Haskell programming language family]]
+[[Category:Term-rewriting programming languages]]
+[[Category:Free compilers and interpreters]]
+[[Category:Cross-platform free software]]
+
+[[ca:Clean]]
+[[cs:Clean]]
+[[de:Clean (Programmiersprache)]]
+[[nl:Clean (programmeertaal)]]
+[[ja:Clean]]
+[[pt:Clean]]
+[[ru:Clean]]
+[[fi:Clean (ohjelmointikieli)]]
+[[tg:Clean]]
+[[zh:Concurrent Clean]]

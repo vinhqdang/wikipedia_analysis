@@ -1,0 +1,96 @@
+{{Userspace draft|source=ArticleWizard|date=February 2010}}
+
+{{Infobox company
+| name             = PKWARE, Inc
+| logo             = [[File:PKWARElogo.jpg]]
+| type             = [[Private Company|Private]]
+| foundation       = {{Start date|1986}}
+| location_city    = [[Milwaukee, Wisconsin|Milwaukee, WI]]
+| location_country = [[United States|U.S.]]
+| area_served      = Worldwide
+| industry         = [[Software]]
+| num_employees    = 83
+| homepage         = [http://www.pkware.com/ PKWARE.com]
+| intl             = yes
+}}
+
+'''PKWARE, Inc.''' was founded in 1986 by [[Phil Katz]], the inventor of the [[ZIP (file format)|ZIP]] standard. PKWARE provides data-centric security solutions across all major computing platforms, and is known for its [[data compression]] and file management solutions. Organizations in industries such as banking, financial services, healthcare and government use PKWARE solutions to solve a variety of common business problems relating to data security, compression, and file management.
+==History==
+{| class="wikitable"
+|-
+! '''Year'''
+! '''Event'''
+|-
+| 1986
+| PKWARE is founded by Phil Katz
+|-
+| 1989
+| .ZIP file format is introduced
+First [[PKZIP]] version is released
+|-
+| 1992
+| PKZIP is released for [[UNIX]] Servers<ref name="PKZIP on UNIX">[http://www.fixya.com/recommendations/p1278972-software_utilities Do you recommend PKZIP on UNIX?]</ref>
+|-
+| 1995
+| Mainframe and midrange PKZIP products are released<ref name="PKZIP i and z">[http://www.thefreelibrary.com/PKWARE+adds+strong+encryption+to+PKZIP+for+MVS.-a097285012 PKZIP introduced on OS/400 and MVS]</ref>
+|-
+| 2001
+| New management team, lead by George Haddix and backed by investment-banking firm Grace Matthews, purchase PKWARE<ref name="Archived Journal">Gertzen, Jason. "Management team purchases PKWARE: Brown Deer firm leads in data compression." ''Milwaukee Journal Sentinel.'' 16 March 2001</ref>
+|-
+| 2002
+| PKWARE Partners with RSA Security, Inc.<ref name="RSA">[http://www.rsa.com/press_release.aspx?id=1455 RSA Press Release]</ref>
+PKWARE Acquires Ascent Solutions <ref name="ASi">[http://goliath.ecnext.com/coms2/gi_0199-2325890/PKWARE-Acquires-Ascent-Solutions-Inc.html:  http://goliath.ecnext.com/coms2/gi_0199-2325890/PKWARE-Acquires-Ascent-Solutions-Inc.html]</ref>
+
+Awarded PC Magazine's Editors' Choice for data compression software<ref name="PC Mag">[http://www.pcmag.com/article2/0,2817,16121,00.asp PC Magazines' Editors' Choice Award]</ref>
+|-
+| 2004
+| SecureZIP is released for Windows Desktop, Windows Server, UNIX, and Linux<ref name ="SZ">[http://encyclopedia2.thefreedictionary.com/SecureZIP SecureZIP]</ref>
+|-
+| 2005
+| SecureZIP extends to midrange and mainframe platforms<ref name="SZ on i and z">[http://www.itjungle.com/fhs/fhs041205-story01.html SecureZIP introduced on i and z platforms]</ref>
+|-
+| 2006
+| PartnerLink is released<ref name="PartnerLink">[http://www.itjungle.com/two/two021506-story10.html The Windows Observer - PKWARE Sets SecureZIP Free with PartnerLink]</ref>
+|-
+| 2009
+| Novacap acquires PKWARE<ref name="JS">[http://www.jsonline.com/business/60702992.html Milwaukee Journal Sentinel]</ref>
+PKWARE names new CEO, V. Miller Newton<ref name ="JS2">[http://www.jsonline.com/business/70084402.html Milwaukee Journal Sentinel]</ref>
+|}
+==Patents==
+Phil Katz was granted a patent in September, 1991 for his efficient search functions used in the PKZIP compression process.<ref>Patent 5,051,745</ref>
+In 2001 and 2005, PKWARE was awarded patents for patching technology used within PKZIP products.<ref>Patent 6,289,509 and Patent 6,952,823</ref> In 2005, PKWARE was awarded a patent for methods used to manage .ZIP files within the Windows file manager and Outlook.<ref>Patent 6,879,988</ref>  In total PKWARE holds four patents, has over fourteen pending patents and is referenced in over eighty patents.<ref name="patents">[http://www.patentstorm.us/search.html?q=PKWARE&s.x=0&s.y=0 Patent Search]</ref>
+==Solutions==
+=== .ZIP App Note ===
+PKWARE publishes an Application Note on the .ZIP file format.<ref name="APP Note">[http://www.sync2it.com/mobile/m_details.php?b=1b151d1a17211f What is the ZIP App Note?]</ref> This Application Note ensures continued interoperability of the .ZIP file format for all users,  The APPNOTE provides developers a general description and technical details of the .ZIP file storage specification.
+===ZIP Reader===
+ZIP Reader is a free Windows utility.<ref name="ZIP Reader">[http://www.viloria.com/secondthoughts/archives/00001308.html ZIP Reader by PKWARE]</ref> Any ZIP file can be opened with the reader program, regardless of where it was created.  To open an archive, the user can drag and drop the desired zip file over the program and it will extract.  A second method is to simply select which file to extract from within the utility.  An email address is required to download ZIP Reader from the PKWARE website.<ref name="ZIP Reader" />
+===PKZIP===
+PKZIP is a software utility that allows for the compression/decompression of multiple files and folders into a single archive.<ref name ="PKZIP">[http://whatis.techtarget.com/definition/0,,sid9_gci515530,00.html What is PKZIP?]</ref> The name ''PKZIP''  comes from a combination of ''Phil Katz'', the inventor, and ''ZIP'', for the ZIP file format.<ref name="PKZIP" />  Katz created the ZIP file format after a legal dispute with Software Enhancement Associates (SEA) over their [[ARC (file format)|ARC]] archiver. PKZIP was a faster alternative than ARC and was quickly adopted.
+
+Originally, PKZIP was written as shareware for [[DOS]].<ref name="PKZIP" /> Since its creation, PKWARE has expanded support of PKZIP to Windows Desktop, Windows Server, UNIX, Linux, IBM i, and zSeries platforms.  A zip archive can be transferred among any of these platforms when creating and extracting with PKZIP.
+
+New versions of PKZIP added strong encryption algorithms to accommodate security needs.
+===SecureZIP===
+SecureZIP was released in 2004 by PKWARE as an extension of PKZIP. SecureZIP not only contained the same compression and passphrase protection as PKZIP but also introduced digital signature authentication and digital certificate-based encryption.<ref name="SZ" />
+
+For a brief period of time, PKWARE offered ''SecureZIP Express'', a free version of SecureZIP available only on Windows Desktop, for non-commercial use.  SecureZIP Express came with the option of receiving a Comodo digital certificate, good for one year.  PKWARE discontinued SecureZIP Express at the end of 2009.  Comodo certificates are still available with purchased copies of SecureZIP.
+
+SecureZIP uses a ''contingency key'' in its Enterprise version of the software.  This key is essentially a master key.  Contingency keys are necessary for audit review, or in the case of lost or stolen passphrases.<ref name="contingency">[http://www.it-observer.com/contingency-access-encrypted-data.html Contingency Access to Encrypted Data]</ref> The contingency key is assigned to a trusted user in the organization.  That key is then used with every encrypted file as part of the natural work flow.<ref name="contingency" />
+
+===PartnerLink===
+Further extending the PKWARE product family, PartnerLink was released in 2006.<ref name="PartnerLink" />  As an extension of SecureZIP, PKWARE customers could become "sponsors" and provide an unlimited number of SecureZIP Partner utilities to the organization's business partners.  This new licensing structure guaranteed secure exchange between business partners. The SecureZIP Partner software provided to customers can only be used to communicate with its sponsoring organization.  Like PKZIP and SecureZIP, PartnerLink is available on all major computing platforms.<ref name="PartnerLink" />
+
+==References==
+<!--- See [[Wikipedia:Footnotes]] on how to create references using <ref></ref> tags which will then appear here automatically -->
+{{Reflist}}
+
+==External links==
+* [http://www.pkware.com/ PKWARE.com]
+
+<!--- Categories --->
+
+{{DEFAULTSORT:Pkware, Inc}}
+[[Category:Companies based in Milwaukee, Wisconsin]]
+[[Category:Companies established in 1986]]
+[[Category:Privately held companies of the United States]]
+[[Category:Software companies of the United States]]

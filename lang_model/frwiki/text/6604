@@ -1,0 +1,46 @@
+{{ébauche|science}}
+
+La '''cartographie statistique paramétrique''' plus connue sous sa désignation [[anglais|anglophone]] ''statistical parametric mapping'' ou '''SPM''' est une méthode d'analyse [[statistique]] employée en [[imagerie cérébrale]]. 
+
+Le terme SPM est souvent utilisé pour désigner le logiciel développé par le ''Wellcome Department of Imaging Neuroscience'' de l'[[University College de Londres]] qui permet d'effectuer ce genre d'analyses.
+
+Ce logiciel permet de préparer les images ([[Tomographie à émission de positon|TEP]], [[IRMf]], TEMP, [[Électro-encéphalographie|EEG]] ou [[Magnétoencéphalographie|MEG]]) de telle sorte que l'on puisse réaliser des analyses statistiques pour chaque [[voxel]] de l'image ; cela sous-entend qu'un voxel représente la même partie anatomique du cerveau quelle que soit l'image analysée (or les images sont acquises à différents moments et chez différentes personnes).
+
+== Pré-traitement ==
+
+Les étapes essentielles du pré-traitement sont :
+* le réalignement : les images sont acquises à différents moments (série temporelle) et donc le sujet a bougé. Le réalignement permet d'estimer les mouvements et d'aligner les images comme si le sujet n'avait pas bougé.
+* la normalisation : les images sont acquises chez différents sujets, or chaque personne a un cerveau différent. La normalisation permet d'étirer l'image du cerveau de telle sorte qu'il ressemble à un cerveau standard. Cette étape est essentielle si on veut faire des analyses statistiques de groupe.
+* le lissage : malgré les étapes précédentes, il reste des variations anatomiques individuelles qui doivent être diminuées si on veut faire une analyse de groupe. Pour ce faire, SPM applique un filtre Gaussien qui moyenne la valeur du voxel avec celle de ces voisins. 
+
+== Analyse statistique ==
+
+Les modèles statistiques paramétriques sont appliqués à chaque voxel, en utilisant le modèle général linéaire pour décrire la variabilité des données en termes d'effets expérimentaux (ceux qui nous intéresse), d'effets confondants (sans intérêt) et de variabilité résiduelle (inexpliquée par le modèle).
+
+On doit donc d'abord construire le modèle en entrant des régresseurs. Les régresseurs définissent les effets expérimentaux (par exemple A, l'apparition d'une stimulation visuelle à t = 22 s, t = 50 s et t = 120 s et pendant 20 s à chaque fois) et les effets confondants (par exemple B, le temps de réaction pour répondre à chaque stimlation).
+
+L'analyse permet de définir l'implication de chaque régresseur dans le signal en y attribuant un paramètre β. Pour notre exemple : 
+
+Y = β A + β' B + ε
+
+où
+
+* Y est le signal mesuré dans le voxel ; 
+* ε est la variabilité résiduelle.
+
+Des analyses peuvent être aussi réalisées pour chercher les différences au cours d'acquisitions temporelles (c'est-à-dire les corrélations entre une variable de la tâche et l'activité cérébrale) en utilisant des modèles de convolution qui permettent de faire le lien entre le signal mesuré et la stimulation effectuée.
+
+Comme l'on fait beaucoup de tests statistiques (1 par voxel, soit plus de 10 000 dans un cerveau), des corrections doivent être effectuées pour contrôler l'erreur de type I (faux positifs). Les corrections sont de plusieurs types.
+
+== Représentations graphiques ==
+
+Ce logiciel permet de représenter les résultats statistiques dans des tableaux (les voxels qui montrent une différence significative entre les tâches sont affichés avec leur coordonnées stéréotaxiques et le nombre de voxels voisins dépassant le seuil de significativité) ou bien sous forme d'images où seuls les voxels significatifs sont représentés avec une valeur qui correspond à une probabilité. Ces images statistiques peuvent être superposées aux images anatomiques afin d'obtenir des cartes statistiques paramétriques.
+
+== Lien externe ==
+* {{en}} [http://www.fil.ion.ucl.ac.uk/spm Site de SPM]
+{{portail|médecine|statistiques}}
+
+[[Catégorie:Imagerie cérébrale]]
+
+[[en:Statistical parametric mapping]]
+[[it:Mappatura statistica parametrica]]

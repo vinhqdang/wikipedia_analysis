@@ -1,0 +1,123 @@
+'''Bayesian hierarchical modeling''' is a [[statistical model]] written in multiple levels (hierarchical form) that estimates the [[parameters]] of the [[Posterior probability|posterior distribution]] using the [[Bayesian inference|Bayesian method]].<ref>Allenby, Rossi, McCulloch (January 2005). [http://faculty.washington.edu/bajari/iosp07/rossi1.pdf <U+201C>Hierarchical Bayes Model: A Practitioner<U+2019>s Guide<U+201D>]. [http://www.researchgate.net/publication/228167480_Bayesian_Applications_in_Marketing Journal of Bayesian Applications in Marketing], pp. 1<U+2013>4. Retrieved 26 April 2014, p. 3</ref> The sub-models combine to form the hierarchical model, and the [[Bayes<U+2019> theorem]] is used to integrate them with the observed data, and account for all the uncertainty that is present. The result of this integration is the posterior distribution, also known as the updated probability estimate, as additional evidence on the [[prior distribution]] is acquired.
+
+[[Frequentist statistics]], the more popular [[Foundations of statistics|foundation of statistics]], has been known to contradict Bayesian statistics due to its treatment of the parameters as a [[random variable]], and its use of subjective information in establishing assumptions on these parameters.<ref>{{Cite book|last1= Gelman|first1= Andrew|author-link1= Andrew Gelman|last2= Carlin, John B.; Stern, Hal S. and Rubin, Donald B.|year=2004|title=Bayesian Data Analysis|edition=second|location=Boca Raton, Florida|publisher=CRC Press|isbn=1-58488-388-X|pages=4<U+2013>5|url=http://www.allbookez.com/pdf/e1qdo/}}</ref> However, Bayesians argue that relevant information regarding decision making and updating beliefs cannot be ignored and that hierarchical modeling has the potential to overrule classical methods in applications where respondents give multiple observational data. Moreover, the model has proven to be [[Robust statistics|robust]], with the posterior distribution less sensitive to the more flexible hierarchical priors.
+
+Hierarchical modeling is used when information is available on several different levels of observational units. The hierarchical form of analysis and organization helps in the understanding of multiparameter problems and also plays an important role in developing computational strategies.<ref>{{harvnb|Gelman|2004|page=6}}</ref>
+
+== Philosophy ==
+
+Numerous statistical applications involve multiple parameters that can be regarded as related or connected in such a way that the problem implies dependence of the joint probability model for these parameters.<ref name="Gelman-117">{{harvnb|Gelman|2004|page=117}}</ref>
+Individual degrees of belief, expressed in the form of probabilities, come with uncertainty.<ref>Good, I.J. (February 1980). [http://vm075031.usc.es/matematicas/public/pdf/TESTOP_1980_31_00_31.pdf <U+201C>Some history of the hierarchical Bayesian methodology<U+201D>]. [http://dialnet.unirioja.es/servlet/revista?codigo=10698 Trabajos de Estadistica Y de Investigacion Operativa Volume 31 Issue 1]. Springer <U+2013> Verlag, p. 480</ref> Amidst this is the change of the degrees of belief overtime. As was stated by Professor Jos<U+00E9> M. Bernardo and Professor [[Adrian Smith (statistician)|Adrian F. Smith]], <U+201C>The actuality of the learning process consists in the evolution of individual and subjective beliefs about the reality.<U+201D>  These subjective probabilities are more directly involved in the mind rather than the physical probabilities.<ref>Good, I.J. (February 1980). [http://vm075031.usc.es/matematicas/public/pdf/TESTOP_1980_31_00_31.pdf <U+201C>Some history of the hierarchical Bayesian methodology<U+201D>]. [http://dialnet.unirioja.es/servlet/revista?codigo=10698 Trabajos de Estadistica Y de Investigacion Operativa Volume 31 Issue 1]. Springer <U+2013> Verlag, pp. 489<U+2013>490</ref> Hence, it is with this need of updating beliefs that Bayesians have formulated an alternative statistical model which takes into account the prior occurrence of a particular event.<ref>Bernardo, Smith(1994). [http://books.google.com.ph/books?id=11nSgIcd7xQC&pg=PA497&dq=bernardo+degroot+lindley&hl=en&sa=X&ei=aNRwU8SXFMzr8AX2lYHYAQ&ved=0CFoQ6AEwCA#v=onepage&q=bernardo%20degroot%20lindley&f=false Bayesian Theory]. Chichester, England:  John Wiley & Sons, ISBN 0-471-92416-4, p. 23</ref>
+
+== Bayes<U+2019> theorem ==
+
+The assumed occurrence of a real-world event will typically modify preferences between certain options. This is done by modifying the degrees of belief attached, by an individual, to the events defining the options.<ref name="Gelman-6">{{harvnb|Gelman|2004|pages=6&ndash;8}}</ref>
+
+Suppose in a study of the effectiveness of cardiac treatments, with the patients in hospital j having survival probability <math>\theta_j</math>, the survival probability will be updated with the occurrence of y, the event in which a hypothetical controversial serum is created which, as believed by some, increases survival in cardiac patients.
+
+In order to make updated probability statements about <math>\theta_j</math>, given the occurrence of event y, we must begin with a model providing a joint probability distribution for <math>\theta_j</math> and y. This can be written as a product of the two distributions that are often referred to as the prior distribution <math>P(\theta)</math> and the [[sampling distribution]] <math>P(y\mid\theta)</math> respectively:
+
+: <math>P(\theta, y) = P(\theta)P(y\mid\theta)</math>
+
+Using the basic property of [[conditional probability]], the posterior distribution will yield:
+
+: <math>P(\theta\mid y)=\frac{P(\theta,y)}{P(y)} = \frac{P(y\mid\theta)P(\theta)}{P(y)}</math>
+
+This equation, showing the relationship between the conditional probability and the individual events, is known as [[Bayes' theorem|Bayes<U+2019> Theorem]]. This simple expression encapsulates the technical core of Bayesian inference which aims to incorporate the updated belief, <math>P(\theta\mid y)</math>, in appropriate and solvable ways.<ref name="Gelman-6" />
+
+== Exchangeability ==
+
+The usual starting point of a statistical analysis is the assumption that the n values <math>y_n</math> are exchangeable. If no information <U+2013> other than data y <U+2013> is available to distinguish any of the <math>\theta_j</math><U+2019>s from any others, and no ordering or grouping of the parameters can be made, one must assume symmetry among the parameters in their prior distribution.<ref>Bernardo, Degroot, Lindley (September 1983). [http://books.google.com.ph/books?id=myfRtgAACAAJ&dq=Proceedings+of+the+Second+Valencia+International+Meeting&hl=en&sa=X&ei=MOBwU-yOMcq58gWO8oCIAw&ved=0CEkQ6AEwBA <U+201C>Proceedings of the Second Valencia International Meeting<U+201D>]. [http://books.google.com.ph/books?id=wYj-_uFLOe4C&dq=Proceedings%20of%20the%20Second%20Valencia%20International%20Meeting&source=gbs_similarbooks Bayesian Statistics 2]. Amsterdam: Elsevier Science Publishers B.V, ISBN 0-444-87746-0, pp. 167<U+2013>168</ref> This symmetry is represented probabilistically by exchangeability. Generally, it is useful and appropriate to model data from an exchangeable distribution, as independently and identically distributed, given some unknown parameter vector <math>\theta</math>, with distribution <math>P(\theta)</math>.
+
+=== Finite exchangeability ===
+
+For a fixed number ''n'', the set <math>y_1, y_2, \ldots, y_n</math>  is exchangeable if the joint probability <math>P(y_1, y_2, \ldots, y_n)</math> is invariant under [[permutation]]s of the indices. That is, for every permutation <math>\pi</math> or <math>(\pi_1,  \pi_2, \ldots, \pi_n)</math>  of (1, 2, <U+2026>, ''n''), <math>P(y_1, y_2, \ldots, y_n)= P(y_{\pi_1}, y_{\pi_2}, \ldots, y_{\pi_n}).</math><ref>{{harvnb|Gelman|2004|pages=121&ndash;125}}</ref>
+
+To visualize this is an exchangeable but not independent and identical (iid) example:
+Consider an urn with one red ball and one blue ball with probability <math>\frac{1}{2}</math> of drawing either. Balls are drawn without replacement, i.e. after one ball is drawn from the ''n'' balls, there will be ''n''&nbsp;&minus;&nbsp;1 remaining balls left for the next draw.
+
+: <math>\text{Let }
+Y_i =
+\begin{cases}
+1, & \text{if the }i\text{th ball is red},\\
+0, & \text{otherwise}.
+\end{cases}
+</math>
+
+Since the probability of selecting a red ball in the first draw and a blue ball in the second draw is equal to the probability of selecting a blue ball on the first draw and a red on the second draw, both of which are equal to 1/2 (i.e. <math>[P(y_1 = 1, y_2 =0) = P(y_1=0,y_2=1)= \frac{1}{2}]</math>), then <math>y_1</math> and <math>y_2</math> are exchangeable.
+
+But the probability of selecting a red ball on the second draw given that the red ball has already been selected in the first draw is 0, and is not equal to the probability that the red ball is selected in the second draw which is equal to 1/2 (i.e. <math> [P(y_2=1\mid y_2=1)=0 \ne P(y_2=1)=  \frac{1}{2}]</math>). Thus, <math>y_1</math> and <math>y_2</math> are not independent.
+
+If <math>x_1, \ldots, x_n</math> are independent and identically distributed, then they are exchangeable, but not conversely true.<ref name="diaconis">Diaconis, Freedman (1980). [http://projecteuclid.org/download/pdf_1/euclid.aop/1176994663 <U+201C>Finite exchangeable sequences<U+201D>]. Annals of Probability, pp. 745<U+2013>747</ref>
+
+=== Infinite exchangeability ===
+
+An infinite exchangeability implies that every finite subset of an infinite sequence <math>y_1</math>, <math>y_2, \ldots</math> is exchangeable. That is, for any ''n'', the sequence <math>y_1, y_2, \ldots, y_n</math> is exchangeable.<ref name="diaconis" />
+
+== Hierarchical models ==
+
+=== Components ===
+
+Bayesian hierarchical modeling makes use of two important concepts in deriving the posterior distribution,<ref>Allenby, Rossi, McCulloch (January 2005). [http://faculty.washington.edu/bajari/iosp07/rossi1.pdf <U+201C>Hierarchical Bayes Model: A Practitioner<U+2019>s Guide<U+201D>]. [http://www.researchgate.net/publication/228167480_Bayesian_Applications_in_Marketing Journal of Bayesian Applications in Marketing], pp. 1<U+2013>4. Retrieved 26 April 2014, pp. 1<U+2013>4</ref> namely:
+
+1. [[Hyperparameter]]: parameter of the prior distribution
+
+2. [[Hyperprior]]: distribution of a parameter of the prior distribution
+
+Say a random variable ''Y'' follows a normal distribution with parameters ''<U+03B8>'' as the [[mean]] and 1 as the [[variance]], that is <math>Y\mid \theta \sim N(\theta,1)</math>. The parameter <math>\theta</math> has a prior distribution given by a [[normal distribution]] with mean <math>\mu</math> and variance 1, i.e. <math>\theta\mid\mu \sim N(\mu,1)</math>. Furthermore, <math>\mu</math> follows another distribution given, for example, by the [[Normal distribution|standard normal distribution]], <math>\text{N}(0,1)</math>. The parameter <math>\mu</math> is called the hyperparameter, while its distribution given by ''N''(0,1) is an example of a hyperprior distribution. The notation of the distribution of ''Y'' changes as another parameter is added, i.e. <math>Y \mid \theta,\mu \sim  N(\theta,1)</math>. If there is another stage, say, <math>\mu</math> follows another normal distribution with mean <math>\beta</math> and variance <math>\epsilon</math>, meaning <math>\mu \sim N(\beta,\epsilon)</math>, <math> \mbox { }</math><math>\beta</math> and <math>\epsilon</math> can also be called hyperparameters while their distributions are hyperprior distributions as well.<ref name="Gelman-117" />
+
+=== Framework ===
+
+Let <math>y_j</math> be an observation and <math>\theta_j</math> a parameter governing the data generating process for <math>y_j</math>. Assume further that the parameters <math>\theta_1, \theta_2, \ldots, \theta_j</math> are generated exchangeably from a common population, with distribution governed by a hyperparameter <math>\phi</math>. In frequentist statistics, <math>\theta</math> and <math>\phi</math> are random effects and is a constant. In Bayesian statistics, however, <math>\theta</math> and <math>\phi</math> are just random variables like any parameters.<br>The Bayesian hierarchical model contains the following stages:
+
+: <math>\text{Stage I: } y_j\mid\theta_j,\phi \sim P(y_j\mid\theta_j,\phi)</math>
+
+: <math>\text{Stage II: } \theta_j\mid\phi \sim P(\theta_j\mid\phi)</math>
+: <math>\text{Stage III: } \phi \sim P(\phi)</math>
+
+The likelihood, as seen in stage I is <math>P(y_j\mid\theta_j,\phi)</math>, with <math>P(\theta_j,\phi)</math> as its prior distribution. Note that the likelihood depends on <math>\phi</math> only through <math>\theta_j</math>.
+
+The prior distribution from stage I can be broken down into:
+
+: <math>P(\theta_j,\phi) = P(\theta_j\mid\phi)P(\phi) </math> ''[using Bayes<U+2019> Theorem]''
+
+With <math>\phi</math> as its hyperparameter with hyperprior distribution, <math>P(\phi)</math>.
+
+Thus, the posterior distribution is proportional to:
+
+: <math>P(\phi,\theta_j\mid y)  \propto P(y_j \mid\theta_j,\phi) P(\theta_j \mid\phi )</math> ''[using Bayes<U+2019> Theorem]''
+
+: <math>P(\phi,\theta_j\mid y)  \propto P(y_j\mid\theta_j ) P(\theta_j,\phi)</math><ref>Bernardo, Degroot, Lindley (September 1983). [http://books.google.com.ph/books?id=wYj-_uFLOe4C&dq=Proceedings%20of%20the%20Second%20Valencia%20International%20Meeting&source=gbs_similarbooks <U+201C>Proceedings of the Second Valencia International Meeting<U+201D>]. [http://books.google.com.ph/books?id=wYj-_uFLOe4C&dq=Proceedings%20of%20the%20Second%20Valencia%20International%20Meeting&source=gbs_similarbooks Bayesian Statistics 2]. Amsterdam: Elsevier Science Publishers B.V, ISBN 0-444-87746-0, pp. 371<U+2013>372</ref>
+
+=== Example ===
+
+To further illustrate this, consider the example:
+A teacher wants to estimate how well a male student did in his SAT. He uses information on the student<U+2019>s high school grades and his current grade point average (GPA) to come up with an estimate. His current GPA, denoted by Y, has a likelihood given by some probability function with parameter <math>\theta</math>, i.e. <math>Y\mid\theta \sim P(Y\mid\theta)</math>. This parameter <math>\theta</math> is the SAT score of the student. The SAT score is viewed as a sample coming from a common population distribution indexed by another parameter <math>\phi</math>, which is the high school grade of the student.<ref>{{harvnb|Gelman|2004|pages=120&ndash;121}}</ref> That is, <math>\theta\mid\phi \sim P(\theta\mid\phi)</math>. Moreover, the hyperparameter <math>\phi</math> follows its own distribution given by <math>P(\phi)</math>, a hyperprior.
+To solve for the SAT score given information on the GPA,
+
+: <math>P(\theta,\phi\mid Y) \propto P(Y\mid\theta,\phi)P(\theta,\phi)</math>
+: <math>P(\theta,\phi\mid Y) \propto P(Y\mid\theta)P(\theta\mid\phi)P(\phi)</math>
+
+All information in the problem will be used to solve for the posterior distribution. Instead of solving only using the prior distribution and the likelihood function, the use of hyperpriors gives more information to make more accurate beliefs in the behavior of a parameter.<ref name="box">Box G. E. P., Tiao G. C. (1965). [http://projecteuclid.org/download/pdf_1/euclid.aoms/1177699906 "Multiparameter problem from a bayesian point of view"]. [http://projecteuclid.org/all/euclid.aoms Multiparameter Problems From A Bayesian Point of View Volume 36 Number 5]. New York City: John Wiley & Sons, ISBN 0-471-57428-7</ref>
+
+=== 2-stage hierarchical model ===
+
+In general, the joint posterior distribution of interest in 2-stage hierarchical models is:
+
+: <math>P(\theta,\phi\mid Y) = {P(Y\mid\theta,\phi) P(\theta,\phi) \over P(Y)} = {P(Y\mid\theta)P(\theta\mid\phi)P(\phi) \over P(Y)}</math>
+
+: <math>P(\theta,\phi\mid Y) \propto P(Y\mid\theta)P(\theta\mid\phi)P(\phi)</math><ref name="box" />
+
+=== 3-stage hierarchical model ===
+
+For 3-stage hierarchical models, the posterior distribution is given by:
+
+: <math>P(\theta,\phi, X\mid Y) = {P(Y\mid\theta)P(\theta\mid\phi)P(\phi\mid X)P(X) \over P(Y)}</math>
+
+: <math>P(\theta,\phi, X\mid Y) \propto P(Y\mid\theta)P(\theta\mid\phi)P(\phi\mid X)P(X)</math><ref name="box" />
+
+== References ==
+{{Reflist|2}}
+
+[[Category:Bayesian statistics]]
+[[Category:Statistical models]]

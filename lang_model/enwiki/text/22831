@@ -1,0 +1,298 @@
+'''Factor analysis''' is a [[statistics|statistical]] method used to describe [[variance|variability]] among observed, correlated [[Variable (mathematics)|variables]] in terms of a potentially lower number of unobserved variables called '''factors'''. For example, it is possible that variations in four observed variables mainly reflect the variations in two unobserved variables. Factor analysis searches for such joint variations in response to unobserved [[latent variable]]s. The observed variables are modelled as [[linear combination]]s of the potential factors, plus "[[errors and residuals in statistics|error]]" terms. The information gained about the interdependencies between observed variables can be used later to reduce the set of variables in a dataset. Computationally this technique is equivalent to [[low rank approximation]] of the matrix of observed variables. Factor analysis originated in [[psychometrics]], and is used in behavioral sciences, [[social sciences]], [[marketing]], [[product management]], [[operations research]], and other applied sciences that deal with large quantities of [[data]].
+
+Factor analysis is related to [[principal component analysis]] (PCA), but the two are not identical.  [[Latent variable model]]s,  including factor analysis, use regression modelling techniques to test hypotheses producing error terms, while PCA is a descriptive statistical technique.<ref name="Bartholomew2008">{{cite book |last1=Bartholomew |first1=D.J. |last2=Steele |first2=F. |last3=Galbraith |first3=J. |last4=Moustaki |first4=I. |title=Analysis of Multivariate Social Science Data |publisher=Taylor & Francis |year=2008 |isbn=1584889608 |edition=2nd |series=Statistics in the Social and Behavioral Sciences Series}}</ref> There has been significant controversy in the field over the equivalence or otherwise of the two techniques (see [[#Exploratory factor analysis versus principal components analysis|exploratory factor analysis versus principal components analysis]]).{{citation needed|date=June 2012}}
+
+==Statistical model==
+
+===Definition===
+Suppose we have a set of <math>p</math> observable random variables, <math>x_1,\dots,x_p</math> with means <math>\mu_1,\dots,\mu_p</math>.
+
+Suppose for some unknown constants <math>l_{ij}</math> and <math>k</math> unobserved random variables <math>F_j</math>, where <math>i\in {1,\dots,p}</math> and <math>j \in {1,\dots,k}</math>, where <math>k<p</math>, we have
+
+: <math>x_i-\mu_i=l_{i1} F_1 + \cdots + l_{ik} F_k + \varepsilon_i.\, </math>
+
+Here, the <math>\varepsilon_i</math> are independently distributed error terms with zero mean and finite variance, which may not be the same for all <math>i</math>. Let <math>\mathrm{Var}(\varepsilon_i)=\psi_i</math>, so that we have
+
+: <math>\mathrm{Cov}(\varepsilon)=\mathrm{Diag}(\psi_1,\dots,\psi_p)=\Psi\text{ and }\mathrm{E}(\varepsilon)=0. \, </math>
+
+In matrix terms, we have
+
+: <math>x-\mu=LF+\varepsilon. \,</math>
+
+If we have <math>n</math> observations, then we will have the dimensions <math>x_{p\times n}</math>, <math>L_{p\times k}</math>, and <math>F_{k\times n}</math>. Each column of <math>x</math> and <math>F</math> denote values for one particular observation, and matrix <math>L</math> does not vary across observations.
+
+Also we will impose the following assumptions on <math>F</math>.
+
+# <math>F</math> and <math>\varepsilon</math> are independent.
+# <math>\mathrm{E}(F) = 0</math>
+# <math>\mathrm{Cov}(F)=I</math> (to make sure that the factors are uncorrelated)
+
+Any solution of the above set of equations following the constraints for <math>F</math> is defined as the ''factors'', and <math>L</math> as the ''loading matrix''.
+
+Suppose <math>\mathrm{Cov}(x-\mu)=\Sigma</math>. Then note that from the conditions just imposed on <math>F</math>, we have
+
+: <math>\mathrm{Cov}(x-\mu)=\mathrm{Cov}(LF+\varepsilon),\,</math>
+
+or
+
+: <math>\Sigma = L \mathrm{Cov}(F) L^T + \mathrm{Cov}(\varepsilon),\,</math>
+
+or
+
+: <math>\Sigma = LL^T + \Psi.\,</math>
+
+Note that for any [[orthogonal matrix]] <math>Q</math> if we set <math>L=LQ</math> and <math>F=Q^T F</math>, the criteria for being factors and factor loadings still hold. Hence a set of factors and factor loadings is identical only up to orthogonal transformation.
+
+===Example===
+The following example is for expository purposes, and should not be taken as being realistic. Suppose a psychologist proposes a theory that there are two kinds of [[intelligence (trait)|intelligence]], "verbal intelligence" and "mathematical intelligence", neither of which is directly observed. [[Evidence]] for the theory is sought in the examination scores from each of 10 different academic fields of 1000 students. If each student is chosen randomly from a large [[population (statistics)|population]], then each student's 10 scores are random variables. The psychologist's theory may say that for each of the 10 academic fields, the score averaged over the group of all students who share some common pair of values for verbal and mathematical "intelligences" is some [[Constant (mathematics)|constant]] times their level of verbal intelligence plus another constant times their level of mathematical intelligence, i.e., it is a combination of those two "factors". The numbers for a particular subject, by which the two kinds of intelligence are multiplied to obtain the expected score, are posited by the theory to be the same for all intelligence level pairs, and are called '''"factor loadings"''' for this subject. For example, the theory may hold that the average student's aptitude in the field of [[Taxonomy (general)|taxonomy]] is
+
+:{10 <U+00D7> the student's verbal intelligence} + {6 <U+00D7> the student's mathematical intelligence}.
+
+The numbers 10 and 6 are the factor loadings associated with taxonomy. Other academic subjects may have different factor loadings.
+
+Two students having identical degrees of verbal intelligence and identical degrees of mathematical intelligence may have different aptitudes in taxonomy because individual aptitudes differ from average aptitudes. That difference is called the "error" <U+2014> a statistical term that means the amount by which an individual differs from what is average for his or her levels of intelligence (see [[errors and residuals in statistics]]).
+
+The observable data that go into factor analysis would be 10 scores of each of the 1000 students, a total of 10,000 numbers. The factor loadings and levels of the two kinds of intelligence of each student must be inferred from the data.
+
+===Mathematical model of the same example===
+In the example above, for ''i'' = 1, ..., 1,000 the ''i''th student's scores are
+
+:<math>\begin{matrix}x_{1,i} & = & \mu_1 & + & \ell_{1,1}v_i & + & \ell_{1,2}m_i & + & \varepsilon_{1,i} \\
+\vdots & & \vdots & & \vdots & & \vdots & & \vdots \\
+x_{10,i} & = & \mu_{10} & + & \ell_{10,1}v_i & + & \ell_{10,2}m_i & + & \varepsilon_{10,i}
+\end{matrix}</math>
+
+where
+* ''x''<sub>''k,i''</sub> is the ''i''th student's score for the ''k''th subject
+* <math>\mu_k</math> is the mean of the students' scores for the ''k''th subject (assumed to be zero, for simplicity, in the example as described above, which would amount to a simple shift of the scale used)
+* ''v''<sub>''i''</sub> is the ''i''th student's "verbal intelligence",
+* ''m''<sub>''i''</sub> is the ''i''th student's "mathematical intelligence",
+* <math>\ell_{k,j}</math> are the factor loadings for the ''k''th subject, for ''j'' = 1, 2.
+* <U+03B5><sub>''k'',''i''</sub> is the difference between the ''i''th student's score in the ''k''th subject and the average score in the ''k''th subject of all students whose levels of verbal and mathematical intelligence are the same as those of the ''i''th student,
+
+In [[Matrix (mathematics)|matrix]] notation, we have
+
+:<math>X=\mu\otimes1_{1\times N}+LF+\epsilon</math>
+
+* ''N'' is 1000 students
+* ''X'' is a 10 <U+00D7> 1,000 matrix of ''observable'' random variables,
+* <U+03BC> is a 10 <U+00D7> 1 column vector of ''unobservable'' constants (in this case "constants" are quantities not differing from one individual student to the next; and "random variables" are those assigned to individual students; the randomness arises from the random way in which the students are chosen).                       Note that, <math> \mu\otimes1_{1\times N} </math> is an [[outer product]] of <U+03BC> with a 1<U+00D7>1000 row vector of ones,   yielding a 10 <U+00D7> 1000 matrix of the elements of <U+03BC>,
+* ''L'' is a 10 <U+00D7> 2 matrix of factor loadings (''unobservable'' constants, ten academic topics, each with two intelligence parameters that determine success in that topic),
+* ''F'' is a 2 <U+00D7> 1,000 matrix of ''unobservable'' random variables (two intelligence parameters for each of 1000 students),
+* <U+03B5> is a 10 <U+00D7> 1,000 matrix of ''unobservable'' random variables.
+
+Observe that by doubling the scale on which "verbal intelligence"<U+2014>the first component in each column of ''F''<U+2014>is measured, and simultaneously halving the factor loadings for verbal intelligence makes no difference to the model. Thus, no generality is lost by assuming that the standard deviation of verbal intelligence is 1. Likewise for mathematical intelligence. Moreover, for similar reasons, no generality is lost by assuming the two factors are [[uncorrelated]] with each other. The "errors" <U+03B5> are taken to be independent of each other. The variances of the "errors" associated with the 10 different subjects are not assumed to be equal.
+
+Note that, since any rotation of a solution is also a solution, this makes interpreting the factors difficult. See disadvantages below. In this particular example, if we do not know beforehand that the two types of intelligence are uncorrelated, then we cannot interpret the two factors as the two different types of intelligence. Even if they are uncorrelated, we cannot tell which factor corresponds to verbal intelligence and which corresponds to mathematical intelligence without an outside argument.
+
+The values of the loadings ''L'', the averages <U+03BC>, and the [[variance]]s of the "errors" <U+03B5> must be estimated given the observed data ''X'' and ''F'' (the assumption about the levels of the factors is fixed for a given ''F''). <!-- [''How this is done is a subject that must get addressed in this article, which remains "under construction".''] -->
+
+==Practical implementation==
+{{Refimprove section|date=April 2012}}
+
+===Type of factor analysis===
+'''[[Exploratory factor analysis]] (EFA)''' is used to identify complex interrelationships among items and group items that are part of unified concepts.<ref name=Polit>{{cite book |author=Polit DF Beck CT |title=Nursing Research: Generating and Assessing Evidence for Nursing Practice, 9th ed. |year=2012 |publisher=Wolters Klower Health, Lippincott Williams & Wilkins |location=Philadelphia, USA}}</ref>  The researcher makes no "a priori" assumptions about relationships among factors.<ref name=Polit/>
+
+'''[[Confirmatory factor analysis]] (CFA)''' is a more complex approach that tests the hypothesis that the items are associated with specific factors.<ref name=Polit/> CFA uses [[structural equation modeling]] to test a measurement model whereby loading on the factors allows for evaluation of relationships between observed variables and unobserved variables.<ref name=Polit/>  Structural equation modeling approaches can accommodate measurement error, and are less restrictive than [[least-squares estimation]].<ref name=Polit/>  Hypothesized models are tested against actual data, and the analysis would demonstrate loadings of observed variables on the latent variables (factors), as well as the correlation between the latent variables.<ref name=Polit/>
+
+===Types of factoring===
+'''[[Principal component analysis]] (PCA)''': PCA is a widely used method for factor extraction, which is the first phase of EFA.<ref name=Polit/> Factor weights are computed in order to extract the maximum possible variance, with successive factoring continuing until there is no further meaningful variance left.<ref name=Polit/> The factor model must then be rotated for analysis.<ref name=Polit/>
+
+'''Canonical factor analysis''', also called Rao's canonical factoring, is a different method of computing the same model as PCA, which uses the principal axis method. Canonical factor analysis seeks factors which have the highest canonical correlation with the observed variables. Canonical factor analysis is unaffected by arbitrary rescaling of the data.
+
+'''Common factor analysis''', also called principal factor analysis (PFA) or principal axis factoring (PAF), seeks the least number of factors which can account for the common variance (correlation) of a set of variables.
+
+'''Image factoring:''' based on the [[correlation matrix]] of predicted variables rather than actual variables, where each variable is predicted from the others using [[multiple regression]].
+
+'''Alpha factoring:''' based on maximizing the reliability of factors, assuming variables are randomly sampled from a universe of variables. All other methods assume cases to be sampled and variables fixed.
+
+'''Factor regression model:''' a combinatorial model of factor model and regression model; or alternatively, it can be viewed as the hybrid factor model,<ref name="meng2011">{{cite journal|last=Meng|first=J.|title=Uncover cooperative gene regulations by microRNAs and transcription factors in glioblastoma using a nonnegative hybrid factor model|journal=International Conference on Acoustics, Speech and Signal Processing|year=2011|url=http://www.cmsworldwide.com/ICASSP2011/Papers/ViewPapers.asp?PaperNum=4439}}</ref> whose factors are partially known.
+
+===Terminology===
+'''Factor loadings:''' The factor loadings, also called component loadings in PCA, are the [[Correlation and dependence|correlation coefficients]] between the variables (rows) and factors (columns). Analogous to [[Pearson product-moment correlation coefficient|Pearson's r]], the squared factor loading is the percent of variance in that indicator variable explained by the factor. To get the percent of variance in all the variables accounted for by each factor, add the sum of the squared factor loadings for that factor (column) and divide by the number of variables. (Note the number of variables equals the sum of their variances as the variance of a standardized variable is 1.) This is the same as dividing the factor's eigenvalue by the number of variables.
+
+'''Interpreting factor loadings:''' By one rule of thumb in confirmatory factor analysis, loadings should be .7 or higher to confirm that independent variables identified a priori are represented by a particular factor, on the rationale that the .7 level corresponds to about half of the variance in the indicator being explained by the factor. However, the .7 standard is a high one and real-life data may well not meet this criterion, which is why some researchers, particularly for exploratory purposes, will use a lower level such as .4 for the central factor and .25 for other factors call loadings above .6 "high" and those below .4 "low". In any event, factor loadings must be interpreted in the light of theory, not by arbitrary cutoff levels.
+
+In [[Angle#Types of angles|oblique]] rotation, one gets both a pattern matrix and a structure matrix. The structure matrix is simply the factor loading matrix as in orthogonal rotation, representing the variance in a measured variable explained by a factor on both a unique and common contributions basis. The pattern matrix, in contrast, contains [[coefficient]]s which just represent unique contributions. The more factors, the lower the pattern coefficients as a rule since there will be more common contributions to variance explained. For oblique rotation, the researcher looks at both the structure and pattern coefficients when attributing a label to a factor. Principles of oblique rotation can be derived from both cross entropy and its dual entropy.<ref>{{cite journal | last=Liou | first=C.-Y. | last2=Musicus | first2=B.R. | title=Cross Entropy Approximation of Structured Gaussian Covariance Matrices |journal=IEEE Transactions on Signal Processing |volume=56 |issue=7 |pages=3362<U+2013>3367 |year=2008 |doi=10.1109/TSP.2008.917878 |url=http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&arnumber=4545272&contentType=Journals+%26+Magazines}}</ref>
+
+'''Communality:''' The sum of the squared factor loadings for all factors for a given variable (row) is the variance in that variable accounted for by all the factors, and this is called the communality. The communality measures the percent of variance in a given variable explained by all the factors jointly and may be interpreted as the reliability of the indicator.
+
+'''Spurious solutions:''' If the communality exceeds 1.0, there is a spurious solution, which may reflect too small a sample or the researcher has too many or too few factors.
+
+'''Uniqueness of a variable:''' That is, uniqueness is the variability of a variable minus its communality.
+
+'''Eigenvalues:/Characteristic roots:''' The eigenvalue for a given factor measures the variance in all the variables which is accounted for by that factor. The ratio of eigenvalues is the ratio of explanatory importance of the factors with respect to the variables. If a factor has a low eigenvalue, then it is contributing little to the explanation of variances in the variables and may be ignored as redundant with more important factors. Eigenvalues measure the amount of variation in the total sample accounted for by each factor.
+
+'''Extraction sums of squared loadings:''' Initial eigenvalues and eigenvalues after extraction (listed by SPSS as "Extraction Sums of Squared Loadings") are the same for PCA extraction, but for other extraction methods, eigenvalues after extraction will be lower than their initial counterparts. SPSS also prints "Rotation Sums of Squared Loadings" and even for PCA, these eigenvalues will differ from initial and extraction eigenvalues, though their total will be the same.
+
+'''Factor scores''' (also called component scores in PCA): are the scores of each case (row) on each factor (column). To compute the factor score for a given case for a given factor, one takes the case's standardized score on each variable, multiplies by the corresponding loadings of the variable for the given factor, and sums these products. Computing factor scores allows one to look for factor outliers. Also, factor scores may be used as variables in subsequent modeling.
+
+===Criteria for determining the number of factors===
+Using one or more of the methods below, the researcher determines an appropriate range of solutions to investigate. Methods may not agree. For instance, the Kaiser criterion may suggest five factors and the scree test may suggest two, so the researcher may request 3-, 4-, and 5-factor solutions discuss each in terms of their relation to external data and theory.
+
+'''Comprehensibility:''' A purely subjective criterion would be to retain those factors whose meaning is comprehensible to the researcher. This is not recommended  {{Citation needed|date=April 2011}}.
+
+'''Kaiser criterion:''' The Kaiser rule is to drop all components with eigenvalues under 1.0 <U+2013> this being the eigenvalue equal to the information accounted for by an average single  item. The Kaiser criterion is the default in [[SPSS]] and most [[statistical software]] but is not recommended when used as the sole cut-off criterion for estimating the number of factors as it tends to overextract factors.<ref>{{cite book |first1=D.L. |last1=Bandalos |first2=M.R. |last2=Boehm-Kaufman |chapter=Four common misconceptions in exploratory factor analysis |editor1-first=Charles E. |editor1-last=Lance |editor2-first=Robert J. |editor2-last=Vandenberg |title=Statistical and Methodological Myths and Urban Legends: Doctrine, Verity and Fable in the Organizational and Social Sciences |chapterurl=http://books.google.com/books?id=KFAnkvqD8CgC&pg=PA61 |year=2008 |publisher=Taylor & Francis |isbn=978-0-8058-6237-9 |pages=61<U+2013>87}}</ref>
+
+'''Variance explained criteria:''' Some researchers simply use the rule of keeping enough factors to account for 90% (sometimes 80%) of the variation. Where the researcher's goal emphasizes [[parsimony]] (explaining variance with as few factors as possible), the criterion could be as low as 50%
+
+'''Scree plot:''' The Cattell scree test plots the components as the X axis and the corresponding [[Eigenvalue, eigenvector and eigenspace|eigenvalues]] as the [[Y-axis]]. As one moves to the right, toward later components, the eigenvalues drop. When the drop ceases and the curve makes an elbow toward less steep decline, Cattell's scree test says to drop all further components after the one starting the elbow. This rule is sometimes criticised for being amenable to researcher-controlled "[[Wiktionary:fudge factor|fudging]]". That is, as picking the "elbow" can be subjective because the curve has multiple elbows or is a smooth curve, the researcher may be tempted to set the cut-off at the number of factors desired by his or her research agenda.
+
+'''[[John L. Horn|Horn]]'s Parallel Analysis (PA):''' A Monte-Carlo based simulation method that compares the observed eigenvalues with those obtained from uncorrelated normal variables. A factor or component is retained if the associated eigenvalue is bigger than the 95th of the distribution of eigenvalues derived from the random data. PA is one of the most recommendable rules for determining the number of components to retain,{{Citation needed|date=October 2011}} but only few programs include this option.<ref>* {{cite journal | last1 = Ledesma | first1 = R.D. | last2 = Valero-Mora | first2 = P. | year = 2007 | title = Determining the Number of Factors to Retain in EFA: An easy-to-use computer program for carrying out Parallel Analysis | url = http://pareonline.net/getvn.asp?v=12&n=2 | journal = Practical Assessment Research & Evaluation | volume = 12 | issue = 2| pages = 1<U+2013>11 }}</ref>
+
+However, before dropping a factor below one's cutoff, the analyst(s) should create scores for a data set based on the factor loadings and check the scores' correlation with any given [[dependent variable]](s) of interest. Scores based on a factor with a very small eigenvalue can correlate strongly with dependent variables, in which case dropping such a factor from a theoretical model may reduce its predictive validity.
+
+===Rotation methods===
+The unrotated output maximises variance accounted for by the first and subsequent factors, and forcing the factors to be [[orthogonal]]. This data-compression comes at the cost of having most items load on the early factors, and usually, of having many items load substantially on more than one factor. Rotation serves to make the output more understandable, by seeking so-called "Simple Structure": A pattern of loadings where items load most strongly on one factor, and much more weakly on the other factors. Rotations can be orthogonal or oblique (allowing the factors to correlate).
+
+'''[[Varimax rotation]]''' is an orthogonal rotation of the factor axes to maximize the variance of the squared loadings of a factor (column) on all the variables (rows) in a factor matrix, which has the effect of differentiating the original variables by extracted factor. Each factor will tend to have either large or small loadings of any particular variable. A varimax solution yields results which make it as easy as possible to identify each variable with a single factor. This is the most common rotation option. However, the orthogonality (i.e., independence) of factors is often an unrealistic assumption. Oblique rotations are inclusive of orthogonal rotation, and for that reason, oblique rotations are a preferred method.<ref>{{cite journal |last=Russell |first=D.W. |title=In search of underlying dimensions: The use (and abuse) of factor analysis in Personality and Social Psychology Bulletin |journal=Personality and Social Psychology Bulletin |volume=28 |issue=12 |pages=1629<U+2013>46 |date=December 2002 |doi=10.1177/014616702237645 |url=http://psp.sagepub.com/content/28/12/1629.short}}</ref>
+
+'''Quartimax rotation''' is an orthogonal alternative which minimizes the number of factors needed to explain each variable. This type of rotation often generates a general factor on which most variables are loaded to a high or medium degree. Such a factor structure is usually not helpful to the research purpose.
+
+'''Equimax rotation''' is a compromise between Varimax and Quartimax criteria.
+
+'''Direct oblimin rotation''' is the standard method when one wishes a non-orthogonal (oblique) solution <U+2013> that is, one in which the factors are allowed to be correlated. This will result in higher eigenvalues but diminished [[interpretability]] of the factors. See below.{{Clarify|date=May 2012}}
+
+'''Promax rotation''' is an alternative non-orthogonal (oblique) rotation method which is computationally faster than the direct oblimin method and therefore is sometimes used for very large [[dataset]]s.
+
+==Factor analysis in psychometrics==
+{{see also|G factor (psychometrics)|label 1=''g'' factor}}
+
+===History===
+[[Charles Spearman]] pioneered the use of factor analysis in the field of psychology and is sometimes credited with the invention of factor analysis. He discovered that school children's scores on a wide variety of seemingly unrelated subjects were positively correlated, which led him to postulate that a general mental ability, or ''g'', underlies and shapes human cognitive performance. His postulate now enjoys broad support in the field of [[intelligence (trait)|intelligence research]], where it is known as the [[General intelligence factor|''g'' theory]].
+
+[[Raymond Cattell]] expanded on Spearman's idea of a two-factor theory of intelligence after performing his own tests and factor analysis. He used a multi-factor theory to explain intelligence. Cattell's theory addressed alternate factors in intellectual development, including motivation and psychology. Cattell also developed several mathematical methods for adjusting psychometric graphs, such as his "scree" test and similarity coefficients. His research led to the development of his theory of [[fluid and crystallized intelligence]], as well as his [[16 Personality Factors]] theory of personality. Cattell was a strong advocate of factor analysis and [[psychometrics]]. He believed that all theory should be derived from research, which supports the continued use of empirical observation and objective testing to study human intelligence.
+
+===Applications in psychology===
+Factor analysis is used to identify "factors" that explain a variety of results on different tests. For example, intelligence research found that people who get a high score on a test of verbal ability are also good on other tests that require verbal abilities. Researchers explained this by using factor analysis to isolate one factor, often called [[crystallized intelligence]] or verbal intelligence, which represents the degree to which someone is able to solve problems involving verbal skills.
+
+Factor analysis in psychology is most often associated with intelligence research. However, it also has been used to find factors in a broad range of domains such as personality, attitudes, beliefs, etc. It is linked to [[psychometrics]], as it can assess the validity of an instrument by finding if the instrument indeed measures the postulated factors.
+
+===Advantages===
+* Reduction of number of variables, by combining two or more variables into a single factor. For example, performance at running, ball throwing, batting, jumping and weight lifting could be combined into a single factor such as general athletic ability. Usually, in an item by people matrix, factors are selected by grouping related items. In the Q factor analysis technique, the matrix is transposed and factors are created by grouping related people: For example, liberals, [[Libertarianism|libertarians]], conservatives and socialists, could form separate groups.
+* Identification of groups of inter-related variables, to see how they are related to each other. For example, Carroll used factor analysis to build his [[Three Stratum Theory]]. He found that a factor called "broad visual perception" relates to how good an individual is at visual tasks. He also found a "broad auditory perception" factor, relating to auditory task capability. Furthermore, he found a global factor, called "g" or general intelligence, that relates to both "broad visual perception" and "broad auditory perception". This means someone with a high "g" is likely to have both a high "visual perception" capability and a high "auditory perception" capability, and that "g" therefore explains a good part of why someone is good or bad in both of those domains.
+
+===Disadvantages===
+* "...each orientation is equally acceptable mathematically. But different factorial theories proved to differ as much in terms of the orientations of factorial axes for a given solution as in terms of anything else, so that model fitting did not prove to be useful in distinguishing among theories." (Sternberg, 1977<ref name=Sternberg>{{cite book|last=Sternberg|first=R.J.|title=Metaphors of mind: Conceptions of the nature of intelligence|year=1977|publisher=New York: Cambridge|pages=85<U+2013>111}}</ref>). This means all rotations represent different underlying processes, but all rotations are equally valid outcomes of standard factor analysis optimization. Therefore, it is impossible to pick the proper rotation using factor analysis alone.
+* Factor analysis can be only as good as the data allows. In psychology, where researchers often have to rely on less valid and reliable measures such as self-reports, this can be problematic.
+* Interpreting factor analysis is based on using a "heuristic", which is a solution that is "convenient even if not absolutely true".<ref>Richard B. Darlington (2004) {{cite web|title=Factor Analysis |accessdate=July 22, 2004 |url=http://comp9.psych.cornell.edu/Darlington/factor.htm}}
+</ref> More than one interpretation can be made of the same data factored the same way, and factor analysis cannot identify causality.
+
+==Exploratory factor analysis versus principal components analysis==
+{{see also|Principal component analysis|Exploratory factor analysis}}
+While [[exploratory factor analysis]] and [[principal component analysis]] are treated as synonymous techniques in some fields of statistics, this has been criticised (e.g. Fabrigar et al., 1999;<ref name=Fabrigar>{{cite web|last=Fabrigar et al.|title=Evaluating the use of exploratory factor analysis in psychological research.|year=1999|url=http://www.statpower.net/Content/312/Handout/Fabrigar1999.pdf|publisher=Psychological Methods}}</ref> Suhr, 2009<ref name=Suhr>{{cite web|last=Suhr|first=Diane|year=2009|title=Principal component analysis vs. exploratory factor analysis|url=http://www2.sas.com/proceedings/sugi30/203-30.pdf|publisher=SUGI 30 Proceedings|accessdate=5 April 2012}}</ref>). In factor analysis, the researcher makes the assumption that an underlying causal model exists, whereas PCA is simply a variable reduction technique.<ref name=Sas>{{cite web|title=Principal Components Analysis|url=http://support.sas.com/publishing/pubcat/chaps/55129.pdf|work=SAS Support Textbook|author=SAS Statistics}}</ref> Researchers have argued that the distinctions between the two techniques may mean that there are objective benefits for preferring one over the other based on the analytic goal.
+
+=== Arguments contrasting PCA and EFA ===
+Fabrigar et al. (1999)<ref name=Fabrigar /> address a number of reasons used to suggest that principal components analysis is equivalent to factor analysis:
+
+# It is sometimes suggested that principal components analysis is computationally quicker and requires fewer resources than factor analysis. Fabrigar et al. suggest that the ready availability of computer resources have rendered this practical concern irrelevant.
+# PCA and factor analysis can produce similar results. This point is also addressed by Fabrigar et al.; in certain cases, whereby the communalities are low (e.g., .40), the two techniques produce divergent results. In fact, Fabrigar et al. argue that in cases where the data correspond to assumptions of the common factor model, the results of PCA are inaccurate results.
+# There are certain cases where factor analysis leads to 'Heywood cases'. These encompass situations whereby 100% or more of the [[variance]] in a measured variable is estimated to be accounted for by the model. Fabrigar et al. suggest that these cases are actually informative to the researcher, indicating a misspecified model or a violation of the common factor model. The lack of Heywood cases in the PCA approach may mean that such issues pass unnoticed.
+# Researchers gain extra information from a PCA approach, such as an individual<U+2019>s score on a certain component <U+2013> such information is not yielded from factor analysis. However, as Fabrigar et al. contend, the typical aim of factor analysis <U+2013> i.e. to determine the factors accounting for the structure of the [[Correlation and dependence|correlations]] between measured variables <U+2013> does not require knowledge of factor scores and thus this advantage is negated. It is also possible to compute factor scores from a factor analysis.
+
+=== Variance versus covariance ===
+Factor analysis takes into account the [[random error]] that is inherent in measurement, whereas PCA fails to do so. This point is exemplified by Brown (2009),<ref name=Brown>{{cite web|last=Brown|first=J. D.|title=Principal components analysis and exploratory factor analysis <U+2013> Definitions, differences and choices.|url=http://jalt.org/test/PDF/Brown29.pdf|publisher=Shiken: JALT Testing & Evaluation SIG Newsletter|accessdate=16 April 2012}}</ref> who indicated that, in respect to the correlation matrices involved in the calculations:
+
+{{Quotation|"In PCA, 1.00s are put in the diagonal meaning that all of the variance in the matrix is to be accounted for (including variance unique to each variable, variance common among variables, and error variance). That would, therefore, by definition, include all of the variance in the variables. In contrast, in EFA, the communalities are put in the diagonal meaning that only the variance shared with other variables is to be accounted for (excluding variance unique to each variable and error variance). That would, therefore, by definition, include only variance that is common among the variables."|Brown (2009)|Principal components analysis and exploratory factor analysis <U+2013> Definitions, differences and choices}}
+
+For this reason, Brown (2009) recommends using factor analysis when theoretical ideas about relationships between variables exist, whereas PCA should be used if the goal of the researcher is to explore patterns in their data.
+
+===Differences in procedure and results===
+The differences between principal components analysis and factor analysis are further illustrated by Suhr (2009):
+* PCA results in principal components that account for a maximal amount of variance for observed variables; FA account for common variance in the data.<ref name=Suhr />
+* PCA inserts ones on the diagonals of the correlation matrix; FA adjusts the diagonals of the correlation matrix with the unique factors.<ref name=Suhr />
+* PCA minimizes the sum of squared perpendicular distance to the component axis; FA estimates factors which influence responses on observed variables.<ref name=Suhr />
+* The component scores in PCA represent a linear combination of the observed variables weighted by [[Eigenvalues and eigenvectors|eigenvectors]]; the observed variables in FA are linear combinations of the underlying and unique factors.<ref name=Suhr />
+* In PCA, the components yielded are uninterpretable, i.e. they do not represent underlying <U+2018>constructs<U+2019>; in FA, the underlying constructs can be labeled and readily interpreted, given an accurate model specification.<ref name=Suhr />
+
+==Factor analysis in marketing==
+The basic steps are:
+* Identify the salient attributes consumers use to evaluate [[product (business)|products]] in this category.
+* Use [[quantitative marketing research]] techniques (such as [[statistical survey|surveys]]) to collect data from a sample of potential [[customer]]s concerning their ratings of all the product attributes.
+* Input the data into a statistical program and run the factor analysis procedure. The computer will yield a set of underlying attributes (or factors).
+* Use these factors to construct [[perceptual mapping|perceptual maps]] and other [[positioning (marketing)|product positioning]] devices.
+
+=== Information collection ===
+The data collection stage is usually done by marketing research professionals. Survey questions ask the respondent to rate a product sample or descriptions of product concepts on a range of attributes. Anywhere from five to twenty attributes are chosen. They could include things like: ease of use, weight, accuracy, durability, colourfulness, price, or size. The attributes chosen will vary depending on the product being studied. The same question is asked about all the products in the study. The data for multiple products is coded and input into a statistical program such as [[R (programming language)|R]], [[SPSS]], [[SAS System|SAS]], [[Stata]], [[STATISTICA]], JMP, and SYSTAT.
+
+=== Analysis ===
+The analysis will isolate the underlying factors that explain the data using a matrix of associations.<ref>Ritter, N. (2012). A comparison of distribution-free and non-distribution free methods in factor analysis. Paper presented at Southwestern Educational Research Association (SERA) Conference 2012, New Orleans, LA (ED529153).</ref> Factor analysis is an interdependence technique. The complete set of interdependent relationships is examined. There is no specification of dependent variables, independent variables, or causality. Factor analysis assumes that all the rating data on different attributes can be reduced down to a few important dimensions. This reduction is possible because some attributes may be related to each other. The rating given to any one attribute is partially the result of the influence of other attributes. The statistical algorithm deconstructs the rating (called a raw score) into its various components, and reconstructs the partial scores into underlying factor scores. The degree of correlation between the initial raw score and the final factor score is called a ''factor loading''.
+
+===Advantages===
+* Both objective and subjective attributes can be used provided the subjective attributes can be converted into scores.
+* Factor analysis can identify latent dimensions or constructs that direct analysis may not.
+* It is easy and inexpensive.
+
+===Disadvantages===
+* Usefulness depends on the researchers' ability to collect a sufficient set of product attributes.  If important attributes are excluded or neglected, the value of the procedure is reduced.
+* If sets of observed variables are highly similar to each other and distinct from other items, factor analysis will assign a single factor to them.  This may obscure factors that represent more interesting relationships. {{Clarify|date=May 2012}}
+* Naming factors may require knowledge of theory because seemingly dissimilar attributes can correlate strongly for unknown reasons.
+
+==Factor analysis in physical sciences==
+Factor analysis has also been widely used in physical sciences such as [[geochemistry]], [[ecology]], and [[hydrochemistry]].<ref>{{cite journal |last1=Subbarao |first1=C. |last2=Subbarao |first2=N.V. |last3=Chandu |first3=S.N. |title=Characterisation of groundwater contamination using factor analysis |journal=Environmental Geology |volume=28 |issue=4 |pages=175<U+2013>180 |date=December 1996 |doi=10.1007/s002540050091 |url=http://www.springerlink.com/content/yqhnrjhdlq8yctj2/}}</ref>
+
+In groundwater quality management, it is important to relate the spatial distribution of different chemical
+parameters to different possible sources, which have different chemical signatures. For example, a sulfide mine is likely to be associated with high levels of acidity, dissolved sulfates and transition metals. These signatures can be identified as factors through R-mode factor analysis, and the location of possible sources can be suggested by contouring the factor scores.<ref>{{cite journal |last1=Love |first1=D. |last2=Hallbauer |first2=D.K. |last3=Amos |first3=A. |last4=Hranova |first4=R.K. |title=Factor analysis as a tool in groundwater quality management: two southern African case studies |journal=Physics and Chemistry of the Earth |volume=29 |issue= |pages=1135<U+2013>43 |year=2004 |doi=10.1016/j.pce.2004.09.027 }}</ref>
+
+In [[geochemistry]], different factors can correspond to different mineral associations, and thus to mineralisation.<ref>{{cite journal |last1=Barton |first1=E.S. |last2=Hallbauer |first2=D.K. |title=Trace-element and U<U+2014>Pb isotope compositions of pyrite types in the Proterozoic Black Reef, Transvaal Sequence, South Africa: Implications on genesis and age |journal=Chemical Geology |volume=133 |issue= |pages=173<U+2013>199 |year=1996 |doi=10.1016/S0009-2541(96)00075-7 |url=}}</ref>
+
+==Factor analysis in microarray analysis==
+Factor analysis can be used for summarizing high-density [[oligonucleotide]] [[DNA microarrays]] data at probe level for [[Affymetrix]] GeneChips. In this case, the latent variable corresponds to the [[RNA]] concentration in a sample.<ref>{{cite journal |first1=Sepp |last1=Hochreiter |first2=Djork-Arn<U+00E9> |last2=Clevert |first3=Klaus |last3=Obermayer |title=A new summarization method for affymetrix probe level data |journal=Bioinformatics |volume=22 |issue=8 |pages=943<U+2013>9 |year=2006 |pmid=16473874 |doi=10.1093/bioinformatics/btl033 |url=http://bioinformatics.oxfordjournals.org/content/22/8/943.full}}</ref>
+
+== Implementation ==
+Factor analysis has been implemented in several statistical analysis programs since the 1980s: [[SAS (software)|SAS]], [[BMDP]] and [[SPSS]].<ref>{{Cite journal
+ | first = Robert |last=MacCallum
+ | title = A comparison of factor analysis programs in SPSS, BMDP, and SAS
+ | journal = Psychometrika
+ | volume = 48
+ | issue = 48
+ | month = June
+ | year = 1983
+ | doi = 10.1007/BF02294017
+}}</ref>
+It is also implemented in the [[R (programming language)|''R'' programming language]] (with the ''factanal'' function) and in [[OpenOpt]].
+Rotations are implemented in the ''GPArotation'' R package.
+
+==See also==
+{{Commons category|Factor analysis}}
+<div style="-moz-column-count:2; column-count:2;">
+* [[Design of experiments]]
+* [[Formal concept analysis]]
+* [[Higher-order factor analysis]]
+* [[Independent component analysis]]
+* [[Multilinear principal component analysis|Multilinear PCA]]
+* [[Multilinear subspace learning]]
+* [[Non-negative matrix factorization]]
+* [[Perceptual mapping]]
+* [[Product management]]
+* [[Q methodology]]
+* [[Recommendation system]]
+* [[Varimax rotation]]
+* [[Generalized Structured Component Analysis]]
+</div>
+
+==References==
+{{Reflist}}
+
+==Further reading==
+* {{cite book |first=Dennis |last=Child |title=The Essentials of Factor Analysis |url=http://books.google.com/books?id=rQ2vdJgohH0C |year=2006 |publisher=Continuum International |isbn=978-0-8264-8000-2 |edition=3rd }}
+* {{cite journal |last1=Fabrigar |first1=L.R. |last2=Wegener |first2=D.T. |last3=MacCallum |first3=R.C. |last4=Strahan |first4=E.J. |title=Evaluating the use of exploratory factor analysis in psychological research |journal=Psychological Methods |volume=4 |issue=3 |pages=272<U+2013>299 |date=September 1999 |doi=10.1037/1082-989X.4.3.272 |url=http://psycnet.apa.org/journals/met/4/3/272/}}
+* {{cite book |last=Thompson |first=B. |title=Exploratory and confirmatory factor analysis: Understanding concepts and applications |publisher=American Psychological Association |location=Washington DC |year=2004 |isbn=1591470935 }}
+
+==External links==
+* Factor Analysis. Retrieved July 23, 2004, from http://www2.chass.ncsu.edu/garson/pa765/factor.htm
+* Raymond Cattell. Retrieved July 22, 2004, from http://www.indiana.edu/~intell/rcattell.shtml
+* Exploratory Factor Analysis - A Book Manuscript by Tucker, L. & MacCallum R. (1993). Retrieved June 8, 2006, from: http://www.unc.edu/~rcm/book/factornew.htm
+* Garson, G. David, "Factor Analysis," from ''Statnotes: Topics in Multivariate Analysis''. Retrieved on April 13, 2009 from http://www2.chass.ncsu.edu/garson/pa765/statnote.htm
+* [http://www.fa100.info/index.html Factor Analysis at 100] <U+2014>conference material
+* [http://www.bioinf.jku.at/software/farms/farms.html FARMS - Factor Analysis for Robust Microarray Summarization, an R package] <U+2014>software
+
+{{DEFAULTSORT:Factor Analysis}}
+[[Category:Factor analysis]]
+[[Category:Psychometrics]]
+[[Category:Multivariate statistics]]
+[[Category:Latent variable models]]
+[[Category:Market research]]
+[[Category:Product management]]
+[[Category:Marketing]]
+[[Category:Educational psychology]]

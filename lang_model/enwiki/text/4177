@@ -1,0 +1,349 @@
+[[Image:Cray 2 Arts et Metiers dsc03940.jpg|thumb|right|The [[Cray-2]] was the world's fastest computer from 1985 to 1989.]]
+
+'''Parallel computing''' is a form of [[computing]] in which many [[Instruction (computer science)|instructions]] are carried out simultaneously.<ref>G.S. Almasi and A. Gottlieb. [http://portal.acm.org/citation.cfm?id=1011116.1011127 Highly Parallel Computing]. Benjamin-Cummings publishers, Redwood city, CA, 1989.</ref> It operates on the principle that large problems can often be divided into smaller ones, which are solved [[Concurrency (computer science)|concurrently]] ("in parallel"). There are several different forms of parallel computing: [[bit-level parallelism]], [[instruction level parallelism|instruction-level parallelism]], [[data parallelism]], and [[task parallelism]]. It has been used for many years, mainly in [[high performance computing|high-performance computing]], but interest in it has grown in recent years due to the physical constraints preventing [[frequency scaling]]. Parallel computing has become the dominant paradigm in [[computer architecture]], mainly in the form of [[Multi-core (computing)|multicore processor]]s.<ref name="View-Power">Krste Asanovic et al. [http://www.eecs.berkeley.edu/Pubs/TechRpts/2006/EECS-2006-183.pdf The Landscape of Parallel Computing Research: A View from Berkeley] (PDF). University of California, Berkeley. Technical Report No. UCB/EECS-2006-183. [[December 18]], [[2006]]: "Old [conventional wisdom]: Increasing clock frequency is the primary method of improving processor performance. New [conventional wisdom]: Increasing parallelism is the primary method of improving processor performance&nbsp;... Even representatives from Intel, a company generally associated with the 'higher clock-speed is better' position, warned that traditional approaches to maximizing performance through maximizing clock speed have been pushed to their limit."</ref> However, in recent years, [[power consumption]] by parallel computers has become a concern.<ref>Asanovic et al. Old [conventional wisdom]: Power is free, but transistors are expensive. New [conventional wisdom] is [that] power is expensive, but transistors are "free".</ref>
+
+Parallel computers can be roughly classified according to the level at which the hardware supports parallelism<U+2014>with [[Multi-core|multi-core]] and [[Symmetric multiprocessing|multi-processor]] computers having multiple processing elements within a single machine, while [[Computer cluster|clusters]], [[Massive parallel processing|MPPs]], and [[Grid computing|grids]] use multiple computers to work on the same task. 
+
+[[Parallel algorithm|Parallel computer programs]] are more difficult to write than sequential ones,<ref>[[David A. Patterson (scientist)|David A. Patterson]] and [[John L. Hennessy]]. Computer Organization and Design (Second Edition) Morgan Kaufmann Publishers, 1998. ISBN 1558604286, p.&nbsp;715.</ref> because concurrency introduces several new classes of potential [[software bug]]s, of which [[race condition]]s are the most common. [[Computer networking|Communication]] and [[Synchronization (computer science)|synchronization]] between the different subtasks is typically one of the greatest barriers to getting good parallel program performance. The [[speedup]] of a program as a result of parallelization is given by [[Amdahl's law]].
+
+==Background==
+
+Traditionally, computer software has been written for serial computation. To solve a problem, an [[algorithm]] is constructed that produces a serial stream of instructions. These instructions are executed on a [[central processing unit]] on one computer. Only one instruction may execute at a time<U+2014>after that instruction is finished, the next is executed.<ref name="llnltut">{{cite web |url=http://www.llnl.gov/computing/tutorials/parallel_comp/ |title=Introduction to Parallel Computing |accessdate=2007-11-09 |author=Blaise Barney |publisher=Lawrence Livermore National Laboratory}}</ref>
+
+Parallel computing, on the other hand, uses multiple processing elements simultaneously to solve a problem. This is accomplished by breaking the problem into independent parts so that each processing element can execute its part of the algorithm simultaneously. The processing elements can be diverse and include resources such as a single computer with multiple processors, several networked computers, specialized hardware, or any combination of the above.<ref name="llnltut" />
+
+[[Frequency scaling]] was the dominant reason for improvements in computer performance  from the mid-1980s until 2004. The runtime of a program is equal to the number of instructions multiplied by the average time per instruction. Maintaining everything else constant, increasing the clock frequency decreases the average time it takes to execute an instruction. An increase in frequency thus decreases runtime for all [[CPU bound|computation-bounded]] programs.<ref>[[John L. Hennessy]] and [[David A. Patterson (scientist)|David A. Patterson]]. Computer Architecture: A Quantitative Approach. 3rd edition, 2002. Morgan Kaufmann, ISBN 1558607242, p.&nbsp;43.</ref> 
+
+However, [[power consumption]] by a chip is given by the equation P = C &times; V<sup>2</sup> &times; F, where P is power, C is the [[capacitance]] being switched per clock cycle (proportional to the number of transistors whose inputs change), V is [[voltage]], and F is the processor frequency (cycles per second).<ref>J.M. Rabaey. Digital Integrated Circuits. Prentice Hall, 1996. ISBN 0131786091, p.&nbsp;235.</ref> Increases in frequency increase the amount of power used in a processor. Increasing processor power consumption led ultimately to [[Intel]]'s May 2004 cancellation of its [[Tejas and Jayhawk]] processors, which is generally cited as the end of frequency scaling as the dominant computer architecture paradigm.<ref>Laurie J. Flynn. [http://www.nytimes.com/2004/05/08/business/08chip.html?ex=1399348800&en=98cc44ca97b1a562&ei=5007 Intel Halts Development of 2 New Microprocessors]. ''The New York Times'', [[May 8]], [[2004]].  Retrieved on [[April 22]], [[2008]].</ref> 
+
+[[Moore's Law]] is the empirical observation that transistor density in a microprocessor doubles every 18 to 24&nbsp;months. Despite power consumption issues, and repeated predictions of its end, Moore's law is still in effect. With the end of frequency scaling, these additional transistors (which are no longer used for frequency scaling) can be used to add extra hardware for parallel computing.
+
+===Amdahl's law and Gustafson's law===
+[[Image:Parallelization diagram.svg|right|thumbnail|300px|The program runtime (shown in blue) and speed-up (shown in red) of a real-world program with suboptimal parallelization. The dashed lines indicate optimal parallelization<U+2013>linear increase in speed-up and linear decrease in runtime. Eventually, the runtime increases with more processors (and the speed-up likewise decreases), in a phenomenon known as [[parallel slowdown]].]]
+
+Theoretically, the speed-up from parallelization should be linear<U+2014>doubling the number of processing elements should halve the runtime, and doubling it a second time should again halve the runtime. However, very few parallel algorithms achieve optimal speed-up. Most of them have a near-linear speed-up for small numbers of processing elements, which flattens out into a constant value for large numbers of processing elements. 
+
+The potential speedup of an algorithm on a parallel computing platform is given by [[Amdahl's law]], originally formulated by [[Gene Amdahl]] in the 1960s.<ref>G. Amdahl. The validity of the single processor approach to achieving large-scale computing capabilities. In Proceedings of AFIPS Spring Joint Computer Conference, pp.&nbsp;483<U+2013>85, Atlantic City, N.J., April 1967. AFIPS Press.</ref> It states that a small portion of the program which cannot be parallelized will limit the overall speed-up available from parallelization. Any large mathematical or engineering problem will typically consist of several parallelizable parts and several non-parallelizable (sequential) parts. This relationship is given by the equation: 
+
+:<math>S = \frac{1}{(1 - P)}</math>
+
+where S is the speed-up of the program (as a factor of its original sequential runtime), and P is the fraction that is parallelizable. If the sequential portion of a program is 10% of the runtime, we can get no more than a 10x speedup, regardless of how many processors are added. This puts an upper limit on the usefulness of adding more parallel execution units.
+
+[[Gustafson's law]] is another law in computer engineering, closely related to Amdahl's law. It can be formulated as: 
+
+[[Image:Optimizing-different-parts.svg|thumb|400px|A graphical representation of [[Amdahl's law]] Assume that a task has two independent parts, A and B. B takes roughly 25% of the time of the whole computation. With effort, a programmer may be able to make this part five times faster, but this only reduces the time for the whole computation by a little. In contrast, one may need to perform less work to make part&nbsp;A twice as fast. This will make the computation much faster than by optimizing part&nbsp;B, even though B got a greater speedup, (5x versus 2x).]]
+
+:<math>\displaystyle S(P) = P - \alpha(P-1)</math>
+
+where P is the number of processors, S is the speed-up, and <math>\alpha</math> the non-parallelizable part of the process.<ref>[http://www.scl.ameslab.gov/Publications/Gus/AmdahlsLaw/Amdahls.html Reevaluating Amdahl's Law] [[Communications of the ACM]] 31(5), 1988. pp.&nbsp;532<U+2013>33.</ref> Amdahl's law assumes a fixed-problem size and that the size of the sequential section is independent of the number of processors, whereas Gustafson's law does not make these assumptions.
+
+===Dependencies===
+
+Understanding [[data dependency|data dependencies]] is fundamental in implementing [[parallel algorithm]]s. No program can run more quickly than the longest chain of dependent calculations (known as the [[critical path]]), since calculations that depend upon prior calculations in the chain must be executed in order. However, most algorithms do not consist of just a long chain of dependent calculations; there are usually opportunities to execute independent calculations in parallel. 
+
+Let P<sub>i</sub> and P<sub>j</sub> be two program fragments. Bernstein's conditions<ref> A.J. Bernstein, "Program Analysis for Parallel Processing,' IEEE Trans. on Electronic Computers, EC-15, October 1966, pp.&nbsp;757<U+2013>62.</ref> describe when the two are independent and can be executed in parallel. Let I<sub>i</sub> be all of the input variables to P<sub>i</sub> and O<sub>i</sub> the output variables, and likewise for P<sub>j</sub>. P <sub>i</sub> and P<sub>j</sub> are independent if they satisfy
+
+* <math> I_j \cap O_i  =  \emptyset</math>
+* <math> I_i \cap O_j  =  \emptyset</math>
+* <math> O_i \cap O_j  = \emptyset</math>
+
+Violation of the first condition introduces a flow dependency, corresponding to first statement's producing a result used by the second statement. The second condition represents an [[anti-dependency]], when the first statement overwrites a variable needed by the second expression. The third and final condition, q, is an output dependency. When two variables write to the same location, the final output must have arisen from the second statement.<ref>Roosta, Seyed H. Parallel processing and parallel algorithms: theory and computation. 2000. Springer, ISBN 0387987169,  p.&nbsp;114.</ref>
+
+Consider the following functions, which demonstrate several kinds of dependencies:
+
+ 1: '''function''' ''Dep''(a, b)
+ 2:    c := a<U+00B7>b
+ 3:    d := 2<U+00B7>c
+ 4: '''end function'''
+
+Operation 3 in ''Dep''(a, b) cannot be executed before (or even in parallel with) operation&nbsp;2, because operation&nbsp;3 uses a result from operation&nbsp;2. It violates condition&nbsp;1, and thus introduces a flow dependency.
+
+ 1: '''function''' ''NoDep''(a, b)
+ 2:      c := a<U+00B7>b
+ 3:      d := 2<U+00B7>b
+ 4:      e := a+b
+ 5: '''end function'''
+
+In this example, there are no dependencies between the instructions, so they can all be run in parallel.
+
+Bernstein<U+2019>s conditions do not allow memory to be shared between different processes. For that, some means of enforcing an ordering between accesses is necessary, such as [[semaphore (programming)|semaphores]], [[barrier (computer science)|barriers]] or some other [[Synchronization (computer science)|synchronization method]].
+
+===Race conditions, mutual exclusion, synchronization, and parallel slowdown===
+
+Subtasks in a parallel program are often called [[Thread (computer science)|threads]]. Some parallel computer architectures use smaller, lightweight versions of threads known as [[Fiber (computer science)|fibers]], while others use bigger versions known as [[Process (computing)|processes]]. However, "threads" is generally accepted as a generic term for subtasks. Threads will often need to update some [[Variable#In computer programming|variable]] that is shared between them. The instructions between the two programs may be [[interleave]]d in any order. For example, consider the following program:
+
+{| class="wikitable" 
+|-
+|Thread A
+|Thread B
+|-
+|1A: Read variable V
+|1B: Read variable V
+|-
+|2A: Add 1 to variable V
+|2B: Add 1 to variable V
+|-
+|3A Write back to variable V
+|3B: Write back to variable V     
+|}
+
+If instruction 1B is executed between 1A and 3A, or if instruction 1A is executed between 1B and 3B, the program will produce incorrect data. This is known as a [[race condition]]. The programmer must use a [[Lock (computer science)|lock]] to provide [[mutual exclusion]]. A lock is a programming language construct that allows one thread to take control of a variable and prevent other threads from reading or writing it, until that variable is unlocked. The thread holding the lock is free to execute its [[critical section]] (the section of a program that requires exclusive access to some variable), and to unlock the data when it is finished. Therefore, to guarantee correct program execution, the above program can be rewritten to use locks: 
+
+{| class="wikitable" 
+|-
+|Thread A
+|Thread B
+|-
+|1A: Lock variable V
+|1B: Lock variable V
+|-
+|2A: Read variable V
+|2B: Read variable V
+|-
+|3A: Add 1 to variable V
+|3B: Add 1 to variable V
+|-
+|4A Write back to variable V
+|4B: Write back to variable V     
+|-
+|5A: Unlock variable V
+|5B: Unlock variable V
+|}
+
+One thread will successfully lock variable V, while the other thread will be [[Software lockout|locked out]]<U+2014>unable to proceed until V is unlocked again. This guarantees correct execution of the program. Locks, while necessary to ensure correct program execution, can greatly slow a program.
+
+Locking multiple variables using [[Atomic operation|non-atomic]] locks introduces the possibility of program [[deadlock]]. An atomic lock locks multiple variables all at once. If it cannot lock all of them, it does not lock any of them. If two threads each need to lock the same two variables using non-atomic locks, it is possible that one thread will lock one of them and the second thread will lock the second variable. In such a case, neither thread can complete, and deadlock results.
+
+Many parallel programs require that their subtasks [[Synchronization (computer science)|act in synchrony]]. This requires the use of a [[barrier (computer science)|barrier]]. Barriers are typically implemented using a software lock. One class of algorithms, known as [[lock-free and wait-free algorithms]], altogether avoids the use of locks and barriers. However, this approach is generally difficult to implement and requires correctly designed data structures.
+
+Not all parallelization results in speed-up. Generally, as a task is split up into more and more threads, those threads spend an ever-increasing portion of their time communicating with each other. Eventually, the overhead from communication dominates the time spent solving the problem, and further parallelization (that is, splitting the workload over even more threads) increases rather than decreases the amount of time required to finish. This is known as [[parallel slowdown]].
+
+===Fine-grained, coarse-grained, and embarrassing parallelism===
+Applications are often classified according to how often their subtasks need to synchronize or communicate with each other. An application exhibits fine-grained parallelism if its subtasks must communicate many times per second; it exhibits coarse-grained parallelism if they do not communicate many times per second, and it is [[embarrassingly parallel]] if they rarely or never have to communicate. Embarrassingly parallel applications are considered the easiest to parallelize.
+
+===Consistency models===
+{{Main|Consistency model}}
+
+[[Image:Leslie Lamport.jpg|right|upright|thumbnail|[[Leslie Lamport]] first defined the concept of [[sequential consistency]]. Lamport is also well-known for his work in creating the [[LaTeX]] typesetting software.]]
+
+Parallel programming languages and parallel computers must have a [[consistency model]] (also known as a memory model). The consistency model defines rules for how operations on [[Computer data storage|computer memory]] occur and how results are produced. 
+
+One of the first consistency models was [[Leslie Lamport]]'s [[sequential consistency]] model. Sequential consistency is the property of a parallel program that its parallel execution produces the same results as a sequential program. Specifically, a program is sequentially consistent if "...&nbsp;the results of any execution is the same as if the operations of all the processors were executed in some sequential order, and the operations of each individual processor appear in this sequence in the order specified by its program".<ref>Leslie Lamport. "How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs", IEEE Transactions on Computers, C-28,9 (September 1979), pp.&nbsp;690<U+2013>91.</ref>
+
+[[Software transactional memory]] is a common type of consistency model. Software transactional memory borrows from [[Database management system|database theory]] the concept of [[Atomicity (database systems)|atomic transactions]] and applies them to memory accesses.
+
+Mathematically, these models can be represented in several ways. [[Process calculus]] is the branch of mathematics that deals with concurrency. Process calculus can be subdivided into [[ambient calculus]], [[calculus of communicating systems]], and [[communicating sequential processes]]. [[Petri net]]s were an early attempt to codify the rules of consistency models. [[Dataflow]] theory later built upon these. [[Dataflow architecture]]s were later created that physically implement the ideas of dataflow.
+
+===Flynn's taxonomy===
+
+[[Michael J. Flynn]] created one of the earliest classification systems for parallel (and sequential) computers and programs, now known as [[Flynn's taxonomy]]. Flynn classified programs and computers by whether they were operating using a single set or multiple sets of instructions, whether or not those instructions were using a single or multiple sets of data.
+
+{{Flynn's Taxonomy}}
+
+The single-instruction-single-data (SISD) classification is equivalent to an entirely sequential program. The single-instruction-multiple-data (SIMD) classification is analogous to doing the same operation repeatedly over a large data set. This is commonly done in [[signal processing]] applications. Multiple-instruction-single-data (MISD) is a rarely used classification. While computer architectures to deal with this were devised (such as [[systolic array]]s), few applications that fit this class materialized. Multiple-instruction-multiple-data (MIMD) programs are by far the most common type of parallel programs.
+
+According to [[David A. Patterson (scientist)|David A. Patterson]] and [[John L. Hennessy]], "Some machines are hybrids of these categories, of course, but this classic model has survived because it is simple, easy to understand, and gives a good first approximation. It is also<U+2014>perhaps because of its understandability<U+2014>the most widely used scheme."<ref>Patterson and Hennessy, p.&nbsp;748.</ref>
+
+==Types of parallelism==
+===Bit-level parallelism===
+{{main|Bit-level parallelism}}
+From the advent of [[very-large-scale integration]] (VLSI) computer-chip fabrication technology in the 1970s until about 1986, speed-up in computer architecture was driven by doubling [[Word (computing)|computer word size]]<U+2014>the amount of information the processor can execute per cycle.<ref>David E. Culler, Jaswinder Pal Singh, Anoop Gupta. Parallel Computer Architecture - A Hardware/Software Approach. Morgan Kaufmann Publishers, 1999. ISBN 1558603433, p.&nbsp;15.</ref> Increasing the word size reduces the number of instructions the processor must execute to perform an operation on variables whose sizes are greater than the length of the word. For example, where an [[8-bit]] processor must add two [[16-bit]] [[integer]]s, the processor must first add the 8&nbsp;lower-order bits from each integer using the standard addition instruction, then add the 8&nbsp;higher-order bits using an add-with-carry instruction and the [[carry bit]] from the lower order addition; thus, an 8-bit processor requires two instructions to complete a single operation, where a 16-bit processor would be able to complete the operation with a single instruction.
+
+Historically, [[4-bit]] microprocessors were replaced with 8-bit, then 16-bit, then 32-bit microprocessors. This trend generally came to an end with the introduction of 32-bit processors, which has been a standard in general-purpose computing for two decades. Not until recently (circa 2003-2004), with the advent of [[x86-64]] architectures, have [[64-bit]] processors become commonplace.
+
+===Instruction-level parallelism===
+{{main|Instruction level parallelism}}
+
+[[Image:Fivestagespipeline.png|thumb|300px|A canonical five-stage pipeline in a [[RISC]] machine (IF = Instruction Fetch, ID = Instruction Decode, EX = Execute, MEM = Memory access, WB = Register write back)]]
+
+A computer program is, in essence, a stream of instructions executed by a processor. These instructions can be [[Out-of-order execution|re-ordered]] and combined into groups which are then executed in parallel without changing the result of the program. This is known as instruction-level parallelism. Advances in instruction-level parallelism dominated computer architecture from the mid-1980s until the mid-1990s.<ref>Culler et al. p.&nbsp;15.</ref>
+
+Modern processors have multi-stage [[instruction pipeline]]s. Each stage in the pipeline corresponds to a different action the processor performs on that instruction in that stage; in other words, a processor with N pipeline stages can have up to N different instructions at different stages of completion. The canonical example of a pipelined processor is a RISC processor, with five stages: instruction fetch, decode, execute, memory access, and write back. The [[Pentium 4]] processor had a 35-stage pipeline.<ref>[[Yale Patt]].  "[http://users.ece.utexas.edu/~patt/Videos/talk_videos/cmu_04-29-04.wmv The Microprocessor Ten Years From Now: What Are The Challenges, How Do We Meet Them?] (wmv). Distinguished Lecturer talk at [[Carnegie Mellon University]], April 2004. Retrieved on [[November 7]], [[2007]].</ref>
+
+[[Image:Superscalarpipeline.png|thumb|300px|A five-stage pipelined superscalar processor, capable of issuing two instructions per cycle. It can have two instructions in each stage of the pipeline, for a total of up to 10&nbsp;instructions (shown in green) being simultaneously executed.]] 
+
+In addition to instruction-level parallelism from pipelining, some processors can issue more than one instruction at a time. These are known as [[superscalar]] processors. Instructions can be grouped together only if there is no [[data dependency]] between them. [[Scoreboarding]] and the [[Tomasulo algorithm]] (which is similar to scoreboarding but makes use of [[register renaming]]) are two of the most common techniques for implementing out-of-order execution and instruction-level parallelism.
+
+===Data parallelism===
+{{main|Data parallelism}}
+
+Data parallelism is parallelism inherent in [[Control flow#Loops|program loops]], which focuses on distributing the data across different computing nodes to be processed in parallel. "Parallelizing loops often leads to similar (not necessarily identical) operation sequences or functions being performed on elements of a large data structure."<ref name=Culler124>Culler et al. p.&nbsp;124.</ref> Many scientific and engineering applications exhibit data parallelism.
+
+A loop-carried dependency is the dependence of a loop iteration on the output of one or more previous iterations. Loop-carried dependencies prevent the parallelization of loops. For example, consider the following [[pseudocode]] that computes the first few [[Fibonacci number]]s: 
+
+ 1:    prev2 := 0
+ 2:    prev1 := 1
+ 3:    cur := 1
+ 4:    do:
+ 5:       CUR := PREV1 + PREV2
+ 6:       PREV2 := PREV1
+ 7:       PREV1 := CUR
+ 8:    while (CUR < 10) 
+
+This loop cannot be parallelized because CUR depends on itself (PREV1) and PREV2, which are computed in each loop iteration. Since each iteration depends on the result of the previous one, they cannot be performed in parallel. As the size of a problem gets bigger, the amount of data-parallelism available usually does as well.<ref name=Culler125>Culler et al. p.&nbsp;125.</ref>
+
+===Task parallelism===
+{{main|Task parallelism}}
+Task parallelism is the characteristic of a parallel program that "entirely different calculations can be performed on either the same or different sets of data".<ref name=Culler124/> This contrasts with data parallelism, where the same calculation is performed on the same or different sets of data. Task parallelism does not usually scale with the size of a problem.<ref name=Culler125/>
+
+==Hardware==
+===Memory and communication===
+Main memory in a parallel computer is either [[shared memory]] (shared between all processing elements in a single [[address space]]), or [[distributed memory]] (in which each processing element has its own local address space).<ref name=PH713>Patterson and Hennessy, p.&nbsp;713.</ref> Distributed memory refers to the fact that the memory is logically distributed, but often implies that it is physically distributed as well. [[Distributed shared memory]] is a combination of the two approaches, where the processing element has its own local memory and access to the memory on non-local processors. Accesses to local memory are typically faster than accesses to non-local memory. 
+
+[[Image:Numa.svg|right|thumbnail|400px|A logical view of a [[Non-Uniform Memory Access]] (NUMA) architecture. Processors in one directory can access that directory's memory with less latency than they can access memory in the other directory's memory.]] 
+
+Computer architectures in which all of main memory can be accessed with equal [[latency]] and [[bandwidth]] are known as [[Uniform Memory Access]] (UMA) systems. Typically, only a [[shared memory]] system (where the memory is not physically distributed) can achieve these. A system that does not have this property is known as a [[Non-Uniform Memory Access]] (NUMA) architecture. Distributed memory systems have non-uniform memory access.  
+
+Computer systems make use of [[cache]]s<U+2014>small, fast memories located close to the processor which store temporary copies of memory values (nearby in both the physical and logical sense). Parallel computer systems have difficulties with caches that may store the same value in more than one location, with the possibility of incorrect program execution. These computers require a [[cache coherency]] system, which keeps track of cached values and strategically purges them, thus ensuring correct program execution. [[Bus sniffing|Bus snooping]] is one of the most common methods for keeping track of which values are being accessed (and thus should be purged). Designing large, high-performance cache coherence systems is a very difficult problem in computer architecture. As a result, shared-memory computer architectures do not scale as well as distributed memory systems do.<ref name=PH713/>
+
+Processor<U+2013>processor and processor<U+2013>memory communication can be implemented in hardware in several ways, including via shared (either multiported or [[Multiplexing|multiplexed]]) memory, a [[crossbar switch]], a shared [[Bus (computing)|bus]] or an interconnect network of a myriad of [[network topology|topologies]] including [[Star network|star]], [[Ring network|ring]], [[Tree (graph theory)|tree]], [[Hypercube graph|hypercube]], fat hypercube (a hypercube with more than one processor at a node), or [[Mesh networking|n-dimensional mesh]].  
+
+Parallel computers based on interconnect networks need to have some kind of [[routing]] to enable the passing of messages between nodes that are not directly connected. The medium used for communication between the processors is likely to be hierarchical in large multiprocessor machines.
+
+===Classes of parallel computers===
+Parallel computers can be roughly classified according to the level at which the hardware supports parallelism. This classification is broadly analogous to the distance between basic computing nodes. These are not mutually exclusive; for example, clusters of symmetric multiprocessors are relatively common. 
+
+====Multicore computing====
+{{main|Multi-core (computing)}}
+A multicore processor is a processor that includes multiple [[execution unit]]s ("cores"). These processors differ from superscalar processors, which can issue multiple instructions per cycle from one instruction stream (thread); by contrast, a multicore processor can issue multiple instructions per cycle from multiple instruction streams. Each core in a multicore processor can potentially be superscalar as well<U+2014>that is, on every cycle, each core can issue multiple instructions from one instruction stream. 
+
+[[Simultaneous multithreading]] (of which Intel's [[HyperThreading]] is the best known) was an early form of pseudo-multicoreism. A processor capable of simultaneous multithreading has only one execution unit ("core"), but when that execution unit is idling (such as during a [[cache miss]]), it uses that execution unit to process a second thread. Intel's [[Intel Core|Core]] and [[Intel Core 2|Core 2]] processor families are Intel's first true multicore architectures. [[IBM]]'s [[Cell (microprocessor)|Cell microprocessor]], designed for use in the [[Sony]] [[Playstation 3]], is another prominent multicore processor.
+
+====Symmetric multiprocessing====
+{{main|Symmetric multiprocessing}}
+A symmetric multiprocessor (SMP) is a computer system with multiple identical processors that share memory and connect via a bus.<ref name=HP549>Hennessy and Patterson, p.&nbsp;549.</ref> [[Bus contention]] prevents bus architectures from scaling. As a result, SMPs generally do not comprise more than 32&nbsp;processors.<ref>Patterson and Hennessy, p.&nbsp;714.</ref> "Because of the small size of the processors and the significant reduction in the requirements for bus bandwidth achieved by large caches, such symmetric multiprocessors are extremely cost-effective, provided that a sufficient amount of memory bandwidth exists."<ref name=HP549/>
+
+====Distributed computing====
+{{main|Distributed computing}}
+A distributed computer (also known as a distributed memory multiprocessor) is a distributed memory computer system in which the processing elements are connected by a network. Distributed computers are highly scalable. 
+
+=====Cluster computing=====
+{{main|Computer cluster}}
+[[Image:Beowulf.jpg|right|thumbnail|upright|A [[Beowulf (computing)|Beowulf cluster]]]]
+
+A cluster is a group of [[Coupling (computer science)#Low coupling|loosely coupled]] computers that work together closely, so that in some respects they can be regarded as a single computer.<ref>[http://www.webopedia.com/TERM/c/clustering.html What is clustering?] Webopedia computer dictionary. Retrieved on [[November 7]], [[2007]].</ref> Clusters are composed of multiple standalone machines connected by a network. While machines in a cluster do not have to be symmetric, [[Load balancing (computing)|load balancing]] is more difficult if they are not. The most common type of cluster is the [[Beowulf (computing)|Beowulf cluster]], which is a cluster implemented on multiple identical [[commercial off-the-shelf]] computers connected with a [[TCP/IP]] [[Ethernet]] [[local area network]].<ref>[http://www.pcmag.com/encyclopedia_term/0,2542,t=Beowulf&i=38548,00.asp Beowulf definition.] ''PC Magazine''. Retrieved on [[November 7]], [[2007]].</ref> Beowulf technology was originally developed by [[Thomas Sterling (computing)|Thomas Sterling]] and [[Donald Becker]]. The vast majority of the [[TOP500]] supercomputers are clusters.<ref>[http://www.top500.org/stats/list/29/archtype Architecture share for 06/2007]. TOP500 Supercomputing Sites. Clusters make up 74.60% of the machines on the list. Retrieved on [[November 7]], [[2007]].</ref>
+
+=====Massive parallel processing=====
+{{main|Massive parallel processing}}
+
+A massively parallel processor (MPP) is a single computer with many networked processors. MPPs have many of the same characteristics as clusters, but they are usually larger, typically having "far more" than 100&nbsp;processors.<ref>Hennessy and Patterson, p.&nbsp;537.</ref> In an MPP, "each CPU contains its own memory and copy of the operating system and application. Each subsystem communicates with the others via a high-speed interconnect."<ref>[http://www.pcmag.com/encyclopedia_term/0,,t=mpp&i=47310,00.asp MPP Definition.] ''PC Magazine''. Retrieved on [[November 7]], [[2007]].</ref>
+
+[[Image:BlueGeneL cabinet.jpg|right|thumbnail|upright|A cabinet from [[Blue Gene]]/L, ranked as the fastest supercomputer in the world according to the [[TOP500]] rankings. Blue Gene/L is a massively parallel processor.]]
+
+[[Blue Gene/L]], the fastest supercomputer in the world according to the TOP500 ranking, is an MPP.
+
+=====Grid computing=====
+{{main|Grid computing}}
+Grid computing is the most distributed form of parallel computing. It makes use of computers communicating over the [[Internet]] to work on a given problem. Because of the low bandwidth and extremely high latency available on the Internet, grid computing typically deals only with embarrassingly parallel problems. [[List of distributed computing projects|Many grid computing applications]] have been created, of which [[SETI@home]] and [[Folding@Home]] are best-known examples.
+
+Most grid computing applications use [[middleware]]<U+2014>software that operates between the operating system and the application, which manages network resources and standardizes the software interface for grid computing applications. The most common grid computing middleware is the [[Berkeley Open Infrastructure for Network Computing]] (BOINC). Often, grid computing software makes use of "spare cycles", performing computations at times when a computer is idling.
+
+====Specialized parallel computers====
+Within parallel computing, there are specialized parallel devices that remain niche areas of interest. While not [[Domain-specific programming language|domain-specific]], they tend to be applicable to only a few classes of parallel problems. 
+
+;Reconfigurable computing with field-programmable gate arrays
+[[Reconfigurable computing]] is the use of a [[field-programmable gate array]] (FPGA) as a co-processor to a general-purpose computer. An FPGA is, in essence, a computer chip that can rewire itself for a given task.  
+
+FPGAs can be programmed with [[hardware description language]]s such as [[VHDL]] or [[Verilog]]. However, programming in these languages can be tedious. Several vendors have created [[C to HDL]] languages that attempt to emulate the syntax and/or semantics of the [[C programming language]], with which most programmers are familiar. The best known C to HDL languages are [[Mitrion-C]], [[Impulse C]], [[DIME-C]], and [[Handel-C]].
+
+AMD's decision to open its [[HyperTransport]] technology to third-party vendors has become the enabling technology for high-performance reconfigurable computing.<ref name="DAmour">Michael R. D'Amour, CEO [[DRC Computer Corporation]]. "Standard Reconfigurable Computing". Invited speaker at the University of Delaware, [[February 28]], [[2007]].</ref> According to Michael R. D'Amour, CEO of [[DRC Computer Corporation]], "when we first walked into AMD, they called us 'the [[CPU socket|socket]] stealers.' Now they call us their partners."<ref name="DAmour"/>
+
+;GPGPU with graphics processing units
+{{main|GPGPU}}
+
+[[Image:NvidiaTesla.jpg|right|thumbnail|Nvidia's [[Nvidia Tesla|Tesla GPGPU card]]]]
+
+General-purpose computing on [[graphics processing unit]]s (GPGPU) is a fairly recent trend in computer engineering research. GPUs are co-processors that have been heavily optimized for [[computer graphics]] processing.<ref>Sha'Kia Boggan and Daniel M. Pressel. [http://www.arl.army.mil/arlreports/2007/ARL-SR-154.pdf GPUs: An Emerging Platform for General-Purpose Computation] (PDF). ARL-SR-154, U.S. Army Research Lab. August 2007. Retrieved on [[November 7]], [[2007]].</ref> Computer graphics processing is a field dominated by data parallel operations<U+2014>particularly [[linear algebra]] [[Matrix (mathematics)|matrix]] operations. 
+
+In the early days, GPGPU programs used the normal graphics APIs for executing programs. However, recently several new programming languages and platforms have been built to do general purpose computation on GPUs with both [[Nvidia]] and [[AMD]] releasing programming environments with [[CUDA]] and [[Close to Metal|CTM]] respectively. Other GPU programming languages are [[BrookGPU]], [[PeakStream]], and [[RapidMind]]. Nvidia has also released specific products for computation in their [[Nvidia Tesla|Tesla series]]. 
+
+;Application-specific integrated circuits
+{{main|Application-specific integrated circuit}}
+Several [[Application-specific integrated circuit]] (ASIC) approaches have been devised for dealing with parallel applications.<ref>Oleg Maslennikov (2002). [http://www.springerlink.com/content/jjrdrb0lelyeu3e9/ Systematic Generation of Executing Programs for Processor Elements in Parallel ASIC or FPGA-Based Systems and Their Transformation into VHDL-Descriptions of Processor Element Control Units]. ''Lecture Notes in Computer Science'', '''2328/2002:''' p.&nbsp;272.</ref><ref> Y. Shimokawa, Y. Fuwa, N. Aramaki. [http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=170708 A parallel ASIC VLSI neurocomputer for a large number of neurons and billion connections per second speed.] IEEE International Joint Conference on Neural Networks, 18<U+2013>21 November 1991. '''3:''' pp.&nbsp;2162<U+2013>67.</ref><ref> K.P. Acken, M.J. Irwin, R.M. Owens. [http://www.ingentaconnect.com/content/klu/vlsi/1998/00000019/00000002/00167697?crawler=true A Parallel ASIC Architecture for Efficient Fractal Image Coding.]  ''The Journal of VLSI Signal Processing'', July 1998, '''19'''(2):97<U+2013>113(17)</ref>
+
+Because an ASIC is (by definition) specific to a given application, it can be fully optimized for that application. As a result, for a given application, an ASIC tends to outperform a general-purpose computer. However, ASICs are created by [[X-ray lithography]]. This process requires a mask, which can be extremely expensive. A single mask can cost over a million US dollars.<ref>Andrew B. Kahng. "[http://www.future-fab.com/documents.asp?grID=353&d_ID=2596 Scoping the Problem of DFM in the Semiconductor Industry]." University of California, San Diego. [[June 21]], [[2004]]: "Future design for manufacturing (DFM) technology must reduce design [non-recoverable expenditure] cost and directly address manufacturing [non-recoverable expenditures] <U+2013> the cost of a mask set and probe card <U+2013> which is well over $1&nbsp;million at the 90&nbsp;nm technology node and creates a significant damper on semiconductor-based innovation."</ref> (The smaller the transistors required for the chip, the more expensive the mask will be.) Meanwhile, performance increases in general-purpose computing over time (as described by Moore's Law) tend to wipe out these gains in only one or two chip generations.<ref name="DAmour"/> High initial cost, and the tendency to be overtaken by Moore's-law-driven general-purpose computing, has rendered ASICs unfeasible for most parallel computing applications. However, some have been built. One example is the peta-flop [[RIKEN MDGRAPE-3]] machine which uses custom ASICs for [[molecular dynamics]] simulation.
+
+;Vector processors
+{{main|Vector processor}}
+[[Image:Cray-1-p1010221.jpg|right|thumbnail|The [[Cray-1]] is the most famous vector processor.]]
+
+A vector processor is a CPU or computer system that can execute the same instruction on large sets of data. "Vector processors have high-level operations that work on linear arrays of numbers or vectors. An example vector operation is <math>A = B \times C</math> where A, B, and C are each 64-element vectors of 64-bit [[floating point|floating-point]] numbers."<ref name=PH751>Patterson and Hennessy, p.&nbsp;751.</ref> They are closely related to Flynn's SIMD classification.<ref name=PH751/>
+
+[[Cray]] computers became famous for their vector-processing computers in the 1970s and 1980s. However, vector processors<U+2014>both as CPUs and as full computer systems<U+2014>have generally disappeared. Modern [[Instruction set|processor instruction sets]] do include some vector processing instructions, such as with [[AltiVec]] and [[Streaming SIMD Extensions]] (SSE).
+
+==Software==
+[[:Category:Concurrent programming languages|Concurrent programming languages]], [[Library (computing)|libraries]], [[Application programming interface|APIs]], and [[parallel programming model]]s have been created for programming parallel computers. These can generally be divided into classes based on the assumptions they make about the underlying memory architecture<U+2014>shared memory, distributed memory, or shared distributed memory. Shared memory programming languages communicate by manipulating shared memory variables. Distributed memory uses [[message passing]]. [[POSIX Threads]] and [[OpenMP]] are two of most widely used shared memory APIs, whereas [[Message Passing Interface]] (MPI) is the most widely used message-passing system API. One concept used in programming parallel programs is the [[Futures and promises|future concept]], where one part of a program promises to deliver a required datum to another part of a program at some future time. 
+
+===Automatic parallelization===
+{{main|Automatic parallelization}}
+Automatic parallelization of a sequential program by a [[compiler]] is the "[[Holy grail#Casual metaphor|holy grail]]" of parallel computing. Despite decades of work by compiler researchers, automatic parallelization has had only limited success.<ref>Modern Processor Design: Fundamentals of Superscalar Processors. John Paul Shen, Mikko H. Lipasti. McGraw-Hill Professional, 2005. ISBN 0070570647. pp.&nbsp;561: "However, the holy grail of such research - automated parallelization of serial programs - has yet to materialize. While automated parallelization of certain classes of algorithms has been demonstrated, such success has largely been limited to scientific and numeric applications with predictable flow control (e.g., nested loop structures with statically determined iteration counts) and statically analyzable memory access patterns. (e.g., walks over large multidimensional arrays of float-point data)."</ref>
+
+Mainstream parallel programming languages remain either [[Explicit parallelism|explicitly parallel]] or (at best) [[Implicit parallelism|partially implicit]], in which a programmer gives the compiler [[Directive (programming)|directives]] for parallelization. A few fully implicit parallel programming languages exist<U+2014>[[SISAL]], Parallel [[Haskell (programming language)|Haskell]], and (for FPGAs) [[Mitrion-C]]<U+2014>but these are niche languages that are not widely used.
+
+===Application checkpointing===
+{{main|Application checkpointing}}
+The larger and more complex a computer, the more that can go wrong and the shorter the [[mean time between failures]]. [[Application checkpointing]] is a technique whereby the computer system takes a "snapshot" of the application<U+2014>a record of all current resource allocations and variable states, akin to a [[core dump]]; this information can be used to restore the program if the computer should fail. Application checkpointing means that the program has to restart from only its last checkpoint rather than the beginning. For an application that may run for months, that is critical. Application checkpointing may be used to facilitate [[process migration]].
+
+==Applications==
+As parallel computers become larger and faster, it becomes feasible to solve problems that previously took too long to run. Parallel computing is used in a wide range of fields, from [[bioinformatics]] (to do [[protein folding]]) to economics (to do simulation in [[mathematical finance]]). Common types of problems found in parallel computing applications are<ref>Krste Asanovic et al. [http://www.eecs.berkeley.edu/Pubs/TechRpts/2006/EECS-2006-183.pdf The Landscape of Parallel Computing Research: A View from Berkeley] (PDF). University of California, Berkeley. Technical Report No. UCB/EECS-2006-183. [[December 18]], [[2006]]. See table on pages 17-19</ref>: 
+<!--Note: do not add to or remove from this list. It is copied from the above source--> 
+* Dense [[linear algebra]]
+* Sparse linear algebra
+* Spectral methods (such as [[Cooley-Tukey FFT algorithm|Cooley-Tukey Fast Fourier transform]])
+* [[N-body simulation|N-body problems]] (such as [[Barnes-Hut simulation]]) 
+* [[Regular grid|Structured grid]] problems (such as [[Lattice Boltzmann methods]]), 
+* [[Unstructured grid]] problems (such as found in [[finite element analysis]])
+* [[Monte Carlo method|Monte Carlo simulation]]
+* [[Combinational logic]] (such as [[Brute force attack|brute-force cryptographic techniques]]) 
+* [[Graph traversal]] (such as [[Sorting algorithm]]s)
+* [[Dynamic programming]]
+* [[Branch and bound]] methods
+* [[Graphical model]]s (such as detecting [[Hidden Markov model]]s and constructing [[Bayesian network]]s)
+* [[Finite State Machine]] simulation
+
+==History==
+{{main|History of computing}}
+
+[[Image:ILLIAC 4 parallel computer.jpg|right|thumbnail|[[ILLIAC IV]], "perhaps the most infamous of Supercomputers"]]
+The origins of true (MIMD) parallelism go back to [[Federico Luigi, Conte Menabrea]] and his "Sketch of the [[Analytic Engine]] Invented by [[Charles Babbage]]."<ref>[[Federico Luigi, Conte Menabrea|L.F. Menabrea]], [http://www.fourmilab.ch/babbage/sketch.html Sketch of the Analytic Engine Invented by Charles Babbage]. Biblioth<U+00E8>que Universelle de Gen<U+00E8>ve, 1842. Retrieved on [[November 7]], [[2007]].</ref><ref name=PH753>Patterson and Hennessy, p.&nbsp;753.</ref> [[IBM]] introduced the 704 in 1954, through a project in which [[Gene Amdahl]] was one of the principal architects. It became the first commercially available computer to use fully automatic [[floating point]] arithmetic commands.<ref>{{cite web | url = http://www.columbia.edu/acis/history/704.html | title = Columbia University Computing History: The IBM 704 | accessdate = 2008-01-08 | year = 2003 | author = Frank da Cruz | publisher = Columbia University }}</ref> In 1958, IBM researchers [[John Cocke]] and Daniel Slotnick discussed the use of parallelism in numerical calculations for the first time.<ref name=G_Wilson>{{cite web | url = http://ei.cs.vt.edu/~history/Parallel.html | title = The History of the Development of Parallel Computing | accessdate = 2008-01-08 | first = Gregory V. | last = Wilson | year = 1994|publisher=Virginia Tech/Norfolk State University, Interactive Learning with a Digital Library in Computer Science}}</ref> [[Burroughs Corporation]] introduced the D825 in 1962, a four-processor computer that accessed up to 16 memory modules through a [[crossbar switch]].<ref>{{cite web | url = http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=65878 | title = The Power of Parallelism | author = Gary Anthes | accessdate = 2008-01-08 | date = [[2001-11-19]] | publisher = ''[[Computerworld]]'' }}</ref> In 1967, Amdahl and Slotnick published a debate about the feasibility of parallel processing at American Federation of Information Processing Societies Conference.<ref name=G_Wilson/> It was during this debate that Amdahl's Law was coined to define the limit of speed-up due to parallelism. 
+
+In 1969, US company [[Honeywell]] introduced its first Multics system, a symmetric multiprocessor system capable of running up to eight processors in parallel.<ref name=G_Wilson/> [[C.mmp]], a 1970s multi-processor project at [[Carnegie Mellon University]], was "among the first multiprocessors with more than a few processors".<ref name=PH753/> "The first bus-connected multi-processor with snooping caches was the [[Synapse N+1]] in 1984."<ref name=PH753/> 
+
+SIMD parallel computers can be traced back to the 1970s. The motivation behind early SIMD computers was to amortize the [[Propagation delay|gate delay]] of the processor's [[control unit]] over multiple instructions.<ref>Patterson and Hennessy, p.&nbsp;749.</ref> In 1964, Slotnick had proposed building a massively parallel computer for the [[Lawrence Livermore National Laboratory]].<ref name=G_Wilson/> His design was funded by the [[US Air Force]], which was the earliest SIMD parallel-computing effort, [[ILLIAC IV]].<ref name=G_Wilson/> The key to its design was a fairly high parallelism, with up to 256&nbsp;processors, which allowed the machine to work on large datasets in what would later be known as [[vector processor|vector processing]]. However, ILLIAC IV was called "the most infamous of Supercomputers", because the project was only one fourth completed, but took 11&nbsp;years and cost almost four times the original estimate.<ref>Patterson and Hennessy, pp.&nbsp;749<U+2013>50: "Although successful in pushing several technologies useful in later projects, the ILLIAC IV failed as a computer. Costs escalated from the $8&nbsp;million estimated in 1966 to $31&nbsp;million by 1972, despite the construction of only a quarter of the planned machine&nbsp;... It was perhaps the most infamous of supercomputers. The project started in 1965 and ran its first real application in 1976."</ref> When it was finally ready to run its first real application in 1976, it was outperformed by existing commercial supercomputers such as the [[Cray-1]].
+
+==References==
+{{reflist|2}}
+
+==External links==
+{{wikibooks|Distributed Systems}}
+
+* {{dmoz|Computers/Parallel_Computing/}}
+* [http://www.llnl.gov/computing/tutorials/parallel_comp/ Lawrence Livermore National Laboratory: Introduction to Parallel Computing]
+* [http://www-unix.mcs.anl.gov/dbpp/ Designing and Building Parallel Programs, by Ian Foster]
+*[http://wotug.ukc.ac.uk/parallel/ Internet Parallel Computing Archive]
+*[http://dsonline.computer.org/portal/site/dsonline/index.jsp?pageID=dso_level1_home&path=dsonline/topics/parallel&file=index.xml&xsl=generic.xsl Parallel processing topic area at IEEE Distributed Computing Online]
+*[http://www.new-npac.org/projects/cdroms/cewes-1998-05/copywrite/pcw/book.html Parallel Computing Works Free On-line Book]
+*[http://ark.cdlib.org/ark:/13030/ft0f59n73z/ Frontiers of Supercomputing Free On-line Book Covering topics like algorithms and industrial applications]
+
+{{Parallel Computing}}
+
+{{featured article}}
+[[Category:Distributed computing]]
+[[Category:Parallel computing|*]]
+[[Category:Concurrent computing]]
+
+[[bs:Paralelno programiranje]]
+[[de:Parallelrechner]]
+[[fa:<U+0628><U+0631><U+0646><U+0627><U+0645><U+0647><U+0633><U+0627><U+0632><U+06CC> <U+0645><U+0648><U+0627><U+0632><U+06CC>]]
+[[fi:Rinnakkaislaskenta]]
+[[fr:Calcul parall<U+00E8>le]]
+[[he:<U+05D7><U+05D9><U+05E9><U+05D5><U+05D1> <U+05DE><U+05E7><U+05D1><U+05D9><U+05DC><U+05D9>]]
+[[id:Pemrograman paralel]]
+[[it:Calcolo parallelo]]
+[[ja:<U+4E26><U+5217><U+30B3><U+30F3><U+30D4><U+30E5><U+30FC><U+30C6><U+30A3><U+30F3><U+30B0>]]
+[[pl:Przetwarzanie r<U+00F3>wnoleg<U+0142>e]]
+[[pt:Computa<U+00E7><U+00E3>o paralela]]
+[[ru:<U+041F><U+0430><U+0440><U+0430><U+043B><U+043B><U+0435><U+043B><U+044C><U+043D><U+044B><U+0435> <U+0432><U+044B><U+0447><U+0438><U+0441><U+043B><U+0438><U+0442><U+0435><U+043B><U+044C><U+043D><U+044B><U+0435> <U+0441><U+0438><U+0441><U+0442><U+0435><U+043C><U+044B>]]
+[[sl:Vzporedna obdelava]]
+[[tr:Paralel hesaplama]]
+[[zh:<U+5E76><U+884C><U+8BA1><U+7B97>]]

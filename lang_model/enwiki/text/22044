@@ -1,0 +1,250 @@
+{| width=300 align="right" style="margin-left:15px;"
+|- 
+|[[Image:Roche limit (far away sphere).PNG|framed|Consider an orbiting mass of fluid held together by gravity, here viewed from above the orbital plane.  Far from the Roche limit the mass is practically spherical.]]
+|- 
+|[[ Image:Roche_limit_(tidal_sphere).PNG|framed|Closer to the Roche limit the body is deformed by [[tidal force]]s.]]
+|- 
+|[[Image:Roche_limit_(ripped_sphere).PNG|framed|Within the Roche limit the mass's own gravity can no longer withstand the tidal forces, and the body disintegrates.]]
+|-
+|[[Image:Roche limit (top view).PNG|framed|Particles closer to the primary orbit more quickly than particles farther away, as represented by the red arrows.]]
+|-
+| [[ Image:Roche_limit_(ring).PNG|framed|The varying orbital speed of the material eventually causes it to form a ring.]]
+|}
+The '''Roche limit''', sometimes referred to as the '''Roche radius''', is the distance within which a celestial body held together only by its own [[gravity]] will disintegrate due to a second celestial body's [[tidal force]]s exceeding the first body's gravitational self-attraction. Inside the Roche limit, [[Planetary_orbit|orbiting]] material will tend to disperse and form rings, while outside the limit, material will tend to [[coalescence (meteorology)|coalesce]]. The term is named after [[<U+00C9>douard Roche]], the [[France|French]] [[astronomy|astronomer]] who first calculated this theoretical limit in [[1848]].
+
+Typically, the Roche limit applies to a [[satellite]] disintegrating due to tidal forces induced by its ''primary'', the body about which it [[orbit]]s.  Some real satellites, both [[natural satellite|natural]] and [[artificial satellite|artificial]], can orbit within their Roche limits because they are held together by forces other than gravitation. [[Jupiter (planet)|Jupiter]]'s moon [[Metis (moon)|Metis]] and [[Saturn (planet)|Saturn]]'s moon [[Pan (moon)|Pan]] are examples of such satellites, which hold together because of their [[Tensile_strength|tensile strength]]. In extreme cases, objects resting on the surface of such a satellite could actually be lifted away by tidal forces.  A weaker satellite, such as a [[comet]], could be broken up when it passes within its Roche limit.
+
+Since tidal forces overwhelm gravity within the Roche limit, no large satellite can coalesce out of smaller particles within that limit. Indeed, almost all known [[planetary ring]]s are located within their Roche limit (Saturn's [[Rings_of_Saturn#E_Ring|E-Ring]] being a notable exception).  They could either be remnants from the planet's proto-planetary [[accretion disc]] that failed to coalesce into moonlets, or conversely have formed when a moon passed within its Roche limit and broke apart.
+
+(Note that the Roche limit should not be confused with the concept of the [[Roche lobe]] or [[Roche sphere]], which are also named after <U+00C9>douard Roche. The Roche lobe describes the limits at which an object which is in orbit around two other objects will be captured by one or the other. The Roche sphere approximates the [[gravity|gravitational]] sphere of influence of one [[astronomical body]] in the face of perturbations from another heavier body around which it [[orbit]]s.)
+
+==Determining the Roche limit==
+The Roche limit depends on the rigidity and density of the satellite. A rigid satellite is one extreme, and will maintain its shape until tidal forces break it apart.  The Roche limit, <math>d</math>, is then the following:
+
+:<math> d = R\left( 2\;\frac {\rho_M} {\rho_m} \right)^{\frac{1}{3}} \approx  1.25992R\left( \frac {\rho_M} {\rho_m} \right)^{\frac{1}{3}} </math>
+
+where <math>R</math> is the primary's [[radius]], <math>\rho_M</math> is the primary's [[density]] and <math>\rho_m</math> is the satellite's density.
+
+At the other extreme, a highly fluid satellite gradually deforms leading to increased tidal forces, causing the satellite to elongate, further compounding the tidal forces and causing it to break apart more readily.  The calculation is complex and its result cannot be expressed as an algebraic formula, but a close approximation is the following:
+
+:<math> d \approx  2.423R\left( \frac {\rho_M} {\rho_m} \right)^{\frac{1}{3}} </math>
+
+which indicates that a fluid satellite will disintegrate at almost twice the distance from the primary as a rigid sphere of similar density.
+
+Most real satellites are somewhere between these two extremes, with internal [[friction]], [[viscosity]], and tensile strength rendering the satellite neither perfectly rigid nor perfectly fluid.
+
+===Rigid satellites===
+As stated above, the formula for calculating the Roche limit, <math>d</math>, for a rigid [[sphere|spherical]] satellite orbiting a spherical primary is:
+
+:<math> d = R\left( 2\;\frac {\rho_M} {\rho_m} \right)^{\frac{1}{3}} </math>
+
+where <math>R</math> is the [[radius]] of the primary, <math>\rho_M</math> is the [[density]] of the primary, and <math>\rho_m</math> is the density of the satellite. 
+
+Notice that if the satellite is more than twice as dense as the primary (as can easily be the case for a rocky moon orbiting a gas giant) then the Roche limit will be inside the primary and hence not relevant.
+
+To calculate the "rigid body" Roche limit for a spherical satellite, the cause of the rigidity is neglected but it is assumed that the body does not deform from its spherical shape while being held together only by its own self-gravity.  Other effects are also neglected, such as tidal deformation of the primary, rotation of the satellite, and its irregular shape.  
+
+====Derivation of the formula====
+In order to determine the Roche limit, we consider a small mass <math>u</math> on the surface of the satellite closest to the primary. There are two forces on this mass <math>u</math>: the gravitational pull towards the satellite and the gravitational pull towards the primary. Since the satellite is already in orbital [[free fall]] around the primary, the [[tidal force]] is the only relevant term of the gravitational attraction of the primary.
+
+[[Image:Roche limit (with small mass u).PNG|right|Derivation of the Roche limit]]
+The gravitational pull <math>F_G</math> on the mass <math>u</math> towards the satellite with mass <math>m</math> and radius <math>r</math> can be expressed according to [[Newton's law of gravitation]]. 
+
+:<math> F_G = \frac{Gmu}{r^2}</math>
+
+The [[tidal force]] <math>F_T</math> on the mass <math>u</math> towards the primary with radius <math>R</math> and a distance <math>d</math> between the centers of the two bodies can be expressed as:
+
+:<math> F_T = \frac{2GMur}{d^3}</math>
+
+The Roche limit is reached when the gravitational pull and the tidal force cancel each other out.
+
+:<math> F_G = F_T \;</math>
+
+or 
+
+:<math> \frac{Gmu}{r^2} = \frac{2GMur}{d^3}</math>
+
+Which quickly gives the Roche limit, <math>d</math>, as:
+
+:<math> d = r \left( 2 M / m \right)^{\frac{1}{3}} </math>
+
+However, we don't really want the radius of the satellite to appear in the expression for the limit, so we re-write this in terms of densities.
+
+For a sphere the mass <math>M</math> can be written as:
+
+:<math> M = \frac{4\pi\rho_M R^3}{3}</math> where <math>R</math> is the radius of the primary.
+
+And likewise:
+
+:<math> m = \frac{4\pi\rho_m r^3}{3}</math> where <math>r</math> is the radius of the satellite.
+
+Substituting for the masses in the equation for the Roche limit, and cancelling out <math>4\pi/3</math> gives:
+
+:<math> d = r \left( \frac{ 2 \rho_M R^3 }{ \rho_m r^3 } \right)^{1/3} </math>
+
+which can be simplified to the Roche limit:
+
+:<math> d = R\left( 2\;\frac {\rho_M} {\rho_m} \right)^{\frac{1}{3}} </math>
+
+===Fluid satellites===
+A more accurate approach for calculating the Roche Limit takes the deformation of the satellite into account. An extreme example would be a [[tidal locking|tidally locked]] liquid satellite orbiting a planet, where any force acting upon the satellite would deform it (into a [[prolate]] [[spheroid]]).
+
+The calculation is complex and its result cannot be represented as an algebraic formula. Historically, Roche himself derived the following numerical solution for the Roche Limit:
+
+:<math> d \approx  2.44R\left( \frac {\rho_M} {\rho_m} \right)^{1/3} </math>
+
+However, a better approximation that takes into account the primary's oblateness and the satellite's mass is:
+
+:<math> d \approx 2.423 R\left( \frac {\rho_M} {\rho_m} \right)^{1/3} \left( \frac{(1+\frac{m}{3M})+\frac{c}{3R}(1+\frac{m}{M})}{1-c/R} \right)^{1/3} </math>
+
+where <math>c/R</math> is the [[oblateness]] of the primary. The numerical factor is calculated with the aid of a computer.
+<!--- Numerical solution obtained from http://scienceworld.wolfram.com/physics/RocheLimit.html,
+equation (17) using the e value given at (20) (= 1.676 554) gives eqn. (21) (= 0.070 310 549),
+extract cubic root and invert (=2.422 849 866 704...). The result is remarkably insensitive to the
+precision of (20) because it is a functional minimum: using e = 1.676600 or 1.676500 changes only the tenth digit --->
+
+The fluid solution is appropriate for cases in which the body is only loosely held together, such as a comet.  For instance, comet [[Shoemaker-Levy 9]]'s decaying orbit around Jupiter passed within its Roche limit in July [[1992]], causing it to fragment into a number of smaller pieces. On its next approach in [[1994]] the fragments crashed into the planet. Shoemaker-Levy 9 was first observed in 1993, but its orbit indicated that it had been captured by Jupiter a few decades prior. [http://www.seds.org/sl9/landis.html]
+
+==Roche limits for selected examples==
+
+The table below shows the mean density and the equatorial radius for selected objects in our [[solar system]].
+{| class="wikitable"
+! Primary !! Density (kg/m<sup>3</sup>) !! Radius (m)
+|-
+| [[Sun]] ||align="center"| 1,408 ||align="right"|696,000,000
+|-
+| [[Jupiter (planet)|Jupiter]] ||align="center"|1,326 ||align="right"|71,492,000
+|-
+| [[Earth]] ||align="center"| 5,513 ||align="right"| 6,378,137
+|-
+| [[Moon]] ||align="center"| 3,346 ||align="right"|1,738,100
+|-
+| [[Saturn (planet)|Saturn]] ||align="center"| 0,6873 ||align="right"|60,268,000
+|-
+| [[Uranus (planet)|Uranus]] ||align="center"|1,318 ||align="right"|25,559,000
+|-
+| [[Neptune (planet)|Neptune]] ||align="center"|1,638 ||align="right"|24,764,000
+|}
+
+Using these data, the Roche Limits for rigid and fluid bodies can easily be calculated. The average density of [[comet]]s is taken to be around 500 kg/m<sup>3</sup>.
+
+The table below gives the Roche limits expressed in metres and in primary radii. The true Roche Limit for a satellite depends on its density and rigidity.
+
+{| class="wikitable"
+!rowspan="2"| Body !!rowspan="2"| Satellite !!colspan="2"| Roche limit (rigid) !!colspan="2"| Roche limit (fluid)
+|-
+! Distance (km) !! ''R'' !! Distance (km) !! ''R''
+|-
+| Earth || Moon ||align="right"| 9,496 ||align="center"| 1.49 ||align="right"| 18,261 ||align="center"| 2.86
+|-
+| Earth || average Comet ||align="right"| 17,880 ||align="center"| 2.80 ||align="right"| 34,390 ||align="center"| 5.39
+|-
+| Sun || Earth ||align="right"| 554,400 ||align="center"| 0.80 ||align="right"| 1,066,300 ||align="center"| 1.53
+|-
+| Sun || Jupiter ||align="right"| 890,700 ||align="center"| 1.28 ||align="right"| 1,713,000 ||align="center"| 2.46
+|-
+| Sun || Moon ||align="right"| 655,300 ||align="center"| 0.94 ||align="right"| 1,260,300 ||align="center"| 1.81
+|-
+| Sun || average Comet ||align="right"| 1,234,000 ||align="center"| 1.78 ||align="right"| 2,374,000 ||align="center"| 3.42
+|}
+
+If the primary is less than half as dense as the satellite, the rigid-body Roche Limit is less than the primary's radius, and the two bodies may collide before the Roche limit is reached.
+
+How close are the solar system's moons to their Roche limits? The table below gives each inner satellite's orbital radius divided by its own Roche radius. Both rigid and fluid body calculations are given. Note [[Naiad (moon)|Naiad]] in particular, which may in fact be quite close to its actual break-up point.
+
+In practice, the densities of most of the inner satellites of giant planets are not known. In these cases (shown in ''italics''), likely values have been assumed, but their ''actual'' Roche limit can vary from the value shown.
+
+{| class="wikitable"
+!rowspan="2"| Primary !!rowspan="2"| Satellite !!colspan="2"| Orbital Radius vs. Roche limit
+|-
+! (rigid) !! (fluid)
+|-
+| [[Sun]] || [[Mercury (planet)|Mercury]] ||align="center"| 104:1 ||align="center"| 54:1
+|-
+| [[Earth]] || [[Moon]] ||align="center"| 41:1 ||align="center"| 21:1
+|-
+|rowspan="2"| [[Mars (planet)|Mars]] || [[Phobos (moon)|Phobos]] ||align="right"| 172% ||align="right"| 89%
+|-
+| [[Deimos (moon)|Deimos]] ||align="right"| 451% ||align="right"| 234%
+|-
+|rowspan="4"| [[Jupiter (planet)|Jupiter]] || ''[[Metis (moon)|Metis]]'' ||align="right"| ''~186%'' ||align="right"| ''~94%''
+|-
+| ''[[Adrastea (moon)|Adrastea]]'' ||align="right"| ''~188%'' ||align="right"| ''~95%''
+|-
+| [[Amalthea (moon)|Amalthea]] ||align="right"| 175% ||align="right"| 88%
+|-
+| [[Thebe (moon)|Thebe]] ||align="right"| 254% ||align="right"| 128%
+|-
+|rowspan="6"| [[Saturn (planet)|Saturn]] || [[Pan (moon)|Pan]] ||align="right"| 168% ||align="right"| 84%
+|-
+| [[Atlas (moon)|Atlas]] ||align="right"| 176% ||align="right"| 88%
+|-
+| [[Prometheus (moon)|Prometheus]] ||align="right"| 178% ||align="right"| 89%
+|-
+| [[Pandora (moon)|Pandora]] ||align="right"| 178% ||align="right"| 89%
+|-
+| [[Epimetheus (moon)|Epimetheus]] ||align="right"| 192% ||align="right"| 95%
+|-
+| [[Janus (moon)|Janus]] ||align="right"| 196% ||align="right"| 98%
+|-
+|rowspan="6"| [[Uranus (planet)|Uranus]] || ''[[Cordelia (moon)|Cordelia]]'' ||align="right"| ''~154%'' ||align="right"| ''~79%''
+|-
+| ''[[Ophelia (moon)|Ophelia]]'' ||align="right"| ''~166%'' ||align="right"| ''~86%''
+|-
+| ''[[Bianca (moon)|Bianca]]'' ||align="right"| ''~183%'' ||align="right"| ''~94%''
+|-
+| ''[[Cressida (moon)|Cressida]]'' ||align="right"| ''~191%'' ||align="right"| ''~98%''
+|-
+| ''[[Desdemona (moon)|Desdemona]]'' ||align="right"| ''~194%'' ||align="right"| ''~100%''
+|-
+| ''[[Juliet (moon)|Juliet]]'' ||align="right"| ''~199%'' ||align="right"| ''~102%''
+|-
+|rowspan="5"| [[Neptune (planet)|Neptune]] || ''[[Naiad (moon)|Naiad]]'' ||align="right"| ''~139%'' ||align="right"| ''~72%''
+|-
+| ''[[Thalassa (moon)|Thalassa]]'' ||align="right"| ''~145%'' ||align="right"| ''~75%''
+|-
+| ''[[Despina (moon)|Despina]]'' ||align="right"| ''~152%'' ||align="right"| ''~78%''
+|-
+| ''[[Galatea (moon)|Galatea]]'' ||align="right"| ''153%'' ||align="right"| ''79%''
+|-
+| ''[[Larissa (moon)|Larissa]]'' ||align="right"| ''~218%'' ||align="right"| ''~113%''
+|-
+| [[Pluto (planet)|Pluto]] || [[Charon (moon)|Charon]] ||align="center"| 12.5:1 ||align="center"| 6.5:1
+|}
+
+==See also==
+* [[Hill sphere]]
+* [[Roche lobe]]
+* [[Spaghettification]] (a rather extreme tidal distortion)
+
+==References==
+
+* <U+00C9>douard Roche: ''La figure d'une masse fluide soumise <U+00E0> l'attraction d'un point <U+00E9>loign<U+00E9>'', Acad. des sciences de Montpellier, Vol. 1 (1847-50) p. 243
+
+==External links==
+* [http://scienceworld.wolfram.com/physics/RocheLimit.html Detailed derivation of formulae for calculating the Roche limit]
+
+[[Category:Celestial mechanics]]
+[[Category:space science]]
+[[category:gravity]]
+
+{{Link FA|es}}
+{{featured article}}
+
+[[bs:Rocheova granica]]
+[[bg:<U+0413><U+0440><U+0430><U+043D><U+0438><U+0446><U+0430> <U+043D><U+0430> <U+0420><U+043E><U+0448>]]
+[[ca:L<U+00ED>mit de Roche]]
+[[de:Roche-Grenze]]
+[[es:L<U+00ED>mite de Roche]]
+[[fr:Limite de Roche]]
+[[hr:Rocheova granica]]
+[[ms:Had Roche]]
+[[nl:Rochelimiet]]
+[[ja:<U+30ED><U+30B7><U+30E5><U+9650><U+754C>]]
+[[pl:Granica Roche'a]]
+[[ru:<U+041F><U+0440><U+0435><U+0434><U+0435><U+043B> <U+0420><U+043E><U+0448><U+0430>]]
+[[sl:Rocheeva meja]]
+[[fi:Rochen raja]]
+[[sv:Roche-gr<U+00E4>ns]]
+[[tr:Roche limiti]]
+[[zh:<U+6D1B><U+5E0C><U+6975><U+9650>]]

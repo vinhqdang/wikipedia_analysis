@@ -1,0 +1,618 @@
+A [[LiveDistro]] is a [[Linux distribution]] that is executed upon boot, without installation on a [[hard drive]]. Typically, it is stored on [[booting|bootable]] media such as a [[CD-ROM]] (Live CD), [[DVD]] (Live DVD), [[USB Flash Drive]], among others.
+
+==Comparison==
+
+{| class="sortable wikitable" style="font-size: 85%; text-align: center; width: 100%;"
+|-
+! Distro
+! Latest<br>Release<br>Date
+! Supported architecture(s)
+! Size
+! Boots<br>from<br>CD-ROM
+! Boots from DVD
+! Desktop environment
+! [[Software license|License]]
+! Target audience/purpose
+! Based on
+! Working state
+|-
+! {{rh}} | [[Arudius]]
+| 2005-11-22? (first)
+| x86
+| <700 MB
+| {{Yes}}
+| {{Yes}}
+| [[Fluxbox]]
+| Various
+| Security (Penetration testing and vulnerability analysis)
+| [[Slackware]]
+| Current
+|-
+! {{rh}} | [[Archie (Linux)|Archie]]
+|
+| x86
+| 
+| {{Yes}}
+| {{Yes}}
+| [[Xfce]]
+| Various
+| Desktop
+| [[Arch Linux]]
+| Current
+|-
+! {{rh}} | [[Ark Linux|Ark Linux]]
+|
+| x86
+| <700MB
+| {{Yes}}
+| {{Yes}}
+| [[KDE]]
+| [[GNU General Public License|GPL]] and other licenses
+| Desktop (and rescue)
+| 
+| Current
+|-
+! {{rh}} | [[Austrumi]]
+|
+| x86
+| 50 MB
+| {{Yes}}
+| {{Yes}}
+| [[Metacity]]
+| Various
+| General; system rescue
+| [[Slackware]]
+| Current
+|-
+! {{rh}} | [[BackTrack]]
+|
+| x86
+| ~700 MB
+| {{Yes}}
+| {{Yes}}
+| [[KDE]], [[Fluxbox]]
+| Various
+| Security (Penetration testing and vulnerability analysis)
+| [[WHAX]], [[Auditor Security Collection]]
+| Current
+|-
+! {{rh}} | [[Big Linux]]
+|
+| x86
+| ~700 MB
+| {{Yes}}
+| {{No}}
+| [[KDE]], [[TDE]]
+| Various
+| Full-featured desktop
+| ([[Kubuntu|K]])[[Ubuntu (Linux distribution)|Ubuntu]]
+| Current
+|-
+! {{rh}} | [[Damn Small Linux|Damn<br>Small<br>Linux]]
+|
+| x86, [[Xbox]]
+| 50 MB
+| {{Yes}}
+| {{Yes}}
+| [[Fluxbox]], [[JWM]]
+| Various
+| General
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[Debian Live]]
+|
+| x86, amd64
+| 50 MB - 5 GB
+| {{Yes}}
+| {{Yes}}
+| Various
+| [[GNU General Public License|GPL]] and other licenses
+| General
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[Dreamlinux]]
+| 2007-01-05 (2.2)
+| x86
+| 700 MB
+| {{Yes}}
+| {{Yes}}
+| [[Xfce]]
+| [[GNU General Public License|GPL]] and other licenses
+| General
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[dyne:bolic]]
+| 2007-03-23 (2.3.52)
+| x86
+| ~650 MB
+| {{Yes}}
+| {{Yes}}
+| [[Xfce]]
+| Various
+| Multimedia (audio/video)
+| 
+| Current
+|-
+! {{rh}} | [[Elive]]
+|
+| x86
+| ~700 MB
+| {{Yes}}
+| {{Yes}}
+| [[Enlightenment (window manager)]]
+| [[GNU General Public License|GPL]] and other licenses
+| Multimedia, Desktop, General purpose
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[Feather Linux]]
+|
+| x86
+| <128 MB
+| {{Yes}}
+| {{Yes}}
+| [[Fluxbox]]
+| Various
+| General
+| [[Debian]]
+| Current
+|-
+
+! {{rh}} | [[Fedora (Linux distribution)|Fedora]]<br>Live CD
+|
+| x86
+| 683 MB
+| {{Yes}}
+| {{Yes}}
+| [[GNOME]], [[KDE]]
+| Various
+| General
+| [[Fedora (Linux distribution)]]
+| Current
+|-
+! {{rh}} | [[Feraga]]
+|
+| x86, amd64
+| 256 MB and up
+| {{No}}
+| {{No}}
+| Any
+| Various
+| USB Flash install, Private Workstation, General, System Rescue
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[Flash Linux]]
+|
+| x86
+| 128 MB-1024 MB
+| {{Yes}}
+| {{Yes}}
+| [[GNOME]]
+| GPL
+| General
+| [[Gentoo]]
+| No longer updated
+|-
+! {{rh}} | [[grml]]
+|
+| x86
+| 700 MB and ~58 MB
+| {{Yes}}
+| {{Yes}}
+| Various ([[Fluxbox]], [[Wmii]], fvwm-crystal,...)
+| [[GNU General Public License|GPL]] and other licenses
+| General, Sysadmin, Texttools, System Rescue, USB install
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [http://ilug.gr/iloog/en/ iloog]
+|
+| x86
+| ~700MB
+| {{Yes}}
+| {{No}}
+| [[Fluxbox]]
+| Various
+| Scientific
+| [[Gentoo]]
+| Current
+|-
+! {{rh}} | [[Kanotix]]
+|
+| x86
+| ~700 MB
+| {{Yes}}
+| {{Yes}}
+| [[KDE]]
+| Various
+| General
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[Kcpentrix]]
+|
+| x86
+| ~1 GB
+| {{No}}
+| {{Yes}}
+| [[KDE]]
+| Various
+| Security (Penetration testing and vulnerability analysis)
+| [[SLAX| Slax 5]]
+| Current
+|-
+! {{rh}} | [[Knoppix]] CD<br>edition
+| 2007-01-04 (5.1.1)
+| x86
+| 700 MB
+| {{Yes}}
+| {{Yes}}
+| [[KDE]]
+| Various
+| General; system rescue
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[Knoppix]] DVD<br>"Maxi" edition
+| 2007-01-04 (5.1.1)
+| x86
+| 4.7 GB
+| {{No}}
+| {{Yes}}
+| [[KDE]]
+| Various
+| General; system rescue
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[Knoppix STD]]
+| 2004-01-24 (0.1)
+| x86
+| 497 MB
+| {{Yes}}
+| {{Yes}}
+| Various
+| Various
+| Security (Penetration testing and vulnerability analysis)
+| [[Knoppix]]
+| No longer updated
+|-
+! {{rh}} | [[Gnoppix]]
+|
+| x86
+| 4.7 GB
+| {{No}}
+| {{Yes}}
+| [[GNOME]]
+| Various
+| General; system rescue
+| [[Debian]]
+| No longer updated
+|-
+! {{rh}} | [[Linux Mint]] 
+|
+| x86
+| ~700 MB
+| {{Yes}}
+| {{Yes}}
+| [[GNOME]] ([[KDE]] and [[Xfce]] versions are also available).
+| [[GNU General Public License|GPL]] and other licenses
+| General, desktop use
+| [[Ubuntu (Linux distribution)|Ubuntu]]
+| Current
+|-
+! {{rh}} | [[Mandriva]] One
+|
+| x86, amd64
+| ~700 MB
+| {{Yes}}
+| {{Yes}}
+| [[KDE]] or [[GNOME]] - depending on version used.
+| [[GNU General Public License|GPL]] and other licenses
+| General, desktop use
+| [[Mandriva]]
+| Current
+|-
+! {{rh}} | [[MCNLive]]
+|
+| x86
+| ~350 MB
+| {{yes}}
+| {{yes}}
+| [[KDE]]
+| Various
+| General; USB Flash install
+| [[Mandriva]]
+| Current
+|-
+! {{rh}} | [[Morphix]]
+| 
+| x86
+| 700 MB
+| {{Yes}}
+| {{Yes}}
+| [[various]]
+| [[GNU General Public License|GPL]] and other licenses
+| General
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[Musix]]
+|
+| x86
+| ~700Mb
+| {{Yes}}
+| {{Yes}}
+| [[IceWM]]
+| GNU
+| musicians, dj's
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[NimbleX]]
+|
+| x86
+| <200 MB
+| {{Yes}}
+| {{Yes}}
+| [[KDE]], [[IceWM]] and [[Fluxbox]]
+| Various
+| General; System Rescue; [[Preboot Execution Environment | LAN Boot]]; USB Install
+| [[Slackware]]
+| Current
+|-
+! {{rh}} | [[nUbuntu]]
+|
+| x86
+| ~265 MB
+| {{Yes}}
+| {{Yes}}
+| [[Fluxbox]]
+| Various
+| Security (Penetration testing and vulnerability analysis)
+| [[Ubuntu (Linux distribution)|Ubuntu]]
+| Current
+|-
+! {{rh}} | [[Oralux]]
+| 2006-05-08 (0.7 alpha)
+| x86
+| <500 MB
+| {{Yes}}
+| {{Yes}}
+| Audio desktops: [[Emacspeak]], [[YASR]], or [[Speakup]]
+| Various
+| Blind and visually-impaired users
+| [[Debian]]
+| No longer updated
+|-
+! {{rh}} | [[Parted Magic]]
+|
+| x86
+| 30 MB
+| {{yes}}
+| {{yes}}
+| [[GTKmm]]
+| Various
+| Linux LiveCD/USB/PXE with its elemental purpose being to partition hard drives.
+| 
+| Current
+|-
+! {{rh}} | [[PCLinuxOS]]
+|
+| x86
+| between 130MB and 700 MB
+| {{yes}}
+| {{yes}}
+| [[KDE]]
+| Various
+| General
+| [[Mandriva]]
+| Current
+|-
+! {{rh}} | [[Phlak]]
+|  2005-05-07 (0.3)
+| x86
+| > 500 MB
+| {{yes}}
+| {{yes}}
+| [[KDE]]
+| Various
+| Security
+| [[debian]]
+| No longer updated
+|-
+! {{rh}} | [[Puppy Linux]]
+|
+| x86
+| 70 MB (standard edition)
+| {{Yes}}
+| {{Yes}}
+| [[JWM]] default, others possible
+| Various
+| General
+|
+| Current
+|-
+! {{rh}} | [[pure:dyne]]
+|
+| x86
+| 684 MB
+| {{Yes}}
+| {{Yes}}
+| [[Window Maker]]
+| Various
+| Multimedia (audio/video)
+| [[dyne:bolic]]
+| Current
+|-
+! {{rh}} | [[Sabayon Linux]] LiveCD
+|
+| x86, x86_64
+| ~695 MB
+| {{yes}}
+| {{yes}}
+| [[KDE]], [[Fluxbox]]
+| Various
+| Desktop, General, System Rescue
+| [[Gentoo]]
+| Current
+|-
+! {{rh}} | [[Sabayon Linux]] LiveDVD
+|
+| x86, x86_64
+| ~4400MB
+| {{no}}
+| {{yes}}
+| [[KDE]], [[GNOME]], [[Fluxbox]]
+| Various
+| Multimedia, Desktop, General, System Rescue
+| [[Gentoo]]
+| Current
+|-
+! {{rh}} | [[SAM Linux]]
+|
+| x86
+| 683 MB
+| {{yes}}
+| {{yes}}
+| [[Xfce]]
+| Various
+| General
+| [[PCLinuxOS]]
+| Current
+|-
+! {{rh}} | [[Sauver]]
+|
+| x86
+| <250 MB
+| {{Yes}}
+| {{Yes}}
+| [[KDE]]
+| [[GNU General Public License|GPL]]
+| General, System Rescue, Recover Deleted Files
+| [[Slackware]]
+| Current
+|-
+! {{rh}} | [[SimplyMEPIS]]
+|
+| x86, amd64
+| 706 MB
+| {{Yes}}
+| {{Yes}}
+| [[KDE]]
+| Various (incl. Sun java JRE)
+| General Desktop, system rescue, recovery
+| [[Ubuntu (Linux distribution)|Ubuntu]]
+| Current
+|-
+! {{rh}} | [[SLAX]]
+|
+| x86
+| <200 MB
+| {{Yes}}
+| {{Yes}}
+| [[KDE]]
+| [[GNU General Public License|GPL]]
+| General
+| [[Slackware]]
+| Current
+|-
+! {{rh}} | [[Trinity Rescue Kit|Trinity<br>Rescue Kit]]
+|
+| x86
+| ~104 MB
+| {{Yes}}
+| {{Yes}}
+| [[CLI]]
+| [[GNU General Public License|GPL]]
+| System Rescue
+| [[Mandriva]]
+| Current
+|-
+! {{rh}} | [[Ubuntu (Linux distribution)|Ubuntu]]
+|
+| x86, amd64,<br>ppc, ia64, ps3 <ref>Unsupported ports of Ubuntu can be found here: http://cdimage.ubuntu.com/ports/releases/7.10/release/</ref>
+| ~700 MB
+| {{Yes}}
+| {{Yes}}
+| [[GNOME]]
+| [[GNU General Public License|GPL]] and other licenses
+| General desktop
+| [[Debian]]
+| Current
+|-
+! {{rh}} | [[Edubuntu]]
+|
+| x86, amd64,<br>ppc, ia64 <ref>Unsupported ports of Edubuntu can be found here: http://cdimage.ubuntu.com/edubuntu/ports/releases/7.10/release/</ref>
+| ~700 MB
+| {{Yes}}
+| {{Yes}}
+| [[GNOME]]
+| [[GNU General Public License|GPL]] and other licenses
+| Education
+| [[Ubuntu (Linux distribution)|Ubuntu]]
+| Current
+|-
+! {{rh}} | [[Kubuntu]]
+|
+| x86, amd64,<br>ppc, ia64 <ref>Unsupported ports of Kubuntu can be found here: http://cdimage.ubuntu.com/kubuntu/ports/releases/7.10/release/</ref>
+| ~700 MB
+| {{Yes}}
+| {{Yes}}
+| [[KDE]]
+| [[GNU General Public License|GPL]] and other licenses
+| Full-featured desktop
+| [[Ubuntu (Linux distribution)|Ubuntu]]
+| Current
+|-
+! {{rh}} | [[Vacarm Linux]]
+|
+| x86
+| ~600 MB
+| {{Yes}}
+| {{Yes}}
+| [[GNOME]]
+| [[GNU General Public License|GPL]] and other licenses
+| Security
+| [[Ubuntu (Linux distribution)|Ubuntu]]
+| Current
+|-
+! {{rh}} | [[Xubuntu]]
+|
+| x86, amd64,<br>ppc, ia64, ps3 <ref>Unsupported ports of Xubuntu can be found here: http://cdimage.ubuntu.com/xubuntu/ports/releases/7.10/release/</ref>
+| ~700 MB
+| {{Yes}}
+| {{Yes}}
+| [[Xfce]]
+| [[GNU General Public License|GPL]] and other licenses
+| Lightweight General desktop
+| [[Ubuntu (Linux distribution)|Ubuntu]]
+| Current
+|-|-
+! style="width:12em" | Distro
+! Latest<br>Release<br>Date
+! Supported architecture(s)
+! Size
+! Boots from CD-ROM
+! Boots from DVD
+! Desktop environment
+! [[Software license|License]]
+! Target audience/purpose
+! Based on
+! Working state
+|}
+
+== References ==
+<references/>
+
+== See also ==
+{{portal|Free software|Free Software Portal Logo.svg}}
+*[[Comparison of Linux distributions]]
+
+{{linux-stub}}
+
+[[Category:LiveCD]]

@@ -1,0 +1,99 @@
+In [[physics]], '''Chern-Simons theory''' is a 3-dimensional [[topological quantum field theory]] of [[Topological quantum field theory#Schwarz-type TQFTs|Schwarz type]]. In [[condensed matter physics]], Chern-Simons theory describes the [[topological order]]
+in [[Quantum Hall Effect|fractional quantum Hall]] states. It was popularized by [[Edward Witten]] in 1989, when he demonstrated that it may be used to calculate [[knot invariants]] and [[three-manifold]] invariants such as the [[Jones polynomial]], as had been conjectured two years earlier by [[Albert Schwarz]]. It is so named because its [[action (physics)|action]] is proportional to the integral of the [[Chern-Simons 3-form]]. 
+
+A particular Chern-Simons theory is specified by a choice of [[Lie group]] G known as the gauge group of the theory and also a number referred to as the ''level'' of the theory, which is a constant that multiplies the action.  The action is gauge dependent, however the [[partition function]] of the [[quantum field theory|quantum]] theory is [[well-defined]] when the level is an integer and the gauge [[field strength]] vanishes on all [[boundary (topology)|boundaries]] of the 3-dimensional spacetime.
+
+==The classical theory==
+===Configurations===
+
+Chern-Simons theories can be defined on any [[topological manifold|topological]] [[3-manifold]] ''M'', with or without boundary.  As these theories are Schwarz-type topological theories, no [[metric tensor|metric]] needs to be introduced on ''M''.  
+
+Chern-Simons theory is a [[gauge theory]], which means that a [[classical physics|classical]] configuration in the Chern-Simons theory on ''M'' with [[gauge group]] ''G'' is described by a [[principal bundle|principal ''G''-bundle]] on ''M''.  The [[connection (principal bundle)|connection]] of this bundle is characterized by a [[connection one-form]] ''A'' which is [[Lie algebra-valued form|valued]] in the [[Lie algebra]] '''g''' of the [[Lie group]] ''G''. In general the connection ''A'' is only defined on individual [[coordinate patch]]es, and the values of ''A'' on different patches are related by maps known as [[gauge symmetry|gauge transformations]].  These are characterized by the assertion that the [[gauge covariant derivative|covariant derivative]], which is the sum of the [[exterior derivative]] operator ''d'' and the connection ''A'', transforms in the [[adjoint representation]] of the gauge group ''G''.  The square of the covariant derivative with itself can be interpreted as a '''g'''-valued 2-form ''F'' called the [[curvature form]] or [[field strength]]. It also transforms in the adjoint representation.
+
+===Dynamics===
+
+The [[action (physics)|action]] ''S'' of Chern-Simons theory is proportional to the integral of the [[Chern-Simons 3-form]]
+
+:<math>S=\frac{k}{4\pi}\int_M \text{tr}\,(A\wedge dA+\tfrac{2}{3}A\wedge A\wedge A).</math>
+
+The constant ''k'' is called the ''level'' of the theory.  The classical physics of Chern-Simons theory is independent of the choice of level ''k''.
+
+Classically the system is characterized by its equations of motion which are the extrema of the action with respect to variations of the field ''A''. In terms of the field curvature 
+
+:<math>F = dA + A \wedge A</math>
+
+the [[field equation]] is explicitly 
+
+:<math>0=\frac{\delta S}{\delta A}=\frac{k}{2\pi} F</math>.
+
+The classical equations of motion are therefore satisfied if and only if the curvature vanishes everywhere, in which case the connection is said to be ''flat''.  Thus the classical solutions to ''G'' Chern-Simons theory are the flat connections of principal ''G''-bundles on ''M''.  Flat connections are determined entirely by holonomies around noncontractible cycles on the base ''M''.  More precisely, they are in one to one correspondence with equivalence classes of homomorphisms from the [[fundamental group]] of ''M'' to the gauge group ''G'' up to conjugation.
+
+If ''M'' has a boundary ''N'' then there is additional data which describes a choice of trivialization of the principal ''G''bundle on ''N''.  Such a choice characterizes a map from ''N'' to ''G''.  The dynamics of this map is described by the [[Wess-Zumino-Witten model|Wess-Zumino-Witten]] (WZW) model on ''N'' at level ''k''.
+
+==Quantization==
+
+To [[canonical quantization|canonically quantize]] Chern-Simons theory one defines a state on each 2-dimensional surface <U+03A3> in M.  As in any quantum field theory, the states correspond to rays in a [[Hilbert space]].  There is no preferred notion of time in a Schwarz-type topological field theory and so one cannot impose that <U+03A3> be [[Cauchy surface]]s, in fact a state can be defined on any surface.
+
+<U+03A3> is codimension one, and so one may cut M along <U+03A3>.  After such a cutting M will be a manifold with boundary and in particular classically the dynamics of <U+03A3> will be described by a WZW model.  [[Edward Witten|Witten]] has shown that this correspondence holds even quantum mechanically.  More precisely, he demonstrated that the Hilbert space of states is always finite dimensional and can be canonically identified with the space of [[conformal block]]s of the G WZW model at level k.  Conformal blocks are locally [[holomorphic]] and antiholomorphic factors whose products sum to the [[correlation function]]s of a 2-dimensional conformal field theory.  
+
+For example, when <U+03A3> is a 2-sphere, this Hilbert space is one-dimensional and so there is only one state.  When <U+03A3> is a 2-torus the states correspond to the integrable [[group representation|representation]]s of the [[affine Lie algebra]] corresponding to g at level k.  Characterizations of the conformal blocks at higher genera are not necessary for Witten's solution of Chern-Simons theory.
+
+==Observables==
+===Wilson loops===
+
+The [[observable]]s of Chern-Simons theory are the n-point [[correlation function]]s of gauge-invariant operators.  The most often studied class of gauge invariant operators are [[Wilson loops]].  A Wilson loop is the holonomy around a loop in M, traced in a given [[representation of a Lie group|representation]] R of G.  As we will be interested in products of Wilson loops, without loss of generality we may restrict our attention to [[irreducible]] representions R.
+
+More concretely, given an irreducible representation R and a loop K in M one may define the Wilson loop <math>W_R(K)</math> by
+
+:<math>\langle W_R(K) \rangle =\text{Tr}_R \, \mathcal{P} \, \exp{i \oint_K A}</math>
+
+where A is the connection 1-form and we take the [[Cauchy principal value]] of the [[contour integral]] 
+and <math>\mathcal{P} \, \exp</math> is the [[path-ordered exponential]].
+
+===[[HOMFLY polynomial|HOMFLY]] and [[Jones polynomial]]s===
+
+Consider a link L in M, which is a collection of l disjoint loops.  A particularly interesting observable is the l-point correlation function formed from the product of the Wilson loops around each disjoint loop, each traced in the fundamental representation of G.  One may form a normalized correlation function by dividing this observable by the [[partition function]] Z(M), which is just the 0-point correlation function.  
+
+In the special case in which M is the 3-sphere, Witten has shown that these normalized correlation functions are proportional to known [[knot polynomials]].  For example, in G=U(N) Chern-Simons theory at level k the normalized correlation function is, up to a phase, equal to 
+:<math>\frac{\sin(\pi/(k+N))}{\sin(\pi N/(k+N))}</math> 
+times the HOMFLY polynomial.  In particular when N=2 the HOMFLY polynomial reduces to the Jones polynomial.  In the SO(N) case one finds a similar expression with the [[Kauffman polynomial]].  
+
+The phase ambiguity reflects the fact that, as Witten has shown, the quantum correlation functions are not fully defined by the classical data.  The [[linking number]] of a loop with itself enters into the calculation of the partition function, but this number is not invariant under small deformations and in particular is not a topological invariant.  This number can be rendered well defined if one chooses a [[framing]] for each loop, which is a choice of preferred nonzero [[normal vector]] at each point along which one deforms the loop to calculate its self-linking number.  This procedure is an example of the [[point-splitting]] [[regularization (physics)|regularization]] procedure introduced by [[Paul Dirac]] and [[Rudolf Peierls]] to define apparently divergent quantities in [[quantum field theory]] in 1934.
+
+[[Sir Michael Atiyah]] has shown that there exists a canonical choice of framing, which is generally used in the literature today and leads to a well-defined linking number.  With the canonical framing the above phase is the exponential of 2<U+03C0>i/(k+N) times the linking number of L with itself.
+
+==Relationships with other theories==
+===Topological string theories===
+
+In the context of [[string theory]], a U(N) Chern-Simons theory on an oriented Lagrangian 3-submanifold M of a 6-manifold N arises as the [[string field theory]] of open strings ending on a [[D-brane]] wrapping M in the [[A-model]] [[topological string theory|topological string]] on N. The [[B-Model]] topological open string field theory on the spacefilling worldvolume of a stack of D5-branes is a 6-dimensional variant of Chern-Simons theory known as [[holomorphic Chern-Simons theory]].
+
+===WZW and matrix models===
+
+Chern-Simons theories are related to many other field theories.  For example, if one considers a Chern-Simons theory with gauge group G on a manifold with boundary then all of the 3-dimensional propagating degrees of freedom may be gauged away, leaving a 2-dimensional [[conformal field theory]] known as a G [[Wess-Zumino-Witten model]] on the boundary.  In addition the U(N) and SO(N) Chern-Simons theories at large N is well approximated by [[matrix model]]s.
+
+===Chern-Simons, the Kodama wavefunction and loop quantum gravity===
+{{main|loop quantum gravity}}
+
+Edward Witten argued that the Kodama state in [[loop quantum gravity]] is unphysical due to an analogy to Chern-Simons state resulting in negative [[helicity]] and energy. There are disagreements to Witten's conclusions.
+
+==Chern-Simons terms in other theories==
+
+The Chern-Simons term can also be added to models which aren't topological quantum field theories. In 3D, this gives rise to a massive [[photon]] if this term is added to the action of Maxwell's theory of [[electrodynamics]]. This term can be induced by integrating over a massive charged [[Fermionic field#Dirac field|Dirac field]]. It also appears for example in the [[quantum Hall effect]].  Ten and eleven dimensional generalizations of Chern-Simons terms appear in the actions of all ten and eleven dimensional [[supergravity]] theories.
+
+== See also ==
+*[[Chern-Simons form]]
+*[[Topological quantum field theory]]
+*[[Alexander polynomial]]
+
+== References ==
+* S.-S. Chern and J. Simons, [http://links.jstor.org/sici?sici=0003-486X%28197401%292%3A99%3A1%3C%3E1.0.CO%3B2-5 ''Characteristic forms and geometric invariants''], ''Annals Math.'' '''99''', 48&ndash;69 (1974). (Subscription required for online access)
+* [[Edward Witten]], [http://projecteuclid.org/Dienst/UI/1.0/Summarize/euclid.cmp/1104178138 ''Quantum Field Theory and the Jones Polynomial''], Commun.Math.Phys.121:351,1989.
+* [[Edward Witten]], [http://arxiv.org/abs/hep-th/9207094 ''Chern-Simons Theory as a String Theory''], Prog.Math.133:637-678,1995.
+* [[Marcos Marino]], [http://arxiv.org/abs/hep-th/0406005 ''Chern-Simons Theory and Topological Strings''], Rev.Mod.Phys.77:675-720,2005.  
+* [[Marcos Marino]], ''Chern-Simons Theory, Matrix Models, And Topological Strings'' (International Series of Monographs on Physics), OUP, 2005.
+
+{{Quantum field theories}}
+
+[[Category:Quantum field theory]]
+
+[[fr:Th<U+00E9>orie de Chern-Simons]]

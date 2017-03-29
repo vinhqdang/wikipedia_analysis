@@ -1,0 +1,268 @@
+{{Article introductif|Longueur d'un arc}}
+[[Fichier:Carre.png|thumb|200px|Le périmètre du [[carré]] vaut ici 8.]]
+[[Fichier:Troy1.jpg|thumb|Selon [[Homère]], le périmètre de [[Troie]] était de {{formatnum:10200}} pas<ref name="Tessier">B. Teissier, ''[http://people.math.jussieu.fr/~teissier/documents/LMA3.Teissier.v6.pdf Volumes des corps convexes, géométrie et algèbre]'', Institut de Mathématiques de Jussieu. Leçon donnée le jeudi 7 octobre 1999, rédigée par C. Reydy p 2</ref>. (Photo des remparts supposés de Troie.)]]
+Le '''périmètre''' d'une figure plane est la [[longueur]] du bord de cette figure. Le calcul du périmètre sert par exemple à déterminer la quantité de grillage nécessaire à la clôture d'un terrain, le nombre de briques ou de pierres pour la construction d'un mur, etc.
+
+Pour tout [[polygone]], le périmètre vaut la [[Somme (arithmétique)|somme]] des longueurs des [[côté]]s du polygone. Il existe des [[formule (mathématiques)|formules]] simples pour le calcul du périmètre des figures de base, mais le problème devient beaucoup plus ardu pour des figures plus complexes : il fait appel à des calculs d'[[intégrale (mathématiques)|intégrales]] ou de [[limite (mathématiques)|limites]]. Dans ce cas, une méthode consiste à approcher la figure complexe par d'autres, plus simples et mieux connues, pour obtenir une [[approximation]] du périmètre voulu.
+
+La question de savoir, pour un périmètre donné, quelle est la surface dont l'[[superficie|aire]] est maximale (ou [[isopérimétrie]]) a été posée très tôt et sa réponse seulement démontrée au {{XIXe siècle}}.
+
+Le périmètre désigne aussi parfois la [[courbe]] qui est le bord d'une surface, plutôt que sa ''mesure''. Le mot ''périmètre'' (du [[grec ancien]] : {{grec ancien|περίμετρος}}) est composé du préfixe ''péri-'' qui signifie « autour » et du suffixe ''-mètre'' : « mesure »<ref>''[[Trésor de la langue française informatisé]]'', article ''périmètre''.</ref>.
+
+== Figures de base ==
+=== Polygone ===
+[[Fichier:Sides in rectangle.svg|thumb|Un rectangle de largeur ''a'' et de longueur ''b''.]]
+Le cas des [[polygone]]s est fondamental, non seulement par sa simplicité, mais aussi parce que de nombreux périmètres sont calculés, en valeur approchée, par une suite de polygones tendant vers ces courbes. Le premier mathématicien connu pour avoir utilisé ce raisonnement fut [[Archimède]] qui approcha le périmètre d'un cercle en l'encadrant par celui de [[polygone régulier|polygones réguliers]]<ref>La méthode est décrite dans le paragraphe [[Périmètre#Circonférence du cercle|Circonférence du cercle]] ou le site : S. Mehl ''[http://serge.mehl.free.fr/anx/LeCercle.html Longueur du cercle selon Archimède]'' ChronoMath</ref>.
+
+Le périmètre d'un polygone est égal à la [[addition|somme]] des longueurs de ses côtés. 
+
+En particulier, un [[rectangle]] de dimensions ''a'' et ''b'' a pour périmètre {{nowrap|2(''a'' + ''b'')}}. Un [[polygone équilatéral]] est un polygone dont tous les côtés ont la même longueur (un [[losange]] est un polygone équilatéral à quatre côtés). Pour calculer le périmètre d'un [[polygone équilatéral]], il suffit de multiplier cette longueur par le nombre de côtés.
+
+Un [[polygone régulier]] est souvent défini par son nombre de côtés et son ''rayon'', c'est-à-dire la distance constante qui sépare son centre de chacun des sommets. Il est possible de calculer la longueur du côté par un raisonnement de [[trigonométrie]]. Si ''R'' est le rayon d'un polygone régulier et ''n'' le nombre de ses côtés, son périmètre est<ref>{{harvsp|Chevalier et al.|2002|id=Référentiel}} pour la formule et une démonstration.</ref> :
+:<math>2nR \sin\left(\frac{180^{\circ}}{n}\right)</math>.
+
+Ces méthodes sont résumées dans le tableau ci-dessous.
+<center>
+{| class="wikitable"
+|+ '''Périmètre de polygones'''
+|-
+! Polygone !! Formule !! Variables
+|-
+| [[Triangle]] || <math>a+b+c\;</math> || ''a'', ''b'' et ''c'' sont les longueurs des côtés du triangle.
+|-
+| [[Parallélogramme]] || <math>2(a+b)\;</math> || ''a'' et ''b'' sont les longueurs de deux côtés consécutifs.
+|-
+| [[Polygone équilatéral]] || <math>n\cdot a\;</math> || ''n'' est le nombre de côtés et ''a'' la longueur de chaque côté.
+|-
+| [[Polygone]] quelconque || <math>a_{1} + a_{2} + a_{3} + \ldots + a_{n} = \sum_{i=1}^{n}a_{i}</math> || où <math>a_{i}</math> est la longueur du <math>i</math>{{e}} (1{{er}}, 2{{e}}, 3{{e}} ... n{{e}}) côté d'un polygone à ''n'' côtés.
+|-
+| [[Polygone régulier]] convexe|| <math>2nR \sin\left(\frac{180^{\circ}}{n}\right)</math> || ''n'' est le nombre de côtés et ''R'' la distance entre le centre du polygone régulier et chacun des sommets.
+|}
+</center>
+
+=== Circonférence d'un cercle ===
+[[Fichier:Pi-unrolled-720.gif|right|300px|thumb|Si le diamètre du cercle est 1, sa circonférence est π.]]
+{{article détaillé|Pi}}
+Le périmètre d'un [[cercle]] est proportionnel à son diamètre<ref name="Amiot27">{{harvsp|Amiot|1870}}, {{romain|XXVII}}{{e}} leçon.</ref>. C'est-à-dire qu'il existe une constante π (le ''p'' grec de ''périmètre'') telle que, quel que soit un cercle de diamètre ''D'' et de périmètre ''P'',
+:''P'' = π ''D''.
+
+L'usage du [[compas (géométrie)|compas]] ayant favorisé l'utilisation du rayon ''R'' du cercle plutôt que de son diamètre, cette formule devient :
+: ''P'' = 2 π ''R''.
+
+Ces deux formules sont parfaitement équivalentes puisque, pour tout cercle, {{nowrap|1=''D'' = 2 ''R''}}.
+
+Il suffit, pour calculer le périmètre d'un cercle, de connaître son rayon ou son diamètre et le nombre [[Pi|π]]. Le problème est que ce nombre n'est pas [[nombre rationnel|rationnel]] (on ne peut pas l'écrire sous la forme d'un quotient de deux entiers) ni même [[Nombre algébrique|algébrique]] (il n'est pas la [[racine d'un polynôme]] à coefficients entiers). Obtenir une valeur approchée de π aussi précise qu'on le souhaite n'est donc pas évident. La recherche des décimales de π mobilise des connaissances en [[analyse (mathématiques)|analyse]], [[algorithmique]] et [[informatique]].
+
+Le périmètre d'un cercle est souvent appelé ''circonférence'', parfois ''longueur'', le mot périmètre concernant plutôt le [[disque (géométrie)|disque]].
+
+== Perception du périmètre ==
+[[Fichier:Hexaflake.gif|thumb|left|upright=0.6|Plus on découpe, plus l'aire diminue et le périmètre augmente.]]
+[[Fichier:Neuf Brisach.jpg|thumb|La citadelle de [[Neuf-Brisach]] a un périmètre compliqué. Pour en faire le tour, mieux vaut suivre son enveloppe convexe.]]
+{{Voir aussi|Aire (géométrie)|Enveloppe convexe}}
+Le périmètre est, avec l'[[aire (géométrie)|aire]], l'une des deux mesures principales des figures géométriques. Il est fréquent de confondre ces deux notions<ref name="conf">''[[#confusion|Aire et périmètre]]'', dossier d’activités pédagogiques réalisé par le groupe national de réflexion sur l’enseignement des mathématiques en dispositifs relais.</ref> ou de croire que, plus l'une est grande, plus l'autre l'est aussi. En effet l'agrandissement (ou la réduction) d'une figure géométrique fait croître (ou décroître) simultanément son aire et son périmètre. Par exemple, si un terrain est représenté sur une carte à l'[[échelle (proportion)|échelle]] 1:{{formatnum:10000}}, le périmètre réel du terrain peut être calculé en multipliant le périmètre de la représentation par {{formatnum:10000}} et l'aire en multipliant celle de la représentation par {{formatnum:10000}}{{exp|2}}. Il n'existe cependant aucun lien direct entre l'aire et le périmètre d'une figure quelconque. Par exemple, un rectangle possédant une aire égale à un [[mètre carré]] peut avoir comme dimensions, en mètres : 0,5 et 2 (donc un périmètre égal à {{unité|5|m}}) mais aussi 0,001 et 1000 (donc un périmètre de plus de {{unité|2000|m}}). [[Proclus]] ({{s|V|e}}) rapporte que des paysans grecs se sont partagés {{guil|équitablement}} des champs suivant leurs périmètres, mais avec des aires différentes<ref>T. Heath, ''A History of Greek Mathematics, Vol. 2'', Dover Publications, 1981, p 206 {{ISBN|0-486-24074-6}}</ref>{{,}}<ref name="Tessier"/>. Or, la production d'un champ est proportionnelle à l'aire, non au périmètre : certains paysans naïfs ont pu obtenir des champs avec de longs périmètres, mais une aire (et donc une récolte) médiocre.
+
+Lorsqu'on ôte une partie d'une figure, son aire diminue (on a aussi {{Citation|ôté}} une aire). Mais il n'en est pas toujours de même du périmètre. Dans le cas de figures très {{Citation|découpées}}, à la confusion aire/périmètre s'ajoute celle avec l'[[enveloppe convexe]] de la figure plutôt que son tour au sens strict<ref>{{Lien web|auteur=François Colmez|url=http://www.apmep.asso.fr/IMG/pdf/Aire_et_autres_Grandeurs.pdf|titre=De l'Aire et d'autres Grandeurs géométriques}}, {{p.}}3.</ref>. L'enveloppe convexe d'une figure est semblable à un élastique qui entourerait cette figure. Sur l'animation ci-contre à gauche, toutes les figures ont la même enveloppe convexe : le grand [[hexagone]] initial.
+{{clr}}
+
+== Isopérimétrie ==
+[[Image:Bouillon_de_volaille.jpg|thumb|Des yeux à la surface d'un bouillon.]]
+{{Article détaillé|Isopérimétrie}}
+
+L'isopérimétrie traite, en particulier, la question de trouver la surface la plus vaste possible, pour un [[périmètre]] donné. La réponse est intuitive, c'est le [[disque (géométrie)|disque]]<ref>''[http://www.univ-orleans.fr/irem/modules/news/documents/Aires%20-%203.pdf Le problème isopérimétrique]'' Irem d'Orléans p 2</ref>. Ceci explique pourquoi, notamment, les yeux à la surface d'un bouillon ont une forme circulaire.
+
+Ce problème, d'apparence anodin, fait appel à des théories sophistiquées pour obtenir une démonstration rigoureuse. On simplifie parfois le problème isopérimétrique en limitant les surfaces autorisées. Par exemple on cherche le [[quadrilatère]] ou le [[triangle]] d'aire la plus vaste possible, toujours pour un périmètre donné. Les solutions respectives sont le [[carré]] et le [[triangle équilatéral]]. De manière générale, le [[polygone]] à ''n'' sommets ayant la plus grande surface, à périmètre donné, est celui qui se rapproche le plus du [[cercle]], c'est le [[polygone régulier]].
+
+L'isopérimétrie ne se limite pas à ces questions. On recherche aussi une zone d'aire la plus vaste possible pour un périmètre donné, avec des géométries différentes. Par exemple, dans le cas d'un [[demi-plan]], la réponse est le demi-disque.
+
+Ce concept donne naissance à une famille de théorèmes, dit [[théorème isopérimétrique|isopérimétriques]], à des majorations dites ''inégalités isopérimétriques'', ainsi qu'à un rapport, appelé ''quotient isopérimétrique''. L'inégalité isopérimétrique indique qu'une surface de périmètre ''p'' et d'aire ''a'' vérifie la majoration suivante :
+
+:<math>\frac {4 \pi a}{p^2} \le 1</math>
+
+Le terme de gauche, est appelé quotient isopérimétrique, il est égal à 1 si, et seulement si la surface est un disque.
+
+Si l'origine de cette question date d'au moins {{formatnum:2900}} ans<ref>''[http://www.univ-orleans.fr/irem/modules/news/documents/Aires%20-%203.pdf Le problème isopérimétrique]'' Irem d'Orléans p 1</ref>, ce n'est qu'en [[1895 en science|1895]], à l'aide de méthodes dérivées du [[théorème de Minkowski]] que la question est définitivement résolue sous sa forme antique<ref>B. Teissier, ''[http://people.math.jussieu.fr/~teissier/documents/LMA3.Teissier.v6.pdf Volumes des corps convexes, géométrie et algèbre]'', Institut de Mathématiques de Jussieu. Leçon donnée le jeudi 7 octobre 1999, rédigée par C. Reydy p 6</ref>. Ces méthodes permettent de démontrer le [[théorème isopérimétrique]] et de le généraliser à des [[dimension d'un espace vectoriel|dimensions]] supérieures dans le cas d'une [[géométrie euclidienne]].
+
+Voir l'article [[isopérimétrie]] pour les aspects élémentaires de cette question. Des éléments de réponse, faisant usage d'outils mathématiques plus sophistiqués, sont proposés dans l'article [[Théorème isopérimétrique]].
+
+== Courbe rectifiable ==
+Mis à part les cas des polygones et des cercles, le périmètre de la plupart des surfaces est malaisé à calculer : il fait intervenir une [[intégrale (mathématiques)|intégrale]] qui ne s'exprime pas souvent au moyen de fonctions élémentaires (polynômes, sinus, etc.)
+
+=== Un exemple : l'ellipse ===
+[[Image:Comète trajectoire 5.svg|thumb|Une ellipse.]]
+L'[[ellipse (mathématiques)|ellipse]] peut paraître simple : il ne s'agit après tout que d'un {{guil|cercle écrasé}}. 
+
+Soit une ellipse de demi-grand axe ''a'' et de demi-petit axe ''b''.
+
+L'aire est aisée à calculer<ref>G. Tulloue, ''[http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Coniques/Ellipse/Aire_ellipse.html Aire d'une ellipse]'', par l'université de Nantes</ref> : <math>\pi a b</math>.
+
+Mais le périmètre ''P'' de l'ellipse ne peut être obtenu qu'à l'aide d'une [[intégrale elliptique]]<ref name=ellipse>E. Weisstein, ''[http://mathworld.wolfram.com/Ellipse.html Ellipse]'' du site mathworld</ref> :
+:<math>P = 4\int_0^{\frac{\pi}{2}}\sqrt{a^2\cos^2 t + b^2\sin^2 t}\,\text{d} t</math>
+qui s'exprime sous forme de [[série (mathématiques)|série]], en notant ''e'' l'[[Excentricité mathématique|excentricité]] de l'ellipse (formule de J.H.Lambert(1772)):
+:<math>P = 2\pi a \left[{1 - \left({1\over 2}\right)^2e^2 - \left({1\cdot 3\over 2\cdot 4}\right)^2{e^4\over 3} - \left({1\cdot 3\cdot 5\over 2\cdot 4\cdot 6}\right)^2{e^6\over5} - \cdots}\right]</math> où <math>e=\frac{c}{a}=\frac{\sqrt{a^2-b^2}}{a}=\sqrt{1-\frac{b^2}{a^2}}.</math>
+
+La difficulté de ces calculs a conduit à développer des approximations. La deuxième proposée, plus précise, est l'œuvre de [[Srinivasa Ramanujan|Ramanujan]]<ref name=ellipse /> :
+:<math>P \approx \pi\sqrt {2(a^2 + b^2)}\approx \pi \left[3(a+b) - \sqrt{(3a+b)(a+3b)}\right]</math>
+
+=== Courbe rectifiable ===
+{{article détaillé|Longueur d'un arc}}
+Le problème du calcul d'un périmètre est plus ardu si la frontière est ''courbe'' et non plus polygonale.
+
+Il est toujours possible d'approcher la longueur d'une courbe par celle d'un ''polygone d'approximation''. La longueur du polygone d'approximation est la somme des longueurs de ses côtés. Lorsque le pas, c'est-à-dire la longueur maximale entre deux sommets consécutifs du polygone, tend vers zéro, la [[limite supérieure]] de la longueur du polygone tend vers la longueur de la courbe. Si la longueur de la courbe est finie, celle-ci est dite ''rectifiable''. Ce raisonnement permet de calculer des valeurs approchées de nombreuses courbes.
+
+Une valeur exacte est possible lorsque la courbe est [[courbe paramétrée|paramétrée]] par une fonction continûment dérivable. Alors la courbe est rectifiable. Si la courbe est un arc paramétré par une fonction ''f'' définie sur un intervalle [''c'';''d''], alors sa longueur est :
+:<math>L = \int_c^d||f '(t)||\mathrm dt.</math>
+En particulier, si ''f''(''t'') = (''x''(''t'') ; ''y''(''t'')) et si les coordonnées s'expriment dans une [[base orthonormale]], la longueur '' L'' de la courbe est donnée par :
+:<math>L = \int_c^d \sqrt {\left(\frac {dx}{dt}\right)^2 + \left(\frac {dy}{dt}\right)^2}\mathrm d t.</math>
+Cette formule permet d'établir celle donnée plus haut, pour le périmètre de l'ellipse ( ''x''(''t'')=''a cos t'', ''y''(''t'')=''b sin t'', ''I''=]0,&nbsp; π/4[ ).
+
+Il est également possible d'utiliser les [[coordonnées polaires]] (θ, ''r''(θ)) où ''r'' est une fonction continûment dérivable de θ définie sur un intervalle [θ<sub>1</sub>;θ<sub>2</sub>]. Dans ce cas :
+:<math>L = \int_{\theta_1}^{\theta_2}\sqrt{r(\theta)^2+r'(\theta)^2}\mathrm d\theta.</math>
+
+== Courbes fractales ==
+[[Image:Von_Koch_curve.gif|thumb|Construction du « flocon ».]]
+=== Un exemple : Le flocon de von Koch ===
+{{article détaillé|Flocon de Koch}}
+Le [[flocon de Koch]] est construit par une suite de polygones à la fois très simple et aux propriétés étonnantes<ref>Cette construction est décrite dans l'article ''Une méthode géométrique élémentaire pour l'étude de certaines questions de la théorie des courbes plane published'' de 1906 : J J O'Connor, E F Robertson, ''[http://www-gap.dcs.st-and.ac.uk/~history/Biographies/Koch.html Niels Fabian Helge von Koch]'', par le site sur l'histoire des mathématiques de l'université de St Andrew</ref>.
+
+# On part d'un [[triangle équilatéral]].
+# On partage chaque côté de la figure en trois segments de même longueur. On construit, sur chaque segment central et à l'extérieur de la figure précédente, un triangle équilatéral.
+# On répète le procédé de l'étape 2 indéfiniment.
+
+À chaque itération, le polygone obtenu possède un périmètre égal à {{fraction|4|3}} de celui du précédent, la [[suite (mathématiques)|suite]] des périmètres obtenus tend vers l'[[infini]]. Pourtant, tous ces polygones sont inclus dans le cercle circonscrit au premier triangle, et ont une aire finie.
+
+=== Fractales et dimension de Hausdorff ===
+{{article détaillé|Fractale|dimension de Hausdorff}}
+Si plusieurs surfaces ont des périmètres infinis, il est toutefois possible que certaines aient un {{guil|plus long périmètre}} que d'autres<ref>{{harvsp|Mandelbrot|1995}}</ref>. La [[dimension de Hausdorff]]<ref>L'article fondateur est : [[Felix Hausdorff|F. Hausdorff]], ''Dimension und äusseres Mass'', Math. Ann. Vol 79, 1918, pp 157-179</ref> introduite en 1918, permet de les comparer en étendant encore la notion de longueur, et donc celle de périmètre.
+
+== Fragments d'histoire ==
+=== Aire et périmètre ===
+Des [[carte géographique|plans]] tracés sur des tablettes d'argile et datant d'[[Ur III]] (fin du {{-m|III|e}}) comportent des mentions de longueurs de terrains, qui sont découpés en triangles et quadrilatères afin de faciliter les calculs. Mais les aires de polygones, notamment les surfaces des champs, étaient calculées à partir des périmètres, même si certains scribes semblent s'être rendu compte que ces raisonnements pouvaient être faux<ref>{{harvsp|Robson|2008}}, {{p.}}61, 67.</ref>. Cette façon de mesurer des villes ou des régions par leur périmètre est utilisée par [[Homère]] pour [[Troie]]<ref name="Tessier"/> ou encore par [[Hérodote]] :
+{{citation bloc|aussi donnait-on autrefois le nom d'Égypte à la Thébaïde, dont la circonférence est de six mille cent vingt stades<ref>Hérodote, ''Histoire : Livre second - Euterpe'', XV.</ref>.}}
+
+Dès 1800 avant J.-C., les problèmes de [[géométrie]] au sujet de périmètres sont attestés. Un problème classique trouvé sur de nombreuses tablettes consistait à trouver les dimensions d'un rectangle, connaissant son aire et son périmètre<ref>{{harvsp|Neugebauer|1992}}. Une résolution de ce problème est donnée dans l'article [[Inconnue (mathématiques)]].</ref> :
+{{théorème|Exemple de problème babylonien|Un champ rectangulaire possède une [[Superficie|aire]] de 96 et un [[périmètre]] de 40. Quelles sont les longueur et largeur du champ ?|style=display:table}}
+
+La légende<ref>Cette légende est racontée par : {{VirÉné}} Livre 1,16.</ref> veut que [[Didon]], vers 800 avant J.-C., cherchant une terre pour fonder une nouvelle cité pour son peuple, obtint d'un roi qu'il lui en cède {{citation|autant qu'il en pourrait tenir dans la peau d'un bœuf}}. Didon découpa une peau de bœuf en très fines lanières et choisit une [[péninsule]] : avec les lanières, elle sépara la péninsule du continent et put ainsi délimiter un vaste terrain. [[Carthage]] était née. La légende de Didon peut avoir une origine didactique, car elle montre qu'aire et périmètre ne sont pas liés, elle est également une première approche du problème d'[[isopérimétrie]]<ref name="Tessier"/>.
+
+La [[fondation de Rome]] est également une question de périmètre : Romulus trace, avec sa charrue, le périmètre circulaire de sa future ville. Le mot [[latin]] ''Urbs'' (la Ville, qui désigne Rome et a donné en français les mots ''urbain'', ''urbaniser'') serait une déformation d'une expression signifiant {{citation|tracer le périmètre}}. Une [[racine indo-européenne]] signifiant pourtour, périmètre, clôture en serait à l'origine<ref>{{ouvrage|titre=Latin et langues techniques|auteurs=Jean-Paul Brachet, Claude Moussy|éditeur=Presses Paris Sorbonne|année=2006|isbn=2-84050-417-0|pages=334}}, {{p.|51-53}}.</ref>.
+
+Le problème de l'isopérimétrie est très ancien, comme l'atteste la légende de Didon, et ses différentes réponses (polygone régulier, demi-disque dans un demi-plan, cercle) étaient connues dès l'antiquité grecque<ref>{{article|titre=Qu’est-ce que l’optimisation de forme ?|auteurs=Antoine Henrot, Jan Sokolowski|revue=1903 - 2003 Un siècle de mathématiques à Nancy|lire en ligne=http://www.iecn.u-nancy.fr/Le-Laboratoire-Et-La-Recherche/100ansdemath/IECN2003-051-062.pdf|année=2003}}</ref>, bien qu'il ait fallu attendre le {{s|XIX}} pour qu'une démonstration rigoureuse soit élaborée.
+
+=== Circonférence du cercle ===
+Les Babyloniens liaient l'aire ''A'' et le périmètre ''P'' d'un cercle suivant un [[algorithme]] de calcul équivalent à la formule <math>A=\frac{P^2}{12}</math> ce qui donne une approximation<ref>{{harvsp|Neugebauer|1992}}, {{p.}}51.</ref> de π égale à 3. Même lorsqu'ils connaissaient le diamètre d'un cercle, les scribes passaient toujours par le calcul de son périmètre (en multipliant le diamètre par 3) pour ensuite obtenir son aire. La dimension usuelle pour un cercle était toujours son périmètre, jamais son diamètre ni son rayon. Cela montre que, pour les anciens, un cercle était plutôt vu comme une ''circonférence'' plutôt que comme une courbe définie par un centre et un rayon<ref>{{harvsp|Robson|2008}}, {{p.|65,66}}.</ref>. La procédure pour calculer l'aire d'un disque à partir de son diamètre était la suivante<ref>Traduction libre et adaptation depuis {{harvsp|Robson|2008}}, {{p.|65}}.</ref>, utilisée, dans cet exemple, pour déterminer le volume d'une bûche cylindrique dont le diamètre était 1&nbsp;+&nbsp;{{fraction|2|3}} :
+{{Théorème|Méthode babylonienne|Triple 1&nbsp;+&nbsp;{{fraction|2|3}}, le dessus de la bûche, et 5, la circonférence de la bûche, viendra. Prends le carré de 5 et 25 viendra. Multiplie 25 par {{fraction|1|12}}, la constante, et 2&nbsp;+&nbsp;{{fraction|1|12}}, l'aire, viendra.|style=display:table}}
+
+L'approximation de π par 3 est également utilisée dans la [[Bible]]<ref name=Fourey>{{ouvrage|auteur=E. Fourrey|titre=Curiosités géométriques|pages=431|éditeur=Vuibert et Nony|année=1907}}</ref> :
+{{citation bloc|Il fit la mer de fonte. Elle avait dix coudées d’un bord à l’autre, une forme entièrement ronde, cinq coudées de hauteur, et une circonférence que mesurait un cordon de trente coudées<ref>Ancien Testament, Premier livre des Rois, Version Louis Segond - 1910</ref>.}}
+et le [[Talmud]]<ref name=Fourey/> :{{citation bloc|Ce qui a trois palmes de tour est large d'une palme.}}
+
+[[Image:Archimedes pi.svg|thumb|Encadrement de cercles par des polygones réguliers. Archimède, pour ses calculs, utilisa des polygones réguliers à 6, 12, 24, 48 et 96 côtés.]][[Archimède]] énonça<ref name="Amiot27"/> et démontra, dans son traité ''[[De la mesure du cercle]]'' :
+{{Théorème|Approximation de π par Archimède|Le quotient du périmètre de tout cercle par son diamètre est plus petit que <math>3+\frac{10}{70}</math> mais plus grand que <math>3+\frac{10}{71}</math>.|style=display:table}}
+Ce qui donne un encadrement de π (qui est le ''quotient du périmètre de tout cercle par son diamètre''). Pour parvenir à ce résultat, Archimède encadra le cercle par deux polygones réguliers dont il calcula les périmètres. Son résultat utilise des polygones réguliers à 96 côtés.
+
+En 1424, [[Al-Kashi]], dans son ''Traité sur le cercle'', calcule une valeur approchée de π en encadrant le cercle entre deux polygones réguliers à {{formatnum:805306368}} côtés avec seize décimales exactes. Son objectif était de déterminer une valeur approchée de π suffisamment précise pour pouvoir calculer non seulement la circonférence de la Terre, mais aussi celle de l'Univers<ref>{{harvsp|Berggren et al.|2004|id=Pibook}}, {{p.}}681.</ref>. Son traité commence ainsi<ref>Traduction libre depuis {{harvsp|Berggren et al.|2004|id=Pibook}}, {{p.}}681.</ref> : {{citation bloc|Louange à [[Allah]], qui connaît le rapport du diamètre à la circonférence [...] et paix à [[Mahomet]], l'Élu, qui est le centre du cercle des prophètes.}}
+
+La méthode d'Archimède a été reprise<ref>{{harvsp|Berggren et al.|2004|id=Pibook}}, {{p.}}329.</ref> en 1579 par [[François Viète]] et en 1593 par [[Adrien Romain]] pour calculer de douze à quinze décimales de π.
+
+D'autres mathématiciens ont calculé des valeurs approchées de π en utilisant des calculs d'[[aire (géométrie)|aires]] puis, à partir du {{s|XVII}}, les techniques du [[calcul infinitésimal]].
+
+=== Longueur d'une courbe ===
+La question du calcul de la longueur d'une courbe prend, au {{XVIIe siècle}} le nom de ''rectification'' d'une courbe<ref>J. C. Pénin, ''Analyse et démarche analytique'' Actes du 11{{e}} colloque de Reims InterIrem d'Epistémologie et d'Histoire des Mathématiques, Chap 4, p 311</ref>. Elle est en général considérée comme impossible à résoudre, ce que [[René Descartes|Descartes]] exprime par : {{Citation|... la proportion qui est entre les droites et les courbes n'étant pas connue, et même je crois ne le pouvant être par les hommes<ref>[[René Descartes|Descartes]], ''La géométrie'', extrait du site : J. C. Pénin, ''[http://pagesperso-orange.fr/fonctionelliptique/Rectification.htm La rectification des courbes]''</ref>.}}
+
+Au {{XVIIe siècle}}, l'invention du [[calcul infinitésimal]] a conduit à interpréter le calcul de la longueur d'une courbe comme celui d'une intégrale<ref>J. C. Pénin ''[http://pagesperso-orange.fr/fonctionelliptique/Rectification.htm La rectification des courbes]''</ref> suivant la formule vue plus haut (voir l'exemple de l'ellipse).
+
+Au {{XIXe siècle}}, [[Marie Ennemond Camille Jordan|Camille Jordan]] donne une nouvelle définition de la longueur d'une courbe<ref>[[Marie Ennemond Camille Jordan|C. Jordan]], ''Cours d'analyse de l'école polytechnique, 3 volumes'', Jacques Gabay, première publication entre 1882 et 1887, édition 1991 {{ISBN|2-87647-018-7}}</ref>, se rapprochant de celle d'[[Archimède]] mais utilisant les outils modernes (dont le calcul de la [[limite (mathématiques)|limite]] d'une [[suite (mathématiques)|suite]]) : il approche la courbe par un [[polygone]] dont les sommets sont des points de cette courbe. Lorsque le nombre de ces points tend vers l'infini, la [[limite supérieure]] de la suite des longueurs des polygones obtenus, si elle est [[Suite (mathématiques élémentaires)#Majorant minorant|majorée]], est la longueur de cette courbe. Cette définition de ''courbe rectifiable'' englobe et étend la précédente qui utilisait une [[intégration (mathématiques)|intégrale]].
+
+[[Fichier:Bretagne region location map.svg|thumb|La côte bretonne.]]
+Durant les {{XIXe s}} et {{XXe siècle}}s, des mathématiciens découvrent de nombreuses courbes {{citation|bizarres}} comme celle de von Koch, qui ne sont pas rectifiables<ref>{{harvsp|Poincaré|1908|p=132}}</ref>.
+À partir de 1967, [[Benoît Mandelbrot]]<ref>{{harvsp|Mandelbrot|1995}}</ref> définit et étudie les [[fractale]]s à partir d'une question apparemment très simple : 
+{{Théorème|Question|Combien mesure la côte de la Bretagne ?|style=display:table}}
+Mandelbrot explique que plus on cherchera à préciser la mesure, plus celle-ci sera grande, jusqu'à éventuellement devenir infinie<ref>{{harvsp|Mandelbrot|1995}}</ref>. En effet, si on mesure grossièrement le périmètre de la [[Bretagne]] (ou de tout pays) sur une carte, on va obtenir un polygone. Mais plus la carte sera précise, plus le polygone sera découpé et donc son périmètre grandira. Si l'on veut le {{guil|vrai}} périmètre de la Bretagne, il faudra aller sur place mesurer chaque caillou, chaque escarpement de rocher, voire chaque [[atome]] de ces composants. L'étude de ces objets dépasse le cadre du calcul de périmètres.
+
+== Annexes ==
+=== Bibliographie ===
+;Livres
+* {{ouvrage|nom=Neugebauer|prénom=Otto|titre=Les sciences exactes dans l'Antiquité|éditeur=Actes Sud|année=1992|isbn=978-2-86869-300-6}}
+* {{ouvrage|nom=Mandelbrot|prénom=Benoit|titre=Les objets fractals, 4e édition|éditeur=Flammarion|année=1995|présentation en ligne=http://www.eyrolles.com/Sciences/Livre/les-objets-fractals-9782080813015|isbn=978-2-08-081301-5}}
+* {{ouvrage|nom=Poincaré|prénom=Henri|lire en ligne=http://jubil.upmc.fr/sdx/pl/toc.xsp?id=PC_000305_001&fmt=upmc&idtoc=PC_000305_001-pleadetoc&base=fa|titre=Science et méthode|année=1908|éditeur=Flammarion}}
+* {{ouvrage|titre = Éléments de géométrie : rédigés d'après le nouveau programme de l'enseignement scientifique des lycées ; suivis d'un Complément à l'usage des élèves de mathématiques spéciales
+|prénom1 = A. 
+|nom1=Amiot
+|éditeur = C. Delagrave et Cie
+|lieu =Paris
+|année= 1870
+|pages = 428
+|lire en ligne =http://gallica2.bnf.fr/ark:/12148/bpt6k996281
+}}
+* {{ouvrage|titre=Référentiel de mathématiques : de 12 à 16 ans
+|auteurs=Anne Chevalier, Collectif, Ginette Cuisinier, Danielle Degen, Christine Docq, Mariza Krysinska, Christiane Hauchart
+|éditeur=De Boeck Education
+|année=2002
+|isbn=978-2-8041-4052-6
+|pages=448
+|id=CITEREFRéférentiel}}
+* {{ouvrage|titre=Pi, a source book|langue=en|auteurs=Lennart Berggren, Jonathan M. Borwein, Peter B. Borwein|éditeur=Springer|année=2004|isbn=0-387-20571-3|pages=797|id=CITEREFPibook}}
+* {{RobsonSocial}}
+;Articles
+* {{Lien web|titre=Aire et Périmètre|auteur=Groupe national de réflexion sur l’enseignement des mathématiques en dispositifs relais|url=http://eduscol.education.fr/D0049/aire_perimetre_tout.pdf|id=confusion}}
+
+=== Notes et références ===
+{{Références|colonnes=2}}
+
+{{Portail|géométrie}}
+
+{{Bon article|vote=BA|oldid=41437376|date=31 mai 2009}}
+
+[[Catégorie:Distance et longueur|Perimetre]]
+[[Catégorie:Mathématiques élémentaires|Perimetre]]
+
+[[af:Omtrek]]
+[[am:መጠነ ዙሪያ]]
+[[ar:محيط (هندسة رياضية)]]
+[[ast:Perímetru]]
+[[ay:Muyta]]
+[[az:Perimetr]]
+[[bg:Периметър]]
+[[ca:Perímetre]]
+[[ckb:چێوە]]
+[[cs:Obvod (geometrie)]]
+[[da:Omkreds]]
+[[de:Umfang]]
+[[en:Perimeter]]
+[[eo:Perimetro]]
+[[es:Perímetro]]
+[[et:Ümbermõõt]]
+[[eu:Perimetro]]
+[[fa:محیط (هندسه)]]
+[[fi:Piiri (geometria)]]
+[[gl:Perímetro]]
+[[he:היקף]]
+[[hr:Opseg]]
+[[hu:Kerület (geometria)]]
+[[io:Perimetro]]
+[[it:Perimetro]]
+[[ja:ペリメーター]]
+[[ka:პერიმეტრი]]
+[[km:បរិមាត្រ]]
+[[ko:둘레]]
+[[lmo:Perìmeter]]
+[[mk:Периметар]]
+[[ms:Perimeter]]
+[[nl:Omtrek]]
+[[nn:Omkrins]]
+[[no:Omkrets]]
+[[pl:Obwód (geometria)]]
+[[pt:Perímetro]]
+[[qu:Iruru muyu]]
+[[ru:Периметр]]
+[[simple:Perimeter]]
+[[sl:Obseg]]
+[[sn:Pimamuganhu]]
+[[sr:Обим]]
+[[sv:Omkrets]]
+[[szl:Uobwůd]]
+[[ta:சுற்றளவு]]
+[[th:เส้นรอบรูป]]
+[[uk:Периметр]]
+[[vi:Chu vi]]
+[[zh:周长]]

@@ -1,0 +1,33 @@
+{{Ébauche|mathématiques}}
+
+L''''inégalité de Schur''' est une [[inégalité]] utilisée en [[théorie des nombres]].
+
+== Enoncé ==
+
+Soit <math>a, b, c</math> des nombres [[Nombre réel|réels]] [[Nombre positif|positifs]] et <math>k</math> un réel, alors on a:
+
+<math>a^k(a-b)(a-c)+b^k(b-c)(b-a)+c^k(c-a)(c-b)\geq 0</math> 	   
+
+avec égalité si et seulement si <math>a=b=c</math>
+
+== Preuve ==
+Quitte à permuter les variables, on peut choisir d'écrire <math>c\leq b\leq a</math> (de par la symétrie de la précédente inégalité). En arrangeant les termes, l'inégalité à démontrer est équivalente à :
+
+<math> (a-b)\left(a^k(a-c)-b^k(b-c)\right)+c^k(a-c)(b-c)\geq 0</math>
+
+Cette dernière inégalité est immédiate car tous les termes à gauche sont positifs.
+
+== Voir aussi ==
+* [[Issai Schur]]
+
+{{portail mathématiques}}
+
+[[Catégorie:Inégalité|Schur]]
+
+[[en:Schur's inequality]]
+[[it:Disuguaglianza di Schur]]
+[[ja:シュールの不等式]]
+[[km:វិសមភាពស្យ៉ឺរ]]
+[[ko:슈어의 부등식]]
+[[vi:Bất đẳng thức Schur]]
+[[zh:舒尔不等式]]

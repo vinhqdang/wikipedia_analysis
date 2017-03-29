@@ -1,0 +1,123 @@
+{{current product}}
+{{Infobox Software
+| name                   = Microsoft Visual Studio Express
+| logo                   = [[Image:Microsoft Visual Studio Express logo.png|The Microsoft Visual Studio Express logo.]]
+| screenshot             = [[Image:Vsplusplus 2005 beta2.png|250px]]
+| caption                = The Visual C++ 2005 Express IDE's Code Editor.
+| developer              = [[Microsoft]]
+| released               = 
+| frequently_updated     = yes<!-- Release version update? Don't edit this page, just click on the version number! -->
+| programming language   = 
+| operating system       = [[Microsoft Windows]]
+| language               = 
+| genre                  = [[Integrated development environment]]
+| license                = [[Software license agreement|Microsoft EULA]]
+| website                = [http://msdn.microsoft.com/vstudio/express/default.aspx msdn.microsoft.com/vstudio/express]
+}}
+'''Microsoft Visual Studio Express''' is a set of [[freeware]] [[integrated development environment]]s developed by [[Microsoft]] that are lightweight versions of the [[Microsoft Visual Studio|Microsoft Visual Studio 2008]] (codenamed ''Orcas'') product line. The idea of express editions, according to Microsoft, is to provide a streamlined, easy-to-use and easy-to-learn IDEs for less serious users, such as hobbyists and students. The final versions were released on [[November 19]], [[2007]]. In line with popular demand since the Visual Studio 2005 Express Editions<ref name="ms-vse">{{cite web
+  | date = [[April 19]], [[2006]]
+  | url = http://www.microsoft.com/presspass/press/2006/apr06/04-19VSExpressFreePR.mspx
+  | title = "Microsoft Brings Programming to the Masses With Visual Studio Express"
+  | publisher = Microsoft
+  | accessdate = 2006-09-13
+}}</ref>, these editions will always remain free-of-charge. Visual Studio 2008 Express Editions require Windows XP or a later Windows version; Windows NT 4.0, Windows 2000 and Windows 9x are no longer supported. Visual Studio 2005 Express Editions can be installed on Windows 2000 SP4.
+
+==Products==
+Visual Studio Express consists of the following separate products:
+
+* [[Visual Basic]] ([[Visual Basic .NET|.NET]]) 2008 [[Microsoft Visual Studio Express#Visual Basic Express|Express Edition]]
+* [[Microsoft Visual C Sharp|Visual]] [[C Sharp (programming language)|C#]] 2008 Express Edition
+* [[Visual C++]] 2008 [[Microsoft Visual Studio Express#Visual C.2B.2B 2008 Express Edition|Express Edition]]
+* [[Microsoft Visual Studio Express#Visual Web Developer Express|Visual Web Developer]] 2008 Express Edition
+* [[Microsoft SQL Server|SQL Server]] 2008 [[SQL Server Express|Express Edition]] (to be released in the first half of 2008)
+
+[[J Sharp|Microsoft Visual J# 2005]] was not updated for this release and is currently not planned. The version shipping with Visual Studio 2005 will be supported until 2015 as per the product life-cycle strategy.
+
+===Visual Basic Express===
+Despite the fact that it is a stripped-down version of Visual Studio, some improvements were made upon Visual Basic 2008 from Visual Basic 2005. Visual Basic 2008 Express includes the following improvements over Visual Basic 2005 Express:
+<!-- ## NOTE: Information still needs updating. ## -->
+* Includes the visual [[Windows Presentation Foundation]] designer codenamed "Cider"
+* [[Debugging|Debugs]] at runtime
+* Better [[IntelliSense]] support
+**Fixes common spelling errors
+**Corrects most invalid [[syntax]]
+**Provides suggestions to [[Class (computer science)|class]] names when specified classes are not found
+
+The Express Edition has the following limitations:<ref>{{web cite|url=http://msdn2.microsoft.com/en-us/library/b4z62wxz(VS.80).aspx|title=Visual Basic Editions |publisher=Microsoft Corporation|accessdate=2007-07-19}}</ref>
+* No IDE support for databases other than [[SQL Server Express]] and [[Microsoft Access]]
+* No support for Web Applications with [[ASP.NET]] (this can instead be done with Visual Web Developer Express, though the non-Express version of Visual Basic allows both web and windows applications from the same IDE)
+* No support for developing for mobile devices (no templates or emulator)
+* No [[Crystal Reports]]
+* Fewer project templates (e.g. Windows services template, Excel Workbook template)
+* Limited options for [[debugging]] and [[breakpoint]]s.
+
+===Visual Web Developer Express===
+The Visual Web Developer Express is a freeware [[web development]] tool that allows developers to evaluate the web development and editing capabilities of the other Visual Studio 2008 editions at no charge. Its main function is to create [[ASP.NET]] websites.
+
+It has a [[WYSIWYG]] interface, drag-and-drop user interface designer; enhanced [[HTML]] & code editors; a (limited) database explorer; support for other web technologies (e.g., [[Cascading Style Sheets|CSS]], [[JavaScript]], [[XML]]); and integrated, design-time validation for standards including [[XHTML]] 1.0/1.1 and CSS 2.1. Visual Web Developer 2008 Express includes a new integrated HTML designer based on [[Microsoft Expression Web]].
+
+Being an Express IDE, it lacks certain features, such as the Accessibility Checker, the ability to create standalone Class Library Projects (which can be done by the other language-specific Express Editions), the extensibility support necessary to load third-party add-ins and macros and some other features. <ref> [http://blogs.msdn.com/mikhailarkhipov/archive/2006/06/26/647516.aspx Which features are missing from Visual Web Developer Express: Mikhail Arkhipov's blog] </ref>
+
+===Visual C++ Express ===
+Due to the popularity of this freeware compiler, numerous popular programming libraries have been or are being modified to compile under this, including [[Irrlicht Engine|Irrlicht]] and Valve's [[Source engine]].{{fact|date=November 2007}}
+
+The Visual C++ 2008 Express Edition can be used to compile [[Microsoft .NET|.NET]] as well as [[Win32]] applications immediately after installation. However, natively compiling [[64-bit]] applications through the IDE is not supported. If the freely available [[Windows SDK]] is installed, 64-bit applications can be built on the command line using the x64 cross-compiler (Cl.exe) supplied with the SDK. <ref> [http://msdn2.microsoft.com/en-us/library/9yb4317s.aspx How to: Configure Visual C++ Projects to Target 64-Bit Platforms] </ref>
+
+Visual C++ 2008 Express does not include [[Microsoft Foundation Class Library|MFC]], [[Active Template Library|ATL]], [[OpenMP]] support, or 64-bit compilers, nor does it include a resource editor. The higher-end commercial editions of Visual Studio, specifically the Professional and Team Suite editions, have these features.<ref>{{web cite|url=http://msdn2.microsoft.com/en-us/library/hs24szh9(VS.90).aspx|title=Visual C++ Editions |publisher=Microsoft Corporation|accessdate=2007-09-29}}</ref>
+
+===Visual C# Express===
+The list of breakpoints where the user could control the breakpoint features has been removed, so that now the user can only toggle breakpoints.
+
+The following [[refactor]]ing modes were also removed:<ref>{{web cite|url=http://www.msdner.com/dev-archive/0/35-24-2723.shtm|title=Technologies site about MSDN|publisher=MSDNER|accessdate=2007-10-21}}</ref>
+* Encapsulate field
+* Promote local to parameter
+* Reorder parameters
+* Remove parameters
+* Extract interface 
+
+This effectively reduces the refactoring capabilities of Visual C# Express to Renaming and Extracting Methods.
+
+Developers state the reason of this removal as "to simplify the C# Express user experience". However this created a controversy as some end users claim it is an important feature, and instead of simplifying it cripples the user experience.<ref>{{web cite|url=http://blogs.msdn.com/astebner/archive/2004/10/20/245413.aspx|title=Aaron Stebner's WebLog|publisher=Microsoft Corporation|accessdate=2004-10-20}}</ref>
+
+The ability to attach the debugger to an already-running process has also been removed, hindering scenarios such as writing Windows services and re-attaching a debugger under ASP.NET when errors under the original debugging session cause breakpoints to be ignored.
+
+===SQL Server Express===
+{{main|SQL Server Express}}
+SQL Server Express is a freeware, light-weight, and redistributable edition of [[Microsoft SQL Server|Microsoft SQL Server]]. It provides an integrated data storage solution for developers writing Windows applications and Web sites that have basic data storage needs. SQL Server Express replaces [[MSDE]] 2000 and significantly expands on its feature set.
+
+The [[SQL]] Server Management Studio Express can also be downloaded to provide a graphical user interface for administering [[SQL Server]] Express.  
+
+The Express Edition has the following limitations:<ref>{{web cite|url=http://www.microsoft.com/technet/prodtechnol/sql/2005/msde2sqlexpress.mspx|title=Upgrading MSDE 2000 to SQL Server Express|author=Microsoft Corporation|date=2006-04-07|accessdate=2006-10-26}}</ref>
+* Limited to one physical [[CPU]]
+* Lack of enterprise features support
+* One GB memory limit for the buffer pool
+* Databases have a 4 GB maximum size<ref>{{web cite|url=http://msdn2.microsoft.com/en-us/library/ms165672.aspx|title=Comparing SQL Server Express with MSDE|publisher=Microsoft Corporation|accessdate=2006-10-29}}</ref>
+* No Data mirroring and/or clustering
+* No profiler tool
+* No workload throttle
+* No UI to import/export data to table
+
+==See also==
+* [[Microsoft Visual Studio]]
+
+==References==
+<div class="references-small"><references/></div>
+
+==External links==
+* [http://msdn.microsoft.com/vstudio/express/ Microsoft Visual Studio Express Official Website]
+* [http://msdn2.microsoft.com/en-us/subscriptions/aa718657.aspx Compare MSDN Subscriptions 2008 ]
+* [http://msdn.microsoft.com/vstudio/express/support/faq/ Microsoft Visual Studio Express - FAQ]
+* [http://msdn.microsoft.com/vstudio/products/compare/ Visual Studio Product Line Feature Comparisons]
+* [http://www.microsoft.com/downloads/details.aspx?familyid=7B0B0339-613A-46E6-AB4D-080D4D4A8C4E&displaylang=en Microsoft Visual Studio Express 2005 SP1 Download]
+* Manual Installation Instructions for Express Editions[http://msdn.microsoft.com/vstudio/express/support/install/ 2005] [http://www.microsoft.com/express/download/offline.aspx 2008]
+* [http://msdn2.microsoft.com/en-us/express/future/ Visual Studio 2008 Express Editions Beta 2 website]
+* [https://www.microsoft.com/downloads/details.aspx?familyid=90E2942D-3AD1-4873-A2EE-4ACC0AACE5B6&displaylang=en Microsoft Visual Express Edition 2005 Update for Windows Vista]
+
+{{MS DevTools}}
+
+[[Category:Integrated development environments]]
+[[Category:Microsoft Visual Studio|Visual Studio Express]]
+[[Category:Microsoft development tools]]
+
+[[fr:Microsoft Visual Studio Express]]
+[[ru:Visual Studio 2005 Express]]

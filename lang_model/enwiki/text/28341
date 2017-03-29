@@ -1,0 +1,218 @@
+{{use dmy dates|date=January 2012}}
+{{Infobox software
+| name = Tor
+| logo = [[File:Tor logo0.png|138px]]
+| screenshot =
+| caption = Tor Logo
+| developer = The Tor Project<ref name=torproject-corepeople />
+| released = {{start date|2002|9|20|df=yes}}<ref name=prealpha>{{cite mailing list | last = Dingledine | first = Roger | title = pre-alpha: run an onion proxy now! | mailinglist = or-dev | date=20 September 2002 | url = http://archives.seul.org/or/dev/Sep-2002/msg00019.html | accessdate=17 July 2008 }}</ref>
+| frequently_updated = yes<!-- Release version update? Don't edit this page, just click on the version number! -->
+| programming language = [[C (programming language)|C]]
+| operating system = [[Cross-platform]]
+| genre = [[Onion routing]], [[Anonymity application|Anonymity]]
+| license = [[BSD license]]
+| website = [https://www.torproject.org/ www.torproject.org]
+}}
+'''Tor''' (short for '''The onion router''') is a system intended to enable [[internet anonymity|online anonymity]]. Tor client software routes Internet traffic through a worldwide volunteer network of servers in order to conceal a user's location or usage from anyone conducting [[Computer surveillance#Network surveillance|network surveillance]] or [[Traffic analysis#In computer security|traffic analysis]]. Using Tor makes it more difficult to trace Internet activity, including "visits to Web sites, online posts, instant messages and other communication forms", back to the user<ref name=nytimes /> and is intended to protect users' personal freedom, privacy, and ability to conduct confidential business by keeping their internet activities from being monitored. 
+
+"[[Onion routing]]" refers to the layered nature of the encryption service: The original data are encrypted and re-encrypted multiple times, then sent through successive Tor relays, each one of which decrypts a "layer" of encryption before passing the data on to the next relay and, ultimately, its destination. This reduces the possibility of the original data being unscrambled or understood in transit.<ref name="torproject">{{cite web| last = The Tor Project | title = Tor: anonymity online | url = https://www.torproject.org/ | accessdate=9 January 2011}}</ref> 
+
+The Tor client is [[free software]] and use of the Tor network is free of charge.
+ 
+==History==
+An alpha version of the software, with the onion routing network "functional and deployed", was announced on 20 September 2002.<ref name=prealpha/> Roger Dingledine, Nick Mathewson and Paul Syverson presented "Tor: The Second-Generation Onion Router" at the 13th [[USENIX]] Security Symposium on 13 August 2004.<ref name="design">{{cite conference |last1=Dingledine |first1=Roger |last2=Mathewson |first2=Nick |last3=Syverson |first3=Paul |title=Tor: The Second-Generation Onion Router |booktitle=Proc. 13th USENIX Security Symposium |place=San Diego, California |date=13 August 2004 |url=http://www.usenix.org/events/sec04/tech/dingledine.html |accessdate=17 November 2008}}</ref> Though the name Tor originated as an [[acronym]] of The Onion Routing project, the current project no longer considers the name to be an acronym, and therefore does not use capital letters.<ref name=torproject-faq />
+
+Originally sponsored by the [[United States Naval Research Laboratory|US Naval Research Laboratory]],<ref name="design"/> Tor was financially supported by the [[Electronic Frontier Foundation]] from 2004 to 2005.<ref name=torproject-sponsors /> Tor software is now developed by the Tor Project, which has been a [[501(c)(3)]] research/education [[nonprofit organization]]<ref name=torproject-donate /> based in the United States of America<ref name=torproject-corepeople /> since December 2006 and receives a diverse base of financial support.<ref name=torproject-sponsors />
+
+In March 2011 The Tor Project was awarded the Free Software Foundation's 2010 Award for Projects of Social Benefit on the following grounds: "Using free software, Tor has enabled roughly 36 million people around the world to experience freedom of access and expression on the Internet while keeping them in control of their privacy and anonymity. Its network has proved pivotal in dissident movements in both Iran and more recently Egypt."<ref>{{cite web|url=http://www.fsf.org/news/2010-free-software-awards-announced|title=2010 Free Software Awards announced|accessdate=23 March 2011}}</ref>
+
+==Operation==
+[[File:Tor-onion-network.png|right|After obtaining a list of Tor nodes from a directory server. Alice's Tor client pick a random path to destination server Bob.]]Tor aims to conceal its users' identities and their network activity from surveillance and traffic analysis by separating identification and routing. It is an implementation of [[onion routing]], which encrypts and then randomly bounces communications through a network of relays run by volunteers throughout the globe. These onion routers employ [[encryption]] in a multi-layered manner (hence the onion metaphor) to ensure [[perfect forward secrecy]] between relays, thereby providing users with anonymity in network location. That anonymity extends to the hosting of censorship-resistant content via Tor's anonymous hidden service feature.<ref name="design"/> Furthermore, by keeping some of the entry relays (bridge relays) secret, users can evade [[Internet censorship]] which relies upon blocking public Tor relays.<ref name=torproject-bridges />
+
+Because the [[IP address|internet address]] of the sender and the recipient are not ''both'' in [[cleartext]] at any hop along the way at non-exit (or "middle") relays ''neither'' piece of information is in cleartext, such that anyone eavesdropping at any point along the communication channel cannot directly identify both ends. Furthermore, to the recipient it appears that the last Tor node (the exit node) is the originator of the communication rather than the sender.
+
+===Originating traffic===
+Users of a Tor network run an onion proxy on their machine. The Tor software periodically negotiates a [[virtual circuit]] through the Tor network, using multi-layer encryption, ensuring perfect forward secrecy. At the same time, the onion proxy software presents a [[SOCKS]] interface to its clients. SOCKS-aware applications may be pointed at Tor, which then [[multiplexing|multiplexes]] the traffic through a Tor virtual circuit. The [[Polipo]] proxy server can speak the [[SOCKS|SOCKS 4 & SOCKS 5 protocols]] and therefore is recommended to be used together with the Tor anonymising network. Polipo is a web proxy that does HTTP 1.1 pipelining well, so it can enhance Tor's [[Latency (engineering)#Communication latency|communication latency]].<ref name=torproject-pp /><ref name=ubuntuusers>{{cite web |title = Ubuntuusers.de <U+2013> Tor einrichten und verwenden. |url = http://wiki.ubuntuusers.de/Tor/Installation |accessdate=28 December 2010}}</ref>
+
+Once inside a Tor network, the traffic is sent from router to router, ultimately reaching an exit node at which point the [[cleartext]] packet is available and is forwarded on to its original destination. Viewed from the destination, the traffic appears to originate at the Tor exit node.
+[[File:Tor-non-exit-relay-bandwidth-usage.jpg|thumb|A Tor non-exit relay with a maximum output of 239.69 KB/s]]
+
+Tor's application independence sets it apart from most other anonymity networks: it works at the [[Transmission Control Protocol]] (TCP) stream level. Applications whose traffic is commonly anonymised using Tor include [[Internet Relay Chat]] (IRC), [[instant messaging]] and [[World Wide Web]] browsing. When browsing the Web, Tor is often coupled with [[Polipo]] or [[Privoxy]] proxy servers. Privoxy is a filtering [[proxy server]] that aims to add [[privacy]] at the application layer. Polipo can speak the [[SOCKS|SOCKS protocol]] and does HTTP 1.1 pipelining for enhancing latencies, therefore is now recommended to be used together with the Tor anonymising network by the torproject.org.<ref name=torproject-pp /><ref name=ubuntuusers />
+
+On older versions of Tor (resolved May<U+2013>July 2010),<ref name="Tor Changelog">{{cite web| title=Tor Changelog | url=https://www.torproject.org/svn/trunk/ChangeLog | accessdate=11 September 2007}}</ref> as with many anonymous web surfing systems, direct [[Domain Name System]] (DNS) requests are usually still performed by many applications, without using a Tor proxy. This allows someone monitoring a user's connection to determine (for example) which WWW sites they are viewing using Tor, even though they cannot see the content being viewed. Using [[Privoxy]] or the command "torify" included with a Tor distribution is a possible solution to this problem.<ref>{{cite web| title=TheOnionRouter/TorifyHOWTO <U+2013> Noreply Wiki | url=https://wiki.torproject.org/noreply/TheOnionRouter/TorifyHOWTO | accessdate=19 April 2007}}</ref> Additionally, applications using [[SOCKS5]] <U+2013> which supports name-based proxy requests <U+2013> can route DNS requests through Tor, having lookups performed at the exit node and thus receiving the same anonymity as other Tor traffic.<ref>{{cite web|url=http://www.rfc.net/rfc1928.html |title=RFC 1928 <U+2013> SOCKS Proxy Protocol, Version 5 |accessdate=4 August 2008}}</ref>
+
+As of Tor release 0.2.0.1-alpha, Tor includes its own DNS resolver which will dispatch queries over the mix network. This should close the DNS leak and can interact with Tor's address mapping facilities to provide the Tor hidden service (<code>.onion</code>) access to non-SOCKS-aware applications.<ref name="Tor Changelog"/>
+
+===Hidden services===
+Tor can also provide anonymity to servers in the form of location-hidden services, which are Tor clients or relays running specially configured server software. Rather than revealing the server's IP address (and therefore its network location), hidden services are accessed through Tor-specific <code>[[.onion]]</code> [[pseudo top-level domain]] (TLD), or pseudomain. The Tor network understands this [[Top-level domain|TLD]] and routes data anonymously both to and from the hidden service. Due to this lack of reliance on a public address, hidden services may be hosted behind [[firewall (computing)|firewalls]] or [[network address translator]]s (NAT). A Tor client is necessary in order to access a hidden service.<ref name=torproject-hidden />
+
+Hidden services have been deployed on the Tor network beginning in 2004.<ref>{{cite conference |first= Lasse |last= <U+00D8>verlier |url= http://www.onion-router.net/Publications/locating-hidden-servers.pdf |coauthors= Paul Syverson|title= Locating Hidden Servers |conference= IEEE Symposium on Security and Privacy|conferenceurl= http://www.ieee-security.org/TC/SP-Index.html|booktitle= Proceedings of the 2006 IEEE Symposium on Security and Privacy |pages= 1 |publisher= IEEE CS Press |date=21 June 2006|location= Oakland, CA|doi= 10.1109/SP.2006.24|url= http://www.onion-router.net/Publications/locating-hidden-servers.pdf|format= PDF|accessdate=8 June 2008|id= ISBN 0-7695-2574-1}}</ref> Other than the database that stores the hidden-service descriptors,<ref>{{cite web|author=The Tor Project, Inc. |url=https://www.torproject.org/docs/hidden-services.html|title=Tor: Hidden Service Protocol, Hidden services |publisher=Torproject.org |accessdate=9 January 2011}}</ref> Tor is [[decentralized]] by design; there is no direct readable list of hidden services. There are a number of independent hidden services that serve this purpose.
+
+Because location-hidden services do not use exit nodes, they are not subject to exit node eavesdropping. There are, however, a number of security issues involving Tor hidden services. For example, services that are reachable through Tor hidden services ''and'' the public Internet are susceptible to [[correlation attack]]s and thus not perfectly hidden. Other pitfalls include misconfigured services (e.g. identifying information included by default in web server error responses),<ref name=torproject-hidden /> [[uptime]] and [[downtime]] statistics, intersection attacks and user error.
+
+==Weaknesses== <!-- This section is linked from [[Internet censorship]] -->
+Like all current [[low latency]] [[anonymity network]]s, Tor cannot and does not attempt to protect against monitoring of traffic at the boundaries of the Tor network, i.e., the traffic entering and exiting the network. While Tor does provide protection against [[traffic analysis]], it cannot prevent traffic confirmation (also called ''end-to-end correlation'').<ref name="tor-onecellbreaks">{{cite web|url=https://blog.torproject.org/blog/one-cell-enough|title=One cell is enough to break Tor's anonymity|date=18 February 2009|work=Tor website|accessdate=9 January 2011}}</ref><ref>{{cite web|url=https://wiki.torproject.org/noreply/TheOnionRouter/TorFAQ?action=recall&rev=554#EntryGuards|title=TheOnionRouter/TorFAQ|accessdate=18 September 2007|quote=Tor (like all current practical low-latency anonymity designs) fails when the attacker can see both ends of the communications channel}}</ref>
+
+[[steven Murdoch|Steven J. Murdoch]] and George Danezis from [[University of Cambridge]] presented an article<ref name="MurdochDanezis05">{{cite web|title=Low-Cost Traffic Analysis of Tor | url=http://www.cl.cam.ac.uk/users/sjm217/papers/oakland05torta.pdf | date=19 January 2006 | accessdate=21 May 2007 | format=PDF}}</ref> at the 2005 [[Institute of Electrical and Electronics Engineers|IEEE]] [[Symposium]] on security and privacy on traffic-analysis techniques that allow adversaries with only a partial view of the network to infer which nodes are being used to relay the anonymous streams. These techniques greatly reduce the anonymity provided by Tor. Murdoch and Danezis have also shown that otherwise unrelated streams can be linked back to the same initiator. However, this attack fails to reveal the identity of the original user.<ref name="MurdochDanezis05" /> Murdoch has been working with<U+2014>and has been funded by<U+2014>Tor since 2006.
+
+In March 2011, researchers with the Rocquencourt, France based [[National Institute for Research in Computer Science and Control]] (Institut national de recherche en informatique et en automatique, INRIA) have documented an attack that is capable of revealing the IP addresses of [[BitTorrent (protocol)|BitTorrent]] users on the Tor network. The "bad apple attack" exploits Tor's design and takes advantage of insecure application use to associate the simultaneous use of a secure application with the IP address of the Tor user in question. One method of attack depends on control of an exit node or hijacking tracker responses, while a secondary attack method is based in part on the statistical exploitation of [[distributed hash table]] tracking.<ref name="LeBlond-et-al-March-2011">{{cite web | last=Le Blond | first=Stevens| last2=Manils | first2=Pere | last3=Chaabane | first3=Abdelberi| last4=Ali Kaafar | first4=Mohamed | last5=Castelluccia | first5=Claude | last6=Legout | first6=Arnaud | last7=Dabbous | first7=Walid |last8=Inria | title=One Bad Apple Spoils the Bunch: Exploiting P2P Applications to Trace and Profile Tor Users | publisher=National Institute for Research in Computer Science and Control | date=March 2011 | url=https://www.usenix.org/events/leet11/tech/full_papers/LeBlond.pdf | format=PDF | accessdate=13 April 2011 }}</ref> According to the study:
+
+{{quote|This attack against Tor consists of two parts: (a) exploiting an insecure application to reveal the source IP address of, or trace, a Tor user and (b) exploiting Tor to associate the use of a secure application with the IP address of a user (revealed by the insecure application). As it is not a goal of Tor to protect against application-level attacks, Tor cannot be held responsible for the first part of this attack. However, because Tor<U+2019>s design makes it possible to associate streams originating from secure application with traced users, the second part of this attack is indeed an attack against Tor. We call the second part of this attack the bad apple attack. (The name of this attack refers to the saying 'one bad apple spoils the bunch.' We use this wording to illustrate that one insecure application on Tor may allow to trace other applications.)<ref name="LeBlond-et-al-March-2011" />}}
+
+The results presented in the bad apple attack research paper are based on an actual attack in the wild launched against the Tor network by the authors of the study. The attack targeted six exit nodes, lasted for 23 days, and revealed a total of 10,000 IP addresses of active Tor users. This study is particularly significant because it is the first documented attack designed to target [[Peer-to-peer|P2P]] file sharing applications on Tor.<ref name="LeBlond-et-al-March-2011" /> BitTorrent may generate as much as 40% of all traffic on Tor,<ref>{{Cite book | last=McCoy | first=Damon | last2=Bauer | first2=Kevin | last3=Grunwald | first3=Dirk | last4=Kohno | first4=Tadayoshi | last5=Sicker | first5=Douglas | title=Shining Light in Dark Places: Understanding the Tor Network | journal=Proceedings of the 8th International Symposium on Privacy Enhancing Technologies | pages=63<U+2013>76 | publisher=Springer-Verlag | location=Berlin | year=2008 | url=http://www.cs.washington.edu/homes/yoshi/papers/Tor/PETS2008_37.pdf | format=PDF | isbn=978-3-540-70629-8 | doi=10.1007/978-3-540-70630-4_5 }}</ref> which means a significant number of Tor users are potentially at risk. Furthermore, the bad apple attack is effective against insecure use of any application over Tor, not just BitTorrent.<ref name="LeBlond-et-al-March-2011" />
+
+In September 2007, Dan Egerstad, a [[Sweden|Swedish]] security consultant, revealed that he had intercepted usernames and passwords for a large number of email accounts by operating and monitoring Tor exit nodes.<ref name=wired /> As Tor does not, and by design cannot, encrypt the traffic between an exit node and the target server, any exit node is in a position to capture any traffic passing through it which does not use end-to-end encryption such as [[Transport Layer Security|TLS]]. While this may or may not inherently violate the anonymity of the source if users mistake Tor's anonymity for end-to-end encryption they may be subject to additional risk of data interception by self-selected third parties.<ref>{{cite web| title=Tor hack proposed to catch criminals | url=http://www.securityfocus.com/news/11447 | accessdate=1 February 2008}}</ref> (The operator of any network carrying unencrypted traffic, such as the operator of a wi-fi hotspot or corporate network, has the same ability to intercept traffic as a Tor exit operator. End-to-end encrypted connections should be used if such interception is a concern.) Even without end-to-end encryption, Tor provides confidentiality against these local observers which may be more likely to have interest in the traffic of users on their network than arbitrary Tor exit operators.
+
+Nonetheless, Tor and the alternative network system [[Java Anon Proxy|JonDonym]] (Java Anon Proxy, JAP) are considered more resilient than alternatives such as [[VPN]]s. Were a local observer on an ISP or WLAN to attempt to analyze the size and timing of the encrypted data stream going through the VPN, Tor or JonDo system, the latter two would be harder to analyze, as demonstrated by a 2009 study.<ref name="Hermann et al. 2009">{{cite web|url= http://epub.uni-regensburg.de/11919/1/authorsversion-ccsw09.pdf |title=Website Fingerprinting: Attacking Popular {{sic|hide=y|Privacy Enhancing}} Technologies with the Multinomial Na<U+00EF>ve-Bayes Classifier |last=Herrmann |first=Dominik |coauthors=Wendolsky, Rolf; Federrath, Hannes |work=Proceedings of the 2009 ACM Cloud Computing Security Workshop (CCSW) |location=[[New York City|New York]] |publisher=[[Association for Computing Machinery]] (ACM) |date=13 November 2009 |accessdate=2 September 2010}}</ref>
+
+Researchers from INRIA showed that Tor dissimulation technique in Bittorrent can be bypassed.<ref>{{cite journal|url=http://hal.inria.fr/docs/00/47/15/56/PDF/TorBT.pdf |title=Compromising Tor Anonymity Exploiting P2P Information Leakage |author=Pere Manils, Abdelberi Chaabane, Stevens Le Blond, Mohamed Ali Kaafar, Claude Castelluccia, Arnaud Legout, Walid Dabbous|date=April 2010}}</ref>
+
+In October 2011, a research team from the French [[Grandes <U+00E9>coles|engineering school]] claimed to have discovered a way to compromise the Tor network by decrypting communication passing over it.<ref>{{cite web | url=http://thehackernews.com/2011/10/tor-anonymizing-network-compromised-by.html | title=Tor anonymizing network Compromised by French researchers | work=The Hacker News | publisher=Thehackernews.com | date=24 October 2011 | accessdate=10 December 2011}}</ref><ref>{{cite web| title=Announcment on 01net.com | url=http://pro.01net.com/editorial/544024/des-chercheurs-francais-cassent-le-reseau-danonymisation-tor/ | accessdate=17 October 2011}}</ref> The technique they describe requires creating a map of Tor network nodes, controlling one third of them and then acquiring their encryption [[Key (cryptography)|keys]] and algorithm [[Random seed|seeds]]. Then, using these known keys and seeds, they claim the ability to decrypt two encryption layers out of three. They claim to break the third key by a statistical-based attack. In order to redirect Tor traffic to the nodes they controlled, they used a [[Denial-of-service|denial-of-service]] attack. A response to this claim has been published on the official Tor Blog stating that these rumours of Tor's compromise are greatly exaggerated.<ref>https://blog.torproject.org/blog/rumors-tors-compromise-are-greatly-exaggerated</ref>
+
+==Legal aspects==
+According to [[CNet]], Tor's anonymity function is "endorsed by the [[Electronic Frontier Foundation]] and other [[civil liberties]] groups as a method for [[whistleblower]]s and [[human rights]] workers to communicate with journalists".<ref name=cnet /> Anonymizing systems such as Tor are at times used for matters that are, or may be, illegal in some countries. For instance, Tor may be used to gain access to [[censorship|censored]] information, to organize political activities,<ref>{{cite web | last=Cochrane | first=Nate | date=2 February 2011 | url=http://www.scmagazine.com.au/News/246707,egyptians-turn-to-tor-to-organise-dissent-online.aspx | title=Egyptians turn to Tor to organise dissent online | publisher=Scmagazine.com.au | accessdate=10 December 2011}}</ref> or to circumvent laws against criticism of heads of state. At the same time, Tor also allows anonymous defamation, unauthorized [[News leak|leak]]s of sensitive information, distributing copyrighted works, or illegal sexual content.<ref>[http://www.broadbandreports.com/shownews/Cleaning-Up-Tor-82218 Cleaning up Tor] on broadband.com</ref><ref>{{Cite book|title=Internet forensics |first= Robert | last=Jones |year=2005 |pages=P133 |publisher=O'Reilly |isbn= 059610006X}}</ref>
+
+==Implementation==
+* The main implementation of Tor is written in the [[C programming language]] and consists of roughly 146,000 lines of source code.<ref>{{cite web|last=Luckey |first=Robin |url=http://www.ohloh.net/p/tor/analyses/latest |title=Tor |publisher=Ohloh | accessdate=16 April 2010}}</ref>
+* [[Vuze]] (formerly Azureus), a [[BitTorrent (protocol)|BitTorrent]] client written in Java, includes built-in Tor support.<ref>{{cite web|url=http://wiki.vuze.com/w/Tor |title=Tor |publisher=Vuze | accessdate=3 March 2010}}</ref>
+* Routers with built-in hardware support for Tor are currently under development through the Torouter project.<ref name=technologyreview /> The code is currently in the [[Alpha test|alpha phase]] of development, and runs on top of the [[OpenWrt]] platform.<ref>{{cite web|title=Torouter Project|url=https://trac.torproject.org/projects/tor/wiki/TheOnionRouter/Torouter|accessdate=10 May 2011}}</ref>
+* The Guardian Project is actively developing a free and open-source suite of application programs and firmware for the Android platform to help make mobile communications more secure.<ref name=guardian-about /> The applications include: Gibberbot&nbsp;<U+2014> a secure, no-logging, instant messaging client that uses [[Off-the-Record Messaging|OTR encryption]];<ref name=guardian-gibber /> Orbot&nbsp;<U+2014> a Tor implementation for Android;<ref name=guardian-orbot /> Orweb&nbsp;<U+2014> a privacy-enhanced mobile browser;<ref name=guardian-orweb /> ProxyMob&nbsp;<U+2014> a Firefox add-on that helps manage the HTTP, SOCKS, and SSL proxy settings for integration with Orbot;<ref name=guardian-proxymob /> and Secure Smart Cam&nbsp;<U+2014> a set of privacy enhancing tools that offers encryption of stored images, face detection and blurring, and secure remote sync of media over slow networks.<ref name=guardian-securecam />
+
+==See also==
+{{Portal box|Free software|Cryptography}}
+{{Div col}}
+* [[Anonymous P2P]]
+* [[Anonymous remailer]]
+* [[Arm (software)]]
+* [[Crypto-anarchism]]
+* [[Free Haven Project]]
+* [[Freedom of information]]
+* [[Freenet]]
+* [[Hacktivism]]
+* [[The Hidden Wiki]]
+* [[I2P]]
+* [[Incognito (operating system)]]
+* [[Internet censorship]]
+* [[Internet privacy]]
+* [[Netsukuku]]
+* [[OpenNet Initiative]]
+* [[OperaTor (web browser)]]
+* [[Phantom Anonymity Protocol]]
+* [[Polipo]]
+* [[Portable Tor]]
+* [[Privoxy]]
+* [[Proxy server]]
+* [[The Amnesic Incognito Live System | Tails (Linux distribution) ]]
+* [[The Silk Road (anonymous marketplace)]]
+* [[Tor-ramdisk]]
+* [[TorChat]]
+* [[Vidalia project]]
+* [[xB Machine]]
+* [[XeroBank Browser]]
+{{Div col end}}
+
+==Footnotes==
+{{Reflist|colwidth=30em|refs=
+<ref name=torproject-corepeople>{{cite web |url=https://www.torproject.org/about/corepeople |title=Tor Project: Core People |publisher=The Tor Project |accessdate=17 July 2008}}</ref>
+
+<ref name=torproject-faq>{{cite web |url=https://www.torproject.org/docs/faq#WhyCalledTor |title=Tor FAQ: Why is it called Tor? |publisher=The Tor Project |accessdate=1 July 2011}}</ref>
+
+<ref name=torproject-bridges>{{cite web |url=https://www.torproject.org/docs/bridges |title=Tor: Bridges |publisher=The Tor Project |accessdate=9 January 2011}}</ref>
+
+<ref name=torproject-sponsors>{{cite web |url=https://www.torproject.org/about/sponsors.html.en |title=Tor: Sponsors |publisher=The Tor Project |accessdate=11 December 2010}}</ref>
+
+<ref name=torproject-donate>{{cite web |url=https://www.torproject.org/donate/donate |title=Make a Donation |publisher=The Tor Project |accessdate=31 May 2011}}</ref>
+
+<ref name=torproject-pp>{{cite web |url=https://trac.torproject.org/projects/tor/wiki/TheOnionRouter/TorFAQ#WhydoweneedPolipoorPrivoxywithTorWhichisbetter |title=TheOnionRouter/TorFAQ |publisher=The Tor Project |accessdate=28 December 2010}}</ref>
+
+<ref name=torproject-hidden>{{cite web |url=https://www.torproject.org/docs/tor-hidden-service |title=Configuring Hidden Services for Tor |publisher=The Tor Project |accessdate=9 January 2011}}</ref>
+
+<ref name=nytimes>{{cite news |title=Privacy for People Who Don't Show Their Navels |first=Jonathan D.|last=Glater |url=http://www.nytimes.com/2006/01/25/technology/techspecial2/25privacy.html?_r=1 |newspaper=[[The New York Times]] |date=25 January 2006 |accessdate=13 May 2011}}</ref>
+
+<ref name=wired>{{cite news |title=Rogue Nodes Turn Tor Anonymizer Into Eavesdropper's Paradise |first=Kim |last=Zetter |authorlink=Kim Zetter |url=http://www.wired.com/politics/security/news/2007/09/embassy_hacks?currentPage=all |newspaper=[[Wired (magazine)|Wired]] |date=10 September 2007 |accessdate=16 September 2007}}</ref>
+
+<ref name=cnet>{{cite news |title=Tor anonymity server admin arrested |first=Chris |last=Soghoian |url=http://news.cnet.com/8301-13739_3-9779225-46.html |newspaper=[[CNET Networks|CNET News]] |date=16 September 2007 |accessdate=17 January 2011}}</ref>
+
+<ref name=technologyreview>{{cite news |title=Home Internet with Anonymity Built In |first=Tom |last=Simonite |url=http://www.technologyreview.com/web/26981/?a=f |newspaper=[[Technology Review]] |date=22 December 2010 |accessdate=14 May 2011}}</ref>
+
+<ref name=guardian-about>{{cite web |url=https://guardianproject.info/ |title=About |work=The Guardian Project |accessdate=10 May 2011}}</ref>
+
+<ref name=guardian-gibber>{{cite web |url=https://guardianproject.info/apps/gibber/ |title=Gibberbot: Secure Instant Messaging |work=The Guardian Project |accessdate=10 May 2011}}</ref>
+
+<ref name=guardian-orbot>{{cite web |url=https://guardianproject.info/apps/orbot/ |title=Orbot: Mobile Anonymity + Circumvention |work=The Guardian Project |accessdate=10 May 2011}}</ref>
+
+<ref name=guardian-orweb>{{cite web |url=https://guardianproject.info/apps/orweb/ |title=Orweb: Privacy Browser |work=The Guardian Project |accessdate=10 May 2011}}</ref>
+
+<ref name=guardian-proxymob>{{cite web |url=https://guardianproject.info/apps/proxymob-firefox-add-on/ |title=ProxyMob: Firefox Mobile Add-on |work=The Guardian Project |accessdate=10 May 2011}}</ref>
+
+<ref name=guardian-securecam>{{cite web |url=https://guardianproject.info/apps/securecam/ |title=Obscura: Secure Smart Camera |work=The Guardian Project |accessdate=10 May 2011}}</ref>
+}}
+
+==References==
+{{Refbegin}}
+* [http://freehaven.net/anonbib/ Anonymity Bibliography] Retrieved: 21 May 2007
+* {{Cite book |title=Applied Cryptography |first=Bruce |last=Schneier |authorlink=Bruce Schneier |isbn=0-471-11709-9}}
+* {{Cite book |title=Email Security |first=Bruce |last=Schneier |authorlink=Bruce Schneier |isbn=0-471-05318-X}}
+* {{Cite book |title=Computer Privacy Handbook |first=Andre |last=Bacard |isbn=1-56609-171-3}}
+{{Refend}}
+
+==Further reading==
+* AnonWatch, [http://www.anonwatch.com/?p=3 Tor in Depth] Security Analysis of the Tor Network
+* Goodin, Dan "[http://www.theregister.co.uk/2007/09/10/misuse_of_tor_led_to_embassy_password_breach/ Tor at heart of embassy passwords leak]", 10 September 2007 article on ''[[The Register]]'' news website. (Accessed 20 September 2007).
+* Krebs, Brian, [http://blog.washingtonpost.com/securityfix/2007/08/attacks_prompt_update_for_tor.html?nav=rss_blog Attacks Prompt Update for 'Tor' Anonymity Network] 8 August 2007 (Accessed 27 October 2007)
+* {{Cite news|title=The Hack of the Year |url=http://www.smh.com.au/news/security/the-hack-of-the-year/2007/11/12/1194766589522.html?page=fullpage#contentSwap1 |work=The Sydney Morning Herald |date=13 November 2007 |accessdate=16 November 2007 }}
+* [http://www.secuser.com/alertes/2007/storm-worm-zhelatinir.htm Zhelatin.IR (= Storm Worm)] 7 September 2007 (Accessed 27 October 2007) {{fr icon}}
+* [http://eng.xakep.ru/link/51074/ Make Tor go the whole hog] Hacker Magazine article
+
+==External links==
+* {{Official website|https://www.torproject.org/}}
+* [https://www.torproject.org/faq#LiveCD Tor Project FAQ: LiveCD & Bundled Software] 
+* [https://trac.torproject.org/projects/tor/wiki/TheOnionRouter/SupportPrograms Tor Support Programs] <U+2014> Commonly used programs that integrate with Tor
+* [http://eqt5g4fuenphqinx.onion/ Core Onion] <U+2014> Introductory point to Tor services (Tor is required to access this site)
+* [http://tor-ip.com/ Tor Network Statistics]
+* [http://en.flossmanuals.net/bypassing-censorship/ch029_tor-the-onion-router/ Tor: The Onion Router] <U+2013> Introduction to Tor in How to Bypass Internet Censorship
+* [http://ahmia.fi/ Tor Hidden Service (.onion) search]
+
+{{DEFAULTSORT:Tor (Anonymity Network)}}
+[[Category:Free routing software]]
+[[Category:Cryptographic software]]
+[[Category:Anonymity networks]]
+[[Category:Internet privacy]]
+[[Category:Proxy servers]]
+[[Category:Free network-related software]]
+[[Category:Free software programmed in C]]
+
+[[ar:<U+062A><U+0648><U+0631> (<U+0634><U+0628><U+0643><U+0629> <U+0645><U+062C><U+0647><U+0648><U+0644><U+064A><U+0629>)]]
+[[az:Tor]]
+[[bg:Tor]]
+[[cs:Tor (software)]]
+[[da:The Onion Router]]
+[[de:Tor (Netzwerk)]]
+[[et:Tor]]
+[[el:Tor]]
+[[es:Tor]]
+[[fa:<U+062A><U+0648><U+0631> (<U+0633><U+0627><U+0645><U+0627><U+0646><U+0647><U+0654> <U+0646><U+0631><U+0645><U+200C><U+0627><U+0641><U+0632><U+0627><U+0631><U+06CC>)]]
+[[fr:Tor (r<U+00E9>seau)]]
+[[gl:Tor]]
+[[ko:<U+D1A0><U+B974> (<U+B124><U+D2B8><U+C6CC><U+D06C>)]]
+[[id:Tor (perangkat lunak)]]
+[[it:Tor (software di anonimato)]]
+[[he:Tor]]
+[[lo:<U+0E97><U+0ECD>]]
+[[hu:TOR (szoftver)]]
+[[nl:Tor (netwerk)]]
+[[ja:Tor]]
+[[no:The Onion Router]]
+[[nn:The Onion Router]]
+[[pl:Tor (sie<U+0107> anonimowa)]]
+[[pt:The Onion Router]]
+[[ro:Tor (re<U+021B>ea)]]
+[[ru:TOR]]
+[[simple:Tor (software)]]
+[[fi:Tor (ohjelma)]]
+[[sv:Tor (n<U+00E4>tverk)]]
+[[ta:<U+0BB0><U+0BCB><U+0BB0><U+0BCD>]]
+[[th:<U+0E17><U+0E2D><U+0E23><U+0E4C>]]
+[[uk:Tor]]
+[[vi:Tor]]
+[[zh:Tor]]

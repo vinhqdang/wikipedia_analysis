@@ -1,0 +1,87 @@
+'''METAR''' is a format for reporting [[weather]] information.  METAR stands for '''METeorological Aerodrome Report''' and is predominantly used by pilots in fullfilment of a part of a pre-flight weather briefing.
+
+It is also used by [[meteorologist]]s, who use the information to help [[forecast]] the [[weather]].  METAR reports usually come from [[airport]]s.  Typically, reports are generated once an hour; however, if conditions change significantly, they may updated in special reports called SPECI's.
+
+The format was introduced [[1 January]] [[1968]] internationally and has been modified several times since. However, the United States and Canada did not adopt the format until [[1 July]] [[1996]].
+
+A typical METAR report contains data for the [[temperature]], [[dew point]], [[wind]], [[precipitation (meteorology)|precipitation]], [[cloud]] cover, cloud heights, visibility, and [[barometric pressure]].  A METAR report may also contain information on [[Precipitation (meteorology)|precipitation]] amounts, [[lightning]], and other information that would be of interest to pilots or meteorologists.
+
+The complement to METAR reports, reporting forecasted weather rather than current weather, are [[Terminal Aerodrome Forecast|TAF]]s.  METARs and TAFs are used in [[VOLMET]] broadcasts.
+
+== International METAR Code ==
+[[United States|US]] metars deviate slightly from the [[World Meteorological Organization|WMO]] (who write the code on behalf of [[ICAO]]) FM 15-XII code. Details listed in [[Federal Aviation Administration|FAA]]'s AIM. The following is a METAR example is from [[Burgas Airport|Sarafovo Airport]] in [[Burgas, Bulgaria]], and was taken on [[February 4]], [[2005]] at 16:00 [[UTC]].
+
+'''METAR LBBG 041600Z 12003MPS 310V290 1400 R04/P1500N R22/P1500U +SN BKN022 OVC050 M04/M07 Q1020 NOSIG 9949//91='''
+
+*'''METAR''' indicates that the following is a standard hourly observation.
+*'''LBBG''' indicates the report came from [[Burgas Airport|Sarafovo Airport]] in [[Burgas, Bulgaria]] in continental [[Europe]].
+*'''041600Z''' indicates the [[date]] of the [[month]] is the 4th and the [[time]] of [[day]] is 1600 [[Zulu time]], 4:00PM [[Greenwich Mean Time]], or 6:00PM [[Eastern European Time]].
+*'''12003MPS''' indicates the [[wind]] [[direction]] is from 120 [[degree (angle)|degree]]s true ([[east]]-[[southeast]]) at a [[speed]] of 3 [[meters per second]].
+*'''310V290''' indicates the [[wind]] [[direction]] is varying from 310 degrees true ([[northwest]]) through 120 degrees true ([[east]]-[[southeast]]) to 290 degrees true ([[west]]-[[northwest]]).
+*'''1400''' indicates the prevailing visibility is 1400 [[meter]]s.
+*'''R04/P1500N''' indicates visibility along [[Runway]] 4 is 1500 meters and not changing significantly.
+*'''R22/P1500U''' indicates visibility along Runway 22 is 1500 meters and rising.
+*'''+SN''' indicates [[snow]] is falling at a heavy intensity.
+*'''BKN022''' indicates a broken [[cloud]] layer at 2,200 [[Foot (unit of length)|feet]] above ground level (agl).
+*'''OVC050''' indicates an unbroken [[cloud]] layer (overcast) at 5,000 [[Foot (unit of length)|feet]] above ground level.
+*'''M04/M07''' indicates the [[temperature]] is minus 4 [[degree (temperature)|degree]]s [[Celsius]] and the [[dewpoint]] is minus 7 degrees Celsius.
+*'''Q1020''' indicates the current [[barometric pressure]] extrapolated to [[sea level]] is 1020 [[millibar]]s.
+*'''NOSIG''' is an example of a TREND forecast which is apended to METARs at stations while a forecaster is on watch. NOSIG means that no significant change is expected to the reported conditions within the next 2 hours.
+*'''9949//91''' indicates runway status. Format: abcdefgh '''ab'''=runway heading, '''c'''=nature of coating (4=dry snow), '''d'''=surface covered in percent (9= 51-100% of rwy covered), '''ef'''=thickness of coating in millimeters (// stands for either not measurable or not affecting usage of rwy) '''gh'''=breaking index (91=bad breaking index i.e grip on rwy)
+*'''=''' indicates the end of the METAR report
+
+== United States/Canada METAR Code ==
+This METAR example is from [[Trenton-Mercer Airport]] near [[Trenton, New Jersey]], and was taken on [[December 5]], [[2003]] at 18:53 [[UTC]]. 
+
+'''METAR KTTN 051853Z 04011KT 1/2SM VCTS SN FZFG BKN003 OVC010 M02/M02 A3006 RMK AO2 TSB40 SLP176 P0002 T10171017='''
+
+*'''METAR''' indicates that the following is a standard hourly observation.
+*'''KTTN''' indicates the report came from [[Trenton-Mercer Airport]], near the city of [[Trenton, New Jersey]] in the continental [[United States]].
+*'''051853Z''' indicates the [[date]] of the [[month]] is the 5th and the [[time]] of [[day]] is 1853 [[Zulu time]], 6:53PM [[Greenwich Mean Time]], or 1:53PM [[North American Eastern Time Zone|Eastern Standard Time]].
+*'''04011KT''' indicates the [[wind]] [[direction]] is from 40 [[degree (angle)|degree]]s true (northeast) at a [[speed]] of 11 [[knot (speed)|knot]]s (approximately 13 [[miles per hour|statute miles per hour]]).
+*'''1/2SM''' indicates the [[prevailing visibility]] is 0.5 [[statute mile]]s.
+*'''VCTS''' indicates there is a [[thunderstorm]] in the vicinity (within 10SM, but beyond 5SM).
+*'''SN''' indicates [[snow]] is falling at a moderate intensity.
+*'''FZFG''' indicates the presence of [[freezing fog]].
+*'''BKN003''' indicates a broken [[cloud]] layer at 300 [[Foot (unit of length)|feet]] above ground level.
+*'''OVC010''' indicates an unbroken [[cloud]] layer (overcast) at 1,000 [[Foot (unit of length)|feet]] above ground level.
+*'''M02/M02''' indicates the [[temperature]] is minus 2 [[degree (temperature)|degree]]s [[Celsius]] and the [[dewpoint]] is minus 2 degrees Celsius.
+*'''A3006''' indicates the [[altimeter]] setting is 30.06 [[inch of mercury|inches of mercury]].
+
+''Note that what follows is not part of the international format.  This example is particular to the United States, a format not shared with Canada.''
+*'''RMK''' indicates the remarks section follows.
+*'''AO2''' indicates that the station has a [[Precipitation (meteorology)|precipitation]] [[sensor]].
+*'''TSB40''' indicates the [[thunderstorm]] began 40 [[minute]]s after the top of the [[hour]] at 1840 [[Zulu time]], 6:40PM [[Greenwich Mean Time]], or 1:40PM [[North American Eastern Time Zone|Eastern Standard Time]].
+*'''SLP176''' indicates the current [[barometric pressure]] extrapolated to [[sea level]] is 1017.6 [[millibar]]s.
+*'''P0002''' indicates that 0.02 [[inch]]es of [[liquid]]-equivalent [[precipitation (meteorology)|precipitation]] accumulated during the last hour.
+*'''T10171017''' indicates the [[temperature]] is 29 degrees Fahrenheit (converted to minus 1.7 degrees Celsius) and the [[dewpoint]] is 29 degrees Fahrenheit (converted to minus 1.7 degrees Celsius).
+*'''=''' indicates the end of the METAR report.
+
+{{Met_vars}}
+
+{{Met_inst}}
+
+{{Met_stat}}
+
+== External links ==
+*[http://metar.noaa.gov/ NOAA.gov - Information on METAR and [[Terminal Aerodrome Forecast|TAF]] reports] Also provides a link to current metar reports and cycle files.
+*[http://www.wmo.ch/web/www/WMOCodes/ManualCodes/WMO306vol-I-1PartA.pdf WMO documentation on METAR format (PDF)]
+*[http://search.cpan.org/search?query=metar&mode=all Perl modules for parsing METAR reports] at the [[CPAN]] website
+*[http://sourceforge.net/projects/phpweather/ PhpWeather] is a [[PHP]] application (with a [[GNU GPL]] licence) that parses METAR reports.
+*[http://www.schwarzvogel.de/software-pymetar.shtml pymetar] python library for METAR fetching and parsing
+*[http://www.nws.noaa.gov/oso/oso1/oso12/fmh1/fmh1toc.htm NOAA.gov - Complete documentation on the METAR format]
+*[http://secure.metoffice.com/aviation/tandm.do?flash=true The Met Office - METARs and TAFs for the UK (requires free login)]
+*[http://www.flightplanning.navcanada.ca/cgi-bin/CreePage.pl?Langue=anglais&NoSession=NS_Inconnu&Page=Fore-obs%2Fmetar-taf&TypeDoc=html  Nav Canada aviation weather site] - provides METARs and TAFs for Canada (and some international stations)
+
+[[Category:Aviation terminology]]
+[[Category:Weather]]
+[[Category:Meteorological data and networks]]
+
+[[de:Meteorological Aviation Routine Weather Report]]
+[[es:METAR]]
+[[fr:Metar]]
+[[it:METAR]]
+[[nl:METAR]]
+[[pl:Depesza METAR]]
+[[fi:METAR]]
+[[sv:METAR]]

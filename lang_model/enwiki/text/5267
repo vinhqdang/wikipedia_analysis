@@ -1,0 +1,75 @@
+<!-- The PBB_Controls template provides controls for Protein Box Bot, please see Template:PBB_Controls for details. -->
+{{PBB_Controls
+| update_page = yes 
+| require_manual_inspection = no 
+| update_protein_box = yes
+| update_summary = yes
+| update_citations = yes
+}}
+
+<!-- The GNF_Protein_box is automatically maintained by Protein Box Bot.  See Template:PBB_Controls to Stop updates. -->
+{{GNF_Protein_box
+ | image = PBB_Protein_MESDC2_image.jpg
+ | image_source = [[Protein_Data_Bank|PDB]] rendering based on 2i9s.
+ | PDB = {{PDB2|2i9s}}
+ | Name = Mesoderm development candidate 2
+ | HGNCid = 13520
+ | Symbol = MESDC2
+ | AltSymbols =; BOCA; KIAA0081; MESD
+ | OMIM = 607783
+ | ECnumber =  
+ | Homologene = 11347
+ | MGIid = 1891421
+ | Function = {{GNF_GO|id=GO:0003674 |text = molecular_function}} 
+ | Component = {{GNF_GO|id=GO:0005575 |text = cellular_component}} 
+ | Process = {{GNF_GO|id=GO:0007498 |text = mesoderm development}} 
+ | Orthologs = {{GNF_Ortholog_box
+    | Hs_EntrezGene = 23184
+    | Hs_Ensembl = ENSG00000117899
+    | Hs_RefseqProtein = NP_055969
+    | Hs_RefseqmRNA = NM_015154
+    | Hs_GenLoc_db =  
+    | Hs_GenLoc_chr = 15
+    | Hs_GenLoc_start = 79026725
+    | Hs_GenLoc_end = 79069224
+    | Hs_Uniprot = Q14696
+    | Mm_EntrezGene = 67943
+    | Mm_Ensembl = ENSMUSG00000038503
+    | Mm_RefseqmRNA = NM_023403
+    | Mm_RefseqProtein = NP_075892
+    | Mm_GenLoc_db =  
+    | Mm_GenLoc_chr = 7
+    | Mm_GenLoc_start = 83768442
+    | Mm_GenLoc_end = 83777717
+    | Mm_Uniprot = Q8CCX7
+  }}
+}}
+'''Mesoderm development candidate 2''', also known as '''MESDC2''', is a human [[gene]].<ref name="entrez">{{cite web | title = Entrez Gene: MESDC2 mesoderm development candidate 2| url = http://www.ncbi.nlm.nih.gov/sites/entrez?Db=gene&Cmd=ShowDetailView&TermToSearch=23184| accessdate = }}</ref>
+
+<!-- The PBB_Summary template is automatically maintained by Protein Box Bot.  See Template:PBB_Controls to Stop updates. -->
+{{PBB_Summary
+| section_title = 
+| summary_text = 
+}}
+
+==References==
+{{reflist}}
+==Further reading==
+{{refbegin | 2}}
+{{PBB_Further_reading 
+| citations = 
+*{{cite journal  | author=Nakajima D, Okazaki N, Yamakawa H, ''et al.'' |title=Construction of expression-ready cDNA clones for KIAA genes: manual curation of 330 KIAA cDNA clones. |journal=DNA Res. |volume=9 |issue= 3 |pages= 99<U+2013>106 |year= 2003 |pmid= 12168954 |doi=  }}
+*{{cite journal  | author=Nagase T, Miyajima N, Tanaka A, ''et al.'' |title=Prediction of the coding sequences of unidentified human genes. III. The coding sequences of 40 new genes (KIAA0081-KIAA0120) deduced by analysis of cDNA clones from human cell line KG-1. |journal=DNA Res. |volume=2 |issue= 1 |pages= 37<U+2013>43 |year= 1995 |pmid= 7788527 |doi=  }}
+*{{cite journal  | author=Scanlan MJ, Gordan JD, Williamson B, ''et al.'' |title=Antigens recognized by autologous antibody in patients with renal-cell carcinoma. |journal=Int. J. Cancer |volume=83 |issue= 4 |pages= 456<U+2013>64 |year= 1999 |pmid= 10508479 |doi=  }}
+*{{cite journal  | author=Dias Neto E, Correa RG, Verjovski-Almeida S, ''et al.'' |title=Shotgun sequencing of the human transcriptome with ORF expressed sequence tags. |journal=Proc. Natl. Acad. Sci. U.S.A. |volume=97 |issue= 7 |pages= 3491<U+2013>6 |year= 2000 |pmid= 10737800 |doi=  }}
+*{{cite journal  | author=Wines ME, Lee L, Katari MS, ''et al.'' |title=Identification of mesoderm development (mesd) candidate genes by comparative mapping and genome sequence analysis. |journal=Genomics |volume=72 |issue= 1 |pages= 88<U+2013>98 |year= 2001 |pmid= 11247670 |doi= 10.1006/geno.2000.6466 }}
+*{{cite journal  | author=Strausberg RL, Feingold EA, Grouse LH, ''et al.'' |title=Generation and initial analysis of more than 15,000 full-length human and mouse cDNA sequences. |journal=Proc. Natl. Acad. Sci. U.S.A. |volume=99 |issue= 26 |pages= 16899<U+2013>903 |year= 2003 |pmid= 12477932 |doi= 10.1073/pnas.242603899 }}
+*{{cite journal  | author=Hsieh JC, Lee L, Zhang L, ''et al.'' |title=Mesd encodes an LRP5/6 chaperone essential for specification of mouse embryonic polarity. |journal=Cell |volume=112 |issue= 3 |pages= 355<U+2013>67 |year= 2003 |pmid= 12581525 |doi=  }}
+*{{cite journal  | author=Clark HF, Gurney AL, Abaya E, ''et al.'' |title=The secreted protein discovery initiative (SPDI), a large-scale effort to identify novel human secreted and transmembrane proteins: a bioinformatics assessment. |journal=Genome Res. |volume=13 |issue= 10 |pages= 2265<U+2013>70 |year= 2003 |pmid= 12975309 |doi= 10.1101/gr.1293003 }}
+*{{cite journal  | author=Gerhard DS, Wagner L, Feingold EA, ''et al.'' |title=The status, quality, and expansion of the NIH full-length cDNA project: the Mammalian Gene Collection (MGC). |journal=Genome Res. |volume=14 |issue= 10B |pages= 2121<U+2013>7 |year= 2004 |pmid= 15489334 |doi= 10.1101/gr.2596504 }}
+*{{cite journal  | author=Veltman IM, Vreede LA, Cheng J, ''et al.'' |title=Fusion of the SUMO/Sentrin-specific protease 1 gene SENP1 and the embryonic polarity-related mesoderm development gene MESDC2 in a patient with an infantile teratoma and a constitutional t(12;15)(q13;q25). |journal=Hum. Mol. Genet. |volume=14 |issue= 14 |pages= 1955<U+2013>63 |year= 2005 |pmid= 15917269 |doi= 10.1093/hmg/ddi200 }}
+*{{cite journal  | author=Li Y, Lu W, He X, Bu G |title=Modulation of LRP6-mediated Wnt signaling by molecular chaperone Mesd. |journal=FEBS Lett. |volume=580 |issue= 22 |pages= 5423<U+2013>8 |year= 2006 |pmid= 16989816 |doi= 10.1016/j.febslet.2006.09.011 }}
+}}
+{{refend}}
+
+{{gene-15-stub}}

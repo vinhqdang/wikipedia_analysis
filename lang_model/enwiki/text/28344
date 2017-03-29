@@ -1,0 +1,624 @@
+[[Image:RS-68 rocket engine test.jpg|thumb|right|[[RS-68]] being tested at NASA's Stennis Space Center. The nearly transparent exhaust is due to this engine's exhaust being mostly superheated steam (water vapor from its propellants, hydrogen and oxygen)]]
+
+[[Image:Viking 5C rocketengine.jpg|thumb|right|[[Viking (rocket engine)|Viking 5C rocket engine]] ]]
+{{for|reaction engines not possessing a [[de Laval nozzle]]|reaction engine}}
+A '''rocket engine''', or simply "rocket," is a [[jet engine]]<ref ="RPECH1">Rocket Propulsion Elements; 7th edition- chapter 1</ref> that uses only [[propellant]] mass for forming its high speed propulsive [[Jet (fluid)|jet]]. Rocket engines are [[reaction engine]]s and obtain thrust in accordance with [[Newton's third law]]. Since they need no external material to form their jet, [[rocket]] engines can be used for [[spacecraft propulsion]] as well as terrestrial uses, such as [[missile]]s. Most rocket engines are [[internal combustion engine]]s, although non combusting forms also exist.
+
+Rocket engines as a group have the highest exhaust velocities, are by far the lightest, but are the least propellant efficient of all types of jet engines.
+
+==Terminology==
+'''Chemical rockets''' are rockets powered by [[exothermic]] chemical reactions of the propellant.
+
+'''[[Solid-fuel rocket|Rocket motor]]''' (or '''solid-propellant rocket motor''') is a synonymous term with rocket engine that usually refers to solid rocket engines. 
+
+'''[[Liquid rocket]]s''' (or '''liquid-propellant rocket engine''') use one or more liquid propellants that are held in tanks prior to burning.
+
+'''[[Hybrid rocket]]s''' have a solid propellant in the combustion chamber and a second liquid or gas propellant is added to permit it to burn.
+
+'''[[Thermal rocket]]s''' are rockets where the propellant is inert, but is heated by a power source such as [[solar thermal rocket|solar]] or [[nuclear thermal rocket|nuclear power]] or [[beamed propulsion|beamed energy]].
+
+'''[[Monopropellant rocket]]s''' are rockets where the propellant is one chemical, typically hi-test (85%+) hydrogen peroxide, which is decomposed by a catalyst producing steam and oxygen. There is no flame.
+
+==Principle of operation==
+[[Image:Rocket engine.svg|thumb|200px|right|How rocket engines work]]
+[[Image:R<U+00FC>ckstoss1600.png|thumb|200px|right|Rocket engines give part of their thrust due to unopposed pressure on the combustion chamber]]<!-- It's a rubbishy picture, since most of the thrust is from the nozzle, but best I could find... --->
+Rocket engines produce thrust by the expulsion of a high-speed [[fluid]] exhaust. This fluid is [[water rocket|nearly]] always a gas which is created by high pressure (10-200 bar) combustion of solid or liquid [[Rocket propellant|propellants]], consisting of [[fuel]] and [[oxidiser]] components, within a [[combustion chamber]].
+
+The fluid exhaust is then passed through a supersonic [[propelling nozzle]] which uses heat energy of the gas to accelerate the exhaust to very high speed, and the reaction to this pushes the engine in the opposite direction.
+
+In rocket engines, high temperatures and pressures are highly desirable for good performance as this permits a longer nozzle to be fitted to the engine, which gives higher exhaust speeds, as well as giving better thermodynamic efficiency.
+
+===Introducing propellant into a combustion chamber===
+Rocket propellant is mass that is stored, usually in some form of propellant tank, prior to being ejected from a rocket engine in the form of a fluid jet to produce thrust.
+
+Chemical rocket propellants are most commonly used, which undergo exothermic chemical reactions which produce hot gas which is used by a rocket for propulsive purposes. Alternatively, a chemically inert [[reaction mass]] can be heated using a high-energy power source via a heat exchanger, and then no combustion chamber is used.
+
+[[Image:SolidRocketMotor.svg|thumb|left|300px|A solid rocket motor.]]
+[[Solid rocket]] propellants are prepared as a mixture of fuel and oxidizing components called 'grain' and the propellant storage casing effectively becomes the combustion chamber. [[Liquid rocket|Liquid-fueled rockets]] typically pump separate fuel and oxidiser components into the combustion chamber, where they mix and burn. [[Hybrid rocket]] engines use a combination of solid and liquid or gaseous propellants. Both liquid and hybrid rockets use ''[[Liquid-fuel rocket#Injectors|injectors]]'' to introduce the propellant into the chamber. These are often an array of simple [[jet (nozzle)|jet]]s- holes through which the propellant escapes under pressure; but sometimes may be more complex spray nozzles. When two or more propellants are injected the jets usually deliberately collide the propellants as this breaks up the flow into smaller droplets that burn more easily.
+
+===Combustion chamber===
+For chemical rockets the combustion chamber is typically just a cylinder, and [[flame holder]]s are rarely used. The dimensions of the cylinder are such that the propellant is able to combust thoroughly; different propellants require different combustion chamber sizes for this to occur. This leads to a number called <math>L^*</math>:
+:<math>L^* = \frac {V_c} {A_t}</math>
+where:
+*<math>V_c</math> is the volume of the chamber
+*<math>A_t</math> is the area of the throat
+L* is typically in the range of {{convert|25|-|60|in|m}}.
+
+The combination of temperatures and pressures typically reached in a combustion chamber is usually extreme by any standards. Unlike in air-breathing jet engines, no atmospheric nitrogen is present to dilute and cool the combustion, and the temperature can reach true [[stoichiometric]]. This, in combination with the high pressures, means that the rate of heat conduction through the walls is very high.
+
+===Rocket nozzles===
+{{Main|Rocket engine nozzle}}
+[[Image:Nozzle de Laval diagram.svg|thumb|right|Typical temperatures (T) and pressures (p) and speeds (v) in a De Laval Nozzle]]
+The large bell or cone shaped expansion nozzle gives a rocket engine its characteristic shape.
+
+In rockets the hot gas produced in the combustion chamber is permitted to escape from the combustion chamber through an opening (the "throat"), within a [[Rocket engine nozzles|high expansion-ratio 'de Laval' nozzle]].
+
+Provided sufficient pressure is provided to the nozzle (about 2.5-3x above ambient pressure) the nozzle ''[[choked flow|choke]]s'' and a supersonic jet is formed, dramatically accelerating the gas, converting most of the thermal energy into kinetic energy.
+
+The exhaust speeds vary, depending on the expansion ratio the nozzle is designed to give, but exhaust speeds as high as ten times the [[speed of sound|speed of sound of sea level air]] are not uncommon.
+
+[[File:Rocket thrust.svg|thumb|right|Rocket thrust is caused by pressures acting in the combustion chamber and nozzle. From Newton's third law, equal and opposite pressures act on the exhaust, and this accelerates it to high speeds.]]
+About half of the rocket engine's thrust comes from the unbalanced pressures inside the combustion chamber and the rest comes from the pressures acting against the inside of the nozzle (see diagram). As the gas expands ([[Adiabatic process|adiabatically]]) the pressure against the nozzle's walls forces the rocket engine in one direction while accelerating the gas in the other.
+
+===Propellant efficiency===
+
+For a rocket engine to be propellant efficient, it is important that the maximum pressures possible be created on the walls of the chamber and nozzle by a specific amount of propellant; as this is the source of the thrust. This can be achieved by all of:
+
+*heating the propellant to as high a temperature as possible (using a high energy fuel, containing hydrogen and carbon and sometimes metals such as aluminium, or even using nuclear energy)
+*using a low specific density gas (as hydrogen rich as possible)
+*using propellants which are, or decompose to, simple molecules with few degrees of freedom to maximise translational velocity
+
+Since all of these things minimise the mass of the propellant used, and since pressure is proportional to the mass of propellant present to be accelerated as it pushes on the engine, and since from Newton's third law the pressure that acts on the engine also reciprocally acts on the propellant, it turns out that for any given engine the speed that the propellant leaves the chamber is unaffected by the chamber pressure (although the thrust is proportional). However, speed is significantly affected by all three of the above factors and the exhaust speed is an excellent measure of the engine propellant efficiency. This is termed ''exhaust velocity'', and after allowance is made for factors that can reduce it, the '''[[effective exhaust velocity]]''' is one of the most important parameters of a rocket engine (although weight, cost, ease of manufacture etc. are usually also very important).
+
+For aerodynamic reasons the flow goes sonic ("[[Choked flow|chokes]]") at the narrowest part of the nozzle, the 'throat'. Since the [[speed of sound]] in gases increases with the square root of temperature, the use of hot exhaust gas greatly improves performance. By comparison, at room temperature the speed of sound in air is about 340&nbsp;m/s while the speed of sound in the hot gas of a rocket engine can be over 1700&nbsp;m/s; much of this performance is due to the higher temperature, but additionally rocket propellants are chosen to be of low molecular mass, and this also gives a higher velocity compared to air.
+
+Expansion in the rocket nozzle then further multiplies the speed, typically between 1.5 and 2 times, giving a highly [[collimated]] hypersonic exhaust jet. The speed increase of a rocket nozzle is mostly determined by its area expansion ratio<U+2014>the ratio of the area of the throat to the area at the exit, but detailed properties of the gas are also important. Larger ratio nozzles are more massive but are able to extract more heat from the combustion gases, increasing the exhaust velocity.
+
+Nozzle efficiency is affected by operation in the atmosphere because atmospheric pressure changes with altitude; but due to the supersonic speeds of the gas exiting from a rocket engine, the pressure of the jet may be either below or above ambient, and equilibrium between the two is not reached at all altitudes (See [[#opt expansion|Diagram]]).
+
+===Back pressure and optimal expansion===
+For optimal performance the pressure of the gas at the end of the nozzle should just equal the ambient pressure: if the exhaust's pressure is lower than the ambient pressure, then the vehicle will be slowed by the difference in pressure between the top of the engine and the exit; on the other hand, if the exhaust's pressure is higher, then exhaust pressure that could have been converted into thrust is not converted, and energy is wasted.
+
+To maintain this ideal of equality between the exhaust's exit pressure and the ambient pressure, the diameter of the nozzle would need to increase with altitude, giving the pressure a longer nozzle to act on (and reducing the exit pressure and temperature). This increase is difficult to arrange in a lightweight fashion, although is routinely done with other forms of jet engines. In rocketry a lightweight compromise nozzle is generally used and some reduction in atmospheric performance occurs when used at other than the 'design altitude' or when throttled. To improve on this, various exotic nozzle designs such as the [[plug nozzle]], [[stepped nozzles]], the [[expanding nozzle]] and the [[aerospike engine|aerospike]] have been proposed, each providing some way to adapt to changing ambient air pressure and each allowing the gas to expand further against the nozzle, giving extra thrust at higher altitudes.
+
+When exhausting into a sufficiently low ambient pressure (vacuum) several issues arise. One is the sheer weight of the nozzle -- beyond a certain point, for a particular vehicle, the extra weight of the nozzle outweighs any performance gained. Secondly, as the exhaust gases adiabatically expand within the nozzle they cool, and eventually some of the chemicals can freeze, producing 'snow' within the jet. This causes instabilities in the jet and must be avoided.
+
+On a De Laval nozzle, exhaust gas flow detachment will occur in a grossly over-expanded nozzle.  As the detachment point will not be uniform around the axis of the engine, a side force may be imparted to the engine. This side force may change over time and result in control problems with the launch vehicle.
+
+===Thrust vectoring===
+Vehicles typically require the overall thrust to change direction over the length of the burn. A number of different ways to achieve this have been flown:
+
+*The entire engine is mounted on a [[hinge]] or [[gimbal]] and any propellant feeds reach the engine via low pressure flexible pipes or rotary couplings.
+*Just the combustion chamber and nozzle is gimbled, the pumps are fixed, and high pressure feeds attach to the engine.
+*Multiple engines (often canted at slight angles) are deployed but throttled to give the overall vector that is required, giving only a very small penalty.
+*High-temperature vanes protrude into the exhaust and can be tilted to deflect the jet.
+*Engines are fixed, and [[vernier thruster]]s are used to steer the vehicle.
+
+==Overall rocket engine performance==
+
+Rocket technology can combine very high thrust ([[meganewton]]s), very high exhaust speeds (around 10 times the speed of sound in air at sea level) and very high thrust/weight ratios (>100) ''simultaneously'' as well as being able to operate outside the atmosphere, and while permitting the use of low pressure and hence lightweight tanks and structure.
+
+Rockets can be further optimised to even more extreme performance along one or more of these axes at the expense of the others.
+
+===Specific impulse===
+{{Main|Specific impulse}}
+The most important metric for the efficiency of a rocket engine is [[impulse (physics)|impulse]] per unit of [[propellant]], this is called [[specific impulse]] (usually written <math>I_{sp}</math>). This is either measured as a speed (the ''effective exhaust velocity'' <math>V_{e}</math> in metres/second or ft/s) or as a time (seconds). An engine that gives a large specific impulse is normally highly desirable.
+
+The specific impulse that can be achieved is primarily a function of the propellant mix (and ultimately would limit the specific impulse), but practical limits on chamber pressures and the nozzle expansion ratios reduce the performance that can be achieved.
+
+{{Specific impulse}}
+
+===Net thrust===
+Below is an approximate equation for calculating the net thrust of a rocket engine:
+
+:<math>F_n = \dot{m}\;V_{e} = \dot{m}\;V_{e-act} + A_{e}(P_{e} - P_{amb})</math><ref>Rocket Propulsion Elements seventh edition eq-2-14</ref>
+
+where:
+
+:<math> \dot{m} = \,</math>exhaust gas mass flow
+
+:<math>V_{e} =\,</math>effective exhaust velocity
+
+:<math>V_{e-act} =\,</math>actual jet velocity at nozzle exit plane
+
+:<math>A_{e} =\,</math>flow area at nozzle exit plane (or the plane where the jet leaves the nozzle if separated flow)
+
+:<math>P_{e} =\,</math>static pressure at nozzle exit plane
+
+:<math>P_{amb} =\,</math>ambient (or atmospheric) pressure
+
+Since, unlike a jet engine, a conventional rocket motor lacks an air intake, there is no 'ram drag' to deduct from the gross thrust. Consequently the net thrust of a rocket motor is equal to the gross thrust (apart from static back pressure).
+
+The <math>\dot{m}\;V_{e-act}\,</math> term represents the momentum thrust, which remains constant at a given throttle setting, whereas the <math>A_{e}(P_{e} - P_{amb})\,</math> term represents the pressure thrust term. At full throttle, the net thrust of a rocket motor improves slightly with increasing altitude, because as atmospheric pressure decreases with altitude, the pressure thrust term increases. At the surface of the Earth the pressure thrust may be reduced by up to 30%,depending on the engine design. This reduction drops roughly exponentially to zero with increasing altitude.
+
+Maximum thrust for a rocket engine is achieved by maximizing the momentum contribution of the equation without incurring penalties from over expanding the exhaust. This occurs when <math>P_{e} = P_{amb}</math>. Since ambient pressure changes with altitude, most rocket engines spend very little time operating at peak efficiency.
+
+{{Anchor|opt_expansion}} <!-- add anchor for diagram references --->
+[[File:Rocket nozzle expansion.svg|thumb|right|200px|If the pressure of the exhaust jet varies from atmospheric pressure, nozzles can be said to be (top to bottom):<br>'''Underexpanded'''<br>'''Ambient'''<br>'''Overexpanded'''<br>'''Grossly overexpanded'''<br>If under or overexpanded then loss of efficiency occurs.  Grossly overexpanded nozzles lose less efficiency, but can cause mechanical problems with the nozzle. However, slightly overexpanded nozzles will produce more thrust than critically expanded nozzles if boundary layer separation does not occur. Rockets become progressively more underexpanded as they gain altitude. Note that almost all rocket engines will be momentarily grossly overexpanded during startup in an atmosphere.<ref>{{cite book|author=Huzel, D. K. and Huang, D. H.|title=NASA SP-125, Design of Liquid Propellant Rocket Engines|edition=2nd Edition|publisher=NASA|year=1971|url=http://ntrs.nasa.gov/search.jsp?Ntt=sp-125&Ntk=all&Ntx=mode+matchall}}</ref>]]
+
+===Vacuum Isp===
+
+Due to the specific impulse varying with pressure, a quantity that is easy to compare and calculate with is useful. Because rockets [[choked flow|choke]] at the throat, and because the supersonic exhaust prevents external pressure influences travelling upstream, it turns out that the pressure at the exit is ideally exactly proportional to the propellant flow <math> \dot{m}</math>, provided the mixture ratios and combustion efficiencies are maintained. It is thus quite usual to rearrange the above equation slightly:
+
+:<math> F_{vac} = C_f \dot{m} c^*</math><ref>Rocket Propulsion Elements seventh edition eq-3-33</ref>
+
+and so define the ''vacuum Isp'' to be:
+
+:<math>V_{evac} = C_f c^* \,</math>
+
+Where:
+
+:<math>c^* =\,</math> the speed of sound constant at the throat
+:<math>C_f =\,</math> the thrust coefficient constant of the nozzle (typically about 2)
+
+And hence:
+:<math> F_n = \dot{m} V_{evac} - A_{e} P_{amb}</math>
+
+===Throttling===
+
+Rockets can be throttled by controlling the propellant combustion rate <math> \dot{m}</math> (usually measured in kg/s or lb/s). In liquid and hybrid rockets, the propellant flow entering the chamber is controlled using valves, in [[solid rocket]]s it is controlled by changing the area of propellant that is burning and this can be designed into the propellant grain (and hence cannot be controlled in real-time).
+
+Rockets can usually be throttled down to an exit pressure of about one-third of ambient pressure (often limited flow separation in nozzles) and up to a maximum limit determined only by the mechanical strength of the engine.
+
+In practice, the degree to which rockets can be throttled varies greatly, but most rockets can be throttled by a factor of 2 without great difficulty; the typical limitation is combustion stability, as for example, injectors need a minimum pressure to avoid triggering damaging oscillations (chugging or combustion instabilities); but injectors can often be optimised and tested for wider ranges. Solid rockets can be throttled by using shaped grains that will vary their surface area over the course of the burn.
+
+===Energy efficiency===
+
+[[Image:PropulsiveEfficiency.svg|left|thumb|Rocket energy efficiency as a function of vehicle speed divided by effective exhaust speed]]
+Rocket engine nozzles are surprisingly efficient [[heat engines]] for generating a high speed jet, as a consequence of the high combustion temperature and high [[compression ratio]]. Rocket nozzles give an excellent approximation to [[adiabatic expansion]] which is a reversible process, and hence they give efficiencies which are very close to that of the [[Carnot cycle]]. Given the temperatures reached, over 60% efficiency can be achieved with chemical rockets.
+
+For a ''vehicle'' employing a rocket engine the energetic efficiency is very good if the vehicle speed approaches or somewhat exceeds the exhaust velocity (relative to launch); but at low speeds the energy efficiency goes to 0% at zero speed (as with all [[jet propulsion]].) <!--- it's very counterintuitive, a way to look at it is that energy= force x distance, but at zero speed you have no movement and you lose lots of energy in the jet --->See [[Rocket#Energy efficiency|Rocket energy efficiency]] for more details.
+
+===Thrust to weight ratio===
+{{Main|thrust-to-weight ratio}}
+Rockets, of all the jet engines, indeed of essentially all engines, have the highest thrust to weight ratio. This is especially true for liquid rocket engines.
+
+This high performance is due to the small volume of [[pressure vessel]]s that make up the engine -- the pumps, pipes and combustion chambers involved. The lack of inlet duct and the use of dense liquid propellant allows the pressurisation system to be small and lightweight, whereas duct engines have to deal with air which has a density about one thousand times lower.
+
+{{Engine thrust to weight table}}
+
+Of the liquid propellants used, density is worst for [[liquid hydrogen]]. Although this propellant is marvellous in many ways, it has a very low density, about one fourteenth that of water. This makes the turbopumps and pipework larger and heavier, and this is reflected in the thrust-to-weight ratio of engines that use it (for example the SSME) compared to those that do not (NK-33).
+
+==Cooling==
+For efficiency reasons, and because they physically can, rockets run with combustion temperatures that can reach ~3500 K (~5800 <U+00B0>F)(~3227 <U+00B0>C).
+
+Most other jet engines have gas turbines in the hot exhaust. Due to their larger surface area, they are harder to cool and hence there is a need to run the combustion processes at much lower temperatures, losing efficiency. In addition [[wiktionary:duct engine|duct engines]] use air as an oxidant, which contains 80% largely unreactive nitrogen, which dilutes the reaction and lowers the temperatures. Rockets have none of these inherent disadvantages.
+
+Therefore in rockets temperatures employed are very often far higher than the melting point of the nozzle and combustion chamber materials, two exceptions are [[graphite]] and [[tungsten]] (~1200 K for copper), however both are subject to oxidation if not protected. Indeed many construction materials can make perfectly acceptable propellants in their own right. It is important that these materials be prevented from combusting, melting or vaporising to the point of failure. This is sometimes somewhat facetiously termed an 'engine rich exhaust'. Materials technology could potentially place an upper limit on the exhaust temperature of chemical rockets.
+
+Alternatively, rockets may use more common construction materials such as aluminium, steel, nickel or copper alloys and employ cooling systems that prevent the construction material itself becoming too hot. [[Regenerative cooling (rocket)|Regenerative cooling]], where the propellant is passed through tubes around the combustion chamber or nozzle, and other techniques, such as curtain cooling or film cooling, are employed to give longer nozzle and chamber life. These techniques ensure that a gaseous thermal [[boundary layer]] touching the material is kept below the temperature which would cause the material to catastrophically fail.
+
+In rockets, the heat fluxes that can pass through the wall are among the highest in engineering, fluxes are generally in the range of 1-200 MW/m^2. The strongest heat fluxes are found at the throat, which often sees twice that found in the associated chamber and nozzle. This is due to the combination of high speeds (which gives a very thin boundary layer), and although lower than the chamber, the high temperatures seen there. (See [[#Rocket nozzles|rocket nozzles]] above for temperatures in nozzle).
+
+In rockets the coolant methods include:
+
+#uncooled (used for short runs mainly during testing)
+#[[ablation|ablative]] walls (walls are lined with a material that is continuously vaporised and carried away).
+#[[radiative cooling]] (the chamber becomes almost white hot and radiates the heat away)
+#dump cooling (a propellant, usually [[hydrogen]], is passed around the chamber and dumped)
+#[[regenerative cooling (rocket)|regenerative cooling]] ([[liquid rocket]]s use the fuel, or occasionally the oxidiser, to cool the chamber via a cooling jacket before being injected)
+#curtain cooling (propellant injection is arranged so the temperature of the gases is cooler at the walls)
+#film cooling (surfaces are wetted with liquid propellant, which cools as it evaporates)
+
+In all cases the cooling effect that prevents the wall from being destroyed is caused by a thin layer of insulating fluid (a [[boundary layer]]) that is in contact with the walls that is far cooler than the combustion temperature. Provided this boundary layer is intact the wall will not be damaged. 
+
+Disruption of the boundary layer may occur during cooling failures or combustion instabilities, and wall failure typically occurs soon after.
+
+With regenerative cooling a second boundary layer is found in the coolant channels around the chamber. This boundary layer thickness needs to be as small as possible, since the boundary layer acts as an insulator between the wall and the coolant. This may be achieved by making the coolant [[velocity]] in the channels as high as possible.
+
+In practice, regenerative cooling is nearly always used in conjunction with curtain cooling and/or film cooling.
+
+Liquid fueled engines are often run fuel [[Air-fuel ratio|rich]], which results in lower temperature combustion.  Cooler exhaust reduces heat loads on the engine allowing lower cost materials, a simplified cooling system, and a lower performance engine.
+
+==Mechanical issues==
+Rocket combustion chambers are normally operated at fairly high pressure, typically 10-200 bar (1 to 20 MPa, 150-3000 psi). When operated within significant atmospheric pressure, higher combustion chamber pressures give better performance by permitting a larger and more efficient nozzle to be fitted without it being grossly overexpanded.
+
+However, these high pressures cause the outermost part of the chamber to be under very large [[hoop stress]]es <U+2013> rocket engines are [[pressure vessel]]s.
+
+Worse, due to the high temperatures created in rocket engines the materials used tend to have a significantly lowered working tensile strength.
+
+In addition, significant temperature gradients are set up in the walls of the chamber and nozzle, these cause differential expansion of the inner liner that create [[internal stresses]].
+
+==Acoustic issues==
+In addition, the extreme vibration and acoustic environment inside a rocket motor commonly result in peak stresses well above mean values, especially in the presence of [[organ pipe]]-like resonances and gas turbulence.{{Citation needed|date=July 2009}}
+
+===Combustion instabilities===
+The combustion may display undesired instabilities, of sudden or periodic nature. The pressure in the injection chamber may increase until the propellant flow through the injector plate decreases; a moment later the pressure drops and the flow increases, injecting more propellant in the combustion chamber which burns a moment later, and again increases the chamber pressure, repeating the cycle. This may lead to high-amplitude pressure oscillations, often in ultrasonic range, which may damage the motor. Oscillations of <U+00B1>200&nbsp;psi at 25&nbsp;kHz were the cause of failures of early versions of the [[LGM-25C Titan II|Titan II]] missile second stage engines. The other failure mode is a [[deflagration to detonation transition]]; the supersonic [[pressure wave]] formed in the combustion chamber may destroy the engine.<ref name="titan2">{{cite book|url=http://books.google.com/books?id=0ZjeIfgG2AoC&pg=PA42&dq=%22hard+start%22+rocket&lr=&num=50&as_brr=3&cd=6#v=onepage&q=%22hard%20start%22%20rocket&f=false |title=Titan II: a history of a Cold War ... - Google Books |publisher=Books.google.com |date= |accessdate=2010-09-12}}</ref>
+
+The combustion instabilities can be provoked by remains of cleaning solvents in the engine, reflected shock wave, initial instability after ignition, explosion near the nozzle that reflects into the combustion chamber, and many more factors. In stable engine designs the oscillations are quickly suppressed; in unstable designs they persist for prolonged periods. Oscillation suppressors are commonly used.
+
+Periodic variations of thrust, caused by combustion instability or longitudinal vibrations of structures between the tanks and the engines which modulate the propellant flow, are known as "[[pogo oscillation]]s" or "pogo", named after the [[pogo stick]].
+
+Three different types of combustion instabilities occur:
+
+;Chugging
+
+This is a low frequency oscillation at a few Hertz in chamber pressure usually caused by pressure variations in feed lines due to variations in acceleration of the vehicle. This can cause cyclic variation in thrust, and the effects can vary from merely annoying to actually damaging the payload or vehicle. Chugging can be minimised by using gas-filled damping tubes on feed lines of high density propellants.
+
+;Buzzing
+
+This can be caused due to insufficient pressure drop across the injectors. It generally is mostly annoying, rather than being damaging. However, in extreme cases combustion can end up being forced backwards through the injectors <U+2013> this can cause explosions with monopropellants.
+
+;Screeching
+
+This is the most immediately damaging, and the hardest to control. It is due to acoustics within the combustion chamber that often couples to the chemical combustion processes that are the primary drivers of the energy release,<ref>Acoustic oscillations can be excited by thermal processes, such as the flow of hot air through a pipe or combustion in a chamber. Specifically, standing acoustic waves inside a chamber can be intensified if combustion occurs more intensely in regions where the pressure of the acoustic wave is maximal. According to Lord Rayleigh<U+2019>s criterion for thermoacoustic processes, "If heat be given to the air at the moment of greatest condensation, or be taken from it at the moment of greatest rarefaction, the vibration is encouraged. On the other hand, if heat be given at the moment of greatest rarefaction, or abstracted at the moment of greatest condensation, the vibration is discouraged." (Reference:   John Wm. Strutt, Baron Rayleigh, ''The Theory of Sound'', 2nd ed. (London: Macmillan, 1896) (reprinted by Dover Publications (N.Y., N.Y.) in 1945), vol. 2, page 226.)  See also: (1) Lord Rayleigh (1878) "The explanation of certain acoustical phenomena" (namely, the [[Rijke tube]]) ''Nature'', vol. 18, pages 319<U+2013>321; and (2) E. C. Fernandes and M. V. Heitor, <U+201C>Unsteady flames and the Rayleigh criterion<U+201D> in F. Culick, M. V. Heitor, and J. H. Whitelaw, ed.s, ''Unsteady Combustion'' (Dordrecht, the Netherlands: Kluwer Academic Publishers, 1996), page 4. Available on-line at: http://books.google.com/books?id=Je_hG6UfnogC&pg=PA1&lpg=PA1&dq=%22rayleigh+criterion%22+%22unsteady+combustion%22#v=onepage</ref> and can lead to unstable resonant "screeching" that commonly leads to catastrophic failure due to thinning of the insulating thermal boundary layer.<ref>G.P. Sutton & D.M. Ross, ''Rocket Propulsion Elements, 4th Ed.'' 1975 (WileyInterscience New York), Ch 8, Sec 6 & especially Sec. 7, re combustion instability.</ref> 
+Such effects are very difficult to predict analytically during the design process, and have usually been addressed by expensive, time consuming and extensive testing, combined with trial and error remedial correction measures.
+
+Screeching is often dealt with by detailed changes to injectors, or changes in the propellant chemistry, or vaporizing the propellant before injection, or use of [[Helmholtz damper]]s within the combustion chambers to change the resonant modes of the chamber.
+
+Testing for the possibility of screeching is sometimes done by exploding small explosive charges outside the combustion chamber with a tube set tangentially to the combustion chamber near the injectors to determine the engine's [[impulse response]] and then evaluating the time response of the chamber pressure- a fast recovery indicates a stable system.
+
+===Exhaust noise===
+For all but the very smallest sizes, rocket exhaust compared to other engines is generally very noisy. As the [[hypersonic]] exhaust mixes with the ambient air, [[shock wave]]s are formed. The [[Space Shuttle]] generates over 200 [[dB(A)]] of noise around its base. 
+
+The [[Saturn V]] launch was detectable on [[seismometer]]s a considerable distance from the launch site{{Citation needed|reason=what does "a considerable distance" mean?|date=June 2009}}. The [[sound intensity]] from the shock waves generated depends on the size of the rocket and on the exhaust velocity. Such shock waves seem to account for the characteristic crackling and popping sounds produced by large rocket engines when heard live. These noise peaks typically overload microphones and audio electronics, and so are generally weakened or entirely absent in recorded or broadcast audio reproductions. For large rockets at close range, the acoustic effects could actually kill.<ref name="CR566">[http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19660030602_1966030602.pdf NASA CR-566]</ref> 
+
+More worryingly for space agencies, such sound levels can also damage the launch structure, or worse, be reflected back at the comparatively delicate rocket above. This is why so much water is typically used at launches. The water spray changes the acoustic qualities of the air and reduces or deflects the sound energy away from the rocket.
+
+Generally speaking noise is most intense when a rocket is close to the ground, since the noise from the engines radiates up away from the plume, as well as reflecting off the ground. Also, when the vehicle is moving slowly, little of the chemical energy input to the engine can go into increasing the kinetic energy of the rocket (since useful power ''P'' transmitted to the vehicle is <math>P = F*V</math> for thrust ''F'' and speed ''V''). Then the largest portion of the energy is dissipated in the exhaust's interaction with the ambient air, producing noise. This noise can be reduced somewhat by flame trenches with roofs, by water injection around the plume and by deflecting the plume at an angle.
+
+==Testing==
+
+Rocket engines are usually statically tested at a [[rocket engine test facility|test facility]] before being put into production. For high altitude engines, either a shorter nozzle must be used, or the rocket must be tested in a large vacuum chamber.
+
+==Safety==
+[[Rocket]]s have a reputation for unreliability and danger; especially catastrophic failures. Contrary to this reputation, carefully designed rockets can be made arbitrarily reliable. In military use, rockets are not unreliable. However, one of the main non-military uses of rockets is for orbital launch. In this application, the premium has typically been placed on minimum weight, and it is difficult to achieve high reliability and low weight simultaneously. In addition, if the number of flights launched is low, there is a very high chance of a design, operations or manufacturing error causing destruction of the vehicle. Essentially all launch vehicles are test vehicles by normal aerospace standards ({{As of|2006|lc=on}}).
+
+The [[X-15]] rocket plane [[Albert Scott Crossfield|achieved a 0.5% failure rate]], with a single catastrophic failure during ground test, and the [[SSME]] has managed to avoid catastrophic failures in over 350 engine-flights.
+
+==Chemistry==
+
+[[Rocket propellant]]s require a high specific energy (energy per unit mass), because ideally all the reaction energy appears as kinetic energy of the exhaust gases, and exhaust velocity is the single most important performance parameter of an engine, on which vehicle performance depends.  
+
+Aside from inevitable losses and imperfections in the engine, incomplete combustion, etc., after specific reaction energy, the main theoretical limit reducing the exhaust velocity obtained is that, according to the laws of thermodynamics, a fraction of the chemical energy may go into rotation of the exhaust molecules, where it is unavailable for producing thrust. Monatomic gases like helium have only three degrees of freedom, corresponding to the three dimensions of space, {''x,y,z''}, and only such spherically symmetric molecules escape this kind of loss. A diatomic molecule like H<sub>2</sub> can rotate about either of the two axes perpendicular to the one joining the two atoms, and as the [[equipartition]] law of statistical mechanics demands that the available thermal energy be divided equally among the degrees of freedom, for such a gas in thermal equilibrium 3/5 of the energy can go into unidirectional motion, and 2/5 into rotation. A triatomic molecule like water has six degrees of freedom, so the energy is divided equally among rotational and translational degrees of freedom. For most chemical reactions the latter situation is the case. This issue is traditionally described in terms of the ratio, gamma, of the specific heat of the gas at constant volume to that at constant pressure. The rotational energy loss is largely recovered in practice if the expansion nozzle is large enough to allow the gases to expand and cool sufficiently, the function of the nozzle being to convert the random thermal motions of the molecules in the combustion chamber into the unidirectional translation that produces thrust. As long as the exhaust gas remains in equilibrium as it expands, the initial rotational energy will be largely returned to translation in the nozzle.
+
+Although the specific reaction energy per unit mass of reactants is key, low mean molecular weight in the reaction products is also important in practice in determining exhaust velocity. This is because the high gas temperatures in rocket engines pose serious problems for the engineering of survivable motors. Because temperature is proportional to the mean ''energy per molecule'', a given amount of energy distributed among more molecules of lower mass permits a higher exhaust velocity at a given temperature. This means low atomic mass elements are favoured. Liquid hydrogen (LH2) and oxygen (LOX, or LO2), are the most effective propellants in terms of exhaust velocity that have been widely used to date, though a few exotic combinations involving boron or liquid ozone are potentially somewhat better in theory if various practical problems could be solved.<ref>[http://yarchive.net/space/rocket/fuels/fuel_ratio.html Newsgroup correspondence], 1998-99</ref>
+
+It is important to note in computing the specific reaction energy, that the ''entire mass of the propellants, including both fuel and oxidizer'', must be included. The fact that air-breathing engines are typically able to obtain oxygen "for free" without having to carry it along, accounts for one factor of why air-breathing engines are very much more propellant-mass efficient, and one reason that rocket engines are far less suitable for most ordinary terrestrial applications. Fuels for automobile or [[turbojet engine]]s, utilize atmospheric oxygen and so have a much better effective energy output per unit mass of propellant that must be carried, but are similar per unit mass of fuel.
+
+Computer programs that predict the performance of propellants in rocket engines are available.<ref>[http://rocketworkbench.sourceforge.net/equil.phtml Complex chemical equilibrium and rocket performance calculations], Cpropep-Web</ref>
+
+==Ignition==
+
+With liquid and hybrid rockets, immediate ignition of the propellant(s) as they first enter the combustion chamber is essential.
+
+With liquid propellants (but not gaseous), failure to ignite within milliseconds usually causes too much liquid propellant to be within the chamber, and if/when ignition occurs the amount of hot gas created will often exceed the maximum design pressure of the chamber. The pressure vessel will often fail catastrophically. This is sometimes called a ''[[hard start]]''.
+
+Ignition can be achieved by a number of different methods; a pyrotechnic charge can be used, a plasma torch can be used, or electric spark plugs may be employed. Some fuel/oxidizer combinations ignite on contact ([[hypergolic]]), and non-hypergolic fuels can be "chemically ignited" by priming the fuel lines with hypergolic propellants (popular in Russian engines).
+
+Gaseous propellants generally will not cause [[hard start]]s, with rockets the total injector area is less than the throat thus the chamber pressure tends to ambient prior to ignition and high pressures cannot form even if the entire chamber is full of flammable gas at ignition.
+
+Solid propellants are usually ignited with one-shot pyrotechnic devices.
+
+Once ignited, rocket chambers are self sustaining and igniters are not needed. Indeed chambers often spontaneously reignite if they are restarted after being shut down for a few seconds. However, when cooled, many rockets cannot be restarted without at least minor maintenance, such as replacement of the pyrotechnic igniter.
+
+==Plume physics==
+[[File:Armadillo Aerospace Pixel Hover.jpg|thumb|right|Armadillo aerospace's quad vehicle showing visible banding (shock diamonds) in the exhaust plume]]
+[[Rocket plume]] varies depending on the rocket engine, design altitude, altitude, thrust and other factors.
+
+Carbon rich exhausts from [[kerosene]] fuels are often orange in colour due to the [[black body radiation]] of the unburned particles, in addition to the blue [[Swan band]]s. [[high test peroxide|Peroxide]] oxidiser based rockets and hydrogen rocket plumes contain largely [[steam]] and are nearly invisible to the naked eye but shine brightly in the [[ultraviolet]] and [[infrared]]. Plumes from [[solid rocket]]s can be highly visible as the propellant frequently contains metals such as elemental [[aluminium]] which burns with an orange-white flame and adds energy to the combustion process.
+
+Some exhausts, notably [[alcohol]] fuelled rockets, can show visible [[shock diamond]]s. These are due to cyclic variations in the plume pressure relative to ambient creating shock waves that form 'mach disks'.
+
+The shape of the plume varies from the design altitude, at high altitude all rockets are grossly under-expanded, and a quite small percentage of exhaust gases actually end up expanding forwards.
+
+==Types of rocket engines==
+===Physically powered===
+{| class="wikitable"
+|-
+!'''Type'''
+!'''Description'''
+!'''Advantages'''
+!'''Disadvantages'''
+|-
+![[water rocket]]
+|Partially filled pressurised carbonated drinks container with tail and nose weighting
+|Very simple to build
+|Altitude typically limited to a few hundred feet or so ([[Water rocket#Altitude Record|world record]] is 623 meters/2044 feet)
+|-
+![[cold gas thruster]]
+|A non combusting form, used for [[vernier thruster]]s
+|Non contaminating exhaust
+|Extremely low performance
+|}
+
+===Chemically powered===
+{{See also|Liquid rocket propellants}}
+
+{| class="wikitable"
+|-
+!'''Type'''
+!'''Description'''
+!'''Advantages'''
+!'''Disadvantages'''
+|-
+! [[Solid rocket]]
+|Ignitable, self sustaining solid fuel/oxidiser mixture ("grain") with central hole and nozzle
+|Simple, often no [[moving parts]], reasonably good mass fraction, reasonable [[Specific Impulse|''I''<sub>sp</sub>]]. A thrust schedule can be designed into the grain.
+|| Throttling, burn termination, and reignition require special designs.  Handling issues from ignitable mixture. Lower performance than liquid rockets. If grain cracks it can block nozzle with disastrous results. Grain cracks burn and widen during burn. Refuelling harder than simply filling tanks. 
+|-
+![[Hybrid rocket]]
+|Separate oxidiser/fuel; typically the oxidiser is liquid and kept in a tank and the fuel is solid.
+|Quite simple, solid fuel is essentially inert without oxidiser, safer; cracks do not escalate, throttleable and easy to switch off.
+|Some oxidisers are monopropellants, can explode in own right; mechanical failure of solid propellant can block nozzle (very rare with rubberised propellant), central hole widens over burn and negatively affects mixture ratio.
+|-
+![[Monopropellant rocket]]
+|Propellant (such as hydrazine, hydrogen peroxide or nitrous oxide) flows over a catalyst and exothermically decomposes; hot gases are emitted through nozzle.
+|Simple in concept, throttleable, low temperatures in combustion chamber
+|catalysts can be easily contaminated, monopropellants can detonate if contaminated or provoked, [[Specific Impulse|''I''<sub>sp</sub>]] is perhaps 1/3 of best liquids
+|-
+![[Liquid rocket|Liquid]] [[Bipropellant rocket]]
+|Two fluid (typically liquid) propellants are introduced through injectors into combustion chamber and burnt
+|Up to ~99% efficient combustion with excellent mixture control, throttleable, can be used with turbopumps which permits incredibly lightweight tanks, can be safe with extreme care
+|Pumps needed for high performance are expensive to design, huge thermal fluxes across combustion chamber wall can impact reuse, failure modes include major explosions, a lot of plumbing is needed.
+|-
+![[Dual mode propulsion rocket]]
+|Rocket takes off as a bipropellant rocket, then turns to using just one propellant as a monopropellant
+|Simplicity and ease of control
+|Lower performance than bipropellants
+|-
+![[Tripropellant rocket]] 
+|Three different propellants (usually hydrogen, hydrocarbon and liquid oxygen) are introduced into a combustion chamber in variable mixture ratios, or multiple engines are used with fixed propellant mixture ratios and throttled or shut down
+|Reduces take-off weight, since hydrogen is lighter; combines good thrust to weight with high average [[Specific Impulse|''I''<sub>sp</sub>]], improves payload for launching from Earth by a sizeable percentage
+|Similar issues to bipropellant, but with more plumbing, more R&D
+|-
+![[Air-augmented rocket]]
+|Essentially a ramjet where intake air is compressed and burnt with the exhaust from a rocket
+|Mach 0 to Mach 4.5+ (can also run exoatmospheric), good efficiency at Mach 2 to 4
+|Similar efficiency to rockets at low speed or exoatmospheric, inlet difficulties, a relatively undeveloped and unexplored type, cooling difficulties, very noisy, thrust/weight ratio is similar to ramjets.
+|-
+![[Turborocket]]
+|A combined cycle turbojet/rocket where an additional [[oxidizer]] such as [[oxygen]] is added to the airstream to increase maximum altitude
+|Very close to existing designs, operates in very high altitude, wide range of altitude and airspeed
+|Atmospheric airspeed limited to same range as turbojet engine, carrying oxidizer like [[LOX]] can be dangerous. Much heavier than simple rockets.
+|-
+![[Precooled jet engine]] / [[Liquid air cycle engine|LACE]] (combined cycle with rocket)
+|Intake air is chilled to very low temperatures at inlet before passing through a ramjet or turbojet engine. Can be combined with a rocket engine for orbital insertion.
+|Easily tested on ground. High thrust/weight ratios are possible (~14) together with good fuel efficiency over a wide range of airspeeds, mach 0-5.5+; this combination of efficiencies may permit launching to orbit, single stage, or very rapid intercontinental travel.
+|Exists only at the lab prototyping stage. Examples include [[RB545]], [[Reaction Engines SABRE|SABRE]], [[ATREX]]
+|}
+
+=== Electrically powered ===
+{| class="wikitable"
+|-
+!'''Type'''
+!'''Description'''
+!'''Advantages'''
+!'''Disadvantages'''
+|-
+! [[Resistojet rocket]] (electric heating)
+|A monopropellant is electrically heated by a filament for extra performance
+|Higher [[Specific Impulse|''I''<sub>sp</sub>]] than monopropellant alone, about 40% higher.
+|Uses a lot of power and hence gives typically low thrust
+|-
+! [[Arcjet rocket]] (chemical burning aided by electrical discharge)
+|Similar to resistojet in concept but with inert propellant, except an arc is used which allows higher temperatures
+|1600 seconds [[Specific Impulse|''I''<sub>sp</sub>]]
+|Very low thrust and high power, performance is similar to [[Ion drive]].
+|-
+! [[Pulsed plasma thruster]] (electric arc heating; emits plasma)
+|Plasma is used to erode a solid propellant
+|High [[Specific Impulse|''I''<sub>sp</sub>]] , can be pulsed on and off for attitude control
+|Low energetic efficiency
+|-
+! [[Variable specific impulse magnetoplasma rocket]]
+|Microwave heated plasma with magnetic throat/nozzle
+|Variable [[Specific Impulse|''I''<sub>sp</sub>]] from 1000 seconds to 10,000 seconds
+|similar thrust/weight ratio with ion drives (worse), thermal issues, as with ion drives very high power requirements for significant thrust, really needs advanced nuclear reactors, never flown, requires low temperatures for superconductors to work
+|}
+
+{{See also|Ion thruster}}
+
+=== Thermal ===
+
+==== Preheated ====
+{| class="wikitable"
+|-
+!'''Type'''
+!'''Description'''
+!'''Advantages'''
+!'''Disadvantages'''
+|-
+![[hot water rocket]]
+|Hot water is stored in a tank at high temperature/pressure and turns to steam in nozzle
+|Simple, fairly safe, under 200 seconds Isp
+|Low overall performance due to heavy tank
+|}
+
+==== Solar thermal ====
+
+The [[Solar thermal rocket]] would make use of solar power to directly heat [[reaction mass]], and therefore does not require an electrical generator as most other forms of solar-powered propulsion do. A solar thermal rocket only has to carry the means of capturing solar energy, such as [[Concentrating solar power|concentrator]]s and [[mirror]]s. The heated propellant is fed through a conventional rocket nozzle to produce thrust. The engine thrust is directly related to the surface area of the solar collector and to the local intensity of the solar radiation and inversely proportional to the ''I''<sub>sp</sub>.
+
+{| class="wikitable"
+|-
+!'''Type'''
+!'''Description'''
+!'''Advantages'''
+!'''Disadvantages'''
+|-
+![[Solar thermal rocket]] 
+|Propellant is heated by solar collector
+|Simple design. Using hydrogen propellant, 900 seconds of [[Specific Impulse|''I''<sub>sp</sub>]] is comparable to Nuclear Thermal rocket, without the problems and complexity of controlling a fission reaction.{{citation needed|date=January 2011}}  
+Ability to [[Solar_thermal_rocket#Proposed_solar-thermal_space_systems|productively utilize]] waste gaseous [[hydrogen]]<U+2014>an inevitable byproduct of long-term [[liquid hydrogen]] storage in the [[Radiative heat transfer|radiative heat]] environment of space<U+2014>for both [[orbital stationkeeping]] and [[attitude control]].<ref name=aiaa20100902>
+{{cite web|last=Zegler|first=Frank |title=Evolving to a Depot-Based Space Transportation Architecture |url=http://www.ulalaunch.com/site/docs/publications/DepotBasedTransportationArchitecture2010.pdf |work=AIAA SPACE 2010 Conference & Exposition |publisher=AIAA |accessdate=2011-01-25 |coauthors=Bernard Kutter |date=2010-09-02 |quote=the waste hydrogen that has boiled off happens to be the best known propellant (as a monopropellant in a basic solar-thermal propulsion system) for this task. A practical depot must evolve hydrogen at a minimum rate that matches the station keeping demands.}}</ref>
+|Only useful once in space, as thrust is fairly low, but hydrogen has not been traditionally thought to be easily stored in space,<ref name=aiaa20100902/> otherwise moderate/low [[Specific Impulse|''I''<sub>sp</sub>]] if higher<U+2013>molecular-mass propellants are used.  Using higher<U+2013>molecular-weight propellants, for example water, lowers performance.
+|}
+
+{{See also|Ion thruster}}
+
+====Beamed thermal====
+
+{| class="wikitable"
+|-
+!'''Type'''
+!'''Description'''
+!'''Advantages'''
+!'''Disadvantages'''
+|-
+![[Beam-powered propulsion|light beam powered rocket]]
+|Propellant is heated by light beam (often laser) aimed at vehicle from a distance, either directly or indirectly via heat exchanger
+|simple in principle, in principle very high exhaust speeds can be achieved
+|~1 MW of power per kg of payload is needed to achieve orbit, relatively high accelerations, lasers are blocked by clouds, fog, reflected laser light may be dangerous, pretty much needs hydrogen monopropellant for good performance which needs heavy tankage, some designs are limited to ~600 seconds due to reemission of light since propellant/heat exchanger gets white hot
+|-
+![[Beam-powered propulsion|microwave beam powered rocket]]
+|Propellant is heated by microwave beam aimed at vehicle from a distance
+|microwaves avoid reemission of energy, so ~900 seconds exhaust speeds might be achieveable
+|~1 MW of power per kg of payload is needed to achieve orbit, relatively high accelerations, microwaves are absorbed to a degree by rain, reflected microwaves may be dangerous, pretty much needs hydrogen monopropellant for good performance which needs heavy tankage, transmitter diameter is measured in kilometres to achieve a fine enough beam to hit a vehicle at up to 100&nbsp;km.
+|}
+
+==== Nuclear thermal ====
+
+{| class="wikitable"
+|-
+!'''Type'''
+!'''Description'''
+!'''Advantages'''
+!'''Disadvantages'''
+|-
+! [[Radioisotope rocket|Radioisotope rocket/"Poodle thruster"]] (radioactive decay energy)
+|Heat from radioactive decay is used to heat hydrogen
+|about 700<U+2013>800 seconds, almost no moving parts
+|low thrust/weight ratio.
+|-
+! [[Nuclear thermal rocket]] (nuclear fission energy)
+|propellant (typ. hydrogen) is passed through a nuclear reactor to heat to high temperature
+|[[Specific Impulse|''I''<sub>sp</sub>]] can be high, perhaps 900 seconds or more, above unity thrust/weight ratio with some designs
+|Maximum temperature is limited by materials technology, some radioactive particles can be present in exhaust in some designs, nuclear reactor shielding is heavy, unlikely to be permitted from surface of the Earth, thrust/weight ratio is not high.
+|}
+
+=== Nuclear ===
+
+[[Nuclear propulsion]] includes a wide variety of [[Spacecraft propulsion|propulsion]] methods that use some form of [[nuclear reaction]] as their primary power source. Various types of nuclear propulsion have been proposed, and some of them tested, for spacecraft applications:
+
+{| class="wikitable"
+|-
+!'''Type'''
+!'''Description'''
+!'''Advantages'''
+!'''Disadvantages'''
+|-
+! [[Gas core reactor rocket]] (nuclear fission energy)
+|Nuclear reaction using a gaseous state fission reactor in intimate contact with propellant
+|Very hot propellant, not limited by keeping reactor solid, [[Specific Impulse|''I''<sub>sp</sub>]] between 1500 and 3000 seconds but with very high thrust
+|Difficulties in heating propellant without losing fissionables in exhaust, massive thermal issues particularly for nozzle/throat region, exhaust almost inherently highly radioactive. Nuclear lightbulb variants can contain fissionables, but cut [[Specific Impulse|''I''<sub>sp</sub>]] in half.
+|-
+! [[Fission-fragment rocket]] (nuclear fission energy)
+|Fission products are directly exhausted to give thrust
+|
+|Theoretical only at this point.
+|-
+! [[Fission sail]] (nuclear fission energy)
+|A sail material is coated with fissionable material on one side
+|No moving parts, works in deep space
+|Theoretical only at this point.
+|-
+! [[Nuclear salt-water rocket]] (nuclear fission energy)
+|Nuclear salts are held in solution, caused to react at nozzle
+|Very high [[Specific Impulse|''I''<sub>sp</sub>]], very high thrust
+|Thermal issues in nozzle, propellant could be unstable, highly radioactive exhaust. Theoretical only at this point.
+|-
+! [[Nuclear pulse propulsion]] (exploding fission/fusion bombs)
+|Shaped nuclear bombs are detonated behind vehicle and blast is caught by a 'pusher plate'
+|Very high [[Specific Impulse|''I''<sub>sp</sub>]], very high thrust/weight ratio, no show stoppers are known for this technology
+|Never been tested, pusher plate may [[spall|throw off fragments]] due to shock, minimum size for nuclear bombs is still pretty big, expensive at small scales, nuclear treaty issues, fallout when used below Earth's magnetosphere.
+|-
+! [[Antimatter catalyzed nuclear pulse propulsion]] (fission and/or fusion energy)
+|Nuclear pulse propulsion with antimatter assist for smaller bombs
+|Smaller sized vehicle might be possible
+|Containment of antimatter, production of antimatter in macroscopic quantities isn't currently feasible. Theoretical only at this point.
+|-
+! [[Fusion rocket]] (nuclear fusion energy)
+|Fusion is used to heat propellant
+|Very high exhaust velocity
+|Largely beyond current state of the art.
+|-
+! [[Antimatter rocket]] (annihilation energy)
+|Antimatter annihilation heats propellant
+|Extremely energetic, very high theoretical exhaust velocity
+|Problems with antimatter production and handling; energy losses in [[neutrino]]s, [[gamma ray]]s, [[muon]]s; thermal issues. Theoretical only at this point 
+|}
+
+==History of rocket engines==
+According to the writings of the Roman [[Aulus Gellius]], in c. 400 BC, a [[Greek people|Greek]] [[Pythagoreanism|Pythagorean]] named [[Archytas]], propelled a wooden bird along wires using steam.<ref>Leofranc Holford-Strevens, ''Aulus Gellius: An Antonine Author and his Achievement'' (Oxford University Press; revised paperback edn. 2005)
+*{{1911}}</ref> However, it would not appear to have been powerful enough to take off under its own thrust.
+
+The ''[[aeolipile]]'' described in the first century BC<!--[[Vitruvius]] described it before Hero--> (often known as ''[[Hero's engine]]'') essentially consists of a [[steam rocket]] on a [[Bearing (mechanical)|bearing]]. It was created almost two millennia before the [[Industrial Revolution]] but the principles behind it were not well understood, and its full potential was not realized for a millennium.<!--Not sure what this latter refers to, but it's probably not critical here-->
+
+The availability of [[black powder]] to propel projectiles was a precursor to the development of the first solid rocket. Ninth Century [[Chinese people|Chinese]] [[Taoist]] [[Alchemy|alchemists]] discovered [[black powder]] in a search for the [[Elixir of life]]; this accidental discovery led to [[fire arrow]]s which were the first rocket engines to leave the ground.
+
+Rocket engines were also brought in use by [[Tippu Sultan]], The king of Mysore. These rockets could be of various sizes, but usually consisted of a tube of soft hammered iron about 8" long and 1<U+00BD> - 3" diameter, closed at one end and strapped to a shaft of bamboo about 4&nbsp;ft. long. The iron tube acted as a combustion chamber and contained well packed black powder propellant. A rocket carrying about one pound of powder could travel almost 1,000 yards. These 'rockets', fitted with swords used to travel long distance, several meters above in air before coming down with swords edges facing the enemy. These rockets were used against British empire very effectively.
+
+Slow development of this technology continued up to the later 20th Century, when the writings of [[Konstantin Tsiolkovsky]] first talked about [[liquid rocket|liquid fuelled rocket engines]].
+
+These independently became a reality thanks to [[Robert Goddard (scientist)|Robert Goddard]]. Goddard also used a De Laval nozzle for the first time on a rocket, doubling the thrust and multiplying up the efficiency by several times.
+
+During the late 1930s, German scientists, such as [[Wernher von Braun]] and [[Hellmuth Walter]], investigated installing liquid-fuelled rockets in military aircraft ([[Heinkel He 112]], [[Heinkel He 111|He 111]], [[Heinkel He 176|He 176]] and [[Messerschmitt Me 163]]).<ref>Warsitz, Lutz: [http://www.pen-and-sword.co.uk/?product_id=1762 ''THE FIRST JET PILOT - The Story of German Test Pilot Erich Warsitz'', Pen and Sword Books Ltd., England, 2009]</ref> The turbopump was first employed by German scientists in WWII. Until then cooling the nozzle was problematic, and the [[A4 (rocket)|A4]] ballistic missile used dilute alcohol for the fuel, which reduced the combustion temperature sufficiently.
+
+[[Staged combustion cycle (rocket)|Staged combustion]] (''<U+0417><U+0430><U+043C><U+043A><U+043D><U+0443><U+0442><U+0430><U+044F> <U+0441><U+0445><U+0435><U+043C><U+0430>'') was first proposed by [[Aleksei Mihailovich Isaev|Alexey Isaev]] in 1949. The first staged combustion engine was the S1.5400 used in the Soviet planetary rocket, designed by Melnikov, a former assistant to Isaev.<ref>George Sutton, "History of Liquid Propellant Rocket Engines", 2006</ref>  About the same time (1959), [[Nikolai Dmitriyevich Kuznetsov|Nikolai Kuznetsov]] began work on the closed cycle engine [[NK-9]] for Korolev's orbital ICBM, GR-1. Kuznetsov later evolved that design into the [[NK-15]] and [[NK-33]] engines for the unsuccessful Lunar [[N1 rocket]].
+
+In the West, the first laboratory staged-combustion test engine was built in Germany in 1963, by [[Ludwig Boelkow]].
+
+Hydrogen peroxide / kerosene fuelled engines such as the British [[Gamma (Rocket engine)|Gamma]] of the 1950s used a closed-cycle process (arguably not ''staged combustion'', but that's mostly a question of semantics) by catalytically decomposing the peroxide to drive turbines ''before'' combustion with the kerosene in the combustion chamber proper. This gave the efficiency advantages of staged combustion, whilst avoiding the major engineering problems.
+
+Liquid hydrogen engines were first successfully developed in America, the [[RL-10]] engine first flew in 1962. Hydrogen engines were used as part of the [[Project Apollo]]; the liquid hydrogen fuel giving a rather lower stage mass and thus reducing the overall size and cost of the vehicle.
+
+The Space Shuttle's [[SSME]] is the highest ground-launched [[specific impulse]] rocket engine to fly.{{Citation needed|date=February 2010}}
+
+== See also ==
+*[[NERVA]] - [[NASA]]'s Nuclear Energy for Rocket Vehicle Applications, a US nuclear thermal rocket programme
+*[[Project Prometheus]], NASA development of nuclear propulsion for long-duration spaceflight, begun in 2003
+*[[Jet damping]] an effect of the exhaust jet of a rocket that tends to slow a vehicle's rotation speed
+*[[Model rocket motor classification]] lettered engines
+*[[Laser propulsion]]
+
+==Bibliography==
+* Lutz Warsitz: ''The First Jet Pilot - The Story of German Test Pilot Erich Warsitz'' (including von Braun<U+2019>s and Hellmuth Walter<U+2019>s experiments with rocket aircraft), Pen and Sword Books Ltd., England, 2009, ISBN 9781844158188, [http://www.pen-and-sword.co.uk/?product_id=1762 English Edition]
+
+==References==
+{{reflist}}
+
+==External links==
+{{Wiktionary}}
+*[http://www.pwrengineering.com/articles/longterm.htm Designing for rocket engine life expectancy]
+*[http://www.pwrengineering.com/articles/plume.htm Rocket Engine performance analysis with Plume Spectrometry]
+*[http://www.pwrengineering.com/articles/heart.htm Rocket Engine Thrust Chamber technical article]
+*[http://www.lpre.de/resources/software/RPA_en.htm Design Tool for Liquid Rocket Engine Thermodynamic Analysis]
+*[http://www.braeunig.us/space/propuls.htm Rocket & Space Technology - Rocket Propulsion]
+*[http://www.erichwarsitz.com The official website of test pilot Erich Warsitz (world<U+2019>s first jet pilot) inclusive videos of the Heinkel He 112 fitted with von Braun<U+2019>s and Hellmuth Walter<U+2019>s rocket engines (as well as the He 111 with ATO Units)]
+
+{{Rocket Engines}}
+{{Heat engines}}
+
+{{DEFAULTSORT:Rocket Engine}}
+[[Category:Spacecraft propulsion]]
+[[Category:Spacecraft components]]
+[[Category:Aerospace engineering]]
+[[Category:Rocket engines|*]]
+[[Category:Rocket propulsion]]
+
+[[ar:<U+0645><U+062D><U+0631><U+0643> <U+0635><U+0627><U+0631><U+0648><U+062E><U+064A>]]
+[[bg:<U+0420><U+0430><U+043A><U+0435><U+0442><U+0435><U+043D> <U+0434><U+0432><U+0438><U+0433><U+0430><U+0442><U+0435><U+043B>]]
+[[ca:Motor de coet]]
+[[cs:Raketov<U+00FD> motor]]
+[[de:Raketentriebwerk]]
+[[es:Motor cohete]]
+[[fa:<U+067E><U+06CC><U+0634><U+200C><U+0631><U+0627><U+0646><U+0634> <U+0641><U+0636><U+0627><U+06CC><U+06CC>]]
+[[fr:Moteur-fus<U+00E9>e]]
+[[ko:<U+B85C><U+CF13> <U+C5D4><U+C9C4>]]
+[[it:Motore a razzo]]
+[[he:<U+05DE><U+05E0><U+05D5><U+05E2> <U+05E8><U+05E7><U+05D8><U+05D9>]]
+[[lv:Ra<U+0137>e<U+0161>dzin<U+0113>js]]
+[[hu:Rak<U+00E9>tahajt<U+00F3>m<U+0171>]]
+[[ja:<U+30ED><U+30B1><U+30C3><U+30C8><U+30A8><U+30F3><U+30B8><U+30F3>]]
+[[no:Rakettmotor]]
+[[pl:Silnik rakietowy]]
+[[pt:Motor de foguete]]
+[[ru:<U+0420><U+0430><U+043A><U+0435><U+0442><U+043D><U+044B><U+0439> <U+0434><U+0432><U+0438><U+0433><U+0430><U+0442><U+0435><U+043B><U+044C>]]
+[[simple:Rocket engine]]
+[[sk:Raketov<U+00FD> motor]]
+[[fi:Rakettimoottori]]
+[[sv:Raketmotor]]
+[[th:<U+0E40><U+0E04><U+0E23><U+0E37><U+0E48><U+0E2D><U+0E07><U+0E22><U+0E19><U+0E15><U+0E4C><U+0E08><U+0E23><U+0E27><U+0E14>]]
+[[uk:<U+0420><U+0430><U+043A><U+0435><U+0442><U+043D><U+0438><U+0439> <U+0434><U+0432><U+0438><U+0433><U+0443><U+043D>]]
+[[vi:<U+0110><U+1ED9>ng c<U+01A1> t<U+00EA>n l<U+1EED>a]]
+[[zh:<U+706B><U+7BAD><U+53D1><U+52A8><U+673A>]]

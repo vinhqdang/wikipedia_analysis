@@ -1,0 +1,100 @@
+:''[[Quickdraw]] also refers to equipment used for [[rock climbing]].''
+
+{{Mac OS X Graphics Model}}
+
+'''QuickDraw''' is the 2D [[Computer graphics|graphics]] library and associated [[Application programming interface|Application Programming Interface (API)]] which is a core part of the classic [[Apple Macintosh]] [[Mac OS|operating system]]. It was initially written by [[Bill Atkinson]] and [[Andy Hertzfeld]]. QuickDraw still exists as part of the libraries of [[Mac OS X]], but has been largely superseded by the more modern [[Quartz (graphics layer)|Quartz]] graphics system. In [[Mac OS X v10.4]], QuickDraw has been officially [[deprecation|deprecated]]. In [[Mac OS X v10.5]] applications using QuickDraw can't make use of the added 64-bit support.
+
+==Principles of QuickDraw==
+
+QuickDraw was grounded in the [[Apple Lisa]]'s LisaGraf of the early 1980s and was designed to fit well with the [[Pascal programming language|Pascal]]-based interfaces and development environments of the early [[Apple Computer|Apple]] systems. In addition, QuickDraw is a [[raster graphics]] system, which defines the [[pixel]] as its basic unit of graphical information. This is in contrast to [[vector graphics]] systems, where graphics primitives are defined in mathematical terms and rasterised as required to the display resolution. A raster system requires much less processing power however, and was the prevailing paradigm at the time that QuickDraw was developed.
+
+QuickDraw defines a key data structure, the graphics ''port'', or GrafPort. This is a logical drawing area where graphics can be drawn. The most obvious on-screen "object" corresponding to a grafport is a window, though so is the entire desktop view and off-screen ports can also exist.
+
+The Grafport defines a [[coordinate system]]. In QuickDraw, this has a resolution of 16 [[binary digit|bits]], giving 65,536 unique vertical and horizontal locations. These are numbered from -32,767 on the extreme left (or top), to +32,768 on the extreme right (or bottom). A window is usually set up so that the top, left corner of its content area is located at 0,0 in the associated grafport. A window's content area does not include the window's frame, [[drop shadow]] or title bar (if any).
+
+QuickDraw coordinates refer to the infinitely thin lines ''between'' [[pixel]] locations. An actual pixel is drawn in the space to the immediate right and below the coordinate. This eliminates graphical glitches caused by [[Off by one errors|off-by-one errors]].
+
+On the Macintosh, pixels are square and a grafport has a default resolution of 72 pixels per inch, chosen to match conventions established by the printing industry of having 72 [[Point (typography)|points]] to the inch.
+
+QuickDraw also contains a number of scaling and mapping functions.
+
+QuickDraw maintains a number of [[global variable]]s per process, chief among these being the current port. This originally simplified the API, since all operations pertain to "the current port", but as the OS has developed, this use of global state has also made QuickDraw much harder to integrate with modern design approaches such as [[multi-threading]], [[pre-emptive multitasking]] and so on. To address these problems, the [[Carbon (API)|Carbon]] [[Application programming interface|API]] (a bridge between Mac OS 9 and OS X) adds additional parameters to some of the routines, allowing for the (opaque) storage of thread information and a new (non-polled) event structure.
+
+==Graphics primitives==
+
+Everything seen on a classic Mac OS screen is drawn by QuickDraw, but the library itself is quite low level. The primitive objects it can draw are:
+
+* Lines
+* Rectangles
+* Rounded (and oval) cornered rectangles
+* Ovals (including circles)
+* Arcs (and wedges), both circular and oval
+* Polygons (arbitrary closed shapes built from a list of points joined by lines)
+* '''Regions''' (arbitrary sets of pixels)
+* [[Bitmap]]s and [[Pixmap]]s
+* Text
+
+Each of these objects (except text) may be drawn using a "pen", which can have any rectangular dimensions, pattern or colour. Note that, because the pen is rectangular and axis-aligned, diagonal lines will end up thicker than horizontal or vertical ones. Shapes may be drawn filled or framed, using any pattern or colour. A filled Arc forms a wedge. Text may be drawn in any installed font, in a variety of stylistic variations, and at any size and colour. Text is scaled in a variety of ways depending on how it is stored - [[TrueType]] fonts will scale smoothly to any size, whereas [[bitmap font]]s do not usually scale well.
+
+An important feature of QuickDraw was support for ''transfer modes'', which governed how a destination pixel value was related to its previous value and the colour of the object being drawn.
+
+The set of attributes of the pen and text drawing are associated with the GrafPort.
+
+'''Regions''' are a key data structure in QuickDraw. They define an arbitrary set of pixels, rather like a bitmap, but in a compressed form which can be very rapidly manipulated in complex ways. Regions can be combined (union), subtracted (difference), and [[exclusive OR|XORed]] to form other Regions. They can be used within a GrafPort for [[clipping]], or drawn filled or framed like any other shape. A series of framed shapes and connected lines may be combined into a Region. A Region need not consist of a contiguous set of pixels - disconnected regions are possible and common. Although regions could allow powerful graphic manipulations they are limited by the current implementation that restricts the maximum region data storage size to a sixteen bit value and so are not practical as a general-purpose drawing composition tool and practical use at high resolution is also restricted. Regions underpin the rest of QuickDraw, permitting clipping to arbitrary shapes, essential for the implementation of multiple overlapping windows. Invented by Bill Atkinson, Regions were patented as a separate invention by Apple.[http://patft1.uspto.gov/netacgi/nph-Parser?Sect2=PTO1&Sect2=HITOFF&p=1&u=%2Fnetahtml%25%2FPTO%25%2Fsearch-bool.html&r=1&f=G&l=50&d=PALL&RefSrch=yes&Query=PN%2F4622545]
+
+A region is specified (after initial creation) by an ''opening'' of the region, drawing various QuickDraw shapes, and ''closing'' the region. Hidden routines construct the region as the QuickDraw commands are executed. Bitmaps may also be converted to regions, and bitmaps may be made from regions by "painting" or "filling" the region into a graphics port.
+
+The internal structure of a region, other than the storage length and its bounding rectangle, is opaque - there are no Apple-published documents available, though the mechanism is outlined in the patent. Regions are implemented using both vertical and horizontal [[Data compression|compression]]. A region is stored as a series of horizontal scan lines ("[[Raster graphics|rasters]]"), each of which contains a vertical coordinate followed by a list of horizontal inversion coordinates. Each inversion point can be thought of as toggling inclusion in the region for all the points after it: the first point turns the region on, the second turns it off, and so on. Further compression is achieved by storing each line differentially: each line contains only the differences from the previous line rather than a full set of inversion points. Finally, identical adjacent scan lines are efficiently encoded by simply skipping them. In this way, a commonly used region, the rounded corner rectangle, is efficiently encoded, and complex operations such as region composition and image clipping may be done without requiring either extensive processor cycles or large amounts of memory. (The original systems executing QuickDraw code used processors operating at 8 megahertz clock rates and systems had but 128 kilobytes of writable memory.)
+
+Because regions are bound to a specific orientation, a ninety degree rotation of a region would require both detailed [[reverse engineering]] of the structure and extensive coding. A general rotation is impractical when compared to rotating the original source boundary description and simply creating a new region. However, the API includes conversion routines to and from BitMaps. (Bitmaps may also be rotated using well known methods, but with various degrees of image degradation depending upon angle chosen, the storage and processor cycles available to the operation, and the complexity of the algorithm.)
+
+Apple has recently (in the [[Carbon (API)|Carbon API]]) defined regions as an opaque structure under some program compilation options.
+
+==Higher level operations==
+
+Any series of graphics calls to QuickDraw can be recorded in a structure called a ''Picture''. This can then be saved in memory and "played back" at any time, reproducing the graphics sequence. At playback time the picture may be placed at new coordinates or scaled. A picture can be saved to disk in which form it defines the Apple [[PICT]] format.
+
+An entire BitMap (or PixMap, when referring to colour images) may be copied from one grafport to another, with scaling and clipping. Known as [[bit blit|blitting]], or ''CopyBits'', after the name of the function, this operation is the basis for most animation and sprite-like effects on the Mac.
+
+QuickDraw provides a similar blitting function which is designed to implement scrolling within a grafport - the image in the port can be shifted to a new location without scaling (but with clipping if desired).
+
+Each graphics primitive operation is vectored through the StdProcs, a series of [[function pointer]]s stored in the GrafPort. This limited [[Polymorphism in object-oriented programming|polymorphism]] permits individual operations to be overridden or replaced by custom functions, allowing [[computer printer|printer]] drivers to intercept graphics commands and translate them to suitable printer operations. In this way, QuickDraw can be rendered using [[PostScript]], a fact that enabled the Macintosh to practically invent [[desktop publishing]].
+
+Similar to a [[Inheritance (computer science)|subclass]], the Window data structure began with the associated GrafPort, thus basically making windows exchangeable with any GrafPort. While convenient, this could be a source of programming errors.
+
+==History==
+
+QuickDraw started life as LisaGraf, as part of the [[Apple Lisa]] development. For the Macintosh it was initially simplified, but then later extended. Originally, QuickDraw GrafPorts only supported a bit depth of 1, that is one bit per pixel, or black and white. This suited the built-in screen of the early Macintosh, with its fixed size of 512 x 342 pixels. Limited colour was supported using a crude [[planar]] model, allowing QuickDraw to drive some types of [[dot-matrix printer]] that used multi-coloured ribbons, but very few applications supported this feature.
+
+In 1987, the [[Macintosh II]] was developed and launched, which was designed as a more conventional three-box design - [[Central processing unit|CPU]], [[Computer display|monitor]] and [[Computer keyboard|keyboard]] all separate. Because the monitor was separate, and larger than the original Mac, the [[video]] architecture had to necessarily change. In addition, the Mac II took the Macintosh from black-and-white to full color. Apple also decided at this time to support a seamless desktop spanning multiple monitors, an industry first. Thus Color QuickDraw, a significant extension of the original QuickDraw, was created. The original architecture lacked much provision for expandability, but using a series of inspired hacks, the Apple developers managed to make the addition of color and the new video architecture virtually seamless to both developers and end users.
+
+Color QuickDraw introduced new data structures - GDevices to represent each attached video card/monitor, and a new colour GrafPort (CGrafPort) structure to handle colour, as well as PixMaps instead of BitMaps for multiple bits-per-pixel images. One of the inspired hacks for compatibility used here was that the new structure was exactly the same size as the old one, with most data members in the same place, but with additional handles and pointers to color structures in place of the BitMap fields. The upper two bits of the ''rowBytes'' field were pressed into use as flags to distinguish a GrafPort from a CGrafPort (they were always zero on old-style GrafPorts because a BitMap could never feasibly be so wide as to ever set these bits). The use of these two high bits would come back to haunt QuickDraw later, as it forced a maximum row width of just 4,096 on 32-bit PixMaps, which became problematic for high-resolution graphics work. Later development (Carbon) eliminated this limitation but was not fully backward compatible. A Palette Manager was also added in Color QuickDraw which managed the arbitration of colours on indexed video devices. Most graphics primitives operations remained either unchanged (but would operate in color), or else new colour versions of the black and white APIs were added.
+
+Initially, Color QuickDraw was only capable of operating with 1, 2, 4 and 8-bit video cards, which were all that was available at the time. Soon after however, 24-bit video cards appeared (so-called true colour), and QuickDraw was updated again to support up to 32 bits per pixel (in reality, 24 bits, with 8 unused) of color data ("32-Bit QuickDraw"). The architecture always allowed for this however, so no new APIs were necessary. The colour data structures themselves allowed a colour depth of 1, 2, 4, 8, 15 and 24 bits, yielding 1, 4, 16, 256, 32,768 and 16,777,216 colours respectively, or 4, 16 and 256 scales of grey. QuickDraw took care of managing the resampling of colours to the available colour depths of the actual video hardware, or transfer between offscreen image buffers, including optionally [[dither]]ing images down to a lower depth to improve image quality. A set of colour sampling utilities were also added so that programmers could generate optimal colour palettes for use with indexed video devices.
+
+The architecture of QuickDraw had always allowed the creation of GrafPorts and their associated BitMaps or PixMaps "offscreen", where graphics could be composed in memory without it being visible immediately on the screen. Pixels could be transferred between these offscreen ports and the screen using the QuickDraw [[BitBLT|blitting]] function CopyBits. Such offscreen compositing is the workhorse for games and graphics-intensive applications. However, until the advent of 32-Bit QuickDraw, such offscreen worlds had to be created and set up by hand by the programmer within his application, and involving as it did three or more separate and fairly complex data structures (CGrafPort, PixMap and GDevice, and for indexed devices, the colour look-up table and its inverse), could be error prone. With 32-Bit QuickDraw, OS support for handling this was added, with the "Offscreen Graphics World" or GWorld. The video buffer (PixMap) of a GWorld could be stored in main memory, or when available in unused parts of video ram where copying to the screen could be optimized for speed by avoiding the need to transfer a large amount of pixel data across the main memory bus.
+
+With the advent of [[QuickTime]], QuickDraw gained the ability to deal with compressed raster data, such as [[JPEG]]. The QuickTime Image Compression Manager integrated closely with QuickDraw: in particular, image decompression calls were full-fledged QuickDraw drawing calls, and if a picture was being recorded, the ''compressed'' data would be saved as part of the picture, for display when the picture was later drawn. The Image Compression Manager also added integration with [[ColorSync]] colour matching.
+
+After this, apart from back-end changes to optimize for new processor architectures ([[PowerPC]]), QuickDraw remained largely unchanged throughout the rest of the life of the classic Mac OS. [[QuickDraw GX]] and [[QuickDraw 3D]] shared the QuickDraw name and were able to interoperate with QuickDraw PixMap and picture data structures, but were otherwise completely separate in functionality.
+
+With Mac OS X, QuickDraw became part of the [[Carbon (computing)|Carbon]] [[Application programming interface|API]]. With the release of Mac OS X 10.4, QuickDraw was officially deprecated. Apple's technology overview for the pre-release Mac OS X 10.5 mentions that Mac OS X 10.5 will include [[resolution independence]], and that to look "as good as possible" applications using QuickDraw will need to replace QuickDraw calls with Quartz[http://developer.apple.com/leopard/overview/].
+
+== See also ==
+* [[Bresenham's line algorithm]]
+
+== External links ==
+* [http://developer.apple.com/documentation/mac/quickdraw/quickdraw-2.html Imaging with QuickDraw] - original QuickDraw documentation from developer.apple.com
+* [http://developer.apple.com/documentation/Carbon/Reference/QuickDraw_Ref/index.html QuickDraw Reference] - modern QuickDraw documentation from developer.apple.com
+* [http://developer.apple.com/macos/quickdraw.html QuickDraw] - list of QuickDraw resources from developer.apple.com
+* [http://www.folklore.org/StoryView.py?project=Macintosh&story=Round_Rects_Are_Everywhere.txt&topic=QuickDraw Folklore.org: Macintosh Stories: Round Rects Are Everywhere!], May 1981, story about creating QuickDraw
+
+{{Mac OS}}
+
+[[Category:Apple Inc. software]]
+[[Category:Mac OS APIs]]
+
+[[de:QuickDraw]]
+[[fr:QuickDraw]]
+[[it:QuickDraw]]
+[[ja:QuickDraw]]

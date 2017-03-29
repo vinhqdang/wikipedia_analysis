@@ -1,0 +1,314 @@
+La notion de '''fugacité''' exprime en [[thermodynamique]] l'écart entre les propriétés d'une [[espèce chimique]] pure ou dans un mélange réel par rapport aux propriétés de ce même corps à l'état de [[gaz parfait]]. Si la notion de fugacité est a priori applicable à toutes les phases (gaz, liquide, solide), elle est dans la pratique surtout employée dans le calcul des propriétés des gaz. Les '''coefficients de fugacité''' sont calculés avec des [[équation d'état|équations d'état]].
+
+== Introduction ==
+
+Suite à l'apparition de l'[[équation d'état de Van der Waals]] en 1873, il devenait possible de calculer les équilibres de phases gaz-liquide. En effet, cette équation novatrice pour son époque permettait de calculer aussi bien les propriétés d'un gaz que celles d'un liquide.
+
+[[Willard Gibbs]] et [[Pierre Duhem]] introduisirent peu après (1875 à 1878) la notion de [[potentiel chimique]], notion importante dans les équilibres de phases et les [[équilibre chimique|équilibres chimiques]], puisque ceux-ci sont définis par l'homogénéité dans tout le système des [[Fonction d'état|variables intensives]] qui le décrivent ([[température]], [[pression]] et [[Potentiel chimique|potentiels chimiques]] des constituants du système) et par leur constance au cours du temps. Toutefois, la notion de potentiel chimique se révéla difficile à manipuler, car un potentiel chimique ne peut être calculé qu'à une constante additive près, et non de façon absolue.
+
+En 1900 et 1901, [[Gilbert Lewis]] introduisit la notion de [[fugacité]] qui décrit l'écart de comportement d'un corps réel, pur ou en mélange, par rapport au même corps à l'état de gaz parfait pur. Cette notion se révéla efficace dans son application pour les gaz, mais les équations d'état représentant assez mal les phases liquides, Lewis introduisit plus tard (1923) la notion d'[[activité chimique]] plus spécialement employée pour les phases condensées.
+
+== Définitions ==
+
+=== Fugacité ===
+
+La variation isotherme à composition constante du [[potentiel chimique]] d'un corps ''i'' pur ou en mélange en fonction de la pression est donnée par la relation :
+
+:<math>\left( \frac{\partial \mu_i}{\partial P} \right)_{T,n} = \bar V_i</math>
+
+avec <math>\bar V_i</math> le [[grandeur molaire| volume molaire]] du corps pur ou le [[grandeur molaire partielle|volume molaire partiel]] du corps ''i'' en mélange.
+
+Pour un gaz parfait pur, le volume molaire vaut :
+
+:<math>\bar V_i^{\bullet,*} = \frac{RT}{P}</math>
+
+En conséquence, la variation isotherme du potentiel chimique d'un gaz parfait pur vaut :
+
+:<math>\mathrm d \mu_i^{\bullet,*} = RT.\frac{\mathrm d P}{P} = RT.\mathrm d \ln \left( P \right)</math>
+
+Lewis s'inspira de cette relation pour introduire la notion de '''fugacité''' d'un corps réel en mélange, notée <math>f</math>, qu'il définit ainsi :
+
+<center>
+{| border="1"
+|'''Variation isotherme de la fugacité : '''<math>\mathrm d \mu _i= RT.\mathrm d \ln \left( f_i \right)</math>
+|}
+</center>
+
+La fugacité a la dimension d'une pression.
+
+Pour un corps à l'état de gaz parfait en mélange la fugacité est égale à la pression partielle de ce corps : <math>f_i^{\bullet} = z_i.P</math>. Pour un gaz parfait pur, la fugacité est bien entendu égale à la pression  : <math>f_i^{\bullet,*} = P</math>.
+
+En revanche pour un mélange réel la fugacité d'un corps présent dans ce mélange n'est pas égale à sa pression partielle : <math>f_i \neq z_i.P</math>. Pour un corps pur la fugacité n'est pas égale à la pression : <math>f_i^{*} \neq P</math>.
+
+La fugacité se définit pour n'importe quelle phase, aussi bien pour un gaz que pour un liquide, un solide ou un fluide supercritique. Toutefois il n'existe pas à l'heure actuelle d'équation d'état représentant convenablement les phases condensées, aussi la fugacité est-elle principalement employée dans le calcul des propriétés des phases gaz.
+
+=== Coefficient de fugacité ===
+L'intégration de l'expression définissant la fugacité donne la relation entre le potentiel chimique <math>\mu_i</math> du corps ''i'' dans le mélange réel et le potentiel chimique <math>\mu_i^{\bullet,*}</math> du même corps pur à l'état de gaz parfait, la température étant identique pour les deux potentiels, mais pas forcément la pression :
+
+:<math>\mu_i - \mu_i^{\bullet,*} = RT. \int_{\ln \left( f_i^{\bullet,*} \right)}^{\ln \left( f_i \right)} \mathrm d \ln \left( f_i \right) = RT.\ln \left( \frac{f_i}{f_i^{\bullet,*}} \right) = RT.\ln \left( \frac{f_i}{P} \right)</math>
+
+Le [[théorème de Gibbs]] conduit à la relation suivante entre le potentiel chimique <math>\mu_i^{\bullet,*}</math> du corps ''i'' pur à l'état de gaz parfait et le potentiel chimique <math>\mu_i^{\bullet}</math> du même corps dans un mélange de gaz parfaits aux mêmes pression et température, <math>z_i</math> étant la fraction molaire du corps :
+
+:<math>\mu_i^{\bullet} = \mu_i^{\bullet,*} + RT.\ln \left( z_i \right) </math>
+
+Nous avons donc la relation :
+
+:<math>\mu_i - \mu_i^{\bullet} = RT.\ln \left( \frac{f_i}{z_i.P} \right)</math>
+
+dans laquelle les deux potentiels chimiques sont définis à la même température, mais pas forcément aux mêmes pression et composition. Cette relation montre que le potentiel chimique d'un corps ''i'' dans un mélange de gaz parfaits est égale à la pression partielle de ce corps :
+
+:<math>\mu_i - \mu_i^{\bullet} = RT. \int_{\ln \left( f_i^{\bullet} \right)}^{\ln \left( f_i \right)} \mathrm d \ln \left( f_i \right) = RT.\ln \left( \frac{f_i}{f_i^{\bullet}} \right)</math>
+:<math>f_i^{\bullet} = z_i.P</math>
+
+Nous considèrerons par la suite que les deux potentiels chimiques sont définis '''aux mêmes pression, température et composition''', seul l'état diffère entre les deux (état réel pour le premier, gaz parfait pour l'autre).
+
+Ce ratio permet de définir le '''coefficient de fugacité''', il est noté <math>\phi_i</math> :
+
+<center>
+{| border="1"
+|'''Coefficient de fugacité : '''<math>\phi_i = \frac{f_i}{z_i.P}</math>
+|}
+</center>
+
+Le coefficient de fugacité est adimensionnel.
+
+Le coefficient de fugacité exprime l'écart entre le potentiel chimique <math>\mu_i</math> d'un corps dans un mélange réel et le potentiel chimique <math>\mu^{\bullet}_i</math> de ce corps en mélange de gaz parfaits de même composition, aux mêmes pression et température :
+
+:<math>\mu_i - \mu^{\bullet}_i = RT.\ln \left( \phi_i \right)</math>
+
+Le coefficient de fugacité exprime également l'écart entre le potentiel chimique <math>\mu_i</math> d'un corps dans un mélange réel et le potentiel chimique <math>\mu^{\bullet,*}_i</math> de ce corps pur à l'état de gaz parfait, aux mêmes pression et température :
+
+:<math>\mu_i - \mu^{\bullet,*}_i = RT.\ln \left( z_i . \phi_i \right)</math>
+
+Par définition, le coefficient de fugacité d'un gaz parfait pur ou en mélange est donc égal à 1 : 
+
+<center>'''Pour un gaz parfait : '''<math>\phi_i^{\bullet} = 1</math> et <math>f_i^{\bullet} = z_i.P</math></center>
+
+Le gaz parfait correspond au cas idéal dans lequel les molécules n'ont aucune interaction entre elles hormis des chocs élastiques.
+
+Lorsque les molécules s'attirent, la pression réelle est inférieure à celle du gaz parfait correspondant de même composition, à la même température et dans le même volume : dans ce cas <math>\phi_i < 1</math> et <math>f_i < z_i.P</math>.
+
+Inversement, lorsque les molécules se repoussent, la pression réelle est supérieure à celle du gaz parfait correspondant de même composition, à la même température et dans le même volume : dans ce cas <math>\phi_i > 1</math> et <math>f_i > z_i.P</math>.
+
+== Calcul du coefficient de fugacité ==
+Contrairement au potentiel chimique qui n'est toujours défini qu'à une constante additive près, le coefficient de fugacité, et donc la fugacité, peut être calculé de façon absolue, ce qui le rend particulièrement intéressant dans le calcul des propriétés des mélanges réels.
+
+=== Avec une équation d'état explicite en P ===
+Avec une équation d'état dans laquelle la pression ''P'' est exprimée explicitement en fonction du volume ''V'', de la température ''T'' et de la composition (nombre de moles <math>n_i</math>), <math>P = P\left(V,T,n\right)</math>, telles que les {{en}}[[:en:equation of state|équations d'état]] de van der Waals, Soave-Redlich-Kwong, Peng-Robinson, le coefficient de fugacité se calcule selon :
+
+<center><math>RT.\ln \left( \phi_i \right) = - \int_{+\infty}^{V} \left[ \left( \frac{\partial P}{\partial n_i} \right)_{V,T,n_{j \neq i}} - \frac{RT}{V} \right]. \mathrm dV - RT . \ln Z</math></center>
+
+avec :
+
+* <math>n_i</math>, le nombre de moles du corps ''i'' dans le mélange ;
+* <math>n_{j \neq i}</math>, nombre de moles des corps autres que ''i'' dans le mélange ;
+* <math>Z=\frac{P \bar V}{RT}</math>, facteur de compressibilité du mélange, <math>\bar V</math> étant le [[grandeur molaire|volume molaire]] du mélange réel.
+
+{{boîte déroulante|titre = Démonstration
+|contenu=
+Soit un mélange de <math>N</math> constituants à pression ''P'', température ''T'' et volume ''V'', chaque constituant ''i'' étant représenté par <math>n_i</math> moles, le mélange étant en une seule phase (gaz, liquide ou solide).
+
+Le coefficient de fugacité de tout constituant ''i'' est défini la relation :
+
+:<math>\mu_i \left( P,T,z \right) - \mu_i^{\bullet} \left( P,T,z \right) = RT.\ln \left( \phi_i \right)</math>
+
+Pour le mélange réel, le potentiel chimique peut indifféremment s'écrire en fonction des variables réelles :
+
+:<math>\mu_i \left( P,T,z \right) = \mu_i \left( V,T,z \right)</math>
+
+Pour le mélange de gaz parfaits correspondant, il n'en va pas de même, car à ''P'', ''T'' et composition du mélange réel le volume correspondant est calculé selon :
+
+:<math>V^{\bullet} = \frac{ \sum_{i=1}^{N} n_i.RT }{P} \neq V</math>
+
+d'où la relation :
+
+:<math>\mu_i^{\bullet} \left( P,T,z \right) = \mu_i^{\bullet} \left( V^{\bullet},T,z \right) \neq \mu_i^{\bullet} \left( V,T,z \right)</math>
+
+La variation isotherme du potentiel chimique de tout constituant ''i'' en fonction du volume est donnée par :
+
+:<math>\left( \frac{\partial \mu_i}{\partial V} \right)_{T,n} = - \left( \frac{\partial P}{\partial n_i} \right)_{V,T,n_{j \neq i}}</math>
+
+En intégrant cette relation entre un volume <math>V^0</math> quelconque et le volume <math>V</math> du mélange, à température et composition constantes, on obtient :
+
+:<math>\mu_i \left( V,T,z \right) - \mu_i \left( V^0,T,z \right) = - \int_{V^0}^{V} \left( \frac{\partial P}{\partial n_i} \right)_{V,T,n_{j \neq i}} . \mathrm d V</math>
+
+Pour un mélange de gaz parfaits en particulier, pour tout corps ''i'', on a :
+
+:<math>\left( \frac{\partial P}{\partial n_i} \right)_{V,T,n_{j \neq i}} = \frac{RT}{V}</math>
+
+d'où les relations entre potentiels chimiques du constituant ''i'' à l'état de gaz parfait :
+
+:<math>\mu_i^{\bullet} \left( V,T,z \right) - \mu_i^{\bullet} \left( V^0,T,z \right) = - \int_{V^0}^{V} \left( \frac{\partial P}{\partial n_i} \right)_{V,T,n_{j \neq i}} . \mathrm d V = - \int_{V^0}^{V} \frac{RT}{V}.\mathrm d V </math>
+:<math>\mu_i^{\bullet} \left( V,T,z \right) - \mu_i^{\bullet} \left( V^{\bullet},T,z \right) = - \int_{V^{\bullet}}^{V} \left( \frac{\partial P}{\partial n_i} \right)_{V,T,n_{j \neq i}} . \mathrm d V = - \int_{V^{\bullet}}^{V} \frac{RT}{V}.\mathrm d V = -RT.\ln \left( \frac{V}{V^{\bullet}} \right) </math>
+
+Dans cette dernière relation on identifie :
+
+:<math>\frac{V}{V^{\bullet}} = \frac{P.V}{\sum_{i=1}^{N} n_i.RT} = \frac{P.\bar V}{RT} = Z</math>
+
+avec <math>\bar V = \frac{V}{\sum_{i=1}^{N} n_i}</math> le volume molaire du mélange réel et <math>Z</math> le facteur de compressibilité du mélange réel.
+
+Nous pouvons écrire :
+
+:<math>\mu_i \left( V,T,z \right) - \mu_i \left( V^0,T,z \right)
++ \mu_i^{\bullet} \left( V^0,T,z \right) \underbrace{- \mu_i^{\bullet} \left( V,T,z \right) 
++ \mu_i^{\bullet} \left( V,T,z \right)}_{=0} - \mu_i^{\bullet} \left( V^{\bullet},T,z \right)
+= - \int_{V^0}^{V} \left[ \left( \frac{\partial P}{\partial n_i} \right)_{V,T,n_{j \neq i}} - \frac{RT}{V} \right]. \mathrm d V - RT.\ln Z</math>
+
+Lorsque le volume tend vers l'infini (lorsque la pression tend vers 0), le comportement du mélange réel à température et composition (nombre de moles) constantes tend vers celui du mélange de gaz parfaits, aussi peut-on écrire :
+
+:<math>\lim_{V^0 \to +\infty} \mu_i \left( V^0,T,z \right) = \lim_{V^0 \to +\infty} \mu_i^{\bullet} \left( V^0,T,z \right)</math>
+
+d'où :
+
+:<math>\mu_i \left( V,T,z \right) - \mu_i^{\bullet} \left( V^{\bullet},T,z \right)
+ = - \int_{+\infty}^{V} \left[ \left( \frac{\partial P}{\partial n_i} \right)_{V,T,n_{j \neq i}} - \frac{RT}{V} \right]. \mathrm d V - RT.\ln Z </math>
+
+or par définition :
+
+:<math>\mu_i \left( V,T,z \right) = \mu_i \left( P,T,z \right)</math>
+:<math>\mu_i^{\bullet} \left( V^{\bullet},T,z \right) = \mu_i^{\bullet} \left( P,T,z \right)</math>
+:<math>\mu_i \left( P,T,z \right) - \mu_i^{\bullet} \left( P,T,z \right) = RT.\ln \left( \phi_i \right)</math>
+}}
+
+=== Avec une équation d'état explicite en V ===
+Avec une équation d'état dans laquelle le volume ''V'' est exprimé explicitement en fonction de la pression ''P'', de la température ''T'' et de la composition (nombre de moles <math>n_i</math>), <math>V = V\left(P,T,n\right)</math>, comme pour certaines formes de l'[[équation du viriel]], le coefficient de fugacité se calcule selon :
+
+<center><math>RT.\ln \left( \phi_i \right) = \int_{0}^{P} \left[ \bar V_i - \frac{RT}{P} \right]. \mathrm dP</math></center>
+
+avec <math>\bar V_i = \left( \frac{\partial V}{\partial n_i} \right)_{P,T,n_{j \neq i}}</math> le [[grandeur molaire partielle|volume molaire partiel]] du corps ''i'' dans le mélange réel.
+
+{{boîte déroulante|titre = Démonstration
+|contenu=
+Soit un mélange de <math>N</math> constituants à pression ''P'', température ''T'' et volume ''V'', chaque constituant ''i'' étant représenté par <math>n_i</math> moles, le mélange étant en une seule phase (gaz, liquide ou solide).
+
+La variation isotherme du potentiel chimique de tout constituant ''i'' en fonction de la pression est donnée par :
+
+:<math>\left( \frac{\partial \mu_i}{\partial P} \right)_{T,n} = \bar V_i</math>
+
+avec le volume molaire partiel du constituant ''i'' :
+
+:<math>\bar V_i = \left( \frac{\partial V}{\partial n_i} \right)_{P,T,n_{j \neq i}}</math>
+
+En intégrant cette relation entre une pression <math>P^0</math> quelconque et la pression <math>P</math> du mélange, à température et composition constantes, on obtient :
+
+:<math>\mu_i \left( P,T,z \right) - \mu_i \left( P^0,T,z \right) = \int_{P^0}^{P} \bar V_i . \mathrm d P</math>
+
+Pour un mélange de gaz parfaits en particulier, le volume molaire partiel de tout corps ''i'' vaut :
+
+:<math>\bar V_i^{\bullet} = \frac{RT}{P}</math>
+
+d'où la relation entre potentiels chimiques du constituant ''i'' à l'état de gaz parfait :
+
+:<math>\mu_i^{\bullet} \left( P,T,z \right) - \mu_i^{\bullet} \left( P^0,T,z \right) = \int_{P^0}^{P} \bar V_i^{\bullet} . \mathrm d P = \int_{P^0}^{P} \frac{RT}{P}.\mathrm d P </math>
+
+En soustrayant l'expression obtenue pour les gaz parfaits à l'expression générale obtenue précédemment, nous avons :
+
+:<math>\mu_i \left( P,T,z \right) - \mu_i \left( P^0,T,z \right) + \mu_i^{\bullet} \left( P^0,T,z \right) - \mu_i^{\bullet} \left( P,T,z \right) = \int_{P^0}^{P} \left[ \bar V_i - \frac{RT}{P} \right]. \mathrm d P</math>
+
+Lorsque la pression tend vers 0, le comportement du mélange réel à température et composition constantes tend vers celui du mélange de gaz parfaits, aussi peut-on écrire :
+
+:<math>\lim_{P^0 \to 0} \mu_i \left( P^0,T,z \right) = \lim_{P^0 \to 0} \mu_i^{\bullet} \left( P^0,T,z \right)</math>
+
+d'où :
+
+:<math>\mu_i \left( P,T,z \right) - \mu_i^{\bullet} \left( P,T,z \right) = \int_{0}^{P} \left[ \bar V_i - \frac{RT}{P} \right]. \mathrm d P</math>
+
+or par définition :
+
+:<math>\mu_i \left( P,T,z \right) - \mu_i^{\bullet} \left( P,T,z \right) = RT.\ln \left( \phi_i \right)</math>
+}}
+
+== Équilibre de phases ==
+Lorsque deux ou plusieurs phases (gaz, liquide, solide) sont en équilibre, les potentiels chimiques de chacun des corps en présence sont homogènes sur l'ensemble des phases. Autrement dit, s'il existe à l'équilibre les phases <math>\alpha, \beta, \gamma</math>, les potentiels chimiques de tout corps ''i'' présent répondent à l'égalité :
+
+<center><math>\mu_i^\alpha = \mu_i^\beta = \mu_i^\gamma</math></center>
+
+En introduisant les fractions molaires respectives <math>z_i^\alpha , z_i^\beta , z_i^\gamma</math> et les coefficients de fugacité respectifs <math>\phi_i^\alpha , \phi_i^\beta , \phi_i^\gamma</math> de tout corps ''i'' dans chacune de ces phases, on peut écrire pour chacun des potentiels chimiques :
+
+:<math>\mu_i^\alpha \left( P, T, z^\alpha \right) = \mu_i^{\bullet,*} \left( P, T \right) + RT.\ln \left( z_i^\alpha . \phi_i^\alpha \right)</math>
+:<math>\mu_i^\beta \left( P, T, z^\beta \right) = \mu_i^{\bullet,*} \left( P, T \right) + RT.\ln \left( z_i^\beta . \phi_i^\beta \right)</math>
+:<math>\mu_i^\gamma \left( P, T, z^\gamma \right) = \mu_i^{\bullet,*} \left( P, T \right) + RT.\ln \left( z_i^\gamma . \phi_i^\gamma \right)</math>
+
+Le potentiel chimique du corps pur à l'état de gaz parfait <math>\mu_i^{\bullet,*}</math> est le même dans toutes ces expressions, puisque la pression et la température sont les mêmes dans toutes les phases à l'équilibre.
+
+L'égalité des potentiels chimiques du corps ''i'' dans l'ensemble des phases conduit à :
+
+<center>
+{| border="1"
+|'''Approche ϕ - ϕ : ''' <math>z_i^\alpha . \phi_i^\alpha = z_i^\beta . \phi_i^\beta = z_i^\gamma . \phi_i^\gamma</math></center>
+|}
+</center>
+
+On remarquera qu'en multipliant par la pression l'égalité précédente, celle-ci revient à l'égalité des fugacités : <math>f_i^\alpha = f_i^\beta = f_i^\gamma</math>. Néanmoins, c'est la relation des coefficients de fugacité ci-dessus qui est le plus souvent utilisée dans le calcul des équilibres de phases.
+
+Cette approche du calcul de l'équilibre de phases est appelée « '''approche <math>\phi - \phi</math>''' » car toutes les phases sont représentées à l'aide de coefficients de fugacité qui peuvent être obtenus avec la même équation d'état (par exemple l'équation d'état cubique de Soave-Redlich-Kwong ou Peng-Robinson) s'il s'agit d'un équilibre gaz-liquide. Toutefois, il n'existe pas à l'heure actuelle d'équation d'état représentant convenablement les phases liquides notamment aux basses pressions : il est alors préférable pour les phases liquides d'employer un modèle de [[activité chimique|coefficient d'activité]] et l'approche dite [[activité chimique#Équilibre de phases|« approche <math>\gamma - \phi</math> »]] pour le calcul de l'équilibre de phases.
+
+L'approche <math>\gamma - \phi</math> nécessite deux modèles distincts : une équation d'état pour la phase gaz, et un modèle de coefficient d'activité pour la phase liquide ; elle est recommandée pour des pressions inférieures à 10 bar. Au-delà, l'approche <math>\phi - \phi</math> est recommandée car elle ne nécessite qu'une seule et même équation d'état pour représenter les deux phases, ce qui rend le calcul cohérent à l'approche du point critique où les deux phases doivent se rejoindre. Les deux modèles de l'approche <math>\gamma - \phi</math> posent des problèmes de convergence numérique autour du point critique.
+
+== Grandeurs résiduelles ==
+=== Définition ===
+Une '''grandeur résiduelle''' <math>X^{RES}</math> exprime l'écart entre une grandeur thermodynamique extensive <math>X</math> d'un mélange réel et la même grandeur thermodynamique extensive <math>X^{\bullet}</math> d'un mélange de gaz parfaits aux mêmes pression, température et composition :
+
+<center>
+{| border="1"
+|'''Grandeur résiduelle : ''' <math>X^{RES} = X - X^{\bullet}</math>
+|}
+</center>
+
+Une grandeur résiduelle est par construction également une grandeur [[extensivité - intensivité|extensive]], il est donc possible de définir une [[grandeur molaire]] résiduelle <math>\bar X^{RES}</math> pour le mélange et une [[grandeur molaire partielle]] résiduelle <math>\bar X_i^{RES}</math> pour chacun des corps présents dans le mélange.
+
+Les relations suivantes sont également vraies entre grandeurs molaires et grandeurs molaires partielles, respectivement réelles, du gaz parfait et résiduelles :
+
+:<math>\bar X = \bar X^{\bullet} + \bar X^{RES}</math>
+:<math>\bar X_i = \bar X_i^{\bullet} + \bar X_i^{RES}</math>
+
+=== Calcul des grandeurs résiduelles ===
+Pour l'[[enthalpie libre]] <math>G</math>, l'identité des [[potentiel chimique|potentiels chimiques]] et des [[grandeur molaire partielle|enthalpies libres molaires partielles]] permet d'écrire :
+
+:<math>\bar G_i = \mu_i = \mu_i^{\bullet} + RT.\ln \left( \phi_i \right) = \bar G_i^{\bullet} + RT.\ln \left( \phi_i \right) </math>
+
+Le deuxième terme est donc l'enthalpie libre molaire partielle résiduelle :
+
+<center><math>\bar G_i^{RES} = RT.\ln \left( \phi_i \right) </math></center>
+
+À partir de l'enthalpie libre résiduelle, toutes les autres grandeurs résiduelles peuvent être calculées :
+
+*<math>\bar S_i^{RES} = -\left( \frac{\partial \bar G_i^{RES}}{\partial T} \right)_{P,z}</math>, [[entropie]] molaire partielle résiduelle, calculée par l'une des [[relations de Maxwell]] ;
+*<math>\bar H_i^{RES} = \bar G_i^{RES} + T.\bar S_i^{RES}</math>, [[enthalpie]] molaire partielle résiduelle ;
+*<math>\bar V_i^{RES} = \left(\frac{\partial \bar G_i^{RES}}{\partial P} \right)_{T,z}</math>, volume molaire partiel résiduel, calculé par l'une des [[relations de Maxwell]] ;
+*<math>\bar U_i^{RES} = \bar H_i^{RES} -P.\bar V_i^{RES}</math>, [[énergie interne]] molaire partielle résiduelle ;
+*<math>\bar F_i^{RES} = \bar G_i^{RES} -P.\bar V_i^{RES}</math>, [[énergie libre]] molaire partielle résiduelle.
+
+Le [[Théorème d'Euler (fonctions de plusieurs variables)|théorème d'Euler sur les fonctions homogènes du premier ordre]] s'applique aux grandeurs résiduelles puisque ce sont des grandeurs extensives, avec <math>n_i</math> nombre de moles de chacun des <math>N</math> corps <math>i</math> présents dans le mélange :
+
+<center><math>X^{RES} = \sum_{i=1}^{N} n_i.\bar X_i^{RES}</math></center>
+
+=== Calcul des grandeurs extensives réelles ===
+Les grandeurs extensives <math>X^{\bullet}</math> du mélange de gaz parfaits peuvent être calculées facilement à l'aide des propriétés des corps purs à l'état de gaz parfait puisque selon le [[théorème de Gibbs]] le mélange de gaz parfaits est une [[solution idéale]].
+
+Les grandeurs extensives du mélange réel se calculent donc en appliquant la définition des grandeurs résiduelles :
+
+<center><math>X = X^{\bullet} + X^{RES}</math></center>
+
+== Voir aussi ==
+=== Articles connexes ===
+* [[Gaz parfait]]
+* [[Théorème de Gibbs]]
+* [[Solution idéale]]
+* [[Équation d'état]]
+* [[Activité chimique]]
+* [[Loi de Raoult]]
+* [[Loi de Henry]]
+
+===Publications===
+* [http://hal.archives-ouvertes.fr/jpa-00233838/ La thermodynamique des solutions, E. Darmois, J. Phys. Radium 4, 7 (1943) 129-142]
+* Christophe COQUELET et Dominique RICHON, « Propriétés thermodynamiques - Détermination pour les fluides purs », traité : « Les techniques de l'ingénieur », {{t.}}Génie chimique, [[Éditions techniques de l'ingénieur]], BE.8030, 1-8, 2007
+* Christophe COQUELET et Dominique RICHON, « Propriétés thermodynamiques - Détermination pour les mélanges », traité : « Les techniques de l'ingénieur », {{t.}}Génie chimique, [[Éditions techniques de l'ingénieur]], BE.8031, 1-12, 2007
+* J.-P. Corriou, « Thermodynamiques, Définitions et relations fondamentales », Éditions techniques de l'ingénieur, J 1 025
+* J.-P. Corriou, « Thermodynamiques, Diagrammes thermodynamiques », Éditions techniques de l'ingénieur, J 1 026
+* R.C. REID, J.M. PRAUSNITZ, B.E. POLING, « The properties of gases and liquids », Mc Graw Hill, 1987, {{4e}} éd.
+* Jean Vidal, « Thermodynamique », {{coll.}} Publications de l'Institut français du pétrole, Éditions Technip, 1974 {{ISBN|978-2-7108-0244-0}}
+
+{{Portail|chimie|physique}}
+
+[[Catégorie:Grandeur thermodynamique]]

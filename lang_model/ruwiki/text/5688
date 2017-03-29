@@ -1,0 +1,146 @@
+{{чистить}}
+
+'''Теорема Грина''' устанавливает связь между [[Криволинейный интеграл|криволинейным интегралом]] по замкнутому контуру <math>C</math> и [[Двойной интеграл|двойным интегралом]] по области <math>D</math>, ограниченной этим контуром.  Фактически, эта теорема является частным случаем более общей [[Теорема Стокса|теоремы Стокса]].  Теорема названа в честь английского математика [[Грин, Джордж|Джорджа Грина]].
+
+== Формулировка ==
+
+Пусть <math>C</math> — положительно ориентированная кусочно-гладкая замкнутая кривая на плоскости, а <math>D</math> — область, ограниченная кривой <math>C</math>.  Если [[Функция (математика)|функции]] <math>P = P(x,y)</math>, <math>Q = Q(x,y)</math> определены в области <math>D</math> и имеют непрерывные [[Частная производная|частные производные]] <math>\frac{\partial P}{\partial y}</math>, <math>\frac{\partial Q}{\partial x}</math>, то
+
+:<math>\int\limits_{C} P \,dx + Q \,dy = \iint\limits_{D} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \,dx\,dy</math>
+
+На символе интеграла часто рисуют окружность, чтобы подчеркнуть, что кривая <math>C</math> замкнута.
+
+=== Доказательство ===
+[[Image:Green's-theorem-simple-region-inverse-direction.svg|thumb|300px|right|<math>D</math> — область, правильная в направлении <math>OY</math>, ограниченная замкнутой кривой <math>C</math>]]
+Пусть область <math>D</math> — криволинейная трапеция (область, правильная в направлении <math>OY</math>):
+
+: <math>D = \{ (x,y)|a \le x \le b, y_1(x) \le y \le y_2(x) \}</math>
+
+Для кривой <math>C</math>, ограничивающей область <math>D</math> зададим направление обхода по часовой стрелке.
+
+Тогда:
+: <math>\iint\limits_{D} \frac{\partial P}{\partial y} \,dx\,dy = \int\limits_{a}^{b}dx \int\limits_{y_1(x,y)}^{y_2(x,y)} \frac{\partial P}{\partial y} \,dy = \int\limits_{a}^{b} (P(x,y_2(x)) - P(x,y_1(x))) \,dx =</math>
+: <math>= \int\limits_{a}^{b} P(x,y_2(x)) \,dx - \int\limits_{a}^{b} P(x,y_1(x)) \,dx \quad (1)</math>
+
+Заметим, что оба полученных интеграла можно заменить криволинейными интегралами:
+: <math>\int\limits_{C_1} P(x,y) \,dx = -\int\limits_{-C_1} P(x,y) \,dx = -\int\limits_{a}^{b} P(x,y_1(x)) \,dx \quad (2)</math>
+: <math>\int\limits_{C_3} P(x,y) \,dx = \int\limits_{a}^{b} P(x,y_2(x)) \,dx \quad (3)</math>
+Интеграл по <math>C_1</math> берётся со знаком "минус", так как согласно ориентации контура <math>C</math> направление обхода данной части — от <math>b</math> до <math>a</math>.
+
+Криволинейные интегралы по <math>C_2</math> и <math>C_4</math> будут равны нулю, так как <math>x = \operatorname{const}</math>:
+: <math>\int\limits_{C_2} P(x,y) \,dx = 0 \quad (4)</math>
+: <math>\int\limits_{C_4} P(x,y) \,dx = 0 \quad (5)</math>
+
+Заменим в (1) интегралы согласно (2) и (3), а также прибавим (4) и (5), равные нулю и поэтому не влияющие на значение выражения:
+: <math>\iint\limits_{D} \frac{\partial P}{\partial y} \,dx\,dy = \int\limits_{C_1} P(x,y) \,dx + \int\limits_{C_3} P(x,y) \,dx + \int\limits_{C_2} P(x,y) \,dx + \int\limits_{C_4} P(x,y) \,dx</math>
+
+Так как обход по часовой стрелке при правой ориентации плоскости является отрицательным направлением, то сумма интегралов в правой части является криволинейным интегралом по замкнутой кривой <math>C</math> в отрицательном направлении:
+: <math>\iint\limits_{D} \frac{\partial P}{\partial y} \,dx\,dy = -\int\limits_{C} P(x,y) \,dx \quad (6)</math>
+
+Аналогично доказывается формула:
+: <math>\iint\limits_{D} \frac{\partial Q}{\partial x} \,dx\,dy = \int\limits_{C} Q(x,y) \,dy \quad (7)</math>
+если в качестве области <math>D</math> взять область, правильную в направлении <math>OX</math>.
+
+Вычитая (6) из (7), получим:
+:<math>\int\limits_{C} P \,dx + Q \,dy = \iint\limits_{D} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) \,dx\,dy</math>
+
+== Формулы Грина ==
+
+Если бы в электростатических задачах мы всегда имели дело
+с дискретным или непрерывным распределением заряда без всяких
+граничных поверхностей, то общее решение для [[скаляр]]ного [[потенциал]]а
+
+<math>\Phi(x)=\int \frac{\varrho(x^')}{|x-x^'|}\, d^3x</math>
+
+было бы самой удобной и непосредственной формой решения таких задач и не
+нужны были бы ни [[уравнение Лапласа]], ни [[уравнение Пуассона]]. Однако
+в действительности в целом ряде, если не в большинстве, задач
+[[электростатика|электростатики]] мы имеем дело с конечными областями
+пространства (содержащими или не содержащими [[заряд]]), на граничных
+поверхностях которых заданы определенные граничные («краевые»)
+условия. Эти граничные условия могут быть заменены некоторым
+соответственно подобранным распределением зарядов вне
+рассматриваемой области (в частности, в бесконечности), однако приведенное выше соотношение
+в этом случае уже непригодно для расчета потенциала,
+за исключением некоторых частных случаев (например, в методе
+изображений).
+
+Для рассмотрения задач с граничными условиями необходимо
+расширить используемый нами математический аппарат, а именно
+вывести так называемые формулы, или теоремы Грина (1824 г.).
+Они получаются непосредственно из [[Формула Остроградского|теоремы]] о [[дивергенция|дивергенции]]
+
+<math>\int\limits_V \operatorname{div}~A\,d^3x=\oint\limits_S A \cdot n\,da </math>,
+
+которая справедлива для любого векторного поля А, определенного
+в объёме V, ограниченном замкнутой поверхностью S. Пусть
+<math>A=\varphi \operatorname{grad} ~\psi</math>, где <math>\varphi</math> и <math>\psi
+\,\!</math> — произвольные дважды непрерывнодифференцируемые скалярные функции.
+Тогда
+
+<math>\operatorname{div}~(\varphi \operatorname{grad} ~\psi)=\varphi \nabla^2 \psi + \operatorname{grad} ~\varphi \cdot \operatorname{grad} ~\psi (1)</math>
+
+и
+
+<math>\varphi  \operatorname{grad} ~\psi \cdot n=\varphi \frac{\partial \psi}{\partial n} (2)</math>,
+
+где <math>\frac{\partial}{\partial n} </math>— [[нормальная производная]] на поверхности S (по
+направлению внешней нормали по отношению к объёму V). Подставляя
+(1) и (2) в теорему о дивергенции, мы придем к ''первой формуле Грина''
+
+<math>\int\limits_V (\varphi \nabla^2 \psi + \operatorname{grad} ~\varphi \cdot \operatorname{grad} ~\psi)\,d^3x = \oint\limits_S \varphi \frac{\partial \psi}{\partial n} \,da (3)</math>.
+
+Напишем такую же формулу, поменяв в ней местами <math>\varphi</math> и <math>\psi\,\!</math>,
+и вычтем её из (3). Тогда члены с произведением <math>\operatorname{grad} ~\varphi \cdot \operatorname{grad} ~\psi</math>
+сократятся и мы получим ''вторую формулу Грина'', называемую
+иначе ''теоремой Грина'':
+
+<math>\int\limits_V (\varphi \nabla^2 \psi - \psi \nabla^2 \varphi)\,d^3x = \oint\limits_S [\varphi \frac{\partial \psi}{\partial n} -  \psi \frac{\partial \varphi}{\partial n}] \,da </math>.
+
+В [[физика|физике]] и [[математика|математике]] теорема Грина дает соотношение между [[линейный интеграл|линейным интегралом]] простой ограниченной кривой С и [[двойной интеграл|двойным интегралом]] по плоской поверхности D ограниченной кривой С. И в общем виде записывается следующим образом
+
+<math>\int\limits_{C} L\, dx + M\, dy = \iint\limits_{D} \left(\frac{\partial M}{\partial x} - \frac{\partial L}{\partial y}\right)\, dA.</math>
+
+В физике Теорема Грина в основном используется для решения двумерных [[потоковый интеграл|потоковых интегралов]], исходя из того, что сумма исходящих потоков в любой точки области равна результирующему потоку, суммируемому по всей ограничивающей поверхности.
+
+''Третье уравнение Грина'' получается из второго уравнения путем замены <math>\psi = \frac{1}{x-y}</math> и замечания о том, что <math>\nabla^2 \psi = - 4 \pi \delta \left( \mathbf{x} - y \right)</math> в ''R'' ³. Если <math>\phi,\,\!</math> дважды дифференцируема на U.
+
+<math> \oint\limits_{\partial U} \left[ {1 \over |\mathbf{x} - \mathbf{y}|} {\partial \phi \over \partial n} (\mathbf{y}) - \phi(\mathbf{y}) {\partial \over \partial n_\mathbf{y}} {1 \over |\mathbf{x} - \mathbf{y}|}\right]\, dS_\mathbf{y} - \int\limits_U \left[ {1 \over |\mathbf{x} - \mathbf{y}|} \nabla^2 \phi(\mathbf{y})\right]\, dV_\mathbf{y} = k</math>
+
+<math>k = 4\pi\phi(x),\,\! </math> если '''''x''''' &isin; внутренней части ''U'', <math>2\pi\phi(x),\,\!</math> если '''''x''''' &isin; &part;''U'' и плоскость касания только в '''''x'''''.
+
+==См. также==
+* [[Дельта-функция]]
+* [[Теорема Стокса]]
+* [[Формула Остроградского]]
+
+== Литература ==
+* ''Д.Ж.Джексон'' Классическая электродинамика (1965г.)
+
+
+[[Категория:Дифференциальные уравнения в частных производных]]
+
+[[ast:Teorema de Green]]
+[[bs:Greenov teorem]]
+[[cs:Greenova věta]]
+[[de:Satz von Green]]
+[[en:Green's theorem]]
+[[eo:Teoremo de Green]]
+[[es:Teorema de Green]]
+[[fa:قضیه گرین]]
+[[fi:Greenin teoreema]]
+[[fr:Théorème de Green]]
+[[is:Lögmál Greens]]
+[[it:Teorema di Green]]
+[[ja:グリーンの定理]]
+[[km:ទ្រឹស្តីបទគ្រីន]]
+[[ko:그린 정리]]
+[[lt:Gryno formulė]]
+[[nl:Stelling van Green]]
+[[no:Greens teorem]]
+[[pl:Twierdzenie Greena]]
+[[pt:Teorema de Green]]
+[[sr:Гринова теорема]]
+[[sv:Greens sats]]
+[[th:ทฤษฎีบทของกรีน]]
+[[zh:格林定理]]

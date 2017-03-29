@@ -1,0 +1,236 @@
+{{use dmy dates|date=April 2014}}
+{{About|the GNU/Linux operating system (OS) by the Jolla company|the alliance gathering Sailfish OS partners|Sailfish Alliance|the Jolla company|Jolla}}
+{{multiple issues|
+{{advert|date=September 2013}}
+{{copyedit|date=September 2013}}
+{{fanpov|date=November 2013}}
+}}
+
+{{Infobox OS
+| name                   = Sailfish
+| logo                   = [[File:Sailfish logo.svg|240px]]
+| screenshot             = 
+| caption                =
+| website                = {{URL|https://sailfishos.org/}}
+| developer              = [[Jolla]]
+| family                 = [[Unix-like]]
+| source model           = 
+| released               = 
+| latest release version = 1.0.5.19
+| latest release date    = {{date|2014-4-24}}
+| latest preview version =
+| latest preview date    =
+| frequently updated     =
+| marketing target       = Mobile
+| language               =
+| kernel type            = [[Monolithic kernel|Monolithic]] ([[Linux kernel|Linux]])
+| programmed_in          = 
+| userland               =
+| license                = open source for OS, but various for Jolla's swipe UI (see [[Sailfish OS#Sailfish OS licensing|Licensing]]).
+| working state          = Current
+| supported platforms    = [[ARM architecture|ARM]]
+| updatemodel            = 
+| package manager        = [[RPM Package Manager]]<ref>{{cite web|first=SailfishOS.org|title=Packaging Applications for Distribution|url=https://sailfishos.org/develop-packaging-apps.html|work=SailfishOS.org|accessdate=24 February 2014}}</ref>
+}}
+[[File:Hackday with Jolla and friends, 8.9.2012 - Tampere.JPG|thumb|Hackday with [[Jolla]], [[Mer (software distribution)|Mer]] and [[Nemo Mobile]] in September 2012]]
+'''Sailfish''' is a [[Linux]]-based [[mobile operating system]] developed by [[Jolla]] in cooperation with the [[Mer (software distribution)|Mer]] project and supported by the [[Sailfish Alliance]]. It is to be used in upcoming [[smartphone]]s by Jolla and other licencees.{{Citation needed|date=April 2013}} Although it is primarily targeted at mobile phones, it is also intended to support other categories of devices.
+
+==Software architecture==
+The Sailfish OS and the Sailfish [[Software development kit|SDK]] is based on the [[Linux kernel]] and [[Mer (software distribution)|Mer]].<ref>{{cite web | title=SailfishOS.org | url=https://sailfishos.org/}}</ref><ref name="SailfishOS.org">{{cite web | url=https://sailfishos.org/about-architecture.html | title=SailfishOS.org}}</ref> Sailfish OS also includes a [[proprietary software|proprietary]] multi-tasking [[user interface]] programmed by Jolla. Sailfish OS is intended to offer a competitive advantage against devices that run Google's [[Android (operating system)|Android]] or Apple's [[iOS]].<ref>{{cite web | title = Jolla OS Will Run Android Apps Says CEO Jussi Hurmola | url = http://www.ibtimes.co.uk/articles/375368/20120820/jolla-os-running-android-apps-jussi-hurmola.htm}}</ref>
+
+The architecture is:<ref name="osnews-jolla-review">{{cite web |url=http://www.osnews.com/story/27545/From_Providence_to_Lahaina_the_Jolla_review |title=From Providence to Lahaina: the Jolla review |first=Thom |last=Holwerda |date=30 January 2014 |accessdate=21 April 2014}}</ref>
+
+* Hardware
+:: Sailfish OS is designed to run on embedded environments,<ref name="SailfishOS.org"/> such as phones and tablets.
+
+* Kernel
+:: Sailfish OS makes use of the [[Linux kernel|Linux]] kernel<ref>{{cite web | url=http://blog.laptopmag.com/sailfish-os-5-things-jolla | title=What is Sailfish OS? 5 Things to Know}}</ref> with some modifications.<ref name="SailfishOS">{{cite web | url=https://sailfishos.org/about-architecture.html | title=SailfishOS}}</ref>
+
+* Core Components
+:: Sailfish OS uses the [[Mer (operating system)|Mer]] project for its core components.<ref name="SailfishOS"/> This includes: multimedia, graphics ([[Wayland (display server protocol)|Wayland]]), communication technologes, [[Personal information manager|PIM]], software management, security, and development (Qt, Qt Webkit and others).
+
+* [[User interface|UI]] and middleware
+
+* Applications
+
+===Wayland (display server protocol) in Sailfish OS===
+Carsten Munk has made it possible to run the Sailfish OS [[User Interface|UI]] on [[Wayland (display server protocol)|Wayland]] by using glibc atop Android GPU drivers.<ref>{{cite web | url=http://www.phoronix.com/scan.php?page=news_item&px=MTM0OTE | title=Jolla Brings Wayland Atop Android GPU Drivers}}</ref><ref>{{cite web | url=https://sailfishos.org/about-technology.html | title=SailfishOS.org}}</ref>
+
+===Sailfish OS SDK===
+The Sailfish OS [[Software development kit|SDK]] was announced in Helsinki at Slush in 2012, and the alpha published in February 2013. As open source software, it is available for free download from the  Sailfish OS Wiki together with installation and coding tutorials. Most users have described positive impressions from using the alpha SDK, however some critical remarks have been reported. Several developers announced porting their existing software from various platforms to Sailfish OS at JollaHQ twitter channel.
+
+The Sailfish OS [[Software development kit|SDK]] uses Qt with virtual box for development, compiling and [[emulator|emulation]] purposes. This technique allows compilation on the Sailfish OS and to test developed software in the virtual machine. This also separate development activities and (side) effects from everything else going on this particular computer.
+
+Jolla says that as development with Sailfish SDK is development on Sailfish OS itself, there are no differences between developed software appearance and behaviour in SDK and on end-user machine with Sailfish OS. Note: the SDK contains Sailfish OS in its entirety, and emulates (see: emulation, in contrary to [[simulation]]) the entire Sailfish OS at the host computer running SDK what in fact means that the entire Sailfish OS, including the kernel, is running in the SDK's virtual machine. That is why porting and developing of any software with Sailfish SDK is possible, even before Jolla mobile is available.
+
+The open source nature of SDK allows to shape and rebuild it for particular and specific needs of any company or any organisation or any group of developers or an advanced developer, what allows to create context specific environment. This supports creating the specific personalised coding environment with specific tools for specific needs which is set once and then always ready to work as set, and does not need initial preparations for specific needs every time it is turned on (booted).
+
+SDK supports many systems like Android, Linux ([[32-bit|32-]] and [[64-bit computing|64-bit]] version), [[OS X]] (64-bit version only as of March 2013) or Windows.
+
+Marc Dillon said about the SDK: "(...)Yes, there's an emulator so you can see how the applications work, and all of our UI features are available as UI components. Actually you can develop applications that have all these different UI components and different elements and use the power of the OS.(...)".<ref>{{cite web|last=Joire|first=Myriam|title=The Engadget Interview: Jolla CEO Marc Dillon at MWC 2013|url=http://www.engadget.com/2013/03/03/the-engadget-interview-jolla-ceo-marc-dillon-at-mwc-2013/|work=The Engadget|publisher=AOL Inc.|accessdate=2 April 2013}}</ref>
+
+=== Privacy ===
+Responding to privacy concerns in light of the [[PRISM]] spying program that came to light in summer 2013, a company representative said the US National Security Agency (NSA) would have no access to Jolla's servers. "Jolla servers are not in US, so we are not subject to any US rules or regulations regarding disclosing information."<ref>{{cite web |url=http://www.coolsmartphone.com/2013/07/05/sailfish-os-when-where-and-why-you-should-care/ |title=Sailfish OS <U+2013> When, Where And Why You Should Care |first=Aran |last=Isom |work=Coolsmartphone |date=5 July 2013 |accessdate=24 April 2014}}</ref> Many see in this the Sailfish OS and Jolla's smartphone advantage over other operating systems like Windows, Android or iOS, which are from companies that allegedly grant secret services wide access to user data.{{who|date=April 2014}}
+
+===Components===
+[[File:Mer and mobile operating systems.svg|thumb|Connection between some mobile platforms. Sailfish OS uses Mer]]
+[[Jolla]] has revealed its plans to use the following technologies in Sailfish OS:
+* The Mer software distribution core
+* A custom built user interface
+* [[HTML5]]
+* [[QML]] and Qt
+Jolla continues building the [[MeeGo]] ecosystem.
+
+The Mer project does not include a [[Kernel (computing)|kernel]], so it can't be considered a complete [[operating system]] on its own. It is a set of libraries complying with the MeeGo API specification, which can be used to build a bootable Linux distribution (i.e. Sailfish OS). This means that Sailfish OS will work on any hardware platform on which the Mer core can be installed.
+
+===Application programming interfaces===
+Qt APIs (QtQuick, QtWebkit and more) should be used by typical Sailfish OS applications. Also standard Linux APIs within reason for mobile usage will be available.<ref>{{cite web|url=https://sailfishos.org/wiki/QA |title=QA |publisher=SailfishOS |date= |accessdate=2013-06-14}}</ref>
+
+==Software overview==
+
+===Software version===
+List of software version and update names for Sailfish OS. Each Sailfish OS version will be named after a Finnish lake.<ref name="thejollablog.wordpress.com">{{cite web |url=http://thejollablog.wordpress.com/2013/11/28/jolla-system-updates-will-be-named-after-a-finnish-lake |title=Jolla system updates will be named after a Finnish lake |first=Aleksi |last=Suomalainen |work=The Jolla Blog |date=28 November 2013 |accessdate=24 April 2014}}{{verify credibility|date=April 2014}}</ref>
+
+{| class="wikitable"
+|-
+! Software version !! Name
+|-
+| Initial release || Kaajanlampi<ref name="thejollablog.wordpress.com"/>
+|-
+| v1.0.1.10 || Laadunj<U+00E4>rvi<ref>{{cite mailing list |url=https://lists.sailfishos.org/pipermail/devel/2013-December/001693.html |title=&#91;SailfishDevel&#93; &#91;Update&#93; Changelog for SailfishOS update 1 (1.0.1.10) |first=Bernd |last=Wachter |mailinglist=devel |date=9 December 2013 |accessdate=24 April 2014}}</ref>
+|-
+| v1.0.2.5  || Maadaj<U+00E4>vri<ref>{{cite web |url=https://together.jolla.com/question/3612/release-notes-software-version-1025-maadajavri/ |title=&#91;Release notes&#93; Software version 1.0.2.5, Maadaj<U+00E4>vri |first=Bernd |last=Wachter |work=[[Jolla]] |date=27 December 2014 |accessdate=24 April 2014}}</ref>
+|-
+| v1.0.3.8 || Naamankaj<U+00E4>rvi<ref>{{cite web |url=https://together.jolla.com/question/21786/release-notes-software-version-1038-naamankajarvi/ |title=&#91;Release notes&#93; Software version 1.0.3.8, Naamankaj<U+00E4>rvi |first=Bernd |last=Wachter |work=[[Jolla]] |date=31 January 2014 |accessdate=24 April 2014}}</ref>
+|-
+| v1.0.4.20 || Ohijarvi<ref>{{cite web |url=https://together.jolla.com/question/33507/release-notes-software-version-10420-ohijarvi/ |title=&#91;Release notes&#93; Software version 1.0.4.20, Ohij<U+00E4>rvi |author=bijjal |work=[[Jolla]] |date=17 Mart 2014 |accessdate=24 April 2014}}</ref>
+|-
+| v1.0.5.16
+| rowspan=2 | Paarlampi<ref>{{cite web |url=https://together.jolla.com/question/38508/release-notes-software-version-10516-paarlampi/ |title=&#91;Release notes&#93; Software version 1.0.5.16, Paarlampi |author=bijjal |work=[[Jolla]] |date=11 April 2014 |accessdate=24 April 2014}}</ref><ref>{{cite web |url=https://together.jolla.com/question/40658/hotfix-mms-changes-for-paarlampi-10519/ |title=&#91;hotfix&#93; MMS changes for Paarlampi (1.0.5.19) |first=Bernd |last=Wachter |work=[[Jolla]] |date=24 April 2014 |accessdate=24 April 2014}}</ref>
+|-
+| v1.0.5.19
+|}
+
+===Migration to Sailfish OS and porting software===
+A number of projects successful at other platforms are migrating to become native at Sailfish OS. This enable developers to earn additional incomes, also for abandoned Harmattan or Symbian developers. In case of [[Qt (software)|Qt]] written projects often it's a question of a few hours to port a whole project. This process is supported and for this purpose sailfish.org collects and publishes <ref>https://sailfishos.org/wiki/Porting/Harmattan</ref> an online compendium of knowledge, links and instructions on:
+* software porting and migration to Sailfish OS
+* similarities and differences between Harmattan and Sailfish
+* guides how to port MeeGo 1.2 Harmattan applications for the Nokia N9 is the Sailfish OS devices
+* porting framework (Qt 4 to Qt 5, SDL 1.2 is SDL 2.0, Debian packaging is RPM packaging)
+* application porting tutorials and examples (QtQuick QML applications, the Flickr application Qt 5, SDL / OpenGL ES applications)
+* Qt Quick Components map to Sailfish Silica
+It gathers and links development resources of different kinds and origins.<ref>{{cite web|last=-|first=-|title=Porting/Harmattan|url=https://sailfishos.org/wiki/Porting/Harmattan|work=sailfishos.org/wiki/|publisher=https://sailfishos.org/|accessdate=25 January 2014}}</ref>
+
+=== Jolla Harbour for submitting software to the Jolla Store ===
+The important element of the Sailfish MeeGo ecosystem is the Jolla Harbour (harbour.jolla.com) devoted for submitting applications to the Jolla Store, where one can submit and manage one's applications. Consumers are able to install available software directly from their Sailfish devices. As Sailfish is mobile OS of general purpose it is intended to make Sailfish software available for sale and as a free applications.
+
+There are binary package naming guidelines for uploading files. Developers are to provide metadata:
+* An app icon for the Store  (86x86px, png)
+* 1-3 screenshots (540x960px, png or jpg) 
+* An optional Cover image for developer's Store page (516x252px, png or jpg)
+
+After submission an application to Jolla Harbour, so the metadata and the binary and required images, Jolla performs Quality Assurance testing on real Sailfish devices, then gets back with feedback of QA results within undefined "a few days" via the email address registered to Jolla account.
+
+At the beginning of November 2013 it was launched but not fully operational as still under construction, so it is in advanced public betatesting, but not the full performance. It allows developers and users to test portal performance with free applications and Jolla to correct issues reported by users to avoid the shame of non-working properly store known generally from former mobiles vendor. That is also fulfilling of the one of the main demands from both customers and developers: 
+* the correct performance of searching & downloading & charging for customers, 
+* the correct performance of publishing & managing & paying for developers.
+
+During the first days after launch at 6 November 2013 number of interested in exceeded expectations and hardware abilities. There were so many demands that the server was overloaded and access to the Harbour portal website was impossible.
+
+===Compatibility===
+{{POV-section|date=November 2013}}
+Jolla declared Sailfish OS compatible with [[Android (operating system)|Android]] phone and tablets hardware, using existing Android device drivers.<ref name="Bhushan">{{cite web|last=Bhushan|first=Amarendra|title=Jolla Sailfish OS Now Supports Android Hardware And Applications|url=http://ceoworld.biz/2013/09/16/jolla-sailfish-operating-system-os-now-supports-android-hardware-and-applications|publisher=CEOWORLD Magazine|accessdate=16 September 2013}}</ref> This was announced on September 2013 and it is a major milestone. This has been achieved with use of Alien Dalvik by Myriad Group. This is a big step forward for phone and tablet manufacturers which can immediately and effortlessly integrate their existing devices with the Sailfish OS and still have ability to use Android software. Unveiled in 2013 Jolla prototypes and Sailfish running on other non-Jolla devices have shown proves of compatibility and Android applications running without problems, with native speed, without lags or jams.
+
+Jolla has previously stated that Sailfish is compatible with Android applications.<ref>{{cite web|last=McAllister|first=Neil|title=Jolla Sailfish OS to support Android hardware, apps|url=http://www.theregister.co.uk/2013/09/17/jolla_sailfish_os_android_support/|work=The Register|publisher=Siig numbertuation Publishing|accessdate=16 November 2013}}</ref> This was done in collaboration with the creators of Alien Dalvik, the [[Myriad Group]],<ref>{{cite web|last=McAllister|first=Neil|title=Jolla's Android-aping Sailfish OS smartphones to land in November|url=http://www.theregister.co.uk/2013/11/15/jolla_phones_to_ship_in_november/|work=The Register|publisher=Situation Publishing|accessdate=16 November 2013}}</ref> known for running Android apps with the [[Nokia N9]] (but the Android layer was never released as built-in on N9). Many Android applications run on Jolla devices unchanged. To take advantage of all UI and other features of Sailfish OS and make applications fast they may need porting to native Qt/QML, there are extensive guides available on porting to Qt/QML.
+
+In all Sailfish OS devices released for sale (via mobile operators and internet Jolla's shop) in 2013 year the Android compatibility has been fully working as expected for almost all software. However, in a few cases, when original software was not following the Android standards, it was not launch-able or steering was a problem, as Jolla informed before.
+
+Jolla has reported that Ubuntu, Sailfish and Plasma Active cooperation for sharing common APIs is in progress and - upon success - will make the platforms compatible on the API level.
+
+As Jolla Sailfish is based on the open-source Meego, it is compatible to some extent with MeeGo Harmattan released by Nokia with the N9 phone. The applications written in Qt for N9 might need a minor conversion process before they can run on Sailfish.
+
+===Software availability===
+Sailfish will be able to run most applications that were originally developed for MeeGo and Android,<ref name="cnet-android-compat">{{cite web |url=http://news.cnet.com/8301-1035_3-57603093-94/jollas-sailfish-os-adds-android-compatibility/ |title=Jolla's Sailfish OS adds Android compatibility |first=Don |last=Reisinger |work=[[Cnet]] |date=16 September 2013 |accessdate=20 April 2014}}</ref> in addition to native Sailfish applications. This will give it a large catalogue of available apps on launch.
+
+Considering upon Jolla's declarations that Sailfish OS is be able to use software from following platforms
+* Sailfish (natively created + ported like from Qt, Symbian, MeeGo - developers have reported that porting a Qt written software with Sailfish SDK takes a few hours only)
+* [[Android (operating system)|Android]] applications are directly running in Sailfish OS.<ref name="cnet-android-compat"/> They are compatible as they are in third-party Android stores, with no needed modification (in most cases).
+* [[MeeGo]] (because of backward compatibility thanks to MeeGo code legacy included in the Mer core)
+* Unix and Linux (as Sailfish is Linux then using such a software is possible, especially RPM packages, either in terminal/console mode or with limitations implying from using Sailfish UI, if not ported and adjusted)
+* [[HTML5]]
+
+==Hardware overview==
+
+===Advantages due to the Mer===
+The Sailfish OS in general can be used on any hardware supported by the Mer core distribution.
+
+Rather than designate a specific reference hardware platform, a [[VirtualBox]] implementation with the Sailfish OS SDK is available for development on most popular OSes like Linux, OS X, Windows, and this VM contains whole Sailfish OS isolated from local resources to enable comfortable work at any particular PC. This allow to evaluate coded or ported software behaviour and performance in future on any real device and safe experimenting ''de facto'' on Sailfish OS itself. This is also caused by fact that Sailfish OS is not limited only to Jolla products and devices, but open for other partners which can use any different hardware.
+
+===Types of devices===
+Although Sailfish has been presented first for [[mobile phone|mobile]] use with upcoming smartphones by Jolla, as a continuation of MeeGo and using Mer core and the open source philosophy behind them both, it is also an OS for general purposes including devices such as [[smart television]]s, computers, laptops, netbooks, [[Personal computer|tablets]], navigations, cameras, household devices of many kinds, for [[automotive]] in cars and [[In-vehicle infotainment|IVI]], for [[sailing]] purposes in yachts and boats, and others. The Sailfish Linux OS in the same way as the MeeGo and the Mer projects it is not limited to use in mobiles only, but can be used with other forms of [[consumer electronics]].
+
+Jolla's Sailfish OS works on a tablet too. Jolla managers said in November 2012 that there could be a Sailfish tablet, but Jolla itself will, in this first wave, concentrate on a smartphone, but it does not exclude devices of different types.<ref>{{cite web|url=http://nokiagadgets.com/2012/11/25/jolla-phone-will-be-priced-as-a-premium-phone/ |title=Jolla phone will be priced premium |publisher=nokiagadgets.com |date=2012-11-25 |accessdate=2013-06-14}}</ref>
+
+===Devices running Sailfish OS===
+
+Sailfish runs on the Jolla phone.
+
+Sailfish has also been presented on devices like:
+* Acer Iconia tab W500<ref>{{cite web|last=Sfiet_Konstantin|first=-|title=Sailfish on an Acer Iconia tab W500|url=http://vimeo.com/62061963|work=vimeo.com|publisher=Vimeo.com DMCA|accessdate=21 April 2013}}</ref>
+* Exopc<ref>{{cite web|last=vgrade100|first=-|title=Sailfish on Exopc #merproject|url=https://www.youtube.com/watch?v=UEgdW3KSxkM|work=youtube.com|publisher=vgrade100|accessdate=21 April 2013}}</ref>
+* [[Google Nexus 4]]<ref>{{cite web|author=Jonne Eilim<U+00F6>|url=http://www.esphoneblog.com/video-sailfish-os-running-google-nexus-4-25934?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+EsPhoneblog+%28es+PhoneBlog%29#readsoruce_bottom|title=Video: Sailfish OS running on a Google Nexus 4|accessdate=23 January 2013}}</ref>
+* [[Google Nexus 7]]<ref>{{cite web|author=Carlos_Gong <U+FF08><U+4EA7><U+54C1><U+89C2><U+5BDF><U+5BB6><U+FF09> |url=http://www.geekpark.net/read/view/182306 |title=Retrieved 15 July 2013 |publisher=Geekpark.net |date= |accessdate=2013-08-07}}</ref>
+* [[Samsung Galaxy S3]]<ref>{{cite web|first=-|title=Sailfish OS su Nexus 4, Samsung Galaxy S3 e Xiaomi Mi2 - MWC 2014|url=https://www.youtube.com/watch?v=BxJAssJpMqY|work=youtube.com|publisher=|accessdate=21 Mar 2014}}</ref>
+* HP Mini<ref name=:0>{{cite web|title=Sailfish|url=https://wiki.merproject.org/wiki/Sailfish|work=Mer Wiki|accessdate=19 November 2013}}</ref>
+* O2 Joggler<ref>{{cite web|last=vgrade100|first=-|title=Sailfishos running on O2 Joggler. Modesetting xorg driver on gma500_gfx kernal driver with mesa-llvm|url=https://www.youtube.com/watch?v=T4bj2Dcvw9I&feature=player_detailpage|work=youtube.com|publisher=vgrade100|accessdate=21 April 2013}}</ref>
+* PackardBell Butterfly Touch <ref name=":0" />
+* [[Nokia N950]] and [[Nokia N9]] - during several presentations given by Jolla
+
+==Sailfish OS licensing==
+Jolla said that any mobile phone manufacturer will be able to license and use Sailfish with their mobile phones and other mobile devices, as they can with Android. The details of licensing have not been presented yet, but it was mentioned that the whole of Sailfish OS is to be licensed as open source.<ref>{{cite web |url=http://www.engadget.com/2012/11/21/jolla-launches-sailfish-os/ |title=Jolla's Sailfish OS promises multitasking, personalization and 'effortless interaction' (updated) |first=Jamie |last=Rigg |work=[[Engadget]] |date=21 November 2012 |accessdate=20 April 2014}}</ref>
+
+==OS development status==
+Sailfish OS is promoted and supported in many ways with the open [[Sailfish Alliance]] established in 2011, a movement established to unite OEM and ODM manufacturers, chipset providers, operators, application developers and retailers.<ref>{{cite web|title=Jolla|url=http://jolla.com/|accessdate=19 November 2013}}</ref>
+
+On 16 August 2012, the user interface was reported as ready to go. Jolla's CEO Jussi Hurmola stated in a ZDNet interview: "(...) Our UI is ready now, we haven't released it yet, we will save it for the product launch and the platform is getting up now so the project looks pretty nice. (...)"<ref>{{cite web|last=Tung|first=Liam|title=Jolla's MeeGo UI is ready to go - and it's on the hunt for mobile talent|url=http://www.zdnet.com/jollas-meego-ui-is-ready-to-go-and-its-on-the-hunt-for-mobile-talent-7000002728/|work=ZDNet.com|publisher=2012 CBS Interactive|accessdate=16 August 2012}}</ref>
+
+The next day, Jolla's CEO Marc Dillon tweeted that they had reached the first development target.
+
+The Sailfish was presented for the first time by the Jolla team, including a worldwide internet stream, as a demo of the OS, as well as the [[User interface|UI]] and [[Software development kit|SDK]] during the Slush event in [[Helsinki]], [[Finland]], on 21<U+2013>22 November 2012.
+
+The Sailfish OS SDK in the alpha stage was published at the end of February 2013 and available for free download.
+
+On 16 September 2013, Jolla has announced that its Sailfish OS is now compatible with [[Android (operating system)|Android]] applications and hardware.<ref name="Bhushan"/>
+
+Jolla announced that the first phone to come with Sailfish OS will be{{Update inline|date=February 2014}} launched on 27 November at a pop-up DNA Kauppa shop in Narinkkatori, central Helsinki, Finland. The first 450 phones will be sold on this event, while the rest of the preordered devices will ship shortly after.<ref>{{cite web|title=First Jolla Phone with Sailfish OS to launch on November 27th|url=http://www.technewscentral.co.uk/first-jolla-phone-with-sailfish-os-to-launch-on-november-27th/id_7134}}</ref>
+
+==See also==
+*[[Replicant (operating system)|Replicant operating system]]
+*[[Jolla (mobile phone)]]
+*[[Nokia N9]]
+
+==References==
+{{reflist|30em}}
+
+==External links==
+* {{official website|http://jolla.com}}
+* [http://sailfishsmartphone.com Sailfish Smartphone blog] 
+* [https://sailfishos.org Sailfish OS Wiki] - OS details and most needed links including SDK download or support for OS.
+* [https://www.youtube.com/watch?feature=player_embedded&v=z3hMGNwObx8#! Programming for Sailfish OS with the Sailfish OS SDK - video tutorial for beginners (also developers porting software) by Leszek Lesner]
+* [http://flyingsheeponsailfish.blogspot.ch/ FlyingSheep on Sailfish - good reading for developers and porting from MeeGo Harmattan to Sailfish OS]
+
+{{Mobile operating systems}}
+{{Mobile phones}}
+{{Linux}}
+{{Qt}}
+
+[[Category:ARM operating systems]]
+[[Category:Embedded Linux distributions]]
+[[Category:Finnish brands]]
+[[Category:Free mobile software]]
+[[Category:Linux distributions]]
+[[Category:MeeGo]]
+[[Category:Mobile Linux]]
+[[Category:Mobile operating systems]]
+[[Category:Smartphones]]
+[[Category:Software that uses QML]]

@@ -1,0 +1,288 @@
+Le '''CP System''' (''Capcom Play System''), plus communément appelé '''CPS''', '''CPS1''' ou '''CPS-1''', est un [[système d'arcade]] développé par [[Capcom]], lancé en [[1988 en jeu vidéo|1988]] avec le jeu ''[[Forgotten Worlds]]''. Cette plate-forme accueille un des [[jeu de combat|jeux de combat]] les plus populaires de tous les temps, ''[[Street Fighter (série)|Street Fighter II]]''.
+
+== Description ==
+Le CP System est plus communément appelé ''CPS'', mais également ''CPS1'' ou ''CPS-1'' depuis la création du [[CPS2]] (et du [[CPS3]]). C'est un système d'arcade 16 bits basé sur le [[Motorola 68000]], sorti à une époque où l'arcade était en plein essor.
+
+Chaque jeu se compose de 3 [[Circuit imprimé|PCB]] : une ''[[Carte mère|motherboard]]'', une ''rom-board'', et une ''C-board'' qui constitue le système de protection de la cartouche, protection disponible seulement sur quelques jeux.
+
+Le son est géré par un [[Zilog Z80]], couplé à des puces [[Yamaha YM2151]] et [[Oki 6295]]. Ce système est donc à sa sortie, très en avance sur les [[bornes d'arcade]] de son époque. Mais la gloire fut de courte durée, car en [[1990 en jeu vidéo|1990]], la [[Neo-Geo MVS]] fit son apparition dans le monde de l'arcade. La Neo-Geo MVS de [[SNK]] était bien plus puissante et évolutive que le CPS, qui fut rapidement dépassé.
+
+Capcom tenta de suivre SNK et proposa en [[1994 en jeu vidéo|1994]] une version salon appelée '''[[CP System Changer]]''' (''Capcom Power System Changer'')<ref>{{en}}[http://assembler.roarvgm.com/CPS_CHANGER/cps_changer.html Description du CP System Changer]</ref>{{,}}<ref>{{es}} [http://usuarios.lycos.es/juegasotravezar/newpage0.html Le CP System Changer (paragraphe en bas de page)]</ref>, identique techniquement au CPS, dans le but de concurrencer directement le système [[Neo-Geo AES]]. Techniquement, c'est un système CPS1 standard ayant intégré un [[supergun]], doté de deux joysticks de série et une connectique TV comme pour une simple [[console de jeux vidéo]]<ref>{{pt}}[http://forum.outerspace.com.br/showthread.php?t=79123 Quelques photos CP System Changer]</ref>. Il n'y a eu que 10 jeux publiés sur ce format, synonyme d'échec.
+
+Parallèlement au CPS, Capcom travaille dès 1992 sur le CPS2, son remplaçant (qui sortira un an plus tard) ayant pour but d'écraser SNK. Malgré tout, le système CPS1 perdurera jusqu'en 1995.
+
+En fin de vie, Capcom se décide à sortir une révision du CPS1, le '''CP System <sup>[Dash]</sup>''', plus communément appelé ''CPS QSound'' (''CPS1 Q-Sound'' ou ''CPS-1 Q-Sound''). Le système fut capable de recréer un son stéréo avec cette fameuse puce [[QSound]]. Cette révision du CPS, est plus proche du CPS2 (dans le design) que les antiques [[Circuit imprimé|PCB]]<ref>{{en}}[http://www.system16.com/cybercade/capcom_list.html#cps1q Information sur le CP System <sup><nowiki>[Dash]</nowiki></sup> sur Cybercade]</ref>{{,}}<ref>{{en}}[http://www.system16.com/cybercade/systems/qsoundpins.html Information sur le CP System <sup><nowiki>[Dash]</nowiki></sup> sur Cybercade]</ref>. Il permettra à quelques titres de bénéficier du son stéréo et d'un nouveau système de sécurité.
+
+Le CP System <sup>[Dash]</sup> est composé d'un assemblage de quatre [[circuit imprimé|PCBs]] qui sont contenues dans un boîtier en plastique gris. L'ensemble constitue une sorte de cartouche, d'une taille assez imposante. Pour lutter contre le piratage, une « batterie suicide » a été intégrée au système, elle fournit de la puissance et fait fonctionner de la RAM qui contient les tables de décryptage. Si la tension de la pile tombe en dessous de + {{unité|2|V}}, ou si une tentative de copie du code de cryptage était tentée, les tables de décryptage stockées dans la RAM étaient perdues. Le CPU n'ayant plus de code valable à exécuter, le jeu devient inutilisable, rendant nécessaire (à l'époque) l'envoi de la carte en réparation chez Capcom, aux propres frais du propriétaire du jeu. Contrairement au CPS2, le CPS QSound comporte un Z80 modèle « Kabuki » encrypté en tant que [[processeur]] audio.
+
+Ce système restera un énorme succès pour Capcom, qui inscrit une fois de plus son nom dans l'histoire. On retiendra de ce ''[[Matériel informatique|hardware]]'' des jeux dantesques qui ont démontrés que Capcom était passé maitre en matière d'action sur [[Jeu d'arcade|Arcade]]. Des bijoux tels que ''[[Strider]]'', ''[[Cadillacs & Dinosaurs]]'', ''[[The Punisher (jeu vidéo, 1993)|The Punisher]]'' ou encore ''[[Final Fight (jeu vidéo)|Final Fight]]'' verront le jour. Mais c'est également entre 1991 et 1992, avec les ''Street Fighter II'', que le CPS1 va devenir l'un des systèmes d'arcade les plus répandus au monde.
+
+== Protection ==
+La majorité des circuits imprimés CPS1 n'ont pas de protection (batterie suicide) à l'exception des jeux [[QSound]], ainsi que de ''[[Three Wonders]]'', ''[[The King of Dragons]]'', ''[[Knights of the Round]]'', ''[[Captain Commando]]'', ''[[Quiz & Dragons: Capcom Quiz Game]]'', ''[[Capcom World 2: Adventure Quiz]]'', ''[[Muscle Bomber Duo: Ultimate Team Battle]]'', ''[[Varth: Operation Thunderstorm]]'' (version japonaise uniquement).
+
+Toutefois, même si ce système a été ré-utilisé dans le CPS2 et CPS3, il s'agissait ici d'une protection assez rudimentaire. En effet, en modifiant les [[Mémoire morte|ROM]]s de programmes (qui ne sont pas cryptés contrairement aux successeurs du CPS1) on pouvait facilement jouer avec le jeu original mais sans batterie. Pour cela il suffisait de programmer des [[Electrically-erasable programmable read-only memory|EEPROM]]s avec le code des ROMs de programmes modifiés ou plutôt « hackés » et éventuellement de faire une petite modification physique sur la carte du jeu, comme faire un pont avec un fil entre deux points précis de la carte. Tout ceci a bien sûr permis l'arrivée en masse de ''[[Bootleg (jeu vidéo)|bootlegs]]'' (jeux pirates) dans les salles d'arcades, chose que n'a jamais connu (durant leur période d'exploitation en salle) les systèmes CPS2 et CPS3.
+
+Des années plus tard, Nicola Salmoria (développeur participant au projet de [[MAME]]) a contribué à aider  les gens qui avaient achetés des jeux CPS1 protégés dont la batterie avait rendu l'âme et ce, en modifiant le code des ROMs de programmes et en donnant des indications techniques. Cela à permis à bien des possesseurs de jeux d'arcade CPS1 (principalement des fans d'arcades) de rejouer à leurs jeux sans être obligés de devoir faire une manipulation assez technique (pour quiconque n'a jamais utilisé un fer à souder) pour changer la batterie avant qu'elle ne meure et ce, tous les cinq ans à peu près (durée moyenne d'une « pile » ou batterie CPS1)<ref>{{en}} [http://www.arcadecollecting.com/dead/dead.html The Dead Battery Society Informations sur le changement de batterie]</ref>{{,}}<ref>{{en}} [http://www.system16.com/cybercade/systems/cps1battery.html Informations sur le changement de batterie sur Cybercade]</ref>.
+
+== Spécifications techniques ==
+=== Processeur ===
+*[[Motorola]] [[68000]] cadencé à {{unité|10|MHz}}
+
+=== Audio ===
+*[[Processeur]] :
+**[[Zilog Z80]] cadencé à {{unité|4|MHz}} ({{unité|6|MHz}} pour le [[QSound]])
+
+*[[Générateur de son|Puces]] :
+**[[Yamaha]] [[YM2151]] cadencé à {{unité|3.57958|MHz}}
+**[[OKI MSM6295]] cadencé à {{unité|7.576|kHz}}
+**ou [[QSound]] cadencé à {{unité|4|MHz}}
+
+=== Affichage ===
+*Nombre de couleurs simultanées : 256
+*Palette de couleurs dynamique : 3072
+*[[Résolution d'écran]] : 384 x 224
+
+== Liste des jeux ==
+=== CP System ===
+{| class="sortable wikitable" style="font-size: 95%; width: 100%;"
+|-
+!width=42%|Titre <!--(titre original)-->
+!width=18%|Développeur
+!width=10%|Éditeur
+!width=20%|Genre
+!width=6%|Année
+|-
+|''[[1941: Counter Attack]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Shoot them up]]
+|align="center"|1990
+|-
+|''[[Capcom World 2: Adventure Quiz]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Quiz]]
+|align="center"|1989
+|-
+|''[[Captain Commando (jeu vidéo)|Captain Commando]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Beat them all]]
+|align="center"|1991
+|-
+|''[[Carrier Air Wing]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Shoot them up]]
+|align="center"|1990
+|-
+|''[[Dynasty Wars]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Beat them all]]
+|align="center"|1989
+|-
+|''[[Final Fight (jeu vidéo)|Final Fight]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Beat them all]]
+|align="center"|1989
+|-
+|''[[Forgotten Worlds]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Shoot them up]]
+|align="center"|1988
+|-
+|''[[Ghouls'n Ghosts]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Jeu de plates-formes|Plates-formes]]
+|align="center"|1988
+|-
+|''[[Ken Sei Mogura]]''
+|[[Togo/Sigma]]
+|[[Capcom]]
+|[[Jeu d'action|Action]]
+|align="center"|1994
+|-
+|''[[Knights of the Round]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Beat them all]]
+|align="center"|1991
+|-
+|''[[Magic Sword: Heroic Fantasy]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Beat them all]]
+|align="center"|1990
+|-
+|''[[Megaman: The Power Battle]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Jeu de combat|Combat]]
+|align="center"|1995
+|-
+|''[[Mega Twins]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Jeu de plate-forme|Plate-forme]]-[[Jeu d'aventure|aventure]]
+|align="center"|1990
+|-
+|''[[Mercs]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Run and gun]]
+|align="center"|1990
+|-
+|''[[Nemo (jeu vidéo)|Nemo]]''
+|[[Capcom]] / [[TMS (entreprise)|TMS]]
+|[[Capcom]]
+|[[Beat them all]]
+|align="center"|1990
+|-
+|''[[Pang! 3]]''
+|[[Mitchell (entreprise)|Mitchell]]
+|[[Mitchell (entreprise)|Mitchell]]
+|[[Jeu d'action|Action]]-[[Jeu vidéo de réflexion|réflexion]]
+|align="center"|1995
+|-
+|''[[Pnickies]]''
+|[[Capcom]] / [[Compile]]
+|[[Capcom]]
+|[[Jeu de puzzle|Puzzle]]
+|align="center"|1994
+|-
+|''[[Quiz & Dragons: Capcom Quiz Game]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Quiz]] 
+|align="center"|1992
+|-
+|''[[Quiz: Tonosama no Yabō 2 - Zenkoku-ban]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Quiz]]
+|align="center"|1995
+|-
+|''[[Street Fighter II: The World Warrior]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Jeu de combat|Combat]]
+|align="center"|1991
+|-
+|''[[Street Fighter II': Champion Edition]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Jeu de combat|Combat]]
+|align="center"|1992
+|-
+|''[[Street Fighter II': Hyper Fighting]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Jeu de combat|Combat]]
+|align="center"|1992
+|-
+|''[[Strider]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Jeu d'action|Action]]-[[Jeu de plates-formes|plates-formes]]
+|align="center"|1989
+|-
+|''[[The King of Dragons]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Beat them all]]
+|align="center"|1991
+|-
+|''[[Three Wonders]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Jeu de plates-formes|Plates-formes]], [[shoot them up]], [[Jeu de puzzle|puzzle]]
+|align="center"|1991
+|-
+|''[[U.N. Squadron]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Shoot them up]]
+|align="center"|1989
+|-
+|''[[Varth: Operation Thunderstorm]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Shoot them up]]
+|align="center"|1992
+|-
+|''[[Willow (jeu d'arcade)|Willow]]''
+|[[Lucasfilm]]
+|[[Capcom]]
+|[[Jeu de plates-formes|Plates-formes]]
+|align="center"|1989
+|}
+
+=== CP System <sup>[Dash]</sup> ===
+{| class="sortable wikitable" style="font-size: 95%; width: 100%;"
+|-
+!width=42%|Titre <!--(titre original)-->
+!width=18%|Développeur
+!width=10%|Éditeur
+!width=20%|Genre
+!width=6%|Année
+|-
+|''[[Cadillacs and Dinosaurs]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Beat them all]]
+|align="center"|1993
+|-
+|''[[Muscle Bomber Duo: Ultimate Team Battle]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Catch]]
+|align="center"|1993
+|-
+|''[[Saturday Night Slam Masters]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Catch]]
+|align="center"|1993
+|-
+|''[[The Punisher (jeu vidéo, 1993)|The Punisher]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Beat them all]]
+|align="center"|1993
+|-
+|''[[Warriors of Fate]]''
+|[[Capcom]]
+|[[Capcom]]
+|[[Beat them all]]
+|align="center"|1992
+|}
+
+== Notes et références ==
+{{Références}}
+
+== Annexes ==
+=== Article connexe ===
+*[[Âge d'or des jeux d'arcade|L'âge d'or des jeux d'arcade]]
+
+=== Lien externe ===
+*{{MAWS||Liste des jeux CPS1|cps1.c}}
+*{{System16|793}}
+*{{System16|794|CP System <sup>[Dash&#93;</sup>}}
+
+{{Palette Systèmes d'arcade Capcom}}
+
+{{portail|Jeu vidéo}}
+
+[[Catégorie:Capcom]]
+[[Catégorie:Système d'arcade]]
+
+[[de:Capcom Play System]]
+[[en:CP System]]
+[[es:CPS-1]]
+[[ja:CPシステム]]
+[[pt:CPS-1]]
+[[ru:CP System]]

@@ -1,0 +1,181 @@
+{{Refimprove|date=August 2013}}
+{{about|numbers traditionally known as "integers"|computer representations|integer (computer science)|the concept in algebraic number theory|integral element}}
+{{Sidebox |style=width:20.0em |text={{center|[[File:Latex integers.svg|100px|The ''Zahlen'' symbol, often used to denote the set of all integers]]}} |below=The ''[[wikt:Zahlen|Zahlen]]'' symbol, often used to denote the set of all integers (see [[List of mathematical symbols]])}}
+{{Group theory sidebar |Discrete}}
+
+An '''integer''' (from the [[Latin]] [[wikt:Integer#Latin|''integer'']] meaning "whole"),<ref group="note">''Integer''&#x2009;'s first, literal meaning in Latin is "untouched", from ''in'' ("not") plus ''tangere'' ("to touch"). "[[wikt:Entire|Entire]]" derives from the same origin, via [[French language|French]] (see: {{cite book |first=Nick |last=Evans |contribution=A-Quantifiers and Scope |editor-first=Emmon W |editor-last=Bach |title=Quantification in Natural Languages |isbn=0-7923-3352-7 |year=1995 |pages=262 |url=http://books.google.com/?id=NlQL97qBSZkC |location=Dordrecht, The Netherlands; Boston, MA |publisher=Kluwer Academic Publishers}})</ref> commonly known as a "whole number", is a [[number]] that can be written without a [[Fraction (mathematics)|fractional component]]. For example, 21, 4, and&nbsp;<U+2212>2048 are integers, while 9.75, 5<U+00BD>, and&nbsp;{{sqrt|2}} are not.
+
+The [[Set (mathematics)|set]] of integers consists of [[zero]] ({{num|0}}), the [[natural number]]s ({{num|1}}, {{num|2}}, {{num|3}},&nbsp;...) and their [[Additive inverse|inverse]] ([[Negative number|negative]]s, i.e. [[<U+2212>1]], <U+2212>2, <U+2212>3,&nbsp;...). This is often denoted by a [[boldface]] Z ("'''Z'''") or [[blackboard bold]] <math>\mathbb{Z}</math> ([[Unicode]] U+2124 {{unicode|<U+2124>}}) standing for the [[German language|German]] word ''[[wikt:Zahlen|Zahlen]]'' ({{IPA-de|<U+02C8>tsa<U+02D0>l<U+0259>n|}}, "numbers").<ref>{{cite web |url=http://jeff560.tripod.com/nth.html |title=Earliest Uses of Symbols of Number Theory |accessdate=2010-09-20 |date=2010-08-29 |first=Jeff |last=Miller}}</ref><ref name="Cameron1998">{{cite book |author=Peter Jephson Cameron |title=Introduction to Algebra |url=http://books.google.com/books?id=syYYl-NVM5IC&pg=PA4 |year=1998 |publisher=Oxford University Press |isbn=978-0-19-850195-4|page=4}}</ref> {{unicode|<U+2124>}} is a [[subset]] of the sets of [[Rational number|rational]] and [[Real number|real]] numbers and, like the natural numbers, is [[Countable set|countably infinite]].
+
+The integers form the smallest [[Group (mathematics)|group]] and the smallest [[ring (mathematics)|ring]] containing the natural numbers. In [[algebraic number theory]], the integers are sometimes called '''rational integers''' to distinguish them from the more general [[algebraic integer]]s. In fact, the (rational) integers are the algebraic integers that are also [[rational number]]s.
+
+== Algebraic properties ==
+[[File:Number-line.svg|right|thumb|300px|Integers can be thought of as discrete, equally spaced points on an infinitely long [[number line]]. In the above, non-[[Negative number|negative]] integers are shown in purple and negative integers in red.]]
+
+Like the natural numbers, '''Z''' is [[closure (mathematics)|closed]] under the [[binary operation|operations]] of addition and [[multiplication]], that is, the sum and product of any two integers is an integer. However, with the inclusion of the negative natural numbers, and, importantly,&nbsp;{{num|0}}, '''Z''' (unlike the natural numbers) is also closed under [[subtraction]]. The integers form a [[unital ring]] which is the most basic one, in the following sense: for any unital ring, there is a unique [[ring homomorphism]] from the integers into this ring. This [[universal property]], namely to be an [[initial object]] in the [[category of rings]], characterizes the ring&nbsp;'''Z'''.
+
+'''Z''' is not closed under [[division (mathematics)|division]], since the quotient of two integers (e.g.,&nbsp;1 divided by&nbsp;2), need not be an integer. Although the natural numbers are closed under [[exponentiation]], the integers are not (since the result can be a fraction when the exponent is negative).
+
+The following lists some of the basic properties of addition and multiplication for any integers ''a'', ''b'' and ''c''.
+{|class="wikitable"
+|+Properties of addition and multiplication on integers
+|  
+!scope="col" |Addition 
+!scope="col" |Multiplication
+|-
+!scope="row" |[[Closure (mathematics)|Closure]]: 
+|{{nowrap|''a'' + ''b''}}{{pad|1em}}is an integer 
+|{{nowrap|''a'' <U+00D7> ''b''}}{{pad|1em}}is an integer
+|-
+!scope="row"|[[Associativity]]: 
+|{{nowrap|''a'' + (''b'' + ''c'') {{=}} (''a'' + ''b'') + ''c''}}
+|{{nowrap|''a'' <U+00D7> (''b'' <U+00D7> ''c'') {{=}} (''a'' <U+00D7> ''b'') <U+00D7> ''c''}}
+|-
+!scope="row" |[[Commutativity]]: 
+|{{nowrap|''a'' + ''b'' {{=}} ''b'' + ''a''}}
+|{{nowrap|''a'' <U+00D7> ''b'' {{=}} ''b'' <U+00D7> ''a''}}
+|-
+!scope="row" |Existence of an [[identity element]]: 
+|{{nowrap|''a'' + 0 {{=}} ''a''}} 
+|{{nowrap|''a'' <U+00D7> 1 {{=}} ''a''}}
+|-
+!scope="row" |Existence of [[inverse element]]s: 
+|{{nowrap|''a'' + (<U+2212>''a'') {{=}} 0}} 
+|An inverse element usually does not exist at all.
+|-
+!scope="row" |[[Distributivity]]: 
+|colspan=2 align=center |{{nowrap|''a'' <U+00D7> (''b'' + ''c'') {{=}} (''a'' <U+00D7> ''b'') + (''a'' <U+00D7> ''c'')}}{{pad|1em}}and{{pad|1em}}{{nowrap|(''a'' + ''b'') <U+00D7> ''c'' {{=}} (''a'' <U+00D7> ''c'') + (''b'' <U+00D7> ''c'')}}
+|-
+!scope="row" |No [[zero divisor]]s: (*)
+| || | If {{nowrap|''a'' <U+00D7> ''b'' {{=}} 0}}, then {{nowrap|''a'' {{=}} 0}} or {{nowrap|''b'' {{=}} 0}} (or both)
+|}
+
+In the language of [[abstract algebra]], the first five properties listed above for addition say that '''Z''' under addition is an [[abelian group]]. As a group under addition, '''Z''' is a [[cyclic group]], since every non-zero integer can be written as a finite sum {{nowrap|1 + 1 + <U+22EF> + 1}} or {{nowrap|(<U+2212>1) + (<U+2212>1) + <U+22EF> + (<U+2212>1)}}. In fact, '''Z''' under addition is the ''only'' infinite cyclic group, in the sense that any infinite cyclic group is [[group isomorphism|isomorphic]] to '''Z'''.
+
+The first four properties listed above for multiplication say that '''Z''' under multiplication is a [[commutative monoid]]. However not every integer has a multiplicative inverse; e.g. there is no integer ''x'' such that {{nowrap|2''x'' {{=}} 1,}} because the left hand side is even, while the right hand side is odd. This means that '''Z''' under multiplication is not a group.
+
+All the rules from the above property table, except for the last, taken together say that '''Z''' together with addition and multiplication is a [[commutative ring]] with [[multiplicative identity|unity]]. It is the prototype of all objects of such [[algebraic structure]]. Only those [[equality (mathematics)|equalities]] of [[algebraic expression|expressions]] are true in&nbsp;'''Z''' [[for all]] values of variables, which are true in any unital commutative ring. Note that certain non-zero integers map to [[additive identity|zero]] in certain rings.
+
+At last, the property&nbsp;(*) says that the commutative ring&nbsp;'''Z''' is an [[integral domain]]. In fact, '''Z''' provides the motivation for defining such a structure.
+
+The lack of multiplicative inverses, which is equivalent to the fact that '''Z''' is not closed under division, means that '''Z''' is ''not'' a [[field (mathematics)|field]]. The smallest field with the usual operations containing the integers is the field of [[rational number]]s. The process of constructing the rationals from the integers can be mimicked to form the [[field of fractions]] of any integral domain. And back, starting from an [[algebraic number field]] (an extension of rational numbers), its [[ring of integers]] can be extracted, which includes '''Z''' as its [[subring]].
+
+Although ordinary division is not defined on '''Z''', the division "with remainder" is defined on them. It is called [[Euclidean division]] and possesses the following important property: that is, given two integers ''a'' and ''b'' with {{nowrap|''b'' <U+2260> 0}}, there exist unique integers ''q'' and ''r'' such that {{nowrap|''a'' {{=}} ''q'' <U+00D7> ''b'' + ''r''}} and {{nowrap|0 <U+2264> ''r'' <  {{!}}&thinsp;''b''&thinsp;{{!}}}}, where |&thinsp;''b''&thinsp;| denotes the [[absolute value]] of ''b''. The integer ''q'' is called the ''quotient'' and ''r'' is called the ''[[remainder]]'' of the division of ''a'' by ''b''. The [[Euclidean algorithm]] for computing [[greatest common divisor]]s works by a sequence of Euclidean divisions.
+
+Again, in the language of abstract algebra, the above says that '''Z''' is a [[Euclidean domain]]. This implies that '''Z''' is a [[principal ideal domain]] and any positive integer can be written as the products of [[prime number|primes]] in an essentially unique way. This is the [[fundamental theorem of arithmetic]].
+
+==Order-theoretic properties==
+'''Z''' is a [[total order|totally ordered set]] without upper or lower bound. The ordering of '''Z''' is given by:
+:... <U+2212>3 < <U+2212>2 < <U+2212>1 < 0 < 1 < 2 < 3 < ...
+An integer is ''positive'' if it is greater than zero and ''negative'' if it is less than zero. Zero is defined as neither negative nor positive.
+
+The ordering of integers is compatible with the algebraic operations in the following way:
+#if ''a'' < ''b'' and ''c'' < ''d'', then ''a'' + ''c'' < ''b'' + ''d''
+#if ''a'' < ''b'' and 0 < ''c'', then ''ac'' < ''bc''.
+
+It follows that '''Z''' together with the above ordering is an [[ordered ring]].
+
+The integers are the only [[integral domain]] whose positive elements are [[well-ordered]], and in which order is preserved by [[addition]].
+
+==Construction==
+[[File:Relatives Numbers Representation.png|thumb|alt=Representation of equivalence classes for the numbers <U+2212>5 to 5
+|Red points represent ordered pairs of [[natural number]]s. Linked red points are equivalence classes representing the blue integers at the end of the line.|upright=2]]
+
+Although the integers are intuitively defined by adding zero and negative integers to the natural numbers, such a construction is not very practicable, because of the number of case distinctions which would be needed in the definition of arithmetical operations. {{fact|date=March 2014}} Therefore, a more abstract construction, which allows one to define the arithmetical operations without any case distinction, is usually preferred by mathematicians. {{fact|date=March 2014}}
+The integers can thus be formally constructed as the [[equivalence class]]es of [[ordered pair]]s of [[natural number]]s (''a'',''b'').<ref name="Campbell-1970-p83">{{cite book |author=Campbell, Howard E. |title=The structure of arithmetic |publisher=Appleton-Century-Crofts |year=1970 |isbn=0-390-16895-5 |page=83}}</ref>
+
+The intuition is that (''a'',''b'') stands for the result of subtracting ''b'' from ''a''.<ref name="Campbell-1970-p83"/> To confirm our expectation that {{nowrap|1 <U+2212> 2}} and {{nowrap|4 <U+2212> 5}} denote the same number, we define an [[equivalence relation]] ~ on these pairs with the following rule:
+:<math>(a,b) \sim (c,d) \,\! </math>
+precisely when
+:<math>a + d = b + c. \,\!</math>
+
+Addition and multiplication of integers can be defined in terms of the equivalent operations on the natural numbers;<ref name="Campbell-1970-p83"/> denoting by [(''a'',''b'')] the equivalence class having (''a'',''b'') as a member, one has:
+:<math>[(a,b)] + [(c,d)] := [(a+c,b+d)].\,</math>
+:<math>[(a,b)]\cdot[(c,d)] := [(ac+bd,ad+bc)].\,</math>
+
+The negation (or additive inverse) of an integer is obtained by reversing the order of the pair:
+:<math>-[(a,b)] := [(b,a)].\,</math>
+
+Hence subtraction can be defined as the addition of the additive inverse:
+:<math>[(a,b)] - [(c,d)] := [(a+d,b+c)].\,</math>
+
+The standard ordering on the integers is given by:
+:<math>[(a,b)] < [(c,d)]\,</math> [[If and only if|iff]] <math>a+d < b+c.\,</math>
+
+It is easily verified that these definitions are independent of the choice of representatives of the equivalence classes.
+
+Every equivalence class has a unique member that is of the form (''n'',0) or (0,''n'') (or both at once). The natural number ''n'' is identified with the class [(''n'',0)] (in other words the natural numbers are [[embedding|embedded]] into the integers by map sending ''n'' to [(''n'',0)]), and the class [(0,''n'')] is denoted <U+2212>''n'' (this covers all remaining classes, and gives the class [(0,0)] a second time since {{nowrap|<U+2212>0 {{=}} 0.}}
+
+Thus, [(''a'',''b'')] is denoted by
+:<math>\begin{cases} a - b, & \mbox{if }  a \ge b  \\ -(b-a),  & \mbox{if } a < b. \end{cases}</math>
+
+If the natural numbers are identified with the corresponding integers (using the embedding mentioned above), this convention creates no ambiguity.
+
+This notation recovers the familiar [[group representation|representation]] of the integers as  {... <U+2212>3,<U+2212>2,<U+2212>1, 0, 1, 2, 3, ...}.
+
+Some examples are:
+:<math>\begin{align}
+ 0 &= [(0,0)] &= [(1,1)] &= \cdots & &= [(k,k)] \\
+ 1 &= [(1,0)] &= [(2,1)] &= \cdots & &= [(k+1,k)] \\
+-1 &= [(0,1)] &= [(1,2)] &= \cdots & &= [(k,k+1)] \\
+ 2 &= [(2,0)] &= [(3,1)] &= \cdots & &= [(k+2,k)] \\
+-2 &= [(0,2)] &= [(1,3)] &= \cdots & &= [(k,k+2)].
+\end{align}</math>
+
+==Integers in computing==
+{{Main|Integer (computer science)}}
+An integer is often a primitive [[data type]] in [[computer language]]s. However, integer data types can only represent a [[subset]] of all integers, since practical computers are of finite capacity. Also, in the common [[two's complement]] representation, the inherent definition of [[sign (mathematics)|sign]] distinguishes between "negative" and "non-negative" rather than "negative, positive, and&nbsp;0". (It is, however, certainly possible for a computer to determine whether an integer value is truly positive.) Fixed length integer approximation data types (or subsets) are denoted ''int'' or Integer in several programming languages (such as [[Algol68]], [[C (computer language)|C]], [[Java (programming language)|Java]], [[Object Pascal|Delphi]], etc.).
+
+Variable-length representations of integers, such as [[bignum]]s, can store any integer that fits in the computer's memory. Other integer data types are implemented with a fixed size, usually a number of bits which is a power of&nbsp;2 (4, 8, 16, etc.) or a memorable number of decimal digits (e.g., 9 or&nbsp;10).
+
+==Cardinality==
+The [[cardinality]] of the set of integers is equal to <math>\aleph_0</math> ([[Aleph number|aleph-null]]). This is readily demonstrated by the construction of a [[bijection]], that is, a function that is [[injective]] and [[surjective]] from '''Z''' to '''N'''.
+If '''N''' = {0, 1, 2, ...} then consider the function:
+:<math>f(x) = \begin{cases} 2|x|,  & \mbox{if } x < 0 \\ 0, & \mbox{if } x = 0 \\ 2x-1, & \mbox{if }  x > 0. \end{cases} </math>
+{... (-4,8) (-3,6) (-2,4) (-1,2) (0,0) (1,1) (2,3) (3,5) ...}
+
+If '''N''' = {1, 2, 3, ...} then consider the function:
+:<math>g(x) = \begin{cases} 2|x|,  & \mbox{if } x < 0 \\ 2x+1, & \mbox{if }  x \ge 0. \end{cases} </math>
+{... (-4,8) (-3,6) (-2,4) (-1,2) (0,1) (1,3) (2,5) (3,7) ...}
+
+If the domain is restricted to '''Z''' then each and every member of '''Z''' has one and only one corresponding member of '''N''' and by the definition of cardinal equality the two sets have equal cardinality.
+
+== See also ==
+{{Portal|Mathematics}}
+*[[0.999...]]
+*[[Canonical representation of a positive integer]]
+*[[Hyperinteger]]
+*[[Integer-valued function]]
+*[[Integer lattice]]
+*[[Integer part]]
+*[[Integer sequence]]
+
+== Notes ==
+{{reflist|group="note"}}
+
+== References ==
+{{reflist}}
+
+== Sources ==
+*[[Eric Temple Bell|Bell, E.T.]], ''[[Men of Mathematics]].'' New York: Simon and Schuster, 1986. (Hardcover; ISBN 0-671-46400-0)/(Paperback; ISBN 0-671-62818-6)
+*Herstein, I.N., ''Topics in Algebra'', Wiley; 2 edition (June 20, 1975), ISBN 0-471-01090-1.
+*[[Saunders Mac Lane|Mac Lane, Saunders]], and [[Garrett Birkhoff]]; ''Algebra'', American Mathematical Society; 3rd edition (April 1999). ISBN 0-8218-1646-2.
+*{{mathworld|Integer}}
+
+== External links ==
+{{Wiktionary|integer}}
+*{{Springer|title=Integer|id=p/i051290}}
+*[http://www.positiveintegers.org The Positive Integers &mdash; divisor tables and numeral representation tools]
+*[http://oeis.org/ On-Line Encyclopedia of Integer Sequences] cf [[OEIS]]
+<!--*"[http://demonstrations.wolfram.com/PositiveIntegerExplorer/Positive Integer Explorer]" by Chris Boucher, [[The Wolfram Demonstrations Project]]. (broken)-->
+
+{{PlanetMath attribution|id=403|title=Integer}}
+{{Number Systems}}
+{{Integers}}
+
+[[Category:Elementary mathematics]]
+[[Category:Abelian group theory]]
+[[Category:Ring theory]]
+[[Category:Integers| ]]
+[[Category:Elementary number theory]]
+[[Category:Algebraic number theory]]

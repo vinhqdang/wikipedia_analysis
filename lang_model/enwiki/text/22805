@@ -1,0 +1,41 @@
+{{Linear analog electronic filter|filter2=hide|filter3=hide}}
+
+[[File:Linkwitz vs Butterworth.svg|thumb|Comparison of the magitude response of the summed Butterworth and Linkwitz<U+2013>Riley crossover filters. The Butterworth crossovers have a +3dB peak at the crossover frequency, whereas the L-R filters have a flat summed output.|300px|right]]
+
+A '''Linkwitz<U+2013>Riley (L-R) filter''' is an [[infinite impulse response]] filter used in Linkwitz<U+2013>Riley [[audio crossover]]s, named after its inventors [[Siegfried Linkwitz]] and [[Russ Riley]], which was originally described in ''Passive Crossover Networks for Noncoincident Drivers'' in [http://www.aes.org/e-lib/browse.cfm?elib=3287 JAES Volume 26 Number 3 pp. 149-150; March 1978]. It is also known as a ''Butterworth squared'' filter. An L-R crossover consists of a parallel combination of a low-pass and a high-pass L-R filter. The filters are usually designed by cascading two [[Butterworth filter|Butterworth]] filters, each of which has &minus;3 [[Decibel#Acoustics|dB]] gain at the cut-off frequency. The resulting Linkwitz<U+2013>Riley filter has a &minus;6 dB gain at the cutoff frequency. This means that summing the low-pass and high-pass outputs, the gain at the crossover frequency will be 0 dB, so the crossover behaves like an [[Allpass filter|all-pass]] filter, having a flat [[amplitude]] response with a smoothly changing [[phase response]]. This is the biggest advantage of L-R crossovers compared to [[Butterworth filter|Butterworth]] crossovers, whose summed output has a +3 dB peak around the crossover frequency. Since cascading two n<sup>th</sup> order [[Butterworth filter|Butterworth]] filters will give a 2n<sup>th</sup> order Linkwitz<U+2013>Riley filter, theoretically any 2n<sup>th</sup> order Linkwitz<U+2013>Riley crossover can be designed. However, crossovers of higher order than 4th  may have less usability due to their increasing peak in [[group delay]] around crossover frequency and complexity.
+
+==Common types==
+
+===Second order Linkwitz<U+2013>Riley crossover (LR2, LR-2)===
+
+Second-order Linkwitz<U+2013>Riley crossovers (LR2) have a 12 dB/octave (40 dB/decade) slope.  They can be realized by cascading two one-pole filters, or using a [[Sallen Key filter]] topology with a Q<sub>0</sub> value of 0.5. There is a 180<U+00B0> phase difference between the [[lowpass]] and [[highpass]] output of the filter, which can be corrected by inverting one signal. In [[loudspeaker]]s this is usually done by reversing the polarity of one driver if the crossover is [[Passive component|passive]]. For [[Active component|active]] crossovers inversion is usually done using a unity gain inverting [[op-amp]].
+
+===Fourth order Linkwitz<U+2013>Riley crossover (LR4, LR-4)===
+
+Fourth-order Linkwitz<U+2013>Riley crossovers (LR4) are probably today's most commonly used type of audio crossover. They are constructed by cascading two 2nd-order [[Butterworth filter|Butterworth]] filters. Their steepness is 24 dB/octave (80 dB/decade).  The phase difference amounts to 360<U+00B0>, i.e. the two drives appear in phase, albeit with a full period time delay for the low-pass section.
+
+===Eighth order Linkwitz<U+2013>Riley crossover (LR8, LR-8)===
+
+Eighth-order Linkwitz<U+2013>Riley crossovers (LR8) have a very steep, 48 dB/octave (160 dB/decade) slope. They can be constructed by cascading two 4th-order [[Butterworth filter|Butterworth]] filters.
+
+==References==
+
+*[http://www.linkwitzlab.com/crossovers.htm Linkwitz Lab: Crossovers]
+*[http://www.linkwitzlab.com/filters.htm Linkwitz Lab: Active Filters]
+*[http://www.rane.com/note160.html Linkwitz<U+2013>Riley Crossovers: A Primer]
+*[http://www.sweetwater.com/expert-center/glossary/t--LinkwitzRiley Glossary: Linkwitz<U+2013>Riley]
+
+==See also==
+{{commonscat|Linkwitz<U+2013>Riley filters}}
+*[[Audio crossover]]
+*[[Butterworth filter]]
+*[[Siegfried Linkwitz]]
+
+[[Category:Linear filters]]
+[[Category:Network synthesis filters]]
+[[Category:Audio engineering]]
+[[Category:Filter theory]]
+
+[[de:Linkwitz-Riley-Filter]]
+[[ru:<U+0424><U+0438><U+043B><U+044C><U+0442><U+0440> <U+041B><U+0438><U+043D><U+043A><U+0432><U+0438><U+0446><U+0430>-<U+0420><U+0430><U+0439><U+043B><U+0438>]]
+[[sv:Linkwitz<U+2013>Riley-filter]]

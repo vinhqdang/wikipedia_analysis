@@ -1,0 +1,304 @@
+{{Expert-subject|Mathematics|date=November 2008}}
+
+In [[mathematics]], a '''low-discrepancy sequence''' is a [[sequence]] with the property that for all values of ''N'', its subsequence ''x''<sub>1</sub>, ..., ''x''<sub>''N''</sub> has a low [[discrepancy of a sequence|discrepancy]].
+
+Roughly speaking, the discrepancy of a sequence is low if the proportion of points in the sequence falling into an arbitrary set ''B'' is close to proportional to the [[Measure (mathematics)|measure]] of ''B'', as would happen on average (but not for particular samples) in the case of an [[equidistributed sequence]]. Specific definitions of discrepancy differ regarding the choice of ''B'' ([[hyperspheres]], hypercubes, etc.) and how the discrepancy for every B is computed (usually normalized) and combined (usually by taking the worst value).
+
+Low-discrepancy sequences are also called '''quasi-random''' or '''sub-random''' sequences, due to their common use as a replacement of uniformly distributed [[random sequence|random numbers]].
+The "quasi" modifier is used to denote more clearly that the values of a low-discrepancy sequence are neither random nor pseudorandom, but such sequences share some properties of random variables and in certain applications such as the [[quasi-Monte Carlo method]] their lower discrepancy is an important advantage.
+
+==Generation methods==
+Because any distribution of random numbers can be mapped onto a uniform distribution, and subrandom numbers are mapped in the same way, this article only concerns generation of subrandom numbers on a multidimensional uniform distribution.
+
+==From random numbers==
+Sequences of subrandom numbers can be generated from random numbers by imposing a negative correlation on those random numbers. One way to do this is to start with a set of random numbers <math>r_i</math> on <math>[0,0.5)</math> and construct subrandom numbers <math>s_i</math> which are uniform on <math>[0,1)</math> using:
+
+<math>s_i = r_i</math> for <math>i</math> odd and <math>s_i = 0.5 + r_i</math> for <math>i</math> even.
+
+A second way to do it with the starting random numbers is to construct a random walk with offset 0.5 as in:
+
+: <math>s_i = s_{i-1} + 0.5+ r_i \pmod 1. \, </math>
+
+That is, take the previous subrandom number, add 0.5 and the random number, and take the result [[modular arithmetic|modulo]]&nbsp;1.
+
+For more than one dimension, [[Latin squares]] of the appropriate dimension can be used to provide offsets to ensure that the whole domain is covered evenly.
+
+[[Image:Subrandom 2D.gif|thumb|270px|right|Coverage of the unit square. Left for additive subrandom numbers with ''c''&nbsp;=&nbsp;0.5545497...,&nbsp;0.308517... Right for random numbers. From top to bottom. 10, 100, 1000, 10000 points.]]
+
+==Additive.==
+One standard method for producing numbers that approximate random numbers is to use the recurrence relation:<ref>Donald E. Knuth ''The Art of Computer Programming'' Vol. 2, Ch. 3</ref>
+
+: <math>r_i = a r_{i-1} + c \pmod m \,</math>
+
+When <math>a</math> and <math>m</math> are both one this becomes an easy way to generate subrandom numbers:
+
+: <math>s_i = s_{i-1} + c \pmod 1 \,</math>
+
+When <math>c</math> is an irrational number this never repeats. The value of <math>c</math> that produces the most even coverage of the domain [0,1) is:<ref>http://mollwollfumble.blogspot.com/, Subrandom numbers</ref>
+
+: <math>c = \frac{\sqrt{5}-1}{2}.</math>
+
+Another value that is nearly as good is:
+
+: <math>c = \sqrt{2}-1. \, </math>
+
+In more than one dimension, separate subrandom numbers are needed for each dimension. In higher dimensions one set of values that can be used is the square roots of [[primes]] from two up, all taken modulo 1:
+
+: <math>c = \sqrt{2}, \sqrt{3}, \sqrt{5}, \sqrt{7}, \sqrt{11}, \ldots \, </math>
+
+==Halton sequence==
+{{Main|Halton sequence}}
+In one dimension, the <math>i</math>th number <math>s_i</math> of a Halton sequence is obtained by the following steps:
+
+1)	Write <math>i</math> and a number in [[Radix|base]] <math>b</math>, where <math>b</math> is some prime. (For example, <math>i</math> = 17 in base <math>b</math> = 3 is 122.)
+
+2)	Reverse the digits and put a decimal point in front of the sequence (e.g. <math>s_i = 0.122</math> base 3 = <math>{1\over 3} + {2\over 9}+{2\over 27}</math>).
+
+To extend this to more dimensions use a different prime for each dimension, typically <math>b = 2, 3, 5, 7, 11, \ldots</math> are used in turn.
+
+==Sobol sequence==
+{{Main|Sobol sequence}}
+The Antonov<U+2013>Saleev variant of the Sobol sequence generates numbers between zero and one directly as binary fractions of length <math>w</math>, from a set of <math>w</math> special binary fractions, <math>V_i, i = 1, 2, \dots, w</math> called direction numbers. The bits of the [[Gray code]] of <math>i</math>, <math>G(i)</math>, are used to select direction numbers. To get the Sobol sequence value <math>s_i</math> take the [[exclusive or]] of the binary value of the Gray code of <math>i</math> with the appropriate direction number. The number of dimensions required affects the choice of <math>V_i</math>.
+
+==Applications==
+
+[[Image:Subrandom Kurtosis.gif|thumb|370px|right|Error in estimated kurtosis as a function of number of datapoints. 'Additive subrandom' gives the maximum error when ''c''&nbsp;=&nbsp;(&radic;5&nbsp;&minus;&nbsp;1)/2. 'Random' gives the average error over six runs of random numbers, where the average is taken to reduce the magnitude of the wild fluctuations]]
+
+Subrandom numbers have an advantage over pure random numbers in that they cover the domain of interest quickly and evenly. They have an advantage over purely deterministic methods in that deterministic methods only give high accuracy when the number of datapoints is pre-set whereas in using subrandom numbers the accuracy improves continually as more datapoints are added.
+
+Two useful applications are in finding the [[characteristic function (probability theory)|characteristic function]] of a [[probability density function]], and in finding the [[derivative]] function of a deterministic function with a small amount of noise. Subrandom numbers allow higher-order [[moment (mathematics)|moments]] to be calculated to high accuracy very quickly.
+
+Applications that don't involve sorting would be in finding the [[mean]], [[standard deviation]], [[skewness]] and [[kurtosis]] of a statistical distribution, and in finding the [[integral]] and global [[maxima and minima]] of difficult deterministic functions. Subrandom numbers can also be used for providing starting points for deterministic algorithms that only work locally, such as [[Newton<U+2013>Raphson iteration]].
+
+Subrandom numbers can also be combined with search algorithms. A binary tree [[Quicksort]]-style algorithm ought to work exceptionally well because subrandom numbers flatten the tree far better than random numbers, and the flatter the tree the faster the sorting. With a search algorithm, subrandom numbers can be used to find the [[mode (statistics)|mode]], [[median]], [[confidence intervals]] and [[cumulative distribution function|cumulative distribution]] of a statistical distribution, and all [[local minima]] and all solutions of deterministic functions.
+
+
+
+
+
+
+
+
+== low-discrepancy sequences in numerical integration ==
+
+At least three methods of [[numerical integration]] can be phrased as follows.
+Given a set {''x''<sub>1</sub>, ..., ''x''<sub>''N''</sub>} in the interval <nowiki>[0,1]</nowiki>, approximate the integral of a function ''f'' as the average of the function evaluated at those points:
+
+:<math> \int_0^1 f(u)\,du \approx \frac{1}{N}\,\sum_{i=1}^N f(x_i). </math>
+
+If the points are chosen as ''x''<sub>''i''</sub> = ''i''/''N'', this is the ''rectangle rule''.
+If the points are chosen to be randomly (or [[pseudorandom]]ly) distributed, this is the ''[[Monte Carlo method]]''.
+If the points are chosen as elements of a low-discrepancy sequence, this is the ''quasi-Monte Carlo method''.
+A remarkable result, the '''Koksma<U+2013>Hlawka inequality''' (stated below), shows that the error of such a method can be bounded by the product of two terms, one of which depends only on ''f'', and the other one is the discrepancy of the set {''x''<sub>1</sub>, ..., ''x''<sub>''N''</sub>}.
+
+It is convenient to construct the set {''x''<sub>1</sub>, ..., ''x''<sub>''N''</sub>} in such a way that if a set with ''N''+1 elements is constructed, the previous ''N'' elements need not be recomputed.
+The rectangle rule uses points set which have low discrepancy, but in general the elements must be recomputed if ''N'' is increased.
+Elements need not be recomputed in the Monte Carlo method if ''N'' is increased,
+but the point sets do not have minimal discrepancy.
+By using low-discrepancy sequences, the quasi-Monte Carlo method has the desirable features of the other two methods.
+
+==Definition of discrepancy==
+The ''discrepancy'' of a set P = {''x''<sub>1</sub>, ..., ''x''<sub>''N''</sub>} is defined, using [[Harald Niederreiter|Niederreiter's]] notation, as
+:<math> D_N(P) = \sup_{B\in J}
+  \left|  \frac{A(B;P)}{N} - \lambda_s(B)  \right|</math>
+
+where
+<U+03BB><sub>''s''</sub> is the ''s''-dimensional [[Lebesgue measure]],
+''A''(''B'';''P'') is the number of points in ''P'' that fall into ''B'',
+and ''J'' is the set of ''s''-dimensional intervals or boxes of the form
+
+:<math> \prod_{i=1}^s [a_i, b_i) = \{ \mathbf{x} \in \mathbf{R}^s : a_i \le x_i < b_i \} \, </math>
+
+where <math> 0 \le a_i < b_i \le 1 </math>.
+
+The ''star-discrepancy'' ''D''<sup>*</sup><sub>''N''</sub>(''P'') is defined similarly, except that the supremum is taken over the set ''J''<sup>*</sup> of rectangular boxes of the form
+
+:<math> \prod_{i=1}^s [0, u_i) </math>
+
+where ''u''<sub>''i''</sub> is in the half-open interval <nowiki>[0, 1)</nowiki>.
+
+The two are related by
+
+:<math>D^*_N \le D_N \le 2^s D^*_N . \,</math>
+
+==Graphical examples==
+The points plotted below are the first 100, 1000, and 10000 elements in a sequence of the Sobol' type.
+For comparison, 10000 elements of a sequence of pseudorandom points are also shown.
+The low-discrepancy sequence was generated by [[ACM Transactions on Mathematical Software|TOMS]] algorithm 659.<ref>P. Bratley and B.L. Fox in ''ACM Transactions on Mathematical Software'', vol. 14, no. 1, pp 88<U+2014>100</ref>
+An implementation of the algorithm in [[Fortran]] is available from [[Netlib]].
+
+[[Image:Low discrepancy 100.png|frame|150px|left|The first 100 points in a low-discrepancy sequence of the [[Sobol sequence|Sobol]]' type.]]
+
+[[Image:Low discrepancy 1000.png|frame|150px|left|The first 1000 points in the same sequence. These 1000 comprise the first 100, with 900 more points.]]
+
+[[Image:Low discrepancy 10000.png|frame|150px|left|The first 10000 points in the same sequence. These 10000 comprise the first 1000, with 9000 more points.]]
+
+[[Image:Random 10000.png|frame|150px|left|For comparison, here are the first 10000 points in a sequence of uniformly distributed pseudorandom numbers. Regions of higher and lower density are evident.]]
+
+{{Clear}}
+
+==The Koksma<U+2013>Hlawka inequality==
+Let <U+012A><sup>''s''</sup> be the ''s''-dimensional unit cube,
+<U+012A><sup>''s''</sup> = [0, 1] &times; ... &times; [0, 1].
+Let ''f'' have [[bounded variation]] ''V(f)'' on <U+012A><sup>''s''</sup> in the sense of [[G.H. Hardy|Hardy]] and Krause.
+Then for any ''x''<sub>1</sub>, ..., ''x''<sub>''N''</sub>
+in ''I''<sup>''s''</sup> =
+<nowiki>[</nowiki>0, 1<nowiki>)</nowiki> &times; ... &times;
+<nowiki>[</nowiki>0, 1<nowiki>)</nowiki>,
+: <math> \left| \frac{1}{N} \sum_{i=1}^N f(x_i)
+      - \int_{\bar I^s} f(u)\,du \right|
+     \le V(f)\, D_N^* (x_1,\ldots,x_N).
+</math>
+
+The [[Jurjen Ferdinand Koksma|Koksma]]-[[Edmund Hlawka|Hlawka]] inequality is sharp in the following sense: For any point set {''x''<sub>1</sub>,...,''x''<sub>N</sub>} in ''I''<sup>s</sup> and any <math>\epsilon>0</math>, there is a function ''f'' with bounded variation and ''V(f)=1'' such that
+
+:<math>
+\left| \frac{1}{N} \sum_{i=1}^N f(x_i)
+      - \int_{\bar I^s} f(u)\,du \right|>D_{N}^{*}(x_1,\ldots,x_N)-\epsilon.
+</math>
+
+Therefore, the quality of a numerical integration rule depends only on the discrepancy D<sup>*</sup><sub>N</sub>(''x''<sub>1</sub>,...,''x''<sub>N</sub>).
+
+==The formula of Hlawka-Zaremba==
+Let <math>D=\{1,2,\ldots,d\}</math>. For <math>\emptyset\neq u\subseteq D</math> we
+write
+:<math>
+dx_u:=\prod_{j\in u} dx_j
+</math>
+and denote by <math>(x_u,1)</math> the point obtained from ''x'' by replacing the
+coordinates not in ''u'' by <math>1</math>.
+Then
+:<math>
+\frac{1}{N} \sum_{i=1}^N f(x_i)
+      - \int_{\bar I^s} f(u)\,du=
+\sum_{\emptyset\neq u\subseteq D}(-1)^{|u|}
+\int_{[0,1]^{|u|}}{\rm disc}(x_u,1)\frac{\partial^{|u|}}{\partial x_u}f(x_u,1) dx_u.
+</math>
+
+==The <math>L^2</math> version of the Koksma<U+2013>Hlawka inequality==
+Applying the [[Cauchy-Schwarz inequality]]
+for integrals and sums
+to the Hlawka-Zaremba identity, we obtain
+an <math>L^2</math> version of the Koksma<U+2013>Hlawka inequality:
+:<math>
+\left|\frac{1}{N} \sum_{i=1}^N f(x_i)
+      - \int_{\bar I^s} f(u)\,du\right|\le
+\|f\|_{d}\,{\rm disc}_{d}(\{t_i\}),
+</math>
+where
+:<math>
+{\rm disc}_{d}(\{t_i\})=\left(\sum_{\emptyset\neq u\subseteq D}
+\int_{[0,1]^{|u|}}{\rm disc}(x_u,1)^2 dx_u\right)^{1/2}
+</math>
+and
+:<math>
+\|f\|_{d}=\left(\sum_{u\subseteq D}
+\int_{[0,1]^{|u|}}
+\left|\frac{\partial^{|u|}}{\partial x_u}f(x_u,1)\right|^2 dx_u\right)^{1/2}.
+</math>
+
+==The Erd&#337;s<U+2013>Tur<U+00E1>n<U+2013>Koksma inequality==
+It is computationally hard to find the exact value of the discrepancy of large point sets. The [[Paul Erd&#337;s|Erd&#337;s]]<U+2013>[[Tur<U+00E1>n]]<U+2013>[[Jurjen Ferdinand Koksma|Koksma]] inequality provides an upper bound.
+
+Let ''x''<sub>1</sub>,...,''x''<sub>N</sub> be points in ''I''<sup>s</sup> and ''H'' be an arbitrary positive integer. Then
+
+:<math>
+D_{N}^{*}(x_1,\ldots,x_N)\leq
+\left(\frac{3}{2}\right)^s
+\left(
+\frac{2}{H+1}+
+\sum_{0<\|h\|_{\infty}\leq H}\frac{1}{r(h)}
+\left|
+\frac{1}{N}
+\sum_{n=1}^{N} e^{2\pi i\langle h,x_n\rangle}
+\right|
+\right)
+</math>
+
+where
+
+:<math>
+r(h)=\prod_{i=1}^s\max\{1,|h_i|\}\quad\mbox{for}\quad h=(h_1,\ldots,h_s)\in\Z^s.
+</math>
+
+==The main conjectures==
+'''Conjecture 1.''' There is a constant ''c''<sub>s</sub> depending only on the dimension ''s'', such that
+
+:<math>D_{N}^{*}(x_1,\ldots,x_N)\geq c_s\frac{(\ln N)^{s-1}}{N}</math>
+
+for any finite point set  {''x''<sub>1</sub>,...,''x''<sub>N</sub>}.
+
+'''Conjecture 2.'''  There is a constant ''c''<sup>'</sup><sub>s</sub> depending only on ''s'', such that
+
+:<math>D_{N}^{*}(x_1,\ldots,x_N)\geq c'_s\frac{(\ln N)^{s}}{N}</math>
+
+for at least one ''N'' for any infinite sequence  ''x''<sub>1</sub>,''x''<sub>2</sub>,''x''<sub>3</sub>,....
+
+These conjectures are equivalent. They have been proved for ''s'' <U+2264> 2 by [[W. M. Schmidt]]. In higher dimensions, the corresponding problem is still open. The best-known lower bounds are due to [[K. F. Roth]].
+
+==The best known sequences==
+[[Constructions of low-discrepancy sequences|Constructions of sequences]] are known such that
+
+:<math>
+D_{N}^{*}(x_1,\ldots,x_N)\leq C\frac{(\ln N)^{s}}{N}.
+</math>
+
+where ''C'' is a certain constant, depending on the sequence. After Conjecture 2, these sequences are believed to have the best possible order of convergence. See also: [[van der Corput sequence]], [[Halton sequences]], [[Sobol sequence]]s.
+
+==Lower bounds==
+Let ''s''&nbsp;=&nbsp;1. Then
+
+:<math>
+D_N^*(x_1,\ldots,x_N)\geq\frac{1}{2N}
+</math>
+
+for any finite point set {''x''<sub>1</sub>,&nbsp;...,&nbsp;''x''<sub>''N''</sub>}.
+
+Let ''s''&nbsp;=&nbsp;2. W. M. Schmidt proved that for any finite point set {''x''<sub>1</sub>,&nbsp;...,&nbsp;''x''<sub>''N''</sub>},
+
+:<math>
+D_N^*(x_1,\ldots,x_N)\geq C\frac{\log N}{N}
+</math>
+
+where
+
+:<math>
+C=\max_{a\geq3}\frac{1}{16}\frac{a-2}{a\log a}=0.023335\dots
+</math>
+
+For arbitrary dimensions ''s''&nbsp;>&nbsp;1, K.F. Roth proved that
+
+:<math>
+D_N^*(x_1,\ldots,x_N)\geq\frac{1}{2^{4s}}\frac{1}{((s-1)\log2)^\frac{s-1}{2}}\frac{\log^{\frac{s-1}{2}}N}{N}
+</math>
+
+for any finite point set {''x''<sub>1</sub>,&nbsp;...,&nbsp;''x''<sub>''N''</sub>}.
+This bound is the best known for ''s''&nbsp;>&nbsp;3.
+
+==Applications==
+* [[Integral|Integration]]
+* [[Optimization (mathematics)|Optimization]]
+* [[Sampling (statistics)|Statistical sampling]]
+
+==References==
+{{reflist}}
+* Josef Dick and Friedrich Pillichshammer, ''Digital Nets and Sequences. Discrepancy Theory and Quasi-Monte Carlo Integration'', Cambridge University Press, Cambridge, 2010, ISBN 978-0-521-19159-3
+* {{Citation | last=Kuipers | first=L. | last2= Niederreiter | first2=H. | title = Uniform distribution of sequences | publisher=[[Dover Publications]] | year=2005 | isbn=0-486-45019-8 }}
+* Harald Niederreiter. ''Random Number Generation and Quasi-Monte Carlo Methods.'' Society for Industrial and Applied Mathematics, 1992. ISBN 0-89871-295-5
+* Michael Drmota and Robert F. Tichy, ''Sequences, discrepancies and applications'', Lecture Notes in Math., 1651, Springer, Berlin, 1997, ISBN 3-540-62606-9
+* William H. Press, Brian P. Flannery, Saul A. Teukolsky, William T. Vetterling. ''[[Numerical Recipes|Numerical Recipes in C]]''. Cambridge, UK: Cambridge University Press, second edition 1992. ISBN 0-521-43108-5 ''(see Section 7.7 for a less technical discussion of low-discrepancy sequences)''
+* ''Quasi-Monte Carlo Simulations'', http://www.puc-rio.br/marco.ind/quasi_mc.html
+
+==External links==
+* [http://calgo.acm.org/ Collected Algorithms of the ACM] ''(See algorithms 647, 659, and 738.)''
+* [http://www.gnu.org/software/gsl/manual/html_node/Quasi_002dRandom-Sequences.html GNU Scientific Library Quasi-Random Sequences]
+* [http://finmathblog.blogspot.com/2013/09/quasi-random-sampling-subject-to-linear.html Quasi-random sampling subject to constraints] at FinancialMathematics.Com
+
+{{Reflist}}
+
+{{DEFAULTSORT:Low-Discrepancy Sequence}}
+[[Category:Numerical analysis]]
+[[Category:Quasirandomness]]
+[[Category:Random number generation]]
+[[Category:Diophantine approximation]]
+[[Category:Sequences and series]]

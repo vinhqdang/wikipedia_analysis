@@ -1,0 +1,125 @@
+{{Infobox software
+| name = Shinken
+| logo =
+| screenshot = [[File:Shinken software screenshot.png|250px]]
+| caption = Shinken screenshot
+| author = Jean Gab<U+00E8>s
+| developer =
+| released = December 1, 2009<ref>Official release in the Nagios mailing list at https://sourceforge.net/mailarchive/message.php?msg_id=6f8615170912010909me433f0do3eb284c11def9dc4%40mail.gmail.com</ref>
+| latest release version = 1.0.1
+| latest release date = {{release date|2012|03|13}}<ref>[http://www.shinken-monitoring.org/news/bug-fix-release-1-0-1/]</ref>
+| operating system = [[Unix-like]], [[Windows]]
+| platform =
+| language = [[Python (programming language)|Python]]
+| genre = [[Network monitoring]]
+| license = [[Affero General Public License]]
+| website = [http://www.shinken-monitoring.org/ www.shinken-monitoring.org]
+}}
+'''Shinken''' is an [[open source]] [[computer system]] and [[network monitoring]] [[software application]] compatible with [[Nagios]]. It watches [[node (networking)|hosts]] and services, alerting users when things go wrong and again when they get better. The major improvement of Shinken over Nagios is the easy load balanced and highly available architecture. The administrator manage a single configuration, the system automatically "cuts" it into parts and dispatches it to worker nodes. It takes its name from this functionality, a [[Shinken]] is a sharp Japanese sword.
+
+Shinken was written by Jean Gab<U+00E8>s as a proof of concept for a new Nagios architecture. Believing new implementation was faster and more flexible than the old C code, he proposed it as the new development branch of Nagios 4.<ref name="ShinkenProposalForNagiosDevelopement">{{cite web
+| url         = https://sourceforge.net/mailarchive/message.php?msg_id=6f8615170912010909me433f0do3eb284c11def9dc4%40mail.gmail.com
+| title       = Shinken : a new implementation proposal
+| accessdate  = 2009-12-01
+| last        = Gab<U+00E8>s
+| first       = Jean
+| date        = 2009-12-01
+| work        =
+| publisher   = Source forge
+| quote       = I would like to have your feed back about a (unfinished) reimplementation of Nagios named "Shinken" I wrote in Python that is faster and more modular than the current Nagios implementation in C}}</ref> The inclusion is not wished from Nagios authors, so now Shinken can be considered as a [[network monitoring]] [[software application]] compatible with [[Nagios]].<ref name="ShinkenNowFork">{{cite web
+| url         = http://www.shinken-monitoring.org/news/shinken-integration-into-nagios-wont-be-possible/
+| title       = Shinken : a mix with Nagios is not possible
+| accessdate  = 2010-06-01
+| last        = Gab<U+00E8>s
+| first       = Jean
+| date        = 2010-06-01
+| work        =
+| publisher   = Shinken team
+| quote       = We never got an answer for the initial Shinken proposal because we are seen as a renegade project. In fact, now we can say that we are a fork.}}</ref>
+
+Shinken was originally designed to run under all systems where Python runs. The development environment is under [[Linux]], but also runs well on other [[Unix]] variants and [[Windows]]. The reactionner process (responsible for sending notifications) can be run under the [[Android (operating system)|Android]] OS. It is [[free software]], licensed under the terms of the [[Affero General Public License]] as published by the [[Free Software Foundation]].
+
+==Overview==
+* Monitoring of network services ([[Simple Mail Transfer Protocol|SMTP]], [[Post Office Protocol|POP3]], [[Hypertext Transfer Protocol|HTTP]], [[Network News Transfer Protocol|NNTP]], [[Internet Control Message Protocol|ICMP]], [[Simple network management protocol|SNMP]], [[File Transfer Protocol|FTP]], [[Secure Shell|SSH]])
+* Monitoring of host resources ([[central processing unit|processor]] load, [[hard disk|disk]] usage, system logs) on a majority of [[network operating system]]s, including [[Microsoft Windows]] with the [http://nsclient.org/ NSClient++] plugin.
+* Monitoring of anything else like probes (temperature, alarms...) which have the ability to send collected data via a network to specifically written plugins
+* Monitoring via remotely-run scripts via [[NRPE|Nagios Remote Plugin Executor]] (An embedded pure-Python implementation is available for Shinken)
+* Remote monitoring supported through [[Secure shell|SSH]] or [[Secure Sockets Layer|SSL]] [[Encryption|encrypted]] tunnels.
+* Simple plugin design that allows users to easily develop their own service checks depending on needs, by using the tools of choice ([[shell scripts]], [[C++]], [[Perl]], [[Ruby (programming language)|Ruby]], [[Python (programming language)|Python]], [[PHP]], [[C Sharp (programming language)|C#]], etc.)
+* Plugins available for graphing of data ([http://sourceforge.net/projects/nagiosgraph/ Nagiosgraph], [http://www.nagiosforge.org/gf/project/nagiosgrapher/ Nagiosgrapher], [http://sourceforge.net/projects/pnp4nagios PNP4Nagios], [https://launchpad.net/graphite Graphite],  and others available)
+* Parallelized service and host checks available
+* Ability to define network host hierarchy using "parent" hosts, allowing detection of and distinction between hosts that are down and those that are unreachable
+* Contact notifications when service or host problems occur and get resolved (via [[e-mail]], [[pager]], [[Short message service|SMS]], or any user-defined method through plugin system)
+* Ability to define event handlers to be run during service or host events for proactive problem resolution
+* Support for implementing easily [[redundancy (engineering)|redundant]] and load balanced monitoring hosts
+* Support for UTF-8 objects names
+* Support for multi sites (like monitoring multiple customers with one administration point)
+* Support for integrated business rules
+* Support for filtering alerts by showing only root problems
+* Support for native messaging api of Android
+* Support for recurring downtimes through the maintenance_period attribute
+* Ability to route checks to dedicated pollers (processes specialised in executing plugins)
+
+==Architecture==
+A Shinken installation consists of several processes, each optimized for a specific task.
+* Arbiter
+** Load the configuration files and dispatch the host and service objects to the scheduler(s)
+** Watchdog for all other processes and responsible for initiating failovers if an error is detected
+
+* Scheduler
+** Plan the next run of host and service checks
+** Dispatch checks to the poller(s)
+** Raise Notifications and dispatch them to the reactionner(s)
+** Update the retention file (or other retention backends)
+** Send broks (internal events of any kind) to the broker(s)
+
+* Poller
+** Get checks from the scheduler, execute plugins and send the results to the scheduler
+
+* Reactionner
+** Get notifications and eventhandlers from the scheduler, execute plugins/scripts and send the results to the scheduler
+
+* Broker
+** Has multiple modules (usually running in their own processes)
+** Gets broks from the scheduler and forwards them to the broker modules
+** Modules decide if they handle a brok depending on a brok's type (log, initial service/host status, check result, begin/end downtime, ...)
+** Modules process the broks in many different ways. Some of the modules are:
+*** ndodb - updates an ndo database (MySQL or Oracle)
+*** merlindb - updates a Merlin database which can then be used by the Ninja GUI
+*** livestatus - updates in-memory objects which can be queried by GUIs like Thruk or [[Check_MK|Check_MK Multisite]]
+*** webui - updates in-memory objects and provides a webserver for the native Shinken GUI
+*** simple_log - writes log messages to a file
+*** status_dat - writes to a status.dat file which can be read by the classic cgi-based GUI
+
+* Receiver (optional)
+** Listens for NSCA events and forwards them to the arbiter
+** Reads the command pipe and forwards external commands to the arbiter
+** Allows to setup a "farm" of NSCA-daemons to handle a high rate of incoming events
+
+There can be multiple instances for each type of process, either on a single host or spread over many hosts. Adding more processes automatically distributes the load.
+
+==See also==
+{{Portal|Free software}}
+* [[Comparison of network monitoring systems]]
+* [[NRPE]]
+
+==References==
+{{Reflist}}
+
+==External links==
+*[http://www.shinken-monitoring.org Shinken-monitoring.org], official website
+*[http://www.nagiosplugins.org/ Nagios Plugins] the home of the official plugins
+*[http://www.nagiosexchange.org NagiosExchange] overview of plugins, addons for Nagios that can be used  for Shinken too
+*[http://www.linuxpromagazine.com/Issues/2010 Linux Magazine] article about Shinken in issue 115 (june 2010) of Linux Magazine
+*[http://www.linux-magazin.de/Heft-Abo/Ausgaben/2010/04 Linux Magazin] article about Shinken in the german Linux Magazin 04/2010
+*[http://www.cul.de/data/freex52010inh.pdf freeX] comparison of Nagios, Icinga, Zabbix and Shinken in the german magazine freeX
+
+{{DEFAULTSORT:Shinken (Software)}}
+[[Category:Network management]]
+[[Category:Internet Protocol based network software]]
+[[Category:Free network management software]]
+[[Category:Multi-agent systems]]
+[[Category:Free software programmed in Python]]
+[[Category:Network analyzers]]
+
+[[fr:Shinken (informatique)]]

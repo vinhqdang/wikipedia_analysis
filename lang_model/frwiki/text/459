@@ -1,0 +1,150 @@
+La '''Livebox''' est un appareil électronique fourni par le [[Fournisseur d'accès à Internet]] [[Orange (entreprise)|Orange]] (anciennement [[Wanadoo]]) à ses abonnés [[Asymmetric Digital Subscriber Line|ADSL]] et [[Fiber To The Home|FTTH]] en [[France]], au [[Royaume-Uni]], aux [[Pays-Bas]], en [[Suisse]], en [[Espagne]] et en [[Tunisie]] et à ses abonnés [[WiMAX]] au [[Cameroun]], mais également par [[Mobistar]] en [[Belgique]] et par [[Telekomunikacja Polska|TPSA]] en [[Pologne]]. Elle permet de bénéficier du ''[[Triple play (télécommunications)|triple play]]''. La Livebox est produite par [[Thomson (entreprise française)|Thomson]] (Depuis le rachat d'[[Inventel]] en 2005) ou [[Sagem]] (appelé en urgence pour pallier les faibles moyens de production d'[[Inventel]]). Depuis septembre 2004 et fin 2009 le parc de Livebox s'établit à 8,8 millions, contre 5,2 à la fin de 2007<ref>
+{{Lien web
+   | url         = http://www.01net.com/editorial/404559/france-telecom-deviendra-orange-en-2012/
+   | titre       = France Télécom : Résultats 2008 et changement de nom
+   | auteur      = La rédaction [[01net]] avec [[Reuters]]
+   | année       = 2009
+   | éditeur     = 01net
+   | site        = 01net.com
+   | consulté le = jeudi 5 mars 2009
+}}</ref>. Mais seule la France offre les modèles des deux constructeurs ; le Royaume-Uni, l'Espagne, et la Belgique sont exclusivement Inventel, les Pays-Bas et la Pologne uniquement [[Sagem]].
+
+Cet appareil sert principalement de [[modem]] [[ADSL]] et de routeur [[Ethernet]] et [[Wi-Fi]], mais permet aussi aux opérateurs de proposer des services ajoutés utilisant le support ADSL, comme la [[télévision]] (via un décodeur externe en option) ou la [[téléphone|téléphonie]] (via une prise RJ-11 ou RJ-45 sur les Livebox 1.2). 
+
+La Livebox permet d'offrir sur un support unique plusieurs types de terminaux, donc plusieurs types de services : téléphone (téléphonie [[VoIP]]), micro-ordinateur (accès Internet), téléviseur (télédiffusion, bouquets de programmes, vidéo à la demande…) via un décodeur externe en option. En ce sens, il s'agit de bien plus qu'un simple modem ADSL qui n'est qu'une interface entre un [[ordinateur]] et [[Internet]].
+La Livebox est louée aux abonnés ou vendue hors abonnement ; elle est livrée avec des accessoires (câbles, filtres…). L'indemnité en cas de non restitution (si location) est de 100 à {{unité|130|€}} pour le modem routeur et de 2 à {{unité|12|€}} pour les accessoires.
+
+L'offre de téléphonie via Livebox propose différents services dont des forfaits illimités vers les numéros fixes et mobiles en [[France]] métropolitaine et certaines destinations internationales selon le forfait ADSL souscrit.
+[[Fichier:photo lb.jpg|thumb|Livebox 1.2]]
+==Caractéristiques techniques==
+===Livebox 1.0===
+* La norme 802.11g assure une connexion avec un débit plus important entre les différents ordinateurs. La norme 802.11b reste cependant supportée par la Livebox.
+* Les deux Livebox sont sensiblement différentes, tant pour le hardware (2 port USB, 1 port PC-card, sur l'Inventel par exemple), que sur l'interface de paramétrage. Malgré de nombreuses évolutions l'interface de la Sagem reste très en deçà de l'Inventel, pourtant quasiment inchangée depuis son lancement !
+* Sur les Livebox Sagem, à l'installation, seul le [[WEP]] était utilisé, il fallait une configuration de l'utilisateur (non triviale) pour utiliser une meilleure technologie ([[Wi-Fi Protected Access|WPA]]). Les mises à jour récentes du logiciel interne de la Livebox (firmware) utilisent le WPA par défaut.
+* Une compatibilité avec les toutes dernières technologies sans fil ([[Wi-Fi]], [[bluetooth]]).
+* Une compatibilité avec des services de télévision par ADSL.
+* Système d'exploitation utilisé : Pour la version [[Sagem]]: D'abord [[VxWorks]] puis [[Linux]] avec quelques versions où les deux systèmes cohabitent (grâce à l'utilisation d'un hyperviseur développé en interne), le noyau Linux étant une version modifiée du noyau 2.4.18, puis 2.6.15. La version [[Thomson (entreprise française)|Thomson]] utilise uniquement [[Linux]] actuellement 2.6.12.6. 
+
+Bien que sous GPL, une partie seulement du code source est disponible sur [http://www.livebox-opensource.com le site ouvert à cet effet par Orange en décembre 2009], Orange ne respectant pas en cela la licence des logiciels utilisés.
+
+===Livebox 1.1===
+[[Fichier:livebox sagem.jpg|thumb|Livebox 1.1 fabriquée par Sagem]]
+Pas de réel changement par rapport à la précédente, cette version n'a pas de fonction [[bluetooth]] car cela provoquait des interférences avec le [[Wi-Fi]], et est plus évolutive<ref>[http://www.degroupnews.com/actualite/n938-livebox-orange.html Orange lance une nouvelle Livebox - DegroupNews.com]</ref>.
+Le câble de raccordement USB, la rallonge USB et l'adaptateur Wifi USB ne sont plus fournis à partir de cette version, la raison invoquée par Orange est la prépondérance des modes de connexion ethernet (par rapport à USB) et le support de plus en plus important du Wifi sur les nouveaux portables du marché.
+
+Cette pratique permet à Orange d'augmenter sa marge sur la location de la Livebox, le tarif de location restant le même en dépit du retrait de ces accessoires. De plus Orange propose de fournir ces accessoires de manière payante<ref>[http://www.pcinpact.com/actu/news/31321-Nouvelle-Livebox-dOrange-allégée-mais-au-pri.htm Nouvelle Livebox d'Orange allégée mais au prix inchangé - PC INpact]</ref>.
+
+===Livebox 1.2===
+[[Fichier:ports livebox12.jpg|thumb|Livebox 1.2]]
+La Livebox 1.2 est désormais disponible en France.
+
+Tout comme les Livebox précédentes, elle est multiservice : Internet, télévision, téléphone. Elle garde le même design que la précédente, en forme de livre ouvert, mais elle est plus compacte et embarque plus de puissance pour être évolutive. Elle consomme 25% de moins que les modèles précédents. Elle a 2 ports Ethernet, 1 port [[RJ11]] pour l'accès ADSL, 1 port [[RJ45]] pour brancher un éventuel décodeur TV et 1 port RJ 45 pour la téléphonie illimitée (remplace le port RJ11 des Livebox 1.0 et 1.1), 1 port USB. Nouveauté par rapport à la Livebox précédente : les boutons explicites Wifi, Reboot, Reset, et la résistance accrue aux orages ({{unité|6000|V}}). Sa clé de sécurité wifi est en [[Wi-Fi Protected Access|WPA]] par défaut, ce qui augmente la sécurité sans fil. Son installation est simplifiée, par des codes couleurs pour les câbles. Son utilisation reposant sur l'interface d'administration permet de nouvelles fonctionnalités telles que le réglage des plages horaires d'accès à Internet pour des ordinateurs précis dans la maison.
+
+===Livebox 2===
+
+Depuis le 1{{er}} octobre 2009, les nouveaux abonnés d'Orange reçoivent d'office la dernière Livebox, la Livebox 2. Dévoilée au mois de juin, elle était jusque là réservée aux nouveaux clients habitant la région parisienne. Elle est désormais distribuée dans toute la [[France]].
+
+Elle est compatible avec le Wi-Fi dernière génération ([[IEEE 802.11n|802.11n]]), est équipée de quatre ports [[Ethernet]] et deux ports USB de 900 mA et de 500mA chacun destiné respectivement à brancher une imprimante ou un périphérique de stockage pour les partager sur le réseau, et supporte l'association facile Wi-Fi, le [[WPS]]. Une des innovations avec la Livebox 2 est aussi la compatibilité avec la [[fibre optique]]. Les abonnés auront donc la possibilité de gérer les appels simultanés.
+
+Malgré une période de test, elle n'a pas échappé à des défauts de conception <ref>http://www.clubic.com/article-317718-2-retrospective-flops-high-tech-2009.html</ref>.
+
+== Déclinaisons ==
+=== Livebox THD ou FTTH ===
+Livebox Très haut débit (jusqu’à 100Mbit/s) pour l'accès internet par [[fibre optique]]. Elle est blanche et fabriquée par [[SAGEM]].
+
+=== Business Livebox ===
+La Business Livebox est fournie aux clients ayant souscrit à une offre Orange (Business Internet Voix / Equant IPVPN /Oléane VPN / Business VPN). Actuellement il existe plusieurs modèles de Business Livebox, voici les 3 principales :
+* Business Livebox 100A : ADSL "light" plage de 512 K → 18 MégaMax, sur base de routeur Bintec([[Funkwerk]])
+* Business Livebox 100S : [[SDSL]] de 512Kbit/s jusqu'à 8Mbit/s, sur base de routeur [[OneAccess]] : One300
+* Business Livebox 1000S : SDSL Jusqu'à 8Mbit/s, avec gestion secours liaisons PABX (RNIS, POTS).
+La Business Livebox propose aux PME en plus d'un lien SDSL et tous les services "classiques" avec ce type de liens (garantie de débit (QOS), temps de rétablissement limité (GTR), bloc d'adresse IP…) de connecter un [[PABX]] grâce à ses ports [[RNIS]] (jusqu'à 24 communications simultanées).
+
+=== Livebox Pro V1 et V2 ===
+
+La Livebox Pro V1 est fabriquée par [[thomson (entreprise française)|Thomson]].
+
+* Elle est de couleur grise.
+* Elle dispose de 4 ports Ethernet au lieu de 2.(contrairement aux Livebox "résidentielles" l'option TV sur le 2{{e}} port ethernet, quoique possible, n'est pas activée par défaut)
+* L'adaptateur USB Wifi est fourni.
+* Elle dispose de la fonction "Hot-Spot"
+* Elle est compatible avec l'offre "512 étendu" (ligne trop longue pour bénéficier d'une offre ADSL classique)
+* sources : Orange, Présentation de la Livebox pro V1 =
+* http://assistance.orange.fr/Image/1163_Branchements_LBpro.gif
+* http://assistance.orange.fr/pdf/1163_271108_presentation_de_la_livebox_pro_v1.pdf
+
+La Livebox Pro V2 est fabriquée par [[Sagem]].
+
+* Elle est de couleur noire.
+* Elle dispose de 4 ports Ethernet, et un port USB master.
+* Il est possible de brancher un périphérique de stockage (clé usb, disque dur…) ou une imprimante sur le port USB master. Cependant, celui-ci n'est pas encore vraiment opérationnel avec la version du firmware LBV2_610128 ni LBV2_610142.
+* Elle est équipée du wifi "802.11 b+g+N" depuis le firmware LBV2_610142 disponible le 20/01/2009. À propos de cette norme N (en stade de projet, voir [[IEEE 802.11n]]), la bande est bridée sur {{unité|2.4|GHz}}, celle de {{unité|5|GHz}} n'est pas disponible. C'est donc un "simple band" compatible avec tous les matériels en {{unité|2.4|GHz}}. N'étant pas equipée du hardware nécessaire, il est peu probable que le "dual band" soit disponible dans un prochain firmware.
+* Elle dispose de la fonction "Hot-Spot" qui permet aux visiteurs de bénéficier d'un accès Internet sans saisir les clés de sécurité. Ils n'ont ainsi accès ni à votre propre réseau interne, ni à vos données d'identification.
+* Elle est principalement destinée aux petites entreprises qui ont un réseau assez complexe à administrer.
+* Contrairement aux idées reçues, elle n'est pas réservée aux entreprises, avec un contrat pro. Les particuliers peuvent en bénéficier en l'achetant, même s'ils ont un contrat résidentiel. Elle n'est pas compatible avec les Livephones, contrairement à la Livebox Pro V1
+* sources : Orange, Présentation de la Livebox pro V2 =
+* http://assistance.orange.fr/Image/3056_Description_LBproV2.gif
+* http://assistance.orange.fr/pdf/3056_271108_presentation_de_la_livebox_pro_v2.pdf
+
+=== Livebox classique dite ''résidentielle'' ===
+La Livebox ''résidentielle'' est de couleur blanche, et fabriquée par [[Sagem]] et Thomson, modèles existants :  Sagem F@st 3202<ref>[http://www.sagem.com/support/site/modele_fax.php?page=produit Sagem F@st 3202]</ref> et Inventel DV4210-WA.
+
+== Liveservices ==
+Les liveservices sont des services ou des périphériques associés à la Livebox :
+* [[Unik]] : [[ToIP|Téléphone IP]] via la technologie [[Unlicensed Mobile Access|UMA]] sur support [[Wi-Fi]] à proximité de la livebox et réseau mobile Orange hors de la portée wifi. Nécessite des téléphones compatibles UMA. 
+* Livephone : Téléphone haute-définition sur [[Protocole Internet|IP]] par base sans fil [[DECT]] reliée par l'[[Universal Serial Bus|USB]] maître.
+* Livezoom : Caméra [[Wi-Fi]] permettant de visionner à distance la vie de la maison depuis Internet (PC Windows uniquement) ou un téléphone mobile.
+* Livemusic : Périphérique [[Wi-Fi]] permettant d'écouter les fichiers musicaux présents sur un PC sur Internet ou des webradios depuis une chaine hifi, un home-cinéma. c'est en fait un Philips SLA5520 repeint aux couleurs Wanadoo.
+* Liveplug : Outil permettant de connecter la Livebox et la télévision sans câble en utilisant la technologie [[Courants porteurs en ligne|CPL]] (utilisation de l'installation électrique de la maison). Ce genre d'équipement possède une capacité de transfert d'environ 80Mbit/s et sont pour le moment assez coûteux. Notez que cette technologie peut aussi servir à relier un pc à votre Livebox car le branchement du décodeur TV ou de la machine s'effectue via un câble RJ45 (Ethernet). Il existe désormais 2 modèles de Liveplugs, le normal (débit 85Mbit/s) et le HD (débit 200Mbit/s). Ce dernier permet le raccordement d'un décodeur HD dans une autre pièce sans câble. À noter que l'on peut utiliser un Liveplug au départ de la Livebox (pour émettre le signal internet) et 2 ou 3 autres Liveplug pour raccorder des ordinateurs. Le liveplug d'Orange fonctionne pour tous les opérateurs.
+* Live télésurveillance : service de télésurveillance (avec abonnement) en partenariat avec EPS et [[Securitas]].
+* Poste [[Liveradio]] : Poste de radio connecté au réseau en WiFi ou via câble Ethernet, il permet l'écoute de 10 000 stations (radios FM et webradios) et 11 000 podcasts issus de 100 pays différents classés par genres et pays. Désormais disponible en deux modèles "Vintage" et "Cube", il possède sur sa façade un pavé de navigation, une touche Menu, une touche « coups de cœur » pour mémoriser des titres de chansons et des présélections de stations. Le service Liveradio est également disponible sur d'autres interfaces connectées (mobile, internet, Tv).
+* Wifi extender : Périphérique permettant d'étendre la portée du wifi grâce à un module CPL qui se branche à la livebox et le deuxième qui possède une antenne wifi se branchant sur une prise électrique n'importe où dans la maison où la couverture wifi n'est pas suffisante.
+
+Certains de ces services ou périphériques sont exclusivement disponibles avec la Livebox.
+
+==Design==
+Les Livebox 1.1 et 1.2 ont été imaginées par Boris Gentine, designer de l'agence Saguez and Partners<ref>[http://www.saguez-and-partners.com/Livebox]</ref>. Étant destinées à s'intégrer harmonieusement dans l'habitat, leur design évoque un livre blanc que l'on pose indifféremment à plat ou sur la tranche. Ce design été récompensé par 2 fois. En 2004, par le prix stratégies (catégories design produit), et en 2006 par l'observeur du design<ref>[http://www.francedesigninnovation.fr/l_observeur_uk/realisation.php?id=1253&laureats=2006&id_participant=1195]</ref>.
+
+France Télécom a lancé en 2005 une Livebox Fashion avec une coque rose ({{formatnum:20000}} unités), et lors de la [[fête de la musique]] une Livebox Music avec une coque bleue ({{formatnum:6000}} unités). Les deux étaient produites par Inventel<ref>[http://www.echosdunet.net/dossiers/dossiers.php?id_dossier=678][http://www.francetelecom.com/fr/espaces/journalistes/communiques/CP_old/cp050616-2.html]
+</ref>.
+En novembre 2005, France Télécom offrait 3 modèles d'autocollants pour personnaliser sa Livebox : une skin vache, une skin griboullis, et une skin « Moi j'adore l'informatique »<ref>[http://www.echosdunet.net/dossiers/dossier_957_les+livebox+collector+pour+noel+collector+chez+collector.html Les Livebox Collector pour Noël]</ref>.
+
+En décembre 2005, France Télécom a diffusé des housses Livebox en fourrure synthétique noire à l'occasion de la sortie du film [[King Kong]]<ref>http://www.eps-france.com/promohautdebit.pdf</ref>.
+
+De mai à juillet 2007, Orange a proposé le Pack Silver série limitée qui comprenait une Livebox Thomson couleur argent avec un Livephone Thomson argent.{{Référence nécessaire}}
+
+==Problèmes==
+===Plaintes===
+* Le 02/12/2004, Cegetel, Neuf Telecom et Tele2 avaient intenté un procès à l'encontre de France Télécom pour pratique illicite de winback (utiliser les dossiers de demande de présélection de ses concurrents pour mener une campagne de reconquête des clients partis à la concurrence suite à l'ouverture du marché du téléphone fixe). Cegetel, Tele2 et Neuf Télécom avaient respectivement demandé 54, 75 et 38 millions d'euros. Un accord a été initié par France Télécom, mais la DGCCRF poursuit ses investigations suite à une plainte de l’Aforst (Association française des opérateurs de réseaux et de services télécoms).
+* En juin 2003, Neuf Télécom obtient 7 millions de dommages et intérêts après un jugement du tribunal de commerce de Paris. France Télécom fera appel de cette décision.
+* En mai 2004, Tele2 obtient quant à lui 15 millions d'euros de dommages et intérêts.
+* Le tribunal de commerce de Paris (décision du 23 février 2009) a condamné la "vente subordonnée prohibée" de France Télécom et sa filiale Orange Sports qui limitaient l’accès à la chaîne « Orange Foot » aux abonnés ADSL de France Télécom. Suite à un appel d’offre, celle-ci avait remporté trois des douze lots mis en jeu par la Ligue 1 de football, pour l’attribution des droits exclusifs de retransmission télévisée des saisons 2008 à 2012. France Télécom proposait donc, en option payante, la chaîne dédiée à la Ligue 1, Orange Foot, à ses seuls abonnés ADSL. Non contents de se voir ainsi privés de clients potentiels, les opérateurs Free et Neuf Cegetel ont assigné France Télécom devant le tribunal de commerce de Paris sur le fondement de la concurrence déloyale née des pratiques de vente subordonnée de France Télécom. Le tribunal a condamné France Télécom et Orange Foot à cesser cette pratique de commercialisation sous astreinte de {{unité|50000|euros}} par jour, au paiement de {{unité|30000|euros}} chacune pour les frais d’avocats et le tribunal retenant l’existence d’actes de concurrence déloyale, désigne un expert pour évaluer le montant du préjudice causé à Free et à Neuf Cegetel.
+* Le collectif LibereMa3G obtient un premier succès judiciaire face à Orange. Un abonné a obtenu le débridage de son offre auprès du tribunal de proximité de Paimbœuf. (Le collectif LibereMa3G milite pour qu’Orange enlève le bridage à 384 kbps (débit de l’EDGE et de la 3G) sur l’ensemble des téléphones et des offres. Si l’opérateur a bien fait cela sur les forfaits ou option iPhone, les autres téléphones restent affectés par ce bridage de l’opérateur. Les utilisateurs de clé 3G+ ne sont pas affectés par le bridage)
+* France Télécom a été condamnée à de multiples reprises pour entente anticoncurrentielle (256 M€ le 01/12/2005, 28 M€ le 28/07/2009 pour la période 2001-2006 dans les DOM suivi par 63 M€ pour la zone Antilles-Guyane en 2004) ;
+En particulier elle a été condamnée à 20 M€ d'amende pour entrave à l'ouverture du marché de l'accès Internet par ADSL de 1999 à 2004, portée en appel à 40 M€ en janvier 2005
+
+=== Controverses sur le respect des logiciels libres ===
+France Télécom/Orange utilise des [[Logiciel libre|logiciels libres]] dans un grand nombre de ses équipements, dont la Livebox qui est prêtée à ses abonnés : elle utilise [[Linux]] pour son noyau, ainsi que d'autres logiciels sous [[Licence publique générale GNU|GPL]](v2), notamment pour ses divers pilotes. Or, la GPL impose de publier le code source de tout logiciel basé sur un logiciel sous GPL, ou réutilisant tout ou partie de son code, notamment lorsqu'il est distribué. Mais France Télécom a toujours refusé de publier le code source des logiciels utilisés par sa Livebox, estimant qu'il n'y avait pas distribution, le terminal Livebox étant produit et prêté à l'abonné qui est tenu de le restituer en fin d'abonnement (voir section 4.3 des CGV en référence). La Livebox est dite propriété insaisissable, au même titre que les compteurs électriques ou de gaz propriétés de leurs compagnies respectives. Le client ne peut donc (pourquoi ?) pas modifier le terminal, sous peine d'être facturé lors de la résiliation ({{Unité|200|€}} pour Livebox et la "valeur à neuf" pour le boîtier TV, soit {{Unité|49|€}} ou {{Unité|179,40|€}} pour les décodeurs TV IAD 80 et TV IAD 81 et {{Unité|220|€}} pour le décodeur TV IHD 91<ref name="CGV">[http://media.abonnez-vous.orange.fr/medias/pdf/cgv/cgv-internet-haut-debit-dom-tv.pdf]</ref>).
+
+== Anecdotes ==
+Les premiers exemplaires de la Livebox étaient commercialisés sous le nom de ''Wanadoohome''. Mais France Télécom a rapidement renommé sa passerelle internet en ''Livebox'' afin d'avoir un nom facile à retenir, international et facilitant la comparaison avec ses futurs concurrents ([[Freebox]], [[Neufbox]]…)
+
+== Articles connexes ==
+* [[Asymmetric Digital Subscriber Line|ADSL]]
+* [[Triple play (télécommunications)|Triple play]]
+
+== Liens externes ==
+* [http://didoune.fr/blog/2009/05/17/tutorial-ouvrir-et-rediriger-les-ports-de-votre-livebox/ Tutorial: Ouvrir et rediriger les ports d'une Livebox]
+
+== Notes et références ==
+{{Références}}
+
+{{Groupe France Télécom}}
+{{Télécommunications en France}}
+{{Portail|Télécommunications}}
+
+[[Catégorie:Modem triple play]]
+[[Catégorie:France Télécom]]
+
+[[en:Orange Livebox]]
+[[es:Livebox]]
+[[pl:Livebox tp]]

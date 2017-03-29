@@ -1,0 +1,80 @@
+L''''IBM NORC''' ('''IBM Naval Ordnance Research Calculator''') était un [[ordinateur]] à [[tubes à vide]] construit en un seul exemplaire par la compagnie IBM pour la [[marine de guerre américaine]] (''United States Navy''). À sa mise en service, en décembre 1954, il était probablement l'ordinateur le plus puissant de l'époque<ref>« The NORC was the first supercomputer » selon Frank da Cruz (2004)</ref>. L''''IBM NORC''' a été construit au Watson Scientific Computing Laboratory sous la direction de [[Wallace Eckert]]<ref>J.A.N. Lee, "(column)", IEEE Computer, 50th anniversary issue</ref>.
+
+L'ordinateur a été présenté à la United States Navy le 2 décembre 1954. Lors de la cérémonie de présentation, l'ordinateur a calculé les 3089 premières décimales du nombre [[Pi]], ce qui était un record pour l'époque. Ce calcul avait pris 13 minutes. En 1955, l'ordinateur a été déménagé au [[terrain d'essai]] de Dahlgren dans l'État de [[Virginie (État)|Virginie]]. Il a été l'ordinateur principal du terrain d'essai jusqu'en 1958.
+
+L'IBM NORC a influencé la conception du [[IBM 701]] et des ordinateurs de la [[Série IBM 700/7000|série IBM 700]].
+
+== Description ==
+
+Originalement, l'ordinateur utilisait des [[tubes électroniques]] ([[écran cathodique]] ou [[tubes de Williams]]) comme [[mémoire vive]]. Cette mémoire vive avait une capacité de 2000 [[mot (informatique)|mots]] avec un temps d'accès de 8 [[microsecondes]]. Chaque mot était constitué de 16 chiffres décimaux utilisant chacun 4 bits pour coder un chiffre plus 2 bits de parité. Chaque mot pouvait contenir une [[instruction informatique|instruction]] ou un nombre de 13 chiffres, un signe et un index de 2 chiffres. La mémoire était constituée de 4 ensembles de 66 tubes électrostatiques. Chaque ensemble de 66 tubes contenait 500 mots de mémoire ; chaque tube de l'ensemble contenait un bit de chacun des 500 mots. L'amélioration du circuit d'adressage des tubes de Williams a permis d'augmenter la capacité de la mémoire d'un tube de 500 à 900 bits, ce qui a permis d'augmenter la capacité de la mémoire vive à 3600 mots sans ajouter de tubes de Williams.
+
+Par la suite, la mémoire à tubes de Williams a été remplacée par une mémoire à [[tores magnétiques]] de 20 000 mots, toujours avec un temps d'accès de 8 microsecondes.
+
+La vitesse du IBM NORC était de 15,000 [[instruction informatique|instructions]] par seconde. Une addition prenait 15 microsecondes, une multiplication 31 microsecondes et une division 227 microsecondes (les temps précédents n'incluent pas les temps d'accès mémoire). L'ordinateur pouvait faire des calculs en double précision.
+
+L'ordinateur comptait 1982 unités enfichables (''pluggable units''), chacune contenant plusieurs tubes à vide et d'autres composantes électroniques. Il y avait 62 types d'unités enfichables, mais la moitié de la circuiterie n'en utilisait que 6 et 80 % de la circuiterie n'en utilisait que 18. Au total, l'ordinateur contenait 9800 tubes à vide et 10,000 [[diodes]].
+
+L'IBM NORC avait 8 [[lecteurs de bande magnétique]] semblables aux lecteurs du l'[[IBM 701]]. Les rubans magnétiques avaient 20 cm de diamètre. Les lecteurs pouvaient lire ou écrire 71,500 caractères par seconde. L'ordinateur avait 2 imprimantes qui pouvaient imprimer 150 lignes par minute, mais les deux imprimantes ne pouvaient fonctionner en même temps. L'ordinateur possédait aussi un lecteur de [[carte perforée]] qui pouvait lire 100 cartes par minute ; chaque carte pouvait contenir quatre mots. Il possédait aussi un dispositif de visualisation composé d'un [[écran cathodique]] et d'une [[caméra]] de film de [[35 mm]] qui filmait l'écran, développait le film et le projetait sur un écran. Le film ainsi produit pouvait être utilisé pour enregistrer des données.
+
+== Hommage en astronomie ==
+
+L'[[astéroïde]] 1625 porte le nom ''The NORC'' en l'honneur de cet ordinateur.
+
+== Références ==
+<references/>
+
+== Source ==
+* {{Traduction/Référence|en|IBM NORC|546099925}}
+
+== Voir aussi ==
+=== Article connexe ===
+* [[Liste des ordinateurs à tubes à vide]]
+
+=== Bibliographie ===
+*{{ouvrage|langue=en
+  | nom = Eckert
+  | prénom = Wallace John
+  | coauteurs = Jones, Rebecca 
+  | titre = Faster, Faster: A Simple Description of a Giant Electronic Calculator and the Problems it Solves
+  | éditeur = McGraw-Hill
+  | année = 1955
+  | url = 
+  | id =  }} (No ISBN, [[Dewey Decimal Classification|Dewey decimal]]: 510.8 E19f).  A contemporary book about the NORC.
+*{{ouvrage|langue=en
+  | nom = Goldstine
+  | prénom = Herman H
+  | coauteurs = 
+  | titre = The Computer from Pascal to von Neumann
+  | éditeur = Princeton University Press
+  | année = 1972
+ }}
+*{{ouvrage|langue=en
+  | nom = Williams
+  | prénom = Michael R.
+  | titre = A History of Computing Technology
+  | éditeur = IEEE Computer Society
+  | année = 1997
+ }}
+
+=== Liens externes ===
+*  {{lien web|langue=en
+  | nom = da Cruz
+  | prénom = Frank 
+  | titre = The IBM Naval Ordnance Research Calculator
+  | éditeur = Columbia University Computing History
+  | date = 18 octobre 2004
+  | url = http://www.columbia.edu/acis/history/norc.html
+  | consulté le = 20 octobre 2006
+ }}
+*  {{lien web|langue=en
+  | nom = IBM
+  | titre = IBM Archive: IBM's NORC
+  | url = http://www-03.ibm.com/ibm/history/exhibits/norc/norc_intro.html
+  | consulté le = 20 octobre 2006
+ }}
+
+
+{{Portail|Informatique|Forces armées des États-Unis}}
+
+[[Catégorie:Ordinateur primitif]]
+[[Catégorie:Calculateur militaire des États-Unis]]

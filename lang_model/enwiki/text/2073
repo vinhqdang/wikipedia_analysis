@@ -1,0 +1,97 @@
+==Muticommodity Flow Problem==
+A commodity is a pair of source and sink nodes in a network flow problem. For detailed definition of multicommodity flow problem, see [[Multi-commodity flow problem]].
+In a multicommodity flow problem, there are <math>k</math><U+2265>1 commodities, each with its own source <math>s_{\text{i}}</math>, sink <math>t_{\text{i}}</math>, and demand <math>D_{\text{i}}</math>. The objective is to simultaneously route <math>D_{\text{i}}</math> units of commodity <math>i</math> from <math>s_{\text{i}}</math> to <math>t_{\text{i}}</math> for each <math>i</math>, such that the total amount of all commodities passing through any edge is no greater than its capacity. (In the case of undirected edges, the sum of the flows in both directions can<U+2019>t exceed the capacity of the edge.).<ref name="Leighton99">{{cite journal|last1=LEIGHTON|first1=TOM|last2=RAO|first2=SATISH|title=Multicommodity Max-Flow Min-Cut Theorems and Their Use in Designing Approximation Algorithms|journal=Journal of the ACM|date=November 1999|volume=46|issue=6|page=787-832}}</ref>
+Specially, a 1-commodity (or single commodity) flow problem is also known as a maximum flow problem (see [[Maximum flow problem]]). According to the famous Ford-Fulkerson algorithm (see [[Ford-Fulkerson algorithm]]),the max-flow and min-cut are always equal in a 1-commodity flow problem.
+===Max-flow and min-cut===
+In a multicommodity flow problem, ''max-flow'' is the maximum value of <math>f</math>, where <math>f</math> is the common fraction of each commodity that is routed, such that <math>fD_{\text{i}}</math> units of commodity <math>i</math> can be simultaneously routed for each <math>i</math> without violating any capacity constraints.
+''min-cut'' is the minimum of all cuts of the ratio <math>\varphi</math> of the capacity of the cut to the demand of the cut.
+Max-flow is always upper bounded by the min-cut for a multicommodify flow problem.
+
+===Uniform multicommodity flow problem===
+In a uniform multicommodity flow problem, there is a commodity for every pair of nodes and the demand for every commodity is the same. (Without loss of generality, the demand for every commodity is set to one.) The underlying network and capacities are arbitrary.<ref name=Leighton99 />
+
+===Product multicommodity flow problem===
+In a product multicommodity flow problem, there is a nonnegative weight for each node <math>v \in V</math> in graph <math>G=(V,E)</math>. The demand for the commodity between nodes <math>u</math> and <math>v</math> is the product of the weights of node <math>u</math> and node <math>v</math>. The uniform multicommodity flow problem is a special case of the product multicommodity flow problem for which the weight is set to 1 for all nodes <math>u \in V</math>. <ref name=Leighton99 />
+
+===Duality of Linear Programming===
+In general, the dual of a multicommodity flow problem for a graph <math>G</math> is the problem of apportioning a fixed amount of weight (where weights can be considered as distances) to the edges of <math>G</math> such that to maximize the cumulative distance between the source and sink pairs <ref name=Leighton99 />. (See [[Linear programming]] for detailed introduction of the duality of linear programming.)
+
+===History===
+The research on the relationship between the max-flow and min-cut of multicommodity flow problem has obtained great interest since Ford and Fulkterson's result for 1-commodity flow problems. 
+Hu 
+<ref name="hu63">{{cite journal|last1=HU|first1=T.C.|title=Multicommodity network flows|journal=Oper. Res.|date=1963|volume=11|issue=3|page=344<U+2013>360}}</ref>
+showed that the max-flow and min-cut are always equal for two commodities. Okamura and Seymour <ref name="Okamura and Seymour 81">{{cite journal|last1=OKAMURA|first1=H.|last2=SEYMOUR|first2=P.D.|title=Multicommodity flows in planar graphs|journal=J. Combin. Theory, Ser.|date=1981|volume=B|issue=31|page=75<U+2013>81}}</ref> illustrated a 4-commodity flow problem with max-flow equals to 3/4 and min-cut equals 1. Shahrokhi and Matula 
+<ref name="Shahrokhi and Matula 90">{{cite journal|last1=SHAHROKHI|first1=F.|last2=MATULA|first2=D.W.|title=The maximum concurrent flow problem|journal=J. ACM|date=1990|volume=37|page=318 <U+2013>334}}</ref> also proved that the max-flow and min-cut are equal provided the dual of the flow problem satisfies a certain cut condition in a uniform multicommodity flow problem. Many other researchers also showed concrete research results in similar problems 
+<ref name=Klein97>{{cite journal|last1=KLEIN|first1=P.|last2=PLOTKIN|first2=S.|last3=RAO|first3=S.|last4=TARDOS|first4=E.|title=Bounds on the max-flow min-cut ratio for directed multicommodity flows|journal=J. Algorithms|date=1997|volume=22|page=241<U+2013>269}}</ref>
+<ref name=Garg96>{{cite journal|last1=GARG|first1=N.|last2=VAZARANI|first2=V.|last3=YANNAKAKIS|first3=M.|title=Approximate max-flow min-(multi)cut theorems and their applications|journal=SIAM J. Comput.|date=1996|volume=25|page=235<U+2013>251}}</ref>
+<ref name="Plotkin and Tardos 93">{{cite journal|last1=PLOTKIN|first1=S.|last2=TARDOS|first2=E.|title=Improved bounds on the max-flow min-cut ratio for multicommodity flows|journal=In Proceedings of the 25th Annual ACM Symposium on Theory of Computing|date=1993|page=691<U+2013> 697}}</ref>
+</br> For a general network flow problem, the max-flow is within a factor of <math>k</math> of the min-cut since each commodity can be optimized separately using <math>1/k</math> of the capacity of each edge. This is not a good result especially in case of large numbers of commodities. <ref name=Leighton99 />
+
+==Approximate Max-Flow Min-Cut Theorems==
+===Theorems of uniform multicommodity flow problems===
+There are two theorems first introduced by Tom Leighton and Satish Rao in 1988 
+<ref name="Leighton88">{{cite journal|last1=LEIGHTON|first1=TOM|last2=RAO|first2=SATISH|title=An approximate max-flow min-cut theorem for uniform multicommodity flow problems with applications to approximation algorithms|journal=Proc.29th IEEE Symposium on Foundations of Computer Science|date=1988|page=422-431}}</ref>
+and then extended in 1999 <ref name=Leighton99 />. Theorem 2 gives a tighter bound compared to Theorem 1.
+
+'''Theorem 1.''' ''For any <math>n</math>, there is an <math>n</math>-node uniform multicommodity flow problem with max-flow <math>f</math> and min-cut <math>\varphi</math> for which <math>f</math><U+2264><math>O(\frac{\varphi}{\log n})</math>.''<ref name=Leighton99 />
+
+'''Theorem 2.''' ''For any uniform multicommodity flow problem, <math>\Omega(\frac{\varphi}{\log n})</math><U+2264><math>f</math><U+2264><math>\varphi</math>, where <math>f</math> is the max-flow and <math>\varphi</math> is the min-cut of the uniform multicommodity flow problem.''<ref name=Leighton99 />
+
+To prove Theorem 2, both the max-flow and the min-cut should be discussed. 
+For the max-flow, the techniques from duality theory of linear programming have to be employed. According to the duality theory of linear programming, an optimal distance function results in a total weight that is equal to the max-flow of the uniform multicommodity flow problem. 
+For the min-cut, a 3-stage process has to be followed:<ref name=Leighton99 /> <ref name=Garg96 />
+</br>Stage 1: Consider the dual of uniform commodity flow problem and use the optimal solution to define a graph with distance labels on the edges.
+</br>Stage 2: Starting from a source or a sink, grow a region in the graph until find a cut of small enough capacity separating the root from its mate.
+</br>Stage 3: Remove the region and repeat the process of stage 2 until all nodes get processed. 
+
+===Generalized to product multicommodity flow problem===
+
+'''Theorem 3.''' ''For any product multicommodity flow problem with <math>k</math> commodities, <math>\Omega(\frac{\varphi}{\log k})</math><U+2264><math>f</math><U+2264><math>\varphi</math>, where <math>f</math> is the max-flow and <math>\varphi</math> is the min-cut of the product multicommodity flow problem.'' <ref name=Leighton99 /> 
+</br>The proof methodology is similar as it is for Theorem 2, the major difference is to take node weights into consideration.
+
+===Extended to directed multicommodity flow problem===
+
+In a directed multicommodity flow problem, each edge has a direction, and the flow is restricted to move in the specified direction. In a directed uniform multicommodity flow problem, the demand is set to 1 for every directed edge.
+</br>'''Theorem 4.''' ''For any directed uniform multicommodity flow problem with <math>n</math> nodes, <math>\Omega(\frac{\varphi}{\log n})</math><U+2264><math>f</math><U+2264><math>\varphi</math>, where <math>f</math> is the max-flow and <math>\varphi</math> is the min-cut of the uniform multicommodity flow problem.'' <ref name=Leighton99 /> 
+</br>The major difference in the proof methodology compared to Theorem 2 is that, now the edge directions need to be considered when defining distance labels in stage 1 and for growing the regions in stage 2, more details can be found in.<ref name=Leighton99 />
+
+Similarly, for product multicommodity flow problem, we have the following extended theorem:
+</br> '''Theorem 5.''' ''For any directed product multicommodity flow problem with <math>k</math> commodities, <math>\Omega(\frac{\varphi}{\log k})</math><U+2264><math>f</math><U+2264><math>\varphi</math>, where <math>f</math> is the max-flow and <math>\varphi</math> is the directed min-cut of the product multicommodity flow problem.'' <ref name=Leighton99 />
+
+==Applications to Approximation Algorithms==
+The above theorems are very useful to design approximation algorithms (see [[Approximation algorithm]]) for NP-hard problems (see [[NP-hard]]), such as the graph partition problem and its variations (see [[Graph partition]]). Here below we briefly introduce a few examples, and the in-depth elaborations can be found in:<ref name=Leighton99 />
+===Sparsest cuts===
+A sparsest cut of a graph <math>G=(V,E)</math> is a partition for which the ratio of the number of edges connecting the two partitioned components over the product of the numbers of nodes of both components. This is a NP-hard problem, and it can be approximated to within <math>O(\log n)</math> factor using Theorem 2. Also, a sparsest cut problem with weighted edges, weighted nodes or directed edges can be approximated within an <math>O(\log p)</math> factor where <math>p</math> is the number of nodes with nonzero weight according to Theorem 3, 4 and 5.
+
+===Balanced cuts and separators===
+In some applications, we want to find a small cut in a graph <math>G=(V,E)</math> that partitions the graph into nearly equal-size pieces. We usually call a cut ''b-balanced'' or a ''(b,1-b)-separator'' (for b<U+2264>1/2) if <math>b\pi(V)</math><U+2264><math>\pi(U)</math><U+2264><math>(1-b)\pi(V)</math> where <math>\pi(U)</math> is the sum of the node weights in <math>U</math>. This is also a NP-hard problem. In <ref name=Leighton99 /> , there is a approximation algorithm designed for this problem, and the core idea is that <math>G</math> has a b-balanced cut of size <math>S</math>, then we find a b'-balanced cut of size <math>O(S\log (n/b) -b')</math> for any b' where b'<b and b'<U+2264>1/3. Then repeat the process then finally obtain the total weight of the edges in the cut is at most <math>O(\frac{S\log n}{b-b'})</math>.
+
+===VLSI layout problems===
+It's helpful to find a layout of minimum size when designing a VLSI circuit, such problem can often be modeled as a graph embedding problem. The objective is to find an embedding for which the layout area is minimized. Finding the minimum layout area is also NP-hard. An approximation algorithm is introduced in <ref name=Leighton99 /> and the result is <math>O(\log^6 n)</math> times optimal.
+
+===Forwarding index problem===
+Given an <math>n</math>-node graph <math>G</math> and an embedding of <math>K_n</math> in <math>G</math>, Chung et al.
+<ref name=CHUNG87>{{cite journal|last1=CHUNG|first1=F. K.|last2=COFFMAN|first2=E. G.|last3=REIMAN|first3=M. I.|last4=SIMON|first4=B. E.|title=The forwarding index of communication networks|journal=IEEE Trans. Inf. Theory|date=1987|volume=33|page=224 <U+2013>232}}</ref>
+defined the ''forwarding index'' of the embedding to be the maximum number of paths (each corresponding to an edge of <math>K_n</math>) that pass through any node of <math>G</math>. The objective is to find an embedding that minimizes the forwarding index. According to the embedding approaches introduced in <ref name=Leighton99 />, it is possible to bound the node and edge-forwarding indices to within an <math>O(\log n)</math>-factor for every graph <math>G</math>.
+
+===Planar edge deletion===
+Tragoudas<ref name=TRAGOUDAS90>{{cite journal|last1=TRAGOUDAS|first1=S.|title=VLSI partitioning approximation algorithms based on multicommodity flows and other techniques|journal=Ph.D. dissertation. Dept. Comput. Sci., Univ. Texas|date=1990}}</ref>
+uses the approximation algorithm for balanced separators to find a set of 
+<math>O((R\log n + \sqrt{nR})\log\frac{n}{R})</math>
+edges whose removal from a bounded-degree graph <math>G</math> results in a planar graph, where <math>R</math> is the minimum number of edges that need to be removed from <math>G</math> before it becomes planar. It remains an open question if there is a polylog <math>n</math> times optimal approximation algorithm for <math>R</math>.<ref name=Leighton99 />
+
+==See Also==
+
+[[Multi-commodity flow problem]]
+<br />[[Linear_programming|Linear programming]]
+<br />[[Ford-Fulkerson algorithm]]
+<br />[[Max-flow min-cut theorem]]
+<br />[[Maximum flow problem]]
+<br />[[Minimum cut]]
+<br />[[Flow network]]
+<br />[[Approximation algorithm]]
+<br />[[NP-hard]]
+<br />[[Graph partition]]
+
+==References==
+{{reflist}}

@@ -1,0 +1,173 @@
+En [[mathématiques]] et plus spécialement dans les applications de l'[[algèbre linéaire]] en [[physique]], la '''convention de sommation d'Einstein''' ou '''notation d'Einstein''' est un raccourci de notation utile pour la manipulation des équations concernant des coordonnées.
+
+Selon cette convention, quand l'indice d'une variable apparaît deux fois dans un terme on sous-entend la sommation sur toutes les valeurs que peut prendre cet indice. Cet indice est dit ''muet''. 
+On le fait figurer une fois en position supérieure, une fois en position inférieure.
+
+Un indice non muet est dit ''indice réel'' et ne peut apparaître qu'une seule fois dans le terme en question.
+Généralement, ces indices sont ''1'', ''2'' et ''3'' pour les calculs dans l'[[espace euclidien]] ou ''0'', ''1'', ''2'', et ''3'' ou ''1'', ''2'', ''3'' et ''4'' pour les calculs dans un [[espace de Minkowski]], mais ils peuvent avoir d'autres valeurs ou même, dans certaines applications, représenter un ensemble infini. En trois dimensions, 
+
+:<math> y  = c_i x^i \,</math>
+
+signifie donc
+
+:<math> y = \sum_{i=1}^3 c_i x^i = c_1 x^1 + c_2 x^2 + c_3 x^3.</math>
+
+En [[relativité générale]], l'[[alphabet latin]] et l'[[alphabet grec]] sont respectivement utilisés pour distinguer si la somme porte sur ''1'', ''2'', ''3'' ou ''0'', ''1'', ''2'', ''3''.
+Par exemple les indices ''i'', ''j'', ... sont utilisés pour ''1'', ''2'', ''3'' et ''μ'', ''ν'', ... ''0'', ''1'', ''2'', ''3''.
+
+Lorsque les indices se rapportent à des [[tenseur]]s, comme en relativité générale, les indices muets doivent apparaître une fois en haut et une fois en bas; dans d'autres applications une telle distinction n'existe pas.
+
+== Définitions ==
+Traditionnellement, on s'intéresse à un [[espace vectoriel]] ''V'' de [[dimension]] finie ''n'' et une [[base (algèbre linéaire)|base]] sur ''V'' dont les vecteurs sont notés <math>\mathbf{e}_1, \mathbf{e}_2, \dots, \mathbf{e}_n</math>.
+Dans ce cas, un vecteur <math>\mathbf{v}</math> dans ''V'' possède une représentation dans cette base qui s'exprime à l'aide de coordonnées notées <math>v^1, v^2, \dots, v^n</math>, ceci conformément à la relation suivante, dite règle de base :
+:<math>\mathbf{v} = \sum_{i=1}^n v^i \mathbf{e}_i</math>
+Avec la convention de sommation d'Einstein, elle s'écrit simplement
+:<math>\mathbf{v} = v^i \mathbf{e}_i</math>
+Dans cette expression, on sous-entend que le terme de droite est additionné pour toutes les valeurs de ''i'' allant de 1 à n, car l'indice ''i'' apparaît deux fois.
+
+L'indice ''i'' est dit ''muet'' car le résultat n'en dépend pas. Par exemple, pour exprimer la même chose on pourrait aussi écrire :
+:<math>\mathbf{v} = v^k \mathbf{e}_k</math>
+
+Dans les contextes dans lesquels l'indice doit apparaître une fois en bas et une fois en haut, les vecteurs de base s'écrivent <math>\mathbf{e}_i</math> mais les coordonnées s'écrivent <math>v^i</math>. La règle de base s'écrit alors :
+:<math>\mathbf{v} = v^i \mathbf{e}_i</math>.
+
+L'intérêt de la notation d'Einstein est qu'elle s'applique à d'autres espaces vectoriels construits à partir de ''V'' en utilisant le [[produit tensoriel]] et la [[dualité (mathématiques)|dualité]].
+Par exemple, <math>V \otimes V</math>, le produit tensoriel de ''V'' par lui-même, a une base constituée de [[tenseur]]s de la forme <math>\mathbf{e}_{ij} = \mathbf{e}_i \otimes \mathbf{e}_j</math>.
+Tout tenseur <math>T</math> dans <math>V \otimes V</math> peut s'écrire :
+:<math>T = T^{ij} \mathbf{e}_{ij}</math>.
+
+''V''*, le dual de ''V'', a une base <math>\mathbf{e}^{1\ast}, \mathbf{e}^{2\ast}, \dots, \mathbf{e}^{n\ast}</math>,
+dite ''base duale'' de la base  <math>\mathbf{e}_1, \mathbf{e}_2, \dots, \mathbf{e}_n</math>, définie par la règle :
+:<math>\mathbf{e}^{i\ast}( \mathbf{e}_j) = \delta^i_j</math>
+où <math>\delta^i_j</math> est le [[symbole de Kronecker]] : <math>\delta^i_j</math> vaut 1 si ''i'' = ''j'' et 0 sinon.
+
+Ici nous avons utilisé un indice supérieur pour la base duale, les indices des coordonnées doivent alors apparaître en bas.
+Dans ce cas, si <math>\mathbf{L}</math> est un élément de ''V''*, alors :
+:<math>\mathbf{L} = L_i \mathbf{e}^i</math>
+Si au contraire, tous les indices doivent être placés en bas, alors une lettre différente doit être utilisée pour désigner la base duale. Par exemple :
+:<math>\mathbf{d}_i = \mathbf{e}^i</math>
+
+L'utilité de la notation d'Einstein apparaît surtout dans les formules et les équations qui ne font pas mention de la base choisie.
+Par exemple, avec <math>\mathbf{L}</math> et <math>\mathbf{v}</math> défini comme plus haut :
+:<math>\mathbf{L}\cdot\mathbf{v} = L_i v^i</math>.
+Et ceci est vrai pour toutes les bases.
+
+Les sections suivantes contiennent d'autres exemples de telles équations.
+
+== Algèbre vectorielle élémentaire et algèbre matricielle ==
+Soit ''V'' un espace vectoriel dans <math>\mathbb{R}^n</math>, alors il existe un base standard pour ''V'' dans laquelle <math>\mathbf{e}_i</math> est (0,...,0,1,0,...,0), avec le 1 à la position ''i''.
+Dans ce cas, les [[matrice (mathématiques)|matrices]] ''n'' × ''n'' peuvent être vues comme des éléments de <math>V^* \otimes V</math>.
+On peut aussi considérer les vecteurs dans ''V'' comme des vecteurs colonnes ou comme des matrices ''n'' × 1 et les éléments de ''V''* comme des vecteurs rangées ou des matrices 1 × ''n''.
+
+Dans les exemples qui suivent, tous les indices apparaîtront en position haute.
+C'est parce que ''V'' a un produit interne et que la base base choisie est orthonormale, comme cela est expliqué dans la section suivante.
+
+Si '''''H''''' est une matrice et '''''v''''' est un vecteur colonne, alors '''''H''''' '''''v''''' est un autre vecteur colonne.
+Pour définir '''''w''''' = '''''H''''' '''''v''''', on peut écrire:
+:<math>w^i = {H^i}_j v^j  \,</math>
+L'indice muet ''j'' apparaît deux fois dans le terme de droite, tandis que ''i'' apparaît une seule fois dans chaque terme.
+
+En utilisant la [[distributivité]], <math>H (\mathbf{u} + \mathbf{v}) = H \mathbf{u} + H \mathbf{v}</math> peut s'écrire:
+:<math>{H^i}_j (u^j + v^j) = {H^i}_j u^j + {H^i}_j v^j  \,</math>
+Cet exemple montre la ''preuve'' de la loi de distributivité, car l'équation des indices ne fait que directement référence aux nombres réels <math>{H^i}_j</math>, <math>u^j</math> et <math>v^j</math> et sa validité découle directement de celle de la distributivité de ces nombres.
+
+La [[transposée]] d'un vecteur colonne est un vecteur ligne avec les mêmes composantes et la transposée d'une matrice est une autre matrice dont les composantes sont données en inversant les indices.
+Supposons que nous sommes intéressés par <math>w</math>, le produit de <math>^tv</math> par <math>^tH</math>.
+Alors:
+:<math>w_i = v_j {H^j}_i  \,</math>
+Donc pour exprimer que la transposée d'un produit inverse l'ordre de la multiplication, nous pouvons écrire:
+:<math>{H^i}_j v^j = v_j {H^j}_i  \,</math>
+À nouveau, ceci découle directement de la [[commutativité]] des nombres réels.
+
+Le [[produit scalaire]] de deux vecteurs '''u''' et '''v''' peut s'écrire:
+:<math>u \cdot v = u_i v^i  \,</math>
+
+Si ''n'' = 3, nous pouvons aussi écrire le [[produit vectoriel]] en utilisant le [[symbole de Levi-Civita]].
+Par exemple, si '''w''' est '''u''' × ''''v''', alors:
+:<math>w^i = \epsilon^i_{jk} u^j v^k  \,</math>
+Ici le symbole de Levi-Civita <math>\epsilon_{ijk}</math> est le tenseur totalement anti-symétrique tel que <math>\epsilon_{123}=1</math>. Concrètement&nbsp;:
+* <math>\epsilon_{ijk}=1</math> si <math>(i,j,k)</math> est une permutation paire de <math>(1,2,3)</math>&nbsp;;
+* <math>\epsilon_{ijk}=-1</math> si <math>(i,j,k)</math> est une permutation impaire de <math>(1,2,3)</math>&nbsp;;
+* <math>\epsilon_{ijk}=0</math> si <math>(i,j,k)</math> n'est pas une permutation de <math>(1,2,3)</math> (s'il y a deux fois le même indice).
+
+=== Exemple ===
+{{Article principal|Identités vectorielles}}
+Soit à démontrer l'identité vectorielle suivante :
+
+:<math> \mathbf a \times (\mathbf b \times \mathbf c) = (\mathbf a \cdot \mathbf c)\mathbf b - (\mathbf a \cdot \mathbf b)\mathbf c </math>
+
+Avec '''a''' '''b''' et '''c''' des vecteurs quelconques. En notation d'Einstein, on a :
+
+:<math> \left(\mathbf a \times (\mathbf b \times \mathbf c)\right)_i = {\epsilon_i}^{jk} a_j {\epsilon_k}^{lm}b_lc_m </math>
+
+En réarrangeant les termes et en permutant les indices, on obtient l'expression équivalente suivante :
+
+:<math> {{{\epsilon}^k}_i}^j {\epsilon_k}^{lm}a_j b_lc_m = {\delta_i}^{l}{\delta^{jm}}a_j b_lc_m - {\delta_i}^{m}{\delta^{jl}}a_j b_lc_m </math>
+
+En utilisant les propriétés du [[symbole de Levi-Civita]]. On a alors en réorganisant et en simplifiant les termes :
+:<math> b_i a^m c_m - a_j b^j c_i = (\mathbf a \cdot \mathbf c)b_i - (\mathbf a \cdot \mathbf b)c_i </math>
+
+On a donc finalement :
+
+<math>\left(\mathbf a \times (\mathbf b \times \mathbf c)\right)_i = (\mathbf a \cdot \mathbf c)b_i - (\mathbf a \cdot \mathbf b)c_i</math>
+
+En explicitant l'indice i, on retrouve l'identité.
+
+== Cas sans produit interne ==
+Dans les exemples ci-dessus, vous pouvez remarquez que les formules sont toujours valides si les indices muets sont présents une fois comme indice supérieur et une fois comme indice inférieur, sauf dans l'exemple concernant la transposée.
+C'est parce que ces exemples utilisent implicitement le produit interne dans un espace euclidien (produit scalaire) alors que l'exemple avec le transposée ne le fait pas.
+
+Dans certaines applications, il n'y a pas de produit interne sur ''V''.
+Dans ces cas, requérir que les indices muets doivent apparaître une fois en haut et une fois en bas peut aider à éviter des erreurs, un peu comme l'[[analyse dimensionnelle]] permet d'éviter les erreurs d'unités.
+Plus significativement, le produit interne peut être l'objet principal de l'étude et ne devrait pas être supprimé de la notation; c'est le cas, par exemple, des équations de la [[relativité générale]].
+Dans ces cas, la différence entre la position d'un indice peut-être cruciale.
+
+Quand on se réfère explicitement au produit interne, ces composantes sont souvent notées : <math>g_{ij}</math> (cfr. [[tenseur métrique]]).
+On notera que <math>g_{ij} = g_{ji}</math>.
+La formule pour le produit scalaire devient alors:
+:<math>\mathbf{u} \cdot \mathbf{v} = g_{ij} u^i v^j</math>
+On peut aussi ''abaisser l'indice'' en définissant:
+:<math>u_i = g_{ij} u^j \,</math>,
+ce qui donne:
+:<math>\mathbf{u} \cdot \mathbf{v} = u_i v^i</math>
+Ici, nous avons implicitement utilisé le fait que <math>g_{ij} = g_{ji}</math>.
+
+De façon similaire, nous pouvons ''élever un indice'' en utilisant le produit interne correspondant sur ''V''*.
+Le produit interne est alors défini par <math>g^{ij}</math>, qui en tant que matrice est l'inverse de <math>g_{ij}</math>.
+Si vous élevez un indice puis l'abaissez (ou le contraire), vous retrouvez ce que aviez au départ.
+Si vous élevez le ''i'' dans <math>g_{ij}</math>, alors vous obtenez <math>d^i_j</math> et si vous élevez le ''j'' dans <math>d^i_j</math> vous obtenez <math>g^{ij}</math>.
+
+Si la base choisie pour ''V'' est [[Base orthonormale|orthonormale]], alors <math>g_{ij} = g^{ij}</math> et <math>u_i = u^i</math>.
+Dans ce cas, on retrouve la formule pour le produit scalaire de la section précédente.
+Mais si la base n'est pas orthonormale, cela ne sera plus vrai. Donc si vous étudiez le produit interne et que vous ne pouvez pas savoir si la base est orthonormale, vous devrez vous référez explicitement à <math>g_{ij}</math>.
+De plus, si le produit interne n'est pas [[Produit scalaire#Caractère défini positif|défini-positif]], comme c'est le cas en relativité générale, <math>g_{ij} = d_{ji}</math> ne sera pas vrai même si la base est orthonormale car vous aurez parfois -1 au lieu de 1 quand ''i'' = ''j''.
+
+{{Palette|Tenseur}}
+{{portail physique}}
+
+[[Catégorie:Tenseur]]
+[[Catégorie:Albert Einstein]]
+[[Catégorie:Relativité générale]]
+
+[[ca:Conveni de sumació d'Einstein]]
+[[cs:Einsteinova konvence]]
+[[de:Einsteinsche Summenkonvention]]
+[[en:Einstein notation]]
+[[es:Convenio de sumación de Einstein]]
+[[fa:قرارداد جمع‌زنی اینشتین]]
+[[fi:Einsteinin summaussääntö]]
+[[he:הסכם הסכימה של איינשטיין]]
+[[id:Notasi Einstein]]
+[[it:Notazione di Einstein]]
+[[ja:アインシュタインの縮約記法]]
+[[ko:아인슈타인 표기법]]
+[[nl:Einstein-sommatieconventie]]
+[[pl:Konwencja sumacyjna Einsteina]]
+[[pt:Notação de Einstein]]
+[[ru:Соглашение Эйнштейна]]
+[[sk:Einsteinova sumačná konvencia]]
+[[sl:Einsteinov zapis]]
+[[sr:Ајнштајнова нотација]]
+[[sv:Einsteins summakonvention]]
+[[uk:Нотація Ейнштейна]]
+[[zh:爱因斯坦求和约定]]

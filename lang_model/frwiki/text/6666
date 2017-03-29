@@ -1,0 +1,342 @@
+En [[mathématiques]], et plus précisément en [[théorie des graphes]], le '''théorème de Robertson–Seymour''' (parfois également appelé le   '''théorème des mineurs''', et connu, avant qu'il soit démontré, sous le nom de '''[[conjecture]] de [[Klaus Wagner|Wagner]]'''), est un [[théorème]] démontré en 2004 par [[Neil Robertson (mathématicien)|Neil Robertson]] et [[Paul Seymour]]. Considéré généralement comme un des résultats les plus importants  de la théorie des graphes, il se caractérise par une démonstration extrêmement complexe et délicate, dont la publication, comportant plus de cinq cents pages,  s'étala de 1983 à 2004 dans  vingt articles de la revue ''[[Journal of Combinatorial Theory]]''.
+
+Le théorème de Robertson–Seymour affirme que {{citation|sur l'ensemble des [[graphe non orienté|graphes non orientés]], l'[[ordre partiel]] défini par la relation  {{citation|être un [[mineur (théorie des graphes)|mineur]]}} est un [[bel ordre]]}}. Ce résultat est équivalent à dire que toute famille ''F'' de graphes ''fermée'', c'est-à-dire telle que les mineurs des graphes de ''F'' appartiennent aussi à ''F'', peut être [[Caractérisation (mathématiques)|caractérisée]] par un ensemble fini de {{citation|mineurs exclus}}, de la même manière que le [[théorème de Kuratowski]] caractérise les graphes planaires comme ceux dont aucun mineur n'est le [[graphe complet]] ''K''<sub>5</sub>, ni le graphe ''K''<sub>3,3</sub>  de l'[[énigme des trois maisons]].
+
+Bien que le théorème lui-même ne soit pas [[démonstration constructive|constructif]] (on ne connait d'ailleurs explicitement de listes de mineurs exclus que dans très peu de cas), Robertson et Seymour ont montré qu'il avait d'importantes conséquences en [[Théorie de la complexité des algorithmes|théorie de la complexité]], garantissant l'existence d'[[algorithme]]s rapides pour de nombreux [[problème de décision|problèmes de décision]].
+
+== Présentation informelle du théorème ==
+{{voir|Théorie des graphes|Graphe planaire}}
+<gallery caption="Un célèbre exemple historique : la modélisation par [[Leonhard Euler|Euler]] du [[problème des sept ponts de Königsberg|problème des ponts de Königsberg]].">
+</gallery> 
+<center><span style="font-size: 300%;">
+[[Image:Konigsberg bridges.png|alt= plan de la ville de Königsberg (à l'époque d'Euler)|180px]] →
+[[Image:7 bridges.svg|alt= le réseau des sept ponts de la ville|179px]] →
+[[Image:konigsburg graph.svg|alt= le graphe modélisant le problème des ponts|180px]]
+</span></center>
+La [[théorie des graphes]] est la discipline mathématique (et [[informatique théorique|informatique]]) qui étudie les  ''graphes'', lesquels sont des modèles abstraits de  dessins de réseaux reliant des  points<ref group="note">Il existe d'autres objets mathématiques portant le même nom, par exemple les [[graphe d'une fonction|graphes de fonctions]], mais ceux-ci n'ont que peu de rapports avec les graphes étudiés ici.</ref>. Ces modèles sont constitués par la donnée de {{citation|points}}, appelés des ''sommets'' (en référence aux [[polyèdre]]s), et de {{citation|liens}} entre ces points ; ces liens, pour les graphes étudiés ici, sont symétriques (les graphes sont dits ''non orientés'') et sont appelés des ''arêtes''.
+
+Un graphe ne peut pas toujours être dessiné sur une feuille de papier (ou, plus rigoureusement, dans un [[plan (mathématiques)|plan]]) sans que les arêtes se coupent ; quand c'est possible, le graphe est alors dit [[graphe planaire|planaire]]. Ainsi, l'explication de l'impossibilité de l'[[énigme des trois maisons]] est que le graphe qui modélise l'énigme n'est pas planaire. En 1930, [[Kazimierz Kuratowski|Kuratowski]] a obtenu une caractérisation de tous les graphes planaires, légèrement reformulée quelques années plus tard par [[Klaus Wagner|Wagner]], sous la forme d'une liste de deux graphes ne devant pas être {{citation|contenus}} dans un graphe donné<ref group="note">Plus précisément, comme on le verra plus bas, la formulation de Wagner est que ces graphes ne doivent pas être des [[mineur (théorie des graphes)|mineurs]] du graphe étudié.</ref> pour que ce dernier soit planaire. 
+[[Fichier:Toroidal graph sample.gif|thumb|right|alt= tracé d'un graphe toroïdal sur un tore|Ce graphe  à 14 sommets et 21 arêtes ne peut être tracé sur une feuille de papier sans que ses arêtes se coupent (il n'est pas [[graphe planaire|planaire]]), mais peut être ainsi tracé sur un [[tore]] (un pneu) : on dit que c'est un [[graphe toroïdal]].]]
+<gallery caption="Les deux mineurs exclus des graphes planaires.">
+Image:Complete graph K5.svg|alt= Diagramme représentant le graphe complet K5, ses 5 sommets et ses 6 arêtes|Le [[graphe complet]] <math>K_5</math>, ayant 5 sommets et 10 arêtes.
+Image:Complete bipartite graph K3,3.svg|alt= Diagramme représentant le graphe biparti complet K3,3 , ses 6 sommets et ses 9 arêtes|Le [[graphe biparti complet]] <math> K_{3,3}</math>, ayant 6 sommets et 9 arêtes.
+</gallery> 
+Pour de nombreuses familles de graphes, par exemple ceux pouvant être dessinés sur la surface d'un pneu (en mathématiques, on parle de [[tore]], et les graphes ainsi traçables sont les [[graphe toroïdal|graphes toroïdaux]]), on peut se demander s'il existe une caractérisation analogue ; le théorème de Robertson-Seymour apporte une réponse affirmative. Ce théorème montre qu'un certain [[ordre partiel|classement (partiel)]] entre les graphes possède des propriétés remarquables (c'est un [[bel ordre]]). On en déduit que pour toute famille de graphes {{citation|''fermée pour les mineurs''}} (le sens technique exact de cette expression sera détaillé [[#Familles_ferm.C3.A9es_pour_les_mineurs|plus loin]]), il existe une liste finie de graphes {{citation|interdits}} caractérisant cette famille. Cependant, même pour des familles simples comme celle des graphes toroïdaux, cette liste peut être très longue.
+
+== Historique ==
+En 1930, [[Kazimierz Kuratowski]] démontrait<ref>{{article|prénom=Casimir|nom=Kuratowski|titre=Sur le problème des courbes gauches en Topologie|revue=[[Fundamenta Mathematicae|Fundam. Math.]]|volume=15|year=1930|p.=271–283|url=http://matwbn.icm.edu.pl/ksiazki/fm/fm15/fm15126.pdf|format=pdf}} ;  la démonstration de Kuratowski n'est pas énoncée dans le langage de la théorie des graphes, mais peut aisément s'y ramener.</ref> 
+qu'un graphe était [[graphe planaire|planaire]] s'il ne contenait pas de [[Lexique en théorie des graphes#S|sous-graphe]] qui soit une ''expansion''<ref group="note">Une ''[[Lexique en théorie des graphes#E|expansion]]'' d'un graphe est un autre graphe,  résultat de l'ajout d'un ou plusieurs sommets sur une ou plusieurs arêtes, ce qui transforme par exemple l'arête •——• en les deux arêtes •—•—•.
+ </ref>du [[graphe complet]] ''K''<sub>5</sub>, ou du [[graphe biparti complet]] ''K''<sub>3,3</sub><ref group="note">Cela revient à dire que les  deux graphes ''K''<sub>5</sub> et ''K''<sub>3,3</sub> ne sont pas des ''mineurs topologiques'' du graphe considéré. </ref>.
+
+En 1937<ref>{{article|lang=de|nom=K. Wagner|titre=Über eine Eigcenschaft der ebenen Komplex|revue=[[Mathematische Annalen|Math. Ann.]]|volume=114|p.=570–590|year=1937|url=http://gdz.sub.uni-goettingen.de/dms/load/img/?PPN=GDZPPN002279355}}.</ref>, [[Klaus Wagner]] donnait une forme analogue et d'ailleurs équivalente<ref> {{en}} [[Béla Bollobás]], ''Modern Graph theory'', Springer-Verlag, 1998, pp. 24 et  25.</ref> de ce théorème, en caractérisant ces graphes comme ne contenant ni ''K''<sub>5</sub> ni ''K''<sub>3,3</sub> comme {{Citation|''[[mineur (théorie des graphes)|mineurs]]''}}. Cette forme permet une généralisation facile à de nombreuses familles de graphes ayant une propriété analogue<ref group="note">Contrairement à la forme donnée par Kuratowski ; il existe en effet des suites infinies de graphes deux à deux incomparables pour la relation « ''H''  a comme sous-graphe  une expansion de ''G'' », on en  trouvera un exemple dans [http://perso.ens-lyon.fr/eric.thierry/Graphes2009/bastien-legloannec.pdf cet exposé de Bastien Legloannec]{{pdf}}(p.10).</ref>, par exemple {{citation|être traçable sur un [[tore]]}}, c'est pourquoi le théorème des mineurs, avant sa démonstration, était connu sous le nom de  ''[[conjecture]] de Wagner'' (cependant, Wagner a par la suite affirmé qu'il n'avait jamais formulé lui-même cette conjecture, et avait d'ailleurs toujours pensé qu'elle devait être fausse<Ref>{{harvsp|Diestel|2005|p=355}}.</ref>).
+
+Un résultat plus faible que cette conjecture, concernant seulement les [[arbre (théorie des graphes)|arbres]], découle du  [[théorème de Kruskal]]<ref group="note">Le théorème de Kruskal  proprement dit porte sur les arbres étiquetés, et est donc plus général (dans ce cas) que le théorème de Robertson-Seymour ; un théorème couvrant le cas des graphes étiquetés a été démontré en 2011 par Robertson et Seymour, comme mentionné dans [[Théorème_de_Robertson-Seymour#G.C3.A9n.C3.A9ralisations_:_hypergraphes_et_graphes_infinis|la dernière section]].</ref>, lequel avait été conjecturé en 1937 par Andrew Vázsonyi ; il fut démontré indépendamment en  1960 par [[Joseph Kruskal]]<ref>{{article
+ | prénom = J. B.
+ | nom = Kruskal
+ | année = 1960
+ | mois = mai
+ | titre = Well-quasi-ordering, the tree theorem, and Vazsonyi's conjecture
+ | journal = Transactions of the American Mathematical Society
+ | volume = 95
+ | issue = 2
+ | pages = 210–225
+ | éditeur = American Mathematical Society
+ }}</ref> et S. Tarkowski<ref>{{harvsp|Diestel|2005|pp=335–336}}; {{harvsp|Lovász|2005}}, section 3.3, pp. 78–79.</ref>. 
+
+Entre 1983 et 2004,  [[Neil Robertson (mathématicien)|Neil Robertson]] et [[Paul Seymour]] développèrent sur une série de vingt articles publiés dans la revue ''[[Journal of Combinatorial Theory]]'' un plan de démonstration complet consistant entre autres à réduire progressivement le cas général à des cas particuliers plus simples<ref group="note" name="serie"> Cette série, intitulée  « ''Graph Minors'' », contient en fait également quelques articles incidents  à la démonstration principale ; d'après R. Diestel, cette dernière correspond aux articles 4 à 7, 9 à 12, et 14 à 20 ({{harvsp|Diestel|2005|p=373}}) ; de plus, ils ont publié par la suite (à partir de 2009) trois nouveaux articles prolongeant cette démonstration, et intitulés eux aussi ''Graph Minors'' (XXI à XXIII).</ref> (ainsi, le premier de leurs articles s'intitule ''Mineurs : exclusion d'une forêt'' et donne une démonstration d'une vingtaine de pages de ce que si l'un des mineurs exclus est une forêt<ref name="foret" group="note">Un graphe est une ''forêt'' s'il est [[graphe acyclique|acyclique]], autrement dit  si c'est un [[arbre (théorie des graphes)|arbre]] ou une [[union (mathématiques)|union]] d'arbres [[ensembles disjoints|disjoints]].</ref>, le théorème est vrai<ref>{{harvsp|Robertson|Seymour|1983}}</ref>), mais introduisant également de nombreux concepts et outils nouveaux, comme la théorie de la [[décomposition arborescente]]<ref name="ful"/>. L'ensemble de la démonstration couvre au total plus de 500 pages<ref group="note">Par la suite, certaines parties de la démonstration ont pu être simplifiées, mais les étapes essentielles demandent toujours, en 2011, des raisonnements complexes et non constructifs, utilisant en particulier l'[[axiome du choix]] ; bien que ce dernier ne soit pas, à proprement parler, strictement nécessaire (voir {{chapitre|lang=en|nom1=S. G. Simpson|titre=Nonprovability of certain combinatorial properties of finite trees|titre ouvrage=Harvey Friedman's Research on Foundations of Mathematics|éditeur=Elsevier, North-Holland|année=1985}}), cela semble montrer que des simplifications substantielles de la démonstration seront difficiles à obtenir. </ref> ; la communauté mathématique en a validé le résultat<ref group="note"> {{harvsp|Diestel|2005|p=333}} ; il semble que dès le début des années 1990, plusieurs théoriciens des graphes estimaient déjà que leurs efforts seraient couronnés de succès, et commençaient à tirer des conséquences, particulièrement algorithmiques, du futur théorème des mineurs. </ref>, appelé désormais ''théorème de Robertson-Seymour''<ref>On le trouve cependant encore parfois mentionné sous le nom de {{citation|théorème des mineurs}}, par exemple dans {{harvsp|Bienstock|Langston|1995}}.</ref>, pour lequel ils reçurent en 2006 le [[prix   Fulkerson]]<ref name="ful">[http://www.ams.org/notices/200611/comm-fulkerson.pdf Notice de l'AMS pour le prix Fulkerson 2006] {{en}} {{pdf}} </ref> ; ce théorème, les outils développés pour sa démonstration, et ses  [[#Algorithmes_li.C3.A9s_au_th.C3.A9or.C3.A8me_des_mineurs|conséquences algorithmiques]] inattendues,  sont généralement considérés comme parmi  les plus importants de la théorie des graphes<ref>Voir par exemple {{harvsp|Delahaye|2008}}, et {{harvsp|Diestel|2005|p=326}} et p. 355, ainsi que la [http://www.ams.org/notices/200611/comm-fulkerson.pdf notice de l'AMS pour le prix Fulkerson 2006].</ref>.
+
+== Le théorème de Robertson-Seymour ==
+=== Définitions préliminaires ===
+[[Image:Mineur.jpg|thumb|alt= Diagramme représentant deux graphes, l'un étant un mineur de l'autre|Un exemple de deux graphes, dont l'un (celui du dessous) est un mineur de l'autre. Le mineur a été obtenu en supprimant l'arête [e,f] et en contractant l'arête [b,c]]]
+{{voir|mineur (théorie des graphes)|bel ordre}}
+
+Un [[mineur (théorie des graphes)|mineur]] d'un [[graphe non orienté]] ''G'' est un graphe pouvant être obtenu  à partir de ''G'' par une suite (éventuellement vide) de contractions d'arêtes de ''G'' et  de suppressions  d'arêtes et de sommets de ''G''<ref group="note">On rencontre également  fréquemment dans la littérature le terme de ''mineur topologique'', correspondant à des mineurs obtenus uniquement par suppressions d'arêtes et de sommets, et par contraction d'arêtes consécutives, autrement dit, ''G'' est un mineur topologique de ''H'' s'il existe un sous-graphe de ''H'' qui soit une expansion de ''G''  ; le théorème de Robertson-Seymour est faux pour cette variante ([http://perso.ens-lyon.fr/eric.thierry/Graphes2009/bastien-legloannec.pdf exposé  de Bastien Legloannec], p. 10).</ref>. 
+
+La relation {{citation|''H'' est un mineur de ''G''}}  (qu'on notera par la suite ''H ≤ G'') est une relation d'[[ordre partiel]] sur l'ensemble des graphes non orientés finis, considérés à [[isomorphisme]] près<ref group="note">Elle est en effet [[relation réflexive|réflexive]] (par la suite vide de transformations), et [[relation transitive|transitive]] (en composant les suites de transformations) ; de plus, si ''H'' est mineur de ''G'' et ''G'' mineur de ''H'', ''G'' et ''H'' sont isomorphes. </ref> (si l'on ne considère pas les graphes isomorphes comme identiques, la relation n'est plus [[relation antisymétrique|antisymétrique]], et on obtient seulement un [[préordre]]<ref>Voir par exemple  {{harvsp|Diestel|2005|p=334}}, section 12.1, "well-quasi-ordering", ainsi que [[N. Bourbaki]], ''[[Éléments de mathématique]] – Théorie des ensembles'', ch. III, § 1, n° 2,  p. 3, pour les définitions et les premières  propriétés des ordres partiels et des préordres.</ref>).
+
+Un ordre partiel (la terminologie est parfois appliquée également aux préordres, comme nous le ferons ici) est appelé un [[bel ordre]] s'il ne contient aucune suite infinie  strictement décroissante (on dit que la relation d'ordre est [[relation bien fondée|bien fondée]]), ni aucune  [[antichaîne]] infinie, c'est-à-dire aucun ensemble infini d'éléments incomparables deux à deux<ref group="note">{{harvsp|Diestel|2005|p=334}} ; cela revient à dire que, notant ≤ la relation d'ordre, toute suite infinie <math>x_i</math> d'éléments de l'ensemble contient un couple tel que <math>\scriptstyle x_i\le x_j</math> et <math>i<j</math> ; on trouvera une démonstration en français de l'équivalence de cette caractérisation dans [http://perso.ens-lyon.fr/eric.thierry/Graphes2009/bastien-legloannec.pdf cet exposé de Bastien Legloannec] {{pdf}}. </ref> (définition qui généralise aux ordres partiels la notion de [[bon ordre]] définie pour les ensembles totalement ordonnés).
+
+=== Énoncés du théorème ===
+Les définitions précédentes  permettent de formuler rigoureusement le 
+{{théorème|Théorème de Robertson–Seymour|date=2004|La relation de préordre {{citation|''F ≤ G'' si et seulement si ''F'' est un mineur de ''G''}} est un bel ordre sur l'ensemble des graphes non orientés finis.|style=display:table}}
+L'existence d'une suite infinie décroissante étant évidemment impossible (puisque chaque mineur contient moins d'arêtes que le graphe précédent<ref name="l05-78"/>), ce théorème  revient donc à affirmer qu'il n'y a pas  d'ensemble infini de graphes deux à deux incomparables par la relation ≤  ; il convient cependant de remarquer que le théorème n'exclut nullement qu'il existe de tels ensembles  finis aussi grands que l'on veut<ref  group="note">On verra [[#Ensembles d'obstructions|plus loin]] que  les ensembles d'obstructions correspondant à une famille fermée sont des antichaînes, or ces ensembles sont le plus souvent très grands, même dans les cas ayant une réelle importance en pratique ; ainsi, si l'on considère la famille des graphes dont la [[Décomposition arborescente|largeur arborescente]] vaut au plus ''k'',  son ensemble d'obstructions contient au moins [[factorielle|(''k'' !)<sup>2</sup>]] arbres (voir 
+{{article| lang=en
+ | last1 = Takahashi | first1 = Atsushi
+ | nom2 = Ueno | prénom2 = Shuichi
+ | nom3 = Kajitani | prénom3 = Yoji
+ | issue = 1–3
+ | journal = Discrete Mathematics
+ | pages = 293–304
+ | title = Minimal acyclic forbidden minors for the family of graphs with bounded path-width
+ | volume = 127
+ | year = 1994}}, [http://www.labri.fr/perso/courcell/CoursMaster/DecsArbosVersLongue.pdf cité par Bruno Courcelle, p.15]).
+</ref>.
+ 
+Utilisant la notion de graphe ''minimal'' d'un ensemble, c'est-à-dire tel qu'aucun autre graphe de l'ensemble n'en soit un mineur, on arrive à un énoncé équivalent au théorème, affirmant que dans tout ensemble de graphes, il n'y a (à isomorphisme près) qu'un nombre fini de graphes minimaux ; comme on le verra [[#Familles fermées pour les mineurs|plus loin]], cela revient à caractériser toute famille ''F'' « fermée pour les mineurs » par un ensemble fini ''S'' de mineurs exclus<ref group="note">C'est-à-dire que ''F'' est telle que tout mineur d'un graphe de ''F'' appartienne à ''F'' , et alors ''G'' est dans ''F'' si et seulement si il n'a pour mineur aucun des graphes de ''S'' ; voir {{harvsp|Diestel|2005|p=360}}.</ref>{{,}}<ref name="exclu"/>.
+
+Dire qu'il n'existe pas d'antichaînes infinies revient, par définition, à dire que dans tout ensemble infini de graphes, il existe un couple de graphes dont l'un est un mineur de l'autre<ref name="l05-78">{{harvsp|Lovász|2005|p=78}}.</ref> ; un résultat plus précis, et qui est en fait une propriété équivalente au théorème de Robertson-Seymour<ref group="note">{{harvsp|Diestel|2005|p=334}} ; en réalité, c'est un résultat général sur les beaux ordres, qui n'est au demeurant nullement évident (il demande l'utilisation d'un résultat équivalent au [[Théorie de Ramsey#Théorème de Ramsey infini|théorème de Ramsey infini]]) ; dans le cas des graphes, cette forme permet de construire ce qu'on appelle des ''formes finitaires de Friedman'' du théorème, obtenant des résultats de logique mathématique qui seront discutés [[#Conséquences en logique mathématique|plus loin]]. </ref>, couvre également l'impossibilité de suites infinies décroissantes, et affirme que toute suite infinie <math>G_i</math> de graphes contient un couple <math>\scriptstyle (G_i, G_j)</math> tel que <math>i<j</math> et que <math>G_i</math> est un mineur de <math>G_j</math><ref>{{harvsp|Diestel|2005|p=334}}, proposition 12.1.1.</ref>.
+
+=== Éléments de la démonstration ===
+
+La preuve du théorème repose sur une série de résultats publiés entre 1983 et 2004 sous le titre ''Graph Minors'', et dont l'enchaînement est résumé dans l'article ''Graph Minors XX'', mettant un point final à la démonstration<ref>{{harvsp|Robertson|Seymour|2004}}</ref>. Tous les résultats obtenus dans cette suite de vingt articles ne sont pas nécessaires à la preuve finale<ref name="serie" group="note"/>, mais une rédaction complète de celle-ci demanderait encore plusieurs centaines de pages<ref>{{harvsp|Diestel|2005}}, p. 365.</ref>  ; il est difficile ne serait-ce que d'esquisser les grandes lignes d'une démonstration aussi complexe<ref>{{harvsp|Diestel|2005}}, p. 333</ref>.
+
+Les deux idées essentielles utilisées par Robertson et Seymour sont,  d'une part, la notion de  ''structuration de graphe'' : il s'agit de techniques consistant à décrire un graphe comme composé (le plus souvent par {{citation|recollement}}) de graphes plus simples<ref group="note">On en trouvera une description informelle dans [http://www.labri.fr/perso/courcell/LMA.pdf ce document de Bruno Courcelle] {{pdf}}, accompagnée de nombreux exemples d'applications. Robertson et Seymour utilisent en particulier la technique de la [[décomposition arborescente]]  (qu'ils semblent avoir redécouverte, d'après B. Courcelle) pour obtenir des invariants de graphes essentiels pour leur démonstration.</ref> ; d'autre part, l'utilisation de considérations [[topologie|topologiques]] sur les [[surface (géométrie)|surfaces]] sur lesquelles un graphe peut être plongé. 
+
+La description plus détaillée qui suit est essentiellement adaptée de celle de Reinhard Diestel<ref>{{harvsp|Diestel|2005}}, p. 365 et suivantes</ref>, qui suit assez étroitement la démonstration originale, en la simplifiant quelque peu.
+*  En utilisant les propriétés des [[bel ordre|beaux ordres]], on se ramène d'abord à l'étude d'une famille infinie de graphes n'admettant pas le [[graphe complet]] ''K<sub>n</sub>'' comme mineur ;
+* On montre ensuite qu'il existe un ensemble fini de [[surface (géométrie)|surfaces]] ''S<sub>k</sub>'' tel que les graphes de la famille étudiée sont {{citation|presque}} plongeables dans l'une des ''S<sub>k</sub>''<ref group="note">Il s'agit en fait des composantes {{citation|fortement connectées}} de ces graphes, c'est-à-dire de celles correspondant à une décomposition arborescente bien choisie (Robertson et Seymour, ''Graph Minors XVII, Taming a Vortex'') ; d'autre part, cette notion de {{citation|presque plongeable}} cache de redoutables difficultés techniques.</ref>, alors que ''K<sub>n</sub>'' ne s'y plonge pas. 
+* La conclusion résulte alors d'un raisonnement par récurrence sur le [[genre (mathématiques)|genre]] des surfaces ''S<sub>k</sub>''  (leur nombre de {{citation|trous}}), la base de la récurrence étant, justement, le [[graphe planaire|théorème de Wagner]] sur les graphes planaires : une [[décomposition arborescente]] convenable d'un graphe plongé sur une surface permet de se ramener à une surface de genre inférieur (en {{citation|comblant les trous}}) sans trop modifier le  graphe<ref group="note">Une description nettement plus rigoureuse est donnée dans {{harvsp|Diestel|2005}}, p. 366 et 367 ; les difficultés techniques correspondant à cette idée sont cependant considérables, et ne sont que mentionnées par R. Diestel.</ref>.
+
+== Familles fermées pour les mineurs ==
+Une famille ''F'' de graphes est dite ''fermée'' (ou ''close'') ''pour les mineurs'' (ce qui sera abrégé en ''famille fermée'' dans le reste de cet article) si chaque mineur d'un graphe de ''F'' appartient également à ''F''<ref group="note"> Cette notion de fermeture est tout à fait générale en mathématiques ; voir l'article [[Clôture (mathématiques)]] pour d'autres exemples.</ref>. Dans le langage de la [[théorie des ordres]],  une famille fermée est donc une [[section commençante]] pour la relation {{citation|être un mineur}}. 
+=== Caractérisation par  mineurs exclus ===
+Si ''F'' est une famille fermée, appelons  ''S'' l'ensemble des graphes qui ne sont pas dans  ''F'' (le [[complémentaire (théorie des ensembles)|complémentaire]] de ''F''). Le théorème de Robertson–Seymour affirme l'existence d'un ensemble fini ''H'' formé des éléments minimaux de ''S''<ref group="note">En fait, il s'agit de [[Relation_d%27équivalence#Classe_d.27.C3.A9quivalence|classes d'équivalence]] de ces graphes à [[isomorphisme]] près ; nous ne ferons désormais plus la distinction.</ref>. Ces éléments minimaux caractérisent  ''F'' : les graphes de  ''F'' sont exactement ceux n'admettant aucun graphe de ''H'' comme mineur<ref>{{harvsp|Bienstock|Langston|1995}}, corollaire 2.1.1; {{harvsp|Lovász|2005}}, théorème 4, p.&nbsp;78.</ref>. Les éléments de ''H'' sont appelés les ''mineurs exclus'' (ou ''interdits''), ou encore les ''obstructions''<ref group="note">Chez de nombreux auteurs contemporains, le terme d'« obstruction » en est venu à désigner des objets caractéristiques de l'impossibilité de telle ou telle construction ou raisonnement. Ainsi, la [[théorie de l'obstruction]] construit des invariants [[cohomologie|cohomologiques]] permettant de déterminer si certains prolongements de fonctions sont ou non possibles.</ref>, pour la famille ''F''.
+
+Ainsi, les [[graphe planaire|graphes planaires]] forment une famille fermée : les contractions et les suppressions d'arêtes d'un graphe planaire ne peuvent détruire sa planarité. Il en résulte que ces graphes peuvent être caractérisés par une famille finie de mineurs exclus, qui sont dans ce cas les deux graphes du [[théorème de Wagner]] : le [[graphe complet]] ''K''<sub>5</sub> et le [[graphe biparti complet]] ''K''<sub>3,3</sub>.
+
+L'existence d'une caractérisation par mineurs exclus de toutes les familles fermées est une affirmation équivalente au théorème de  Robertson-Seymour. En effet, si ''S'' est un ensemble  de graphes, appelons ''F'' la famille des graphes n'ayant pas de mineurs dans ''S''. ''F'' est alors fermée, et son ensemble ''H'' de mineurs exclus est exactement l'ensemble des éléments minimaux de ''S'' (incomparables deux à deux), ce qui prouve que cet ensemble est fini<ref name="exclu">{{harvsp|Diestel|2005|p=360}}.</ref>.
+
+=== Exemples de familles fermées ===
+Les familles de graphes (finis) suivantes<ref group="note">On trouvera des listes plus complètes, accompagnées de leurs obstructions (lorsqu'elles sont connues) dans [[:en:Forbidden graph characterization|l'article anglais correspondant]].</ref> sont fermées pour les mineurs, et par conséquent (d'après le théorème de  Robertson–Seymour) possèdent des caractérisations par mineurs exclus (mais qu'on ne connait pas explicitement en général) :
+[[Fichier:Petersen family.svg|thumb|alt= Diagramme représentant les sept graphes de la famille de Petersen, ainsi que leurs relations|La [[famille de Petersen]], ensemble des sept obstructions correspondant aux graphes pouvant être plongés dans l'espace sans [[entrelacs et graphes|entrelacements]]<ref name="rst93" group="note"/> (ces graphes sont incomparables en tant que mineurs, mais reliés les uns aux autres (comme indiqué par les traits bleus) par les transformations Y-Δ du [[théorème de Kennelly]]).]]
+* les ''forêts'' (les graphes qui sont des [[union (mathématiques)|unions]] d'[[arbre (théorie des graphes)|arbres]] [[ensembles disjoints|disjoints]]) ; on remarquera que les arbres eux-mêmes ne forment pas une famille fermée, un mineur d'un arbre n'étant pas forcément [[graphe connexe|connexe]] ;
+* les  [[graphe planaire|graphes planaires]], les [[graphe toroïdal|graphes toroïdaux]], et, plus généralement, les graphes qui peuvent être tracés sur une [[surface (géométrie)|surface]] donnée<ref name="l05-76-77">{{harvsp|Lovász|2005|pp=76–77}}.</ref> ;
+* les graphes qui peuvent être plongés sans [[entrelacs et graphes|entrelacement]]<ref name="rst93" group="note"> Robertson, Seymour et Thomas ont montré en 1993 que la [[famille de Petersen]] est l'ensemble des obstructions de ces graphes : voir {{article|lang=en|nom1= Robertson|prénom1=Neil|nom2=Seymour|prénom2= P. D.|nom3=Thomas|prénom3=Robin|url=http://www.ams.org/journals/bull/1993-28-01/S0273-0979-1993-00335-5/S0273-0979-1993-00335-5.pdf|mr=1164063|issue=1|revue=Bull. Amer. Math. Soc.|p.= 84–89|titre=Linkless embeddings of graphs in 3-space|volume=28|year=1993}}, {{arxiv2|math/9301216}}.</ref> ou sans  [[nœud (mathématiques)|nœud]] dans l'espace euclidien à 3 dimensions<ref name="l05-76-77"/> ;
+* les graphes dont certains invariants<ref name="inv" group="note">Par analogie avec  la [[théorie des invariants]], on appelle ''invariant'' d'un graphe un nombre (généralement entier) qui ne dépend pas de certaines transformations que l'on peut faire subir à ce graphe, ou à ses réalisations concrètes comme, par exemple, le tracé du graphe sur une surface. Outre des invariants évidents, comme le nombre de sommets ou d'arêtes (la {{citation|taille}} du graphe), Robertson et Seymour ont ainsi défini de nombreux invariants liés à ce qu'ils appellent la théorie de la [[décomposition arborescente]] des graphes. </ref>, tels que la [[Décomposition arborescente|largeur arborescente]],  sont bornés par une constante finie fixée<ref name="chroma" group="note">Cela suppose que tout mineur d'un graphe pour lequel cet invariant vaut ''k'' soit d'invariant <math>\scriptstyle\le k</math> ; c'est par exemple évident pour les graphes ayant ''k'' arêtes, mais c'est faux pour les graphes de [[Coloration_de_graphe#D.C3.A9finition_.28nombre_chromatique.29|nombre chromatique]] ''k'', parce que contracter  une arête peut augmenter le nombre chromatique, comme on le voit sur l'exemple des cycles à 3 et 4 sommets.</ref>.
+
+=== Ensembles d'obstructions ===
+L’''ensemble des obstructions'' pour une famille ''F'' donnée est  défini comme l'ensemble des éléments minimaux (pour la relation de mineurs) du complémentaire de ''F'', c'est-à-dire que c'est le plus petit ensemble de mineurs exclus caractérisant ''F'' ; le théorème de Robertson-Seymour affirme que cet ensemble est toujours fini quelle que soit ''F''. 
+
+Des exemples d'ensembles d'obstructions finis étaient déjà connus (pour des classes de graphes particuliers) avant que le théorème de Robertson–Seymour soit démontré. Ainsi, la famille des forêts<ref name="foret" group="note"/> a pour seule obstruction  le [[graphe cycle|cycle]] à trois sommets (si l'on se restreint aux [[graphe simple|graphes simples]]), c'est-à-dire qu'un graphe est une forêt si et seulement s'il n'a pas ce cycle  pour mineur. De même, le [[théorème de Wagner]] dit que l'ensemble des obstructions pour les graphes planaires est {''K''<sub>5</sub>,&nbsp;''K''<sub>3,3</sub>}. Un théorème analogue caractérise les [[graphe planaire extérieur|graphes planaires extérieurs]] comme ayant pour obstructions les graphes ''K''<sub>4</sub> et ''K''<sub>2,3</sub>.
+
+Le théorème de Robertson-Seymour étend ces résultats à des familles fermées quelconques, mais, étant extrêmement non constructif, ne permet le plus souvent pas, même en principe<ref group="note">Comme on le verra plus loin, l'ensemble des obstructions peut devenir si vaste qu'il est impossible en pratique de l'explorer, ou même de le décrire. Mais de plus, dans le cas général, sa détermination a été démontrée être [[fonction récursive|non calculable]], c'est-à-dire ne pouvant être obtenue à l'aide d'une [[machine de Turing]] ({{harvsp|Fellows|Langston|1994}}).</ref>, de déterminer l'ensemble des obstructions d'une famille donnée. Par exemple, l'ensemble des [[graphe toroïdal|graphes toroïdaux]] (traçables sur un [[tore]]) est une famille fermée dont on ignore l'ensemble des obstructions ; on sait seulement qu'il comporte au moins {{formatnum:16000}} graphes<ref>{{harvsp|Chambers|2002}} ; il est en fait possible de donner une majoration de ce nombre (voir la démonstration constructive donnée par R. Diestel, dans {{harvsp|Diestel|2005}}, pp. 360 et suivantes), mais elle est extrêmement élevée, et interdit toute approche exhaustive directe. </ref>. En 2011, on ne connait complètement l'ensemble des obstructions pour les familles de graphes traçables sur une surface donnée que dans le cas du plan (les deux graphes mentionnés plus haut) et dans le cas  du [[plan projectif]], où cet ensemble comporte 35 graphes<ref>{{en}} Bojan Mohar et Carsten Thomassen, ''Graphs on Surfaces'', Hopkins Fulfillment Service, 2001, p. 198.</ref>.
+
+== Algorithmes liés au théorème des mineurs ==
+{{article connexe|Théorie de la complexité des algorithmes}}
+De nombreux questions d'[[informatique théorique]] sont modélisées par des graphes, ou plus précisément par la détermination de propriétés de certains graphes, un exemple célèbre étant le [[problème du voyageur de commerce]].
+
+La démonstration du théorème des mineurs a complètement changé l'estimation qu'on avait de la [[Théorie_de_la_complexité_des_algorithmes|difficulté algorithmique]] de certains de ces problèmes. Ainsi, on ignorait jusque-là si la question de savoir si un graphe peut être plongé sans [[nœud (mathématiques)|nœuds]] dans l'espace usuel était [[calculabilité|calculable]], c'est-à-dire décidable par une [[machine de Turing]] ; on sait désormais  qu'en fait, ce problème appartient à la [[Théorie de la complexité des algorithmes#Classe P|classe P]] des problèmes solubles en temps polynomial, bien qu'on ne connaisse toujours aucun algorithme (même très lent) pour le résoudre<ref>{{harvsp|Bienstock|Langston|1995}}.</ref>.
+=== Reconnaissance en temps polynomial ===
+{{voir|Classe P|Complexité paramétrée}}
+Robertson et Seymour ont démontré que pour tout graphe fixé  ''G'', il existe un algorithme en  [[Théorie_de_la_complexité_des_algorithmes#Classe_P|temps polynomial]] qui teste si un graphe quelconque ''H'' possède  ''G'' comme mineur<ref>{{harvsp|Robertson|Seymour|1995}} ; {{harvsp|Bienstock|Langston|1995}}, théorème 2.1.4 et corollaire 2.1.5 ; {{harvsp|Lovász|2005}}, théorème 11, p. 83.</ref>. Plus précisément, cet algorithme demande un temps proportionnel au cube du nombre ''n'' des sommets et arêtes du graphe testé ''H'' (ce que l'on note <math>O(n^3)</math> en [[Comparaison asymptotique|notation de Landau]]). Ce résultat est moins utile en pratique qu'on ne pourrait le croire, parce que la constante de proportionnalité croît avec la taille de ''G'' de manière [[croissance exponentielle|exponentielle]]. Il en résulte cependant que, pour toute famille fermée ''F'', il existe un algorithme en temps polynomial décidant si un graphe donné ''G'' appartient ou non à ''F'' : il suffit de contrôler, pour chaque élément de l'ensemble des obstructions de ''F'', s'il est ou non un mineur de ''G''.
+
+L'existence de cet algorithme est donc une conséquence du théorème de Robertson-Seymour, mais ce dernier ne donne aucun moyen effectif de le construire ; il est ainsi possible de démontrer qu'un problème peut être résolu en temps polynomial (dans le langage de la [[Théorie de la complexité des algorithmes|théorie de la complexité]], on dit qu'il appartient à la [[Théorie de la complexité des algorithmes#Classe P|classe P]]) sans pouvoir exhiber une telle solution : on dit qu'une telle preuve est [[démonstration constructive|non constructive]]<ref>{{harvsp|Fellows|Langston|1988}} ; {{harvsp|Bienstock|Langston|1995}}, section 6.</ref>. En revanche, dans de nombreux cas où l'ensemble des obstructions de ''F'' est connu explicitement, il est possible de savoir si un graphe appartient à ''F'' de manière plus efficace encore ; ainsi, tester si un graphe à ''n'' sommets est planaire peut être fait en temps linéaire<ref>Voir, par exemple,{{article|lang=en
+ | last1 = Shih | first1 = W. K.
+ | nom2 = Hsu | prénot2 = W. L.
+ | issue = 1–2
+ | journal = Theoretical Computer Science
+ | pages = 179–191
+ | title = A new planarity test
+ | volume = 223
+| year = 1999
+}} ; on trouvera une analyse plus détaillée de cette question dans l'article [[:en: Planarity testing|Planarity testing]] de la Wikipédia anglophone.</ref>, c'est-à-dire en temps proportionnel à ''n''.
+
+Pour des invariants de graphes<ref name="inv" group="note"/> ayant la propriété que, pour un ''k'' fixé, la famille des  graphes d'invariant plus petit que ''k'' est fermée<ref name="chroma" group="note"/>, le même théorème s'applique ; c'est par exemple le cas de la [[Décomposition_arborescente|largeur arborescente]], ou du [[genre (mathématiques)|genre]] minimal de la surface sur laquelle le graphe peut être tracé. Dans chacun de ces cas, pour chaque ''k''  fixé, il y a un algorithme permettant, pour un graphe ''G'' ayant ''n'' sommets et arêtes, de déterminer si son invariant est ou non inférieur à ''k'', en un temps inférieur à <math>C(k)n^3</math>, où <math>C(k)</math> est une constante ne dépendant que de ''k'' et de l'invariant mesuré. Un problème ayant cette propriété (où <math>n^3</math>  est remplacé par un polynôme quelconque) est dit  [[Complexité_paramétrée#Algorithme_FPT|soluble à paramètre fixé]].
+
+Cependant, cette méthode ne permet pas de construire un algorithme unique permettant de déterminer la valeur d'un tel invariant pour un graphe donné (lorsque cette valeur n'est pas bornée à l'avance), à cause de la difficulté qu'il y a à déterminer l'ensemble des obstructions. De plus, la constante <math>C(k)</math> augmente en général extrêmement vite avec ''k'', rendant ces algorithmes très inefficaces en pratique. C'est pourquoi le développement d'algorithmes plus efficaces pour ces problèmes constitue encore en 2011 un important domaine de recherche.
+
+=== Relation avec le problème P=NP ===
+{{voir|Problème P %3D NP}}
+Le théorème des mineurs semble permettre de construire des algorithmes rapides (polynomiaux, et même cubiques) de résolution de problèmes dont on sait qu'ils sont [[Problème NP-complet|NP-complets]], voire [[Théorie de la complexité des algorithmes#Problèmes C-complets ou C-difficiles|NP-difficiles]]<ref>Voir en ligne [http://theory.cs.uiuc.edu/~jeffe/teaching/comptop/notes/graph-minors.pdf le cours de Jeff Erickson, ''Computational Topology'', section 12 (''graph minors''), p. 3] {{en}}.</ref>. Cependant, une analyse plus précise de la définition de la complexité des algorithmes<ref group="note">On se reportera à l'article [[Théorie de la complexité des algorithmes]] pour des définitions rigoureuses des diverses notions mises en jeu.</ref> montre que ces algorithmes prennent en fait un temps exponentiel par rapport  à la taille des graphes décrivant le problème à résoudre. Ainsi, le problème des chemins disjoints est NP-complet<ref group="note">Il s'agit de déterminer, étant donné ''n'' paires de sommets, s'il existe dans le graphe ''n'' chemins disjoints les reliant deux à deux ; le problème reste même NP-complet pour des graphes assez simples, [http://www.nishizeki.ecei.tohoku.ac.jp/nszk/nishi/sub/j/DVD/PDF_J/J137.pdf comme cela fut démontré en 2001 par Nishizegi, Vigen et Zhou] {{en}}.</ref>, mais Robertson et Seymour ont montré que, à ''k'' fixé, le problème des ''k'' chemins disjoints est effectivement soluble en temps polynomial<ref>{{harvsp|Robertson|Seymour|1995}}</ref> ; cette contradiction apparente<ref group="note">À moins de supposer que [[problème P = NP|P=NP]], ce qui serait [[Problèmes_du_prix_du_millénaire#Probl.C3.A8me_ouvert_P_.3D_NP|tout à fait remarquable...]]</ref> se résout en remarquant que le temps pris par l'algorithme est un polynôme en ''n'' (la taille du graphe étudié) de la forme <math>C(k)n^3</math>, comme on l'a vu dans la section précédente, mais que la constante <math>C(k)</math> augmente au moins exponentiellement avec ''k'', et que c'est elle qui définit la complexité du problème lorsque  ''k'' est inconnu.
+
+Bien que le théorème de Robertson-Seymour n'ait pas vraiment apporté d'informations nouvelles concernant le  [[Problème_P_%3D_NP|problème P=NP]], Fellows et Langston ont fait remarquer<ref>{{harvsp|Fellows|Langston|1994}}.</ref> que leur démonstration non constructive d'existence d'algorithmes polynomiaux (et où apparaissent souvent, qui plus est, des constantes de proportionnalité bien trop grandes pour qu'ils puissent avoir une utilisation pratique quelconque) rend moins claire qu'auparavant la distinction entre algorithmes polynomiaux (considérés comme utilisables de manière réaliste) et non polynomiaux (à jamais inutilisables pour des ensembles de données un peu vastes), et donc que l'intuition de la majorité des informaticiens<ref group="note">Voir l'article [[Problème_P_%3D_NP|problème P=NP]] pour un exposé plus complet des différents arguments à ce sujet.</ref>, selon laquelle la classe P est différente de la classe NP, pourrait bien s'avérer fausse, sans pour autant que les problèmes NP-complets en deviennent faciles à résoudre.
+
+== Conséquences en logique mathématique ==
+L'étude de la [[logique mathématique]], c'est-à-dire l'analyse systématique des fondations des mathématiques et des bases logiques sur lesquelles s'appuient les démonstrations, commencée à la fin du dix-neuvième siècle par des logiciens et des mathématiciens tels que [[Gottlob Frege]] et [[Giuseppe Peano]], a amené vers 1930 à la découverte de surprenants résultats d'[[indécidabilité]], liés aux célèbres [[théorèmes d'incomplétude de Gödel]] ; ces résultats, dont la forme générale est « la théorie ''T'' ne permet, pour un certain énoncé ''E'' exprimable dans son langage, ni de démontrer ''E'', ni de démontrer sa [[négation logique|négation]] ''non E'' », sont souvent dits  ''méta-mathématiques'', car ils portent sur les mathématiques elles-mêmes et non sur les objets mathématiques usuels. La plupart des énoncés ''E'' ainsi construits  étaient  généralement jugés artificiels<ref group="note">Les affirmations initialement construites par Gödel sont des codages du [[paradoxe du menteur]] ; bien que d'une forme mathématique acceptable, ils sont d'une complexité redoutable, et ne correspondent à aucun problème qu'un mathématicien jugerait intéressant. On trouvera de nombreuses analyses de ces questions dans la bibliographie de l'article [[théorèmes d'incomplétude de Gödel]].</ref>, et des énoncés plus conformes à la pratique courante des mathématiciens semblaient ne pas devoir susciter de tels problèmes. Pourtant, vers 1980, [[Jeff Paris]]<ref>En collaboration avec divers autres auteurs, tels que L. Harrington ; voir par exemple {{en}} J. Paris et L. Harrington, ''A mathematical incompleteness in Peano Arithmetic.'' dans  ''Handbook for Mathematical Logic'' (ed. J. Barwise), pp. 1133–1142. Amsterdam, Netherlands: North-Holland, 1977.</ref> a obtenu des énoncés de forme apparemment naturelle et inoffensive, par exemple affirmant qu'une certaine [[suite (mathématiques)|suite]] finit par décroître<ref group="note">Il s'agit  de suites analogues aux [[théorème de Goodstein|suites de Goodstein]], qui commencent par croître pendant un nombre d'étapes démesurément long.</ref>, mais revenant en fait à définir des entiers si grands que leur {{citation|existence}} ne peut être prouvée à l'aide des seuls [[axiomes de Peano]] ; cela implique que, en n'utilisant que ces axiomes, les énoncés en question sont indécidables.
+
+En 1987, [[Harvey Friedman|Friedman]], Robertson et Seymour ont montré que, si le théorème des mineurs était vrai, le théorème suivant (qui en est un cas particulier<ref group="note">Ce genre de théorème est souvent mentionné sous le nom de  {{citation|forme finitaire de Friedman}} ou, en anglais, FFF pour ''Friedman finite form'' ; pour plus de détails, voir [[Théorème de Kruskal#Les_r.C3.A9sultats_d.27ind.C3.A9cidabilit.C3.A9_de_Friedman|cette section de l'article « théorème de Kruskal »]].</ref>) serait lui aussi, et pour les mêmes raisons, non démontrable dans des systèmes beaucoup plus forts que l'arithmétique de Peano<ref>{{harvsp|Friedman|Robertson|Seymour|1987}}.</ref>, bien qu'il soit démontrable dans [[ZFC]] (et en  fait, l'analyse détaillée de la preuve de Robertson et Seymour permet de montrer qu'il est démontrable  dans des systèmes beaucoup moins puissants que ZFC) :
+
+:'''Théorème''' : Pour tout entier ''n'', il existe un entier ''m'' si grand que si ''G''<sub >1</sub>, ..., ''G''<sub>''m''</sub> est une suite de graphes finis non orientés, où chaque ''G''<sub>''i''</sub> a au plus ''n''+''i'' sommets et arêtes, alors il existe ''j'' < ''k'' tels que  ''G''<sub>''j''</sub>  soit un mineur de  ''G''<sub>''k''</sub>. 
+
+Là encore, l'entier ''m'' est une fonction de ''n'' à croissance si rapide<ref group="note">Voir l'article [[hiérarchie de croissance rapide]] pour plus de détails ; dans le cas d'un théorème analogue pour les arbres, Friedman a montré que cette fonction était de l'ordre de <math>f_{\Gamma_0}</math>, où <math>{\Gamma_0}</math> est l'[[ordinal de Feferman-Schütte]] ; plus explicitement, [http://www.math.osu.edu/~friedman/pdf/finiteseq10_8_98.pdf cet article de Friedman] {{en}} montre comment calculer les premières valeurs d'une fonction de ce genre, où l'on voit, par exemple, qu'on obtient très vite des entiers bien plus grands que le [[nombre de Graham]]. Il ne semble pas qu'on ait réussi  à déterminer la vitesse de croissance exacte de la fonction ''m(n)'', mais l'ordinal correspondant sera de toute façon  bien trop grand pour pouvoir être décrit à l'aide des notations usuelles ; se limitant à des arbres et appliquant le [[théorème de Kruskal]], Friedman a montré qu'il était déjà nécessaire d'utiliser le ''petit ordinal de Veblen'' ; voir à ce sujet l'article [[grand ordinal dénombrable]], ainsi que {{en}} [http://www.icm2006.org/proceedings/Vol_II/contents/ICM_Vol_2_03.pdf Michael Rathjen, ''The art of ordinal analysis] {{pdf}}.</ref> que les axiomes de Peano (ou même des formes très renforcées de ces axiomes) ne permettent pas de montrer qu'elle est toujours définie, ce qui explique ces résultats d'indécidabilité ; on trouvera dans l'article [[théorème de Kruskal]] une description plus précise d'autres théorèmes de logique mathématique analogues, dus eux aussi à Friedman. Ces théorèmes donnent ainsi des exemples de propositions indécidables en arithmétique, considérées comme plus naturelles que celles correspondant au théorème de Gödel<ref>On trouvera des remarques informelles sur cette question dans {{Ouvrage |langue=en|prénom1=C.|nom1=Smorynski|titre=The varieties of arboreal experience|année=1982|url=http://www.springerlink.com/content/jn235530n57t2384/fulltext.pdf}}, et une analyse  plus rigoureuse dans {{article|lang=en|id={{MR|1129778}}|last= Gallier|first= Jean H.|title= What's so special about Kruskal's theorem and the ordinal Γ<sub>0</sub>? A survey of some results in proof theory|journal=  Ann. Pure Appl. Logic|volume=  53|year=1991|issue=  3|pages= 199–260}} (texte intégral sous forme de trois documents PDF : [ftp://ftp.cis.upenn.edu/pub/papers/gallier/kruskal1.pdf partie 1] [ftp://ftp.cis.upenn.edu/pub/papers/gallier/kruskal2.pdf partie 2][ftp://ftp.cis.upenn.edu/pub/papers/gallier/kruskal3.pdf partie 3]).</ref>.
+
+== Généralisations : hypergraphes et graphes infinis ==
+En 2011, Robertson et Seymour ont achevé la démonstration d'un résultat analogue sur les [[hypergraphe]]s<ref>{{harvsp|Robertson|Seymour|2010}}.</ref>, définissant un préordre généralisant la relation de mineur, et montrant qu'il s'agit là encore d'un bel ordre. Parmi les conséquences de ce résultat, ils en déduisent que le théorème des mineurs (pour les graphes) s'applique encore si on munit les sommets ou les arêtes d'étiquettes (elles-mêmes ordonnées par un bel ordre), et qu'on demande aux mineurs de respecter l'ordre de ces étiquettes<ref group="note">Ce théorème est la  généralisation du [[théorème de Kruskal]] pour les arbres mentionné dans l'historique, ce dernier portant sur les arbres étiquetés.</ref>. Ce résultat leur a également permis de démontrer une conjecture de [[Crispin Nash-Williams|Nash-Williams]] : dans toute suite infinie de graphes, il en existe deux tels que le premier peut être ''immergé'' dans le second<ref group="note">En théorie des graphes, une ''immersion'' est une [[Injection (mathématiques)|injection]] telle que les arêtes du premier graphe correspondent à des chemins disjoints du second.</ref>.
+
+Il n'est pas impossible qu'un théorème analogue soit encore vrai pour des graphes [[ensemble dénombrable|infinis dénombrables]], mais cette conjecture (ou d'ailleurs sa réfutation) est considérée comme encore plus difficile que ne l'est le théorème des mineurs ; Reinhard Diestel  pense qu'elle pourrait être liée à une autre conjecture de Seymour, affirmant que tout graphe infini dénombrable possède un mineur (strictement plus petit) qui lui est isomorphe<ref>{{harvsp|Diestel|2005|p=367}} ; cette conjecture entraîne aisément le théorème des mineurs dans le cas fini.</ref>. En revanche, on sait que ce résultat est faux pour des graphes non dénombrables : Péter Komjáth a démontré que, si <math>\lambda</math> est un [[nombre cardinal|cardinal]] non dénombrable, il existe <math>2^\lambda</math> graphes de cardinal <math>\lambda</math> dont aucun n'est un mineur de l'autre<ref>{{article|lang=en|nom=P. Komjáth|titre=A note on minors of uncountable graphs|revue=Math. Proc. [[Cambridge Philosophical Society|Camb. Phil. Soc.]]|year=1995|volume=117|p.=7-9}}</ref>{{,}}<ref group="note">D'ailleurs, la conjecture de Seymour est également fausse dans le cas non dénombrable : voir {{article|lang=en|nom=B. Oporowski|titre=A counterexample to Seymour’s self-minor conjecture|revue=Journal of Graph Theory|volume=14|issue=5|year=1990}}.</ref>.
+
+== Notes et références ==
+=== Notes ===
+{{références|colonnes=2|group="note"}}
+
+=== Références ===
+{{références|colonnes=2}}
+
+== Bibliographie ==
+=== Livres ===
+*{{chapitre
+|lang=en
+|nom1=Bienstock|prénom1=Daniel
+|nom2=Langston|prénom2=Michael A.
+|titre=Algorithmic implications of the graph minor theorem
+|doi=10.1016/S0927-0507(05)80125-2
+|passage=481–502
+|collection=Handbooks in Operations Research and Management Science
+|titre ouvrage= Network Models
+|url=http://www.cs.utk.edu/~langston/courses/cs594-fall2003/BL.pdf
+|numéro dans collection=7
+|année=1995}} {{pdf}}.
+*{{ouvrage
+  |lang=en
+ | nom1 = Chambers | prénom1 = John
+ | éditeur = Department of Computer Science, [[Université de Victoria|UVic]]
+ | titre = Hunting for torus obstructions, [[Maîtrise dans les systèmes universitaires anglo-saxons#Maîtrise en sciences|M.Sc.]] thesis
+ | année = 2002}}.
+*{{ouvrage
+  |lang=en
+ | nom1 = Diestel | prénom1 = Reinhard
+ | contribution = Minors, Trees, and WQO
+ | edition = Electronic Edition 2005
+|passage=326–367
+ | éditeur = Springer
+ | titre = Graph Theory
+ | url = http://www.math.uni-hamburg.de/home/diestel/books/graph.theory/preview/Ch12.pdf
+ | année = 2005}} {{pdf}}.
+*{{chapitre
+  |lang=en
+ | nom1 = Friedman | prénom1 = Harvey
+ | nom2 = Robertson | prénom2 = Neil
+ | nom3 = Seymour | prénom3 = Paul
+|auteurs ouvrage=S. Simpson
+ | éditeur = [[American Mathematical Society|AMS]]
+ |collection= Contemporary Mathematics
+ | titre = The metamathematics of the graph minor theorem|titre ouvrage=Logic and Combinatorics
+ |numéro dans collection=65
+ | année = 1987|passage=229–261}}.
+=== Articles provenant de publications scientifiques ===
+*{{article
+ | nom1 = Delahaye | prénom1 = Jean-Paul | lien auteur1 = Jean-Paul Delahaye
+ | issue = 3
+ | journal = [[Pour la Science]]
+ | pages = 92-97
+ | titre = Une propriété cachée des graphes
+ | volume = avril
+ | année = 2008}}.{{Commentaire biblio|Article de vulgarisation.}}
+
+*{{article
+  |lang=en
+ | nom = Lovász | prénom = László
+ | url = http://www.ams.org/journals/bull/2006-43-01/S0273-0979-05-01088-8/S0273-0979-05-01088-8.pdf
+ | issue = 1
+ | journal=Bull. Amer. Math. Soc. (New Series)
+ | pages = 75–86
+ | title = Graph Minor Theory
+ | volume = 43
+ | year = 2005}} {{pdf}}.
+*{{article
+  |lang=en
+ | nom1 = Fellows | prénom1 = Michael R.
+ | nom2 = Langston | prénom2 = Michael A.
+ | doi = 10.1145/44483.44491
+ | issue = 3
+ | journal = [http://jacm.acm.org/ Journal of the ACM]
+ | pages = 727–739
+ | title = Nonconstructive tools for proving polynomial-time decidability
+ | volume = 35
+ | year = 1988}}.
+*{{article
+  |lang=en
+ | nom1 = Fellows | prénom1 = Michael R.
+ | nom2 = Langston | prénom2 = Michael A.
+ | doi = 
+ | issue = 3
+ | journal = [http://www.journals.elsevier.com/journal-of-computer-and-system-sciences/ Journal of Computer and System Sciences]
+ | pages = 769–779
+ | title = On search, decision, and the efficiency of polynomial-time algorithms
+ | volume = 49
+ | year = 1994}}.{{Commentaire biblio|1=En voici [http://www.mrfellows.net/papers/FL89_Search,Decision,Efficiency.pdf un résumé étendu] {{pdf}}, dû aux auteurs eux-mêmes.}}
+*{{article
+  |lang=en
+ | nom1 = Robertson | prénom1 = Neil
+ | nom2 = Seymour | prénom2 = Paul
+ | doi = 10.1016/0095-8956(83)90079-5
+ | issue = 1
+ | journal = [[Journal of Combinatorial Theory]], Series B
+ | pages = 39–61
+ | title = Graph Minors. I. Excluding a forest
+ | volume = 35
+ | year = 1983}}.{{Commentaire biblio|1=Le premier des vingt articles de la démonstration complète, intitulé ''Mineurs : exclusion d'une forêt''.<br/>En 1995, Reinhard Diestel a publié une preuve simplifiée de ce résultat, dans un article de quatre pages [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.56.4451&rep=rep1&type=pdf disponible en ligne] {{pdf}}.}}
+*{{article
+  |lang=en
+ | nom1 = Robertson | prénom1 = Neil
+ | nom2 = Seymour | prénom2 = Paul
+ | doi = 10.1006/jctb.1995.1006
+ | issue = 1
+ | journal=Journal of Combinatorial Theory, Series B
+ | pages = 65–110
+ | title = Graph Minors. XIII. The disjoint paths problem
+ | volume = 63
+ | year = 1995}}.
+*{{article
+  |lang=en
+ | nom1 = Robertson | prénom1 = Neil
+ | nom2 = Seymour | prénom2 = Paul
+ | url = http://www.math.princeton.edu/~pds/papers/GM20/GM20.pdf
+ | issue = 2
+ | journal=Journal of Combinatorial Theory, Series B
+ | pages = 325–357
+ | title = Graph Minors. XX. Wagner's conjecture
+ | volume = 92
+ | year = 2004}} {{pdf}}.
+*{{article
+  |lang=en
+ | nom1 = Robertson | prénom1 = Neil
+ | nom2 = Seymour | prénom2 = Paul
+ | url = http://www.math.princeton.edu/~pds/papers/GM23/GM23.pdf
+ | issue = 2
+ | journal=Journal of Combinatorial Theory, Series B
+ | pages = 181–205
+ | title = Graph Minors. XXIII. Nash-Williams’s immersion conjecture
+ | volume = 100
+ | year = 2010}} {{pdf}}.
+{{boîte déroulante/début
+    |titre=La liste complète des vingt-trois articles de Robertson et Seymour
+    |largeur=95%
+    |alignB=center
+    |couleurFondT=transparent
+    |couleurFondB=transparent
+    |arrondi=0.6em
+}}
+Ces articles (à l'exception de ''Graph minors. II'') sont tous parus dans le [[Journal of Combinatorial Theory]] (Series B), mais pas toujours exactement dans l'ordre de leur numérotation.
+* ''Graph minors. I. Excluding a forest'', J. Combin. Theory, Ser. B, '''35''' (1983), 39–61.
+* ''Graph minors. II. Algorithmic aspects of tree-width'', J. Algorithms, '''7''' (1986), 309–322.
+* ''Graph minors. III. Planar tree-width'', J. Combin. Theory, Ser. B, '''36''' (1984), 49–64.
+* ''Graph minors. IV. Tree-width and well-quasi-ordering'', J. Combin. Theory, Ser. B, '''48''' (1990), 227–254.
+* ''Graph minors. V. Excluding a planar graph'', J. Combin. Theory, Ser. B, '''41''' (1986), 92–114.
+* ''Graph minors. VI. Disjoint paths across a disc'', J. Combin. Theory, Ser. B, '''41''' (1986), 115–138.
+* ''Graph minors. VII. Disjoint paths on a surface'', J. Combin. Theory, Ser. B, '''45''' (1988), 212–254.
+* ''Graph minors. VIII. A Kuratowski theorem for general surfaces'', J. Combin. Theory, Ser. B, '''48''' (1990), 255–288.
+* ''Graph minors. IX. Disjoint crossed paths'', J. Combin. Theory, Ser. B, '''49''' (1990), 40–77.
+* ''Graph minors. X. Obstructions to tree-decomposition'', J. Combin. Theory, Ser. B, '''52''' (1991), 153–190.
+* ''Graph minors. XI. Circuits on a surface'', J. Combin. Theory, Ser. B, '''60''' (1994), 72–106
+* ''Graph minors. XII. Distance on a surface'', J. Combin. Theory, Ser. B, '''64''' (1995), 240–272.
+* ''Graph minors. XIII. The disjoint paths problem'', J. Combin. Theory, Ser. B, '''63''' (1995), 65–110.
+* ''Graph minors. XIV. Extending an embedding'', J. Combin. Theory, Ser. B, '''65''' (1995), 23–50.
+* ''Graph minors. XV. Giant steps'', J. Combin. Theory, Ser.  B, '''68''' (1996), 112–148.
+* ''Graph minors. XVI. Excluding a non-planar graph'', J. Combin. Theory, Ser. B, '''89''' (2003), 43–76.
+* ''Graph minors. XVII. Taming a vortex'', J. Combin. Theory, Ser. B, '''77''' (1999), 162–210.
+* ''Graph minors. XVIII. Tree-decompositions and well-quasi-ordering'', J. Combin. Theory, Ser. B, '''89''' (2003), 77–108.
+* ''Graph minors. XIX. Well-quasi-ordering on a surface'', J. Combin. Theory, Ser. B, '''90''' (2004), 325–385.
+* ''Graph minors. XX. Wagner’s conjecture'', J. Combin. Theory, Ser. B, '''92''' (2004), 325–357. ({{en}}[http://www.math.princeton.edu/~pds/papers/GM20/GM20.pdf texte intégral]{{pdf}})
+* ''Graph minors. XXI. Graphs with unique linkages'', J. Combin. Theory, Ser. B, '''99''' (2009), 583–616. ({{en}}[http://www.math.princeton.edu/~pds/papers/GM21/GM21.pdf texte intégral]{{pdf}})
+* ''Graph minors. XXII. Irrelevant vertices in linkage problems'',  J. Combin. Theory, Ser. B, (2011, sous presse). ({{en}} [http://www.math.princeton.edu/~pds/papers/GM22/GM22.pdf texte intégral]{{pdf}})
+* ''Graph minors. XXIII. Nash-Williams’s immersion conjecture'', J. Combin. Theory, Ser. B, '''100''' (2010), 181–205. ({{en}}[http://www.math.princeton.edu/~pds/papers/GM23/GM23.pdf texte intégral]{{pdf}})
+{{boîte déroulante/fin}}
+
+== Voir aussi ==
+{{Traduction/Référence|en|Robertson–Seymour theorem|455728184}}
+=== Articles connexes ===
+* [[Bel ordre]]
+* [[Graphe planaire]]
+* [[Lemme de Higman]]
+*[[Théorème de Kruskal]]
+=== Liens externes ===
+* Sur le [http://perso.ens-lyon.fr/eric.thierry site professionnel de Eric Thierry] ([[Maître de conférences]] à l'[[ENS Lyon]]), on trouvera  en particulier [http://perso.ens-lyon.fr/eric.thierry/Graphes2009/bastien-legloannec.pdf un exposé rigoureux de Bastien Legloannec, en français] {{pdf}}, contenant  des démonstrations complètes des propriétés des beaux ordres (en passant par le [[Théorie de Ramsey#Théorème de Ramsey infini|théorème de Ramsey infini]], qu'il démontre également), une démonstration du [[théorème de Kruskal]] dans le cas des arbres non étiquetés, et beaucoup d'exemples et de contre-exemples.
+
+{{Portail|géométrie|informatique théorique}}
+{{Article de qualité|oldid=73333100|date=21 décembre 2011}}
+
+{{DEFAULTSORT:Theoreme De Robertson-Seymour}}
+[[Catégorie:Théorème de la théorie des graphes|Robertson-Seymour]]
+[[Catégorie:Théorème d'informatique|Robertson-Seymour]]
+[[en:Robertson–Seymour theorem]]

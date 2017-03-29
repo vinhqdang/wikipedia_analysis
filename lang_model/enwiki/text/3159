@@ -1,0 +1,36 @@
+{{refimprove|date=January 2012}}
+'''Virtual surround''' is an audio system which attempts to create the perception that there are many more sources of sound than are actually present. In order to achieve this it is necessary to devise some means of tricking the human auditory system into thinking that a sound is coming from somewhere that it is not. Most recent examples of such systems are designed to simulate the true (physical) [[surround sound]] experience using one, two or three loudspeakers. Such systems are popular among consumers who want to enjoy the experience of surround sound without the large number of speakers that are traditionally required to do so.
+
+==Types==
+A virtual surround system must provide a means for 2-dimensional imaging of sound, using some properties of the human auditory system. The way that the auditory system localises a sound source is a topic that is studied in the field of [[psychoacoustics]]. Thus, virtual surround systems use knowledge of [[psychoacoustics]] to "trick" the listener. There are several ways in which this has been attempted.
+
+===Using HRTFs===
+Some methods use knowledge of [[head-related transfer function]] (HRTF). With an appropriate HRTF the signals required at the eardrums for the listener to perceive sound from any direction can be calculated. These signals are then recreated at the eardrum using either headphones or a crosstalk calculation method
+.<ref>
+{{cite journal
+ | last = Kirkeby
+ | first = Ole
+ | coauthors = Nelson, Philip A.; Hamada, Hareo
+ | year = 1998
+ | month = May
+ | title = The 'Stereo Dipole': A Virtual Source Imaging System Using Two Closely Spaced Loudspeakers
+ | journal = the Journal of the Audio Engineering Society
+ | volume = 46
+ | pages = 387<U+2013>395
+ }}
+</ref>
+For an application of this method, see [http://www.isvr.soton.ac.uk/FDAG/VAP/index.htm ''ISVR, Virtual Acoustics And Audio Engineering'']. The disadvantage of this approach is that it is very difficult to get these systems to work for more than one listener at a time.
+
+===Using reflections===
+Some virtual surround systems work by directing a strong beam of sound to reflect off the walls of a room so that the listener hears the reflection at a higher level than the sound directly from the loudspeaker. One example of this technology is a commercially available [http://www.cambridgemechatronics.com/technology/audio''Digital Sound Projector''] by Cambridge Mechatronics (formerly 1 Ltd). It employs 40 micro drivers and 2 woofers as well as projection technology to control the direction of the sound. The micro drivers' sound is focused into groups of "beams" that reflect off the room's walls. The [[center channel]]'s sound is projected directly to the listening position. Another example is [http://www.ultrasone.com/files/techreports/aes97text_1mbfile.zip ''S-Logic''] marketed by a German headphones manufacturer [[Ultrasone]]. With this technology (which may also be considered a hybrid of HRTF and reflection-based methods), decentralized transducer positioning is used to spread sound over the outer ear in an attempt to mimic sound heard over speakers.
+
+For virtual surround to be effective, the room should be both physically symmetrical about the perpendicular to the line between the speakers, and the absorbing characteristics of the left and right walls. An absorptive piece of furniture close to one speaker, and not matched on the other side will cause the sound field to shift to the "live" side of the room. The resulting "sound stage" is affected by asymmetry.
+
+===Creating a diffuse source===
+{{unreferenced section|date=January 2012}}
+Perception of direction is greatly affected by the relative time that a sound arrives at each ear and any difference in the amplitude of a sound at each ear. It is possible to create a sound source having an output characteristic which is rapidly varying with direction and frequency of signal. These kinds of sources create sound fields which are rapidly variable around the listeners room. These are often referred to as diffuse sources, this is because their output resembles a diffuse sound field <U+2014> a sound field where soundwaves are traveling in all directions with equal probability. In a diffuse field the sound at each of a listeners' ears is so completely different that it is impossible for the brain to work out where the sound has come from. A diffuse source located in front of the listener will be hard to localize and can be used to carry the surround signals.
+
+== Citations ==
+<references/>
+
+[[Category:Surround sound]]

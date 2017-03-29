@@ -1,0 +1,475 @@
+<table border="0" align="right" cellspacing="5" width="20%"><tr><td>__TOC__</td></tr></table><!-- float: right magic working with legacy browsers -->
+A '''country code top-level domain''' ('''ccTLD''') is an [[Internet]] [[top-level domain]] generally used or reserved for a [[country]] (a sovereign state or a [[dependent territory]]).
+
+All ccTLD identifiers are two letters long, and all two-letter top-level domains are ccTLDs. Creation and delegation of ccTLDs is performed by the [[Internet Assigned Numbers Authority]] (IANA)
+as described in RFC 1591, corresponding to [[ISO 3166-1]] [[ISO 3166-1 alpha-2|alpha-2]] [[country codes]] with few exceptions explained below.
+
+==Delegation and management==
+The IANA (currently contracted to [[ICANN]]) is responsible for determining an appropriate trustee for each ccTLD. Administration and control is then delegated to that trustee, which is responsible for the policies and operation of the domain. The current delegation can be determined from [http://www.iana.org/cctld/cctld-whois.htm IANA's list of ccTLDs]. Individual ccTLDs may have varying requirements and fees for registering [[subdomains]]. There may be a local presence requirement (for instance, citizenship or other connection to the ccTLD), as for example the [[Canada|Canadian]] ([[.ca|ca]]) and [[Germany|German]] ([[.de|de]]) domains, or registration may be open.
+
+==Relation to ISO 3166-1==
+{{cquote2|The IANA is not in the business of deciding what is and what is not a country. The selection of the ISO 3166 list as a basis for country code top-level domain names was made with the knowledge that ISO has a procedure for determining which entities should be and should not be on that list.|[[Jon Postel]]|RFC 1591<ref>{{cite web |url=http://tools.ietf.org/html/rfc1591#section-4 |title=RFC 1591 - Domain Name System Structure and Delegation |year=1994 |month=March |author=[[Jon Postel]] |accessdate=2008-06-22 }}</ref>}}
+
+===Unused ISO 3166-1 codes===
+Almost all current ISO 3166-1 codes have been assigned and do exist in DNS.
+However, some of these are effectively unused. In particular, the ccTLDs for the Norwegian dependency [[Bouvet Island]] (<tt>[[.bv|bv]]</tt>) and the designation [[Svalbard and Jan Mayen]] (<tt>[[.sj|sj]]</tt>) do exist in DNS, but no subdomains have been assigned, and it is [[Norid]] policy not to assign any at present. Two [[France|French]] territories, <tt>[[.bl|bl]]</tt> ([[Saint Barth<U+00E9>lemy]]) and <tt>[[.mf|mf]]</tt> ([[Saint Martin (France)|Saint Martin]]), {{As of|2008|alt=still}} await local assignment by France's government.
+
+The code <tt>[[.eh|eh]]</tt>, although eligible as ccTLD for [[Western Sahara]], has never been assigned and does not exist in [[Domain Name System|DNS]]. Only one subdomain is still registered in <tt>[[.gb|gb]]</tt> (ISO 3166-1 for [[United Kingdom]]) and no new registrations are being accepted for it. Sites in the UK generally use <tt>[[.uk|uk]]</tt> (see below).
+
+The former [[.um]] ccTLD for the [[United States Minor Outlying Islands|U.S. Minor outlying islands]] was removed in April 2008. Under RFC 1591 rules [[.um]] is eligible as ccTLD on request by the relevant governmental agency and local Internet user community.
+
+===ccTLDs not in ISO 3166-1===
+Six ccTLDs are currently in use despite not being ISO 3166-1 two-letter codes. Some of these codes were in older ISO 3166-1 two-letter codes (now listed in [[ISO 3166-3]]).
+* <tt>[[.uk|uk]]</tt> ([[United Kingdom]]): The ISO 3166-1 code for the United Kingdom is GB, however the [[JANET]] network had already selected <tt>uk</tt> as a top-level identifier for its pre-existing [[JANET NRS|Name Registration Scheme]], and this was incorporated into the top-level domains. <tt>[[.gb|gb]]</tt> was assigned with the intention of a transition, but this never occurred and the use of <tt>uk</tt> is now entrenched.
+* <tt>[[.su|su]]</tt> (the obsolete ISO 3166 code for [[Soviet Union]]): Assigned when the Soviet Union was still extant and SU was its assigned ISO 3166 code. The <tt>su</tt> managers stated in [[2001]] they will commence accepting new <tt>su</tt> registrations, but it is unclear whether this action is compatible with [[ICANN]] policy.
+* <tt>[[.ac|ac]]</tt> ([[Ascension Island]]): This code is a vestige of [[Internet Assigned Numbers Authority|IANA's]] decision in [[1996]] to allow the use of codes reserved in the [[ISO 3166-1 alpha-2]] reserve list for use by the [[Universal Postal Union]]. The decision was later reversed, with Ascension Island now the sole outlier. (Three other ccTLDs, <tt>[[.gg|gg]]</tt> ([[Guernsey]]), <tt>[[.im|im]]</tt> ([[Isle of Man]]) and <tt>[[.je|je]]</tt> ([[Jersey]]) also fell under this category from 1996 until they received corresponding ISO 3166 codes in March 2006.)
+* <tt>[[.eu|eu]]</tt> ([[European Union]]): On [[September 25]], [[2000]], [[ICANN]] decided in violation of RFC 1591 to allow the use of any two-letter code in the ISO 3166-1 reserve list that is reserved for all purposes. Only EU currently meets this criterion. Following a decision by the EU's Council of Telecommunications Ministers in March 2002, progress was slow, but a [[domain name registry|registry]] (named [[EURid]]) was chosen by the [[European Commission]], and criteria for allocation set: [[ICANN]] approved <tt>[[.eu|eu]]</tt> as a ccTLD, and it opened for registration on [[7 December]] [[2005]] for the holders of prior rights. Since [[7 April]] [[2006]], registration is open to all.
+* <tt>[[.tp|tp]]</tt> (the previous ISO 3166-1 code for [[East Timor]]): To be phased out in favour of <tt>[[.tl|tl]]</tt> during 2005.
+* <tt>[[.yu|yu]]</tt> (the previous ISO 3166-1 code for [[Yugoslavia]]): To be phased out in favour of <tt>[[.rs|rs]]</tt> and <tt>[[.me|me]]</tt> before the end of 2009.
+
+===Historical ccTLDs===
+There are two ccTLDs that have been deleted after the corresponding 2-letter code was withdrawn from ISO 3166-1: <tt>[[.cs|cs]]</tt> (for [[Czechoslovakia]]) and <tt>[[.zr|zr]]</tt> (for [[Zaire]]). There may be a significant delay between withdrawal from ISO 3166-1 and deletion from the DNS; for example, ZR ceased to be an ISO 3166-1 code in 1997, but the <tt>zr</tt> ccTLD was not deleted until 2001. Other ccTLDs corresponding to obsolete ISO 3166-1 have not yet been deleted. In some cases they may never be deleted due to the amount of disruption this would cause for a heavily used ccTLD. In particular, the Soviet Union's ccTLD <tt>[[.su|su]]</tt> remains in use more than a decade after SU was removed from ISO 3166-1.
+
+The historical country codes <tt>[[.dd|dd]]</tt> for the [[German Democratic Republic]] and <tt>yd</tt> for [[South Yemen]] were eligible for a ccTLD, but not allocated; see also <tt>[[.de|de]]</tt> and <tt>[[.ye|ye]]</tt>.
+
+The temporary reassignment of country code CS to [[Serbia and Montenegro]] until the split into <tt>[[.rs|rs]]</tt> ([[Serbia]]) and <tt>[[.me|me]]</tt> ([[Montenegro]]), led to some controversies<ref>{{cite web
+|url=http://www.iab.org/documents/correspondence/2003-09-25-icann-cs-code.html
+|title=IAB input related to the .cs code in ISO 3166
+|date=2003-09-24
+|author=Leslie Daigle
+|publisher=[[Internet Architecture Board|IAB]]
+|accessdate=2008-06-22 }}</ref><ref>{{cite web
+|url=http://www.iab.org/documents/correspondence/2003-09-25-iso-cs-code.html
+|title=IAB comment on stability of ISO 3166 and other infrastructure standards
+|date=2003-09-24
+|author=Leslie Daigle
+|publisher=[[Internet Architecture Board|IAB]]
+|accessdate=2008-06-22 }}</ref> with respect to the stability of ISO 3166-1 country codes, resulting in a second edition of ISO 3166-1 in 2007 with a guarantee that retired codes will not be reassigned for at least 50 years, and the replacement of RFC 3066 by RFC 4646 for country codes used in [[language tag]]s in 2006.
+
+Australia was originally assigned the <tt>[[.au#Historic_second-level_domains|oz]]</tt> country code, which was later changed to <tt>[[.au|au]]</tt> with the <tt>.oz</tt> domains moved to <tt>.oz.au</tt>.
+
+==Internationalized ccTLDs==
+ {{see|GeoTLD}}
+
+There is a process to introduce internationalized ccTLDs using non-Latin letters. A technical solution has been tested with eleven [[internationalized domain name]] (IDN) TLDs in 2007. The introduction of selected IDN TLDs for ISO 3166-1 territories and [[.eu]] on ''fast track'' is under discussion as of 2008.<ref>{{cite web |url=http://icann.org/en/announcements/announcement-24jun08-en.htm |date=2008-06-24 |title=Updated Draft Final Report of Recommendations for IDN ccTLD Fast Track Mechanism Now Available |publisher=[[ICANN]] |accessdate=2008-06-26 }}</ref>
+
+The draft states that ''all territories should be contacted'' for their interest in the creation of internationalized TLDs for languages and scripts relevant in their territory. See [[.<U+0440><U+0444>]] (Cyrillic abbreviation of [[Russia|Russian Federation]]) for one proposal; various territories seem to be interested in the ''fast track'' mechanism.<ref>{{cite web |url=http://idn.wat.ch/wiki/index.php?title=IDN_ccTLD_Discussion |title=IDN ccTLD Discussion |publisher=GNSO IDN WG Wiki |accessdate=2008-06-22 }}</ref>
+
+==Unconventional usage==
+Lenient registration restrictions on certain ccTLDs have resulted in domain names like <tt>I.am</tt>, <tt>tip.it</tt>, <tt>start.at</tt> and <tt>go.to</tt>. Other variations of ccTLD usage have been called [[domain hack]]s, where the [[Second-level domain]] and ccTLD are used together to form one word or one title. This has resulted in domains like <tt>[[blo.gs]]</tt> of [[South Georgia and the South Sandwich Islands]] (<tt>[[.gs|gs]]</tt>), <tt>[[del.icio.us]]</tt> of [[United States of America]] (<tt>[[.us|us]]</tt>), and <tt>[[cr.yp.to]]</tt> of [[Tonga]] (<tt>[[.to|to]]</tt>). (Non country code TLDs have also been used, like <tt>inter.net</tt> which uses the [[.net]] gTLD, probably the first domain hack ever.)
+
+Another form of hacks on ccTLDs results from speculation over typographical errors. The <tt>.co</tt> domain of [[Colombia]] has generated interest ever since it was realized that people might miss typing the "m" for sites in the <tt>.com</tt> domain, or similarly reach the domain <tt>.cm</tt> for [[Cameroon]] due to a missed "o".
+
+===Commercial and vanity use===
+
+A number of the world's smallest countries have licensed their TLDs for worldwide commercial use. For example, [[Tuvalu]] and the [[Federated States of Micronesia]], small island-states in the Pacific, have partnered with [[VeriSign]] and [[FSM Telecommunications]] respectively, to sell domain names using the <tt>[[.tv]]</tt> and <tt>[[.fm]]</tt> TLDs to television and radio stations.
+
+Vanity ccTLDs are [[TLDs]] which are used for various purposes outside their home countries, because of their name.
+For example,
+* '''[[.ad]]''' is a ccTLD for [[Andorra]], but has recently been increasingly used by advertising agencies or [[classified advertising]].
+* '''[[.ag]]''' is a ccTLD for [[Antigua and Barbuda]] and is sometimes used for agricultural sites. In [[Germany]], AG (short for [[Aktiengesellschaft]]) is appended to the name of a stock-based company, similar to [[Incorporation (business)|Inc.]] in [[United States|USA]].
+* '''[[.am]]''' is a ccTLD for [[Armenia]], but is often used for [[AM broadcasting|AM]] radio stations, or for [[domain hack]]s (such as .i.am).
+* '''[[.as]]''' is a ccTLD for [[American Samoa]]. In Denmark and Norway, [[Aksjeselskap|AS]] is appended to the name of a stock-based company, similar to Inc. in USA. In Czech Republic, the joint stock corporation a.s. abbreviation stands for [http://cs.wikipedia.org/wiki/Akciov%C3%A1_spole%C4%8Dnost Akciov<U+00E1> spole<U+010D>nost].
+* '''[[.at]]''' is a ccTLD for [[Austria]] but is used for English words ending in eat (e.at).
+* '''[[.be]]''' is a ccTLD for [[Belgium]], but is sometimes used for the literal term "be".
+* '''[[.by]]''' is a ccTLD for [[Belarus]], but is sometimes used in Germany, as "BY" is the official abbreviation of the state [[Bavaria|Bayern]].
+* '''[[.cc]]''' is a ccTLD for [[Cocos (Keeling) Islands]] but is used for a wide variety of sites such as community colleges, especially before such institutions were allowed to use .edu.
+* '''[[.cd]]''' is a ccTLD for [[Democratic Republic of Congo]] but is used for CD merchants and file sharing sites.
+* '''[[.ck]]''' is a ccTLD for [[Cook Islands]] was notably abused in [[Chris Morris (satirist)|Chris Morris's]] [[Nathan Barley]] by preceding it with ".co" in order to spell out the word cock (.co.ck as in [http://www.trashbat.co.ck trashbat.co.ck]).
+* '''[[.dj]]''' is a ccTLD for [[Djibouti]] but is used for CD merchants and disc jockeys.
+* '''[[.fm]]''' is a ccTLD for the [[Federated States of Micronesia]] but it is often used for [[FM]] radio stations (and even non-FM stations, such as [[internet radio]] stations).
+* '''[[.gg]]''' is a ccTLD for [[Guernsey]] but it is often used by the gaming and gambling industry, particularly in relation to horse racing and online poker.
+* '''[[.im]]''' is a ccTLD for the [[Isle of Man]] but is often used by instant messaging programs and services.
+* '''[[.in]]''' is a ccTLD for [[India]] but is widely used in the internet industry.
+* '''[[.it]]''' is a ccTLD for [[Italy]] but is used in domain hacks (e.g. .has.it).
+* '''[[.je]]''' is a ccTLD for [[Jersey]] but is often used as a diminutive in Dutch (e.g. "huis.je"), as "you" ("zoek.je" = "search ye!"), or as "I" in French (e.g. "moi.je")
+* '''[[.la]]''' is a ccTLD for [[Laos]] but is marketed as the TLD for [[Los Angeles]].
+* '''[[.li]]''' is a ccTLD for [[Liechtenstein]] but is marketed as the TLD for [[Long Island]].
+* '''[[.lv]]''' is a ccTLD for [[Latvia]] but is also used to abbreviate [[Las Vegas, Nevada|Las Vegas]] or less frequently, [[love]].
+* '''[[.ly]]''' is a ccTLD for [[Libya]] but is also used for words ending with [[suffix]] "ly".
+* '''[[.md]]''' is a ccTLD for [[Moldova]], but is marketed to the medical industry (as in "medical domain" or "medical doctor").
+* '''[[.me]]''' is a ccTLD for [[Montenegro]], and is recently opened to individuals.
+* '''[[.ms]]''' is a ccTLD for [[Montserrat]], but is also used by Microsoft for such projects as [http://popfly.ms popfly.ms].
+* '''[[.mu]]''' is a ccTLD for [[Mauritius]], but is used within the music industry.
+* '''[[.ni]]''' is a ccTLD for [[Nicaragua]], but is occasionally adopted by companies from [[Northern Ireland]], particularly to distinguish from the more usual [[.uk]] within all parts of the [[United Kingdom]]
+* '''[[.nu]]''' is a ccTLD for [[Niue]] but marketed as resembling "new" in English and "now" in Scandinavian/Dutch. Also meaning "nude" in French/Portuguese.
+* '''[[.pr]]''' is a ccTLD for [[Puerto Rico]], but can be used in the meaning of "Public Relations"
+* '''[[.sc]]''' is a ccTLD for [[Seychelles]] but is often used as .Source
+* '''[[.sh]]''' is a ccTLD for [[Saint Helena]], but is also sometimes used for entities connected to the [[Germany|German]] ''[[Bundesland]]'' of [[Schleswig-Holstein]].
+* '''[[.si]]''' is a ccTLD for [[Slovenia]], but is also used by Hispanic sites as "yes" ("s<U+00ED>"). Mexican mayor candidate Jorge Arana, for example, had his web site registered as http://www.jorgearana.si (i.e. "Jorge Arana, s<U+00ED>", meaning Jorge Arana, yes").
+* '''[[.sr]]''' is a ccTLD for [[Suriname]] but is marketed as being for "seniors".
+* '''[[.st]]''' is a ccTLD for [[S<U+00E3>o Tom<U+00E9> and Pr<U+00ED>ncipe]] but is being marketed worldwide as an abbreviation for various things including "street".
+* '''[[.tk]]''' is a ccTLD for [[Tokelau]] but is bought by someone and given away at [http://dot.tk dot.tk page]
+* '''[[.tm]]''' is a ccTLD for [[Turkmenistan]] but it can be used as "Trade Mark"
+* '''[[.to]]''' is a ccTLD for [[Tonga]] but is often used as the English word "to", like "go.to"; also is marketed as the TLD for [[Toronto]].
+* '''[[.tv]]''' is a ccTLD for [[Tuvalu]] but it is used for the television ("TV") / entertainment industry purposes.
+* '''[[.vg]]''' is a ccTLD for [[British Virgin Islands]] but is sometimes used to abbreviate [[Video game]]s
+* '''[[.vu]]''' is a ccTLD for [[Vanuatu]] but means "seen" in French as well as an abbreviation for the English language word "view".
+* '''[[.ws]]''' is a ccTLD for [[Samoa]] (earlier Western Samoa), but is marketed as .Website
+
+==List of ccTLDs==
+[[Image:World TLD Map.jpg|thumb|World map with all ccTLDs]]
+
+<nowiki>*</nowiki> Foreign registration permitted
+
+===A===
+* [[.ac]] <U+2013> [[Ascension Island]]*
+* [[.ad]] <U+2013> [[Andorra]]
+* [[.ae]] <U+2013> [[United Arab Emirates]]
+* [[.af]] <U+2013> [[Afghanistan]]
+* [[.ag]] <U+2013> [[Antigua and Barbuda]]*
+* [[.ai]] <U+2013> [[Anguilla]]
+* [[.al]] <U+2013> [[Albania]]
+* [[.am]] <U+2013> [[Armenia]]*
+* [[.an]] <U+2013> [[Netherlands Antilles]]
+* [[.ao]] <U+2013> [[Angola]]
+* [[.aq]] <U+2013> [[Antarctica]]
+* [[.ar]] <U+2013> [[Argentina]]
+* [[.as]] <U+2013> [[American Samoa]]*
+* [[.at]] <U+2013> [[Austria]]*
+* [[.au]] <U+2013> [[Australia]]
+* [[.aw]] <U+2013> [[Aruba]]
+* [[.ax]] <U+2013> [[<U+00C5>land Islands]]
+* [[.az]] <U+2013> [[Azerbaijan]]
+
+===B===
+* [[.ba]] <U+2013> [[Bosnia and Herzegovina]]
+* [[.bb]] <U+2013> [[Barbados]]
+* [[.bd]] <U+2013> [[Bangladesh]]
+* [[.be]] <U+2013> [[Belgium]]*
+* [[.bf]] <U+2013> [[Burkina Faso]]
+* [[.bg]] <U+2013> [[Bulgaria]]
+* [[.bh]] <U+2013> [[Bahrain]]
+* [[.bi]] <U+2013> [[Burundi]]*
+* [[.bj]] <U+2013> [[Benin]]
+* [[.bl]] <U+2013> [[Saint Barth<U+00E9>lemy]]
+* [[.bm]] <U+2013> [[Bermuda]]
+* [[.bn]] <U+2013> [[Brunei]]
+* [[.bo]] <U+2013> [[Bolivia]]*
+* [[.br]] <U+2013> [[Brazil]]*
+* [[.bs]] <U+2013> [[The Bahamas|Bahamas]]*
+* [[.bt]] <U+2013> [[Bhutan]]
+* [[.bv]] <U+2013> [[Bouvet Island]] ''(not in use; no registrations)''
+* [[.bw]] <U+2013> [[Botswana]]
+* [[.by]] <U+2013> [[Belarus]]
+* [[.bz]] <U+2013> [[Belize]]*
+
+===C===
+* [[.ca]] <U+2013> [[Canada]]
+* [[.cc]] <U+2013> [[Cocos (Keeling) Islands]]*
+* [[.cd]] <U+2013> [[Democratic Republic of the Congo]] (''formerly'' .zr <U+2013> [[Zaire]])*
+* [[.cf]] <U+2013> [[Central African Republic]]
+* [[.cg]] <U+2013> [[Republic of the Congo]]*
+* [[.ch]] <U+2013> [[Switzerland]] (''Confoederatio Helvetica'') *
+* [[.ci]] <U+2013> [[C<U+00F4>te d'Ivoire]] (Ivory Coast)*
+* [[.ck]] <U+2013> [[Cook Islands]]*
+* [[.cl]] <U+2013> [[Chile]]
+* [[.cm]] <U+2013> [[Cameroon]]
+* [[.cn]] <U+2013> [[People's Republic of China]]*
+* [[.co]] <U+2013> [[Colombia]]
+* [[.cr]] <U+2013> [[Costa Rica]]
+* [[.cu]] <U+2013> [[Cuba]]
+* [[.cv]] <U+2013> [[Cape Verde]]
+* [[.cx]] <U+2013> [[Christmas Island]]*
+* [[.cy]] <U+2013> [[Cyprus]]
+* [[.cz]] <U+2013> [[Czech Republic]]
+
+===D===
+* [[.de]] <U+2013> [[Germany]]
+* [[.dj]] <U+2013> [[Djibouti]]*
+* [[.dk]] <U+2013> [[Denmark]]*
+* [[.dm]] <U+2013> [[Dominica]]
+* [[.do]] <U+2013> [[Dominican Republic]]
+* [[.dz]] <U+2013> [[Algeria]]
+
+===E===
+* [[.ec]] <U+2013> [[Ecuador]]*
+* [[.ee]] <U+2013> [[Estonia]]
+* [[.eg]] <U+2013> [[Egypt]]
+* [[.eh]] <U+2013> [[Western Sahara]] ''(not assigned; no DNS)''
+* [[.er]] <U+2013> [[Eritrea]]
+* [[.es]] <U+2013> [[Spain]]*
+* [[.et]] <U+2013> [[Ethiopia]]
+* [[.eu]] <U+2013> [[European Union]] ''(code "exceptionally reserved" by ISO 3166<U+2013>1)''
+
+===F===
+* [[.fi]] <U+2013> [[Finland]]
+* [[.fj]] <U+2013> [[Fiji]]*
+* [[.fk]] <U+2013> [[Falkland Islands]]
+* [[.fm]] <U+2013> [[Federated States of Micronesia]]*
+* [[.fo]] <U+2013> [[Faroe Islands]]
+* [[.fr]] <U+2013> [[France]]
+
+===G===
+* [[.ga]] <U+2013> [[Gabon]]
+* [[.gb]] <U+2013> [[United Kingdom]] ''(Reserved domain by IANA; deprecated <U+2013> see [[.uk]])''
+* [[.gd]] <U+2013> [[Grenada]]*
+* [[.ge]] <U+2013> [[Georgia (country)|Georgia]]
+* [[.gf]] <U+2013> [[French Guiana]]
+* [[.gg]] <U+2013> [[Guernsey]]
+* [[.gh]] <U+2013> [[Ghana]]
+* [[.gi]] <U+2013> [[Gibraltar]]
+* [[.gl]] <U+2013> [[Greenland]]*
+* [[.gm]] <U+2013> [[The Gambia|Gambia]]
+* [[.gn]] <U+2013> [[Guinea]]
+* [[.gp]] <U+2013> [[Guadeloupe]]
+* [[.gq]] <U+2013> [[Equatorial Guinea]]
+* [[.gr]] <U+2013> [[Greece]]*
+* [[.gs]] <U+2013> [[South Georgia and the South Sandwich Islands]]*
+* [[.gt]] <U+2013> [[Guatemala]]
+* [[.gu]] <U+2013> [[Guam]]
+* [[.gw]] <U+2013> [[Guinea-Bissau]]
+* [[.gy]] <U+2013> [[Guyana]]
+
+===H===
+* [[.hk]] <U+2013> [[Hong Kong]]*
+* [[.hm]] <U+2013> [[Heard Island and McDonald Islands]]*
+* [[.hn]] <U+2013> [[Honduras]]*
+* [[.hr]] <U+2013> [[Croatia]]
+* [[.ht]] <U+2013> [[Haiti]]
+* [[.hu]] <U+2013> [[Hungary]]*
+
+===I===
+* [[.id]] <U+2013> [[Indonesia]]
+* [[.ie]] <U+2013> [[Ireland]]
+* [[.il]] <U+2013> [[Israel]]*
+* [[.im]] <U+2013> [[Isle of Man]]*
+* [[.in]] <U+2013> [[India]]*
+* [[.io]] <U+2013> [[British Indian Ocean Territory]]*
+* [[.iq]] <U+2013> [[Iraq]]
+* [[.ir]] <U+2013> [[Iran]]*
+* [[.is]] <U+2013> [[Iceland]]*
+* [[.it]] <U+2013> [[Italy]]
+
+===J===
+* [[.je]] <U+2013> [[Jersey]]
+* [[.jm]] <U+2013> [[Jamaica]]
+* [[.jo]] <U+2013> [[Jordan]]
+* [[.jp]] <U+2013> [[Japan]]
+
+===K===
+* [[.ke]] <U+2013> [[Kenya]]
+* [[.kg]] <U+2013> [[Kyrgyzstan]]
+* [[.kh]] <U+2013> [[Cambodia]]
+* [[.ki]] <U+2013> [[Kiribati]]
+* [[.km]] <U+2013> [[Comoros]]
+* [[.kn]] <U+2013> [[Saint Kitts and Nevis]]
+* [[.kp]] <U+2013> [[North Korea]]
+* [[.kr]] <U+2013> [[South Korea]]
+* [[.kw]] <U+2013> [[Kuwait]]
+* [[.ky]] <U+2013> [[Cayman Islands]]
+* [[.kz]] <U+2013> [[Kazakhstan]]*
+
+===L===
+* [[.la]] <U+2013> [[Laos]]*
+* [[.lb]] <U+2013> [[Lebanon]]
+* [[.lc]] <U+2013> [[Saint Lucia]]
+* [[.li]] <U+2013> [[Liechtenstein]]*
+* [[.lk]] <U+2013> [[Sri Lanka]]
+* [[.lr]] <U+2013> [[Liberia]]
+* [[.ls]] <U+2013> [[Lesotho]]*
+* [[.lt]] <U+2013> [[Lithuania]]
+* [[.lu]] <U+2013> [[Luxembourg]]
+* [[.lv]] <U+2013> [[Latvia]]*
+* [[.ly]] <U+2013> [[Libya]]*
+
+===M===
+* [[.ma]] <U+2013> [[Morocco]]
+* [[.mc]] <U+2013> [[Monaco]]
+* [[.md]] <U+2013> [[Moldova]]*
+* [[.me]] <U+2013> [[Montenegro]]*
+* [[.mg]] <U+2013> [[Madagascar]]
+* [[.mh]] <U+2013> [[Marshall Islands]]
+* [[.mk]] <U+2013> [[Republic of Macedonia]]
+* [[.ml]] <U+2013> [[Mali]]
+* [[.mm]] <U+2013> [[Myanmar]]
+* [[.mn]] <U+2013> [[Mongolia]]*
+* [[.mo]] <U+2013> [[Macau]]
+* [[.mp]] <U+2013> [[Northern Mariana Islands]]*
+* [[.mq]] <U+2013> [[Martinique]]
+* [[.mr]] <U+2013> [[Mauritania]]
+* [[.ms]] <U+2013> [[Montserrat]]*
+* [[.mt]] <U+2013> [[Malta]]
+* [[.mu]] <U+2013> [[Mauritius]]*
+* [[.mv]] <U+2013> [[Maldives]]
+* [[.mw]] <U+2013> [[Malawi]]*
+* [[.mx]] <U+2013> [[Mexico]]*
+* [[.my]] <U+2013> [[Malaysia]]
+* [[.mz]] <U+2013> [[Mozambique]]
+
+===N===
+* [[.na]] <U+2013> [[Namibia]]*
+* [[.nc]] <U+2013> [[New Caledonia]]
+* [[.ne]] <U+2013> [[Niger]]
+* [[.nf]] <U+2013> [[Norfolk Island]]*
+* [[.ng]] <U+2013> [[Nigeria]]
+* [[.ni]] <U+2013> [[Nicaragua]]
+* [[.nl]] <U+2013> [[Netherlands]]*
+* [[.no]] <U+2013> [[Norway]]
+* [[.np]] <U+2013> [[Nepal]]
+* [[.nr]] <U+2013> [[Nauru]]*
+* [[.nu]] <U+2013> [[Niue]]*
+* [[.nz]] <U+2013> [[New Zealand]]*
+
+===O===
+* [[.om]] <U+2013> [[Oman]]
+
+===P===
+* [[.pa]] <U+2013> [[Panama]]
+* [[.pe]] <U+2013> [[Peru]]
+* [[.pf]] <U+2013> [[French Polynesia]]
+* [[.pg]] <U+2013> [[Papua New Guinea]]
+* [[.ph]] <U+2013> [[Philippines]]*
+* [[.pk]] <U+2013> [[Pakistan]]*
+* [[.pl]] <U+2013> [[Poland]]*
+* [[.pm]] <U+2013> [[Saint Pierre and Miquelon]]
+* [[.pn]] <U+2013> [[Pitcairn Islands]]*
+* [[.pr]] <U+2013> [[Puerto Rico]]*
+* [[.ps]] <U+2013> [[Palestinian Authority|Palestine]]*
+* [[.pt]] <U+2013> [[Portugal]]*
+* [[.pw]] <U+2013> [[Palau]]
+* [[.py]] <U+2013> [[Paraguay]]
+
+===Q===
+* [[.qa]] <U+2013> [[Qatar]]
+
+===R===
+* [[.re]] <U+2013> [[R<U+00E9>union]]
+* [[.ro]] <U+2013> [[Romania]]*
+* [[.rs]] <U+2013> [[Serbia]]*
+* [[.ru]] <U+2013> [[Russia]]*
+* [[.rw]] <U+2013> [[Rwanda]]
+
+===S===
+* [[.sa]] <U+2013> [[Saudi Arabia]]
+* [[.sb]] <U+2013> [[Solomon Islands]]*
+* [[.sc]] <U+2013> [[Seychelles]]*
+* [[.sd]] <U+2013> [[Sudan]]
+* [[.se]] <U+2013> [[Sweden]]*
+* [[.sg]] <U+2013> [[Singapore]]
+* [[.sh]] <U+2013> [[Saint Helena]]*
+* [[.si]] <U+2013> [[Slovenia]]
+* [[.sj]] <U+2013> [[Svalbard and Jan Mayen]] islands ''(not in use; no registrations)''
+* [[.sk]] <U+2013> [[Slovakia]]
+* [[.sl]] <U+2013> [[Sierra Leone]]
+* [[.sm]] <U+2013> [[San Marino]]*
+* [[.sn]] <U+2013> [[Senegal]]
+* [[.so]] <U+2013> [[Somalia]]
+* [[.sr]] <U+2013> [[Suriname]]*
+* [[.st]] <U+2013> [[S<U+00E3>o Tom<U+00E9> and Pr<U+00ED>ncipe]]*
+* [[.su]] <U+2013> [[Soviet Union]] ''(deprecated; being phased out; code "transitionally reserved" by ISO 3166<U+2013>1)''
+* [[.sv]] <U+2013> [[El Salvador]]
+* [[.sy]] <U+2013> [[Syria]]*
+* [[.sz]] <U+2013> [[Swaziland]]*
+
+===T===
+* [[.tc]] <U+2013> [[Turks and Caicos Islands]]*
+* [[.td]] <U+2013> [[Chad]]
+* [[.tf]] <U+2013> [[French Southern Territories]]
+* [[.tg]] <U+2013> [[Togo]]*
+* [[.th]] <U+2013> [[Thailand]]*
+* [[.tj]] <U+2013> [[Tajikistan]]*
+* [[.tk]] <U+2013> [[Tokelau]]*
+* [[.tl]] <U+2013> [[East Timor]] ''(formerly .tp)''*
+* [[.tm]] <U+2013> [[Turkmenistan]]*
+* [[.tn]] <U+2013> [[Tunisia]]
+* [[.to]] <U+2013> [[Tonga]]*
+* [[.tp]] <U+2013> [[East Timor]] ''(deprecated <U+2013> use .tl; code "transitionally reserved" by ISO 3166<U+2013>1)''
+* [[.tr]] <U+2013> [[Turkey]]
+* [[.tt]] <U+2013> [[Trinidad and Tobago]]*
+* [[.tv]] <U+2013> [[Tuvalu]]*
+* [[.tw]] <U+2013> [[Taiwan]]*
+* [[.tz]] <U+2013> [[Tanzania]]
+
+===U===
+* [[.ua]] <U+2013> [[Ukraine]]
+* [[.ug]] <U+2013> [[Uganda]]*
+* [[.uk]] <U+2013> [[United Kingdom]] ''(code "exceptionally reserved" by ISO 3166<U+2013>1) (see also [[.gb]])''
+* [[.um]] <U+2013> [[US Minor Outlying Islands]] ''(code terminated)''
+* [[.us]] <U+2013> [[United States]]*
+* [[.uy]] <U+2013> [[Uruguay]]
+* [[.uz]] <U+2013> [[Uzbekistan]]
+
+===V===
+* [[.va]] <U+2013> [[Vatican City]]
+* [[.vc]] <U+2013> [[Saint Vincent and the Grenadines]]*
+* [[.ve]] <U+2013> [[Venezuela]]
+* [[.vg]] <U+2013> [[British Virgin Islands]]*
+* [[.vi]] <U+2013> [[United States Virgin Islands]]
+* [[.vn]] <U+2013> [[Vietnam]]
+* [[.vu]] <U+2013> [[Vanuatu]]*
+
+===W===
+* [[.wf]] <U+2013> [[Wallis and Futuna]]
+* [[.ws]] <U+2013> [[Samoa]]* ''(formerly Western Samoa)''
+
+===Y===
+* [[.ye]] <U+2013> [[Yemen]]
+* [[.yt]] <U+2013> [[Mayotte]]
+* [[.yu]] <U+2013> [[Yugoslavia]]
+
+===Z===
+* [[.za]] <U+2013> [[South Africa]]*
+* [[.zm]] <U+2013> [[Zambia]]
+* [[.zw]] <U+2013> [[Zimbabwe]]
+
+==References==
+<references/>
+
+==External links==
+* [http://www.iana.org/cctld/cctld-whois.htm IANA's list of ccTLDs] <U+2013> official site
+* [http://www.wipo.int/amc/en/domains/cctld/index.html World Intellectual Property Organization] ([[WIPO]]) [[Domain name]] dispute resolution]
+* [http://www.wwtld.org/ World-Wide Alliance of Top Level Domain-names]
+* [http://www.norid.no/domenenavnbaser/domreg.html Norid: Domain name registries around the world]
+* [http://www.robert.net/ccTLD/ ccTLD and TLD analysis of several Zone files]
+* [http://ccnso.icann.org/ The ICANN Country Code Names Supporting Organisation (ccNSO)]
+{{ccTLD}}
+
+{{Link FL|no}}
+
+[[Category:Top-level domains]]
+[[Category:Country codes]]
+
+[[az:<U+00D6>lk<U+0259>l<U+0259>rin <U+0130>nternet Kodlar<U+0131>]]
+[[bn:<U+0995><U+09BE><U+0989><U+09A8><U+09CD><U+099F><U+09CD><U+09B0><U+09BF> <U+0995><U+09CB><U+09A1> <U+099F><U+09AA> <U+09B2><U+09C7><U+09AD><U+09C7><U+09B2> <U+09A1><U+09CB><U+09AE><U+09C7><U+0987><U+09A8>]]
+[[be:<U+041D><U+0430><U+0446><U+044B><U+044F><U+043D><U+0430><U+043B><U+044C><U+043D><U+044B> <U+0434><U+0430><U+043C><U+0435><U+043D> <U+0432><U+0435><U+0440><U+0445><U+043D><U+044F><U+0433><U+0430> <U+045E><U+0437><U+0440><U+043E><U+045E><U+043D><U+044E>]]
+[[be-x-old:<U+041D><U+0430><U+0446><U+044B><U+044F><U+043D><U+0430><U+043B><U+044C><U+043D><U+044B> <U+0434><U+0430><U+043C><U+044D><U+043D> <U+0432><U+0435><U+0440><U+0445><U+043D><U+044F><U+0433><U+0430> <U+045E><U+0437><U+0440><U+043E><U+045E><U+043D><U+044E>]]
+[[ca:Llista de dominis de primer nivell territorial]]
+[[cs:Seznam internetov<U+00FD>ch dom<U+00E9>n nejvy<U+0161><U+0161><U+00ED>ho <U+0159><U+00E1>du]]
+[[cy:C<U+00F4>d gwlad parth lefel uchaf]]
+[[da:Nationalt topdom<U+00E6>ne]]
+[[de:Top-Level-Domain#L<U+00E4>nderspezifische Top-Level-Domains (ccTLD)]]
+[[el:<U+039A><U+03B1><U+03C4><U+03AC><U+03BB><U+03BF><U+03B3><U+03BF><U+03C2> top-level domains]]
+[[es:Dominio de nivel superior geogr<U+00E1>fico]]
+[[eo:Nacia domajno de plej alta nivelo]]
+[[eu:Herrialdeentzako goi mailako domeinu]]
+[[fr:Domaine de premier niveau#Domaine national de premier niveau]]
+[[ko:<U+AD6D><U+AC00> <U+CF54><U+B4DC> <U+CD5C><U+C0C1><U+C704> <U+B3C4><U+BA54><U+C778>]]
+[[is:<U+00DE>j<U+00F3><U+00F0>arl<U+00E9>n]]
+[[it:Dominio di primo livello nazionale]]
+[[ka:<U+10D6><U+10D4><U+10D3><U+10D0> <U+10D3><U+10DD><U+10DC><U+10D8><U+10E1> <U+10D4><U+10E0><U+10DD><U+10D5><U+10DC><U+10E3><U+10DA><U+10D8> <U+10D3><U+10DD><U+10DB><U+10D4><U+10DC><U+10D8>]]
+[[ms:Domain peringkat tinggi kod negara]]
+[[mn:<U+0418><U+043D><U+0442><U+0435><U+0440><U+043D><U+0435><U+0442><U+0438><U+0439><U+043D> <U+0443><U+043B><U+0441><U+044B><U+043D> <U+0434><U+043E><U+043C><U+044D><U+0439><U+043D><U+0443><U+0443><U+0434><U+044B><U+043D> <U+0436><U+0430><U+0433><U+0441><U+0430><U+0430><U+043B><U+0442>]]
+[[nl:CcTLD]]
+[[ja:<U+56FD><U+5225><U+30B3><U+30FC><U+30C9><U+30C8><U+30C3><U+30D7><U+30EC><U+30D9><U+30EB><U+30C9><U+30E1><U+30A4><U+30F3>]]
+[[no:Nasjonalt toppniv<U+00E5>domene]]
+[[uz:Yuqori darajali milliy domenlar]]
+[[pl:Krajowa domena najwy<U+017C>szego poziomu]]
+[[pt:CcTLD]]
+[[ro:Domeniu na<U+0163>ional de nivel superior]]
+[[ru:<U+041D><U+0430><U+0446><U+0438><U+043E><U+043D><U+0430><U+043B><U+044C><U+043D><U+044B><U+0439> <U+0434><U+043E><U+043C><U+0435><U+043D> <U+0432><U+0435><U+0440><U+0445><U+043D><U+0435><U+0433><U+043E> <U+0443><U+0440><U+043E><U+0432><U+043D><U+044F>]]
+[[sah:<U+04AE><U+0440><U+0434><U+04AF><U+043A> <U+0442><U+0430>h<U+044B><U+043C><U+043D><U+0430><U+0430><U+0445> <U+0438><U+043B> <U+0434><U+043E><U+043C><U+0435><U+043D>]]
+[[sq:Domeni internacional i shteteve]]
+[[simple:Country code top-level domain]]
+[[sl:Seznam vrhnjih internetnih domen]]
+[[szl:Pa<U+0144>stwowo d<U+016F>myna nojwy<U+017E><U+0161>ygo po<U+017A><U+016F>mu]]
+[[sr:<U+041D><U+0430><U+0458><U+0432><U+0438><U+0448><U+0438> <U+0418><U+043D><U+0442><U+0435><U+0440><U+043D><U+0435><U+0442> <U+0434><U+043E><U+043C><U+0435><U+043D> <U+0434><U+0440><U+0436><U+0430><U+0432><U+043D><U+0438><U+0445> <U+043A><U+043E><U+0434><U+043E><U+0432><U+0430>]]
+[[tl:CcTLD]]
+[[th:<U+0E42><U+0E14><U+0E40><U+0E21><U+0E19><U+0E23><U+0E30><U+0E14><U+0E31><U+0E1A><U+0E1A><U+0E19><U+0E2A><U+0E38><U+0E14><U+0E15><U+0E32><U+0E21><U+0E23><U+0E2B><U+0E31><U+0E2A><U+0E1B><U+0E23><U+0E30><U+0E40><U+0E17><U+0E28>]]
+[[tg:<U+0414><U+043E><U+043C><U+0435><U+043D><U+04B3><U+043E><U+0438> <U+043C><U+0438><U+043B><U+043B><U+0438><U+0438> <U+0434><U+0430><U+0440><U+0430><U+04B7><U+0430><U+0438> <U+0430><U+0432><U+0432><U+0430><U+043B>]]
+[[tr:<U+0130>nternet <U+00DC>lke Alan Kodu]]
+[[uk:<U+041D><U+0430><U+0446><U+0456><U+043E><U+043D><U+0430><U+043B><U+044C><U+043D><U+0438><U+0439> <U+0434><U+043E><U+043C><U+0435><U+043D> <U+0432><U+0435><U+0440><U+0445><U+043D><U+044C><U+043E><U+0433><U+043E> <U+0440><U+0456><U+0432><U+043D><U+044F>]]
+[[ur:<U+0645><U+0644><U+06A9><U+06CC> <U+0628><U+0644><U+0646><U+062F> <U+062A><U+0631><U+06CC><U+0646> <U+0627><U+0633><U+0645><U+0650> <U+0633><U+0627><U+062D><U+06C1>]]
+[[vi:T<U+00EA>n mi<U+1EC1>n qu<U+1ED1>c gia c<U+1EA5>p cao nh<U+1EA5>t]]
+[[fiu-vro:Riigi internetitunnus]]
+[[zh:<U+570B><U+5BB6><U+53CA><U+5730><U+5340><U+9802><U+7D1A><U+57DF>]]

@@ -1,0 +1,365 @@
+{{about|the Macintosh operating system version|the IBM word processor|System 6 (word processor)}}
+{{Infobox OS version
+|name = System Software 6
+|family = Mac OS
+|logo=
+|  screenshot = sys6screenshotbusy.png
+|caption=System Software 6.0.8 workspace
+|developer=[[Apple Inc|Apple Computer]]
+|source_model=[[Closed source]]
+|license=Proprietary
+|kernel_type = [[Monolithic kernel|Monolithic]]
+|first_release_date=April, 1988
+|first_release_url=http://docs.info.apple.com/article.html?artnum=15582
+|release_version=6.0.8
+|release_date=April, 1991
+|release_url=http://docs.info.apple.com/article.html?artnum=15582
+|support_status=Unsupported
+|date=January 2009 <!-- approximate date of template insertion for dating hidden maintenance categories -->
+}}
+[[File:System6.0.8MacII.png|thumb|250px|System 6 as it looked like on the [[Macintosh II]].]]
+
+'''System 6''' (also referred to as '''System Software 6''') is a [[graphical user interface]]-based [[operating system]] for [[Macintosh]] computers. It was released in 1988 by [[Apple Inc|Apple Computer]] and was  part of the [[Mac OS]] line of operating systems. System 6 was shipped with various Macintosh computers until it was succeeded by [[System 7]] in 1991. The boxed version of System 6 cost 49 USD when introduced.<ref name="macuser">{{Citation|last=Paden| first=Jake|title=Now we are six (System Software 6.0 for the Macintosh)|newspaper=[[MacUser]]| pages=184|date=November 1988}}</ref>. System 6 is classed as a [[monolithic system|monolithic]] operating system. It featured an improved [[MultiFinder]], which allowed for [[co-operative multitasking]]. The last version of System 6 was released in 1991.
+
+==Main features==
+===MacroMaker===
+A new feature called MacroMaker was included with System 6<ref name="newfeatures">{{Citation|last= Forbes|first=Jim|title=Apple to enhance system software, desktop database.|newspaper=[[eWeek|PC Week]]|pages=11|date=April 12, 1988}}</ref>. When enabled, it allowed users to record mouse and keyboard input as "[[Macro (computer science)|macro]]s." MacroMaker had a unique user interface, which aimed to look and act like a [[tape recorder]]<ref name="macromaker">{{Citation|last=Beaver| first=David|title=Some simpler solutions to making macros (MacroMaker and AutoMac III macro recorders for the Macintosh)|newspaper=[[MacWEEK]]|pages=44|date=July 19, 1988}}</ref>. MacroMaker was criticized for its lack of features when compared to [[Microsoft]]'s AutoMac III, which was already available commercially<ref name="macromaker"/>. As MacroMaker only recorded the locations of mouse-clicks inside windows and not what was being clicked or exactly when, users soon found that it could not be used to automate more sophisticated programs. The pre-recorded clicks would miss buttons if they had moved or failed to appear upon playback<ref name="macromaker"/>. MacroMaker was not compatible with [[System 7]], which used [[AppleScript]] instead.
+
+===Multitasking===
+Cooperative multitasking made its Macintosh debut in March 1985 with a program called Switcher by [[Andy Hertzfeld]], which allowed the user to launch multiple applications and switch between them<ref>{{cite book|last=Hertzfeld|first=Andy|title=Revolution in the Valley|publisher=[O'Reilly]] |year=2005|pages=243<U+2013>251|isbn=0596007191}}</ref>. Many programs and features did not function correctly with Switcher. Also, Switcher did not display windows of other applications beside the selected one. It was not included with the operating system, but was available from Apple for purchase separately. Both System 5 and System 6 had a feature called [[MultiFinder]] instead<ref>{{Citation|last=Wiggins|first=Robert R.|title=All systems go (System Tools 5.0 with MultiFinder)| newspaper=MacUser|pages=126|date=March 1988}}</ref>, which was much more mature and widely used in System 6. MultiFinder could be enabled or disabled, with a reboot. If disabled, the Finder would quit when the user launched another application, thus freeing [[RAM]] for it. If enabled, the system behaved as in the familiar multitasking tradition, with the desktop and windows of other applications in the screen's background.
+
+===Hardware support===
+System 6 included support for the Apple [[ImageWriter LQ]] and other [[PostScript]] [[laser printer]]s. New [[software driver]]s allowed the ImageWriter LQ to be used on [[AppleTalk]] local area networks and supports use of tabloid, or B, size paper ({{convert|11|x|17|in|mm|abbr=on}})<ref name="newfeatures"/>. System 6 also included QuickerGraf, a piece of system software used to accelerate the drawing of color screen images on the [[Macintosh II]]. It was licensed to Apple and [[Radius (computer)|Radius Inc]] by its programmer, [[Andy Hertzfeld]]<ref name="newfeatures"/>.
+
+==Limitations==
+System 6's [[Apple menu]] cannot be used to launch applications. The application switcher menu in the upper right-hand corner of the [[menu bar]] is a toggle, not a menu<ref>{{Citation|last=LeVitus |first=Bob|title=System 7.0: 10 reasons why you'll love it|newspaper=Computer Shopper|pages=202| date=(July 1991}}</ref>. System 6 supports 24&nbsp;[[bit]]s of addressable [[random access memory]] (RAM), which allowed a maximum of 8&nbsp;[[megabyte]]s of RAM with no provision for [[virtual memory]]<ref name="memory">{{Citation|title=Settling down with System 7 (Apple Macintosh operating system's compatibility with network operating systems and upgrading benefits)|newspaper=The Local Area Network Magazine|pages=18|date=August 1991}}</ref>. These limitations were fixed in System 7. System 6 also has a [[hard drive]] capacity limit; it supports up to 2&nbsp;[[gigabyte]]s and 65,536 files on a drive<ref>{{cite web|title=Macintosh: File System Specifications and Terms| publisher=[[Apple Inc]]|date=January 17, 2007|url=http://docs.info.apple.com article.html?artnum=8647&coll=cp|accessdate = 2008-04-22}}</ref>. This is a limitation of the [[Hierarchical File System]] it used, which was not increased until System 7.5 which first increased the limit to 4&nbsp;GB.
+
+The Trash (or "Wastebasket" in the British version) empties when the Finder terminates. If MultiFinder is not running, this occurs as soon as an application launches. Icons on the desktop in System 6 are not organized into a single folder, as in later operating systems. Instead, the system records whether each file is on the desktop or not<ref>{{Citation|last=LeVitus|first=Bob|title=Top ten secrets of System 7 (Beating the System)|newspaper=MacUser|pages=213|date=March 1992}}</ref>. This is inefficient and confusing, as the user cannot browse to the desktop in applications besides the Finder, even within the standard Open and Save As [[dialog box]]es. Furthermore, these dialogs are primitive, mostly unchanged since 1984. The lack of [[alias (Mac OS)|alias]]es, shortcuts to files, was another limitation of file management on System 6<ref>{{Citation|last=Michel|first=Steve
+|title=Aliasing: a file by any other name. (making duplicate files with minimal disk space) (System 7.0 Survival Guide)|newspaper=MacWEEK|pages=S13|date=May 14, 1991}}</ref>. Custom file and folder icons are also not supported. These problems were all remedied in System 7.
+
+A maximum of 15 [[Desk Accessory|Desk Accessories]] may be installed at one time, including the Chooser, Scrapbook, and Control Panel. System 6 uses the Control Panel desk accessory to access all the installed control panels, which imposes severe user interface limitations<ref>{{cite book|title =Inside Macintosh: More Macintosh Toolbox (Apple Technical Library)|publisher=[[Addison-Wesley]]| month=October|year=1992|pages=779|url=http://developer.apple.com/documentation/mac/pdf/MoreMacintoshToolbox.pdf|format=PDF|isbn=0201632438|author=lead writer: Sharon Everson}}</ref>. Desk Accessories cannot be installed or removed within the Finder; this requires the Font/DA Mover utility. System 7 also fixed this. Control panels, however, are contained in separate files.
+
+Few accoutrements exist for the interface personalization which later became an Apple trademark. The Finder allows each icon to be assigned a color, but the desktop background is limited to an 8x8 pixel black and white tiled pattern, and standard window frames are all black and white. However, many "[[INIT]]" extension files existed to add color and customization. System 7 later allowed the user to change the color and various other aspects of the user interface<ref name="revamp">{{Citation|last=Crabb|first=Don|title=The Mac Interface: Showing Its Age|newspaper=[[Byte (magazine)|Byte]]|pages=235<U+2013>237|date=issue 6/1989}}</ref>. By 1989, the System 6 user interface was in need of a change<ref name="revamp"/>. In comparison to the [[NeXTSTEP]] operating system of the time, System 6 did not make use of sound, and its user interface presented several limitations in terms of file management and the way windows were displayed<ref name="revamp"/>.
+
+==Reception==
+The initial releases of System 6 were unstable; many [[Third-party developer|third party software developers]] did not receive copies before its release, resulting in widespread compatibility problems<ref name="macuser"/>. At first, many common software programs such as [[Microsoft Excel]], [[Microsoft Works]] and [[4th Dimension (Software)|4th Dimension]] were not fully compatible with System 6<ref name="macuser"/>. There were also software bugs in the Color Manager, Script Manager, and Sound Manager [[Extension (Mac OS)|extension]] files. Apple announced that 66 bugs were fixed when the 6.0.1 update was released in September 1988<ref>{{Citation|title=System 6.0.1 set for distribution|newspaper=MacWEEK|date=September 13, 1988}}</ref> <ref name="saga">{{Citation|last= Perrow|first=Jonathan|title=System 6.0 saga not over yet|newspaper=MacWEEK|pages=2|date=September 20, 1988}}</ref>. However, a major bug involving text spacing of screen fonts was found in 6.0.1 after distribution began<ref name="saga"/>. This led to the quick release of 6.0.2, which solved this problem. Some customers waited longer until moving to System 6 because of the poor reputation already gained<ref>{{Citation|title=Managers go slow with System 6.0.2|newspaper=MacWEEK|pages=2| date=October 25, 1988}}</ref>.
+
+==Compatibility==
+System 6 was officially supported by Apple for many different machines, some of which were shipped with System 6. It may be that some Apple computers for which System 6 was not officially supported may nevertheless be able to run it, perhaps with limitations<ref name="versionmatrix"/><ref name="PowerBook100">{{cite web|title=PowerBook & Macintosh Classic II: No Support for System 6| publisher=[[Apple Inc]]|date=November 30, 1994|url=http://docs.info.apple.com/article.html?artnum=9140|accessdate=2008-05-03}}</ref>.
+
+{| border="1" cellpadding="1" cellspacing="0" style="font-size: 85%; border: gray solid 1px; border-collapse: collapse; text-align: center; width: 100%"
+|-
+!style="background: #ececec; width:100px"|Macintosh Model
+!style="background: #ececec; width:100px"|Model Date
+!style="background: #ececec;"|6.0.8<ref name="versionmatrix">{{cite web|title=System Software: Version Matrix, System 6.0.x to 7.0.1|publisher=[[Apple Inc]]|date=September 10, 1997|url= http://docs.info.apple.com/article.html?artnum=18046|accessdate=2008-04-22}}</ref>
+!style="background: #ececec;"|6.0.7<ref name="versionmatrix"/>
+!style="background: #ececec;"|6.0.5<ref name="versionmatrix"/>
+!style="background: #ececec;"|6.0.4<ref name="versionmatrix"/>
+!style="background: #ececec;"|6.0.3<ref name="versionmatrix"/>
+!style="background: #ececec;"|6.0.2<ref name="versionmatrix"/>
+|-
+!style="background: #ececec;"|[[Macintosh 128K|128K]]
+|1984
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh 512K|512K]]
+|1984
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh 512Ke|512Ke]]
+|1986
+|{{yes}}<ref name="512Ke">{{cite web|title=Macintosh 512Ke: Technical Specifications|publisher= [[Apple Inc]]|date=2002-03-14|url=http://docs.info.apple.com/article.html?artnum=112166|accessdate= 2008-05-03}}</ref> 
+|{{yes}}<ref name="512Ke"/>
+|{{yes}}<ref name="512Ke"/>
+|{{yes}}<ref name="512Ke"/>
+|{{yes}}<ref name="512Ke"/>
+|{{yes}}<ref name="512Ke"/>
+|-
+!style="background: #ececec;"|[[Macintosh XL|XL/Lisa]]
+|1985
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh Plus|Plus]]
+|1986
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|-
+!style="background: #ececec;"|[[Macintosh SE|SE]]
+|1987
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|-
+!style="background: #ececec;"|[[Macintosh SE/30|SE/30]]
+|1989
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|-
+!style="background: #ececec;"|[[Macintosh Classic|Classic]]
+|1990
+|{{yes}}
+|{{yes}}
+|{{no}}
+|{{no}}
+|{{yes}}<ref name="ClassicROM">{{cite web|title=The System in the New Machine|publisher=TidBITS Publishing Inc.|date=November 19, 1990|url=http://www.tidbits.com/tb-issues/TidBITS-031.html#lnk1| accessdate=2008-05-04}}</ref>
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh Classic|Classic II]]
+|1991
+|{{yes}}: 6.0.8L<ref name="6.0.8L">{{cite web|title=System 6.0.8L: ReadMe File (8/95)|publisher= [[Apple Inc]]|date=August 17, 1995|url=http://docs.info.apple.com/article.html?artnum=10863| accessdate=2008-05-03}}</ref>
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh Portable|Portable]]
+|1989
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh II|II]]
+|1987
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|-
+!style="background: #ececec;"|[[Macintosh IIx|IIx]]
+|1988
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|-
+!style="background: #ececec;"|[[Macintosh IIcx|IIcx]]
+|1989
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh IIci|IIci]]
+|1989
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh IIfx|IIfx]]
+|1990
+|{{yes}}
+|{{yes}}
+|{{yes}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh IIsi|IIsi]]
+|1990
+|{{yes}}
+|{{yes}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh LC|LC]]
+|1990
+|{{yes}}
+|{{yes}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh LC II|LC II]]
+|1992
+|{{yes}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh Quadra 700|Quadra 700]]
+|1991
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[Macintosh Quadra 900|Quadra 900]]/[[Macintosh Quadra 950|950]]
+|1991/1992
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[PowerBook 100]]
+|1991
+|{{yes}}: 6.0.8L<ref name="6.0.8L"/>
+|{{partial}}: limited<ref name="PowerBook100"/>
+|{{partial}}: limited<ref name="PowerBook100"/>
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+!style="background: #ececec;"|[[PowerBook 140]]<br/>[[PowerBook 145|145]]/[[PowerBook 145B|145B]]/[[PowerBook 170|170]]
+|1991/1992/1993
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|{{no}}
+|-
+|}
+
+==Version history==
+{| border="1" cellpadding="1" cellspacing="0" style="font-size: 85%; border: gray solid 1px; border-collapse: collapse; text-align: center; width: 100%"
+|-
+!style="background: #ececec;"|System Version<ref name="versionhistory">{{cite web|title=Macintosh: System Software Version History|publisher=[[Apple Inc]]|date=August 7, 2001|url= http://docs.info.apple.com/article.html?artnum=15582|accessdate=2008-04-22}}</ref>
+!style="background: #ececec;"|Release Date<ref name="versionhistory"/>
+!style="background: #ececec;"|[[Macintosh Finder|Finder]] Version<ref name="versionhistory"/>
+!style="background: #ececec;"|[[MultiFinder]] Version<ref name="versionhistory"/>
+!style="background: #ececec;"|[[Apple LaserWriter|LaserWriter]] Version<ref name="versionhistory"/>
+!style="background: #ececec;"|Release Information<ref name="versionhistory"/>
+|-
+!style="background: #ececec;"|6.0
+|1988
+|6.1
+|6.0
+|5.2
+|Initial Release
+|-
+!style="background: #ececec;"|6.0.1
+|September 19, 1988
+|6.1.1
+|6.0.1
+|5.2
+|Release for [[Macintosh IIx]] (1988)
+|-
+!style="background: #ececec;"|6.0.2
+|1988
+|6.1
+|6.0.1
+|5.2
+|Maintenance Release
+|-
+!style="background: #ececec;"|6.0.3
+|March 7, 1989
+|6.1
+|6.0.3
+|5.2
+|Release for [[Macintosh IIcx]] (1989)
+|-
+!style="background: #ececec;"|6.0.4
+|September 20, 1989
+|6.1.4
+|6.0.4
+|5.2
+|Release for [[Macintosh Portable]] and [[Macintosh IIci|IIci]] (1989)
+|-
+!style="background: #ececec;"|6.0.5
+|March 19, 1990
+|6.1.5
+|6.0.5
+|5.2
+|Release for [[Macintosh IIfx]] (1990)
+|-
+!style="background: #ececec;"|6.0.6
+|1990
+|6.1.6
+|6.0.6
+|5.2
+|Not officially released.
+|-
+!style="background: #ececec;"|6.0.7
+|October 15, 1990
+|6.1.7
+|6.0.7
+|5.2
+|Official release for [[Macintosh LC]], [[Macintosh IIsi|IIsi]] and [[Macintosh Classic|Classic]] (1990)
+|-
+!style="background: #ececec;"|6.0.8
+|May 13, 1991
+|6.1.8
+|6.0.8
+|7.0
+|Updated printing software to match software of [[System 7|System 7.0]]
+|-
+!style="background: #ececec;"|6.0.8L
+|March 23, 1992<ref name="6.0.8L"/>
+|6.1.8
+|6.0.8
+|7.0
+|Used only on the [[Macintosh Classic]], [[Macintosh Classic II|Classic II]], [[Macintosh LC|LC]], [[Macintosh LC II|LC II]], and [[PowerBook 100]].
+|-
+|}
+
+==References==
+{{reflist|2}}
+
+==External links==
+*[http://docs.info.apple.com/article.html?artnum=15582 Macintosh: System Software Version History] at apple.com
+*[http://download.info.apple.com/Apple_Support_Area/Apple_Software_Updates/English-North_American/Macintosh/System/Older_System/System_6.0.x/ Download System 6.0.x Software Updates] at apple.com
+
+{{Mac OS History}}
+
+[[Category:1988 software]]
+[[Category:Apple Inc. software]]
+[[Category:Mac OS]]
+[[Category:Discontinued operating systems]]
+
+[[ca:System 6]]
+[[cs:System 6]]
+[[es:System 6]]
+[[fr:Syst<U+00E8>me 6]]
+[[it:System 6]]
+[[pl:System Software 6]]
+[[fi:System Software 6]]
+[[sv:System 6]]
+[[zh:System 6]]

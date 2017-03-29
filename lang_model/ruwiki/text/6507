@@ -1,0 +1,61 @@
+[[Файл:Rectangular function.svg|thumb|right|Прямоугольная функция]]
+
+'''Прямоугольная функция''', '''прямоугольный импульс''', или нормированное '''[[прямоугольное окно]]''' - [[кусочно-постоянная функция]] следующего вида:
+
+: <math>\mathrm{rect}(t) = \sqcap(t) = \begin{cases}
+0           & \mbox{npu } |t| > \frac{1}{2} \\[3pt]
+\frac{1}{2} & \mbox{npu } |t| = \frac{1}{2} \\[3pt]
+1           & \mbox{npu } |t| < \frac{1}{2}
+\end{cases} </math>
+
+Другое определение функции через [[Функция Хевисайда|функцию Хевисайда]], <math>u(t)</math>:
+
+: <math>\mathrm{rect}\left(\frac{t}{\tau}\right) = u \left( t + \frac{\tau}{2} \right) - u \left( t - \frac{\tau}{2} \right) </math>
+
+или, иначе:
+
+: <math>\mathrm{rect}(t) = u \left( t + \frac{1}{2} \right) \cdot u \left( \frac{1}{2} - t \right) </math>
+
+Нормированная прямоугольная функция:
+
+: <math>\int\limits_{-\infty}^\infty \mathrm{rect}(t)\,dt=1</math>
+
+[[Преобразование Фурье]] прямоугольной функции:
+
+: <math>\frac{1}{\sqrt{2\pi}}\int\limits_{-\infty}^\infty \mathrm{rect}(t)\cdot e^{-i \omega t} \, dt
+=\frac{1}{\sqrt{2\pi}}\cdot \mathrm{sinc}\left(\frac{\omega}{2\pi}\right)</math>,
+
+при нормировке [[sinc-функция|sinc-функции]],
+
+
+: <math>\int\limits_{-\infty}^\infty \mathrm{rect}(t)\cdot e^{-i 2\pi f t} \, dt
+= \mathrm{sinc}(f)</math>
+
+[[Треугольная функция]] может быть определена как [[свёртка]] двух прямоугольных функций:
+
+: <math>\mathrm{tri}(t) = \mathrm{rect}(t) * \mathrm{rect}(t) \;</math>
+
+На основе бесконечнократных [[свёртка|свёрток]] прямоугольных функций, длины которых убывают в [[геометрическая прогрессия|геометрической прогрессии]], строятся [[атомарные функции]].
+
+== См. также ==
+* [[Преобразование Фурье]]
+* [[Треугольная функция]]
+* [[Атомарная функция]]
+{{math-stub}}
+
+[[Категория:Функции]]
+[[Категория:Импульсные сигналы]]
+
+[[bs:Pravougaona funkcija]]
+[[de:Rechteckfunktion]]
+[[en:Rectangular function]]
+[[fa:تابع مستطیلی]]
+[[fr:Fonction porte]]
+[[he:פונקציית המלבן]]
+[[it:Funzione rettangolo]]
+[[ja:矩形関数]]
+[[ko:구형함수]]
+[[nl:Rechthoekfunctie]]
+[[pt:Função retangular]]
+[[th:ฟังก์ชันสี่เหลี่ยมมุมฉาก]]
+[[zh:矩形函数]]

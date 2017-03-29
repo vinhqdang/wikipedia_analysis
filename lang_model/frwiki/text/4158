@@ -1,0 +1,291 @@
+[[Image:Triangle with notations.svg|thumb|upright=1.5|Fig. 1 - Notations usuelles dans un triangle quelconque.]]
+
+Le '''théorème d'Al-Kashi''', en France, '''loi des cosinus''', dans les autres pays francophones et dans d'autres langues, ou '''théorème de Pythagore généralisé''', est un [[théorème]] de [[géométrie]] couramment utilisé en [[trigonométrie]], qui relie dans un [[triangle]] la longueur d'un côté à celles des deux autres et au [[cosinus]] de l'[[angle]] formé par ces deux côtés. Il généralise ainsi le [[théorème de Pythagore]] aux triangles non rectangles. Le nom francisé du [[mathématicien]] [[perse]] [[Ghiyath al-Kashi]] (1380 - 1429), lui a été attribué en France dans les années 1990, les appellations ''théorème de Pythagore généralisé'' ou ''loi des cosinus'' étant utilisées jusque là. 
+
+Le théorème d'al-Kashi s'énonce de la façon suivante :
+::Soit un triangle ABC, dans lequel on utilise les notations usuelles exposées sur la figure 1 : d'une part α, β et γ pour les angles et, d'autre part, ''a'', ''b'' et ''c'' pour les longueurs des côtés respectivement opposés à ces angles. 
+::<math>c^2 = a^2 + b^2 - 2ab\ \cos\ \gamma.</math>
+
+==Histoire==
+[[Image:obtuse-triangle-with-altitude.png|thumb|Fig. 2 - Triangle ABC avec hauteur BH.|upright=1.5]]
+Les [[Éléments d'Euclide|''Éléments'']] d'[[Euclide]] datant du {{IIIe siècle av. J.-C.}}, contenaient déjà une approche géométrique de la généralisation du [[théorème de Pythagore]] : les propositions 12 et 13 du [[Livre II des Éléments d'Euclide|livre II]], traitent séparément le cas d'un [[triangle obtusangle]] et celui d'un [[triangle acutangle]].
+La formulation de l'époque est pédestre car l'absence de [[fonction trigonométrique]] et d'[[algèbre]] oblige à raisonner en termes de différences d'aires. Aussi la proposition 12 utilise-t-elle ces termes :
+{{Citation bloc|Dans les triangles obtusangles, le carré du côté qui soutient l'angle obtus est plus grand que la somme des carrés des deux autres côtés, de la quantité de deux fois le rectangle formé d'un des côtés contenant l'angle obtus, à savoir celui sur le prolongement duquel tombe la hauteur, et de la ligne prise en dehors entre [le pied de] la hauteur et l'angle obtus.
+|Euclide|Les Éléments<ref>Pour une version en ligne de cette proposition (mais en anglais), voir [http://aleph0.clarku.edu/~djoyce/java/elements/bookII/bookII.html le site de David E. Joyce] {{en}}, ou [http://gallica.bnf.fr/ark:/12148/bpt6k68013g le texte intégral de la traduction de 1632]</ref>|}}
+En notant ABC le triangle d'angle obtus A et H le pied de la hauteur issue de B (cf.  Fig. 2 ci-contre), les notations modernes permettent de résumer l'énoncé ainsi : 
+:AB² = CA² + CB² + 2 CA CH.
+
+Il fallut attendre la trigonométrie arabo-musulmane au [[Moyen Âge]] pour voir le théorème évoluer dans sa forme et dans sa portée : l'[[astronome]] et mathématicien [[al-Battani]] généralisa le résultat d'Euclide à la [[géométrie sphérique]] au début du {{Xe siècle}}<ref>{{Article
+|langue=en
+|prénom1=Yasmeen 
+|nom1=Mahnaz Faruqi
+|lien auteur1=
+|titre=Contributions of Islamic scholars to the scientific enterprise
+|périodique=International Education Journal
+|lien périodique=
+|jour=
+|mois=
+|année=2006
+|volume=7
+|numéro=4
+|pages=391-399
+|issn=1443-1475
+|url texte=http://ehlt.flinders.edu.au/education/iej/articles/v7n4/Faruqi/paper.pdf
+|consulté le=22 décembre 2009
+}}</ref>, ce qui permit d'effectuer des calculs de distance angulaire entre [[étoile]]s. C'est durant la même période que se sont établies les premières tables trigonométriques, pour les fonctions [[sinus (mathématiques)|sinus]] et [[cosinus]]. Cela permit à [[Ghiyath al-Kashi]], mathématicien de l'école de [[Samarcande]], de mettre le théorème sous une forme utilisable pour la [[triangulation]] au cours du {{XVe siècle}}.  La propriété a été popularisée en occident par [[François Viète]] qui l'a, semble-t-il, redécouverte indépendamment<ref>Youssef Guergour, '' [http://dialnet.unirioja.es/servlet/fichero_articulo?codigo=2470591&orden=0 Le roi de Saragosse Al-Mutaman Ibn Hud et le théorème de Pythagore : ses sources et ses prolongements]'', LLULL, vol 28,2005, p 432.</ref>
+
+C'est au début du {{XIXe siècle}} que les notations algébriques modernes permettent d'écrire le théorème sous sa forme actuelle et qu'il prend dans de nombreuses langues le nom de loi (ou théorème) des cosinus.
+{{clr}}
+
+==Le théorème et ses applications==
+Le théorème d'Al-Kashi est également connu sous le nom de '''théorème de Pythagore généralisé'''<ref>Renée Honvault : [http://books.google.com/books?id=t43c0p50NkQC&pg=PA41&dq=pythagore+al'kashi&client=safari&hl=fr&cd=2#v=onepage&q=pythagore%20al'kashi&f=false Une approche possible de la géométrie plane page 41 ]</ref>, car le [[théorème de Pythagore]] en est un cas particulier :
+: L'angle <math>\gamma</math> est droit (autrement dit lorsque cos &gamma; = 0) si et seulement si <math>c^2=a^2+b^2, \, </math> d'après le théorème d'Al-Kashi.
+
+[[Image:triangle-with-an-unknown-angle-or-side.png|thumb|Fig. 3 - Utilisation du théorème d'Al-Kashi : angle ou côté inconnu.|upright=1.5]]
+Le théorème s'utilise en [[triangulation]] (voir Fig. 3) pour [[résolution d'un triangle|résoudre un triangle]], à savoir déterminer
+* le troisième côté d'un triangle dont on connaît un angle et les côtés adjacents :
+:<math>c = \sqrt{a^2+b^2-2ab\cos\gamma}; \, </math>
+* les angles d'un triangle dont on connaît les trois côtés :
+:<math>\gamma = \arccos \dfrac{a^2+b^2-c^2}{2ab}.</math>
+Ces formules sont instables numériquement dans le cas de triangles en épingle, c'est-à-dire lorsque ''c'' est petit devant ''a'' et ''b'' — ou, de façon équivalente, lorsque ''γ'' est petit devant 1.
+
+Il existe un corollaire du théorème d'al-Kashi : pour deux triangles directement semblables ABC et <nowiki>A'B'C'</nowiki>
+:<math>cc' = aa' + bb' - (ab'+a' b)\cos \gamma. \, </math>
+
+{{clr}}
+
+==Démonstrations==
+Tout comme le [[théorème de Pythagore]], le théorème d'Al-Kashi possède de nombreuses démonstrations, certaines utilisant des propriétés sur les aires comme celles d'Euclide ou d'Al-Kashi, d'autres utilisant des propriétés trigonométriques ou liées au cercle. Enfin, le théorème d'Al-Kashi peut être vu comme une application des propriétés sur le [[produit scalaire]]<ref name="scalaire">La formule d'Al-Kashi, vue comme application du produit scalaire, est   présente dans les programmes de mathématiques de première S de l'enseignement français (voir [http://www.education.gouv.fr/bo/2000/hs7/vol5mathsc.htm BO du 31 aout 2000])</ref>.
+=== Démonstration d'Euclide ===
+[[Fichier:Law of cosines(Euclide).svg|thumb|Fig. 4 - Démonstration du théorème d'Al-Kashi pour un angle obtus : « selon Euclide ».|upright=1.5]]
+La démonstration d'Euclide<ref>[http://gallica.bnf.fr/ark:/12148/bpt6k68013g.f104 Élements d'Euclide selon la traduction d'Henrion (1632)] pp 99-104</ref> par la proposition 12 (angle obtus) et 13 (angle aigu) s'appuie sur le théorème de Pythagore et fait intervenir le point H pied de la hauteur issue de B. Pour Euclide cette propriété est une propriété sur des aires. Pour l'angle obtus (proposition 12), Euclide remarque que 
+: <math>CH^2+CA^2+2\times CH \times AC=AH^2</math>
+Il lui suffit alors d'ajouter l'aire du carré de côté HB
+:<math> HB^2 + CH^2 + CA^2+2\times CH \times AC=AH^2+ HB^2</math>
+et d'utiliser le théorème de Pythagore
+: <math>CB^2+CA^2 + 2\times CH \times CA= AB^2</math>
+Une démonstration analogue est réalisable pour l'angle aigu.
+
+=== Démonstration d'Al-Kashi ===
+[[Fichier:Law of cosines(anime).gif|thumb|Fig. 5 - Démonstration du théorème d'Al-Kashi pour un triangle acutangle : « selon Al-Kashi ».|upright=1.5]]
+Dans son livre ''Clé de l'arithmétique'' en 1429<ref>Selon Youssef Guergour, '' [http://dialnet.unirioja.es/servlet/fichero_articulo?codigo=2470591&orden=0 Le roi de Saragosse Al-Mutaman Ibn Hud et le théorème de Pythagore : ses sources et ses prolongements]'', LLULL, vol 28,2005, 415-434,  la démonstration se trouve dans  KASHI (al) (1967): Miftam al-misab [Clé de l'Arithmétique], al-Damardache, A. S. & al-Manfi al-Shikh, M. M. (Edit.), Le Caire, Dar al-Kitab al-cArabi li at-tibaqa wa an-Nashr, pp 130-138</ref>, Al-Kashi généralise le théorème de Pythagore et introduit dans l'égalité la trigonométrie. Pour lui aussi, cette propriété est liée aux aires. Ainsi dans un triangle aigu ABC, il mène par A et par B les hauteurs du triangle qui découpent dans les carrés s'appuyant sur CB et CA des rectangles. La somme des aires des rectangles de diagonales BF et AG correspond à l'aire du carré sous AB  et les rectangles de diagonales CF et CG ont une même aire égale à CB &times; CA &times; cos(C)
+Ce qui donne effectivement 
+: <math>CA^2+CB^2=AB^2+2 CB\times CA \times \cos(C)</math>
+Une démonstration analogue est envisageable pour un triangle obtusangle en opérant par soustraction d'aires.
+{{clr}}
+
+===Par un découpage d'aires===
+[[Image:law of cosines with acute angles.svg|right|thumb|Fig. 6a - Démonstration du théorème d'Al-Kashi pour les triangles à angles aigus : « méthode du découpage ».|upright=1.5]]
+[[Image:law of cosines with an obtuse angle.svg|right|thumb|Fig. 6b - Démonstration du théorème d'Al-Kashi dans le cas d'un angle obtus : « méthode du découpage »|upright=1.5]]
+Un certain nombre des démonstrations du théorème font intervenir un calcul d'[[Aire (géométrie)|aire]]s<ref>Voir par exemple Nelsen, Roger B. (2000), Proofs without Words II: More Exercises in Visual Thinking, p.9 (publié par la Mathematical Association of America), et plus généralement [http://en.wikipedia.org/wiki/Proof_without_words cet article sur les preuves sans mots] {{en}}</ref>. Il convient en effet de remarquer que 
+* <math>a^2</math>, <math>b^2</math> et <math>c^2</math> sont les aires de [[carré (géométrie)|carré]]s de côtés respectifs <math>a</math>, <math>b</math> et <math>c</math> ;
+* <math>ab |\cos\gamma|</math> est celle d'un [[parallélogramme]] de côtés <math>a</math> et <math>b</math> formant un angle <math>\pi/2-\gamma</math>, le changement de signe de <math>\cos\gamma</math> lorsque l'angle <math>\gamma</math> devient obtus rendant une étude par cas obligatoire.
+
+La figure 6a (ci-contre) découpe un heptagone de deux manières différentes de sorte à démontrer le théorème d'Al-Kashi dans le cas d'un angle aigu. Interviennent :
+* en rose, les aires <math>a^2</math>, <math>b^2</math>  à gauche, et les aires <math>2ab \cos\gamma</math> et <math>c^2</math> à droite ;
+* en bleu, le triangle ABC, à droite comme à gauche ;
+* en gris, quelques triangles supplémentaires, identiques au triangle ABC et en même nombre dans les deux découpages.
+
+L'égalité des aires de droite et de gauche donne
+:<math>\,a^2+b^2 = c^2+2ab \cos\gamma</math>.
+
+La figure 6b (ci-contre) découpe un hexagone de deux manières différentes de sorte à faire démontrer le théorème d'Al-Kashi dans le cas d'un angle obtus.  La figure montre
+* en rose, les aires <math>a^2</math>, <math>b^2</math> et <math>-2ab \cos\gamma</math> à gauche, et l'aire <math>c^2</math> à droite ;
+* en bleu, deux fois le triangle ABC, à droite comme à gauche.
+
+L'égalité des aires à droite et à gauche donne
+:<math>\,a^2+b^2-2ab\cos\gamma = c^2</math>.
+
+Une démonstration rigoureuse nécessiterait de prouver que les deux découpages sont effectivement identiques, ce qui utilise principalement les [[cas d'égalité des triangles]].
+{{clr}}
+
+===Par le [[théorème de Pythagore]]===
+[[Image:Triangle with trigonometric proof of the law of cosines.svg|thumb|Fig. 7 - Démonstration du théorème d'Al-Kashi en utilisant les relations trigonométriques.|upright=1.5]] 
+La figure 7 (ci-contre) indique la manière de procéder pour démontrer le théorème d'Al-Kashi dans le cas d'un triangle à angles aigus en utilisant le théorème de Pythagore sur un sous-triangle rectangle formé en prenant le pied de la hauteur<ref>Küstner, Hellwitch, Kästner, ''Petite encyclopédie des mathématiques'', Édition Didier, 1980, ch 11-2, p 265</ref>
+. Seule la dernière étape n'est pas indiquée sur la figure : le théorème de Pythagore s'applique au triangle rectangle dont le côté c est l'[[hypoténuse]] :
+:<math>\,c^2 = (a\sin\gamma)^2 + (b-a\cos\gamma)^2</math>,
+ce qui donne le résultat escompté, après simplification.
+
+La méthode est en tous points similaire pour les angles obtus.
+{{clr}}
+
+=== En utilisant la puissance d'un point par rapport à un cercle===
+[[Image:triangle with circle of center B and radius BC.png|thumb|Fig. 8 - Démonstration du théorème d'Al-Kashi en utilisant la puissance d'un point par rapport à un cercle.|upright=1.5]]
+On considère le cercle de centre B et de rayon [BC] (cf. figure ci-contre). Il coupe la droite (AC) en C et K.  La [[puissance d'un point par rapport à un cercle|puissance du point A par rapport au dit cercle]] est : 
+:<math>\mathrm{AB}^2 - \mathrm{BC}^2 = \overline{\mathrm{AC}}\cdot\overline{\mathrm{AK}} = \overline{\mathrm{AC}}\cdot(\overline{\mathrm{AC}}+\overline{\mathrm{CK}})</math>
+d'où
+:<math>c^2-a^2 = b\,(b-2a\ \cos\ \gamma)</math>.
+
+Contrairement aux précédentes, pour cette démonstration, il n'est pas nécessaire de recourir à une étude par cas. En effet, les [[mesure algébrique|mesures algébriques]] permettent de traiter pareillement un angle aigu (<math>\overline{\mathrm{CK}} < 0</math>) et un angle obtus (<math>\overline{\mathrm{CK}} > 0</math>).
+
+On trouve trace de l'utilisation de la puissance d'un point par rapport à un cercle pour déterminer tous les angles d'un triangle dont les longueurs sont connues, dans l'œuvre de [[Nicolas Copernic]], ''[[Des révolutions des sphères célestes]]''. Il présente ainsi deux algorithmes l'un utilisant le théorème de Pythagore généralisé présent dans l'œuvre d'Euclide<ref>N. Copernic, ''De révolutionibus orbium coelestium'', Livre I, Chapitre XII, paragraphe VII, p 20 ([[s:la:Pagina:Nicolai Copernici torinensis De revolutionibus orbium coelestium.djvu/54|Lire en ligne]])</ref>, l'autre utilisant la puissance d'un point par rapport à un cercle<ref>N. Copernic, ''De révolutionibus orbium coelestium'', Livre I, Chapitre XII, paragraphe VII, p 21 ([[s:la:Pagina:Nicolai Copernici torinensis De revolutionibus orbium coelestium.djvu/55|Lire en ligne]])</ref>.
+
+Ainsi dans une figure analogue à celle ci-contre, il fait remarquer que, a et c étant connu, la puissance du point A par rapport au cercle tracé est connue
+: en langage mathématique actuel, elle vaut <math>c^2-a^2</math>
+Il en déduit que, puisque b est connu, AK est connu
+: en effet <math>AK \times b = c^2-a^2</math>donc <math>AK=\frac{c^2-a^2}{b}</math>
+Puisque AK est connu, alors CK est connu.
+: en effet, dans la figure ci-contre, <math>CK= AK-b=\frac{c^2-a^2-b^2}{b}</math>
+Enfin, il fait remarquer que CK étant connu, l'angle KCB est connu
+: en effet, <math>\cos(KCB)=\frac{CK}{2a}=\frac{c^2-a^2-b^2}{2ab}</math>
+Et puisque l'angle KCB est connu, il en est de  même de l'angle ACB 
+: Ainsi, on retrouve la règle du cosinus : <math>\cos(\gamma)=\frac{a^2+b^2-c^2}{2ab}</math>
+Ne manipulant pas les mesures algébriques, Nicolas Copernic présente deux cas de figure pour l'angle obtus et l'angle aigu, travaille sur un cercle dont le rayon correspond au plus petit côté, et ne présente pas de formule mais un algorithme de calcul. Une utilisation analogue de la puissance d'un point par rapport à un cercle pour retrouver la règle du cosinus  est faite par [[Pitiscus]]<ref>David Eugene Smith, ''[http://books.google.fr/books?id=awAfO7Ff_z0C&printsec=frontcover&source=gbs_v2_summary_r&cad=0#v=onepage&q=&f=false A source book in mathematics, Volume 1]'', p 435</ref>
+
+===À l'aide du produit scalaire ===
+En utilisant le calcul [[vecteur|vectoriel]], plus précisément le [[produit scalaire]], il est possible de retrouver le théorème d'Al-Kashi en quelques lignes<ref name="scalaire"/> :
+:{| border=0
+|<math>c^2\,</math>
+|<math>=\lVert\overrightarrow{\mathrm{AB}}\lVert^2</math>
+|-
+|
+|<math>= \lVert\overrightarrow{\mathrm{CB}}-\overrightarrow{\mathrm{CA}}\lVert^2</math>
+|-
+|
+|<math>=\lVert\overrightarrow{\mathrm{CB}}\lVert^2-2\cdot\overrightarrow{\mathrm{CB}}\cdot\overrightarrow{\mathrm{CA}}+\lVert\overrightarrow{\mathrm{CA}}\lVert^2</math>
+|-
+|
+|<math>=\mathrm{CB}^2-2\cdot\left|\mathrm{CB}\right|\cdot\left|\mathrm{CA}\right|\cos\widehat{\mathrm{ACB}}+\mathrm{CA}^2</math>
+|-
+|
+|<math>=a^2+b^2-2ab \cos\gamma\,. </math>
+|}
+
+==Généralisation aux géométries non euclidiennes==
+Pour une [[géométrie non euclidienne|surface non euclidienne]] de courbure ''K'', on note ''R'' le rayon de courbure. Il vérifie
+:<math>\,R = 1/\sqrt{|K|}</math>.
+On définit alors les dimensions réduites du triangle :
+:<math>\,a = BC/R</math>,
+:<math>\,b = AC/R</math>,
+:<math>\,c = AB/R</math>.
+Dans le cas d'un triangle sphérique, ''a'', ''b'' et ''c'' correspondent à la mesure angulaire des segments de grand arc [BC], [AC] et [AB] (voir Fig. 7).
+
+===Géométrie sphérique===
+[[Image:Spherical triangle with notations.png|thumb|200px|Fig. 9 - Triangle sphérique : dimensions réduites ''a'', ''b'' et ''c'' ; angles α, β et γ.|upright=1.5]]
+Dans un [[trigonométrie sphérique|triangle sphérique]] ABC (Fig. 9), le théorème d'Al-Kashi s'écrit<ref>Voir l'article  [[trigonométrie sphérique]], et pour des démonstrations, par exemple, [http://www.madore.org/~david/math/carto.pdf le "cours" de cartographie de David Madore]</ref>
+:<math>\cos c = \cos a \, \cos b + \sin a \, \sin b \, \cos\gamma.</math>
+
+Lorsque le rayon de courbure est très grand devant les dimensions du triangle, c’est-à-dire lorsque
+:<math>\,a <\!\!< 1,\  \,b <\!\!< 1,\  \,c <\!\!< 1,\  </math>
+cette expression se simplifie pour donner la version euclidienne du théorème d'Al-Kashi. Pour le montrer, on utilise les [[développement limité|développements limités]] suivants :
+:<math>\,\sin a = a + O(a^3),</math>  
+:<math>\,\cos a = 1 - a^2/2 + O(a^3).</math>
+
+Il existe une identité similaire qui relie les trois angles :
+:<math>\cos\gamma = - \cos\alpha\,\cos\beta + \sin\alpha\,\sin\beta\,\cos c</math>
+
+===Géométrie hyperbolique===
+Dans un triangle hyperbolique ABC, le théorème d'Al-Kashi s'écrit<ref>Voir l'article [[géométrie hyperbolique]] ; pour des démonstrations de ces formules, on pourra par exemple se référer à [http://people.math.jussieu.fr/~boyer/fichiers/dea/td1.pdf ce TD de DEA] (mais qui utilise des connaissances assez avancées)</ref>
+:<math>\cosh c = \cosh a\,\cosh b - \sinh a\,\sinh b\,\cos\gamma</math>.
+
+Lorsque le rayon de courbure devient très grand devant les dimensions du triangle, on retrouve le théorème d'Al-Kashi euclidien à partir des développements limités
+:<math>\,\sinh a = a + O(a^3)</math>, 
+:<math>\,\cosh a = 1 + a^2/2 + O(a^3).</math>
+
+==Généralisation à l'espace euclidien==   
+[[Image:Tetrahedron with faces and dihedral angles.png|thumb|Fig. 10 - Tétraèdre : faces et angles diédraux.|upright=1.5]] 
+On considère un [[tétraèdre]] A<sub>1</sub>A<sub>2</sub>A<sub>3</sub>A<sub>4</sub> de l'espace euclidien. La figure 10 ci-contre présente les notations concernant les sommets, faces et angles dans le tétraèdre :   
+* <math>\mathrm S_k</math> la face opposée au sommet <math>\mathrm A_k\ </math>;   
+* <math>s_k</math> la surface de <math>\mathrm S_k\ </math>;    
+* <math>\Delta_k</math> le [[plan (mathématiques)|plan]] dans lequel <math>\mathrm S_k\ </math> est plongée ;   
+* <math>\theta_{ij}</math> l'angle [[dièdre (optique)|diédral]] <math>(\Delta_i, \Delta_j)</math>.    
+    
+Alors, surfaces et angles vérifient<ref> {{en}} Lee, J. R. "The Law of Cosines in a Tetrahedron." J. Korea Soc. Math. Ed. Ser. B: Pure Appl. Math. 4, 1-6, 1997.</ref>  :
+:<math>s_4^2 = s_1^2+s_2^2+s_3^2 - 2s_1s_2\cos\theta_{12} - 2s_1s_3\cos\theta_{13} - 2s_2s_3\cos\theta_{23}.\,</math>
+{{clr}}
+
+== Notes et références ==
+{{Références|colonnes=2}}
+
+== Voir aussi==
+===Articles connexes===
+{| width="80%"
+|-
+! [[Trigonométrie]]
+! [[Géométrie]] du [[triangle]]
+! [[Mathématicien]]s
+|-
+| [[triangulation]]
+| [[théorème de Pythagore]]
+| [[Euclide]]
+|-
+| [[trigonométrie sphérique]]
+| [[Livre II des Éléments d'Euclide]]
+| [[al-Battani]]
+|-
+| [[fonction trigonométrique]]
+| [[loi des sinus]]
+| [[Ghiyath al-Kashi]]
+|-
+|
+| [[loi des tangentes]]
+| [[François Viète]]
+|}
+
+===Liens externes===
+''<small>Ces liens ont servi de sources de l'article</small>''
+* ''[http://gallica.bnf.fr/ark:/12148/bpt6k68013g Les Éléments]'', tome II, Euclide, sur la [http://gallica.bnf.fr/ Bibliothèque nationale française en ligne].
+* ''[http://mathworld.wolfram.com/LawofCosines.html Law of cosines]'', sur le site [http://mathworld.wolfram.com Math World] (en [[anglais]])
+
+===Bibliographie===
+*  N. Éfimov,''Géométrie Supérieure'', Moscou, Éditions MIR, [[1981]]
+* Collectif, ''Petite Encyclopédie des Mathématiques'', Paris, Éditions K. Pagoulatos,  [[1980]]
+*[[Antoine Arnauld (1612-1694)|Antoine Arnauld]], ''Nouveaux éléments de géométrie'', Paris, Charles Savreux, [[1667]],p295-296 (Sixième théorème)
+*Amiot, ''Eléments de géométrie'', Paris, Delagrave, 14e édition, [[1870]], p109-111
+*Cirodde, ''Leçons de géométrie'', Paris, Hachette, 3e édition, [[1858]], p111-112 (théorème XI)
+{{Article de qualité|date=14 février 2005|oldid=1475929}}
+
+{{portail|géométrie|monde arabo-musulman}}
+
+{{DEFAULTSORT:Theoreme d'Al-Kashi}}
+[[Catégorie:Géométrie du triangle]]
+[[Catégorie:Mathématiques élémentaires]]
+[[Catégorie:Trigonométrie]]
+[[Catégorie:Théorème de géométrie|Al-Kashi]]
+
+{{Lien BA|es}}
+
+{{Lien AdQ|ca}}
+
+[[als:Kosinussatz]]
+[[ar:مبرهنة الكاشي]]
+[[bg:Косинусова теорема]]
+[[bs:Kosinusni teorem]]
+[[ca:Teorema del cosinus]]
+[[cs:Kosinová věta]]
+[[da:Cosinusrelation]]
+[[de:Kosinussatz]]
+[[en:Law of cosines]]
+[[eo:Leĝo de kosinusoj]]
+[[es:Teorema del coseno]]
+[[eu:Kosinuaren teorema]]
+[[fa:قانون کسینوس‌ها]]
+[[fi:Kosinilause]]
+[[he:משפט הקוסינוסים]]
+[[hu:Koszinusztétel]]
+[[hy:Կոսինուսների թեորեմ]]
+[[id:Hukum cosinus]]
+[[it:Teorema del coseno]]
+[[ja:余弦定理]]
+[[ka:კოსინუსების თეორემა]]
+[[km:ទ្រឹស្តីបទ​កូស៊ីនុស]]
+[[ko:코사인 법칙]]
+[[ms:Hukum kosinus]]
+[[nl:Cosinusregel]]
+[[no:Cosinussetningen]]
+[[pl:Twierdzenie cosinusów]]
+[[pms:Teorema dël cosen]]
+[[pt:Lei dos cossenos]]
+[[ro:Teorema cosinusului]]
+[[ru:Теорема косинусов]]
+[[si:කෝසයින නියමය]]
+[[sk:Kosínusová veta]]
+[[sl:Kosinusni izrek]]
+[[sq:Teorema e kosinusit]]
+[[sr:Косинусна теорема]]
+[[sv:Cosinussatsen]]
+[[th:กฎของโคไซน์]]
+[[tr:Kosinüs teoremi]]
+[[uk:Теорема косинусів]]
+[[ur:قانون جیب التمام]]
+[[zh:餘弦定理]]

@@ -1,0 +1,958 @@
+[[Fichier:JohnvonNeumann-LosAlamos.jpg|thumb|[[John von Neumann]]]]
+[[Fichier:Maradona penalty.jpg|thumb|Vers où faut-il [[Loi 14 du football : coup de pied de réparation|tirer]] ?]]
+Le '''théorème du minimax''' de '''[[John von Neumann]]''' (parfois appelé '''théorème fondamental de la théorie des jeux à deux joueurs'''), démontré en [[1928]], est un résultat important en [[théorie des jeux]].
+Il assure que, pour un jeu non-coopératif synchrone à information complète<ref group="Note">Ces termes sont définis dans la suite de l'article.</ref> opposant deux joueurs, à nombre fini de stratégies pures et à somme nulle, il existe au moins une situation d'interaction stable, à savoir une situation dans laquelle aucun des deux joueurs n'a intérêt à changer sa [[stratégie mixte]] si l'autre ne la change pas. Ce théorème est un cas particulier du [[Équilibre de Nash#Théorème|théorème fondamental de la théorie des jeux à n joueurs]] de [[John Forbes Nash]], démontré en 1950.
+
+Le théorème du minimax fournit une méthode rationnelle de prise de décision dans un contexte bien précis : celui où s'affrontent deux adversaires (des entreprises concurrentes ou des États en guerre par exemple) lorsqu'on suppose qu'ils doivent prendre leurs décisions simultanément et que tout gain de l'un est perte de l'autre. Cette seconde hypothèse, rarement remplie dans la réalité, limite cependant beaucoup son intérêt pratique.
+
+Un exemple de situation qu'il modélise bien est, au [[football]], le duel entre un tireur de [[penalty]] et le [[gardien de but (football)|gardien de but]] adverse. Le premier doit choisir où diriger son tir, le second quel secteur de sa cage protéger. En fonction du couple de décisions prises, les chances du tireur de marquer varient fortement<ref>Les données empiriques figurent au tableau 4, p. 20 dans {{harvsp|id=BERGER2007|Berger-Hammer|2007}}</ref>. La pratique des joueurs est bien sûr de faire leurs choix de façon aléatoire et imprévisible. La théorie du minimax justifie cette méthode et détermine les [[loi de probabilité|probabilités]] qu'il est bon de donner à chacune des stratégies possibles ; les mesures effectuées sur les matchs de [[Championnat d'Allemagne de football|Bundesliga]] la valident : les probabilités constatées sont proches de celles que le théorème de von Neumann recommande.
+
+Historiquement, le mathématicien [[Émile Borel]] a formalisé l'énoncé du théorème et est l'auteur de démonstrations parcellaires. La première preuve complète, un peu plus tardive, est l'œuvre de von Neumann.
+
+La pertinence du modèle de von Neumann a été mise en cause. Outre l'inadéquation à la réalité de l'hypothèse de « somme nulle », des critiques ont été articulées contre la théorie sous-jacente de l'[[utilité]] bâtie par von Neumann et l'économiste [[Oskar Morgenstern]] pour donner un sens à la mesure du gain en situation d'incertitude ; le [[Paradoxe d'Allais#Le paradoxe d'Allais|paradoxe d'Allais]] en est une des plus célèbres.
+
+Si on fait abstraction de son utilisation en [[théorie de la décision]], le théorème de von Neumann n'en demeure pas moins un résultat remarquable de mathématiques pures. En [[analyse fonctionnelle (mathématiques)|analyse fonctionnelle]], c'est le premier d'une longue chaîne de théorèmes du [[minimax]] ; sa deuxième démonstration de 1937 par von Neumann, qui utilise un [[théorèmes de point fixe|théorème de point fixe]], a sans doute guidé les travaux ultérieurs de [[John Forbes Nash]] sur les jeux à somme non nulle ; sa démonstration de 1938 par [[Jean Ville]], qui met en relief la relation avec la [[convexité]] et la théorie des inégalités, ouvre un pont vers la théorie de l'[[optimisation linéaire]] qui va émerger dans les années 1940.
+
+== Énoncé du théorème ==
+
+'''Théorème de von Neumann (1926)''' : ''Pour'' <math>m</math> ''entier strictement positif, notons'' <math>\Delta_m</math> ''l'ensemble des [[vecteur colonne|vecteurs colonnes]] comportant'' <math>m</math> ''coefficients réels positifs ou nuls dont la somme vaut'' <math>1</math>.
+
+''Soit'' <math>A</math> ''une [[matrice (mathématiques)|matrice]] réelle'' <math>(n,k)</math>. ''On a l'identité'' :
+
+<center><math>\max_{X\in\Delta_k}\min_{Y\in\Delta_n}Y^TAX=\min_{Y\in\Delta_n}\max_{X\in\Delta_k}Y^TAX</math>.</center>
+
+''(La notation'' <math>Y^T</math> ''désignant le [[vecteur ligne]] [[matrice transposée|transposé]] de'' <math>Y</math>).
+
+== Le modèle économique sous-jacent ==
+
+{{Article détaillé|Jeu sous forme normale}}
+[[Fichier:SssStein.jpg|thumb|Pierre]]
+[[Fichier:SssPapier.jpg|thumb|Feuille]]
+[[Fichier:SssSchere.jpg|thumb|Ciseaux]]
+
+On suppose que deux protagonistes, Xavier et Yvette, s'affrontent dans un contexte qui peut être un « jeu », au sens commun du terme (ainsi le [[pierre-feuille-ciseaux]]), mais aussi une compétition militaire ou économique. On en trouvera deux exemples (des plus primaires) à l'article [[Jeu à somme nulle]].
+
+Chacun dispose d'un nombre fini de coups possibles, appelés des « stratégies pures ». On note « k » le nombre de stratégies pures disponibles pour Xavier et « n » le nombre de stratégies pures disponibles pour Yvette. On numérote de <math>1</math> à <math>k</math> les stratégies à la disposition de Xavier et de <math>1</math> à <math>n</math> celles d'Yvette. Dans l'exemple du jeu de pierre-feuille-ciseaux, le formalisme sera le même pour Xavier et pour Yvette : <math>n=k=3</math>, « 1 » codant « jouer pierre », « 2 » codant « jouer feuille » et « 3 » codant « jouer ciseaux » (on prendra garde que cet exemple peut être trompeur : on ne suppose pas le jeu symétrique et les deux joueurs n'ont pas nécessairement les mêmes stratégies pures à leur disposition, ni même le même nombre de stratégies pures.)
+
+On suppose que les deux joueurs connaissent sans ambiguïté la règle du jeu, en particulier les gains ou pertes qui seront applicables pour chaque couple de choix de stratégies (le jeu est dit « à information complète »), et qu'à chaque coup ils jouent simultanément (le jeu est dit « synchrone » — on peut aussi utiliser l'expression « jeu à information complète imparfaite » pour exprimer ce synchronisme). Il leur est interdit de se concerter préalablement<ref group="Note">Cette définition d'un jeu « non coopératif » est exagérément simplificatrice ; [[Robert Aumann]] (parlant du [[dilemme du prisonnier]] mais cela s'adapte aussi ici) souligne que ce qui est important, ce n'est pas tant d'interdire aux joueurs de se concerter que de supposer qu'aucun mécanisme n'est prévu pour sanctionner qui trahirait ses engagements. (« ''Game theory'' », dans ''Collected papers'', MIT Press, 2000 {{ISBN|9780262011549}}, p. 71)</ref> : le jeu est dit « non coopératif ».
+
+Pour chaque choix d'une stratégie pure numérotée « <math>j</math> » par Xavier et d'une stratégie pure numérotée « <math>i</math> » par Yvette, les règles du jeu (bien connues des deux participants) définissent un gain <math>a_{ij}</math> remporté par Xavier, qui est un [[nombre réel]]. Une valeur positive signifie que Xavier est bénéficiaire de ce nombre d'unités, un gain négatif qu'il en est perdant. Ces gains peuvent être regroupés en un tableau rectangulaire, appelé [[matrice (mathématiques)|matrice]] (les lignes correspondant aux stratégies d'Yvette et les colonnes à celles de Xavier). Dans l'exemple de « pierre-feuille-ciseaux » avec ses règles les plus usuelles, la matrice <math>A</math> représentant les gains de Xavier serait ainsi :
+
+{| class="wikitable" border="1" cellspacing="2" style="margin: 1em auto 1em auto; text-align:center"
+|-
+| 
+| Xavier joue « pierre »
+| Xavier joue « feuille »
+| Xavier joue « ciseaux »
+|-
+| Yvette joue  « pierre »
+| 0
+| 1
+| -1
+|-
+| Yvette joue  « feuille »
+| -1
+| 0
+| 1
+|-
+| Yvette joue  « ciseaux »
+| 1
+| -1
+| 0
+|}
+
+On pourrait définir de même le gain « <math>b_{ij}</math> » pour Yvette et la matrice représentant ces gains, mais ce ne sera pas nécessaire car on fait une dernière hypothèse : celle que le jeu est « à somme nulle », ce qui signifie que la société formée des deux joueurs ne gagne ni ne perd rien au jeu dans sa globalité, que tout ce que perd Xavier, Yvette le gagne et réciproquement. La matrice des gains d'Yvette est donc la matrice <math>-A</math> et il n'est pas utile de lui donner un nouveau nom.
+
+=== Points-selles dans les matrices de gain ===
+[[Fichier:Pointsellematrice.png|thumb|Représentation graphique de la matrice <math>\begin{pmatrix}2 & 4 & 5\\1 & 3 & 2\\4 & 6 & 2,5\end{pmatrix}</math>.<br/>Le point-selle est en vert.]]
+
+Soit l'exemple d'un jeu à trois stratégies pour chaque joueur où la matrice A des gains de Xavier est la suivante :
+
+{| class="wikitable" border="1" cellspacing="2" style="margin: 1em auto 1em auto; text-align:center"
+|-
+| 
+| Xavier joue sa stratégie 1
+| Xavier joue sa stratégie 2
+| Xavier joue sa stratégie 3
+|-
+| Yvette joue  sa stratégie 1
+| -1000
+| 2
+| 2000
+|-
+| Yvette joue sa stratégie 2
+| 1010
+| 2
+| -3000
+|-
+| Yvette joue sa stratégie 3
+| 0
+| 1
+| 0
+|}
+
+Considérant la règle du jeu, Xavier se dit : « Si je joue 1, je risque de perdre 1000 unités, et si je joue 3 d'en perdre 3000 ; mais si je joue 2, je gagne une unité dans le pire des cas. »
+
+Yvette, pour sa part, se dit : « Si je joue 1, je risque de perdre 2000 unités, et si je joue 2 d'en perdre 1010 ; mais si je joue 3 mes pertes sont limitées à une unité dans le pire des cas. 
+
+Xavier peut poursuivre son raisonnement : « J'ai reconstitué le raisonnement d'Yvette, qui lui donne de bonnes raisons de choisir sa stratégie 3. Si elle le fait comme je m'y attends, la lecture de la 3{{ème}} ligne de la matrice me montre que la stratégie 2 est le meilleur choix pour moi. Excellente raison de m'y tenir. »
+
+Et symétriquement, après avoir observé la 2{{ème}} colonne de la matrice, Yvette se sent confortée dans son choix pour la stratégie 3.
+
+Finalement tout ceci mène à penser que le choix conjoint du 2{{ème}} coup pour Xavier, du 3{{ème}} pour Yvette est plus rationnel que les autres, qu'il est le bon choix en un sens qui reste à préciser. Il est à cet égard instructif de considérer deux règles de décision inappropriées qui pourraient tenter Xavier : en premier lieu, il pourrait chercher à maximiser la moyenne d'une colonne, en l'interprétant comme le gain moyen que lui rapporterait le choix de la stratégie correspondante, et il jouerait alors son 1{{er}} coup ; en second lieu, il pourrait être attiré par le « maximax », le gain le plus élevé figurant sur le tableau (ici c'est 2000), ce qui le conduirait à jouer son 3{{ème}} coup. Dans les deux cas, il y perdrait, puisqu'Yvette — si elle joue bien — s'en tiendrait tout de même à jouer son coup numéro 3 et le seul résultat de la gourmandise de Xavier serait qu'il ne toucherait rien au lieu de gagner le modeste 1 que la meilleure stratégie lui garantit.
+
+Comparons à la situation suivante, variante minime du jeu de « pierre-feuille-ciseaux » (on a modifié de quelques centimes les enjeux pour éviter des situations d'indifférence entre stratégies qui n'apportent rien à la compréhension) :
+
+{| class="wikitable" border="1" cellspacing="2" style="margin: 1em auto 1em auto; text-align:center"
+|-
+| 
+| Xavier joue « pierre »
+| Xavier joue « feuille »
+| Xavier joue « ciseaux »
+|-
+| Yvette joue  « pierre »
+| 0
+| 1,05
+| -1,07
+|-
+| Yvette joue  « feuille »
+| -1,03
+| 0
+| 1,04
+|-
+| Yvette joue  « ciseaux »
+| 1,02
+| -1,01
+| 0
+|}
+
+Xavier et Yvette peuvent commencer à raisonner comme dans l'exemple précédent : si Xavier veut minimiser la somme qu'il devra verser à Yvette, le coup à jouer est « feuille » où il ne perdra au pire que 1,01 unité. De même Yvette va dans un premier temps être tentée par jouer « ciseaux » où dans le pire des cas sa perte se limite à 1,02 unité. Mais lorsqu'il considère qu'Yvette a des raisons sérieuses de jouer « ciseaux » Xavier, au lieu d'être conforté dans son choix initial de « feuille », s'aperçoit qu'il serait alors perdant et qu'il vaut mieux bien mieux bifurquer sur « pierre ». Yvette, qui reconstitue mentalement les anticipations de Xavier, anticipe qu'il jouera « pierre » et déplace son projet de coup vers « feuille ». À son tour Xavier modifie ses anticipations... Rien ne se stabilise et aucun choix de stratégies pures n'arrive à s'imposer.
+
+Où se situe la différence entre les deux exemples ? C'est que dans la première matrice, contrairement à la deuxième, figure ce qu'on peut appeler un point-selle, ou [[équilibre de Nash]] : une entrée qui est à la fois la plus petite de sa colonne et la plus grande de sa ligne.
+
+'''Proposition'''<ref>{{harvsp|id=BINMORE2007|Binmore|2007|p=220-221}}</ref> : ''Les points-selles étant définis comme ci-dessus, une matrice'' <math>(n,k)</math> de réels <math>A=(a_{ij})</math> ''possède un point-selle si et seulement si''
+
+<center><math>\max_{1\leq j\leq k}(\min_{1\leq i\leq n} a_{ij})=\min_{1\leq i\leq n}(\max_{1\leq j\leq k} a_{ij}).</math></center>
+
+''En tout point-selle de la matrice, l'entrée correspondante du tableau est égale à ce minimax''.
+
+{{Boîte déroulante début|titre=Vérification}}
+* Supposons l'égalité du minimax et du maximin, et montrons l'existence d'un point-selle.
+
+Notons <math>i_0</math> un indice pour lequel <math>\min_{1\leq i\leq n}(\max_{1\leq j\leq k} a_{ij})=\max_{1\leq j\leq k} a_{i_0j}</math>, et symétriquement <math>j_0</math> un indice pour lequel <math>\max_{1\leq j\leq k}(\min_{1\leq i\leq n} a_{ij})=\min_{1\leq i\leq n} a_{ij_0}</math>.
+
+Vu l'hypothèse d'égalité du maximin et du minimax, on en déduit l'égalité : <math>\max_{1\leq j\leq k} a_{i_0j}=\min_{1\leq i\leq n} a_{ij_0}</math>.
+
+On va vérifier que la position <math>(i_0,j_0)</math> correspond à un point-selle. Soit <math>(i_1,j_0)</math> une autre position dans la même colonne. On écrit :
+<math>a_{i_0j_0}\leq \max_{1\leq j\leq k} a_{i_0j}=\min_{1\leq i\leq n} a_{ij_0}\leq a_{i_1j_0}</math> : l'entrée en cette nouvelle position est plus grande que celle en <math>(i_0,j_0)</math>. On vérifierait de même l'autre propriété requise des points-selles.
+
+* Remarquons préalablement que l'inégalité 
+
+<math>\max_{1\leq j\leq k}(\min_{1\leq i\leq n} a_{ij})\leq\min_{1\leq i\leq n}(\max_{1\leq j\leq k} a_{ij})</math>
+
+est vérifiée pour n'importe quelle matrice <math>A</math>, qu'elle contienne ou non des points-selles.
+
+Soit en effet <math>i_0</math> un indice pour lequel <math>\min_{1\leq i\leq n}(\max_{1\leq j\leq k} a_{ij})=\max_{1\leq j\leq k} a_{i_0j}</math>, et symétriquement <math>j_0</math> un indice pour lequel <math>\max_{1\leq j\leq k}(\min_{1\leq i\leq n} a_{ij})=\min_{1\leq i\leq n} a_{ij_0}</math>.
+
+Comme <math>\min_{1\leq i\leq n} a_{ij_0}\leq a_{i_0j_0}\leq\max_{1\leq j\leq k} a_{i_0j}</math>, il en découle que le maximin est plus petit que le minimax.
+
+* Supposons qu'une position <math>(i_0,j_0)</math> corresponde à un point-selle.
+
+Alors par définition d'un point-selle, <math>a_{i_0j_0}=\min_{1\leq i\leq n} a_{ij_0}</math> (c'est la plus petite entrée de sa colonne) et <math>a_{i_0j_0}=\max_{1\leq j\leq k} a_{i_0j}</math> (c'est la plus grande entrée de sa ligne).
+
+On en déduit que <math>\min_{1\leq i\leq n}(\max_{1\leq j\leq k} a_{ij})\leq\max_{1\leq j\leq k} a_{i_0j}=a_{i_0j_0}=\min_{1\leq i\leq n} a_{ij_0}\leq\max_{1\leq j\leq k}(\min_{1\leq i\leq n} a_{ij})</math> et donc -puisqu'on connaît déjà l'inégalité dans l'autre sens- l'égalité du maximin et du minimax, qui sont de surcroît tous deux égaux à l'entrée de la matrice au point-selle.
+
+{{Boîte déroulante fin}}
+
+Voyons comment s'applique cette proposition sur les exemples :
+
+pour le premier exemple, <math>\max_{1\leq j\leq k}(\min_{1\leq i\leq n} a_{ij})=\max\{-1000,1,-3000\}=1</math> tandis que <math>\min_{1\leq i\leq n}(\max_{1\leq j\leq k} a_{ij})=\min\{2000,1010, 1\}=1.</math> Le minimax et le maximin sont égaux, et la case à l'intersection de la ligne où le minimax est atteint et de la colonne où le maximin est atteint est un point-selle.
+
+Dans le second cas, <math>\max_{1\leq j\leq k}(\min_{1\leq i\leq n} a_{ij})=-1,01</math> tandis que <math>\min_{1\leq i\leq n}(\max_{1\leq j\leq k} a_{ij})=1,02</math> (on reconnaît les valeurs initialement considérées dans leurs réflexions respectives par Xavier et Yvette). Comme ils ne coïncident pas, il ne peut y avoir de point-selle.
+
+=== Signification intuitive du maximin ===
+
+L'expression <math>\max_{1\leq j\leq k}(\min_{1\leq i\leq n} a_{ij})</math> peut s'interpréter.
+
+Pour un <math>j</math> donné, l'expression <math>\min_{1\leq i\leq n} a_{ij}</math> représente la plus petite entrée de la <math>j</math>-ème colonne. Dans la version du modèle où on ne connaît que les stratégies pures, on l'interprète comme suit : c'est pour un Xavier considérant la possibilité de jouer <math>j</math> l'hypothèse de résultat la moins favorable.
+
+Quand ensuite Xavier considère le max de ces min (le « maximin ») il détermine, parmi les k coups qui lui sont proposés, celui qui a pour lui les résultats les moins fâcheux dans l'optique pessimiste où Yvette, infiniment chanceuse ou psychologue, déjoue forcément le choix stratégique de Xavier. Choisir le maximin pour lui, c'est donc choisir la solution la moins risquée en mesurant le risque de chacune par la seule considération de l'hypothèse la plus défavorable.
+
+Dans son exposé de la théorie des jeux pour un large public, {{Lien|William Poundstone}} synthétise élégamment cette explication en citant [[Italo Calvino]] : {{citation|Tu sais que ce que tu peux espérer de mieux est d'éviter le pire}}<ref>{{harvsp|id=POUND1993|Poundstone|1993}}, p. 71. La citation de Calvino est issue du roman [[Si par une nuit d'hiver un voyageur]].</ref>.
+
+=== Stratégies mixtes ===
+On peut aller plus loin à condition d'imaginer une extension de la notion de stratégie. Jusqu'à présent, chaque joueur n'avait le choix qu'entre des « stratégies pures » : il pouvait décider quel coup jouer. On lui offre désormais une nouvelle possibilité : choisir judicieusement une [[mesure de probabilité]] sur l'ensemble fini des stratégies pures, puis jouer aléatoirement en pondérant son tirage par la mesure préalablement choisie. On appellera ainsi '''[[stratégie mixte]]''' une probabilité sur l'ensemble fini des stratégies pures accessibles à un joueur.
+
+Une mesure de probabilité <math>P</math> sur l'ensemble fini <math>\{1,\ldots,m\}</math> est caractérisée par la donnée de la probabilité <math>p_i=P(\{i\})</math> pour chaque <math>i \in\{1,\ldots,m\}</math>. En identifiant une mesure de probabilité <math>P</math> sur <math>\{1,\ldots,m\}</math> au vecteur-colonne <math>(p_1\,\ldots\,p_m)^T</math>, on représente ainsi l'ensemble des stratégies mixtes accessibles à un joueur disposant de <math>m</math> stratégies pures par le [[simplexe]] <math>\Delta_m</math>, ensemble des <math>m</math>-uplets de réels positifs ou nuls et de somme égale à 1.
+
+Dans l'exemple du jeu [[pierre-feuille-ciseaux]], choisir la stratégie mixte <math>(1/3\,\,\,\,1/3\,\,\,\,1/3)^T</math> c'est décider de tirer au sort quel coup on jouera avec équiprobabilité ; choisir la stratégie mixte <math>(1/7\,\,\,\,2/7\,\,\,\,4/7)^T</math>, c'est choisir d'annoncer « pierre » avec probabilité 1/7, « feuille » avec probabilité 2/7 et « ciseaux » sinon ; choisir la stratégie mixte <math>(0\,\,\,\,0\,\,\,\,1)^T</math> c'est décider de ne pas tirer au sort et de jouer « ciseaux » dans tous les cas (au passage, on remarque ici que les stratégies pures peuvent être interprétées comme des cas particuliers de stratégies mixtes).
+
+Pour chaque choix d'une stratégie mixte <math>X=(p_1\,\ldots\,p_k)^T</math> par Xavier et d'une stratégie mixte <math>Y=(q_1\,\ldots\,q_n)^T</math> par Yvette, la probabilité que Xavier joue le coup « <math>j</math> » et Yvette le coup « <math>i</math> » est alors égale au produit <math>q_ip_j</math> : en effet comme on a supposé le jeu non coopératif, les deux joueurs ne se concertent pas et il est raisonnable de modéliser leurs tirages au sort respectifs par des [[variable aléatoire|variables aléatoires]] [[Indépendance (probabilités)|indépendantes]].
+
+L'espérance de gain pour Xavier sous l'hypothèse de choix de ces deux stratégies mixtes se calcule alors comme une [[espérance mathématique]] : c'est
+
+<center><math>\sum_{1\leq i\leq n\atop 1\leq j\leq k}a_{ij}q_ip_j.</math></center>
+
+Il s'agit de l'unique terme de la matrice <math>Y^TAX</math>, qui est de taille <math>(1,1)</math> ; et cette dernière s'interprète donc comme le gain que peut attendre Xavier, en moyenne, lorsque les stratégies mixtes choisies sont <math>X</math> et <math>Y</math>.
+
+Il est alors possible de définir la notion d'[[équilibre de Nash]] pour cette fonction de gain comme on a défini les points-selles plus haut : on dira qu'un couple de stratégies mixtes <math>(X_0,Y_0)\in\Delta_k\times\Delta_n</math> est un équilibre de Nash pour <math>A</math> lorsque :
+
+*d'une part, pour tout <math>Y\in\Delta_n</math>, <math>Y_0^TAX_0\leq Y^TAX_0</math> (si Yvette change de stratégie tandis que Xavier conserve la stratégie <math>X_0</math>, elle ne peut qu'y perdre)
+
+*d'autre part, pour tout <math>X\in\Delta_k</math>, <math>Y_0^TAX\leq Y_0^TAX_0</math> (si Xavier change de stratégie tandis qu'Yvette maintient <math>Y_0</math>, il ne peut que s'en repentir).
+
+Comme avec le modèle qui ne connaît que les stratégies pures, lorsqu'il existe un équilibre de Nash on peut exposer des arguments heuristiques justifiant que celui-ci constitue un choix raisonnable pour les deux joueurs ; comme plus haut, son existence est caractérisée par une propriété de minimax et on montre la
+
+'''Proposition'''<ref>{{harvsp|id=BINMORE2007|Binmore|2007|p=228}}</ref> : ''Soit'' <math>A=(a_{ij})</math> ''une matrice'' <math>(n,k)</math> ''de réels. Il y a un équilibre de Nash pour'' <math>A</math> ''(au sens défini ci-dessus) si et seulement si''
+
+<center><math>\max_{X\in\Delta_k}\min_{Y\in\Delta_n}Y^TAX=\min_{Y\in\Delta_n}\max_{X\in\Delta_k}Y^TAX.</math></center>
+
+''En tout équilibre de Nash'' <math>(X_0,Y_0)</math> ''pour'' <math>A</math>, ''la valeur de'' <math>Y_0^TAX_0</math> ''est alors égale à ce minimax''.
+
+Le maximin qui apparaît dans ce calcul matriciel s'interprète comme celui de la situation à point-selle, la nouveauté étant que les ensembles de choix sont désormais infinis. Pour chaque stratégie mixte envisageable, Xavier soupèse quelle conséquence elle aurait pour lui dans une hypothèse pessimiste (c'est <math>\min_{Y\in\Delta_n}Y^TAX</math> qui s'il est négatif peut signifier pour lui une douloureuse perte sèche). Dans un second temps il choisit parmi l'infinité de stratégies mixtes à sa disposition celle dont les conséquences, si tout va mal, sont les moins douloureuses.
+
+Ce qu'affirme alors le théorème du minimax de von Neumann, c'est l'existence d'un tel équilibre de Nash pour '''toute''' matrice <math>A</math>. Ce résultat reste d'ailleurs vrai sans l'hypothèse de « somme nulle », comme l'a montré [[John Forbes Nash]] en 1949, mais n'est alors plus lié à une propriété de minimax.
+
+=== Retour aux exemples ===
+Voyons sur les deux exemples étudiés plus haut quelles répartitions de probabilité constituent l'équilibre de von Neumann.
+
+Dans le jeu avec point-selle, on peut s'attendre à ce que ce soient sur des stratégies pures, et c'est en effet le cas : notons <math>X_0=(0\,1\,0)^T</math> et <math>Y_0=(0\,0\,1)^T</math> les stratégies pures constituant le point-selle, désormais considérées comme des stratégies mixtes dégénérées. Pour ce choix, <math>Y_0^TAX_0=1</math>.
+
+Considérons un autre <math>Y=(q_1\,\,\,q_2\,\,\,q_3)^T</math> dans <math>\Delta_3</math>. Calculons :
+
+<center><math>Y^TAX_0=Y^T(AX_0)=\begin{pmatrix}q_1&q_2&q_3\end{pmatrix}\begin{pmatrix}2&2&1\end{pmatrix}^T=2q_1+2q_2+q_3.</math></center>
+
+Comme par hypothèse <math>0\leq q_1</math> et <math>0\leq q_2</math>, on peut écrire que <math>q_1+q_2+q_3\leq 2q_1+2q_2+q_3</math>. En regroupant toutes ces informations (et en se souvenant que <math>q_1+q_2+q_3=1</math>), on en déduit : <center><math>Y_0^TAX_0=1=q_1+q_2+q_3\leq 2q_1+2q_2+q_3=Y^TAX_0.</math></center>
+
+La première condition définissant les équilibres de Nash est bien vérifiée. La vérification de la seconde n'est pas plus difficile. L'équilibre de Nash est identifié, et reste composé de stratégies pures même dans l'extension du modèle à des stratégies probabilistes.
+
+Examinons maintenant l'exemple du jeu pierre-feuille-ciseaux, cette fois-ci sous sa forme la plus simple avec la matrice de gain
+
+{| class="wikitable" border="1" cellspacing="2" style="margin: 1em auto 1em auto; text-align:center"
+|-
+| 
+| Xavier joue « pierre »
+| Xavier joue « feuille »
+| Xavier joue « ciseaux »
+|-
+| Yvette joue  « pierre »
+| 0
+| 1
+| -1
+|-
+| Yvette joue  « feuille »
+| -1
+| 0
+| 1
+|-
+| Yvette joue  « ciseaux »
+| 1
+| -1
+| 0
+|}
+
+
+qui est dépourvue de point-selle.
+
+On essaie ici conformément à l'intuition <math>X_0=Y_0=(1/3\,\,\,\,1/3\,\,\,\,1/3)^T</math>. On calcule d'abord <math>Y_0^TAX_0=0</math>, où on remarque que tout simplement <math>Y_0^TA=0</math> et <math>AX_0=0</math>. Dès lors pour toute stratégie mixte <math>Y</math>, <math>Y_0^TAX_0=0\leq0=Y^TAX_0</math> et de même pour l'autre inégalité. Le tirage équiprobable par les deux joueurs constitue un équilibre de Nash.
+
+=== Critiques du modèle ===
+
+Le modèle économique utilisé ne peut se contenter d'un concept d'[[Utilité#Utilité ordinale|utilité ordinale]]. Si on se borne à supposer comparables entre elles les satisfactions ou désagréments d'un joueur, on construit un [[ensemble totalement ordonné]] : on peut ainsi dire que Xavier préfère gagner {{unité|100|euros}} à ne rien gagner du tout, et ne rien gagner du tout à perdre {{unité|100|euros}}. Mais que fera-t-il si on lui propose de participer à une loterie où il a une chance sur deux de s'enrichir de {{unité|100|euros}} et une chance sur deux de s'appauvrir du même montant ? Est-ce pour lui plus tentant que de s'abstenir et de s'assurer ainsi de ne rien perdre, mais ne rien gagner non plus ? Si le joueur ressent de l'[[aversion au risque|aversion pour la prise de risque]], il refusera la loterie puisqu'elle lui propose le même gain moyen que l'abstention, mais avec plus de risque. Mais comment maintenant se comportera-t-il si on lui offre deux chances sur trois de gagner et une chance sur trois de perdre ? À partir de quelle valeur du paramètre accepte-t-il de jouer ? L'introduction d'une [[théorie cardinale de l'utilité]] permettrait de répondre, une théorie purement ordinale ne suffit pas en revanche à donner un sens à une espérance de gain en situation aléatoire, et donc à mettre sur pied le modèle justifiant les applications en économie du théorème du minimax.
+
+Pour donner un sens au calcul d'[[espérance mathématique]] par lequel passe la justification du modèle, von Neumann et [[Oskar Morgenstern|Morgenstern]] se sont efforcés de fonder l'utilisation d'une théorie cardinale, et ont développé une [[théorie de la décision#La théorie de la décision dans le risque|théorie de l'utilité de l'incertain]] suffisante pour fonder leur modèle. Mathématiquement rigoureuse, la théorie n'en a pas moins été contestée dès son introduction, la contestation passant nécessairement par celle de ses axiomes : voir en ce sens le fameux [[paradoxe d'Allais]], explicité par [[Maurice Allais]]<ref>{{Ouvrage
+ | titre       = Game Theory and Political Theory: An Introduction
+ | éditeur     = Cambridge University Press
+ | auteur      = Peter C. Ordeshook
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 1986
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 9780521315937
+ | oclc        = 
+ | commentaire = 
+}}, chapitre 1.</ref>.
+
+Mais si l'utilité cardinale n'est qu'un concept mathématique découplé de la réalité, les formalisations [[Probabilité|probabilistes]] en théorie des jeux sont mal fondées. Tout en nuançant son propos (il concède que les théories de la décision qu'il critique « ont établi leur pertinence et leur puissance dans de multiples applications »), [[Russel Hardin]] peut ainsi décocher quelques flèches contre les modèles à base de stratégies mixtes : il fait par exemple observer qu'il se pourrait bien qu'il n'y ait aucun moyen sensé de définir une combinaison de victoires et de défaites de deux pays en guerre qui puisse être raisonnablement considérée comme à mi-chemin de la victoire totale et de la défaite totale d'une des parties<ref>{{en}} Russel Hardin, « {{lang|en|''Rational choice theories''}} », dans Terence Ball (éd.), {{lang|en|''Idioms of inquiry''}}, SUNY Press, 1987, {{p.}}67-94 {{ISBN|978-0-88706-458-6}}</ref>.
+
+Enfin, même en admettant pouvoir définir pour chaque joueur une utilité cardinale et donc développer une théorie considérant des stratégies mixtes, cela ne suffit pas à justifier qu'on puisse reconnaître si un jeu vérifie l'hypothèse de « somme nulle » : pour pouvoir exiger que le gain de Xavier équilibre la perte d'Yvette, il faut aussi postuler la comparabilité de leurs utilités, ce qui ne va pas de soi<ref>Cette objection de Hardin est explicitée par {{Ouvrage
+ | titre       = Playing fair : game theory and the social contract
+ | éditeur     = The MIT Press
+ | auteur      = Kenneth Binmore
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 1994
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 0262023636
+ | oclc        = 
+ | commentaire = 
+}}, p. 276 (qui en propose une réfutation)</ref>.
+
+== Histoire d'une découverte ==
+=== Von Neumann à Göttingen ===
+Au début de l'année 1926 John von Neumann, âgé de 22 ans, vient de soutenir son [[doctorat]] à [[Budapest]]. Bien qu'inscrit à l'université de sa ville natale, il ne l'a fréquentée qu'au moment de passer des examens et a suivi sa formation à l'[[université de Berlin]] de 1921 à 1923 puis à l'[[École polytechnique fédérale de Zurich]]. Ayant accédé à un ''Fellowship'' de la [[Fondation Rockefeller]], il va séjourner pendant l'année universitaire 1926-1927 à l'[[Université de Göttingen]] où exerce alors [[David Hilbert]]. C'est pendant cette période qu'il va concevoir sa première démonstration du théorème du minimax, qu'il exposera en décembre 1926 au séminaire de mathématiques<ref>Pour ce paragraphe, voir {{harvsp|id=LEONARD1995|Leonard|1995}}, p. 732.</ref>.
+
+Pour expliquer pourquoi von Neumann s'est intéressé à la théorie des jeux, des raisons psychologiques assez peu convaincantes ont été apportées : on a ainsi noté son goût pour le [[poker]], signalé qu'il avait constitué une collection de jeux d'enfants, voire souligné qu'il faisait preuve d'un humour parfois assez puéril<ref>Ces explications psychologiques sont rapportées par {{harvsp|id=POUND1993|Poundstone|1993}}, p. 52, qui ne les prend guère au sérieux.</ref>. Plus intéressantes sont les analyses de Philip Mirowski et Robert J. Leonard pour qui la conception du théorème du minimax ne doit pas être détachée du séjour de von Neumann à Göttingen et de l'influence qu'exerce alors sur lui l'« école formaliste » constituée autour de Hilbert<ref group=Note>{{harvsp|id=HOFF2001|Kjeldsen|2001}} juge ce point de vue « convaincant », p. 42.</ref>. En même temps qu'ils travaillent sur le [[programme de Hilbert]] de formalisation finitiste des mathématiques, les représentants de cette école s'intéressent en effet aussi à la formalisation mathématique de la réalité, notamment en [[physique mathématique]] — ainsi c'est également à Göttingen, en 1925, qu'un jeune ''[[privatdozent]]'', [[Werner Heisenberg]], en collaboration avec [[Max Born]] et [[Pascual Jordan]], met au point la formulation de la [[mécanique quantique]] en termes de [[mécanique matricielle]]<ref group=Note>Philip Mirowski insiste particulièrement sur les parentés conceptuelles qu'il perçoit entre la théorie du minimax et les travaux qu'effectue concurremment von Neumann en mécanique quantique : représentation matricielle de formes bilinéaires, introduction du probabiliste dans un domaine où on n'était pas habitué à l'utiliser. (Il va jusqu'à évoquer un « lien entre les jeux et la mécanique quantique  » ({{citation étrangère|lang=en|games/quantum mechanics nexus}}), p. 121).</ref>. On peut aussi rappeler que c'est aussi un ancien collaborateur de Hilbert à Göttingen, [[Ernst Zermelo]] qui, en 1913, a été le pionnier de la théorie des jeux non synchrones par son travail de mathématisation des [[échecs]]<ref>Pour les analyses de l'influence de l'école hilbertienne, voir Philip Mirowski « ''What were von Neumann and Morgenstern trying to accomplish ?'' », dans {{harvsp|id=WEINTRAUB1991|Weintraub (éd.)|1991}} et {{harvsp|id=LEONARD1995|Leonard|1995}}.</ref>.
+
+En revanche, la recherche économique ne semble guère avoir influencé l'élaboration du théorème du minimax, même si une note dans l'article de 1928 montre que von Neumann est conscient qu'il y a là un champ de développement de ses idées. Pour Robert J. Leonard, qui ne constate des échanges de correspondance entre von Neumann et des économistes qu'à partir de 1927 et se fonde sur le mode d'exposition du théorème dans les années 1930, la théorie des jeux reste d'abord pour von Neumann jusqu'aux alentours de 1940 ce qu'elle est dans le titre de son article de 1928 : une théorie des « jeux de société »<ref>{{harvsp|id=LEONARD1995|Leonard|1995}}, p. 735 et 739 notamment.</ref>.
+
+=== Les précurseurs du minimax ===
+
+
+Nombre de cours ou traités consacrés à la théorie des jeux dans son ensemble mettent en relief le caractère profondément innovant du théorème de von Neumann, où ils lisent l'invention de la théorie des jeux synchrones<ref group=Note>Par exemple {{Lire en ligne
+  |lien=http://www.owlnet.rice.edu/~econ440/notes/gt07ch123.pdf
+  |langue=en
+  |texte=Advanced game theory
+  |date=7 février 2009
+}}, cours d'Hervé Moulin à l'[[université Rice]], qui utilise l'expression « résultat fondateur » (« ''founding result'' ») ou l'introduction historique dans {{Ouvrage
+ | titre       = Games, Theory and Applications
+ | éditeur     = Courier Dover Publications
+ | auteur      = L. C. Thomas
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 2003
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 9780486432373
+ | oclc        = 
+ | commentaire = 
+}} (p. 20) pour qui « la théorie des jeux a commencé avec deux articles de von Neumann (1928, 1937) sans oublier les travaux de [[Émile Borel|Borel]], qui avait étudié des problèmes semblables dans les années 1920 »</ref>.
+
+Dans les études historiques plus complètes, les précurseurs de von Neumann sont davantage considérés. La première référence où les historiens observent l'élaboration d'une stratégie de jeu par recherche d'un maximin est une lettre de novembre [[1713]] de [[Pierre Rémond de Montmort]] où il décrit une solution du jeu de {{Lien|Le Her}} due à [[James Waldegrave]] qui est déjà ce qu'on appelle aujourd'hui une [[stratégie mixte]]<ref>{{harvsp|id=DIMAND1996|Dimand et Dimand|1996|p=122-123}}</ref>.
+
+Mais ce sont surtout trois notes d'[[Émile Borel]] aux [[comptes rendus de l'Académie des sciences]] qui attirent l'attention des spécialistes de l'histoire du minimax. Dans celles-ci, Borel formalise mathématiquement pour la première fois la notion générale de stratégie mixte, prouve le théorème du minimax pour des jeux symétriques à moins de cinq stratégies pures, mais conjecture l'existence de contre-exemples pour des matrices de taille plus grande.
+
+À l'en croire, quand il découvre de son côté le théorème du minimax, von Neumann ignore tout des travaux de Borel<ref group=Note>{{harvsp|id=HOFF2001|Kjeldsen|2001}} considère la version de von Neumann comme hautement crédible, même si l'interprétation contraire a pu être formulée, par exemple par [[Stanislaw Ulam]] (dans la nécrologie « ''John von Neumann, 1903-1957'' », ''Bulletin of the American Mathematical Society'', 64, 1958, p. 1-49)</ref>. Dans son article de 1928, von Neumann précise avoir découvert ceux-ci postérieurement à l'envoi pour publication, et en fait mention par une note de bas de page.
+
+En revanche, les travaux de Borel ne sont nulle part signalés dans son ouvrage influent de 1944 (''{{Lien|Theory of games and economic behavior}}'') publié conjointement avec [[Oskar Morgenstern]] qui va contribuer à populariser la nouvelle théorie des jeux.
+
+La discussion de l'importance respective des contributions des deux grands mathématiciens prend un ton polémique lorsqu'en 1953, au sommet de la gloire de von Neumann, [[Maurice Fréchet]] publie deux notes où il qualifie Borel d'« initiateur » de la théorie des jeux ; il ajoute incidemment que même si Borel avait démontré le premier le théorème, il n'aurait, comme von Neumann, qu'« enfoncé une porte ouverte » ({{citation étrangère|lang=en|simply entered an open door}}) puisque le théorème et même des versions plus générales avaient été prouvés très antérieurement aux travaux de Borel<ref group=Note>Il s'agit, comme l'explicite T. H. Kjeldsen, d'une allusion aux [[théorèmes de l'alternative]]</ref>. Von Neumann répond sèchement à l'agression, soulignant encore qu'il ne connaissait pas les travaux du mathématicien français quand il a lui-même découvert le théorème, et que cela valait sans doute mieux puisque la conjecture de celui-ci était fausse ; il ne lui paraît pas que la mise sous forme mathématique du problème soit une contribution aussi essentielle que la complète résolution qu'il y a apportée, et refuse de reconnaître en Borel l'initiateur de la théorie ({{citation étrangère|lang=en|In view of this, Borel did hardly "initiate" the theory}})<ref>Pour l'ensemble de la narration de la polémique von Neumann-Borel, cf. {{harvsp|id=HOFF2001|Kjeldsen|2001}}. Le résumé de la réponse de von Neumann a été écrit à partir de la consultation de {{harvsp|id=VON1953|Von Neumann|1953}}.</ref>.
+
+== Comprendre la rationalité ==
+
+Dès lors que le modèle de von Neumann prétend définir quelle est la « meilleure » stratégie à adopter dans un jeu à somme nulle, deux questions se posent naturellement : ce modèle est-il une aide efficace à la décision, la solution qu'il fournit doit-elle être appliquée en pratique (le modèle est-il prescriptif) ? Et par ailleurs le modèle reflète-t-il le comportement qu'appliquent les acteurs dans la réalité (le modèle est-il descriptif)<ref>Ce plan d'étude est celui de l'article {{Lien web
+   |url=http://www.iep.utm.edu/g/game-th.htm
+   |titre=''Game Theory''
+   |auteur=
+   |année=
+   |éditeur=
+   |consulté le=10 février 2009
+ }} de l'''Internet Encyclopedia of Philosophy'', par Till Grüne-Yanoff
+</ref> ?
+
+Cette section s'intéresse à la première question, qu'on peut immédiatement compléter : si la réponse est « oui », si on s'accorde à dire que viser le maximin est un acte « rationnel », en quel sens l'est-il ? Le modèle [[École néoclassique|néo-classique]] de [[rationalité économique|rationalité]] (l'[[homo œconomicus]] visant à maximiser son [[utilité]]) suffit-il à fonder les normes à suivre dans les prises de décision modélisées par des jeux ? On peut raisonnablement défendre que non<ref>Article {{Lien web
+   |url=http://plato.stanford.edu/entries/economics
+   |titre=''Philosophy of Economics''
+   |auteur=
+   |année=
+   |éditeur=
+   |consulté le=10 février 2009
+ }} de la ''Stanford Encyclopedia of Philosophy'', section 5-3 « ''Game Theory'' » par Daniel M. Hausman</ref>, mais c'est souvent en pensant la situation plus complexe des jeux à somme non nulle (notamment le fameux [[dilemme du prisonnier]]). Qu'en est-il si on se borne aux jeux concernés par le théorème du minimax ?
+
+Si on en croit [[Kenneth Binmore]], la méthode du maximin est bien celle à suivre : face à un bon joueur, il n'y a rien de mieux à faire que choisir la stratégie mixte recommandée par le théorème de von Neumann. Il faut tout de même formuler deux mises en garde : la recommandation ne doit pas être suivie face à un adversaire peu compétent ; si sa stratégie est faible, il ne faut pas manquer de s'éloigner de la recherche du maximin pour exploiter cette faiblesse (comme l'écrit Binmore, « il serait irrationnel de refuser de prendre un risque calculé lorsque les probabilités sont suffisamment en votre faveur »). Par ailleurs, la recherche du maximin n'est recommandable que sous l'hypothèse de jeu à somme nulle ; dans la plupart des situations réelles elle est donc inexploitable<ref name="bin233">{{harvsp|id=BINMORE2007|Binmore|2007|p=233}}</ref>. D'autres auteurs parviennent aux mêmes conclusions en accordant plus ou moins de place à la première mise en garde : Morton D. Davis, par exemple, souligne que s'éloigner des recommandations du théorème, lorsque les deux joueurs s'y aventurent simultanément, c'est jouer risqué et plonger dans l'inconnu mais ce sera tout de même gagnant pour l'un ou l'autre puisque le jeu est à somme nulle – or décider si on préfère la sécurité d'un gain assuré ou le piquant de la prise de risque, est une simple question de goût personnel<ref>{{Ouvrage
+ | titre       = Game Theory: A Nontechnical Introduction
+ | éditeur     = Courier Dover Publications
+ | auteur      = Morton D. Davis
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 1997
+ | lieu        = 
+ | publi       = 
+ | pages       = 44
+ | isbn        = 9780486296722
+ | oclc        = 
+ | commentaire =
+}}</ref>.
+
+Se pose alors la question [[Philosophie|philosophique]] de construire une justification de cette prescription : la nature humaine étant ce qu'elle est, comment expliquer que ce choix soit le bon ? Posée comme question concernant la totalité des jeux non coopératifs, cette interrogation fait l'objet d'une littérature très abondante<ref>Voir notamment la section « ''Game Theory as a Theory of Rationality'' » de l'article précité « ''Game Theory'' » de l'''Internet Encyclopedia of Philosophy''</ref>, mais qui le plus souvent ne s'arrête pas à considérer spécifiquement le cas très particulier du minimax et des jeux à somme nulle. On peut toutefois relever un article de Mathias Risse<ref>{{article
+ | langue = en
+ | prénom =Mathias
+ | nom = Risse
+ | lien auteur =
+ | titre =  ''What Is Rational About Nash Equilibria?''
+ | périodique =Synthese
+ | lien périodique =
+ | volume =124
+ | numéro =3
+ | jour =
+ | mois =septembre
+ | année =2000
+ | pages =361-384
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}</ref> qui consacre une section à une relecture critique de l'argumentation de Morgenstern et von Neumann « prouvant » la pertinence opératoire de la stratégie du maximin. Pour parvenir à cette preuve, Morgenstern et von Neumann proposaient une expérience de pensée : supposer qu'Yvette joue après Xavier, informée de la stratégie mixte que celui-ci a choisie mais pas du coup que le hasard a ensuite défini – sous cette hypothèse, Xavier serait inconséquent de ne pas adopter la stratégie du maximin. On considère ensuite la situation inverse (Xavier informé de la stratégie mixte d'Yvette) et ceci fonde le choix d'Yvette de viser le minimax. Pour Risse, cette argumentation paraît bien faible et il en conclut que « von Neumann et Morgenstern ne réussissent pas à prouver que les stratégies du minimax sont les seules rationnelles pour un jeu à deux personnes et à somme nulle ».
+
+On peut ici mentionner un autre problème philosophique, apparemment sans relation avec le précédent : celui du sens à donner aux stratégies mixtes lorsque le jeu n'est pas répété. Si Xavier et Yvette ne s'affrontent qu'une fois [[pierre-feuille-ciseaux]], à quoi bon pour Xavier suivre à la lettre les conseils de von Neumann et tirer au sort préalablement s'il jouera « pierre », « feuille » ou « ciseaux » ? Il lui suffit de décider de jouer « ciseaux » : à supposer qu'Yvette ne le connaisse pas d'assez près pour identifier d'éventuels biais psychologiques, son intention est alors tout aussi opaque pour elle et conduira au même résultat. Le théorème du minimax ne semble rien apporter<ref>Ce paradoxe est mentionné par {{harvsp|id=DIMAND1996|Dimand et Dimand|1996|p=149}}</ref>.
+
+Les deux problématiques se retrouvent dans une intéressante interprétation de l'équilibre de von Neumann comme limite, due à [[Julia Robinson]] (1950). Sans entrer dans les détails techniques, en voici le principe décrit sous forme [[définition par récurrence|récurrente]] : on suppose que Xavier et Yvette vont s'affronter pendant un grand nombre de parties. Lors de leur première rencontre, ils choisissent chacun arbitrairement une stratégie pure, peu importe par quelle méthode. Une fois les N premières parties jouées, pour déterminer son coup à la N+1-ème partie, Xavier emploie la méthode suivante : il considère la liste des N coups déjà joués par son adversaire et reconstitue empiriquement à partir de celle-ci la stratégie mixte <math>Y_{N}^{\rm emp}</math> qu'Yvette emploie vraisemblablement – pour éclairer cette construction par l'exemple, si dans les 10 premiers coups d'une partie de « pierre-feuille-ciseaux » Yvette a joué 3 fois « pierre », 3 fois « feuille » et 4 fois « ciseaux », Xavier postule comme vraisemblable l'emploi par Yvette de la stratégie mixte <math>Y_{10}^{\rm emp}=\begin{pmatrix}3/10&3/10&4/10\end{pmatrix}^T</math>. Il détermine alors la stratégie pure qui maximiserait ses chances de gain contre une joueuse jouant selon <math>Y_{N}^{\rm emp}</math> (dans l'exemple ce serait « pierre ») et joue ce coup. Yvette fait son choix de façon symétrique. Alors, quand <math>N</math> tend vers l'infini, il y a toutes chances que les stratégies mixtes empiriques des deux joueurs convergent vers celles de l'équilibre du minimax<ref>Le théorème de Julia Robinson est exposé informellement dans {{Ouvrage
+ | titre       = Luck, Logic, and White Lies
+ | éditeur     = A K Peters, Ltd.
+ | auteur      = Jörg Bewersdorff et David Kramer
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 2005
+ | lieu        = 
+ | publi       = 
+ | pages       = p. 406-411
+ | isbn        = 9781568812106
+ | oclc        = 
+ | commentaire = 
+}}</ref>. Dans ce cadre conceptuel, on parvient à éclairer le maximin sans dépasser la théorie néo-classique de la rationalité : à chaque partie Xavier (ou Yvette) choisit son coup par la simple maximisation d'une utilité. De même, l'argumentation de Morgenstern et von Neumann critiquée par Risse reprend du sens : certes chaque joueur ne connaît pas avant de jouer quelle est la stratégie mixte choisie par son adversaire, mais il n'est pas loin de la connaître puisqu'il dispose de la répartition empirique obtenue par mémoire du passé.
+
+== Expériences ==
+
+Comme toute théorie scientifique, celle de l'équilibre de von Neumann peut et doit subir le test de l'expérience, et en particulier être prédictive : on souhaiterait qu'elle prédise avec un taux de réussite acceptable les comportements réels des acteurs en situation de conflit.
+
+===Expérimentations de laboratoire===
+[[Fichier:Fancyrat1.jpg|thumb|Un rat attiré par une récompense.]]
+Notamment dans les années 1960 et 1970, de multiples [[Psychologie expérimentale|expériences de psychologie]] ont mesuré le comportement réel d'acteurs soumis à des jeux à la von Neumann, avec diverses variantes méthodologiques : jeux à points-selles ou jeux à stratégie optimale mixte, jeu contre un autre sujet d'expérience ou jeu contre un expérimentateur (qui peut lui-même soit utiliser la stratégie du minimax, soit sciemment utiliser une mauvaise stratégie)... Les résultats en sont très disparates. On y observe assez souvent la convergence vers la stratégie appropriée pour les joueurs à qui on propose un adversaire volontairement malhabile ; on constate déjà plus rarement la convergence vers le minimax contre un adversaire jouant le minimax. Plusieurs auteurs annoncent des résultats absolument négatifs et ne mesurent aucune tendance de leurs sujets d'expérience à se diriger vers la stratégie supposée « rationnelle », celle du minimax. Une expérience menée sur des [[rat]]s ne décèle pas chez eux une meilleure aptitude que chez les humains à apprécier les subtilités du théorème de von Neumann : si leur comportement n'est pas aléatoire, la tendance qu'on y constate est une préférence pour le maximax, la stratégie pure qui rend envisageable la plus forte récompense<ref>Pour le paragraphe « Expérimentations de laboratoire », les sources utilisées sont Davis (op. cit.), p. 50-53 et {{Ouvrage
+ | titre       = Game Theory and Its Applications in the Social and Biological Sciences
+ | éditeur     = Routledge
+ | auteur      = Andrew M. Colman
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 1995
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 9780750623698
+ | oclc        = 
+ | commentaire = 
+}} (chapitre 5). Les « auteurs qui annoncent des résultats négatifs » cités par Colman sont Kaufman et Lamb (1967) et Messick (1967) ; l'expérience sur les rats est de Flood, Lendenmann, Rapoport (1983)</ref>.
+
+===Efficacité prédictive dans des situations réelles===
+
+Même si la théorie des jeux à somme nulle ne modélise que rarement de façon correcte des situations réelles, il est parfois possible de représenter des problèmes de décision comme des jeux à deux joueurs et à somme nulle, puis de contrôler ''a posteriori'' si les acteurs appliquent ou non une stratégie de maximin.
+
+Un travail abondamment cité de l'anthropologiste William Davenport, publié en 1960, modélise le comportement de pêcheurs [[Jamaïque|jamaïcains]] par un modèle à la von Neumann. Ces pêcheurs disposent de trois choix différents pour installer leurs [[nasse|casiers]], les coûts des trois choix étant bien distincts (distance à parcourir) et tous n'étant pas également poissonneux. Face à eux, la nature peut ou non déclencher de forts courants imprévisibles, susceptibles de diminuer significativement le rapport des casiers, leur influence étant d'ampleur très différente d'un site à l'autre. On peut mesurer, pour chaque choix conjoint (le choix du site du côté du pêcheur, celui de rester calme ou se déchaîner du côté de la nature), le bénéfice que tire le pêcheur de sa journée de travail. L'application du théorème de von Neumann à la matrice <math>(3,2)</math> ainsi obtenue fournit de très près la répartition effectivement mesurée des pêcheurs entre les trois sites. Las, la méthode est critiquable, et a été critiquée : utiliser le modèle du minimax quand « la nature » est un des joueurs, c'est mal le comprendre puisqu'il est certain que celle-ci n'adaptera pas sa stratégie au comportement de son adversaire, ne tiendra pas compte des habitudes des pêcheurs locaux pour décider avec quelle fréquence déclencher le courant dévastateur. Même si on peut ensuite critiquer la critique et expliquer en quoi le comportement des pêcheurs est tout de même rationnel, l'étude de Davenport est donc difficilement admissible comme pièce à l'appui du modèle de von Neumann<ref>{{Ouvrage
+ | titre       = Game Theory and Strategy
+ | éditeur     = MAA
+ | auteur      = Philip D. Straffin
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 1993
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 9780883856376
+ | oclc        = 
+ | commentaire = 
+}}, p. 23-26</ref>.
+
+En revanche, les observations confirment que le modèle du maximin est bien prédictif lorsque s'opposent des joueurs humains hautement compétents. Au [[football]], en considérant le jeu à somme nulle qui oppose le joueur exécutant au [[gardien de but (football)|gardien de but]] au moment du [[penalty]], les données constatées recoupent avec une excellente précision les prédictions du modèle de von Neumann<ref name="bin233" />{{,}}<ref>{{harvsp|id=BERGER2007|Berger-Hammer|2007}}</ref>.
+
+== Démonstrations ==
+
+La preuve originelle de von Neumann, publiée en 1928, était assez difficile à suivre<ref group=Note>{{harvsp|id=HOFF2001|Kjeldsen|2001}} cite trois sources qui évoquent cette prétendue difficulté de la preuve, dont elle ne semble pas convaincue ; elle donne pour sa part un résumé de cete démonstration d'origine en cinq pages seulement. Il lui semble toutefois important de souligner que cette démonstration ne repose sur aucun théorème du point fixe, et qu'elle ne fait nullement apparaître le lien entre le théorème du minimax et la théorie des inéquations linéaires</ref> et utilisait des arguments topologiques. Dans un second article, publié en 1937, von Neumann propose une preuve beaucoup plus lisible où l'utilisation de la topologie passe désormais par l'utilisation du [[théorème du point fixe de Brouwer]]. Un an plus tard, en 1938, le mathématicien [[Jean Ville]] publie une nouvelle preuve du théorème d'un esprit très différent puisqu'elle ne repose plus sur des résultats topologiques fins mais sur des arguments élémentaires de géométrie des convexes ([[hyperplan d'appui]]). Dans l'important ouvrage qu'il publie en 1944 avec [[Oskar Morgenstern]] (''Theory of games and economic behavior''), John von Neumann donne d'ailleurs une preuve adaptée de celle de Ville et non plus celle qui repose sur le théorème de Brouwer. En 1950, c'est [[Hermann Weyl]] qui fournit une nouvelle démonstration, également basée sur des arguments de convexité. Enfin, en 1967, {{Lien|Guillermo Owen}} apporte une nouvelle preuve très concise, en utilisant une construction par [[récurrence transfinie]]<ref>{{harvsp|id=DIMAND1996|Dimand et Dimand|1996|p=130}}, est source de l'ensemble du paragraphe, sauf la dernière phrase (preuve d'Owen) qui repose sur {{harvsp|id=BINMORE2007|Binmore|2007|p=228-229}} où on en trouvera une version distanciée. Pour être tout à fait exact, c'est la présentation consultée dans Binmore qui repose sur une récurrence transfinie.</ref>.
+
+Le théorème du minimax peut aussi être démontré comme corollaire du théorème plus général de Nash qui assure l'existence d'équilibres pour les jeux non coopératifs, même à somme non nulle ; comme les premières preuves du théorème de von Neumann, la démonstration du théorème de Nash repose sur des arguments topologiques (on peut utiliser le théorème du point fixe de Brouwer mais aussi le {{Lien|trad=Kakutani fixed point theorem|théorème du point fixe de Kakutani}}] et donc exploiter la convexité).
+
+On peut aussi le déduire du [[Optimisation linéaire#Dualité lagrangienne|théorème de dualité en optimisation linéaire]], comme les [[théorèmes de l'alternative]] parmi lesquels il se laisse ranger si on le reformule. Dans la mesure où le théorème de dualité peut être prouvé indépendamment de la théorie des inéquations linéaires, par des méthodes algorithmiques ([[algorithme du simplexe|méthode du simplexe]]), cette approche est différente de celles évoquées précédemment et a surtout l'intérêt d'être constructive : en appliquant un algorithme d'optimisation linéaire, on parvient à expliciter le minimax et un équilibre de Nash pour le jeu.
+
+La valeur du maximin en termes de programmes linéaires est précisément la suivante, en utilisant les notations de l'article [[Optimisation linéaire]]<ref group=Note>La restriction exigeant la positivité du maximin ne pose pas de difficultés en pratique, car il suffit d'ajouter à tous les coefficients de A un même réel suffisamment grand pour être ramené à un nouveau problème pour lequel l'hypothèse est réalisée</ref> :
+
+'''Proposition'''<ref>{{harvsp|id=BINMORE2007|Binmore|2007|p=234}}</ref> : ''Supposons'' <math>0<\max_{X\in\Delta_k}\min_{Y\in\Delta_n}Y^TAX</math>.
+
+''Alors, en notant'' <math>e=\begin{pmatrix}1&\ldots&1\end{pmatrix}^T</math>, ''ce maximin est l'inverse de la valeur du programme linéaire'' :
+
+<center><math>
+\begin{array}{rrll}
+\min w = & e^Tx & &\\
+     s.c & Ax   &\geq& e\\
+         &  x   &\geq&0
+\end{array}
+</math></center>
+
+Pour une exposition sommaire de certaines des démonstrations, 
+
+{{Article détaillé|Démonstrations du théorème du minimax}}
+
+On signalera tout de même ici, ce qui est très facile à prouver, que l'une des inégalités du théorème se vérifie en deux lignes :
+
+'''Remarque''' : ''Avec les notations du théorème de von Neumann,'' <math>\max_{X\in\Delta_k}\min_{Y\in\Delta_n}Y^TAX\leq\min_{Y\in\Delta_n}\max_{X\in\Delta_k}Y^TAX</math>.
+
+Elle a de fait déjà été utilisée dans la preuve de la proposition de la sous-section « Stratégies mixtes » et se vérifie exactement comme on vérifie l'inégalité analogue concernant les coefficients de la matrice A dans la preuve de la proposition de la sous-section « Points-selles dans les matrices de gain ».
+
+== Postérité du théorème ==
+
+Dans le domaine des mathématiques pures, le théorème de von Neumann est le premier d'une longue série de théorèmes du [[minimax]] qui le généralisent dans de multiples directions<ref>{{en}} Stephen Simons, « {{lang|en|''Minimax theorems and their proofs''}} », dans Dingzhu Du, Panos M. Pardalos (éd.), {{lang|en|''Minimax and Applications''}}, Springer, 1995, {{p.}}1-24 {{ISBN|9780792336150}}.</ref>. Il a sans doute aussi eu une influence significative sur l'évolution de l'[[optimisation linéaire]]<ref>{{Ouvrage
+ | titre       = Linear Programming and Extensions
+ | éditeur     = Princeton University Press
+ | auteur      = [[George Dantzig|George B. Dantzig]]
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 1998
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 9780691059136
+ | oclc        = 
+ | commentaire = 
+}}, p. 24</ref>.
+
+Dans d'autres domaines scientifiques, le minimax a joué un rôle non négligeable en théorie statistique de la décision et sur la conception de systèmes de [[Calcul distribué|calcul distribués]]<ref name=Aumann>[[Robert Aumann]], « ''Game theory'' », dans ''Collected papers'', MIT Press, 2000 {{ISBN|9780262011549}}, p. 52-53</ref>.
+
+Pour le meilleur ou pour le pire<ref group="Note">[[Kenneth Binmore|Ken Binmore]] est extrêmement virulent dans sa dénonciation de ce qu'il juge être une erreur lourde de Rawls. Il note (p. 317) que l'introduction du « minimax » comme concept philosophique s'explique probablement par l'influence du théorème de von Neumann. Il va ensuite longuement critiquer son usage : s'il est sans doute rationnel dans le cas d'un jeu à somme nulle, le choix du minimax dans des cadres plus généraux n'est pas recommandé par la théorie des jeux, et reflète simplement une très forte [[aversion au risque]]. En fait, il lui semble très plausible que les théoriciens qui prônent le maximin comme concept de philosophie politique soient sous l'influence de leurs préjugés de [[classe sociale|classe]] : l'aversion au risque n'est-elle pas une qualité bourgeoise ? (voir tome 2, p. 151)</ref>, le théorème de von Neumann a peut-être eu aussi une postérité philosophique : il aurait inspiré la pensée de [[John Rawls]], qui invoque explicitement la notion de maximin dans l'élaboration de sa [[théorie de la justice]]<ref>Kenneth Binmore, ''Playing fair : game theory and the social contract'', op. cit., chapitre 4</ref>. Critiqué avec virulence pour l'usage immodéré qu'il aurait fait du concept<ref>{{article
+ | langue = en
+ | prénom = John
+ | nom =     Harsanyi
+ | lien auteur = John Harsanyi
+ | titre =      ''Can the maximin principle serve as a basis for morality ?''
+ | périodique = American Political Science Review
+ | lien périodique =
+ | volume = 69
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1975
+ | pages = 594-606
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}</ref>, Rawls a toutefois tenu à préciser qu'il n'avait jamais fait l'erreur de proposer la recherche du maximin « comme principe général de délibération rationnelle, quels que puissent être les niveaux de risque et d'incertitude » ({{citation étrangère|lang=en|as the general principle of rational decision in all cases of risk and uncertainty}})<ref>{{Ouvrage
+ | titre       = Justice as Fairness: A Restatement
+ | éditeur     = Harvard University Press
+ | auteur      = [[John Rawls]] et Erin Kelly
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 2001
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 9780674005105
+ | oclc        = 
+ | commentaire = 
+}}</ref>.
+
+On laissera le mot de la fin à [[Robert Aumann]] qui dresse un bilan argumenté de la postérité du théorème de von Neumann<ref name="Aumann"></ref>. Pour lui, l'omniprésence du théorème dans les présentations de la théorie des jeux antérieures à 1960 était peut-être un peu injuste (la modélisation des jeux à somme nulle n'est pas l'essentiel de la théorie) mais s'explique par la simplicité du résultat. Par un retour de balancier encore plus injuste, les théoriciens des jeux ont eu tendance dans les décennies qui ont suivi à minimiser l'importance du théorème<ref group=Note>Aumann raconte ainsi avoir donné en 1964 un cours d'initiation à la théorie des jeux à l'[[université Yale]] sans jamais y mentionner le théorème du minimax.</ref>. Avec le recul que donne le temps, on ne peut pourtant que reconnaître son importance : par sa postérité en dehors de la théorie des jeux d'abord, mais aussi en théorie des jeux où l'appareil conceptuel qui le sous-tend reste central, il fournit un modèle simple particulièrement adapté pour tester les concepts plus techniques. Sa preuve a certainement ouvert la voie à [[John Forbes Nash|John Nash]], pionnier de la théorie des jeux à somme non nulle. En conclusion, pour Aumann, le théorème de von Neumann « s'il n'est pas la pièce maîtresse de la théorie des jeux, en demeure une pierre angulaire cruciale » ({{citation étrangère|lang=en|While not the centerpiece of game theory, it is a vital cornerstone}}).
+
+== Annexes ==
+
+=== Notes ===
+{{Références|colonnes=2|group="Note"}}
+
+=== Références ===
+
+{{Références|colonnes=2}}
+
+=== Ouvrages et articles scientifiques originaux mentionnés dans cet article ===
+
+*{{article
+ | id = BOREL1921
+ | langue = fr
+ | prénom = Émile
+ | nom =        Borel
+ | lien auteur = Émile Borel
+ | titre =      La théorie du jeu et les équations intégrales à noyau symétrique
+ | périodique = Comptes rendus de l'Académie des sciences
+ | lien périodique = Comptes rendus de l'Académie des sciences
+ | volume = 173
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1921
+ | pages = 1304-1308
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+*{{article
+ | id = BOREL1924
+ | langue = fr
+ | prénom = Émile
+ | nom =        Borel
+ | lien auteur =
+ | titre =  Sur les jeux où le hasard se combine avec l'habileté des joueurs
+ | périodique = Comptes rendus de l'Académie des sciences
+ | lien périodique = 
+ | volume = 178
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1924
+ | pages = 25-26
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+*{{article
+ | id = BOREL1926
+ | langue = fr
+ | prénom = Émile
+ | nom =        Borel
+ | lien auteur =
+ | titre = Un théorème sur les systèmes de formes linéaires à déterminant symétrique gauche
+ | périodique = Comptes rendus de l'Académie des sciences
+ | lien périodique = 
+ | volume = 183
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1926
+ | pages = 925-927
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+*{{article
+ | id = VON1928
+ | langue = de
+ | prénom = John
+ | nom = von Neumann
+ | lien auteur = John von Neumann
+ | titre = ''Zur Theorie der Gesellschaftspiele''
+ | périodique = Mathematische Annalen
+ | lien périodique = Mathematische Annalen
+ | volume = 100
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1928
+ | pages = 295-320
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+* {{article
+ | id = VON1937
+ | langue = de
+ | prénom = John
+ | nom = von Neumann
+ | lien auteur =
+ | titre = ''Über ein ökonomisches Gleichungssystem und eine Verallgemeinerung des Brouwerschen Fixpunktsatzes''
+ | périodique = Ergebnisse eines Mathematischen Seminars (Karl Menger éd.)
+ | lien périodique =
+ | volume = 8
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1937
+ | pages = 73-83
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+*[[Jean Ville]], « Sur la théorie générale des jeux où intervient l'habileté des joueurs » dans Émile Borel et ses collaborateurs, ''Traité du calcul des probabilités et de ses applications'', 2 (1938), p. 105-113.
+
+* {{Ouvrage
+ | titre       = Theory of games and economic behavior 
+ | éditeur     = Princeton University Press
+ | auteur      = John von Neumann et [[Oskar Morgenstern]]
+ | langue      = en
+ | année       = 1944
+}}
+
+* {{article
+ | id = ROBINSON1950
+ | langue = en
+ | prénom = Julia
+ | nom = Robinson
+ | lien auteur = Julia Robinson
+ | titre =  ''An iterative method of solving a game''
+ | périodique = Annals of Maths
+ | lien périodique =
+ | volume = 54
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1950
+ | pages = 296-301
+ | ISSN =
+ | url texte =
+ | consulté le =
+}} ( [http://courses.ece.uiuc.edu/ece586/TB/Robinson-AnnMath-1951.pdf Télécharger en pdf] )
+
+* {{en}} [[Hermann Weyl]], « ''Elementary Proof of a Minimax Theorem due to von Neumann'' » dans [[Harold W. Kuhn|H. W. Kuhn]] et [[Albert William Tucker|A. W. Tucker]] (éd.), ''Contributions to the Theory of Games Vol.I'', ''Annals of mathematics studies'' 24 (1950), p. 19-25 (Princeton University Press)
+
+* {{article
+ | id = FRECHET1953-1
+ | langue = en
+ | prénom = Maurice
+ | nom = Fréchet
+ | lien auteur = Maurice Fréchet
+ | titre = ''Émile Borel, Initiator of the Theory of Psychological Games and its Applications''
+ | périodique = Econometrica
+ | lien périodique =
+ | volume = 21
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1953
+ | pages = 95-96
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+* {{article
+ | id = FRECHET1953-2
+ | langue = en
+ | prénom = Maurice
+ | nom = Fréchet
+ | lien auteur = 
+ | titre = ''Commentary on the three notes of É. Borel''
+ | périodique = Econometrica
+ | lien périodique =
+ | volume = 21
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1953
+ | pages = 118-123
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+* {{article
+ | id = VON1953
+ | langue = en
+ | prénom = John
+ | nom = von Neumann
+ | lien auteur = 
+ | titre =   ''Communication on the Borel notes''
+ | périodique = Econometrica
+ | lien périodique =
+ | volume = 21
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1953
+ | pages = 124-125
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+* {{en}} William Davenport, « ''Jamaican fishing: a game theory analysis'' » dans Sidney W. Mintz (éd.), ''Papers in Caribbean anthropology'', ''Yale University Publications in Anthropology'' 57-64 (1960), p. 3-11 (Department of Anthropology, Yale University)
+
+* {{article
+ | id = OWEN1967
+ | langue = en
+ | nom ={{Lien|Guillermo Owen}}
+ | titre =  ''Communications to the Editor—An Elementary Proof of the Minimax Theorem''
+ | périodique = Management science
+ | lien périodique =
+ | volume = 13
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1967
+ | pages = 765
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+=== Article connexe ===
+
+* [[Point col|Point-selle]]
+
+== Bibliographie ==
+
+=== Références généralistes ===
+
+Presque tout ouvrage général de théorie des jeux destiné à un public sensibilisé aux mathématiques contiendra un énoncé du théorème de von Neumann, et souvent sa démonstration.
+
+* {{article
+ | id=BERGER2007
+ | langue = de
+ | prénom =
+ | nom = Roger Berger et Rupert Hammer
+ | lien auteur =
+ | titre = ''Links oder rechts; das ist hier die Frage. Eine spieltheoretische Analyse von Elfmeterschüssen mit Bundesligadaten''
+ | périodique = Arbeitsberichte des Instituts für Soziologie der Universität Leipzig
+ | lien périodique =
+ | volume =
+ | numéro = 47
+ | jour =
+ | mois = janvier
+ | année = 2007
+ | pages =
+ | ISSN =
+ | url texte = http://www.uni-leipzig.de/~sozio/content/site/a_berichte/47.pdf
+ | consulté le = 14 février 2009
+ | commentaire = L'exemple mis en relief dans le résumé introductif : théorie et pratique des penalties en matchs de Bundesliga.
+}}
+
+* {{Ouvrage
+ | id = BINMORE2007
+ | langue = en
+ | titre       = Playing for Real: A Text on Game Theory
+ | éditeur     = Oxford University Press US
+ | auteur      = [[Kenneth Binmore|Ken Binmore]]
+ | jour        = 
+ | mois        = 
+ | année       = 2007
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 9780195300574
+ | oclc        = 
+ | commentaire = Un cours d'initiation à la théorie des jeux et à son formalisme mathématique, par un des spécialistes mondiaux du sujet.
+}}
+
+* {{en}} A. A. Korbut, « ''Matrix game'' » {{Lire en ligne
+  |lien=http://eom.springer.de/m/m062820.htm
+  |texte=Lire en ligne
+  |date=23 février 2009
+}}  dans {{Ouvrage
+ | titre       = Encyclopaedia of mathematics - An updated and annotated translation of the Soviet Mathematical Encyclopaedia
+ | éditeur     = Reidel
+ | auteur      = Michel Hazewinkel, éd.
+ | langue      = 
+ | jour        = 
+ | mois        = 
+ | année       = 1988
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 1556080107
+ | oclc        = 
+ | commentaire = Un article d'encyclopédie précis et concis.
+}}
+
+*{{Ouvrage
+ | id = POUND1993
+ | titre       = Le dilemme du prisonnier : Von Neumann, la théorie des jeux et la bombe
+ | éditeur     = Cassini
+ | auteur      ={{Lien|William Poundstone}}
+ | langue      = 
+ | jour        = 
+ | mois        = 
+ | année       = 2003 (pour la traduction - édition en anglais de 1993)
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 978-2842250461
+ | oclc        = 
+ | commentaire = Un ouvrage de vulgarisation à la forme narrative, qui évite le formalisme mathématique. Disponible en français.
+}}
+
+=== Ouvrages et articles d'histoire des sciences ===
+*[http://www.springerlink.com/content/7u840622x441r661/fulltext.pdf Christian Schmidt, ''Quelques repères historiques sur la théorie des jeux de Leibniz à von Neumann'' {{pdf}}]
+*{{Ouvrage
+ | id = WEINTRAUB1991
+ | titre       = Toward a History of Game Theory
+ | éditeur     = Duke University Press
+ | auteur      = E. Roy Weintraub (éd.)
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 1991
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 0822312530
+ | oclc        = 
+ | commentaire = 
+}}
+
+*{{Ouvrage
+ | id = DIMAND1996
+ | langue = en
+ | titre       = A History of Game Theory, Volume I: From the Beginnings to 1945
+ | éditeur     = Routledge
+ | auteur      = Mary Ann Dimand et Robert W. Dimand
+ | langue      = en
+ | jour        = 
+ | mois        = 
+ | année       = 1996
+ | lieu        = 
+ | publi       = 
+ | pages       = 
+ | isbn        = 9780415072571
+ | oclc        = 
+ | commentaire = 
+}}
+
+* {{article
+ | id = LEONARD1995
+ | langue = en
+ | prénom = Robert J.
+ | nom = Leonard
+ | lien auteur =
+ | titre = ''From Parlor Games to Social Science: von Neumann, Morgenstern, and the Creation of Game Theory. 1928-1944''
+ | périodique = Journal of Economic Literature
+ | lien périodique =
+ | volume = 33
+ | numéro =
+ | jour =
+ | mois = juin
+ | année = 1995
+ | pages = 730-761
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+* {{article
+ | id = AGLIO1995
+ | langue = en
+ | prénom = Luca
+ | nom = dell'Aglio
+ | lien auteur =
+ | titre =   ''Divergences in the history of mathematics : Borel, von Neumann and the genesis of game theory''
+ | périodique = Rivista della storia della scienza
+ | lien périodique =
+ | volume = 3
+ | numéro =
+ | jour =
+ | mois =
+ | année = 1995
+ | pages = 1-46
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+* {{article
+ | id = HOFF2001
+ | langue = en
+ | prénom = Tinne Hoff
+ | nom =  Kjeldsen
+ | lien auteur =
+ | titre = ''John von Neumann's Conception of the Minimax Theorem: A Journey Through Different Mathematical Contexts''
+ | périodique = Archive for History of Exact Sciences Volume
+ | lien périodique =
+ | volume = 56
+ | numéro = 1
+ | jour =
+ | mois = novembre
+ | année = 2001
+ | pages = 39-68
+ | ISSN =
+ | url texte =
+ | consulté le =
+}}
+
+{{Bon article|vote=BA|oldid=38478177|date=4 mars 2009}}
+
+{{Portail|Économie|Mathématiques}}
+
+[[Catégorie:Optimisation]]
+[[Catégorie:Théorie des jeux]]
+[[Catégorie:Théorème de mathématiques|Minimax de von Neumann]]
+
+[[de:Min-Max-Theorem]]
+[[en:Minimax#Minimax theorem]]
+[[it:Minimax#Teorema minimax nel caso di mosse simultanee]]

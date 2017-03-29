@@ -1,0 +1,202 @@
+[[Image:IGBT symbol.gif|thumb|150px|Symbole usuel de l’IGBT]]
+Le '''transistor bipolaire à grille isolée''' ('''IGBT''', de l’anglais ''Insulated Gate Bipolar Transistor'') est un dispositif [[semi-conducteur]] de la famille des [[transistor]]s qui est utilisé comme [[interrupteur]] électronique, principalement dans les montages de l’[[électronique de puissance]].
+
+Ce composant, qui combine les avantages des technologies précédentes — c’est-à-dire la grande simplicité de commande du [[transistor à effet de champ]] par rapport au [[transistor bipolaire]], tout en conservant les faibles pertes par [[conductance électrique|conduction]] de ce dernier — a permis de nombreux progrès dans les applications de l’électronique de puissance, aussi bien en ce qui concerne la [[fiabilité]] que sur l’aspect économique<ref>{{en}} ''[http://www.powerdesignersusa.com/InfoWeb/design_center/articles/IGBTs/igbts.shtm IGBTs Basics]'', Power Designers.</ref>.
+
+Les transistors IGBT ont permis d’envisager des développements jusqu’alors non viables en particulier dans la [[variateur de vitesse (électricité)|vitesse variable]] ainsi que dans les applications des [[Machine électrique|machines électriques]] et des convertisseurs de puissance qui nous accompagnent chaque jour et partout, sans que nous en soyons particulièrement conscients : [[automobile]]s, [[train]]s, [[métro]]s, [[autobus|bus]], [[avion]]s, [[bateau]]x, [[ascenseur]]s, [[électroménager]], [[téléviseur|télévision]], [[domotique]]{{etc.}}
+
+== Historique ==
+La première tentative concernant ce composant est sa réalisation en composants discrets, avec un transistor à effet de champ de faible puissance commandant un transistor bipolaire de puissance (montage BipMos). Le but est de simplifier les circuits de commande inhérents aux applications des transistors de puissance en commutation, fort complexes dans les années [[années 1970|1970]]-[[années 1980|1980]].
+
+La technologie '''IGBT''' a été [[brevet]]ée aux États-Unis le 14 décembre [[1982]] par Hans W. Beck et Carl F. Wheatley, Jr., sous le nom de ''Power [[MOSFET]] with an Anode Region'' (Brevet {{n°}}4,364,073)<ref>{{en}} [http://www.engr.umd.edu/ihof/wheatley.htm University of Maryland - C. Frank Wheatley, Jr., BSEE], et [http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=4,364,073.PN.&OS=PN/4,364,073&RS=PN/4,364,073 le brevet] sur le site de l’[[USPTO]].</ref>. C’est une technologie récente, qui succède aux [[thyristor]]s, aux [[Transistor Darlington|transistors Darlington]] et aux [[thyristor GTO|thyristors GTO]]<ref>{{en}} [http://www.fairchildsemi.com/an/AN/AN-9016.pdf ''Application Note 9016''], Fairchild.</ref>.
+
+La première génération de transistors IGBT présentait d’importants problèmes de [[#Verrouillage (Latching)|verrouillage (ou ''latching'')]], qui ont été corrigés dans la 2{{e}} génération apparue au début des [[années 1990]]. La fin du {{XXe siècle}} a connu trois nouvelles générations de transistors IGBT, qui ont augmenté les performances pour des courants et des tensions importants (IGBT à structures trench, CSTBT<ref>{{en}} [http://www.mitsubishichips.com/Global/conference/pdf/Paper1.pdf ''Next Generation High Power Dual IGBT Module''] - Mitsubishi (2003) {{pdf}}.</ref>).
+
+Les caractéristiques de l’IGBT font que dans les [[années 2000]] il s’est largement imposé dans tous les domaines de l’électronique de puissance face aux autres types de composants pour les gammes de tension {{Unité|600|V}} à {{Unité|3300|V}}, et qu’il perce dans les tensions supérieures face au [[Thyristor GTO|GTO]], ainsi que dans les tensions inférieures face au [[MOSFET]], bien qu’il soit plus lent<ref>{{en}} [http://www.darnell.com/consulting/study.php?mc_id=18 ''Worldwide Market Statistics and Trends''], Darnell Group (un cabinet d’études de marché en électronique de puissance).</ref>.
+
+== Caractéristiques ==
+[[Image:IGBT equivalent circuit fr.gif|thumb|Schéma équivalent de l’IGBT]]
+L’IGBT est un transistor hybride, regroupant un transistor à effet de champ du type MOSFET en entrée et un transistor bipolaire en sortie. Il est ainsi commandé par la [[Tension électrique|tension]] de grille (entre [[Grille de contrôle|grille]] et [[Collecteur et émetteur (électronique)|émetteur]]) qui lui est appliquée, mais ses caractéristiques de conduction (entre [[Collecteur et émetteur (électronique)|collecteur]] et émetteur) sont celles d’un bipolaire. Le schéma équivalent du transistor IGBT ci-contre montre un troisième transistor, qui représente en fait une propriété parasite responsable du ''latching''.
+
+Cette structure lui donne le faible coût énergétique de commande d’un MOSFET, avec les pertes de [[Conductance électrique|conduction]] plus faibles (à surface de puce donnée) d’un bipolaire. De plus, les IGBT peuvent gérer une tension bien plus élevée que celle gérée par les MOSFET.
+
+=== Conductance ===
+La [[Conductance électrique|conductance]] est définie par la résistance du transistor lorsque celui-ci est passant : on l’appelle aussi R{{ind|on}} dans le cas d’un FET ou V{{ind|CEsat}} pour un bipolaire. C’est une caractéristique importante car elle détermine l’échauffement du composant en fonction du courant I{{ind|ce}} : plus le V{{ind|CEsat}} est faible, plus le courant admissible peut être fort. Dans le cas de l’IGBT, la conductance est minimisée par l’utilisation d’un transistor bipolaire en sortie, et par l’optimisation de la saturation de celui-ci. Pour cela, il est possible de diminuer le R{{ind|on}} du MOSFET d’entrée, et d’augmenter le gain du transistor bipolaire. Cependant un gain trop important entrainera un risque élevé de ''latching''<ref name="IRF AN983">{{en}} [http://www.irf.com/technical-info/appnotes/an-983.pdf ''Application Note AN-983'' de la société IRF] (1996).</ref>.
+
+Les dernières technologies SPT (''Soft-Punch-Through''), dites ''SPT+'', permettent de diminuer encore la chute de tension directe V{{ind|CEsat}} de l’ordre de 25 à {{Unité|30|%}}.
+
+=== Commutation ===
+La faiblesse de l’IGBT (comparé au MOSFET) résulte essentiellement dans sa vitesse de commutation, notamment lors du passage de l’état passant à l’état bloqué : les « [[Trou d'électron|trous]] » présents dans la « zone d’épitaxie N- » (''Drift zone'') doivent se recombiner ou être évacués lorsque la tension de la grille passe en dessous du seuil de commutation. La technologie PT possède une zone tampon (''buffer'') à proximité de la zone de ''drift'' pour accélérer l’absorption des trous. Les transistors IGBT-PT seront donc plus rapides, mais auront une tension V{{ind|CEsat}} plus élevée<ref name="608PET23">{{en}} [http://powerelectronics.com/mag/608PET23.pdf ''Trench IGBTs Improve Appliance Motor Drives''] - ''Power Electronics Technology'' (août 2006).</ref>.
+
+Les fréquences de commutation maximales peuvent être notablement augmentées par l’utilisation de « circuits d’aide à la commutation » passifs ([[Effet Joule|dissipatifs]]), mais surtout actifs (non dissipatifs), de type « ZVS » (''Zero Voltage Switch'', commutation au zéro de tension), « ZCS » (''Zero Current Switch'', commutation au zéro de courant) ou autres. Ces circuits, en assurant des « commutations douces », permettent une diminution drastique des pertes de commutation, tout en facilitant grandement la mise en conformité des équipements concernant la [[compatibilité électromagnétique]]. Néanmoins, du fait de leur complexité et de leur coût, ils sont encore peu utilisés dans les fortes puissances.
+
+=== Verrouillage (''Latching'') ===
+L’IGBT présente quatre couches N-P-N-P qui peuvent sous certaines conditions devenir passantes à la manière d’un thyristor, du fait de la présence du transistor parasite entre émetteur et base du transistor bipolaire principal (voir le schéma équivalent ci-dessus) : c’est l’effet ''latch-up'' (verrouillage). Dans ces conditions le transistor restera passant, avec effets destructifs, jusqu’à ce que l’alimentation soit coupée<ref name="IRF AN983"/>. Les constructeurs sont parvenus à diminuer ce problème majeur du transistor IGBT, et ce de différentes manières : réduction de la [[transconductance]] du transistor bipolaire de sortie, utilisation de nouvelles technologies de gravure comme l’IGBT Trench. Ces évolutions, ainsi que l’amélioration des processus de commande de grille, font que le phénomène de verrouillage est actuellement bien maîtrisé et ne pose plus de problèmes au développement de l’utilisation industrielle de l’IGBT.
+
+=== Aire de sécurité (''Safe Operating Area'') ===
+[[Image:SOA.gif|thumb|Exemple d'aire de sécurité]]
+L’aire de sécurité ou « zone de fonctionnement sûr » ou ''SOA'' (qui est le sigle anglais pour ''Safe Operating Area'') désigne les zones de fonctionnement autorisées du transistor dans le plan [[courant électrique|courant]]-[[tension]]. Dans ces zones, le transistor peut travailler sans subir de dommages dans les périodes où à la fois un courant important traverse le semi-conducteur et une tension importante est présente à ses bornes, c’est-à-dire en dehors du fonctionnement « saturé » (conducteur et faible chute de tension). Dans tous les cas ces zones de fonctionnement ne peuvent être que transitoires, car les puissances dissipées en valeurs instantanées sont de plusieurs ordres de grandeur au-dessus de la puissance admissible nominale du composant. On distingue trois phases critiques :
+# le [[court-circuit]]. Il s’agit de la zone dite de ''SCSOA'' (pour ''Short Circuit SOA'') ou aire de sécurité de court-circuit. Lorsque la charge commandée par le transistor est en court-circuit, le courant demandé est en théorie infini. En pratique, le courant I{{ind|CE}} dans le transistor est limité par la tension V{{ind|GE}} sur la grille et la valeur de la transconductance, ainsi que par le circuit extérieur. Le risque pour l’IGBT est alors le verrouillage (''latching''). Suivant la famille utilisée ce risque est minimisé au détriment de la transconductivité ou du V{{ind|CEsat}}. Certains IGBT ont un circuit interne de limitation du [[courant de court-circuit]] à quelques multiples du courant nominal.
+# la commutation ON → OFF avec une charge inductive. Il s’agit de la zone dite de ''RBSOA'' (pour ''Reverse Bias SOA'') ou aire de sécurité inverse. Lors de cette phase de transition on passe d’un état où un courant stable (et important) I{{ind|CE}} est établi dans la charge et dans le transistor à un état où le transistor est bloqué. La tension V{{ind|CE}} croit alors de quelques volts à la tension d’alimentation augmentée de la [[FCEM]] de la charge inductive. Cette FCEM doit être limitée, par exemple, par une diode dite de « roue libre » à ses bornes. Durant cette phase le courant est constant – car lorsque la charge est [[inductance|inductive]], elle tend à s’opposer à la variation de courant – ceci jusqu’à la fin de la recombinaison des [[trou d'électron|porteurs]] et au blocage de la jonction par augmentation de la [[barrière de potentiel]]. Il s’ensuit un risque de « claquage » du composant par formation de points chauds localisés et embalement thermique ; ce phénomène est connu pour les transistors bipolaires de puissance sous le nom de « second claquage » (''Second Break Down'' en anglais). Les IGBT sont cependant beaucoup plus robustes que les bipolaires pour la tenue en aire de sécurité inverse. Des circuits d’aide à la commutation au blocage, en dérivant le courant de la charge inductive (dans un condensateur auxiliaire par exemple) pendant la période de blocage autorisent une commutation à pertes quasi-nulles pour le silicium et évitent le risque de second claquage.
+# l’utilisation du transistor en mode linéaire. L’étude de cette phase présente un intérêt plus limité, car ce n’est pas le mode de fonctionnement usuel de l’IGBT. Une attention particulière sur ce mode de fonctionnement est cependant nécessaire lors de la mise en œuvre des circuits de protection du composant contre les court-circuits.
+
+=== Transconductance ===
+La [[transconductance]] d’un IGBT est le rapport entre le courant de sortie et la tension d’entrée. Ce rapport dépend de nombreux paramètres, notamment la taille du transistor, la température ou le courant de sortie. Contrairement aux transistors bipolaires, les MOSFET et les IGBT n’ont pas un gain de transconductance qui chute avec le courant de sortie.
+
+=== Performances ===
+Le tableau suivant montre les performances typiques de quelques produits du marché des transistors.
+
+Il dégage la tendance générale :
+* le V{{ind|CEsat}} augmente et la fréquence d’utilisation diminue quand la tenue en tension augmente ;
+* les MOSFET et les GTO deviennent concurrentiels aux extrémités de la gamme.
+
+{| class=wikitable
+|+ '''Caractéristiques moyennes comparées'''
+! &nbsp; !! MOSFET 600V !! IGBT 600V !! IGBT 1700V !! IGBT 3300V !! IGBT 6500V !! GTO 6000V
+|-
+| V{{ind|CEsat}}<ref>V{{ind|CEsat}} = tension collecteur-émetteur à l’état saturé. Les valeurs données sont des moyennes des valeurs annoncées par différents fabricants.</ref> à {{température|125|°C}} || 2,2 V || 1,8 V || 2,5 V  || 3,5 V || 5,3 V || 3 V
+|-{{ligne grise}}
+| [[fréquence]] typique<ref>Fréquence typique de commutation dans les applications courantes.</ref> || 15-100 kHz || 6-40 kHz || 3-10 kHz || 1-5 kHz || 0,8-2 kHz || 0,3-1 kHz
+|}
+
+Des produits de certains fabricants peuvent s’écarter significativement des valeurs mentionnées car relevant d’optimisations différentes (améliorant l’un des paramètres au détriment de l’autre) ou utilisant des technologies très récentes.
+
+== Structure ==
+[[Image:IGBT cross section.gif|thumb|Vue en coupe d’une cellule élémentaire (''planar'', PT)]]
+La structure d’un IGBT est basée sur celle d’un [[MOSFET|MOSFET vertical doublement diffusé]]<ref>{{en}}[http://www.elec.gla.ac.uk/groups/dev_mod/papers/igbt/igbt.html ''The Insulated Gate Bipolar Transistor''], Device Modelling Group, université de [[Glasgow]].</ref> : l’épaisseur du support est utilisée pour séparer le [[drain]] de la [[Drain et source (électronique)|source]]. Les épaisseurs typiques des [[wafer]]s sont de l'ordre de 70 à {{Unité|100|µm}}. Une zone dite d'[[épitaxie]], dopée N-, permet l'apparition d'un canal lorsque des électrons sont injectés par la grille (V{{ind|G}}>0, état passant).
+
+La technique de double [[Diffusion de la matière|diffusion]] est utilisée pour créer les puits dopés P/P+ à proximité de la source. La présence d'une région dopée P+ diminue le risque de ''latchup'', tout en augmentant la tension de seuil de commutation.
+
+La différence principale entre un MOSFET vertical et un IGBT est l’existence d’une couche de [[substrat#Électronique|substrat]] P+ (fortement [[Dopage (semi-conducteur)|dopée]]) côté drain/collecteur. Cette couche injecte des trous dans la couche N-, ce qui a pour effet de diminuer la chute de tension à l’état passant et de le transformer en [[transistor bipolaire]].
+
+À l’état bloqué, c’est la couche N- qui supporte la tension. Cette tension maximale sera d'autant plus importante que la couche N d'épitaxie sera peu dopée et/ou épaisse.
+
+À l'état passant, le courant sera limité par la largeur du canal. Les structures verticales permettent la mise en parallèle de plusieurs cellules élémentaires, de façon à augmenter le courant admissible et diminuer la résistance à l'état passant R{{ind|DSon}}.
+
+=== Les différentes structures d'IGBT ===
+{| style="border: 1px grey solid"
+| [[Image:IGBT cross section.svg|left|250px|Section d’un IGBT ''Non Punch Through'']]
+| [[Image:IGBT cross section PT.svg|center|250px|Section d’un IGBT ''Punch Through'']]
+| [[Image:IGBT cross section PT trench.svg|right|250px|Section d’un IGBT ''Punch Through'' en tranchée]]
+|-
+| Section d’un IGBT ''Non Punch Through''
+| Section d’un IGBT ''Punch Through''
+| Section d’un IGBT ''Punch Through'' en tranchée
+|}
+
+L’IGBT '''NPT''' (sigle anglais : ''Non Punch Through'') à grille plane est la structure la plus simple à réaliser. Elle utilise des puces plus minces, sans couche N+ additionnelle. La transconductance sera moins élevée, il est donc plus robuste en situation de [[court-circuit]].
+
+L’IGBT '''PT''' (sigle anglais : ''Punch Through'') à grille plane utilise des puces épaisses comportant une couche tampon N+. Il a en principe une chute de tension plus faible à l’état passant.
+
+Cette couche tampon entre la zone d'épitaxie N et la zone d'injection P+ du collecteur permet d'obtenir une distribution du champ électrique trapézoïdal.
+
+On trouve également des transistors dénommés DS-IGBT (pour ''Depletion Stop'' IGBT), ou FS-IGBT (pour ''Field Stop'' IGBT), qui présentent les mêmes caractéristiques que le PT-IGBT, avec une couche tampon moins dopée. Cela permet d'utiliser les technologies de fabrication plus simples d'un NPT-IGBT.
+
+Les structures précédentes dites à grille plane (en anglais : '''planar''') ont l'avantage d'être faciles à réaliser. Néanmoins une technologie dite de grille en tranchée (en anglais : '''trench''') est également utilisée : la zone d’[[épitaxie]] est découpée sous la grille de manière à diminuer les phénomènes de ''latching'' et permettre ainsi des densités de courant plus importantes. Cette géométrie est aussi plus compacte et généralement plus performante que la géométrie à grille plane.
+
+== Technologie ==
+[[Image:IGBT 3300V 1200A Mitsubishi.jpg|thumb|Module IGBT {{nobr|3300 V 1200 A}}]]
+[[Image:IGBT 2441.JPG|thumb|Intérieur d'un module IGBT {{nobr|600 V 400 A}}]]
+Les IGBT sont fabriqués avec des techniques similaires à celle des circuits intégrés (comme les [[MOSFET]], mais contrairement aux [[thyristor GTO|GTO]] et [[thyristor]]s de puissance). Ceci a pour conséquence que la taille de la [[Circuit intégré|puce]] est limitée à environ {{NaU|1|cm|2}}, alors qu’on sait faire des [[diode]]s monolithiques de {{NaU|150|mm}} de diamètre ({{NaU|176|cm|2}}) <ref>Les produits commerciaux se limitent le plus souvent à {{NaU|100|mm}} de diamètre, comme le [http://www.infineon.com/upload/Document/Datenblatt_T3101N.pdf T3101N d'Infineon] (pour la puce : le boîtier fait {{NaU|150|mm}})</ref>.
+
+Les gros IGBT sont donc des modules multi-puces, constitués de nombreuses puces en parallèle, généralement [[brasage|brasées]] sur une semelle de [[cuivre]] ou d’[[Al-SiC]] à travers laquelle on assure leur [[Dissipateur thermique|refroidissement]].
+
+La plupart intègrent aussi une diode anti-parallèle (ou de « roue-libre »), elle-même multi-puces. Cette diode est en fait une partie très importante du module IGBT, car ses caractéristiques (en particulier de recouvrement) doivent être compatibles avec l’IGBT lui-même, nécessité cruciale. Ceci représente d’ailleurs une des premières applications pour les semi-conducteurs en [[carbure de silicium]]<ref>[http://www.electronique.biz/editorial/331500/semiconducteurs-de-puissance/cree-associe-igbt-et-diode-sic/ Cree associe IGBT et diode SiC], Électronique International.</ref>.
+
+On trouve principalement des IGBT « canal N ». La structure complémentaire « canal P » est possible, mais limitée aux petites puissances, car comme pour les transistors bipolaires et les MOSFET, les caractéristiques obtenues sont moins bonnes (pertes supérieures par exemple).
+
+Ces composants sont disponibles pratiquement dans tous les boîtiers courants, depuis le petit boîtier plastique ([[TO-220]]) pour des courants de quelques ampères à quelques dizaines d’ampères et des tensions collecteur-émetteur de 600 à {{Unité|1500|volts}}, jusqu’aux modules de forte puissance de quelques centaines d’[[Ampère (unité)|ampères]] et quelques [[kilo]][[volt]]s.
+
+== Gammes et usages ==
+
+Ces composants sont disponibles dans une gamme de [[Tension électrique|tension]] allant de 600 (et moins) à {{Unité|6500|[[volt]]s}}, et des [[Courant électrique|courants]] jusqu’à {{Unité|2400|[[ampère (unité)|ampères]]}} par module. Les valeurs de tension les plus courantes sont :
+* {{NaU|600|V}} : valeur adaptée à la connexion sur un réseau {{Unité|230|V}} [[Courant alternatif|alternatif]] ;
+* {{NaU|1200|V}} : valeur adaptée à la connexion sur un réseau {{Unité|400|V}} alternatif ;
+* {{NaU|1700|V}} : valeur adaptée à la connexion sur un réseau {{Unité|660|V}} alternatif ;
+* {{NaU|3300|V}} : valeur utilisée en [[Locomotive électrique|traction ferroviaire]] {{Unité|1500|V}} [[courant continu|continu]] ;
+* {{NaU|6500|V}} : valeur utilisée en traction ferroviaire {{Unité|3000|V}} continu.
+
+== Applications ==
+Les applications usuelles de l’IGBT sont les [[onduleur]]s, [[redresseur]]s et [[hacheur]]s pour les [[alimentation à découpage|alimentations à découpage]] et la [[variateur de vitesse|vitesse variable]], mais aussi pour les [[FACTS]].
+
+=== Exemples ===
+* Les IGBT sont utilisés comme éléments de puissance dans les convertisseurs de traction du [[TGV]], sur les versions les plus modernes équipées de [[Machine synchrone|moteurs synchrones]] ou [[Machine asynchrone|asynchrones]], ainsi que dans la plupart des convertisseurs auxiliaires (éclairage, ventilation{{etc.}}). La tendance est à la généralisation des IGBT sur ce marché<ref>Part de marché supérieure à 50 % d’après {{en}} [http://www.railway-energy.org/static/IGBT_28.php cette étude] de l’[[Union internationale des chemins de fer|UIC]] et la [[Deutsche Bahn]].</ref>.
+* La technologie IGBT est exploitée dans les émetteurs ondes décamétriques développés par [[Thales (entreprise)|Thales Broadcast & Multimedia]] (série TSW2500) à [[tétrode]] finale [[Haute fréquence|HF]]. Les modules IGBT constituent l’étage de [[Modulation d'amplitude|modulation AM]] dont le but est d’effectuer une superposition du signal audio sur la tension d’alimentation de la tétrode finale HF de puissance. En 2006, douze émetteurs de ce type sont en service sur le site de [[TDF]] d’[[Issoudun]] qui assure la radiodiffusion de [[Radio France internationale|RFI]] (puissance unitaire de 500 kW associée à une antenne ALLISS).
+* Ils sont également utilisés dans les variateurs-onduleurs de commande des moteurs électriques des [[Pod (navigation)|pods]], [[Propulsion électrique des navires|propulseurs]] des navires les plus récents comme le [[Queen Mary 2]].
+* L’utilisation des IGBT commence à se développer dans le secteur automobile pour les [[véhicule électrique|véhicules électriques]] et en particulier pour les voitures dites hybrides comme par exemple la [[Toyota Prius]], dont la partie électrique de la chaîne de traction comprend deux moteurs électriques sans balais commandés par un onduleur de 50 kW à IGBT.
+* Les [[Ballast (électricité)|ballasts électroniques]] de forte puissance (jusqu’à 18 kW) pour lampes à décharges halogènes comme les lampes HMI (''Hydragyrum Metal Iodyne'') utilisées dans les projecteurs professionnels de spectacle incorporent des IGBT dans leurs étages de puissance. Le fonctionnement de l’ensemble devant être inaudible, l’encombrement réduit, et la compatibilité électromagnétique maximum, cette application particulière requiert un fonctionnement à des fréquences de découpages supérieures à 20 kHz et l’emploi impératif de circuits d’aide à la commutation non dissipatifs.
+* Ces transistors sont utilisés dans le [[chauffage par induction]].
+
+L’IGBT est utilisé presque exclusivement en commutation, c’est-à-dire quand seuls les états saturés et bloqués sont souhaitables. Néanmoins, comme tout transistor, il possède une zone de fonctionnement « linéaire », ou active, qui peut être utilisée pour des applications particulières ([[amplificateur électronique|amplificateurs]]{{etc.}}).
+
+== Principaux fabricants ==
+* [[Asea Brown Boveri|ABB]] 
+* Dynex
+* [[Fairchild Semiconductor]] 
+* [[Fuji Semiconductor]]
+* [[Hitachi]]
+* [[Infineon Technologies AG|Infineon Technologies]], incluant l’ancien Eupec
+* [[International Rectifier]]
+* Ixys
+* Microsemi (ex-APT)
+* [[Mitsubishi|Mitsubishi Electric]]
+* Poseico
+* Powerex
+* [[Semikron]]
+* [[STMicroelectronics]]
+* [[Semelab]]
+* [[Toshiba|Toshiba semiconductor]]
+* [[TTelectronics]]
+* Westcode
+
+== Notes et références ==
+<references />
+
+== Liens externes ==
+{{Autres projets|commons=Category:Insulated gate bipolar transistors}}
+
+* {{fr}} [http://srv-mac.lpmi.uhp-nancy.fr/Personnel/Omar/chap1.pdf « Généralités sur l’IGBT »]. Premier chapitre de la [http://srv-mac.lpmi.uhp-nancy.fr/Personnel/Omar/introduction.pdf thèse] d’Omar Elmazria : ''Caractérisation et Simulation de l’IGBT dans le but d’optimiser ses performances au moyen d’irradiation par faisceau d’électrons'' (1996)
+* {{fr}} {{pdf}} [http://www.electronique.biz/Pdf/ELM200612010175068.pdf « Les modules IGBT »], Yves Corvisier, ''Electronique'' n°&nbsp;175, décembre 2006
+* {{fr}} {{pdf}} [http://www.mgeups.com/techinfo/techpap/articles/0123-f.pdf ''Utilisation des IGBT dans les ASI''], MGE (1998)
+* {{en}} {{pdf}} [http://www.mitsubishichips.com/Global/files/manuals/powermos4_0.pdf ''Using IGBT module''], Mitsubishi (1998) 
+* {{en}} {{pdf}} [http://ww1.microchip.com/downloads/en/AppNotes/00898a.pdf ''Determining MOSFET Driver Needs for Motor Drive Applications''], Microchip (2003) 
+* {{en}} {{pdf}} [http://www.irf.com/technical-info/appnotes/an-980.pdf ''IGBT vs. HEXFET Power MOSFETs for Variable Frequency Motor Drives''], International Rectifier
+* {{en}} {{pdf}} [http://www.irf.com/technical-info/appnotes/an-990.pdf ''Application Characterization of IGBTs''], International Rectifier
+* {{en}} {{pdf}} [http://www.irf.com/technical-info/appnotes/an-983.pdf ''IGBT Characteristics''], International Rectifier
+* {{en}} {{pdf}} [http://www.irf.com/technical-info/whitepaper/choosewisely.pdf ''IGBT or MOSFET: Choose Wisely''], International Rectifier
+* {{en}} {{pdf}} [http://www.microsemi.com/micnotes/APT0408.pdf ''IGBT Technical Overview - Application Note APT0408''], Advanced Power Technologies, 2004 (pdf, 16 pages)
+* {{en}} {{pdf}} [http://www.intusoft.com/articles/Igbt.pdf ''Spice Model for IGBTs''], A.F Petrie, Charles Hymowitz 
+* {{en}} {{pdf}} ''Fairchild semiconductor Application note 9016 : [http://www.fairchildsemi.com/an/AN/AN-9016.pdf IGBT Basic I]''
+* {{en}} {{pdf}} ''Fairchild semiconductor Application note 9020 : [http://www.fairchildsemi.com/an/AN/AN-9020.pdf IGBT Basic II]''
+* {{en}} {{pdf}} ''Ixys Corporation Application note IXAN0063 : [http://www.ixyspower.com/images/technical_support/Application%20Notes%20By%20Topic/IGBTs/IXYS_IGBT_Basic_I.pdf Insulated Gate Bipolar Transistor (IGBT) Basic]''
+
+{{Bon article|oldid=15197070|date=28 mars 2007}} 
+{{Portail électricité et électronique}}
+
+[[Catégorie:Transistor|Bipolaire à grille isolée]]
+[[Catégorie:Électronique de puissance]]
+
+[[ca:Transistor IGBT]]
+[[cs:IGBT]]
+[[da:Insulated gate bipolar transistor]]
+[[de:Bipolartransistor mit isolierter Gate-Elektrode]]
+[[en:Insulated-gate bipolar transistor]]
+[[es:Transistor IGBT]]
+[[et:Isoleeritud paisuga bipolaartransistor]]
+[[fi:IGBT]]
+[[he:טרנזיסטור IGBT]]
+[[hi:इंसुलेटेड गेट बाईपोलर ट्रांजिस्टर]]
+[[id:Transistor dwikutub gerbang-terisolasi]]
+[[it:Insulated Gate Bipolar Transistor]]
+[[ja:絶縁ゲートバイポーラトランジスタ]]
+[[ko:절연 게이트 양극성 트랜지스터]]
+[[nl:Insulated-gate bipolar transistor]]
+[[pl:IGBT]]
+[[pt:IGBT]]
+[[ru:IGBT]]
+[[sk:Bipolárny tranzistor s izolovaným hradlom]]
+[[sv:IGBT]]
+[[tr:IGBT]]
+[[uk:IGBT-транзистор]]
+[[vi:IGBT]]
+[[zh:絕緣柵雙極晶體管]]

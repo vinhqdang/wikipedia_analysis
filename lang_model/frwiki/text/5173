@@ -1,0 +1,275 @@
+La '''consommation de carburant''' d’une [[automobile]] est le volume de [[carburant]] utilisé lors d'un trajet  rapporté à la distance parcourue. L’unité utilisée pour la consommation de carburant est le « litre pour cent kilomètres » (l/{{unité|100|km}})<ref>Council Directive 80/1268/EEC of 16 December 1980 on the approximation of the laws of the Member States relating to the fuel consumption of motor vehicles</ref>. En Europe, la consommation de carburant fait partie des données nécessaires pour l'[[homologation]] des véhicules automobiles.
+
+La combustion de carburants fossiles dans les [[Moteur à combustion interne|moteurs à combustion interne]] produit du [[dioxyde de carbone]] (CO<sub>2</sub>) dont la diffusion dans l’[[atmosphère terrestre|atmosphère]] participe à l’[[effet de serre]] et au [[réchauffement climatique]]. La réduction de consommation des véhicules automobiles constitue un enjeu important pour la société par ses impacts sur le réchauffement climatique, la qualité de l'air et les économies des pays sous forte dépendance énergétique<ref>http://ec.europa.eu/transport/themes/strategies/2011_white_paper_en.htm</ref>.
+
+Un litre de carburant produit lors de sa combustion environ {{unité|2.4|kg}} de CO<sub>2</sub>.Cette valeur dépend du type de carburant (essence, gazole, gaz naturel,etc..) et de sa densité.<br />
+En Europe, la consommation de carburant est mesurée en laboratoire selon un protocole réglementé avec une procédure qui utilise un profil de vitesse simplifié (NEDC [[Nouveau cycle européen de conduite]]).
+Ainsi, les réglementations qui encadrent la consommation de carburant fixent des objectifs en grammes de CO<sub>2</sub>/km indépendamment du type de carburant.<br> Ces réglementations visent à réduire progressivement l'impact environnemental du parc automobile :
+* par des pénalités pour les constructeurs qui ne respecteraient pas les seuils d’émission moyenne des véhicules vendus sur un territoire durant une année civile (Réglementation Européenne CAFE).
+* par des incitations fiscales de différentes natures décidées par les états pour favoriser l’achat et l'usage de véhicules à faible consommation.
+
+== Approche énergétique ==
+De façon générale, l’énergie chimique disponible dans le carburant est transformée en énergie mécanique dans le moteur et transmise pour l'essentiel aux roues pour propulser le véhicule et accessoirement à des auxiliaires qui fournissent de l’énergie pour d'autres fonctions (climatisation, éclairage, équipements multimédia etc.).<br>
+La quantité d'énergie chimique consommée (ou le volume de carburant) dépend donc de l'énergie nécessaire pour déplacer le véhicule et du rendement du moteur thermique (rapport entre l'énergie mécanique produite et l'énergie chimique consommée).
+
+=== Équation d’équilibre d’une automobile en mouvement ===
+Un véhicule automobile en mouvement selon un profil de vitesse donné est soumis à chaque instant à un système de forces égales et opposées appliquées aux roues : La force de traction produite par le moteur via la chaîne cinématique et la résistance à l'avancement totale R<sub>t</sub>.
+La résistance à l'avancement R<sub>t</sub><ref>Les Techniques de l'Ingénieur "Transmissions dans l'Automobile" BM 2583 du 17/03/2013 E.Baron, Ph.Pescarou</ref> est la somme des résistances à l'avancement R<sub>t</sub> = R<sub>roul</sub> + R<sub>air</sub> + + R<sub>α</sub> + R<sub>i</sub><br>
+R<sub>roul</sub> = μ<sub>roul</sub> P<sub>veh</sub>cosα  (résistance au roulement)<br>
+avec μ<sub>roul</sub> : coefficient de roulement,P<sub>veh</sub> : poids du véhicule, α : l'angle de pente<br>
+R<sub>air</sub> = 1/2 ρ<sub>air</sub> S<sub>fveh</sub> C<sub>x</sub> V<sup>2</sup><sub>flux</sub> (résistance aérodynamique)<br>
+avec ρ<sub>air</sub> = masse volumique de l'air, S<sub>fveh</sub> = surface frontale du véhicule, C<sub>x</sub> = coefficient de pénétration dans l'air, V<sub>flux</sub> = Vitesse véhicule +- vitesse du vent<br>
+R<sub>α</sub> = P<sub>veh</sub> sinα (résistance à la pente)<br>
+avec Pveh : poids du véhicule, α :pente de la route.<br>
+R<sub>i</sub> = (m<sub>veh</sub> + m<sub>ce</sub>) γ<sub>veh</sub> (Force d'inertie liée à l'accélération)<br>
+avec m<sub>veh</sub>: masse du véhicule, m<sub>ce</sub> = inertie de translation équivalente des parties tournantes du moteur, de la chaine cinématique et des roues, m<sub>veh</sub> = la masse du véhicule<br>
+Pour suivre un profil de route avec une consigne de vitesse donnée, le moteur doit produire à chaque instant une force aux roues égale et opposée à la résistance totale R<sub>t</sub>.<br>
+La puissance instantanée du moteur P est alors égale à R<sub>t</sub> V.<br>
+
+=== Efficacité énergétique du moteur ===
+[[File:Consommation spécifique d'un moteur.jpg|vignette|upright=2.0|Cartographie d'un moteur indiquant la consommation spécifique en fonction du couple (Nm) et de la vitesse de rotation (tr/min)]]<br>
+La consommation d'un moteur thermique varie avec la vitesse de rotation (régime tr/min) et la charge (couple produit sur l'arbre moteur Nm)). 
+Pour analyser la consommation de carburant d'un moteur, il est pratique d'utiliser un diagramme du type joint<ref name="R:1">Techniques de l'Ingénieur "Transmissions dans l'Automobile-Influence sur a consommation du véhicule" bm 2584 du 17/03/2013 E.Baron, Ph.Pescarou</ref> qui indique la consommation spécifique (g de carburant par kWh) pour chaque couple (Nm) et vitesse de rotation (tr/min). On observe sur un tel graphique appelé "cartographie moteur" qu'il existe plusieurs combinaisons possibles de couple et vitesse de rotation pour produire une même puissance (par exemple  points de fonctionnement 1,2 et 3 du graphique joint).
+L'efficacité énergétique du moteur pour un point de fonctionnement donné est le rapport entre l'énergie mécanique produite pendant un temps Δt et l'énergie chimique consommée sur cette durée ({{unité|43.8|MJ}}/kg pour l'essence).<br>
+η = P<sub>m</sub>Δt/(P<sub>m</sub> Cse D<sub>carb</sub>Δt)
+avec P<sub>m</sub> : Puissance moteur, Cse : Consommation spécifique (g/kWh), Dcarb : densité énergétique du carburant MJ/kg).<br>
+Sur le graphique joint, le point de fonctionnement 3 correspond à une efficacité énergétique de 33 % proche de la ligne de consommation minimale du moteur. À l'inverse, l'efficacité énergétique du point de fonctionnement 1 n'est que de 24 % et dans les zones de faible charge, elle est inférieure à 20 %.<br>
+Sur un cycle de type NEDC, l'efficacité énergétique correspondant à la moyenne des points de fonctionnement. Pour un moteur essence atmosphérique, elle est de l'ordre de 20 %, ce qui signifie que 80 % environ de l'énergie disponible dans le carburant est rejetée dans l'atmosphère sous forme de chaleur à travers l'échappement et le circuit de refroidissement du moteur.
+
+=== Diagramme énergétique ===
+Il est pratique de présenter sur un même diagramme l'énergie nécessaire pour déplacer un véhicule sur un trajet donné (abscisse) en fonction de la consommation de carburant ou des émissions de CO<sub>2</sub> réalisées sur ce même trajet (ordonnée). Cette représentation nommée "Diagramme énergétique" permet de tracer des droites à iso efficacité énergétique qui correspondent aux différentes technologies de moteurs et ainsi d'estimer pour une catégorie de véhicule donnée les émissions de CO<sub>2</sub> sur le trajet. L'exemple joint<ref name="R:2">Les ateliers de la Plateforme Française Automobile - Les leviers pour atteindre {{unité|2|litres}} au {{unité|100|km}}- Ph.Doublet 2/10/2013 - </ref> montre que pour atteindre le seuil de {{unité|50|g}} de CO<sub>2</sub> par km(soit environ 2 l/{{unité|100|km}})sur cycleNEDC  avec un véhicule urbain(catégorie B), il faut utiliser un moteur hybride plug-in ou alors réaliser sur ce véhicule un allègement considérable.<br>
+[[File:Diagramme énergétique.jpg|vignette|upright=2.0|Diagramme énergétique pour estimer les émissions de CO<sub>2</sub> d'un véhicule automobile]]<br>
+Le tableau ci-dessous donne les ordres de grandeur des gains à réaliser sur les principaux inducteurs de la voiture pour gagner {{unité|1|g}} de CO<sub>2</sub>/km<ref name="R:2" />.<br>
+{| class="wikitable"
+|-Principaux inducteurs de réduction du CO<sub>2</sub> (ordres de grandeur)
+! Grandeur Physique
+! Gain de CO<sub>2</sub> (cycle NEDC)
+|-
+| Efficacité énergétique du groupe moto-propulseur
+| ŋ +1% ⇒ CO<sub>2</sub>-1%
+|-
+| Masse (reconception avec effets induits)
+| {{unité|100|kg}} = {{unité|10|g}}/km
+|-
+| Résistance au roulement
+| 6N= {{unité|1|g}}/km
+|-
+| Consommation électrique
+| {{unité|50|W}} = {{unité|1|g}}/km
+|-
+| Aérodynamique
+| {{unité|0.03|m|2}} SCx = {{unité|1|g}}/km
+|}
+
+==Procédures et réglementations== 
+=== Historique ===
+La préoccupation de réduction de la consommation a d’abord été dictée par l’envolée du coût des carburants lors des grands [[Choc pétrolier|Chocs pétroliers]] des années 1970. Le principal impact sur le marché automobile a été le retour à des véhicules plus compacts et moins lourds. Dans cette période, les constructeurs ont mené des recherches pour réduire la consommation et ont présenté des prototypes pouvant atteindre jusqu'à 2 l/{{unité|100|km}} avec des technologies conventionnelles, sans hybridation ni électrification ([[Renault VESTA 2]] 1987: 1,94 l/{{unité|100|km}}). Ces travaux n’ont eu malheureusement que peu d'impact sur les véhicules de série qui ont continué de s'alourdir pour satisfaire les normes de sécurité et assurer plus de performance et de confort pour les usagers. La préoccupation de réduction de consommation est réapparue dans les années 2000 avec la mise en place de réglementations CAFE dans certains pays, puis la mise en place par les états de fiscalités discriminantes pour les véhicules à forte consommation<ref name="R:3">http://www.developpement-durable.gouv.fr/Bonus-Malus-2015</ref>. Sont apparues alors des technologies qui visaient prioritairement à améliorer l’efficacité énergétique du moteur : hybridation par Toyota [[Hybrid Synergy Drive]] (2000), puis électrification par Nissan et Renault (2010).<br>
+C'est aussi dans cette même période que les motorisations [[Moteur Diesel|diesel]] qui émettent de l'ordre de 15 % de CO<sub>2</sub> en moins que les moteur essence ont pris le pas en Europe. En Europe de l'Ouest, la part du diesel dans les véhicules nouvellement immatriculés est passée de 13,8 % à 53,3 % entre 1990 et 2013 <ref>http://www.acea.be/statistics/tag/category/diesel-penetration</ref><br />
+Les premiers cycles de mesure de la consommation ont été élaborés en 1962 par l'organisme français UTAC<ref name=":0">Ingénieurs de l'Automobile n° 832 Evolutions des protocoles de mesure de consommation et de pollution</ref> à partir de cycle urbain (Urban Driving Cycle). Ce cycle a ensuite évolué vers le cycle NEDC encore en vigueur début 2015.<br>
+Mais c'est aux États-Unis que fut instaurée la première législation CARB (California Air Resources Board) en 1968, avec pour objectif premier de mesurer la pollution plutôt que la consommation en raison de la dégradation de la qualité de l'air dans plusieurs villes de l'état de Californie<ref name=":0" />.
+
+=== Procédure de mesure de la consommation de carburant ===
+En Europe, la consommation de [[carburant]] par les voitures est donnée par le constructeur en faisant référence au [[Nouveau cycle européen de conduite|cycle NEDC]]. Ce cycle sera remplacé au plus tard en 2014 dans le cadre de la [[norme européenne d'émission|norme Euro 6]]<ref>OFEV - Air - [http://www.bafu.admin.ch/luft/11640/11646/index.html?lang=fr UNECE World Forum for Harmonization of Vehicle Regulations (WP.29): Working Party on Pollution and Energy (GRPE)] - 2012-05-24</ref>{{,}}<ref>EUR-Lex - [http://eur-lex.europa.eu/smartapi/cgi/sga_doc?smartapi!celexplus!prod!CELEXnumdoc&lg=FR&numdoc=32007R0715 Règlement (CE) n o 715/2007 du Parlement européen et du Conseil du 20 juin 2007 relatif à la réception des véhicules à moteur au regard des émissions des véhicules particuliers et utilitaires légers (Euro 5 et Euro 6) et aux informations sur la réparation et l'entretien des véhicules (Texte présentant de l'intérêt pour l'EEE)]</ref> par le cycle [[Procédure d'essai mondiale harmonisée pour les voitures particulières et véhicules utilitaires légers|WLTC]], conçu pour être le plus proche possible des conditions d'utilisation réelles.
+
+=== Réglementation Européenne ===
+La réglementation européenne fixe des limites aux constructeurs pour les émissions moyennes des véhicules neufs vendus dans l'année sur le périmètres des 27 pays de l'UE.
+Pour les véhicules particuliers de catégorie M1, ces limites sont fixées à {{unité|130|g}} de CO<sub>2</sub>/km en 2015 puis {{unité|95|g}} de CO<sub>2</sub>/km en 2020.<br>[http://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=URISERV:mi0046&qid=1422468251715&from=FR]<br>
+[[File:Réglementation CAFE Europe.png|vignette|upright=2.0|Réglementation CAFE Europe 2015]]
+Les seuils sont définis selon un paramètre d'utilité qui est la masse moyenne des véhicules pour chaque constructeur. Le seuil de {{unité|130|g}} de CO<sub>2</sub>/km en 2015 est donné pour une masse {{unité|1372|kg}} qui correspond à la moyenne de la flotte européenne en 2006, mais les seuils varient pour chaque constructeur en fonction de la masse moyenne de la flotte de véhicules avec une pente de {{unité|4.57|g}} de CO<sub>2</sub>/kg pour {{unité|100|kg}}<ref>http://ec.europa.eu/clima/policies/transport/vehicles/cars/faq_en.htm</ref>. Cette pente est inférieure à la pente "naturelle" que l'on obtiendrait avec de véhicules utilisant les mêmes technologies. Ainsi, la réglementation est plus exigeante pour les constructeurs qui commercialisent les véhicules les plus lourds et réciproquement.<br>
+Par ailleurs, des conditions particulières sont mises en œuvre dans la réglementation pour inciter à la diffusion de dispositifs innovants (Eco-innovations qui produisent des gains de consommation en dehors du cycle normalisé)  ou de véhicules à faibles émissions de CO<sub>2</sub> (Supercrédits pour les véhicules électriques).
+Cette réglementation est très incitative pour les constructeurs et la plupart d'entre eux sont en ligne<ref>http://www.eea.europa.eu/highlights/car-and-van-makers-continue</ref> pour satisfaire le seuil réglementaire de {{unité|130|g}} de CO<sub>2</sub>/km en 2015. La prochaine étape aura lieu en 2020 avec un seuil réglementaire de {{unité|95|g}} de CO<sub>2</sub>/km qui sera beaucoup plus difficile à atteindre.
+
+===Fiscalité Française=== 
+La France applique une fiscalité de type Bonus-Malus à l'achat du véhicule basée sur les émissions de CO<sub>2</sub> normalisées.
+En 2015, les seuils sont les suivants<ref name="R:3" /> :<br>
+Bonus :<br>
+{| class="wikitable"
+|-
+!Taux d’émission 
+de CO<sub>2</sub> 
+(en grammes par kilomètre)
+!Montant du bonus 
+au {{1er janvier}} 2015
+(en euros)
+|-
+|0 à 20 g
+|{{formatnum:6300}} (dans la limite de 27 % du coût d’acquisition)
+|-
+|21 à 60 g
+|{{formatnum:4000}} (dans la limite de 20 % du coût d’acquisition)
+|}
+Malus :<br>	
+{| class="wikitable"
+|-
+!Taux de CO<sub>2</sub>/km
+!Montant du malus
+|-
+|Entre 131 et 135 g  
+|{{unité|150|€}}
+|-	
+|Entre 136 et 140 g 
+|{{unité|250|€}}
+|-
+|Entre 141 et 145 g 	
+|{{unité|500|€}}
+|-
+|Entre 146 et 150 g 	
+|{{unité|900|€}}
+|-
+|Entre 151 et 155 g 	
+|{{unité|1600|€}}
+|-
+|Entre 156 et 175 g 	
+|{{unité|2200|€}}
+|-
+|Entre 176 et 180 g 	
+|{{unité|3000|€}}
+|-
+|Entre 181 et 185 g 	
+|{{unité|3600|€}}
+|-
+|Entre 186 et 190 g 	
+|{{unité|4000|€}}
+|-
+|Entre 191 et 200 g 	
+|{{unité|6500|€}}
+|-
+|À partir de 201 g 	
+|{{formatnum:8000}} €
+|}
+
+=== Du puits à la roue ===
+Les émissions de CO<sub>2</sub> réglementées sont les émissions en usage "du réservoir à la roue" ("tank to wheel" en anglais), qui correspondent à la combustion du carburant dans le moteur.<br>
+Pour comparer le bilan carbone des différentes énergies utilisées pour la propulsion des véhicules, on utilise la notion d'émissions de CO<sub>2</sub> "du puits à la roue"("well to wheel" en anglais).<br>
+Pour ce faire, on évalue les émissions de CO<sub>2</sub> produites lors des différentes étapes d'extraction, transformation et transport du carburant jusqu'à la pompe.<br>
+Ainsi, les émissions de CO<sub>2</sub> d'un véhicule électrique qui sont nulles en usage, vont varier considérablement en fonction du mode de production de l'énergie électrique et le mix énergétique des pays.
+C'est aussi, en utilisant cette notion "du puits à la roue" que l'on peut justifier le l'intérêt des biocarburants pour laquelle la partie "du puits au réservoir" est négative car on considère que la croissance du végétal dont ils sont issus se réalise par captation du CO<sub>2</sub> dans l'atmosphère lors de la réaction de photosynthèse.
+
+== Données du marché ==
+
+=== Déchiffrer les valeurs officielles ===
+Les résultats d'essais de consommation sur le profil NEDC sont rapportés dans les deux unités (l/{{unité|100|km}}) et émissions de CO<sub>2</sub>(g/km) pour trois profils de vitesse :
+* Cycle urbain de 800s avec 4 motifs répétés d'accélération jusqu'à {{unité|15|km}}/h, {{unité|30|km}}/h et {{unité|50|km}}/h.
+* Cycle extra urbain de 400s  avec plusieurs paliers de vitesse jusqu'à {{unité|120|km/h}}.
+* Cycle complet donnant des valeurs pondérées. En général, ce sont ces valeurs qui sont communiquées par les constructeurs et qui servent de référence pour les réglementations et la fiscalité.
+L'exemple ci-dessous<ref name="R:4">http://www.carlabelling.ademe.fr</ref>montre l'intérêt d'analyser l'ensemble des résultats pour faire un choix pertinent par rapport aux usages.<br>
+{| class="wikitable"
+|-
+! Modèle
+! Puissance (ch)
+! Urbain (l/{{unité|100|km}})
+! Extra Urbain(l/{{unité|100|km}})
+! Mixte (l/{{unité|100|km}})
+! Mixte CO<sub>2</sub> (g/km)
+|-
+| Citroen C3 Diesel
+| 100
+| 3,6
+| 2,7
+| 3,0
+| 79
+|-
+| Toyota Yaris Hybride Ess.
+| 100
+| 3,1
+| 3,3
+| 3,3
+| 75
+|-
+|}
+Ainsi, pour une utilisation essentiellement urbaine, un véhicule hybride qui tire avantage de sa capacité à récupérer l'énergie lors des décélérations pour la restituer en accélération est plus performant lorsqu'il y a beaucoup d'arrêts et de variations de vitesse, à l'inverse un véhicule diesel est plus efficace pour un usage routier car il bénéficie d'une meilleure efficacité énergétique  que le moteur essence du véhicule hybride dans ces conditions d'utilisation.
+
+=== Relation entre consommation de carburant et émission de CO<sub>2</sub> ===
+Le tableau ci-dessous donne quelques caractéristiques pour les carburants automobiles usuels.
+{| class="wikitable"
+|-
+! Type de carburant
+! Densité (kg/l)
+! Densité énergétique spécifique (MJ/kg)
+!CO<sub>2</sub> produit par combustion (kg/l)
+!{{fchim|CO|2}} produit par combustion pour une consommation de 1l/{{unité|100|km}} (g/km)
+|-
+| Essence
+| 0,755
+| 43,8
+| 2,365
+| 23,65
+|-
+| Diesel
+| 0,845
+| 42,5
+| 2,645
+| 26,45
+|}
+
+=== Les véhicules les plus sobres ===
+En France, l'[[Agence de l'environnement et de la maîtrise de l'énergie|ADEME]] s'appuie sur la consommation théorique ([[Nouveau cycle européen de conduite|cycle NEDC]]) pour réaliser un classement des voitures selon les grammes de CO<sub>2</sub> par kilomètre émis par les voitures<ref name="R:4" />.
+
+=== Consommation réelle versus consommation homologuée ===
+[[File:Impact du rapport de boite sur la consommation.jpg|vignette|upright=1.8|Exemple de consommation de carburant (l/{{unité|100|km}}) en fonction de la vitesse du véhicule (km/h) avec différents rapports de boite de vitesse]]<br>
+Il est courant pour les usagers de constater un écart important entre la consommation réelle observée et la consommation homologuée (de l'ordre de 25 %<ref>ICCT "From laboratory to road" mai 2013</ref>supérieure aux valeurs homologuées).Ces écarts peuvent s’expliquer de plusieurs façons :
+*Les conditions d’usage sont très différentes  des conditions d’homologation, par exemple dans les cas suivants:
+**Trajets très courts ou pourcentage d'autoroute important. 
+**Véhicules très chargé ou transport d'objets sur une galerie.
+**Pneumatiques sous gonflés.
+**Temps froid avec courts trajets et usage dégivrage ou chaud avec usage de la climatisation.
+**Conduite nerveuse avec accélération et freinages brutaux ou régimes inadaptés liés à un mauvais choix de rapport de boite (boite manuelle)
+*les constructeurs utilisent leur expertise pour exploiter les tolérances de la procédure d’essai afin de minimiser la consommation homologuée. Cette pratique s’est développée depuis la mise en place de réglementations fiscales dans certains pays avec des seuils très discriminants qui ont des impacts commerciaux considérables.
+Il est possible pour un usager de réaliser une consommation proche de la valeur homologuée sous certaines conditions d'usage mais surtout s'il pratique une conduite adaptée ([[Écoconduite]]).
+Le tableau ci-contre montre l'importance du rapport de boite de vitesse sur la consommation<ref name="R:1" />
+
+== Réduire la consommation de carburant ==
+=== Les technologies de réduction de la consommation ===
+
+Réduire le besoin énergétique<br>
+Améliorer l’efficacité énergétique<br>
+Aides à la conduite écologique ([[écoconduite]])
+
+=== Autres voies ===
+Puisque la finalité est de réduire  la contribution des transports aux émissions globales de CO<sub>2</sub> sur la planète, il est plus pertinent de raisonner en émission de CO<sub>2</sub> par personne et par kilomètre. Des études sont menées pour évaluer cet indicateur pour différents moyens de transport<ref>ADEME / Efficacités énergétique et environnementale des modes de transport Synthèse publique janvier 2008</ref>. Pour l'automobile, cet indicateur est très influencé par le kilométrage annuel et le nombre de passagers. Les coûts d'usage (dont prix du carburant) et les conditions de circulation dans les zones urbaines de forte densité incitent les automobilistes à de nouvelles pratiques.<br>
+[[Covoiturage]]<br>Mobilités alternatives<br>[[Télétravail]]
+
+== Le projet 2l/100 de la Nouvelle France Industrielle ==
+Le projet 2l/100 fait partie du Programme des Investissements d'Avenir lancés par l'état français. Il a été lancé en juin 2013 avec l'objectif de fédérer les acteurs de la filière française automobile (constructeurs, équipementiers, académiques) autour d'un objectif commun qui consiste à développer ensemble les technologies du futur et mettre en place de nouvelles filières industrielles.<br>[[File:Projet 2l au 100km, Briques technologiques.jpg|vignette|upright=2.5|Feuille de route pour 2l/{{unité|100|km}} : contribution des différentes technologies]]
+Si l'objectif parait peu ambitieux dans la mesure où Volkswagen commercialise depuis mi 2014 un véhicule XL1 annoncé à 0,9 l/{{unité|100|km}}, la spécificité du programme français, selon la revendication des constructeurs<ref>http://www.pfa-auto.fr/index.php/articles/2l100km-21</ref> est de développer des technologies abordables(à un prix identique à une version diesel) et avec les mêmes conditions de confort et d'habilité qu'un véhicule du segment inférieur actuel (Clio ou 208).
+Dans ce programme, toutes les voies de réduction de la consommation sont explorées et les briques technologiques permettant d'atteindre le seuil de 2l/100 sont mises en œuvre<ref>Revue "Ingénieurs de l'Automobile" {{n°|833}} décembre 2014 p16 : article sur "Le véhicule 2 L/{{unité|100|km}}"</ref> sur des démonstrateurs présentés au Mondial de l'Automobile 2014 à Paris (Peugeot 208 et C4 Cactus avec la technologie Hybrid Air et Renault EOLAB avec la technologie Hybride rechargeable).<br><br>
+La graphique ci-contre donne une idée des améliorations apportée par les différentes technologies pour passer de "l'état de l'art" en 2013 au niveau visé en 2020.<br>
+
+== Voir aussi ==
+
+=== Unités de mesure / conversion ===
+Le l/{{unité|100|km}} est l'unité courante en Europe. D'autres unités sont utilisées dans le monde, notamment dans les pays anglo-saxons qui n'utilisent pas le système international d'unités.
+{| border=0
+|-
+| style="background:#F0FFFF;"| L/{{unité|100|km}}: → km/L
+| style="background:#FFE0E0;"| 100 / (L/{{unité|100|km}}) = km/L
+|-
+| style="background:#F0FFFF;"| miles per US gallon → L/{{unité|100|km}}:
+| style="background:#FFE0E0;"| 235 / mpg<sub>US</sub> = L/{{unité|100|km}}
+|-
+| style="background:#F0FFFF;"| miles per Imp. gallon → L/{{unité|100|km}}:
+| style="background:#FFE0E0;"| 282 / mpg<sub>Imp.</sub> = L/{{unité|100|km}}
+|-
+| style="background:#F0FFFF;"| L/{{unité|100|km}} → miles per US gallon:
+| style="background:#FFE0E0;"| 235 / (L/{{unité|100|km}}) = mpg<sub>US</sub>
+|-
+| style="background:#F0FFFF;"| L/{{unité|100|km}} → miles per Imp. gallon:
+| style="background:#FFE0E0;"| 282 / (L/{{unité|100|km}}) = mpg<sub>Imp.</sub>
+|}
+
+=== Notes et références ===
+{{Références|colonnes=2}}
+
+=== Articles connexes ===
+* [[Agence de l'environnement et de la maîtrise de l'énergie|ADEME]] Agence pour le Développement et la Maîtrise de l’Énergie
+* [[Nouveau cycle européen de conduite|NEDC]] : New Driving Cycle
+* CAFE : [[Corporate Average Fuel Economy]]
+* [[Économiseur d'essence]]
+
+=== Liens externes ===
+* http://www.ademe.fr/sites/default/files/assets/documents/incitations-financieres-vehicules-2014-7376.pdf
+* http://ec.europa.eu/clima/policies/transport/vehicles/cars/faq_en.htm
+* http://www.eea.europa.eu/data-and-maps/data/co2-cars-emission-7
+
+{{Portail|Automobile|Énergie|pétrole}}
+{{Article potentiellement bon|oldid=116083551|date=24 juin 2015}}

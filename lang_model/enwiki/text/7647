@@ -1,0 +1,278 @@
+{{Refimprove|date=November 2007}}
+'''General packet radio service (GPRS)''' is a [[packet oriented]] [[Mobile Data Service|mobile data service]] on the [[2G]] and [[3G]] [[cellular communication]] system's [[Global System for Mobile Communications|global system for mobile communications]] (GSM). GPRS was originally standardized by [[European Telecommunications Standards Institute]] (ETSI) in response to the earlier [[CDPD]] and [[i-mode]] packet-switched cellular technologies. It is now maintained by the [[3rd Generation Partnership Project]] (3GPP).<ref>[http://www.etsi.org/WebSite/homepage.aspx ETSI]</ref><ref>[http://www.3gpp.org/ 3GPP]</ref>
+
+GPRS usage is typically charged based on volume of data transferred, contrasting with [[circuit switching|circuit switched]] data, which is usually billed per minute of connection time.  GPRS data may be sold either as part of a bundle (e.g., up to 5 GB per month for a fixed fee) or on a pay-as-you-use basis. Usage above the bundle cap is either charged per megabyte or disallowed.
+
+GPRS is a [[best-effort]] service, implying variable [[throughput]] and [[latency (engineering)|latency]] that depend on the number of other users sharing the service concurrently, as opposed to [[circuit switching]], where a certain [[quality of service]] (QoS) is guaranteed during the connection.  In 2G systems, GPRS provides data rates of 56<U+2013>114 kbit/second.<ref>[http://about.qkport.com/g/general_packet_radio_service General packet radio service from Qkport]</ref> [[2G]] cellular technology combined with GPRS is sometimes described as ''[[2.5G]]'', that is, a technology between the second ([[2G]]) and third ([[3G]]) generations of mobile telephony.<ref>[http://www.funsms.net/mobile_phone_generations.htm Mobile Phone Generations from]</ref> It provides moderate-speed data transfer, by using unused [[time division multiple access]] (TDMA) channels in, for example, the GSM system. GPRS is integrated into GSM Release 97 and newer releases.
+
+== Technical overview ==
+{{See also|GPRS Core Network}}
+The GPRS core network allows [[2G]], [[3G]] and [[WCDMA]] [[mobile telephony|mobile networks]] to transmit [[Internet protocol|IP]] packets to external networks such as the [[Internet]].  The GPRS system is an integrated part of the [[GSM]] [[network switching subsystem]].
+
+=== Services offered ===
+GPRS extends the GSM Packet circuit switched data capabilities and makes the following services possible:
+* [[SMS]] messaging and broadcasting
+* "Always on" internet access
+* [[Multimedia Messaging Service|Multimedia messaging service]] (MMS)
+* [[Push to talk]] over cellular (PoC)
+* [[Instant messaging]] and presence<U+2014>[[Wireless Village|wireless village]]
+* Internet applications for smart devices through [[Wireless Application Protocol|wireless application protocol]] (WAP)
+* [[Point-to-point (telecommunications)|Point-to-point]] (P2P) service: inter-networking with the Internet (IP)
+* [[Point-to-Multipoint]] (P2M) service{{Citation needed|date=December 2012}}: point-to-multipoint multicast and point-to-multipoint group calls
+
+If SMS over GPRS is used, an SMS transmission speed of about 30 SMS messages per minute may be achieved. This is much faster than using the ordinary SMS over GSM, whose SMS transmission speed is about 6 to 10 SMS messages per minute.
+
+===Protocols supported===
+GPRS supports the following protocols: 
+
+* [[Internet protocol]] IP. In practice, built-in [[mobile browser]]s use [[IPv4]] since [[IPv6]] was not yet popular.
+* [[Point-to-point protocol]] (PPP). In this mode PPP is often not supported by the [[mobile phone operator]] but if the mobile is used as a modem to the connected computer, PPP is used to tunnel IP to the phone. This allows an IP address to be assigned dynamically (IPCP not DHCP) to the mobile equipment.
+* [[X.25]] connections. This is typically used for applications like wireless payment terminals, although it has been removed from the standard. X.25 can still be supported over PPP, or even over IP, but doing this requires either a network-based [[Router (computing)|router]] to perform encapsulation or intelligence built in to the end-device/terminal; e.g., user equipment (UE).
+
+When [[Internet protocol suite|TCP/IP]] is used, each phone can have one or more [[IP address]]es allocated. GPRS will store and forward the IP packets to the phone even during [[handover]]. The TCP handles any packet loss (e.g. due to a radio noise induced pause).
+
+===Hardware===
+Devices supporting GPRS are divided into three classes:
+
+;Class A: Can be connected to GPRS service and GSM service (voice, SMS), using both at the same time. Such devices are known to be available today.
+;Class B: Can be connected to GPRS service and GSM service (voice, SMS), but using only one or the other at a given time. During GSM service (voice call or SMS), GPRS service is suspended, and then resumed automatically after the GSM service (voice call or SMS) has concluded. Most GPRS mobile devices are Class B.
+;Class C: Are connected to either GPRS service or GSM service (voice, SMS). Must be switched manually between one or the other service.
+
+A true Class A device may be required to transmit on two different frequencies at the same time, and thus will need two radios. To get around this expensive requirement, a GPRS mobile may implement the [[Dual Transfer Mode|dual transfer mode (DTM)]] feature. A DTM-capable mobile may use simultaneous voice and packet data, with the network coordinating to ensure that it is not required to transmit on two different frequencies at the same time. Such mobiles are considered pseudo-Class A, sometimes referred to as "simple class A". Some networks support DTM since 2007.
+
+[[Image:Huawei E220 (Three).jpg|right|thumb|120px|[[Huawei E220]] 3G/GPRS Modem]]
+USB 3G/GPRS modems use a terminal-like interface over [[USB]] 1.1, 2.0 and later, data formats [[V.42bis]], and RFC 1144 and some models have connector for external [[antenna (radio)|antenna]]. Modems can be added as cards (for laptops) or external USB devices which are similar in shape and size to a computer mouse, or nowadays more like a [[pendrive]].
+
+=== Addressing ===
+A GPRS connection is established by reference to its [[Access Point Name|access point name]] (APN). The APN defines the services such as [[Wireless Application Protocol|wireless application protocol]] (WAP) access, [[Short Message Service|short message service]] (SMS), [[Multimedia Messaging Service|multimedia messaging service]] (MMS), and  for [[Internet]] communication services such as [[email]] and [[World Wide Web]] access.
+
+In order to set up a GPRS connection for a [[wireless modem]], a user must specify an APN, optionally a user name and password, and very rarely an [[IP address]], all provided by the network       operator.
+
+== Coding schemes and speeds ==
+The upload and download speeds that can be achieved in GPRS depend on a number of factors such as:
+
+* the number of [[Base Transceiver Station|BTS]] TDMA time slots assigned by the operator
+* the channel encoding is used.
+* the maximum capability of the mobile device expressed as a [[Multislot Class|GPRS multislot class]]
+
+===Multiple access schemes ===
+The [[multiple access method]]s used in GSM with GPRS are based on [[frequency division duplex]] (FDD) and TDMA. During a session, a user is assigned to one pair of up-link and down-link frequency channels. This is combined with time domain [[statistical multiplexing]]; i.e., [[packet mode]] communication, which makes it possible for several users to share the same frequency channel. The packets have constant length, corresponding to a GSM time slot. The down-link uses [[first-come first-served]] packet scheduling, while the up-link uses a scheme very similar to [[reservation ALOHA]] (R-ALOHA). This means that [[slotted ALOHA]] (S-ALOHA) is used for reservation inquiries during a contention phase, and then the actual data is transferred using [[dynamic TDMA]] with first-come first-served .
+
+=== Channel encoding ===
+Channel encoding is based on a [[convolutional code]] at different [[code rate]]s and [[GMSK]] modulation defined for GSM.  The following table summarises the options:
+:{| class="wikitable" align=center
+! Coding scheme
+! Speed (kbit/s)
+|- style="text-align:center;"
+| CS-1
+| 8.0
+|- style="text-align:center;"
+| CS-2
+| 12.0
+|- style="text-align:center;"
+| CS-3
+| 14.4
+|- style="text-align:center;"
+| CS-4
+| 20.0
+|}
+
+The least robust, but fastest, coding scheme (CS-4) is available near a [[Base Transceiver Station|base transceiver station]] (BTS), while the most robust coding scheme (CS-1) is used when the mobile station (MS) is further away from a BTS.
+
+Using the CS-4 it is possible to achieve a user speed of 20.0 kbit/s per time slot. However, using this scheme the cell coverage is 25% of normal. CS-1 can achieve a user speed of only 8.0 kbit/s per time slot, but has 98% of normal coverage. Newer network equipment can adapt the transfer speed automatically depending on the mobile location.
+
+In addition to GPRS, there are two other GSM technologies which deliver data services: [[Circuit Switched Data|circuit-switched data]] (CSD) and [[high-speed circuit-switched data]] (HSCSD).  In contrast to the shared nature of GPRS, these instead establish a dedicated circuit (usually billed per minute).  Some applications such as [[video calling]] may prefer HSCSD, especially when there is a continuous flow of data between the endpoints.
+
+The following table summarises some possible configurations of GPRS and circuit switched data services.
+
+:{| class="wikitable" align=center
+! Technology
+! Download (kbit/s)
+! Upload (kbit/s)
+! TDMA Timeslots allocated (DL+UL)
+|- style="text-align:center;"
+| CSD
+| 9.6
+| 9.6
+| 1+1
+|- style="text-align:center;"
+| HSCSD
+| 28.8
+| 14.4
+| 2+1
+|- style="text-align:center;"
+| HSCSD
+| 43.2
+| 14.4
+| 3+1
+|- style="text-align:center;"
+| GPRS
+| 80.0
+| 20.0 (Class 8 & 10 and CS-4)
+| 4+1
+|- style="text-align:center;"
+| GPRS
+| 60.0
+| 40.0 (Class 10 and CS-4)
+| 3+2
+|- style="text-align:center;"
+| [[EGPRS]] (EDGE)
+| 236.8
+| 59.2 (Class 8, 10 and MCS-9)
+| 4+1
+|- style="text-align:center;"
+| [[EGPRS]] (EDGE)
+| 177.6
+| 118.4 (Class 10 and MCS-9)
+| 3+2
+|}
+
+=== Multislot Class ===
+The multislot class determines the speed of data transfer available in the [[Uplink]] and [[Downlink]] directions.  It is a value between 1 to 45 which the network uses to allocate radio channels in the uplink and downlink direction.  Multislot class with values greater than 31 are referred to as high multislot classes.
+
+A multislot allocation is represented as, for example, 5+2. The first number is the number of downlink timeslots and the second is the number of uplink timeslots allocated for use by the mobile station.  A commonly used value is class 10 for many GPRS/EGPRS mobiles which uses a maximum of 4 timeslots in downlink direction and 2 timeslots in uplink direction. However simultaneously a maximum number of 5 simultaneous timeslots can be used in both uplink and downlink. The network will automatically configure the for either 3+2 or 4+1 operation depending on the nature of data transfer.
+
+Some high end mobiles, usually also supporting [[UMTS]] also support GPRS/[[EDGE]] multislot class 32. According to [[3GPP]] TS 45.002 (Release 6), Table B.2, mobile stations of this class support 5 timeslots in downlink and 3 timeslots in uplink with a maximum number of 6 simultaneously used timeslots. If data traffic is concentrated in downlink direction the network will configure the connection for 5+1 operation. When more data is transferred in the uplink the network can at any time change the constellation to 4+2 or 3+3. Under the best reception conditions, i.e. when the best EDGE [[modulation and coding scheme]] can be used, 5 timeslots can carry a bandwidth of 5*59.2 kbit/s = 296 kbit/s. In uplink direction, 3 timeslots can carry a bandwidth of 3*59.2 kbit/s = 177.6 kbit/s.<ref>[http://mobilesociety.typepad.com/mobile_life/2007/04/gprs_and_edge_m.html GPRS and EDGE Multislot Classes]</ref>
+
+==== Multislot Classes for GPRS/EGPRS ====
+:{| class="wikitable"
+! Multislot Class
+! Downlink TS
+! Uplink TS
+! Active TS
+|- style="text-align:center;"
+| 1
+| 1
+| 1
+| 2
+|- style="text-align:center;"
+| 2
+| 2
+| 1
+| 3
+|- style="text-align:center;"
+| 3
+| 2
+| 2
+| 3
+|- style="text-align:center;"
+| 4
+| 3
+| 1
+| 4
+|- style="text-align:center;"
+| 5
+| 2
+| 2
+| 4
+|- style="text-align:center;"
+| 6
+| 3
+| 2
+| 4
+|- style="text-align:center;"
+| 7
+| 3
+| 3
+| 4
+|- style="text-align:center;"
+| 8
+| 4
+| 1
+| 5
+|- style="text-align:center;"
+| 9
+| 3
+| 2
+| 5
+|- style="text-align:center;"
+| 10
+| 4
+| 2
+| 5
+|- style="text-align:center;"
+| 11
+| 4
+| 3
+| 5
+|- style="text-align:center;"
+| 12
+| 4
+| 4
+| 5
+|- style="text-align:center;"
+| 30
+| 5
+| 1
+| 6
+|- style="text-align:center;"
+| 31
+| 5
+| 2
+| 6
+|- style="text-align:center;"
+| 32
+| 5
+| 3
+| 6
+|- style="text-align:center;"
+| 33
+| 5
+| 4
+| 6
+|- style="text-align:center;"
+| 34
+| 5
+| 5
+| 6
+|}
+
+==== Attributes of a multislot class ====
+Each multislot class identifies the following:
+* the maximum number of Timeslots that can be allocated on uplink
+* the maximum number of Timeslots that can be allocated on downlink
+* the total number of timeslots which can be allocated by the network to the mobile
+* the time needed for the MS to perform adjacent cell signal level measurement and get ready to transmit
+* the time needed for the MS to get ready to transmit
+* the time needed for the MS to perform adjacent cell signal level measurement and get ready to receive
+* the time needed for the MS to get ready to receive.
+
+The different multislot class specification is detailed in the Annex B of the 3GPP Technical Specification 45.002 (Multiplexing and multiple access on the radio path)
+
+== Usability ==
+The maximum speed of a GPRS connection offered in 2003 was similar to a [[modem]] connection in an analog wire telephone network, about 32<U+2013>40 kbit/s, depending on the phone used. [[Lag|Latency]] is very high; round-trip time (RTT) is typically about 600<U+2013>700 ms and often reaches 1s. GPRS is typically prioritized lower than speech, and thus the quality of connection varies greatly.
+
+Devices with latency/RTT improvements (via, for example, the extended UL TBF mode feature) are generally available. Also, network upgrades of features are available with certain operators. With these enhancements the active round-trip time can be reduced, resulting in significant increase in application-level throughput speeds.
+
+== See also ==
+* [[Code division multiple access]] (CDMA)
+* [[Enhanced Data Rates for GSM Evolution|Enhanced data rates for GSM evolution]] (EDGE)
+* [[Universal Mobile Telecommunications System|Universal mobile telephone system]] (UMTS)
+* [[GPRS core network]]
+* [[SNDCP|Sub-network dependent convergence protocol]] (SNDCP)
+* [[IP Multimedia Subsystem]]
+* [[High-Speed Downlink Packet Access|High-speed downlink packet access]] (HSDPA)
+* [[Cellular data communication protocol]]
+* [[List of device bandwidths]]
+
+== References ==
+{{reflist}}
+
+== External links ==
+* [http://www.3gpp.org/ftp/Specs/latest/Rel-8/27_series/27007-841.zip 3GPP AT command set for user equipment (UE)]
+* [http://web.archive.org/web/20080209213430/http://www.gprssecurity.com/ GPRS security information (archive.org)]
+* [http://www.telecomspace.com/datatech-gprs.html Free GPRS resources]
+* [http://www.gsmworld.com/technology/gprs/intro.shtml GSM World, the trade association for GSM and GPRS network operators].
+* [http://www.palowireless.com/gprs/ Palowireless GPRS resource center]
+* [http://www.eventhelix.com/RealtimeMantra/Telecom/gprs_attach_pdp_sequence_diagram.pdf GPRS attach and PDP context activation sequence diagram]
+
+{{Internet access}}
+{{Mobile telecommunications standards}}
+
+[[Category:3rd Generation Partnership Project standards]]
+[[Category:Link protocols]]
+[[Category:1997 introductions]]
+
+{{Link FA|pl}}
+
+[[ja:GSM#GPRS]]

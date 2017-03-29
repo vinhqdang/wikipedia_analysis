@@ -1,0 +1,51 @@
+{{Voir homonymes|Dock}}
+Le '''Dock''' est une fonctionnalité de l'[[environnement graphique]] de [[Mac OS X]] (cette fonctionnalité est aujourd'hui courante sur d'autres [[système d'exploitation|système d'exploitations]], tels que [[Microsoft Windows]] ou [[Linux]]), le [[système d'exploitation]] d'[[Apple, Inc.|Apple]]. Il s'agit d'une zone située par défaut en bas de l'écran, qui contient toutes les [[icône (informatique)|icônes]] des [[Logiciel|applications]], [[Répertoire (informatique)|dossiers]] ou [[Fichier (informatique)|fichiers]] favoris de l'utilisateur. Cette zone contient également la [[corbeille (informatique)|corbeille]].
+
+Le concept du Dock a été popularisé par [[NeXTSTEP]], le système d'exploitation ayant notamment servi de base à Mac OS X. Toutefois, son origine remonte au système d'exploitation [[PowerPC G3|Arthur]] sorti en 1987 et ancêtre de [[RISC OS]]<ref>{{cite web | url=http://osnews.com/story/18941/Common_Usability_Terms_pt._VI:_the_Dock | titre=Common Usability Terms, pt. VI: the Dock | auteur=Thom Holwerda | date=18 november 2007}}</ref>. Le dock s'appelait alors "Iconbar". Les systèmes de fichiers montés et d'autres choses (comme l'imprimante) étaient iconifiés à gauche de l'Iconbar<ref name=daniel>{{cite web | url=http://telcontar.net/Misc/GUI/RISCOS/ | titre=The RISC OS GUI | auteur=Daniel Beardsmore | date=11 février 2008}}</ref>. La partie droite était, quant à elle, réservée aux applications en exécution. Des fichiers pouvaient être glissés-déplacés sur cette barre<ref>{{cite web | url=http://www.riscos.org/articles/pv_nov2006b.html | titre=Why I stay with RISC OS ... (follow up) | auteur=Paul Vigay | date=14 decembre 2006}}</ref>.
+
+==Applications==
+Le Dock contient dans sa zone gauche les icônes des applications favorites de l'utilisateur, qu'il suffit de cliquer pour lancer. Les applications en cours d'exécution se distinguent par la présence d'un petit triangle noir (rond blanc translucide sous [[Mac OS X 10.5]]) sous leur icône, et apparaissent automatiquement quand bien même elles n'étaient pas présentes dans le Dock avant d'être lancées (elles disparaissent aussitôt l'application quittée). Puisque le [[Finder]] est constamment en cours d'exécution, son icône est toujours présente et ne peut être supprimée du Dock<ref>L'exception à ce principe est l'icône de [[Dashboard]], depuis [[Mac OS X 10.4]], puisque celle-ci peut être supprimée du Dock alors même que l'application est toujours en cours d'exécution.</ref>
+
+Au fur et à mesure que des applications qui n'étaient pas présentes dans le Dock sont lancées, ce dernier s'agrandit pour pouvoir contenir leur icône. Lorsque le Dock a utilisé toute la largeur disponible (ou la hauteur selon sa position sur l'écran), il réduit la taille de chacune de ses icônes pour éventuellement continuer à s'agrandir. Au fur et à mesure que des applications dont les icônes n'étaient pas présentes dans le Dock sont quittées, le Dock retrouve sa taille initiale.
+
+Pour certaines applications, un clic droit (ou clic + Commande) sur leur icône dans le Dock permet d'accéder à leurs fonctionnalités principales (lecture ou avance rapide pour [[iTunes]], relever le courrier ou rédiger un message pour [[Mail (Apple)|Mail]], par exemple).
+
+Il existe quelques petites astuces pour le Dock. Si plusieurs applications sont ouvertes, il est possible d'en changer rapidement en utilisant un [[raccourci clavier]] : Commande + Tabulation : cela aura comme effet de placer l'application utilisée en avant-dernier lieu au premier plan.
+Il est également possible de maintenir la touche Commande enfoncée après ce raccourci clavier, auquel cas les icônes de toutes les applications ouvertes apparaîtrons au centre de l'écran, triées par ordre de dernière utilisation. Il faut alors appuyer sur la touche Tabulation jusqu'à sélectionner l'application à mettre au premier-plan, puis tout relâcher. Pour sélectionner dans le sens inverse (de droite à gauche), il suffit d'appuyer sur les touches Commande + Majuscule + Tabulation.
+
+==Fichiers, dossiers, fenêtres réduites et Corbeille==
+La zone droite du Dock peut contenir des raccourcis vers des fichiers ou des dossiers. Un clic droit (ou clic + Commande) sur une icône de dossier permet de consulter le contenu de celui-ci rapidement.
+Cette zone contient par ailleurs les éventuelles fenêtres réduites, en affichant une miniature de celles-ci avec au premier plan l'icône de l'application à laquelle elles appartiennent.
+Enfin, la zone droite du Dock contient également l'icône de la [[corbeille (informatique)|corbeille]], dans laquelle on peut placer par [[glisser-déposer|glissé-déposé]] les fichiers ou dossiers dont on souhaiterait se débarrasser. Lorsqu'un volume (disque dur externe, disque optique, serveur distant, etc.) est glissé saisi par le pointeur, la Corbeille devient un signe d'éjection, permettant d'éjecter ou de déconnecter le volume.
+
+==Personnalisation==
+Mis à part les icônes du Finder et de la Corbeille, placées aux extrémités du Dock, l'utilisateur peut ajouter et supprimer de ce dernier toutes les icônes d'applications, de dossiers et de fichiers qu'il souhaite, par glissé-déposé. Pour ajouter une application au Dock, il suffit de glisser son icône dans la zone gauche de celui-ci. Pour effectuer l'opération inverse, il suffit de glisser l'icône hors du Dock, et celle-ci disparaît dans un petit « pouf » de fumée. L'ordre des icônes peut également être modifié par glissé-déposé.
+
+L'utilisateur peut choisir la position du Dock sur l'écran (gauche, bas ou droite). Certaines applications de tierce partie permettent à l'utilisateur de placer le Dock en haut de l'écran, sous la zone unique de menu, et/ou d'annuler l'alignement par défaut au centre du côté.
+
+Il est aussi possible de masquer automatiquement le Dock, et de ne le faire apparaître uniquement lorsque l'utilisateur place le curseur sur le côté de l'écran où le Dock est censé se tenir. Cette fonctionnalité est notamment accessible par le raccourci clavier Commande + Option + D.
+
+Enfin, la taille, l'agrandissement lors du survol des icônes et le type de réduction des fenêtres peuvent être modifiés.
+
+==Alternatives==
+Un dispositif ''plus ou moins comparable'' existe dans la plupart des autres [[système d'exploitation|systèmes d'exploitation]], il s'agit de la  [[barre des tâches]], qui existe dans [[Windows]] et dans certains [[environnement graphique|environnements graphiques]] pour [[Linux]], notamment [[KDE]] et [[GNOME]], qui y ajoutent un menu central permettant de naviguer dans l'ordinateur, ainsi que l'accès à plusieurs bureaux virtuels.
+
+Il existe par ailleurs des logiciels commerciaux<ref>Comme ObjetDock ou MobyDock.</ref> ou gratuits<ref>Comme RK LAUNCHER.
+</ref>, qui permettent de reproduire le Dock de Mac OS X dans Windows, et plusieurs autres projets sous GNU/Linux comme le [[Cairo-dock]] ou Avant Window Navigator ([https://launchpad.net/awn/ site officiel]).
+
+==Étymologie==
+''Dock'' est un mot anglais désignant l'endroit dans les [[Port (marine)|ports maritimes]] où les [[bateau|bateaux]] déchargent leur [[fret]] et subissent divers opérations d'entretien ou réparations.
+
+==Liens externes==
+* {{en}} [http://www.appleinsider.com/articles/07/10/10/road_to_mac_os_x_leopard_dock_1_6.html Road to Mac OS X Leopard: Dock 1.6 (AppleInsider)]
+
+==Notes==
+<references />
+{{Portail|Apple Macintosh}}
+
+[[Catégorie:Mac OS X]]
+[[Catégorie:Lanceur d'applications]]
+
+[[en:Dock (Mac OS X)]]
+[[it:Dock (Mac OS X)]]
+[[ko:독 (맥 오에스 텐)]]

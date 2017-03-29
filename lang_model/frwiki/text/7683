@@ -1,0 +1,421 @@
+[[Fichier:Fig 07b.png|600px|thumb|Le premier graphe donne l'allure du graphe d'une fonction périodique ; l'histogramme donne les valeurs des modules des coefficients de Fourier correspondant aux différentes fréquences.]]
+
+En analyse, les '''séries de Fourier''' sont un outil fondamental dans l'étude des [[fonction périodique|fonctions périodiques]]. C'est à partir de ce concept que s'est développée la branche des mathématiques connue sous le nom d'[[Analyse harmonique (mathématiques)|analyse harmonique]]. 
+
+L'étude d'une fonction périodique par les séries de Fourier comprend deux volets :
+* l''''analyse''', qui consiste en la détermination de la suite de ses coefficients de Fourier ;
+* la '''synthèse''', qui permet de retrouver, en un certain sens, la fonction à l'aide de la suite de ses coefficients.
+
+Au-delà du problème de la décomposition, la théorie des séries de Fourier établit une correspondance entre la fonction périodique et les coefficients de Fourier. De ce fait, l'analyse de Fourier peut être considérée comme une nouvelle façon de décrire les fonctions périodiques. 
+Des opérations telles que la dérivation s'écrivent simplement en termes de coefficients de Fourier. La construction d'une fonction périodique solution d'une équation fonctionnelle peut se ramener à la construction des coefficients de Fourier correspondants.
+
+Les séries de Fourier ont été introduites par [[Joseph Fourier]] en [[1822]], mais il fallut un siècle pour que les analystes dégagent les outils d'étude adaptés : une théorie de l'[[intégrale de Lebesgue|intégrale]] pleinement satisfaisante et les premiers concepts de l'[[analyse fonctionnelle (mathématiques)|analyse fonctionnelle]]. Elles font encore actuellement l'objet de recherches actives pour elles-mêmes, et ont suscité plusieurs branches nouvelles : [[Analyse harmonique (mathématiques)|analyse harmonique]], [[Traitement du signal|théorie du signal]], [[ondelette]]s, etc.
+
+Les séries de Fourier se rencontrent usuellement dans la décomposition de signaux périodiques, dans l'étude des courants électriques, des ondes cérébrales, dans la [[synthèse sonore]], le [[traitement d'images]], etc.
+
+__TOC__
+
+== Préliminaire ==
+Soient ''D'' un sous-ensemble non vide de '''R''' et ''f'' une fonction réelle dont l'ensemble de définition est ''D'' .
+
+Si ''t'' est un nombre réel, on dit que ''f'' admet ''t'' pour période si, et seulement si, pour tout ''x'' de ''D'', 
+<math>x+t \in D </math> et <math>x-t \in D</math> et <math>f(x+t)=f(x)</math>. 
+
+Il est facile de voir que l'ensemble ''E'' des périodes de ''f'' est un sous-groupe muni de la loi + de '''R'''.
+
+La fonction ''f'' est dite [[fonction périodique|périodique]] de période ''T'' lorsque l'intersection de ''E'' et des réels strictement positifs admet ''T'' pour plus petit élément. Alors, le réel ''F=1/T'', inverse de la période ''T'', est appelé fréquence de ''f''.
+
+Si ''T'' est un réel strictement positif et si ''F=1/T'', les [[fonction trigonométrique|fonctions sinusoïdales]]
+:<math>x\mapsto \cos(2\pi\cdot n\cdot F\cdot  x)</math> et <math>x\mapsto \sin(2\pi \cdot n\cdot F\cdot x)</math>
+sont périodiques de période ''T/n'' et de fréquence ''n F''. ''T/n'' est évidemment période de chacune de ces fonctions ( car <math>\cos(2\pi\cdot n\cdot F\cdot  (x+T/n)) = \cos(2\pi\cdot n\cdot F\cdot  x )</math> et <math>\sin(2\pi \cdot n\cdot F\cdot (x+T/n) )=\sin(2\pi \cdot n\cdot F\cdot x)</math> )
+=== Polynômes trigonométriques ===
+
+Une [[combinaison linéaire]] de ces fonctions sinusoïdales élémentaires porte le nom de [[polynôme trigonométrique]] et constitue aussi une fonction admettant ''T'' pour période. Elle peut se réécrire comme combinaison linéaire de fonctions <math>x\mapsto e^{2in\pi F x}</math>, l'emploi des [[nombre complexe|nombres complexes]] et de la [[fonction exponentielle]] permettant de simplifier les notations. 
+
+Un polynôme trigonométrique ''P'' s'écrit donc sous la forme :
+:<math>P(x)=\sum_{n=-\infty}^{+\infty}c_n (P)e^{i 2\pi\frac{n}{T} x}</math> avec <math>e^{i 2\pi\frac{n}{T} x} = \cos \left(2\pi\frac{n}{T} x \right) + i \sin \left(2\pi\frac{n}{T} x \right) </math>
+où les coefficients ''c<sub>n</sub>(P)'' sont presque tous nuls, et peuvent être obtenus par la formule suivante :
+:<math>\frac{1}{T} \int_{-T/2}^{T/2} P(t) e^{-i \frac{2n\pi}{T}t}\,\mathrm dt=c_n(P) \qquad (1)</math>.
+
+=== Principe des séries de Fourier ===
+
+On ne peut pas obtenir toutes les fonctions admettant ''T'' pour période comme une telle combinaison, ne serait-ce que parce qu'un polynôme trigonométrique est nécessairement indéfiniment dérivable. 
+
+L'idée sous-jacente à l'introduction des séries de Fourier est de pouvoir obtenir une fonction admettant ''T'' pour période, par exemple continue, comme somme de fonctions sinusoïdales :
+:<math>f(x)=\sum_{n=-\infty}^{+\infty}c_n (f)e^{i 2\pi\frac{n}{T} x}</math> 
+avec les coefficients ''c''<sub>''n''</sub>(f), appelés '''coefficients de Fourier''' de ''f'', définis par la formule :
+:<math>c_n(f) = \frac{1}{T} \int_{-T/2}^{T/2} f(t) e^{-i 2\pi\frac{n}{T}t}\mathrm dt</math>.
+
+Il s'agit cette fois-ci d'une véritable somme infinie, c'est-à-dire d'une limite de somme finie, ce qui correspond au concept de somme de [[série (mathématiques)|série]].
+
+De nombreux calculs se traduisent de façon très simple sur les coefficients des polynômes trigonométriques, comme le calcul de dérivée. Il est possible de les généraliser au niveau des coefficients de Fourier généraux.
+
+Au sens strict, la formule de décomposition n'est pas correcte en général. Elle l'est, ponctuellement, sous de bonnes hypothèses de régularité portant sur ''f''. Alternativement, on peut lui donner sens en se plaçant dans les bons espaces fonctionnels.
+
+== Aspects historiques ==
+
+Les séries de Fourier constituent la branche la plus ancienne de l'[[analyse harmonique (mathématiques)|analyse harmonique]], mais n'en demeurent pas moins un domaine vivant, aux nombreuses questions ouvertes. L'étude de leurs particularités est allée de pair, pendant tout le {{XIXe siècle}}, avec les progrès de la théorie de l'[[Intégrale (mathématiques)|intégration]].
+
+=== Les origines ===
+
+Les premières considérations sur les [[série trigonométrique|séries trigonométriques]] apparaissent vers 1400 en Inde, chez [[Madhava de Sangamagrama|Madhava]], chef de file de l'[[école du Kerala]]<ref>
+{{MacTutor|id=Madhava|classe=Mathematicians|titre=Madhava of Sangamagramma}} (consulté en 2000)</ref>. En Occident, on les trouve au {{XVIIe siècle}} chez [[James Gregory (mathématicien)|James Gregory]], au début du {{XVIIIe siècle}} chez [[Brook Taylor]]. C'est l'ouvrage de ce dernier, ''Methodus Incrementorum Directa et Inversa'', paru en [[1715]], qui donne le coup d'envoi à l'étude systématique des [[corde vibrante|cordes vibrantes]] et de la [[Son (physique)#Propagation du son|propagation du son]], thème de recherche majeur pendant tout le siècle. 
+
+Une controverse éclate dans les années 1750 entre [[Jean le Rond d'Alembert|d'Alembert]], [[Leonhard Euler|Euler]] et [[Daniel Bernoulli]] sur le problème des [[corde vibrante|cordes vibrantes]]. D'Alembert détermine l'[[équation d'onde]] et ses solutions analytiques. Bernoulli les obtient également, sous forme de décomposition en série trigonométrique. La controverse porte sur la nécessité de concilier ces points de vue avec les questions de régularité des solutions. Selon J.-P. Kahane<ref>{{Kahane1}}, p. 33 et suivantes</ref>, 
+elle aura un rôle majeur dans la genèse des séries de Fourier.
+
+Bernoulli avait introduit des séries trigonométriques dans le problème des cordes vibrantes pour superposer des solutions élémentaires. 
+
+[[Joseph Fourier]] <small>([[1768]]-[[1830]])</small> introduit l'[[équation de la chaleur]] dans un premier mémoire en [[1807 en science|1807]]<ref>''Mémoire sur la propagation de la chaleur dans les corps solides'', disparu depuis des archives de l'Institut et connu à travers [http://gallica.bnf.fr/ark:/12148/bpt6k33707.image.r=Oeuvres+de+Fourier.f223.langFR.pagination un abrégé] paru sous la signature de [[Siméon Denis Poisson]] dans le Nouveau Bulletin des sciences par la Société philomatique de Paris, t. I, p. 112-116, n°6; mars 1808. Paris, Bernard</ref> qu'il complète et présente en [[1811 en science|1811]] pour le Grand prix de Mathématiques. Ces premiers travaux, controversés sur le plan de l'analyse, ne furent pas publiés. En [[1822 en science|1822]], Fourier expose les séries et la transformation de Fourier dans son traité ''Théorie analytique de la chaleur''.
+Il énonce qu'une fonction peut être décomposée sous forme de série trigonométrique, et qu'il est facile de prouver la convergence de celle-ci. Il juge même toute hypothèse de continuité inutile<ref>[[Joseph Fourier]], ''Théorie analytique de la chaleur'', voir le texte sur [http://gallica.bnf.fr/ark:/12148/bpt6k29061r Gallica], alinéa 235 p. 259 et alinéa 417 p. 551</ref>. 
+
+En [[1829 en science|1829]], [[Johann Peter Gustav Lejeune Dirichlet|Dirichlet]] <small>([[1805 en science|1805]]-[[1859 en science|1859]])</small> donne un [[Théorème de Dirichlet sur la convergence des séries de Fourier|premier énoncé correct]]<ref>[[Johann Peter Gustav Lejeune Dirichlet|Gustav Lejeune-Dirichlet]], ''Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire entre des limites données'', [[Journal de Crelle]] '''4''' (1829) p. 157-169</ref> de convergence limité aux fonctions périodiques continues par morceaux ne possédant qu'un nombre fini d'extrema. Dirichlet considérait que les autres cas s'y ramenaient ; l'erreur sera corrigée par [[Marie Ennemond Camille Jordan|Jordan]] en 1881.
+
+En [[1848 en science|1848]], [[Henry Wilbraham|Wilbraham]] est le premier à mettre en évidence le [[phénomène de Gibbs]]<ref>[[Henry Wilbraham]], ''On a certain periodic function'', Cambridge Dublin Math. J. '''3''', 1848</ref> en s'intéressant au comportement des séries de Fourier au voisinage des points de discontinuité.
+
+=== Avancée conjointe des séries de Fourier et de l'analyse réelle ===
+
+Le ''Mémoire sur les séries trigonométriques'' de [[Bernhard Riemann]] <small>([[1826 en science|1826]]-[[1866 en science|1866]])</small>, publié en [[1867 en science|1867]]<ref>''Œuvres de Riemann'', 2{{e}} édition, p. 230</ref>, constitue une avancée décisive. L'auteur lève un obstacle majeur en définissant pour la première fois une théorie de l'[[intégrale de Riemann|intégration]] satisfaisante. Il démontre notamment que les coefficients de Fourier [[théorème de Riemann-Lebesgue|ont une limite nulle à l'infini]], et un résultat de convergence connu comme le théorème de sommabilité de Riemann.
+
+[[Georg Cantor]] <small>([[1845 en science|1845]]-[[1918 en science|1918]])</small> publie une série d'articles sur les séries trigonométriques entre [[1870 en science|1870]] et [[1872 en science|1872]], où il démontre son [[Série trigonométrique#Théorème d'unicité de Cantor|théorème d'unicité]]. Cantor raffine ses résultats en recherchant des "ensembles d'unicité", pour lesquels son théorème reste vérifié. C'est l'origine de l'introduction de la [[théorie des ensembles]].
+
+En [[1873 en science|1873]], [[Paul David Gustave du Bois-Reymond|du Bois-Reymond]] <small>([[1831 en science|1831]]-[[1889 en science|1889]])</small> donne le premier exemple de fonction continue périodique dont la série de Fourier diverge en un point<ref>[[Paul David Gustave du Bois-Reymond]], ''Eine neue Theorie der Convergenz und Divergenz von Reihen mit positiven Gliedern'', Journal für die reine und angewandte Mathematik 76 (1873) p. 61-91.</ref>. Le dernier quart du {{XIXe siècle}} voit relativement peu d'avancées dans le domaine des séries de Fourier ou de l'analyse réelle en général, alors que l'[[analyse complexe]] connaît une progression rapide.
+
+Dans une note de [[1900 en science|1900]]<ref>[[Lipót Fejér]], Sur les fonctions intégrables et bornées, ''C.R. Acad. Sci. Paris'', 10 décembre 1900</ref> et dans un article de [[1904 en science|1904]]<ref>Leopold Fejér, Untersuchungen über Fouriersche Reihen, ''Math. Annalen'', '''58''', 1904</ref>, [[Lipót Fejér|Fejér]] <small>( [[1880 en science|1880]]-[[1959 en science|1959]])</small> démontre son [[théorème de Fejér|théorème de convergence uniforme]] utilisant le [[Lemme de Cesàro|procédé de sommation de Cesàro]] (moyenne arithmétique des sommes partielles de Fourier). Surtout, il dégage un principe nouveau : l'association systématique entre régularisation au moyen d'un « [[opérateur à noyau|noyau]] » et [[procédé de sommation]] pour la série de Fourier.
+
+=== De nouveaux outils d'étude ===
+
+[[Henri Léon Lebesgue|Henri Lebesgue]] <small>([[1875 en science|1875]]-[[1941 en science|1941]])</small> donne à la théorie des séries de Fourier son cadre définitif en introduisant une nouvelle [[intégrale de Lebesgue|théorie de l'intégration]]. Dans une série de publications qui s'étalent de [[1902 en science|1902]] à [[1910 en science|1910]], il étend les théorèmes de ses prédécesseurs, notamment le [[théorème de Riemann-Lebesgue|théorème de Riemann sur la limite des séries de Fourier]]. Il prouve également plusieurs théorèmes de convergence nouveaux. La plupart de ses résultats figurent dans ses ''Leçons sur les séries trigonométriques'' publiées en [[1906 en science|1906]]. 
+
+En [[1907 en science|1907]], [[Pierre Fatou]] <small>([[1878 en science|1878]]-[[1929 en science|1929]])</small> démontre l'[[égalité de Parseval]] dans le cadre général des fonctions de carré sommable. La même année, [[Frigyes Riesz]] <small>([[1880 en science|1880]]-[[1926 en science|1926]])</small> et [[Ernst Sigismund Fischer|Ernst Fischer]] <small>([[1875 en science|1875]]-[[1954 en science|1954]])</small>, de façon indépendante, prouvent la réciproque. Ces résultats participent à la naissance d'un domaine nouveau, l'[[Analyse fonctionnelle (mathématiques)|analyse fonctionnelle]]. 
+
+Dorénavant, les questions de convergence dans les espaces fonctionnels sont envisagées à travers l'étude des propriétés des suites de noyaux et des opérateurs associés. Une grande partie des résultats passe par des questions d'estimation de normes appelées "constantes de Lebesgue", qui deviennent un objet d'étude systématique.
+
+Parallèlement, le problème de la convergence simple des séries de Fourier donne lieu à plusieurs coups de théâtre avec la publication de résultats qui ont connu un grand retentissement et surpris les contemporains. En [[1926 en science|1926]], [[Andreï Kolmogorov]] <small>([[1903 en science|1903]]-[[1987 en science|1987]])</small> construit un exemple de fonction intégrable dont la série de Fourier diverge partout<ref>[[Andreï Kolmogorov]], ''Une série de Fourier-Lebesgue divergente partout'', C. R. Acad Sci. Paris, 183, p. 1327-28</ref>. En [[1966 en science|1966]], [[Lennart Carleson]] <small>([[1928 en science|1928]])</small> établit au contraire<ref>[[Lennart Carleson]], ''Convergence and growth of partial sums of Fourier series'', Acta Math. 116, p. 135-157</ref> que la série de Fourier d'une fonction de carré sommable converge [[Ensemble négligeable|presque partout]] vers cette fonction. D'autres résultats (Kahane et Katznelson 1966, Hunt 1967) viennent compléter l'étude. Les recherches se portent ensuite sur la convergence des séries de Fourier à plusieurs dimensions, encore imparfaitement connue.
+
+== Coefficients de Fourier ==
+
+La définition des coefficients de Fourier porte sur les fonctions périodiques [[intégrale de Lebesgue|intégrables au sens de Lebesgue]] sur une période. Pour une fonction périodique, être de classe <math>L^p</math> implique l'intégrabilité. Ceci comprend en particulier les fonctions continues, ou continues par morceaux, périodiques. On reprend ici les notations du premier paragraphe.
+
+=== Coefficients complexes ===
+
+Les '''coefficients de Fourier''' (complexes) de ''f'' (pour <math>n \in \Z</math>) sont donnés par :
+<center><math>c_n(f) = \frac{1}{T} \int_{-T/2}^{T/2} f(t) e^{-i \frac{2n\pi}{T}t}\,dt\, </math>.</center>
+Par périodicité de l'intégrale, ces coefficients peuvent également être calculés en considérant l'intégrale sur n'importe quel segment de longueur ''T''. Le coefficient <math>c_n(f)</math> est la [[Moyenne#Valeur moyenne d'une fonction|valeur moyenne]] de <math>f(t) e^{-i \frac{2n\pi}{T}t}</math>. En particulier, le coefficient <math>c_0(f)</math> n'est autre que la valeur moyenne de ''f''. 
+
+Si ''n''>0, on appelle '''[[Harmonique (physique)|harmonique]] de rang ''n''''' et note <math>H_n(f)</math> la fonction sinusoïdale de fréquence <math>nF=\frac{n}{T}</math>'' obtenue en tenant compte des coefficients de Fourier d'indice ''n'' et ''-n'', donnée par :
+<center><math>H_n : x\mapsto c_n(f) e^{i\frac{2n\pi}{T}x} + c_{-n}(f)e^{-i\frac{2n\pi}{T}x}\,.</math></center>
+
+La série de Fourier, <math>S_n(f)</math>, est la [[série de fonctions]] obtenue en sommant les harmoniques successifs jusqu'au rang ''n'', soit :
+<center><math>S_n(f)= c_0(f) + \sum_{k=1}^n H_k(f) = \sum_{k=-n}^n c_k(f)e^{i\frac{2k\pi}{T}x}\,. </math></center>
+Une des questions à laquelle répond la théorie de Fourier est de déterminer le mode de convergence de cette série ([[Convergence simple|convergence ponctuelle]], [[convergence uniforme]], [[convergence quadratique]], ...).
+
+Si on suppose que la série <math>S_n(f)</math> est absolument convergente, la fonction <math>f(x)</math> est égale à cette série :
+<center><math>f(x)=\sum_{k=-\infty}^\infty c_k(f)e^{i\frac{2k\pi}{T}x}\,. </math></center>
+
+On dit que la fonction ''f'' est ''développable en série de Fourier''.
+
+Il suffit d'intégrer terme à terme en inversant les signes somme et intégrale pour le démontrer.
+
+=== Coefficients réels ===
+
+Si la fonction ''f''  est à valeurs réelles, il peut être intéressant de manipuler des coefficients réels, notamment dans le cas de fonctions paires ou impaires. On définit ainsi les coefficients de Fourier réels de ''f'' :
+* <math>a_0(f) = \frac{1}{T} \int_{-T/2}^{T/2} f(t)\,dt=c_0</math> ;
+* <math>b_0(f)=0</math> ;
+* Pour ''n''>0, <math>a_n(f) = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \cos\left(nt\frac{2\pi}{T}\right)\,dt</math> ;
+* Pour ''n''>0, <math>b_n(f) = \frac{2}{T} \int_{-T/2}^{T/2} f(t) \sin\left(nt\frac{2\pi}{T}\right)\,dt</math>.
+
+Là encore, la périodicité autorise à changer l'intervalle d'intégration.
+
+L'[[harmonique]] de rang n se réécrit  alors comme la fonction :
+<center><math>x\mapsto a_n(f) \cos\left(nx\frac{2\pi}{T}\right) + b_n(f) \sin\left(nx\frac{2\pi}{T}\right) = \chi_n \cos\left(nx\frac{2\pi}{T} + \Phi_n\right)\,</math>,</center>
+où <math>\chi_n ^2 = a_n(f)^2 + b_n(f)^2 </math> et si <math>\chi_n</math> est non nul, <math>\;\cos(\Phi_n)=a_n / \chi_n</math> et <math>\;\sin(\Phi_n)=-b_n / \chi_n</math>.
+
+La convention suivante peut aussi être choisie pour ''a<sub>0</sub>'' :
+<math>a_0 (f)= \frac{2}{T}\int_{-T/2}^{T/2} f(t)\, dt</math>,
+ce qui ne s'interprète plus alors comme une valeur moyenne, mais en est le double. Cette dernière convention harmonise les définitions des coefficients qui commencent alors tous par <math>2/T</math>.
+
+Les systèmes de coefficients (''a''<sub>''n''</sub>,''b''<sub>''n''</sub>), pour ''n'' positif, et ''c''<sub>''n''</sub>, pour ''n'' entier relatif sont liés linéairement par les relations suivantes :
+* <math>\forall n\geq 0</math>, <math>c_{\pm n}(f)=\frac12(a_n(f)\mp i.b_n(f))</math> ;
+* Pour <math>n>0</math>, <math>\;a_n(f)=c_n(f)+c_{-n}(f)</math> et <math>\;i.b_n(f)=c_{-n}(f)-c_n(f)</math>.
+Les dernières identités restent vraies pour <math>n=0</math> sous la convention du coefficient en <math>2/T</math>.
+
+La parité d'une fonction se traduit sur les coefficients de Fourier : 
+* Si ''f'' est une fonction [[fonction paire|paire]], alors ''c<sub>-n</sub>(f)=c<sub>n</sub>(f)''&nbsp; pour tout ''n''. Dans le cas d'une fonction ''f'' réelle, cette propriété devient ''b<sub>n</sub>(f)''&nbsp;= 0 pour tout ''n''. 
+* Si ''f'' est une fonction impaire, alors ''c<sub>-n</sub>(f)=-c<sub>n</sub>(f)''&nbsp; pour tout ''n''. Dans le cas réel cela donne ''a<sub>n</sub>(f)''&nbsp;= 0 pour tout ''n''.
+
+=== Égalité de Parseval ===
+
+{{Article détaillé|égalité de Parseval}}
+
+Pour une fonction ''T''-périodique continue par morceaux, ou plus généralement de carré intégrable sur une période, l'égalité de Parseval affirme la convergence de la série suivante et l'identité :
+<center><math>\sum_{n=-\infty}^{+\infty}|c_n(f)|^2=\frac{1}{T}\int_{-T/2}^{T/2}|f(t)|^2dt = \frac{1}{T}\int_0^T|f(t)|^2dt= \|f\|^2\; </math>.</center>
+Ce résultat est équivalent à une convergence en moyenne quadratique des séries de Fourier correspondantes (voir ci-dessous).
+
+L'égalité de Parseval implique en particulier que les coefficients de Fourier de ''f'' tendent (suffisamment vite) vers 0 en l'infini. Suivant les hypothèses de régularité sur ''f'', la vitesse de convergence peut être précisée (voir ci-dessous).
+
+
+
+Remarque : <center><math>\sum_{n=-\infty}^{+\infty}|c_n(f)|^2=\frac14|a_0(f)|^2+\frac12\sum_{n=1}^{+\infty}\left(|a_n(f)|^2+|b_n(f)|^2\right)</math></center>
+
+=== Effet de la dérivation sur les coefficients ===
+
+Pour une fonction continue et <math>\mathcal C^1</math> par morceaux, on établit, par [[intégration par parties]] :
+:<math>c_n(f\, ')=2i \pi n c_n(f)/T</math>.
+Plus généralement, pour une fonction de classe <math>\mathcal C^{k}</math> et <math>\mathcal C^{k+1}</math> [[régularité par morceaux|par morceaux]], on établit :
+:<math>c_n(f^{(k+1)})=(2i\pi n/T)^{k+1}c_n(f)</math>.
+
+=== Coefficients et régularité de la fonction ===
+
+Les coefficients de Fourier caractérisent la fonction : deux fonctions ayant les mêmes coefficients de Fourier sont égales [[Ensemble négligeable|presque partout]]. Notamment, dans le cas [[régularité par morceaux|continu par morceaux]], elles coïncident en tous les points sauf un nombre fini.
+
+Un certain nombre de résultats relient régularité de la fonction et comportement à l'infini des coefficients de Fourier.
+* Le [[théorème de Riemann-Lebesgue]] montre que les coefficients de Fourier d'une fonction ''f'' intégrable sur une période tendent vers 0 lorsque n tend vers l'infini.
+* L'identité de Parseval admet une réciproque : une fonction est de carré sommable sur une période si et seulement si la série des carrés des modules des coefficients de Fourier converge. C'est le [[théorème de Riesz-Fischer]].
+* Il existe peu de caractérisations analogues pour d'autres espaces fonctionnels. On peut affirmer cependant qu'une fonction périodique est <math>{\mathcal C}^\infty</math> si et seulement si ses coefficients de Fourier sont à décroissance rapide,
+:<math>\forall p\in \mathbb{N}, \qquad c_n(f)=o\left(\frac1{|n|^p}\right)</math> en <math>\pm \infty</math> 
+:Plus précisément, si la fonction est de classe <math>\mathcal C^{k}</math>, ses coefficients de Fourier sont négligeables devant <math>\frac1{n^k}</math>.
+:Réciproquement, si les coefficients de Fourier sont dominés par <math>\frac1{n^{k+2}}</math>, alors la fonction est de classe <math>\mathcal C^{k}</math>.
+
+== Reconstitution des fonctions ==
+
+Une des questions centrales de la théorie est celle du comportement de la série de Fourier d'une fonction et en cas de convergence de l'égalité de sa somme avec la fonction initialement considérée, ceci dans le but de pouvoir remplacer l'étude de la fonction elle-même par celle de sa série de Fourier, qui autorise des opérations analytiques aisément manipulables. Sous des hypothèses de régularité convenables, une fonction périodique peut effectivement se décomposer comme somme de fonctions sinusoïdales.
+
+=== Théorème de convergence ponctuelle (de Dirichlet) ===
+{{Article détaillé|Théorème de Dirichlet sur la convergence des séries de Fourier}}
+[[Fichier:Periodic identity.png|thumb|350px|right|Un signal en dents de scie]]
+[[Fichier:Periodic identity function.gif|thumb|350px|right|Les cinq premières sommes partielles de sa série de Fourier]]
+Pour une [[fonction périodique]] ''f'' de période ''T'', [[continuité|continue]] en un réel ''x'', et dérivable à droite et à gauche en ''x'', le théorème de Dirichlet affirme la convergence de sa série de Fourier évaluée en ''x'' et donne l'égalité :
+<center><math>f(x) = \sum_{n = -\infty}^{\infty} c_n(f) \cdot e^{i nx\frac{2\pi}{T}}</math>.</center>
+Si ''f'' est à valeurs réelles, l'égalité ci-dessus se réécrit avec les coefficients de Fourier réels :
+<center><math>f(x) = \frac{a_0(f)}{2} + \sum_{n = 1}^{\infty} \left ( a_n (f) \cdot \cos \left ( nx\frac{2\pi}{T} \right ) +  b_n(f) \cdot \sin \left ( nx\frac{2\pi}{T} \right )\right )</math>.</center>
+
+Les hypothèses peuvent être affaiblies. La fonction ''f'' peut seulement être continue à gauche et à droite en ''x'' et [[fonction à variation bornée|à variation bornée]] sur un voisinage de ''x''. Dans ce cas, ''f''(''x'') doit être remplacé par la valeur moyenne de ''f'' en ''x'', soit donc la moyenne entre ses limites à droite et à gauche en ''x'' : <math>((f(x_-)+f(x_+))/2</math>. La démonstration du théorème se base sur le fait que la série de Fourier se calcule par [[produit de convolution]] avec un polynôme trigonométrique aux propriétés remarquables : le [[noyau de Dirichlet]].
+
+=== Théorème de convergence uniforme de Dirichlet ===
+
+Le théorème de convergence uniforme de Dirichlet est une version globale du théorème de convergence ponctuelle. Pour une fonction ''T''-périodique et continûment dérivable au voisinage de tout point d'un segment ''I'', la série de Fourier de ''f'' converge uniformément vers ''f'' sur ''I''. 
+
+La démonstration consiste à constater que les constantes dans les estimations de la preuve du théorème de convergence ponctuelle peuvent être choisies indépendamment du point d'évaluation <math>x\in I</math>.
+
+En particulier, la série de Fourier d'une fonction continûment dérivable et ''T''-périodique, converge uniformément sur <math>\mathbf R</math> vers la fonction.
+
+PS: Il suffit que la fonction soit continûment dérivable par morceaux et continue.
+
+=== Phénomène de Gibbs ===
+{{Article détaillé|Phénomène de Gibbs}}
+Le phénomène de Gibbs est un effet de bord observé au voisinage d'une discontinuité de la fonction. Pour l'illustrer, voici la représentation des termes d'ordre 10, 50 et 250 de la série de Fourier de la fonction « créneau ».
+
+{| border="0" align="center"
+|+ Phénomène de Gibbs
+|[[Fichier:Gibbs phenomenon 10.png|thumb|200px|center|Approximation du créneau à l'ordre 10]]
+|[[Fichier:Gibbs phenomenon 50.jpg|thumb|200px|center|Approximation du créneau à l'ordre 50]]
+|[[Fichier:Gibbs phenomenon 250.png|thumb|200px|center|Approximation du créneau à l'ordre 250]]
+|}
+
+Le polynôme trigonométrique ''n''<sup>ème</sup> terme de la série de Fourier, <math>S_n(f)</math>, est une fonction continue, il est donc normal qu'il ne puisse approcher [[convergence uniforme|uniformément]] la fonction créneau qui, elle, ne l'est pas. Sur une des zones de « plateau », en dehors d'un voisinage de la discontinuité, cependant, la série de Fourier converge uniformément vers la fonction (elle en est indiscernable sur le dernier graphique). 
+
+Au niveau du point de discontinuité, <math>S_n</math> subit une forte [[oscillation]], une sorte de « sursaut ». Les images laissent soupçonner et le calcul montre effectivement que l'amplitude de ce sursaut tend vers une constante. Précisément si la fonction a une discontinuité d'amplitude <math>\Delta y</math>, alors <math>S_n</math>, tout en restant continue, connaîtra un « saut » en ordonnée valant de l'ordre de 18% de plus.
+
+=== Convergence en moyenne quadratique ===
+
+La convergence en moyenne quadratique concerne la convergence pour la norme hermitienne :
+<center><math>\|f\|^2=\int_{0}^T|f(t)|^2dt</math></center>
+Cette norme est définie par exemple sur l'espace ''E'' des fonctions ''T''-périodiques et continues, ou sur l'espace ''F'' des fonctions ''T''-périodiques mesurables de carré intégrable identifiées modulo égalité sur un [[ensemble négligeable]]. La norme provient du [[produit scalaire]] :
+<center><math>(f\cdot g)= \frac1T\int_{-T/2}^{T/2} f(t)\overline{g(t)} dt</math>.</center>
+L'espace ''E'' est dense dans l'espace ''F'' et l'espace normé ''F'' est complet ; il peut être obtenu comme le complété de ''E''.
+
+Introduisons la fonction exponentielle complexe d'indice ''n'' 
+:<math>e_n : x\mapsto e^{in\frac{2\pi}{T}x}</math>.
+La famille <math>(e_n)</math> forme une famille orthonormale. Cette famille est notamment libre. L'espace qu'elle engendre est l'espace des polynômes trigonométriques, sous-espace de ''E''. Le ''n''<sup>ème</sup> coefficient de Fourier de ''f'' est le produit scalaire de ''f'' par ''e''<sub>''n''</sub> :
+<center><math>c_n(f)=(f\cdot e_n)</math></center>
+En particulier, le ''n''<sup>ème</sup> polynôme trigonométrique de ''f'' est la projection orthogonale de ''f'' sur l'espace engendré par <math>(e_k)_{-n\leq k\leq n}</math>.
+
+* '''La famille <math>(e_n)</math> est une [[base de Hilbert]] : le sous-espace des polynômes trigonométriques est dense dans ''E'' et dans ''F''.'''
+* '''La série de Fourier d'une fonction ''T''-périodique de carré intégrable sur une période converge en nome <math>L^2</math> vers la fonction considérée.'''
+
+Une conséquence est l'[[égalité de Parseval]].
+
+=== Théorème de Fejér ===
+{{Article détaillé|Théorème de Fejér}}
+Le théorème de Fejér consiste à améliorer la convergence donnée par le théorème de convergence uniforme de Dirichlet en effectuant une limite de Cesàro des sommes partielles de la série de Fourier. Pour une fonction continue et ''T''-périodique, on note :
+<center><math>S_n (f)= \sum_{k = -n}^{n} c_k (f)\cdot e^{i kx\frac{2\pi}{T}}</math> puis <math>\sigma_N (f)= \frac1N\sum_{n = 0}^{N-1} S_n(f)= \sum_{k = -N+1}^{N-1} \frac {N-|k|}{N} c_k(f) \cdot e^{i kx\frac{2\pi}{T}}</math></center>
+Le théorème de Fejér affirme que, sous la seule hypothèse de continuité, la suite des fonctions <math>\sigma_N(f)</math> [[convergence uniforme|converge uniformément]] vers ''f''.
+
+Ce théorème de [[Lipót Fejér|Fejér]] constitue une démonstration possible de la version trigonométrique du [[théorème de Stone-Weierstrass]]. Il se démontre en utilisant les propriétés d'un polynôme trigonométrique particulier : le [[noyau de Fejér]] d'indice ''n'' est positif et la suite de ces noyaux constitue une [[approximation de l'identité]].
+
+Le polynôme trigonométrique <math>\sigma_N(f)</math> admet des fréquences s'étalant de <math>-nf</math> à <math>nf</math>. Pour chaque fréquence, le coefficient précédent est modifié. Les nouveaux coefficients tendent à donner plus d'importance aux petites fréquences et à amortir les termes de fréquence élevée, ce qui permet de lisser les comportements trop brusques.
+
+=== Convergence simple ===
+
+Les résultats positifs obtenus en envisageant d'autres modes de convergence ne font pas perdre sa pertinence à l'étude de la convergence simple.
+
+Dans le cadre des fonctions continues, le théorème de Fejér permet d'affirmer que si la série de Fourier de ''f'' converge simplement, alors elle admet pour limite la fonction ''f''. En revanche des considérations d'[[Analyse fonctionnelle (mathématiques)|analyse fonctionnelle]] permettent de prouver qu'il existe une fonction continue dont la série de Fourier diverge en au moins un point : précisément il s'agit d'une application du [[théorème de Banach-Steinhaus]] à l'opérateur de convolution par la fonction [[noyau de Dirichlet]]. Il est également possible d'en donner des exemples explicites simples. C'est ainsi le cas de la fonction <math>2\pi</math>-périodique définie par :
+<math>\forall x\in [-\pi,\pi], \,\, f(x)=\sum_{n=1}^{+\infty} \frac1{n^2} \sin \left(\left(2^{n^3}+1\right)\frac {|x|} 2\right)</math>
+
+Les domaines de divergence possibles sont connus grâce à deux théorèmes complémentaires. 
+* D'une part, selon un théorème de Kahane et Katznelson, pour tout ensemble de [[mesure de Lebesgue]] nulle, on peut trouver une fonction continue dont la série de Fourier diverge en tout point de cet ensemble<ref>J.-P. Kahane, Y. Katznelson, ''Sur les ensembles de divergence des séries trigonométriques'', Studia Math, 26, 305-306</ref>.
+* D'autre part, selon le théorème de Carleson, la série de Fourier d'une fonction continue converge [[Ensemble négligeable|presque partout]] vers cette fonction.
+
+Si on élargit le cadre aux fonctions [[intégrabilité|intégrables]] sur une période,
+
+* le théorème de [[Andreï Kolmogorov|Kolmogorov]] assure qu'il existe une fonction intégrable dont la série de Fourier diverge en tout point,
+
+* en revanche le théorème de [[Lennart Carleson]] cité plus haut a été prouvé dans le cadre des fonctions [[espace L2|L<sup>2</sup>]] et possède même une extension aux [[espace Lp|espaces L<sup>p</sup>]] pour ''p>1''<ref>R.A. Hunt, ''On the convergence of Fourier series orthogonal expansions and their continuous analogues'', Proc Conf Edwardsville 1967, p 235-255, Southern Illinois University Press, Carbondale, III, 1968</ref>. Pour de telles fonctions, la série de Fourier de ''f'' converge presque partout.
+
+== Applications ==
+
+=== Calculs de séries ===
+L'application des théorèmes de Dirichlet et de Parseval, précédemment énoncés, permettent de calculer la valeur exacte de la somme de [[série (mathématiques)|séries numériques]] remarquables, parmi lesquelles :
+<center><math>\frac{\pi^2}{6} = \frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \cdots = \sum_{n=1}^{\infty} \frac{1}{n^2}</math></center>
+<center><math> \frac{\pi^2}{12} = 1 - \frac{1}{2^2} + \cdots + (-1)^{n+1}\frac{1}{n^2} + \cdots=
+\sum_{n=1}^{\infty} (-1)^{n+1}\frac{1}{n^2}</math></center>
+<center><math>\frac{\pi^2}{8} = \frac{1}{1^2} + \frac{1}{3^2} + \frac{1}{5^2} + \cdots + \frac{1}{(2n+1)^2} + \cdots=\sum_{k=0}^{\infty}\frac{1}{(2k+1)^2}</math></center>
+<center> <math>\frac{\pi}{4} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots + \frac{(-1)^n}{2n+1} + \cdots=\sum_{k=0}^{\infty}\frac{(-1)^k}{2k+1} </math> (formule de [[Gottfried Wilhelm von Leibniz|Leibniz]])</center>
+<center> <math>\frac{\pi-1}{2} = \sum_{n=1}^{\infty}\frac{\sin(n)}{n} = \sum_{n=1}^{\infty}\left(\frac{\sin(n)}{n}\right)^{2}</math></center>
+<center><math>\sum_{n=1}^{+\infty} \frac{1}{n^{2p}}</math>, (valeur de la [[fonction zêta de Riemann]] en les entiers pairs).</center> 
+
+{{boîte déroulante|titre=Calculs détaillés|contenu=
+Par exemple avec ''f'' périodique de période 2π, valant <math>f(x) = x^2 \;</math> si <math>-\pi \le x \le \pi </math>, alors par le théorème de Dirichlet, on peut écrire pour tout x :
+:<math>x^2 = \frac{\pi^2}{3} - 4\cos x + \frac{4}{2^2}\cos 2x + \cdots + (-1)^n\frac{4}{n^2}\cos nx + \cdots</math>.
+:Dans cette identité, si l'on fait x = π, on retrouve la célèbre formule démontrée par [[Leonhard Euler|Euler]] :
+
+:<math>\frac{\pi^2}{6} = \frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \cdots = \sum_{n=1}^{+\infty} \frac{1}{n^2}</math>,
+
+:pour x=0 on a également un résultat remarquable :
+:<math> \frac{\pi^2}{12} = 1 - \frac{1}{2^2} + \cdots + (-1)^{n+1}\frac{1}{n^2} + \cdots=
+\sum_{n=1}^{+\infty} (-1)^{n+1}\frac{1}{n^2}</math>.
+
+Par ailleurs la formule de Parseval donne <math> \frac{\pi^4}{90} = \sum_{n=1}^{+\infty} \frac{1}{n^4}</math>
+
+En prenant d'autres fonctions, telles que :
+* le signal carré périodique : <math>f\,2\pi</math>-périodique qui coïncide sur <math>[-\pi;\pi[</math> avec <math>x \mapsto \left\{\begin{array}{cl} -1 & \mbox{si } x \in [-\pi;0[ \\ 0 & \mbox{si } x = 0 \\ 1 & \mbox{si } x \in ]0;\pi[\end{array}\right. </math>,
+
+* le signal triangulaire périodique : <math>f(x) = \left| x \right|</math> si <math>-\pi \le x \le \pi </math>,
+}}
+
+=== Équations différentielles et aux dérivées partielles ===
+
+Les séries trigonométriques peuvent être employées, comme les [[série entière|séries entières]], pour rechercher les solutions de certaines [[équation différentielle linéaire|équations différentielles linéaires]].
+
+La méthode de [[séparation des variables]] pour une [[équation aux dérivées partielles]] consiste à en chercher des solutions sous forme de produit de fonctions d'une seule variable. Lorsque cette méthode s'applique, chacune de ces fonctions vérifie une équation différentielle linéaire et des conditions aux limites. Ainsi, pour le problème des [[corde vibrante|cordes vibrantes]] :
+:<math>\begin{cases}\hbox{(i)}\qquad \frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2},\\
+\hbox{(ii)}\qquad u(0,t)=u(1,t)=0,\\
+\hbox{(iii)}\qquad u(x,0)=f(x), \frac{\partial u}{\partial t}(x,0)=v(x)\end{cases} \qquad (x,t)\in \left ]0,1 \right [\times \left ]0,+\infty \right[, </math>
+La variable ''t'' est le temps, ''x'' est une coordonnée d'espace comprise entre deux valeurs 0 et 1 qui représentent les points d'attache de la corde. La fonction ''u'' donne la position de la corde à tout moment. La fonction ''f'' donne sa position initiale, ''v'' la distribution initiale des vitesses.
+
+On peut trouver des fonctions satisfaisant (i) et (ii) qui sont de la forme <math>a(x)b(t)</math>. Par superposition, on trouve l'expression générale de la solution
+:<math>u(x,t)=\sum_{n=0}^{+\infty} \sin (n\pi x) (a_n \cos (n\pi t) +b_n\sin(n\pi t)),</math>
+où les coefficients <math>a_n</math> et <math>b_n</math> sont ceux qu'on obtient en décomposant ''f'' et ''v'' en série de Fourier.
+
+Plus généralement, la [[théorie de Sturm-Liouville]] permet de traiter les problèmes de séparation de variables de façon très similaire en donnant l'existence d'une base hilbertienne jouant le même rôle que la famille des fonctions trigonométriques élémentaires.
+
+Le [[problème de Dirichlet]] sur un disque est un autre exemple classique d'emploi des séries de Fourier. Il consiste à déterminer les [[fonction harmonique|fonctions harmoniques]] sur le disque (ouvert) ayant une valeur limite fixée au bord. Physiquement, il s'interprète comme la recherche d'un profil de température à l'équilibre, les valeurs sur le bord du disque étant imposées. Si on suppose qu'il s'agit du disque unité, en employant les coordonnées polaires, la fonction donnant le profil de température imposé est <math>f(\theta)</math>, supposée continue et périodique. Elle admet des coefficients de Fourier <math>a_n(f)</math> et <math>b_n(f)</math>. Alors la fonction suivante donne la solution sur le disque :
+:<math>T(r,\theta)=\sum_{n=0}^{+\infty} r^n(a_n(f) \cos (n\theta)+b_n(f)\sin (n\theta)).</math>
+Le fait que la limite lorsque ''r'' tend vers 1 soit égale à ''f'', avec convergence uniforme, est une application du procédé de [[Sommation par parties|sommation d'Abel]].
+
+=== Inégalités fonctionnelles ===
+
+L'analyse de Fourier permet de donner des expressions nouvelles pour l'opération de dérivation, et d'en tirer des estimées intéressantes.
+
+Ainsi l'[[inégalité de Wirtinger]] s'applique à une fonction ''f'' de classe <math>\mathcal {C}^1</math>, ''2π''-périodique et de [[Moyenne|valeur moyenne]] nulle. Elle compare les normes de ''f'' et de sa dérivée (normes de la convergence en moyenne quadratique)
+:<math> \|f\|_2^2\leq \|f'\|_2^2 </math> c'est-à-dire <math> \int_{-\pi}^{\pi} |f(t)|^2 dt \leq 
+\int_{-\pi}^{\pi} |f'(t)|^2 dt</math>
+Ce résultat peut servir à son tour à établir le [[théorème isopérimétrique]] : le cercle est la courbe fermée enserrant un domaine connexe d'aire maximale pour une longueur donnée.
+
+Un autre exemple d'application est l'[[inégalité de Bernstein]]. Celle-ci s'applique à une fonction de la forme suivante :
+:<math>f(t)=\sum_{k=1}^p \alpha_k e^{i\lambda_k t}</math>
+avec des coefficients <math>\alpha_k</math> complexes et des coefficients <math>\lambda_k</math> réels (ce n'est donc pas nécessairement un [[polynôme trigonométrique]]) et distincts. L'inégalité permet de comparer cette fois les [[Borne (mathématiques)|bornes supérieures]] de ''f'' et de sa dérivée :
+:<math>\|f'\|_\infty \leq \max\limits_{1\leq k\leq p}|\lambda_k|\cdot \|f\|_\infty.</math>
+
+La démonstration de l'inégalité de Bernstein repose sur l'écriture de ''f′'' comme une combinaison infinie de translatées de ''f'', à l'aide d'une formule d'analyse de Fourier.
+
+== Extension du concept de série de Fourier ==
+
+=== Extension aux distributions ===
+
+Les séries de Fourier se définissent par analogie pour les [[Distribution (mathématiques)|distributions]]. Une distribution ''D'' est par définition une application linéaire sur l'espace des fonctions. ''D'' est dite ''T''-périodique lorsque sa valeur sur une fonction test ''f'' est la même que sur sa ''T''-translatée. Dans ce cas, il existe une distribution à support compact ''d'' telle que ''D'' est la somme de la série suivante au sens des distributions : 
+:<math>D=\sum_{k\in \mathbb{Z}} t_{kT}d</math>.
+
+Les '''coefficients de Fourier de ''D''''' sont alors définis comme suit : 
+<center><math>c_p(D)=\frac1T \left\langle d , e^{-i\frac{2p\pi}{T}t} \right\rangle\, </math>.</center>
+Ces coefficients ne dépendent pas du choix de ''d''. Ils sont « à croissance lente », c'est-à-dire dominés par une expression polynomiale.
+
+La série de Fourier converge vers ''D'' au sens des distributions :
+<center><math>D=\sum_{p\in \Z}c_p(D)e^{i\frac{2p\pi}{T}t}\, </math>.</center>
+Réciproquement, si on considère une suite à croissance lente, la série trigonométrique correspondante converge au sens des distributions vers une distribution périodique. Un exemple d'utilisation est le [[peigne de Dirac]].
+
+=== Espaces de Hilbert ===
+
+Les [[espace de Hilbert|espaces de Hilbert]] sont les espaces vectoriels munis d'un produit scalaire et qui sont complets pour la norme associée. L'espace des fonctions ''T''-périodiques, de carré sommable, identifiées par la relation d'égalité [[Ensemble négligeable|presque partout]], possède une structure de ce type. L'identité de Parseval et théorème de Riesz-Fischer montrent que les fonctions trigonométriques élémentaires forment une [[Base de Hilbert|base hilbertienne]], et les coordonnées d'une fonction sont données par ses coefficients de Fourier.
+
+Tout espace de Hilbert séparable et de dimension infinie ''E'' est muni d'une telle base, et l'application qui à un élément de l'espace associe ses coefficients (encore appelés "coefficients de Fourier") est une isométrie de ''E'' dans l'[[espace de suites lp|espace l<sup>2</sup>]].
+
+Il est possible d'envisager également des espaces de Hilbert non séparables, ainsi il existe des coefficients de Fourier-Bohr pour les [[fonction presque périodique|fonctions presque périodiques]]. On ne pose alors plus de conditions sur le rapport de fréquences pour les fonctions trigonométriques de référence.
+
+=== Série et transformation de Fourier ===
+
+La décomposition en séries de Fourier est également généralisée aux fonctions non périodiques avec la théorie de la [[transformée de Fourier]] et la notion de [[densité spectrale de puissance|densité spectrale]]. Pour une présentation élémentaire, voir [[Analyse spectrale]].
+
+Série et transformation de Fourier sont reliées par la [[formule sommatoire de Poisson]].
+
+== Notes et références ==
+
+<references/>
+
+== Voir aussi ==
+{{autres projets
+  | v = Série de Fourier
+}}
+=== Bibliographie ===
+
+* {{Kahane1}}
+* {{Rudin}}
+* {{en}} Yitzhak Katznelson, ''An introduction to harmonic analysis'', Dover Publications, New York, 1976, ISBN 0-486-63331-4
+
+=== Liens externes ===
+
+* [http://www.sciences.univ-nantes.fr/physique/perso/gtulloue/Elec/Fourier/fourier1.html Synthèse de Fourier (animation Flash)]
+
+{{portail analyse}}
+
+[[Catégorie:Série de Fourier|*]]
+
+[[ar:متسلسلة فورييه]]
+[[bg:Ред на Фурие]]
+[[bs:Fourierov red]]
+[[ca:Sèrie de Fourier]]
+[[cs:Fourierova řada]]
+[[da:Fourierrække]]
+[[de:Fourierreihe]]
+[[en:Fourier series]]
+[[es:Serie de Fourier]]
+[[fa:سری فوریه]]
+[[fi:Fourier'n sarja]]
+[[gl:Serie de Fourier]]
+[[he:טור פורייה]]
+[[hi:फ़ोरियर श्रेणी]]
+[[hu:Fourier-sor]]
+[[id:Deret Fourier]]
+[[it:Serie di Fourier]]
+[[ja:フーリエ級数]]
+[[ko:푸리에 급수]]
+[[lt:Furjė eilutė]]
+[[ms:Siri Fourier]]
+[[mt:Serje ta' Fourier]]
+[[nl:Fourierreeks]]
+[[nn:Fourierrekkje]]
+[[pl:Szereg Fouriera]]
+[[pt:Série de Fourier]]
+[[ro:Serie Fourier]]
+[[ru:Ряд Фурье]]
+[[si:ෆූරියර් ශ්‍රේණිය]]
+[[sk:Fourierov rad]]
+[[sq:Seritë e Furierit]]
+[[su:Dérét Fourier]]
+[[sv:Fourierserie]]
+[[th:อนุกรมฟูริเยร์]]
+[[tr:Fourier serileri]]
+[[uk:Ряд Фур'є]]
+[[vi:Chuỗi Fourier]]
+[[zh:傅里叶级数]]

@@ -1,0 +1,108 @@
+{{Recently revised|date=June 2011}}
+
+'''Two-dimensional nuclear magnetic resonance spectroscopy''' (2D NMR) is a set of [[nuclear magnetic resonance spectroscopy]] (NMR) methods which give data plotted in a space defined by two frequency axes rather than one.  Types of 2D NMR include '''correlation spectroscopy''' (COSY), '''J-spectroscopy''', '''exchange spectroscopy''' (EXSY), and [[Nuclear Overhauser effect]] spectroscopy (NOESY).  Two-dimensional NMR [[Frequency spectrum|spectra]] provide more information about a molecule than one-dimensional NMR spectra and are especially useful in determining the structure of a [[molecule]], particularly for molecules that are too complicated to work with using one-dimensional NMR.
+
+The first two-dimensional experiment, COSY, was proposed by [[Jean Jeener]], a professor at the Universit<U+00E9> Libre de Bruxelles, in 1971.  This experiment was later implemented by Walter P. Aue, Enrico Bartholdi and [[Richard R. Ernst]], who published their work in 1976.<ref>{{cite book |last1=Martin |first1=G. E |last2=Zekter |first2=A. S. |title=Two-Dimensional NMR Methods for Establishing Molecular Connectivity |publisher=VCH Publishers, Inc. |location=New York |year=1988 |page=59}}</ref>
+
+== Fundamental concepts ==
+Each experiment consists of a sequence of [[radio frequency]] (RF) pulses with delay periods in between them.  It is the timing, frequencies, and intensities of these pulses that distinguish different NMR experiments from one another.<ref>{{cite book |last1=Akitt |first1=J. W. |last2=Mann |first2=B. E. |title=NMR and Chemistry |publisher=Stanley Thornes |location=Cheltenham, UK |year=2000 |page=273}}</ref>  Almost all two-dimensional experiments have four stages: the preparation period, where a magnetization coherence is created through a set of RF pulses; the evolution period, a determined length of time during which no pulses are delivered and the nuclear spins are allowed to freely precess (rotate); the mixing period, where the coherence is manipulated by another series of pulses into a state which will give an observable signal; and the detection period, in which the [[free induction decay]] signal from the sample is observed as a function of time, in a manner identical to one-dimensional FT-NMR.<ref name="keeler2D">{{cite book|last=Keeler|first=James|title=Understanding NMR Spectroscopy|year=2010|publisher=Wiley|isbn=9780470746080|pages=184&ndash;187|edition=2nd}}</ref>
+
+The two dimensions of a two-dimensional NMR experiment are two frequency axes representing a chemical shift.  Each frquency axis is associated with one of the two time variables, which are the length of the evolution period (the ''evolution time'') and the time elapsed during the detection period (the ''detection time'').  There are each converted from a time series to a frequency series through a two-dimensional [[Fourier transform]].  A single two-dimensional experiment is generated as a series of one-dimensional experiment, with a different specific evolution time in successive experiments, with the entire duration of the detection period recorded in each experiment.<ref name="keeler2D"/>
+
+The end result is a plot showing and intensity value for each pair of frequency variables.  The intensities of the peaks in the spectrum can be represented using a third dimension.  More commonly, intensity is indicated using [[contour line]]s or different colors.
+
+== Homonuclear through-bond correlation methods ==
+
+In these methods, magnetization transfer occurs between nuclei of the same type, through [[J-coupling]] of nuclei connected by up to a few bonds.
+
+=== Correlation spectroscopy (COSY) ===
+[[Image:Pulsefrequency1.png|400px|right|thumb|In standard COSY, the preparation (p1) and mixing (p2) periods each consist of a single 90<U+00B0> pulse separated by the evolution time t1, and the resonance signal from the sample is read during the detection period over a range of times t2.]]
+
+The first and most popular two-dimension NMR experiment is the homonuclear correlation spectroscopy (COSY) sequence, which is used to identify spins which are coupled to each other.  It consists of a single RF pulse (p1) followed by the specific evolution time (t1) followed by a second pulse (p2) followed by a measurement period (t2).<ref name="keelerCOSY">Keeler, pp. 190&ndash;191.</ref>
+
+The two-dimensional spectrum that results from the COSY experiment shows the frequencies for a single [[isotope]], most commonly hydrogen (<sup>1</sup>H) along both axes.  (Techniques have also been devised for generating heteronuclear correlation spectra, in which the two axes correspond to different isotopes, such as <sup>13</sup>C and <sup>1</sup>H.)  COSY spectra show two types of peaks.  ''Diagonal peaks'' have the same frequency coodrinate on each axis and appear along the diagonal of the plot, while ''cross peaks'' have different values for each frequency coodinate and appear off the diagonal.  Diagonal peaks correspond to the peaks in a 1D-NMR experiment, while the cross peaks indicate couplings between pairs of nuclei (much as multiplet splitting indicates couplings in 1D-NMR).<ref name="keelerCOSY"/>
+
+Cross peaks result from a phenomenon called [[magnetization transfer]], and their presence indicates that two nuclei are coupled which have the two different chemical shifts that make up the cross peak's coordinates.  Each coupling gives two symmetrical cross peaks above and below the diagonal.  That is, a cross-peak occurs when there is a correlation between the signals of the spectrum along each of the two axes at these value.  One can thus determine which atoms are connected to one another (within a small number of chemical bonds) by looking for cross-peaks between various signals.<ref name="keelerCOSY"/>
+
+An easy visual way to determine which couplings a cross peak represents is to find the diagonal peak which is directly above or below the cross peak, and the other diagonal peak which is directly to the left or right of the cross peak.  The nuclei represented by those two diagonal peaks are coupled.<ref name="keelerCOSY"/>
+
+<!--For example:  a CH<sub>3</sub>CH<sub>2</sub>COCH<sub>3</sub> molecule [[2-butanone]] has three sets of chemically distinct hydrogen atoms, and would show three peaks on the diagonal, much as a 1D-NMR spectrum would show three peaks.  -->[[Image:progesteroneCOSY.png|300px|right|thumb|<sup>1</sup>H COSY spectrum of progesterone]]
+
+To the right is an example of a COSY NMR spectrum of [[progesterone]] in DMSO-d6.  The spectrum that appears along both the horizontal and vertical axes is a regular one dimensional <sup>1</sub>H NMR spectrum.  The bulk of the peaks appear along the diagonal, while cross-peaks appear symmetrically above and below the diagonal.
+
+COSY-90 is the most common COSY experiment.  In COSY-90, the p1 pulse tilts the nuclear spin by 90<U+00B0>. Another member of the COSY family is '''COSY-45'''.  In COSY-45 a 45<U+00B0> pulse is used instead of a 90<U+00B0> pulse for the first pulse, p1.  The advantage of a COSY-45 is that the diagonal-peaks are less pronounced, making it simpler to match cross-peaks near the diagonal in a large molecule.  Additionally, the relative signs{{Clarify|date=June 2011}} of the coupling constants can be elucidated from a COSY-45 spectrum.  This is not possible using COSY-90.<ref>Akitt & Mann, p. 287.</ref>  Overall, the COSY-45 offers a cleaner spectrum while the COSY-90 is more sensitive.
+
+Another related COSY techniques is double quantum filtered (DQF COSY).  DQF COSY uses a coherence selection method such as phase cycling or [[pulsed field gradient]]s, which cause only signals from double-quantum coherences to give an obervable signal.  This has the effect of decreasing the intensity of the diagonal peaks and changing their lineshape from a broad "dispersion" lineshape to a sharper "absorption" lineshape.  It also eliminates diagonal peaks from uncoupled nuclei.  These all have the advantage that they give a cleaner spectrum in which the diagonal peaks are prevented from obscuring the cross peaks, which are weaker in a regular COSY spectrum.<ref name="keelerDQF">Keeler, pp. 199&ndash;203.</ref>
+
+=== Exclusive correlation spectroscopy (ECOSY) ===
+{{main|Exclusive correlation spectroscopy}}
+
+ECOSY was developed for the accurate measurement of small J-couplings.  It uses a system of three active nuclei (SXI spin system) to measure an unresolved coupling with the help of a larger coupling which is resolved in a dimension orthogonal to the small coupling.
+
+=== Total correlation spectroscopy (TOCSY) ===
+
+The TOCSY experiment is similar to the COSY experiment, in that cross peaks of coupled protons are observed.  However, cross peaks are observed not only for nuclei which are directly coupled, but also between nuclei which are connected by a chain of couplings.  This makes it useful for identifying the larger interconnected networks of spin couplings.  This ability is achieved by inserting a repetitive series of pulses which cause ''isotropic mixing'' during the mixing period.  Longer isotropic mixing times cause the polarizaton to spread out through an increasing number of bonds.<ref name="keelerTOCSY">Keeler, pp. 223&ndash;226.</ref>
+
+In the case of oligosaccharides, each sugar residue is an isolated spin system, so it is possible to differentiate all the protons of a specific sugar residue. A 1D version of TOCSY is also available and by irradiating a single proton the rest of the spin system can be revealed.  Recent advances in this technique include the 1D-CSSF-TOCSY (Chemical Shift Selective Filter - TOCSY) experiment, which produces higher quality spectra and allows coupling constants to be reliably extracted and used to help determine stereochemistry.
+
+TOCSY is sometimes called "homonuclear Hartmann&ndash;Hahn spectroscopy" (HOHAHA).<ref>{{cite web|title=2D: Homonuclear correlation: TOCSY|url=http://www.chem.queensu.ca/facilities/nmr/nmr/webcourse/tocsy.htm|publisher=Queen's University|accessdate=26 June 2011}}</ref>
+
+=== Incredible natural-abudance double-quantum transfer experiment (INADEQUATE) ===
+
+INADEQUATE is a method often used to find <sup>13</sup>C couplings between adjacent carbon atoms.  Because the [[natural abundance]] of <sup>13</sup>C is only about 1%, only about .01% of molecules being studied will have the two nearby <sup>13</sup>C atoms needed for a signal in this experiment.  However, correlation selection methods are used (similar to DQF COSY) to prevent signals from single <sup>13</sup>C atoms, so that the double <sup>13</sup>C signals can be easily resolved.  Each coupled pair of nuclei gives a pair of peaks on the INADEQUATE spectrum which both have the same vertical coordinate, which is the sum of the chemical shifts of the nuclei; the horizontal coordinate of each peak is the chemical shift for each of the nuclei separately.<ref name="keelerINAD">Keeler, pp. 206&ndash;208.</ref>
+
+== Heteronuclear through-bond correlation methods ==
+
+Heteronuclear correlation spectroscopy gives signals based upon coupling between nuclei between two different types.  Often the two nuclei are protons and another nucleus (called a "heteronucleus").  For historical reasons, experiments which record the proton rather than the heteronucleus spectrum during the detection period are called "inverse" experiments.  This is because the low natural abundance of most heteronuclei would result in the proton spectrum being overwhelmed with signals from molecules with no active heteronuclei, making it useless for observing the desired, coupled signals.  With the advent of techniques for suppressing these undesired signals, inverse correlation experiments such as HSQC, HMQC, and HMBC are actually much more common today.  "Normal" heteronuclear correlation spectroscopy, in which the hetronucleus spectrum is recorded, is known as HETCOR.<ref name="keelerHetero">Keeler, pp. 208&ndash;209, 220.</ref>
+
+===Heteronuclear single-quantum correlation spectroscopy (HSQC)===
+[[File:HSQC-NMR.tiff|thumb|300px|<sup>1</sup>H<U+2013><sup>15</sup>N HSQC spectrum of a fragment of the protein NleG3-2.  Each peak in the spectrum represents a bonded N-H pair, with its two coordinates corresponding to the chemical shifts of each of the H and N atoms.  Some of the peaks are labeled with the [[amino acid]] residue that gives that signal.<ref>{{cite journal|last=Wu|first=Bin|coauthors=Skarina, Tatiana, Yee, Adelinda, Jobin, Marie-Claude, DiLeo, Rosa, Semesi, Anthony, Fares, Christophe, Lemak, Alexander, Coombes, Brian K., Arrowsmith, Cheryl H., Singer, Alexander U., Savchenko, Alexei, Stebbins, C. Erec|title=NleG Type 3 Effectors from Enterohaemorrhagic Escherichia coli Are U-Box E3 Ubiquitin Ligases|journal=PLoS Pathogens|year=2010|month=June|volume=6|issue=6|page=e1000960|doi=10.1371/journal.ppat.1000960|accessdate=29 June 2011}}</ref> ]]
+
+{{main|Heteronuclear single quantum coherence}}
+
+HSQC detects correlations between nuclei of two different types which are separated by one bond.  This method gives one peak per pair of coupled nuclei, whose two coordinates are the chemical shifts of the two coupled atoms.<ref name="keelerHSQC">Keeler, pp. 209&ndash;215.</ref>
+
+HSQC works by transferring magnetization from the ''I'' nucleus (usually the proton) to the ''S'' nucleus (usually the heteroatom) using the [[Insensitive nuclei enhanced by polarization transfer|INEPT]] pulse sequence; this first step is done because the proton has a greater equilibrium magnetization and thus this step creates a stronger signal.  The magnetization then evolves and then is transferred back to the ''I'' nucleus for observation.  An extra [[spin echo]] step can then optionally be used to decouple the signal, simplifying the spectrum by collapsing multiplets to a single peak.  The undesired uncoupled signals are removed by running the experiment twice with the phase of one specific pulse reversed; this reverses the signs of the desired but not the undersired peaks, so subraticting the two spectra will give only the desired peaks.<ref name="keelerHSQC"/>
+
+Heteronuclear multiple-quantum correlation spectroscopy (HMQC) gives an identical spectrum as HSQC, but using a different method.  The two methods give similar quality results for small to medium sized molecules, but HSQC is considered to be superior for larger molecules.<ref name="keelerHSQC"/>
+
+===Heteronuclear multiple-bond correlation spectroscopy (HMBC)===
+HMBC detects heteronuclear correlations over longer ranges of about 2&ndash;4 bonds.  The difficulty of detecting multiple-bond correlations is that the HSQC and HMBC sequences contain a specific delay time between pulses which allows detection only of a range around a specific coupling constant.  This is not a problem for the single-bond methods since the coupling constants tend to lie in a narrow range, but multiple-bond coupling constants cover a much wider range and cannot all be captured in a single HSQC or HMQC experiment.<ref name="keelerHMBC">Keeler, pp. 215&ndash;219.</ref>
+
+In HMBC, this difficulty is overcome by omitting one of these delays from an HMQC sequence.  This increases the range of coupling constants that can be detected, and also reduces signal loss from relaxation.  The cost is that this eliminates the possibility of decoupling the spectrum, and introduces phase distortions into the signal.  There is a modification of the HMBC method which suppresses one-bond signals, leaving only the multiple-bond signals.<ref name="keelerHMBC"/>
+
+== Through-space correlation methods ==
+These methods establish correlations between nuclei which are physically close to each other regardless of whether there is a bond between them.  They use the [[Nuclear Overhauser effect]] (NOE) by which nearby atoms (within about 5 <U+00C5>) undergo cross relaxation by a mechanism related to [[spin<U+2013>lattice relaxation]].
+
+=== Nuclear Overhauser effect spectroscopy (NOESY) ===
+In NOESY, the Nuclear Overhauser cross relaxation between nuclear spins during the mixing period is used to establish the correlations.  The spectrum obtained is similar to COSY, with diagonal peaks and cross peaks, however the cross peaks connect resonances from nuclei that are spatially close rather than those that are through-bond coupled to each other.  NOESY spectra also contain extra ''axial peaks'' which do not provide extra information and can be eliminated through a difference experiment by reversing the phase of the first pulse.<ref name="keelerNOESY">Keeler, pp. 274, 281&ndash;284.</ref>
+
+One application of NOESY is in the study of large biomolecules such as in [[protein NMR]], which can often be assigned using [[sequential walking]].
+
+The NOESY experiment can also be performed in a one-dimensional fashion by pre-selecting individual resonances. The spectra are read with the pre-selected nuclei giving a large, negative signal while neighboring nuclei are identified by weaker, positive signals.  This only reveals which peaks have measurable NOEs to the resonance of interest but takes much less time than the full 2D experiment.  In addition, if a pre-selected nucleus changes environment within the time scale of the experiment, multiple negative signals may be observed.  This offers exchange information similar to the EXSY (exchange spectroscopy) NMR method.
+
+=== Rotating frame nuclear Overhauser effect spectroscopy (ROESY) ===
+
+ROESY is similar to NOESY, except that the initial state is different.  Instead of observing cross relaxation from an initial state of ''z''-magnetization, the equilibrium magnetization is rotated onto the ''x'' axis and then spin-locked by an external magnetic field so that it cannot precess.  This method is useful for certain molecules whose [[rotational correlation time]] falls in a range where the Nuclear Overhauser effect is too weak to be detectable, usually molecules with a [[molecular weight]] around 1000 [[Dalton (unit)|daltons]], because ROESY has a different dependence between the correlation time and the cross-relaxation rate constant.  In NOESY the cross-relaxation rate constant goes from positive to negative as the correlation time increases, giving a range where it is near zero, whereas in ROESY the cross-relaxation rate constant is always positive.<ref name="keelerROESY">Keeler, pp. 273, 297&ndash;299.</ref><ref name="nakanishi"/>
+
+ROESY is sometimes called "cross relaxation appropriate for minimolecules emulated by locked spins" (CAMELSPIN).<ref name="nakanishi">{{cite book|title=One-dimensional and two-dimensional NMR Spectra by Modern Pulse Techniques|year=1990|publisher=University Science Books|location=Mill Valley, California|isbn=0935702636|editor=Nakanishi, Koji|page=136}}</ref>
+
+== Resolved-spectrum methods ==
+
+Unlike correlated spectra, resolved spectra spread the peaks in a 1D-NMR experiment into two dimensions without adding any extra peaks.  These methods are usually called J-resolved spectroscopy, but are sometimes also known as chemical shift resoved spectroscopy or <U+03B4>-resolved spectroscopy.  They are useful for analysing molecules for which the 1D-NMR spectra contain overlapping multiplets as the J-resolved spectrum vertically displaces the multiplet from each nuclei by a different amount.  Each peak in the 2D spectrum will have the same horizontal coordinate that it has in a non-decoupled 1D spectrum, but its vertical coordinate will be the chemical shift of the single peak that the nucleus has in a decoupled 1D spectrum.<ref name="schraml">{{cite book|last=Schraml|first=Jan|title=Two-Dimensional NMR Spectrocopy|year=1988|publisher=Wiley|location=New York|isbn=0471601780|pages=28<U+2013>33, 49<U+2013>50, 65|coauthors=Bellama, Jon M.}}</ref>
+
+For the heteronuclear version, the simplest pulse sequence used is called a M<U+00FC>ller<U+2013>Kumar<U+2013>Ernst (MKE) experiment, which has a single 90<U+00B0> pulse for the heteronucleus for the perparation period, no mixing period, and applies a decoupling signal to the proton during the detection period.  There are several variants on this pulse sequence which are more sensitive and more accurate, which fall under the categories of ''gated decoupler methods'' and ''spin-flip methods''.  Homonuclear J-resolved spectroscopy uses the [[spin echo]] pulse sequence.<ref name="schraml"/>
+
+== See also ==
+*[[Two-dimensional correlation analysis]]
+
+== References ==
+{{Reflist}}
+{{Use dmy dates|date=June 2011}}
+
+[[Category:Nuclear magnetic resonance]]
+[[Category:Spectroscopy]]
+
+[[it:Spettroscopia di risonanza magnetica nucleare]]
+[[sv:COSY]]
+[[zh:<U+95DC><U+806F><U+6027><U+78C1><U+632F><U+983B><U+8B5C>]]

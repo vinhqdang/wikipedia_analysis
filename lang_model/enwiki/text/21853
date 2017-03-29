@@ -1,0 +1,100 @@
+'''Arithmetic dynamics'''<ref>{{cite book|author=J.H. Silverman | title=The Arithmetic of Dynamical Systems  | url=http://www.math.brown.edu/~jhs/ADSHome.html | publisher=Springer | year=2007 | isbn=978-0-387-69903-5}}</ref> is a field that amalgamates two areas of mathematics, [[dynamical systems]] and [[number theory]]. Classically, discrete dynamics refers to the study of the [[Iterated function|iteration]] of self-maps of the [[complex plane]] or [[real line]]. Arithmetic dynamics is the study of the number-theoretic properties of [[integer point|integer]], [[rational point|rational]], {{mvar|p}}-adic, and/or algebraic points under repeated application of a [[polynomial]] or [[rational function]]. A fundamental goal is to describe arithmetic properties in terms of underlying geometric structures.
+
+''Global arithmetic dynamics'' refers to the study of analogues of classical [[Diophantine equations|Diophantine geometry]]  in the setting of discrete dynamical systems, while ''local arithmetic dynamics'', also called [[p-adic dynamics|p-adic or nonarchimedean dynamics]], is an analogue of classical dynamics in which one replaces the complex numbers {{math|'''C'''}} by a {{mvar|p}}-adic field such as [[P-adic number|{{math|'''Q'''<sub>''p''</sub>}}]] or {{math|'''C'''<sub>''p''</sub>}} and studies chaotic behavior and the [[Fatou set|Fatou]] and [[Julia set]]s.
+
+The following table describes a rough correspondence between Diophantine equations, especially [[abelian varieties]], and dynamical systems:
+
+{|border=1
+|+
+! Diophantine equations !! Dynamical systems
+|-
+| Rational and integer points on a variety
+| Rational and integer points in an orbit
+|-
+| Points of finite order on an abelian variety
+| [[periodic point|Preperiodic points]] of a rational function
+|}
+
+==Definitions and notation from discrete dynamics==
+Let {{mvar|S}} be a set and let {{math|''F'' : ''S'' <U+2192> ''S''}} be a map from {{mvar|S}} to itself. The iterate of {{mvar|F}} with itself {{mvar|n}} times is denoted
+
+:<math>F^{(n)} = F \circ F \circ \cdots \circ F. </math>
+
+A point {{math|''P'' <U+2208> ''S''}} is ''periodic'' if {{math|''F''<sup>(''n'')</sup>(''P'') {{=}} ''P''}} for some {{math|''n'' > 1}}.
+
+The point is ''preperiodic'' if {{math|''F''<sup>(''k'')</sup>(''P'')}} is periodic for some {{math|''k'' <U+2265> 1}}.
+
+The (forward) ''orbit of'' {{mvar|P}} is the set
+
+:<math>O_F(P) = \left \{ P, F(P), F^{(2)}(P), F^{(3)}(P), \cdots\right\}.</math>
+
+Thus {{mvar|P}} is preperiodic if and only if its orbit {{math|''O<sub>F</sub>''(''P'')}} is finite.
+
+==Number theoretic properties of preperiodic points==
+Let {{math|''F''(''x'')}} be a rational function of degree at least two with coefficients in {{math|'''Q'''}}. A theorem of Northcott<ref>D. G. Northcott. Periodic points on an algebraic variety. ''Ann. of Math. (2)'', 51:167--177, 1950.</ref> says that {{mvar|F}} has only finitely many {{math|'''Q'''}}-rational preperiodic points, i.e., {{mvar|F}} has only finitely many preperiodic points in {{math|'''P'''<sup>1</sup>('''Q''')}}. The Uniform Boundedness Conjecture<ref> P. Morton and J. H. Silverman. Rational periodic points of rational functions. ''Internat. Math. Res. Notices'', (2):97--110, 1994.</ref> of [[Patrick Morton|Morton]] and [[Joseph Silverman|Silverman]] says that the number of preperiodic points of {{mvar|F}} in {{math|'''P'''<sup>1</sup>('''Q''')}} is bounded by a constant that depends only on the degree of {{mvar|F}}.
+
+More generally, let {{math|''F'' : '''P'''<sup>''N''</sup> <U+2192> '''P'''<sup>''N''</sup>}} be a morphism of degree at least two defined over a number field {{mvar|K}}. Northcott's theorem says that {{mvar|F}} has only finitely many preperiodic points in
+{{math|'''P'''<sup>''N''</sup>(''K'')}}, and the general Uniform Boundedness Conjecture says that the number of preperiodic points in
+{{math|'''P'''<sup>''N''</sup>(''K'')}} may be bounded solely in terms of {{mvar|N}}, the degree of {{mvar|F}}, and the degree of {{mvar|K}} over {{math|'''Q'''}}.
+
+The Uniform Boundedness Conjecture is not known even for quadratic polynomials {{math|''F<sub>c</sub>''(''x'') {{=}} ''x''<sup>2</sup> + ''c''}} over the rational numbers {{math|'''Q'''}}. It is known in this case that {{math|''F<sub>c</sub>''(''x'')}} cannot have periodic points of period four,<ref> P. Morton. Arithmetic properties of periodic points of quadratic maps. ''Acta Arith.'', 62(4):343--372, 1992.</ref> five,<ref>E. V. Flynn, B. Poonen, and E. F. Schaefer. Cycles of quadratic polynomials and rational points on a genus-2 curve. ''Duke Math. J.'', 90(3):435--463, 1997.</ref> or six,<ref> M. Stoll, [http://arxiv.org/abs/0803.2836 Rational 6-cycles under iteration of quadratic polynomials], 2008.</ref> although the result for period six is contingent on the validity of the [[Birch Swinnerton-Dyer Conjecture|conjecture of Birch and Swinnerton-Dyer]]. [[Bjorn Poonen|Poonen]] has conjectured that {{math|''F<sub>c</sub>''(''x'')}} cannot have rational periodic points of any period strictly larger than three.<ref> B. Poonen. The classification of rational preperiodic points of quadratic  polynomials over {{math|'''Q'''}}: a refined conjecture. ''Math. Z.'', 228(1):11--29, 1998.</ref>
+
+==Integer points in orbits==
+The orbit of a rational map may contain infinitely many integers. For example, if {{math|''F''(''x'')}} is a polynomial with integer coefficients and if {{mvar|a}} is an integer, then it is clear that the entire orbit {{math|''O''<sub>''F''</sub>(''a'')}} consists of integers. Similarly, if {{math|''F''(''x'')}} is a rational map and some iterate {{math|''F''<sup>(''n'')</sup>(''x'')}} is a polynomial with integer coefficients, then every {{mvar|n}}-th entry in the orbit is an integer. An example of this phenomenon is the map {{math|''F''(''x'') {{=}} ''x<sup><U+2212>d</sup>''}}, whose second iterate is a polynomial. It turns out that this is the only way that an orbit can contain infinitely many integers.
+
+:'''Theorem.'''<ref> J. H. Silverman. Integer points, Diophantine approximation, and iteration of rational maps. ''Duke Math. J.'', 71(3):793-829, 1993.</ref> Let {{math|''F''(''x'') <U+2208> '''Q'''(''x'')}} be a rational function of degree at least two, and assume that no iterate<ref> An elementary theorem says that if {{math|''F''(''x'') <U+2208> '''C'''(''x'')}} and if some iterate of {{mvar|F}} is a polynomial, then already the second iterate is a polynomial.</ref> of {{mvar|F}} is a polynomial. Let {{math|''a'' <U+2208> '''Q'''}}. Then the orbit {{math|''O''<sub>''F''</sub>(''a'')}} contains only finitely many integers.
+
+==Dynamically defined points lying on subvarieties==
+There are general conjectures due to [[Shouwu Zhang]]<ref> S.-W. Zhang, Distributions in algebraic dynamics, ''Differential Geometry: A Tribute to Professor S.-S. Chern'', ''Surv. Differ. Geom.'', Vol. X, Int. Press, Boston, MA, 2006, pages 381&ndash;430.</ref>
+and others concerning subvarieties that contain infinitely many periodic points or that intersect an orbit in infinitely many points. These are dynamical analogues of, respectively,  the [[Manin-Munford conjecture|Manin&ndash;Mumford conjecture]], proven by Raynaud,
+and the [[Faltings' theorem|Mordell&ndash;Lang conjecture]], proven by [[Gerd Faltings|Faltings]]. The following conjectures illustrate the general theory in the case that the subvariety is a curve.
+
+:'''Conjecture.''' Let {{math|''F'' : '''P'''<sup>''N''</sup> <U+2192> '''P'''<sup>''N''</sup>}} be a morphism and let {{math|''C'' <U+2282> '''P'''<sup>''N''</sup>}} be an irreducible algebraic curve. Suppose that either of the following is true:
+::(a) {{mvar|C}} contains infinitely many points that are periodic points of {{mvar|F}}.
+::(b) There is a point {{math|''P'' <U+2208> '''P'''<sup>''N''</sup>}} such that {{mvar|C}} contains infinitely many points in the orbit  {{math|''O<sub>F</sub>''(''P'')}}.
+:Then {{mvar|C}} is periodic for {{mvar|F}} in the sense that there is some iterate {{math|''F''<sup>(''k'')</sup>}} of {{mvar|F}} that maps {{mvar|C}} to itself.
+
+==''p''-adic dynamics==
+The field of [[p-adic dynamics|{{mvar|p}}-adic (or nonarchimedean) dynamics]] is the study of classical dynamical questions over a field {{mvar|K}} that is complete with respect to a nonarchimedean absolute value. Examples of such fields are the field of {{mvar|p}}-adic rationals {{math|'''Q'''<sub>''p''</sub>}} and the completion of its algebraic closure {{math|'''C'''<sub>''p''</sub>}}. The metric on {{mvar|K}} and the standard definition of equicontinuity leads to the usual definition of the [[Fatou set|Fatou]] and [[Julia set]]s of a rational map {{math|''F''(''x'') <U+2208> ''K''(''x'')}}. There are many similarities between the complex and the nonarchimedean theories, but also many differences. A striking difference is that in the nonarchimedean setting, the Fatou set is always nonempty, but the Julia set may be empty. This is the reverse of what is true over the complex numbers. Nonarchimedean dynamics has been extended to [[Berkovich space]],<ref> R. Rumely and M. Baker, [http://arxiv.org/pdf/math/0407433 Analysis and dynamics on the Berkovich projective line], ArXiv preprint, 150 pages.</ref> which is a compact connected space that contains the totally disconnected non-locally compact field {{math|'''C'''<sub>''p''</sub>}}.
+
+==Generalizations==
+There are natural generalizations of arithmetic dynamics in which {{math|'''Q'''}} and {{math|'''Q'''<sub>''p''</sub>}} are replaced by number fields and their {{mvar|p}}-adic completions. Another natural generalization is to replace self-maps of {{math|'''P'''<sup>1</sup>}} or {{math|'''P'''<sup>''N''</sup>}} with self-maps (morphisms) {{math|''V'' <U+2192> ''V''}} of other affine or [[projective variety|projective varieties]].
+
+==Other areas in which number theory and dynamics interact==
+There are many other problems of a number theoretic nature that appear in the setting of dynamical systems, including:
+
+* dynamics over [[finite field]]s.
+* dynamics over [[Global field|function fields]] such as {{math|'''C'''(''x'')}}.
+* iteration of formal and {{mvar|p}}-adic [[power series]].
+* dynamics on [[Lie group]]s.
+* arithmetic properties of dynamically defined [[moduli space]]s.
+* [[equidistribution]]<ref>[http://books.google.com/books?id=a4XE8QWc1GUC Equidistribution in number theory, an introduction], Andrew Granville, Ze<U+00E9>v Rudnick Springer, 2007, ISBN 978-1-4020-5403-7</ref> and invariant [[Measure (mathematics)|measures]], especially on {{mvar|p}}-adic spaces.
+* dynamics on [[Drinfeld module]]s.
+* number-theoretic iteration problems that are not described by rational maps on varieties, for example, the [[Collatz problem]].
+* symbolic codings of dynamical systems based on explicit arithmetic expansions of real numbers.<ref>{{cite book | last=Sidorov | first=Nikita | chapter=Arithmetic dynamics | zbl=1051.37007 | editor1-last=Bezuglyi | editor1-first=Sergey | editor2-last=Kolyada | editor2-first=Sergiy | title=Topics in dynamics and ergodic theory. Survey papers and mini-courses presented at the international conference and US-Ukrainian workshop on dynamical systems and ergodic theory, Katsiveli, Ukraine, August 21<U+2013>30, 2000 | location=Cambridge | publisher=[[Cambridge University Press]] | isbn=0-521-53365-1 | series=Lond. Math. Soc. Lect. Note Ser. | volume=310 | pages=145<U+2013>189 | year=2003 }}</ref>
+
+The [http://math.brown.edu/~jhs/ADSBIB.pdf Arithmetic Dynamics Reference List] gives an extensive list of articles and books covering a wide range of arithmetical dynamical topics.
+
+==See also==
+*[[Arithmetic geometry]]
+*[[Arithmetic topology]]
+*[[Combinatorics and dynamical systems]]
+
+==Notes and references==
+{{reflist}}
+
+==Further reading==
+* [http://swc.math.arizona.edu/aws/2010/2010SilvermanNotes.pdf Lecture Notes on Arithmetic Dynamics Arizona Winter School], March 13<U+2013>17, 2010, Joseph H. Silverman
+* Chapter 15 of [http://books.google.com/books?id=fGGP482b54sC A first course in dynamics: with a panorama of recent developments], Boris Hasselblatt, A. B. Katok, Cambridge University Press, 2003, ISBN 978-0-521-58750-1
+
+==External links==
+* [http://www.math.brown.edu/~jhs/ADSHome.html ''The Arithmetic of Dynamical Systems'' home page]
+* [http://math.brown.edu/~jhs/ADSBIB.pdf Arithmetic dynamics bibliography]
+* [http://arxiv.org/pdf/math/0407433 Analysis and dynamics on the Berkovich projective line]
+* [http://www.ams.org/bull/2009-46-01/S0273-0979-08-01216-0/S0273-0979-08-01216-0.pdf Book review] of [[Joseph H. Silverman]]'s  "The Arithmetic of Dynamical Systems", reviewed by [[Robert L. Benedetto]]
+
+{{Number theory-footer}}
+
+{{DEFAULTSORT:Arithmetic Dynamics}}
+[[Category:Dynamical systems]]
+[[Category:Algebraic number theory]]

@@ -1,0 +1,347 @@
+{{Infobox file format
+| name = Dynamic-link library
+| icon = [[Image:DLL icon on Windows Vista.png|100px]]
+| extension = .dll
+| mime = application/x-msdownload
+| type code =
+| magic = MZ
+| uniform type = com.microsoft.windows-<U+200B>dynamic-link-library
+| owner = [[Microsoft]]
+| genre = 
+| container for = [[shared library]]
+| contained by = 
+| extended from = 
+| extended to = 
+| standard = 
+}}
+'''Dynamic-link library''' (also written without the hyphen), or '''DLL''', is [[Microsoft]]'s implementation of the [[shared library]] concept in the [[Microsoft Windows]] and [[OS/2]] [[operating system]]s. These libraries usually have the [[file extension]] <tt>DLL</tt>, <tt>OCX</tt> (for libraries containing [[ActiveX]] controls), or <tt>DRV</tt> (for legacy [[Device driver|system driver]]s).
+The file formats for DLLs are the same as for Windows [[EXE]] files <U+2014> that is, [[Portable Executable]] (PE) for [[32-bit]] and [[64-bit]] Windows, and [[New Executable]] (NE) for [[16-bit]] Windows. As with EXEs, DLLs can contain [[code (computer programming)|code]], [[data (computing)|data]], and [[resource (Windows)|resource]]s, in any combination.
+
+In the broader sense of the term, any data [[computer file|file]] with the same [[file format]] can be called a ''resource DLL''. Examples of such DLLs include ''[[icon (computing)|icon]] libraries'', sometimes having the extension <tt>ICL</tt>, and [[typeface|font]] files, having the extensions <tt>FON</tt> and <tt>FOT</tt>.
+
+== Background for DLL ==
+
+The first versions of [[Microsoft Windows]] ran every program in a single address space. Every program was meant to co-operate by yielding the CPU to other programs so that the GUI was capable of multitasking and could be as responsive as possible. All Operating-System level operations were provided by the underlying operating system: [[DOS]]. All higher level services were provided by Windows Libraries '''Dynamic Link Libraries'''. The drawing API, GDI was implemented in a DLL called <tt>GDI.EXE</tt>, the user interface in <tt>USER.EXE<tt>. These extra layers on top of DOS had to be shared across all running windows programs, not just to enable Windows to work in a machine with less than a megabyte of RAM, but to enable the programs to co-operate amongst each other. The 
+[[Graphics Device Interface]] code in GDI needed to translate drawing commands to operations on specific devices. On the display, it had to manipulate pixels in the frame buffer. When drawing to a printer, the API calls had to be transformed into requests to a printer. Although it could have been possible to provide hard-coded support for a limited set of devices (like the [[Color Graphics Adapter]] display, the HP LaserJet [[Printer Command Language]]), Microsoft chose a different approach. GDI would work by loading different pieces of code to work with different output devices -pieces of code called ''Device Drivers''.
+
+The same architectural concept that allowed GDI to load different device drivers is that which allowed the Windows shell to load different windows programs, and for these programs to invoke API calls from the shared USER and GDI libraries. That concept was ''Dynamic Linking''. 
+
+In a conventional non-shared, ''static'' library, sections of code are simply added to the calling program when its executable is built at the ''linking'' phase; if two programs use the same routine, the code has to be included in both. With dynamic linking shared code is placed into a single, separate file. The programs that call this file are connected to it at run time, with the operating system (or, in the case of early versions of Windows, the OS-extension), performing the binding. 
+
+For those early versions of Windows (1.0 to 3.11), the DLLs were the foundation for the entire GUI.
+* Display drivers were merely DLLs with a .DRV extension, DLLs that provided custom implementations of the same drawing API, '''DDI''', an abbreviation of [[Device Driver Interface]].
+* The Drawing (GDI) and GUI (USER) APIs were merely the function calls exported by the GDI and USER DLLs, DLLs with the .EXE extension.
+* Windows Screen savers were merely DLLs with a .SCR extension
+
+This notion of building up the operating system from a collection of dynamically loaded libraries is a core concept of Windows that persists even today. 
+DLLs provide the standard benefits of [[Shared library#Shared library|shared libraries]], such as [[Modularity (programming)|modularity]]. Modularity allows changes to be made to code and data in a single self-contained DLL shared by several applications without any change to the applications themselves. 
+
+Another benefit of the modularity is the use of generic interfaces for plug-ins. A single interface may be developed which allows old as well as new modules to be integrated seamlessly at run-time into pre-existing applications, without any modification to the application itself. This concept of dynamic extensibility is taken to the extreme with the [[Component Object Model]], the underpinnings of [[ActiveX]].
+
+In Windows 1.x, 2.x and 3.x, all windows applications shared the same address space, as well as the same memory. A DLL was only loaded once into this address space; from then on all programs using the library accessed it. The library's data was shared across all the programs. This could be used as an indirect form of [[Inter-process communication]], or it could accidentally corrupt the different programs. With [[Windows 95]] and successors every process runs in its own address space. While the DLL code may be shared, the data is private except where shared data is explicitly requested by the library. That said, large swathes of [[Windows 95]], [[Windows 98]] and [[Windows Me]] were built from 16-bit libraries, a feature which limited the performance of the [[Pentium Pro]] microprocessor when launched, and ultimately limited the stability and scalability of the DOS-based versions of Windows.
+
+While DLLs are the core of the Windows architecture, they have a number of drawbacks, collectively called "[[DLL hell]]". Currently, Microsoft promotes [[Microsoft .NET]] as one solution to the problems of DLL hell, although they now promote Virtualization based solutions such as [[Microsoft Virtual PC]] and [[Microsoft Application Virtualization]], because they offer superior isolation between applications.
+
+== Features of DLL ==
+=== Memory management ===
+In [[Win32]], the DLL files are organized into ''sections''. Each section has its own set of attributes, such as being writable or read-only, executable (for code) or non-executable (for data), and so on.
+
+The code in a DLL is usually shared among all the processes that use the DLL; that is, they occupy a single place in physical memory, and do not take up space in the [[page file]]. If the physical memory occupied by a code section is to be reclaimed, its contents are discarded, and later reloaded directly from the DLL file as necessary.
+
+In contrast to code sections, the data sections of a DLL are usually private; that is, each process using the DLL has its own copy of all the DLL's data. Optionally, data sections can be made shared, allowing [[inter-process communication]] via this shared memory area. However, because user restrictions do not apply to the use of shared DLL memory, this creates a [[Vulnerability (computer science)|security hole]]; namely, one process can corrupt the shared data, which will likely cause all other sharing processes to behave undesirably. For example, a process running under a guest account can in this way corrupt another process running under a privileged account. This is an important reason to avoid the use of shared sections in DLLs.
+
+If a DLL is compressed by certain [[Executable compression|executable packers]] (e.g. [[UPX]]), all of its code sections are marked as read-and-write, and will be unshared. Read-and-write code sections, much like private data sections, are private to each process. Thus DLLs with shared data sections should not be compressed if they are intended to be used simultaneously by multiple programs, since each program instance would have to carry its own copy of the DLL, resulting in increased memory consumption.
+
+=== Import libraries ===
+Linking to dynamic libraries is usually handled by linking to an import library when building or linking to create an executable file. The created executable then contains an import address table (IAT) by which all DLL function calls are referenced (each referenced DLL function contains its own entry in the IAT). At run-time, the IAT is filled with appropriate addresses that point directly to a function in the separately-loaded DLL.
+
+Like static libraries, import libraries for DLLs are noted by the .[[lib]] file extension. For example, [[kernel32.dll]], the primary dynamic library for Windows' base functions such as file creation and memory management, is linked via kernel32.lib.
+
+=== Symbol resolution and binding ===
+Each function exported by a DLL is identified by a numeric ordinal and optionally a name. Likewise, functions can be imported from a DLL either by ordinal or by name. The ordinal represents the position of the functions address pointer in the DLL Export Address table.  It is common for internal functions to be exported by ordinal only. For most Windows API functions only the names are preserved across different Windows releases; the ordinals are subject to change. Thus, one cannot reliably import Windows API functions by their ordinals.
+
+Importing functions by ordinal provides only slightly better performance than importing them by name: export tables of DLLs are ordered by name, so a [[binary search]] can be used to find a function. The index of the found name is then used to lookup the ordinal in the Export Ordinal table. In 16-bit Windows, the name table was not sorted, so the name lookup overhead was much more noticeable.
+
+It is also possible to ''bind'' an executable to a specific version of a DLL, that is, to resolve the addresses of imported functions at compile-time. For bound imports, the linker saves the timestamp and checksum of the DLL to which the import is bound. At run-time Windows checks to see if the same version of library is being used, and if so, Windows bypasses processing the imports. Otherwise, if the library is different from the one which was bound to, Windows processes the imports in a normal way.
+
+Bound executables load somewhat faster if they are run in the same environment that they were compiled for, and exactly the same time if they are run in a different environment, so there's no drawback for binding the imports. For example, all the standard Windows applications are bound to the system DLLs of their respective Windows release. A good opportunity to bind an application's imports to its target environment is during the application's installation. This keeps the libraries 'bound' until the next OS update. It does, however, change the checksum of the executable, so is not something that can be done with signed programs, or programs that are managed by a configuration management tool that uses checksums (such as [[MD5]] checksums) to manage file versions. As more recent Windows versions have moved away from having fixed addresses for every loaded library (for security reasons), the opportunity and value of binding an executable is decreasing.
+
+===Explicit run-time linking===
+<!-- TODO: mention ref-counting here.
+For each DLL, Windows maintains one global ref-count, and one more per each process using it.
+LoadLibrary and FreeLibrary affect the per-process ref-count; load-time linking has no effect on it.
+Thus, it's impossible to force unloading a DLL from memory by calling FreeLibrary many times. A process can at most unmap it from its own VAS.
+-->
+
+DLL files may be explicitly loaded at run-time, a process referred to simply as ''run-time dynamic linking'' by Microsoft, by using the <tt>LoadLibrary</tt> (or <tt>LoadLibraryEx</tt>) API function. The <tt>GetProcAddress</tt> API function is used to lookup exported symbols by name, and <tt>FreeLibrary</tt> <U+2014> to unload the DLL. These functions are analogous to <tt>dlopen</tt>, <tt>dlsym</tt>, and <tt>dlclose</tt> in the [[POSIX]] standard API.
+
+Note that with implicit run-time linking, referred to as ''load-time dynamic linking'' by Microsoft, if the linked <tt>DLL</tt> file cannot be found, Windows will display an error message and fail to load the application. The application developer cannot handle the absence of <tt>DLL</tt> files linked implicitly by the compile-time linker. On the other hand, with explicit run-time linking, developers have the opportunity to provide a graceful fall-back facility. For example, in [[Windows 3.1x]] a program with explicit linking could check for the (then optional) [[Object Linking and Embedding]] libraries and expose additional functionality if they were present, whereas a program with implicit linking would fail to load. 
+
+<source lang="C">
+// LSPaper draw using OLE2 function if available on client
+
+HINSTANCE hOle2Dll ;
+			
+hOle2Dll = LoadLibrary ( "OLE2.DLL" ) ;
+										
+if ( hOle2Dll >= 32 )
+{
+  FARPROC lpOleDraw ;
+												
+  lpOleDraw = GetProcAddress ( hOle2Dll , "OleDraw" ) ;
+				
+  if ( lpOleDraw != (FARPROC)NULL ) 
+  {
+    (*lpOleDraw) (pUnknown , dwAspect , hdcDraw , lprcBounds ) ;
+  }
+  FreeLibrary ( hOle2Dll ) ;
+}
+</source>
+
+The procedure for explicit run-time linking is the same in any language that supports [[Function pointer|pointers to functions]], since it depends on the [[Windows API]] rather than language constructs.
+
+== Compiler and language considerations ==
+=== [[Delphi programming language|Delphi]] ===
+In the heading of a source file, the keyword <tt>library</tt> is used instead of <tt>program</tt>. In the end of the file, the functions to be exported are listed in <tt>exports</tt> clause.
+
+Delphi does not require <tt>LIB</tt> files to import functions from DLLs. To link to a DLL, <tt>external</tt> keyword is used in function declaration.
+
+=== Microsoft [[Visual Basic]] ===
+In Visual Basic (VB), only run-time linking is supported; but in addition to using <tt>LoadLibrary</tt> and <tt>GetProcAddress</tt> API functions, ''declarations'' of imported functions are allowed.
+
+When importing DLL functions through declarations, VB will generate a run-time error if the <tt>DLL</tt> file cannot be found. The developer can catch the error and handle it appropriately.
+
+When creating DLLs in VB, the IDE will only allow you to create ActiveX DLLs, however [http://www.windowsdevcenter.com/pub/a/windows/2005/04/26/create_dll.html?page=1 methods have been created] to allow the user to explicitly tell the linker to include a .DEF file which defines the ordinal position and name of each exported function. This allows the user to create a standard Windows DLL using Visual Basic (Version 6 or lower) which can be referenced through a "Declare" statement.
+
+=== [[C (programming language)|C]] and [[C Plus Plus|C++]] ===
+Microsoft [[Visual C Plus Plus|Visual C++]] (MSVC) provides a number of extensions to standard C++ which allow functions to be specified as imported or exported directly in the C++ code; these have been adopted by other Windows C and C++ compilers, including Windows versions of [[GNU Compiler Collection|GCC]]. These extensions use the attribute <tt>__declspec</tt> before a function declaration. When external names follow the C naming conventions, they must also be declared as <tt>extern "C"</tt> in C++ code, to prevent them from using C++ naming conventions.
+
+Besides specifying imported or exported functions using <tt>__declspec</tt> attributes, they may be listed in IMPORT or EXPORTS section of the <tt>[[.def file|DEF]]</tt> file used by the project. The <tt>DEF</tt> file is processed by the linker, rather than the compiler, and thus it is not specific to C++.
+
+DLL compilation will produce both <tt>DLL</tt> and <tt>LIB</tt> files. The <tt>LIB</tt> file is used to link against a DLL at compile-time; it is not necessary for run-time linking. Unless your DLL is a [[Component Object Model|COM]] server, the <tt>DLL</tt> file must be placed in one of the directories listed in the PATH environment variable, in the default system directory, or in the same directory as the program using it. [[Component Object Model|COM]] server DLLs are registered using regsvr32.exe, which places the DLL's location and its globally unique ID ([[GUID]]) in the registry. Programs can then use the DLL by looking up its GUID in the registry to find its location.
+
+== Programming examples ==
+=== Creating DLL exports ===
+The following examples show language-specific bindings for exporting symbols from DLLs.
+
+'''Delphi'''
+<source lang="pascal">
+
+library Example;
+
+// function that adds two numbers
+function AddNumbers(a, b : Double): Double;
+begin
+  Result := a + b;
+end;
+
+// export this function
+exports AddNumbers;
+
+// DLL initialization code: no special handling needed
+begin
+end.
+</source>
+
+'''C and C++'''
+<source lang="c">
+#include <windows.h>
+
+// DLL entry function (called on load, unload, ...)
+BOOL APIENTRY DllMain(HANDLE hModule, DWORD dwReason, LPVOID lpReserved)
+{
+    return TRUE;
+}
+ 
+// Exported function - adds two numbers
+extern "C" __declspec(dllexport) double AddNumbers(double a, double b)
+{
+    return a + b;
+}
+</source>
+
+=== Using DLL imports ===
+The following examples show how to use language-specific bindings to import symbols for linking against a DLL at compile-time.
+
+'''Delphi'''
+
+<source lang="pascal">
+{$APPTYPE CONSOLE}
+
+program Example;
+ 
+// import function that adds two numbers
+function AddNumbers(a, b : Double): Double; external 'Example.dll';
+
+// main program
+begin
+  Result := AddNumbers(1, 2);
+  Writeln('The result was: ', Result);
+end.
+</source>
+
+'''C and C++'''
+
+Make sure you include Example.lib file(assuming that Example.dll is generated) in the project (Add Existing Item option for Project!) before static linking. The file Example.lib is automatically generated by the compiler when compiling the DLL. Not executing the above statement would cause <U>'''linking error'''</U> as the linker would not know where to find the definition of AddNumbers. You also need to copy the DLL Example.dll to the location where the .exe file would be generated by the following code.
+<source lang="c">
+#include <windows.h>
+#include <stdio.h>
+ 
+// Import function that adds two numbers
+extern "C" __declspec(dllimport) double AddNumbers(double a, double b);
+
+int main(int argc, char *argv[])
+{
+    double result = AddNumbers(1, 2);
+    printf("The result was: %f\n", result);
+    return 0;
+}
+</source>
+
+=== Using explicit run-time linking ===
+The following examples show how to use the run-time loading and linking facilities using language-specific WIN32 API bindings.
+
+==== Microsoft Visual Basic ====
+<source lang="vb">
+Option Explicit
+Declare Function AddNumbers Lib "Example.dll" _ 
+(ByVal a As Double, ByVal b As Double) As Double
+ 
+Sub Main()
+	Dim Result As Double
+	Result = AddNumbers(1, 2)
+	Debug.Print "The result was: " & Result
+End Sub
+</source>
+
+==== Delphi ====
+<source lang="pascal">
+program Example;
+
+{$APPTYPE CONSOLE}
+
+uses Windows;
+
+type
+  TAddNumbersFunc = function (a, b: Double): Double;
+
+var
+  AddNumbers: TAddNumbersFunc
+  LibHandle: HMODULE;
+
+begin
+  LibHandle := LoadLibrary('example.dll');
+  if LibHandle <> 0 then try
+    AddNumbers := GetProcAddress(LibHandle, 'AddNumbers');
+    if Assigned(AddNumbers) then
+      Writeln('1 + 2 = ', AddNumbers(1, 2));
+    else
+      Writeln('Error: unable to find DLL function');
+  finally
+    FreeLibrary(LibHandle);
+  end
+  else
+    Writeln('Error: unable to load library');
+end.
+</source>
+
+==== C and C++ ====
+<source lang="c">
+#include <windows.h>
+#include <stdio.h>
+ 
+// DLL function signature
+typedef double (*importFunction)(double, double);
+ 
+int main(int argc, char **argv)
+{
+	importFunction addNumbers;
+	double result;
+
+	// Load DLL file
+	HINSTANCE hinstLib = LoadLibrary("Example.dll");
+	if (hinstLib == NULL) {
+		printf("ERROR: unable to load DLL\n");
+		return 1;
+	}
+
+	// Get function pointer
+	addNumbers = (importFunction)GetProcAddress(hinstLib, "AddNumbers");
+	if (addNumbers == NULL) {
+		printf("ERROR: unable to find DLL function\n");
+		FreeLibrary(hinstLib);
+		return 1;
+	}
+
+	// Call function.
+	result = addNumbers(1, 2);
+
+	// Unload DLL file
+	FreeLibrary(hinstLib);
+
+	// Display result
+	printf("The result was: %f\n", result);
+
+	return 0;
+}
+</source>
+
+==Component Object Model==
+The [[Component Object Model]] (COM) extends the DLL concept to [[object-oriented programming]].  Objects can be called from another process or hosted on another machine.  COM objects have unique [[GUID]]s and can be used to implement powerful back-ends to simple GUI front ends such as Visual Basic and ASP.  They can also be programmed from scripting languages.  COM objects are more complex to create and use than DLLs.
+
+==See also==
+* [[Dependency Walker]], a utility which displays exported and imported functions of DLL and EXE files.
+* [[Dynamic library]]
+* [[Library (computing)]] 
+* [[Linker]] 
+* [[Loader (computing)]] 
+* [[Object file]]
+* [[Shared library]]
+* [[Static library]]
+
+==External links==
+* [http://msdn2.microsoft.com/en-us/library/dabb5z75.aspx __declspec C++ Language Reference] on MSDN
+* [http://msdn.microsoft.com/library/default.asp?url=/library/en-us/vclang/html/_pluslang_the_dllexport_and_dllimport_attributes.asp dllexport, dllimport] on MSDN
+* [http://msdn2.microsoft.com/en-us/library/ms682589.aspx Dynamic-Link Libraries] on MSDN
+* [http://support.microsoft.com/kb/815065 What is a DLL?] on Microsoft support site
+* [http://msdn2.microsoft.com/en-us/library/ms682599.aspx Dynamic-Link Library Functions] on MSDN
+* [http://www.microsoft.com/whdc/system/platform/firmware/PECOFF.mspx Microsoft Portable Executable and Common Object File Format Specification]
+* [http://www.functionx.com/visualc/libraries/win32dll.htm Win32 DLL] on www.functionx.com. Tutorial for making and using DLLs
+* [http://www.codemaestro.com/articles/article00000001.html Delay Load Dlls Error Recovery] on www.codemaestro.com.
+* [http://www.joachim-bauch.de/tutorials/load_dll_memory.html Loading a DLL from memory]
+* [http://www.windowsdevcenter.com/pub/a/windows/2005/04/26/create_dll.html Creating a Windows DLL with Visual Basic]
+* [http://python.net/crew/theller/ctypes/ Using DLLs from native Python code]
+* [http://www.softwaretipspalace.com/MS_Windows_Vista/Tips-and-Tricks/common-DLL-errors-and-fixes.php Common DLL Errors and Fixes] in Windows Vista
+
+== References ==
+* Hart, Johnson. ''Windows System Programming Third Edition''. Addison-Wesley, 2005. ISBN 0-321-25619-0
+* Rector, Brent et al. ''Win32 Programming''. Addison-Wesley Developers Press, 1997. ISBN 0-201-63492-9.
+
+{{Windows Components}}
+
+[[Category:Computer libraries]]
+[[Category:Windows administration]]
+[[Category:Computer file formats]]
+
+[[ar:<U+0645><U+0643><U+062A><U+0628><U+0629> <U+0627><U+0644><U+0631><U+0628><U+0637> <U+0627><U+0644><U+062F><U+064A><U+0646><U+0627><U+0645><U+064A><U+0643><U+064A>]]
+[[bg:DLL]]
+[[ca:DLL]]
+[[cv:DLL]]
+[[de:Dynamic Link Library]]
+[[es:Dynamic Linking Library]]
+[[ko:<U+B3D9><U+C801> <U+B9C1><U+D06C> <U+B77C><U+C774><U+BE0C><U+B7EC><U+B9AC>]]
+[[hi:<U+0921><U+0940> <U+090F><U+0932> <U+090F><U+0932>]]
+[[it:Dynamic-link library]]
+[[he:Dynamic-Link Library]]
+[[hu:Dinamikus csatol<U+00E1>s<U+00FA> k<U+00F6>nyvt<U+00E1>r]]
+[[nl:Dynamically Linked Library]]
+[[ja:<U+30C0><U+30A4><U+30CA><U+30DF><U+30C3><U+30AF><U+30EA><U+30F3><U+30AF><U+30E9><U+30A4><U+30D6><U+30E9><U+30EA>]]
+[[no:Dynamic-Link Library]]
+[[pl:DLL]]
+[[pt:DLL]]
+[[ru:DLL]]
+[[si:DLL]]
+[[sk:Dynamic-link library]]
+[[sv:DLL]]
+[[vi:DLL]]
+[[zh:<U+52A8><U+6001><U+94FE><U+63A5><U+5E93>]]

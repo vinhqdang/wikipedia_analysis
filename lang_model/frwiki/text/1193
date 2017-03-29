@@ -1,0 +1,97 @@
+{{Confusion|Moïse de León|Moïse ben Salomon ibn Habib}}
+<div style="text-align: center; ">
+<timeline>
+ImageSize  = width:590 height:120
+PlotArea   = width:570 height:25 left:5 bottom:60
+TimeAxis   = orientation:horizontal
+DateFormat = yyyy
+Period     = from:-250 till:2000
+AlignBars  = early
+ScaleMajor = unit:year increment:200 start:-200
+ScaleMinor  = unit:year increment:50 start:-200
+
+Colors =
+  id:turkiz    value:rgb(0,0.76,0.76)
+  id:treaty    value:rgb(0.6,0.8,0.6)
+  id:lightgrey value:rgb(0.6,0.8,0.4)
+  id:darkgrey  value:rgb(0.6,0.8,0)
+  id:Celadon  value:rgb(0.67,1,0.68)
+  id:TeaGreen  value:rgb(0.81,0.94,0.75)
+
+Define $hx = 15 # shift text to right side of bar
+
+PlotData =
+  bar:Leaders color:blue width:20 align:left fontsize:s 
+  from:-250 till:0 color:treaty shift:(-10,$hx) text:[[Zougot]]
+   from:0 till:220 color:turkiz shift:(-20,$hx) text:[[Tannaim]]
+   from:220 till:500 color:TeaGreen  shift:(-20,$hx) text:[[Amoraim]]
+   from:500 till:625 color:darkgrey shift:(-20,$hx) text:[[Savoraïm]]
+   from:625 till:1050 color:turkiz shift:(-15,$hx) text:[[Gueonim]]
+   from:1050 till:1500 color:TeaGreen shift:(-20,$hx) text:[[Rishonim]]
+  from:1500 till:2000 color:treaty shift:(-20,$hx) text:[[Aharonim]]
+
+LineData =
+  layer:front  # all lines in front of bars unless stated otherwise
+  from:1450 till:1520 atpos:65  color:red    width:2 
+
+Legend     = columns:4 left:125 top:25 columnwidth:150
+
+Colors =
+ id:aaa value:red   legend:Moshe&nbsp;ibn&nbsp;Habib
+
+</timeline>
+</div>
+'''Moïse ben Shem Tov ibn Habib''' ([[hébreu]] : {{Lang|rtl|he|'''משה בן שם טוב אבן חביב'''}} ''Moshe ben Shem Tov ibn Haviv'') est un grammairien, poète, traducteur et philosophe [[juif italien]] des {{s2|XV|e|XVI|e}} (c. 1450 - c. 1520<ref>A. Schippers, ''Moses ibn Habib: Poet and migrant''</ref>).
+
+== Éléments biographiques ==
+
+Moshe ibn Habib est originaire de Lisbonne, mais il quitte la péninsule ibérique bien avant l'expulsion des Juifs, et entame une vie errante. Il vit pour un temps en « terre d'Ismaël » (au Proche-Orient), et s'établit finalement dans le sud de l'Italie, où il rédige ses œuvres et décède au début du {{s-|XVI|e}}.
+
+== Œuvre ==
+
+=== Grammaire hébraïque ===
+
+Moïse ibn Habib est l'auteur de deux traités grammaticaux, le ''Perah Shoshan'' et le ''Marpe Lashon''. Ses conceptions sont fortement influencées par celles d’''[[Efodi]]'', qui entend baser la grammaire sur la logique.
+
+Le ''Perah Shoshan'' est cité par Ibn Habib lui-même dans son ''Darke Noam'' et abondamment par [[Abraham de Balmes]] dans son ''Mikne Avraham''. Le livre est divisé en sept sections (''shearim''), elles-mêmes divisées en chapitres (''perakim''). Il cite comme autorités [[Juda ben David Hayyuj]], [[Yona ibn Jannah]], [[Abraham ibn Ezra]] et ''[[Efodi]]'', mais non [[David Kimhi]], dont le ''Mikhlol'' allait s'imposer comme manuel de référence auprès des hébraïsants chrétiens de la Renaissance, car il dédaigne ce modèle trop didactique et trop peu théorique. Il indique avoir entamé la rédaction du livre le 23 Sivan 5244 (16 juin 1484) et l'avoir achevé environ six mois plus tard. Un exemplaire en a été conservé au [[British Museum]] (MS. n° 2857). 
+
+Dans le ''Marpe Lashon'', il tente de résumer les principes de la grammaire hébraïque sous une forme catéchétique. Le livre est pau à Constantinople vers 1520, puis dans la collection ''Diqdouqim'' (Venise, 1506), dans la grammaire hébraïque ''Devar Tov'' d'Avigdor Levi de Glogau (Prague, 1783), et enfin dans une édition de Heidenheim (Rödelheim, 1806), où il est imprimé avec le ''Darke Noam''.
+
+=== Poésie ===
+
+Le ''Darke Noam'' est un résumé de poésie hébraïque et de versification, basé sur la ''Poétique'' d'[[Aristote]]. <br />L'auteur y fait une affirmation, souvent répétée depuis, qu'il a vu une inscription de deux lignes rimée sur la pierre tombale du général (?) Amatsya, en Espagne. Le poème d'introduction, daté du 14 Nissan (mi-avril) 1486 est dédicacé au médecin Joseph Levi de [[Bitonto]].
+
+À [[Otrante]], Moshe ibn Habib a également composé à l'intention de son disciple Azarya ben Joseph, un commentaire du ''Behinat Olam'' de [[Yedaya Bedersi]], publié à Constantinople vers 1520 (seul un fragment de cette édition avait survécu au {{s-|XIX|e}}, et était en la possession d'[[Abraham Harkavy]]), à Ferrare en 1551 et à Zolkiev en 1741. Ce commentaire a été cité par d'autres commentateurs du même poème, dont [[Yom-Tov Lipman Heller]], [[Eleazar ben Zalman Lisser|Eleazar ben Shlomo]] dans son ''Migdanot Eleazar'' et Jacob ben Nahoum de Tyszowce dans son ''Or Hakhamim''. Dans ce commentaire, qui démontre les amples connaissances de l'auteur en littérature philosophique, il écrit envisager la composition d'un travail intitulé ''Qiryat Arba'' sur le nombre quatre, mais rien n'est connu d'une telle œuvre.
+
+=== Traductions ===
+
+Moïse ibn Habib a traduit ''She'elot ouTeshouvot'' (« Questions et Réponses »), sur les six choses naturelles que le corps requiert, selon la médecine, dont l'original aurait été écrit par « Albertus » (probablement [[Albert le Grand]]). L'original de ce manuscrit est conservé à la [[Bibliothèque nationale de France]] (MS n° 977).
+
+== Notes et références ==
+{{Références}}
+
+== Sources ==
+* {{Jewish Encyclopedia|article=Habib, Moses B. Shem-Tob Ibn|url=http://www.jewishencyclopedia.com/view.jsp?artid=20&letter=H|author=[[Kaufmann Kohler]] & [[Samuel Poznanski]]}}
+
+== Annexes ==
+
+=== Bibliographie ===
+* Schippers, Arie, ''Moses ibn Habib: Poet and migrant'', in ''Studia Rosenthaliana'' 2001, vol. 35, n°2, ISSN 0039-3347, pp. 172-183 
+
+<br />
+{{Sages d'Israël/Rishonim}}
+
+{{Portail|Histoire|judaïsme|linguistique|poésie|philosophie|Italie}}
+
+{{DEFAULTSORT:Habib, Moise ben Shem Tov ibn}}
+
+[[Catégorie:Rabbin italien]]
+[[Catégorie:Rabbin du XVe siècle]]
+[[Catégorie:Rabbin du XVIe siècle]]
+[[Catégorie:Grammairien italien]]
+[[Catégorie:Grammairien hébraïsant]]
+[[Catégorie:Poète italien]]
+[[Catégorie:Traducteur italien]]
+[[Catégorie:Date de naissance inconnue (XVe siècle)]]
+[[Catégorie:Date de décès inconnue (XVIe siècle)]]
+[[Catégorie:Portail:Biographie/Articles liés]]

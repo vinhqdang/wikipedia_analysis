@@ -1,0 +1,182 @@
+'''Nucleation''' is the extremely localized budding of a distinct [[thermodynamic]] phase.  Some examples of phases that may form via nucleation in liquids are gaseous [[liquid bubble|bubble]]s, [[crystals]], or [[Physics of glass|glassy]] regions. Creation of liquid [[droplet]]s in saturated [[vapor]] is also characterized by nucleation (see [[Cloud condensation nuclei]]).  Nucleation of crystalline, amorphous, and even vacancy clusters in solid materials is also important, for example to the semiconductor industry. Most nucleation processes are physical, rather than chemical, but a few exceptions do exist (e.g. [[electrochemical nucleation]]) . A good example would be the famous [[Diet Coke and Mentos eruption]].
+Nucleation normally occurs at ''nucleation sites'' on surfaces contacting the liquid or vapor. Suspended particles or minute bubbles also provide nucleation sites. This is called ''heterogeneous nucleation''. Nucleation without preferential nucleation sites is ''homogeneous nucleation''. Homogeneous nucleation occurs spontaneously and randomly, but it requires [[superheating]] or [[supercooling]] of the medium. Nucleation is involved in such processes as [[cloud seeding]] and in instruments such as the [[bubble chamber]] and the [[cloud chamber]].    
+
+==Examples of nucleation==
+[[Image:Nucleation finger.jpg|thumb|right|250px|Nucleation of carbon dioxide bubbles around a finger]]
+* Pure [[water]] [[freezing|freezes]] at <U+2212>42<U+00B0>C rather than at its freezing temperature of 0<U+00B0>C if no crystal nuclei, such as dust particles, are present to form an [[ice nucleus]]. 
+* Presence of [[cloud condensation nuclei]] is important in [[meteorology]] because they are often in short supply in the upper [[atmosphere]] (''see [[cloud seeding]]'').
+* All natural and artificial [[crystallization]] process (of formation of solid [[crystals]] from a homogeneous solution) starts with a ''nucleation'' event{{Fact|date=March 2009}}.
+* Bubbles of [[carbon dioxide]] ''nucleate'' shortly after the pressure is released from a container of [[carbonation|carbonated]] liquid.  Nucleation often occurs more easily at a pre-existing [[Interface (chemistry)|interface]] (''heterogeneous nucleation''), as happens on [[boiling chip]]s and string used to make [[rock candy]]. So-called [[Diet Coke and Mentos eruption]]s are a dramatic example.
+* Nucleation in [[boiling]] can occur in the bulk [[liquid]] if the pressure is reduced so that the liquid becomes [[superheating|superheated]] with respect to the pressure-dependent boiling point. More often nucleation occurs on the heating surface, at ''nucleation sites''. Typically, nucleation sites are tiny crevices where free gas-liquid surface is maintained or spots on the heating surface with lower [[wetting]] properties. Substantial superheating of a liquid can be achieved after the liquid is de-gassed and if the heating surfaces are clean, smooth and made of materials well wetted by the liquid.
+* Nucleation is relevant in the process of crystallization of [[Nanoparticle|nanometer sized materials]], <ref> E.M-V. and R. Bowles (2007) ''Surface nucleation in the freezing of gold nanoparticles.'' Phys. Rev. Lett. May 4;98 (18) 185503</ref> and plays an important role in atmospheric processes.
+* Nucleation is a key concept in  [[polymer]]<ref>R. J. Young (1981) ''Introduction to Polymers'' (CRC Press, NY) ISBN 0-412-22170-5</ref>, [[alloy]], and [[ceramic]] systems.  
+* In [[chemistry]] and [[biophysics]], nucleation can also refer to the phaseless formation of multimers which are intermediates in polymerization processes.  This sort of process is believed to be the best model for processes such as [[crystallization]] and [[amyloid]]ogenesis. 
+* In [[molecular biology]], nucleation is used to term the critical stage in the assembly of a [[polymer]]ic structure, such as a microfilament, at which a small cluster of [[monomer]]s aggregates in the correct arrangement to initiate rapid polymerization. For instance, two [[actin]] [[molecule]]s bind weakly, but addition of a third stabilizes the complex. This trimer then adds additional molecules and forms a nucleation site. The nucleation site serves the slow, or lag phase of the polymerization process.
+* Some [[champagne stirrer]]s operate by providing many nucleation sites via high surface area and sharp corners, speeding the release of bubbles and removing carbonation from the wine.
+
+==Mechanics of nucleation==
+===Homogeneous nucleation===
+Nucleation generally occurs with much more difficulty in the interior of a uniform substance, by a process called ''homogeneous nucleation''.  The creation of a nucleus implies the formation of an interface at the boundaries of a new phase.  
+
+Liquids cooled below the maximum heterogeneous nucleation temperature ([[melting]] temperature), but which are above the homogeneous nucleation temperature (pure substance [[freezing]] temperature) are said to be [[supercooling|supercooled]].  This is useful for making [[amorphous solid]]s and other [[metastability|metastable]] structures, but can delay the progress of industrial [[chemistry|chemical processes]] or produce undesirable effects in the context of [[casting]].  
+Supercooling brings about supersaturation, the driving force for nucleation.  Supersaturation occurs when the pressure in the newly formed solid is less than the vapor pressure, and brings about a change in free energy per unit volume, <math>G_v</math>, between the liquid and newly created solid phase. This change in free energy is balanced by the energy gain of creating a new volume, and the energy cost due to creation of a new interface.  When the overall change in free energy, '''<math>\Delta G</math>''' is negative, nucleation is favored.
+
+Some energy is consumed to form an interface, based on the [[surface energy]] of each phase.  If a hypothetical nucleus is too small (known as an unstable nucleus or "embryo"), the energy that would be released by forming its volume is not enough to create its surface, and nucleation does not proceed. The critical nucleus size can be denoted by its radius, and it is when r=r* (or r critical) that the nucleation proceeds. 
+
+For example in the classic case<ref>F. F. Abraham (1974) ''Homogeneous nucleation theory'' (Academic Press, NY)</ref> of a spherical cluster that liberates -G<sub>v</sub> Joules per cubic centimeter during formation (here G<sub>v</sub> is a negative quantity), but which must pay the positive cost of <U+03C3> Joules per square centimeter of surface interfacing with the surrounding, the free energy needed to form a cluster of radius r is
+ 
+:<math>\Delta G = \frac{4}{3} \pi r^3 G_v + 4 \pi r^2 \sigma</math>.
+Where the first term shows the energy gain of creating a new volume and the second term shows the energy loss due to surface tension of the new interface.
+
+It costs free energy to add molecules to this cluster (because <math> \frac{dG}{dr} > 0 </math>) until the radius reaches
+
+:<math>r^* = -\frac{2 \sigma}{G_v}</math>  
+where <math> \frac{dG}{dr} = 0 </math>.
+
+[[Image:Critical radius.jpg|thumb|right|Critical radius]]
+
+Addition of new molecules to clusters larger than this [[critical radius]] releases, rather than costs, available work.  In other words at that point growth of the cluster is no longer limited by nucleation, but perhaps by diffusion<ref>Frank S. Ham (1959) [http://scitation.aip.org/getabs/servlet/GetabsServlet?prog=normal&id=JAPIAU000030000010001518000001&idtype=cvips&gifs=yes  Diffusion-limited growth of precipitate particles], ''J. Appl. Phys.'' '''30''':1518-1525</ref> (i.e. the supply of molecules) or by reaction kinetics instead.
+
+We can find the free energy needed to form this critical radius by
+::<math>\Delta G^* = \frac{16 \pi \sigma ^3}{3(G_v)^2}</math>
+which occurs at the maximum <math>\Delta G</math> where <math>dG/dr=0</math> <br>
+As the phase transformation becomes more and more favorable, the formation of a given volume of nucleus frees enough energy to form an increasingly large surface, allowing progressively smaller nuclei to become viable.  Eventually, [[thermal activation]] will provide enough energy to form stable nuclei.  These can then grow until [[thermodynamic equilibrium]] is restored.
+
+A greater degree of supercooling favors phase transformation, and we can relate <math>\Delta G</math> to supercooling and find r* and <math>\Delta G*</math> as a function of <math>\Delta T</math>
+::<math>r^* = \frac{2 \sigma T_m}{\Delta H_s} \frac{1}{\Delta T}</math>
+and
+::<math>\Delta G^* = \frac{16 \pi \sigma ^3 T_m^2}{3\Delta H_s^2} \frac{1}{(\Delta T)^2}</math>
+
+The greater the supercooling, the smaller the critical radius and the less energy needed to form it.
+
+The spontaneous nucleation rate in, say, water changes very rapidly with temperature, so the spontaneous nucleation temperature can be quite well defined. 'Film boiling' on very hot surfaces and the [[Leidenfrost effect]] are both believed to be stabilized by spontaneous nucleation phenomena.
+
+===Heterogeneous nucleation===
+Heterogeneous nucleation occurs much more often than homogeneous nucleation.  It forms at preferential sites such as phase boundaries or impurities like dust and requires less energy than homogeneous nucleation.  At such preferential sites, the effective surface energy is lower, thus diminished the free energy barrier and facilitating nucleation.  Surfaces promote nucleation because of [[wetting]] <U+2013> contact angles greater than zero between phases encourage particles to nucleate.
+The free energy needed for heterogeneous nucleation is equal to the product of homogeneous nucleation and a function of the contact angle : 
+
+::<math>\Delta G_{heterogeneous}\ = \Delta G_{homogeneous}*f( \theta)</math>
+
+where <math>f( \theta)\ = \frac{1}{2} + \frac{3}{4}cos\theta - \frac{1}{4}cos^3 \theta</math>
+
+[[Image:Hethomnucdifference.JPG|thumb|right|Difference in energy barriers]]
+
+The barrier energy needed for heterogeneous nucleation is reduced, and less supercooling is needed. The wetting angle determines the ease of nucleation by reducing the energy needed.  
+It is important to note that the critical radius remains unchanged.  However, the volume can be significantly less for heterogeneous nucleation due to the wetting angle affecting the shape of the cluster.  
+
+In the case of heterogeneous nucleation, some energy is released by the partial destruction of the previous interface.  For example, if a carbon dioxide bubble forms between water and the inside surface of a bottle, the energy inherent in the water-bottle interface is released wherever a layer of gas intervenes, and this energy goes toward the formation of bubble-water and bubble-bottle interfaces.  The same effect can cause  [[Precipitation (chemistry)|precipitate]] particles to form at the [[crystallite|grain boundaries]] of a solid.  This can interfere with [[precipitation strengthening]], which relies on homogeneous nucleation to produce a uniform distribution of precipitate particles.
+
+===Nucleation rate===
+The nucleation rate, I, depends on the average number of critical clusters, n* and the diffusion of molecules to the cluster, <math>\beta</math>.  
+
+::<math>I\ =\ n^* \beta</math>
+
+Where the average population of critical nuclei is
+
+::<math>n^*\ =\ Nexp \left( \frac{-\Delta G^*}{k_BT} \right)</math>
+
+Where:
+:*&Delta;''G*'' is critical free energy needed.
+:*''N'' is the number of potential nucleation sites per unit volume
+:*''k<sub>B</sub>'' is the [[Boltzmann constant]]
+
+The number of clusters of a certain size formed is a function of the total number of atoms in the system, the free energy to create a cluster (of that size), and the temperature.  The number of clusters increases with increasing temperature.
+
+Plugging in for <math>\Delta G*</math>, we get
+
+The rate of addition of one extra atom to the critical nucleus as estimated by the Volmer-Weber theory is<br>
+::<math>\Beta\ =\ A exp \left( \frac{-(Q + \Delta G^*)}{k_BT} \right)</math>
+
+where A is a term that incorporates the shape factor of the atoms and the area to which atoms can join, and the vibrational frequency of the particles.
+And Q is the activation energy for atomic migration.
+
+This term gives us the diffusion of the atoms to the site of nucleation.  However, a problem with the Volmer Weber theory is that it ignores formation of particles of r>r* and assumes that size distribution is maintained (fluctuations are occurring fast)
+
+The rate of nucleation can be expressed as:
+::<math>I(T)\ =\ A exp \left( \frac{-Q}{kT} \right) exp \left( \frac{-16 \pi \gamma_{sl}^3}{3 \Delta H_s^2}* \frac{1}{kT}* \frac{T_m^2}{\Delta T^2} * f(\theta) \right)</math>
+
+Where:
+:*&gamma; is the [[surface tension]].
+:*&Delta;''H<sub>s</sub>'' is the [[enthalpy]] per unit volume.
+:*''Tm'' is the melting temperature.
+:*&Theta; is the wetting angle.
+
+[[Image:Nucleationrate.JPG|thumb|right|Nucleation rate]]
+
+At very low temperatures, rate of diffusion is low.  As temperature increases, the rate of diffusion increases; molecules are able to get to the site of nucleation at a fast enough rate to promote growth of the nucleus.  At temperatures significantly below melting temperature, fluctuation of molecules is very low; the molecules are in a low energy state and do not have enough energy to move around and nucleate.  Nucleation rate is dominated by diffusion. However, as temperature increases, molecular fluctuations increase, and molecules tend to escape from the nucleus, causing a decreased rate of nucleation.
+
+The time required for steady state nucleation is known as the time-lag <math>\tau</math> and can be found by<ref>Schmelzer, J (Ed.), Fokin, Yuritsyn, Zanotto. Nucleation Theory and Applications. 
+Nucleation and Crystallization Kinetics in Silicate Glasses: Theory and Experiment. P. 76-83. 2005. Wiley-VCH Verlag GmbH & Co.
+</ref>
+::<math>\tau\ =\ \frac{16h}{\pi} \frac{\sigma}{\Delta G_v^2a^4} exp\left( \frac{\Delta G}{k_BT} \right)</math>
+Where:
+:*''a'' is the average particle size.
+
+===Theory of the spinodal region nucleation ===
+Phase transition processes can also be explained in  terms of [[spinodal decomposition]] where [[phase separation]] is delayed until the system enters the unstable region where a small perturbation in composition leads to a decrease in energy and thus spontaneous growth of the perturbation.<ref> Mendez-Villuendas E et al. (2007) A limit of stability in supercooled liquid clusters. J Chem Phys. Oct 21;127 (15):154703 </ref>   This region of a phase diagram is known as the spinodal region and the phase separation process is known as spinodal decomposition and may be governed by the [[Cahn<U+2013>Hilliard equation]].
+
+==Modern Theory==
+=== Limitations of the classical nucleation theory ===
+Due to the many unjustified assumptions made by the classical nucleation theory (CNT), it has limited applicability to the solution of practical problems when compared with experimental data. The limitations arise mainly because the CNT assumes that macroscopic properties of molecules can be applied to microscopic activities. This can be a major drawback when dealing with characteristics such as density, surface tension, and saturated vapour pressure of clusters consisting of only several tens of molecules. The classical nucleation theory also does not take into consideration the interaction of particles around the nuclei, which leads to thermodynamics.
+
+===Modifications of the classical nucleation theory===
+In the last five decades, due to the ever- increasing accuracy of experimental results, many scientists and engineers have worked to improve and develop more accurate nucleation models. One of the versions of the classical theory which has gained acceptance is the self-consistent theory (SCT) of nucleation.<ref>S.L. Girshick, C.-P. Chiu, The Journal of Chemical Physics 93 (2), pp. 1273-1277  (1990)</ref> According to this theory,
+::<math>\Delta G\ =\ (4 \pi r^2 - s) \sigma - (n - 1)k_BTlnS</math>
+
+Where:
+:*&Delta;''s'' is critical free energy needed.
+:*''k<sub>B</sub>'' is the [[Boltzmann constant]]
+:*''S=p<sub>v</sub>/p<sub>o</sub>'' is the [[supersaturation]]
+:*''s'' is the [[surface area]] of a monomer
+
+Under this theory, the nucleation rate becomes
+::<math>I_{SCT}\ =\ \frac{exp(\sigma s/ k_BT)}{S}I </math>
+
+Where I is the rate calculated from the classical nucleation theory. The exponential coefficient in the equation takes into account the surface energy of the monomer. 
+
+Another popular modern nucleation theory is the Dillmann-Meier theory where the change in free energy is expressed as
+::<math>\Delta G\ =\ k_n \sigma sn^{2/3} + \tau k_B T lnn - k_BTlnQ_oV - nk_BTlnS</math>
+
+Where:
+:*&tau;,''k<sub>n</sub>'' and q<sub>o</sub> are adjustable coefficients of the model
+:*''V'' is the volume of the system
+
+The coefficient ''k''<sub>n</sub> reflects the difference between the surface energies of the cluster and the macroscopic liquid droplet and is represented in the first term of the equation. The second and third term takes into account the translational, vibrational and rotational degrees of freedom to the free energy of the droplet. Lastly the fourth term takes into account relaxation of the metastable state. Many scientists believe this equation takes into account all significant contributions to the energy of cluster formation.<ref>Anisimov, M.P., Nucleation: theory and experiment. Russian Chemical Reviews, 2003. 72(7): p. 591-600</ref> 
+
+Although these modern modifications to the classical nucleation theory improve the applicability of the model, further exploration is still going on to either improve or develop a better model that can be applied to a wider range of conditions.
+
+==Nucleation in modern technology==
+Nucleation is a topic of wide interest in many scientific studies and technological processes. It is used heavily in the chemical industry for cases such as in the preparation of metallic ultradispersed powders that can serve as catalysts. For example, platinum deposited onto TiO<sub>2</sub> nanoparticles catalyses the liberation of hydrogen from water.<ref>R Palmans, A J Frank J. Phys. Chem. 95 9438 (1991)</ref> It is also an important factor in the semiconductor industry as the gap width in semiconductors is influenced by the size of metal nanoclusters.<ref>T Rajh, O I Micic, A J Nozik J. Phys. Chem. 97 11999 (1993)</ref>
+
+==Experimental Theory==
+It is sometimes difficult to experimentally measure nucleation rate.  The supercooling necessary to get a measurable rate may be at a temperature too low to allow for measurable growth rates.  Gustav Tammann developed a method, known as the Tammann or <U+201C>development<U+201D> method.<ref>Tammann, Z. Physical Chemistry. B 25, 441. 1898.</ref>  In this method, crystals are nucleated at a low temperature T<sub>n</sub>  and then grown at a higher temperature T<sub>g</sub>.  For validity of this method, the nucleation rate, I , has to be greater at the nucleation temperature T<sub>n</sub> than at the growth temperature T<sub>g</sub>;  I(T<sub>n</sub>)>> I(T<sub>g</sub>), and the growth rate U must be greater at the growth temperature than at the nucleation temperature T<sub>n</sub> ;  U(T<sub>g</sub>) >> U(T<sub>n</sub>).  Since the clusters are heated to a larger temperature with a larger critical radius requirement, clusters no longer meet the critical radius requirement and remelt.  A method to heat the particles carefully must be used.
+
+Koster proposed a method for nucleation of [[metallic glass]]es.<ref>Schmelzer, J (Ed.), Fokin, Yuritsyn, Zanotto. Nucleation Theory and Applications. 
+Nucleation and Crystallization Kinetics in Silicate Glasses: Theory and Experiment. P. 76-83. 2005. Wiley-VCH Verlag GmbH & Co.
+</ref>  
+This method considers the sizes of different crystals and attempts to determine when they were formed using data of their growth rates. It can be used for both homogeneous and heterogeneous nucleation.
+
+== See also ==
+
+* [[Crystal growth]]
+* [[Physics of glass]]
+* [[Spinodal decomposition]]
+* [[Phase transformations in solids]]
+
+== Footnotes ==
+
+{{reflist}}
+
+[[Category:Particle detectors]]
+[[Category:Hydrogen technologies]]
+
+[[de:Keimbildung (Nukleation)]]
+[[es:Nucleaci<U+00F3>n]]
+[[fa:<U+062C><U+0648><U+0627><U+0646><U+0647><U+200C><U+0632><U+0646><U+06CC>]]
+[[it:Nucleazione]]
+[[he:<U+05D4><U+05EA><U+05D2><U+05E8><U+05E2><U+05E0><U+05D5><U+05EA>]]
+[[nl:Nucleatie]]
+[[pl:Nukleacja]]
+[[ru:<U+0413><U+0435><U+0442><U+0435><U+0440><U+043E><U+0433><U+0435><U+043D><U+043D><U+0430><U+044F> <U+043D><U+0443><U+043A><U+043B><U+0435><U+0430><U+0446><U+0438><U+044F>]]
+[[fi:Nukleaatio]]
+[[uk:<U+041D><U+0443><U+043A><U+043B><U+0435><U+0430><U+0446><U+0456><U+044F>]]

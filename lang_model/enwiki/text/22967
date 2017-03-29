@@ -1,0 +1,136 @@
+A '''traveling-wave tube (TWT)''' is an [[Electronics|electronic]] device used to amplify [[radio frequency]] signals to high power, usually in an electronic assembly known as a '''traveling-wave tube amplifier''' (TWTA).
+
+The bandwidth of a broadband TWT can be as high as three [[octaves]], although tuned (narrowband) versions exist, and operating frequencies range from 300&nbsp;MHz to 50&nbsp;GHz.  The voltage gain of the tube can be of the order of 70 [[decibel]]s.
+
+[[Image:TWTA.png|301px|right|thumbnail|Cutaway view of a TWT. (1) Electron gun; (2) RF input; (3) Magnets; (4) Attenuator; (5) Helix coil; (6) RF output; (7) Vacuum tube; (8) Collector.]]
+
+==Description==
+
+The device is an elongated [[vacuum tube]] with an [[electron gun]] (a heated [[cathode]] that emits [[electron]]s) at one end.  A magnetic containment field around the tube focuses the electrons into a beam, which then passes down the middle of a [[wire]] [[helix]] that stretches from the RF input to the RF output, the electron beam finally striking a collector at the other end. A [[directional coupler]], which can be either a [[waveguide]] or an electromagnetic coil, fed with the low-powered radio signal that is to be amplified, is positioned near the emitter, and induces a [[electric current|current]] into the helix.  
+
+The helix acts as a [[delay line]], in which the RF signal travels at near the same speed along the tube as the electron beam.  The electromagnetic field due to the current in the helix interacts with the electron beam, causing bunching of the electrons (an effect called ''velocity modulation''), and the electromagnetic field due to the beam current then induces more current back into the helix (i.e. the current builds up and thus is amplified as it passes down). 
+
+A second directional coupler, positioned near the collector, receives an amplified version of the input signal from the far end of the helix.  An attenuator placed on the helix, usually between the input and output helicies, prevents reflected wave from travelling back to the cathode.
+
+==Invention, Development and early use==
+
+The invention of the TWT is widely attributed to [[Rudolf Kompfner]] in 1942<U+2013>1943,
+though Nils Lindenblad did patent a device in May 1940<ref name=Lindenblad_patent>
+{{Cite patent|US|2300052}}</ref> which was
+remarkably similar to Kompfner's TWT.<ref name=Gilmour_book>{{Cite book
+| publisher = Artech House
+| isbn = 0890067201 9780890067208
+| last = Gilmour
+| first = A. S.
+| title = Principles of traveling wave tubes
+| location = Boston
+| series = Artech House radar library
+| date = 1994
+}}</ref>{{rp|2}}
+Kompfner invented the TWT in a British radar lab during [[World War II]].
+His first sketch of a TWT is dated November 12, 1942, and he
+built the first TWT in early 1943.<ref name=Gilmour_book />{{rp|3}}
+<ref name=Kompfner_book>{{cite book
+  | last = Kompfner
+  | first = Rudolf
+  | authorlink = Rudolf Kompfner
+  | title = The Invention of the Traveling-Wave Tube
+  | publisher = San Francisco Press
+  | year = 1964
+}}</ref>
+The TWT was refined by Kompfner<ref name=Kompfner_book />
+and [[John Robinson Pierce|John Pierce]]<ref name=Pierce_book>{{cite book
+  | last = Pierce
+  | first = John R.
+  | authorlink = John Robinson Pierce
+  | title = Traveling-Wave Tubes
+  | publisher = D. van Nostrand Co.
+  | year = 1950
+}}</ref>
+at [[Bell Labs]].
+
+By the sixties TWTs were produced by such companies as the [[English Electric Valve Company]], followed by [[Ferranti]] in the seventies<ref>*[http://www.firedirect.net/Profiles/0802_e2v/0802_001.htm Fire Direct Website] accessed 2 July 2008*[http://www.albacom.co.uk/web/site/def_products/def_micro.asp TWT - Travelling Wave Tubes], Alabcomwebsite accessed 8 july 2008*[http://www.r-type.org/static/twta.htm Travelling Wave Tube Amplifiers] accessed 8 July 2008</ref>.
+
+On July 10, 1962, the first communications satellite, [[Telstar|Telstar 1]], was
+launched with a 2 W, 4 GHz RCA-designed TWT transponder used for transmitting RF signals back to the earth.
+[[Syncom|Syncom 2]], the first synchronous satellite (Syncom 1 did not reach its final orbit), launched on July 26,
+1963 with two 2 W, 1850 MHz Hughes-designed TWT transponders (one active and one spare).<ref name="ZimmermanITM">{{cite web 
+|url= http://www.americanheritage.com/articles/magazine/it/2000/2/2000_2_10.shtml 
+|title= TELSTAR 
+|author= Robert Zimmerman 
+|work= [[Invention and Technology Magazine|Invention & Technology Magazine]] 
+|publisher= [[American Heritage (magazine)|American Heritage]] 
+|date= Fall 2000 Volume 16, Issue 2 
+|accessdate= 2008-07-02 }}</ref><ref name=Pond_book>{{Cite book
+| publisher = Russ Cochran
+| isbn = 978-0-9816923-0-2
+| last = Pond, Norman H.
+| title = The Tube Guys
+| location = West Plains, Missouri
+| date = 2008
+| url = http://www.russcochran.com/publishing/thetubeguys/
+}}</ref>{{rp|328}}.
+
+==Coupled-cavity TWT==
+
+Helix TWTs are limited in peak RF power by the current handling (and therefore thickness) of the helix wire. As power level increases, the wire can overheat and cause the helix geometry to warp. Wire thickness can be increased to improve matters, but if the wire is too thick it becomes impossible to obtain the required [[helix|helix pitch]] for proper operation. Typically helix TWTs achieve less than 2.5&nbsp;kW output power.
+
+The '''coupled-cavity TWT''' overcomes this limit by replacing the helix with a series of coupled cavities arranged axially along the beam. Conceptually, this structure provides a helical [[waveguide]] and hence amplification can occur via velocity modulation. Helical waveguides have very nonlinear dispersion and thus are only narrowband (but wider than [[klystron]]). A coupled-cavity TWT can achieve 60&nbsp;kW output power.
+
+Operation is similar to that of a [[klystron]], except that coupled-cavity TWTs are designed with attenuation between the slow-wave structure instead of a drift tube. The slow-wave structure gives the TWT its wide bandwidth. A [[free electron laser]] allows higher frequencies.
+
+==Traveling-wave tube amplifier==
+
+A TWT integrated with a regulated [[power supply]] and protection circuits is referred to as a traveling-wave tube amplifier<ref>{{cite book | title = Vsats: Very Small Aperture Terminals | author = John Everett | publisher = IET | year = 1992 | isbn = 0863412009 | url = http://books.google.com/books?id=MWuXmf4V4NwC&pg=PA65&dq=twta+power-supply+protection+control&lr=&as_brr=0&ei=KmiMR5uEKozitQPomLHQBQ&sig=D15Vi396wr6gRWzB1o3JtBiUF1I#PPA64,M1 }}</ref> (abbreviated '''TWTA''' and often pronounced "TWEET-uh").  It is used to produce high-power [[radio frequency]] signals.  The bandwidth of a broadband TWTA can be as high as one [[octave]], although tuned (narrowband) versions exist; operating frequencies range from 300&nbsp;MHz to 50&nbsp;GHz.
+
+A TWTA consists of a traveling-wave tube coupled with its protection circuits (as in [[klystron]]) and regulated [[power supply]] (EPC, [[electronic power conditioner]]), which may be supplied and integrated by a different manufacturer. The main difference between most power supplies and those for vacuum tubes is that efficient vacuum tubes have depressed collectors to recycle kinetic energy of the electrons and therefore the secondary winding of the power supply needs up to 6 taps of which the helix voltage needs precise regulation. The subsequent addition of a [[linearizer]] (as for [[inductive output tube]]) can, by complementary compensation, improve the [[gain compression]] and other characteristics of the TWTA; this combination is called a linearized TWTA (LTWTA, "EL-tweet-uh").
+
+Broadband TWTAs generally use a helix TWT, and achieve less than 2.5&nbsp;kW output power. TWTAs using a coupled cavity TWT can achieve 15&nbsp;kW output power, but at the expense of bandwidth.
+
+==Uses==
+
+TWTAs are commonly used as amplifiers in [[satellite]] [[transponders]], where the input signal is very weak and the output needs to be high power.<ref>{{cite book | title = Satellite Communications | author = Dennis Roddy | publisher = McGraw-Hill Professional | year = 2006 | isbn = 0071462988 | url = http://books.google.com/books?id=2KEt_hFyjwgC&pg=PA374&dq=twta&lr=&as_brr=0&ei=sGSMR4aGJovUsgOd-J3QBQ&sig=ke5M82C-Y32_MVDtufLwcjOijas#PPA375,M1 }}</ref>
+
+A TWTA whose output drives an [[antenna (radio)|antenna]] is a type of [[transmitter]]. TWTA transmitters are used extensively in [[radar]], particularly in airborne fire-control radar systems, and in [[electronic warfare]] and self-protection systems.<ref>{{cite book | title = Microwave Tube Transmitters | author = L. Sivan | publisher = Springer | year = 1994 | isbn = 0412579502 | url = http://books.google.com/books?id=o2o1R7I8rvEC&pg=PA20&dq=twta-transmitter&lr=&as_brr=0&ei=rmWMR-iNMobuswPAjZnQBQ&sig=esPHAaN0vD7w-2vxXxCbXJI0u7o#PPA20,M1 }}</ref> In these types of applications, a control grid is typically introduced between the TWT's electron gun and slow-wave structure to allow pulsed operation. The circuit that drives the control grid is usually referred to as a grid [[modulator]].
+
+Another major use of TWTAs is for the [[electromagnetic compatibility]] (EMC) testing industry for immunity testing of electronic devices.{{Fact|date=January 2008}}
+
+==Historical notes==
+
+A TWT has sometimes been referred to as a "traveling-wave amplifier tube" (TWAT),<ref>[http://www.fas.org/news/reference/lexicon/act.htm Military Acronyms, Initialisms, and Abbreviations] on [http://www.fas.org Federation of American Scientists] web site</ref> although this term was never widely adopted.  "TWT" has been pronounced by engineers as "twit",<ref>{{cite book | title = Understanding Radar | author = Henry W. Cole | publisher = Collins | year = 1985 | url = http://books.google.com/books?id=sRFTAAAAMAAJ&q=twt+twit&dq=twt+twit&lr=&as_brr=0&ei=IAUOSL7zJYP6sQPLksSTBg&pgis=1 }}</ref> and "TWTA" as "tweeta".<ref>{{cite book | title = Dictionary of Space Technology | author = Mark Williamson | publisher = A. Hilger | year = 1990 | isbn = 0852743394 | url = http://books.google.com/books?id=3Y9TAAAAMAAJ&q=tweeta+twta&dq=tweeta+twta&lr=&as_brr=0&ei=6B56SKbnB4PcswO9sJjPCQ&pgis=1 }}</ref>
+
+==See also==
+
+*[[Distributed amplifier]]
+
+Other types of microwave power tubes include:
+
+*[[Magnetron]]
+*[[Klystron tube|Klystron]]
+*[[Crossed-field amplifier]]
+*[[Backward wave oscillator]]
+
+==References==
+
+{{reflist}}
+
+==External links==
+
+* [http://www.ieeeghn.org/wiki/index.php/John_Pierce Memorial page], with photo of John Pierce holding a TWT
+* [http://www.geocities.com/bioelectrochemistry/nyquist.htm Nyquist page], with photo of Pierce, Kompfner, and Nyquist in front of TWT calculations on blackboard
+* [http://www.tmd.co.uk/products/microwave_tubes/index.asp TMD Travelling Wave Tubes], Information & PDF data sheets.
+* [http://www.l-3com.com/edd/products_traveling_wave_tube.htm Flash animation showing the operation of a traveling wave tube (TWT) and its internal construction]
+
+[[Category:Vacuum tubes]]
+[[Category:Valve amplifiers]]
+[[Category:Microwave technology]]
+[[Category:Electronic warfare]]
+
+[[de:Wanderfeldr<U+00F6>hre]]
+[[fr:Tube <U+00E0> ondes progressives]]
+[[it:Travelling wave tube]]
+[[la:TWT]]
+[[lv:Skrejvi<U+013C><U+0146>a lampa]]
+[[nl:Lopende-golfbuis]]
+[[ru:<U+041B><U+0430><U+043C><U+043F><U+0430> <U+0431><U+0435><U+0433><U+0443><U+0449><U+0435><U+0439> <U+0432><U+043E><U+043B><U+043D><U+044B>]]
+[[fi:Kulkuaaltoputki]]

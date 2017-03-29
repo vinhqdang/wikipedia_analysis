@@ -1,0 +1,216 @@
+{{Multiple issues|
+{{Refimprove|date=May 2009}}
+{{Cleanup|date=August 2007}}
+{{Tone|date=December 2007}}
+}}
+
+[[File:Logarithmic Scales.svg|thumb|400px|Various scales: [[Lin-lin graph|lin-lin]], [[Lin-log graph|lin-log]], [[Log-lin graph|log-lin]], and [[Log-log graph|log-log]]. Plotted graphs are: ''y''&nbsp;=&nbsp;10<sup>&nbsp;''x''</sup> (<span style="color:red;">red</span>), ''y''&nbsp;=&nbsp;''x'' (<span style="color:green;">green</span>), ''y''&nbsp;=&nbsp;log<sub>''e''</sub>(''x'') (<span style="color:blue;">blue</span>).]]
+
+A '''logarithmic scale''' is a [[scale (measurement)|scale of measurement]] that displays the value of a [[physical quantity]] using intervals corresponding to orders of magnitude, rather than a standard linear scale.
+
+A simple example is a chart whose vertical or horizontal axis has equally spaced increments that are labeled 1, 10, 100, 1000, instead of 0, 1, 2, 3. Each unit increase on the logarithmic scale thus represents an [[Exponentiation|exponential]] increase in the underlying quantity for the given base (10, in this case).
+
+Presentation of data on a logarithmic scale can be helpful when the data covers a large range of values. The use of the logarithms of the values rather than the actual values reduces a wide range to a more manageable size. Some of our [[sense]]s operate in a logarithmic fashion ([[Weber<U+2013>Fechner law]]), which makes logarithmic scales for these input quantities especially appropriate. In particular our sense of [[hearing (sense)|hearing]] perceives equal ratios of frequencies as equal differences in pitch.  In addition, studies of young children in an isolated tribe have shown logarithmic scales to be the most natural display of numbers by humans.<ref>{{cite web|url=http://www.sciencedaily.com/releases/2008/05/080529141344.htm|title=Slide Rule Sense: Amazonian Indigenous Culture Demonstrates Universal Mapping Of Number Onto Space
+|date=2008-05-30|publisher=ScienceDaily|accessdate=2008-05-31}} <br />'''which references:''' {{cite journal|last=Stanislas|first=Dehaene|coauthors=V<U+00E9>ronique Izard, [[Elizabeth Spelke]], and [[Pierre Pica]].|year=2008|title=Log or linear? Distinct intuitions of the number scale in Western and Amazonian indigene cultures|journal=Science|volume=320|issue=5880|doi=10.1126/science.1156540|pmid=18511690|pmc=2610411|pages=1217<U+2013>20}}</ref>
+
+==Definition and base==
+Logarithmic scales are either defined for ''ratios'' of the underlying quantity, or one has to agree to measure the quantity in fixed units. Deviating from these units means that the logarithmic measure will change by an ''additive'' constant. The base of the logarithm also has to be specified, unless the scale's value is considered to be a dimensional quantity expressed in generic (indefinite-base) logarithmic units.
+
+==Example scales==
+On most logarithmic scales, ''small'' values (or ratios) of the underlying quantity correspond to ''negative'' values of the logarithmic measure. Well-known examples of such scales are:
+* [[Richter magnitude scale]] and [[moment magnitude scale]] (MMS) for strength of [[earthquakes]] and [[Motion (physics)|movement]] in the [[earth]].
+* [[Ban (information)|ban and deciban]], for information or weight of evidence;
+* [[decibel|bel and decibel]] and [[neper]] for acoustic power (loudness) and electric power;
+* [[Cent (music)|cent]], [[minor second]], [[major second]], and [[octave]] for the relative pitch of notes in [[music]];
+* [[logit]] for [[odds]] in [[statistics]];
+* [[Palermo Technical Impact Hazard Scale]];
+* [[Logarithmic timeline]];
+* counting [[f-stop]]s for ratios of [[photographic exposure]];
+* rating low [[probabilities]] by the number of 'nines' in the decimal expansion of the probability of their not happening: for example, a system which will fail with a probability of 10<sup><U+2212>5</sup> is 99.999% reliable: "five nines".
+* [[Entropy]] in [[thermodynamics]].
+* [[Information]] in [[information theory]].
+* Particle Size Distribution curves of soil
+
+Some logarithmic scales were designed such that ''large'' values (or ratios) of the underlying quantity correspond to ''small''  values of the logarithmic measure. Examples of such scales are:
+* [[pH]] for acidity and alkalinity;
+* [[Apparent magnitude|stellar magnitude scale]] for brightness of [[star]]s;
+* [[Krumbein scale]] for [[Particle size (grain size)|particle size]] in [[geology]].
+* [[Absorbance]] of light by transparent samples.
+
+==Logarithmic units==
+Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a [[logarithm]] function.  In this article, a given logarithmic unit will be denoted using the notation [log&nbsp;''n''], where ''n'' is a positive real number, and [log&nbsp;] here denotes the [[indefinite logarithm]] function Log().
+
+===Examples===
+Examples of logarithmic units include common units of [[information]] and [[entropy]], such as the ''[[bit]]'' [log&nbsp;2] and the ''[[byte]]'' 8[log&nbsp;2] = [log&nbsp;256], also the ''[[nat (information)|nat]]'' [log&nbsp;e] and the ''[[ban (information)|ban]]'' [log&nbsp;10]; units of relative signal strength magnitude such as the ''[[decibel]]'' 0.1[log&nbsp;10] and ''bel'' [log&nbsp;10], ''[[neper]]'' [log&nbsp;e], and other logarithmic-scale units such as the [[Richter scale]] point [log&nbsp;10] or (more generally) the corresponding order-of-magnitude unit sometimes referred to as a ''factor of ten'' or ''[[Decade (log scale)|decade]]'' (here meaning [log&nbsp;10], not 10 years).
+
+===Motivation===
+The motivation behind the concept of logarithmic units is that defining a quantity on a logarithmic scale in terms of a logarithm to a specific base amounts to making a (totally arbitrary) choice of a unit of measurement for that quantity, one that corresponds to the specific (and equally arbitrary) logarithm base that was selected.  Due to the identity
+
+: <math>\log_b a = \frac{\log_c a}{\log_c b},</math>
+
+the logarithms of any given number ''a'' to two different bases (here ''b'' and ''c'') differ only by the constant factor log<sub>''c''</sub>&nbsp;''b''.  This constant factor can be considered to represent the conversion factor for converting a numerical representation of the pure (indefinite) logarithmic quantity Log(''a'') from one arbitrary unit of measurement (the [log&nbsp;''c''] unit) to another (the [log&nbsp;''b''] unit), since
+
+: <math> \mathrm{Log}(a) = (\log_b a)[\log b] = (\log_c a)[\log c]. \, </math>
+
+For example, [[Boltzmann]]'s standard definition of entropy ''S'' = ''k''&nbsp;ln&nbsp;''W'' (where ''W'' is the number of ways of arranging a system and ''k'' is [[Boltzmann constant|Boltzmann's constant]]) can also written more simply as just ''S''&nbsp;=&nbsp;Log(''W''), where "Log" here denotes the [[indefinite logarithm]], and we let ''k''&nbsp;=&nbsp;[log&nbsp;e]; that is, we identify the physical entropy unit ''k'' with the mathematical unit [log&nbsp;e].  This identity works because
+
+: <math>\ln W = \log_e W = \frac{\mathrm{Log}(W)}{\log e}.</math>
+
+Thus, we can interpret Boltzmann's constant as being simply the expression (in terms of more standard physical units) of the abstract logarithmic unit [log&nbsp;e] that is needed to convert the dimensionless pure-number quantity ln&nbsp;''W'' (which uses an arbitrary choice of base, namely e) to the more fundamental pure logarithmic quantity Log(''W''), which implies no particular choice of base, and thus no particular choice of physical unit for measuring entropy.
+
+==Graphic representation==<!-- This section is linked from [[Order of magnitude]] -->
+[[File:COB data Tsunami deaths.PNG|right|thumb|400px|A log scale makes it easy to compare values which cover a large range, such as in this map]]
+
+A logarithmic scale is also a graphical scale on one or both sides of a graph where a number ''x'' is printed at a distance ''c''<U+00B7>log(''x'')  from the point marked with the number 1. A [[slide rule]] has logarithmic scales, and [[nomogram]]s often employ logarithmic scales. On a logarithmic scale an equal difference in [[order of magnitude]] is represented by an equal distance. The [[geometric mean]] of two numbers is midway between the numbers.
+
+'''Logarithmic [[graph paper]]''', before the advent of computer graphics, was a basic scientific tool. Plots on paper with one log scale can show up [[exponential law]]s, and on log-log paper [[power law]]s, as straight lines (see [[semi-log graph]], [[log-log graph]]).
+
+===Comparing the scales===
+[[File:Comparison of the sequence 1 to 10 and their logs to the base 10.png|thumb|Comparison of the sequence 1 to 10 and their logs to the base 10]]A plot of ''x'' v. log<sub>10</sub>(''x''). Note two things: first, log(''x'') increases quickly at first: by ''x'' = 3, log(''x'') is almost at .5; it is useful to remember that sqrt(10) ~ 3. Second, log(''x'') grows ever more slowly as ''x'' approaches 10; this shows how logarithms can be used to 'tame' large numbers.
+
+=={{anchor|Logarithmic plots}}Logarithmic and semi-logarithmic plots and equations of lines==
+Log and semilog scales are best used to view two types of equations (for ease, the natural base 'e' is used):
+
+: <math> (1)\quad Y = \exp(-aX) </math>
+: <math> (2)\quad Y = X^b. </math>
+
+In the first case, plotting the equation on a semilog scale (log&nbsp;''Y'' versus ''X'') gives: log&nbsp;''Y''&nbsp;=&nbsp;&minus;''aX'', which is linear.<br />
+In the second case, plotting the equation on a log-log scale (log&nbsp;''Y'' versus log&nbsp;''X'') gives: log&nbsp;''Y''&nbsp;=&nbsp;''b''&nbsp;log&nbsp;''X'', which is linear.<br />
+When values that span large ranges need to be plotted, a logarithmic scale can provide a means of viewing the data that allows the values to be determined from the graph.  '''The logarithmic scale is marked off in distances proportional to the logarithms of the values being represented.''' For example, in the figure below, for both plots, y has the values of: 1, 2, 3, 4, 5, 6, 7, 8, 9 10, 20, 30, 40, 50, 60, 70, 80, 90 and 100.  For the plot on the left, the log<sub>10</sub> of the values of ''y'' are plotted on a linear scale.  Thus the first value is log<sub>10</sub>(1) = 0; the second value is log<sub>10</sub>(2) = 0.301; the 3rd value is log<sub>10</sub>(3) = 0.4771; the 4th value is log<sub>10</sub>(4) = 0.602, and so on.  The plot on the right uses logarithmic (or log, as it is also referred to) scaling on the vertical axis. Note that values where the exponent term is close to an integral fraction of 10 (0.1, 0.2, 0.3, etc.) are shown as 10 raised to the power that yields the original value of y.  These are shown for ''y'' = 2, 4, 8, 10, 20, 40, 80 and 100.
+{{-}}
+[[File:SemiLogPlotDescription.GIF|frame|left|Plots of the log (base 10) of values of ''y'' (see text) on a linear scale (left plot) and of values of ''y'' on a log scale (right plot).]]
+{{-}}
+Note that for ''y'' = 2 and 20, ''y'' = 10<sup>0.301</sup> and 10<sup>1.301</sup>; for ''y'' = 4 and 40, ''y'' = 10<sup>0.602</sup> and 10<sup>1.602</sup>.  This is due to the law that
+
+: <math> \log(AB) = \log(A) + \log(B).\,</math>
+
+So, knowing log<sub>10</sub>(2) = 0.301, the rest can be derived:
+
+: <math> \log_{10} (4) = \log_{10} (2 \times 2) = \log_{10}(2) + \log_{10}(2) = 0.602 </math>
+
+: <math> \log_{10} (20) = \log_{10}(2 \times 10) = \log_{10} (2) + \log_{10}(10) = 1.301. </math>
+
+Note that the values of ''y'' are easily picked off the above figure.  By comparison, values of ''y'' less than 10 are difficult to determine from the figure below, where they are plotted on a linear scale, thus confirming the earlier assertion that values spanning large ranges are more easily read from a logarithmically scaled graph.
+{{-}}
+[[File:LargeSpanLinearPlot.GIF|frame|left|Plot of the values of ''y'' (see text) on a linear scale.]]
+{{-}}
+
+===Log-log plots===
+[[File:LogLogPlot of Line.GIF|right|thumb|200px|Plot on log-log scale of equation ''F''(''x'') = (''x''<sup>&minus;10</sup> )(10<sup>20</sup>), which can be expressed as the line: log(''F''(''x'')) = -10&nbsp;log(''x'')&nbsp;+&nbsp;20.]]
+
+If both the vertical and horizontal axis of a plot is scaled logarithmically, the plot is referred to as a log-log plot.
+{{main|log-log graph}}
+
+===Semi logarithmic plots===
+If only the [[ordinate]] or [[abscissa]] is scaled logarithmically, the plot is referred to as a semi logarithmic plot.
+
+{{main|semi-log graph}}
+
+==Estimating values in a diagram with logarithmic scale==
+One method for accurate determination of values on a logarithmic axis is as follows:
+
+# Measure the distance from the point on the scale to the closest decade line with lower value with a ruler.
+# Divide this distance by the length of a decade (the length between two decade lines).
+# The value of your chosen point is now the value of the nearest decade line with lower value times 10<sup>''a''</sup> where ''a'' is the value found in step 2.
+
+Example: What is the value that lies halfway between the 10 and 100 decades on a logarithmic axis?  Since it is the halfway point that is of interest, the quotient of steps 1 and 2 is 0.5.  The nearest decade line with lower value is 10, so the halfway point's value is (10<sup>0.5</sup>)&nbsp;&times;&nbsp;10&nbsp;=&nbsp;10<sup>1.5</sup>&nbsp;<U+2248>&nbsp;31.62.
+
+To estimate where a value lies within a decade on a logarithmic axis, use the following method:
+
+# Measure the distance between consecutive decades with a ruler.  You can use any units provided that you are consistent.
+# Take the log (value of interest/nearest lower value decade) multiplied by the number determined in step one.
+# Using the same units as in step 1, count as many units as resulted from step 2, starting at the lower decade.
+
+Example: To determine where 17 is located on a logarithmic axis, first use a ruler to measure the distance between 10 and 100.  If the measurement is 30mm on a ruler (it can vary &mdash; ensure that the same scale is used throughout the rest of the process).
+
+: [log (17/10)] &times; 30 = 6.9
+
+''x'' = 17 is then 6.9mm after ''x'' = 10 (along the ''x''-axis).
+
+===Logarithmic interpolation===
+Interpolating logarithmic values is very similar to interpolating linear values.  In linear interpolation, values are determined through equal ratios.  For example, in linear interpolation, a line that increases one ordinate (y-value) for every two abscissa (x-value) has a ratio (also known as slope or rise-over-run) of 1/2.  To determine the ordinate or abscissa of a particular point, you must know the other value.  The calculation of the ordinate corresponding to an abscissa of 12 in the example below is as follows:
+
+: 1/2 = ''Y''/12
+
+''Y'' is the unknown ordinate.  Using cross-multiplication, ''Y'' can be calculated and is equal to&nbsp;6.
+
+In logarithmic interpolation, a ratio of logarithmic values is set equal to a ratio of linear values.  For example, consider a log base 10 scale graph of paper reams sold per day measuring 19{{fraction|1|32}} inches from 1 to 10.  How many reams were sold in a day if the value on the graph is 11{{fraction|1|32}} between 1 and 10?  To solve this problem, it is necessary to use a basic logarithmic definition:
+
+: log(''A'') <U+2212> log(''B'') = log(''A''/''B'')
+
+Decade lines, those values that denote powers of the log base, are also important in logarithmic interpolation.  Locate the lower decade line.  It is the closest decade line to the number you are evaluating that is lower than that number.  Decade lines begin at 1.  The next decade line is the first power of your log base.  For log base 10, the first decade line is 1, the second is 10, the third is 100, and so on.
+
+The ratio of linear values is the number of units from the lower decade line to the value of interest (11{{fraction|1|32}} in this example, since the lower decade line in this example is 1) divided by the total number of units between the lower decade line and the upper decade line (the upper decade line is 10 in this example).  Therefore, the linear ratio is:
+
+:11/19
+
+Notice that the units (1/32 inch) are removed from the equation because both measurements are in the same units.  Conversion to a single unit before calculating the ratio is required if the measurements were made in different units.
+
+The logarithmic ratio uses the same graphical measurements as the linear ratio.  The difference between the log of the upper decade line (10) and the log of the lower decade line (1) represents the same graphical distance as the total number of units between the two decade lines in the linear ratio (19{{fraction|1|32}}nds of an inch).  Therefore, the lower part of the logarithmic ratio (the bottom part of the fraction) is:
+
+:log(10) <U+2212> log(1)
+
+The upper part of the logarithmic ratio (the top part of the fraction) represents the same graphical distance as the number of units between the value of interest (number of reams of paper sold) and the lower decade line in linear ratio (11{{fraction|1|32}}nds of an inch).  The unknown in this ratio is the value of interest, which we will call&nbsp;''X''.  Therefore, the top part of the fraction is:
+
+:log(''X'') <U+2212> log(1)
+
+The logarithmic ratio is:
+
+:[log(X) <U+2212> log(1)]/[log(10) <U+2212> log(1)]
+
+The linear ratio is equal to the logarithmic ratio.  Therefore, the equation required to determine the number of paper reams sold in a particular day is:
+
+:11/19 = [log(X) <U+2212> log(1)]/[log(10) <U+2212> log(1)]
+
+This equation can be rewritten using the logarithmic definition mentioned above:
+
+:11/19 = log(X/1)/log(10)
+
+log(10) = 1, therefore:
+
+:11/19 = log(''X''/1)
+
+To remove the "log" from the right side of the equation, both sides must be used as exponents for the number 10, meaning 10 to the power of 11/19 and 10 to the power of log(''X''/1).  The "log" function and the "10 to the power of" function are reciprocal and cancel each other out, leaving:
+
+:10<sup>11/19</sup> = ''X''/1
+
+Now both sides must be multiplied by 1.  While the 1 drops out of this equation, it is important to note that the number ''X'' is divided by is the value of the lower decade line.  If this example involved values between 10 and 100, the equation would include ''X''/10 instead of&nbsp;''X''/1.
+
+:10<sup>11/19</sup> = ''X''
+
+''X'' = 3.793 reams of paper.
+
+== See also ==
+{{Portal|Mathematics}}
+* [[Entropy]]
+* [[Logarithm]]
+* [[Preferred number]]
+
+===Units of information===
+* [[ban (information)|ban]] [log&nbsp;10]
+* [[bit]] [log&nbsp;2]
+* [[byte]] 8[log&nbsp;2] = [log&nbsp;256]
+* [[nat (information)|nat]] [log&nbsp;e]
+
+===Units of relative signal strength===
+* [[bel]] [log&nbsp;10]
+* [[decibel]] 0.1[log&nbsp;10]
+* [[neper]] [log&nbsp;e]
+
+===Scale===
+* [[Decade (log scale)|Decade]]
+* [[Order of magnitude]]
+
+===Applications===
+* [[optical density]] [log&nbsp;10]
+
+==References==
+{{Reflist}}
+
+==External links==
+* {{en icon}} [http://legeneraliste.perso.sfr.fr/?p=echelle_log_eng Why using logarithmic scale to display share prices?]
+* {{Commonscat-inline}}
+* [http://www.peregraph.com/documents/graphpaper Example Logarithmic Graph Paper Template]
+
+{{DEFAULTSORT:Logarithmic Scale}}
+[[Category:Logarithmic scales of measurement]]

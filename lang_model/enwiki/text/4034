@@ -1,0 +1,121 @@
+A '''classical field theory''' is a [[physical theory]] that describes the study of how one or more [[field (physics)|physical fields]] interact with matter. The word 'classical' is used in contrast to those field theories that incorporate quantum mechanics ([[quantum field theory|quantum field theories]]).
+
+A physical field can be thought of as the assignment of a [[physical quantity]] at each point of [[space]] and [[time]] (usually in a continuous manner). For example, on weather forecasts, the wind velocity during a day over a country is described by assigning a vector at each point of space (with moving arrows representing the change in wind velocity during the day). The term 'classical field theory' is commonly reserved for describing those physical theories that describe [[electromagnetism]] and [[gravitation]], two of the [[fundamental force]]s of nature.
+
+Descriptions of physical fields were given before the advent of [[relativity theory]] and then revised in light of this theory. Consequently, classical field theories are usually categorised as ''non-relativistic'' and ''relativistic''. 
+
+== Non-relativistic field theories ==
+
+Some of the simplest physical fields are vector force fields. Historically, the first time fields were taken seriously was with [[Faraday|Faraday's]] [[lines of force]] when describing the [[electric field]]. The [[gravitational field]] was then similarly described.
+
+===Newtonian gravitation===
+
+A classical field theory describing gravity was [[gravity|Newtonian gravitation]], which describes the gravitational force as a mutual interaction between two [[mass]]es.
+
+In a gravitational field, a [[test particle]] of gravitational mass m experiences a force, F. The [[gravitational field strength]] is then defined by g=F/m, where it is required that the test mass, m, is so small that its presence effectively does not disturb the gravitational field. [[Newton's law of gravitation]] says that two masses separated by a distance, r, experience a force
+
+:<math>\vec{F}=-\frac{Gm_1m_2}{r^2}\vec{r}</math>
+
+Using [[Newton's 2nd law]] (for constant inertial mass), F=ma leads to a definition of the gravitational field strength due to a mass m as
+
+:<math>\vec{g}=-G\frac{m}{r^2}\vec{r}.</math>
+
+The experimental observation that inertial mass and gravitational mass are equal to [[equivalence principle#Tests_of_the_weak_equivalence_principle|unprecedented levels of accuracy]] leads to the identification of the gravitational field strength as identical to the acceleration experienced by a particle. This is the starting point of the [[equivalence principle]], which leads to [[general relativity]].
+
+=== Electrostatics ===
+{{Main|Electrostatics}}
+A [[test charge|charged test particle]], charge q, experiences a force, F, based solely on its charge. We can similarly describe the [[electric field]], E, so that F=qE. Using this and [[Coulomb's law]] tells us that, we define the electric field due to a single charged particle as
+
+:<math>\vec{E}=\frac{1}{4\pi\epsilon_0}\frac{q}{r^2}\vec{r}.</math>
+
+===Magnetism===
+{{Main|Magnetism}}
+===Hydrodynamics===
+{{Main|Hydrodynamics}}
+
+== Relativistic field theory ==
+{{main|Covariant classical field theory}}
+
+Modern formulations of classical field theories generally require [[Lorentz covariance]] as this is now recognised as a fundamental aspect of nature. A field theory tends to be expressed mathematically by using [[Lagrangian]]s. This is a function that, when subjected to an [[action principle]], gives rise to the [[field equations]] and a [[conservation law]] for the theory.
+
+We use units where c=1 throughout.
+
+=== Lagrangian dynamics ===
+{{main|Lagrangian}}
+
+Given a field tensor <math>\phi</math>, a scalar called the [[Lagrangian|Lagrangian density]] <math>\mathcal{L}(\phi,\partial\phi,\partial\partial\phi, ...,x)</math> can be constructed from <math>\phi</math> and its derivatives.
+
+From this density, the functional action can be constructed by integrating over spacetime
+
+:<math>\mathcal{S} [\phi] = \int{\mathcal{L} [\phi (x)]\, \mathrm{d}^4x}.</math>
+
+Then by enforcing the [[Action (physics)|action principle]], the Euler-Lagrange equations are obtained
+
+:<math>\frac{\delta \mathcal{S}}{\delta\phi}=\frac{\partial\mathcal{L}}{\partial\phi}-\partial_\mu  \left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\right)=0.</math>
+
+== Relativistic fields ==
+
+Two of the most well-known Lorentz covariant classical field theories are now described.
+
+=== Electromagnetism ===
+{{main|Electromagnetic field|Electromagnetism}}
+Historically, the first (classical) field theories were those describing the electric and magnetic fields (separately). After numerous experiments, it was found that these two fields were related, or, in fact, two aspects of the same field: the [[electromagnetic field]].  [[Maxwell]]'s theory of [[electromagnetism]] describes the interaction of charged matter with the electromagnetic field. The first formulation of this field theory used vector fields to describe the [[electric]] and [[magnetic]] fields. With the advent of special relativity, a better (and more consistent with mechanics) formulation using [[tensor]] fields was found. Instead of using two vector fields describing the electric and magnetic fields, a tensor field representing these two fields together is used.
+
+We have the [[electromagnetic potential]], <math>A_a=\left(-\phi, \vec{A} \right)</math>, and the [[four-current|electromagnetic four-current]] <math>j_a=\left(-\rho, \vec{j}\right)</math>. The electromagnetic field at any point in spacetime is described by the antisymmetric (0,2)-rank [[electromagnetic field tensor]]
+
+:<math>F_{ab} = \partial_a A_b - \partial_b A_a.</math>
+
+==== The Lagrangian ====
+
+To obtain the dynamics for this field, we try and construct a scalar from the field. In the vacuum, we have <math>\mathcal{L} = \frac{-1}{4\mu_0}F^{ab}F_{ab}.</math> We can use [[gauge field theory]] to get the interaction term, and this gives us 
+
+:<math>\mathcal{L} = \frac{-1}{4\mu_0}F^{ab}F_{ab} + j^aA_a.</math>
+
+==== The Equations ====
+
+This, coupled with the Euler-Lagrange equations, gives us the desired result, since the E-L equations say that
+
+:<math>\partial_b\left(\frac{\partial\mathcal{L}}{\partial\left(\partial_b A_a\right)}\right)=\frac{\partial\mathcal{L}}{\partial A_a}.</math>
+
+After some enlightening algebra, this yields
+
+:<math>\partial_b F^{ab}=\mu_0j^a.</math>
+
+This gives us a vector equation, which are [[Maxwell's equations]] in vacuum. The other two are obtained from the fact that F is the 4-curl of A:
+
+:<math>6F_{[ab,c]} \, = F_{ab,c} + F_{ca,b} + F_{bc,a} = 0.  </math> 
+
+where the comma indicates a [[partial derivative]].
+
+===Gravitation===
+{{main|Gravitation|General Relativity}}
+Newtonian gravitation being found to be inconsistent with [[special relativity]], a new theory of gravitation called [[general relativity]] was formulated by [[Albert Einstein]]. This treats [[gravitation]] as a geometric phenomena ('curved [[spacetime]]') caused by masses and the [[gravitational field]] is represented mathematically by a [[tensor field]] called the [[metric tensor (general relativity)|metric tensor]]. The [[Einstein field equations]] describe how this curvature is produced. The field equations may be derived by using the [[Einstein-Hilbert action]]. The Lagrangian 
+
+:<math>\mathcal{L} = \, R \sqrt{-g}</math>
+
+where <math>R \, =R_{ab}g^{ab}</math> is the [[Ricci scalar]] written in terms of the [[Ricci tensor]] <math>\, R_{ab}</math> and the [[metric tensor (general relativity)|metric tensor]] <math>\, g_{ab}</math>, will yield the vacuum EFE:
+
+:<math>G_{ab}\, =0</math>
+
+where <math>G_{ab} \, =R_{ab}-\frac{R}{2}g_{ab}</math> is the [[Einstein tensor]].
+
+==See also==
+*[[Covariant classical field theory]]
+*[[Electromagnetism]]
+*[[Field (physics)]]
+*[[General relativity]]
+*[[Quantum field theory]]
+*[[Variational methods in general relativity]]
+
+==External links==
+*{{cite web | author=Thid<U+00E9>, Bo | title=Electromagnetic Field Theory | url=http://www.plasma.uu.se/CED/Book/EMFT_Book.pdf | accessmonthday=February 14 | accessyear=2006}}
+*{{cite web | author=Carroll, Sean M | title=Lecture Notes on General Relativity | url=http://www.arxiv.org/PS_cache/gr-qc/pdf/9712/9712019.pdf| accessmonthday=February 14 | accessyear=2006 }}
+*{{cite web| author=Binney, Prof. James J | title=Lecture Notes on Classical Fields | url=http://www-thphys.physics.ox.ac.uk/user/JamesBinney/classf.pdf| accessmonthday=April 30 | accessyear=2007 }}
+
+[[Category:Theoretical physics]]
+[[Category:Lagrangian mechanics]]
+
+[[es:Teor<U+00ED>a cl<U+00E1>sica de campos]]
+[[ja:<U+5834><U+306E><U+53E4><U+5178><U+8AD6>]]
+[[pl:Teoria pola (fizyka)]]
+[[zh:<U+7ECF><U+5178><U+573A><U+8BBA>]]

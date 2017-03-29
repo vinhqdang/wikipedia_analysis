@@ -1,0 +1,518 @@
+In [[mathematics]], more specifically in [[functional analysis]], a '''Banach space''' (pronounced {{IPA-pl|<U+02C8>banax|}}) is a [[complete metric space|complete]] [[normed vector space]]. Informally, a Banach space is a vector space with a [[metric (mathematics)|metric]] that allows the computation of vector length and distance between vectors and is complete in the sense that a [[Cauchy sequence]] of vectors always converges to a well defined limit in the space.
+
+Banach spaces are named after the Polish mathematician [[Stefan Banach]], who introduced and made a systematic study of them in 1920<U+2013>1922 along with [[Hans Hahn (mathematician)|Hans Hahn]] and [[Eduard Helly]].<ref>{{harvnb|Bourbaki|1987|loc=V.86}}<!--From French edition.  Please check the "Historical Note" in the English edition.--></ref> Banach spaces originally grew out of the study of function spaces by Hilbert, Fr<U+00E9>chet, and Riesz earlier in the century. Banach spaces play a central role in functional analysis. In other areas of [[analysis (mathematics)|analysis]], the spaces under study are often Banach spaces.
+
+== Definition ==
+A Banach space is a [[vector space]] ''X'' over the field '''R''' of real numbers, or over the field '''C''' of complex numbers, which is equipped with a [[norm (mathematics)|norm]] and which is [[complete metric space|complete]] with respect to that norm, that is to say, for every [[Cauchy sequence]] <math>\left\{x_n\right\}^{\infty}_{n=1}</math> in ''X'', there exists an element ''x'' in ''X'' such that 
+:<math>\lim_{n\to\infty}x_n=x, \ \ \mathit{i.e.,} \ \ \lim_{n\to\infty} \|x_n - x\|_X = 0.</math>.
+
+The vector space structure allows one to relate the behavior of Cauchy sequences to that of converging [[Series (mathematics)#Generalizations|series of vectors]]. A normed space ''X'' is a Banach space if and only if each [[Series (mathematics)|absolutely convergent]] series in ''X'' converges,<ref>see Theorem&nbsp;1.3.9, p.&nbsp;20 in {{harvtxt|Megginson|1998}}.</ref> 
+:<math> \sum_{n=1}^{\infty} \|v_n\|_X < \infty \quad \text{implies that} \quad \sum_{n=1}^{\infty} v_n\ \ \text{converges in} \ \ X.</math>
+
+Completeness of a normed space is preserved if the given norm is replaced by an [[Norm (mathematics)#Definition|equivalent]] one.
+
+All norms on a finite dimensional vector space are equivalent. Every finite-dimensional normed space is a Banach space.<ref>see Corollary&nbsp;1.4.18, p.&nbsp;32 in {{harvtxt|Megginson|1998}}.</ref>
+
+== General theory ==
+
+=== Linear operators, isomorphisms ===
+<!-- This section is linked from [[Operator]] -->
+{{main|Bounded operator}}
+If ''X'' and ''Y'' are normed spaces over the same [[ground field]] '''K''', the set of all [[continuous function (topology)|continuous]] [[linear transformation|'''K'''-linear maps]] ''T'' : ''X'' <U+2192> ''Y''  is denoted by {{nowrap|''B''(''X'', ''Y'')}}. In infinite-dimensional spaces, not all linear maps are continuous.  A linear mapping from a normed space ''X'' to another normed space is continuous if and only if it is [[bounded operator|bounded]] on the closed [[Unit sphere|unit ball]] of ''X''.  Thus, the vector space {{nowrap|''B''(''X'', ''Y'')}} can be given the [[operator norm]]
+:<math>\|T\| = \sup\{\|Tx\|_Y \mid x\in X,\ \|x\|_X\le 1\}.</math>
+When ''Y'' a Banach space, the space {{nowrap|''B''(''X'', ''Y'')}} is a Banach space with respect to this norm.
+
+If ''X'' is a Banach space, the space ''B''(''X'')&nbsp;= {{nowrap|''B''(''X'', ''X'')}} forms a unital [[Banach algebra]]; the multiplication operation is given by the composition of linear maps.
+
+If ''X'' and ''Y'' are normed spaces, they are '''isomorphic normed spaces''' if there exists a linear bijection ''T'' from ''X'' onto ''Y'' such that ''T'' and its inverse {{nowrap|''T''&thinsp;<sup><U+2212>1</sup>}} are continuous. If one of the two spaces ''X'' or ''Y'' is complete (or [[Reflexive space|reflexive]], [[Separable space|separable]], etc.) then so is the other space. Two normed spaces ''X'' and ''Y'' are '''isometrically isomorphic''' if in addition, ''T'' is an [[isometry]], ''i.e.'', ||''T''(''x'')|| = ||''x''|| for every ''x'' in&nbsp;''X''. The [[Banach-Mazur distance]] ''d''(''X'',&nbsp;''Y'') between two isomorphic but not isometric spaces ''X'' and ''Y'' gives a measure of how much the two spaces ''X'' and ''Y'' differ.
+
+=== Basic notions ===
+Every normed space ''X'' can be isometrically embedded in a Banach space. More precisely, there is a Banach space&nbsp;''Y'' and an [[Isometry|isometric mapping]] {{nowrap|''T'' : ''X'' <U+2192> ''Y''}} such that ''T''(''X'') is dense in ''Y''. If ''Z'' is another Banach space such that there is an isometric isomorphism from ''X'' onto a dense subset of ''Z'', then ''Z'' is isometrically isomorphic to&nbsp;''Y''.
+
+This Banach space ''Y'' is the [[Complete metric space#completion|'''completion''']] of the normed space ''X''. The underlying metric space for ''Y'' is the same as the metric completion of ''X'', with the vector space operations extended from ''X'' to ''Y''. The completion of ''X'' is often denoted by <math>\widehat X</math>.
+
+The cartesian product ''X''&times;''Y'' of two normed spaces is not canonically equipped with a norm. However, several equivalent norms are commonly used,<ref>see {{harvtxt|Banach|1932}}, p.&nbsp;182.</ref> such as
+:<math> \|(x, y)\|_1 = \|x\| + \|y\|, \ \ \ \|(x, y)\|_\infty = \max (\|x\|, \|y\|) </math>
+and give rise to isomorphic normed spaces. In this sense, the product ''X''&times;''Y'' (or the direct sum {{nowrap|''X'' <U+2295> ''Y''}}) is complete if and only if the two factors are complete.
+
+If ''M'' is a closed subspace of a normed space ''X'', there is a natural norm on the '''quotient space''' {{nowrap|''X''&thinsp;/&thinsp;''M''}},
+:<math> \| x + M\| = \inf\limits_{m \in M} \|x+m\|. </math>
+The quotient {{nowrap|''X''&thinsp;/&thinsp;''M''}} is a Banach space when ''X'' is complete.<ref name="Caro17">see pp.&nbsp;17&ndash;19 in {{harvtxt|Carothers|2005}}.</ref> 
+The '''quotient map''' from ''X'' onto {{nowrap|''X''&thinsp;/&thinsp;''M''}}, sending ''x'' in ''X'' to its class ''x''+''M'', is linear, onto and has norm&nbsp;1, except when {{nowrap|''M'' {{=}} ''X''}}, in which case the quotient is the null space.
+
+The closed linear subspace ''M'' of ''X'' is said to be a '''complemented subspace''' of ''X'' if ''M'' is the [[Range (mathematics)|range]] of a bounded linear [[Projection (linear algebra)|projection]] ''P'' from ''X'' onto ''M''.  In this case, the space ''X'' is isomorphic to the direct sum of ''M'' and {{nowrap| ker&thinsp;''P''}}, the kernel of the projection&nbsp;''P''.
+
+Suppose that ''X'' and ''Y'' are Banach spaces and that ''T'' <U+2208> ''B''(''X'', ''Y''). There exists a '''canonical factorization''' of ''T'' as<ref name="Caro17" />
+:<math> T = T_1 \circ \pi, \ \ \ T : X \ \overset{\pi}{\longrightarrow}\  X / \operatorname{Ker}(T) \ \overset{T_1}{\longrightarrow} \ Y </math>
+where the first map &pi; is the quotient map, and the second map ''T''<sub>1</sub> sends every class {{nowrap|''x'' + Ker(''T'')}} in the quotient to the image ''T''(''x'') in ''Y''. This is well defined because all elements in the same class have the same image. The mapping ''T''<sub>1</sub> is a linear bijection from {{nowrap|''X''&thinsp;/&thinsp;Ker ''T''}} onto the range ''T''(''X''), whose inverse need not be bounded.
+
+=== Classical spaces ===
+Basic examples<ref>see {{harvtxt|Banach|1932}}, pp.&nbsp;11-12.</ref> of Banach spaces include the [[Lp space|''L<sup>p</sup>'' spaces]] and their special cases, the [[sequence spaces]] <U+2113><sup>''p''</sup>;
+the space ''C''(''K'') of continuous scalar functions on a compact Hausdorff space ''K'', equipped with the max norm,
+:<math> \|f\|_{C(K)} = \max \{ |f(x)| : x \in K \}, \quad f \in C(K). </math>
+According to the [[Banach-Mazur theorem|Banach&ndash;Mazur theorem]], every Banach space is isometrically isomorphic to a subspace of some ''C''(''K'').<ref>see {{harvtxt|Banach|1932}}, Th.&nbsp;9 p.&nbsp;185.</ref> For every separable Banach space ''X'', there is a closed subspace ''M'' of <U+2113><sup>1</sup> such that {{nowrap|''X'' <U+2245> <U+2113><sup>1</sup>/''M''}}.<ref>see Theorem&nbsp;6.1, p.&nbsp;55 in {{harvtxt|Carothers|2005}}</ref>
+
+A most important example of Banach space is that of a [[Hilbert space]]. A Hilbert space ''H'' on '''K''' = '''R''' or '''C''' is complete for a norm of the form
+:<math> \|x\|_H = \sqrt{\langle x, x \rangle}, \ \ \text{where} \ \ (x, y) \in H \times H \to \langle x, y \rangle</math>
+is the [[Inner product space|inner product]], a '''K'''-valued function on {{nowrap|''H'' <U+00D7> ''H''}}, linear in ''x'' and such that 
+:<math>\langle y, x \rangle = \overline{\langle x, y \rangle}, \ \ \langle x, x \rangle \ge 0, \ \ \text{for all}\ \ x, y \in H.</math>
+The space ''L''<sup>2</sup> is a fundamental example of Hilbert space.
+
+The [[Hardy space]]s, the [[Sobolev space]]s are examples of Banach spaces that are related to ''L<sup>p</sup>'' spaces and have additional structure. They are important in different branches of analysis, [[Harmonic analysis]] and [[Partial differential equation]]s among others.
+
+A '''[[Banach algebra]]''' is a Banach space ''A'' over {{nowrap|'''K''' {{=}} '''R'''}} or&nbsp;'''C''', together with a structure of [[Algebra over a field|algebra over '''K''']], such that the product map {{nowrap|(''a'', ''b'') &isin; A &times; A &rarr;}} {{nowrap|''a''&thinsp;''b'' &isin; ''A''}} is continuous. An equivalent norm on ''A'' can be found so that {{nowrap|<U+01C1>''a&thinsp;b''<U+01C1> &le; <U+01C1>''a''<U+01C1>&thinsp;<U+01C1>''b''<U+01C1>}} for all ''a'', ''b'' in ''A''. The Banach space ''C''(''K''), with the pointwise product, is a Banach algebra. The '''[[disk algebra]]''' ''A''(''D'') consists of functions [[Holomorphic function|holomorphic]] in the open unit disk ''D'' in the complex plane and continuous on the [[Closure (topology)|closure]] of ''D''. Equipped with the max norm on the closure of ''D'', the disk algebra ''A''(''D'') is a closed subalgebra of <math>C(\overline D)</math>.  The [[Wiener algebra]] ''A''('''T''') is the algebra of functions on the unit circle '''T''' with absolutely convergent Fourier series. Via the map associating a function on '''T''' to the sequence of its Fourier coefficients, this algebra is isomorphic to the Banach algebra <U+2113><sup>1</sup>('''Z'''), where the product is the [[convolution#Discrete convolution|convolution]] of sequences. For every Banach space&nbsp;''X'', the space ''B''(''X'') of bounded linear operators on ''X'', with the composition of maps as product, is a Banach algebra. 
+
+A [[C*-algebra]] is a complex Banach algebra ''A'' with an [[antilinear map|antilinear]] [[Involution (mathematics)|involution]] {{nowrap|''a'' &rarr; ''a''*}} such that {{nowrap|<U+01C1>''a*a''<U+01C1> {{=}} <U+01C1>''a''<U+01C1><sup>2</sup>}}. The space ''B''(''H'') of bounded linear operators on a Hilbert space ''H'' is a fundamental example of ''C''*-algebra. The [[Gelfand<U+2013>Naimark theorem]] states that every ''C''*-algebra is isometrically isomorphic to a ''C''*-subalgebra of some ''B''(''H''). The space ''C''(''K'') of complex continuous functions on a compact Hausdorff space ''K'' is an example of commutative ''C''*-algebra, where the involution associates to every function ''f'' its [[complex conjugate]] <math>\overline f</math>.
+
+=== Dual space ===
+{{main|Dual space}}
+If ''X'' is a normed space and '''K''' the underlying [[field (mathematics)|field]] (either the [[real number|real]] or the [[complex number|complex]] numbers), the [[dual space#Continuous dual space|'''continuous dual space''']] is the space of continuous linear maps from ''X'' into '''K''', or '''continuous linear functionals'''.  The notation for the continuous dual is {{nowrap|''X''&thinsp;<U+2032>}} = ''B''(''X'', '''K''') in this article.<ref>Several books about functional analysis use the notation ''X''* for the continuous dual, for example {{harvtxt|Carothers|2005}}, {{harvtxt|Lindenstrauss|Tzafriri|1977}}, {{harvtxt|Megginson|1998}}, {{harvtxt|Ryan|2002}}, {{harvtxt|Wojtaszczyk|1991}}.</ref> 
+Since '''K''' is a Banach space (using the [[absolute value]] as norm), the dual {{nowrap|''X''&thinsp;<U+2032>}} is a Banach space, for every normed space&nbsp;''X''. 
+
+The main tool for proving the existence of continuous linear functionals is the [[Hahn<U+2013>Banach theorem]].
+
+<blockquote>'''Hahn<U+2013>Banach Theorem.''' Let ''X'' be a [[vector space]] over the field '''K''' = '''R''' or '''K''' = '''C'''. Let further
+* ''Y'' <U+2286> ''X'' be a [[linear subspace]],
+* ''p'' : ''X'' <U+2192> '''R''' be a [[sublinear function]] and
+* ''f'' : ''Y'' <U+2192> '''K''' be a [[linear functional]] so that Re ''f''(''y'') <U+2264> ''p''(''y'') for all ''y'' in ''Y''.
+Then, there exists a linear functional ''F'' : ''X'' <U+2192> '''K''' so that
+:<math>F|_Y=f, \ \ \text{and} \ \ \forall x\in X, \ \ \operatorname{Re}(F(x))\leq p(x). </math>
+In particular, every continuous linear functional on a subspace of a normed space can be continuously extended to the whole space, without increasing the norm of the functional.<ref>Theorem&nbsp;1.9.6, p.&nbsp;75 in {{harvtxt|Megginson|1998}}</ref></blockquote>
+
+The [[Hahn-Banach theorem#Hahn<U+2013>Banach separation theorem|Hahn&ndash;Banach separation theorem]] states that two disjoint non-empty [[convex set]]s in a real Banach space, one of them open, can be separated by a closed [[Affine space|affine]] [[hyperplane]]. The open convex set lies strictly on one side of the hyperplane, the second convex set lies on the other side but may touch the hyperplane.<ref>see also Theorem&nbsp;2.2.26, p.&nbsp;179 in {{harvtxt|Megginson|1998}}</ref>
+
+A subset ''S'' in a Banach space ''X'' is '''total''' if the [[linear span]] of ''S'' is [[Dense set|dense]] in ''X''.  The subset ''S'' is total in&nbsp;''X'' if and only if the only continuous linear functional that vanishes on&nbsp;''S'' is the '''0''' functional: this equivalence follows from the Hahn&ndash;Banach theorem.
+
+If ''X'' is the direct sum of two closed linear subspaces ''M'' and ''N'', then the dual {{nowrap|''X''&thinsp;<U+2032>}} of ''X'' is isomorphic to the direct sum of the duals of  ''M'' and ''N''.<ref name="Caro19">see p.&nbsp;19 in {{harvtxt|Carothers|2005}}.</ref>
+If ''M'' is a closed linear subspace in ''X'', one can associate the ''orthogonal of'' ''M'' in the dual,
+:<math>M^\perp = \{ x' \in X' : x'(m) = 0, \ \forall m \in M \}.</math>
+The orthogonal ''M''<sup>&perp;</sup> is a closed linear subspace of the dual. The dual of ''M'' is isometrically isomorphic to {{nowrap|''X''&thinsp;<U+2032>&thinsp;/&thinsp;''M''<sup>&perp;</sup>}}. The dual of {{nowrap|''X''&thinsp;/&thinsp;''M''}} is isometrically isomorphic to ''M''<sup>&perp;</sup>.<ref>Theorems&nbsp;1.10.16, 1.10.17 pp.94&ndash;95 in {{harvtxt|Megginson|1998}}</ref>
+
+The dual of a separable Banach space need not be separable, but:
+
+:'''Theorem.'''<ref>Theorem&nbsp;1.12.11, p.&nbsp;112 in {{harvtxt|Megginson|1998}}</ref> Let ''X'' be a normed space. If {{nowrap|''X''&thinsp;<U+2032>}} is [[Separable space|separable]], then ''X'' is separable.
+
+When {{nowrap|''X''&thinsp;<U+2032>}} is separable, the above criterion for totality can be used for proving the existence of a countable total subset in&nbsp;''X''.
+
+==== Weak topologies ====
+The '''[[weak topology]]''' on a Banach space ''X'' is the [[Comparison of topologies|coarsest topology]] on ''X'' for which all elements {{nowrap|''x''&thinsp;<U+2032>}} in the continuous dual space&nbsp;{{nowrap|''X''&thinsp;<U+2032>}} are continuous.  The norm topology is therefore [[Comparison of topologies|finer]] than the weak topology.  It follows from the Hahn&ndash;Banach separation theorem that the weak topology is [[Hausdorff space|Hausdorff]], and that a norm-closed [[Convex set|convex subset]] of a Banach space is also weakly closed.<ref>Theorem&nbsp;2.5.16, p.&nbsp;216 in {{harvtxt|Megginson|1998}}.</ref> 
+A norm-continuous linear map between two Banach spaces ''X'' and&nbsp;''Y'' is also '''weakly continuous''', ''i.e.'', continuous from the weak topology of&nbsp;''X'' to that of&nbsp;''Y''.<ref>see II.A.8, p.&nbsp;29 in  {{harvtxt|Wojtaszczyk|1991}}</ref>
+
+If ''X'' is infinite-dimensional, there exist linear maps which are not continuous.  The space ''X*'' of all linear maps from&nbsp;''X'' to the underlying field&nbsp;'''K''' (this space ''X*'' is called the [[Dual space#Algebraic dual space|algebraic dual space]], to distinguish it from  {{nowrap|''X''&thinsp;<U+2032>}}) also induces a topology on&nbsp;''X'' which is [[finer topology|finer]] than the weak topology, and much less used in functional analysis.
+
+On a dual space {{nowrap|''X''&thinsp;<U+2032>}}, there is a topology weaker than the weak topology of {{nowrap|''X''&thinsp;<U+2032>}}, called [[weak topology|'''weak* topology''']]. It is the coarsest topology on {{nowrap|''X''&thinsp;<U+2032>}} for which all evaluation maps {{nowrap|''x''<U+2032>&thinsp;<U+2208>&thinsp;''X''&thinsp;<U+2032> <U+2192>}} ''x''<U+2032>(''x''), {{nowrap|''x''&thinsp;&isin;&thinsp;''X''}}, are continuous. Its importance comes from the [[Banach<U+2013>Alaoglu theorem]].
+
+<blockquote> '''Banach<U+2013>Alaoglu Theorem.''' Let ''X'' be a [[normed vector space]]. Then the [[closed set|closed]] [[ball (mathematics)|unit ball]] {{nowrap|''B''&thinsp;<U+2032> {{=}} {''x''<U+2032> <U+2208> ''X''&thinsp;<U+2032> {{!}} <U+01C1>''x''<U+2032>&thinsp;<U+01C1> <U+2264> 1} }} of the dual space is [[compact space|compact]] in the weak* topology.</blockquote>
+
+The Banach<U+2013>Alaoglu theorem depends on [[Tychonoff's theorem]] about infinite products of compact spaces. When&nbsp;''X'' is separable, the unit ball&nbsp;{{nowrap|''B''&thinsp;<U+2032>}} of the dual is a [[Metrization theorem|metrizable]] compact in the weak* topology.<ref>see Theorem&nbsp;2.6.23, p.&nbsp;231 in {{harvtxt|Megginson|1998}}.</ref>
+
+==== Examples of dual spaces ====
+The dual of ''c''<sub>0</sub> is isometrically isomorphic to <U+2113><sup>1</sup>. The dual of [[Lp space#Properties of Lp spaces|''L''<sup>''p''</sup>([0,&nbsp;1])]] is isometrically isomorphic to ''L''<sup>''q''</sup>([0,&nbsp;1]) when 1&nbsp;&le; ''p''&nbsp;< <U+221E> and 1/''p'' + 1/''q'' = 1. 
+
+For every vector ''y'' in a Hilbert space ''H'', the mapping 
+:<math>x \in H \to f_y(x) = \langle x, y \rangle</math> 
+defines a continuous linear functional {{nowrap|''f''<sub>&thinsp;''y''</sub>}} on ''H''. The [[Riesz representation theorem]] states that every continuous linear functional on&nbsp;''H'' is of the form {{nowrap|''f''<sub>&thinsp;''y''</sub>}} for a uniquely defined vector ''y'' in ''H''. The mapping {{nowrap|''y'' <U+2208> ''H'' <U+2192> ''f''<sub>&thinsp;''y''</sub>}} is an [[Antilinear map|antilinear]] isometric bijection from ''H'' onto its dual {{nowrap|''H''&thinsp;<U+2032>}}. When the scalars are real, this map is an isometric isomorphism.
+
+When ''K'' is a compact Hausdorff topological space, the dual ''M''(''K'') of ''C''(''K'') is the space of [[Radon measure]]s in the sense of Bourbaki.<ref>see N. Bourbaki, (2004), "Integration I", Springer Verlag, ISBN 3-540-41129-1.</ref> The subset ''P''(''K'') of ''M''(''K'') consisting of non-negative measures of mass 1 ([[probability measure]]s) is a convex w*-closed subset of the unit ball of ''M''(''K''). The [[extreme point]]s of ''P''(''K'') are the [[Dirac measure]]s on ''K''. The set of Dirac measures on ''K'', equipped with the w*-topology, is [[Homeomorphism|homeomorphic]] to ''K''.
+
+<blockquote>[[Banach-Stone theorem|'''Banach-Stone Theorem.''']] If ''K'' and ''L'' are  compact Hausdorff spaces and if ''C''(''K'') and ''C''(''L'') are isometrically isomorphic, then the topological spaces ''K'' and ''L'' are [[homeomorphic]].<ref name= Eilenberg /><ref>see also {{harvtxt|Banach|1932}}, p.&nbsp;170 for metrizable ''K'' and ''L''.</ref></blockquote>
+
+The result has been extended by Amir<ref>see D. Amir, "On isomorphisms of continuous function spaces". Israel J. Math. '''3''' (1965), 205<U+2013>210.</ref> and Cambern<ref>M. Cambern, "A generalized Banach-Stone theorem". Proc. Amer. Math. Soc. '''17''' (1966), 396<U+2013>400, and "On isomorphisms with small bound". Proc. Amer. Math. Soc. '''18''' (1967), 1062<U+2013>1066.</ref> to the case when the multiplicative [[Banach-Mazur compactum|Banach&ndash;Mazur distance]] between ''C''(''K'') and ''C''(''L'') is <&nbsp;2. The theorem is no longer true when the distance is equal to&nbsp;2.<ref>H. B. Cohen, "A bound-two isomorphism between ''C''(''X'') Banach spaces". Proc. Amer. Math. Soc. '''50''' (1975), 215<U+2013>217.</ref>
+
+In the commutative [[Banach algebra]] ''C''(''K''), the [[Banach algebra#Ideals and characters|maximal ideals]] are precisely kernels of Dirac mesures on ''K'',
+:<math>I_x = \ker \delta_x = \{f \in C(K) : f(x) = 0\}, \ \ x \in K.</math>
+
+More generally, by the [[Gelfand-Mazur theorem]], the maximal ideals of a unital commutative Banach algebra can be identified with its [[Banach algebra#Ideals and characters|characters]]---not merely as sets but as topological spaces: the former with the [[hull-kernel topology]] and the latter with the w*-topology. In this identification, the maximal ideal space can be viewed as a w*-compact subset of the unit ball in the dual {{nowrap|''A''&thinsp;<U+2032>}}.   
+
+<blockquote>'''Theorem.''' If ''K'' is a compact Hausdorff space, then the maximal ideal space <U+039E> of the Banach algebra ''C''(''K'') is [[homeomorphic]] to&nbsp;''K''.<ref name=Eilenberg>{{cite journal|last=Eilenberg|first=Samuel|title=Banach Space Methods in Topology|journal=Annals of Mathematics|date=Jan 22, 1942 |year=1942 |volume=43 |issue=3 |page=568 |accessdate=03/02/2013}}</ref></blockquote>
+
+Not every unital commutative Banach algebra is of the form ''C''(''K'') for some compact Hausdorff space ''K''. However, this statement holds if one places ''C''(''K'') in the smaller category of commutative [[C*-algebra]]s. [[Israel Gelfand|Gelfand's]] [[Gelfand representation|representation theorem]] for commutative C*-algebras states that every commutative unital ''C''*-algebra ''A'' is isometrically isomorphic to a ''C''(''K'') space.<ref>see for example W. Arveson, (1976), "An Invitation to C*-Algebra", Springer-Verlag, ISBN 0-387-90176-0.</ref> The Hausdorff compact space ''K'' here is again the maximal ideal space, also called the [[Spectrum of a C*-algebra#Examples|spectrum]] of ''A'' in the C*-algebra context.
+
+=== Banach's theorems ===
+Here are the main general results about Banach spaces that go back to the time of Banach's book ({{harvtxt|Banach|1932}} and are related to the [[Baire category theorem]]. According to this theorem, a complete metric space (such as a Banach space, a [[Fr<U+00E9>chet space]] or an [[F-space]]) cannot be equal to a union of countably many closed subsets with empty [[Interior (topology)|interiors]]. Therefore, a Banach space cannot be the union of countably many closed subspaces, unless it is already equal to one of them; a Banach space with a countable [[Hamel basis]] is finite-dimensional.
+
+<blockquote>'''[[Uniform boundedness principle|Banach&ndash;Steinhaus Theorem.]]''' Let ''X'' be a Banach space and ''Y'' be a [[normed vector space]]. Suppose that ''F'' is a collection of continuous linear operators from ''X'' to  ''Y''. The uniform boundedness principle states that if for all ''x'' in ''X'' we have <math>\sup_{T \in F} \|T (x)\|_Y  < \infty </math>, then <math>\ \sup_{T \in F} \|T\|  < \infty. </math></blockquote>
+The Banach&ndash;Steinhaus theorem is not limited to Banach spaces. It can be extended for example to the case where ''X'' is a [[Fr<U+00E9>chet space]], provided the conclusion is modified as follows: under the same hypothesis, there exists a neighborhood ''U'' of 0 in ''X'' such that all ''T'' in ''F'' are uniformly bounded on ''U'',
+:<math>\sup_{T \in F} \sup_{x \in U} \; \|T(x)\|_Y < \infty.</math>
+
+<blockquote>'''[[Open mapping theorem (functional analysis)|The Open Mapping Theorem.]]''' Let ''X'' and ''Y'' be Banach spaces and ''T'' : ''X'' <U+2192> ''Y'' be a continuous linear operator. Then ''T'' is surjective if and only if ''T'' is an open map.</blockquote>
+
+<blockquote>'''Corollary.''' Every one-to-one bounded linear operator from a Banach space onto a Banach space is an isomorphism.</blockquote>
+
+<blockquote>'''The First Isomorphism Theorem for Banach spaces.''' Suppose that ''X'' and ''Y'' are Banach spaces and that {{nowrap|''T'' <U+2208>}} {{nowrap|''B''(''X'', ''Y'')}}. Suppose further that the range of ''T'' is closed in ''Y''. Then {{nowrap|''X''&thinsp;/&thinsp;Ker(''T'')}} is isomorphic to ''T''(''X'').</blockquote>
+
+This result is a direct consequence of the preceding ''Banach isomorphism theorem'' and of the canonical factorization of bounded linear maps. 
+
+<blockquote>'''Corollary.''' If a Banach space ''X'' is the internal direct sum of closed subspaces ''M''<sub>1</sub>, ..., ''M<sub>n</sub>'', then ''X'' is isomorphic to {{nowrap|''M''<sub>1</sub> <U+2295> ... <U+2295> ''M<sub>n</sub>''}}.</blockquote>
+
+This is another consequence of Banach's isomorphism theorem, applied to the continuous bijection from {{nowrap|''M''<sub>1</sub> <U+2295> ... <U+2295> ''M<sub>n</sub>''}}
+onto ''X'' sending {{nowrap|(''m''<sub>1</sub>, ... , ''m<sub>n</sub>'')}} to the sum {{nowrap|''m''<sub>1</sub> + ... + ''m<sub>n</sub>''}}.
+
+<blockquote>'''[[Closed graph theorem|The Closed Graph Theorem.]]''' Let ''T'' : ''X'' <U+2192> ''Y'' be a linear mapping between Banach spaces. The graph of ''T'' is closed in {{nowrap|''X'' <U+00D7> ''Y''}} if and only if ''T'' is continuous.</blockquote>
+
+=== Reflexivity ===
+{{main|Reflexive space}}
+For every normed space ''X'', there is a natural map {{nowrap|''F'' : ''X'' <U+2192> ''X''&thinsp;<U+2032><U+2032>}} (the dual of the dual = '''bidual''')  defined by
+
+:''F''(''x'')(''f'') = ''f''(''x'') for all ''x'' in ''X'' and ''f'' in {{nowrap|''X''&thinsp;<U+2032>}}.
+
+Because ''F''(''x'') is a continuous linear functional on {{nowrap|''X''&thinsp;<U+2032>}}, it is an element of {{nowrap|''X''&thinsp;<U+2032><U+2032>}}.  The map ''F'' : ''x'' <U+2192> ''F''(''x'') is thus a map ''X'' <U+2192>  {{nowrap|''X''&thinsp;<U+2032><U+2032>}}. As a consequence of the [[Hahn<U+2013>Banach theorem]], this map is [[injective]] and isometric. If ''F'' is also [[surjective]], then the normed space ''X'' is called [[reflexive space|'''reflexive''']].  Since the dual of a normed space is complete, every reflexive normed space is a Banach space.
+
+<blockquote> '''Theorem.''' If ''X'' is a reflexive Banach space, every closed subspace of ''X'' and every quotient space of ''X'' are reflexive.</blockquote>
+
+This is a consequence of the Hahn&ndash;Banach theorem. Further, by the open mapping theorem, if there is a bounded linear operator from the Banach space ''X'' onto the Banach space ''Y'', then ''Y'' is reflexive.
+
+<blockquote>'''Theorem.''' If ''X'' is a Banach space, then ''X'' is reflexive if and only if {{nowrap|''X''&thinsp;<U+2032>}} is reflexive.</blockquote>
+
+<blockquote>'''Corollary.''' Let ''X'' be a reflexive Banach space. Then ''X'' is [[Separable space|separable]] if and only if {{nowrap|''X''&thinsp;<U+2032>}} is separable.</blockquote>
+
+Indeed,  if the dual {{nowrap|''Y''&thinsp;<U+2032>}} of a Banach space ''Y'' is separable, then ''Y'' is separable. If ''X'' is reflexive and separable, then the dual of {{nowrap|''X''&thinsp;<U+2032>}} is separable, so {{nowrap|''X''&thinsp;<U+2032>}} is separable.
+
+<blockquote>'''Theorem.''' Suppose that ''X''<sub>1</sub>, ..., ''X<sub>n</sub>'' are normed spaces and that ''X'' = ''X''<sub>1</sub> <U+2295> ... <U+2295> ''X<sub>n</sub>''. Then ''X'' is reflexive if and only if each ''X<sub>j</sub>'' is reflexive.</blockquote>
+
+Hilbert spaces are reflexive. The ''L''<sup>''p''</sup> spaces are reflexive when {{nowrap|1 < ''p'' < <U+221E>}}. More generally, [[uniformly convex space]]s are reflexive, by the [[Milman&ndash;Pettis theorem]]. The spaces ''c''<sub>0</sub>, <U+2113><sup>1</sup>, ''L''<sup>1</sup>([0,&nbsp;1]), ''C''([0,&nbsp;1]) are not reflexive. In these examples of non-reflexive spaces&nbsp;''X'', the bidual {{nowrap|''X''&thinsp;<U+2032><U+2032>}} is "much larger" than ''X''. Namely, under the natural isometric embedding of ''X'' into {{nowrap|''X''&thinsp;<U+2032><U+2032>}} given by the Hahn&ndash;Banach theorem, the quotient {{nowrap|''X''&thinsp;<U+2032><U+2032>&thinsp;/&thinsp;''X''}} is infinite dimensional, and even nonseparable. However, Robert C. James has constructed an example<ref>{{cite journal
+ | author = R. C. James
+ | title = A non-reflexive Banach space isometric with its second conjugate space
+ | journal = Proc. Natl. Acad. Sci. U.S.A. 
+ | volume = 37
+ | pages = 174<U+2013>177
+ | year = 1951 }}
+</ref> 
+of a non-reflexive space, usually called "''the James space''" and denoted by ''J'',<ref>see {{harvtxt|Lindenstrauss|Tzafriri|1977}}, p.&nbsp;25.</ref> 
+such that the quotient {{nowrap|''J''&thinsp;<U+2032><U+2032>&thinsp;/&thinsp;''J''}} is one dimensional. Furthermore, this space ''J'' is isometrically isomorphic to its bidual.
+
+<blockquote>'''Theorem.''' A Banach space ''X'' is reflexive if and only if its unit ball is [[compact space|compact]] in the [[weak topology]].</blockquote>
+
+When ''X'' is reflexive, it follows that all closed and bounded [[Convex set|convex subsets]] of ''X'' are weakly compact. In a Hilbert space ''H'', the weak compactness of the unit ball is very often used in the following way: every bounded sequence in ''H'' has weakly convergent subsequences.
+
+Weak compactness of the unit ball provides a tool for finding solutions in reflexive spaces to certain [[Infinite-dimensional optimization|optimization problems]]. For example, every [[Convex function|convex]] continuous function on the unit ball ''B'' of a reflexive space attains its minimum at some point in ''B''.
+
+As a special case of the preceding result, when ''X'' is a reflexive space over '''R''', every continuous linear functional ''f'' in {{nowrap|''X''&thinsp;<U+2032>}} attains its maximum {{nowrap|<U+01C1>''f&thinsp;''<U+01C1>}} on the unit ball of ''X''. The following [[James' theorem|theorem of Robert C. James]] provides a converse statement.
+
+<blockquote>'''James' Theorem.''' For a Banach space the following two properties are equivalent:
+* ''X'' is reflexive.
+* for all ''f'' in {{nowrap|''X''&thinsp;<U+2032>}} there exists ''x'' in ''X'' with <U+01C1>''x''<U+01C1> <U+2264> 1, so that {{nowrap|''f''&thinsp;(''x'') {{=}}}} {{nowrap|<U+01C1>''f&thinsp;''<U+01C1>.}}</blockquote>
+The theorem can be extended to give a characterization of weakly compact convex sets. 
+
+On every non-reflexive Banach space ''X'', there exist continuous linear functionals that are not ''norm-attaining''. However, the [[Errett Bishop|Bishop]]&ndash;[[Robert Phelps|Phelps]] theorem<ref>see E. Bishop and R. Phelps, "A proof that every Banach space is subreflexive". Bull. Amer. Math. Soc. '''67''' (1961), 97<U+2013>98.</ref> states that norm-attaining functionals are norm dense in the dual {{nowrap|''X''&thinsp;<U+2032>}} of ''X''.
+
+=== Weak convergences of sequences ===
+A sequence {{nowrap| {''x''<sub>''n''&thinsp;</sub>} }} in a Banach space ''X'' is '''weakly convergent''' to a vector {{nowrap| ''x'' &isin; ''X'' }} if {{nowrap|''f''&thinsp;(''x''<sub>''n''</sub>)}} converges to {{nowrap|''f''&thinsp;(''x'')}} for every continuous linear functional ''f'' in the dual&nbsp;{{nowrap|''X''&thinsp;<U+2032>}}.  The sequence {{nowrap| {''x''<sub>''n''&thinsp;</sub>} }} is a '''weakly Cauchy sequence''' if {{nowrap|''f''&thinsp;(''x''<sub>''n''</sub>)}} converges to a scalar limit&nbsp;{{nowrap|''L''(''f''&thinsp;)}}, for every ''f'' in&nbsp;{{nowrap|''X''&thinsp;<U+2032>}}.  A sequence {{nowrap| {''f''<sub>''n''&thinsp;</sub>} }} in the dual&nbsp;{{nowrap|''X''&thinsp;<U+2032>}} is '''weakly* convergent''' to a functional {{nowrap| ''f'' &isin; ''X''&thinsp;<U+2032> }} if {{nowrap|''f''<sub>''n''&thinsp;</sub>(''x'')}} converges to {{nowrap|''f''&thinsp;(''x'')}} for every ''x'' in&nbsp;''X''.   Weakly Cauchy sequences, weakly convergent and weakly* convergent sequences are norm bounded, as a consequence of the [[Uniform boundedness principle|Banach&ndash;Steinhaus]] theorem.
+
+When the sequence {{nowrap| {''x''<sub>''n''&thinsp;</sub>} }} in ''X'' is a weakly Cauchy sequence, the limit ''L'' above defines a bounded linear functional on the dual {{nowrap|''X''&thinsp;<U+2032>}}, ''i.e.'', an element ''L'' of the bidual of&nbsp;''X''.  The Banach space ''X'' is '''weakly sequentially complete''' if every weakly Cauchy sequence is weakly convergent in&nbsp;''X''.  It follows from the preceding discussion that reflexive spaces are weakly sequentially complete.
+
+'''Theorem.'''
+<ref>see III.C.14, p.&nbsp;140 in {{harvtxt|Wojtaszczyk|1991}}.</ref>
+For every measure &mu;, the space ''L''<sup>1</sup>(&mu;) is weakly sequentially complete.
+
+An orthonormal sequence in a Hilbert space is a simple example of a weakly convergent sequence, with limit equal to the&nbsp;'''0'''&nbsp;vector.  The [[Schauder basis#Examples|unit vector basis]] of <U+2113><sup>''p''</sup>, {{nowrap| 1 &lt; ''p'' &lt; &infin;}}, or of ''c''<sub>0</sub>, is another example of a '''weakly null sequence''', ''i.e.'', a sequence that converges weakly to '''0'''.  For every weakly null sequence in a Banach space, there exists a sequence of convex combinations of vectors from the given sequence that is norm-converging to&nbsp;'''0'''.<ref>see Corollary&nbsp;2, p.&nbsp;11 in {{harvtxt|Diestel|1984}}.</ref>  
+
+The unit vector basis of <U+2113><sup>1</sup> is not weakly Cauchy.  Weakly Cauchy sequences in <U+2113><sup>1</sup> are weakly convergent, since ''L''<sup>1</sup>-spaces are weakly sequentially complete.  Actually, weakly convergent sequences in <U+2113><sup>1</sup> are norm convergent.<ref>see p.&nbsp;85 in {{harvtxt|Diestel|1984}}.</ref>  
+This means that <U+2113><sup>1</sup> satisfies [[Schur's property]].  Weakly Cauchy sequences and the <U+2113><sup>1</sup> basis are the opposite cases of the dichotomy established in the following deep result of&nbsp;H.&nbsp;P.&nbsp;Rosenthal.<ref>Rosenthal, Haskell P. (1974), "A characterization of Banach spaces containing <U+2113><sup>1</sup>", Proc. Nat. Acad. Sci. U.S.A. '''71''':2411&ndash;2413. Rosenthal's proof is for real scalars.  The complex version of the result is due to L. Dor, in Dor, Leonard E. (1975), "On sequences spanning a complex <U+2113><sup>1</sup> space", Proc. Amer. Math. Soc. '''47''':515<U+2013>516.</ref>
+
+'''Theorem.'''<ref>see p.&nbsp;201 in {{harvtxt|Diestel|1984}}.</ref>
+Let {{nowrap| {''x''<sub>''n''&thinsp;</sub>} }} be a bounded sequence in a Banach space.  Either&nbsp;{{nowrap| {''x''<sub>''n''&thinsp;</sub>} }} has a weakly Cauchy subsequence, or it admits a subsequence [[Schauder basis#Definitions|equivalent]] to the standard unit vector basis of&nbsp;<U+2113><sup>1</sup>.
+
+==== Sequences, weak and weak* compactness ====
+When ''X'' is separable, the unit ball of the dual is [[Metrization theorem|metrizable]] for the weak* topology,<ref>see Theorem&nbsp;2.6.23, p.&nbsp;231 in {{harvtxt|Megginson|1998}}.</ref> 
+and weak*-compact by Banach&ndash;Alaoglu, hence every bounded sequence in the dual has weakly* convergent subsequences.  This applies to separable reflexive spaces, but more is true in this case, as stated below.
+
+The weak topology of a Banach space&nbsp;''X'' is metrizable if and only if&nbsp;''X'' is finite dimensional.<ref>see Proposition&nbsp;2.5.14, p.&nbsp;215 in {{harvtxt|Megginson|1998}}.</ref>
+If the dual&nbsp;{{nowrap|''X''&thinsp;<U+2032>}} is separable, the weak topology of the unit ball of&nbsp;''X'' is metrizable.  This applies in particular to separable reflexive Banach spaces.
+Although the weak topology of the unit ball is not metrizable in general, one can characterize weak compactness using sequences.  
+
+'''[[Eberlein&ndash;<U+0160>mulian theorem]]'''.<ref>see for example p.&nbsp;49, II.C.3 in {{harvtxt|Wojtaszczyk|1991}}.</ref> 
+A set ''A'' in a Banach space is relatively weakly compact if and only if every sequence {''a''<sub>''n''</sub>} in&nbsp;''A'' has a weakly convergent subsequence.
+
+A Banach space ''X'' is reflexive if and only if each bounded sequence in&nbsp;''X'' has a weakly convergent subsequence.<ref>see Corollary&nbsp;2.8.9, p.&nbsp;251 in {{harvtxt|Megginson|1998}}.</ref>
+
+A weakly compact subset ''A'' in <U+2113><sup>1</sup> is norm-compact.  Indeed, every sequence in ''A'' has weakly convergent subsequences by Eberlein&ndash;<U+0160>mulian, that are norm convergent by the Schur property of&nbsp;<U+2113><sup>1</sup>.
+
+== Schauder bases ==
+{{main|Schauder basis}}
+A '''Schauder basis''' in a Banach space ''X'' is a sequence {{nowrap| {''e<sub>n&thinsp;</sub>''}<sub>''n''&thinsp;&ge;&thinsp;0</sub>}} of vectors in ''X'' with the property that for every vector&nbsp;''x'' in&nbsp;''X'', there exist ''uniquely'' defined scalars {{nowrap| {''x<sub>n&thinsp;</sub>''}<sub>''n''&thinsp;&ge;&thinsp;0</sub>}} depending on ''x'', such that
+:<math> x = \sum_{n=0}^{\infty} x_n e_n, \ \ \textit{i.e.,} \ \ x = \lim_n P_n(x), \ \ P_n(x) := \sum_{k=0}^n x_k e_k.</math>
+It follows from the Banach&ndash;Steinhaus theorem that the linear mappings {''P<sub>n</sub>''} are uniformly bounded by some constant ''C''. Let {''e*<sub>n</sub>''} denote the coordinate functionals  which assign to every ''x'' in ''X'' the coordinate ''x<sub>n</sub>'' of ''x'' in the above expansion. They are called '''biorthogonal functionals'''. When the basis vectors have norm 1, the coordinate functionals ''e*<sub>n</sub>'' have norm &le; 2''C'' in the dual of ''X''.
+
+Most classical spaces have explicit bases. The [[Haar wavelet|Haar system]] {''h''<sub>''n''</sub>} is a basis for ''L''<sup>''p''</sup>([0,&nbsp;1]), 1&nbsp;&le; ''p'' < <U+221E>. The [[Schauder basis#Examples|trigonometric system]] is a basis in ''L''<sup>''p''</sup>('''T''') when 1 < ''p'' < <U+221E>.  The [[Haar wavelet#Haar system on the unit interval and related systems|Schauder system]] is a basis in the space ''C''([0,&nbsp;1]).<ref>see {{harvtxt|Lindenstrauss|Tzafriri|1977}} p.&nbsp;3.</ref>
+The question of whether the disk algebra ''A''(''D'') has a basis<ref>the question appears p.&nbsp;238, &sect;3 in Banach's book, {{harvtxt|Banach|1932}}.</ref> 
+remained open for more than forty years, until Bo<U+010D>karev showed in 1974 that ''A''(''D'') admits a basis constructed from the [[Haar wavelet#Haar system on the unit interval and related systems|Franklin system]].<ref>see S. V. Bo<U+010D>karev, "Existence of a basis in the space of functions analytic in the disc, and some properties of Franklin's system". (Russian) Mat. Sb. (N.S.) 95(137) (1974), 3<U+2013>18, 159.</ref>
+
+Since every vector ''x'' in a Banach space ''X'' with a basis is the limit of ''P<sub>n</sub>''(''x''), with ''P<sub>n</sub>'' of finite rank and uniformly bounded, the space ''X'' satisfies the [[approximation property|bounded approximation property]]. The first example<ref>see P. Enflo, "A counterexample to the approximation property in Banach spaces". Acta Math. 130, 309<U+2013>317(1973).</ref> by [[Per Enflo|Enflo]] of a space failing the approximation property was at the same time the first example of a Banach space without Schauder basis.
+
+Robert C. James characterized reflexivity in Banach spaces with basis: the space ''X'' with a Schauder basis is reflexive if and only if the basis is both [[Schauder basis#Schauder bases and duality|shrinking and boundedly complete]].<ref>see R.C. James, "Bases and reflexivity of Banach spaces". Ann. of Math. (2) 52, (1950). 518<U+2013>527. See also {{harvtxt|Lindenstrauss|Tzafriri|1977}} p.&nbsp;9.</ref> In this case, the biorthogonal functionals form a basis of the dual of ''X''.
+
+== Tensor product ==
+{{main|Tensor product}}
+[[File:Tensor-diagramB.jpg|thumb]]
+Let ''X'' and ''Y'' be two '''K'''-vector spaces. The [[tensor product]] {{nowrap|''X'' <U+2297> ''Y''}} of ''X'' and ''Y'' is a '''K'''-vector space ''Z'' with a bilinear mapping ''T'' : {{nowrap|''X'' <U+00D7> ''Y'' <U+2192> ''Z''}} which has the following [[universal property]]: If ''T''<sub>1</sub> : {{nowrap|''X'' <U+00D7> ''Y'' <U+2192> ''Z''<sub>1</sub>}} is any bilinear mapping into a '''K'''-vector space ''Z''<sub>1</sub>, then there exists a unique linear mapping ''f'' : {{nowrap|''Z'' <U+2192> ''Z''<sub>1</sub>}} such that ''T''<sub>1</sub> = ''f'' <small>o</small> ''T''.
+
+The image under ''T'' of a couple (''x'', ''y'') in ''X'' <U+00D7> ''Y'' is denoted by ''x'' <U+2297> ''y'', and called a '''simple tensor'''. Every element ''z'' in {{nowrap|''X'' <U+2297> ''Y''}} is a finite sum of such simple tensors.
+
+There are various norms that can be placed on the tensor product of the underlying vector spaces, amongst others the [[Topological tensor product#Cross norms and tensor products of Banach spaces|projective cross norm]] and [[Topological tensor product#Cross norms and tensor products of Banach spaces|injective cross norm]] introduced by [[Alexander Grothendieck|A. Grothendieck]] in 1955.<ref>see A. Grothendieck, "Produits tensoriels topologiques et espaces nucl<U+00E9>aires". Mem. Amer. Math. Soc. 1955 (1955), no. 16, 140 pp., and A. Grothendieck, "R<U+00E9>sum<U+00E9> de la th<U+00E9>orie m<U+00E9>trique des produits tensoriels topologiques". Bol. Soc. Mat. S<U+00E3>o Paulo 8 1953 1<U+2013>79.</ref>  
+
+In general, the tensor product of complete spaces is not complete again. When working with Banach spaces, it is customary to call '''projective tensor product'''<ref>see chap.&nbsp;2, p.&nbsp;15 in {{harvtxt|Ryan|2002}}.</ref> 
+of two Banach spaces ''X'' and ''Y'' the ''completion'' <math>X \widehat{\otimes}_\pi Y</math> of the algebraic tensor product {{nowrap|''X'' <U+2297> ''Y''}} equipped with the projective tensor norm, and similarly for the '''injective tensor product'''<ref>see chap.&nbsp;3, p.&nbsp;45 in {{harvtxt|Ryan|2002}}.</ref>
+<math>X \widehat{\otimes}_\varepsilon Y</math>. Grothendieck proved in particular that<ref>see Example.&nbsp;2.19, p.&nbsp;29, and pp.&nbsp;49&ndash;50 in {{harvtxt|Ryan|2002}}.</ref> 
+:<math>\begin{align} 
+C(K) \widehat{\otimes}_\varepsilon Y &\simeq C(K, Y), \\
+L^1([0, 1]) \widehat{\otimes}_\pi Y &\simeq L^1([0, 1], Y),
+\end{align}</math>
+where ''K'' is a compact Hausdorff space, ''C''(''K'', ''Y'') the Banach space of continuous functions from ''K'' to ''Y'' and {{nowrap|''L''<sup>1</sup>([0, 1], ''Y'')}} the space of Bochner-measurable and integrable functions from {{nowrap|[0, 1]}} to ''Y'', and where the isomorphisms are isometric. The two isomorphisms above are the respective extensions of the map sending the tensor {{nowrap|''f''&thinsp;<U+2297>&thinsp;''y''}} to the vector-valued function {{nowrap|''s'' <U+2208> ''K'' <U+2192> ''f''(''s'')''y'' <U+2208> ''Y''}}.
+
+=== Tensor products and the approximation property ===
+Let ''X'' be a Banach space.  The tensor product <math>X' \widehat \otimes_\varepsilon X </math> is identified isometrically with the closure in ''B''(''X'') of the set of finite rank operators.  When ''X'' has the [[approximation property]], this closure coincides with the space of [[compact operator]]s on ''X''.
+
+For every Banach space ''Y'', there is a natural norm&nbsp;1 linear map
+:<math> Y \widehat\otimes_\pi X \to Y \widehat\otimes_\varepsilon X </math>
+obtained by extending the identity map of the algebraic tensor product. Grothendieck related the [[Approximation property|approximation problem]] to the question of whether this map is one-to-one when ''Y'' is the dual of ''X''. Precisely, for every Banach space&nbsp;''X'', the map
+
+:<math> X' \widehat \otimes_\pi X \ \longrightarrow X' \widehat \otimes_\varepsilon X </math>
+is one-to-one if and only if ''X'' has the approximation property.<ref>see Proposition&nbsp;4.6, p.&nbsp;74 in {{harvtxt|Ryan|2002}}.</ref>
+
+Grothendieck conjectured that <math>X \widehat{\otimes}_\pi Y</math> and <math>X \widehat{\otimes}_\varepsilon Y</math> must be different whenever ''X'' and ''Y'' are infinite dimensional Banach spaces. This was disproved by [[Gilles Pisier]] in 1983.<ref>see Pisier, Gilles (1983), "Counterexamples to a conjecture of Grothendieck", Acta Math. '''151''':181&ndash;208.</ref> 
+Pisier constructed an infinite dimensional Banach space ''X'' such that <math>X \widehat{\otimes}_\pi X</math> and <math>X \widehat{\otimes}_\varepsilon X</math> are equal.  Furthermore, just as [[Per Enflo|Enflo's]] example, this space ''X'' is a "hand-made" space that fails to have the approximation property.  On the other hand, Szankowski proved that the classical space ''B''(<U+2113><sup>2</sup>) does not have the approximation property.<ref>see Szankowski, Andrzej (1981), "''B''(''H'') does not have the approximation property", Acta Math. '''147''': 89&ndash;108.  Ryan claims that this result is due to [[Per Enflo]], p.&nbsp;74 in {{harvtxt|Ryan|2002}}.</ref>
+
+== Characterizations of Hilbert space among Banach spaces ==
+A necessary and sufficient condition for the norm of a Banach space ''X'' to be associated to an inner product is the [[parallelogram identity]]:
+
+:<math>\|x+y\|^2 + \|x-y\|^2 = 2(\|x\|^2 + \|y\|^2),</math>
+
+for all ''x'' and ''y'' in ''X''.  It follows, for example, that the [[Lp space|Lebesgue space]] ''L<sup>p</sup>''([0,&nbsp;1]) is a Hilbert space only when ''p''&nbsp;=&nbsp;2. If this identity is satisfied, the associated inner product is given by the [[polarization identity]].  In the case of real scalars, this gives:
+
+:<math>\langle x, y\rangle = \tfrac{1}{4} (\|x+y\|^2 - \|x-y\|^2).</math>
+
+For complex scalars, defining the inner product so as to be '''C'''-linear in ''x'', [[Antilinear map|antilinear]] in ''y'', the polarization identity gives:
+
+:<math>\langle x,y\rangle = \tfrac{1}{4} \left(\|x+y\|^2 - \|x-y\|^2 + i(\|x+iy\|^2 - \|x-iy\|^2)\right).</math>
+
+To see that the parallelogram law is sufficient, one observes in the real case that {{nowrap|<U+3008>''x'', ''y''<U+3009>}} is symmetric, and in the complex case, that it satisfies the [[Hermitian symmetry]] property and {{nowrap|<U+3008>''i''&thinsp;''x'', ''y''<U+3009> {{=}} ''i''<U+3008>''x'', ''y''<U+3009>}}.  The parallelogram law implies that {{nowrap|<U+3008>''x'', ''y''<U+3009>}} is additive in&nbsp;''x''.  It follows that it is linear over the rationals, thus linear by continuity.
+
+Several characterizations of spaces isomorphic (rather than isometric) to Hilbert spaces are available.  The parallelogram law can be extended to more than two vectors, and weakened by the introduction of a two-sided inequality with a constant&nbsp;{{nowrap|''c'' &ge; 1&thinsp;}}: Kwapie<U+0144> proved that if
+
+:<math> c^{-2} \sum_{k=1}^n \|x_k\|^2 \le \operatorname{Ave}_{\pm} \bigl\| \sum_{k=1}^n \pm x_k \bigr\|^2 \le c^2 \sum_{k=1}^n \|x_k\|^2</math>
+
+for every integer ''n'' and all families of vectors {{nowrap| {''x''<sub>''k''&thinsp;</sub>}<sub>&thinsp;1&thinsp;&le;&thinsp;''k''&thinsp;&le;&thinsp;''n''</sub>}} in the Banach space ''X'', then ''X'' is isomorphic to a Hilbert space.<ref>see Kwapie<U+0144>, S. (1970),
+"A linear topological characterization of inner-product spaces",
+Studia Math. '''38''':277&ndash;278.</ref> 
+Here, ''Ave'' denotes the average over the 2<sup>''n''</sup> possible choices of signs {{nowrap|&plusmn;&thinsp;1}}. In the same article, Kwapie<U+0144> proved that the validity of a Banach-valued [[Parseval's theorem]] for the Fourier transform characterizes Banach spaces isomorphic to Hilbert spaces.
+
+Lindenstrauss and Tzafriri proved that a Banach space in which every closed linear subspace is complemented (that is, is the range of a bounded linear projection) is isomorphic to a Hilbert space.<ref>see Lindenstrauss, J. and Tzafriri, L. (1971), "On the complemented subspaces problem", Israel J. Math. '''9''':263<U+2013>269.</ref>
+The proof rests upon [[Dvoretzky's theorem]] about Euclidean sections of high dimensional centrally symmetric convex bodies.  In other words, Dvoretzky's theorem states that for every integer&nbsp;''n'', any finite dimensional normed space, with dimension sufficiently large compared to&nbsp;''n'', contains subspaces nearly isometric to the ''n''-dimensional Euclidean space.
+
+The next result gives the solution of the so-called ''homogeneous space problem''. An infinite dimensional Banach space ''X'' is said to be '''homogeneous''' if it is isomorphic to all its infinite dimensional closed subspaces.  A Banach space isomorphic to&nbsp;<U+2113><sup>2</sup> is homogeneous, and Banach asked for the converse.<ref>see p.&nbsp;245 in {{harvtxt|Banach|1932}}.  The homogeneity property is called "propri<U+00E9>t<U+00E9>&nbsp;(15)" there.  Banach writes: "on ne conna<U+00EE>t aucun exemple d'espace <U+00E0> une infinit<U+00E9> de dimensions qui, sans <U+00EA>tre isomorphe avec (''L''<sup>2</sup>), poss<U+00E8>de la propri<U+00E9>t<U+00E9>&nbsp;(15)".</ref>  
+
+'''Theorem.'''<ref name="Gowers">Gowers, W. T. (1996), "A new dichotomy for Banach spaces", Geom. Funct. Anal. '''6''':1083<U+2013>1093.</ref>
+A Banach space isomorphic to all its infinite dimensional closed subspaces is isomorphic to a separable Hilbert space. 
+
+An infinite dimensional Banach space is '''hereditarily indecomposable''' when no subspace of it can be isomorphic to the direct sum of two infinite dimensional Banach spaces.  The [[Timothy Gowers|Gowers]] dichotomy theorem<ref name="Gowers" /> 
+asserts that every infinite dimensional Banach space&nbsp;''X'' contains, either a subspace&nbsp;''Y'' with [[Schauder basis#Unconditionality|unconditional basis]], or a hereditarily indecomposable subspace&nbsp;''Z'', and in particular, ''Z'' is not isomorphic to its closed hyperplanes.<ref>see Gowers, W. T. (1994), "A solution to Banach's hyperplane problem", Bull. London Math. Soc. '''26''':523&ndash;530.</ref>  
+If&nbsp;''X'' is homogeneous, it must therefore have an unconditional basis.  It follows then from the partial solution obtained by Komorowski and [[Nicole Tomczak-Jaegermann|Tomczak&ndash;Jaegermann]], for spaces with an unconditional basis,<ref>see Komorowski, Ryszard A. and Tomczak&ndash;Jaegermann, Nicole (1995), "Banach spaces without local unconditional structure", Israel J. Math. '''89''':205&ndash;226 and also (1998), "Erratum to: Banach spaces without local unconditional structure", Israel J. Math. '''105''':85&ndash;92.</ref>
+that ''X'' is isomorphic to&nbsp;<U+2113><sup>2</sup>.
+
+== Examples ==
+{{main|List of Banach spaces}}
+
+Here '''K''' denotes the [[field (mathematics)|field]] of [[real numbers]] or [[complex numbers]], ''I'' is a closed and bounded interval [''a'', ''b''] and  ''p'', ''q'' are [[real number]]s with 1 < ''p'', ''q'' < <U+221E> so that
+
+: <math> \tfrac{1}{q}+\tfrac{1}{p}=1.</math>
+
+The symbol <U+03A3> denotes a [[sigma algebra|<U+03C3>-algebra]] of sets, and <U+039E> denotes just an algebra of sets (for spaces only requiring finite additivity, such as the [[ba space]]).  The symbol <U+03BC> denotes a positive measure: that is, a real-valued positive set function defined on a <U+03C3>-algebra which is countably additive.
+
+{| align="left" class="wikitable" style="text-align:center"
+|- align="center"
+| style="border-bottom: 2px solid #303060" colspan=6| '''Classical Banach spaces'''
+|-
+! !! [[Dual space]] !! [[Reflexive space|Reflexive]] !! [[Weak topology|weakly]]  [[complete metric space|complete]] !! [[Normed space|Norm]] !! Notes
+|-
+! [[Euclidean space|'''K'''<sup>n</sup>]]
+| '''K'''<sup>n</sup> ||{{yes}} || {{yes}} || <math>\|x\|_2 = \left(\sum_{i=1}^n |x_i|^2\right)^{\frac{1}{2}}</math> ||
+|-
+!  [[Lp space|<U+2113><sup>n</sup><sub>p</sub>]]
+||  <U+2113><sup>n</sup><sub>q</sub> || {{yes}} || {{yes}} || <math>\|x\|_p = \left(\sum_{i=1}^n |x_i|^p\right)^{\frac{1}{p}}</math> ||
+|-
+! [[Lp space|<U+2113><sup>n</sup><sub><U+221E></sub>]]
+| <U+2113><sup>n</sup><sub>1</sub> || {{yes}} || {{yes}} || <math>\|x\|_\infty = \max\nolimits_{1\le i\le n} |x_i|</math> ||
+|-
+!  [[Lp space|<U+2113><sub>p</sub>]]
+||  <U+2113><sub>q</sub> || {{yes}} || {{yes}} || <math>\|x\|_p = \left(\sum_{i=1}^\infty |x_i|^p\right)^{\frac{1}{p}}</math> ||
+|-
+!  [[Lp space|<U+2113><sub>1</sub>]]
+||  <U+2113><sub><U+221E></sub> || {{no}} || {{yes}} || <math>\|x\|_1 = \sum_{i=1}^\infty |x_i|</math> ||
+|-
+!  [[Lp space|<U+2113><sub><U+221E></sub>]]
+||  [[ba space|ba]] || {{no}} || {{no}} || <math>\|x\|_\infty = \sup\nolimits_i |x_i|</math> ||
+|-
+! ''[[c space|c]]''
+| <U+2113><sub>1</sub> || {{no}} || {{no}} || <math>\|x\|_\infty = \sup\nolimits_i |x_i|</math> ||
+|-
+! [[c0 space|''c''<sub>0</sub>]]
+| <U+2113><sub>1</sub> || {{no}} || {{no}} || <math>\|x\|_\infty = \sup\nolimits_i |x_i|</math> || Isomorphic but not isometric to ''c''.
+|-
+! ''[[bv space|bv]]''
+| <U+2113><sub>1</sub> + '''K''' || {{no}} || {{yes}} || <math>\|x\|_{bv} = |x_1| + \sum_{i=1}^\infty|x_{i+1}-x_i|</math> ||
+|-
+! [[bv space|''bv''<sub>0</sub>]]
+| <U+2113><sub>1</sub> || {{no}} || {{yes}} || <math>\|x\|_{bv_0} = \sum_{i=1}^\infty|x_{i+1}-x_i|</math> ||
+|-
+! ''[[bs space|bs]]''
+| [[ba space|ba]] || {{no}} || {{no}} || <math>\|x\|_{bs} = \sup\nolimits_n\left|\sum_{i=1}^nx_i\right|</math> || Isometrically isomorphic to <U+2113><sub><U+221E></sub>.
+|-
+! ''[[bs space|cs]]''
+| <U+2113><sub>1</sub> || {{no}} || {{no}} || <math>\|x\|_{bs} = \sup\nolimits_n\left|\sum_{i=1}^nx_i\right|</math> || Isometrically isomorphic to [[c space|c]].
+|-
+! [[ba space|''B''(''X'',&nbsp;<U+039E>)]]
+|| [[ba space|ba(<U+039E>)]] || {{no}} || {{no}} ||  <math>\|f\|_B = \sup\nolimits_{x\in X}|f(x)|</math> ||
+|-
+! [[Continuous functions on a compact Hausdorff space|''C''(''X'')]]
+| [[ba space|rca(''X'')]] || {{no}} || {{no}} || <math>\|x\|_{bs} = \sup\nolimits_{x\in X} |f(x)|</math> || ''X'' is a [[compact Hausdorff space]].
+|-
+! [[ba space|ba(<U+039E>)]]
+| ? || {{no}} || {{yes}} || <math>\|\mu\|_{ba} = \sup\nolimits_{A\in\Sigma} |\mu|(A)</math> || <math>|\mu|</math> is [[Total_variation#Total_variation_in_measure_theory|the variation of <U+03BC>]]
+|-
+! [[ba space|ca(<U+03A3>)]]
+| ? || {{no}} || {{yes}} || <math>\|\mu\|_{ba} = \sup\nolimits_{A\in\Sigma} |\mu|(A)</math> || A closed subspace of ba(<U+03A3>).
+|-
+! [[ba space|rca(<U+03A3>)]]
+| ? || {{no}} || {{yes}} || <math>\|\mu\|_{ba} = \sup\nolimits_{A\in\Sigma} |\mu|(A)</math> || A closed subspace of ca(<U+03A3>).
+|-
+! [[Lp space|L<sup>p</sup>(<U+03BC>)]]
+| ''L<sup>q</sup>''(<U+03BC>) || {{yes}} || {{yes}} || <math>\|f\|_p = \left (\int |f|^p\,d\mu\right)^{\frac{1}{p}}</math> ||
+|-
+! [[Bounded variation|BV(I)]]
+| ? || {{no}} || {{yes}} || <math>\|f\|_{BV} = V_f(I) + \lim\nolimits_{x\to a^+}f(x)</math> || ''V<sub>f</sub>''(''I'') is the [[total variation]] of ''f''
+|-
+! [[Bounded variation|NBV(I)]]
+| ? || {{no}} || {{yes}} || <math>\|f\|_{BV} = V_f(I)</math> || NBV(''I'') consists of BV(''I'') functions such that <math>\lim\nolimits_{x\to a^+}f(x)=0</math>
+|-
+! [[Absolutely continuous function|AC(I)]]
+| '''K''' + ''L''<sup><U+221E></sup>(''I'') || {{no}} || {{yes}} || <math>\|f\|_{BV} = V_f(I) + \lim\nolimits_{x\to a^+}f(x)</math> || Isomorphic to the [[Sobolev space]] ''W''<sup>1,1</sup>(''I'').
+|-
+! [[Continuously differentiable|C<sup>''n''</sup>[''a'',''b'']]]
+|| [[Ba space|rca([''a'',''b''])]] || {{no}} || {{no}} || <math>\|f\| = \sum_{i=0}^n \sup\nolimits_{x\in [a,b]} \left |f^{(i)}(x) \right |</math> || Isomorphic to '''R'''<sup>''n''</sup>&nbsp;<U+2295>&nbsp;C([''a'',''b'']), essentially by [[Taylor's theorem]].
+|}
+{{clr}}
+
+== Derivatives ==
+Several concepts of a derivative may be defined on a Banach space. See the articles on the [[Fr<U+00E9>chet derivative]] and the [[G<U+00E2>teaux derivative]] for details. The Fr<U+00E9>chet derivative allows for an extension of the concept of a [[directional derivative]] to Banach spaces. The G<U+00E2>teaux derivative allows for an extension of a [[directional derivative]] to [[locally convex]] [[topological vector space]]s. Fr<U+00E9>chet differentiability is a stronger condition than G<U+00E2>teaux differentiability. The [[quasi-derivative]] is another generalization of directional derivative that implies a stronger condition than G<U+00E2>teaux differentiability, but a weaker condition than Fr<U+00E9>chet differentiability.
+
+== Further results ==
+<blockquote>'''Theorem.''' If there are Banach spaces which are invariant under the action of an integrable group representation and give their atomic decompositions with respect to coherent states, then the atoms arise from a single element under the group action.<ref>{{cite journal|last=Hans G. Feichtinger, K.H Gr<U+00F6>chenig|title=Banach spaces related to integrable group representations and their atomic decompositions, I|journal=Journal of Functional Analysis|year=1989|month=October|volume=86|issue=2|pages=307<U+2013>340|url=http://www.sciencedirect.com/science/article/pii/0022123689900554}}</ref></blockquote>
+
+<blockquote>'''Theorem.''' If ''X'' is a separable infinite dimensional Banach space then its isomorphism class has infinite diameter with respect to the Banach-Mazur distance.<ref name=W.B.-Johnson-and-E.-Odell>{{cite journal|last=W. B. Johnson and E. Odell|title=The diameter of the isomorphism class of a Banach space|journal=Annals of Mathematics. Second Series|year=2005|month=Jul|volume=162|issue=1|pages=423<U+2013>437|url=http://www.jstor.org/stable/3597376}}</ref></blockquote>
+
+<blockquote>'''Theorem.''' If ''X'' is a separable Banach space such that for some ''K'' < <U+221E> every [[isomorph]] of ''X'' is ''K''-elastic the ''X'' is finite dimensional.<ref name=W.B.-Johnson-and-E.-Odell /></blockquote>
+
+<blockquote>'''Theorem.''' Every ''n''-homogeneous continuous polynomial on a Banach space ''E'' which is weakly continuous on the unit ball of ''E'' is weakly uniformly continuous on the unit ball of ''E''.<ref name=Aron>{{cite journal|last=Aron|first=R.M|title=Weakly continuous mappings on Banach spaces|journal=Journal of Functional Analysis|date=Jan 15, 1983|year=1983|volume=52|issue=2|pages=189<U+2013>204|accessdate=03/15/2013}}</ref></blockquote>
+
+<blockquote>'''Theorem.''' If ''X'' is a strictly convex Banach space with the Radon-Nikodym property, then the [[quasihyperbolic]] [[geodesics]] in ''X'' are unique.<ref name=Radon-Nikodym>{{cite journal|last=Rasila|first=Antti|title=On Quasihyperbolic Geodesics in Banach Spaces|journal=ArXiv.org|date=Jan 5, 2013|year=2013|accessdate=03/16/2013}}</ref></blockquote>
+
+== Generalizations ==
+Several important spaces in functional analysis, for instance the space of all infinitely often differentiable functions '''R''' <U+2192> '''R''', or the space of all [[distribution (mathematics)|distributions]] on '''R''', are complete but are not normed vector spaces and hence not Banach spaces. In [[Fr<U+00E9>chet space]]s one still has a complete [[metric space|metric]], while [[LF-space]]s are complete [[uniform space|uniform]] vector spaces arising as limits of Fr<U+00E9>chet spaces.
+
+== See also ==
+* [[Space (mathematics)]]
+** [[Hilbert space]]
+** [[Lp space]]
+** [[Sobolev space]]
+** [[Hardy space]]
+* [[Interpolation space]]
+* [[Distortion problem]]
+
+==Notes==
+<references/>
+
+== References ==
+*{{citation|first=Stefan|last=Banach|authorlink=Stefan Banach|url=http://matwbn.icm.edu.pl/kstresc.php?tom=1&wyd=10|title=Th<U+00E9>orie des op<U+00E9>rations lin<U+00E9>aires|publication-place=Warszawa|publisher=Subwencji Funduszu Kultury Narodowej|year=1932|series=Monografie Matematyczne|volume=1|zbl=0005.20901}}.
+*{{citation
+|author=Beauzamy, Bernard
+|title=Introduction to Banach Spaces and their Geometry
+|year=1985 [1982]
+|edition=Second revised
+|publisher=North-Holland
+}}.
+* {{citation|first=Nicolas|last=Bourbaki|authorlink=Nicolas Bourbaki|title=Topological vector spaces|series=Elements of mathematics|publisher= Springer-Verlag|publication-place=Berlin|year=1987|isbn=978-3-540-13627-9}}.
+*{{citation
+ | last = Carothers | first = Neal L.
+ | title = A short course on Banach space theory
+ | series = London Mathematical Society Student Texts
+ | volume = 64 
+ | publisher = Cambridge University Press
+ | location = Cambridge 
+ | year = 2005
+ | pages = xii+184
+ | isbn = 0-521-84283-2
+}}.
+*{{citation
+ | last = Diestel
+ | first = Joseph
+ | title = Sequences and series in Banach spaces
+ | series = Graduate Texts in Mathematics 
+ | volume = 92 
+ | publisher = Springer-Verlag 
+ | location = New York 
+ | year = 1984 
+ | pages = xii+261
+ | isbn = 0-387-90859-5
+}}.
+*{{Citation 
+ | last1=Dunford | first1=Nelson
+ | last2=Schwartz | first2=Jacob T. with the assistance of W. G. Bade and R. G. Bartle
+ | title=Linear Operators. I. General Theory
+ | publisher=Interscience Publishers, Inc.
+ | location = New York
+ | series = Pure and Applied Mathematics
+ | volume = 7
+ | mr=0117523
+ | year=1958}}
+*{{citation
+ | last1=Lindenstrauss | first1=Joram |author1-link = Joram Lindenstrauss
+ | last2=Tzafriri | first2=Lior
+ | isbn = 3-540-08072-4
+ | location = Berlin
+ | publisher = Springer-Verlag
+ | series = Ergebnisse der Mathematik und ihrer Grenzgebiete
+ | title=Classical Banach Spaces I, Sequence Spaces
+ | volume = 92
+ | year=1977}}.
+*{{citation
+ | last = Megginson | first = Robert E.
+ | title = An introduction to Banach space theory
+ | series = Graduate Texts in Mathematics 
+ | volume = 183 
+ | publisher = Springer-Verlag 
+ | location = New York 
+ | year = 1998 
+ | pages = xx+596
+ | isbn = 0-387-98431-3
+}}.
+*{{citation
+ | last = Ryan |first = Raymond A. 
+ | year = 2002 
+ | title = Introduction to Tensor Products of Banach Spaces 
+ | publisher = Springer-Verlag
+ | series = Springer Monographs in Mathematics
+ | location = London
+ | isbn = 1-85233-437-1
+ | pages = xiv+225
+}}.
+*{{citation
+ | last=Wojtaszczyk | first= Przemys<U+0142>aw
+ | title = Banach spaces for analysts
+ | series = Cambridge Studies in Advanced Mathematics
+ | volume = 25
+ | publisher = Cambridge University Press, 
+ | location = Cambridge
+ | year= 1991
+ | pages = xiv+382
+ | ISBN = 0-521-35618-0 
+}}.
+* Deitmar, A: ''Funktionalanalysis Skript WS2011/12'' < http://www.mathematik.uni-tuebingen.de/~deitmar/LEHRE/frueher/2011-12/FA/FA.pdf>
+
+==External links==
+* {{springer|title=Banach space|id=p/b015190}}
+*{{MathWorld|BanachSpace|Banach Space}}
+
+{{DEFAULTSORT:Banach Space}}
+[[Category:Banach spaces|*]]
+[[Category:Science and technology in Poland]]

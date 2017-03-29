@@ -1,0 +1,284 @@
+:''Many points in this article may be difficult to understand without a background in the elementary concepts of [[game theory]].''<!--Replace with suitable template?-->
+[[Image:Prison.jpg|right|frame|Will the two prisoners cooperate to minimize total loss of liberty or will one of them, trusting the other to cooperate, betray him so as to go free?]]
+
+In [[game theory]], the '''prisoner's dilemma''' is a type of non-[[zero-sum]] game in which two players can "cooperate" with or "defect" (i.e. betray) the other player. In this game, as in all game theory, the only concern of each individual player ("prisoner") is maximizing his/her own payoff, without any concern for the other player's payoff ''per se''.  In the classic form of this game, cooperating is [[dominance (game theory)|strictly dominated]] by defecting, so that the only possible [[Nash equilibrium|equilibrium]] for the game is for all players to defect. In simpler terms, no matter what the other player does, one player will always gain a greater payoff by playing defect. Since in any situation playing ''defect'' is more beneficial than cooperating, all [[perfect rationality|rational]] players will play ''defect''.
+
+The unique equilibrium for this game is a [[Pareto efficiency|Pareto-]]suboptimal solution&mdash;that is, rational choice leads the two players to both play ''defect'' even though each player's individual reward would be greater if they both played ''cooperate''. In equilibrium, each prisoner chooses to defect even though both would be better off by cooperating, hence the dilemma.
+
+In the '''iterated prisoner's dilemma''' the game is [[repeated game|played repeatedly]]. Thus each player has an opportunity to "punish" the other player for previous non-cooperative play. Cooperation may then arise as an equilibrium outcome. The incentive to defect is overcome by the threat of punishment, leading to the possibility of a cooperative outcome. If the game is infinitely repeated cooperation may be a [[Nash equilibrium]] although both players defecting  always remains an equilibrium.
+
+==The classical prisoner's dilemma==
+The Prisoner's dilemma was originally framed by [[Merrill Flood]] and [[Melvin Dresher]] working at [[RAND]] in 1950.  [[Albert W. Tucker]] formalized the game with prison sentence payoffs and gave it the "Prisoner's Dilemma" name (Poundstone, 1992).
+
+The classical prisoner's dilemma (PD) is as follows:
+
+:Two suspects, A and B, are arrested by the police. The police have insufficient evidence for a conviction, and, having separated both prisoners, visit each of them to offer the same deal: if one testifies for the prosecution against the other and the other remains silent, the betrayer goes free and the silent accomplice receives the full 10-year sentence. If both stay silent, the police can sentence both prisoners to only six months in jail for a minor charge. If each betrays the other, each will receive a two-year sentence.  Each prisoner must make the choice of whether to betray the other or to remain silent.  However, neither prisoner knows for sure what choice the other prisoner will make. So the question this dilemma poses is:  What will happen? How will the prisoners act?
+
+The dilemma can be summarised thus:
+
+<table border cellpadding="5" cellspacing="0" align="center">
+<tr>
+<td></td>
+<th scope="col">Prisoner B Stays Silent</th>
+<th scope="col">Prisoner B Betrays</th>
+</tr>
+<tr>
+<th scope="row">Prisoner A Stays Silent</th>
+<td>Both serve six months</td>
+<td>Prisoner A serves ten years<br>Prisoner B goes free</td>
+</tr>
+<tr>
+<th scope="row">Prisoner A Betrays</th>
+<td>Prisoner A goes free<br>Prisoner B serves ten years</td>
+<td>Both serve two years</td>
+</table>
+
+The dilemma arises when one assumes that both prisoners only care about minimising their own jail terms. Each prisoner has two options: to cooperate with his accomplice and stay quiet, or to defect from their implied pact and betray his accomplice in return for a lighter sentence.  The outcome of each choice depends on the choice of the accomplice, but the player must choose without knowing what their accomplice has chosen to do.
+
+Let's assume the protagonist prisoner is working out his best move. If his partner stays quiet, his best move is to betray as he then walks free instead of receiving the minor sentence. If his partner betrays, his best move is still to betray, as by doing it he receives a relatively lesser sentence than staying silent. At the same time, the other prisoner's thinking would also have arrived at the same conclusion and would therefore also betray.
+
+If reasoned from the perspective of the optimal outcome for the group (of two prisoners), the correct choice would be for both prisoners to cooperate with each other, as this would reduce the total jail time served by the group to one year total. Any other decision would be worse for the two prisoners considered together. When the prisoners both betray each other, each prisoner achieves a worse outcome than if they had cooperated. This demonstrates very elegantly that in a [[non-zero sum game]] the [[Pareto optimum]] and the [[Nash Equilibrium]] can be opposite.
+
+Alternately, the "Stay Silent" and "Betray" [[Strategy (game theory)|strategies]] may be known as "don't confess" and "confess", or the more standard "cooperate" and "defect", respectively.
+
+==Generalized form==
+We can expose the skeleton of the game by stripping it of the Prisoners<U+2019> subtext. The generalized form of the game has been used frequently in [[experimental economics]]. The following rules give a typical realization of the game. 
+
+There are two players and a banker. Each player holds a set of two cards: one printed with the word "Cooperate", the other printed with "Defect" (the standard terminology for the game). Each player puts one card face-down in front of the banker. By laying them face down, the possibility of a player knowing the other player's selection in advance is eliminated (although revealing one's move does not affect the dominance analysis<ref name="tell">A simple "[[Tell (poker)|tell]]" that partially or wholly reveals one player's choice <U+2013> such as the Red player playing their Cooperate card face-up <U+2013> does not change the fact that Defect is the dominant strategy. When one is considering the game itself, communication has no effect whatsoever. However, when the game is being played in real life considerations outside of the game itself may cause communication to matter. It is a point of utmost importance to the full implications of the dilemma that when we do not need to take into account external considerations, single-instance Prisoner's Dilemma is not affected in any way by communications.<p>Even in single-instance Prisoner's Dilemma, meaningful prior communication could alter the play environment, by raising the possibility of enforceable side contracts or credible threats. For example, if the Red player plays their Cooperate card face-up and simultaneously reveals a binding commitment to blow the jail up if and only if Blue Defects (with additional payoff <span style="color: #009">-11</span>,<span style="color: #900">-10</span>), then Blue's Cooperation becomes dominant. As a result, players are screened from each other and prevented from communicating outside of the game.</p></ref>). At the end of the turn, the banker turns over both cards and gives out the payments accordingly.
+
+If player 1 (red) defects and player 2 (blue) cooperates, player 1 gets the Temptation to Defect payoff of 5 points while player 2 receives the Sucker's payoff of 0 points. If both cooperate they get the Reward for Mutual Cooperation payoff of 3 points each, while if they both defect they get the Punishment for Mutual Defection payoff of 1 point. The checker board [[payoff matrix]] showing the payoffs is given below.
+
+{| border cellpadding="5" cellspacing="0" align="center">
+|+ Canonical PD payoff matrix
+|
+!scope="col" style="color: #900"|Cooperate
+!scope="col" style="color: #900"|Defect
+|-
+!scope="row" style="color: #009"|Cooperate
+|<span style="color: #009">3</span>, <span style="color: #900">3
+|<span style="color: #009">0</span>, <span style="color: #900">5
+|-
+!scope="row" style="color: #009"|Defect
+|<span style="color: #009">5</span>, <span style="color: #900">0</span>
+|<span style="color: #009">1</span>, <span style="color: #900">1</span>
+|}
+
+In "win-lose" terminology the table looks like this:
+
+{| border cellpadding="5" cellspacing="0" align="center">
+|
+!scope="col" style="color: #900"|Cooperate
+!scope="col" style="color: #900"|Defect
+|-
+!scope="row" style="color: #009"|Cooperate
+|<span style="color: #009">win</span>-<span style="color: #900">win</span>
+|<span style="color: #009">lose much</span>-<span style="color: #900">win much</span>
+|-
+!scope="row" style="color: #009"|Defect
+|<span style="color: #009">win much</span>-<span style="color: #900">lose much</span>
+|<span style="color: #009">lose</span>-<span style="color: #900">lose</span>
+|}
+
+These point assignments are given arbitrarily for illustration. It is possible to generalize them. Let ''T'' stand for ''Temptation to defect'', ''R'' for ''Reward for mutual cooperation'', ''P'' for ''Punishment for mutual defection'' and ''S'' for ''Sucker's payoff''. The following inequalities must hold: 
+
+''T'' > ''R'' > ''P'' > ''S''
+
+In addition to the above condition, Richard Dawkins suggests that, if the game is repeatedly played by two players, the following condition should be added.<ref>{{cite book
+  | last = Dawkins
+  | first = Richard
+  | authorlink = Richard Dawkins
+  | title = [[The Selfish Gene]]
+  | publisher = [[Oxford University Press]]
+  | date = 1989
+  | id = ISBN 0-19-286092-5}} Page: 204 of Paperback edition</ref>
+
+2 ''R'' > ''T'' + ''S''
+
+If that condition does not hold, then full cooperation is not necessarily [[Pareto optimal]], as the players are collectively better off by having each player alternate between cooperate and defect.
+
+These rules were established by cognitive scientist [[Douglas Hofstadter]] and form the formal canonical description of a typical game of Prisoners Dilemma.
+
+==The iterated prisoner's dilemma==
+In his book ''[[The Evolution of Cooperation]]'' (1984), [[Robert Axelrod]] explored an extension to the classical PD scenario, which he called the ''iterated prisoner's dilemma'' (IPD). In this, participants have to choose their mutual strategy again and again, and have memory of their previous encounters. Axelrod invited academic colleagues all over the world to devise computer strategies to compete in an [[IPD tournament]]. The programs that were entered varied widely in algorithmic complexity; initial hostility; capacity for forgiveness; and so forth.
+
+Axelrod discovered that when these encounters were repeated over a long period of time with many players, each with different strategies, "greedy" strategies tended to do very poorly in the long run while more "[[altruism|altruistic]]" strategies did better, as judged purely by self-interest.  He used this to show a possible mechanism for the evolution of altruistic behaviour from mechanisms that are initially purely selfish, by [[natural selection]].
+
+The best [[deterministic algorithm|deterministic]] strategy was found to be "[[Tit for Tat]]", which [[Anatol Rapoport]] developed and entered into the tournament. It was the simplest of any program entered, containing only four lines of BASIC, and won the contest. The strategy is simply to cooperate on the first iteration of the game; after that, the player does what his opponent did on the previous move.  A slightly better strategy is "Tit for Tat with forgiveness". When the opponent defects, on the next move, the player sometimes cooperates anyway, with a small probability (around 1%-5%).  This allows for occasional recovery from getting trapped in a cycle of defections.  The exact probability depends on the line-up of opponents.  "Tit for Tat with forgiveness" is best when miscommunication is introduced to the game &mdash; when one's move is incorrectly reported to the opponent.
+
+By analysing the top-scoring strategies, Axelrod stated several conditions necessary for a strategy to be successful.
+
+; Nice: The most important condition is that the strategy must be "nice", that is, it will not defect before its opponent does. Almost all of the top-scoring strategies were nice. Therefore a purely selfish strategy for purely selfish reasons will never hit its opponent first.
+; Retaliating: However, Axelrod contended, the successful strategy must not be a blind optimist. It must always retaliate. An example of a non-retaliating strategy is Always Cooperate. This is a very bad choice, as "nasty" strategies will ruthlessly exploit such softies.
+; Forgiving: Another quality of successful strategies is that they must be forgiving. Though they will retaliate, they will once again fall back to cooperating if the opponent does not continue to play defects. This stops long runs of revenge and counter-revenge, maximizing points.
+; Non-envious: The last quality is being non-envious, that is not striving to score more than the opponent (impossible for a <U+2018>nice<U+2019> strategy, i.e., a 'nice' strategy can never score more than the opponent).
+
+Therefore, Axelrod reached the [[Utopia]]n-sounding conclusion that selfish individuals for their own selfish good will tend to be nice and forgiving and non-envious. One of the most important conclusions of Axelrod's study of IPDs is that Nice guys can finish first.
+
+Reconsider the arms-race model given in the [[prisoner's dilemma#The classical prisoner's dilemma|classical PD section]] (should be Real-life examples, someone please rebuild the link) below: It was concluded that the only rational strategy was to build up the military, even though both nations would rather spend their [[GDP]] on butter than guns. Interestingly, attempts to show that rival states actually compete in this way (by [[regression|regressing]] "high" and "low" military spending between periods under ''iterated PD assumptions'') often show that the posited arms race is not occurring as expected. (For example [[Greece|Greek]] and [[Turkey|Turkish]] military spending does not appear to follow a [[Tit for Tat|tit-for-tat]] iterated-PD arms-race, but is more likely driven by domestic politics.) This may be an example of rational behaviour differing between the one-off and iterated forms of the game.
+
+The optimal (points-maximizing) strategy for the one-time PD game is simply defection; as explained above, this is true whatever the composition of opponents may be. However, in the iterated-PD game the optimal strategy depends upon the strategies of likely opponents, and how they will react to defections and cooperations. For example, consider a population where everyone defects every time, except for a single individual following the Tit-for-Tat strategy.  That individual is at a slight disadvantage because of the loss on the first turn.  In such a population, the optimal strategy for that individual is to defect every time.  In a population with a certain percentage of always-defectors and the rest being Tit-for-Tat players, the optimal strategy for an individual depends on the percentage, and on the length of the game. 
+
+Deriving the optimal strategy is generally done in two ways:
+# Bayesian [[Nash Equilibrium]]: If the statistical distribution of opposing strategies can be determined (e.g. 50% tit-for-tat, 50% always cooperate) an optimal counter-strategy can be derived mathematically<ref name="bne">For example see the 2003 study [http://econ.hevra.haifa.ac.il/~mbengad/seminars/whole1.pdf  <U+201C>Bayesian Nash equilibrium; a statistical test of the hypothesis<U+201D>] for discussion of the concept and whether it can apply in real [[economic]] or strategic situations (from [[Tel Aviv University]]).</ref>.
+# [[Monte Carlo method|Monte Carlo]] simulations of populations have been made, where individuals with low scores die off, and those with high scores reproduce (a [[genetic algorithm]] for finding an optimal strategy).  The mix of algorithms in the final population generally depends on the mix in the initial population.  The introduction of mutation (random variation during reproduction) lessens the dependency on the initial population; empirical experiments with such systems tend to produce Tit-for-Tat players (see for instance Chess 1988), but there is no analytic proof that this will always occur.
+
+Although Tit-for-Tat was long considered to be the most solid basic strategy, a team from [[Southampton University]] in England (led by Professor Nicholas Jennings [http://www.ecs.soton.ac.uk/~nrj], and including Rajdeep Dash, Sarvapali Ramchurn, Alex Rogers and Perukrishnen Vytelingum) introduced a new strategy at the 20th-anniversary Iterated Prisoner's Dilemma competition, which proved to be more successful than Tit-for-Tat.  This strategy relied on cooperation between programs to achieve the highest number of points for a single program.  The University submitted 60 programs to the competition, which were designed to recognise each other through a series of five to ten moves at the start.  Once this recognition was made, one program would always cooperate and the other would always defect, assuring the maximum number of points for the defector.  If the program realised that it was playing a non-Southampton player, it would continuously defect in an attempt to minimise the score of the competing program.  As a result<ref name="southamptontrick">[http://www.prisoners-dilemma.com/results/cec04/ipd_cec04_full_run.html The 2004 Prisoner's Dilemma Tournament Results] show Gopal Ramchurn<U+2019>s [[University of Southampton]] strategies in the first three places, despite having fewer wins and many more losses than the GRIM strategy. (Note that in a PD tournament, the aim of the game is not to <U+201C>win<U+201D> matches - that can easily be achieved by frequent defection). It should also be pointed out that even without implicit collusion between [[computer program|software strategies]] (exploited by the Southampton team) tit-for-tat is not always the absolute winner of any given tournament; it would be more precise to say that its long run results over a series of tournaments outperform its rivals. (In any one event a given strategy can be slightly better adjusted to the competition than tit-for-tat, but tit-for-tat is more robust). The same applies for the tit-for-tat-with-forgiveness variant, and other optimal strategies: on any given day they might not 'win' against a specific mix of counter-strategies.<p>An alternative way of putting it is using the Darinian [[ESS]] simulation. In such a simulation Tit-for-Tat will almost always come to dominate, though nasty strategies will drift in and out of the population because a Tit-for-Tat population is penetratable by non-retaliating nice strategies which in turn are easy prey for the nasty strategies. Richard Dawkins showed that here no static mix of strategies form a stable equilibrium and the system will always oscillate between bounds.</p></ref>, this strategy ended up taking the top three positions in the competition, as well as a number of positions towards the bottom.  
+
+Although this strategy is notable in that it proved more effective than Tit-for-Tat, it takes advantage of the fact that multiple entries were allowed in this particular competition.  In a competition where one has control of only a single player, Tit-for-Tat is certainly a better strategy. It also relies on circumventing rules about the prisoner's dilemma in that there is no communication allowed between the two players. When the Southampton programs engage in an opening "ten move dance" to recognize one another, this only reinforces just how valuable communication can be in shifting the balance of the game.
+
+If an iterated PD is going to be iterated exactly N times, for some known constant N, then there is another interesting fact.  The [[Nash equilibrium]] is to always defect.  That is easily proved by induction; one might as well defect on the last turn, since the opponent will not have a chance to punish the player. Therefore, both will defect on the last turn. Thus, the player might as well defect on the second-to-last turn, since the opponent will defect on the last no matter what is done, and so on. For cooperation to remain appealing, then, the future must be indeterminate for both players.  One solution is to make the total number of turns N random. The shadow of the future must be indeterminably long.
+
+Another odd case is "play forever" prisoner's dilemma. The game is repeated infinitely many times, and the player's score is the average (suitably computed).
+
+The prisoner's dilemma game is fundamental to certain theories of human cooperation and trust. On the assumption that the PD can model transactions between two people requiring trust, cooperative behaviour in populations may be modelled by a multi-player, iterated, version of the game. It has, consequently, fascinated many, many scholars over the years. In 1975, Grofman and Pool estimated the count of scholarly articles devoted to it at over 2000.
+
+===Learning psychology and game theory===
+Where game players can learn to estimate the likelihood of other players defecting, their own behaviour is influenced by their experience of the others' behaviour.  Simple statistics show that inexperienced players are more likely to have had, overall, atypically good or bad interactions with other players.  If they act on the basis of these experiences (by defecting or cooperating more than they would otherwise) they are likely to suffer in future transactions.  As more experience is accrued a truer impression of the likelihood of defection is gained and game playing becomes more successful.  The early transactions experienced by immature players are likely to have a greater effect on their future playing than would such transactions affect mature players.  This principle goes part way towards explaining why the formative experiences of young people are so influential and why they are particularly vulnerable to bullying, sometimes ending up as bullies themselves.
+
+The likelihood of defection in a population may be reduced by the experience of cooperation in earlier games allowing [[Trust (sociology)|trust]] to build up<ref name="trust" />.  Hence self-sacrificing behaviour may, in some instances, strengthen the moral fibre of a group.  If the group is small the positive behaviour is more likely to feedback in a mutually affirming way encouraging individuals within that group to continue to cooperate.  This is allied to the twin dilemma of encouraging those people whom one would aid to indulge in behaviour that might put them at risk.  Such processes are major concerns within the study of [[reciprocal altruism]], [[group selection]], [[kin selection]] and [[moral philosophy]].
+
+===Rationality and super-rationality===
+
+One resolution of the dilemma proposed by [[Douglas Hofstadter]] in his [[Metamagical Themas]] is to reject the definition of "rational" that led to the "rational" decision to defect. Truly rational (or "[[superrationality|superrational]]") players take into account that the other person is superrational, like them, and thus they cooperate. <!--Many authors and researchers seem unaware of this resolution of the dilemma, however. CONJECTURE --> This analysis of the one-shot game is in complete contradiction to classical game theory,
+but follows naturally from the symmetry between the two players:
+* an optimal strategy must be the same for both players
+* the result must lie on the diagonal of the payoff matrix
+* maximize return from solutions on the diagonal
+* cooperate
+
+===Morality===
+[[Douglas Hofstadter|Hofstadter]]
+also expresses a strong personal belief that 
+the mathematical symmetry is reinforced by a moral symmetry, along the lines of the [[Kant|Kantian]] [[categorical imperative]]: defecting in the hope that the other player cooperates is morally indefensible. 
+If players treat each other as they would treat themselves, then off-diagonal results cannot occur.
+
+==Real-life examples==
+These particular examples, involving prisoners and bag switching and so forth, may seem contrived, but there are in fact many examples in human interaction as well as interactions in nature that have the same payoff matrix. The prisoner's dilemma is therefore of interest to the [[social science]]s such as [[economics]], [[politics]] and [[sociology]], as well as to the biological sciences such as [[ethology]] and [[evolutionary biology]]. Many natural processes have been abstracted into models in which living beings are engaged in endless games of Prisoner's Dilemma. This wide applicability of the PD gives the game its substantial importance.
+
+In [[political science]], for instance, the PD scenario is often used to illustrate the problem of two states engaged in an [[arms race]]. Both will reason that they have two options, either to increase [[military expenditure]] or to make an agreement to reduce weapons. Neither state can be certain that the other one will keep to such an agreement; therefore, they both incline towards military expansion. The [[paradox]] is that both states are acting "[[rational]]ly", but producing an apparently "irrational" result. This could be considered a [[corollary]] to [[deterrence theory]].
+
+In [[sociology]] or [[criminology]], the PD may be applied to an actual dilemma facing two inmates. Marek Kaminski, a former political prisoner and game theorist (see References below), analyzes the factors contributing to payoffs in the game set up by a prosecutor for arrested defendants. He concludes that while the PD is the ideal game of a prosecutor, numerous factors may strongly affect the payoffs and potentially change the properties of the game.
+
+Another interesting example concerns a well-known concept in [[cycling]] races, for instance in the [[Tour de France]]. Consider two cyclists halfway in a race, with the [[peloton]] (larger group) at great distance behind them. The two cyclists often work together (''mutual cooperation'') by sharing the tough load of the front position, where there is no shelter from the wind. If neither of the cyclists makes an effort to stay ahead, the peloton will soon catch up (''mutual defection''). An often-seen scenario is one cyclist doing the hard work alone (''cooperating''), keeping the two ahead of the peloton. In the end, this will likely lead to a victory for the second cyclist (''defecting'') who has an easy ride in the first cyclist's [[slipstream]].
+
+Also in athletics, there is a widespread practice in high school wrestling where the participants intentionally lose unnaturally large amounts of weight so as to compete against lighter opponents.  In doing so, the participants are clearly not at their top level of physical and athletic fitness and yet often end up competing against the same opponents anyway, who have also followed this practice (''mutual defection'').  The result is a reduction in the level of competition.  Yet if a participant maintains their natural weight (''cooperating''), they likely will compete against a nominally stronger opponent who has lost considerable weight.  
+
+Advertising is sometimes cited as a real life example of the prisoner<U+2019>s dilemma.  When [[cigarette]] advertising was legal in the United States, competing cigarette manufacturers had to decide how much money to spend on advertising.  The effectiveness of Firm A<U+2019>s advertising was partially determined by the advertising conducted by Firm B.  Likewise, the profit derived from advertising for Firm B is affected by the advertising conducted by Firm A.  If both Firm A and Firm B chose to advertise during a given period the advertising cancels out, receipts remain constant, and expenses increase due to the cost of advertising.  Both firms would benefit from a reduction in advertising.  However, should Firm B choose not to advertise, Firm A could benefit greatly by advertising. Nevertheless, the optimal amount of advertising by one firm depends on how much advertising the other undertakes. As the best strategy is not independent of what the other firm chooses there is no dominant strategy and this is not a prisoner's dilemma. The outcome is though similar in that both firms would be better off were they to advertise less than in the equilibrium. Sometimes cooperative behaviours do emerge in business situations.  For instance, cigarette manufacturers endorsed the creation of laws banning cigarette advertising, understanding that this would reduce costs and increase profits across the industry.{{fact}} <ref name="trust">This argument for the development of cooperation through trust is given in '' [[The Wisdom of Crowds]] '', where it is argued that long-distance [[capitalism]] was able to form around a nucleus of [[Religious Society of Friends|Quaker]]s, who always dealt honourably with their business partners. (Rather than defecting and reneging on promises <U+2013> a phenomenon that had discouraged earlier long-term unenforceable overseas contracts). It is argued that dealings with reliable merchants allowed the [[meme]] for cooperation to spread to other traders, who spread it further until a high degree of cooperation became a profitable strategy in general [[commerce]].</ref>.  This analysis is likely to be pertinent in many other business situations involving advertising.  
+
+A mundane but familiar set of examples of the prisoner's dilemma can be seen in automobile driving behaviour.  From traffic violations (''e.g.'', speeding, red light running) to reckless driving (''e.g.'', passing in the shoulder to then cut off), these behaviours give a benefit to the perpetrator while hindering the efficiency of the general traffic and the safety of all.
+
+William Poundstone, in a book about the Prisoner's Dilemma (see References below), describes a situation in New Zealand where newspaper boxes are left unlocked. It is possible for someone to take a paper without paying (''defecting'') but very few do, recognising the resultant harm if everybody stole newspapers (''mutual defection''). Since the pure PD is simultaneous for all players (with no way for any player's action to have an effect on another's strategy) this widespread line of reasoning is called "[[magical thinking]]".<ref name="magic">As well as being an explanation for the lack of petty-theft, [[magical thinking]] has been used to explain such things as voluntary [[voting]] (where a non-voter is considered a [[free rider]]). Potentially, it might be used to explain [[Wikipedia]] contributions: Text may be added under the assumption that if contributions are not made, then similar people will also fail to contribute (i.e. arguing from effect to cause). Alternatively, the explanation could depend on expected future actions (and not require a magical connection). Modelling future interactions requires the addition of the temporal dimension, as given in the [[prisoner's dilemma#The iterated prisoner's dilemma|Iterated prisoner<U+2019>s dilemma section]].</ref>  
+
+The theoretical conclusion of PD is one reason why, in many countries, [[plea bargain]]ing is forbidden. Often, precisely the PD scenario applies: it is in the interest of both suspects to confess and testify against the other prisoner/suspect, even if each is innocent of the alleged crime. Arguably, the worst case is when only one party is guilty &mdash; here, the innocent one is unlikely to confess, while the guilty one is likely to confess and testify against the innocent.
+
+Many real-life dilemmas involve multiple players.  Although metaphorical, [[Garrett Hardin|Hardin's]] [[tragedy of the commons]] may be viewed as an example of a multi-player generalisation of the PD:  Each villager makes a choice for personal gain or restraint.  The collective reward for unanimous (or even frequent) defection is very low payoffs (representing the destruction of the "commons"). However, such multi-player PDs are not formal as they can always be decomposed into a set of classical two-player games.
+
+== Related Games ==
+===Closed Bag Exchange===
+[[Douglas Hofstadter|Hofstadter]]<ref name="dh">{{cite book | first=Douglas R. | last=Hofstadter| authorlink=Douglas Hofstadter | title= [[Metamagical Themas]]: questing for the essence of mind and pattern | publisher= Bantam Dell Pub Group| year=1985 | id=ISBN 0-465-04566-9}} - see Ch.29 ''The Prisoner's Dilemma Computer Tournaments and the Evolution of Cooperation''.</ref> once suggested that people often find problems such as the PD problem easier to understand when it is illustrated in the form of a simple game, or trade-off.  One of several examples he used was "closed bag exchange":
+: Two people meet and exchange closed bags, with the understanding that one of them contains money, and the other contains a purchase. Either player can choose to honour the deal by putting into his bag what he agreed, or he can defect by handing over an empty bag.
+
+In this game, defection is always the best course, implying that rational agents will never play, and that "closed bag exchange" will be a [[missing market]] due to [[adverse selection]].
+
+In a variation, popular among [[hacker]]s and programmers, each bag-exchanging agent is given a memory (or access to a collective memory), and many exchanges are repeated over time.
+
+As noted, without this introduction of time and memory, there is not much meaning to this game. Not much is explained about the behaviour of actual systems and groups of people, except for describing interactions which don't happen. Yet more complexity is introduced here than might be expected. The programmer (especially the [[functional program]]mer) will pick up right away on the significance of introducing [[time]] and [[state]] (memory). But without any background on writing programs or modelling these kinds of systems, the various choices that one would have to make can be seen. How big is the memory of each actor? What is the strategy of each actor? How are actors with various strategies distributed and what determines who interacts with whom and in what order?  
+
+One may become frustrated by the complexity involved in creating any model which is meaningful at all, but some very interesting and worthy technical and philosophical issues are raised.
+
+The pregnancy of this problem is suggested by the fact that this discussion has not even mentioned the possibility of the formation (spontaneous or otherwise) of conglomerates of actors, negotiating their bag-exchanges collectively. And what about agents, who charge a fee for organising these bag exchanges?  Or agents (journalists?) who collect and exchange information about the bag exchanges themselves?
+
+===Friend or Foe?===
+''[[Friend or Foe?]]'' is a game show that aired from 2002 to 2005 on the [[Game Show Network]] in the [[United States]].  It is an example of the prisoner's dilemma game tested by real people, but in an artificial setting.  On the game show, three pairs of people compete.  As each pair is eliminated, they play a game of Prisoner's Dilemma to determine how their winnings are split.  If they both cooperate ("Friend"), they share the winnings 50-50.  If one cooperates and the other defects ("Foe"), the defector gets all the winnings and the cooperator gets nothing.  If both defect, both leave with nothing.  Notice that the payoff matrix is slightly different from the standard one given above, as the payouts for the "both defect" and the "cooperate while the opponent defects" cases are identical.  This makes the "both defect" case a weak equilibrium, compared with being a strict equilibrium in the standard prisoner's dilemma.  If you know your opponent is going to vote "Foe", then your choice does not affect your winnings.  In a certain sense, "Friend or Foe" has a payoff model between "Prisoner's Dilemma" and "[[Game of chicken|Chicken]]".
+
+The payoff matrix is
+{| border cellpadding="5" cellspacing="0" align="center">
+|
+!scope="col" style="color: #900"|Cooperate
+!scope="col" style="color: #900"|Defect
+|-
+!scope="row" style="color: #009"|Cooperate
+|<span style="color: #009">1</span>, <span style="color: #900">1
+|<span style="color: #009">0</span>, <span style="color: #900">2
+|-
+!scope="row" style="color: #009"|Defect
+|<span style="color: #009">2</span>, <span style="color: #900">0</span>
+|<span style="color: #009">0</span>, <span style="color: #900">0</span>
+|}
+
+Friend or Foe would be useful for someone who wanted to do a real-life analysis of prisoner's dilemma.  Notice that participants only get to play once, so all the issues involving repeated playing are not present and a "tit for tat" strategy cannot develop.
+
+In Friend or Foe, each player is allowed to make a statement to convince the other of his friendliness before both make the secret decision to cooperate or defect.  One possible way to 'beat the system' would be for a player to tell his rival, "I am going to choose foe.  If you trust me to split the winnings with you later, choose friend.  Otherwise, if you choose foe, we both walk away with nothing."  A greedier version of this would be "I am going to choose foe.  I am going to give you X%, and I'll take (100-X)% of the total prize package. So, take it or leave it, we both get something or we both get nothing." (As in the [[Ultimatum game]].) Now, the trick is to minimise X such that the other contestant will still choose friend.  Basically, the player has to know the threshold at which the utility his opponent gets from watching him receive nothing exceeds the utility he gets from the money he stands to win if he just went along.
+
+This approach was never tried in the game; it's possible that the judges might not allow it, and that even if they did, [[inequity aversion]] would produce a lower expected payoff from using the tactic. ([[Ultimatum game]]s in which this approach was attempted have led to rejections of high but unequal offers <U+2013> in some cases up to two weeks wages have been turned down in preference to both players receiving nothing.)
+
+(The published rules for the TV show disallowed splitting; the contestants had to sign a document saying that if they tried to split the winnings, they would forfeit the prize.)
+
+==References==
+* [[Robert Axelrod|Axelrod, R.]] (1981). The Evolution of Cooperation. ''Science'', 211(4489):1390-6
+* [[Robert Axelrod|Axelrod, R.]] (1984). ''[[The Evolution of Cooperation]]''. ISBN 0-465-02121-2
+* [[Kenneth Binmore]], Fun and Games.
+* David M. Chess (1988). Simulating the evolution of behavior: the iterated prisoners' dilemma problem. Complex Systems, 2:663-670.
+* [[Melvin Dresher|Dresher, M.]] (1961). ''The Mathematics of Games of Strategy: Theory and Applications''  Prentice-Hall, Englewood Cliffs, NJ.
+* Flood, M.M. (1952).  Some experimental games. Research memorandum RM-789. [[RAND]] Corporation, Santa Monica, CA. <!--(Research Memoranda do not appear for sale at the RAND [http://www.rand.org/pubs/authors/f/flood_merrill_m.html store])-->
+* Kaminski, Marek M. (2004) ''Games Prisoners Play''  Princeton University Press. ISBN 0-691-11721-7 http://webfiles.uci.edu/mkaminsk/www/book.html
+* Poundstone, W. (1992) ''Prisoner's Dilemma'' Doubleday, NY NY.
+* Greif, A. (2006). ''Institutions and the Path to the Modern Economy: Lessons from Medieval Trade.'' [[Cambridge University Press]], [[Cambridge]], UK.
+
+==See also==
+* [[Cellular automata]]
+* [[Centipede game]]
+* [[Diner's dilemma]]
+* [[Evolutionarily stable strategy]]
+* [[Nash equilibrium]]
+* [[Neuroeconomics]]
+* [[Reciprocal altruism]]
+* [[Rendezvous problem]]
+* [[Superrationality]]
+* [[Tit for tat]]
+* [[Tragedy of the commons]]
+* [[Tragedy of the anticommons]]
+* [[Trust (sociology)]]
+
+==Notes==
+<div class="references-small">
+<references />
+</div>
+
+==External links==
+*[http://www.nature.com/npp/journal/v31/n5/full/1300932a.html Effects of Tryptophan Depletion on the Performance of an Iterated Prisoner's Dilemma Game in Healthy Adults] - Nature Neuropsychopharmacology
+*[http://www.egwald.com/operationsresearch/prisonersdilemma.php Is there a "dilemma" in Prisoner's Dilemma] by Elmer G. Wiens
+* [http://webfiles.uci.edu/mkaminsk/www/book.html "Games Prisoners Play"] - game-theoretic analysis of interactions among actual prisoners, including PD.
+*Play an [http://people.bath.ac.uk/mk213/ipd/ iterated prisoner's dilemma game].
+*Another version of the [http://www.gametheory.net/Web/PDilemma/ iterated prisoner's dilemma game]
+*[http://www.paulspages.co.uk/hmd/ Iterated prisoner's dilemma game] applied to Big Brother TV show situation.
+
+{{Game_theory}}
+{{featured article}}
+
+[[Category:Game theory]]
+[[Category:Psychological theories]]
+[[Category:Thought experiments]]
+
+{{Link FA|es}}
+
+[[cs:V<U+011B>z<U+0148>ovo dilema]]
+[[de:Gefangenendilemma]]
+[[es:Dilema del prisionero]]
+[[fr:Dilemme du prisonnier]]
+[[ko:<U+C8C4><U+C218><U+C758> <U+B51C><U+B808><U+B9C8>]]
+[[io:Karcerano-dilemo]]
+[[it:Dilemma del prigioniero]]
+[[he:<U+05D3><U+05D9><U+05DC><U+05DE><U+05EA> <U+05D4><U+05D0><U+05E1><U+05D9><U+05E8>]]
+[[hu:Fogolydilemma]]
+[[nl:Prisoner's dilemma]]
+[[ja:<U+56DA><U+4EBA><U+306E><U+30B8><U+30EC><U+30F3><U+30DE>]]
+[[pl:Dylemat wi<U+0119><U+017A>nia]]
+[[pt:Dilema do prisioneiro]]
+[[ro:Dilema prizonierului]]
+[[ru:<U+0414><U+0438><U+043B><U+0435><U+043C><U+043C><U+0430> <U+0437><U+0430><U+043A><U+043B><U+044E><U+0447><U+0451><U+043D><U+043D><U+043E><U+0433><U+043E>]]
+[[fi:Vangin dilemma]]
+[[sl:Zapornikova dilema]]
+[[sv:F<U+00E5>ngarnas dilemma]]
+[[vi:Song <U+0111><U+1EC1> t<U+00F9> nh<U+00E2>n]]
+[[zh:<U+56DA><U+5F92><U+56F0><U+5883>]]

@@ -1,0 +1,76 @@
+'''A''x''''' is a series of [[ARM architecture|ARM]] based [[system-on-a-chip|System on Chips]] (SoC) designed by [[Apple Inc.|Apple]] to fit inside their [[Consumer electronics|consumer electronic]] devices, such as the [[iPod]], [[iPad]], [[iPhone]] and [[Apple TV]].
+
+==Apple A4==
+[[File:Apple_A4_Chip.jpg|thumb|right|The Apple A4 SoC]]
+{{main|Apple A4}}
+The Apple A4 is a [[package on package]] (PoP) [[system-on-a-chip]] (SoC) designed by [[Apple Inc.|Apple]] and manufactured by [[Samsung]].<ref>{{cite web|last=Clark |first=Don |url=http://online.wsj.com/article/SB10001424052702303912104575164112770784290.html?mod=rss_Today's_Most_Popular |title=Apple iPad Taps Familiar Component Suppliers - WSJ.com |publisher=Online.wsj.com |date=2010-04-05 |accessdate=2010-04-15}}</ref>  It combines an [[ARM architecture|ARM]] [[ARM Cortex-A8|Cortex-A8]] CPU with a [[PowerVR]] GPU, and emphasizes power efficiency.<ref>{{cite web|url=http://www.apple.com/ipad/design/#performance |title=iPad - It's thin, light, powerful, and revolutionary |publisher=Apple |date= |accessdate=2010-07-07}}</ref>  The chip commercially debuted with the release of Apple's [[iPad]] [[tablet computer|tablet]];<ref name="Apple PR">{{cite press release |url=http://www.apple.com/pr/library/2010/01/27ipad.html |title=Apple Launches iPad |publisher=[[Apple Inc.|Apple]] |date=2010-01-27 | accessdate=2010-01-28}}</ref> followed shortly by the [[iPhone 4]] smartphone,<ref name="iPhoneA4">{{cite web |url=http://www.apple.com/iphone/design/index.html |title=iPhone 4 design |publisher=Apple |date=2010-07-06}}</ref> the 4th generation [[iPod Touch]] and the 2nd generation [[Apple TV]]. It was superseded in the second-generation iPad, released the following year, by the [[Apple A5]] processor.
+
+Apple A4 is based on the [[ARM architecture|ARM processor architecture]].<ref name="based_on_arm">
+{{cite news |url=http://www.nytimes.com/2010/02/22/technology/22chip.html |title=For Chip Makers, the Next Battle Is in Smartphones |newspaper=New York Times |date=2010-02-21 |accessdate=2010-02-25 |first=Ashlee |last=Vance}}</ref> The first version released runs at 1 [[GHz]] for the iPad  and contains an ARM Cortex-A8 CPU core paired with a [[PowerVR#Series5 (SGX)|PowerVR SGX 535]]  [[graphics processing unit|graphics processor]] (GPU)<ref name="Apple PR" /><ref>{{cite web |url=http://www.ifixit.com/Teardown/Apple-A4-Teardown/2204/3 |title=conclusion from both hard and software analysis it uses an ARM Cortex-A8 core |publisher=Ifixit.com |first=Kyle |last=Wiens |date=2010-04-05 |accessdate=2010-04-15}}</ref><ref>{{cite web |url=http://www.apple.com/ipad/specs/ |title=iPad <U+2014> Technical specifications and accessories for iPad |publisher=Apple |accessdate=2010-01-28}}</ref><ref name="Engadget">{{cite web |url=http://www.engadget.com/2010/02/23/ipad-confirmed-to-use-powervr-sgx-graphics/ |title=iPad confirmed to use PowerVR SGX graphics |date=2010-02-23 |first=Donald |last=Melanson |publisher=Engadget}}</ref> built on Samsung's 45-nanometer (nm) silicon chip fabrication process.<ref name="Chipworks">{{cite web |url=http://www.chipworks.com/A4_is_Samsung_45nm.aspx |title=Chipworks Confirms Apple A4 iPad chip is fabbed by Samsung in their 45-nm process |publisher=Chipworks}}</ref> Clock speed for the units used in the iPhone 4, iPod Touch, and Apple TVs have not been revealed.
+
+The Cortex-A8 core used in the A4 is thought to use performance enhancements developed by chip designer [[Intrinsity]] (which was subsequently acquired by Apple)<ref>{{cite web |url=http://arstechnica.com/apple/news/2010/04/apple-purchase-of-intrinsity-confirmed.ars |title=Apple purchase of Intrinsity confirmed |publisher=Ars Technica |date=2010-04-28 |first=Jon |last=Stokes |accessdate=2010-04-28}}</ref> in collaboration with [[Samsung]].<ref name="Intrinsity">{{cite web |url=http://www.eetimes.com/news/latest/showArticle.jhtml?articleID=218600577 |publisher=EETimes.com |accessdate=2010-04-23 |title=Samsung, Intrinsity pump ARM to GHz rate |first=Rick |last=Merritt}}</ref> The resulting core, dubbed "[[Samsung Hummingbird|Hummingbird]]", is able to run at far higher clock rates than other implementations while remaining fully compatible with the Cortex-A8 design provided by ARM.<ref name = "speed">{{cite web |url=http://www.pcworld.com/article/193597/Apple_iPad_Smokes_Past_the_iPhone_3GS_in_Speed_Test.html |title=Apple iPad smokes past the iPhone 3GS in speed |publisher=[[PC World (magazine)|PC World]] |date=2010-04-06 |accessdate=2010-04-11 |first=Gregg |last=Keizer}}</ref> Other performance improvements include additional L2 cache. The same  Cortex-A8 CPU core used in the A4 is also used in Samsung's S5PC110A01 SoC.<ref>{{cite web|url=http://www.eetimes.com/showArticle.jhtml?articleID=225700447 |title=Apple's A4 dissected, discussed...and tantalizing |publisher=EETimes.com |date=16 June 2010 |first1=Paul |last1=Boldt |first2=Don |last2=Scansen | first3=Tim |last3=Whibley |accessdate=2010-07-07}}</ref><ref>{{cite web|url=http://www.ubmtechinsights.com/uploadedFiles/Apple%20A4%20vs%20SEC%20S5PC110A01.pdf |title=Microsoft PowerPoint - Apple A4 vs SEC S5PC110A01 |format=PDF |date= |accessdate=2010-07-07}}</ref>
+
+The A4 processor package does not contain RAM, but supports [[Package on package|PoP]] installation. The top package of the A4 used in the [[iPad]], in the  [[iPod Touch]]<ref>{{cite web|url=http://www.appleinsider.com/articles/10/09/08/teardown_of_apples_4th_gen_ipod_touch_finds_256mb_of_ram.html |title=Teardown of Apple's 4th-gen iPod touch finds 256MB of RAM |publisher=Appleinsider.com |date=2010-09-08 |accessdate=2010-09-10}}</ref>  4th gen and in the [[Apple TV]]<ref>{{cite web|url=http://www.ifixit.com/Teardown/Apple-TV-2nd-Generation-Teardown/3625/2 |title=Apple TV 2nd Generation Teardown |publisher=iFixit |date=2010-09-30 |accessdate=2011-01-04}}</ref> 2nd gen contains two low-power 128 MB [[DDR SDRAM]] [[Integrated circuit|chips]] for a total of 256MB RAM. For the [[iPhone 4]] there are two chips of 256 MB for a total of 512 MB.<ref>{{cite web|url=http://www.appleinsider.com/articles/10/06/17/apple_reveals_iphone_4_has_512mb_ram_doubling_ipad_report.html |title=Apple reveals iPhone 4 has 512MB RAM, doubling iPad - report |publisher=Appleinsider.com |date=2010-06-17 |accessdate=2010-07-07}}</ref><ref>{{cite web |url=http://www.ifixit.com/blog/2010/04/a-peek-inside-apples-a4-processor/ |title=A Peek Inside Apple<U+2019>s A4 Processor |publisher=iFixit |date=2010-04-05}}</ref><ref>{{cite web |url=http://www.denali.com/wordpress/index.php/dmr/2010/04/09/apple-ipad-no-lpddr2 |title=Apple iPad: no LPDDR2? |publisher=Denali |date=2010-04-09 |first=Marc |last=Greenberg}}</ref> RAM is connected to the processor using ARM's 64-bit-wide [[Advanced Microcontroller Bus Architecture#Advanced eXtensible Interface (AXI)|AMBA 3 AXI]] bus. This is twice the width of the RAM data bus used in previous ARM 11 and ARM 9 based Apple devices, to support the greater need for graphics bandwidth in the iPad.<ref>{{cite web |url=http://www.eetasia.com/ART_8800603321_499495_NP_1e1373d9.HTM |title=iPad equipped to deliver richer graphics |publisher=EE Times Asia |date=2010-04-09 |accessdate=2010-04-14 |first=Rick |last=Merritt}}</ref>
+{{br}}
+==Apple A5==
+[[File:Apple A5 Chip.jpg|thumb|right|The Apple A5 SoC]]
+{{main|Apple A5}}
+The Apple A5 is a [[package on package]] (PoP) [[system-on-a-chip]] (SoC) designed by [[Apple Inc.|Apple]] and manufactured by [[Samsung]]<ref>{{cite web| url= http://www.eetimes.com/electronics-news/4213981/Samsung-fabs-Apple-A5-processor |title= Updated: Samsung fabs Apple A5 processor | date= March 12, 2011 | publisher= EETimes.com| accessdate=2011-03-15}}</ref> to replace the [[Apple A4]]. The chip commercially debuted with the release of Apple's [[iPad 2]] [[tablet computer|tablet]], followed by [[iPhone 4S]] [[smartphone]]. (This is consistent with how Apple debuted the A4 chip: first in the original iPad, then in the iPhone 4, and finally in the iPod touch 4th generation.<ref>[http://www.macworld.co.uk/ipod-itunes/news/index.cfm?newsid=3264638 iPhone 5 expected to have same A5 chip as iPad 2]</ref>)
+
+The A5 contains a dual-core [[ARM Cortex-A9 MPCore|ARM Cortex-A9]] CPU<ref name="anandtech1">{{cite web|url=http://www.anandtech.com/show/4215/apple-ipad-2-benchmarked-dualcore-cortex-a9-powervr-sgx-543mp2/2 |title=Apple iPad 2 Preview - AnandTech :: Your Source for Hardware Analysis and News |publisher=AnandTech |date= |accessdate=2011-03-15}}</ref> with [[ARM]]'s advanced [[SIMD]] extension, marketed as [[ARM architecture#Advanced_SIMD_.28NEON.29|NEON]], and a dual core [[PowerVR|PowerVR SGX543MP2]] GPU. This GPU can push between 70 and 80 million polygons/second and has a pixel fill rate of 2 billion pixels/second. The SGX535 in the A4 could only push 35 million polygons/second and 500 million pixels/second, although in real world tests it struggled to pull off even 7 million flat shaded polygons. <ref>{{cite web|url=http://www.anandtech.com/show/4216/apple-ipad-2-gpu-performance-explored-powervr-sgx543mp2-benchmarked |title=Apple iPad 2 GPU Performance Explored: PowerVR SGX543MP2 Benchmarked - AnandTech :: Your Source for Hardware Analysis and News |publisher=AnandTech |date= |accessdate=2011-03-15}}</ref> Apple lists the A5 to be clocked at 1 GHz on the iPad 2's technical specifications page,<ref>{{cite web|url=http://www.apple.com/ipad/specs/ |title=iPad - View the technical specifications for iPad |publisher=Apple |date= |accessdate=2011-03-15}}</ref> though it can dynamically adjust its frequency to save battery life.<ref>{{cite web|url=http://www.appleinsider.com/articles/11/03/13/inside_apples_ipad_2_a5_fast_lpddr2_ram_costs_66_more_than_tegra_2.html |title=Inside Apple's iPad 2 A5: fast LPDDR2 RAM, costs 66% more than Tegra 2 |publisher=AppleInsider |date= |accessdate=2011-03-15}}</ref><ref name="anandtech1"/>
+
+Apple claims that the [[CPU]] is twice as powerful and the [[Graphics processing unit|GPU]] up to nine times as powerful as its predecessor, the [[Apple A4]]. The A5 package contains 512 MB of low-power DDR2 RAM clocked at 533 MHz.<ref>{{cite web|url=http://www.apple.com/ipad/features/ |title=Apple iPad 2 feature page |publisher=Apple.com |date= |accessdate=2011-03-15}}</ref><ref>{{cite web|url=http://www.appleinsider.com/articles/11/03/03/apples_a5_cpu_in_ipad_2_has_512mb_of_ram_same_as_iphone_4_report.html |title=Apple's A5 CPU in iPad 2 has 512MB of RAM, same as iPhone 4 |publisher=Appleinsider.com |date=2011-03-03 |accessdate=2011-03-15}}</ref><ref>{{cite web|url=http://www.tipb.com/2011/03/03/tipb-answers-apple-a5-chip-guess/ |title=TiPb Answers: Apple A5 chip <U+2014> what we know and what we guess |publisher=Tipb.com |date=2011-03-03 |accessdate=2011-03-15}}</ref><ref>{{cite web|url=http://daringfireball.net/2011/03/the_ipad_2 |title=The iPad 2 <U+2013> Daring Fireball |publisher=Daringfireball.net |date=2011-03-09 |accessdate=2011-03-15}}</ref> The A5 is estimated to cost 75% more than its predecessor; the price difference is supposed to diminish as production increases.<ref>{{cite web | url=http://www.businessinsider.com/how-much-does-it-cost-to-build-the-ipad-2-2011-3 | title=It Costs $326.60 To Make An iPad 2 &mdash; Why That Matters | accessdate=March 14, 2011 | author=Pascal-Emmanuel Gobry | date=14 March 2011 | publisher=Business Insider, Inc.}}</ref>
+{{br}}
+
+==Apple A6==
+TSMC is reportedly begun trial manufacturing of the Apple A6 on their 28 nm fabrication process. It is debated whether TSMC will be the only supplier of the A6 chip that is speculated will be the heart of the iPad 3, rumored to be released in the first half of 2012<ref>[http://www.ipodnn.com/articles/11/09/08/supplier.prepping.for.28nm.chip.production/ TSMC may be ready to build A6 chipsets in early 2012]</ref>, since it's also reported that Apple will stick to Samsung as primary supplier due to fabrication problems at TSMC.<ref>[http://www.macrumors.com/2011/10/17/apple-to-stick-with-samsung-for-a6-chip-production-after-all/ Apple to Stick with Samsung for A6 Chip Production After All?]</ref>
+
+Other specifications are unknown though rumors include an increased core count to quad-core, enhanced GPU<ref>[http://www.gottabemobile.com/2011/06/16/next-gen-apple-a6-arm-processor-to-use-powervr-series-6-rogue-gpu/#utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Gottabemobile+%28GottaBeMobile%29 Next-Gen Apple A6 ARM Processor to Use PowerVR Series 6 <U+2018>Rogue<U+2019> GPU?]</ref> or an increase in clock speed.
+
+==List of Apple SoC==
+{| class="wikitable"
+|-
+! Name !! [[Semiconductor device fabrication|Fabrication process]] !! [[Instruction set]] !! [[Clock rate]] !! [[CPU Cache]] !! [[Graphics processing unit|GPU]] !! [[Random-access memory|RAM]] !! Available<U+2026> !! Used in<U+2026>
+|-
+| A4
+| 45&nbsp;nm
+| [[ARM architecture|ARMv7]]
+| 800-1000 MHz Single-core [[ARM Cortex-A8]]
+| L1: 32 kB Instruction + 32 kB Data, L2: 512 kB
+| [[PowerVR]] SGX535
+| [[Mobile DDR|LPDDR]] 200 MHz (Effective 400 MHz)
+| March 2010
+| [[iPad]], [[iPhone 4]], [[iPod Touch]] 4th gen, [[Apple TV]] 2nd gen
+|-
+| A5
+| 45&nbsp;nm
+| [[ARM architecture|ARMv7]]
+| 800-1000 MHz Dual-core [[ARM Cortex-A9]]
+| L1: 32 kB instruction + 32 kB data, L2: 1 MB
+| Dual-core [[PowerVR]] SGX543MP2
+| [[Mobile DDR|LPDDR2]] 266 MHz (Effective 533 MHz)
+| March 2011
+| [[iPad 2]], [[iPhone 4S]]
+|-
+|}
+
+==Similar platforms==
+* [[Snapdragon (System on Chip)|Snapdragon]] by [[Qualcomm]]
+* [[OMAP]] by [[Texas Instruments]]
+* [[Tegra]] by [[Nvidia]]
+* [[Exynos]] by [[Samsung]]
+* [[NovaThor]] by [[ST-Ericsson]]
+
+== See also ==
+* [[Apple A4]], Apple's first-generation Apple Ax SoC, featuring a single-core processor.
+* [[Apple A5]], Apple's second-generation Apple Ax SoC, featuring a dual-core processor.
+* [[PWRficient]], a processor designed by [[P.A. Semi]], a company Apple acquired to form an in-house custom chip design department.
+* [[PowerVR#Series 5 (SGX)|PowerVR SGX]] GPUs were also used in the [[iPhone 3GS]] and the third-generation [[iPod touch]].
+* [[ARM Cortex-A9 MPCore]]
+
+== References ==
+{{reflist|colwidth=30em}}
+[[Category:2011 introductions]]
+[[Category:Apple Inc. hardware]]
+[[Category:Microprocessors]]
+[[Category:ARM architecture]]

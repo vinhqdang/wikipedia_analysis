@@ -1,0 +1,475 @@
+The '''Information Technology Infrastructure Library''' ('''ITIL''') also known as '''Infrastructure Management Service''' ('''IMS''')  is a set of concepts and policies for managing [[information technology]] (IT) infrastructure, development and operations.  
+
+ITIL gives a detailed description of a number of important IT practices with comprehensive checklists, tasks and procedures that any IT organization can tailor to its needs.
+ITIL is published in a series of books, each of which covers an IT management topic.  The names ''ITIL'' and ''IT Infrastructure Library'' are [[trademark|registered trademarks]] of the [[United Kingdom]]'s [[Office of Government Commerce]] (OGC).
+{{TOC left}}
+
+==History==
+ITIL is built around a process-model based view of controlling and managing operations often credited to [[W. Edwards Deming]]{{Citation needed|date=June 2007}}. The UK Government's CCTA developed ITIL recommendations in the 1980s in response to the growing dependence on IT, and the recognition that without standard practices, government agencies and private sector contracts were independently creating their own IT management practices. This duplication of effort within [[Information and Communications Technology]] (ICT) projects resulted in common mistakes and increased costs.{{Citation needed|date=February 2007}} In April 2001 the CCTA was merged into the [[Office of Government Commerce]] (OGC), an office of the [[HM Treasury|UK Treasury]].<ref>Office of Government Commerce (UK)[http://www.ogc.gov.uk/index.asp?id=1878 CCTA and OGC]. Retrieved [[May 5]] [[2005]].</ref>  
+
+A primary benefit claimed by proponents of ITIL community is its common [[vocabulary]], which consists of a glossary of tightly defined and widely accepted terms. A new and enhanced [[glossary]] has been developed as a key deliverable of the ITIL v3 (also known as the ITIL Refresh Project).
+
+==Overview of the ITIL v3 library==
+ 
+Five key volumes comprise the ITIL v3, published in May 2007:
+
+:1. '''Service Strategy'''
+:2. '''Service Design'''
+:3. '''Service Transition'''
+:4. '''Service Operation'''
+:5. '''Continual Service Improvement'''
+
+===1. Service Strategy===
+As the center and origin point of the ITIL Service Lifecycle, the Service Strategy volume provides guidance on clarification and prioritization of service provider investments in services.  More generally, Service Strategy focuses on helping IT organizations improve and develop over the long term. In both cases, Service Strategy relies largely upon a market-driven approach.  Key topics covered include service value definition, business case development, service assets, market analysis, and service provider types.  Processes covered include service portfolio management, demand management, and IT financial management.
+
+===2. Service Design===
+The ITIL Service Design volume provides good practice guidance on the design of IT services, processes, and other aspects of the service management effort.  Significantly, design within ITIL is understood to encompass all elements relevant to technology service delivery, rather than focusing solely on design of the technology itself.  As such, Service Design addresses how a planned service solution interacts with the larger business and technical environments, service management systems required to support the service, processes which interacts with the service, technology, and [[architecture]] required to support the service, and the supply chain required to support the planned service.  Within ITIL, design work for an IT service is aggregated into a single Service Design Package (SDP).  Service Design Packages, along with other information about services, are managed within the service catalog.  Processes covered in this volume include [[service level management]], availability management, capacity management, IT service continuity management, information security management, supplier management, and service catalog management.
+test sherif khalifa
+
+===3. Service Transition===
+Service transition relates to the delivery of services required by the business into live/operational use, and often encompasses the "project" side of IT rather than "BAU" (Business As Usual). This area also covers topics such as managing changes to the "BAU" environment. Topics include Service Asset and Configuration Management, Transition Planning and Support, Release and deployment management, [[Change Management]], [[Knowledge Management]], as well as the key roles of staff engaging in Service Transition.
+
+===4. Service Operation===
+Best practice for achieving the delivery of agreed levels of services both to end-users and the customers (where "customers" refer to those individuals who pay for the service and negotiate the SLAs). Service Operations is the part of the [[Enterprise life cycle|lifecycle]] where the services and value is actually directly delivered. Also the monitoring of problems and balance between service reliability and cost etc are considered. Topics include balancing conflicting goals (e.g. reliability vs cost etc), Event management, [[Incident Management (ITSM)|incident management]], [[problem management]], request fulfillment, access management, [[service desk]]. The functions include technical management,application management , operations management and Service Desk as well as, responsibilities for staff engaging in Service Operation.
+
+===5. Continual Service Improvement (CSI)===
+<!--==== Short Description ==== -->
+
+Aligning and realigning IT services to changing business needs (because standstill implies decline).
+
+The goal of Continual Service Improvement is to align and realign IT Services to changing business needs by identifying and implementing improvements to the IT services that support the Business Processes. The perspective of CSI on improvement is the business perspective of service quality, even though CSI aims to improve process effectiveness, [[efficiency]] and cost effectiveness of the IT processes through the whole lifecycle. To manage improvement, CSI should clearly define what should be controlled and measured.
+
+CSI needs to be treated just like any other service practice. There needs to be upfront planning, training and awareness, ongoing scheduling, roles created, ownership assigned,and activities identified to be successful. CSI must be planned and scheduled as process with defined activities, inputs, outputs, roles and reporting.
+<!-- We should not give 2 alternatives when giving a definition in an encyclopedia, it confuses the reader
+==== Long Description ====
+
+Once an organization has gone through the process of identifying what its Services are, as well as developing and implementing the IT Service Management (ITSM) processes to enable those services, many incorrectly believe that the hard work is done. The real work is only just beginning. How do organizations get buy-in for using the new processes? How do organizations measure, report and use the data to improve not only the new processes but to continually improve the Services being provided? This requires a conscious decision to adopt CSI with clearly defined goals, documented procedures, inputs, outputs and identified roles and responsibilities. To be successful, CSI must be embedded within each organization's culture.
+
+The Service Lifecycle is a comprehensive approach to Service Management: seeking to understand its structure, the interconnections between all components,and how changes in any area affect the whole system and its constituent parts over time. It is an organizing framework designed for sustainable performance.
+
+The Service Lifecycle can be viewed in a graphical manner, where it is easy to demonstrate the value provided, both in terms of "''business contribution''" and "''profit''". The '''business contribution''' is the ability for an IT organization to support a business process, managing the IT service at the requested performance. The '''profit''' is the ability to manage cost of service in relations to the business revenue.
+
+The Service Lifecycle can be viewed as a phased life cycle, where the phases are:
+* Defining strategy for the IT Service Management (Service Strategy or SS)
+* Designing the services to support the strategy (Service Design or SD)
+* Implement the services to meet the designed requirements (Service Transition or ST)
+* Support the services managing the operational activities (Service Operation or SO)
+
+The interaction between phases are managed through the Continual Service Improvement approach, which is responsible for measuring and improving service and process maturity level. After comparison of all phases, a service period is concluded and another service period begins.
+
+The Continual Service Improvement phase is involved during all phases of the service lifecycle. It is responsible for measuring the service and the processes, (Service Measurement), and to document the results (Service Reporting) to improve the services quality and the processes maturity (Service Improvement).
+These improvements will be implemented in the next period of Service Lifecycle, starting again with Service Strategy, and following with Service Design and Transition, the Service Operation phase of course continue to manages operations during all service periods.
+
+With the evolution of service periods, the "effort" for each phase will be reduced concerning the strategic and tactical phases (SS,SD and ST), here the SO phase is optimized and takes the primary role. At each cycle of the service (service period) the service is improved, increasing business value and maximizing of profits.
+
+In terms of Business Contribution, the IT Service begins to be valuable when in the first step the Service Transition starts. 
+In terms of profits, the major investments are required with the big implementation projects (ST), when the transition is complete and the Operations start, the service begins to support business process and the new revenues balance the costs. After some periods of service optimization the "Profit & Loss" start to be profitable and reach the "break even point".
+
+After a number of periods (depending on the complexity of the service and the flexibility of the business), the business contribution and the profit stabilize, which means that the IT organization has reached the right level of maturity in managing processes and the service has reached the right level of performance in meeting the service level requirements.-->
+
+==Overview of the ITIL 2 library==
+The IT Infrastructure '''Library''' originated as a collection of books each covering a specific '''practice''' within IT Service Management. After the initial publication, the number of books quickly grew within ITIL v1 to over 30 volumes. To make ITIL more accessible (and affordable), ITIL v2 consolidated the publications into logical 'sets' that grouped related process guidelines to match different aspects of IT management, applications, and services. 
+
+While the Service Management sets (Service Support and Service Delivery) are by far the most widely used, circulated, and understood of ITIL publications, ITIL provides a more comprehensive set of practices as a whole. Proponents believe using the broader library provides comprehensive guidance to link ''technical'' implementation, operations guidelines and requirements with the [[strategic management]], [[operations management]] and [[financial management]] of a modern business.
+
+The eight ITIL version 2 books and their disciplines are:
+
+The IT Service Management sets
+:1. '''[[Information Technology Infrastructure Library#Service Delivery|Service Delivery]]'''  
+:2. '''[[Information Technology Infrastructure Library#Service Support|Service Support]]''' 
+
+Other operational guidance
+:3. '''[[Information Technology Infrastructure Library#ICT Infrastructure Management|ICT Infrastructure Management]]''' 
+:4. '''[[Information Technology Infrastructure Library#Security Management|Security Management]]''' 
+:5. '''[[Information Technology Infrastructure Library#The Business Perspective|The Business Perspective]]''' 
+:6. '''[[Information Technology Infrastructure Library#Application Management|Application Management]]''' 
+:7. '''[[Information Technology Infrastructure Library#Software Asset Management|Software Asset Management]]''' 
+
+To assist with the implementation of ITIL practices a further book was published providing guidance on implementation (mainly of Service Management):
+:8. '''[[Information Technology Infrastructure Library#Planning To Implement Service Management|Planning to Implement Service Management]]''' 
+
+And this has more recently been supplemented with guidelines for smaller IT units, not included in the original eight publications:
+:9. '''ITIL [[Information Technology Infrastructure Library#Small-Scale Implementation|Small-Scale Implementation]]'''
+
+==Details of the ITIL v2 library==
+===Service Support===
+The Service Support<ref>{{cite book|author=Office of Government Commerce|title=Service Support|publisher=The Stationery Office|year=2000|isbn=0-11-330015-8}}</ref> ITIL discipline is focused on the ''User'' of the ICT services and is primarily concerned with ensuring that they have access to the appropriate services to support the business functions.
+
+To a business, customers and users are the entry point to the process model. They get involved in service support by:
+* Asking for changes
+* Needing communication, updates
+* Having difficulties, queries.
+* Real process delivery
+
+The [[service desk]] is the single contact point for customers problems. If there is a direct solution, it tries to resolve the problem. If not, it creates an [[ITIL glossary#Incident Management|incident]]. ''Incidents'' initiate a chain of processes: Incident Management, Problem Management, Change Management, Release Management and Configuration Management (see following sections for details). This chain of processes is tracked using the Configuration Management Database (CMDB), which records each process, and creates output documents for traceability (Quality Management).
+
+==== Service Desk / Service Request Management ====
+
+Tasks include handling incidents and requests, and providing an interface for other ITSM processes.
+*Single Point of Contact (SPOC) and not necessarily the First Point of Contact (FPOC)
+*There is a single point of entry and exit
+*Easier for Customers
+*Data Integrity
+*Communication channel is streamlined
+
+The primary ''functions'' of the Service Desk are:
+
+*Incident Control: life cycle management of all Service Requests
+*Communication: keeping the customer informed of progress and  advising on workarounds
+
+The Service Desk function is known under various names .
+*''[[Call Center]]'': main emphasis on professionally handling large call volumes of telephone-based transactions
+*''[[Help Desk]]'': manage, co-ordinate and resolve incidents as quickly as possible
+*''Service Desk'': not only handles incidents, problems and questions but also provides an interface for other activities such as change requests, maintenance contracts, software licenses, service level management, configuration management, availability management, Financial Management and IT Services Continuity Management
+
+The three ''types'' of structure that can be considered are:
+*''Local Service Desk'': to meet local business needs - is practical only until multiple locations requiring support services are involved
+*''Central Service Desk'': for organizations having multiple locations - reduces operational costs and improves usage of available resources
+*''Virtual Service Desk'': for organizations having multi-country locations - can be situated and accessed from anywhere in the world due to advances in network performance and telecommunications, reducing operational costs and improving usage of available resources
+
+====Incident Management====
+The goal of Incident Management is to restore normal service operation as quickly as possible and minimize the adverse effect on business operations, thus ensuring that the best possible levels of service quality and availability are maintained.
+'Normal service operation' is defined here as service operation within Service Level Agreement (SLA) limits.
+
+{{Main|Incident Management (ITSM)}}
+
+====Problem Management====
+The goal of 'Problem Management' is to resolve the root cause of incidents and thus to minimize the adverse impact of incidents and problems on business that are caused by errors within the IT infrastructure, and to prevent recurrence of incidents related to these errors. 
+A `problem' is an unknown underlying cause of one or more incidents, and a `known error' is a problem that is successfully diagnosed and for which either a [[work-around]] or a permanent resolution has been identified. The CCTA defines problems and known errors as follows:
+
+:''A '''problem''' is a condition often identified as a result of multiple Incidents that exhibit common symptoms. Problems can also be identified from a single significant Incident, indicative of a single error, for which the cause is unknown, but for which the impact is significant.''
+
+:''A '''known error''' is a condition identified by successful diagnosis of the root cause of a problem, and the subsequent development of a Work-around.''
+
+''Problem management'' is different from ''incident management''. The principal purpose of ''problem management'' is to find and resolve the root cause of a problem and prevention of incidents; the purpose of ''incident management'' is to return the service to normal level as soon as possible, with smallest possible business impact. 
+
+<!-- Unsourced image removed: [[Image:Problem management process.jpg|thumb|800px|center|none|Problem management process]] -->
+<!-- The above diagram shows the details of the problem management process. --> 
+
+The problem management process is intended to reduce the number and severity of incidents and problems on the business, and report it in documentation to be available for the first-line and second line of the help desk.
+The proactive process identifies and resolves problems before incidents occur. These activities are:
+* Trend analysis;
+* Targeting support action;
+* Providing information to the organization.
+
+The ''Error Control Process'' is an iterative process to diagnose known errors until they are eliminated by the successful implementation of a change under the control of the Change Management process.
+
+The ''Problem Control Process'' aims to handle problems in an efficient way. Problem control identifies the root cause of incidents and reports it to the service desk. Other activities are:
+* Problem identification and recording;
+* Problem classification;
+* Problem investigation and diagnosis.
+The standard technique for identifying the root cause of a problem is to use an ''[[Ishikawa diagram]]'', also referred to as a cause-and-effect diagram, tree diagram, or [[fishbone diagram]]. A brainstorming session&mdash;in which group members offer product improvement ideas&mdash;typically results in an Ishikawa diagram. For problem-solving, the goal is to find causes and effects of the problem. 
+<!--The following diagram is an example of an Ishikawa diagram. -->
+<!-- Unsourced image removed: [[Image:Appli meta model.jpg|center|frame|Ishikawa diagram - Tree diagram]] -->
+
+Ishikawa diagrams can be defined in a [[meta-model]].
+
+First there is the main subject, which is the backbone of the diagram that we are trying to solve or improve. The main subject is derived from a cause. 
+The relationship between a cause and an effect is a double relation: an effect is a result of a cause, and the cause is the root of an effect. But there is just one effect for several causes and one cause for several effects.
+
+<!-- Unsourced image removed: [[Image:Metamodel.jpg|center|frame|Ishikawa meta-model]] -->
+
+====Change Management====
+The goal of Change Management is to ensure that standardized methods and procedures are used for efficient handling of all changes, 
+
+{{Main|Change Management (ITSM)}}
+
+A change is <U+201C>an event that results in a new status of one or more configuration items (CI's)<U+201D> approved by management, cost effective, enhances business process changes (fixes) - with a minimum risk to IT infrastructure.
+
+The main aims of Change Management are:
+*Minimal disruption of services
+*Reduction in back-out activities
+*Economic utilization of resources involved in the change
+
+=====Change Management Terminology=====
+*''Change'': the addition, modification or removal of CIs
+*''Request for Change (RFC)'': form used to record details of a request for a change and is sent as an input to Change Management by the Change Requestor
+*''Forward Schedule of Changes (FSC)'': schedule that contains details of all forthcoming Changes
+
+====Release Management====
+[[Release Management]] is used for platform-independent and automated distribution of software and hardware, including license controls across the entire IT infrastructure.  Proper software and hardware control ensures the availability of licensed, tested, and version-certified software and hardware, which functions as intended when introduced into existing infrastructure. Quality control during the development and implementation of new hardware and software is also the responsibility of Release Management. This guarantees that all software meets the demands of the business processes.
+The goals of release management are:
+*Plan the rollout of software
+*Design and implement procedures for the distribution and installation of changes to IT systems
+*Effectively communicate and manage expectations of the customer during the planning and rollout of new releases
+*Control the distribution and installation of changes to IT systems
+The focus of release management is the protection of the live environment and its services through the use of formal procedures and checks.
+<br />
+<br />'''Release Categories'''<br />
+A Release consists of the new or changed software and/or hardware required to implement approved changes<br/>
+Releases are categorized as:
+*Major software releases and hardware upgrades, normally containing large amounts of new functionality, some of which may make intervening fixes to problems redundant. A major upgrade or release usually supersedes all preceding minor upgrades, releases and emergency fixes.
+*Minor software releases and hardware upgrades, normally containing small enhancements and fixes, some of which may have already been issued as emergency fixes. A minor upgrade or release usually supersedes all preceding emergency fixes.
+*Emergency software and hardware fixes, normally containing the corrections to a small number of known problems.
+<br />
+Releases can be divided based on the release unit into:<br />
+*Delta Release: is a release of only that part of the software which has been changed. For example, security patches.
+*Full Release: means the entire software program is deployed&mdash;for example, a new version of an existing application.
+*Packaged Release: is a combination of many changes&mdash;for example, an operating system image which also contains specific applications.
+
+====Configuration Management====
+Configuration Management is a ''process'' that tracks all individual Configuration Items (CI) in a system.
+
+{{Main|Configuration Management (ITSM)}}
+
+===Service Delivery===
+The Service Delivery <ref>{{cite book|author=Office of Government Commerce|title=Service Delivery|series=IT Infrastructure Library''|publisher=The Stationery Office|year=2001|isbn=0-11-330017-4}}</ref> discipline is primarily concerned with proactive services the ICT must deliver to provide adequate support to business users. It focuses on the business as the ''customer'' of the ICT services (compare with: [[#Service Support|Service Support]]). The discipline consists of the following processes, explained in subsections below:
+* Service Level Management
+* Capacity Management
+* IT Service Continuity Management
+* Availability Management
+* Financial Management
+
+<!-- Unsourced image removed: [[Image:Servicedelivery.jpg|frame|center|Service Delivery Process]] -->
+<!--The diagram above shows the relationships between the processes -->
+
+====Service Level Management====
+
+Service Level Management provides for continual identification, monitoring and review of the levels of IT services specified in the [[service level agreement]]s (SLAs). Service Level Management ensures that arrangements are in place with internal IT Support Providers and external [[suppliers]] in the form of Operational Level Agreements (OLAs) and Underpinning [[Contracts]] (UCs).  The process involves assessing the impact of change upon service quality and SLAs. The service level management process is in close relation with the operational processes to control their activities. The central role of Service Level Management makes it the natural place for [[metrics]] to be established and monitored against a [[benchmark]].
+
+Service Level Management is the primary interface with the customer (as opposed to the user, who is serviced by the [[#Service Desk|Service Desk]]). Service Level Management is responsible for
+ 
+* ensuring that the agreed IT services are delivered when and where they are supposed to be
+* liaising with [[#Availability Management|Availability Management]], [[#Capacity Management|Capacity Management]], [[Incident Management (ITSM)|Incident Management]] and [[#Problem Management|Problem Management]] to ensure that the required levels and quality of service are achieved within the resources agreed with [[#Financial Management for IT services|Financial Management]]
+* producing and maintaining a [[Service Catalog]] (a list of standard IT service options and agreements made available to customers)
+* ensuring that appropriate [[#IT Service CNOTty|IT Service Continuity]] plans have been made to support the business and its continuity requirements. 
+
+The Service Level Manager relies on the other areas of the Service Delivery process to provide the necessary support which ensures the agreed services are provided in a cost effective, secure and efficient manner.
+
+====Capacity Management====
+[[Capacity management|Capacity Management]] supports the optimum and cost effective provision of IT services by helping organizations match their IT resources to the business demands. The high-level activities are Application Sizing, Workload Management, Demand Management, Modeling, Capacity Planning, Resource Management,  and Performance Management.
+
+====IT Service Continuity Management====
+[[IT Service Continuity management|IT Service Continuity Management]] is the process by which plans are put in place and managed to ensure that IT Services can recover and continue should a serious incident occur. It is not just about reactive measures, but also about proactive measures - reducing the risk of a disaster in the first instance.
+
+Continuity management is regarded as the recovery of the IT infrastructure used to deliver IT Services, but many businesses these days practice the much further reaching process of Business Continuity Planning (BCP), to ensure that the whole end-to-end business process can continue should a serious incident occur.
+
+Continuity management involves the following basic steps:
+
+* Prioritising the businesses to be recovered by conducting a Business Impact Analysis (BIA) 
+* Performing a Risk Assessment (aka Risk Analysis) for each of the IT Services to identify the assets, threats, vulnerabilities and countermeasures for each service. 
+* Evaluating the options for recovery 
+* Producing the Contingency Plan 
+* Testing, reviewing, and revising the plan on a regular basis
+
+====Availability Management====
+Availability Management allows organizations to sustain the IT service availability to support the business at a justifiable cost. The high-level activities are Realize Availability Requirements, Compile Availability Plan, Monitor Availability, and Monitor Maintenance Obligations.
+
+Availability Management is the ability of an IT component to perform at an agreed level over a period of time.
+
+* [[Wikt:reliability|Reliability]]: how reliable is the service? Ability of an IT component to perform at an agreed level at described conditions.
+* [[Wikt:maintainability|Maintainability]]: The ability of an IT Component to remain in, or be restored to an operational state.  
+* [[Serviceability (computer)|Serviceability]]: The ability for an external supplier to maintain the availability of component or function under a third party contract.
+* [[Wikt:resilience|Resilience]]: A measure of freedom from operational failure and a method of keeping services reliable. One popular method of resilience is redundancy.
+* [[Security]]: A service may have associated data. Security refers to the confidentiality, integrity, and availability of that data. Availability gives us the clear overview of the end to end availability of the system. more
+
+====Financial Management for IT Services====
+{{Main|Financial Management}}
+IT Financial Management is the discipline of ensuring that the IT infrastructure is obtained at the most effective price (which does not necessarily mean cheapest) and calculating the cost of providing IT services so that an organisation can understand the costs of its IT services. These costs may then be recovered from the customer of the service.
+
+===Planning to implement service management===
+{{Main|ITIL Planning to implement service management}}
+The ITIL discipline - Planning To Implement Service Management <ref>{{cite book|author=Office of Government Commerce|title=Planning To Implement Service Management|publisher=The Stationery Office|year=2002|isbn=0-11-330877-9}}</ref> attempts to provide practitioners with a framework for the alignment of [[business]] needs and [[Information Technology|IT]] provision requirements. The processes and approaches incorporated within the guidelines suggest the development of a Continuous Service Improvement Programme (CSIP) as the basis for implementing other ITIL disciplines as projects within a controlled programme of work. Planning To Implement Service Management is mainly focused on the Service Management processes, but is also generically applicable to other ITIL disciplines.
+
+* create [[vision]]
+* analyze organization
+* set goals
+* implement IT service management
+
+===Security Management===
+{{Main|ITIL Security Management}}
+The ITIL-process Security Management <ref>{{cite book|author=Cazemier, Jacques A.; Overbeek, Paul L.; Peters, Louk M.|title=Security Management|publisher=The Stationery Office|year=2000|isbn=0-11-330014-X}}</ref> describes the structured fitting of information security in the management organization. [[ITIL Security Management]] is based on the code of practice for information security management also known as [[ISO/IEC 17799]].
+
+A basic concept of the Security Management is the [[information security]]. The primary goal of information security is to guarantee [[safety]] of the [[information]]. Safety is to be protected against [[risks]]. [[Security]] is the means to be safe against risks. When protecting information it is the value of the information that has to be protected. These values are stipulated by the confidentiality, integrity and availability. Inferred aspects are privacy, anonymity and verifiability.
+
+The current move towards [[ISO/IEC 27001]] may require some revision to the ITIL Security Management best practices which are often claimed to be rich in content for physical security but weak in areas such as software/application security and logical security in the ICT infrastructure.
+
+===ICT Infrastructure Management===
+<!-- removed elongation as ICT is the official title of the practice -->ICT Infrastructure Management <ref>{{cite book|author=Office of Government Commerce|title=ICT Infrastructure Management|publisher=The Stationery Office|year=2002|isbn=0-11-330865-5}}</ref> processes recommend best practice for requirements analysis, planning, design, deployment and ongoing operations management and technical support of an ICT Infrastructure.  ("ICT" is an acronym for "Information and Communication Technology".)
+
+The Infrastructure Management processes describe those processes within ITIL that directly relate to the ICT equipment and software that is involved in providing ICT services to customers.
+
+*'''ICT Design and Planning'''
+*'''ICT Deployment'''
+*'''ICT Operations'''
+*'''ICT Technical Support'''
+
+These disciplines are less well understood than those of Service Management and therefore often some of their content is believed to be covered 'by implication' in Service Management disciplines.  
+
+====ICT Design and Planning====
+ICT Design and Planning provides a framework and approach for the Strategic and Technical Design and Planning of ICT infrastructures.  It includes the necessary combination of Business (and overall IS) strategy, with technical design and architecture. ICT Design and Planning drives both the Procurement of new ICT solutions through the production of Statements of Requirement ("SOR") and  Invitations to [[Call for bids|Tender]] ("ITT") and is responsible for the initiation and management of ICT Programmes for strategic business change.  Key Outputs from Design and Planning are:
+* ICT Strategies, Policies and Plans
+* The ICT Overall Architecture & Management Architecture
+* Feasibility Studies, ITTs and SORs
+* Business Cases
+****************
+
+====ICT Deployment Management====
+ICT Deployment provides a framework for the successful management of design, build, test and roll-out (deploy)  projects within an overall ICT [[program management|programme]].  It includes many [[project management]] disciplines in common with [[PRINCE2]], but has a broader focus to include the necessary integration of Release Management and both functional and non functional testing.
+
+====ICT Operations Management====
+ICT Operations Management provides the day-to-day technical supervision of the ICT infrastructure.  Often confused with the role of Incident Management from Service Support, Operations is more technical and is concerned not solely with Incidents reported by users, but with Events generated by or recorded by the Infrastructure. ICT Operations may often work closely alongside Incident Management and the Service Desk, which are not-necessarily technical, to provide an 'Operations Bridge'. Operations, however should primarily work from documented processes and procedures and should be concerned with a number of specific sub-processes, such as: Output Management, Job Scheduling, Backup and Restore, Network Monitoring/Management, System Monitoring/Management, Database Monitoring/Management Storage Monitoring/Management. Operations are responsible for:   
+* A stable, secure ICT infrastructure 	 
+* A current, up to date Operational Documentation Library ("ODL") 	 
+* A log of all operational Events 	 
+* Maintenance of operational monitoring and management tools. 	 
+* Operational Scripts
+* Operational Procedures
+
+====ICT Technical Support==== 	 
+ICT Technical Support is the specialist technical function for infrastructure within ICT. Primarily as a support to other processes, both in Infrastructure Management and Service Management, Technical Support provides a number of specialist functions: Research and Evaluation, Market Intelligence (particularly for Design and Planning and Capacity Management), Proof of Concept and Pilot engineering, specialist technical expertise (particularly to Operations and Problem Management), creation of documentation (perhaps for the Operational Documentation Library or Known Error Database).
+
+===The Business Perspective=== 	 
+The Business Perspective is the name given to the collection of best practices<ref>{{cite book|author=Office of Government Commerce|title=The Business Perspective|publisher=The Stationery Office|year=2005|isbn=0-11-330894-9}}</ref> that is suggested to address some of the issues often encountered in understanding and improving IT service provision, as a part of the entire business requirement for high IS quality management. These issues are: 	 
+ 		 
+* ''Business Continuity Management'' describes the responsibilities and opportunities available to the business manager to improve what is, in most organizations one of the key contributing services to business efficiency and effectiveness. 	 
+* ''Surviving Change''. IT infrastructure changes can impact the manner in which business is conducted or the continuity of business operations. It is important that business managers take notice of these changes and ensure that steps are taken to safeguard the business from adverse side   effects. 	 
+* ''Transformation of business practice through radical change'' helps to control IT and to integrate it with the business. 	 
+* ''Partnerships and outsourcing'' 	 
+ 		 
+This volume is related to the topics of [[IT Governance]] and [[IT Portfolio Management]].
+
+===Application Management=== 	 
+ITIL ''Application Management''<ref>{{cite book|author=Office of Government Commerce|title=Application Management|publisher=The Stationery Office|year=2002|isbn=0-11-330866-3}}</ref> set encompasses a set of best practices proposed to improve the overall quality of IT software development and support through the life-cycle of software development projects, with particular attention to gathering and defining requirements that meet business objectives. 	 
+ 		 
+This volume is related to the topics of [[Software Engineering]] and [[IT Portfolio Management]].
+
+===Software Asset Management ===
+[[Software Asset Management]] (SAM) is the practice of integrating people, processes and technology to allow software licenses and usage to be systematically tracked, evaluated and managed. The goal of SAM is to reduce IT expenditures, human resource overhead and risks inherent in owning and managing software assets.  
+
+SAM practices include:
+* Maintaining software license compliance
+* Tracking inventory and software asset use
+* Maintaining standard policies and procedures surrounding definition, deployment, configuration, use, and retirement of software assets and the [[Definitive Software Library]]. 
+
+SAM represents the software component of IT asset management. This includes hardware asset management because effective hardware inventory controls are critical to efforts to control software. This means overseeing software and [[hardware]] that comprise an organization<U+2019>s [[computers]] and [[Computer network|network]].
+
+===Small-Scale Implementation=== 	 
+ITIL ''Small-Scale Implementation'' <ref>{{cite book|author=Office of Government Commerce|title=ITIL Small Scale Implementation|publisher=The Stationery Office|year=2005|isbn=0-11-330980-5}}</ref> provides an approach to ITIL framework implementation for smaller IT units or departments. It is primarily an auxiliary work that covers many of the same best practice guidelines as ''Planning To Implement Service Management, Service Support, and Service Delivery'' but provides additional guidance on the combination of roles and responsibilities, and avoiding conflict between ITIL priorities.
+
+==Criticisms of ITIL==
+ITIL has been criticized on several fronts, including:
+  
+* The books are not affordable for non-commercial users
+* Accusations that many ITIL advocates think ITIL is "a holistic, all-encompassing framework for IT governance"; 
+* Accusations that proponents of ITIL indoctrinate the methodology with 'religious zeal' at the expense of pragmatism.
+* Implementation and credentialing requires specific training
+* Debate over ITIL falling under [[Business Service Management|BSM]] or [[ITSM]] frameworks
+As Jan van Bon (author and editor of many IT Service Management publications) notes, 
+
+:''There is confusion about ITIL, stemming from misunderstandings about its nature. ITIL is, as the OGC states, a set of best practices. The OGC doesn<U+2019>t claim that ITIL<U+2019>s best practices describe pure processes. The OGC also doesn<U+2019>t claim that ITIL is a framework, designed as one coherent model. That is what most of its users make of it, probably because they have such a great need for such a model...''<ref>{{cite book|author=van Bon, J.(Editor)|title=The guide to IT service management|publisher=Addison Wesley|year=2002|isbn=0-201-73792-2}}</ref>
+
+''CIO Magazine'' columnist Dean Meyer has also presented some cautionary views of ITIL,<ref> Meyer, Dean, 2005. [http://web.archive.org/web/20050404165524/http://www.cio.com/leadership/buzz/column.html?ID=4186 "Beneath the Buzz: ITIL"], ''CIO Magazine,'' [[March 31]] [[2005]]</ref> including five pitfalls such as "becoming a slave to outdated definitions" and "Letting ITIL become religion." As he notes, "...it doesn't describe the complete range of processes needed to be world class. It's focused on ... managing ongoing services."
+
+The quality of the library's volumes is seen to be uneven. For example, van Herwaarden and Grift note, <U+201C>the consistency that characterized the service support processes <U+2026> is largely missing in the service delivery books."<ref>van Herwaarden, H. and F. Grift (2002). "IPW(tm) and the IPW Stadia Model(tm) (IPWSM)". ''The guide to IT service management.'' J. Van Bon. London, Addison-Wesley: 97-115.</ref>
+
+In a 2004 survey designed by Noel Bruton (author of 'How to Manage the IT Helpdesk' and 'Managing the IT Services Process'), ITIL adopting organizations were asked to relate their actual experiences in having implemented ITIL. Seventy-seven percent of survey respondents either agreed or strongly agreed that "ITIL does not have all the answers". ITIL exponents accept this, citing ITIL's stated intention to be non-prescriptive, expecting organizations to engage ITIL processes with existing process models. Bruton notes that the claim to non-prescriptiveness must be, at best, one of scale rather than absolute intention, for the very description of a certain set of processes is in itself a form of prescription.
+(Survey "The ITIL Experience - Has It Been Worth It", author Bruton Consultancy 2004, published by Helpdesk Institute Europe, The Helpdesk and IT Support Show and Hornbill Software.)
+
+While ITIL addresses in depth the various aspects of Service Management, it does not address [[enterprise architecture]] in such depth.  Many of the shortcomings in the implementation of ITIL do not necessarily come about because of flaws in the design or implementation of the Service Management aspects of the business, but rather the wider architectural framework in which the business is situated.  Because of its primary focus on Service Management, ITIL has limited utility in managing poorly designed enterprise architectures, or how to feed back into the design of the [[enterprise architecture]].
+
+Some researchers group ITIL with [[Lean]], [[Six Sigma]] and [[Agile IT]] operations management. {{Citation needed|date=April 2009}} Applying Six Sigma techniques to ITIL brings the engineering approach to ITIL's framework.  Applying Lean techniques promotes continuous improvement of the ITIL's best practices.  However, ITIL itself is not a transformation method, nor does it offer one.  Readers are required to find and associate such a method.  Some vendors have also included the term Lean when discussing 'ITIL implementations, for example 'Lean-ITIL'.{{Facts|date=May 2009}}  The initial consequences of an ITIL initiative tend to ADD cost with benefits promised as a future deliverable.{{Facts|date=May 2009}}  ITIL does not provide usable methods 'out of the box' to identify and target waste, or document the customer value stream as required by Lean, and measure customer satisfaction.{{Who|date=May 2009}}
+
+
+==ITIL alternatives==
+[[IT Service Management]] as a [[concept]] is related but not equivalent to ITIL which, in Version 2, contained a subsection specifically entitled '''IT Service Management''' (ITSM). (The five volumes of version 3 have no such demarcated subsection). The combination of the [[ITIL#Service Support|Service Support]] and [[ITIL#Service Delivery|Service Delivery]] volumes are generally equivalent to the scope of the [[ISO/IEC 20000]] standard (previously BS 15000), "BS" meaning British Standard.
+
+Outside of ITIL, other IT Service Management approaches and frameworks exist, including the [http://www.ecinst.com/ Enterprise Computing Institute's] library covering general issues of large scale IT management, including various Service Management subjects, and the [http://www.usmbok.org/ Universal Service Management Body of Knowledge (USMBOK)], developed offer a description of a service management system and service provider organization that may be universally applied to IT organizations and non-IT alike.
+
+[[COBIT]] is perceived as an audit framework but the supporting body of knowledge (such as COBIT's books Control Practices, IT Assurance Guide, IT Governance Implementation Guide, and User's Guide for Service Managers) has grown to offer a credible alternative to ITIL.
+
+The British Educational Communications and Technology Agency ([[BECTA]]) has developed the [http://www.becta.org.uk/fits/ Framework for ICT Technical Support] (FITS) and is based on ITIL, but it is slimmed down for UK primary and secondary schools (which often have very small IT departments). Similarly, [http://www.itpi.org/home/visibleops2.php The Visible OPS Handbook: Implementing ITIL in 4 Practical and Auditable Steps] ([http://wikisummaries.org/Visible_Ops Full book summary]) claims to be based on ITIL but to focus specifically on the biggest "bang for the buck" elements of ITIL.
+
+Organizations that need to understand how ITIL processes link to a broader range of IT processes or need task level detail to guide their service management implementation can use the [[IBM Tivoli Unified Process (ITUP)]]. Like [[MOF]], ITUP is aligned with ITIL, but is presented as a complete, integrated process model.
+
+Smaller organizations that cannot justify a full ITIL program and materials can gain insight into ITIL from a review of the [[Microsoft Operations Framework]] which is based on ITIL but defines a more limited implementation.
+
+The enhanced Telecom Operations Map [[eTOM]] published by the TeleManagement Forum offers a framework aimed at telecommunications service providers. In a joined effort, tmforum and itSMF have developed an Application Note to eTOM (GB921 V, version 6.1 in 2005, a new releases is scheduled for summer 2008) that shows how the two frameworks can be mapped to each other. It addresses how eTom process elements and flows can be used to support the processes identified in ITIL.
+
+One United States - based approach to the enterprise lifecycle is found in [http://www.gao.gov/bestpractices/bpeaguide.pdf A Practical Guide to Federal Enterprise Architecture] by the U.S. CIO Council.  This is a companion text to [[Federal Enterprise Architecture]] Framework (or FEAF).  The guide ties together the operational (present time) CPIC ([[Capital Planning and Investment Control]]) processes, the architecture processes (future planning), and other pieces of the lifecycle management processes into one cohesive package.
+
+The safest and most cost effective alternative to ITIL to date has been identified as good old fashion common sense.{{Citation needed|date=June 2009}}
+
+==Certification==
+[[Image:Wearer of an ITIL Foundation Certificate pin.jpg|thumb|An ITIL Foundation certificate pin.]]
+ITIL Certifications are managed by the ITIL Certification Management Board (ICMB).  The Board includes representatives from interested parties within the community around the world. Members of the Board include (though are not limited to) representatives from the UK [[Office of Government Commerce]] (OGC), APM Group (APMG), [[The Stationery Office]] (TSO), V3 Examination Panel, Examination Institutes (EIs) and the [[ItSMF|IT Service Management Forum International]] (''it''SMF) as the recognized user group.<ref>{{cite web |author=APMG|year=2008|title=ITIL Service Management Practices: V3 Qualifications Scheme|url=http://www.itil-officialsite.com/nmsruntime/saveasdialog.asp?lID=572&sID=86|accessdate=2009-02-24}}</ref>
+
+On [[July 20]] [[2006]], the OGC signed a contract with the [http://www.apmgroupltd.com/ APM Group] to be its commercial partner for ITIL accreditation from [[January 1]] [[2007]].<!--removed following phrase as it is speculation and POV: presumably ending the EXIN and ISEB roles in this activity) --><ref>{{cite web |author=Office of Government Commerce|year=2006|title= Best Practice portfolio: new contracts awarded for publishing and accreditation services|url=http://www.ogc.gov.uk/About_OGC_news_4906.asp|accessdate=2006-09-19}}</ref>.
+
+APMG manage the ITIL Version 3 exams and award qualifications at Foundation, Intermediate and Expert level (with a new Masters level under development). 
+
+APMG maintains a voluntary register of ITIL Version 3-certified practitioners at their [http://www.apmgroup.co.uk/ITILSCRquery.asp Successful Candidate Register].  A voluntary registry of ITIL Version 2-certified practitioners is operated by the [http://www.certification-register.org/ ITIL Certification Register].
+
+Organizations and management systems cannot be certified as "ITIL-compliant".  An organization that has implemented ITIL guidance in IT Service Management (ITSM), may however, be able to achieve compliance with and seek certification under [[ISO/IEC 20000]].  Note that there are some significant differences between ISO/IEC20000 and ITIL Version 3 <ref>{{cite web |author=Office of Government Commerce|year=2008|title=Best Management Practice: ITIL V3 and ISO/IEC 20000|url=http://www.best-management-practice.com/gempdf/ITIL_and_ISO_20000_March08.pdf|accessdate=2009-02-24}}</ref>  
+* ISO20000 only recognizes the management of financial assets, not assets which include "management, organization, process, knowledge, people, information, applications, infrastructure and financial capital", nor the concept of a "service asset". So ISO20000 certification does not address the management of 'assets' in an ITIL sense. 
+* ISO20000 does not recognize Configuration Management System (CMS) or Service Knowledge Management System (SKMS), and so does not certify anything beyond Configuration Management Database (CMDB). 
+* An organization can obtain ISO20000 certification without recognizing or implementing the ITIL concept of Known Error, which is usually considered essential ITIL.
+
+==See also==
+* [[Business Information Services Library]]
+* [[Enterprise Architecture]]
+* [[IT Governance]]
+* [[IT Service Management]]
+* [[PRINCE2]]
+* [[IBM Tivoli Unified Process (ITUP)]]
+* [[eTOM|enhanced Telecom Operations Map]] (eTOM)
+* [[Run Book Automation]] (RBA)
+* [[Performance engineering]]
+* [[Microsoft Operations Framework]] (MOF)
+* [[Grey Area Diagnosis]]
+* [[RPR Problem Diagnosis]]
+
+==References==
+{{reflist}}
+
+==External links==
+<!--========================({{No More Links}})============================
+    | PLEASE BE CAUTIOUS IN ADDING MORE LINKS TO THIS ARTICLE. WIKIPEDIA  |
+    | IS NOT A COLLECTION OF LINKS NOR SHOULD IT BE USED FOR ADVERTISING. |
+    |                                                                     |
+    |           Excessive or inappropriate links WILL BE DELETED.         |
+    | See [[Wikipedia:External links]] & [[Wikipedia:Spam]] for details.  |
+    |                                                                     |
+    | If there are already plentiful links, please propose additions or   |
+    | replacements on this article's discussion page, or submit your link |
+    | to the relevant category at the Open Directory Project (dmoz.org)   |
+    | and link back to that category using the {{dmoz}} template.         |
+    =======================({{No More Links}})=============================-->
+* [http://www.itil-officialsite.com/home/home.asp Official ITIL Website] 
+* [http://www.ogc.gov.uk/ The OGC website]
+* [http://www.itsmfi.org/ IT Service Management Forum (International)]
+* [http://www.itlibrary.org/ The ITIL Open Guide]  
+* [http://www.govtech.com/gt/articles/95672 American ITIL]
+* [http://www.itilcommunity.com/ The ITIL Community Forum]
+
+[[Category:Information technology management]]
+[[Category:Standards]]
+[[Category:Method engineering]]
+
+[[bg:ITIL]]
+[[ca:ITIL]]
+[[cs:Information Technology Infrastructure Library]]
+[[da:ITIL]]
+[[de:IT Infrastructure Library]]
+[[es:Information Technology Infrastructure Library]]
+[[fa:<U+06A9><U+062A><U+0627><U+0628><U+062E><U+0627><U+0646><U+0647> <U+0632><U+06CC><U+0631><U+0628><U+0646><U+0627><U+06CC><U+06CC> <U+0641><U+0646><U+0627><U+0648><U+0631><U+06CC> <U+0627><U+0637><U+0644><U+0627><U+0639><U+0627><U+062A>]]
+[[fr:Information Technology Infrastructure Library]]
+[[id:ITIL]]
+[[it:ITIL]]
+[[he:<U+05DE><U+05EA><U+05D5><U+05D3><U+05EA> ITIL]]
+[[lt:ITIL]]
+[[hu:ITIL]]
+[[ms:ITIL]]
+[[nl:Information Technology Infrastructure Library]]
+[[ja:Information Technology Infrastructure Library]]
+[[no:ITIL]]
+[[pl:Information Technology Infrastructure Library]]
+[[pt:Information Technology Infrastructure Library]]
+[[ru:ITIL]]
+[[sk:Kni<U+017E>nica infra<U+0161>trukt<U+00FA>ry informa<U+010D>n<U+00FD>ch technol<U+00F3>gi<U+00ED>]]
+[[sr:ITIL]]
+[[fi:ITIL]]
+[[sv:ITIL]]
+[[tr:Bilgi Teknolojisi Altyap<U+0131> K<U+00FC>t<U+00FC>phanesi]]
+[[uk:ITIL]]
+[[zh:ITIL]]

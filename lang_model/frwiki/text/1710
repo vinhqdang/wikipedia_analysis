@@ -1,0 +1,213 @@
+{{Voir homonymes}}
+Le '''lagrangien''' <math> \mathcal{L}[\varphi_i] </math> d'un [[système dynamique]] est une [[fonction (mathématiques)|fonction]] des [[variable]]s dynamiques qui permet d'écrire de manière concise les [[équations du mouvement]] du système.  Son nom vient de [[Joseph Louis Lagrange]], qui a établi les principes du procédé. Malgré l'emploi du même mot, le seul rapport avec le lagrangien que l'on trouve en optimisation est que lorsque l'on ajoute des contraintes géométriques ou cinématiques le critère gagne des termes avec multiplicateurs de Lagrange, cependant lorsque toutes les forces sont conservatives et introduites par un potentiel il n'y a aucun multiplicateur et ce n'est pas un lagrangien au sens mathématique du terme.
+
+Les équations du mouvement s'obtiennent par application du [[principe de moindre action]] (ou principe d'action extrémale), qui s'écrit :
+
+:<math> \frac{\delta \mathcal{S}}{\delta \varphi_i} = 0 </math>
+
+avec l'[[Action (physique)|action]] <math> \mathcal{S}[\varphi_i] = \int{\mathcal{L}[\varphi_i(s)]{}\,\mathrm d^ns}, </math>
+
+et <math>{}{}{}{}\ s_\alpha </math> l'ensemble des paramètres du système.
+
+Les [[équations du mouvement]] obtenues sont équivalentes aux [[équation d'Euler-Lagrange|équations d'Euler-Lagrange]]. Un système dynamique dont les équations du mouvement peuvent s'obtenir à partir d'un principe de moindre action et d'un lagrangien est un ''système dynamique lagrangien''. C'est le cas de la version classique du [[modèle standard]], des [[Lois du mouvement de Newton|équations de Newton]], des équations de la [[relativité générale]], et de problèmes purement mathématiques comme les équations des géodésiques ou le [[problème de Plateau]].
+
+==Un exemple en mécanique classique==
+
+Le concept de lagrangien fut historiquement introduit dans une reformulation de la mécanique classique, la mécanique lagrangienne. Dans ce contexte, le lagrangien vaut généralement l'[[énergie cinétique]] à laquelle on soustrait l'[[Énergie potentielle mécanique|énergie potentielle]] : 
+
+:<math>\mathcal{L} = T - V</math>
+
+=== En coordonnées cartésiennes ===
+
+Le lagrangien d'une particule de masse ''m'' non relativiste dans un espace euclidien à trois dimensions s'écrit :
+
+:<math>L(\vec{x}, \dot{\vec{x}}) \ = \ \frac{1}{2} \ m \ \dot{\vec{x}}^2 \ - \ V(\vec{x})</math>
+
+ou bien 
+:<math>L(\vec{x}, \dot{\vec{x}}) \ = \ \frac{\vec{P}^2}{2m} \ \ - \ V(\vec{x})</math>
+avec P la quantité de mouvement 
+:<math>\vec{P} \ = \ m \ \vec{v} \ = \ m \ \dot{\vec{x}}</math>
+
+on note la dérivation temporelle par un point au-dessus de la quantité différentiée.
+
+Les équations d'Euler-Lagrange s'écrivent :
+
+:<math>\frac{\mathrm d~}{\mathrm dt} \ \left( \, \frac{\partial L}{\partial \dot{x}_i} \, \right) \ - \ \frac{\partial L}{\partial x_i} \ = \ 0</math>
+
+L'indice ''i'' = 1, 2, 3. Le calcul des dérivées donne :
+
+:<math> \frac{\partial L}{\partial x_i} \ = \ - \ \frac{\partial V}{\partial x_i} </math>
+avec <math>P=m.v</math>
+:<math> \frac{\partial L}{\partial \dot{x}_i} \ = \ \frac{\partial ~}{\partial \dot{x}_i} \, \left( \, \frac{1}{2} \ m \ \dot{\vec{x}}^2 \, \right) \ = \ \frac{1}{2} \ m \ \frac{\partial ~}{\partial \dot{x}_i} \, \left( \,  \dot{x}_i \, \dot{x}_i \, \right)
+\ = \ m \, \dot{x}_i
+</math>
+
+:<math>\frac{\mathrm d~}{\mathrm dt} \ \left( \, \frac{\partial L}{\partial \dot{x}_i} \, \right) \ = \ m \, \ddot{x}_i </math>
+
+Les équations d'Euler-Lagrange s'écrivent donc explicitement : 
+
+:<math> m \, \ddot{x}_i \ + \ \frac{\partial V}{\partial x_i} \ = \ 0 \quad \Longleftrightarrow \quad  m \, \ddot{x}_i \ = \ - \ \frac{\partial V}{\partial x_i}</math>
+
+soit sous forme vectorielle :
+
+:<math> m \ \ddot{\vec{x}} \ = \ - \ \vec{\nabla} V  </math>
+
+Les approches lagrangienne et newtonienne sont donc équivalentes lorsque la force dérive d'un potentiel : 
+
+:<math>\vec{F} \ = \ - \ \vec{\nabla} V(x)</math>
+
+puisque la formulation de la deuxième loi de Newton dans un référentiel Galiléen s'écrit :
+
+:<math>m \ \ddot{\vec{x}} \ = \ \vec{F}  </math>
+
+=== En coordonnées sphériques ===
+
+Soit un espace à trois dimensions en [[coordonnées sphériques]] <math>(r,\theta,\varphi)</math>, et le lagrangien :
+
+:<math>L = \frac{m}{2}(\dot{r}^2+r^2\dot{\theta}^2 +r^2\sin^2\theta\dot{\varphi}^2)-V(r, \theta, \varphi).</math>
+
+Les équations d'Euler-Lagrange s'écrivent alors :
+
+:<math>m\ddot{r}-mr(\dot{\theta}^2+\sin^2\theta\dot{\varphi}^2) + V_r' =0,</math>
+
+:<math>(mr^2\ddot{\theta}) -mr^2\sin\theta\cos\theta\dot{\varphi}^2 + V_{\theta}'=0,</math>
+
+:<math>mr^2\sin^2\theta\ddot{\varphi} + V_{\varphi}' =0.</math>
+
+Ici l'ensemble des paramètres <math>s_i</math> se réduit au temps <math>t</math>, et les variables dynamiques <math>\phi_i(s)</math> sont les trajectoires <math>\vec x(t)</math> des particules.
+
+== Lagrangiens et densités de lagrangien dans la théorie des champs==
+
+Dans la théorie des champs, on distingue parfois le lagrangien <math>L</math>, dont l'intégrale sur le temps est l'action :
+
+:<math>S = \int{L \,\mathrm dt}</math>
+
+et la ''densité lagrangienne'' <math>\mathcal{L}</math>, qu'on intègre sur tout l'espace pour obtenir l'action :
+
+:<math>S [\varphi_i] = \int{\mathcal{L} [\varphi_i (x)]\,\mathrm d^4x}</math>
+
+Le lagrangien est ainsi l'intégrale spatiale de la densité lagrangienne. Cependant, on appelle souvent <math>\mathcal{L}</math> simplement le lagrangien, surtout dans l'usage moderne. C'est plus simple dans les [[Théorie de la relativité|théories relativistes]] où l'espace est défini localement. Ces deux types de lagrangiens peuvent être vus comme des cas particuliers d'une formule plus générale, selon qu'on introduit la variable spatiale <math>\vec x</math> dans les index <math>i</math> ou dans les paramètres <math>s</math> pour écrire <math>\varphi_i(s)</math>. Les théories quantiques des champs en physique des particules, comme l'[[électrodynamique quantique]], sont généralement écrites en termes de densités de lagrangiens <math>\mathcal{L}</math>, ces termes se transformant facilement pour donner les règles permettant d'évaluer les diagrammes de [[Feynman]].
+
+== Lagrangien électromagnétique ==
+En général, en mécanique lagrangienne, le lagrangien vaut:
+:<math> L = T - V </math>
+où ''T'' est l'énergie cinétique et ''V'' l'énergie potentielle.
+
+Etant donnée une particule chargée électriquement de masse ''m'' et charge ''q'', et de vitesse <math>\vec{v}</math> dans un champ électromagnétique de [[potentiel électrique|potentiel scalaire]] &phi; et de [[Potentiel vecteur du champ magnétique|potentiel vecteur]] <math>\vec{A}</math>, l'énergie cinétique de la particule est :
+:<math> T = {1 \over 2} m \vec{v} \cdot \vec{v} </math>
+et son énergie potentielle est:
+:<math> V = q\phi - q \vec{v} \cdot \vec{A} </math>
+
+Le lagrangien électromagnétique est alors:
+:<math> L = {1 \over 2} m \vec{v} \cdot \vec{v}  - q\phi + q \vec{v} \cdot \vec{A} . </math>
+
+{{Démonstration|titre=Démonstration|déroulante=oui|contenu=
+Le lagrangien électromagnétique se construit à partir de l'expression de la force de Lorentz :
+
+<math>\vec F = q\left(\vec E + \vec v \times \vec B\right)=q\left(-\vec\nabla\varphi-\frac{\partial\vec A}{\partial t} + \vec v\times(\vec\nabla\times A)\right)</math>
+<math>=q\left(-\vec\nabla\varphi-\frac{\mathrm d\vec A}{\mathrm dt}+(\vec v\cdot\vec\nabla)\vec A+ \vec v\times(\vec\nabla\times A)\right)</math>
+
+Les deux termes du membre de droite est un gradient d'un produit scalaire, la force est le gradient de l'énergie cinétique (par rapport à la vitesse) dérivée par rapport au temps obtenant :
+
+<math>\frac{\mathrm d}{\mathrm dt}\vec\nabla_{\vec v}\left(\frac{1}{2}mv^2\right) = q\left(-\vec\nabla_{\vec r}\varphi-\frac{d\vec A}{dt}+\vec\nabla_{\vec r}(\vec A\cdot\vec v)\right)</math>
+
+Le reste n'est plus qu'une question d'écriture :
+
+<math>\frac{\mathrm d}{\mathrm dt}\vec\nabla_{\vec v}\left(\frac{1}{2}mv^2-q\varphi+q\vec A\cdot\vec v\right) = \vec\nabla_{\vec r}\left(\frac{1}{2}mv^2-q\varphi+q\vec A\cdot\vec v\right)</math>}}
+
+== Lagrangiens en théorie quantique des champs ==
+
+=== Le lagrangien de Dirac ===
+La densité lagrangienne pour un [[Champ fermionique#Champ de Dirac|champ de Dirac]] est:
+:<math> \mathcal{L} = \bar \psi (i \hbar c \not\!D - mc^2) \psi </math>
+où <math>\psi</math> est un [[spineur]], <math> \bar \psi = \psi^\dagger \gamma^0 </math> est son [[adjoint de Dirac]], <math>D</math> est la [[dérivée covariante de jauge]], et <math>\not\!D</math> est la [[Barre oblique de Feynman|notation de Feynman]] pour <math> \gamma^\sigma D_\sigma </math>.
+
+=== Le lagrangien de l'électrodynamique quantique ===
+La densité lagrangienne en [[Électrodynamique quantique|QED]] est:
+:<math> \mathcal{L}_{\mathrm{QED}} = \bar \psi (i \hbar c\not\!D - mc^2) \psi - {1 \over 4\mu_0} F_{\mu \nu} F^{\mu \nu}</math>
+où <math>F^{\mu \nu}</math> est le [[tenseur électromagnétique]].
+
+=== Le lagrangien de la chromodynamique quantique ===
+La densité lagrangienne en [[Chromodynamique quantique|QCD]] est<ref>http://www.fuw.edu.pl/~dobaczew/maub-42w/node9.html</ref>{{,}}<ref>http://smallsystems.isn-oldenburg.de/Docs/THEO3/publications/semiclassical.qcd.prep.pdf</ref>{{,}}<ref>http://www-zeus.physik.uni-bonn.de/~brock/teaching/jets_ws0405/seminar09/sluka_quark_gluon_jets.pdf</ref>
+:<math> \mathcal{L}_{\mathrm{QCD}} = \sum_n \bar \psi_n (i \hbar c\not\!D - m_n c^2) \psi_n - {1\over 4} G^\alpha {}_{\mu\nu} G_\alpha {}^{\mu\nu} </math>
+où <math>D</math> est la [[dérivée covariante de jauge#Chromodynamique quantique|dérivée covariante de jauge]] en QCD, et <math> G^\alpha {}_{\mu\nu} </math> est le tenseur de la [[force du champ]] du gluon.
+
+== Formalisme mathématique==
+Soit <math>M</math> une [[variété (géométrie)|variété]] de dimension <math>n</math>, et une variété de destination <math>T</math>. Soit <math>\mathcal{C}</math> l'[[espace de configuration]] de la fonction continue <math>s</math> de <math>M</math> dans <math>T</math>.
+
+Avant tout donnons quelques exemples :
+* En mécanique classique, dans le formalisme d'Hamilton, <math>M</math> est le variété de dimension 1 <math>\mathbb{R}</math>, qui représente le temps, et l'espace de destination est le fibré cotangent de l'espace des positions généralisées.
+* Dans la théorie des champs, <math>M</math> est la variété espace-temps et l'espace de destination est l'ensemble des valeurs possibles des champs en chaque point. Si par exemple il y a <math>m</math> champs scalaires réels φ<sub>1</sub>,...,φ<sub>m</sub>, alors la variété de destination est <math>\R^m</math>. Si on a un champ de vecteurs réels, la variété de destination  est isomorphe à <math>\mathbb{R}^n</math>. Il y a en fait une manière plus élégante d'utiliser le fibré tangent, mais on s'en tiendra à cette version.
+
+Supposons maintenant qu'il existe une fonctionnelle <math>S:\mathcal{C}\rightarrow\mathbb{R}</math>, qu'on appelle l'action physique. C'est une application vers <math>\mathbb{R}</math>, et non vers <math>\mathbb{C}</math>, pour des raisons physiques.
+
+Pour que l'action soit locale, nous avons besoin de restrictions supplémentaires sur l'action. Si 
+<math>\varphi\in\mathcal{C}</math>, on impose que S[φ] soit l'intégrale sur M d'une fonction de φ, de ses dérivées et des positions qu'on appelle le lagrangien <math>\mathcal{L}(\varphi,\partial\varphi,\partial\partial\varphi, ...,x)</math>. En d'autres termes,
+
+:<math>\forall\varphi\in\mathcal{C}\, S[\varphi]\equiv\int_M d^nx \mathcal{L}(\varphi(x),\partial\varphi(x),\partial\partial\varphi(x), ...,x).</math>
+
+La plupart du temps, on impose que le lagrangien dépende uniquement de la valeur des champs, de leur dérivées premières, mais pas des dérivées d'ordre supérieur. C'est en fait seulement par commodité, et ce n'est pas vrai en général. Nous le supposons cependant dans le reste de cet article.
+
+Fixons des conditions aux limites, essentiellement la donnée de φ aux frontières si M est compact, ou une limite pour φ quand x tend vers l'infini (ce qui est pratique lors d'intégrations par parties). Le sous-espace de <math>\mathcal{C}</math> des fonctions φ telles que toutes les dérivées fonctionnelles de l'action S en φ soient 0 et que φ satisfasse aux conditions aux limites, est l'espace des solutions physiques.
+
+La solution est donnée par les '''équations d'Euler-Lagrange''' (en utilisant les conditions aux limites) :
+
+:<math>\frac{\delta}{\delta\varphi}S=-\partial_\mu
+ \left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\varphi)}\right)+ \frac{\partial\mathcal{L}}{\partial\varphi}=0.</math>
+
+On retrouve la dérivée fonctionnelle par rapport à φ de l'action dans le membre de gauche.
+
+== Voir aussi ==
+=== Articles connexes ===
+<div style='-moz-column-count:3; -moz-column-gap:10px;'>
+* [[mécanique hamiltonienne]]
+* [[théorème de Noether]]
+* [[dérivée fonctionnelle]]
+* [[intégrale de chemin]] (ou intégrale fonctionnelle)
+* [[action (physique)]]
+* [[principe de moindre action]]
+* [[condition de cohérence]]
+</div>
+
+=== Liens externes ===
+* {{...}}
+
+=== Bibliographie ===
+* {{...}}
+
+=== Notes et références ===
+<references />
+
+{{portail physique}}
+
+[[Catégorie:Physique théorique]]
+[[Catégorie:Analyse à plusieurs variables]]
+[[Catégorie:Géométrie différentielle]]
+[[Catégorie:Mécanique]]
+[[Catégorie:Géométrie symplectique]]
+
+[[ar:لاغرانجيان]]
+[[bg:Оператор на Лагранж]]
+[[ca:Lagrangià]]
+[[cs:Lagrangeova funkce]]
+[[de:Lagrange-Dichte]]
+[[el:Λαγκρανζιανή συνάρτηση]]
+[[en:Lagrangian]]
+[[es:Lagrangiano]]
+[[et:Lagrange'i funktsioon]]
+[[gl:Lagranxiana]]
+[[he:לגראנז'יאן]]
+[[hu:Lagrange-függvény]]
+[[it:Lagrangiana]]
+[[ja:ラグランジアン]]
+[[ko:라그랑지안]]
+[[nl:Lagrangiaan]]
+[[pl:Lagranżjan]]
+[[pt:Função de Lagrange]]
+[[ru:Лагранжиан]]
+[[sk:Lagrangeova funkcia]]
+[[sl:Lagrangeeva funkcija]]
+[[sq:Formalizmi i Lagranzhit]]
+[[sv:Lagrangefunktion]]
+[[uk:Лагранжиан]]
+[[zh:拉格朗日量]]

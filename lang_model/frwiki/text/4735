@@ -1,0 +1,595 @@
+La '''mécanique quantique''' est la branche de la [[physique]] qui a pour but d'étudier et de décrire les phénomènes fondamentaux à l'œuvre dans les [[système physique|systèmes physiques]], plus particulièrement à l'échelle atomique et subatomique. C'est aussi la partie de la physique où apparaît la [[constante de Planck]].
+
+Elle fut développée au début du vingtième siècle par une dizaine de physiciens américains et européens, afin de résoudre différents problèmes que la physique classique échouait à expliquer, comme le [[rayonnement du corps noir]], l'[[effet photo-électrique]], ou l'existence des [[raies spectrales]].
+
+Au cours de ce développement la mécanique quantique se révéla être très féconde en résultats et en applications diverses.  Elle permit notamment d'élucider le mystère de la structure de l'[[atome]], et plus globalement elle s'avéra être le cadre général de description du comportement des particules élémentaires, jusqu'à constituer le socle de la physique moderne.  Elle fut complétée plus tard par la [[théorie quantique des champs]], plus apte à décrire le comportement de la matière animée d'une vitesse proche de celle de la lumière.
+
+La mécanique quantique comporte de profondes difficultés conceptuelles, et son interprétation physique ne fait pas encore l'unanimité dans la communauté scientifique.  Parmi ces concepts, on peut citer la [[dualité onde corpuscule]], l'[[amplitude de probabilité]], l'[[intrication quantique]] ou encore la [[Principe de localité (physique)|non-localité]].
+
+<!--  à recycler
+Cette description complète la [[physique classique]], qui réussit très bien à décrire les phénomènes à l'échelle macroscopique,  mais qui échoue dans sa description du monde microscopique et de certaines propriétés du [[rayonnement électromagnétique]]. Toutefois les [[postulats de la mécanique quantique]] sont eux-mêmes inadéquats lorsqu'il s'agit d'étudier les particules élémentaires relativistes, on préfère dans ce cas utiliser une théorie plus large qui est la [[théorie quantique des champs]]<ref>Cette dernière s'est étendue à partir de la mécanique quantique aux phénomènes relativistes et aux champs ([[théorie quantique des champs]]) jusqu'au [[Modèle standard (physique des particules)|modèle standard]] de la physique des particules.</ref>.
+Le cadre de la mécanique quantique apparaît donc comme le cadre théorique le plus adéquat à la description des phénomènes physiques microscopiques mais de basse énergie ([[molécule]]s, [[atome]]s, [[électron]]s, [[proton]]s, [[neutron]]s, [[photon]]s et autres [[Particule subatomique|particules subatomiques]]), certains phénomènes macroscopiques ne s'expliquent toutefois que dans le cadre de cette théorie et non de la physique classique, comme entre autres la [[superfluidité]], la [[supraconductivité]] ou l'[[effet photo-électrique]].
+
+Les principes de la mécanique quantique se révèlent en rupture avec ceux de la physique classique, notamment en mettant en évidence une [[dualité onde-corpuscule]] fondamentale, ainsi qu'en abandonnant la notion de valeur déterminée pour certains états physiques (comme la position et la vitesse) en faveur de probabilités. Le fait que la mécanique quantique implique l'existence d'états [[intrication|intriqués]] suggère que le monde physique puisse parfois se comporter de façon [[Principe de localité (physique)|non-locale]].
+
+Cependant, les phénomènes classiques peuvent être dérivés avec une bonne approximation des lois de la physique quantique, notamment en physique statistique quand un grand nombre de particules est en jeu.
+-->
+
+== Panorama général ==
+
+Globalement la mécanique quantique se démarque de la physique classique par deux aspects : des règles différentes quant à l'additivité des [[probabilité]]s, et l'existence de grandeurs physiques ne pouvant se manifester que par multiples de quantités fixes, appelés quantas, qui donnent leur nom à la théorie.
+
+=== Lois de probabilités ===
+
+Dans la conception classique des lois de probabilités, lorsqu'un évènement peut se produire de deux façons différentes incompatibles l'une de l'autre, les probabilités s'additionnent.   Tel n'est pas le cas en mécanique quantique, où la probabilité d'un évènement est liée à une [[amplitude de probabilité]] susceptible d'interférer, y compris de façon destructive.
+
+Cette propriété est illustrée par l'expérience des [[fentes de Young]], considérée notamment par [[Richard Feynman]] comme la plus emblématique du comportement quantique de la matière.  Dans son cours de mécanique quantique, Feynman consacre un long chapitre à son analyse détaillée.  Cette expérience illustre aussi le concept de [[dualité onde corpuscule]], à la base de l'interprétation moderne de la théorie.
+
+On considère actuellement qu'aux échelles macroscopiques, la non observation du comportement quantique de la matière s'explique par un phénomène appelé [[décohérence]].
+
+=== Existence des quantas ===
+
+La mécanique quantique tire son nom de l'existence de grandeurs ne pouvant se manifester que par multiples de quantités fixes, souvent liées à la constante découverte par [[Max Planck]].   Ces grandeurs sont par exemple l'[[énergie]] ou le [[moment cinétique]] des particules.
+
+L'illustration la plus manifeste et la plus riche en conséquences de ce phénomène se trouve probablement dans la structure de l'atome et plus précisément dans l'organisation des [[électrons]] autour du noyau.   En effet les électrons se répartissent en occupant les places laissées libres par les valeurs possibles des nombres quantiques liés à leur énergie et leur moment cinétique.  Cette organisation permet d'expliquer le comportement chimique et spectroscopique des [[éléments chimiques|éléments naturels]].
+
+== Bref historique ==
+[[Fichier:Solvay_conference_1927.jpg|thumb|Le [[congrès Solvay]] de 1927 a réuni les meilleurs physiciens de l'époque, au nombre desquels figurent la plupart des fondateurs de la mécanique quantique.]]
+C'est incontestablement la résolution du problème du [[rayonnement du corps noir]] qui a marqué le début de la mécanique quantique.   Au début du vingtième siècle, [[Max Planck]] résout en effet ce problème en faisant l'hypothèse que l'énergie des atomes ne peut s'échanger que par multiples de quantités proportionnelles à la fréquence du rayonnement, selon la formule désormais célèbre :
+
+<math>
+E=h\nu
+</math>
+
+La constante <math>h</math>, dont il obtient alors facilement une valeur numérique précise en confrontant son modèle aux données expérimentales, est alors et est toujours une grandeur fondamentale en mécanique quantique, au même titre que la vitesse de la lumière en [[relativité]].
+
+Cette idée de grandeurs énergétiques ne pouvant s'échanger que de façon discrète inspirera alors de nombreux physiciens, comme [[Niels Bohr]], qui s'en serviront notamment pour développer un modèle de la structure de l'atome.  Plus généralement, ce fut le début de ce qu'on appela la [[théorie des quanta]].
+
+Peu de temps après la découverte de Planck [[Albert Einstein]] suggère que la quantité <math>h\nu</math> est l'énergie d'une particule électromagnétique qu'il appelle ''[[photon]]''.  Cette réintroduction d'une conception corpusculaire de la lumière va inciter [[Louis de Broglie]] à proposer une relation analogue à celle de Planck, mais pour la quantité de mouvement :
+
+<math>
+\vec{P}=h\vec{k}
+</math>
+
+où <math>\vec{k}</math> est un [[vecteur d'onde]].
+
+Ce faisant, il est l'instigateur de la [[dualité onde corpuscule]] qui incitera certains physiciens à rechercher une description ondulatoire de la matière.  Parmi ceux-ci, [[Erwin Schrödinger]] y parvient et obtient une équation différentielle, portant désormais son nom, qui permet de décrire précisément l'évolution quantique d'une particule.  Cette équation prouva rapidement sa pertinence dans sa description du modèle de l'[[atome d'hydrogène]].
+
+Parallèlement, [[Werner Heisenberg]] avait développé une approche radicalement différente, qui s'appuyait sur des calculs matriciels directement inspirés de la [[mécanique analytique]] classique.
+
+Ces deux approches, ainsi que la confusion concernant le concept de dualité onde corpuscule, donnaient à la mécanique quantique naissante un besoin de clarification.  Cette clarification intervint grâce aux travaux d'un physicien britannique, [[Paul Adrien Dirac]].
+
+Dans un livre publié en 1930, ''principes de la mécanique quantique'', Dirac montre que les deux approches, celle de Schrödinger et Heisenberg, ne sont en fait que deux représentations d'une même [[algèbre linéaire]].  Dans cet ouvrage fondateur, Dirac extrait les lois proprement quantiques, en faisant abstraction des lois déjà imposées par la physique classique.
+
+<!-- à recycler
+=== Quelques exemples de succès ===
+
+Historiquement, la théorie a d'abord permis de décrire correctement les structures électroniques des [[atome]]s et des [[molécule]]s, ainsi que leurs interactions avec un champ électromagnétique. Elle permet  également d'expliquer le comportement de la matière condensée, notamment :
+* la structure des [[cristal|cristaux]] et leurs [[phonon|vibrations]] ;
+* les propriétés de [[conductivité]] électrique et de [[conduction thermique]] des métaux grâce à la [[théorie des bandes]] ;
+* l'existence et les propriétés des [[semi-conducteur]]s ;
+* l'[[effet tunnel]] ;
+* la [[cryptographie]] et le [[jeu de hasard]]<ref>« Les nouvelles applications de la physique quantique » , David Larousserie, Sciences et Avenir, nº 742, décembre 2008, pages 48 à 61.</ref>
+* la [[supraconductivité]] et [[superfluidité]].
+
+Un autre grand succès de la mécanique quantique fut de résoudre le [[paradoxe de Gibbs]] : en [[physique statistique]] classique, des particules identiques sont considérées comme étant discernables, et l'[[entropie]] n'est alors pas une [[grandeur extensive]]. L'accord entre la théorie et l'expérience fut rétabli en tenant compte du fait que des particules identiques sont ''indiscernables'' en mécanique quantique. 
+
+La [[théorie quantique des champs]], généralisation relativiste de la mécanique quantique, permet quant à elle de décrire les phénomènes où le nombre total de particules n'est pas conservé : [[radioactivité]], [[fission nucléaire]] (c'est-à-dire la désintégration du [[noyau atomique]]) et [[fusion nucléaire]].
+
+-->
+
+== Formulation de Dirac ==
+
+{{article détaillé|Notation bra-ket}}
+
+Paul Dirac dégage les propriétés essentiellement quantiques des phénomènes physiques et les exprime à travers quelques [[postulats de la mécanique quantique|postulats]], un peu à la manière des [[Éléments d'Euclide|postulats d'Euclide]].
+
+Parmi ces postulats, le plus important<ref>Dans ''principes de la mécanique quantique'', Dirac écrit (chapitre 1, §2) : « Quoique l'idée fondamentale, suivant laquelle une réalité physique peut être décrite par l'emploi simultané d'ondes et de particules reliées entre elles d'une façon bien curieuse, soit une idée d'une importance considérable et susceptible d'applications étendues, elle n'en est pas moins, cependant, qu'un simple cas particulier d'un principe beaucoup plus général, le ''principe de superposition''.  Celui-ci constitue l'idée fondamentale nouvelle de la mécanique quantique et forme le point initial à partir duquel celle-ci commence à s'écarter de la théorie classique »</ref> est probablement le [[principe de superposition]].  Selon ce principe, si un système physique peut se trouver dans ce qu'il appelle un ''état'' <math>\phi</math> [[notation bra-ket|que Dirac note]] <math>|\phi\rangle</math>, et si de même il peut se trouver dans un état <math>|\psi\rangle</math>, alors il peut aussi se trouver dans un état linéairement composé :
+
+<math>
+\alpha |\phi\rangle  + \beta |\psi\rangle
+</math>
+
+Où <math>\alpha</math> et <math>\beta</math> sont deux [[nombres complexes]] quelconques.
+
+Autrement dit, l'ensemble des états possibles d'un système physique est un [[espace vectoriel]].
+
+Le point important est qu'un ''état superposé'' n'est pas un état traduisant une ignorance vis-à-vis de l'état ''réel'' du système, mais bien une indétermination intrinsèque au système, qui n'est ni dans l'état <math>\phi</math>, ni dans l'état <math>\psi</math>.  Ce point souleva de nombreux questionnements dans la communauté scientifique.  En particulier, le principe de superposition est à l'origine de ce qu'on appelle le [[problème de la mesure quantique]], que [[Schrödinger]] popularisa en l'appliquant à un chat qui ne serait, selon le désormais fameux ''[[chat de Schrödinger|paradoxe de Schrödinger]]'', ni ''mort'', ni ''vivant''.
+
+Le principe de superposition fut aussi analysé et critiqué par Einstein qui, avec [[Podolski]] et [[Rosen]], imagina une expérience, dite [[paradoxe EPR|expérience EPR]], afin de le mettre en défaut.  Une expérience comparable fut menée à la fin du vingtième siècle par [[Alain Aspect]], qui confirma le principe de superposition.
+
+== Équation de Schrödinger ==
+
+{{article détaillé|Équation de Schrödinger}}
+
+La formulation purement algébrique de Dirac peut paraître abstraite, mais elle eut le mérite de donner un cadre précis à la formulation alors en vogue à l'époque, en l'occurrence la mécanique ondulatoire de [[Schrödinger]].
+
+La formulation de Schrödinger s'intéresse au mouvement d'une particule dans l'espace.  La base de l'espace vectoriel des états y est donc naturellement l'ensemble <math>|x\rangle</math> des états de position parfaitement déterminée.  Ainsi, dans cette base, l'état <math>|\phi\rangle</math> d'une particule s'écrit :
+
+<math>
+|\phi\rangle = \int \phi(x, t) |x\rangle dx
+</math>
+
+Où <math>\phi(x, t)</math> est une fonction scalaire, que Schrödinger appelle ''fonction d'onde''.  Schrödinger fait du temps un simple paramètre, et non une grandeur physique, ce qui fait de sa théorie une théorie essentiellement non [[relativiste]].
+
+En s'inspirant de l'équation de propagation électromagnétique, et à l'aide des relations de Planck et de De Broglie, Schrödinger parvient alors à exprimer l'évolution temporelle de <math>\phi(x,t)</math> :
+
+<math>
+-i\hbar\frac{\partial}{\partial t}\phi(x,t) = H\phi (x,t) 
+</math>
+
+où H est un opérateur linéaire : l'[[hamiltonien]] du système considéré.
+
+=== Interprétation physique de la fonction d'onde ===
+
+L'interprétation physique de la fonction d'onde <math> \Psi </math> sera donnée par [[Max Born|Born]] en 1926, et Dirac en fera plus tard son deuxième postulat, connu sous le nom de [[règle de Born]] : le module au carré de la fonction d'onde <math> \left| \Psi \right|^2  =  \overline{\Psi} \Psi </math> représente la ''densité de probabilité de présence'' de la particule considérée, c'est-à-dire que :
+
+{| align="center" border="0"
+|<math> dP(\vec{r},t) \ = \ \left| \Psi(\vec{r},t) \right|^2 \ dV</math>
+|}
+
+s'interprète comme étant la probabilité de trouver la particule dans un petit volume <math>dV</math> situé au voisinage du point <math>\vec{r} </math> de l'espace à l'instant <math>t</math>. En particulier, la particule étant nécessairement située quelque part dans l'espace entier, on a la condition de normalisation :
+
+{| align="center" border="0"
+|<math> \iiint dP(\vec{r},t) \ = \ \iiint \left| \Psi(\vec{r},t) \right|^2 \ dV \ = \ 1</math>
+|}
+
+Cette interprétation statistique pose un problème lorsque le système quantique étudié est l'Univers entier, comme en [[cosmologie]] quantique. Dans ce cas, les physiciens théoriciens utilisent préférentiellement l'interprétation dite des « [[théorie d'Everett|mondes multiples]] » d'[[Hugh Everett|Everett]].
+
+=== Méthodes de résolution ===
+
+En dehors de quelques cas particuliers où on sait l'intégrer exactement, l'équation de Schrödinger ne se prête en général pas à une résolution analytique exacte. Il faut alors :
+
+* soit développer des techniques d'approximations comme la [[théorie des perturbations]].
+
+* soit la résoudre numériquement. Cette résolution numérique permet notamment de visualiser la disposition curieuse des [[Moment cinétique orbital|orbitales]] électroniques.
+
+== Formulation de la mécanique quantique par intégrale de chemin ==
+
+[[Richard Feynman]] dans sa thèse en 1942 introduit la notion d'[[intégrale de chemin]] afin de présenter une nouvelle formulation de la [[mécanique quantique]] <ref>Richard P. Feynman ; ''The principle of least action in quantum mechanics'', thèse de l'université de Princeton. Cette thèse vient d'être publiée dans Laurie M. Brown (Editor) ; ''Feynman's thesis: a new approach to quantum theory'', World Scientific (2005),{{ISBN|9812563806}}.</ref>. Ces résultats ne seront publiés qu'en 1948 <ref>
+Richard P. Feynman ; ''Space-time approach to non-relativistic quantum mechanics'', Review of Modern Physics 20 (1948) 267. Cet article est reproduit dans : Julian Schwinger (ed) ; ''Selected papers on quantum electrodynamics'', Dover Publications, Inc. (1958) {{ISBN|0-486-60444-6}}, ainsi que dans : Laurie M. Brown (Editor) ; ''Feynman's thesis: a new approach to quantum theory'', World Scientific (2005),{{ISBN|9812563806}}.</ref> en raison de la seconde guerre mondiale. A terme, le but de cette approche serait de formuler une théorie de l'[[électrodynamique quantique]] en développant la quantification par intégrale de chemin. Si de nos jours on retient le formalisme Hamiltonien de la mécanique quantique pour traiter des problèmes classiques (au sens non relativiste), il s'avère que la formulation de Feynman est largement prédominante pour traiter les problèmes relativistes notamment en [[théorie quantique des champs]], l'avantage provenant du fait que cette approche est non perturbative. 
+
+Par ailleurs, en 1953 Feynman appliqua son approche pour formuler la mécanique statistique quantique par intégrale de chemin ([[intégrale de Wiener]], [[formule de Feynman-Kac]]) et tenta d'expliquer la transition lambda dans l'hélium superfluide.
+
+== Mécanique quantique et relativité ==
+
+{{article détaillé|Théorie quantique des champs}}
+
+La mécanique quantique est une théorie ''non relativiste'' : elle n'incorpore pas les principes de la [[relativité restreinte]]. En appliquant les règles de la quantification canonique à la relation de dispersion relativiste, on obtient l'[[équation de Klein-Gordon]] (1926). Les solutions de cette équation présentent toutefois de sérieuses difficultés d'interprétation dans le cadre d'une théorie censée décrire '''une''' seule particule : on ne peut notamment pas construire une ''densité de probabilité de présence'' partout positive, car l'équation contient une dérivée temporelle seconde. Dirac cherchera alors une autre équation relativiste du ''premier ordre en temps'', et obtiendra l'[[équation de Dirac]], qui décrit très bien les [[fermion]]s de [[spin]] un-demi comme l'électron.
+
+La [[théorie quantique des champs]] permet d'interpréter toutes les équations quantiques relativistes sans difficulté.
+
+L'[[équation de Dirac]] incorpore naturellement l'[[invariance de Lorentz]] avec la mécanique quantique, ainsi que l'interaction avec le [[champ (physique)|champ]] [[électromagnétisme|électromagnétique]] mais qui est traité encore de façon classique (on parle d'[[approximation semi-classique]]). Elle constitue la [[mécanique quantique relativiste]]. Mais du fait précisément de cette interaction entre les particules et le champ, il est alors nécessaire, afin d'obtenir une description cohérente de l'ensemble, d'appliquer la procédure de [[quantification]] également au champ électromagnétique. Le résultat de cette procédure est l'[[électrodynamique quantique]] dans laquelle l'unité entre champ et particule est encore plus transparente puisque désormais la matière elle aussi est décrite par un champ. L'électrodynamique quantique est un exemple particulier de [[théorie quantique des champs]]. 
+
+D'autres théories quantique des champs ont été développées par la suite au fur et à mesure que les autres interactions fondamentales ont été découvertes ([[théorie électrofaible]], puis [[chromodynamique quantique]]).
+
+== Les inégalités de Heisenberg ==
+
+{{article détaillé|Principe d'incertitude}}
+
+Les [[principe d'incertitude|relations d'incertitude de Heisenberg]] traduisent l'impossibilité de préparer un état quantique correspondant à des valeurs précises de certains couples de grandeurs conjuguées. Ceci est lié au fait que les opérateurs quantiques associés à ces grandeurs classiques ''ne [[algèbre commutative|commutent]] pas''.
+
+=== Inégalité position-impulsion ===
+
+Considérons par exemple la position <math>x\,</math> et l'impulsion <math>p_x\,</math>  d'une particule.  En utilisant les règles de la quantification canonique, il est facile de vérifier que les opérateurs de position et d'impulsion vérifient :
+
+:<math> \left[ \hat{x}^i ,  \hat{p}_j \right] f( \vec{r} ) \ = \ \left(  \hat{x}^i  \hat{p}_j - \hat{p}_j \hat{x}^i \right) f( \vec{r} ) \ = \ i  \hbar \ \delta^i_j \ f( \vec{r} ) </math>
+
+La relation d'incertitude est définie à partir des [[écart type|écarts quadratiques moyens]] de grandeurs conjuguées. Dans le cas de la position <math>x\,</math> et de l'impulsion <math>p_x\,</math> d'une particule, elle s'écrit par exemple&nbsp;:
+
+:<math> {\Delta}x \, \cdot \, {\Delta}p_x  \ {\ge} \ \frac{\hbar}{2}</math>
+
+Plus l'état possède une distribution resserrée sur la position, plus sa distribution sur les valeurs de l'impulsion qui lui est associée est large. Cette propriété rappelle le cas des ondes, via un résultat de la [[transformée de Fourier]], et exprime ici la dualité onde-corpuscule. Il est clair que ceci mène à une remise en cause de la notion classique de trajectoire comme chemin continu différentiable<ref>La notion de chemin a fait un retour spectaculaire en mécanique quantique en 1948 avec la formulation lagrangienne introduite par [[Feynman]], basée sur le concept d'[[intégrale de chemin]].</ref>.
+
+=== Inégalité temps-énergie ===
+
+Il existe également une relation d'incertitude portant sur l'énergie d'une particule et la variable temps. Ainsi, la durée <math>\Delta t\,</math> nécessaire à la détection d'une particule d'énergie <math>E\,</math> à <math>\Delta E\,</math> près<ref>Ce concept est primordial en [[théorie quantique des champs]], théorie qui fait appel à la notion de [[particule virtuelle]].</ref> vérifie la relation :
+
+:<math> {\Delta}E \, \cdot \, {\Delta}t  \ {\ge} \ \frac{\hbar}{2}</math>
+
+Cependant, la dérivation de cette inégalité énergie-temps est assez différente de celle des inégalités position-impulsion<ref>Pour une dérivation rigoureuse de l'inégalité énergie-temps, consulter par exemple Albert Messiah, ''Mécanique quantique - volume 1'', Dunod (1959) pp. 114-117, pp. 269-270, et pour l'oscillateur harmonique, p. 280. Ouvrage réédité par Dunod en 1995, {{ISBN|2-10-007361-3}}.</ref>.
+
+En effet, si le hamiltonien est bien le générateur des translations dans le temps en [[mécanique hamiltonienne]], indiquant que temps et énergie sont conjuguées<ref>De même que la composante <math>p_i\,</math> de l'impulsion est le générateur des translations d'espace dans la direction <math>x^i\,</math>.</ref>, '''il n'existe pas d'opérateur temps''' en mécanique quantique (« théorème » de Pauli), c'est-à-dire qu'on ne peut pas construire d'opérateur <math> \hat{T}\,</math> qui obéirait à une relation de commutation canonique avec l'opérateur hamiltonien <math> \hat{H}\,</math> :
+
+:<math> \left[ \hat{H} ,  \hat{T} \right] \ = \ i  \hbar \ \hat{1}</math>
+
+ceci pour une raison très fondamentale : la mécanique quantique a en effet été inventée pour que chaque système physique stable possède un ''état fondamental d'énergie mininum''. L'argument de Pauli est le suivant : si l'opérateur temps existait, il posséderait un spectre continu. Or, l'opérateur temps, obéissant à la relation de commutation canonique, serait aussi le générateur des ''translations en énergie''. Ceci entraîne alors que l'opérateur hamiltonien posséderait lui aussi un ''spectre continu'', en contradiction avec le fait que l'énergie de tout système physique stable se doit d'être ''bornée inférieurement''<ref>Concernant la validité de ce « théorème », lire les travaux d'Eric Galapon : [http://arxiv.org/abs/quant-ph/9908033 ''quant-ph/9908033''] et [http://arxiv.org/abs/quant-ph/0303106 ''quant-ph/0303106''].</ref>.
+
+== L'intrication ==
+{{article détaillé|intrication quantique}}
+
+L'intrication est un état quantique (voir aussi [[fonction d'onde]]) décrivant deux systèmes classiques (ou plus) non factorisables en un produit d'états correspondant à chaque système classique. 
+
+Deux systèmes ou deux particules peuvent être intriqués dès qu'il existe une interaction entre eux. En conséquence, les états intriqués sont la règle plutôt que l'exception. Une mesure effectuée sur l'une des particules changera son état quantique selon le postulat quantique de la mesure. Du fait de l'intrication, cette mesure aura un effet instantané sur l'état de l'autre particule, même si la [[ligne d'univers]] qui relie les deux [[évènement]]s "''mesure 1''" et "''mesure 2''" de l'[[espace-temps]] est une courbe de [[ligne d'univers|genre espace]] ! Par suite, le fait que la mécanique quantique tolère l'existence d'états intriqués, états ayant effectivement été observés en laboratoire et dont le comportement est en accord avec celui prévu par la mécanique quantique (voir l'[[expérience d'Aspect]]), implique que la mécanique quantique est une [[Principe de localité (physique)|théorie physique non locale]]. Néanmoins, il est incorrect d'assimiler ce changement d'état à une transmission d'information plus rapide que la vitesse de la lumière (et donc une violation de la théorie de la relativité). La raison est que le résultat de la mesure relatif à la première particule est toujours aléatoire, dans le cas des états intriqués comme dans le cas des états non intriqués. Il est donc impossible de « transmettre » quelque information que ce soit, puisque la modification de l'état de l'autre particule, pour immédiate qu'elle soit, conduit à un résultat de la mesure relatif à la seconde particule qui est toujours aussi aléatoire que celui relatif à la première particule. Les corrélations entre les mesures des deux particules, bien que très réelles et mises en évidence dans de nombreux laboratoires de par le monde, resteront indétectables tant que les résultats des mesures ne seront pas comparés, ce qui implique nécessairement un échange d'information classique, respectueux de la Relativité (voir aussi le [[Paradoxe EPR]]). 
+
+La [[téléportation quantique]] fait usage de l'intrication pour assurer le transfert de l'état quantique d'un système physique vers un autre système physique. Ce processus est le seul moyen connu de transférer parfaitement l'information quantique. Il ne peut dépasser la vitesse de la lumière et est également « désincarné », en ce sens qu'il n'y a pas de transfert de matière (contrairement à la téléportation fictive de Star Trek).
+
+Cet état ne doit pas être confondu avec l'état de ''superposition''. Un même objet quantique peut avoir deux (ou plus) états ''superposés''. Par exemple un même photon peut être dans l'état "polarité longitudinale" et "polarité transversale" simultanément. Le [[chat de Schrödinger]] est simultanément dans l'état "mort" et "vivant". Un photon qui passe une lame semi-réfléchissante est dans l'état superposé "photon transmis" et "photon réfléchi". C'est uniquement lors de l'acte de mesure que l'objet quantique possédera un état déterminé.
+
+Dans le formalisme de la physique quantique, un état d'intrication de ''plusieurs objets quantique'' est représenté par un [[produit tensoriel]] des vecteurs d'état de chaque objet quantique. Un état de superposition ne concerne qu''''un seul objet quantique''' (qui peut être une intrication), et est représentée par une [[combinaison linéaire]] des différentes possibilités d'états de celui-ci.
+
+== Téléportation quantique ==
+{{Article détaillé|Téléportation quantique}}
+
+On ne peut déterminer l'état d'un système quantique qu'en l'observant, ce qui a pour effet de détruire l'état en question. Celui-ci peut en revanche, une fois connu, être en principe recréé ailleurs. En d'autres termes, la ''duplication'' n'est pas possible dans le monde quantique, seule l'est une ''reconstruction en un autre endroit'',  voisine du concept de téléportation dans la [[science-fiction]].
+
+Élaborée théoriquement en 1993 par C.H. Bennett, G. Brassard, C. Crépeau, R. Jozsa, A. Peres, et  W. Wootters dans l'article ''Teleporting an unknown quantum state by dual classical and EPR channels'', de la ''Physical Review Letter'', cette reconstruction a été réalisée expérimentalement en 1997, sur des photons, par l'équipe d'[[Anton Zeilinger]] à Innsbruck, et plus récemment sur des atomes d'[[hydrogène]].
+
+==Liste des expériences==
+{{...}}
+
+== Quelques paradoxes ==
+
+Ces « paradoxes » nous questionnent sur l'interprétation de la mécanique quantique, et révèlent dans certains cas à quel point notre intuition peut se révéler trompeuse dans ce domaine qui ne relève pas directement de l'expérience quotidienne de nos sens.
+
+; Chat de Schrödinger 
+
+Ce paradoxe (1935) met en évidence les problèmes d'interprétation du postulat de [[réduction du paquet d'onde]].
+
+{{Article détaillé|Chat de Schrödinger}}
+
+; Paradoxe EPR et expérience d'Alain Aspect 
+
+Ce paradoxe (1935) met en évidence la non-localité de la physique quantique, impliquée par les [[intrication quantique|états intriqués]].
+
+{{Article détaillé|Paradoxe EPR|Expérience d'Aspect}}
+
+; Expérience de Marlan Scully
+
+Cette expérience peut être interprétée comme une démonstration que les résultats d'une expérience enregistrée à un instant T dépendent objectivement d'une action effectuée à un temps ultérieur T+t. Selon cette interprétation, la non-localité des états intriqués ne serait pas seulement spatiale, mais également temporelle.
+
+Toutefois, la [[causalité]] n'est pas strictement violée car il n'est pas possible - pour des raisons fondamentales - de mettre en évidence, avant l'instant T+t, que l'état enregistré à l'instant T dépend d'un évènement ultérieur. Ce phénomène ne peut donc donner aucune information sur l'avenir.
+
+{{Article détaillé|Expérience de Marlan Scully}}
+
+; Contrafactualité
+
+Selon la mécanique quantique, des évènements qui ''auraient pu se produire, mais qui ne se sont pas produits'', influent sur les résultats de l'expérience.
+
+{{Article détaillé|contrafactualité (physique)}}
+
+== La décohérence : du monde quantique au monde classique ==
+
+{{article détaillé|Décohérence}}
+
+Alors que les principes de la mécanique quantique s'appliquent a priori à tous les objets contenus dans l'univers (nous y compris), pourquoi continuons-nous à percevoir classiquement l'essentiel du monde [[macroscopique]] ? En particulier, pourquoi les [[Principe de superposition quantique|superpositions quantiques]] ne sont-elles pas observables dans le monde macroscopique? La théorie de la [[décohérence]] explique leurs disparitions très rapides en raison du couplage inévitable entre le système quantique considéré et son environnement. 
+
+Cette théorie a reçu une confirmation expérimentale avec les études portant sur des systèmes [[mésoscopique]]s pour lesquels le temps de décohérence n'est pas trop court pour rester mesurable, par exemple un système de quelques photons dans une cavité (Haroche ''et al.'', 1996)
+
+== Notes et références ==
+{{Références|colonnes=1}}
+
+== Voir aussi ==
+{{Wikiversity|Département:Mécanique quantique}}
+== Articles connexes ==
+
+=== Concepts fondamentaux ===
+* [[Quantum]]
+* [[Théorie des quanta]]
+** [[Diagramme d'énergie]]
+* [[Postulats de la mécanique quantique]]
+* [[Les trois axiomes de la mécanique quantique]]
+* [[Dualité onde-corpuscule]]
+* [[État quantique]]
+** [[Principe de superposition quantique]]
+** [[Intrication quantique]]
+*** [[Téléportation quantique]]
+* [[Fonction d'onde]]
+* [[Principe d'incertitude]]
+* [[Principe de complémentarité]]
+
+=== Interprétation ===
+
+Il existe de nombreuses interprétations des effets de la mécanique quantique, certaines étant en contradiction totale avec d'autres. Faute de conséquences observables de ces interprétations, il n'est pas possible de trancher en faveur de l'une ou de l'autre de ces interprétations. Seule exception, l'école de Copenhague dont le principe est justement de refuser toute interprétation des phénomènes.
+
+{{Boîte déroulante|
+titre = Diagramme des principales interprétations|
+contenu = {{Arbre des solutions du problème de la mesure}}
+}}
+* [[1924]] :   [[Hypothèse de De Broglie]]
+* [[1927]] :   [[École de Copenhague]]
+* [[1927]] :   [[Théorie de l'onde pilote]]
+* [[1952]] :   [[Théorie de De Broglie-Bohm]]
+* [[1957]] :   [[Théorie d'Everett]] (univers multiples)
+* [[1970]] :   [[Décohérence quantique]]
+* [[1986]] :   [[Interprétation transactionnelle de la mécanique quantique|Interprétation transactionnelle]]
+
+=== Problèmes, paradoxes et expériences ===
+* [[Problème de la mesure quantique]]
+* [[Gravité quantique]]
+* [[Contrafactualité (physique)|Contrafactualité]]
+* [[Paradoxes de la mécanique quantique]]
+* [[Chat de Schrödinger]]
+* [[Paradoxe EPR]]
+* [[Expérience d'Aspect]]
+* [[Expérience de la gomme quantique à choix retardé]]
+* [[Fentes de Young]]
+* [[Expérience d’Afshar]]
+* [[Gomme quantique]]
+
+=== Mathématique ===
+* [[Constante de Planck]]
+* [[Constante de Planck réduite]]
+* [[Équation de Schrödinger]]
+* [[Amplitude de probabilité]]
+* [[Notation bra-ket]]
+* [[Espace de Hilbert]]
+* [[Oscillateur harmonique quantique]]
+* [[Phase géométrique]]
+* [[Intégrale de chemin]]
+* [[Spin]]
+
+=== Mécanique quantique relativiste ===
+{{Article détaillé|Mécanique quantique relativiste}}
+* [[Modèle standard (physique)|Modèle standard]]
+* [[Physique quantique]]
+* [[Théorie quantique des champs]]
+* [[Principe d'exclusion de Pauli]] 
+* [[Équation de Dirac]]
+* [[Physique des particules]]
+* [[Diagramme de Feynman]]
+
+=== Informatique quantique ===
+{{Article détaillé|Informatique quantique}}
+* [[Information quantique]]
+* [[Ordinateur quantique]]
+* [[Qubit]]
+* [[Cryptographie quantique]]
+
+=== Vide quantique ===
+{{Article détaillé|Vide quantique}}
+* [[Énergie du vide]]
+* [[Effet Casimir]]
+** [[Décalage de Lamb]]
+* [[Évaporation des trous noirs]]
+
+=== Divers ===
+* [[Chronologie de la physique microscopique]]
+* [[Atome d'hydrogène]]
+
+== Bibliographie ==
+
+=== Ouvrages de vulgarisation ===
+
+* Banesh Hoffman et Michel Paty ; ''L'étrange histoire des quanta'', Collection Points-Sciences 26, Le Seuil (1981). {{ISBN|2-02-005417-5}}
+
+* Emilio Segré ; ''Les physiciens modernes et leurs découvertes - Des rayons X aux quarks'', Fayard (1984) {{ISBN|2-213-01383-7}}. Une histoire vulgarisée qui couvre la période 1895-1983. L'auteur a reçu le [http://nobelprize.org/physics/laureates/1959/segre-bio.html ''prix Nobel 1959''] pour la découverte expérimentale de l'antiproton. 
+
+* Georges Gamow ; ''Trente années qui ébranlèrent la physique (Histoire de la théorie quantique)'', 1968. Réédité par Jacques Gabay (2000) {{ISBN|2-87647-135-3}}.
+
+* Stéphane Deligeorges (ed) ; ''Le monde quantique'', Collection Points-Sciences 46, Le Seuil (1984). {{ISBN|2-02-008908-4}}
+
+* Emile Noël (ed) ; ''La matière aujourd'hui'', Collection Points-Sciences 24, Le Seuil (1981). {{ISBN|2-02-005739-5}}
+
+* Serge Haroche ; ''Physique quantique'', Leçon inaugurale au Collège de France, coédition Collège de France/Fayard (2004).
+
+* Étienne Klein ; ''Petit voyage dans le monde des quanta'', Collection Champs 557, Flammarion (2004). {{ISBN|2-08-080063-9}}
+
+* [[Roland Omnès]] ; ''Les indispensables de la mécanique quantique'', Collection Sciences, Odile Jacob (2006). {{ISBN|978-2-7381-1820-2}}
+
+* Helge S. Kragh ; ''Quantum generations - A history of physics in the twentieth century'', Princeton University Press (1999) {{ISBN|0-691-01206-7}}
+
+* Sven Ortoli et Jean-Pierre Pharabod; Le Cantique des quantiques: le monde existe-t-il ? éd. La Découverte, 2007. {{ISBN|978-2-7071-5348-7}}. 
+
+=== Ouvrages de philosophie ===
+
+* Bernard d'Espagnat ; "Le réel voilé, Analyse des concepts quantiques", Fayard, 1994
+
+* {{Bitbol1996}}
+
+* Manuel Bächtold, "L'interprétation de la mécanique quantique: une approche pragmatiste", Hermann, 2009
+
+* [[Bryce DeWitt]] and Neil Graham ; "The many-worlds interpretation of quantum mechanics" Princeton University Press, 1973
+
+* David Bohm and Basil Hiley ; "The undivided Universe, An ontological interpretation of quantum mechanics", Routledge, 1993
+
+* {{VanFraassen1991}}
+
+* R. I. G. Hughes ; "The structure and interpretation of quantum mechanics", Harvard University Press, 1992
+
+* Roland Omnès ; "The interpretation of quantum mechanics", Princeton University Press, 1994
+
+* [[Robert Griffiths (physicist)|Robert B. Griffiths]] '' Consistent Quantum Theory'', Cambridge University Press, 2003. {{ISBN|0-521-53929-3}} 
+
+* [[John Bell|John S. Bell]] ''Speakable and Unspeakable in Quantum Mechanics, second Edition, Collected papers on quantum philosophy'', Cambridge University Press, 2004. {{ISBN|0-521-52338-9}}
+
+=== Ouvrages d'initiation ===
+
+Accessibles au niveau d'un premier cycle universitaire.
+
+* Jean-Marc Lévy-Leblond & Françoise Balibar ; ''Quantique : rudiments'', InterEditions/[[Éditions du CNRS]] (1984). Réédité par Masson (1997) {{ISBN|2-225-85521-8}}, aujourd'hui racheté par Dunod : {{ISBN|2-225-85521-8}} Initiation à la physique quantique, accessible dès le premier cycle universitaire. Le bagage mathématique est restreint au minimum, l'accent étant porté sur la compréhension des phénomènes.
+
+* [[Richard Feynman]] ; ''Mécanique quantique'', volume 3 du ''Cours de physique de Feynman'', issu d'un enseignement donné à CalTech (Californian Institute of Technology, Pasadena), première parution aux États-Unis en 1963, édidions Dunod, {{ISBN|2-10-004934-8}}. Cours de niveau premier cycle universitaire, par le théoricien américain Richard Feynman, [[prix Nobel de physique]] 1965. C'est une vision personnelle de la physique orientée vers la pédagogie : Feynman prend pour point de départ les amplitudes de transitions plutôt que la fonction d'onde <math> \Psi </math> (l'équation de Schrödinger ne faisant son apparition qu'au chapitre 16 à la page 320). Ces amplitudes constituent l'objet central de sa propre formulation en [[intégrale de chemin]]s. Cette approche peut dérouter l'étudiant ayant déjà suivi un cours d'initiation standard, l'aspect formel étant réduit.
+
+* Max Born ; ''Structure atomique de la matière - Introduction à la physique quantique'', Collection U, Armand-Colin (8{{e}} édition-1971). Un livre de référence par un professeur de physique théorique de l'université de Göttingen, prix Nobel de physique 1954 pour son interprétation statistique de la fonction d'onde de Schrödinger. Ce livre vaut pour certains détails historiques de première main.
+
+* Bernard Cagnac & Jean-Claude Pebay-Peyroula ; ''Physique atomique - Tome 1 : expériences et principes fondamentaux'', Dunod (1975). {{ISBN|2-04-002555-3}}. Ce livre décrit précisément et en détails les aspects expérimentaux suivants : l'effet photoélectrique, les spectres optiques, l'expérience de Franck et Hertz, l'effet Compton, l'émission et l'absorption de photons, le laser, la dualité onde-corpuscule, les modèles atomique planétaires, ainsi que de nombreux aspects du magnétisme orbital et du magnétisme de spin, dont l'expérience de Stern et Gerlach.
+
+* Edouard Chpolski ; ''Physique atomique'' (2 vol.), Editions Mir (1977) ISBN . Un exposé des principes de la physique atomique, qui fournit de nombreux détails historiques.
+
+* Abraham Pais ; ''Inward Bound - Of Matter & Forces in the Physical World'', Oxford University Press (1986) {{ISBN|0-19-851997-4}} Écrite par un ancien assistant d'Einstein à Princeton, cette histoire des développements de la physique moderne démarre en 1895 avec la découverte expérimentale des rayons X, et se termine en 1983 lors de la découverte expérimentale au C.E.R.N. des bosons-vecteurs W et Z. L'auteur décrit avec beaucoup de détails l'évolution des idées, indiquant systématiquement les références des publications originales. Livre non traduit pour l'instant en français.
+
+=== Ouvrages destinés à l'apprentissage de la discipline ===
+
+Accessibles à partir du second cycle universitaire.
+
+* Constantin Piron ; "Mécanique Quantique: Bases et Applications", Presses Polytechniques et Universitaires Romandes (1998) {{ISBN|2-88074-399-0}}. Ce cours expose les bases de la théorie quantique et ses applications élémentaires sous une forme moderne, totalement renouvelée grâce aux travaux et aux découvertes faites ces trente dernières années, tant dans le domaine expérimental que dans le domaine théorique. Les concepts mathématiques sont introduits au fur et à mesure des besoins d'une manière élémentaire mais rigoureuse. Le tout est illustré par de nombreux exercices, avec corrigé.
+* Michel Le Bellac ; ''Physique quantique'', Collection ''Savoirs actuels'', EDP Sciences/CNRS Editions (2003) {{ISBN|2-86883-665-0|2-271-06147-4}}. Cet ouvrage aborde les aspects les plus récents de la théorie.
+* {{Basdevant}}
+* Jean-Louis Basdevant & Jean Dalibard ; ''Problèmes quantiques'', Editions de l'école Polytechnique (2004), {{ISBN|2730211179}}. Complément du volume de cours précédent, ce livre contient 19 problèmes, avec corrigés, sur une grande diversité d'exemples expérimentaux contemporains.
+* {{cohen}}. Traité en français, généralement donné comme référence aux étudiants du premier et second cycles universitaires.
+* {{Messiah}}
+* {{Landau|tome 3}}. Écrit par un théoricien soviétique (en collaboration avec un de ses élèves) connu pour ses travaux en physique de l'état condensé, prix Nobel de physique 1962. Ouvrage complet. 
+* [[Sakurai|Jun John Sakurai]] ; Modern Quantum Mechanics, Revised Edition, Addison-Wesley Publishing Company (1994) {{ISBN|0-201-53929-2}}. Cet ouvrage d'un niveau avancé présente en particulier des sujets tels que les intégrales de chemin de Feynman, les mesures de corrélations, les inégalités de Bell, etc. 
+* Peter Atkins ; ''Molecular quantum mechanics'', Oxford University Press (2{{e}} édition-1983) ISBN . Cours très pédagogique, par le célèbre professeur de chimie-physique de l'Université d'Oxford.
+* Alain Aspect ; ''Quelques tests expérimentaux des fondements de la mécanique quantique (en optique)'', dans : ''Qu'est-ce que l'Univers ?'', Vol. 4 de l'Université de Tous les Savoirs (sous la direction d'Yves Michaux), Odile Jacob (2001) 589. Dualité onde-corpuscule, intrication quantique & paradoxe  E.P.R., par un professeur d'optique à l'Université de Paris-Sud (Orsay), auteur en 1982 d'une remarquable expérience testant les inégalités de Bell des corrélations E.P.R. (expérience en faveur des prédictions de la mécanique quantique. Cette expérience fut améliorée en 1998 par Anton Zeilinger et ses collaborateurs de l'Université d'Innsbrück, Autriche).
+* Anton Zeilinger ; ''La téléportation'', Pour La Science 272 (Juin 2000) 36-44
+
+=== Aspects historiques ===
+
+* José Leite-Lopes & Bruno Escoubès ; ''Sources et évolution de la physique quantique - Textes fondateurs'', Masson (1995) {{ISBN|2-225-84607-3}}. Réédité par E.D.P. Sciences. Donne une vue générale de l'évolution des idées, du XIXe siècle à 1993, ainsi que la traduction française de quelques articles fondateurs.
+
+* John Archibald Wheeler &  Wojciech Zurek ; "Quantum theory and measurement", Princeton University Press, 1983. Un recueil classique d'articles sur le "problème de la mesure"
+
+* B.L. van der Waerden (ed.) ; ''Sources of quantum mechanics'', Dover Publications, Inc. (1967) {{ISBN|0-486-61881-1}}. Ce volume regroupe  quelques-uns des articles pionniers de 1916 à 1926 (en traduction anglaise).
+
+* [[Paul Dirac|Paul A. Dirac]]; ''The principles of quantum mechanics'', Oxford Science Publication, Oxford University Press (4{{e}} édition-1958). Le traité historique de base sur les principes de la mécanique quantique, par l'un de ses plus brillants inventeur, professeur de physique théorique à l'université de Cambridge, prix Nobel de physique en 1933 (avec Erwin Schrödinger).
+
+* Paul A.M. Dirac ; ''Lectures on Quantum Mechanics'', Dover Publications, Inc (2001). Quatre conférences faites à l'Université Yeshiva de New York en 1964.
+
+* Erwin Schrödinger ; ''Mémoires sur la mécanique ondulatoire'', réédition des articles historiques par Jacques Gabay (1988) ISBN . 
+
+* Werner Heisenberg ; ''Les principes physiques de la théorie des quanta'', réédition du livre historique par Jacques Gabay (1989) ISBN . 
+
+* Enrico Fermi ; ''Notes on quantum mechanics'', the University of Chicago Press (1961) ISBN . 
+
+* John Von Neumann ; ''Les fondements mathématiques de la mécanique quantique'', Librairie Alcan (1946), réédité par Jacques Gabay (1988) ISBN . Un ouvrage fondamental sur la structure mathématique de la théorie et les espaces de Hilbert.
+
+* Jagdish Mehra & Helmut Rechenberg ; ''The historical development of quantum theory'', Vols. 1-6, Springer-Verlag (New York-1978 à 2001) ISBN. Ouvrage de plus de 4500 pages (6 volumes en 9 livres) sur le développement la mécanique quantique, principalement de 1900 à 1941 (un court texte est consacré aux avancées depuis 1941 jusqu'en 1999). 
+
+* Max Jammer ; ''The conceptual development of quantum mechanics'', McGraw-Hill (New York-1966) ISBN . 
+
+* Max Jammer ; ''The philosophy of quantum mechanics'', John Wiley & Sons (New York-1974) ISBN .
+
+=== Sur la décohérence ===
+
+* Serge Haroche, Jean-Michel Raimond & Michel Brune ; ''Le chat de Schrödinger se prête à l'expérience - Voir en direct le passage du monde quantique au monde classique'', La Recherche 301 (Septembre 1997) 50.
+
+* Serge Haroche ; ''Une exploration au cœur du monde quantique'', dans : ''Qu'est-ce que l'Univers'' ?, Vol. 4 de l'Université de Tous les Savoirs (sous la direction d'Yves Michaux), Odile Jacob (2001) 571.
+
+* Roland Omnès ; ''Comprendre la mécanique quantique'', EDP Sciences (2000) {{ISBN|2-86883-470-1}}. Par un professeur de physique théorique émérite de l'Université de Paris-Sud (Orsay), une discussion de l' interprétation de Copenhague  de la mécanique quantique, du problème de la mesure et de la théorie des histoires consistantes  de Griffiths et de la décohérence, par l'un de ses pionniers.
+
+* E. Joos,, H.D. Zeh, C. Kiefer, D. Giulini, K. Kupsch, I.O. Stamatescu ; ''Decoherence and the Appearance of a Classical World in Quantum Theory'', Springer-Verlag (1996). Deuxième édition (2003)  {{ISBN|3-540-00390-8}} 
+
+* Gennaro Auletta ; ''Foundation & Interpretation of Quantum Mechanics (in the light of a critical - historical analysis of the problems and of a synthesis of the results)'', Wolrd Scientific (2001) ISBN . Par un professeur de l'Université de Rome, un ouvrage monumental (environ 1000 pages) sur les fondements conceptuels de la mécanique quantique des origines à nos jours - y compris les questions de décohérence -, mis en relation avec les avancées expérimentales les plus récentes.
+
+* [[Fred Alan Wolf]] ; ''Parallel Universes: The Search for Other Worlds'', 1988
+
+=== Bibliothèque virtuelle ===
+==== Cours ====
+
+* Franck Laloë ; [http://www.phys.ens.fr/cours/notes-de-cours/fl-mq/mq.PDF ''Comprenons-nous vraiment la mécanique quantique ?''] (pdf) : cours de Franck Laloë (Laboratoire Kastler-Brossel, ENS Ulm, Paris).
+
+* Franck Laloë ; [http://www.phys.ens.fr/cours/notes-de-cours/fl-mq/mq-anglais.pdf ''Do we really understand quantum mechanics ?''] (pdf) : version anglaise augmentée du cours précédent sur le "paradoxe" E.P.R., le théorème de Bell, les intrications quantiques et la décohérence.
+
+* Claude Cohen-Tannoudji ; [http://www.phys.ens.fr/cours/notes-de-cours/cct-dea/index.html ''Compléments de mécanique quantique''] (pdf) : cours de Claude Cohen-Tannoudji (prix Nobel 1997) sur la formulation Lagrangienne de la mécanique quantique (Feynman-Dirac), et sur l'utilisation des fonctions de Green. Notes rédigées en 1966 par Serge Haroche.
+
+* Jean Dalibard  ; [http://www.phys.ens.fr/cours/notes-de-cours/jd-dea/index.html ''Mécanique quantique avancée''] (pdf) : cours sur les systèmes de bosons et de fermions, la seconde quantification et l'espace de Fock, et la théorie des collisions.
+
+* [http://www.phys.ens.fr/cours/college-de-france/index.html ''Claude Cohen-Tannoudji au Collège de France''] (pdf) :  cours donnés depuis 1976 par Claude Cohen-Tannoudji (prix Nobel 1997 - chaire de physique atomique).
+
+* [http://www.lkb.ens.fr/recherche/qedcav/college/college.html ''Serge Haroche au Collège de France''] (pdf) : cours donnés par Serge Haroche (chaire de physique quantique).
+
+* Michel Le Bellac  ; [http://cel.archives-ouvertes.fr/cel-00092955/fr/''Introduction à l'information quantique''] (pdf). Cours de Michel Le Bellac (Institut Non Linéaire de Nice).
+
+* Philippe Jacquier ; [http://www.phys.ens.fr/~jacquier/cours/M1] ''Physique Quantique et Applications & Atomes et Molécules''. Cours de Master M1 donné à l'UPMC (Paris VI).
+
+* Doron Cohen ; ''Lecture Notes in Quantum Mechanics'', (2006). Excellente introduction, qui couvre de multiples aspects qu'on trouve rarement abordés à ce niveau. ArXiv : [http://arxiv.org/abs/quant-ph/0605180 quant-ph/0605180].
+
+=== Lectures complémentaires ===
+
+* Roger Balian  ; [http://www-spht.cea.fr/articles/t02/046/ ''La physique quantique à notre échelle''] : texte d'une conférence donnée par l'auteur (Service de Physique Théorique du CEA, Saclay) le 15 décembre 2000 à l'Académie des Sciences de Paris lors du colloque : ''Les quanta : un siècle après Planck''. Publié par Michel Crozon & Yves Saquin (éditeurs), Physique et Interrogations Fondamentales - ''Un siècle de quanta'', EDP Sciences (2003) pp. 59-89 
+
+* Max Born  ; [http://archive.numdam.org/article/AIHP_1930__1_3_205_0.pdf ''Quelques problèmes de mécanique quantique''] (pdf), Annales de l'Institut Henri Poincaré 1 (3) (1930) pp. 205-263. Après une introduction à la mécanique quantique, Max Born (prix Nobel 1954) discute notamment le phénomène d'effet tunnel appliqué à la radioactivité alpha, poursuit par quelques applications à la cinétique des réactions chimiques, et aborde enfin le problème de la largeur des raies spectrales.
+
+* P.A.M. Dirac ; [http://archive.numdam.org/article/AIHP_1930__1_4_357_0.pdf ''Quelques problèmes de mécanique quantique''] (pdf), Annales de l'Institut Henri Poincaré 1 (4) (1930) pp. 357-400. Paul Dirac (prix Nobel 1933) y expose le formalisme de la physique statistique quantique d'une part, ainsi que l'équation quantique et relativiste de l'électron d'autre part (aujourd'hui appelée « équation de Dirac » en son honneur). À noter que, dans cet article, Dirac identifie de façon erronée un  « trou » de la mer de Dirac des états d'énergie négatives (issues des solutions de son équation) avec le proton. On sait aujourd'hui qu'il s'agit d'un positron, antiparticule de l'électron.
+
+* Edmond Bauer ; [http://archive.numdam.org/article/AIHP_1933__4_1_1_0.pdf ''Introduction à la théorie des groupes et à ses applications en physique quantique''] (pdf), Annales de l'Institut Henri Poincaré 3 (4) (1933) pp. 1-170.
+
+== Liens externes ==
+{{Wikiversity|Département:Mécanique quantique|Mécanique quantique}}
+* [http://www.e-scio.net/mecaq/index.php3 Scio : Introduction à la mécanique quantique, sans jargon technique]
+* [http://www.futura-sciences.com/comprendre/d/dossier188-1.php Introduction à la physique quantique]
+* [http://www.quantum-physics.polytechnique.fr Quantum Physics Online : introduction interactive à la mécanique quantique (applets Java)]
+* [http://catalogue.polytechnique.fr/site.php?id=87 Cours de mécanique quantique (1ère année) à l'Ecole polytechnique (vidéo)]
+* [http://catalogue.polytechnique.fr/site.php?id=118 Cours de mécanique quantique (2ème année) à l'Ecole polytechnique (vidéo)]
+
+=== Sur la téléportation quantique ===
+* [http://www.cs.mcgill.ca/~crepeau/tele.html Téléportation quantique sur le site de M.Crépeau] 
+* [http://www.astrosurf.com/luxorion/quantique-teleportation.htm La téléportation sur le site ''Luxorion''] 
+* {{en}} [http://www.research.ibm.com/quantuminfo/teleportation/ Téléportation quantique sur le site d'IBM]
+
+{{Palette|Branches de la physique|Mécanique quantique}}
+{{portail physique}}
+
+[[Catégorie:Théorie scientifique]]
+[[Catégorie:Mécanique quantique|*]]
+
+{{Lien BA|zh}}
+
+{{Lien AdQ|uk}}
+
+[[als:Quantenmechanik]]
+[[an:Mecanica cuantica]]
+[[ar:ميكانيكا الكم]]
+[[az:Kvant mexanikası]]
+[[bat-smg:Kvantėnė mekanėka]]
+[[be:Квантавая механіка]]
+[[bg:Квантова механика]]
+[[bn:কোয়ান্টাম বলবিজ্ঞান]]
+[[bs:Kvantna mehanika]]
+[[ca:Mecànica quàntica]]
+[[cs:Kvantová mechanika]]
+[[cv:Квантăллă механика]]
+[[cy:Mecaneg cwantwm]]
+[[da:Kvantemekanik]]
+[[de:Quantenmechanik]]
+[[el:Κβαντική μηχανική]]
+[[en:Quantum mechanics]]
+[[eo:Kvantuma mekaniko]]
+[[es:Mecánica cuántica]]
+[[et:Kvantmehaanika]]
+[[eu:Mekanika kuantiko]]
+[[fa:مکانیک کوانتومی]]
+[[fi:Kvanttimekaniikka]]
+[[fiu-vro:Kvantmekaaniga]]
+[[gl:Mecánica cuántica]]
+[[he:מכניקת הקוונטים]]
+[[hr:Kvantna mehanika]]
+[[hu:Kvantummechanika]]
+[[ia:Mechanica quantic]]
+[[id:Mekanika kuantum]]
+[[is:Skammtafræði]]
+[[it:Meccanica quantistica]]
+[[ja:量子力学]]
+[[ka:კვანტური მექანიკა]]
+[[kn:ಕ್ವಾಂಟಮ್ ಭೌತಶಾಸ್ತ್ರ]]
+[[ko:양자역학]]
+[[la:Mechanica quantica]]
+[[li:Kwantummechanica]]
+[[lmo:Mecàniga di quanta]]
+[[lt:Kvantinė mechanika]]
+[[lv:Kvantu mehānika]]
+[[mk:Квантна механика]]
+[[ml:ക്വാണ്ടം ബലതന്ത്രം]]
+[[mr:पुंज यामिक]]
+[[ms:Mekanik kuantum]]
+[[mt:Mekkanika kwantistika]]
+[[nl:Kwantummechanica]]
+[[nn:Kvantemekanikk]]
+[[no:Kvantemekanikk]]
+[[pl:Mechanika kwantowa]]
+[[pt:Mecânica quântica]]
+[[ro:Mecanică cuantică]]
+[[ru:Квантовая механика]]
+[[scn:Miccànica quantìstica]]
+[[sh:Kvantna mehanika]]
+[[simple:Quantum mechanics]]
+[[sk:Kvantová mechanika]]
+[[sl:Kvantna mehanika]]
+[[sq:Mekanika kuantike]]
+[[sr:Квантна механика]]
+[[su:Mékanika kuantum]]
+[[sv:Kvantmekanik]]
+[[ta:குவாண்டம் பொறிமுறை]]
+[[th:กลศาสตร์ควอนตัม]]
+[[tl:Mekaniks na kuwantum]]
+[[tr:Kuantum mekaniği]]
+[[tt:Квант механикасы]]
+[[uk:Квантова механіка]]
+[[ur:مقداریہ آلاتیات]]
+[[vi:Cơ học lượng tử]]
+[[war:Mekanika kwantum]]
+[[wuu:量子力学]]
+[[zh:量子力学]]
+[[zh-min-nan:Liōng-chú la̍t-ha̍k]]

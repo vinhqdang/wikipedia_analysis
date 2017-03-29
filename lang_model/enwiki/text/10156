@@ -1,0 +1,593 @@
+In [[probability theory]], the '''birthday problem''' or '''birthday [[paradox]]'''<ref>This is not a [[paradox]] in the sense of leading to a [[logic]]al contradiction, but is called a paradox because the mathematical truth contradicts na<U+00EF>ve [[intuition (knowledge)|intuition]]: most people estimate that the chance of two individuals sharing the same birthday in a group of 23 is much lower than 50%.</ref> concerns the [[probability]] that, in a set of ''n'' [[random]]ly chosen people, some pair of them will have the same [[birthday]]. By the [[pigeonhole principle]], the probability reaches 100% when the number of people reaches 367 (since there are 366 possible birthdays, including February 29). However, 99% probability is reached with just 57 people, and 50% probability with 23 people. These conclusions are based on the assumption that each day of the year (except February 29) is equally probable for a birthday.
+
+The mathematics behind this problem led to a well-known cryptographic attack called the [[birthday attack]], which uses this probabilistic model to reduce the complexity of cracking a [[hash function]].
+
+[[Image:Birthday Paradox.svg|thumb|right|300px|A graph showing the computed probability of at least two people sharing a birthday amongst a certain number of people.]]
+
+==Understanding the problem==
+The birthday problem asks whether ''any'' of the people in a given group has a birthday matching ''any'' of the others&nbsp;<U+2014> not one in particular. (See "[[#Same birthday as you|Same birthday as you]]" below for an analysis of this much less surprising alternative problem.)
+
+In the example given earlier, a list of 23 people, comparing the birthday of the first person on the list to the others allows 22 chances for a matching birthday, the second person on the list to the others allows 21 chances for a matching birthday, third person has 20 chances, and so on. Hence total chances are: 22+21+20+....+1 = 253, so comparing every person to all of the others allows 253 distinct chances ([[combination]]s): in a group of 23 people there are <math>\textstyle {23 \choose 2} = \frac{23 \cdot 22}{2} = 253</math> pairs.
+
+Presuming all birthdays are equally probable,<ref>In reality, birthdays are not evenly distributed throughout the year; there are more births per day in some seasons than in others, but for the purposes of this problem the distribution is treated as uniform.{{citation needed|date=November 2011}}</ref><ref>{{Cite web
+| last = Murphy
+| first = Ron
+| title = An Analysis of the Distribution of Birthdays in a Calendar Year
+| accessdate = 2011-12-27
+| url = http://www.panix.com/~murphy/bday.html
+}}</ref><ref>{{Cite journal
+| doi = 10.1093/ije/12.3.326
+| volume = 12
+| issue = 3
+| pages = 326<U+2013>331
+| last = Mathers
+| first = C D
+| coauthors = R S Harris
+| title = Seasonal Distribution of Births in Australia
+| journal = International Journal of Epidemiology
+| accessdate = 2011-12-27
+| year = 1983
+| url = http://ije.oxfordjournals.org/content/12/3/326.abstract
+}}</ref> the probability of a given birthday for a person chosen from the entire population at random is 1/365 (ignoring [[February 29|Leap Day]], February 29).  Although the pairings in a group of 23 people are not statistically equivalent to 253 pairs chosen independently, the birthday paradox becomes less surprising if a group is thought of in terms of the number of possible pairs, rather than as the number of individuals.
+
+==Calculating the probability==
+The problem is to compute the approximate probability that in a room of ''n'' people, at least two have the same birthday. For simplicity, disregard variations in the distribution, such as [[leap year]]s, [[twin]]s, seasonal or weekday variations, and assume that the 365 possible birthdays are equally likely. Real-life birthday distributions are not uniform since not all dates are equally likely.<ref>In particular, many children are born in the summer, especially the months of August and September (for the northern hemisphere) [http://scienceworld.wolfram.com/astronomy/LeapDay.html], and in the U.S. it has been noted that many children are conceived around the holidays of [[Christmas]] and [[New Year's Day]]{{Citation needed|date=August 2009}}. Also, because hospitals rarely schedule C-sections and induced labor on the weekend, more Americans are born on Mondays and Tuesdays than on weekends{{Citation needed|date=August 2009}}; where many of the people share a birth year (e.g. a class in a school), this creates a tendency toward particular dates. In Sweden 9.3% of the population is born in March and 7.3% in November when a uniform distribution would give 8.3% [http://www.scb.se/statistik/BE/BE0101/2006A01a/BE0101_2006A01a_SM_BE12SM0701.pdf Swedish statistics board] Both of these factors tend to increase the chance of identical birth dates, since a denser subset has more possible pairs (in the extreme case when everyone was born on three days, there would obviously be many identical birthdays). The birthday problem for such non-constant birthday probabilities was first understood by [[Murray Klamkin]] in 1967. A formal proof that the probability of two matching birthdays is least for a uniform distribution of birthdays was given by D. Bloom (1973)</ref>
+
+If ''P''(''A'') is the probability of at least two people in the room having the same birthday, it may be simpler to calculate ''P''(''A''<nowiki>'</nowiki>), the probability of there not being any two people having the same birthday.  Then, because ''A'' and ''A''<nowiki>'</nowiki> are the only two possibilities and are also [[mutually exclusive events|mutually exclusive]], ''P''(''A'')&nbsp;=&nbsp;1&nbsp;&minus;&nbsp;''P''(''A''<nowiki>'</nowiki>).
+
+In deference to widely published solutions concluding that 23 is the number of people necessary to have a ''P''(''A'') that is greater than 50%, the following calculation of ''P''(''A'') will use 23 people as an example.
+
+When events are [[independence (probability theory)|independent]] of each other, the probability of all of the events occurring is equal to a product of the probabilities of each of the events occurring.  Therefore, if ''P''(''A''<nowiki>'</nowiki>) can be described as 23 independent events, ''P''(''A''<nowiki>'</nowiki>) could be calculated as ''P''(1)&nbsp;<U+00D7>&nbsp;P(2)&nbsp;<U+00D7>&nbsp;P(3)&nbsp;<U+00D7>&nbsp;...&nbsp;<U+00D7>&nbsp;''P''(23).
+
+The 23 independent events correspond to the 23 people, and can be defined in order.  Each event can be defined as the corresponding person not sharing his/her birthday with any of the previously analyzed people.  For Event 1, there are no previously analyzed people.  Therefore, the probability, ''P''(1), that person number 1 does not share his/her birthday with previously analyzed people is 1, or 100%.  Ignoring leap years for this analysis, the probability of 1 can also be written as 365/365, for reasons that will become clear below.
+
+For Event 2, the only previously analyzed people is Person 1.  Assuming that birthdays are equally likely to happen on each of the 365 days of the year, the probability, ''P''(2), that Person 2 has a different birthday than Person 1 is 364/365.  This is because, if Person 2 was born on any of the other 364 days of the year, Persons 1 and 2 will not share the same birthday.
+
+Similarly, if Person 3 is born on any of the 363 days of the year other than the birthdays of Persons 1 and 2, Person 3 will not share their birthday.  This makes the probability ''P''(3)&nbsp;=&nbsp;363/365.
+
+This analysis continues until Person 23 is reached, whose probability of not sharing his/her birthday with people analyzed before, ''P''(23), is 343/365.
+
+''P''(''A''<nowiki>'</nowiki>) is equal to the product of these individual probabilities:
+
+: (1) ''P''(''A''<nowiki>'</nowiki>) = 365/365&nbsp;<U+00D7>&nbsp;364/365&nbsp;<U+00D7>&nbsp;363/365&nbsp;<U+00D7>&nbsp;362/365&nbsp;<U+00D7>&nbsp;...&nbsp;<U+00D7>&nbsp;343/365
+
+The terms of equation (1) can be collected to arrive at:
+
+: (2) ''P''(''A''<nowiki>'</nowiki>) = (1/365)<sup>23</sup>&nbsp;<U+00D7>&nbsp;(365&nbsp;<U+00D7>&nbsp;364&nbsp;<U+00D7>&nbsp;363&nbsp;<U+00D7>&nbsp;...&nbsp;<U+00D7>&nbsp;343)
+
+Evaluating equation (2) gives ''P''(''A''<nowiki>'</nowiki>) <U+2248>&nbsp;0.492703
+
+Therefore, ''P''(''A'') <U+2248>&nbsp;1&nbsp;&minus;&nbsp;0.492703 =&nbsp;0.507297&nbsp;(50.7297%)
+
+This process can be generalized to a group of ''n'' people, where ''p''(''n'') is the probability of at least two of the ''n'' people sharing a birthday.  It is easier to first calculate the probability ''<u style="text-decoration:overline">p</u>''(''n'') that all ''n'' birthdays are ''different''.  According to the [[pigeonhole principle]], ''<u style="text-decoration:overline">p</u>''(''n'') is zero when&nbsp;''n''&nbsp;>&nbsp;365.  When&nbsp;''n''&nbsp;<U+2264>&nbsp;365:
+
+:<math> \begin{align} \bar p(n) &= 1 \times \left(1-\frac{1}{365}\right) \times \left(1-\frac{2}{365}\right) \times \cdots \times \left(1-\frac{n-1}{365}\right) \\  &= { 365 \times 364 \times \cdots \times (365-n+1) \over 365^n } \\ &= { 365! \over 365^n (365-n)!} = \frac{n!\cdot{365 \choose n}}{365^n} = \frac{^{365}P_n}{365^n}\end{align} </math>
+
+where ' ! ' is the [[factorial]] operator, <math>\textstyle {365 \choose n}</math> is the [[binomial coefficient]] and <math>{^{k}P_r}</math> denotes [[permutation]].
+
+The equation expresses the fact that the first person has no one to share a birthday, the second person cannot have the same birthday as the first (364/365), the third cannot have the same birthday as the first two (363/365), and in general the ''n''<sup>th</sup> birthday cannot be the same as any of the ''n''&nbsp;&minus;&nbsp;1 preceding birthdays.
+
+The [[event (probability theory)|event]] of at least two of the ''n'' persons having the same birthday is [[complementary event|complementary]] to all ''n'' birthdays being different. Therefore, its probability ''p''(''n'') is
+
+:<math> p(n) = 1 - \bar p(n). \, </math>
+
+This probability surpasses 1/2 for&nbsp;''n''&nbsp;=&nbsp;23 (with value about&nbsp;50.7%). The following table shows the probability for some other values of ''n'' (this table ignores the existence of leap years, as described above):
+
+[[Image:Birthdaymatch.png|thumb|right|300px|The approximate probability that no two people share a birthday in a group of ''n'' people. Note that the vertical scale is logarithmic (each step down is 10<sup>20</sup> times less likely).]]
+
+{| class="wikitable"
+!''n''!!''p''(''n'')
+|-
+|10 || 11.7%
+|-
+|20 || 41.1%
+|-
+|23 || 50.7%
+|-
+|30 || 70.6%
+|-
+|50 || 97.0%
+|-
+|57 || 99.0%
+|-
+|100 || 99.99997%
+|-
+|200 || 99.9999999999999999999999999998%
+|-
+|300 || (100 &minus; (6<U+00D7>10<sup>&minus;80</sup>))%
+|-
+|350 || (100 &minus; (3<U+00D7>10<sup>&minus;129</sup>))%
+|-
+|365 || (100 &minus; (1.45<U+00D7>10<sup>&minus;155</sup>))%
+|-
+|366 || 100%
+|}
+
+==Approximations==
+[[Image:Birthday_paradox_probability.svg|thumb|right|300px|Graphs showing the approximate probabilities of at least two people sharing a birthday (red) and its complementary event (blue)]]
+[[Image:050329-birthday2.png|thumb|right|300px|A graph showing the accuracy of the approximation <math>1-e^{-n^2/(2 \times 365)}</math> (white)]]
+The [[Taylor series]] expansion of the [[exponential function]] (the constant e <U+2248> 2.718281828)
+
+:<math> e^x = 1 + x + \frac{x^2}{2!}+\cdots </math>
+
+provides a first-order approximation for ''e''<sup>''x''</sup> for ''x'' <U+226A> 1:
+
+:<math> e^x \approx 1 + x.\ </math>
+
+To apply this approximation to the first expression derived for ''<u style="text-decoration:overline">p</u>''(''n''), set <math> x = -i / 365\ </math>. Thus,
+:<math> e^{-i/365} \approx 1 - \frac{i}{365}. \ </math>
+
+Then, replace ''i'' with non-negative integers for each term in the formula of ''<u style="text-decoration:overline">p</u>''(''n'') until ''i'' = ''n'' <U+2212> 1, for example, when ''i'' = 1,
+:<math> e^{-1/365} \approx 1 - \frac{1}{365}. \ </math>
+
+The first expression derived for ''<u style="text-decoration:overline">p</u>''(''n'') can be approximated as
+
+:<math>
+\begin{align}
+\bar p(n) & \approx 1 \times e^{-1/365} \times e^{-2/365} \cdots e^{-(n-1)/365} \\
+& = 1 \times e^{-(1+2+ \cdots +(n-1))/365} \\
+& = e^{-(n(n-1)/2) / 365}.
+\end{align}
+</math>
+
+Therefore,
+
+:<math> p(n) = 1-\bar p(n) \approx 1 - e^{- n(n-1)/(2 \times 365)}.</math>
+
+An even coarser approximation is given by
+
+:<math>p(n)\approx 1-e^{- n^2/(2 \times 365)},\,</math>
+
+which, as the graph illustrates, is still fairly accurate.
+
+According to the approximation, the same approach can be applied to any number of "people" and "days". If rather than 365 days there are ''n'', if there are ''m'' persons, and if ''m'' <U+226A> ''n'', then using the same approach as above we achieve the result that if ''Pr''[(''m'', ''n'')] is the probability that at least two out of ''m'' people share the same birthday from a set of ''n'' available days, then:
+
+:<math> Pr[(m, n)] \approx 1-e^{-m^2 / 2n}.\ </math>
+
+===A simple exponentiation===
+The probability of any two people not having the same birthday is 364/365. In a room containing ''n'' people, there are ''C''(''n'',&nbsp;2)&nbsp;=&nbsp;''n''(''n''&nbsp;&minus;&nbsp;1)/2 pairs of people, i.e. ''C''(''n'',&nbsp;2) events.  The probability of no two people sharing the same birthday can be approximated by assuming that these events are independent and hence by multiplying their probability together. In short 364/365 can be multiplied by itself ''C''(''n'',&nbsp;2) times, which gives us
+
+:<math>\bar p(n) \approx \left(\frac{364}{365}\right)^{C(n,2)}.</math>
+
+Since this is the probability of no one having the same birthday, then the probability of someone sharing a birthday is
+
+:<math>p(n) \approx 1 - \left(\frac{364}{365}\right)^{C(n,2)}.</math>
+
+===Poisson approximation===
+Applying the [[Poisson distribution|Poisson]] approximation for the binomial on the group of 23 people,
+
+:<math>\mathrm{Poi}\left(\frac{C(23, 2)}{365}\right) =\mathrm{Poi}\left(\frac{253}{365}\right) \approx \mathrm{Poi}(0.6932)</math>
+
+:<math>\Pr(X>0)=1-\Pr(X=0) \approx 1-e^{-0.6932} \approx 1-0.499998=0.500002.</math>
+
+The result is over 50% as previous descriptions.
+
+===Approximation of number of people===
+This can also be approximated using the following formula for the ''number'' of people necessary to have at least a 50% chance of matching:
+:<math>n \approx \frac{1}{2} + \sqrt{\frac{1}{4} - 2 \times 365 \times \ln(0.5)} = 22.999943.</math>
+This is a result of the good approximation that an event with 1 in ''k'' probability will have a 50% chance of occurring at least once if it is repeated ''k''&nbsp;ln&nbsp;2 times.<ref>{{cite journal
+ | quotes = 
+ | last = Mathis
+ | first = Frank H.
+ | coauthors = 
+ | date = 
+ | year = 1991
+ | month = June
+ | title = A Generalized Birthday Problem
+ | journal = SIAM Review
+ | volume = 33
+ | issue = 2
+ | pages = 265<U+2013>270
+ | publisher = [[Society for Industrial and Applied Mathematics]]
+ | issn = 0036-1445
+ | pmc = 
+ | doi = 10.1137/1033051
+ | bibcode = 
+ | oclc = 37699182
+ | jstor = 2031144
+ }}</ref>
+
+===Probability table===
+{{Main|Birthday attack}}
+
+:{| class="wikitable" style="white-space:nowrap;"
+|-
+! rowspan="2" | length of <br/>hex string
+! rowspan="2" | #bits
+! rowspan="2" | hash space<br />size<br />(2<sup>#bits</sup>)
+! colspan="10" | Number of hashed elements such that {probability of at least one hash collision&nbsp;=&nbsp;''p''}
+|-
+! ''p'' = {{10^|<U+2212>18}}
+! ''p'' = {{10^|<U+2212>15}}
+! ''p'' = {{10^|<U+2212>12}}
+! ''p'' = {{10^|<U+2212>9}}
+! ''p'' = {{10^|<U+2212>6}}
+! ''p'' = 0.1%
+! ''p'' = 1%
+! ''p'' = 25%
+! ''p'' = 50%
+! ''p'' = 75%
+|- align="center"
+| bgcolor="#F2F2F2" | 8
+| bgcolor="#F2F2F2" | 32
+| bgcolor="#F2F2F2" | 4.3{{e|9}}
+| 2
+| 2
+| 2
+| 2.9
+| 93
+| 2.9{{e|3}}
+| 9.3{{e|3}}
+| 5.0{{e|4}}
+| 7.7{{e|4}}
+| 1.1{{e|5}}
+|- align="center"
+| bgcolor="#F2F2F2" | 16
+| bgcolor="#F2F2F2" | 64
+| bgcolor="#F2F2F2" | 1.8{{e|19}}
+| 6.1
+| 1.9{{e|2}}
+| 6.1{{e|3}}
+| 1.9{{e|5}}
+| 6.1{{e|6}}
+| 1.9{{e|8}}
+| 6.1{{e|8}}
+| 3.3{{e|9}}
+| 5.1{{e|9}}
+| 7.2{{e|9}}
+|- align="center"
+| bgcolor="#F2F2F2" | 32
+| bgcolor="#F2F2F2" | 128
+| bgcolor="#F2F2F2" | 3.4{{e|38}}
+| 2.6{{e|10}}
+| 8.2{{e|11}}
+| 2.6{{e|13}}
+| 8.2{{e|14}}
+| 2.6{{e|16}}
+| 8.3{{e|17}}
+| 2.6{{e|18}}
+| 1.4{{e|19}}
+| 2.2{{e|19}}
+| 3.1{{e|19}}
+|- align="center"
+| bgcolor="#F2F2F2" | 64
+| bgcolor="#F2F2F2" | 256
+| bgcolor="#F2F2F2" | 1.2{{e|77}}
+| 4.8{{e|29}}
+| 1.5{{e|31}}
+| 4.8{{e|32}}
+| 1.5{{e|34}}
+| 4.8{{e|35}}
+| 1.5{{e|37}}
+| 4.8{{e|37}}
+| 2.6{{e|38}}
+| 4.0{{e|38}}
+| 5.7{{e|38}}
+|- align="center"
+| bgcolor="#F2F2F2" | (96)
+| bgcolor="#F2F2F2" | (384)
+| bgcolor="#F2F2F2" | (3.9{{e|115}})
+| 8.9{{e|48}}
+| 2.8{{e|50}}
+| 8.9{{e|51}}
+| 2.8{{e|53}}
+| 8.9{{e|54}}
+| 2.8{{e|56}}
+| 8.9{{e|56}}
+| 4.8{{e|57}}
+| 7.4{{e|57}}
+| 1.0{{e|58}}
+|- align="center"
+| bgcolor="#F2F2F2" | 128
+| bgcolor="#F2F2F2" | 512
+| bgcolor="#F2F2F2" | 1.3{{e|154}}
+| 1.6{{e|68}}
+| 5.2{{e|69}}
+| 1.6{{e|71}}
+| 5.2{{e|72}}
+| 1.6{{e|74}}
+| 5.2{{e|75}}
+| 1.6{{e|76}}
+| 8.8{{e|76}}
+| 1.4{{e|77}}
+| 1.9{{e|77}}
+|}
+
+The white squares in this table show the number of hashes needed to achieve the given probability of collision (column) given a hash space of a certain size in bits (row). Using the birthday analogy: the "hash space size" resembles the "available days", the "probability of collision" resembles the "probability of shared birthday", and the "required number of hashed elements" resembles the "required number of people in a group". One could of course also use this chart to determine the minimum hash size required (given upper bounds on the hashes and probability of error), or the probability of collision (for fixed number of hashes and probability of error).
+
+For comparison, 10<sup><U+2212>18</sup> to 10<sup><U+2212>15</sup> is the uncorrectable bit error rate of a typical hard disk. <ref>Jim Gray, Catharine van Ingen. [http://arxiv.org/abs/cs/0701166 Empirical Measurements of Disk Failure Rates and Error Rates]</ref> In theory, 128-bit hash functions, such as [[MD5]], should stay within that range until about 820 billion documents, even if its possible outputs are many more.
+
+==An upper bound==
+The argument below is adapted from an argument of [[Paul Halmos]].<ref>In his autobiography, Halmos criticized the form in which the birthday paradox is often presented, in terms of numerical computation.  He believed that it should be used as an example in the use of more abstract mathematical concepts. He wrote:
+<blockquote>The reasoning is based on important tools that all students of mathematics should have ready access to.  The birthday problem used to be a splendid illustration of the advantages of pure thought over mechanical manipulation; the inequalities can be obtained in a minute or two, whereas the multiplications would take much longer, and be much more subject to error, whether the instrument is a pencil or an old-fashioned desk computer. What [[calculator]]s do not yield is understanding, or mathematical facility, or a solid basis for more advanced, generalized theories.</blockquote></ref>
+
+As stated above, the probability that no two birthdays coincide is
+
+:<math>1-p(n) = \bar p(n) = \prod_{k=1}^{n-1}\left(1-{k \over 365}\right) .</math>
+
+As in earlier paragraphs, interest lies in the smallest ''n'' such that ''p''(''n'')&nbsp;>&nbsp;1/2; or equivalently, the smallest ''n'' such that ''<u style="text-decoration:overline">p</u>''(''n'')&nbsp;<&nbsp;1/2.
+
+Using the inequality 1&nbsp;<U+2212>&nbsp;''x''&nbsp;<&nbsp;''e''<sup><U+2212>''x''</sup> in the above expression we replace 1&nbsp;<U+2212>&nbsp;''k''/365 with ''e''<sup><U+2212>''k''/365</sup>. This yields
+
+:<math>\bar p(n) = \prod_{k=1}^{n-1}\left(1-{k \over 365}\right) < \prod_{k=1}^{n-1}\left(e^{-k/365}\right) = e^{-(n(n-1))/(2\times 365)} .</math>
+
+Therefore, the expression above is not only an approximation, but also an [[upper bound]] of ''<u style="text-decoration:overline">p</u>''(''n''). The inequality
+
+:<math> e^{-(n(n-1))/(2\cdot 365)} < \frac{1}{2}</math>
+
+implies ''<u style="text-decoration:overline">p</u>''(''n'')&nbsp;<&nbsp;1/2. Solving for ''n'' gives
+
+:<math>n^2-n > 2\times365\ln 2 \,\! .</math>
+
+Now, 730&nbsp;ln&nbsp;2 is approximately 505.997, which is barely below 506, the value of ''n''<sup>2</sup>&nbsp;&minus;&nbsp;''n'' attained when ''n''&nbsp;=&nbsp;23. Therefore, 23 people suffice.
+Solving ''n''<sup>2</sup>&nbsp;&minus;&nbsp;''n'' =&nbsp;2&nbsp;<U+00B7>&nbsp;365&nbsp;<U+00B7>&nbsp;ln&nbsp;2 for ''n'' gives, by the way, the approximate formula of Frank H. Mathis cited above.
+
+This derivation only shows that ''at most'' 23 people are needed to ensure a birthday match with even chance; it leaves open the possibility that ''n'' is 22 or less could also work.
+
+==Generalizations==
+===The generalized birthday problem===
+Given a year with ''d'' days, the '''generalized birthday problem''' asks for the minimal number ''n''(''d'') such that, in a set of ''n''(''d'') randomly chosen people, the probability of a birthday coincidence is at least 50%.
+In other words, ''n''(''d'') is the minimal integer ''n'' such that
+
+:<math>1-\left(1-\frac{1}{d}\right)\left(1-\frac{2}{d}\right)\cdots\left(1-\frac{n-1}{d}\right)\geq \frac{1}{2}.</math>
+
+The classical birthday problem thus corresponds to determining ''n''(365). The first 99 values of ''n''(''d'') are given here:
+
+:{| class="wikitable" style="text-align:center;"
+|-
+! scope="row" | ''d''
+| 1&ndash;2 || 3&ndash;5 || 6&ndash;9 || 10&ndash;16 || 17&ndash;23 || 24&ndash;32 || 33&ndash;42 || 43&ndash;54 || 55&ndash;68 || 69&ndash;82 || 83&ndash;99
+|-
+! scope="row" | ''n''(''d'')
+| 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 10 || 11 || 12
+|}
+
+A number of bounds and formulas for ''n''(''d'') have been published.<ref>
+D. Brink, A (probably) exact solution to the Birthday Problem, Ramanujan Journal, 2012, [http://www.springerlink.com/content/1194r3627822841q/ doi: 10.1007/s11139-011-9343-9].</ref>
+For any ''d''<U+2265>1, the number ''n''(''d'') satisfies<ref>{{Harvard citations|author=Brink|year=2012|nb=yes|loc=Theorem 2}}</ref>
+
+:<math>\frac{3-2\ln2}{6}<n(d)-\sqrt{2d\ln2}\leq 9-\sqrt{86\ln2}.</math>
+
+These bounds are optimal in the sense that the sequence <math>n(d)-\sqrt{2d\ln2}</math>
+gets arbitrarily close to <math>(3-2\ln2)/6\approx 0.27</math>, while it has <math>9-\sqrt{86\ln2}\approx 1.28</math> as its maximum, taken for ''d''=43.
+The bounds are sufficiently tight to give the exact value of ''n''(''d'') in 99% of all cases, for example ''n''(365)=23.
+In general, it follows from these bounds that ''n''(''d'') always equals either
+<math>\left\lceil\sqrt{2d\ln2}\right\rceil</math> or <math>\left\lceil\sqrt{2d\ln2}\right\rceil+1</math> where <math>\lceil x \rceil</math> denotes the [[Floor and ceiling functions|ceiling function]].
+The formula
+
+:<math>n(d) = \left\lceil\sqrt{2d\ln2}\right\rceil</math>
+
+holds for 73% of all integers ''d''.<ref name=Brink>{{Harvard citations|author=Brink|year=2012|nb=yes|loc=Theorem 3}}</ref>
+The formula
+
+:<math>n(d) = \left\lceil\sqrt{2d\ln2}+\frac{3-2\ln2}{6}\right\rceil</math>
+
+holds for [[almost all]] ''d'', i.e., for a set of integers ''d'' with [[asymptotic density]] 1.<ref name=Brink/> The formula
+
+:<math>n(d)=\left\lceil \sqrt{2d\ln2}+\frac{3-2\ln2}{6}+\frac{9-4(\ln2)^2}{72\sqrt{2d\ln2}}
+\right\rceil</math>
+
+holds for all ''d'' up to 10<sup>18</sup>, but it is conjectured that there are infinitely many counter-examples to this formula.<ref name="ReferenceA">{{Harvard citations|author=Brink|year=2012|nb=yes|loc=Table 3, Conjecture 1}}</ref>
+The formula
+
+:<math>n(d)=\left\lceil \sqrt{2d\ln2}+\frac{3-2\ln2}{6}+\frac{9-4(\ln2)^2}{72\sqrt{2d\ln2}}
+-\frac{2(\ln2)^2}{135d}\right\rceil</math>
+
+holds too for all ''d'' up to 10<sup>18</sup>, and it is conjectured that this formula holds for all ''d''.<ref name="ReferenceA"/>
+
+===Cast as a collision problem===
+The birthday problem can be generalized as follows{{citation needed|date=July 2012}}: given ''n'' random integers drawn from a [[Uniform distribution (discrete)|discrete uniform distribution]] with range [1,''d''], what is the probability ''p''(''n'';''d'') that at least two numbers are the same? (''d=365'' gives the usual birthday problem.)
+
+The generic results can be derived using the same arguments given above.
+:<math>p(n;d) = \begin{cases} 1-\prod_{k=1}^{n-1}\left(1-{k \over d}\right) & n\le d \\ 1 & n > d \end{cases}</math>
+:<math>p(n;d) \approx 1 - e^{-n(n-1)/(2d)}</math>
+:<math>p(n;d) \approx 1 - \left( \frac{d-1}{d} \right)^{n(n-1)/2}</math>
+
+Conversely, if ''n(p;d)'' denotes the number of random integers drawn from [1,''d''] to obtain a probability ''p'' that at least two numbers are the same, then
+:<math>n(p;d)\approx \sqrt{2d \cdot \ln\left({1 \over 1-p}\right)}.</math>
+
+The birthday problem in this more generic sense applies to [[hash function]]s: the expected number of ''N''-[[bit]] hashes that can be generated before getting a collision is not 2<sup>''N''</sup>, but rather only 2<sup>''N''/2</sup>. This is exploited by [[birthday attack]]s on [[cryptographic hash function]]s and is the reason why a small number of collisions in a [[hash table]] are, for all practical purposes, inevitable.
+
+The theory behind the birthday problem was used by Zoe Schnabel<ref>Z. E. Schnabel (1938) ''The Estimation of the Total Fish Population of a Lake'', [[American Mathematical Monthly]] '''45''', 348<U+2013>352.</ref> under the name of [[mark and recapture|capture-recapture]] statistics to estimate the size of fish population in lakes.
+
+====Generalization to multiple types====
+The basic problem considers all trials to be of one "type". The  birthday problem has been generalized to consider an arbitrary number of types.<ref>[[Michael Christopher Wendl|M. C. Wendl]] (2003) ''[http://dx.doi.org/10.1016/S0167-7152(03)00168-8 Collision Probability Between Sets of Random Variables]'', Statistics and Probability Letters '''64'''(3), 249<U+2013>254.</ref> In the simplest extension there are just two types, say ''m'' "men" and ''n'' "women", and the problem becomes characterizing the probability of a shared birthday between at least one man and one woman. (Shared birthdays between, say, two women do not count.) The probability of ''no'' (i.e. zero) shared birthdays here is
+
+:<math>p_0 =1 - \frac{1}{d^{m+n}} \sum_{i=1}^m \sum_{j=1}^n S_2(m,i) S_2(n,j) \prod_{k=0}^{i+j-1} d - k</math>
+
+where ''d''&nbsp;=&nbsp;365 and ''S''<sub>2</sub> are [[Stirling number|Stirling numbers of the second kind]]. Consequently, the desired probability is 1&nbsp;&minus;&nbsp;''p''<sub>0</sub>.
+
+This variation of the birthday problem is interesting because there is not a unique solution for the total number of people ''m''&nbsp;+&nbsp;''n''. For example, the usual 0.5 probability value is realized for both a 32-member group of 16 men and 16 women and a 49-member group of 43 women and 6 men.
+
+==Other birthday problems==
+
+===Reverse problem===
+For a fixed probability ''p'':
+* Find the greatest ''n'' for which the probability ''p''(''n'') is smaller than the given ''p'', or
+* Find the smallest ''n'' for which the probability ''p''(''n'') is greater than the given ''p''.
+
+Taking the above formula for ''d''&nbsp;=&nbsp;365 we have:
+
+:<math>n(p;365)\approx \sqrt{2\times 365\ln\left({1 \over 1-p}\right)}.</math>
+
+====Sample calculations====
+{| class="wikitable"
+|-----
+! ''p'' || ''n''
+! ''n''<U+2193> || ''p''(''n''<U+2193>) || ''n''<U+2191> || ''p''(''n''<U+2191>)
+|-----
+| <span style="color:magenta">0.01</span>
+| 0.14178<U+221A>365 = <span style="color:magenta">2.70864</span>
+| align="right" | 2 || 0.00274 || align="right" | 3
+| <span style="color:magenta">0.00820</span>
+|-----
+| 0.05 || 0.32029<U+221A>365 = 6.11916
+| align="right" | 6 || 0.04046 || align="right" | 7 || 0.05624
+|-----
+| <span style="color:magenta">0.1</span>
+| 0.45904<U+221A>365 = <span style="color:magenta"> 8.77002</span>
+| align="right" | 8 || 0.07434 || align="right" | 9
+| <span style="color:magenta">0.09462</span>
+|-----
+| <span style="color:magenta">0.2</span>
+| 0.66805<U+221A>365 = <span style="color:magenta">12.76302</span>
+| align="right" | 12 || 0.16702 || align="right" | 13
+| <span style="color:magenta">0.19441</span>
+|-----
+| 0.3 || 0.84460<U+221A>365 = 16.13607
+| align="right" | 16 || 0.28360 || align="right" | 17 || 0.31501
+|-----
+| 0.5 || 1.17741<U+221A>365 = 22.49439
+| align="right" | 22 || 0.47570 || align="right" | 23 || 0.50730
+|-----
+| 0.7 || 1.55176<U+221A>365 = 29.64625
+| align="right" | 29 || 0.68097 || align="right" | 30 || 0.70632
+|-----
+| 0.8 || 1.79412<U+221A>365 = 34.27666
+| align="right" | 34 || 0.79532 || align="right" | 35 || 0.81438
+|-----
+| 0.9 || 2.14597<U+221A>365 = 40.99862
+| align="right" | 40 || 0.89123 || align="right" | 41 || 0.90315
+|-----
+| 0.95 || 2.44775<U+221A>365 = 46.76414
+| align="right" | 46 || 0.94825 || align="right" | 47 || 0.95477
+|-----
+| <span style="color:magenta">0.99</span>
+| 3.03485<U+221A>365 = <span style="color:magenta">57.98081</span>
+| align="right" | 57
+| <span style="color:magenta">0.99012</span>
+| align="right" | 58 || 0.99166
+|}
+Note: some values falling outside the bounds have been <span style="color:magenta">colored</span> to show that the approximation is '''not''' always exact.
+
+===First match===
+A related question is, as people enter a room one at a time, which one is most likely to be the first to have the same birthday as someone already in the room?  That is, for what ''n'' is ''p''(''n'')&nbsp;&minus;&nbsp;''p''(''n''&nbsp;&minus;&nbsp;1) maximum?  The answer is 20<U+2014>if there's a prize for first match, the best position in line is 20th.
+
+===Same birthday as you===
+[[Image:Birthday paradox.svg|thumb|right|300px|Comparing ''p''(''n'') = probability of a birthday match with ''q''(''n'') = probability of matching ''your'' birthday]]
+Note that in the birthday problem, neither of the two people is chosen in advance. By way of contrast, the probability ''q''(''n'') that someone in a room of ''n'' other people has the same birthday  as a particular person (for example, you), is given by
+
+: <math> q(n) = 1 - \left( \frac{365-1}{365} \right)^n </math>
+and for general ''d'' by
+: <math> q(n;d) = 1 - \left( \frac{d-1}{d} \right)^n. </math>
+
+In the standard case of ''d'' = 365 substituting ''n'' = 23 gives about 6.1%, which is less than 1 chance in 16.  For a greater than 50% chance that one person in a roomful of ''n'' people has the same birthday as ''you'', ''n'' would need to be at least 253.<!-- Caution! Think twice before changing it to 23 ;-) --> Note that this number is significantly higher than 365/2 = 182.5: the reason is that it is likely that there are some birthday matches among the other people in the room.
+
+It is not a coincidence that <math>253=\frac{23\times(23-1)}{2}</math>; a similar approximate pattern can be found using a number of possibilities different from 365, or a target probability different from 50%.
+
+===Near matches===
+Another generalization is to ask what is the probability of finding at least one pair in a group of ''n'' people with birthdays within ''k'' calendar days of each other's, if there are ''m'' equally likely birthdays.
+
+:<math> \begin{align} p(n,k,m) &= 1 - { (m - nk -1)! \over m^{n-1} (m - n(k+1))!}\end{align} </math><ref name="abramson">M. Abramson and W. O. J. Moser (1970) ''More Birthday Surprises'', [[American Mathematical Monthly]] '''77''', 856<U+2013>858</ref>
+
+The number of people required so that the probability that some pair will have a birthday separated by  ''k'' days or fewer will be higher than 50% is:
+
+{| class="wikitable" style="text-align: center"
+! ''k'' !! # people required(i.e. ''n'') when ''m''=365
+|-
+|0 || 23
+|-
+|1 || 14
+|-
+|2 || 11
+|-
+|3 || 9
+|-
+|4 || 8
+|-
+|5 || 8
+|-
+|6 || 7
+|-
+|7 || 7
+|}
+
+Thus in a group of just seven random people, it is more likely than not that two of them will have a birthday within a week of each other.<ref name="abramson"/>
+
+===Collision counting===
+The probability that the ''k''th integer randomly chosen from [1,&nbsp;''d''] will repeat at least one previous choice equals ''q''(''k''&nbsp;&minus;&nbsp;1;&nbsp;''d'') above.  The expected total number of times a selection will repeat a previous selection as ''n'' such integers are chosen equals{{citation needed|date=July 2012}}
+
+:<math>\sum_{k=1}^n q(k-1;d) = n - d + d \left (\frac {d-1} {d} \right )^n.</math>
+
+===Average number of people===
+In an alternative formulation of the birthday problem, one asks the ''average'' number of people required to find a pair with the same birthday. The problem is relevant to several [[hash function|hashing algorithms]] analyzed by [[Donald Knuth]] in his book ''[[The Art of Computer Programming]]''. It may be shown<ref name="knuth73">D. E. Knuth; ''[[The Art of Computer Programming]]. Vol. 3, Sorting and Searching'' (Addison-Wesley, Reading, Massachusetts, 1973)</ref><ref name="flajolet95">P. Flajolet, P. J. Grabner, P. Kirschenhofer, H. Prodinger (1995), ''On Ramanujan's Q-Function'', Journal of Computational and Applied Mathematics '''58''', 103<U+2013>116</ref> that if one samples uniformly, with replacement, from a population of size ''M'', the number of trials required for the first repeated sampling of ''some'' individual has [[expected value]] <math>\scriptstyle\overline{n}\,=\,1+Q(M)</math>, where
+
+: <math>Q(M)=\sum_{k=1}^{M} \frac{M!}{(M-k)! M^k}.</math>
+
+The function
+
+: <math>Q(M)= 1 + \frac{M-1}{M} + \frac{(M-1)(M-2)}{M^2} + \cdots + \frac{(M-1)(M-2) \cdots 1}{M^{M-1}}</math>
+
+has been studied by [[Srinivasa Ramanujan]] and has [[asymptotic expansion]]:
+
+: <math>Q(M)\sim\sqrt{\frac{\pi M}{2}}-\frac{1}{3}+\frac{1}{12}\sqrt{\frac{\pi}{2M}}-\frac{4}{135M}+\cdots.</math>
+
+With ''M''&nbsp;=&nbsp;365 days in a year, the average number of people required to find a pair with the same birthday is <math>\scriptstyle\overline{n}\,=\,1+Q(M)\approx 24.61658</math>, slightly more than the number required for a 50% chance. In the best case, two people will suffice; at worst, the maximum possible number of ''M''&nbsp;+&nbsp;1&nbsp;=&nbsp;366 people is needed; but on [[average]], only 25 people are required.
+
+An ''informal'' demonstration of the problem can be made from the [[list of Prime Ministers of Australia]], of which there have been 27, in which [[Paul Keating]], the 24th Prime Minister, and [[Edmund Barton]], the first Prime Minister, share the same birthday, 18 January.
+
+==Partition problem==
+A related problem is the [[partition problem]], a variant of the [[knapsack problem]] from operations research. Some weights are put on a [[Weighing scale|balance scale]]; each weight is an integer number of grams randomly chosen between one gram and one million grams (one metric ton). The question is whether one can usually (that is, with probability close to 1) transfer the weights between the left and right arms to balance the scale. (In case the sum of all the weights is an odd number of grams, a discrepancy of one gram is allowed.) If there are only two or three weights, the answer is very clearly no; although there are some combinations which work, the majority of randomly selected combinations of three weights do not. If there are very many weights, the answer is clearly yes. The question is, how many are just sufficient? That is, what is the number of weights such that it is equally likely for it to be possible to balance them as it is to be impossible?
+
+Some people's intuition is that the answer is above 100,000. Most people's intuition is that it is in the thousands or tens of thousands, while others feel it should at least be in the hundreds. The correct answer is approximately 23.
+
+The reason is that the correct comparison is to the number of partitions of the weights into left and right. There are 2<sup>''N''&minus;1</sup> different partitions for ''N'' weights, and the left sum minus the right sum can be thought of as a new random quantity for each partition. The distribution of the sum of weights is approximately [[normal distribution|Gaussian]], with a peak at 1,000,000&nbsp;''N'' and width <math>\scriptstyle 1,000,000\sqrt{N}</math>, so that when 2<sup>''N''&minus;1</sup> is approximately equal to <math>\scriptstyle 1,000,000\sqrt{N}</math> the transition occurs.  2<sup>23&minus;1</sup> is about 4 million, while the width of the distribution is only 5 million.<ref>C. Borgs, J. Chayes, and B. Pittel (2001) ''Phase Transition and Finite Size Scaling in the Integer Partition Problem'', Random Structures and Algorithms '''19'''(3<U+2013>4), 247<U+2013>288.</ref>
+
+==Notes==
+{{reflist}}
+
+==References==
+{{refbegin}}
+* John G. Kemeny, J. Laurie Snell, and Gerald Thompson Introduction to Finite Mathematics .  The first edition, 1957
+* E. H. McKinney (1966) ''Generalized Birthday Problem'', [[American Mathematical Monthly]] '''73''', 385<U+2013>387.
+* M. Klamkin and D. Newman (1967) ''Extensions of the Birthday Surprise'', Journal of Combinatorial Theory '''3''', 279<U+2013>282.
+* M. Abramson and W. O. J. Moser (1970) ''More Birthday Surprises'', [[American Mathematical Monthly]] '''77''', 856<U+2013>858
+* D. Bloom (1973) ''A Birthday Problem'', [[American Mathematical Monthly]] '''80''', 1141<U+2013>1142.
+* [[Clay Shirky|Shirky, Clay]] ''Here Comes Everybody: The Power of Organizing Without Organizations'', (2008.) New York. 25<U+2013>27.
+{{refend}}
+
+==External links==
+* [http://www.rsscse-edu.org.uk/tsj/wp-content/uploads/2011/03/matthews.pdf Coincidences: the truth is out there]  Experimental test of the Birthday Paradox and other coincidences
+* http://www.efgh.com/math/birthday.htm
+* http://planetmath.org/encyclopedia/BirthdayProblem.html
+* {{MathWorld | urlname=BirthdayProblem | title=Birthday Problem}}
+* [http://www.damninteresting.com/?p=402 A humorous article explaining the paradox]
+* [http://wiki.stat.ucla.edu/socr/index.php/SOCR_EduMaterials_Activities_BirthdayExperiment SOCR EduMaterials activities birthday experiment]
+* [http://betterexplained.com/articles/understanding-the-birthday-paradox/  Understanding the Birthday Problem (Better Explained)]
+* [http://www.matifutbol.com/docs/units/eurobirthdays.html Eurobirthdays 2012. A birthday problem.] A practical football example of the birthday paradox.
+
+{{DEFAULTSORT:Birthday Problem}}
+[[Category:Probability theory paradoxes]]
+[[Category:Named probability problems]]
+[[Category:Applied probability]]
+[[Category:Birthdays]]
+[[Category:Mathematical problems]]
+
+[[ar:<U+0645><U+0639><U+0636><U+0644><U+0629> <U+064A><U+0648><U+0645> <U+0627><U+0644><U+0645><U+064A><U+0644><U+0627><U+062F>]]
+[[ca:Problema dels aniversaris]]
+[[cs:Narozeninov<U+00FD> probl<U+00E9>m]]
+[[da:F<U+00F8>dselsdagsparadokset]]
+[[de:Geburtstagsparadoxon]]
+[[el:<U+03A0><U+03B1><U+03C1><U+03AC><U+03B4><U+03BF><U+03BE><U+03BF> <U+03C4><U+03C9><U+03BD> <U+03B3><U+03B5><U+03BD><U+03B5><U+03B8><U+03BB><U+03AF><U+03C9><U+03BD>]]
+[[es:Paradoja del cumplea<U+00F1>os]]
+[[eu:Urtebetetzeen ebazkizuna]]
+[[fa:<U+0645><U+0633><U+0626><U+0644><U+0647> <U+062A><U+0627><U+0631><U+06CC><U+062E> <U+062A><U+0648><U+0644><U+062F>]]
+[[fr:Paradoxe des anniversaires]]
+[[gl:Paradoxo do aniversario]]
+[[ko:<U+C0DD><U+C77C> <U+BB38><U+C81C>]]
+[[it:Paradosso del compleanno]]
+[[he:<U+05E4><U+05E8><U+05D3><U+05D5><U+05E7><U+05E1> <U+05D9><U+05D5><U+05DD> <U+05D4><U+05D4><U+05D5><U+05DC><U+05D3><U+05EA>]]
+[[lt:Gimimo dien<U+0173> paradoksas]]
+[[hu:Sz<U+00FC>let<U+00E9>snap-paradoxon]]
+[[ml:<U+0D1C><U+0D28><U+0D4D><U+0D2E><U+0D26><U+0D3F><U+0D28><U+0D2A><U+0D4D><U+0D30><U+0D36><U+0D4D><U+0D28><U+0D02>]]
+[[nl:Verjaardagenparadox]]
+[[ja:<U+8A95><U+751F><U+65E5><U+306E><U+30D1><U+30E9><U+30C9><U+30C3><U+30AF><U+30B9>]]
+[[pl:Paradoks dnia urodzin]]
+[[pt:Paradoxo do anivers<U+00E1>rio]]
+[[ru:<U+041F><U+0430><U+0440><U+0430><U+0434><U+043E><U+043A><U+0441> <U+0434><U+043D><U+0435><U+0439> <U+0440><U+043E><U+0436><U+0434><U+0435><U+043D><U+0438><U+044F>]]
+[[fi:Syntym<U+00E4>p<U+00E4>iv<U+00E4>ongelma]]
+[[sv:F<U+00F6>delsedagsparadoxen]]
+[[th:<U+0E1B><U+0E31><U+0E0D><U+0E2B><U+0E32><U+0E27><U+0E31><U+0E19><U+0E40><U+0E01><U+0E34><U+0E14>]]
+[[uk:<U+041F><U+0430><U+0440><U+0430><U+0434><U+043E><U+043A><U+0441> <U+0434><U+043D><U+0456><U+0432> <U+043D><U+0430><U+0440><U+043E><U+0434><U+0436><U+0435><U+043D><U+043D><U+044F>]]
+[[ur:<U+0633><U+0627><U+0644><U+06AF><U+0631><U+06C1> <U+0645><U+0633><U+0626><U+0644><U+06C1>]]
+[[zh:<U+751F><U+65E5><U+554F><U+984C>]]

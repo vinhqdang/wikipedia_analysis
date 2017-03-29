@@ -1,0 +1,146 @@
+In [[computer science]], '''group code recording (GCR)''' refers to several distinct but related encoding methods for magnetic media.  The first, used in 6250 [[Characters Per Inch|cpi]] [[magnetic tape]], is an [[error-correcting code]] combined with a [[run length limited]] encoding scheme.  The others are different [[floppy disk]] encoding methods used in some [[microcomputers]] until the late 1980s.
+
+== GCR for 9-track reel-to-reel tape ==
+
+In order to reliably read and write to magnetic tape, several constraints on the signal to be written must be followed.  The first is that two adjacent flux reversals must be separated by a certain distance on the media.  The second is that there must be a flux reversal often enough to keep the reader's clock in phase with the written signal; that is, the signal must be [[self-clocking signal|self-clocking]].  Prior to 6250 cpi tapes, 1600 cpi tapes satisfied these constraints using a technique called [[Manchester code|phase encoding]], which was only 50% efficient.  For 6250 GCR tapes, a (0,2)[[Run Length Limited|RLL]] code is used.  This code requires five bits to be written for every four bits of data.  The code is structured so that no more than two zero bits (which are represented by lack of a flux reversal) can occur in a row, either within a code or between codes, no matter what the data was.  This RLL code is applied independently to the data going to each of the 9 tracks.
+
+Of the 32 5-bit patterns, 8 begin with two consecutive zero bits, 6 others end with two consecutive zero bits, and one more (10001) contains three consecutive zero bits.  Removing the all-ones pattern (11111) from the remainder leaves 16 suitable code words.
+
+The 6250 GCR RLL code:
+{|
+| 
+{| border="1" 
+|-
+! Nybble !!   Code
+|-
+| 0000   || 11001  
+|-
+| 0001   || 11011 
+|-
+| 0010   || 10010 
+|-
+| 0011   || 10011 
+|-
+| 0100   || 11101 
+|-
+| 0101   || 10101
+|-
+| 0110   || 10110 
+|-
+| 0111   || 10111 
+|} 
+| 
+{| border="1" 
+|-
+! Nybble !!   Code
+|-
+| 1000   || 11010 
+|-
+| 1001   || 01001 
+|-
+| 1010   || 01010 
+|-
+| 1011   || 01011 
+|-
+| 1100   || 11110 
+|-
+| 1101   || 01101 
+|-
+| 1110   || 01110 
+|-
+| 1111   || 01111 
+|}
+|}
+
+Because of the extremely high density of 6250 cpi tape, the RLL code is not sufficient to ensure reliable data storage.  On top of the RLL code, an [[error-correcting code]] called the Optimal Rectangular Code (ORC) is applied.  This code is a combination of a [[parity bit|parity]] track and [[polynomial]] code similar to a [[Cyclic Redundancy Check|CRC]], but structured for error correction rather than error detection.  For every 7 bytes written to the tape (before RLL encoding), an 8th check byte is calculated and written to the tape.  When reading, the parity is calculated on each byte and exclusive-or'd with the contents of the parity track, and the polynomial check code calculated and exclusive-or'd with the received check code, resulting in two 8-bit syndrome words.  If these are both zero, the data is error free.  Otherwise, error-correction logic in the tape controller corrects the data before it is forwarded to the host.  The error correcting code is able to correct any number of errors in any single track, or in any two tracks if the erroneous tracks can be identified by other means.
+
+IBM documents refer to the error correcting code itself as "group coded recording". However, GCR has come to refer to the recording format of 6250 cpi tape as a whole, and later to formats which use similar RLL codes without the error correction code.
+
+== GCR for floppy disks ==
+
+Like magnetic tape drives, [[floppy disk]] drives have physical limits on the spacing of flux reversals (also called transitions, represented by 1 bits).
+
+For the [[Apple II]] floppy drive, [[Steve Wozniak]] invented a floppy controller which (along with the drive itself) imposed two constraints
+* Between any two one bits, there may be a maximum of one zero bit.
+* Each 8-bit byte must start with a one bit.
+
+The simplest scheme to ensure compliance with these limits is to record an extra "clock" transition between each data bit.  This scheme is called FM (Frequency Modulation) or "4 and 4", and allows only 10 256-byte sectors per track to be recorded on a single-density 5<U+00BC> floppy.
+
+Wozniak realized that a more complex encoding scheme would allow each 8-bit byte on disk to hold 5 bits of useful data rather than 4 bits.  This is because there are 34 bytes which have the top bit set and no two zero bits in a row.  This encoding scheme became known as "5 and 3" encoding, and allowed 13 sectors per track; it was used for [[Apple DOS]] 3.1, 3.2, and 3.2.1, as well as for the earliest version of Apple CP/M.  Later, the design of the floppy drive controller was modified to allow a byte on disk to contain exactly one pair of zero bits in a row.  This allowed each 8-bit byte to hold 6 bits of useful data, and allowed 16 sectors per track.  This scheme is known as "6 and 2", and was used on [[Apple Pascal]], Apple DOS 3.3 and [[ProDOS]], and later on the 400K and 800K 3<U+00BD> disks on the [[Apple Macintosh|Macintosh]] and [[Apple II]].  Apple did not originally call this scheme "GCR", but the term was later applied to it to distinguish it from IBM PC floppies which used the [[Modified Frequency Modulation|MFM]] encoding scheme.
+
+Independently, [[Commodore International|Commodore Business Machines]] created a Group Code Recording scheme for their [[Commodore 2040]] floppy disk drive (launched in the spring of 1979).  The relevant constraint on the 2040 drive was that no more than two zero bits could occur in a row, with no special constraint on the first bit in a byte.  This allowed the use of a scheme similar to that used in 6250 tape drives.  Every 4 bits of data are translated into 5 bits on disk, according to the following table:
+{|
+|
+{| border=1
+! Nybble !!  Code 
+|-
+| 0000   || 01010 
+|-
+| 0001   || 01011 
+|-
+| 0010   || 10010 
+|-
+| 0011   || 10011
+|-
+| 0100   || 01110
+|-
+| 0101   || 01111 
+|-
+| 0110   || 10110
+|-
+| 0111   || 10111 
+|}
+| 
+{| border=1
+! Nybble !!  Code
+|-
+| 1000   || 01001
+|-
+| 1001   || 11001
+|-
+| 1010   || 11010
+|-
+| 1011   || 11011
+|-
+| 1100   || 01101
+|-
+| 1101   || 11101
+|-
+| 1110   || 11110 
+|-
+| 1111   || 10101 
+|}
+|}
+Note no code starts with two zero bits, nor ends with two zero bits.  This ensures that regardless of the input data, the encoded data will never contain more than two zero bits in a row. Also note that with this encoding not more than eight one bits in a row are possible. Therefore Commodore used sequences of ten or more one bits in a row as synchronization mark.
+
+Partially because of this more efficient scheme, Commodore was able to fit 170KB on a standard single-density floppy, where Apple fit 140K (6 and 2) or 114K (5 and 3) and an FM-encoded floppy held only 88K.
+
+== See also ==
+*[[Modified Frequency Modulation]] (MFM)
+*[[Run Length Limited]] (RLL)
+*[[Eight-to-Fourteen Modulation]] (EFM)
+*[[Error-correcting code]]
+*[[8b/10b encoding]]
+
+== References==
+* Patel, A.M and Hong, S.J, "Optimal Rectangular Code for High Density Magnetic Tapes", ''IBM Journal of Research and Development'', 18, pp.579<U+2013>588 (1974)
+* Hsiao, M.Y, et al., "Reliability, Availability, and Serviceability of IBM Computer Systems", ''IBM Journal of Research and Development'', 25, p.462 (1981) (mentions the 5/4 RLL code used on 6250 tape drives)
+* [http://www.qualstar.com/500450.pdf ''Qualstar 34XX Technical Service Manual'']  pp. 3<U+2013>4..3-7 (additional detail on the GCR tape format)
+* Lechner, Pieter and Worth, Don, ''Beneath Apple DOS'' ("5 and 3" and "6 and 2" details)
+* [http://www.zimmers.net/anonftp/pub/cbm/manuals/anthology/p049.jpg Hildon, Karl, ''The Complete Commodore Inner Space Anthology'', p. 49] (Commodore GCR codes<U+2014>but be warned that this reference erroneously claims that a 1 bit indicates a lack of a transition.)
+* [http://apple2history.org/museum/articles/byte8501.html Williams, Gregg and Moore, Rob, "The Apple Story", ''Byte''] Interview with Steve Wozniak, where he describes creating the Apple version of GCR.
+
+== External links ==
+*[http://www.storagereview.com/guide2000/ref/hdd/geom/dataFM.html The PC Guide] Frequency Modulation
+*[http://www.thegalleryofoldiron.com/3803.HTM The Gallery of Old Iron]  A comment on the origin of the name "Group Coded Recording".
+
+[[Category:CBM storage devices|*Group]]
+[[Category:Apple II family]]
+[[Category:Computer storage tape media]]
+[[Category:Rotating disc computer storage media]]
+[[Category:Line codes]]
+[[Category:Error detection and correction]]
+
+[[de:Group Coded Recording]]
+[[it:Group Code Recording]]
+[[sv:Group Code Recording]]

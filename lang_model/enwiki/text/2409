@@ -1,0 +1,409 @@
+{{lowercase|title=printf}}
+[[Image:Printf.svg|350px|thumb|An example of the printf function.]]
+
+'''printf functions''' (which stands for "'''print f'''ormatted") are a class of [[function (computer science)|functions]] typically associated with [[curly bracket programming language]]s.  They accept a [[string (computer science)|string]] [[parameter (computer science)|parameter]] called the '''format string''', which specifies a method for rendering an arbitrary number of varied data type parameter(s) into a string.  This string is then by default printed on the [[standard output]] stream, but variants exist that perform other tasks with the result.  Characters in the format string are usually copied literally into the function's output, with the other parameters being rendered into the resulting text at points marked by '''format specifiers'''.  Format specifiers are typically introduced by a [[percent sign|'''%''' character]], and a literal percent sign can be copied into the output using the [[escape sequence]] '''%%'''.
+
+==Timeline==
+Several [[programming languages]] implement a '''<code>printf</code>''' [[subroutine|function]], to output a formatted [[string literal|string]]. It originated from the [[C (programming language)|C programming language]], where it has a [[Function prototype|prototype]] similar to the following:
+  <source lang="c">int printf(const char *format, ...)</source>
+The [[Variable (programming)|string constant]] <code>format</code> provides a description of the output, with [[placeholder]]s marked by "%" [[escape character]]s, to specify both the relative location and the type of output that the function should produce.
+
+=== 1950s: FORTRAN, COBOL ===
+FORTRANs [[Variadic function|variadic]] <code> PRINT </code> statement took a reference to a non-executable <code> FORMAT </code> statement
+.
+<code>
+      PRINT, 601, 123456, 1000.0, 3.14, 250
+  601 FORMAT (7HRED NUM,I7,3HEXP, E7.1, 4HREAL ,F3.2, 3HVAL, I3)
+</code>
+
+will print the following line (including the CF LF characters):
+
+<code> 
+RED NUM 123456 EXP 1.0E 03 REAL 3.14 VAL 250 
+</code>
+
+=== 1960s: BCPL, ALGOL 68, Multics PL/I ===
+C's [[Variadic function|variadic]] <code>printf</code> has its origins in [[BCPL]]'s <code>writef</code> function.
+
+[[ALGOL 68]] Draft and Final report had the functions <code>inf</code> and <code>outf</code>, subsequently these were revised out of the original language and replaced with the now more familiar <code>readf/getf</code> and <code>printf/putf</code>.
+ printf(($"Color "g", number1 "6d,", number2 "4zd,", hex "16r2d,", float "-d.2d,", unsigned value"-3d"."l$,
+             "red", 123456, 89, BIN 255, 3.14, 250));
+
+[[Multics]] has a standard function called <code>ioa_</code> with a wide variety of control codes.  It was based on a machine-language facility from Multics's BOS (Bootstrap Operating System).
+ <source lang="c">
+ call ioa_ ("Hello, ^a", "World!");
+ </source>
+
+=== 1970s: C, Lisp ===
+ <source lang="c">
+ printf("Color %s, number1 %d, number2 %05d, hex %x, float %5.2f, unsigned value %u.\n", "red", 123456, 89, 255, 3.14159, 250);
+ </source>
+will print the following line (including new-line character, \n):
+ Color red, number1 123456, number2 00089, hex ff, float  3.14, unsigned value 250.
+
+The <code>printf</code> function returns the number of characters printed, or a negative value if an output error occurs.
+
+[[Common lisp|Common Lisp]] has the <code>format</code> function.
+ <source lang="lisp">
+ (format t "Hello, ~a" "World!")
+ </source>
+
+prints <code>"Hello, World!"</code> on the standard output stream.  If the first argument is <code>nil</code>, format returns the string to its caller.  The first argument can also be any output stream.  <code>format</code> was introduced into [[ZetaLisp]] at [[Mit|M.I.T.]] in 1978, based on the [[Multics]] <code>ioa_</code>, and was later adopted into the [[Common lisp|Common Lisp]] standard.
+
+===1980s: perl===
+[[Perl]] also has a <code>printf</code> function. [[Common Lisp]] has a [[format (Common Lisp)|format]] function which acts according to the same principles as <code>printf</code>, but uses different characters for output conversion. The [[GLib]] library contains <code>g_print</code>, an implementation of <code>printf</code>.
+
+Some [[Unix]] systems have a <code>printf</code> program for use in [[shell script]]s. This can be used instead of [[echo (computing)|echo]] in situations where the latter is not portable. For example:
+ <source lang="bash">echo -n -e "$FOO\t$BAR"</source>
+may be rewritten portably as:
+ <source lang="bash">printf "%s\t%s" "$FOO" "$BAR"</source>
+=== 1990s: PHP & Python ===
+1991: [[Python (programming language)|Python]]'s <code>%</code> operator hearkens to <code>printf</code>'s syntax when interpolating the contents of a tuple.  This operator can, for example, be used with the <code>print</code> function:
+<source lang="python">print("%s\t%s" % (foo,bar))</source>
+
+1995: [[PHP]] also has the <code>printf</code> function, with the same specifications and usage as that in C/C++. [[MATLAB]] does not have <code>printf</code>, but does have its two extensions <code>sprintf</code> and <code>fprintf</code> which use the same formatting strings. <code>sprintf</code> returns a formatted string instead of producing a visual output.
+
+=== 2000s: Java ===
+2004: [[Java (programming language)|Java]] supported <code>printf</code> from version 1.5 onwards as a member of the <code>PrintStream</code><ref>{{ cite web
+| publisher=Sun Microsystems Inc.
+| title = PrintStream (Java 2 Platform SE 5.0)
+| year = 1994
+| url=http://java.sun.com/j2se/1.5.0/docs/api/java/io/PrintStream.html#printf(java.lang.String,%20java.lang.Object...)
+| accessdate=2008-11-18 }}</ref> [[class (computer science)|class]], giving it the functionality of both the <code>printf</code> and <code>[[fprintf]]</code> functions.  At the same time <code>sprintf</code>-like functionality was added to the <code>String</code> class by adding the <code>format(String, Object... args)</code> method<ref>{{ cite web
+| publisher=Sun Microsystems Inc.
+| title = String (Java 2 Platform SE 5.0)
+| year = 1994
+| url=http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html#format(java.lang.String,%20java.lang.Object...) 
+| accessdate=2008-11-18 }}</ref>. 
+<source lang="java5">
+// Write "Hello, World!" to standard output (like printf)
+System.out.printf("%s, %s", "Hello", "World!"); 
+// create a String object with the value "Hello, World!" (like sprintf)
+String myString = String.format("%s, %s", "Hello", "World!"); 
+</source>
+Unlike most other implementations, Java's implementation of <code>printf</code> throws an [[exception handling|exception]] on encountering a malformed format string.
+
+==Derivative functions==
+The [[C Standard]] specifies a number of derivative functions to further leverage the printf functionality:
+
+===fprintf===
+ <source lang="c">int fprintf(FILE *stream, const char *format, ...)</source>
+
+'''<code>fprintf</code>''' enables printf output to be written to any file. Programmers frequently use it to print errors, by writing to the [[Standard streams#Standard error|standard error]] device, but it can operate with any file opened with the <code>[[fopen]]</code> function.The same functionality is applicable in PRO * C also.
+
+===sprintf===
+ <source lang="c">int sprintf (char *str, const char *format, ...)</source>
+
+'''<code>sprintf</code>''' prints to a string (<code>char</code> array) instead of to [[Standard streams#Standard output|standard output]]. Users of <code>sprintf</code> must ensure, via calculation or via a [[guard page]], that the resulting string will not be larger than the memory allocated for ''str''. Failure to ensure this can allow a [[buffer overflow]] to occur.
+
+In higher-level languages such as [[PHP]] the <code>sprintf</code> function does not have the <code>str</code> argument. Instead, it returns the formatted output string. The prototype in PHP is like this:
+
+<source lang="php">string sprintf (const string format, ...)</source>
+
+===Buffer safety and sprintf===
+In ISO C99, '''<code>snprintf</code>''' was introduced as an alternative to '''<code>sprintf</code>''' that can help avoid the risk of a buffer overflow:
+
+ <source lang="c">int snprintf(char *str, size_t size, const char * restrict format, ...)</source>
+
+<code>snprintf</code> is guaranteed not to write more than ''size'' bytes into ''str'', so use of it can help avoid the risk of a buffer overflow, as in the following code fragment:
+<source lang="c">
+#define BUFFER_SIZE 50
+char buf[BUFFER_SIZE];
+int n;
+
+...
+
+n = snprintf(buf, BUFFER_SIZE, "Your name is %s.\n", username);
+if (n > BUFFER_SIZE)
+   /* Handle error */
+</source>
+If ''username'' in the above example causes result to exceed 50 characters in length, the function will limit the string that gets saved in ''buf'' by cutting off final characters ([[truncation (disambiguation)|truncating]]). This may seem undesirable, but it is usually preferable to having a security vulnerability, which [[buffer overflows]] often cause. Additionally, the return code of <code>snprintf</code> indicates how many characters the function ''would'' have written to the string had enough space existed. Systems can use this information to allocate a new (larger) buffer if they require the whole string.
+
+Another safe <code>sprintf</code> alternative is '''<code>asprintf</code>''' which is a GNU extension:
+
+ <source lang="c">int asprintf(char **ret, const char *format, ...)</source>
+
+<code>asprintf</code> automatically allocates enough memory to hold the final string. It sets <code>*ret</code> to a pointer to the resulting string, or to an undefined value if an error occurred ([[GLibc]] is notable in being the only implementation that doesn't always set <code>*ret</code> to [[NULL]] on error). The programmer using <code>asprintf</code> has the responsibility of freeing the allocated memory after use. Though not part of any standard, <code>asprintf</code> comes in the C libraries of several operating systems (including [[OpenBSD]], [[FreeBSD]], and [[NetBSD]]) and on other platforms in the [[libiberty]] library.
+
+[[GLib]] provides yet another safe alternative: <code>g_strdup_printf</code>, which allocates enough memory, but, unlike <code>asprintf</code>, returns the resulting string as its return value rather than via the first argument.
+
+===C++ alternatives to sprintf for numeric conversion===
+The standard method for string formatting and the conversion of other types to strings in C++ is [[iostream]].  Unlike printf, the iostream standard library is type-safe and extensible.
+
+A common programming task is convert a numeric type into a string (char buffer).  The <code>sprintf</code> family, while useful, in many applications seems like overkill for such a simple task.
+
+A number of alternative means in C/C++ have been developed:
+* [http://boost.org/libs/conversion/lexical_cast.htm Boost::lexical_cast ] 
+* [http://www.boost.org/libs/format/index.html Boost::format ] 
+* [http://code.google.com/p/stringencoders/wiki/NumToA modp_numtoa]
+* [[itoa]]
+
+==vprintf, vfprintf, vsprintf, vsnprintf, and vasprintf==
+<source lang="c">
+/* va_list versions of above */
+int vprintf(const char *format, va_list ap);
+int vfprintf(FILE *stream, const char *format, va_list ap);
+int vsprintf(char *str, const char *format, va_list ap);
+int vsnprintf(char *str, size_t size, const char *format, va_list ap);
+int vasprintf(char **ret, const char *format, va_list ap);
+</source>
+
+These are analogous to the above functions without the ''v''s, except that they use [[Variadic function|variable argument]] lists. These functions offer the ability for programmers to essentially create their own printf variants. For instance, a programmer could write a function
+
+ <source lang="c">void fatal_error(const char *format, ...)</source>
+
+which would use the <code>va_start</code> macro to obtain a <code>va_list</code> variable from the extra parameters, print a message on the standard error device using <code>vfprintf</code>, clean up after the <code>va_list</code> variable with the <code>va_end</code> macro, and finally perform the necessary tasks to cleanly shut down the program.
+
+Another common application of these functions is to write a custom printf that prints to a different target than a file. For instance, a graphical library might provide a printf-like function with X and Y coordinates:
+
+ <source lang="c">int graphical_printf(int x, int y, const char *format, ...)</source>
+
+This would work by temporarily saving the string to a private buffer using <code>vsnprintf</code> or <code>vasprintf</code>.
+
+==printf format placeholders==
+Formatting takes place via placeholders within the format string. For example, if a program wanted to print out a person's age, it could present the output by prefixing it with "Your age is ". To denote that we want the integer for the age to be shown immediately after that message, we may use the format string:
+ "Your age is %d."
+
+The syntax for a format placeholder is "''%[parameter][flags][width][.precision][length]type''". 
+
+*'''Parameter''' can be omitted or can be:
+:{| class="wikitable"
+|-
+! Character
+! Description
+|-
+| <code>n$</code>
+| ''n'' is the number of the parameter to display using this format specifier, allowing the parameters provided to be output multiple times, using varying format specifiers or in different orders. This is a [[POSIX]] extension and not in [[C99]]. Example: <code>printf("%2$d %1$#x %1$d",16,17)</code> produces "17 0x10 16"
+|}
+
+*'''Flags''' can be zero or more (in any order) of:
+:{| class="wikitable"
+|-
+! Character
+! Description
+|-
+| ''a number''
+| Causes <code>printf</code> to left-pad the output with spaces until the required length of output is attained. If combined with '0' (see below), it will cause the sign to become a space when positive, but the remaining characters will be zero-padded
+|-
+| +
+| Causes <code>printf</code> to always denote the sign '+' or '-' of a number (the default is to omit the sign for positive numbers).  Only applicable to numeric types.
+|-
+| -
+| Causes <code>printf</code> to left-align the output of this placeholder (the default is to right-align the output).
+|-
+| #
+| Alternate form. For 'g' and 'G', trailing zeros are not removed. For 'f', 'F', 'e', 'E', 'g', 'G', the output always contains a decimal point. For 'o', 'x', and 'X', a 0, 0x, and 0X, respectively, is prepended to non-zero numbers.
+|-
+| 0
+| Causes <code>printf</code> to use 0 instead of spaces to left-fill a fixed-length field. For example, <code>printf("%2d", 3)</code> results in " 3", while <code>printf("%02d", 3)</code> results in "03".
+|}
+
+*'''Width''' can be omitted or be any of:
+:{| class="wikitable"
+|-
+! Character
+! Description
+|-
+| ''a number''
+| Causes <code>printf</code> to pad the output of this placeholder with spaces until it is at least ''number'' characters wide. As mentioned above, if ''number'' has a leading '0', that is interpreted as a flag, and the padding is done with '0' characters instead of spaces.
+|- 
+| *
+| Causes <code>printf</code> to pad the output until it is ''n'' characters wide, where n is an integer value stored in the a function argument just preceding that represented by the modified type. For example <code>printf("%*d", 5, 10)</code> will result in "10" being printed with a width of 5.
+|}
+
+*'''Precision''' can be omitted or be any of:
+:{| class="wikitable"
+|-
+! Character
+! Description
+|-
+| ''a number''
+| For non-integral numeric types, causes the decimal portion of the output to be expressed in at least ''number'' digits.  For the string type, causes the output to be truncated at ''number'' characters. If the precision is zero, nothing is printed for the corresponding argument.
+|- 
+| *
+| Same as the above, but uses an integer value in the intaken argument to determine the number of decimal places or maximum string length.  For example, <code>printf("%.*s", 3, "abcdef")</code> will result in "abc" being printed.
+|}
+
+*'''Length''' can be omitted or be any of:
+:{| class="wikitable"
+|-
+! Character
+! Description
+|-
+| <code>hh</code>
+| For integer types, causes <code>printf</code> to expect an <code>int</code> sized integer argument which was promoted from a <code>char</code>.
+|-
+| <code>h</code>
+| For integer types, causes <code>printf</code> to expect a <code>int</code> sized integer argument which was promoted from a <code>short</code>.
+|-
+| <code>l</code>
+| For integer types, causes <code>printf</code> to expect a <code>long</code> sized integer argument.
+|-
+| <code>ll</code>
+| For integer types, causes <code>printf</code> to expect a <code>long long</code> sized integer argument.  
+|-
+| <code>L</code>
+| For floating point types, causes <code>printf</code> to expect a <code>long double</code> argument.
+|-
+| <code>z</code>
+| For integer types, causes <code>printf</code> to expect a <code>size_t</code> sized integer argument.
+|-
+| <code>j</code>
+| For integer types, causes <code>printf</code> to expect a <code>intmax_t</code> sized integer argument.
+|-
+| <code>t</code>
+| For integer types, causes <code>printf</code> to expect a <code>ptrdiff_t</code> sized integer argument.
+|}
+
+Additionally, several platform specific length options came to exist prior to widespread use of the ISO C99 extensions:
+:{| class="wikitable"
+|-
+! Characters
+! Description
+|-
+| <code>I</code>
+| For signed integer types, causes <code>printf</code> to expect <code>ptrdiff_t</code> sized integer argument; for unsigned integer types, causes <code>printf</code> to expect <code>size_t</code> sized integer argument. ''Commonly found in Win32/Win64 platforms.'' 
+|-
+| <code>I32</code>
+| For integer types, causes <code>printf</code> to expect a 32-bit (double word) integer argument.  ''Commonly found in Win32/Win64 platforms.''
+|-
+| <code>I64</code>
+| For integer types, causes <code>printf</code> to expect a 64-bit (quad word) integer argument.  ''Commonly found in Win32/Win64 platforms.''
+|-
+| <code>q</code>
+| For integer types, causes <code>printf</code> to expect a 64-bit (quad word) integer argument.  ''Commonly found in BSD platforms.''
+|}
+
+ISO C99 includes the <code>[[inttypes.h]]</code> header file that includes a number of macros for use in platform-independent <code>printf</code> coding.  Example macros include:
+:{| class="wikitable"
+|-
+! Characters
+! Description
+|-
+| <code>"PRId32"</code>
+| Typically equivalent to <code>I32d</code> (''Win32/Win64'') or <code>d</code>
+|-
+| <code>"PRId64"</code>
+| Typically equivalent to <code>I64d</code> (''Win32/Win64''), <code>lld</code> (''32-bit platforms'') or <code>ld</code> (''64-bit platforms'')
+|-
+| <code>"PRIi32"</code>
+| Typically equivalent to <code>I32i</code> (''Win32/Win64'') or <code>i</code>
+|-
+| <code>"PRIi64"</code>
+| Typically equivalent to <code>I64i</code> (''Win32/Win64''), <code>lli</code> (''32-bit platforms'') or <code>li</code> (''64-bit platforms'')
+|-
+| <code>"PRIu32"</code>
+| Typically equivalent to <code>I32u</code> (''Win32/Win64'') or <code>u</code>
+|-
+| <code>"PRIu64"</code>
+| Typically equivalent to <code>I64u</code> (''Win32/Win64''), <code>llu</code> (''32-bit platforms'') or <code>lu</code> (''64-bit platforms'')
+|}
+
+*'''Type''' can be any of:
+:{| class="wikitable"
+|-
+! Character
+! Description
+|-
+| <code>d</code>, <code>i</code>
+| Print an <code>int</code> as a signed [[decimal]] number. '<code>%d</code>' and '<code>%i</code>' are synonymous for output, but are different when used with <code>[[scanf]]()</code> for input.
+|-
+| <code>u</code>
+| Print decimal <code>unsigned int</code>.
+|-
+| <code>f</code>, <code>F</code>
+| Print a <code>double</code> in normal ([[fixed-point]]) notation. 'f' and 'F' only differs in how the strings for an infinite number or NaN are printed ('inf', 'infinity' and 'nan' for 'f', 'INF', 'INFINITY' and 'NAN' for 'F').
+|-
+| <code>e</code>, <code>E</code>
+| Print a <code>double</code> value in standard form ([-]d.ddd e[+/-]ddd).An E conversion uses the letter E (rather than e) to introduce the exponent.  The exponent always contains at least two digits; if the value is zero, the exponent is 00.
+|-
+| <code>g</code>, <code>G</code>
+| Print a <code>double</code> in either normal or exponential notation, whichever is more appropriate for its magnitude. 'g' uses lower-case letters, 'G' uses upper-case letters.  This type differs slightly from fixed-point notation in that insignificant zeroes to the right of the decimal point are not included.  Also, the decimal point is not included on whole numbers.
+|-
+| <code>x</code>, <code>X</code>
+| Print an <code>unsigned int</code> as a [[hexadecimal]] number. 'x' uses lower-case letters and 'X' uses upper-case.
+|-
+| <code>o</code>
+| Print an <code>unsigned int</code> in octal.
+|-
+| <code>s</code>
+| Print a [[character string]].
+|-
+| <code>c</code>
+| Print a <code>char</code> (character).
+|-
+| <code>p</code>
+| Print a <code>void *</code> (pointer to void) in an implementation-defined format.
+|-
+| <code>n</code>
+| Print nothing, but write number of characters successfully written so far into an integer pointer parameter.
+|-
+| <code>%</code>
+| Print a literal '%' character (this type doesn't accept any flags, width, precision or length).
+|}
+
+If the [[syntax]] of a conversion specification is invalid, behavior remains undefined, and in fact can cause program termination.  If there are too few [[function argument]]s provided to supply values for all the conversion specifications in the template string, or if the arguments are not of the correct types, the results are also undefined. Excess arguments are ignored. In a number of cases, the undefined behavior has led to "[[Format string attack]]" security [[Exploit (computer science)|vulnerabilities]]. 
+
+Note that some compilers, like [[GNU Compiler Collection|the GNU Compiler Collection]], will statically check the format strings of printf-like functions and warn about problems (specially by using the flags <code>-Wall</code> or <code>-Wformat</code>). The [[GNU Compiler Collection]] will also warn about user-defined printf-style functions if the non-standard "format" __attribute__ is applied to the function.
+
+==Risks of using field width versus explicit delimiters in tabular output==
+Using only field widths to provide for tabulation, as with a format like "<code>%8d%8d%8d</code>" for three integers in three 8-character columns, will not guarantee that field separation will be retained if large numbers occur in the data.  Loss of field separation can easily lead to corrupt output. In systems which encourage the use of programs as building blocks in scripts, such corrupt data can often be forwarded into and corrupt further processing, regardless of whether the original programmer expected the output would only be read by human eyes. Such problems can be eliminated by including explicit delimiters, even spaces, in all tabular output formats.  Simply changing the dangerous example from before to "<code> %7d %7d %7d</code>" addresses this, formatting identically until numbers become larger, but then explicitly preventing them from becoming merged on output due to the explicitly-included spaces.  Similar strategies apply to string data.
+
+==Custom printf format placeholders==
+There are a few implementations of <code>printf</code>-like functions that allow extensions to the [[escape character|escape-character]]-based [[Domain-specific programming language|mini-language]], thus allowing the programmer to have a specific formatting function for non-builtin types.  One of the most well-known is [[glibc|glibc's]] <code>[http://www.gnu.org/software/libc/manual/html_node/Customizing-Printf.html register_printf_function()]</code>.  However, it is rarely used due to the fact that it conflicts with static format string checking.  Another is [http://www.and.org/vstr/#cust-fmt Vstr custom formatters], which allows adding multi-character format names, and can work with static format checkers.
+
+Some applications (like the [[Apache HTTP Server]]) include their own <code>printf</code>-like function, and embed extensions into it. However these all tend to have the same problems that <code>register_printf_function()</code> has.
+
+Most non-C languages that have a <code>printf</code>-like function work around the lack of this feature by just using the "<code>%s</code>" format and converting the object to a string representation. [[C++]] offers a notable exception, in that it has a <code>printf</code> function inherited from its C history, but also has a completely different mechanism that is preferred.
+
+==Programming languages with printf==
+*[[AMPL]]
+*[[awk]]
+*[[Bourne shell]] (sh) and derivatives such as [[Korn shell]] (ksh), [[Bourne again shell]] (bash), or [[Z shell]] (zsh)
+*[[C (programming language)|C]], and subsequently [[C++]] and [[Obj-C]] (C++ also provides overloaded shift operators and manipulators as an alternative for formatted output - see [[iostream]] and [[iomanip]])
+*[[F Sharp (programming language)|F#]]
+*[[GNU Linear Programming Kit|GNU MathProg]]
+*[[GNU Octave]]
+*[[Haskell programming language|Haskell]]
+*[[Java (programming language)|Java]] (since version 1.5)
+*[[Maple]]
+*[[Mathematica]]
+*[[MATLAB]]
+*[[Objective Caml]]
+*[[PHP]],
+*[[Python (programming language)|Python]] (using the % operator)
+*[[Perl]]
+*[[Ruby (programming language)|Ruby]]
+
+==See also==
+*<code>[[scanf]]</code>
+*[[C standard library]]
+*[[Format string attack]]
+*<code>[[iostream]]</code>
+
+==Notes==
+<references/>
+
+==External links==
+*[http://www.pixelbeat.org/programming/gcc/format_specs.html printf format specifications quick reference]
+*{{man|sh|printf|SUS|print formatted output}}
+*The [http://java.sun.com/j2se/1.5.0/docs/api/java/util/Formatter.html#syntax <code>Formatter</code> specification] in Java 1.5
+*[http://bash-hackers.org/wiki/doku.php?id=commands:builtin:printf GNU Bash <code>printf(1)</code> builtin]
+*[http://www.and.org/vstr/printf_comparison C printf comparison page]
+*{{man|3|printf|OpenBSD|formatted output conversion}}
+*[http://alexei.417.ro/blog/sprintf_for_javascript.html <code>sprintf()</code> for JavaScript - a lightweight and easy to use implementation]
+*[http://msdn.microsoft.com/en-us/library/tcxf1dw6(VS.71).aspx Size Prefixes for <code>printf</code> and <code>wprintf</code> Format-Type Specifiers]
+*[http://www.thelinuxblog.com/linux-man-pages/1/printf GNU Bash printf Man Page]
+
+{{Unix commands}}
+
+[[Category:Articles with example C code]]
+[[Category:Stdio.h]]
+[[Category:Unix software]]
+
+[[es:Printf]]
+[[fr:Printf]]
+[[it:Printf]]
+[[ja:Printf]]
+[[pl:Printf]]
+[[ru:Printf]]

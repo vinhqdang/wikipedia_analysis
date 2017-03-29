@@ -1,0 +1,176 @@
+[[Image:Znam-2-3-11-23-31.svg|thumb|301px|Graphical demonstration that 1 = 1/2 + 1/3 + 1/11 + 1/23 + 1/31 + 1/(2<U+00D7>3<U+00D7>11<U+00D7>23<U+00D7>31). Each row of k squares of side length 1/k has total area 1/k, and all the squares together exactly cover a larger square with area 1. The bottom row of 47058 squares with side length 1/47058 is too small to see in the figure and is not shown.]]
+In [[number theory]], '''Zn<U+00E1>m's problem''' asks which sets of integers have the property that each integer in the set is a [[proper divisor]] of the product of the other integers in the set, plus 1. That is, given ''k'', what sets of integers 
+:{''n''<sub>1</sub>, ... ''n''<sub>k</sub>} 
+are there, such that, for each ''i'', ''n''<sub>''i''</sub> divides but is not equal to
+:<math>\prod_{j \ne i}^n n_j + 1?</math>
+
+A closely related problem concerns sets of integers in which each integer in the set is a divisor, but not necessarily a proper divisor, of one plus the product of the other integers in the set. This problem does not seem to have been named in the literature, but for ease of description we refer to it as the improper Zn<U+00E1>m problem. Any solution to Zn<U+00E1>m's problem is also a solution to the improper Zn<U+00E1>m problem, but not necessarily vice versa.
+
+Zn<U+00E1>m's problem is named after Slovak mathematician [[<U+0160>tefan Zn<U+00E1>m]], who suggested it in 1972. Barbeau (1971) had posed the improper Zn<U+00E1>m problem for ''k'' = 3, and Mordell (1973) independently of Zn<U+00E1>m found all solutions to the improper problem for ''k'' <U+2264> 5. Skula (1975) showed that Zn<U+00E1>m's problem is unsolvable for ''k'' < 5, and credited J. Jan<U+00E1>k with finding the solution {2, 3, 11, 23, 31} for ''k'' = 5.
+
+The improper Zn<U+00E1>m problem is easily solved for any ''k'': the first ''k'' terms of [[Sylvester's sequence]] provide a solution.
+Sun (1983) showed that there is at least one solution to Zn<U+00E1>m's problem for each ''k'' <U+2265> 5. Sun's solution is based on a recurrence similar to that for Sylvester's sequence, but with a different set of initial values.
+
+It is unknown whether there are any solutions to Zn<U+00E1>m's problem using only odd numbers. With one exception, all known solutions start with [[2 (number)|2]]. If all numbers in a solution to Zn<U+00E1>m's problem or the improper Zn<U+00E1>m problem are [[prime number|prime]], their product is a [[primary pseudoperfect number]] (Butske et al. 2000); it is unknown whether infinitely many solutions of this type exist.
+
+== Examples ==
+
+One solution to ''k'' = 5 is {2, 3, 7, 47, 395}. A few calculations will show that
+
+:{|
+|align="right" | 3 &times; 7 &times; 47 &times; 395 || + 1 = || 389866, || &nbsp; || which is divisible by but unequal to 2,
+|-
+|align="right" | 2 &times; 7 &times; 47 &times; 395 || + 1 = || 259911, || &nbsp; || which is divisible by but unequal to 3,
+|-
+|align="right" | 2 &times; 3 &times; 47 &times; 395 || + 1 = || 111391, || &nbsp; || which is divisible by but unequal to 7,
+|-
+|align="right" | 2 &times; 3 &times; 7 &times; 395 || + 1 = || 16591, || &nbsp; || which is divisible by but unequal to 47, and
+|-
+|align="right" | 2 &times; 3 &times; 7 &times; 47 || + 1 = || 1975, || &nbsp; || which is divisible by but unequal to 395.
+|}
+
+An interesting "near miss" for ''k'' = 4 is the set {2, 3, 7, 43}, formed by taking the first four terms of Sylvester's sequence. It has the property that each integer in the set divides the product of the other integers in the set, plus 1, but the last member of this set is equal to the product of the first three members plus one, rather than being a proper divisor. Thus, it is a solution to the improper Zn<U+00E1>m problem, but not a solution to Zn<U+00E1>m's problem as it is usually defined.
+
+== Connection to Egyptian fractions ==
+
+Any solution to the improper Zn<U+00E1>m problem is equivalent (via division by the product of the ''x''<sub>''i''</sub>'s) to a solution to the equation
+:<math>\sum\frac1{x_i} + \prod\frac1{x_i}=y,</math>
+where ''y'' as well as each ''x''<sub>''i''</sub> must be an integer, and conversely any such solution corresponds to a solution to the improper Zn<U+00E1>m problem. However, all known solutions have ''y'' = 1, so they satisfy the equation
+:<math>\sum\frac1{x_i} + \prod\frac1{x_i}=1.</math>
+That is, they lead to an [[Egyptian fraction]] representation of the number one as a sum of [[unit fractions]]. Several of the cited papers on Zn<U+00E1>m's problem study also the solutions to this equation; Brenton and Hill (1988) describe an application of the equation in [[topology]], to the classification of [[Mathematical singularity|singularities]] on surfaces.
+
+== Number of solutions ==
+
+As Jan<U+00E1>k and Skula (1978) showed, the number of solutions for any ''k'' is finite, so it makes sense to count the total number of solutions for each ''k''.
+
+Brenton and Vasiliu calculated that the number of solutions for small values of ''k'', starting with ''k'' = 5, forms the sequence
+:[[2 (number)|2]], [[5 (number)|5]], [[15 (number)|15]], [[93 (number)|93]] {{OEIS|id=A075441}}.
+Presently, a few solutions are known for ''k'' = 9 and ''k'' = 10, but it is unclear how many solutions remain undiscovered for those values of ''k''.
+However, there are infinitely many solutions if ''k'' is not fixed:
+Cao and Jing (1998) showed that there are at least 39 solutions for each ''k'' <U+2265> 12, improving earlier results proving the existence of fewer solutions (Cao et al 1987; Sun and Cao 1988). Sun and Cao (1988) conjecture that the number of solutions for each value of ''k'' grows monotonically with ''k''.
+
+== References ==
+<div class="references-small" style="-moz-column-count:2; column-count:2;">
+* {{cite journal
+  | author = Barbeau, G. E. J.
+  | title = Problem 179
+  | journal = Canad. Math. Bull.
+  | volume = 14
+  | year = 1971
+  | issue = 1
+  | pages = 129}}
+
+* {{cite journal
+  | author = Brenton, Lawrence and Hill, Richard
+  | title = On the Diophantine equation 1=&Sigma;1/''n''<sub>''i''</sub> + 1/&Pi;''n''<sub>''i''</sub> and a class of homologically trivial complex surface singularities
+  | journal = [[Pacific Journal of Mathematics]]
+  | url = http://projecteuclid.org/Dienst/UI/1.0/Summarize/euclid.pjm/1102689567
+  | volume = 133
+  | issue = 1
+  | year = 1988
+  | pages = 41<U+2013>67
+  | id = {{MathSciNet | id = 0936356}}}}
+
+* {{cite journal
+  | author = Brenton, Lawrence and Vasiliu, Ana
+  | title = Zn<U+00E1>m's problem
+  | journal = [[Mathematics Magazine]]
+  | volume = 75
+  | pages = 3<U+2013>11
+  | year = 2002}}
+
+* {{cite journal
+  | author = Butske, William, Jaje, Lynda M., and Mayernik, Daniel R.
+  | title = On the equation <math>\scriptstyle\sum_{p|N}\frac{1}{p}+\frac{1}{N}=1</math>, pseudoperfect numbers, and perfectly weighted graphs
+  | journal = [[Mathematics of Computation]]
+  | volume = 69
+  | year = 2000
+  | pages = 407<U+2013>420
+  | url = http://www.ams.org/mcom/2000-69-229/S0025-5718-99-01088-1/home.html
+  | id = {{MathSciNet | id = 1648363}}}}
+
+* {{cite journal
+  | author = Cao, Zhen Fu; Jing, Cheng Ming
+  | title = On the number of solutions of Zn<U+00E1>m's problem
+  | journal = J. Harbin Inst. Tech.
+  | volume = 30
+  | year = 1998
+  | issue = 1
+  | pages = 46<U+2013>49
+  | id = {{MathSciNet | id = 1651784}}}}
+
+* {{cite journal
+  | author = Cao, Zhen Fu; Liu, Rui; Zhang, Liang Rui
+  | title = On the equation <math>\scriptstyle\sum^s_{j=1}(1/x_j)+(1/(x_1\cdots x_s))=1</math> and Zn<U+00E1>m's problem
+  | journal = [[Journal of Number Theory]]
+  | volume = 27
+  | year = 1987
+  | issue = 2
+  | pages = 206<U+2013>211
+  | id = {{MathSciNet | id = 0909837}}
+  | doi = 10.1016/0022-314X(87)90062-X}}
+
+* {{cite journal
+  | author = Jan<U+00E1>k, Jaroslav; Skula, Ladislav
+  | title = On the integers <math>\scriptstyle x_{i}</math> for which <math>\scriptstyle x_{i}|x_{1}\cdots x_{i-1}x_{i+1}\cdots x_{n}+1</math>
+  | journal = Math. Slovaca
+  | volume = 28
+  | year = 1978
+  | issue = 3
+  | pages = 305<U+2013>310
+  | id = {{MathSciNet | id = 0534998}}}}
+
+* {{cite journal
+  | author = Mordell, L. J.
+  | title = Systems of congruences.
+  | journal = Canad. Math. Bull.
+  | volume = 16
+  | year = 1973
+  | pages = 457<U+2013>462
+  | id = {{MathSciNet | id = 0332650}}}}
+ 
+* {{cite journal
+  | author = Skula, Ladislav
+  | title = On a problem of Zn<U+00E1>m
+  | format = Russian, Slovak summary
+  | journal = Acta Fac. Rerum Natur. Univ. Comenian. Math.
+  | volume = 32
+  | year = 1975
+  | pages = 87<U+2013>90
+  | id = {{MathSciNet | id = 0539862}}}}
+
+* {{cite journal
+  | author = Sun, Qi
+  | title = On a problem of <U+0160>. Zn<U+00E1>m
+  | journal = Sichuan Daxue Xuebao
+  | year = 1983
+  | issue = 4
+  | pages = 9<U+2013>12
+  | id = {{MathSciNet | id = 0750288}}}}
+
+* {{cite journal
+  | author = Sun, Qi; Cao, Zhen Fu
+  | title = On the equation <math>\scriptstyle\sum^s_{j=1}1/x_j+1/x_1\cdots x_s=n</math> and the number of solutions of Zn<U+00E1>m's problem
+  | journal = Northeastern Mathematics Journal
+  | volume = 4
+  | year = 1988
+  | issue = 1
+  | pages = 43<U+2013>48
+  | id = {{MathSciNet | id = 0970644}}}}
+</div>
+
+== External links ==
+
+* {{cite web
+  | author = Primefan
+  | url = http://www.geocities.com/primefan/ZnamProbSols.html
+  | title = Solutions to Zn<U+00E1>m's Problem}}
+
+* {{mathworld | title = Zn<U+00E1>m's Problem | urlname = ZnamsProblem}}
+
+<!-- future interwiki links:
+sk:Zn<U+00E1>movo problem
+sl:Zn<U+00E1>movo problem -->
+
+[[Category:Number theory]] [[Category:Integer sequences]]
+[[Category:Egyptian fractions]]

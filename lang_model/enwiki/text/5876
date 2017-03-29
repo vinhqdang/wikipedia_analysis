@@ -1,0 +1,35 @@
+A '''Low level windshear alert system''' (LLWAS) measures wind speed and direction at remote sensor station sites situated around an airport.
+
+Each equipped airport may have as few as 6 or as many as 32 remote [[anemometer]] stations. The remote sensor data received is transmitted to a master station, which generates warnings when [[wind shear|windshear]] or [[microburst]] conditions are detected. Current wind speed and direction data and warnings are displayed for approach controllers in the [[Terminal Radar Approach Control Facility]] (TRACON) and for ground controllers in the [[Air Traffic Control Tower]] (ATCT).
+
+[[Air Traffic Controllers]] (ATCs) relay the LLWAS runway specific alerts to pilots via voice radio communication. LLWAS alerts assist pilots during critical times when they must determine whether to attempt to land or take off in hazardous weather conditions.
+
+==Related activities in the United States==
+
+The original LLWAS system (LLWAS I) was developed by the [[Federal Aviation Administration]] (FAA) in 1976 in response to the 1975 [[Eastern Air Lines Flight 66]] windshear accident in New York. LLWAS I used a centerfield anemometer along with five pole mounted anemometers sited around the periphery of the airport. It was installed at 110 FAA towered airports between 1977 and 1987. Windshear was detected used a simple vector difference algorithm, triggering an alarm when the magnitude of the difference vector between the centerfield anemometer and any of the five remotes exceeded 15 knots. The LLWAS II deployment included software and hardware upgrades to the existing LLWAS I to improve the windshear detection. Between 1988 and 1991, all of the LLWAS I systems were also upgraded to be LLWAS II compliant. 
+
+The Low Level Windshear Alert System Relocation/Sustainment (LLWAS-RS) is intended to upgrade the current LLWAS at 40 LLWAS-2 operating sites and 4 support sites, to extend their service life another 20 years. The LLWAS-RS program is divided into two efforts: pole relocation and system sustainment. The program began in response to the [[National Transportation Safety Board]] (NTSB) investigation of the [[USAir Flight 1016]] accident at Charlotte, NC, in 1994. From that accident, a determination was made that LLWAS must regain and retain its original capability. Due to increased obstructions around remote station wind sensors and equipment obsolescence, the capability has been lost over the years.
+
+In 1993 the Federal Aviation Administration (FAA) began deploying two new wind shear detection systems: the [[Terminal Doppler Weather Radar]] (TDWR) and the third-generation Low Level Windshear Alert System (LLWAS 3).
+
+==See also==
+*[[Microburst]]
+*[[Weather radar]]
+{{met inst}}
+{{Met stat}}
+
+==References==
+{{refbegin}}
+{{cite journal
+|url=http://www.ll.mit.edu/AviationWeather/ne_llwas.pdf
+|title=STUDY OF NETWORK EXPANSION LLWAS (LLWAS-NE)FAULT IDENTIFICATION AND SYSTEM WARNING OPTIMIZATION THROUGH JOINT USE OF LLWAS-NE AND TDWR DATA 
+|last= Meyer
+|first=Darin R.
+|others=Mark A. Isaminger, and Erik A. Proseus
+|date=1999-01-10
+}}
+{{refend}}
+{{USGovernment|sourceURL=[http://www.tc.faa.gov/its/cmd/visitors/data/ACT-300/llwas.pdf Low Level Windshear Alert System <U+2013> Relocation/Sustainment (LLWAS-RS)]}}
+
+{{aviation-stub}}
+{{airport-stub}}

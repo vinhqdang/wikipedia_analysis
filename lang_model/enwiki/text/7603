@@ -1,0 +1,160 @@
+An '''embedded database''' system is a [[database management system]] (DBMS) which is tightly integrated with an [[application software]] that requires access to [[computer data storage|stored data]], such that the database system is "hidden" from the application<U+2019>s end-user and requires little or no ongoing maintenance. It is actually a broad technology category that includes database systems with differing [[application programming interface]]s ([[SQL]] as well as proprietary, native APIs); database architectures ([[client-server]] and in-process); storage modes (on-disk, [[in-memory database|in-memory]] and combined); [[database model]]s ([[relational database|relational]], [[object database|object-oriented]], [[entity<U+2013>attribute<U+2013>value model]] and network/[[CODASYL]]); and target markets. 
+
+The term ''embedded database'' can be confusing because only a small subset of embedded database products is used in [[real-time computing|real-time]] [[embedded system]]s such as [[telephone switch#Digital switches|telecommunications switches]] and [[consumer electronics]] devices.<ref>Graves, Steve.  [http://www.embedded-computing.com/articles/id/?2020 "COTS Databases For Embedded Systems"], ''Embedded Computing Design'' magazine, January, 2007. Retrieved on August 13, 2008.</ref> (See [[mobile database]] for small-footprint databasees that could be used on embedded devices.)
+
+== Implementations ==
+Major embedded database products include, in alphabetical order:
+[[Advantage Database Server]] from Sybase Inc., [[Berkeley DB]] from Oracle Corporation, [[CSQL]] from csqlcache.com, EffiPRoz from [http://www.EffiProz.com EffiProz Systems], [[ElevateDB]] from [http://www.elevatesoft.com Elevate Software, Inc.], Empress Embedded Database from [http://www.empress.com Empress Software], [[Extensible Storage Engine]] from Microsoft, [[eXtremeDB]] from McObject, [[Firebird (database server)|Firebird]] Embedded, [[HSQLDB]] from HSQLDB.ORG, [[Informix Dynamic Server]] (IDS) from IBM, [[InnoDB]] from Oracle Corporation, ITTIA DB from [http://www.ittia.com/products ITTIA], [[RDM Embedded]] and [[RDM Server]] from [http://www.raima.com/ Raima Inc.], [[SolidDB]] from IBM, [[SQLite]], [[SQL Server Compact]] from Microsoft Corporation, [[TurboDB]] from dataweb, [[Valentina (database)|Valentina DB]] from Paradigma Software, and [[VistaDB]] from VistaDB Software, Inc.
+
+== Comparisons of database storage engines ==
+
+===Accuracer Database System===
+[http://www.accuracer.com Accuracer Database System] from [http://www.aidaim.com AidAim Software] is a compact, embedded, single-file, multi-user (file-server and client-server) x86 and x64 [[Microsoft Windows]] and [[Linux]] cross-platform [[DBMS]] with [[SQL]] database engine released as independent packages for different IDEs and [[ODBC]] [[API]] as a [[dynamic-link library|DLL]] for Windows. Accuracer Database System supports [[Embarcadero Technologies|Embarcadero]] [[Embarcadero Delphi|Delphi]], [[C++Builder]], and Borland [[Kylix (software)|Kylix]] IDEs from the old versions to the newest ones. Accuracer Database System has [[Bold for Delphi]] support, a number of modules for visual query building, Manager, SQLConsole, as well as other utilities with full source code, and Accuracer Database Server, a server application for Microsoft Windows. Accuracer Database System provides wide set of [[data compression]] and [[symmetric-key algorithm|encryption]] modes for network traffic in client-server mode as well as for a database file. Database file in Accuracer format can be compiled into [[EXE]] and accessed in read-only mode. All Accuracer Database System products, commercial and free, are released under royalty-free licenses.
+
+===Advantage Database Server===
+{{main|Advantage Database Server}}
+Sybase's Advantage Database Server (ADS) is a full-featured embedded database management system. It provides both ISAM and relational data access and is compatible with multiple platforms including Windows, Linux, and Netware. It is available as a royalty-free local file-server database or a full client-server version.  ADS has been around for many years and is highly scalable, with no administration, and has support for a variety of IDEs including [[.NET Framework]] (.NET), [[Object Pascal]] (Delphi), [[Visual FoxPro]] (FoxPro), [[PHP]], [[Visual Basic]] (VB), [[Visual Objects]] (VO), [[Vulcan (programming language)|Vulcan]], [[Clipper (programming language)|Clipper]], [[Perl]], [[Java (programming language)|Java]], [[xHarbour]], etc.
+
+===Apache Derby===
+{{main|Apache Derby}}
+Derby is an embeddable SQL engine written entirely in Java. Fully
+transactional, multi-user with a decent SQL subset, Derby is a mature
+engine and freely available under the Apache license and is actively
+maintained. [http://db.apache.org/derby Derby project page]. It is also
+distributed as part of Oracle's Java SE Development Kit (JDK) under the name of Java DB.
+
+===csharp-sqlite===
+C#-SQLite is a port of the [[SQLite]] embedded SQL database engine, versionn 3.7.7.1, from the original native C into fully managed C#. The port is complete aside from some minor optional features of SQLite. [http://code.google.com/p/csharp-sqlite/ csharp-sqlite project page]
+
+===CSQL===
+CSQL is an open source transactional, persistent in-memory SQL database engine.[http://sourceforge.net/projects/csql csql project page]
+
+===EffiProz===
+Effiproz is a transactional, persistent in-memory SQL database engine written entirely in C#. SQL features include SQL Stored Procedures, Functions, Triggers,etc. Support .NET Framework 3.5, Silverlight 3 and .NET Compact Framework.[http://effiproz.codeplex.com/ EffiProz project page]
+
+===ElevateDB===
+ElevateDB is a royalty-free, [[SQL:2003]]-compliant, compact, embedded database engine available for Delphi (Win32), C++Builder (Win32), [[Lazarus (IDE)|Lazarus]] (Win32/WinCE), [[Visual Studio]] (.NET and .NET CF), and any ODBC-compliant application.  Under [[Delphi]], Lazarus, and C++Builder, ElevateDB can be compiled directly into the application, whereas under .NET it is one assembly and the ODBC driver is implemented as one .DLL.  ElevateDB operates in single-user, multi-user file-sharing, and client-server modes, and includes the ElevateDB Server for client-server operation.
+
+===Embedded InnoDB===
+{{main|InnoDB}}
+[http://www.innodb.com/wp/products/embedded-innodb/ Embedded InnoDB] is a standalone, embeddable form of the InnoDB Storage Engine.  Given that Embedded InnoDB is based on the same code base as the InnoDB Storage Engine, it contains many of the same features: high-performance and scalability, [[multiversion concurrency control]] (MVCC), row-level locking, deadlock detection, fault tolerance, automatic crash recovery, etc.  However, because the embedded engine is completely independent from MySQL, it lacks server components such as networking, object-level permissions, etc.  By eliminating the MySQL server overhead, InnoDB has a small footprint and is well-suited for embedding in applications which require high-performance and concurrency.  As with most embedded database systems, Embedded InnoDB is designed to be accessed primarily with an ISAM-like C API rather than SQL (though an extremely rudimentary SQL variant is supported).
+
+Embedded InnoDB has not seen any product updates since 2009 (and downloads currently seem to be broken), but a non-Oracle maintained fork exists with [http://www.haildb.com/ HailDB].
+
+===Empress Embedded Database===
+{{main|Empress Embedded Database}}
+Empress Software, Inc., developer of the [http://www.empress.com Empress Embedded Database], is a privately held company founded in 1979. Empress Embedded Database is a full-function, relational database that has been embedded into applications by organizations small to large, with deployment environments including medical systems, network routers, nuclear power plant monitors, satellite management systems, and other embedded system applications that require reliability and power.<ref>Mullins, Craig. [http://www.craigsmullins.com/Mullins-Embedded.pdf  "Empress Offers an Effective Embedded Database Solution"], 2005. Retrieved on 2008-12-09</ref> Empress is an [[ACID]] compliant, [[SQL]] database engine with C, [[C++]], Java, [[JDBC]], ODBC, [[SQL]], [[ADO.NET]] and kernel level [[API]]s. Applications developed using these APIs may be run in standalone and/or server modes.  Empress Embedded Database runs on Linux, [[Unix]], Microsoft Windows and [[real-time operating system]]s.
+
+===Extensible Storage Engine===
+{{main|Extensible Storage Engine}}
+ESE is an Indexed Sequential Access Method (ISAM) data storage technology from Microsoft. ESE is notably a core of Microsoft Exchange Server and Active Directory. Its purpose is to allow applications to store and retrieve data via indexed and sequential access. Windows Mail and Desktop Search in the Windows Vista operating system also make use of ESE to store indexes and property information respectively.
+
+===eXtremeDB===
+{{main|eXtremeDB}}
+McObject launched [[eXtremeDB]] as the first in-memory embedded database designed from scratch for real-time embedded systems. The initial product was soon joined by eXtremeDB High Availability (HA) for [[fault tolerant]] applications. The product family now includes 64-bit and [[transaction log]]ging editions, and the hybrid eXtremeDB Fusion, which combines in-memory and on-disk data storage. In 2008, McObject introduced eXtremeDB Kernel Mode, the first embedded DBMS designed to run in an operating system [[kernel (computing)|kernel]].<ref>Gorine, Andrei and Krivolapov, Alexander. [http://www.ddj.com/database/207401567/ "Kernel Mode Databases: A DBMS Technology For High-Performance Applications"], ''Dr. Dobb's Journal'', April, 2008.  Retrieved on August 13, 2008.</ref> Today, eXtremeDB is used in millions of real-time and embedded systems worldwide. McObject also offers [[Perst]], an [[open source]], object-oriented embedded database for Java, [[Java ME]], .NET, [[.NET Compact Framework]] and [[Silverlight]].
+
+===Firebird Embedded===
+{{main|Firebird (database server)}}
+Firebird Embedded is a relational database engine. It's an open source fork of InterBase, is [[ACID]] compliant, supports triggers and stored procedures, and is available on Linux and Win32/Win64 systems. It has the same features as the classic and superserver version of Firebird, two or more  threads (and applications) can access the same database at the same time starting with Firebird 2.5. So Firebird embedded acts as a local server for one threaded client accessing its databases (that means it works properly for ASP.NET web applications, because there, each user has its own thread, which means two users could access the same database at the same time, but they would not be in the same thread, because ASP.NET opens a new thread for each user). It exports the standard Firebird API entrypoints. The main advantage of Firebird embedded databases is, that unlike SQlite or Access databases, they can be plugged-in to a full Firebird server without any modifications at all also is multiplatform (runs on Linux, OS X with full asp.net mono support)
+
+===H2===
+{{main|H2_(DBMS)}}
+Written in Java Open source very fast database engine. Embedded and Server mode, Clustering support, can run inside the [[Google App Engine]]. Supports encrypted database files (AES or XTEA). The development of H2 was started in May 2004, but it was first published on December 14th 2005. H2 is dual licensed and available under a modified version of the MPL 1.1 (Mozilla Public License) or under the (unmodified) EPL 1.0 (Eclipse Public License).
+
+===HamsterDB===
+
+[http://hamsterdb.com/ HamsterDB] is a non-relational library for persistent and ephemeral (cached) record storage. Native support exists for transactions, compressing, and encrypting data. HamsterDB provides a native API for C and C++. API wrappers exist for Java, Python, .NET languages, and Erlang. HamsterDB is available under the GPL (with an exception for linking to other free, open-source code) and commercial licensing. It is also possible to use HamsterDB as a network-accessed (non-embedded) database.
+
+===HSQLDB===
+{{main|HSQLDB}}
+HSQLDB is an opensource [[relational database management system]] with a BSD-like license that runs in the same Java Virtual Machine as the embedded application. HSQLDB supports a variety of in-memory and disk-based table modes, Unicode and SQL:2008.
+
+===HSS Database===
+{{main|HSS Database}}
+The HSS Database by HighSpeed-Solutions, is a client/embedded, zero-configuration, auto schema evolution, acid/transactional, LINQ Database engine with a common API for all platforms - MonoTouch, Mono for Android, .NET 4/4.5, Windows 8, Windows Phone 7.5/8 and Silverlight 5.
+
+===InfinityDB===
+{{main|InfinityDB}}
+
+InfinityDB is an all Java B+Tree Database Engine that is embeddable in the smallest to the largest applications that run on hand held devices, workstations, servers, or in distributed systems. InfinityDB provides a data integrity guarantee through all non-media failures, provides a simple API with only a few basic methods, and requires no administrative support. Version 2 offers full ACID transactionality without a log and with fine-grained locks. Programmers can superimpose their own data model, or employ the entity<U+2013>attribute<U+2013>value model, by direct low-level access. The basic engine provides multi-valued or set attributes, all primitive Java types, unlimited large objects, heterogenous values, composite keys (Entities) and values, and unlimited sparse attributes, all extensible in-place with no schema changes.
+
+===Informix Dynamic Server===
+{{main|Informix Dynamic Server}}
+Informix Dynamic Server (IDS) is characterized as an ''enterprise class embeddable database server'', combining embeddable features such as low footprint, programmable and autonomic capabilities with enterprise class database features such as high availability and flexible replication features.<ref>[http://www-01.ibm.com/software/data/informix/embed/benefits.html "Embedding Informix Dynamic Server"], Retrieved on August 30, 2009.</ref> IDS is used in deeply embedded scenarios such as IP telephony call-processing systems, point of sale applications and financial transaction processing systems.
+
+===InterBase===
+{{main|InterBase}}
+InterBase is a cross-platform, Unicode enabled SQL database platform able to be embedded within turn-key applications. Out of the box SMP support (Server Edition), SQL 92 compliance and support for Windows, Linux, Solaris, and Macintosh platforms.  Ideal for small-to-medium enterprises.
+
+===ITTIA DB===
+ITTIA DB is a cross-platform embedded database for embedded system and intelligent mobile device software developers. ITTIA DB is a true [[relational database management system]], supporting runtime [[SQL]] queries, [[Isolation (database systems)|isolation levels]], [[write ahead logging]], and [[B+ tree]] indexes. To support the wide variety of operating systems and hardware used in embedded development, ITTIA DB databases use a portable format that can be accessed with or without SQL through [[C (programming language)|C]] and C++ [[application programming interface]]s (API). Disk, [[in-memory database|memory]], and hybrid databases are supported.
+
+===Kyoto Cabinet===
+[http://fallabs.com/kyotocabinet/ Kyoto Cabinet] is a straightforward implementation of a [[dbm]], it compares well to Oracle Berkeley DB, but on large datasets fails more gracefully, it is released under the GPL (with commercial licensing available) by Mikio Hirabayashi in 2009.
+
+===LevelDB===
+{{main|LevelDB}}
+LevelDB is an ordered [[NoSQL#Key.E2.80.93value_store|key/value store]] created by [[Google]] as a lightweight implementation of the [[BigTable]] storage design. As a library (which is the only way to use LevelDB), its native API is C++. It also includes official C wrappers for most functionality. Third-party API wrappers exist for [http://code.google.com/p/py-leveldb/ Python], [http://pecl.php.net/package/leveldb PHP], [https://github.com/jmhodges/levigo Go] ([http://code.google.com/p/leveldb-go/ pure Go LevelDB implementation] exists but is in progress still), and Objective C. Google distributes LevelDB under the [[BSD_licenses#3-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29|New BSD License]].
+
+===LightningDB===
+{{main|Lightning Memory-Mapped Database}}
+[[Lightning Memory-Mapped Database|LightningDB]] is a memory-mapped database developed by [http://www.symas.com Symas] for the [[OpenLDAP]] Project. It is written in C and the API is modeled after the [[Berkeley DB]] API, though much simplified. The library is extremely compact, compiling down to under 40KB of x86 object code, corruption proof, and orders of magnitude faster, more robust, more scalable, and more efficient than similar libraries like [[Berkeley DB]], [[LevelDB]], etc. The library implements B+trees with [[multiversion concurrency control]] (MVCC), [[Single_level_store]], [[Copy_on_write]] and provides full [[ACID]] transactions with no deadlocks. The library is optimized for high read concurrency; readers need no locks at all. Readers don't block writers and writers don't block readers, so read performance scales perfectly linearly across arbitrarily many threads and CPUs. Third-party wrappers exist for [http://code.google.com/p/libglim/source/browse/trunk/mdb.hpp C++], [https://github.com/alepharchives/emdb Erlang] and [https://github.com/dw/py-lmdb Python]. Lightning DB is distributed by the OpenLDAP Project under the OpenLDAP Public License. As of 2013 the OpenLDAP Project is deprecating the use of Berkeley DB, in favor of LightningDB.
+
+===MySQL Embedded Server Library===
+{{main|MySQL}}
+The [http://dev.mysql.com/doc/refman/5.5/en/libmysqld.html libmysqld, MySQL Embedded Server Library] provides [http://dev.mysql.com/doc/refman/5.5/en/libmysqld-restrictions.html most of the features] of regular MySQL as a linkable library that can be run in the context of a client process. After initialization clients can use the same C API calls as when talking to a separate MySQL server but with less communication overhead and with no need for a separate database process.
+
+===NexusDB===
+{{main|NexusDB}}
+NexusDB is the commercial successor to the [http://sourceforge.net/projects/tpflashfiler/ FlashFiler] database which is now open source. They can both be embedded in Delphi applications to create stand-alone executables with full database functionality.
+
+===Oracle Berkeley DB===
+{{main|Berkeley DB}}
+As the name implies, Oracle<U+2019>s embedded database is actually [[Berkeley DB]], which Oracle acquired from Sleepycat Software. It was originally developed at the University of California.<ref>See [[Berkeley DB]]</ref> Berkeley DB is a fast, open-source embedded database and is used in several well-known open-source products, including the Linux and BSD Unix operating systems, Apache Web server, OpenLDAP directory, OpenOffice productivity suite.<ref>Niccolai, James. [http://www.infoworld.com/article/06/02/14/75352_HNoraclebuyssleepycat_1.html "Update: Oracle Buys Sleepycat open-source database vendor"], "InfoWorld", 2006-02-14.  Retrieved on June 12, 2008.</ref> 
+
+===RDM Embedded===
+{{main|RDM Embedded}}
+RDM Embedded, produced by [[Raima]] was one of the first database management systems to be categorized as an ''embedded database'' when it made its debut in 1984 under the name db_Vista. According to Raima's definition, the product is ''embedded'' in two senses: first, it is embedded within an application, becoming an extension to the application, second, it is possible to use it in embedded computer/OS or real-time environments because of its small footprint and efficient operation. Its APIs (for C/C++ and SQL) have been designed to support the limited resources of embedded environments. Since its initial release, RDM Embedded has been continually evolving and is currently released as version 10.1. Today Raima produces two products under the product names [[RDM Embedded]] and [[RDM Server]].
+
+===ScimoreDB===
+{{main|ScimoreDB}}
+Scimore is an embedded database running on Windows. It performs fast and can easily handle millions of rows. This database provides full data reliability (ACID properties), manages heavy loads and includes features such as support for T-SQL, Read/Merge replication with [[ScimoreDB]] server, [[full text search]]. Clients can access database via .NET provider or C++ library.
+
+===SolidDB===
+{{main|SolidDB}}
+IBM's SolidDB is another embedded database bought by a large technology company.  Originally owned by Solid Information Technology, SolidDB was acquired in January 2008 by IBM.<ref>IBM Corp. [http://www-306.ibm.com/software/data/info/solidinformation/].  Retrieved on June 12, 2008.</ref>  SolidDB is a hybrid disk/in-memory, relational database and is historically used as an embedded system database in telecommunications equipment, network software, and similar systems.<ref>Monash, Curt. [http://www.dbms2.com/2007/12/21/ibm-acquires-soliddb/  "IBM acquires SolidDB to compete with Oracle TimesTen"] "DBMS2", 2007-12-21.  Retrieved on June 12, 2008.</ref>
+
+===SQLite===
+{{main|SQLite}}
+SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed SQL database engine in the world. The source code, chiefly C, for SQLite is in the public domain. Includes both a native C library and a simple command line client for its database. It is embedded in the Google Android smart phone operating system.
+
+===SQL Server Compact===
+{{main|SQL Server Compact}}
+Microsoft's SQL Server Compact is an embedded database with wide variety of features like multi-process connections, T-SQL, ADO.NET Sync Services to sync with any back end database, Merge Replication with SQL Server, Programming API: LINQ to SQL, LINQ to Entities, ADO.NET.  The product runs on both Desktop and Mobile Windows platforms. It has been in the market for long time, used by many enterprises in production software ([http://www.microsoft.com/sql/prodinfo/casestudies/cs-mobile.mspx Case Studies]).  The product went through multiple re-brandings and was known with multiple names like: SQL CE, SQL Server CE, SQL Server Mobile, SQL Mobile.
+
+===TurboDB===
+{{main|TurboDB}}
+[http://www.dataweb.de/en/products/embedded_databases.html TurboDB] is the family name for various embedded in-process SQL database engines by dataweb. TurboDB for VCL is an implementation in Delphi and can be used as a compatible database replacement with additional features like transactions and full-text search. If it becomes necessary, a client for the embedded engine can easily be upgraded to the server version. TurboDB for ODBC is based on the Delphi implementation and can be accessed via the ODBC interface while still being an in-process database. TurboDB for .NET is implemented in C# and can be used with .NET Framework, .NET Compact Framework, Silverlight and Windows Phone.
+
+===Valentina DB===
+{{main|Valentina (database)}}
+Paradigma Software Valentina DB is an embedded SQL database with wide variety of features, including broad support for native implementations on Windows, Linux and Mac OS X. It is available as a local engine for over 18 platforms. Developers can also use VDN to deploy a royalty free Embedded Server on Windows, Linux and Mac OS X, which also natively supports PHP and Ruby-on-Rails server side scripting.
+
+===VistaDB===
+{{main|VistaDB}}
+VistaDB is an embedded SQL database written entirely in C# and supports a number of features to make it compatible with SQL Server like T-SQL datatypes and syntax.  The product runs on .NET platforms, including [[Mono (software)|Mono]]. It has been in the market since 2004, and is used by many companies ([http://vistadb.net/customers.aspx Customer List]).
+
+VistaDB was acquired by [[Gibraltar Software]] as of [http://www.prweb.com/releases/2010/09/prweb4516664.htm September 15, 2010].
+
+==See also==
+* [[In-memory database]], main memory database
+* [[Mobile database]]
+
+== References ==
+<references/>
+
+{{DEFAULTSORT:Embedded Database}}
+[[Category:Embedded databases| ]]
+
+[[de:Eingebettetes Datenbanksystem]]
+[[ru:<U+0412><U+0441><U+0442><U+0440><U+0430><U+0438><U+0432><U+0430><U+0435><U+043C><U+0430><U+044F> <U+0421><U+0423><U+0411><U+0414>]]

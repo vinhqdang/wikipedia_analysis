@@ -1,0 +1,244 @@
+[[Image:Lrec 17-1.png|400px|thumb|right|A diffraction pattern of a gold nanocrystal formed from using a nano area beam of coherent X-rays. This reciprocal space diffraction image was taken by Ian Robinson's Group to be used in the reconstruction of a real space coherent x-ray diffraction image in 2007.]]
+
+'''Coherent diffractive imaging''' ('''CDI''') also '''coherent diffraction imaging''' is a <U+201C>lensless<U+201D> technique for 2D or 3D reconstruction of the image of nanoscale structures such as nanotubes,<ref name=zuo>{{cite journal 
+|author= JM Zuo, I Vartanyants, M Gao, R Zhang, LA Nagahara 
+|year=2003 
+|title=Atomic Resolution Imaging of a Carbon Nanotube from Diffraction Intensities 
+|journal=Science  
+|volume= 300
+|issue= 
+|pages=1419  
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref> nanocrystals,<ref name=vartanyants2005>{{cite journal 
+|author= IA Vartanyants, IK Robinson, JD Onken, MA Pfeifer, GJ Williams, F Pfeiffer, H Metzger, Z Zhong, G Bauer 
+|year=2005
+|title=Coherent x-ray diffraction from Quantum dots 
+|journal=Phys. Rev. B
+|volume= 71
+|issue= 
+|pages=245302 
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref> defects,<ref name=pfeifer>{{cite journal 
+|author= M Pfeifer, GJ Williams, IA Vartanyants, R Harder, IK Robinson
+|year=2006
+|title=Three-dimensional mapping of a deformation field inside a nanocrystal
+|journal=Nature Lett.
+|volume= 442
+|issue= 
+|pages=63<U+2013>66
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref> potentially proteins,<ref name=marchesini>{{cite journal 
+|author= S Marchesini, HN Chapman, SP Hau-Riege, RA London, A Szoke, H He, MR Howells, H Padmore, R Rosen, JCH Spence, U Weierstall
+|year=2003
+|title=Coherent X-ray diffractive imaging: applications and limitations
+|journal=Optics Express
+|volume= 11
+|issue= 19
+|pages=2344
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref> and more.<ref name=marchesini /> In CDI, a highly coherent beam of [[x-rays]], [[electron]]s or other wavelike particle or photon is incident on an object. The beam scattered by the object produces a [[diffraction pattern]] downstream which is then collected by a detector. This recorded pattern is then used to reconstruct an image via an iterative feedback algorithm. Effectively, the objective lens in a typical microscope is replaced with software to convert from the reciprocal space diffraction pattern into a real space image. The advantage in using no lenses is that the final image is aberration<U+2013>free and so resolution is only diffraction and dose limited (dependent on [[wavelength]], aperture size and exposure). A simple [[Fourier transform]] retrieves only the intensity information and so is insufficient for creating an image from the diffraction pattern due to the phase problem.
+
+== The phase problem ==
+{{main|phase problem}}
+
+There are two relevant parameters for diffracted waves: amplitude and phase. In typical microscopy using lenses there is no phase problem, as phase information is retained when waves are refracted. When a diffraction pattern is collected, the data is described in terms of absolute counts of photons or electrons, a measurement which describes amplitudes but loses phase information. This results in an ill-posed [[inverse problem]] as any phase could be assigned to the amplitudes prior to an inverse Fourier transform to real space.
+
+Three ideas developed that enabled the reconstruction of real space images from diffraction patterns.<ref name=marchesini /> The first idea was the realization by Sayre in 1952 that Bragg diffraction under-samples diffracted intensity relative to Shannon<U+2019>s theorem.<ref name=sayre1952>{{cite journal 
+|author= D Sayre
+|year=1952
+|title=Some implications of a theorem due to Shannon
+|journal=Acta Cryst.
+|volume= 5
+|issue= 
+|pages= 843 
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref> If the diffraction pattern is sampled at twice the Nyquist frequency (inverse of sample size) or lower it can yield a unique real space image.<ref name=vartanyants2005/> The second was an increase in computing power in the 1980s which enabled iterative [[Hybrid input output (HIO) algorithm for phase retrieval]] to optimize and extract phase information using adequately sampled intensity data with feedback. This method was introduced<ref name=pfeifer/> by Fienup in the 1980s.<ref name=fienup>{{cite journal 
+|author= JR Fienup
+|year=1987
+|title=Reconstruction of a complex-valued object from the modulous of its Fourier transform using a support constraint
+|journal=J. Opt. Soc. Am. A
+|volume= 4
+|issue= 
+|pages= 118<U+2013>123 
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref> Finally, the development of <U+201C>phase recovery<U+201D> algorithms led to the first demonstration<ref name=marchesini /> of CDI in 1999 by Miao.<ref name=miao>{{cite journal 
+|author= J Miao, P Charalambous, J Kirz, D Sayre 
+|year=1999
+|title=Extending the methodology of x-ray crystallography to allow imaging of micromere-sized non-crystalline specimens
+|journal=Nature 
+|volume= 400
+|issue= 
+|pages=342<U+2013>344
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref>
+
+[[Image:DWCNT CDI Reconstruction.png|800px|thumb|center|A simulated double wall nanotube (n1,m1)(n2,m2) can be used to test a CDI algorithm. First, a simulated nanotube is created (left) given the chiral numbers, (26,24)(35,25) in this case. Then a diffraction pattern is created by using the power spectrum function in Digital Micrograph software (middle). Finally, the algorithm is tested by reconstructing a final image (right). This work was performed by Ji Li and Jian-Min Zuo in 2007.]]
+
+== Reconstruction ==
+
+In a typical reconstruction<ref name=vartanyants2005/> the first step is to generate random phases and combine them with the amplitude information from the reciprocal space pattern. Then a Fourier transform is applied back and forth to move between real space and reciprocal space with the modulus squared of the diffracted wave field set equal to the measured diffraction intensities in each cycle. By applying various constraints in real and reciprocal space the pattern evolves into an image after enough iterations of the HIO process. To ensure reproducibility the process is typically repeated with new sets of random phases with each run having typically hundreds to thousands of cycles.<ref name=vartanyants2005/><ref name=spence>{{cite journal 
+|author= JCH Spence, U Weierstall, M Howells
+|year= 2004
+|title= Coherence and sampling requirements for diffractive imaging
+|journal= Ultramicroscopy  
+|volume= 101 
+|issue=  
+|pages= 149<U+2013>152
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref> The constraints imposed in real and reciprocal space typically depend on the experimental setup and the sample to be imaged. The real space constraint is to restrict the imaged object to a confined region called the <U+201C>support.<U+201D> For example, the object to be imaged can be initially assumed to reside in a region no larger than roughly the beam size. In some cases this constraint may be more restrictive, such as in a periodic support region for a uniformly spaced array of quantum dots.<ref name=vartanyants2005/> Other researchers have investigated imaging extended objects, that is, objects that are larger than the beam size, by applying other constraints.<ref name=baghaei2008>{{cite journal 
+|author=Leili Baghaei, Ali Rad, Bing Dai, Diling Zhu, Andreas Scherz, Jun Ye, Piero Pianetta, and R. Fabian W. Pease 
+|year= 2008
+|title= X-ray diffraction microscopy: Reconstruction with partial magnitude and spatial a priori information
+|journal= J. Vac. Sci. Technol. B  
+|volume= 26  
+|issue=  
+|pages= 2362 
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref><ref name=baghaei2009>{{cite journal 
+|author= Baghaei, Leili;   Rad, Ali;   Dai, Bing;   Pianetta, Piero;   Miao, Jianwei;   Pease, R. Fabian W.
+|year= 2009
+|title= Iterative phase recovery using wavelet domain constraints
+|journal= J. Vac. Sci. Technol. B 
+|volume= 27
+|issue=  
+|pages= 
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref>
+
+In most cases the support constraint imposed is a priori in that it is modified by the researcher based on the evolving image. In theory this is not necessarily required and algorithms have been developed<ref name=spence/> which impose an evolving support based on the image alone using an auto-correlation function. This eliminates the need for a secondary image (support) thus making the reconstruction autonomic.
+
+The diffraction pattern of a perfect crystal is symmetric so the inverse Fourier transform of that pattern is entirely real valued. The introduction of defects in the crystal leads to an asymmetric diffraction pattern with a complex valued inverse Fourier transform. It has been shown<ref name=vartanyants2001>{{cite journal 
+|author= IA Vartanyants, IK Robinson
+|year= 2001
+|title=Partial coherence effects on the imaging of small crystals using coherent X-ray diffraction 
+|journal=J. Phys. Condensed Matter  
+|volume= 13 
+|issue=  
+|pages= 10593<U+2013>10611
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref> that the crystal density can be represented as a complex function where its magnitude is electron density and its phase is the <U+201C>projection of the local deformations of the crystal lattice onto the reciprocal lattice vector Q of the Bragg peak about which the diffraction is measured<U+201D>.<ref name=pfeifer/> Therefore, it is possible to image the strain fields associated with crystal defects in 3D using CDI and it has been reported<ref name=pfeifer/> in one case. Unfortunately, the imaging of complex-valued functions (which for brevity represents the strained field in crystals) is accompanied by complementary problems namely, the uniqueness of the solutions, stagnation of the algorithm etc. However, recent developments that overcame these problems (particularly for patterned structures) were addressed.<ref name=minkevich2007>{{cite journal 
+|author=A. A. Minkevich, M. Gailhanou, J.-S. Micha, B. Charlet, V. Chamard, and O. Thomas 
+|year= 2007
+|title= Inversion of the diffraction pattern from an inhomogeneously strained crystal using an iterative algorithm
+|journal= Phys. Rev. B 
+|volume= 76  
+|issue= 
+|pages= 104106 
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref><ref name=minkevich2008>{{cite journal 
+|author= A. A. Minkevich, T. Baumbach, M. Gailhanou, and O. Thomas
+|year= 2008
+|title= Applicability of an iterative inversion algorithm to the diffraction patterns from inhomogeneously strained crystals
+|journal= Phys. Rev. B
+|volume= 78
+|issue=  
+|pages= 174110
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref> On the other hand, if the diffraction geometry is insensitive to strain, such as in GISAXS, the electron density will be real valued and positive.<ref name=vartanyants2005/> This provides another constraint for the HIO process, thus increasing the efficiency of the algorithm and the amount of information that can be extracted from the diffraction pattern.
+
+== Coherence ==
+
+Clearly a highly coherent beam of waves is required for CDI to work since the technique requires interference of diffracted waves. Coherent waves must be generated at the source (synchrotron, field emitter, etc.) and must maintain coherence until diffraction. It has been shown<ref name=spence/> that the coherence width of the incident beam needs to be approximately twice the lateral width of the object to be imaged. This result is because Shannon sampling has twice the spatial period of Bragg sampling. As the coherence width is decreased, the size of the Bragg peaks in reciprocal space grows and they begin to overlap leading to decreased image resolution.
+
+== Diffraction imaging techniques ==
+
+'''Coherent x-ray diffraction imaging''' ('''CXDI''' or '''CXD''') uses x-rays (typically .5-4kV)<ref name=marchesini/> to form a diffraction pattern which may be more attractive for 3D applications than electron diffraction since x-rays typically have better penetration. For imaging surfaces, the penetration of X-rays may be undesirable, in which case a glancing angle geometry may be used such as GISAXS.<ref name=vartanyants2005/> A typical x-ray CCD is used to record the diffraction pattern. If the sample is rotated about an axis perpendicular to the beam a 3-Dimensional image may be reconstructed.<ref name=spence/>
+
+Due to radiation damage,<ref name=marchesini/> resolution is limited (for continuous illumination set-ups) to about 10&nbsp;nm for frozen-hydrated biological samples but resolutions of as high as 1 to 2&nbsp;nm should be possible for inorganic materials less sensitive to damage (using modern synchrotron sources). It has been proposed<ref name=marchesini/> that radiation damage may be avoided by using ultra short pulses of x-rays where the time scale of the destruction mechanism is longer than the pulse duration. This may enable higher energy and therefore higher resolution CXDI of organic materials such as proteins. However, without the loss of information <U+201C>the linear number of detector pixels fixes the energy spread needed in the beam<U+201D><ref name=spence/> which becomes increasingly difficult to control at higher energies.
+
+In a 2006 report,<ref name=pfeifer/> resolution was 40&nbsp;nm using the Advanced Photon Source (APS) but the authors suggest this could be improved with higher power and more coherent X-ray sources such as the X-ray free electron laser.
+
+[[Image:CNT CDI Reconstruction.png|400px|thumb|right|Simulated single wall carbon nanotube (left) is used to generate a diffraction pattern (middle) for reconstruction (right) algorithm testing. The top and bottom are different chirality tubes. This work was performed by Ji Li and Jian-Min Zuo in 2007.]]
+
+'''Coherent electron diffraction imaging''' works the same as CXDI in principle only electrons are the diffracted waves and an imaging plate is used to detect electrons rather than a CCD. In one published report<ref name=zuo/> a double walled carbon nanotube (DWCNT) was imaged using '''nano area electron diffraction''' ('''NAED''') with atomic resolution. In principle, electron diffraction imaging should yield a higher resolution image because the wavelength of electrons can be much smaller than photons without going to very high energies. Electrons also have much weaker penetration so they are more surface sensitive than X-rays. However, typically electron beams are more damaging than x-rays so this technique may be limited to inorganic materials.
+
+In Zuo<U+2019>s approach,<ref name=zuo/> a low resolution electron image is used to locate a nanotube. A field emission electron gun generates a beam with high coherence and high intensity. The beam size is limited to nano area with the condenser aperture in order to ensure scattering from only a section of the nanotube of interest. The diffraction pattern is recorded in the far field using electron imaging plates to a resolution of 0.0025 1/<U+00C5>. Using a typical HIO reconstruction method an image is produced with <U+00C5> resolution in which the DWCNT chirality (lattice structure) can be directly observed. Zuo found that it is possible to start with non-random phases based on a low resolution image from a [[Transmission electron microscopy|TEM]] to improve the final image quality.
+
+In 2007, Podorov ''et al.'' <ref name=podorov>{{cite journal 
+|author= S. G. Podorov, K. M. Pavlov, and D. M. Paganin
+|year= 2007
+|title= A non-iterative reconstruction method for direct and unambiguous coherent diffractive imaging
+|journal=Optics Express  
+|volume= 15 
+|issue= 16 
+|pages= 9954<U+2013>9962
+|publisher= 
+|doi= 
+|pmid= 
+|pmc= 
+|url= 
+|accessdate= }}</ref> proposed an exact analytical solution of CDXI problem for particular cases.
+
+== See also ==
+* [[Diffraction]]
+* [[Diffraction Tomography]]
+* [[List of materials analysis methods]]
+* [[Nanotechnology]]
+* [[Surface Physics]]
+* [[Synchrotron]]
+
+== References ==
+<references />
+
+== External links ==
+* [http://groups.mrl.uiuc.edu/robinson/index.html Ian Robinson X-Ray Studies Group Page]
+* [http://cbed.mse.uiuc.edu/ Jian-Min (Jim) Zuo Electron Microscopy Group Page]
+
+[[Category:Diffraction]]
+[[Category:Materials science]]
+[[Category:Microscopes]]
+[[Category:Microscopy]]
+[[Category:Nanotechnology]]
+[[Category:Scientific techniques]]

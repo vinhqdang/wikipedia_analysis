@@ -1,0 +1,427 @@
+{{hatnote|This article covers only the basic notions related to groups. More advanced facets, [[applications of group theory|applications]] and [[history of group theory]] are treated in [[group theory]].}}
+[[Image:Rubik's cube.svg|thumb|right|200px|The possible rearrangements of [[Rubik's Cube]] form a group, called the [[Rubik's Cube group]].]]{{Groups}}
+A '''group''' is one of the fundamental objects of study in the field of [[mathematics]] known as [[abstract algebra]], and more specifically [[group theory]].<ref>[[#CITEREFHerstein1975|Herstein 1975]], section 2, p. 26.</ref><ref>[[#CITEREFHall1967|Hall 1967]], section 1.1., p. 1: "The idea of a group is one which pervades the whole of mathematics both pure and applied."</ref>
+
+Many structures investigated in mathematics turn out to be groups, including familiar number systems such as the [[integer]]s, or the [[rational number]]s under addition, as well as the non-zero rational numbers under multiplication. Other important examples are groups of [[matrix (mathematics)|matrices]], [[permutation group]]s and [[symmetry group|groups of symmetries]] of [[geometry|geometrical]] objects. Almost all [[algebraic structure]]s such as [[ring (algebra)|rings]] and [[vector space]]s can be defined concisely in terms of groups. Both relaxing and strengthening the requirements of the group axioms yields interesting further structures.
+
+The [[group theory|theory of groups]] allows for the properties of such structures to be investigated in a general and abstract setting. Beyond direct implications of the group axioms, basic techniques include studying groups related to a given one (such as [[subgroup|sub-]] or [[quotient group]]s) or decomposing groups into [[simple group|simpler]] parts. A particularly ample theory has been developed for [[finite group|finite]] and for [[abelian group]]s.
+
+Groups are extensively used outside mathematics. Their ability to represent [[Geometry|geometric]] transformations finds applications in [[chemistry]] and [[computer graphics]]. Groups, in particular [[Lie group]]s, are essential abstractions in branches of physics involving [[symmetry]] principles, such as [[Theory of relativity|relativity]], [[quantum mechanics]], and other fields. 
+
+{{TOClimit|limit=3}}
+
+== Definition and illustration ==
+
+A group (''G'', <U+2022>) is a [[set]] ''G'' with a [[binary operation]] <U+2022> on ''G'' that satisfies the following four [[axiom]]s:<ref>{{harvnb|Herstein|1975}}, section 2.1., p. 27</ref>
+
+:{|
+| 1. || ''[[Closure (mathematics)|Closure]]''. || For all ''a'', ''b'' in ''G'', the result of ''a'' <U+2022> ''b'' is also in ''G''.
+|- 
+| 2. ||  ''[[Associativity]]''. || For all ''a'', ''b'' and ''c'' in ''G'', (''a'' <U+2022> ''b'') <U+2022> ''c'' = ''a'' <U+2022> (''b'' <U+2022> ''c''). 
+|-
+| 3. || ''[[Identity element]]''. &emsp; || There exists an element ''e'' in ''G'' such that for all ''a'' in ''G'', ''e'' <U+2022> ''a'' = ''a'' <U+2022> ''e'' = ''a''.
+|-
+| 4. || ''[[Inverse element]]''. || For each ''a'' in ''G'', there exists an element ''b'' in ''G'' such that ''a'' <U+2022> ''b'' = ''b'' <U+2022> ''a'' = ''e'', where ''e'' is the identity element.
+|}
+
+===First example: the integers===
+The first example of a group is the set of [[integers]] '''Z'''&nbsp;=&nbsp;{..., <U+2212>4, <U+2212>3, <U+2212>2, <U+2212>1, 0, 1, 2, 3, 4, ...}. Under the usual [[addition]] operation "+" they form what is probably the most familiar group. The group axioms can be thought of as being modelled on the properties of the integers together with the addition operation.  The set of integers under addition is denoted by ('''Z''', +). The abstract group axioms reduce to statements about numbers, in this case:
+
+:{|
+| 1. || ''Closure''. || For any two integers ''a'', ''b'', the sum ''a'' + ''b'' is also an integer.
+|- 
+| 2. ||  ''Associativity''. || For all integers ''a'', ''b'' and ''c'', (''a'' + ''b'') + ''c'' = ''a'' + (''b'' + ''c''). 
+|-
+| 3. || ''Identity element''. || If ''a'' is any integer, then 0 + ''a'' = ''a'' + 0 = ''a''.  Thus [[zero|0]]  is the (additive) identity.
+|-
+| 4. || ''Inverse element''. || For each ''a'' in '''Z''', ''b'' = &minus;''a'' is an integer and satisfies ''a'' + ''b'' = ''b'' + ''a'' = 0.  Thus &minus;''a'' is the (additive) inverse of the integer ''a''.
+|}
+
+=== Worked example: a symmetry group ===
+{|align="right" style="margin: 1ex 1em 1ex 1em"
+|
+{|align="right" class="wikitable" style="text-align:center; margin: 0 auto 1ex auto"
+| [[Image:group_D8_id.svg|140px]]  <br/> id (keeping it as is) || [[Image:group_D8_90.svg|140px]] <br/> r<sub>1</sub> (rotation by 90<U+00B0>)
+|-
+| [[Image:group_D8_180.svg|140px]] <br/> r<sub>2</sub> (rotation by 180<U+00B0>) || [[Image:group_D8_270.svg|140px]] <br/> r<sub>3</sub> (left rotation by 90<U+00B0>)
+|-
+| [[Image:group_D8_fv.svg|140px]] <br/> f<sub>v</sub> (vertical flip)  || [[Image:group_D8_fh.svg|140px]] <br/> f<sub>h</sub> (horizontal flip)
+|-
+| [[Image:group_D8_f13.svg|140px]] <br/> f<sub>d</sub> (diagonal flip)  || [[Image:group_D8_f24.svg|140px]] <br/> f<sub>c</sub> (counterdiagonal flip)
+|-
+| colspan=2 | Elements of the symmetry group.<br/>The vertices are colored only to visualize the operations.
+|}
+|-
+|
+{| align="right" class="wikitable" style="text-align:center; margin: .5em auto 1em auto; width:32ex; height: 32ex"
+|+ [[Cayley table|group table]]
+|- 
+!width="12%"|  <U+2022>  !!width="11%"| id !!width="11%"| r<sub>1</sub> !!width="11%"| r<sub>2</sub> !!width="11%"| r<sub>3</sub> !!width="11%"| f<sub>v</sub> !!width="11%"| f<sub>h</sub> !!width="11%"| f<sub>d</sub> !!width="11%"| f<sub>c</sub> 
+|- 
+! id 
+|style="background:#FFDDDD; border-left: solid black 2px; border-top: solid black 2px"| id 
+|style="background:#FFDDDD; border-top: solid black 2px"| r<sub>1</sub> 
+|style="background:#FFDDDD; border-top: solid black 2px"| r<sub>2</sub> 
+|style="background:#FFDDDD; border-right: solid black 2px; border-top: solid black 2px"| r<sub>3</sub> || f<sub>v</sub> || f<sub>h</sub> || f<sub>d</sub> || f<sub>c</sub> 
+|- 
+! r<sub>1</sub> 
+|style="background:#FFDDDD; border-left: solid black 2px;"| r<sub>1</sub> 
+|style="background:#FFDDDD;"| r<sub>2</sub> 
+|style="background:#FFDDDD;"| r<sub>3</sub> 
+|style="background:#FFDDDD; border-right: solid black 2px;"| id || f<sub>c</sub> || f<sub>d</sub> || f<sub>v</sub> || f<sub>h</sub> 
+|- style="height:10%"
+! r<sub>2</sub> 
+|style="background:#FFDDDD; border-left: solid black 2px;"| r<sub>2</sub> 
+|style="background:#FFDDDD;"| r<sub>3</sub> 
+|style="background:#FFDDDD;"| id 
+|style="background:#FFDDDD; border-right: solid black 2px;"| r<sub>1</sub> || f<sub>h</sub> || f<sub>v</sub> || f<sub>d</sub> || f<sub>c</sub> 
+|- style="height:10%"
+! r<sub>3</sub> 
+|style="background:#FFDDDD; border-bottom: solid black 2px;border-left: solid black 2px;"| r<sub>3</sub> 
+|style="background:#FFDDDD; border-bottom: solid black 2px;"| id 
+|style="background:#FFDDDD; border-bottom: solid black 2px;"| r<sub>1</sub> 
+|style="background:#FFDDDD; border-right: solid black 2px; border-bottom: solid black 2px;"| r<sub>2</sub> || f<sub>d</sub> || f<sub>c</sub> || f<sub>h</sub> || f<sub>v</sub>   
+|- style="height:10%"
+! f<sub>v</sub> 
+| f<sub>v</sub> || f<sub>d</sub> || f<sub>h</sub> || f<sub>c</sub>|| id || r<sub>2</sub> || r<sub>1</sub> || r<sub>3</sub> 
+|- style="height:10%"
+! f<sub>h</sub>
+| f<sub>h</sub> || f<sub>c</sub> || f<sub>v</sub> ||style="background:#DDDDFF;border:solid black 2px"| f<sub>d</sub> || r<sub>2</sub> || id || r<sub>3</sub> || r<sub>1</sub> 
+|- style="height:10%"
+! f<sub>d</sub> 
+| f<sub>d</sub> || f<sub>h</sub> || f<sub>c</sub> || f<sub>v</sub> || r<sub>3</sub> || r<sub>1</sub> || id || r<sub>2</sub> 
+|- style="height:10%"
+! f<sub>c</sub> 
+| f<sub>c</sub> || f<sub>v</sub> || f<sub>d</sub> || f<sub>h</sub> || r<sub>1</sub> || r<sub>3</sub> || r<sub>2</sub> || id
+|-
+| colspan=9 | The elements id, r<sub>1</sub>, r<sub>2</sub>, and r<sub>3</sub> form a subgroup (highlighted in red).
+|}
+|}
+[[Group theory]] and the notion of a group concern much more general entities than numbers. The following illustrates the meaning of the group axioms for [[dihedral group|the dihedral group]] of [[symmetry|symmetries]] of the [[Square (geometry)|square]].<ref>[[#CITEREFHerstein1975|Herstein 1975]], section 2.6., p. 54</ref> The elements of the group are operations which keep the shape of the square unchanged. The operations are:
+:* Three [[rotation]]s r<sub>1</sub>, r<sub>2</sub> and r<sub>3</sub> (rotating the square by 90<U+00B0>, 180<U+00B0>, and 270<U+00B0> respectively).
+:* [[reflection (mathematics)|Reflections]] about the vertical and horizontal middle line (f<sub>h</sub> and f<sub>v</sub>), or through the two [[diagonal]]s (f<sub>d</sub> and f<sub>c</sub>).
+:* The identity operation id leaving everything unchanged.
+
+In this example group, the axioms can be understood as follows:
+<ol>
+<li> The ''closure'' axiom demands that any two symmetries can be composed. This is indeed the case&mdash;for any two symmetries ''a'' and ''b'', we can first perform ''a'' and then ''b'' and the result will still be a symmetry, written symbolically from right to left ("perform the symmetry ''b'' after performing the symmetry ''a''") as:
+:{{nowrap begin}}''b'' <U+2022> ''a''.{{nowrap end}} 
+For example, rotating by 90<U+00B0> left (r<sub>3</sub>) and then flipping horizontally (f<sub>h</sub>) is the same as performing a reflection along the diagonal (f<sub>d</sub>). Using the above symbols, we have (highlighted in blue in the group table):
+:{{nowrap begin}}f<sub>h</sub> <U+2022> r<sub>3</sub> = f<sub>d</sub>.{{nowrap end}}</li>
+
+<li> The ''associativity'' constraint is the natural axiom to impose in order to make  composing more than two symmetries well-behaved: given three elements ''a'', ''b'' and ''c'' of ''G'', there are two possible ways of computing "''a'' after ''b'' after ''c''". The requirement: 
+:{{nowrap begin}}(''a'' <U+2022> ''b'') <U+2022> ''c'' = ''a'' <U+2022> (''b'' <U+2022> ''c''){{nowrap end}}
+means that composing ''a'' after ''b'', and calling this symmetry ''x'', then ''x'' after ''c'' is the same as ''a'' after ''y'', where ''y'' in turn is applying ''b'' after ''c''.
+For example, we check {{nowrap begin}} (f<sub>d</sub> <U+2022> f<sub>v</sub>) <U+2022> r<sub>2</sub> = f<sub>d</sub> <U+2022> (f<sub>v</sub> <U+2022> r<sub>2</sub>){{nowrap end}} using the [[Cayley table|group table]] at the right:
+:{{nowrap begin}}(f<sub>d</sub> <U+2022> f<sub>v</sub>) <U+2022> r<sub>2</sub> = r<sub>3</sub> <U+2022> r<sub>2</sub> = r<sub>1</sub>,{{nowrap end}} which equals
+:{{nowrap begin}}f<sub>d</sub> <U+2022> (f<sub>v</sub> <U+2022> r<sub>2</sub>) = f<sub>d</sub> <U+2022> f<sub>h</sub> = r<sub>1</sub>.{{nowrap end}}</li>
+
+<li> The ''identity element'' is the symmetry id leaving everything unchanged: for any symmetry ''a'', performing id after ''a'' (or ''a'' after id) equals ''a'', in symbolic form:
+: {{nowrap begin}}id <U+2022> ''a'' = ''a'',{{nowrap end}} and
+: {{nowrap begin}}''a'' <U+2022> id = ''a''.{{nowrap end}}</li>
+
+<li> An ''inverse element'' undoes the operation of some other element. In the symmetry group example, every symmetry can be undone: each of the identity id, the flips f<sub>h</sub>, f<sub>v</sub>, f<sub>d</sub>, f<sub>c</sub> and the 180<U+00B0> rotation r<sub>2</sub> is its own inverse, because performing each one twice brings the square back to its original orientation. Each of the 90<U+00B0> rotations r<sub>3</sub> and r<sub>1</sub> is each other's inverse, because rotating one way and then by the same angle the other way leaves the square unchanged. In symbols, for example:
+:{{nowrap begin}}f<sub>h</sub> <U+2022> f<sub>h</sub> = id,{{nowrap end}}
+:{{nowrap begin}}r<sub>3</sub> <U+2022>  r<sub>1</sub> = r<sub>1</sub> <U+2022> r<sub>3</sub> = id.</li>
+</ol>
+
+==First consequences of the group axioms ==
+[[Elementary group theory]] is concerned with basic facts about general groups, as opposed for example to the more involved study of groups via their [[group representation|representations]].<ref>{{harvnb|Fulton|Harris|1991}}</ref> These facts are usually direct consequences of the group definition <U+2014> obtained by  invoking the axioms a few times <U+2014> and are often used in group theory without explicit reference to the corresponding statement.<ref>[[#CITEREFLedermann1953|Ledermann 1953]], section 1.2., pp. 4<U+2013>5</ref> 
+
+For example, [[Mathematical induction|repeated]] applications of the associativity axiom show that the unambiguity of 
+:''a'' <U+2022> ''b'' <U+2022>  ''c'' = (''a'' <U+2022> ''b'') <U+2022>  ''c'' = ''a'' <U+2022> (''b'' <U+2022>  ''c'') 
+generalizes to more than three factors. Therefore parentheses are usually omitted in such expressions. 
+
+===Uniqueness of identity element and inverses===
+Though the uniqueness of the identity is not required by the group axioms, it is a consequence of them. Therefore it is customary to speak of ''the'' identity, and ''the'' inverse of ''a''.<ref>[[#CITEREFLang2005|Lang 2005]], section II.1., p. 17</ref> 
+
+The following proof of this fact shows the flavor of elementary group theory: suppose both ''e'' and ''f'' are identity elements. Then
+:''e'' = ''e&nbsp;<U+2022>&nbsp;f'' = ''f'', 
+because ''e'' is a (left) identity element and ''f'' is a (right) identity element. Hence the two identities necessarily agree.
+Similarly, suppose given two inverses ''l'' and ''r'' of a fixed element ''a''. Then
+:''l''&nbsp;=&nbsp;''l'' <U+2022> ''e'' = ''l'' <U+2022> (''a'' <U+2022> ''r'') = (''l'' <U+2022> ''a'') <U+2022> ''r'' = ''e'' <U+2022> ''r'' = ''r''.
+
+Moreover, if in a group knowing only that ''b''&nbsp;<U+2022>&nbsp;''a''&nbsp;=&nbsp;''e'' suffices to conclude that ''b'' is the inverse element of ''a'' (since a two-sided inverse of ''a'' is guaranteed to exist, and then ''b'' must be equal to it). Similarly ''a''&nbsp;<U+2022>&nbsp; ''b''&nbsp;=&nbsp;''e'' suffices for the same conclusion.
+
+The inverse of a product is the product of the inverses in the opposite order: (''a'' <U+2022> ''b'')<sup><U+2212>1</sup> = ''b''<sup><U+2212>1</sup> <U+2022> ''a''<sup><U+2212>1</sup>. The identity (''a''&nbsp;<U+2022>&nbsp;''b'')&nbsp;<U+2022>&nbsp;(''b''<sup>&minus;1</sup>&nbsp;<U+2022>&nbsp;''a''<sup>&minus;1</sup>)&nbsp;=&nbsp;''e'' then suffices to prove that ''b''<sup>&minus;1</sup>&nbsp;<U+2022>&nbsp;''a''<sup>&minus;1</sup> is the inverse of ''a''&nbsp;<U+2022>&nbsp;''b''.
+
+::{|
+|(''a''&nbsp;<U+2022>&nbsp;''b'')&nbsp;<U+2022>&nbsp;(''b''<sup>&minus;1</sup>&nbsp;<U+2022>&nbsp;''a''<sup>&minus;1</sup>)|| = || ((''a''&nbsp;<U+2022>&nbsp;''b'')&nbsp;<U+2022>&nbsp;''b''<sup>&minus;1</sup>&nbsp;)&nbsp;<U+2022>&nbsp;''a''<sup>&minus;1</sup>|| (associativity)
+|-
+| || = || (''a''&nbsp;<U+2022>&nbsp;(''b''&nbsp;<U+2022>&nbsp;''b''<sup>&minus;1</sup>))&nbsp;<U+2022>&nbsp;''a''<sup>&minus;1</sup>
+|| (associativity)
+|-
+| || = || (''a''&nbsp;<U+2022>&nbsp;''e'')&nbsp;<U+2022>&nbsp;''a''<sup>&minus;1</sup> || (definition of inverse)
+|-
+| || = || ''a''&nbsp;<U+2022>&nbsp;''a''<sup>&minus;1</sup> || (definition of identity element)
+|-
+| || = || ''e'' || (definition of inverse)
+|}
+
+===Division===
+In groups, it is possible to perform [[division (mathematics)|division]]: given elements ''a'' and ''b'' of the group ''G'', there is exactly one solution ''x'' in ''G'' to the [[equation]] ''x''&nbsp;<U+2022>&nbsp;''a''&nbsp;=&nbsp;''b''. In fact, right multiplication of the equation by ''a''<sup>&minus;1</sup> gives the solution ''x''&nbsp;=&nbsp;''b''&nbsp;<U+2022>&nbsp;''a''<sup>&minus;1</sup>. Similarly there is exactly one solution ''y'' in ''G'' to the equation ''a''&nbsp;<U+2022>&nbsp;''y''&nbsp;=&nbsp;''b'', namely ''y''&nbsp;=&nbsp;''a''<sup>&minus;1</sup>&nbsp;<U+2022>&nbsp;''b''.
+
+===Variants of the definition===
+Some definitions of a group use seemingly weaker conditions for identity and inverse elements.  Instead of requiring a two-sided identity element, the axioms may separately require the existence of a left and right identity element,
+and similarly they may only separately require the existence of a left and right inverse elements.  In both cases the left and right elements can be shown to be the same (and each is unique).<ref>see for example {{Citation|last1=Artin|first1=Emil|author1-link=Emil Artin|title=Algebra I|Vorlesungsnotizen, Universit<U+00E4>t Hamburg}}, Definition 1.7., p. 4.</ref>
+<!--
+But requiring only for instance the existence of a left identity element (''e'' <U+2022> ''a'' = ''a'' for all ''a'' in ''G''), or only the existence of left inverse elements (there exists ''b'' in ''G'' such that ''b'' <U+2022> ''a'' = ''e''), would be insufficient: there are examples where such weaker conditions are satisfied but the structure does not define a group.
+-->
+
+Strictly speaking the closure axiom is already implied by the condition that <U+2022> be a binary operation on ''G''. Many authors therefore omit this axiom.<ref>such as [[#CITEREFLang2002|Lang 2002]]</ref>
+
+In [[universal algebra]], groups are generally treated as algebraic structures of the form (''G'', <U+2022>, ''e'', <sup>&minus;1</sup>), i.e. the identity element ''e'' and the map that takes every element ''a'' of the group to its inverse ''a''<sup>&minus;1</sup> are treated as integral parts of the formal definition of a group.
+
+=== Notations ===
+{| align="right" class="infobox" style="text-align:center"
+|- align="center"
+| style="border-bottom: 2px solid #303060" colspan=5| Customary notations for group operations 
+|-
+| || operation || identity || inverse of ''a''
+|-
+| [[additive group]]s
+| + || 0 || &minus;''a''
+|-
+| [[multiplicative group]]s
+| *, <U+2022>, &times; || 1 || ''a''<sup>&minus;1</sup>
+|-
+| [[automorphism group]]s
+| <U+2218> || id, 1 || ''a''<sup><U+2013>1</sup>
+|}
+
+The notation for groups often depends on the context and the nature of the group operation. There is a tendency to denote abelian groups additively, whereas non-abelian groups are often written multiplicatively.<ref>[[#CITEREFArtin1991|Artin 1991]], section 2.1.</ref> In many situations, there is only one possible (or reasonable) group operation on a given set, therefore it is very common to drop the operation symbol and leave it to the reader to know the context and the group operation. For example the groups ([[cyclic group|'''Z'''<sub>''n''</sub>]], +) and ('''F'''<sub>''q''</sub>*, &times;), the multiplicative group of nonzero elements in the [[finite field]] '''F'''<sub>''q''</sub> are commonly denoted '''Z'''<sub>''n''</sup> and '''F'''<sub>''q''</sub>*, since only one of the two [[ring (mathematics)|ring]] operations makes these sets into a group.<ref>In the context of [[commutative algebra]], '''Z'''<sub>''n''</sub> is usually denoted '''Z'''/''n'' '''Z''' or '''Z'''/''n'', see for example {{harvnb|Eisenbud|1995}}</ref>
+
+== Basic concepts in group theory ==
+{{see|Glossary of group theory}}
+{{Basic notions in group theory}}
+The structure of groups can be understood by breaking them into pieces, combining them into larger groups, or by comparing them to other groups.  The pieces are called subgroups and quotient groups.  The larger groups are called direct products and semi-direct products.  Groups are compared using homomorphisms.  Some groups are singled out as particularly important building blocks: the cyclic, abelian, and simple groups.  These basic concepts form the standard introduction to groups.<ref>see Lang's and Herstein's books below</ref>
+
+===Subgroups===
+A [[subset]] ''H'' <U+2282> ''G'' is called a '''[[subgroup]]''' if the restriction of <U+2022> to ''H'' is a group operation on ''H''.<ref>{{harvnb|Lang|2005}}, section II.1., p. 19</ref> In other words, it is a group using the restriction of the operation defined on ''G''. In the example above, the rotations constitute a subgroup, since a rotation composed with a rotation is still a rotation: in the group table, the intersections of rows and columns for id, r<sub>1</sub>, r<sub>2</sub>, and r<sub>3</sub>, only contain those same elements (highlighted in red). It can be read off the group table above, and is indeed a general principle that knowing the subgroups of a group is important to understand the structure of the group in question.
+
+The [[subgroup test]] is a necessary and sufficient condition for a subset ''H'' of a group ''G'' to be a subgroup: it is sufficient to check that ''g''<sup><U+2212>1</sup>''h'' <U+2208> ''H'' for all ''g'', ''h'' <U+2208> ''H''. The [[Closure (mathematics)|closure]], under the group operation and inversion, of any nonempty subset of a group is a subgroup. The subset is said to ''[[generating set of a group|generate]]'' the subgroup. For example, the powers of any element ''a'' and their inverses (that is, ''a''<sup>0</sup> = ''e'', ''a'', ''a''<sup>2</sup>, ''a''<sup>3</sup>, ''a''<sup>4</sup>, <U+2026>, ''a''<sup><U+2212>1</sup>, ''a''<sup><U+2212>2</sup>, ''a''<sup><U+2212>3</sup>, ''a''<sup><U+2212>4</sup>, <U+2026>) always form a subgroup of the larger group, the so-called ''[[#Cyclic groups|cyclic subgroup]]'' generated by ''a''.
+
+A subgroup ''H'' defines a set of left and right [[coset]]s. Given an arbitrary element ''g'' in ''G'', the ''left'' and ''right coset'' of ''H'' containing ''g'' are
+
+:''gH''&nbsp;=&nbsp;{''gh'', ''h'' &isin; ''H''} and ''Hg''&nbsp;=&nbsp;{''hg'', ''h'' &isin; ''H''}, respectively.<ref>{{harvnb|Lang|2005}}, section II.4., p. 41</ref> 
+
+The set of left cosets of ''H'' forms a [[Partition of a set|partition]] of the elements of ''G''; that is, two left cosets are either equal or have an [[empty set|empty]] [[Intersection (set theory)|intersection]].<ref>[[#CITEREFLang2002|Lang 2002]], section I.2., p. 12</ref> The same holds true of the right cosets of ''H''. Left and right cosets of ''H'' may or may not be equal. If it is the case that for all ''g'' in ''G'', ''gH''&nbsp;=&nbsp;''Hg'', then ''H'' is said to be a [[normal subgroup]].
+
+===Quotient groups===
+'''[[Quotient group]]s''', also known as ''factor groups,'' treat the cosets of a normal subgroup as a group.<ref>{{harvnb|Lang|2005}}, section II.4., p. 45</ref>  If ''N'' is a normal subgroup of ''G'', its set of left cosets and right cosets are the same and one may speak simply of the set of cosets of ''N''. In this case, the set of cosets of ''N'' may be equipped with an operation (sometimes called coset multiplication, or coset addition) to form a new group, called the quotient group ''G''/''N''. The operation between the cosets behaves in the nicest way possible: {{nowrap begin}}(''Ng'') <U+2022> (''Nh'') = ''N''(''gh''){{nowrap end}} for all ''g'' and ''h'' in ''G''. The coset ''N'' itself serves as the identity in this group, and the inverse of ''Ng'' in the quotient group is {{nowrap begin}}(''Ng'')<sup>&minus;1</sup> = ''N''(''g''<sup>&minus;1</sup>).{{nowrap end}}<ref>See [[universal property]]</ref>
+
+Quotient and subgroups together form a way of describing every group by its [[presentation of a group|presentation]]: any group is the quotient of the [[free group]] over the ''[[Generating set of a group|generators]]'' of the group, quotiented by the subgroup of ''relations''. The introductory dihedral group, for example, is presented by two generators ''r'' and ''f'' (for example, ''r''&nbsp;=&nbsp;r<sub>1</sub>, the right rotation and ''f''&nbsp;=&nbsp;f<sub>v</sub> the vertical (or any other) flip), together with the relations
+:''r''<sup>4</sup>&nbsp;=&nbsp;''f''<sup>2</sup>&nbsp;=&nbsp;(''rf'')<sup>2</sup>&nbsp;=&nbsp;1.<ref>[[#CITEREFLang2002|Lang 2002]], section I.2., p. 9</ref> 
+This way of describing a group can also be used to construct the [[Cayley graph]], a graphical device showing certain features of [[discrete group]]s.
+
+===Group homomorphisms===
+If ''G'' and ''H'' are two groups, a '''[[group homomorphism]]''' ''f'' is a mapping ''f'': ''G'' <U+2192> ''H'' that preserves the structure of the groups in question. The structure of groups being determined by the group operation, this means the following: if ''g'' and ''k'' are any two elements in ''G'', then 
+:''f''(''gk'')=''f''(''g'')''f''(''k''). 
+This requirement ensures that ''f''(1<sub>''G''</sub>)=1<sub>''H''</sub>, and also ''f''(''g'')<sup>&minus;1</sup>=''f''(''g''<sup>&minus;1</sup>) for all ''g'' in ''G''.<ref>[[#CITEREFLang2005|Lang 2005]], section II.3., p. 34</ref> The [[category of groups]] is the abstract framework containing groups and group homomorphisms.
+
+Two groups ''G'' and ''H'' are called [[isomorphism|isomorphic]] if there exists a group homomorphism ''f'' between ''G'' and ''H'' which is both [[Surjective function|surjective]] (onto) and [[Injective function|injective]] (one-to-one). The [[kernel (algebra)|kernel]] and [[Image (mathematics)|image]] of a homomorphism can be interpreted as measuring how close it is to being an isomorphism. The kernel ker ''f''={''g'' in ''G'' : ''f''(''g'')=1<sub>''H''</sub>} is the set of elements in ''G'' which are mapped to the identity in ''H''. It is always a normal subgroup.<ref>The converse statement is also true: any normal subgroup ''N'' is the kernel of the canonical map ''G''&nbsp;&rarr;&nbsp;''G''/''N'', see [[#CITEREFLang2005|Lang 2005]], section II.4., p. 45</ref> The [[isomorphism theorem|First Isomorphism Theorem]] states that the [[Image (mathematics)|image]] of a group homomorphism, ''f''(''G'') is isomorphic to the quotient group ''G''/ker ''f''.
+
+===Simple groups===
+A nontrivial group is called '''[[simple group|simple]]''' if its only normal subgroups are the [[trivial group|trivial]] group and the group itself.<ref>{{harvnb|Michler|2006}}, {{harvnb|Carter|1989}}</ref>  Equivalently, a nontrivial group is simple if its only quotient groups are the trivial group and the group itself.  The [[Jordan-H<U+00F6>lder theorem]] exhibits simple groups as the building blocks for all finite groups.<ref>[[#CITEREFLang2002|Lang 2002]], section I.3., p. 22</ref>  The [[classification of finite simple groups]] was a major problem in group theory.  Filling the gaps in the 1982 proof and simplifying it are areas of active research.<ref>{{harvnb|Aschbacher|2004}}</ref>
+
+===Abelian groups===
+A group ''G'' is said to be [[abelian group|'''abelian''']], or '''commutative''', if the operation satisfies the commutative law.<ref>{{harvnb|Lang|2002}}, section I.1., p. 4</ref> That is, for all ''a'' and ''b'' in ''G'', {{nowrap begin}}''a'' <U+2022> ''b'' = ''b'' <U+2022> ''a''.{{nowrap end}} If not, the group is called '''non-abelian''' or '''non-commutative'''. The name "abelian" derives from the Norwegian mathematician [[Niels Henrik Abel]]. The group of symmetries of the square (discussed above) is non-abelian, because
+:{{nowrap begin}}r<sub>1</sub> <U+2022> f<sub>v</sub> = f<sub>c</sub> &ne; f<sub>d</sub> = f<sub>v</sub> <U+2022> r<sub>1</sub>.{{nowrap end}}
+but there is an abelian subgroup {id, r<sub>1</sub>, r<sub>2</sub>, r<sub>3</sub>} consisting of only the rotations.
+
+The [[center (group theory)|center]] of a group is the subgroup consisting of the elements which commute with every other element in the group.<ref>{{harvnb|Lang|2002}}, section I.5., p. 26, 29.</ref> In a commutative group the center is the whole group; at the other extreme there are groups whose center is trivial, i.e. it consists only of the identity element. 
+
+====Cyclic groups====
+'''[[Cyclic group]]s''' are those groups whose elements may be [[Generating set of a group|generated]] by successive [[function composition|compositions]] of the group operation applied to a single element of that group.<ref>{{harvnb|Lang|2005}}, section II.1., p. 22</ref> An element with this property is called a generator or a [[Primitive root modulo n|primitive element]] of the group. Written additively, the group is therefore generated by the multiples {{nowrap|''t'' <U+2022> ''a''}} (the multiplicative notation would be ''a''<sup>''t''</sup>), where ''t'' ranges in '''Z'''. A cyclic group may or may not be finite. If it is finite, the group is isomorphic to [[cyclic group|'''Z'''<sub>''n''</sub>]] (also denoted '''Z'''/''n'''''Z'''), where ''n'' is the smallest integer such that {{nowrap begin}}''n'' <U+2022> ''a'' = 0{{nowrap end}}, for example the group of [[root of unity|''n''-th complex roots of unity]].<ref>[[#CITEREFLang2005|Lang 2005]], section II.2., p. 26</ref> Otherwise the group is isomorphic to ('''Z''', +).<ref>[[#CITEREFLang2005|Lang 2005]], Example 11, section II.1., p. 22</ref> 
+
+In any group, the successive composition of the operation applied to an element of the group generates a [[cyclic subgroup]].
+
+=== Products and sums of groups ===
+In addition to subgroups and quotient groups there are further ways of constructing new groups from given ones:<ref>[[#CITEREFLang2002|Lang 2002]], section I.2.</ref> given two groups (''G'',&nbsp;*) and (''H'',&nbsp;<U+2022>), their '''[[Direct product#Group direct product|direct product]]''' is the set ''G''<U+00D7>''H'' together with the operation 
+
+:(''g''<sub>1</sub>,''h''<sub>1</sub>)(''g''<sub>2</sub>,''h''<sub>2</sub>) :=(''g''<sub>1</sub>*''g''<sub>2</sub>,''h''<sub>1</sub><U+2022>''h''<sub>2</sub>). 
+
+This definition extends to products of any number of groups, finite or infinite, by using the [[Cartesian product]]. A variation of this construction is the '''[[Direct sum of groups|direct sum]]''', the subgroup of the product constituted by elements that have only a finite number of non-identity coordinates. If the family is finite the direct sum and the product are equivalent. 
+
+A further generalization of the direct product of two groups is the '''[[semidirect product]]'''. Given two groups ''N'' and ''H'', it allows for the twisting of the group operation on the first factor by a group homomorphism <U+03C6> : ''H'' <U+2192> [[automorphism|Aut]](''N''): the semidirect product of ''N'' and ''H'' with respect to <U+03C6> is the group (''N'' &times; ''H'', <U+2022>), with <U+2022> defined as
+: (''n''<sub>1</sub>, ''h''<sub>1</sub>) <U+2022> (''n''<sub>2</sub>, ''h''<sub>2</sub>) = (''n''<sub>1</sub> &phi;(''h''<sub>1</sub>) (''n''<sub>2</sub>), ''h''<sub>1</sub> ''h''<sub>2</sub>).
+The group of symmetries of the square (described above) is a semidirect product of ''N''&nbsp;=&nbsp;'''Z'''/4'''Z''' (the subgroup consisting of rotations) with ''H''&nbsp;=&nbsp;'''Z'''/2'''Z''' (generated by a reflection).
+
+== Examples of groups ==
+{{Main|Examples of groups|List of small groups}}
+
+=== Integers under addition ===
+The integers '''Z''' under addition form a group (described above). In addition to merely being a group, this group is also abelian because 
+:''a'' + ''b'' = ''b'' + ''a'' ([[commutativity]] of addition). 
+The integers are ''the'' basic building block for abelian groups, for example every [[torsion-free group]] contains ('''Z''', +) as a subgroup.<ref>Namely the [[cyclic subgroup]] generated by an arbitrary non-identity element.</ref>
+
+=== Multiplicative groups ===
+Many structures involving [[multiplication]] also form groups, however many such structures may well fail to be groups.  An important counterexample is the [[integer]]s, denoted by '''Z''', with the operation of multiplication, denoted by "<U+2022>". The pair ('''Z''',&nbsp;<U+2022>) is not a group. It satisfies the closure, associativity and identity axioms, but fails to have inverses: it is ''not'' true that whenever ''a'' is an integer, there is an integer ''b'' such that ''ab'' = ''ba'' = 1.<ref>Elements which do have multiplicative inverses are called ''[[unit (ring theory)|units]]'', see [[#CITEREFLang2002|Lang 2002]], section II.1., p. 84</ref> For example, ''a'' = 2 is an integer, but the only solution to the equation ''ab'' = 1 in this case is ''b'' = 1/2, which is a rational number, but not an integer. Hence not every element of ('''Z''',&nbsp;<U+2022>) has a (multiplicative) inverse, so ('''Z''',&nbsp;<U+2022>) is ''not'' a group. It is, however, a commutative [[monoid]], which is a similar structure to a group but does not require inverse elements. From another point of view, the integers, with both addition and multiplication form a more complicated algebraic structure called a [[Ring (mathematics)|ring]].
+
+==== Nonzero rational numbers ====
+The [[field of fractions|natural]] remedy of the above situation are the [[rational number]]s '''Q''', the set of all fractions of integers ''a''/''b'', where ''a'' and ''b'' are integers and ''b'' is nonzero, and the multiplication operation, again denoted by "<U+2022>". Since the rational number [[0 (number)|0]] does not have a multiplicative inverse, ('''Q''',&nbsp;<U+2022>), like ('''Z''',&nbsp;<U+2022>), is not a group.
+
+However, the set of all ''nonzero'' rational numbers '''Q''' \ {0}, then ('''Q''' \ {0},&nbsp;<U+2022>) ''does'' form an abelian group.<ref>The same is true for any [[field (mathematics)|field]] ''F'' instead of '''Q'''. See [[#CITEREFLang2005|Lang 2005]], section III.1., p. 86.</ref> Indeed, closure, associativity and identity element axioms are easy to check and follow from the properties of integers. The closure requirement still holds true after removing zero, because the product of two nonzero rationals is never zero. Finally, the inverse of ''a''/''b'' is ''b''/''a'', therefore the axiom of the inverse element is satisfied.
+
+Just as the integers form a [[ring (mathematics)|ring]], the rational numbers form the algebraic structure of a [[field (mathematics)|field]], allowing the operations of addition, subtraction, multiplication and division.
+
+==== Cyclic multiplicative groups ====
+In ('''Q'''&nbsp;\&nbsp;{0},&nbsp;<U+2022>), there are the cyclic subgroups
+:''G'' = {''a''<sup>''n''</sup>, ''n'' &isin; '''Z'''} &sub; '''Q'''
+where ''a<sup>n</sup>'' is the ''n''-th [[exponentiation]]s of the primitive element ''a'' of that group.<ref>This example is from [[#CITEREFLang2005|Lang 2005]], section II.1., p. 22</ref> For example, if ''a'' is 2 then 
+
+:G&nbsp;=&nbsp;{..., 2<sup>&minus;2</sup>, 2<sup>&minus;1</sup>, 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>, ...} = {..., 0.25, 0.5, 1, 2, 4, ...}. 
+
+This group is an example of a [[free abelian group]] of [[rank of an abelian group|rank]] one: the rank is one, because ''G'' is generated by one element (''a'' or equivalently ''a''<sup>&minus;1</sup>) and the freeness refers to the fact that no [[presentation of a group|relations]] between the powers of this generator occur. Therefore, ''G'', is [[isomorphism|isomorphic]] to the (additive) group of integers ('''Z''',&nbsp;+) above. This example shows that distinguishing between additive and multiplicative groups is merely a matter of notation <U+2013> group theory treats groups from a purely abstract point of view, forgetting about the concrete nature of the group elements and the group operation.
+
+==== Nonzero integers modulo a prime ====
+The nonzero classes of integers [[Modular arithmetic|modulo]] ''p'', a [[prime number]], form a group under multiplication called the [[multiplicative group of integers modulo n|multiplicative group of integers modulo ''p'']].<ref>[[#CITEREFLang2005|Lang 2005]], chapter VII</ref> The product of two integers neither of which is divisible by ''p'' is not divisible by ''p'' either (because ''p'' is prime), which shows that the indicated set of classes is closed under multiplication. Associativity is clear, and the class of 1 is the identity for multiplication. The inverse element axiom requires that given an integer ''a'' not divisible by ''p'', there exists an integer ''b'' such that 
+:''a''&nbsp;&middot;&nbsp;''b''&nbsp;<U+2261>&nbsp;1 ([[modulo|mod]] ''p'').
+It can be shown by inspecting the structure of the [[finite field]] '''F'''<sub>''p''</sub>. Actually, this example is similar to ('''Q'''\{0}, <U+2022>) above, because it turns out to be the group of nonzero elements in '''F'''<sub>''p''</sub>.
+
+=== Finite groups ===
+The ''[[order (group theory)|order]]'' of a group ''G'', usually denoted by |''G''| or occasionally by o(''G''), is the number of elements in the set ''G''. If it is [[Finite set|finite]], then ''G'' itself is called a '''[[finite group]]'''.<ref>{{harvnb|Kurzweil|Stellmacher|2004}}</ref> Otherwise, the group is an ''infinite group''. Via [[arithmetic geometry]] over [[finite field]]s, finite groups are much applied in [[cryptography]].<ref>For example, the [[Diffie-Hellman]] protocol uses the [[discrete logarithm]].</ref> Two important classes of finite groups are the following:
+
+* the cyclic (abelian) groups [[cyclic group|'''Z'''/''n'''''Z''']] treated above. Any abelian finite group is a finite [[direct sum]] of groups of this kind, this is part of the [[fundamental theorem of finitely generated abelian groups]].
+* the [[symmetric group]] ''S''<sub>''N''</sub>: it is the group of [[permutation]]s of ''N'' letters. For example, the symmetric group on 3 letters [[dihedral group of order 6|''S''<sub>3</sub>]] is the group consisting of all possible swaps of the three letters ''ABC'', i.e. contains the elements ''ABC'', ''ACB'', ..., up to ''CBA'', in total 6 (or 3 [[factorial]]) elements. Parallel to the group of symmetries of the square above, ''S''<sub>3</sub> can also be interpreted as the group of symmetries of an [[equilateral triangle]].
+
+[[Cayley's theorem]] states that any finite (not necessarily abelian) group can be expressed as a subgroup of a symmetric group ''S''<sub>''N''</sub>.
+
+The ''order of an element a'' in a group ''G'', often denoted o(''a''), is the least positive integer ''n'' such that ''a<sup>n</sup>&nbsp;=&nbsp;e'', where ''a<sup>n</sup>'' represents <math>\underbrace{a \cdot \ldots \cdot a}_n</math>, i.e. application of the operation <U+2022> to ''n'' copies of the value ''a''. (If <U+2022> represents multiplication, then a<sup>n</sup> corresponds to the n<sup>th</sup> power of a.) If no such ''n'' exists, then the order of ''a'' is said to be infinity. The order of an element is the same as the order of the cyclic subgroup generated by this element.
+
+More sophisticated counting techniques, for example counting cosets, yield more precise statements about finite groups: [[Lagrange's theorem (group theory)|Lagrange's Theorem]] states that for a finite group ''G'' the order of any (necessarily finite) subgroup ''H'' [[divisor|divides]] the order of ''G''. A partial converse is given by the [[Sylow theorems]].
+
+The [[dihedral group]] (discussed above) is a finite group of order 8. The order of ''r<sub>1</sub>'' is 4, because rotating four times by 90<U+00B0> does not change anything. The order of the reflection elements ''f<sub>v</sub>'' etc. is 2. Both orders divide 8, as predicted by Lagrange's Theorem.
+
+===Symmetry groups===
+[[Image:Wallpaper group-cm-6.jpg|thumb|right|150px|A periodic wallpaper gives rise to a [[wallpaper group]].]]
+[[Symmetry group]]s are groups consisting of [[symmetry|symmetries]] of given [[geometry|geometrical]] objects.<ref>{{harvnb|Weyl|1952}}</ref> The introductory dihedral group is an example for a symmetry group. Symmetries greatly [[symmetry in mathematics|simplify the study]] of geometrical objects. This remark is formalized and exploited using the notion of [[group action]]s, a concept much used in [[geometric invariant theory]]. This way, abstract algebra and geometry are enriching each other: the methods of abstract algebra are applied to get refined information about geometrical objects whereas geometry may serve as an intuition for advances in abstract algebra.<ref>See, for example, [[hyperbolic group]]s, which employ ideas and methods of [[hyperbolic geometry]].</ref> Symmetry groups play a central r<U+00F4>le in modern physical fields such as [[gauge theory]]. Finite symmetry groups such as the [[Mathieu group]]s are used in [[coding theory]], which is in turn applied in [[forward error correction|error correction]] of transmitted data, or in [[CD player]]s.<ref>{{harvnb|Welsh|1989}}</ref> Every group is the symmetry group of some [[graph (mathematics)|graph]].<ref>{{harvnb|Frucht|1939}}</ref>
+
+===Lie groups===
+In many situations groups are endowed with an [[group object|additional structure]]. Examples include [[algebraic group|algebraic]] and [[topological group]]s studied in [[algebraic geometry]] and [[topology]] and [[Lie group]]s. The latter are groups which also have a (compatible) [[manifold]] structure.<ref>{{harvnb|Warner|1983}}</ref> Because of the manifold structure it is possible to consider continuous paths in the group. For this reason they are also referred to as continuous groups. Examples include the [[real number]]s with addition, the nonzero [[complex number]]s with multiplication, or the rotations of a circle with composition.
+
+In physics continuous symmetries are linked to [[conserved quantities]] via [[Noether's theorem]], so Lie groups play an important role in physical theories. The [[Poincar<U+00E9> group]], for example, plays a pivotal role in [[special relativity]] and [[quantum field theory]].
+
+====General linear group and matrix groups====
+Most of Lie groups important in physics may be described as groups of [[Matrix (mathematics)|matrices]] together  with [[matrix multiplication]]: the [[general linear group]] ''GL''(''n'',''K'') consists of all [[invertible matrix|invertible]] ''n'' by ''n'' matrices with entries in a fixed field ''K''.<ref>{{harvnb|Borel|1991}}</ref> From a [[category theory|category-theoretic]] point of view, this group is an example of an [[automorphism group]], for it is the group of [[linear map|linear automorphisms]] of the [[vector space]] ''K''<sup>''n''</sup>.
+
+The subgroups of ''GL''(''n'',''K'') are referred to as ''matrix  groups''. The dihedral group example mentioned above can be viewed as a (very small) matrix group. Other important matrix groups include the [[special orthogonal group]] ''SO''(''n'') which describes all possible rotations in ''n'' dimensions. In chemical fields, such as [[crystallography]], groups of rotation matrices are used to describe [[molecular symmetry|molecular symmetries]].
+
+=== Galois groups ===
+[[Galois group]]s are groups of substitutions of the roots of a polynomial and were historically important during the development of group theory.<ref>{{harvnb|Robinson|1996|p=viii}}</ref><ref>{{harvnb|Artin|1998}}</ref> They stem from the question of determining which [[polynomial]]s of [[degree of a polynomial|degree]] greater than four have solutions by [[radical]]s. That is, which polynomial have all their solutions expressible using solely addition, multiplication, and ''n''-th [[root (mathematics)|root]]s, where ''n'' is a positive integer. For example, the solutions of the [[quadratic equation]] ''ax''<sup>2</sup>+''bx''+''c''=0 may be expressed by radicals as
+:<math>x = \frac{-b \pm \sqrt {b^2-4ac}}{2a}</math>.
+The abstract properties of Galois groups (in particular their [[solvable group|solvability]]) associated to polynomials give a criterion which polynomials do have all their solutions expressible by radicals.<ref>[[#CITEREFLang2002|Lang 2002]], theorem VI.7.2., p. 292</ref> [[Galois theory]] also explains the existence and structure of the formulae solving [[cubic equation|cubic]] and [[quartic equation]]s.
+
+==Generalizations==
+{{Group-like structures}}
+In [[abstract algebra]], more general structures arise by relaxing some of the axioms defining a group:<ref>{{harvnb|Mac Lane|1998}}</ref><ref>{{harvnb|Denecke|Wismath|2002}}</ref><ref>{{harvnb|Romanowska|Smith|2002}}</ref>
+* Eliminating the requirement that every element have an inverse, then the resulting algebraic structure is called a [[monoid]].
+* A monoid without an identity is called a [[semigroup]].
+* Alternatively, relaxing the requirement that the operation be [[Associativity|associative]] while still requiring the possibility of [[division (mathematics)|division]], the resulting algebraic structure is a [[loop (algebra)|loop]].
+* A loop without an identity is called a [[quasigroup]].
+* Finally, dropping all axioms for the binary operation, the resulting algebraic structure is called a [[magma (algebra)|magma]].
+*[[Groupoid]]s, which are similar to groups except that the composition ''a'' <U+2022> ''b'' need not be defined for all ''a'' and ''b'', arise in the study of more involved kinds of symmetries, often in [[topology|topological]] and [[analysis|analytical]] structures, e.g. the [[fundamental groupoid]]. Groupoids, in turn, are special sorts of [[category theory|categories]].
+
+Additionally:
+*Generalizing from binary to [[ternary operation]]s leads to [[heap (mathematics)|heaps]].
+*The [[category of abelian groups]] form the prototype for the concept of an [[abelian category]], which provides the general setting for [[homological algebra]].
+*Groups may be viewed as a special case of a [[Hopf algebra]], deforming a group in this larger context leads to the concept of a [[quantum group]].<ref>{{harvnb|Kassel|1994}}</ref>
+*[[Formal group law]]s are certain [[formal power series]] which have properties much like a group operation.<ref>{{harvnb|Fr<U+00F6>hlich|1968}}</ref>
+
+==See also==
+<div style="-moz-column-count:2; column-count:2;">
+* [[List of group theory topics]]
+* [[List of small groups]]
+</div>
+
+==Notes==
+
+{{reflist|3}}
+
+==References==
+{{Wikibooks|Abstract algebra/Groups}}
+* [[List of publications in mathematics#Group theory|Important historical publications in group theory]].
+* {{Citation | last1=Artin | first1=Michael | author1-link=Michael Artin | title=Algebra | publisher=[[Prentice Hall]] | isbn=978-0-89871-510-1 | year=1991}}, Chapter 2 contains a undergraduate-level exposition of the notions covered in this article.
+* {{Citation | last1=Devlin | first1=Keith | author1-link=Keith Devlin | title=The Language of Mathematics : Making the Invisible Visible | publisher=Owl Books | isbn=978-0-8050-7254-9 | year=2000}}, Chapter 5 provides a layman-accessible explanation of groups.
+* {{Citation | last1=Dummit | first1=David S. | last2=Foote | first2=Richard M. | title=Abstract algebra | publisher=Wiley | location=New York | edition=3rd| isbn=978-0-471-43334-7 | id={{MathSciNet | id = 2286236}} | year=2004}}.
+* {{Citation | last1=Fulton | first1=William | author1-link=William Fulton | last2=Harris | first2=Joe | author2-link=Joe Harris | title=Representation Theory, A First Course | publisher=[[Springer-Verlag]] | location=Berlin, New York | series=Graduate Texts in Mathematics | isbn=978-0-387-97495-8 | id={{MathSciNet | id = 1153249}} | year=1991 | volume=129}}
+* {{Citation | last1=Hall | first1=G. G. | title=Applied group theory | publisher=American Elsevier Publishing Co., Inc., New York | id={{MathSciNet | id = 0219593}} | year=1967}}, an elementary introduction
+* {{Citation | last1=Herstein | first1=Israel Nathan |author1-link = Israel Nathan Herstein | title=Abstract algebra | publisher=Prentice Hall Inc. | location=Upper Saddle River, NJ | edition=3rd | isbn=978-0-13-374562-7 | id={{MathSciNet | id = 1375019}} | year=1996}}.
+* {{Citation | last1=Herstein | first1=Israel Nathan | title=Topics in algebra | publisher=Xerox College Publishing | location=Lexington, Mass. | edition=2nd | id={{MathSciNet | id = 0356988}} | year=1975}}
+* {{Citation | last1=Lang | first1=Serge | author1-link = Serge Lang | title=Algebra | publisher=| location=Berlin, New York | series=Graduate Texts in Mathematics | isbn=978-0-387-95385-4 | id={{MathSciNet | id = 1878556}} | year=2002 | volume=211}}
+* {{Citation | last1=Lang | first1=Serge | title=Undergraduate Algebra | publisher=[[Springer-Verlag]] | location=Berlin, New York | edition=3rd | isbn=978-0-387-22025-3 | year=2005}}
+* {{Citation | last1=Ledermann | first1=Walter | title=Introduction to the theory of finite groups | publisher=Oliver and Boyd, Edinburgh and London | id={{MathSciNet | id = 0054593}} | year=1953}}
+* {{Citation | last1=Robinson | first1=Derek John Scott | title=A course in the theory of groups | publisher=[[Springer-Verlag]] | location=Berlin, New York | isbn=978-0-387-94461-6 | year=1996}}
+
+===Further reading===
+* {{Citation | last1=Artin | first1=Emil | author1-link=Emil Artin | title=Galois Theory | publisher=[[Dover Publications]] | location=New York | isbn=978-0-486-62342-9 | year=1998}}
+* {{Citation | last1=Aschbacher | first1=Michael | author1-link = Michael Aschbacher | title=The Status of the Classification of the Finite Simple Groups | url=http://www.ams.org/notices/200407/fea-aschbacher.pdf | year=2004 | journal=[[Notices of the American Mathematical Society]] | issn=0002-9920 | volume=51 | issue=7 | pages=736<U+2013>740}}. See also the [[classification of finite simple groups#References|references]] in the classification article.
+* {{Citation | last1=Borel | first1=Armand | author1-link=Armand Borel | title=Linear algebraic groups | publisher=[[Springer-Verlag]] | location=Berlin, New York | edition=2nd | series=Graduate Texts in Mathematics | isbn=978-0-387-97370-8 | id={{MathSciNet | id = 1102012}} | year=1991 | volume=126}}
+* {{Citation | last1=Carter | first1=Roger W. | author1-link=Roger Carter (mathematician) | title=Simple groups of lie type | publisher=[[John Wiley & Sons]] | location=New York | isbn=978-0-471-50683-6 | year=1989}}
+* {{Citation | last1=Denecke | first1=Klaus | last2=Wismath | first2=Shelly L. | title=Universal algebra and applications in theoretical computer science | publisher=[[CRC Press]] | location=London | isbn=978-1-58488-254-1 | year=2002}}
+* {{Citation | last1=Eisenbud | first1=David | author1-link=David Eisenbud | title=Commutative algebra | publisher=[[Springer-Verlag]] | location=Berlin, New York | series=Graduate Texts in Mathematics | isbn=978-0-387-94268-1; 978-0-387-94269-8 | id={{MathSciNet | id = 1322960}} | year=1995 | volume=150}}
+* {{Citation | last1=Fr<U+00F6>hlich | first1=Albrecht | title=Formal groups | publisher=[[Springer-Verlag]] | location=Berlin, New York | series=Lecture notes in mathematics | year=1968 | volume=74}}
+* {{Citation | last1=Frucht | first1=R. | title=Herstellung von Graphen mit vorgegebener abstrakter Gruppe | url=http://www.numdam.org/numdam-bin/fitem?id=CM_1939__6__239_0 | year=1939 | journal=Compositio Mathematica | issn=0010-437X | volume=6 | pages=239<U+2013>50}}
+* {{Citation | last=Kassel |first=Christian |title=Quantum Groups |year=1994 |publisher=Springer |isbn=978-0387943701 }}
+* {{Citation | last1=Kurzweil | first1=Hans | last2=Stellmacher | first2=Bernd | title=The theory of finite groups | publisher=[[Springer-Verlag]] | location=Berlin, New York | series=Universitext | isbn=978-0-387-40510-0 | id={{MathSciNet | id = 2014408}} | year=2004}}
+* {{Citation | last1=Mac Lane | first1=Saunders | author1-link=Saunders Mac Lane | title=[[Categories for the Working Mathematician|Categories for the Working Mathematician]] | publisher=[[Springer-Verlag]] | location=Berlin, New York | edition=2nd | isbn=978-0-387-98403-2 | year=1998}}
+* {{Citation | last1=Michler | first1=Gerhard | title=Theory of finite simple groups | publisher=[[Cambridge University Press]] | isbn=978-0-521-86625-5 | year=2006}}
+* {{Citation | last1=Romanowska | first1=A.B. | last2=Smith | first2=J.D.H. | title=Modes | publisher=[[World Scientific]] | isbn=9789810249427 | year=2002}}
+* {{Citation | last1=Warner | first1=Frank | title=Foundations of Differentiable Manifolds and Lie Groups | publisher=[[Springer-Verlag]] | location=Berlin, New York | isbn=978-0-387-90894-6 | year=1983}}
+* {{Citation | last1=Welsh | first1=Dominic | title=Codes and cryptography | publisher=Clarendon Press | location=Oxford | isbn=978-0-19-853287-3 | year=1989}}
+* {{Citation | last1=Weyl | first1=Hermann | author1-link=Hermann Weyl | title=Symmetry | publisher=[[Princeton University Press]] | isbn=978-0-691-02374-8 | year=1952}}
+
+==External links==
+*{{mathworld|title=Group|urlname=Group}}
+*[http://planetmath.org/encyclopedia/Group.html Group] at [[PlanetMath]].
+
+[[Category:Abstract algebra]]
+[[Category:Group theory]]
+[[Category:Symmetry]]
+
+[[af:Groep (wiskunde)]]
+[[ar:<U+0632><U+0645><U+0631><U+0629> (<U+0631><U+064A><U+0627><U+0636><U+064A><U+0627><U+062A>)]]
+[[az:Qrup anlay<U+0131><U+015F><U+0131>]]
+[[bg:<U+0413><U+0440><U+0443><U+043F><U+0430> (<U+0430><U+043B><U+0433><U+0435><U+0431><U+0440><U+0430>)]]
+[[ca:Grup (matem<U+00E0>tiques)]]
+[[cs:Grupa]]
+[[cy:Gr<U+0175>p (mathemateg)]]
+[[da:Gruppe (matematik)]]
+[[de:Gruppentheorie]]
+[[et:R<U+00FC>hm (matemaatika)]]
+[[el:<U+039F><U+03BC><U+03AC><U+03B4><U+03B1>]]
+[[es:Grupo (matem<U+00E1>tica)]]
+[[eo:Grupo (algebro)]]
+[[fa:<U+06AF><U+0631><U+0648><U+0647> (<U+0631><U+06CC><U+0627><U+0636><U+06CC>)]]
+[[fr:Groupe (math<U+00E9>matiques)]]
+[[zh-classical:<U+7FA4> (<U+4EE3><U+6578>)]]
+[[ko:<U+AD70> (<U+C218><U+D559>)]]
+[[hr:Grupa (matematika)]]
+[[id:Grup (matematika)]]
+[[is:Gr<U+00FA>pa]]
+[[it:Gruppo (matematica)]]
+[[he:<U+05D7><U+05D1><U+05D5><U+05E8><U+05D4> (<U+05DE><U+05D1><U+05E0><U+05D4> <U+05D0><U+05DC><U+05D2><U+05D1><U+05E8><U+05D9>)]]
+[[lt:Grup<U+0117> (algebra)]]
+[[hu:Csoport]]
+[[nl:Groep (wiskunde)]]
+[[ja:<U+7FA4> (<U+6570><U+5B66>)]]
+[[no:Gruppe (matematikk)]]
+[[nov:Grupe (matematike)]]
+[[oc:Grop (matematicas)]]
+[[pms:Strop]]
+[[pl:Grupa (matematyka)]]
+[[pt:Grupo (matem<U+00E1>tica)]]
+[[ro:Grup (matematic<U+0103>)]]
+[[ru:<U+0413><U+0440><U+0443><U+043F><U+043F><U+0430> (<U+043C><U+0430><U+0442><U+0435><U+043C><U+0430><U+0442><U+0438><U+043A><U+0430>)]]
+[[scn:Gruppu (matimatica)]]
+[[sk:Grupa (matematika)]]
+[[sl:Grupa (matematika)]]
+[[sr:<U+0413><U+0440><U+0443><U+043F><U+0430> (<U+043C><U+0430><U+0442><U+0435><U+043C><U+0430><U+0442><U+0438><U+043A><U+0430>)]]
+[[fi:Ryhm<U+00E4> (algebra)]]
+[[sv:Grupp (matematik)]]
+[[ta:<U+0B95><U+0BC1><U+0BB2><U+0BAE><U+0BCD> (<U+0B95><U+0BA3><U+0BBF><U+0BA4><U+0BAE><U+0BCD>)]]
+[[th:<U+0E01><U+0E23><U+0E38><U+0E1B> (<U+0E04><U+0E13><U+0E34><U+0E15><U+0E28><U+0E32><U+0E2A><U+0E15><U+0E23><U+0E4C>)]]
+[[tr:<U+00D6>bek (matematik)]]
+[[uk:<U+0413><U+0440><U+0443><U+043F><U+0430> (<U+043C><U+0430><U+0442><U+0435><U+043C><U+0430><U+0442><U+0438><U+043A><U+0430>)]]
+[[vls:Groep (algebra)]]
+[[zh:<U+7FA4>]]

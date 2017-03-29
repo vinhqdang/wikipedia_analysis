@@ -1,0 +1,89 @@
+{{Refimprove|date=August 2008}}
+[[Image:Carnot-engine-1824.png|175px|thumb|right|[[Axial]] [[Cross section (geometry)|cross section]] of Carnot's heat engine. In this diagram, ''abcd'' is a cylindrical vessel, ''cd'' is a movable [[piston]], and ''A'' and ''B'' are constant<U+2013>temperature bodies. The vessel may be placed in contact with either body or removed from both (as it is here).<ref>Figure&nbsp;1 in Carnot (1824, p. 17) and Carnot (1890, p. 63). In the diagram, the diameter of the vessel is large enough to bridge the space between the two bodies, but in the model, the vessel is never in contact with both bodies simultaneously. Also, the diagram shows an unlabeled axial rod attached to the outside of the piston.</ref> ]]
+A '''Carnot heat engine'''<ref>In French, Carnot uses ''machine <U+00E0> feu'', which Thurston translates as ''heat-engine'' or ''steam-engine''. In a footnote, Carnot distinguishes the steam-engine (''machine <U+00E0> vapeur'') from the heat-engine in general. (Carnot, 1824, p. 5 and Carnot, 1890, p. 43)</ref> is a hypothetical engine that operates on the reversible [[Carnot cycle]].   The basic model for this engine was developed by [[Nicolas L<U+00E9>onard Sadi Carnot]] in 1824.  The Carnot engine model was graphically expanded upon by [[<U+00C9>mile Clapeyron|Benoit Paul <U+00C9>mile Clapeyron]] in 1834 and mathematically elaborated upon by [[Rudolf Clausius]] in the 1850s and 60s from which the concept of [[entropy]] emerged.
+
+Every thermodynamic system exists in a particular [[thermodynamic state|state]]. A [[thermodynamic cycle]] occurs when a [[thermodynamic system|system]] is taken through a series of different states, and finally returned to its initial state. In the process of going through this cycle, the system may perform work on its surroundings, thereby acting as a [[heat engine]].
+
+A heat engine acts by transferring energy from a warm region to a cool region of space and, in the process, converting some of that energy to [[mechanical work]]. The cycle may also be reversed. The system may be worked upon by an external force, and in the process, it can transfer thermal energy from a cooler system to a warmer one, thereby acting as a [[Refrigeration|refrigerator]] or [[heat pump]] rather than a heat engine.
+
+In the adjacent diagram, from Carnot's 1824 work, ''[[Reflections on the Motive Power of Heat]]'',<ref>Sometimes translated as ''Reflections on the Motive Power of Fire''.[http://www.worldcat.org/search?q=ti%3AReflections+on+the+motive+power+of+fire+au%3Acarnot]</ref> there are "two bodies ''A'' and ''B'', kept each at a constant temperature, that of ''A'' being higher than that of ''B''.  These two bodies, to which we can give or from which we can remove the heat without causing their temperatures to vary, exercise the functions of two unlimited reservoirs of [[caloric]].  We will call the first the [[furnace]] and the second the refrigerator.<U+201D><ref>English translation by Thurston (Carnot, 1890, p. 51-52).</ref> Carnot then explains how we can obtain [[motive power]], i.e. <U+201C>work<U+201D>, by carrying a certain quantity of heat from body ''A'' to body ''B''.
+
+==Modern diagram==
+[[Image:Carnot heat engine 2.svg|300px|thumb|right|Carnot engine diagram (modern) - where heat flows from a high temperature ''T<sub>H</sub>'' furnace through the fluid of the "working body" (working substance) and into the cold sink ''T<sub>C</sub>'', thus forcing the working substance to do [[mechanical work]] ''W'' on the surroundings, via cycles of contractions and expansions.]]
+
+The previous image shows the original piston-and-cylinder diagram used by Carnot in discussing his ideal engine.  The figure at right shows a block diagram of a generic heat engine, such as the Carnot engine.  In the diagram, the <U+201C>working body<U+201D> (system), a term introduced by Clausius in 1850, can be any fluid or vapor body through which [[heat]] ''Q'' can be introduced or transmitted through to produce work.  Carnot had postulated that the fluid body could be any substance capable of expansion, such as vapor of water, vapor of alcohol, vapor of mercury, a permanent gas, or air, etc.  Although, in these early years, engines came in a number of configurations, typically ''Q<sub>H</sub>'' was supplied by a boiler, wherein water was boiled over a furnace; ''Q<sub>C</sub>'' was typically a stream of cold flowing water in the form of a [[condenser]] located on a separate part of the engine.  The output work ''W'' here is the movement of the piston as it is used to turn a crank-arm, which was then typically used to turn a pulley so to lift water out of flooded salt mines.  Carnot defined work as <U+201C>weight lifted through a height<U+201D>.
+
+<!-- Until this section text gets longer, please leave this space for the right-justified image -->
+ 
+
+<!-- Until this section text gets longer, please leave this space for the right-justified image -->
+
+==Carnot's theorem==
+{{main|Carnot's theorem (thermodynamics)}}
+[[Image:Real vs Carnot.png|500px|thumb|right|A real engine (left) compared to the Carnot cycle (right). The entropy of a real material changes with temperature. This change is indicated by the curve on a T-S diagram. For this figure, the curve indicates a vapor-liquid equilibrium (''See [[Rankine cycle]]''). Irreversible systems and losses of heat (for example, due to friction) prevent the ideal from taking place at every step.]]
+
+'''Carnot's theorem''' is a formal statement of this fact: ''No engine operating between two heat reservoirs can be more efficient than a Carnot engine operating between the same reservoirs.'' 
+
+This maximum efficiency <math>\eta</math> is defined to be:
+:<math>\eta=\frac{W}{Q_H}=1-\frac{T_C}{T_H}
+\quad\quad\quad\quad\quad\quad\quad\quad\quad(1)</math>
+where
+: <math> W </math> is the work done by the system (energy exiting the system as work),
+: <math> Q_H </math> is the heat put into the system (heat energy entering the system),
+: <math> T_C </math> is the [[absolute temperature]] of the cold reservoir, and 
+: <math> T_H </math> is the [[absolute temperature]] of the hot reservoir.
+
+A corollary to Carnot's theorem states that: ''All reversible engines operating between the same heat reservoirs are equally efficient.''  
+
+In other words, maximum efficiency is achieved if and only if no new [[entropy]] is created in the cycle. Otherwise, since [[entropy]] is a [[state function]], the required dumping of heat into the environment to dispose of excess [[entropy]] leads to a reduction in efficiency. So Equation (1) gives the efficiency of any [[Reversible process (thermodynamics)|reversible]] [[heat engine]].
+
+==Efficiency of real heat engines==
+Carnot realised that in reality it is not possible to build a [[Thermodynamic reversibility|thermodynamically reversible]] engine, so real heat engines are less efficient than indicated by Equation (1).  Nevertheless, Equation (1) is extremely useful for determining the maximum efficiency that could ever be expected for a given set of thermal reservoirs.
+
+Although '''Carnot's cycle''' is an idealisation, the expression 
+of Carnot efficiency is still useful. Consider the [[average]] temperatures,
+
+:    <math>\langle T_H \rangle = \frac{1}{\Delta S} \int_{Q_{in}} TdS </math>
+
+:    <math>\langle T_C \rangle = \frac{1}{\Delta S} \int_{Q_{out}} TdS </math>
+
+at which heat is input and output, respectively.  Replace ''T<sub>H</sub>'' and ''T<sub>C</sub>'' in Equation (1) by <''T<sub>H</sub>''> and <''T<sub>C</sub>''> respectively.
+
+For the Carnot cycle, or an equivalent, <''T<sub>H</sub>''> is the highest temperature available and <''T<sub>C</sub>''> the lowest. For other less efficient cycles, <''T<sub>H</sub>''> will be lower than ''T<sub>H</sub>'' , and <''T<sub>C</sub>''> will be higher than ''T<sub>C</sub>''. This can help illustrate, for example, why a [[reheater]] or a [[regenerator]] can improve thermal efficiency.
+
+:''See also: [[Heat Engine#Efficiency|Heat Engine (efficiency]] and [[Heat Engine#Other criteria of heat engine performance|other performance criteria)]]''
+
+==See also==
+*[[Carnot cycle]]
+*[[Thermal efficiency]]
+*[[History of the internal combustion engine]]
+
+==Notes==
+<references />
+
+==References==
+<!--
+[[Template:Cite book]]
+*{{cite book |title= |last= |first= |authorlink= |coauthors= |year= |edition= |publisher= |location= |isbn= |pages= }}
+-->
+*{{cite book |title=R<U+00E9>flexions sur la puissance motrice du feu et sur les machines propres <U+00E0> d<U+00E9>velopper cette puissance |last=Carnot |first=Sadi |authorlink=Nicolas L<U+00E9>onard Sadi Carnot |coauthors= |year=1824 |publisher=Bachelier |location=Paris |isbn= |pages= |url=http://books.google.com/books?id=YcY9AAAAMAAJ }} {{fr icon}}
+*{{cite book |title=Reflections on the Motive Power of Heat and on Machines Fitted to Develop That Power |last=Carnot |first=Sadi |authorlink= |coauthors= [[Robert Henry Thurston|Thurston, Robert Henry]] (editor and translator) |year=1890 |publisher=J. Wiley & Sons |location=New York |isbn= |pages= }} ([http://books.google.com/books?id=tgdJAAAAIAAJ full text of 1897 ed.)]) ([http://www.history.rochester.edu/steam/carnot/1943/ html])
+*{{cite book 
+  |  author = Feynman, Richard P.; Leighton, Robert B.; Sands, Matthew
+  | title = The Feynman Lectures on Physics
+  | publisher = Addison-Wesley Publishing Company
+  | year = 1963
+  | pages=44-4f
+  | isbn = 0201021161 }}
+*{{cite book |title=Physics |last=Halliday |first=David |authorlink= |coauthors=Resnick, Robert |year=1978 |edition=3rd ed. |publisher=John Wiley & Sons |location= |isbn=0471024562 |pages=541-548 }}
+*{{cite book |title=Thermal Physics |last=Kittel |first=Charles |authorlink=Charles Kittel |coauthors=[[Herbert Kroemer|Kroemer, Herbert]] |year=1980 |edition=2nd ed. |publisher=W. H. Freeman Company |location= |isbn=0-7167-1088-9 |pages= }}
+
+{{Commonscat|Carnot heat engine}}
+
+[[Category:Hot air engines]]
+
+[[es:M<U+00E1>quina de Carnot]]
+[[id:Mesin Carnot]]
+[[it:Macchina di Carnot]]
+[[sk:Tepeln<U+00FD> stroj]]
+[[th:<U+0E40><U+0E04><U+0E23><U+0E37><U+0E48><U+0E2D><U+0E07><U+0E08><U+0E31><U+0E01><U+0E23><U+0E04><U+0E27><U+0E32><U+0E21><U+0E23><U+0E49><U+0E2D><U+0E19><U+0E01><U+0E32><U+0E23><U+0E4C><U+0E42><U+0E19><U+0E15><U+0E4C>]]

@@ -1,0 +1,39 @@
+{{Unicode}}
+{{Caractère Unicode
+| titre=<span style="font-size:100%;">{{UniCtrl|200F|M<br />DAG|marque droite-à-gauche (RLM)}}</span>
+| code=200F
+| nom=MARQUE DROITE-À-GAUCHE
+| bloc=[[Table des caractères Unicode/U2000|Ponctuation générale]]<br /><small>(U+2000 à U+206F)</small>
+| voir=
+| chasse= aucune
+| trait= aucun
+}}
+La '''marque droite-à-gauche''' est, en [[informatique]] et en [[typographie]], un caractère sans [[Chasse (typographie)|chasse]] (U+200F marqueur droite-à-gauche, [[Hypertext Markup Language|HTML]] : &amp;rlm;‏), qui est utilisé pour indiquer que les caractères  qui lui sont adjacents s’affichent de droite à gauche. Il est généralement utilisé dans les textes mélangeant des [[système d’écriture|systèmes d’écriture]] s’écrivant de gauche à droite et de droite à gauche, comme quelques mots français (avec l’alphabet latin) dans un texte en arabe (avec l’alphabet arabe). Il est à comparer à la [[marque gauche-à-droite]] qui a un rôle opposé. L'usage du marqueur gauche-à-droite est décrit dans l'algorithme BiDi d’Unicode1<ref name="Bidi-Unicode"/>.
+
+== Utilisation ==
+La marque droite-à-gauche est utile lorsqu’une chaine de caractères d’un système d’écriture écrit de droite à gauche et de caractères non alphabétiques est utilisée dans un texte dans écrit de gauche à droite<ref name="WCAG-20"/>.
+
+Par exemple le texte hébreu ''באמת'' (de droite à gauche) avec le point d’exclamation (neutre), littéralement « vraiment ! », dans un texte en français (de gauche à droite) , sera affiché avec ''!'' à sa droite:<br/>
+:J’ai — באמת<span style="color:red">!</span> — apprécié lui rendre visite.
+
+Si la marque droite-à-gauche est introduite après le ''!'', le texte devrait être affiché correctement avec ''!'' à droite du ''באמת'' :<br/>
+:J’ai — באמת<span style="color:red">!</span>&rlm; — apprécié lui rendre visite.
+
+Les applications conformes à la norme afficheront ''!'' à droite dans le premier exemple car elles reconnaissent le paragraphe comme étant dans une écriture de gauche à droite (ici l’écriture latine), et traite les signes de ponctuation et symboles (neutre dans leur orientation) comme le texte adjacent le plus proéminent, c’est-à-dire le reste du paragraphe plutôt que juste quelques caractères. Dans le second exemple, la marque droite-à-gauche indique que le texte adjacent (le ''באמת'' et la marque) est uniquement de droite à gauche et l’application affiche donc ''!'' à gauche des caractères précédents.
+
+== Références ==
+{{Références|références=
+<ref name="Bidi-Unicode">[http://www.unicode.org/reports/tr9/ Unicode Bidirectional Algorithm]</ref>
+<ref name="WCAG-20">[http://www.w3.org/TR/WCAG20-TECHS/H34.html Using a Unicode right-to-left mark (RLM) or left-to-right mark (LRM) to mix text direction inline], ''Techniques for WCAG 2.0  — Techniques and Failures for Web Content Accessibility Guidelines 2.0'', W3C.</ref>
+}}
+
+== Voir ==
+* [[Marque gauche-à-droite]]
+* [[Texte bidirectionnel]]
+
+{{Palette Unicode}}
+{{Portail|informatique|écriture}}
+
+[[Catégorie:Typographie]]
+[[Catégorie:Caractère de formatage Unicode]]
+[[Catégorie:Caractère de contrôle]]

@@ -1,0 +1,1240 @@
+{{Confusion|texte=Ne doit pas être confondu avec des [[Théorème de Gauss|théorèmes et lemmes de Gauss]] parfois appelés lois de Gauss}}
+{{Distribution_Statistiques|
+  name       =Loi normale|
+  type       =density|
+  pdf_image  =[[Fichier:Normal Distribution PDF.svg|325px|alt=Courbes de quatre densité de lois normales|Densités de probabilité]]<br /><small>La courbe rouge représente la fonction <math>\scriptstyle \varphi</math> ([[#Définition par la fonction de densité|voir texte]]), densité de probabilité de la loi normale centrée réduite.</small>|
+  cdf_image  =[[Fichier:Normal Distribution CDF.svg|325px|alt=Courbes de quatre fonctions de répartition de lois normales.|Fonctions de répartition]]<small>La courbe rouge représente la fonction <math>\scriptstyle \Phi</math> ([[#Définition par la fonction de répartition|voir texte]]), fonction de répartition de la loi normale centrée réduite.</small>|
+  parameters =<math>\mu</math> [[moyenne]] ([[nombre réel]])<br /><math>\sigma^2>0</math> variance (nombre réel)|
+  support    =<math>]-\infty;+\infty[\!~</math>|
+  pdf        =<math>\frac1{\sigma\sqrt{2\pi}}\; \exp\left(-\frac{\left(x-\mu\right)^2}{2\sigma^2} \right) \!~</math>|
+  cdf        =<math>\frac12 \left(1 + \mathrm{erf}\,\frac{x-\mu}{\sigma\sqrt2}\right) \!~</math>|
+  mean       =<math>\mu</math>|
+  median     =<math>\mu</math>|
+  mode       =<math>\mu</math>|
+  variance   =<math>\sigma^2</math>|
+  skewness   = 0|
+  kurtosis   = 0|
+  entropy    =<math>\ln\left(\sigma\sqrt{2\,\pi\,e}\right)\!~</math>|
+  mgf        =<math>\exp\left(\mu\,t+\frac{\sigma^2 t^2}{2}\right)</math>|
+  char       =<math>\exp\left(\mu\,i\,t-\frac{\sigma^2 t^2}{2}\right)</math>|
+}}
+{{Intro Probabilités et statistiques}} la '''loi normale''' est une [[loi de probabilité]] [[loi de probabilité#Lois absolument continues|absolument continue]] qui dépend de deux paramètres : son [[Espérance mathématique|espérance]] [[Nombre réel|réelle]] <math>\scriptstyle \mu</math> et son [[écart type]] [[Nombre positif|réel positif]] <math>\scriptstyle \sigma</math>. Cette loi est également appelée '''loi gaussienne''', '''loi de Gauss''', '''loi de Laplace''' ou toute combinaison des deux noms des mathématiciens [[Carl Friedrich Gauss]] et [[Pierre-Simon de Laplace]]. La [[densité de probabilité]] de la loi normale est donnée par :
+<center><math>f(x) = \tfrac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}.</math></center>
+La courbe de cette densité est appelée ''courbe de Gauss'' ou ''courbe en cloche'', entre autres. C'est la représentation la plus connue de cette loi. La loi normale de moyenne nulle et d'écart-type unitaire est appelée '''loi normale centrée réduite''' ou '''loi normale standard'''.
+
+Lorsqu'une [[variable aléatoire]] <math>\scriptstyle X</math> suit la loi normale, elle est dite ''gaussienne'' ou ''normale'' et il est habituel d'utiliser la notation utilisant la [[Variance (statistiques et probabilités)|variance]] <math>\scriptstyle \sigma^2</math> :
+<center><math>X \sim \mathcal{N}(\mu,\sigma^2).</math></center>
+Parmi les lois de probabilité, la loi normale prend une place particulière grâce au [[théorème central limite]]. En effet elle correspond au comportement de toute suite d'expériences aléatoires lorsque le nombre d'expériences est très élevé. Grâce à cette propriété centrale, la loi normale permet d'approcher d'autres lois et ainsi de modéliser de nombreuses études scientifiques comme des [[Intervalle de confiance|mesures d'erreurs]] ou des [[tests statistiques]], en utilisant par exemple les tables de la loi normale. Cette loi est également à la base de nombreux objets mathématiques tels que d'autres lois de probabilité, le [[mouvement brownien]], le [[bruit blanc|bruit blanc gaussien]] etc.
+
+== Historique ==
+{{article détaillé|Histoire des probabilités}}
+=== Courbe de Gauss ===
+{{article détaillé|Fonction gaussienne}}
+Les prémices de la compréhension de cette [[loi de probabilité]] à caractère central commencent avec [[Galilée (savant)|Galilée]] lorsqu'il s'intéresse à un jeu de dé, notamment à la somme des points lors du lancer de trois dés. La question particulière sur laquelle Galilée se penche est : ''Pourquoi la somme 10 semble se présenter plus fréquemment que 9 ?''<ref group="a" name="henry">{{Article | langue = fr | prénom1 = Michel | nom1 = Henry | titre = La démonstration par Jacques Bernoulli de son théorème | périodique = Histoires de probabilités et de statistiques - Ellipse | année = 2004 | pages = 121-140 | url texte = http://scholar.googleusercontent.com/scholar?q=cache:KNaLR4i1uBgJ:scholar.google.com/+%22loi+normale%22+histoire+des+probabilit%C3%A9s+&hl=fr&as_sdt=0}}</ref> Galilée publie une solution en 1618 en faisant un décompte des différents cas. Il trouve que des erreurs d'observations sont distribuées de manière symétrique autour d'une « vraie valeur »<ref name="Yadolah309"/>.
+
+L'origine de la loi normale remonte aux travaux de [[Jacques Bernoulli]] sur son théorème d'or, appelé aujourd'hui ''[[loi des grands nombres]]'', publié dans son œuvre ''[[Ars Conjectandi]]'' en 1713. Il y calcule des probabilités liées à des paris sur des jeux de [[pile ou face]]<ref group="a" name="Bru">{{article|langue = fr|prénom1=Bernard|nom1=Bru|titre=La courbe de Gauss ou le théorème de Bernoulli raconté aux enfants|périodique=Mathematics and Social Sciences|volume=175|numéro=3|année=2006|pages=5-23|url texte=http://www.ehess.fr/revue-msh/pdf/N175R1241.pdf}}</ref>, notamment le calcul de la probabilité que la moyenne du nombre de ''pile'' soit proche de la moyenne théorique 1/2 dans lequel apparait le calcul de [[factorielle]]s.
+
+[[Abraham de Moivre]] introduit alors la [[formule de Stirling]] qui précise les calculs de Bernoulli<ref group="a" name="Bru"/>. de Moivre est le premier à introduire cette loi comme loi limite d'une somme de [[loi de Bernoulli|variables de Bernoulli]]. Dans son ouvrage intitulé ''Approximatio ad Summam Terminorum Binomii <math>\scriptstyle(a + b)^n</math> in Seriem expansi'', écrit en latin en 1733 et publié en anglais en 1738, De Moivre calcule des probabilités de gains pour des jeux de hasard, il obtient la loi normale comme une « courbe »<ref name="Yadolah309">{{Harvsp|Dodge|2004|p=309}}</ref>.
+
+Au milieu du {{s-|XVIII|e}}, [[Leonhard Euler]] donne la [[fonction Gamma d'Euler]] qui permet de faire un lien entre les calculs de Bernoulli et de de Moivre et une courbe proche de la courbe en cloche<ref group="a" name="Bru"/>. Plus tard en 1777, [[Pierre-Simon de Laplace]] reprend les travaux de Bernoulli et de de Moivre et généralise leur théorème limite à l'aide de la fonction Gamma d'Euler<ref group="a" name="Bru"/>. Il obtient cette même loi mais en tant qu'approximation de la [[loi binomiale]]<ref name="Quinio36">{{Harvsp|Quinio Benamo|2005|p=36}}</ref>. Pour cela il étudie le comportement du nombre de ''pile'' après un nombre important de lancers de pièce non équilibrée, il obtient alors une bonne estimation de l'écart entre la limite et la somme de variables. Toujours dans le but d'estimer des erreurs, Laplace montre alors que la [[loi hypergéométrique]] peut être approchée par la loi normale<ref name="Yadolah309"/>. Laplace s'intéresse également à la [[loi normale multidimensionnelle]] en tant que coordonnées normales indépendantes<ref name="Lifschitz283">{{Harvsp|Lifschitz|1995|p=283}}</ref>.
+
+Dans ses travaux, ''Theoria motus corporum coelestium'' (1809) et ''Bestimmung der genauigkeit der beobachtung'' (1816), [[Carl Friedrich Gauss]] s'intéresse à la loi normale pour des calculs en astronomie<ref name="Yadolah309"/>. Pour minimiser les erreurs obtenues à partir des différentes observations, il utilise la [[méthode des moindres carrés]] qui permet d'obtenir la moyenne arithmétique des observations pour valeur la plus vraisemblable et la courbe de Gauss comme courbe des erreurs autour de cette valeur théorique<ref group="a" name="Bru"/>. Il obtient la loi normale en tant que solution d'une [[équation différentielle]]<ref name="Stigler407"/>. Ce n'est finalement que le seul lien entre Gauss et cette loi<ref group="a" name="Bru"/>.
+
+Il existe alors une certaine compétition entre Laplace et Gauss pour trouver la meilleure méthode d'approcher les erreurs. C'est finalement Laplace qui énonce en 1810, et publie en 1812, le théorème de Laplace (appelé aujourd'hui [[théorème central limite]]) dans son ouvrage ''Théorie analytique des probabilités''<ref group="a" name="Bru"/>.
+
+Le calcul d'erreurs gaussien est alors utilisé par certains scientifiques, comme [[Friedrich Wilhelm Bessel|Bessel]] dans les années 1830, dans des domaines plus appliqués : [[astronomie]], [[géodésique]] de terrain, étude [[statistique]] de populations, de productions agricoles ou industrielles, enregistrements météorologique, etc. C'est le début des [[statistique]]s. [[Adolphe Quetelet]] qui est l'un des statisticiens les plus connus du {{s-|XIX|e}}, publie en 1846 ses ''Lettres'' dans lesquelles il compare des données observées, des tours de poitrines de l'armée écossaise, à la courbe de Gauss qui fait alors sa première apparition dans une œuvre<ref group="a" name="Bru"/>. Les [[Artillerie|artilleurs]] ont pris conscience que la portée des tirs suit sensiblement une loi normale avec [[Isidore Didion]] en 1937<ref group="a" name="Hadjadji"/>.
+
+Notons que [[Francis Galton]] imagine une machine en 1889, appelée [[planche de Galton]], qui permet d'illustrer la convergence du [[théorème central limite]] et ainsi de faire apparaitre la courbe en cloche de la loi normale.
+
+<gallery>
+image : Abraham de moivre.jpg|de Moivre
+image : Carl Friedrich Gauss.jpg|Gauss
+image : Pierre-Simon Laplace.jpg|Laplace
+image : Adolphe Quételet by Joseph-Arnold Demannez.jpg|Quetelet
+</gallery>
+
+L'étude probabiliste et l'utilisation statistique de la loi normale se poursuit alors durant les siècles suivants jusqu'à aujourd'hui. La formule de la somme de deux variables de loi normale est attribuée à [[Maurice d'Ocagne]] (début du {{s-|XX|e}}), bien que Poisson et Cauchy connaissaient déjà cette propriété, ainsi que possiblement Gauss<ref name="Cramér51">{{Harvsp|Cramér|1970|p=51}}</ref>. La loi normale est vue comme une loi stable par [[Paul Lévy (mathématicien)|Paul Lévy]] et [[Ernest Lhoste]] vers 1919<ref group="a" name="Hadjadji">{{Article | langue = fr | prénom1 = Nacira | nom1 = Hadjadji Seddik-Ameur | titre = Les tests de normalité de Lhoste | périodique = Mathematics and Social Sciences |volume=41|numéro=162 | année = 2003 | pages = 19-43 | url texte = http://www.ehess.fr/revue-msh/pdf/N162R886.pdf}}</ref>.
+
+
+Lorsque [[Pierre-Simon de Laplace|Laplace]] utilise la loi normale comme approximation de la loi hypergéométrique, il obtient en 1778 une première table de la loi, cette table est publiée en 1781<ref name="Yadolah502"/>. [[Egon Sharpe Pearson|E. S. Pearson]] et [[H. O. Hartley]] publient une table plus complète en 1948 basée sur les valeurs calculées par [[W. F. Sheppard]] en 1903 et 1907. Des tables complètes de valeurs sont données par le [[National Bureau of Standards]] (« Institut national des normes et de la technologie ») dans un ouvrage de 1952<ref>{{Harvsp|National Bureau of Standards|1952|p=}}</ref> et par [[J. A. Greenwood]] et [[H. O. Hartley]] dans un ouvrage de 1962<ref>{{Harvsp|Greenwood|Hartley|1962|p=}}</ref>.
+
+=== Historique du nom ===
+Puisqu'il y a plusieurs auteurs considérés comme pères de la loi normale, les noms « loi gaussienne » et « loi de Gauss » sont utilisés dans la littérature allemande et anglo-saxonne, alors que le nom « loi de Laplace » est utilisé par les mathématiciens français<ref name="Quinio35">{{Harvsp|Quinio Benamo|2005|p=35}}</ref>. Les noms « loi de Laplace-Gauss » et « loi de Gauss-Laplace » sont également parfois utilisés<ref name="Stigler406"/>. 
+
+De nombreux auteurs ont donné des noms différents à cette loi : [[Adolphe Quetelet]] l'appelait « courbe des possibilités » ou « loi des erreurs accidentelles » ; [[Bartel Leendert van der Waerden]] (1967) l'appelait « courbe de Quetelet »<ref group="a" name="Bru"/> ; [[Francis Galton]] (1877) parlait de « loi de fréquence des erreurs », de « loi de déviation d'après une moyenne »<ref name="Yadolah309"/>, ou encore d'une courbe « de forme parfaitement normale »<ref name="Stigler412">{{Harvsp|Stigler|1999|p=412}}</ref>{{,}}<ref group="b">en anglais : « ''It is perfectly normal in shape'' »</ref>, c'est la première apparition du terme « normal » en tant qu'adjectif.
+
+{{citation bloc| Il se trouve souvent que des séries de valeurs observées soient des variables 'normales', c'est-à-dire qu'elles sont conformes avec suffisamment d'exactitude pour les besoins habituels, avec les séries de valeurs calculées à partir de raisonnements ''a priori'' de la loi des Fréquences des Erreurs<ref group="b">en anglais : « It is usually found that a series of observed values are 'normally' variable, that is to say that they conform with sufficient exactitude for ordinary purposes, to the series of values calculated from the ''a priori'' reasonings of the law of Frequency of Error. »</ref>.|Francis Galton<ref name="Stigler412"/>, 1885}}
+
+La première attribution du terme « normal » pour la loi est attribuée à [[Henri Poincaré]] qui énonça pendant un de ses cours en 1893 : {{citation | Je dirai, pour abréger, que la loi de probabilité est normale, lorsque la valeur de la probabilité est représentée par cette intégrale<ref name="Stigler407">{{Harvsp|Stigler|1999|p=407}}</ref>.}}. En 1894, [[Irving Fisher]] écrivit une phrase sensiblement différente : {{citation | Lorsqu'une loi d'écarts est exprimée par cette intégrale nous disons que la probabilité est normale<ref name="Stigler407">{{Harvsp|Stigler|1999|p=407}}</ref>}}. Le terme « normal » vient du fait que cette loi apparait souvent dans la nature et que de toute les lois qui apparaissent naturellement, la loi normal est la plus courante et la plus adaptée aux observations<ref name="Stigler407"/>. [[Karl Pearson]] explique en 1893 le choix du terme « normal » pour la loi et la courbe par la facilité de ne pas fixer de paternité<ref name="Stigler406">{{Harvsp|Stigler|1999|p=406}}</ref>.
+
+Puisque la première apparition de la loi normale s'est faite par l'observation de la courbe de sa densité de probabilité, le nom de la courbe sert parfois à définir la loi. Pour mieux donner une image de sa forme, cette courbe est parfois imagée en « chapeau de gendarme vu de face », « cloche plate » ou encore « boa qui a avalé un dromadaire »<ref group="a" name="Bru"/>.
+
+Autour de 1950, la commission de terminologie statistique de l'[[Afnor]], probablement emmené par [[Maurice René Fréchet|Fréchet]], décida de normalisé le terme « loi  de Laplace ». Le polytechnicien [[André Pallez]] ajoute : 
+:« la Commission, considérant que Laplace a découvert la loi qui devrait porter son nom et qui porte celui de Gauss, à une époque où Gauss était encore un jeune enfant, a rétabli la vérité en rendant à Laplace l’hommage qui lui était dû. »<ref group="a" name="Hadjadji"/>.
+Cependant, aujourd'hui au {{s-|XXI|e}}, les deux noms les plus utilisés sont « loi de Gauss » et « loi normale »<ref group="a" name="Hadjadji"/>. Le nom de Gauss est resté plus que les autres grâce, entre autres, à l'influence de l'ouvrage pédagogique de [[Joseph Bertrand]] publié à la fin du {{s-|XIX|e}}<ref group="a" name="Bru"/>.
+
+=== Définition et explications informelles ===
+[[Fichier:Dice sum central limit theorem.svg|thumb|alt=Cinq histogrammes convergeant vers la densité de la loi normale|Les histogrammes représentent les lois discrètes de la somme de 1, 2, 3, 4 ou 5 dés. La courbe noire est la densité de la loi normale vue comme limite des histogrammes.]]
+Les lois de probabilité permettent de décrire de manière théorique le caractère aléatoire d'une expérience qui est considérée comme aléatoire. La loi normale en est un cas particulier. La manière historique de l'aborder est par approximation<ref name="Yadolah310"/>.
+
+Lorsque le résultat de cette expérience aléatoire est à valeurs discrètes, par exemple la somme du lancer de deux dés vaut 1, 2, ... ou 12, une loi dite discrète modélise l'expérience. Les probabilités d'apparition de chaque valeur peuvent être représentées par des histogrammes (voir la figure ci-contre). Une question que ce sont posés plusieurs scientifiques (voir l'[[#Historique|historique]] ci-dessus) est d'effectuer un grand nombre d'expérience et de s'intéresser au comportement de la loi de probabilité associée. Il apparait que les fréquences d'apparition des valeurs possibles sont de plus en plus « lissées »<ref name="Quinio36"/> (voir figure ci-contre). Il existe une certaine répartition autour d'une valeur centrale, ces probabilités peuvent être alors représentées par la fameuse courbe de Gauss ou courbe en cloche obtenue par calcul ou par expérience<ref name="Grinstead351">{{Harvsp|Grinstead|Snell|1997|p=351}}</ref>. Cette courbe en cloche est la densité de probabilité de la loi normale. C'est-à-dire que l'aire sous la courbe vaut 1. Le rôle central de cette loi de probabilité vient du fait qu'elle est la limite d'un grand nombre de loi de probabilité, c'est le théorème central limite.
+
+Ainsi, des mesures faites sur une population de grande taille donnent des valeurs qui sont distribuées de manière normale, par exemple : la taille des femmes adultes d'une population donnée<ref name="Grinstead345">{{Harvsp|Grinstead|Snell|1997|p=345}}</ref>, le poids des graines de pois de senteur<ref name="Grinstead351"/>, etc.
+
+La loi normale est alors devenue une loi de probabilité dont plusieurs définitions équivalentes existent : par la densité de probabilité (la courbe de Gauss), la fonction de répartition, la fonction caractéristique, etc. La loi normale dépend de deux paramètres : le premier donne la moyenne, c'est-à-dire la valeur « centrale » des valeurs possibles<ref name="Grinstead212">{{Harvsp|Grinstead|Snell|1997|p=212}}</ref>, c'est la valeur 7 pour la somme des deux dés ; le deuxième paramètre renseigne sur la « dispersion » des valeurs autour de cette valeur centrale<ref name="Grinstead212"/>, plus ce paramètre est faible plus les valeurs proches de la valeur centrale auront une forte probabilité d'apparaitre. Beaucoup de grandeurs physiques peuvent être représentées par ces deux paramètres<ref name="Protassov30">{{Harvsp|Protassov|2002|p=30}}</ref>.
+
+Lors de l'étude statistique, une valeur observée peut être considérée comme aléatoire et de loi normale. La moyenne de la loi normale est alors considérée comme la valeur « réelle » de la valeur observée, la dispersion de la loi renseigne alors sur l'« erreur » d'observation<ref name="Protassov29">{{Harvsp|Protassov|2002|p=29}}</ref>. C'est-à-dire qu'il est possible de calculer<ref name="Protassov29"/> une valeur approchée de la probabilité qu'une variable suivant une loi normale soit dans un intervalle [μ-σ,μ+σ] autour de la moyenne <math>\scriptstyle \mu</math>. L'idée est de pouvoir obtenir une approximation de la valeur de l'expérience observée en considérant les erreurs dues aux instruments de mesures ou autres<ref name="Quinio36"/>.
+
+== Loi normale centrée réduite ==
+Il est à noter que la loi normale est une [[loi de probabilité]] unidimensionnelle, c'est-à-dire à [[Support d'une mesure|support]] réel <math>\scriptstyle \mathbb R</math>. La loi, également dite ''normale'', multidimensionnelle est la ''[[loi normale multidimensionnelle]]'' (également appelée ''loi multinormale'' ou ''loi de Gauss à plusieurs variables'').
+
+La loi normale centrée réduite est également appelée ''loi normale standard''<ref name="Lifschitz1"/>. La loi normale est une [[loi de probabilité]], c'est-à-dire une [[Mesure (mathématiques)|mesure]] <math>\scriptstyle N</math> de masse totale unitaire. La loi normale est une [[loi de probabilité#Lois absolument continues|loi absolument continue]], c'est-à-dire que la mesure est [[absolue continuité|absolument continue]] par rapport à la mesure de Lebesgue, autrement dit il existe une [[densité de probabilité]] souvent notée <math>\scriptstyle \varphi</math> pour la loi normale centrée réduite telle que : <math>\scriptstyle N(dx)=\varphi(x) \mathrm{d}x</math>.
+
+=== Définition par la fonction de densité ===
+[[Fichier:Gauss reduite.svg|thumbnail|280px|right|alt=Courbe de Gauss|Fonction de densité de la loi normale centrée réduite (dite [[courbe de Gauss]] ou ''courbe en cloche'').]]
+{{article détaillé|Fonction gaussienne|Intégrale de Gauss}}
+La loi normale centrée réduite est la [[loi de probabilité absolument continue]] dont la [[densité de probabilité]] est donnée par la fonction <math>\scriptstyle\varphi : \R \to \R_+</math> définie par<ref name="Yadolah309"/> : 
+:<math>\varphi(t)=\frac{1}{\sqrt{2\;\pi}}\, \mathrm{e}^{-\frac 12 t^2}</math>, pour tout <math>t\in \mathbb R</math>.
+Cette loi est dite centrée puisque son [[Moment (mathématiques)|moment]] d'ordre 1 ([[Espérance mathématique|espérance]]) vaut 0 et que son [[Moment (mathématiques)|moment]] d'ordre 2 ([[écart type]] ou [[Variance (statistiques et probabilités)|variance]]) vaut 1. Le [[Graphe d'une fonction|graphe]] de la densité <math>\scriptstyle\varphi</math> est appelée la ''[[fonction gaussienne]]'', ''courbe de Gauss'' ou ''courbe en cloche''. Cette loi est notée grâce à la première lettre de « normal », une [[variable aléatoire]] ''X'' qui suit la loi normale centrée réduite est notée :
+:<math>X \sim \mathcal N(0,1)</math>.
+
+Donnons quelques remarques et propriétés immédiates (voir également [[#Remarques et propriétés immédiates|les propriétés]] ci-dessous) :
+* Le calcul de l'[[intégrale de Gauss]] permet de démontrer que la fonction <math>\scriptstyle\varphi</math> est bien une densité de probabilité par la formule : <math>\scriptstyle \int_{-\infty}^{+\infty}\mathrm{exp}(-\frac 12 t^2) \mathrm{d}t = \sqrt{2\, \pi}</math>.
+* La densité <math>\scriptstyle \varphi</math> est [[Continuité|continue]], uniformément bornée et [[fonction paire|paire]]<ref name="Lifschitz2">{{Harvsp|Lifschitz|1995|p=2}}</ref>.
+*Le [[Mode (statistiques)|maximum]] de la fonction <math>\scriptstyle \varphi</math> est atteint en la moyenne 0 et vaut<ref name="Lifschitz2"/> <math>\scriptstyle \frac{1}{\sqrt{2\pi}}</math>.
+*La fonction vérifie : <math>\scriptstyle \lim_{x\rightarrow +\infty}\varphi(x)=\lim_{x\rightarrow -\infty}\varphi(x)=0</math>.
+*La densité <math>\scriptstyle \varphi</math> est [[Classe de régularité|infiniment dérivable]], un [[raisonnement par récurrence]] permet d'obtenir la formule<ref name="Tassi128">{{Harvsp|Tassi|Legait|1990|p=128}}</ref> : <math>\scriptstyle \varphi^{(n)}(x)=(-1)^n H_n(x)\varphi(x)</math> où <math>\scriptstyle H_n</math> est le ''n''-ième [[polynôme d'Hermite]].
+
+=== Définition par la fonction de répartition ===
+[[Fichier:CumulativeSD.svg|thumbnail|280px|right|alt=Fonction de répartition|Fonction de répartition de la loi normale centrée réduite.]]
+Certains auteurs préfère définir la loi normale à partir de sa [[fonction de répartition]]. la loi normale est la loi de probabilité dont la fonction de répartition est donnée par la fonction <math>\scriptstyle\Phi : \R \to \R_+</math> définie par<ref name="Cramér50">{{Harvsp|Cramér|1970|p=50}}</ref> :
+:<math>\Phi(x)=\frac{1}{\sqrt{2\;\pi}}\int_{-\infty}^x \mathrm{e}^{-\frac 12 t^2} \mathrm{d}t</math>, pour tout <math>x\in \mathbb R</math>.
+
+Donnons quelques remarques et propriétés immédiates :
+*Il n'existe pas d'expression analytique de la fonction de répartition <math>\scriptstyle \Phi</math>, c'est-à-dire que cette fonction ne s'exprime pas à partir de fonctions usuelles mais elle devient elle-même une fonction usuelle<ref name="Grinstead330"/>.
+*La fonction de répartition s'exprime en fonction de la [[fonction d'erreur]] grâce aux deux formules équivalentes suivantes<ref group="a" name="Marsaglia">{{article|langue=en|prénom1=George|nom1=Marsaglia|titre=Evaluating the Normal Distribution|périodique=Journal of Statistical Software|volume=11|numéro=4|année=2004|pages=1-11|url texte=http://www.jstatsoft.org/v11/i05/paper}}</ref> : <math>\scriptstyle \Phi(x) = \frac12 +\frac12 \operatorname{erf}\left(\frac{x}{\sqrt{2}}\right)</math> et <math>\scriptstyle\operatorname{erf}(x) = 2\Phi\left(x\sqrt{2}\right)-1.</math>
+*La fonction de répartition est dérivable une infinité de fois et vérifie <math>\scriptstyle \Phi'(x)=\varphi(x)</math>. L'écriture équivalente <math>\scriptstyle\mathrm{d}\Phi(x)=\varphi(x)\mathrm{d}x</math> permet de définir l'[[Intégrale de Stieltjes|intégrale de Lebesgue-Stieltjes]] par rapport à la loi normale.
+*La fonction de répartition <math>\scriptstyle \Phi</math> est [[Absolue continuité|absoluement continue]] et [[Fonction monotone|strictement croissante]], c'est donc une [[bijection]]<ref group="a" name="eduscol"/> de <math>\scriptstyle \R</math> dans <math>\scriptstyle ]0,1[</math>. Son [[Fonction inverse|inverse]] <math>\scriptstyle \Phi^{-1}</math> existe et s'appelle la fonction [[probit]]. Cette fonction est utilisée pour le [[modèle Probit]]<ref name="Droesbeke104">{{Harvsp|Droesbeke|Lejeune|Saporta|2005|p=104}}</ref>.
+*Par parité de la loi, <math>\scriptstyle\Phi(-x)=1-\Phi(x)</math> et ainsi <math>\scriptstyle\Phi(0)=\frac 12</math>. Ceci montre<ref group="a" name="eduscol"/> que la [[Médiane (statistiques)|médiane]] de la loi normale centrée réduite est 0.
+*Par définition de la fonction de répartition, <math>\scriptstyle \Phi(x)=\mathbb P(X\leq x)</math> lorsque la variable aléatoire ''X'' suit la loi normale centrée réduite, <math>\scriptstyle X\sim \mathcal N(0,1)</math>. Pour obtenir les valeurs de cette probabilité, il faut approcher cette fonction par d'autres fonctions usuelles et il existe des tables de valeurs. (voir la section ''[[#Table de la loi normale|table]]'' ci-dessous).
+
+=== Définition par la fonction caractéristique ===
+[[Fichier:Fonction caracteristique normale.svg|thumbnail|280px|right|alt=Fonction caractéristique|Fonction caractéristique et fonction génératrice des moments de la loi normale centrée réduite.]]
+Certains auteurs préfère définir la loi normale à partir de sa [[Fonction caractéristique d'une variable aléatoire|fonction caractéristique]]. la loi normale est la loi de probabilité dont la fonction caractéristique est donnée par la fonction <math> \scriptstyle \phi:\R \to \R_+</math> définie par<ref name="Cramér51">{{Harvsp|Cramér|1970|p=51}}</ref>{{,}}<ref name="Bogaert122">{{Harvsp|Bogaert|2006|p=122}}</ref> :
+:<math> \phi(t) = e^{-\frac{t^2}{2}}</math>, pour tout <math>t\in \mathbb R</math>.
+
+Donnons quelques remarques et propriétés immédiates :
+*La fonction caractéristique de la loi normale peut s'obtenir à partir de la fonction de densité par les égalités<ref name="Cramér50"/> :
+:<math>\phi(t)=\int_{-\infty}^{+\infty} e^{itx}\mathrm{d}\Phi(x)=\int_{-\infty}^{+\infty} e^{itx-\frac{x^2}{2}}\mathrm{d}x=e^{-\frac{t^2}{2}}</math>.
+*Si une variable aléatoire X suit la loi normale centrée réduite de fonction caractéristique <math>\scriptstyle \phi</math> définie ci-dessus, alors<ref name="Bogaert123">{{Harvsp|Bogaert|2006|p=123}}</ref> la transformation linéaire <math>\scriptstyle Y=aX+b</math> admet pour fonction caractéristique : <math>\scriptstyle \phi_Y(t)=e^{ibt}\phi(at)</math>. C'est donc une variable aléatoire de loi normale de moyenne <math>\scriptstyle b</math> et de variance <math>\scriptstyle a^2</math>.
+
+=== Définition par la fonction génératrice des moments ===
+Certains auteurs préfère définir la loi normale à partir de sa [[fonction génératrice des moments]]. La loi normale est la loi de probabilité dont la fonction génératrice des moments est donnée par la fonction <math> \scriptstyle M:\R \to \R_+</math> définie par<ref name="Protassov27">{{Harvsp|Protassov|2002|p=27}}</ref> :
+:<math> M(t) = e^{\frac{t^2}{2}}</math>, pour tout <math>t\in \mathbb R</math>.
+
+Donnons quelques remarques et propriétés immédiates :
+*La fonction génératrice des moments de la loi normale peut s'obtenir à partir de la fonction de densité<ref name="Protassov27"/> :
+*:<math>M(t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty} e^{xt}e^{-\frac{x^2}{2}}\mathrm{d}x=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty} e^{-(\frac{(x-t)^2-t^2}{2})}\mathrm{d}x=e^{\frac{t^2}{2}}\,\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty} e^{-\frac{x^2}{2}}\mathrm{d}x=e^{\frac{t^2}{2}}</math>.
+*L'intérêt de la fonction génératrice des moments est de pouvoir calculer les moments de la loi normale<ref name="Protassov28">{{Harvsp|Protassov|2002|p=28}}</ref> (voir la section [[#Moments|Moments]] ci-dessous).
+*Si une variable aléatoire ''X'' suit la loi normale centrée réduite de fonction génératrice des moments <math>\scriptstyle M</math> définie ci-dessus, alors la transformation linéaire <math>\scriptstyle Y=aX+b</math> admet pour fonction génératrice des moments : <math>\scriptstyle M_Y(t)=e^{bt}M(at)</math>. C'est donc une variable aléatoire de loi normale<ref name="Protassov28"/> de moyenne <math>\scriptstyle b</math> et de variance <math>\scriptstyle a^2</math>.
+
+== Loi normale générale ==
+=== Définition ===
+Plus généralement que la loi normale centrée réduite, la loi normale (non centrée et non réduite) est la [[loi de probabilité absolument continue]] dont l'un des quatre points suivants est vérifié :
+*la [[densité de probabilité]] est donnée par la fonction <math>\scriptstyle\varphi : \R \to \R_+</math> définie par<ref name="Yadolah309"/> :
+*:<math>f(t)=\frac{1}{\sigma\sqrt{2\;\pi}}\, \mathrm{e}^{-\frac 12 \frac{(t-\mu)^2}{\sigma^2}}</math>, pour tout <math>t\in \mathbb R</math>,
+*la [[fonction de répartition]] est donnée par la fonction <math>\scriptstyle\Phi : \R \to \R_+</math> définie par :
+*:<math>F(x)=\frac{1}{\sigma\sqrt{2\;\pi}}\int_{-\infty}^x \mathrm{e}^{-\frac 12 \frac{(t-\mu)^2}{\sigma^2}} \mathrm{d}t</math>, pour tout <math>x\in \mathbb R</math>,
+*la [[Fonction caractéristique d'une variable aléatoire|fonction caractéristique]] est donnée par la fonction <math> \scriptstyle \phi:\R \to \C</math> définie par<ref name="Cramér51">{{Harvsp|Cramér|1970|p=51}}</ref> :
+*:<math> \phi(t) = e^{\mu it-\frac{1}{2}\sigma^2t^2}</math>, pour tout <math>t\in \mathbb R</math>,
+*La [[fonction génératrice des moments]] est donnée par la fonction <math> \scriptstyle \phi:\R \to \R_+</math> définie par<ref name="Ross408">{{Harvsp|Ross|2007|p=408}}</ref> :
+*:<math> M(t) = e^{\mu t+\frac{1}{2}\sigma^2t^2}</math>, pour tout <math>t\in \mathbb R</math>,
+où <math>\scriptstyle \mu\in \R</math> et <math>\scriptstyle \sigma\in \R_+^\star</math>.
+
+Pour le cas où <math>\scriptstyle \sigma=0</math>, les fonctions de densité et de répartition ci-dessus ne sont pas définie. Ce cas correspond à un comportement dégénéré de la loi normale, parfois appelée la loi normale impropre<ref name="Cramér51"/>. La loi normale est alors la [[mesure de Dirac]] au point <math>\scriptstyle \mu</math>.
+
+La valeur <math>\scriptstyle \mu</math> est la moyenne de la loi et <math>\scriptstyle \sigma</math> est l'écart-type alors que <math>\scriptstyle \sigma^2</math> en est la variance. Cette loi est notée grâce à la première lettre de « normal », une [[variable aléatoire]] ''X'' qui suit la loi normale centrée réduite est notée de deux manières différentes suivant les auteurs<ref name="Quinio169">{{Harvsp|Quinio Benamo|2005|p=1699}}</ref>{{,}}<ref name="Lifschitz1">{{Harvsp|Lifschitz|1995|p=1}}</ref> :
+:<math>X \sim \mathcal N(\mu,\sigma)</math> ou <math>X \sim \mathcal N(\mu,\sigma^2)</math>.
+La deuxième notation à l'intérêt de pouvoir noter la [[#stabilités|stabilité par addition]] de manière simple<ref group="a" name="eduscol">{{Lien web | auteur = Ministère de l'éducation nationale de la jeunesse et de la vie associative | url = http://media.eduscol.education.fr/file/Mathematiques/11/5/LyceeGT_ressources_Math_T_proba-stat_207115.pdf | titre  = Ressources pour la classe terminale générale et technologique - Probabilités et statistique | année = 2012}}</ref>, elle sera utilisée dans cet article.
+
+=== Remarques et propriétés immédiates ===
+*Si la variable aléatoire ''X'' suit une loi normale centrée réduite <math>\scriptstyle \mathcal N(0,1)</math>, alors la variable aléatoire <math>\scriptstyle \sigma X +\mu</math> suit une loi normale <math>\scriptstyle \mathcal N(\mu,\sigma^2)</math> de moyenne <math>\scriptstyle \mu</math> et de variance <math>\scriptstyle \sigma^2</math>. Réciproquement, si ''Y'' suit une loi normale <math>\scriptstyle \mathcal N(\mu,\sigma^2)</math>, alors <math>\scriptstyle \frac{Y-\mu}{\sigma}</math> suit une loi normale centrée réduite<ref name="Yadolah310">{{Harvsp|Dodge|2004|p=310}}</ref>. C'est-à-dire que toute loi normale peut s'obtenir par [[Translation (géométrie)|translation]] (''shifting'' en anglais) et par [[Dilatation (géométrie)|dilatation]] (''scaling'' en anglais) d'une loi centrée réduite. 
+Cette première propriété permet d'obtenir la formule très utile :
+:<math>\mathbb P (Y\leq x) = \mathbb P\left(\frac{Y-\mu}{\sigma}\leq\frac{x-\mu}{\sigma}\right)=\mathbb P\left(X\leq \frac{x-\mu}{\sigma}\right)</math>.
+Il est alors possible de déduire les propriétés de la loi normale à partir de celles de la loi normale centrée réduite, et vice versa. La variable <math>\scriptstyle \frac{Y-\mu}{\sigma}</math> est parfois<ref name="Ross239">{{Harvsp|Ross|2007|p=239}}</ref> appelée la « standardisation » de ''Y'' ou variable ''Y'' centrée réduite.
+*La densité <math>\scriptstyle f</math> est symétrique par rapport à <math>\scriptstyle \mu</math><ref name="Lifschitz2"/>.
+*Le maximum de la fonction <math>\scriptstyle f</math> est atteint en <math>\scriptstyle \mu</math> et vaut<ref name="Lifschitz2"/> <math>\scriptstyle \frac{1}{\sigma\sqrt{2\pi}}</math>.
+*La décroissance de la densité à droite et à gauche de <math>\scriptstyle \mu</math> est [[Décroissance exponentielle|surexponentielle]]<ref name="Lifschitz2"/>.
+*Puisque la loi normale est une [[loi de probabilité absolument continue]], l'[[Événement (probabilités)|événement]] <math>\scriptstyle [X=x]</math> est [[Ensemble négligeable|négligeable]], c'est-à-dire que [[presque sûrement]] une variable aléatoire de loi normale ''X'' n'est (presque sûrement) jamais égale à une valeur fixée <math>\scriptstyle x</math>. Ceci se traduit mathématiquement par : <math>\scriptstyle \mathbb P(X=x)=0</math>.
+*La [[largeur à mi-hauteur]] permet de donner une valeur d'amplitude de la loi. C'est la largeur de la courbe à une hauteur qui vaut la moitié de la hauteur totale. La largeur à mi-hauteur de la loi normale est proportionnelle à l'écart type<ref group="a" name="mathworld">{{Lien web|auteur=Weisstein, Eric W|url=http://mathworld.wolfram.com/GaussianFunction.html|titre=Gaussian Function|année=|site=MathWorld, a Wolfram Web Resource}}</ref> : <math>\scriptstyle H = 2 \sqrt{2\ln(2)}\sigma \approx  2,3548 \sigma </math>. Le facteur 2 est issu de la propriété de symétrie de la loi normale.
+*La loi normale est une loi de la {{Lien|fr=famille exponentielle|lang=en|trad=Exponential family}}, c'est-à-dire que se densité s'écrit sous la forme : <math>\scriptstyle f(x)=a(\theta)b(x) \mathrm e^{-c(\theta)d(x)} </math> où de manière équivalente sous la forme<ref name="Droesbeke85">{{Harvsp|Droesbeke|Lejeune|Saporta|2005|p=85}}</ref> <math>\scriptstyle f(x)=\mathrm exp\left(\frac{x\theta_1 - \beta(\theta_1)}{\alpha(\theta_2)}\right) </math> avec <math>\scriptstyle \theta_1=\mu</math>, <math>\scriptstyle \theta_2=\sigma</math>, <math>\scriptstyle \beta(\mu)=\mu^2/2</math> et  <math>\scriptstyle \alpha(\sigma)=\sigma^2</math>.
+
+== Propriétés ==
+=== Moments ===
+Le [[Moment (mathématiques)|moment]] d'ordre un est appelé la moyenne et est donné en paramètre dans la loi normale <math>\scriptstyle \mathcal N(\mu,\sigma^2)</math>. Le deuxième paramètre de la loi est son [[écart type]], c'est-à-dire la racine carrée de la [[Variance (statistiques et probabilités)|variance]] qui est par définition la moyenne des carrés des écarts à la moyenne. Il est alors également intéressant d'obtenir les [[Moment (mathématiques)#Moment centré|moments centrés]] de la loi normale, ils sont donnés par<ref name="Protassov28"/> :
+
+:<math>\begin{cases}
+\mu_{2k} = \mathbb E[(X-\mu)^{2k}] = \frac{(2\, k) !}{2^k k!}\sigma^{2k}\\
+\mu_{2k+1} = \mathbb E[(X-\mu)^{2k+1}] = 0 
+\end{cases}</math>
+pour <math>\scriptstyle k\geq 0</math> et ''X'' une variable aléatoire de loi normale <math>\scriptstyle \mathcal N(\mu,\sigma^2)</math>. Le moment centré d'ordre ''n'' peut s'obtenir comme une fonction des moments d'ordre inférieur à ''n'', ainsi le moment d'ordre ''n'' peut s'obtenir à partir des moments d'ordre inférieur à ''n-1'' et du moment centré d'ordre ''n''. Les premiers moments de la loi normale sont alors<ref name="Bogaert120">{{Harvsp|Bogaert|2006|p=120}}</ref> : 
+:<math>m_1= \mathbb E[X] =\mu ; m_2= \mathbb E[X^2] =\sigma^2+\mu^2 ; m_3= \mathbb E[X^3] =3\mu\sigma^2+\mu^3</math>.
+
+;Calcul direct
+Grâce à la symétrie autour de <math>\scriptstyle \mu</math> de la fonction de densité de la loi normale, les moments centrés d'ordre pair sont tous nuls<ref name="Protassov28"/>.
+
+Les moments d'ordre impairs de la loi normale centrée réduite <math>\scriptstyle \mathcal N(0,1)</math> peuvent s'obtenir à partir de la relation de récurrence <math>\scriptstyle m_{2k}=(2k - 1) m_{2k - 2}</math> qui provient de l'[[intégration par parties]] suivante, pour <math>\scriptstyle k\geq 1</math> :
+:<math>m_{2k} = \int_{-\infty}^{+\infty} t^{2k - 1}  t \varphi(t) \mathrm{d}t =-\int_{-\infty}^{+\infty} t^{2k - 1}  \varphi'(t) \mathrm{d}t = (2 k - 1) \int_{-\infty}^{+\infty} t^{2k - 2} \varphi(t) \mathrm{d}t</math>.
+S'en déduit la formule des moments centrés réduits<ref name="Cramér50"/> <math>\scriptstyle m_{2k} = (2k-1)\cdots 3 \cdot 1  = \frac{(2\, k) !}{2^k k!}</math> ainsi que la formule des moments centrés : <math>\scriptstyle \mu_{2k} = \frac{(2\, k) !}{2^k k!}\sigma^{2k}</math>.
+
+;Par la fonction génératrice des moments
+Les [[Moment (mathématiques)#Moment centré|moments centrés]] <math>\scriptstyle (\mu_n, n\geq 0)</math> d'une loi peuvent s'obtenir à partir de la fonction génératrice des moments centrés. Pour la loi <math>\scriptstyle \mathcal N(\mu,\sigma^2)</math>, le changement de variable <math>\scriptstyle y=\frac{x-\mu}{\sigma\sqrt{2}}</math> permet d'obtenir les formules<ref name="Protassov28"/> :
+:<math>M_{\text{centré}}(t)=e^{\frac{\sigma^2t^2}{2}}=\sum_{k=0}^\infty \frac{1}{k!}\left(\frac{\sigma^2t^2}{2}\right)^k</math> d'une part et <math>M_{\text{centré}}(t)=\sum_{n=0}^\infty \frac{1}{n!}\mu_n t^n</math> d'autre part.
+Par l'identification des coefficients des deux séries, implique que les moments d'ordre impair sont nuls et donne une formule pour les moments d'ordre pair <math>\scriptstyle\mu_{2k+1}=0</math> et <math>\scriptstyle\mu_{2k}=\frac{(2k)!}{2^k k!}\sigma^{2k}</math>.
+
+;Asymétrie et aplatissement
+L'[[Asymétrie (statistiques)|asymétrie]] <math>\scriptstyle \gamma_1</math>, le [[kurtosis]] <math>\scriptstyle \beta_2</math> et le kurtosis normalisé <math>\scriptstyle \gamma_2</math> s'obtiennent à partir des formules des moments<ref name="Bogaert119">{{Harvsp|Bogaert|2006|p=119}}</ref> : 
+: <math>\gamma_1 = \frac{\mu_3}{\sigma^3} = 0 ; \beta_2 = \frac{\mu_4}{\sigma^4} = 3 \;\textrm{et}\; \gamma_2=\beta_2-3=0</math>.
+
+;Cumulants
+La fonction caractéristique permet d'obtenir la [[fonction génératrice des cumulants]]  par la formule <math>\scriptstyle \ln (\phi(t))=\sum_{n=1}^{+\infty} K_n \frac{(it)^n}{n!} </math> et permet d'obtenir les [[Cumulant (statistiques)|cumulants]]<ref name="Abramovitch930">{{Harvsp|Abramovitch|Stegun|1972|p=930}}</ref> : <math>\scriptstyle K_1=\mu</math>, <math>\scriptstyle K_2=\sigma^2</math> et <math>\scriptstyle K_n=0</math> pour <math>\scriptstyle n\geq 3</math>.
+
+=== Théorèmes de convergence ===
+[[Fichier:De moivre-laplace.gif|right|thumb|250px|alt=Animation montrant la convergence d'une loi discrète vers une loi continue.|Lorsque le nombre <math>\scriptstyle n</math> de variables augmente, la densité de probabilité de la variable <math>\scriptstyle S_n</math> (centrée réduite) se rapproche de la courbe en cloche de la loi normale.]]
+{{article détaillé|Théorème central limite|Théorème de De Moivre-Laplace}}
+La première version du théorème central limite, appelé alors [[théorème de De Moivre-Laplace]], a été énoncée dans le cas de variables aléatoires de [[loi de Bernoulli]]. De manière plus générale, si <math>\scriptstyle X_1,X_2,\dots,X_n</math> sont des [[variables indépendantes et identiquement distribuées]] de variance finie et si la somme est notée <math>\scriptstyle S_n=X_1+X_2+\dots+X_n</math>, alors<ref name="Grinstead330">{{Harvsp|Grinstead|Snell|1997|p=330}}</ref> pour tout <math>\scriptstyle a<b</math>
+:<math>\lim_{n\rightarrow +\infty}\mathbb P\left(a\leq \frac{S_n-\mathbb E[S_n]}{\sqrt{Var(S_n)}} \leq b\right) = \int_a^b \varphi(x)\mathrm{d}x</math>
+où <math>\scriptstyle \varphi</math> est la densité de probabilité de la loi normale centrée réduite.
+
+Ce théorème signifie que tout ce qui peut être considéré comme étant la somme de pleins de petites valeurs aléatoires indépendantes est approximativement de loi normale<ref name="Grinstead345">{{Harvsp|Grinstead|Snell|1997|p=345}}</ref>. Ceci montre le caractère central de la loi normale en théorie des probabilités. Donnons un énoncé physique de ce théorème<ref name="Protassov44">{{Harvsp|Protassov|2002|p=44}}</ref> : 
+:Si une grandeur physique subit l'influence d'un nombre important de facteurs indépendants et si l'influence de chaque facteur pris séparément est petite, alors la distribution de cette grandeur est une distribution gaussienne.
+
+Ce théorème central limite est valide pour toute loi de probabilité initiale des variables [[iid]] <math>\scriptstyle (X_i ; i=1,2,\dots,n)</math> ayant un écart-type fini, il permet d'obtenir de bonne approximation de la somme <math>\scriptstyle S_n</math>, par exemple<ref name="Bogaert223">{{Harvsp|Bogaert|2006|p=223}}</ref> :
+*Si les variables <math>\scriptstyle X_i</math> de [[loi de Bernoulli]] : <math>\scriptstyle B(p)</math>, alors <math>\scriptstyle S_n</math> suit approximativement une loi normale <math>\scriptstyle \mathcal N(np,np(1-p))</math>. Cette approximation est satisfaisante<ref name="Ross240">{{Harvsp|Ross|2007|p=240}}</ref> dans le cas où <math>\scriptstyle np(1-p)>10</math>.
+*Si les variables <math>\scriptstyle X_i</math> sont  de [[loi du χ²]] : <math>\scriptstyle \xi^2(1)</math>, alors <math>\scriptstyle S_n</math> suit approximativement une loi normale <math>\scriptstyle \mathcal N(n,4n^2)</math>.
+*Si les variables <math>\scriptstyle X_i</math> sont  de [[loi exponentielle]] : <math>\scriptstyle \mathcal E(\lambda)</math>, alors <math>\scriptstyle S_n</math> suit approximativement une loi normale <math>\scriptstyle \mathcal N\left(\frac{n}{\lambda},\frac{n}{\lambda^2}\right)</math>.
+
+Il existe des versions plus générales de ce théorème, par exemple en considérant des variables aléatoires indépendantes, pas de même loi mais ayant des variances petites comparées à celle de leur moyenne<ref name="Yger651">{{Harvsp|Yger|Weill|2009|p=651}}</ref>.
+
+=== Stabilités et famille normale ===
+;Stabilité par additivité
+La loi normale est stable par additivité, c'est-à-dire que la somme de deux variables aléatoires indépendantes de lois normales est elle-même une variable aléatoire de loi normale. Plus explicitement : si <math>\scriptstyle X_1\sim \mathcal N(\mu_1,\sigma_1^2)</math>, <math>\scriptstyle X_2\sim \mathcal N(\mu_2,\sigma_2^2)</math> et <math>\scriptstyle X_1</math> et <math>\scriptstyle X_2</math> sont indépendantes, alors la variable aléatoire <math>\scriptstyle X_1+X_2</math> suit la loi normale <math>\scriptstyle \mathcal N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)</math>.
+
+Cette propriété se généralise pour ''n'' variables, c'est-à-dire si pour tout <math>\scriptstyle i\in \{1,2,\dots,n\}</math>, les variables aléatoires <math>\scriptstyle X_i</math> suivent la loi normale <math>\scriptstyle \mathcal N(\mu_i,\sigma_i^2)</math> et sont indépendantes, alors<ref name="Ross299">{{Harvsp|Ross|2007|p=299}}</ref> la somme <math>\scriptstyle X_1+X_2+\dots+X_n</math> suit la loi normale <math>\scriptstyle \mathcal N(\mu_1+\mu_2+\dots+\mu_n,\sigma_1^2+\sigma_2^2+\dots+\sigma_n^2)</math>.
+
+Cette propriété se démontre directement au moyen des fonctions caractéristiques. La densité de probabilité de la somme de deux variables indépendante de loi normale est donnée par la [[Produit de convolution|convolution]] des deux densités. Ceci se traduit par la formule<ref name="Cramér51"/> :
+:<math>\varphi\left(\frac{x-\mu_1}{\sigma_1}\right) \ast \varphi\left(\frac{x-\mu_2}{\sigma_2}\right) = \varphi\left(\frac{x-(\mu_1+\mu_2)}{\sqrt{\sigma_1^2+\sigma_2^2}}\right)</math>.
+
+Il ne faut pas confondre avec la loi dont la densité est la somme de densité de loi normale (voir la section ''[[#Constructions à partir de la loi normale|mélange gaussien]]'' ci-dessous).
+
+;Famille normale
+L'ensemble de fonctions <math>\scriptstyle \{ \varphi(\frac{x-\mu}{\sigma}) ; \mu\in \mathbb R, \sigma>0\}</math> forme la famille dite ''famille normale''. Cette famille est fermée pour la convolution au sens où<ref name="Cramér52"/> : la fonction <math>\scriptstyle \varphi</math> est la seule qui [[Famille génératrice|engendre]] la famille ; si la convolution de deux densité est dans la famille alors les deux fonctions sont dans la famille ; et toute densité [[Produit de convolution|convolée]] un nombre suffisamment grand de fois et convenablement renormalisée est proche d'une fonction de la famille normale. Les trois théorèmes suivants donnent plus de précisions mathématiques.
+
+#''Théorème''<ref name="Cramér52">{{Harvsp|Cramér|1970|p=52}}</ref> : si pour une fonction de densité <math>\scriptstyle f</math> de moyenne 0 et d'écart type 1, il existe <math>\scriptstyle \mu\in \mathbb R</math> et <math>\scriptstyle \sigma\in \mathbb R_+^*</math> satisfaisant : <math>\scriptstyle f\left(\frac{x-\mu_1}{\sigma_1}\right) \ast f\left(\frac{x-\mu_2}{\sigma_2}\right) = f\left(\frac{x-\mu}{\sigma}\right)</math>, alors <math>\scriptstyle f\equiv \varphi</math> est la densité de la loi normale centrée réduite.
+#''Théorème de Lévy-Cramér (il a été conjecturé par [[Paul Lévy (mathématicien)|Paul Lévy]])''<ref name="Cramér53">{{Harvsp|Cramér|1970|p=53}}</ref> : si deux fonctions de densité <math>\scriptstyle f_1</math> et <math>\scriptstyle f_2</math> vérifient : <math>\scriptstyle f_1(x) \ast f_2(x) = \varphi\left(\frac{x-\mu}{\sigma}\right)</math>, alors <math>\scriptstyle f_1(x)=\varphi\left(\frac{x-\mu_1}{\sigma_1}\right)</math> et <math>\scriptstyle f_2(x)=\varphi\left(\frac{x-\mu_2}{\sigma_2}\right)</math> avec <math>\scriptstyle \mu_1+\mu_2=\mu</math> et <math>\scriptstyle \sigma_1+\sigma_2=\sigma</math>. Autrement dit, si la somme de deux variables aléatoires indépendantes est normale, alors les deux variables sont de lois normales.
+#''Théorème''<ref name="Cramér53"/> : si <math>\scriptstyle f</math> est la densité commune de ''n'' variables aléatoires indépendantes de moyenne 0 et d'écart type 1, alors la [[Produit de convolution|convolée]] ''n'' fois de <math>\scriptstyle f</math> [[Convergence uniforme|converge uniformément]] en ''x'' : <math>\scriptstyle \left( f(x/\sqrt{n})\right)^{\ast n}\rightarrow \varphi(x)</math>. (Ce théorème est équivalent au théorème central limite)
+Il ne faut pas confondre cette ''famille normale'' avec la [[famille normale]] de fonctions holomorphes.
+
+;Stabilité par linéarité
+La loi normale est stable par linéarité : si <math>\scriptstyle \alpha \geq 0</math> et <math>\scriptstyle \beta</math> sont deux réels et <math>\scriptstyle X\sim \mathcal N(\mu,\sigma^2)</math>, alors<ref name="Ross235">{{Harvsp|Ross|2007|p=235}}</ref> la variable aléatoire <math>\scriptstyle \alpha X + \beta</math> suit la loi normale <math>\scriptstyle \mathcal N(\alpha \mu + \beta, \alpha^2 \sigma^2)</math>.
+
+Grâce aux stabilités par addition et par linéarité, la loi normale est un cas particulier de [[loi stable]]<ref group="a" name="Mandelbrot"/> avec pour paramètre de stabilité <math>\scriptstyle \alpha=2</math>.
+
+;Stabilité par moyenne
+La loi normale est stable par moyennisation, c'est-à-dire si <math>\scriptstyle X_{1},X_{2},\dots,X_{n}</math> sont des variables aléatoires indépendantes suivant respectivement les lois normales <math>\scriptstyle \mathcal N (\mu_1,\sigma_1^2),\mathcal N (\mu_2,\sigma_2^2),\dots,\mathcal N(\mu_n,\sigma_n^2)</math>, alors la moyenne <math>\scriptstyle\frac{1}{n}(X_1+X_2+\dots+X_n) </math> suit la loi <math>\mathcal N\left(\tfrac {\mu_1+\mu_2+...+\mu_n} n,\tfrac {\sigma_1^2+\sigma_2^2+....+\sigma_n^2} {n^{2}}\right).</math>
+
+=== Entropie et quantité d'information ===
+;Entropie
+L'[[entropie de Shannon]] d'une loi de probabilité [[Loi de probabilité#Lois absolument continues|absolument continue]] de densité donnée par <math>\scriptstyle f</math> permet de mesurer une quantité d'information et est définie par : 
+:<math>H=-\int_{-\infty}^{+\infty} f(x)\ln f(x) \mathrm{d}x. </math>
+Dans l'ensemble des lois absolument continues de variance <math>\scriptstyle \sigma^2</math> fixée, les lois normales <math>\scriptstyle \mathcal N(\cdot,\sigma^2)</math> de variance <math>\scriptstyle \sigma^2</math>, sont d'entropie maximum<ref group="a" name="shannon">{{article|langue=en|prénom1=Claude|nom1=Shannon|lien auteur1=Claude Shannon|titre=A Mathematical Theory of Communication|périodique=The Bell System Technical Journal|volume=27|année=1948|pages=379-423|url texte=}}</ref>. L'entropie maximum, pour une loi normale donc,  est donnée par : <math>\scriptstyle H=\ln \left(\sigma \sqrt{2\pi e}\right)</math>. Ainsi la théorie de maximisation de l'entropie nous dit que, même si elle n'est pas la meilleure loi adaptée aux valeurs, la loi normal ajustée aux valeurs est adéquat pour prendre une décision.
+
+;Distance entre lois
+La [[divergence de Kullback-Leibler]] entre deux lois permet de mesurer une distance entre les deux lois, ou une ''perte d'information'' entre les deux lois. La divergence de Kullback-Leibler entre les deux lois normales <math>\scriptstyle \mathcal N(\mu_1,\sigma_1^2)</math> et <math>\scriptstyle \mathcal N(\mu_2,\sigma_2^2)</math> est :
+:<math>D_{KL}(\mathcal N(\mu_1,\sigma_1^2) \|\mathcal N(\mu_2,\sigma_2^2)) =  \log \left( \frac{\sigma_1}{\sigma_2} \right) + \frac{1}{2} \left( \frac{\sigma_1^2}{\sigma_2^2} -  \frac{\sigma_2^2}{\sigma_1^2} + \frac{(\mu_2 - \mu_1)^2}{\sigma_2^2} \right) </math>.
+Cette divergence est nulle pour <math>\scriptstyle \mu_1=\mu_2</math> et <math>\scriptstyle \sigma_1=\sigma_2</math> ; de plus elle croît lorsque <math>\scriptstyle |\mu_1-\mu_2|</math> croît<ref group="a" name="">{{Lien web|auteur=Lloyd Allison|url=http://www.allisons.org/ll/MML/KL/Normal/|titre=Normal, Gaussian|année=2012}}</ref>.
+
+=== Approximation de la fonction de répartition ===
+Il n'existe pas d'expression analytique pour la fonction de répartition <math>\scriptstyle \Phi</math> de la loi normale centrée réduite, mais il est possible d'obtenir une écriture sous forme d'une [[série de Taylor]]<ref name="Abramovitch932">{{Harvsp|Abramovitch|Stegun|1972|p=932}}</ref>.
+
+Pour les valeurs de <math>\scriptstyle 0<x \ll 1</math> proches de 0, la fonction de répartition de la loi normale centrée réduite s'écrit sous la forme<ref group="a" name="mathworldnormal">{{Lien web|auteur=Weisstein, Eric W|url=http://mathworld.wolfram.com/NormalDistributionFunction.html|titre=Normal Distribution Function|année=|site=MathWorld, a Wolfram Web Resource}}</ref> :
+:<math> \Phi(x) = \frac{1}{2}+\frac{1}{\sqrt{2\pi}} \sum_{n=0}^{\infty} \frac{(-1)^n}{n! 2^n (2n+1)} x^{2n+1} = \frac{1}{2} +  \frac{1}{\sqrt{2 \pi}} \left(x-\frac{x^3}{6}+\frac{x^5}{40}+\dots\right) ,</math>
+ou sous la forme :
+:<math> \Phi(x) = \frac{1}{2}+\varphi(x) \sum_{n=0}^{\infty} \frac{1}{1 \cdot 3 \cdot 5\dots (2n+1)} x^{2n+1} = \frac{1}{2} +  \varphi(x) \left(x+\frac{x^3}{3}+\frac{x^5}{15}+\dots\right).</math>
+
+Pour les grandes valeurs de <math>\scriptstyle 1 \ll x</math>, la fonction de répartition de la loi normale centrée réduite s'écrit sous la forme<ref name="Abramovitch932"/>{{,}}<ref group="a" name="mathworldnormal"/> :
+:<math> \Phi(x) = 1-\frac{\varphi(x)}{x}\left(1-\frac{1}{x^2}+\frac{1 \cdot 3}{x^4}-\frac{1 \cdot 3\cdot 5}{x^6}+\dots+\frac{1 \cdot 3\dots (2n-1)}{x^{2n}}\right)+R_n </math> avec <math>R_n=(-1)^{n+1}1 \cdot 3\dots (2n+1) \int_x^\infty \frac{\varphi(y)}{y^{2n+2}}\mathrm{d}y</math>
+
+De manière plus numérique et facilement calculable, les approximations suivantes donnent des valeurs de la fonction de répartition <math>\scriptstyle \Phi</math> de la loi normale centrée réduite avec :
+*une erreur de l'ordre de<ref name="Tassi126">{{Harvsp|Tassi|Legait|1990|p=126}}</ref> <math>\scriptstyle 10^{-5}</math> : pour <math>\scriptstyle x>0</math>, <math>\Phi(x) = 1- \frac{e^{-\frac{x^2}{2}}}{\sqrt{2\pi}} \left( \frac{0,4361836}{1+0,33267\,x} + \frac{-0,1201676}{(1+0,33267\,x)^2}+ \frac{0,9772980}{(1+0,33267\,x)^3} \right)+\epsilon(x)</math> où <math>|\epsilon(x)| < 10^{-5} </math>,
+*une erreur de l'ordre de<ref name="Tassi126"/> <math>\scriptstyle 2,5\,.\,10^{-4}</math> : pour <math>\scriptstyle x>0</math> : <math>\Phi(x) \approx 1- \frac{1}{2\left(1+0,196854\, x + 0,115194\, x^2 + 0,000344\, x^3 + 0,019527\, x^4\right)^4}</math>,
+*une erreur de l'ordre de<ref group="a" name="mathworldnormal"/> <math>\scriptstyle 10^{-2}</math> : <math>\Phi(x)=\begin{cases}0,1 x(4,4-x) & \text{ pour }0\leq x \leq 2,2 \\ 0,49 & \text{ pour }2,2\leq x\leq 2,6 \\ 0,5 & \text{ pour } x\geq 2,6  \end{cases}</math>
+
+Voici un exemple d'algorithme<ref group="a" name="Marsaglia"/> pour le langage [[C (langage)|C]] :
+ double Phi(double x)
+ {long double s=x,t=0,b=x,q=x*x,i=1;
+ while(s!=t) s=(t=s)+(b*=q/(i+=2));
+ return .5+s*exp(-.5*q-.91893853320467274178L);}
+
+Une autre écriture de la fonction de répartition de la loi normale centrée réduite utilise une [[fraction continue]]<ref group="a" name="Marsaglia"/> :
+:<math>\Phi(x\sqrt{2})=\frac 12 - \cfrac{1}{\sqrt{\pi}} \cfrac{\cfrac 12 e^{-x^2}}{x+\cfrac{1}{2x+\cfrac{2}{x+\cfrac{3}{2x+\cfrac{4}{x+\dots}}}}}</math>
+
+=== Tables numériques et calculs ===
+{{boîte déroulante début|align=left|titre=Table de valeur de la fonction de répartition}}
+La table suivante donne les valeurs de la fonction de répartition <math>\scriptstyle \Phi(x)=\mathbb P[X\leq x]</math>, lorsque ''X'' suit la loi normale centrée réduite <math>\scriptstyle \mathcal N(0,1)</math>.
+
+Les valeurs en début de lignes donnent la première partie de la variable, les valeurs en début de colonnes donne la deuxième partie. Ainsi la case de la deuxième ligne et troisième colonne donne : <math>\scriptstyle \Phi(0,12)=0,54776</math>.
+
+<center>
+[[Fichier:DisNormal04.svg|thumb|alt=Aire sous la courbe de la densité|La courbe en cloche est la fonction de densité. La droite verticale est la valeur <math>\scriptstyle x</math>. La surface de la partie colorée sous la courbe est la valeur de <math>\scriptstyle \mathbb P[X\leq x]=\Phi(x)</math>.]]
+[[Fichier:DisNormal05.svg|thumb|alt=Aire sous la courbe de la densité|La courbe en cloche est la fonction de densité. Les droites verticales sont les valeurs <math>\scriptstyle x_1</math> et <math>\scriptstyle x_2</math>. La surface de la partie colorée sous la courbe est la valeur de <math>\scriptstyle \mathbb P[x_1\leq X\leq x_2]=\Phi(x_2)-\Phi(x_1)</math>.]]
+[[Fichier:DisNormal09.svg|thumb|alt=Aire sous la courbe de la densité|La courbe en cloche est la fonction de densité. La droite verticale est la valeur <math>\scriptstyle x</math>. La surface de la partie colorée sous la courbe est la valeur de <math>\scriptstyle \mathbb P[X\geq x]=1-\Phi(x)</math>.]]
+
+
+{|  class="wikitable" style="text-align:center" 
+!!|<math>\Phi(x)</math> 
+!| 0,00
+!| 0,01
+!| 0,02
+!| 0,03
+!| 0,04
+!| 0,05
+!| 0,06
+!| 0,07
+!| 0,08
+!| 0,09
+|----
+!| 0,0
+|0,50000
+|0,50399
+|0,50798
+|0,51197
+|0,51595
+|0,51994
+|0,52392
+|0,52790
+|0,53188
+|0,53586
+|----
+!| 0,1
+|0,53983
+|0,54380
+|0,54776
+|0,55172
+|0,55567
+|0,55962
+|0,56356
+|0,56749
+|0,57142
+|0,57535
+|----
+!| 0,2
+|0,57926
+|0,58317
+|0,58706
+|0,59095
+|0,59483
+|0,59871
+|0,60257
+|0,60642
+|0,61026
+|0,61409
+|----
+!| 0,3
+|0,61791
+|0,62172
+|0,62552
+|0,62930
+|0,63307
+|0,63683
+|0,64058
+|0,64431
+|0,64803
+|0,65173
+|----
+!| 0,4
+|0,65542
+|0,65910
+|0,66276
+|0,66640
+|0,67003
+|0,67364
+|0,67724
+|0,68082
+|0,68439
+|0,68793
+|----
+!| 0,5
+|,069146
+|0,69497
+|0,69847
+|0,70194
+|0,70540
+|0,70884
+|0,71226
+|0,71566
+|0,71904
+|0,72240
+|----
+!| 0,6
+|0,72575
+|0,72907
+|0,73237
+|0,73565
+|0,73891
+|0,74215
+|0,74537
+|0,74857
+|0,75175
+|0,75490
+|----
+!| 0,7
+|0,75804
+|0,76115
+|0,76424
+|0,76730
+|0,77035
+|0,77337
+|0,77637
+|0,77935
+|0,78230
+|0,78524
+|----
+!| 0,8
+|0,78814
+|0,79103
+|0,79389
+|0,79673
+|0,79955
+|0,80234
+|0,80511
+|0,80785
+|0,81057
+|0,81327
+|----
+!| 0,9
+|0,81594
+|0,81859
+|0,82121
+|0,82381
+|0,82639
+|0,82894
+|0,83147
+|0,83398
+|0,83646
+|0,83891
+|----
+!| 1,0
+|0,84134
+|0,84375
+|0,84614
+|0,84849
+|0,85083
+|0,85314
+|0,85543
+|0,85769
+|0,85993
+|0,86214
+|----
+!| 1,1
+|0,86433
+|0,86650
+|0,86864
+|0,87076
+|0,87286
+|0,87493
+|0,87698
+|0,87900
+|0,88100
+|0,88298
+|----
+!| 1,2
+|0,88493
+|0,88686
+|0,88877
+|0,89065
+|0,89251
+|0,89435
+|0,89617
+|0,89796
+|0,89973
+|0,90147
+|----
+!| 1,3
+|0,90320
+|0,90490
+|0,90658
+|0,90824
+|0,90988
+|0,91149
+|0,91309
+|0,91466
+|0,91621
+|0,91774
+|----
+!| 1,4
+|0,91924
+|0,92073
+|0,92220
+|0,92364
+|0,92507
+|0,92647
+|0,92785
+|0,92922
+|0,93056
+|0,93189
+|----
+!| 1,5
+|0,93319
+|0,93448
+|0,93574
+|0,93699
+|0,93822
+|0,93943
+|0,94062
+|0,94179
+|0,94295
+|0,94408
+|----
+!| 1,6
+|0,94520
+|0,94630
+|0,94738
+|0,94845
+|0,94950
+|0,95053
+|0,95154
+|0,95254
+|0,95352
+|0,95449
+|----
+!| 1,7
+|0,95543
+|0,95637
+|0,95728
+|0,95818
+|0,95907
+|0,95994
+|0,96080
+|0,96164
+|0,96246
+|0,96327
+|----
+!| 1,8
+|0,96407
+|0,96485
+|0,96562
+|0,96638
+|0,96712
+|0,96784
+|0,96856
+|0,96926
+|0,96995
+|0,97062
+|----
+!| 1,9
+|0,97128
+|0,97193
+|0,97257
+|0,97320
+|0,97381
+|0,97441
+|0,97500
+|0,97558
+|0,97615
+|0,97670
+|----
+!| 2,0
+|0,97725
+|0,97778
+|0,97831
+|0,97882
+|0,97932
+|0,97982
+|0,98030
+|0,98077
+|0,98124
+|0,98169
+|----
+!| 2,1
+|0,98214
+|0,98257
+|0,98300
+|0,98341
+|0,98382
+|0,98422
+|0,98461
+|0,98500
+|0,98537
+|0,98574
+|----
+!| 2,2
+|0,98610
+|0,98645
+|0,98679
+|0,98713
+|0,98745
+|0,98778
+|0,98809
+|0,98840
+|0,98870
+|0,98899
+|----
+!| 2,3
+|0,98928
+|0,98956
+|0,98983
+|0,99010
+|0,99036
+|0,99061
+|0,99086
+|0,99111
+|0,99134
+|0,99158
+|----
+!| 2,4
+|0,99180
+|0,99202
+|0,99224
+|0,99245
+|0,99266
+|0,99286
+|0,99305
+|0,99324
+|0,99343
+|0,99361
+|----
+!| 2,5
+|0,99379
+|0,99396
+|0,99413
+|0,99430
+|0,99446
+|0,99461
+|0,99477
+|0,99492
+|0,99506
+|0,99520
+|----
+!| 2,6
+|0,99534
+|0,99547
+|0,99560
+|0,99573
+|0,99585
+|0,99598
+|0,99609
+|0,99621
+|0,99632
+|0,99643
+|----
+!| 2,7
+|0,99653
+|0,99664
+|0,99674
+|0,99683
+|0,99693
+|0,99702
+|0,99711
+|0,99720
+|0,99728
+|0,99736
+|----
+!| 2,8
+|0,99744
+|0,99752
+|0,99760
+|0,99767
+|0,99774
+|0,99781
+|0,99788
+|0,99795
+|0,99801
+|0,99807
+|----
+!| 2,9
+|0,99813
+|0,99819
+|0,99825
+|0,99831
+|0,99836
+|0,99841
+|0,99846
+|0,99851
+|0,99856
+|0,99861
+|----
+!| 3,0
+|0,99865
+|0,99869
+|0,99874
+|0,99878
+|0,99882
+|0,99886
+|0,99889
+|0,99893
+|0,99896
+|0,99900
+|----
+!| 3,1
+|0,99903
+|0,99906
+|0,99910
+|0,99913
+|0,99916
+|0,99918
+|0,99921
+|0,99924
+|0,99926
+|0,99929
+|----
+!| 3,2
+|0,99931
+|0,99934
+|0,99936
+|0,99938
+|0,99940
+|0,99942
+|0,99944
+|0,99946
+|0,99948
+|0,99950
+|----
+!| 3,3
+|0,99952
+|0,99953
+|0,99955
+|0,99957
+|0,99958
+|0,99960
+|0,99961
+|0,99962
+|0,99964
+|0,99965
+|----
+!| 3,4
+|0,99966
+|0,99968
+|0,99969
+|0,99970
+|0,99971
+|0,99972
+|0,99973
+|0,99974
+|0,99975
+|0,99976
+|----
+!| 3,5
+|0,99977
+|0,99978
+|0,99978
+|0,99979
+|0,99980
+|0,99981
+|0,99981
+|0,99982
+|0,99983
+|0,99983
+|----
+!| 3,6
+|0,99984
+|0,99985
+|0,99985
+|0,99986
+|0,99986
+|0,99987
+|0,99987
+|0,99988
+|0,99988
+|0,99989
+|----
+!| 3,7
+|0,99989
+|0,99990
+|0,99990
+|0,99990
+|0,99991
+|0,99992
+|0,99992
+|0,99992
+|0,99992
+|0,99992
+|----
+!| 3,8
+|0,99993
+|0,99993
+|0,99993
+|0,99994
+|0,99994
+|0,99994
+|0,99994
+|0,99995
+|0,99995
+|0,99995
+|----
+!| 3,9
+|0,99995
+|0,99995
+|0,99996
+|0,99996
+|0,99996
+|0,99996
+|0,99996
+|0,99996
+|0,99997
+|0,99997
+|----
+|}
+</center>
+{{boîte déroulante fin}}
+
+{{boîte déroulante début|align=left|titre=Table de valeur des quantiles}}
+Les deux tables suivantes donnent<ref name="Bogaert354">{{Harvsp|Bogaert|2006|p=354}}</ref> les valeurs du quantile <math>\scriptstyle q_p</math> de la loi normale centrée réduite <math>\scriptstyle \mathcal N(0,1)</math> défini par <math>\scriptstyle q_p=\Phi^{-1}(p)</math>.
+
+Les valeurs en début de ligne donne la première partie de la variable, les valeurs en début de colonne donne la deuxième partie. Ainsi la case de la deuxième ligne et troisième colonne donne : <math>\scriptstyle q_{0,62}=\Phi^{-1}(0,62)=0,3055</math>.
+<center>
+{|  class="wikitable" style="text-align:center" 
+!!|<math>q_p</math> 
+!| 0,00
+!| 0,01
+!| 0,02
+!| 0,03
+!| 0,04
+!| 0,05
+!| 0,06
+!| 0,07
+!| 0,08
+!| 0,09
+|----
+!| 0,50
+| 0,0000
+| 0,0251
+| 0,0502
+| 0,0753
+| 0,1004
+| 0,1257
+| 0,1510
+| 0,1764
+| 0,2019
+| 0,2275
+|----
+!| 0,60
+| 0,2533
+| 0,2793
+| 0,3055
+| 0,3319
+| 0,3585
+| 0,3853
+| 0,4125
+| 0,4399
+| 0,4677
+| 0,4959
+|----
+!| 0,70
+| 0,5244
+| 0,5534
+| 0,5828
+| 0,6128
+| 0,6433
+| 0,6745
+| 0,7063
+| 0,7388
+| 0,7722
+| 0,8064
+|----
+!| 0,80
+| 0,8416
+| 0,8779
+| 0,9154
+| 0,9542
+| 0,9945
+| 1,036
+| 1,080
+| 1,126
+| 1,175
+| 1,227
+|----
+!| 0,90
+| 1,282
+| 1,341
+| 1,405
+| 1,476
+| 1,555
+| 1,645
+| 1,751
+| 1,881
+| 2,054
+| 2,326
+|----
+|}
+</center>
+
+Ce tableau donne les valeurs des quantiles pour ''p'' grand.
+<center>
+{|  class="wikitable" style="text-align:center" 
+!!|p 
+!| 0,975
+!| 0,995
+!| 0,999
+!| 0,9995
+!| 0,9999
+!| 0,99995
+!| 0,99999
+!| 0,999995
+|----
+!| <math>q_p</math>
+| 1,9600
+| 2,5758
+| 3,0902
+| 3,2905
+| 3,7190
+| 3,8906
+| 4,2649
+| 4,4172
+|----
+|}
+</center>
+{{boîte déroulante fin}}
+
+Les tables sont données pour les valeurs positive de la loi normale centrée réduite. Grâce aux formules de la fonction de répartition, il est possible d'obtenir d'autres valeurs.
+
+Les valeurs négatives de la fonction de répartition sont données par la formule<ref name="Yadolah502">{{Harvsp|Dodge|2004|p=502}}</ref> <math>\scriptstyle \Phi(-x)=1-\Phi(x)</math>. Par exemple :
+:<math>\Phi(-1,07)=\mathbb P[X\leq -1,07]\approx 1-0,85769=0,14231\;</math> pour <math>X\sim \mathcal N(0,1)</math>.
+
+Les valeurs de la fonction de répartition de la loi générale s'obtiennent par la formule<ref name="Grinstead213"/> <math>\scriptstyle F(y)=\Phi(\frac{y-\mu}{\sigma})</math>. Par exemple<ref name="Grinstead214">{{Harvsp|Grinstead|Snell|1997|p=214}}</ref> :
+:<math>F(12,14)=\mathbb P[Y\leq 12,14]=\mathbb P\left[\frac{Y-10}{2}\leq \frac{12,14-10}{2}\right]=\mathbb P[X\leq 1,07]=\Phi(1,07)\approx 0,85769\;</math>, pour <math>Y\sim \mathcal N(10,2^2)</math>
+
+La table de valeur permet également d'obtenir la probabilité qu'une variable aléatoire de loi normale <math>\scriptstyle X\sim \mathcal N(0,1)</math> appartienne à un intervalle donné <math>\scriptstyle [a,b]</math> par la formule : <math>\scriptstyle \mathbb P\left[X\in [a,b]\right]=\mathbb P[X\leq b]-\mathbb P[X < a]=\Phi(b)-\Phi(a)</math>. Par exemple :
+*<math>\mathbb P[X\geq 1,07]=1-\mathbb P[X < 1,07]=1-\mathbb P[X \leq 1,07]\approx 0,14231\;</math> pour <math>X\sim \mathcal N(0,1)</math>
+*<math>\mathbb P[0\leq X\leq 1,07]=\Phi(1,07)-\Phi(0)=\Phi(1,07)-0,5\approx 0,85769-0,5=0,35769\;</math> pour <math>X\sim \mathcal N(0,1)</math>.
+
+;Plages de normalité, intervalles de confiance
+Un des intérêt de calculer des probabilités sur des intervalles est l'utilisation des intervalles de confiance pour les test statistiques. La loi normale est définie par deux valeurs : la moyenne <math>\scriptstyle \mu</math> et l'écart-type <math>\scriptstyle \sigma</math>. Ainsi il est utile de s'intéresser aux intervalles<ref name="Protassov72">{{Harvsp|Protassov|2002|p=72}}</ref> du type <math>\scriptstyle [\mu-r\sigma, \mu+r\sigma]</math>. 
+:<math>\mathbb P[\mu-r\sigma\leq Y\leq \mu+r\sigma] = \Phi(r) - (1 - \Phi(r)) = 2\Phi(r) - 1\;</math> pour <math>Y\sim \mathcal N(\mu,\sigma^2)</math>.
+
+{{boîte déroulante début|align=left|titre=Table de valeur des intervalles de confiance}}
+[[Fichier:Standard deviation diagram micro.svg|thumb|Place de l'écart-type par rapport à la densité|La courbe en cloche est la densité de probabilité. Les surfaces des zones colorées sous la courbe correspondent aux probabilités des intervalles <math>\scriptstyle [\mu-r\sigma,\mu+r\sigma]</math>.]]
+La table suivante s'obtient grâce aux tables précédentes<ref name="Protassov72"/> et donne les probabilités :
+:<math>\mathbb P_r=\mathbb P[\mu-r\sigma\leq Y\leq \mu+r\sigma] = 2\Phi(r) - 1\;</math> pour <math>Y\sim \mathcal N(\mu,\sigma^2)</math>
+<center>
+{|  class="wikitable" style="text-align:center" 
+!|r 
+!| 0,0
+!| 0,5
+!| 1,0
+!| 1,5
+!| 2,0
+!| 2,5
+!| 3,0
+!| 3,5
+|----
+!| <math>\mathbb P_r</math>
+| 0,00
+| 0,3829
+| 0,6827
+| 0,8664
+| 0,9545
+| 0,9876
+| 0,9973
+| 0,9995
+|----
+|}
+</center>
+{{boîte déroulante fin}}
+
+Cette table de valeurs des intervalles de confiance permet d'obtenir les plages de normalité pour un niveau de confiance donné. Pour <math>\scriptstyle Y\sim \mathcal N(\mu,\sigma^2)</math>, le tableau donne<ref name="Protassov29">{{Harvsp|Protassov|2002|p=29}}</ref>
+*<math>\mathbb P(\mu - \sigma \leq Y \leq \mu + \sigma) \approx 0,6827</math> ;
+*:l'intervalle <math>[\mu - \sigma,\, \mu + \sigma] </math> est la plage de normalité au niveau de confiance 68 %,
+*<math>\ P(\mu - 0,5H \leq Y \leq \mu + 0,5H) \approx 0,76</math> ;
+*:l'intervalle <math>[\mu - 0,5H,\, \mu + 0,5H] </math>, ''H'' étant la largeur à mi-hauteur, est la plage de normalité au niveau de confiance 76 %,
+*<math>\ P(\mu - 2\sigma \leq Y \leq \mu + 2\sigma) \approx 0,9545</math> ;
+*:l'intervalle <math>[\mu - 2\, \sigma,\, \mu + 2\, \sigma] </math> est la plage de normalité au niveau de confiance 95 %,
+*<math>\ P(\mu - 3\sigma \leq Y \leq \mu + 3\sigma) \approx 0,9973</math> ;
+*:l'intervalle <math>[\mu - 3\sigma,\mu + 3\, \sigma] </math> est la plage de normalité au niveau de confiance 99 %.
+
+Inversement, lorsque la valeur de la probabilité <math>\scriptstyle \alpha\in [0,1]</math> est fixée, il existe<ref group="a" name="eduscol"/> une unique valeur <math>\scriptstyle r>0</math> telle que : <math>\scriptstyle \mathbb P(\mu - r\sigma \leq Y \leq \mu + r\sigma) = 2\Phi(r)-1= \alpha</math>. L'intervalle <math>\scriptstyle [\mu - r\sigma, \mu + r\sigma]</math> est appelé ''plage de normalité'' ou ''intervalle de confiance'' au niveau de confiance <math>\alpha</math>. Pour une loi normale <math>\scriptstyle \mathcal N(\mu,\sigma^2)</math> et le seuil <math>\scriptstyle \alpha</math> donnés, la méthode pour retrouver cette valeur <math>\scriptstyle r</math> consiste<ref name="Bogaert90">{{Harvsp|Bogaert|2006|p=90}}</ref> à utiliser le tableau de valeur des quantiles (ci-dessus) pour trouver la valeur <math>\scriptstyle r</math> telle que <math>\scriptstyle \Phi(r)=\frac{\alpha+1}{2}</math>, l'intervalle de confiance est alors : <math>\scriptstyle [\mu - r\sigma, \mu + r\sigma]</math>.
+
+Par exemple, la plage de normalité au niveau de confiance 95 % d'une loi normale <math>\scriptstyle \mathcal N(10,2^2)</math> est l'intervalle <math>\scriptstyle [10-2r ; 10+2r]</math> où <math>\scriptstyle r</math> vérifie <math>\scriptstyle \Phi(r)=\frac{0,95+1}{2}=0,975</math>, soit <math>\scriptstyle r=q_{0,975}\approx 1,96</math>, l'intervalle est donc : <math>\scriptstyle [6,08 ; 13,92]</math> aux arrondis près.
+
+== Liens avec d'autres lois ==
+=== Lois usuelles ===
+{| class="wikitable droite"
+|+Différentes lois du <math>\chi</math> et <math>\chi^2</math>
+|-
+! Lois !! en fonction de variables de loi normale
+|-
+| [[loi du χ²]] || <math>\sum_{i=1}^k \left(\frac{X_i-\mu_i}{\sigma_i}\right)^2</math>
+|-
+| [[loi du χ² non centrée]] || <math>\sum_{i=1}^k \left(\frac{X_i}{\sigma_i}\right)^2</math>
+|-
+| [[loi du χ]] || <math>\sqrt{\sum_{i=1}^k \left(\frac{X_i-\mu_i}{\sigma_i}\right)^2}</math>
+|-
+| [[loi du χ non centrée]] || <math>\sqrt{\sum_{i=1}^k \left(\frac{X_i}{\sigma_i}\right)^2}</math>
+|}
+*Si une [[variable aléatoire]] <math>\scriptstyle X</math> suit la loi normale <math>\scriptstyle \mathcal N(\mu,\sigma^2)</math>, alors<ref name="Ross301">{{Harvsp|Ross|2007|p=301}}</ref> la variable aléatoire <math>\scriptstyle \exp(X) </math> suit la [[loi log-normale]].
+*Si ''U'' et ''V'' sont deux variables aléatoires indépendantes de [[Loi uniforme continue|loi uniforme]] sur [0,1], alors les deux variables aléatoires <math>\scriptstyle X=\sqrt{-2\ln(U)}\, \cos(2\pi V)</math> et <math>\scriptstyle Y=\sqrt{-2\ln(U)}\, \sin(2\pi V)</math> sont de loi normale centrée réduite<ref name="Grinstead213">{{Harvsp|Grinstead|Snell|1997|p=213}}</ref>. De plus ''X'' et ''Y'' sont indépendantes. Ces deux formules sont utilisées pour simuler la loi normale.
+*Si les variables <math>\scriptstyle X_1,X_2,\dots,X_n</math> sont [[Indépendance (probabilités)|indépendantes]] et de loi commune <math>\scriptstyle \mathcal N(0,1)</math>, alors<ref name="Yger703">{{Harvsp|Yger|Weill|2009|p=703}}</ref> la somme de leur carré : <math>\scriptstyle \sum_{k=1}^n X_k^2</math> suit une [[loi du χ²]] à ''n'' degrés de liberté : <math>\scriptstyle \chi^2(n)</math>. La formule s'étend pour des variables normales non centrées et non réduites. De plus, le même type de lien existe avec la [[loi du χ² non centrée]], la [[loi du χ]] et la [[loi du χ non centrée]] (voir le tableau ci-contre).
+*Si la variable ''U'' suit une loi normale centrée réduite : <math>\scriptstyle \mathcal N(0,1)</math>, si ''V'' suit une [[loi du χ²]] à ''n'' degrés de liberté : <math>\scriptstyle \chi^2(n)</math> et si ''U'' et ''V'' sont indépendantes, alors<ref name="Yger703"/> la variable <math>\scriptstyle \frac{U}{\sqrt{\frac{V}{n}}}</math> suit une [[loi de Student]] à ''n'' degrés de liberté : <math>\scriptstyle t(n)</math>.
+*Si <math>\scriptstyle X</math> est une variable aléatoire de loi normale centrée réduite et <math>\scriptstyle U</math> de [[loi uniforme continue|loi uniforme]] sur [0,1], alors <math>\scriptstyle \frac{X}{U}</math> est de loi dite [[loi slash|de Slash]]<ref group="a" name="Ferrari">
+{{article|langue=fr|prénom1=Nicolas|nom1=Ferrari|titre=Prévoir l'investissement des entreprises Un indicateur des révisions dans l'enquête Investissement |périodique=Économie et Statistique|numéro=395-396|année=2006|pages=39-64|url texte=http://www.insee.fr/fr/themes/document.asp?id=1865&reg_id=0}}</ref>.
+*Pour un variable aléatoire <math>\scriptstyle X</math> de loi normale centrée réduite <math>\scriptstyle \mathcal N(0,1)</math>, la variable <math>\scriptstyle \mathrm{signe}(X) |X|^p</math> est de [[loi normale puissance p]]. Pour <math>\scriptstyle p=1</math>, cette variable est de loi normale centrée réduite<ref group="a" name="Ferrari"/>.
+*Si <math>\scriptstyle Z_1</math> et <math>\scriptstyle Z_2</math> sont deux variables aléatoires indépendantes de loi normale centrée réduite, alors<ref name="Bogaert330">{{Harvsp|Bogaert|2006|p=330}}</ref> le quotient <math>\scriptstyle \frac{Z_1}{Z_2}</math> suit la [[Loi de Cauchy (probabilités)|loi de Cauchy]] de paramètre 0 et 1 : <math>\scriptstyle Cau(0,1)</math>.
+*Il existe une version multidimensionnelle de la loi normale, appelée ''[[loi normale multidimensionnelle]]'', ''loi multinormale'' ou ''loi de Gauss à plusieurs variables''. Lorsque <math>\scriptstyle X_1,X_2,\dots,X_n</math> sont des variables aléatoires de lois normales, alors la loi de probabilité du [[vecteur aléatoire]] <math>\scriptstyle (X_1,X_2,\dots,X_n)</math> est de loi normale multidimensionnelle. Sa densité de probabilité prend la même forme que la densité de la loi normale mais avec une écriture [[Matrice (mathématiques)|matricielle]]. Si le vecteur aléatoire <math>\scriptstyle (X_1,X_2)</math> est de loi  normale multidimensionnelle <math>\mathcal N(\mu,\mathbf{\Sigma})</math> où <math>\scriptstyle \mu</math> est le vecteur des moyennes et <math>\scriptstyle \mathbf\Sigma</math> est la [[matrice de variance-covariance]], alors la [[Loi de probabilité#Loi conditionnelle|loi conditionnelle]] <math>\scriptstyle (X_1|X_2=x)</math> de <math>\scriptstyle X_1</math> sachant que <math>\scriptstyle X_2=x</math> est la loi normale<ref name="Bogaert341">{{Harvsp|Bogaert|2006|p=341}}</ref> <math>\scriptstyle \mathcal N(\mu_{1|x},\sigma_{1|x})</math> :
+:Si <math>(X_1,X_2) \sim \mathcal N \left( \left(\begin{matrix} \mu_1 \\ \mu_2 \end{matrix}\right) , \left(\begin{matrix} \sigma_{11} & \sigma_{12} \\ \sigma_{21} & \sigma_{22} \end{matrix}\right) \right)</math>, alors <math>(X_1|X_2=x)\sim \mathcal N(\mu_{1|x},\sigma_{1|x})</math> avec <math>\mu_{1|x}=\mu_1+\frac{\sigma_{12}}{\sigma_{22}} \left( x - \mu_2 \right)</math> et <math>\sigma_{1|x} = \sigma_{11} - \frac{\sigma_{12}\sigma_{21}}{\sigma_{22}}. </math>
+
+Il est à noter que la [[loi inverse-gaussienne]] et [[loi inverse-gaussienne généralisée]] n'ont pas de lien avec une formule simple créée à partir de variables de loi normale, mais ont une relation avec le [[mouvement brownien]].
+
+=== Lois normales généralisées ===
+{{article détaillé|Loi normale généralisée|Loi normale asymétrique|Loi tronquée|Loi normale rectifiée|Loi normale repliée}}
+Plusieurs généralisations de la loi normale ont été introduites afin de changer sa [[Paramètre de forme|forme]], son [[Asymétrie (statistiques)|asymétrie]], son [[Support d'une mesure|support]], etc.
+
+Un nouveau paramètre <math>\scriptstyle \beta>0</math> dit de [[Paramètre de forme|forme]] a été introduit dans la loi normale pour obtenir une [[loi normale généralisée]]. Cette famille de loi contient la loi normale, c'est le cas pour <math>\scriptstyle \beta=2</math>, mais également la [[Loi de Laplace (probabilités)|loi de Laplace]] pour <math>\scriptstyle \beta=1</math>. La nouvelle densité de probabilité est donnée par<ref group="a">{{article| langue = en |nom1=Faming|prénom1=Liang|coauthors= Liu, Chuanhai; Wang, Naisyin |année = 2007|titre= A robust sequential Bayesian method for identification of differentially expressed genes|périodique= Statistica Sinica|volume= 17|numéro= 2|pages= 571-597 |url= http://www3.stat.sinica.edu.tw/statistica/password.asp?vol=17&num=2&art=8}}</ref> : 
+:<math>f(x)= \frac{\beta}{2\alpha\Gamma(1/\beta)} \; e^{-\left(\frac{|x-\mu|}{\sigma}\right)^\beta} </math>.
+
+Il existe une manière de changer l'asymétrie de la loi normale afin d'obtenir la loi dite [[loi normale asymétrique]] (''skew normal distribution'' en anglais)<ref group="a">{{Article | langue = en | prénom1 = Norbert | nom1 = Henze  | titre = A Probabilistic Representation of the 'Skew-Normal' Distribution | périodique = Scandinavian Journal of Statistics | volume = 13 | numéro = 4  | année = 1986 | pages = 271-275 | url texte = http://www.jstor.org/stable/10.2307/4616036}}</ref>. L'introduction d'un paramètre <math>\scriptstyle \lambda\in \mathbb R</math> permet d'obtenir la loi normale lorsque <math>\scriptstyle \lambda=0</math>, une asymétrie vers la droite lorsque <math>\scriptstyle \lambda>0</math> et une asymétrie vers la gauche lorsque <math>\scriptstyle \lambda<0</math>. La densité de cette loi est donnée par :
+:<math>f(x)=2\varphi(x)\Phi(\lambda x)</math>.
+
+Afin de changer le [[Support d'une mesure|support]] de la loi normale et notamment de le rendre borné, une modification possible de la loi est de la [[Loi tronquée|tronquer]]. La loi est alors changée d'échelle pour que les partie coupées se répartissent sur l'ensemble des valeurs gardées (à la différence de la loi repliée, voir ci-dessous). La loi normale centrée réduite tronquée en ''-T'' et en ''T'' a pour support l'intervalle <math>\scriptstyle [-T,T]</math> et se fonction de densité de définie par<ref group="a">{{article| langue = fr |nom1= Rouzet|prénom1= G|année = 1962|titre=Étude des moments de la loi normale tronquée|périodique=Revue de statistique appliquée|volume=10|numéro=2|pages=49-61|url=http://archive.numdam.org/ARCHIVE/RSA/RSA_1962__10_2/RSA_1962__10_2_49_0/RSA_1962__10_2_49_0.pdf}}</ref> :
+:<math>f(x)=\begin{cases} \frac{\varphi(x)}{2\Phi(T)-1} & \text{ si } x\in [-T,T]\\ 0 & \text{ sinon }. \end{cases}</math>
+
+Il est également possible de tronquer la loi normale d'un seul côté. La loi normale est alors appelée [[loi normale rectifiée]]. Si une variable aléatoire <math>\scriptstyle X</math> suit une loi normale <math>\scriptstyle \mathcal N(\mu, \sigma^2)</math>, alors <math>\scriptstyle \max(X,0)</math> suit la loi normale rectifiée<ref group="a" name="hochreiter">{{article|langue=en|prénom1=Sepp| nom1=Hochreiter� |prénom2=Djork-Arne |nom2=Clevert |prénom3=Klaus |nom3=Obermayer |titre=A new summarization method for affymetrix probe level data|périodique=Bioinformatics|volume=22|numéro=8|année=2006|pages=943-949|url texte=http://bioinformatics.oxfordjournals.org/content/22/8/943.full.pdf}}</ref>.
+
+Une autre manière de changer le support de la loi normale est de « replier » la densité à partir d'une valeur, la loi obtenue est la [[loi normale repliée]]. Les valeurs retirées, par exemple <math>\scriptstyle ]-\infty,0[</math>, sont alors réparties proche de la valeur charnière, 0 ici (à la différence de la loi tronquée, voir ci-dessus). La densité de probabiltié de la loi normale repliée en 0 est donnée par<ref group="a">{{article| langue = en |nom1= Irvine|prénom1= Richard|année = 2002|titre=A geometrical approach to conflict probability estimation|périodique=Air Traffic Control Quarterly seminar|volume=10|numéro=2|pages=1-15|url=http://www.atmseminar.org/seminarContent/seminar4/papers/p_137_DSTCDM.pdf}}</ref> :
+:<math>f(x)=\begin{cases} \frac{1}{\sigma\sqrt{2\pi}} \, \exp \left( -\frac{(x+\mu)^2}{2\sigma^2} \right) + \frac{1}{\sigma\sqrt{2\pi}} \, \exp \left( -\frac{(x-\mu)^2}{2\sigma^2} \right)& \text{ pour }x \ge 0 \\ 0 &\text{ sinon.}\end{cases} </math>
+
+Une version généralisée de la [[loi log-normale]] permet d'obtenir une famille de loi comprenant la loi normal comme cas particulier<ref name="Hosking197">{{Harvsp|Hosking|Wallis|1997|p=197}}</ref>. La famille est définie à partir de trois paramètres : un [[paramètre de position]] <math>\scriptstyle \mu</math>, un [[paramètre d'échelle]]  <math>\scriptstyle \sigma</math> et un [[paramètre de forme]] <math>\scriptstyle \kappa\in \mathbb R</math>. Lorsque <math>\scriptstyle \kappa=0</math>, cette loi log-normale généralisée est la loi normale. La densité est donnée par : 
+:<math>f(x)=\frac{\varphi(y)}{\alpha-\kappa(x-\xi)}</math>, où <math>y = \begin{cases} - \frac{1}{\kappa} \log \left[ 1- \frac{\kappa(x-\xi)}{\alpha} \right] & \text{si } \kappa \neq 0 \\ \frac{x-\xi}{\alpha} & \text{si } \kappa=0 \end{cases} </math>.
+
+<gallery>
+File:Generalized normal densities.svg|Différentes formes pour la densité de la [[loi normale généralisée]].
+File:Skew normal densities.svg|Différentes formes pour la densité de la [[loi normale asymétrique]].
+File:Normaletronquée2.svg|Loi normale centrée réduite [[Loi tronquée|tronquée]] en 1,5 pour la courbe rouge et en 2,5 pour la courbe bleue
+File:Folded normal pdf.svg|En verte, la densité de la [[loi normale repliée]] en 0.
+File:Generalized normal densities 2.svg|Différentes formes pour la densité de la [[loi log-normale]].
+</gallery>
+
+=== Constructions à partir de la loi normale ===
+;Mélange de lois
+{{article détaillé|Modèle de mélanges gaussiens}}
+[[Fichier:Double Gauss.png|thumb|alt=densité d'un mélange de lois normales.|En bleue : densité d'une combinaison linéaire de deux densité normales.]]
+Un mélange gaussien est une loi de probabilité dont la densité est définie par une combinaison linéaire de deux densité de loi normales. Si on note <math>\scriptstyle f_1</math> la densité de <math>\scriptstyle \mathcal N(\mu_1,\sigma_1^2)</math> et <math>\scriptstyle f_2</math> la densité de <math>\scriptstyle \mathcal N(\mu_2,\sigma_2^2)</math>, alors <math>\scriptstyle \lambda f_1+(1-\lambda)f_2</math> est la densité d'une loi de probabilité dite ''mélange gaussien''<ref name="Bogaert86">{{Harvsp|Bogaert|2006|p=86}}</ref>.
+
+Il ne faut pas confondre la combinaison linéaire de deux variables aléatoires indépendantes de loi normale, qui reste une variable gaussienne, et la combinaison linéaire de leur deux densité, qui permet d'obtenir une loi qui n'est pas la loi normale.
+
+Les modes des deux lois normales sont donnés par <math>\scriptstyle \mu_1</math> et <math>\scriptstyle \mu_2</math>, le mélange gaussien est alors une loi [[Mode (statistiques)|bimodale]]. Ses maxima locaux sont proches mais non égaux<ref name="Bogaert86"/> aux valeurs <math>\scriptstyle \mu_1</math> et <math>\scriptstyle \mu_2</math>.
+
+;Généralité
+Il est possible de construire d'autres densités de probabilité grâce à la densité <math>\scriptstyle \varphi</math> de la loi normale centrée réduite. [[Harald Cramér]] énonce en 1926 un résultat général<ref name="Tassi205">{{Harvsp|Tassi|Legait|1990|p=205}}</ref> : si une densité de probabilité <math>\scriptstyle g</math> est deux fois [[Dérivabilité|dérivable]], si l'intégrale <math>\scriptstyle \int (g''(x))^2 e^{x^2/2}dx</math> converge et si <math>\scriptstyle \lim_{+\infty}g(x)=\lim_{-\infty}g(x)=0</math>, alors la fonction <math>\scriptstyle g</math> peut être développée en une série [[Convergence absolue|absolument]] et [[convergence uniforme#Critères de convergence uniforme pour les séries|uniformément]] convergente en fonction des dérivées de la densité de la loi normale centrée réduite et des [[polynôme d'Hermite|polynômes d'Hermite]] <math>\scriptstyle H_k</math> :
+:<math>g(x) = \sum_{k=0}^\infty \frac{1}{k!} \varphi^{(k)}(x) \int g(y) H_k(y) dy</math>.
+
+== Utilisations de la loi ==
+=== Utilisations et applications ===
+[[File:Gaussian white noise Frequency Analysis.png|thumb|alt=Bruit blanc gaussien|left|Bruit blanc gaussien unidimensionnel.]]
+;En mathématiques
+La loi normale est utilisée dans plusieurs domaines des mathématiques. Le [[Bruit blanc|bruit blanc gaussien]] est un [[processus stochastique]] tel qu'en tout point, le processus est une variable aléatoire de loi normale indépendante du processus aux autres points<ref name="Yger573">{{Harvsp|Yger|Weill|2009|p=573}}</ref>. Le [[mouvement brownien]] <math>\scriptstyle (B(t),t\geq 0)</math> est un processus stochastique dont les accroissements sont indépendants, stationnaires et de loi normale<ref group="a" name="Mandelbrot"/>. Notamment pour une valeur <math>\scriptstyle t>0</math> fixée, la variable aléatoire <math>\scriptstyle B(t)</math> suit la loi normale <math>\scriptstyle \mathcal N(0,t)</math>.
+
+;En traitement du signal et mesures physiques
+Lorsque qu'un signal est transmis, une perte d'information apparait à cause du moyen de transmission ou du décodage du signal. Lorsqu'une mesure physique est effectuée, une incertitude sur le résultat peut provenir d'une imprécision de l'appareil de mesure ou d'une impossibilité à obtenir la valeur théorique. Une méthode pour modéliser de tels phénomènes est de considérer un modèle déterministe (non aléatoire) pour le signal ou la mesure et d'y ajouter ou multiplier un terme aléatoire qui représente la perturbation aléatoire, parfois appelée ''erreur'' ou ''bruit''. Dans beaucoup de cas cette erreur additive est supposée de loi normale, de [[loi log-normale]] dans le cas multiplicatif<ref name="Hosking157">{{Harvsp|Hosking|Wallis|1997|p=157}}</ref>. C'est le cas, par exemple, pour la transmission d'un signal à travers un câble électrique<ref name="Ross239"/>. Lorsque le processus dépend du temps, le signal ou la mesure est alors modélisé grâce à un [[bruit blanc]] (voir ci-dessus)<ref name="Yadolah354">{{Harvsp|Dodge|2004|p=354}}</ref>.
+
+;En économie
+Les prix de certaines denrées sont données par une [[Bourse des valeurs|bourse]], c'est me cas du cours du blé, du coton brut ou de l'or. Au temps <math>\scriptstyle t</math>, le prix <math>\scriptstyle Z(t)</math> évolue jusqu'au temps <math>\scriptstyle t+T</math> par l'accroissement <math>\scriptstyle Z(t+T)-Z(t)</math>. En 1900, [[Louis Bachelier]] postule que cet accroissement suit une loi normale de moyenne nulle et dont la variance dépend de <math>\scriptstyle t</math> et <math>\scriptstyle T</math>. Cependant ce modèle satisfait peu l'observation faite des marchés financiers. D'autres mathématiciens proposent alors d'améliorer ce modèle en supposant que c'est l'accroissement <math>\scriptstyle \ln Z(t+T)-\ln Z(t)</math> qui suit une loi normale<ref group="a" name="Mandelbrot">{{article|langue=fr|prénom1=Benoît|nom1=Mandelbrot|lien auteur1=Benoît Mandelbrot|titre=Nouveaux modèles de la variation des prix (Cycles lents et changements instantanés)|périodique=Cahiers du Séminaire d'Économétrie |numéro=9 |année=1966 |pages=53-66 |url texte=http://www.jstor.org/stable/20075411?seq=5}}</ref>. C'est-à-dire que l'accroissement du prix suit une [[loi log-normale]].  Ce modèle est encore amélioré, par [[Benoît Mandelbrot]] notamment, en supposant que l'accroissement suit une [[loi stable]]. Notons que la loi normale est un cas particulier de loi stable. Il apparait alors le [[mouvement brownien]] dont l'accroissement est de loi normal et le [[processus de Lévy]] (stable) dont l'accroissement est de loi stable pour modéliser les courbes des marchés<ref group="a" name="Mandelbrot"/>.
+
+[[File:Balistique.jpg|thumb|alt=Trajectoire d'un canon|modélisation de la trajectoire de tir d'un canon.]]
+;En balistique
+De manière plus historique au {{s-|XIX|e}}, pour améliorer les précisions des tirs de l'[[artillerie]], de nombreux tirs de canons sont réalisés. Il est observé que la direction et la portée sont assimilables à des lois normales<ref group="a" name="Hadjadji"/>. Cette compréhension permet de mieux entrainer les officiers pour « régler » leurs tirs. Cette loi normale provient de différents facteurs comme les conditions climatiques, mais également de l'usure du matériel militaire. La dispersion des points d'impact et donc de la loi renseigne sur l'état du matériel et sur le nombre éventuel de tirs anormaux. L'ajustement à la loi normale est alors effectué par [[Ernest Lhoste]] en utilisant le [[test de Lhoste]] sur une série de deux cents tirs. Le mathématicien [[Jules Haag]] applique la méthode pour 2680 tirs de différentes portées et de différentes directions<ref group="a" name="Hadjadji"/>.
+
+[[File:Growth Curve Girl (WHO).jpg|thumb|alt=Courbe de croissance du poids.|left|Exemple de courbe de croissance du poids.]]
+;En anatomie
+Un caractère observable et mesurable dans une population d'individus comparables a souvent une fréquence modélisée par une loi normale. C'est le cas par exemple de la taille humaine pour un âge donné (en séparant les hommes et les femmes)<ref name="Ridley76">{{Harvsp|Ridley|2004|p=76}}</ref>, de la taille des becs dans une population d'oiseaux comme les [[Pinson de Darwin|pinsons]] étudiés par [[Charles Darwin|Darwin]]<ref name="Ridley226"/>. Plus précisément, un caractère mesurable dans une population peut être modélisée une loi normale si il est codé génétiquement par de nombreux [[allèle]]s ou par de nombreux [[Locus|loci]]<ref name="Ridley226">{{Harvsp|Ridley|2004|p=226}}</ref> ou si le caractère dépend d'un grand nombre d'effets environnementaux<ref name="Ridley252">{{Harvsp|Ridley|2004|p=252}}</ref>.
+
+Les courbes de croissance données par l'[[OMS]] et présentes par exemple dans les [[carnet de santé|carnets de santé]], sont issues de modélisations grâce à la loi normale. Grâce à une étude détaillée des [[centile]]s mesurés dans une population d'âge fixé et grâce à des tests statistiques d'adéquation, les répartitions du poids et de la taille par tranche d'âge ont été modélisées par des lois de probabilité. Parmi ces lois on retrouve la loi normale, la {{Lien|fr=loi normale de Box-Cox|lang=en|trad=Box–Cox distribution}} (généralisation de la loi normale), la [[loi Student de Box-Cox]] (généralisation de la loi normale de Box-Cox) ou encore la [[loi exponentielle-puissance de Box-Cox]]<ref group="a" name="borghi">{{article|langue=en|nom1=Borghi|nom2=de Onis|nom3=Garza|nom4=Van den Broeck|nom5=Frongillo|nom6=Grummer-Strawn|nom7=Van Buuren|nom8=Pan|nom9=Molinari|nom10=Martorell |nom11=Onyango1 |nom12=Martines |titre=Construction of the World Health Organization child growth standards: selection of methods for attained growth curves |périodique=Statistics in medecine |volume=25 |numéro= |année=2006 |pages=247-265 |url texte=http://www.ucl.ac.uk/paediatric-epidemiology/pdfs/P860.pdf}}</ref>. Graphiquement, pour chaque âge, c'est-à-dire pour chaque axe vertical, la [[Médiane (statistiques)|médiane]] <math>\scriptstyle m</math> est représentée (elle donne la courbe centrale) et les deux valeurs de <math>\scriptstyle m+\sigma</math> et <math>\scriptstyle m-\sigma</math> où <math>\scriptstyle \sigma</math> est l'écart-type, donnent les deux courbes et ainsi représentent l'évolution d'un intervalle de confiance.
+
+=== Hommages ===
+Par son utilisation généralisée dans les sciences, la loi normale, souvent par l'utilisation de la courbe en cloche, a été représentée dans de nombreux contextes.
+
+En 1989, un hommage est rendu à Gauss en imprimant un billet à son effigie, la courbe en cloche est également présente sur le billet. Des pierres tombales portent le signe de la courbe en cloche, c'est le cas pour certains mathématiciens.
+
+Le statisticien {{lien|trad=William J. Youden|William Youden}} écrit<ref name="Stigler415">{{Harvsp|Stigler|1999|p=415}}</ref> en 1962 une explication du but et de la position de la loi normale dans les sciences. Il la présente sous forme de courbe en cloche (voir ci-dessous) :
+:{{citation|La loi normale des erreurs se distingue dans l'expérience de l'humanité comme une des plus larges généralisations de la philosophie naturelle ♦ Elle sert de guide dans la recherche en sciences physiques et sociales, en médecine, en agriculture et en ingénierie ♦ C'est un outil indispensable pour l'analyse et l'interprétation des données de base obtenues par l'observation et l'expérience}}
+
+{| class="wikitable droite"
+|<center>
+THE <BR>
+NORMAL <BR>
+LAW OF ERROR <BR>
+STANDS OUT IN THE <BR>
+EXPERIENCE OF MANKIND <BR>
+AS ONE OF THE BROASDEST <BR>
+GENERALIZATIONS OF NATURAL <BR>
+PHILOSOPHY ♦ IT SERVES AS THE <BR>
+GUIDING INSTRUMENT IN RESEARCHES <BR>
+IN THE PHYSICAL AND SOCIAL SCIENCES AND <BR>
+IN MEDICINE AGRICULTURE AND ENGINEERING ♦<BR>
+IT IS AN INDISPENSABLE TOOL FOR THE ANALYSIS AND THE <BR>
+INTERPRETATION OF THE BASIC DATA OBTAINED BY OBSERVATION AND EXPERIMENT
+</center>
+|-
+|William Youden (1962)
+|}
+<gallery>
+File:10 DM Serie4 Vorderseite.jpg|Gauss et la courbe en cloche sur un billet de dix Deutsche Mark.
+File:Truly Unique Mathematical Grave.jpg|Pierre tombale du mathématicien W. S. Corson avec le dessin de la courbe en cloche.
+File:Gauß-Glockenkurve.jpg| Une peinture à l'huile contenant la courbe en cloche.
+</gallery>
+
+== Tests et estimations ==
+=== Critères de normalité ===
+[[Fichier:Gaussoarithmetique2.svg|thumb|alt=Droite de Henry.|Quatre valeurs ainsi que la droite de Henri représentées sur un papier gausso-arithmétique.]]
+Il est important de savoir si des valeurs sont distribuées suivant la loi normale. Quelques critères peuvent être étudiés avant de réaliser un test statistique (voir la section [[#Tests de normalité|Tests de normalité]] ci-dessous).
+
+Le premier critère, le plus simple, consiste à tracer l'histogramme ou le diagramme en bâtons de la distribution et à vérifier visuellement si le ''diagramme est en forme de « cloche »''. Ce critère, subjectif, permet cependant d'éliminer une partie des distributions jugées alors non gaussiennes.
+
+De manière plus précise,l'utilisation des [[#Tables numériques et calculs|plages de normalité]] permet de comparer avec les fréquences observées facilement calculables.
+Le critère suivant consiste à utiliser les plages de normalité ou intervalles de confiance. On a vu que si une distribution est gaussienne :
+
+La [[droite de Henry]] permet de faire un ajustement des valeurs observées avec une loi normale. C'est-à-dire qu'en représentant la droite de Henry, il est possible de porter un diagnostic sur la nature normale ou non de la distribution et, dans le cas où celle-ci a des chances d'être normale, elle permet d'en déterminer la moyenne et l'écart type. Les valeurs <math>\scriptstyle (x_i , i\leq n)</math> sont observées et représentées par leur [[fonction de répartition empirique]] <math>\scriptstyle F_n</math>. Elles sont gaussiennes si les points <math>\scriptstyle (x_i,F_n(x_i))</math> représentés sur un papier gausso-arithmétique sont alignés suivant une droite dite de Henri<ref name="Tassi144">{{Harvsp|Tassi|Legait|1990|p=144}}</ref>. Un papier gausso-arithmétique est gradué avec une échelle arithmétique en abscisse et graduée suivant l'inverse de la fonction de répartition de la loi normale centrée réduite <math>\scriptstyle \Phi^{-1}</math> en ordonnée<ref name="Yadolah228">{{Harvsp|Dodge|2004|p=228}}</ref>.
+
+Ces critères sont nécessaires mais non suffisants. C'est-à-dire que si l'un d'entre eux n'est pas rempli alors la loi n'est probablement pas normale, cependant, il ne suffit pas de remplir les critères pour affirmer que les valeurs suivent la loi normale.
+
+=== Tests de normalité ===
+{{article détaillé|Test (statistique)|Test de normalité}}
+Grâce à son rôle dans le [[théorème central limite]], la loi normale se retrouve dans de nombreux [[tests statistiques]] dits gaussiens ou asymptotiquement gaussiens. L'hypothèse dite ''de normalité'' est faite sur une loi a priori dans un test d'adéquation pour indiquer que cette loi suit, approximativement, une loi normale<ref group="a" name="Hadjadji"/>. Il existe un grand nombre de [[tests de normalité]]:
+
+*Un [[Test du χ²#Test du χ² d'adéquation|test du χ² d'adéquation]] à la loi normale est possible pour tester si une série de ''k'' valeurs observées suit une loi normale<ref name="Yadolah519">{{Harvsp|Dodge|2004|p=519}}</ref>. Dans ce type de test, l'hypothèse nulle est : la distribution observée peut être approchée par la loi normale. Après avoir regroupé les ''k'' valeurs observées en classes, il faut calculer les probabilités qu'une variable aléatoire de loi normale appartienne à chaque classe en estimant les paramètres de la loi grâce aux valeurs observées. Ces probabilités peuvent être obtenues avec les tables numériques de la loi normale. Si l'hypothèse nulle est vraie, la [[Test du χ²#Test du χ² d'adéquation|statistique du χ²]] calculée à partir des valeurs observées et des probabilités précédentes suit une [[loi du χ²]]. Le nombre de degré de liberté est ''k-1'' si la moyenne et l'écart-type sont connus, ''k-2'' si l'un des deux paramètres est inconnu, ou ''k-3'' si les deux paramètres sont inconnus. L'hypothèse nulle est rejetée si la statistique du χ² est supérieure à la valeur obtenue grâce à la [[table de la loi du χ²]] au seuil <math>\scriptstyle \alpha</math>.
+
+*Tests basés sur la [[fonction de répartition empirique]] : [[test de Kolmogorov-Smirnov]] et son adaptation le [[test de Lilliefors]], ou le {{Lien|fr=test de Anderson-Darling|lang=en|trad=Anderson-Darling test}}.
+
+*Tests basés sur les [[Moment (mathématiques)|moments]], comme le [[test de Jarque Bera]] ou {{Lien|fr=test D'Agostino's K-squared|lang=en|trad=D'Agostino's K-squared test}}.
+
+*Le [[test de Shapiro-Wilk]]
+
+=== Estimations des paramètres ===
+Lorsqu'un phénomène aléatoire est observé et qu'il est considéré comme pouvant être modélisé par une loi normale, un des questions que l'on peut se poser est : Que valent les paramètres <math>\scriptstyle \mu</math> et <math>\scriptstyle \sigma</math> de la loi normale <math>\scriptstyle \mathcal N(\mu,\sigma^2)</math> ? Une estimation est alors à effectuer. Les observations récupérées lors de l'observation du phénomène sont notées par des variables aléatoires <math>\scriptstyle X_1,X_2,\dots,X_n</math>, les notations de la [[moyenne empirique]] et de la moyenne des carrés sont également utiles<ref name="Yger715">{{Harvsp|Yger|Weill|2009|p=715}}</ref> : 
+:<math>S_n=\frac{1}{n}(X_1+X_2+\dots+X_n)</math> et <math>T_{n-1}^2=\frac{1}{n-1} \sum_{k=1}^n (X_k-S_n)^2</math>.
+Ces deux valeurs sont des [[Estimateur (statistique)|estimateurs]] de la moyenne et de l'écart-type respectivement qui se calculent à partir des valeurs observées. Puisque les variables <math>\scriptstyle X_1,X_2,\dots,X_n</math> sont de loi normale, alors <math>\scriptstyle S_n</math> est de loi <math>\scriptstyle \mathcal N(\mu, \frac{\sigma^2}{n})</math> et <math>\scriptstyle T_{n-1}</math> est de [[loi du χ²]] : <math>\scriptstyle \chi^2 (n-1)</math><ref name="Yger715"/>.
+
+;Estimation de la moyenne <math>\scriptstyle \mu</math> (lorsque l'écart-type <math>\scriptstyle \sigma</math> est connu)
+Une méthode est de chercher un intervalle de confiance à un seuil <math>\scriptstyle \alpha</math> autour de la moyenne théorique <math>\scriptstyle \mu</math>. En utilisant les quantiles d'ordre <math>\scriptstyle \frac{\alpha}{2}</math> et <math>\scriptstyle 1-\frac{\alpha}{2}</math>, la formule définissant les quantiles permet d'obtenir<ref name="Yger715"/> :
+:<math>\mathbb P\left( S_n+\frac{\sigma}{\sqrt{n}}q_{\alpha/2} \leq \mu \leq S_n-\frac{\sigma}{\sqrt{n}}q_{\alpha/2} \right)\geq 1- \alpha</math>.
+Grâce aux valeurs observées et aux tables numériques de la loi normale centrée réduite (voir la [[#Tables numériques et calculs|table]]), il est alors possible de donner les valeurs numériques de l'intervalle <math>\scriptstyle \left[S_n-\frac{\sigma}{\sqrt{n}}q_{\alpha/2} , S_n-\frac{\sigma}{\sqrt{n}}q_{1-\alpha/2} \right]</math> au seuil <math>\scriptstyle \alpha</math>.
+
+;Estimation de la moyenne <math>\scriptstyle \mu</math> (lorsque l'écart-type <math>\scriptstyle \sigma</math> est inconnu)
+Une méthode est d'utiliser une variable intermédiaire qui peut s'écrire à l'aide de nouvelles variables aléatoires <math>\scriptstyle U</math> de loi <math>\scriptstyle \mathcal N(0,1)</math> et <math>\scriptstyle V</math> de loi <math>\scriptstyle \chi^2 (n-1)</math> : <math>\scriptstyle \sigma\frac{S_n-\mu}{T_{n-1}} = \frac{U\sqrt{n-1}}{\sqrt{V}}</math> est de [[loi de Student]] <math>\scriptstyle t(n-1)</math>. En utilisant les quantiles d'ordre <math>\scriptstyle \frac{\alpha}{2}</math> et <math>\scriptstyle 1-\frac{\alpha}{2}</math>, la formule définissant les quantiles permet d'obtenir<ref name="Yger716">{{Harvsp|Yger|Weill|2009|p=716}}</ref> : 
+:<math>\mathbb P\left( S_n+\frac{T_{n-1}}{\sqrt{n}}q_{\alpha/2} \leq \mu \leq S_n-\frac{T_{n-1}}{\sqrt{n}}q_{\alpha/2} \right)\geq 1- \alpha</math>.
+Grâce aux valeurs observées et aux tables numériques de la loi normale centrée réduite (voir la [[#Tables numériques et calculs|table]]), il est alors possible de donner les valeurs numériques de l'intervalle <math>\scriptstyle \left[S_n+\frac{T_{n-1}}{\sqrt{n}}q_{\alpha/2} , S_n-\frac{T_{n-1}}{\sqrt{n}}q_{\alpha/2}  \right]</math> au seuil <math>\scriptstyle \alpha</math>.
+
+;Estimation de l'écart-type <math>\scriptstyle \sigma</math> (lorsque la moyenne <math>\scriptstyle \mu</math> est inconnu)
+La méthode est la même que la précédente. L'introduction de la variable aléatoire <math>\scriptstyle T_{n-1}^2\frac{n-1}{\sigma^2}</math> de [[loi du χ²]] à <math>\scriptstyle n-1</math> degrés de liberté permet d'obtenir<ref name="Yger717">{{Harvsp|Yger|Weill|2009|p=717}}</ref> :
+:<math>\mathbb P\left( T_{n-1}^2\frac{n-1}{q_{1-\alpha/2}} \leq \mu \leq T_{n-1}^2\frac{n-1}{q_{\alpha/2}} \right)\geq 1- \alpha</math>
+où <math>\scriptstyle q_{1-\alpha/2}</math> et <math>\scriptstyle q_{\alpha/2}</math> sont les quantiles de la loi du χ² à <math>\scriptstyle n-1</math> degrés de liberté que l'on peut obtenir à partir de la table numérique du χ². L'intervalle <math>\scriptstyle \left[T_{n-1}^2\frac{n-1}{q_{1-\alpha/2}} , T_{n-1}^2\frac{n-1}{q_{\alpha/2}}\right]</math> est l'intervalle de confiance au seuil <math>\scriptstyle \alpha</math>.
+
+== Simulation ==
+Il est possible de simuler, par exemple par ordinateur, un tirage aléatoire dont la loi est normale.
+
+Les logiciels ou les langages de programmation possèdent en général un [[générateur de nombres pseudo-aléatoires]] ayant une distribution uniforme sur ]0,1[. On cherche donc une fonction transformant ces nombres. De manière générale, on peut prendre la fonction réciproque de la fonction de répartition : en l'occurrence, si la variable aléatoire <math>U</math> suit la loi uniforme sur ]0,1[, alors la variable aléatoire <math>\ \Phi^{-1}(U)</math> suit la loi normale centrée réduite ; cependant, cette méthode est tout à fait malcommode, faute d'expressions simples des fonctions <math>\ \Phi</math> et <math>\ \Phi^{-1}</math>. En revanche, on peut facilement utiliser la méthode décrite ci-dessous.
+
+Si <math>\scriptstyle U_1,U_2,\dots,U_{12}</math> sont douze variables indépendantes de [[loi uniforme continue|loi uniforme]] sur <math>\scriptstyle [0,1]</math>, alors la variable <math>\scriptstyle \sum_{k=1}^{12}U_k-6</math> est de moyenne nulle et d'écart-type unitaire. Ainsi, grâce au [[théorème central limite]], cette variable suit '' approximativement'' la loi normale centrée réduite<ref group="a" name="Atkinson">{{article|langue=en|prénom1=A. C.|nom1=Atkinson|prénom2=M. C.|nom2=Pearce|titre=The Computer Generation of Beta, Gamma and Normal Random Variables|périodique=Journal of the Royal Statistical Society|volume=139|numéro=4|année=1976|pages=431-461|url texte=http://www.jstor.org/stable/2344349?seq=6}}</ref>. C'est une manière simple de générer une loi normale, cependant l'approximation n'est pas très précise.
+
+Un meilleur algorithme a été proposé par [[George Box|Box]] et [[Mervin Edgar Muller|Muller]]. Cette [[méthode de Box-Muller]] utilise une représentation en polaire de deux coordonnées uniformes donnée par les formules :
+:Si <math>\begin{cases}U\sim\mathcal U(0,1) \\ V\sim\mathcal U(0,1)\end{cases}</math> alors <math>\begin{cases}\sqrt{-2\ln(U)}\cos(2\pi V)\sim\mathcal N(0,1) \\ \sqrt{-2\ln(U)}\sin(2\pi V)\sim\mathcal N(0,1)\end{cases}</math>.
+Cet algorithme est simple à réaliser mais le calcul d'un logarithme, d'une racine carrée et d'une fonction trigonométrique rend la simulation informatique lente<ref group="a" name="Atkinson"/>. Une amélioration a été proposée par Marsaglia et Bray en 1964, en remplaçant les cosinus et sinus des formules par la variable aléatoire <math>\scriptstyle V_1/\sqrt{W}</math> et <math>\scriptstyle V_2/\sqrt{W}</math> où <math>\scriptstyle V_1</math> et <math>\scriptstyle V_2</math> sont indépendantes de loi <math>\scriptstyle \mathcal U(0,1)</math> et <math>\scriptstyle W=V_1^2+V_2^2</math>, ainsi :
+:<math>\begin{cases} V_1\sqrt{\frac{2}{W}\ln\left(\frac{1}{W}\right)}\sim\mathcal N(0,1) \\  V_2\sqrt{\frac{2}{W}\ln\left(\frac{1}{W}\right)}\sim\mathcal N(0,1).\end{cases}</math>
+L'algorithme n'est pas plus compliqué à mettre en œuvre et la simulation gagne en vitesse<ref group="a" name="Atkinson"/>.
+
+== Notes et références ==
+;Notes
+{{Références|group="b"}}
+;Ouvrages
+{{Références|colonnes=3}}
+;Articles et autres sources
+{{Références|group="a"}}
+
+== Voir aussi ==
+=== Bibliographie ===
+*{{ouvrage| langue  = en|prénom1=Milton|nom1= Abramovitch|prénom2=Irene|nom2=Stegun|titre=Handbook of Mathematical Functions with Formulas|lien titre=Handbook of Mathematical Functions|éditeur=New York: Dover|numéro d'édition=9|numéro chapitre=26|titre chapitre=Probability Functions|passage=927-996|année=1972|pages totales=1047|isbn=0-486-61272-4|lire en ligne = http://books.google.fr/books?id=MtU8uP7XMvoC&printsec=frontcover&hl=fr#v=onepage&q&f=false}}.{{plume}}
+*{{ouvrage|prénom1=Patrick|nom1= Bogaert|titre=Probabilités pour scientifiques et ingénieurs|éditeur=Éditions De Boeck|lieu=Paris|année=2006|pages totales=387|isbn=2-8041-4794-0|lire en ligne = http://books.google.fr/books?id=vbO_UTOW-gUC&printsec=frontcover&hl=fr#v=onepage&q&f=false}}.{{plume}}
+*{{Ouvrage | langue  = en | prénom1 = Harald  | nom1 = Cramér | lien auteur1 = Harald Cramér | titre = Random Variables and Probability Distributions | numéro d'édition =  3 | éditeur = Cambridge university press | année = 1970 | pages totales = 123 | isbn = 0-521-60486-9 | lire en ligne = http://books.google.fr/books?id=QW3kkBzd0OQC&printsec=frontcover&hl=fr#v=onepage&q&f=false}}{{plume}}
+*{{Ouvrage | langue  = fr | prénom1 = Yadolah  | nom1 = Dodge | titre =Statistique - dictionnaire encyclopédique | éditeur = Springer - Verlag | lien éditeur = Springer Science+Business Media | année = 2004 | pages totales = 637 | isbn = 2-287-21325-2 | lire en ligne = http://books.google.fr/books?id=PyDEP3M-T4cC&pg=PA309&lpg=PA309&dq=historique+de+la+loi+normale&source=bl&ots=S4HmR8UgNx&sig=ahl-6KEOmKfL3y6CBNV3tXK_N0I&hl=fr&sa=X&ei=1ARiULCHPObI0QWduoHwAg&ved=0CDUQ6AEwAQ#v=onepage&q=gauss&f=false}}{{plume}}
+*{{Ouvrage | langue  = fr | prénom1 = Jean-Jacques | nom1 = Droesbeke | prénom2 = Michel |nom2 = Lejeune | prénom3 = Gilbert |nom3 = Saporta | titre = Modèles statistiques pour données qualitatives | éditeur = Technip | année = 2005 | pages totales = 295 | isbn = 2-7108-0855-2 | lire en ligne = http://books.google.fr/books?id=ANuQrh3Oa64C&printsec=frontcover&hl=fr#v=onepage&q&f=false}}{{plume}}
+*{{ouvrage | langue  = en |prénom1=Joseph Arthur|nom1= Greenwood | prénom2 = H.O. | nom2 = Hartley | titre = Guide to tables in mathematical statistics | éditeur= Princeton University Press |année=1962 | pages totales=1014 | isbn= |lire en ligne =  }}.{{plume}}
+*{{Ouvrage | langue  = en | prénom1 = Charles Miller | nom1 = Grinstead | prénom2 = James Laurie | nom2 = Snell | titre = Introduction to probability | éditeur = American Mathematical Soc. | numéro d'édition =  2 | année = 1997 | pages totales = 519 | isbn = 0-8218-0749-8 | lire en ligne = http://books.google.fr/books?id=14oq4uWGCkwC&printsec=frontcover&hl=fr#v=onepage&q&f=false}}{{plume}}
+*{{Ouvrage|langue=en|prénom1=J. R. M. |nom1=Hosking|prénom2=James R.|nom2=Wallis|titre=Regional Frequency Analysis: An Approach Based on L-Moments|numéro d'édition=|éditeur=Cambridge University Press|année=1997|pages totales=224|isbn=978-0-521-43045-6|lire en ligne=http://books.google.fr/books?id=gurAnfB4nvUC&printsec=frontcover&hl=fr#v=onepage&q&f=false}}{{plume}}
+*{{Ouvrage | langue  = en | prénom1 = M  | nom1 = Lifschitz | titre = Gaussian Random Functions | éditeur = Kluver Academic publishers | année = 1995 | pages totales = 339 | isbn = 0-7923-3385-3 | lire en ligne = http://books.google.fr/books?id=vNh6_n-K9_4C&printsec=frontcover&dq=gaussian+distribution&source=bl&ots=Q5fMJzL5Fq&sig=FGORvsscSmPnteHbZXNPGU7jJu8&hl=en&sa=X&ei=AcNhUInMF4eB4ATsy4HgBw&ved=0CEoQ6AEwBg#v=onepage&q=gaussian%20distribution&f=false}}{{plume}}
+*{{Ouvrage | langue  = en | prénom1 = | nom1 = National Bureau of Standards | titre A guide to tables of the normal probability integral | éditeur = U.S. Govt. Print. Off. | année = 1952 | pages totales = 16 | isbn = | lire en ligne =}}{{plume}}
+*{{Ouvrage | langue  = fr | prénom1 = Konstantin  | nom1 = Protassov  | titre = Analyse statistique des données expérimentales | éditeur = EDP sciences | année = 2002 | pages totales = 148 | isbn = 2-86883-456-6 | lire en ligne = http://books.google.fr/books?id=yaKwiKMECPUC&printsec=frontcover&hl=fr&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false}}{{plume}}
+*{{Ouvrage | langue  = fr | prénom1 = Martine  | nom1 = Quinio Benamo  | titre = Probabilités et Statistique aujourd'hui | éditeur = l'Harmattan | année = 2005 | pages totales = 277 | isbn = 2-7475-9799-7 | lire en ligne = http://books.google.fr/books?id=RUlUubOjhcwC&printsec=frontcover&hl=fr#v=onepage&q&f=false}}{{plume}}
+*{{Ouvrage | langue  = en | prénom1 = Mark  | nom1 = Ridley | titre = Evolution | numéro d'édition=3 | éditeur = Blakwell | année = 2004 | pages totales = 751 | isbn = 1-4051-0345-0 | lire en ligne = http://fr.scribd.com/doc/45318423/4/Natural-selection-can-be-directional-stabilizing-or-disruptive}}{{plume}}
+*{{Ouvrage | prénom1 = Sheldon M.  | nom1 = Ross | titre = Initiation aux probabilités | éditeur = presses polytechniques et universitaires romandes | année = 2007 | pages totales = 592 | isbn = 978-2-88074-738-1 | lire en ligne = http://books.google.fr/books?id=6TjJW8tpQLwC&printsec=frontcover#v=onepage&q&f=false}}{{plume}}
+*{{Ouvrage | langue  = en | prénom1 = Stephen  | nom1 = Stigler | titre = Statistics on the table | éditeur = Harvard university press | lien éditeur = Harvard University Press | année = 1999 | pages totales = 499 | isbn = 0-674-83601-4 | lire en ligne = http://books.google.fr/books?id=qQusWukdPa4C&printsec=frontcover&dq=normal+distribution+stigler&source=bl&ots=6dnG-FnGTJ&sig=M2KtCanmaXfoE2sOA1Q6mCb3pcg&hl=fr&sa=X&ei=5Q1iUOuQH_CR0QWL2IGQBA&ved=0CC4Q6AEwAA#v=onepage&q=normal&f=false}}{{plume}}
+*{{Ouvrage | prénom1 = Philippe | nom1 = Tassi | prénom2 = Sylvia | nom2 = Legait | titre = Théorie des probabilités en vue des applications statistiques | éditeur = Technip | année = 1990 | pages totales = 367 | isbn = 2-7108-0582-0 | lire en ligne = http://books.google.fr/books?id=Ju62Wvc1stoC&printsec=frontcover&hl=fr#v=onepage&q&f=false}}{{plume}}
+*{{Ouvrage | prénom1 = Alain | nom1 = Yger | prénom2 = Jacques-Arthur | nom2 = Weill | titre = Mathématiques appliquées | éditeur = Pearson Education | année = 2009 | pages totales = 890 | isbn = 978-2-7440-7356-2 | lire en ligne = http://books.google.fr/books?id=fqOu6xKdmhcC&printsec=frontcover&hl=fr#v=onepage&q&f=false}}{{plume}}
+
+=== Liens externes ===
+* {{en}} [http://www.taygeta.com/random/gaussian.html Generating Gaussian Random Numbers]
+* {{fr}} [https://www.youtube.com/watch?v=FePQmvcsh74&feature=bf_prev&list=PLAE81FEB96ADC0161 Dix vidéos] (sur youtube) de moins de dix minutes chacune dans lesquelles Saïd Chermak explique les propriétés de la loi normale.
+
+=== Articles connexes ===
+* [[Loi de probabilité]]
+* [[Loi normale multidimensionnelle]]
+* [[Fonction d'erreur]]
+* [[Théorème central limite]]
+
+{{Palette|Lois de probabilités|Probabilités et statistiques}}
+{{Portail|probabilités et statistiques}}
+
+[[Catégorie:Loi de probabilité|Normale]]
+[[Catégorie:Fonction spéciale]]
+[[Catégorie:Carl Friedrich Gauss]]
+[[ar:توزيع احتمالي طبيعي]]
+[[az:Normal paylanma]]
+[[bg:Нормално разпределение]]
+[[ca:Distribució normal]]
+[[cs:Normální rozdělení]]
+[[cy:Dosraniad normal]]
+[[da:Normalfordeling]]
+[[de:Normalverteilung]]
+[[el:Κανονική κατανομή]]
+[[en:Normal distribution]]
+[[eo:Normala distribuo]]
+[[es:Distribución normal]]
+[[et:Normaaljaotus]]
+[[eu:Banakuntza normal]]
+[[fa:توزیع نرمال]]
+[[fi:Normaalijakauma]]
+[[gl:Distribución normal]]
+[[he:התפלגות נורמלית]]
+[[hr:Normalna raspodjela]]
+[[hu:Normális eloszlás]]
+[[id:Distribusi normal]]
+[[is:Normaldreifing]]
+[[it:Distribuzione normale]]
+[[ja:正規分布]]
+[[ka:ნორმალური განაწილება]]
+[[kk:Қалыпты дисперсия]]
+[[ko:정규분포]]
+[[la:Distributio normalis]]
+[[lt:Normalusis skirstinys]]
+[[mr:सामान्य वितरण]]
+[[nl:Normale verdeling]]
+[[nn:Normalfordeling]]
+[[no:Normalfordeling]]
+[[pl:Rozkład normalny]]
+[[pms:Distribussion ëd Gauss]]
+[[pt:Distribuição normal]]
+[[ru:Нормальное распределение]]
+[[sh:Normalna raspodela]]
+[[simple:Normal distribution]]
+[[sk:Normálne rozdelenie]]
+[[sl:Normalna porazdelitev]]
+[[sr:Нормална расподела]]
+[[su:Sebaran normal]]
+[[sv:Normalfördelning]]
+[[ta:இயல்நிலைப் பரவல்]]
+[[th:การแจกแจงแบบปรกติ]]
+[[tr:Normal dağılım]]
+[[uk:Нормальний розподіл]]
+[[ur:معمول توزیع]]
+[[vi:Phân phối chuẩn]]
+[[yi:נארמאלע פארטיילונג]]
+[[zh:正态分布]]
+[[zh-min-nan:Siông-thài hun-pò͘]]

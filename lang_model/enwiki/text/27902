@@ -1,0 +1,165 @@
+[[File:DvorakCDP1973.png|thumb|right|Common developmental patterns seen during tropical cyclone development, and their Dvorak-assigned intensities]]
+The '''Dvorak technique''' (developed between 1969 and 1984 by [[Vernon Dvorak]]<ref name="evolution"/>) is a widely-used system to estimate [[tropical cyclone]] intensity based solely on visible and [[infrared]] [[Weather satellite|satellite images]].   Within the Dvorak satellite strength estimate for tropical cyclones, there are several [[Pattern recognition|visual patterns]] that a cyclone may take on which define the upper and lower bounds on its intensity. The primary patterns used are curved [[rainband|band]] pattern (T1.0-T4.5), [[Wind_shear#Effects_on_tropical_cyclones|shear pattern]] (T1.5-T3.5), central dense overcast (CDO) pattern (T2.5-T5.0), central cold cover (CCC) pattern, banding [[eye (cyclone)|eye]] pattern (T4.0-T4.5), and eye pattern (T4.5 - T8.0).  
+
+Both the [[central dense overcast]] and imbedded eye pattern utilize the size of the CDO.  The CDO pattern intensities start at T2.5, equivalent to minimal tropical storm intensity ({{convert|35|kn|km/h}}).  The shape of the central dense overcast is also considered.  The eye pattern utilizes the coldness of the cloud tops within the surrounding mass of thunderstorms and contrasts it with the temperature within the eye itself.  The larger the temperature difference is, the stronger the tropical cyclone.  Once a pattern is identified, the storm features (such as length and curvature of banding features) are further analyzed to arrive at a particular T-number.  The CCC pattern indicates little development is occurring, despite the cold cloud tops associated with the quickly-evolving feature.
+
+Several agencies issue Dvorak intensity numbers for tropical cyclones and their precursors, including the [[National Hurricane Center]]'s [[Tropical Analysis and Forecast Branch]] (TAFB), the [[National Oceanic and Atmospheric Administration|NOAA]]/[[National Oceanic and Atmospheric Administration#National Environmental Satellite, Data, and Information Service (NESDIS)|NESDIS]] [[Satellite Analysis Branch]] (SAB), and the [[Joint Typhoon Warning Center]] at the [[Naval Pacific Meteorology and Oceanography Center]] in [[Pearl Harbor]], [[Hawaii]].
+
+==Evolution==
+[[File:Subtropical Storm Andrea 2007.jpg|thumb|200px|right|[[Subtropical Storm Andrea (2007)|Subtropical Storm Andrea]] of [[2007 Atlantic hurricane season|2007]], a system which the Dvorak technique would improperly diagnose cyclone intensity]]
+The initial development of this technique occurred in 1969, using satellite pictures of tropical cyclones within the northwest Pacific ocean.  The system as it was initially conceived involved pattern matching of cloud features with a development and decay model.  As the technique matured through the 1970s and 1980s, measurement of cloud features became dominant in defining tropical cyclone intensity and central pressure of the tropical cyclone's [[low-pressure area]].  Use of infrared satellite imagery led to a more objective assessment of the strength of tropical cyclones with eyes, using the cloud top temperatures within the eyewall and contrasting them with the warm temperatures within the eye itself.  Constraints on short term intensity change are used less frequently than they were back in the 1970s and 1980s.  The central pressures assigned to tropical cyclones have required modification, as the original estimates were 5-10&nbsp;hPa (0.15-0.29&nbsp;inHg) too low in the Atlantic and up to 20&nbsp;hPa (0.59&nbsp;inHg) too high in the northwest Pacific.  This led to the development of a separate wind-pressure relationship for the northwest Pacific, devised by Atkinson and Holliday in 1975, then modified in 1977.<ref name="evolution"/>  
+
+Systems with small eyes near the limb, or edge, of a satellite image can be biased too weakly using the technique, which can be resolved through use of [[Weather_satellite#Polar_orbiting|polar-orbiting satellite imagery]].  Subtropical cyclone intensity cannot be determined using this technique, which led to the development of the Hebert-Poteat technique in 1975.  Cyclones undergoing extratropical transition, losing their thunderstorm activity, see their intensities underestimated using the Dvorak technique.  This led to the development of the Miller and Lander [[extratropical transition technique]] which can be used under these circumstances.<ref name="evolution"/>
+
+As human analysts using the technique lead to subjective biases, efforts have been made to make more objective estimates using computer programs, which have been aided by higher-resolution satellite imagery and more powerful computers.  Since tropical cyclone satellite patterns can fluctuate over time, automated techniques use a six-hour averaging period to lead to more reliable intensity estimates.  Development of the objective Dvorak technique began in 1998, which performed best with tropical cyclones that had eyes (of hurricane or typhoon strength).  It still required a manual center placement, keeping some subjectivity within the process.  By 2004, an advanced objective Dvorak technique was developed which utilized banding features for systems below hurricane intensity and to objectively determine the tropical cyclone's center.  A central pressure bias was uncovered in 2004 relating to the slope of the [[tropopause]] and cloud top temperatures which change with latitude that helped improve central pressure estimates within the objective technique.<ref name="evolution">{{cite journal|url=http://www.nhc.noaa.gov/pdf/06velden.pdf|title=The Dvorak Tropical Cyclone Intensity Estimation Technique: A Satellite-Based Method That Has Endured For Over 30 Years|author=Velden, Christopher, Bruce Harper, Frank Wells, John L. Beven II, Ray Zehr,
+Timothy Olander, Max Mayfield, Charles <U+201C>Chip<U+201D> Guard, Mark Lander, Roger Edson, Lixion Avila, Andrew Burton, Mike Turk, Akihiro Kikuchi,
+Adam Christian, Philippe Caroff, and Paul McCrone|date=September 2006|pages=1195<U+2013>1214|journal=Bulletin of the American Meteorological Society|accessdate=2012-09-26}}</ref>
+
+==Details of technique==
+{| class="wikitable" style="float:right; margin-left:1.5em; width:35em; text-align:center; font-size: 92%;"
+|+'''Dvorak T-Number and Corresponding Intensity'''<ref>{{cite web | author = Satellite and Information Service Division | title = Dvorak Current Intensity Chart | url = http://www.ssd.noaa.gov/PS/TROP/CI-chart.html | publisher = [[National Oceanic and Atmospheric Administration]] | date = April 17, 2005 | accessdate=2006-06-12}}</ref> 
+|- 
+! rowspan=2 width=20% style="background:gold"  | T-Number
+! colspan=3 width=20% style="background:gold"| Winds
+! rowspan=2 width=20% style="background:gold"| Category <small>([[Saffir<U+2013>Simpson Hurricane Scale|SSHS]])</small>
+! colspan=2  style="background:gold" | Min. Pressure <small>(millibars)</small>
+|- 
+! style="background:gold" | <small>([[Knot (unit)|knots]])</small>
+! style="background:gold" | <small>(mph)</small>
+! style="background:gold" | <small>(km/h)</small>
+! width=15% style="background:orange" | Atlantic 
+! style="background:orange" | NW Pacific
+|- 
+|1.0 - 1.5 || 25 || 29 || 46
+| style="background: #{{storm colour|depression}};" | TD 
+| ---- || ----
+|- 
+|2.0 || 30 || 35 || 56
+| style="background: #{{storm colour|depression}};" | TD 
+| 1009 || 1000
+|- 
+|2.5 || 35 || 40 || 65
+| style="background: #{{storm colour|storm}};" | TS 
+| 1005 || 997
+|- 
+|3.0 || 45 || 52 || 83
+| style="background: #{{storm colour|storm}};" | TS 
+| 1000 || 991
+|- 
+|3.5 || 55 || 63 || 102
+| style="background: #{{storm colour|storm}};" | TS 
+| 994 || 984
+|- 
+|4.0 || 65 || 75 || 120
+| style="background: #{{storm colour|cat1}};" | Cat 1
+| 987 || 976
+|- 
+|4.5 || 77 || 89 || 143
+| style="background: #{{storm colour|cat1}};" | Cat 1<U+2013>2
+| 979 || 966
+|- 
+|5.0 || 90 || 104 || 167 
+| style="background: #{{storm colour|cat2}};" | Cat 2<U+2013>3
+| 970 || 954
+|- 
+|5.5 || 102 || 117 || 189
+| style="background: #{{storm colour|cat3}};" | Cat 3 
+| 960 || 941
+|- 
+|6.0 || 115 || 132 || 213
+| style="background: #{{storm colour|cat4}};" | Cat 4 
+| 948 || 927
+|- 
+|6.5 || 127 || 146 || 235
+| style="background: #{{storm colour|cat4}};" | Cat 4
+| 935 || 914
+|- 
+|7.0 || 140 || 161 || 260
+| style="background: #{{storm colour|cat5}};" | Cat 5
+| 921 || 898
+|- 
+|7.5 || 155 || 178 || 287
+| style="background: #{{storm colour|cat5}};" | Cat 5
+| 906 || 879
+|- 
+|8.0 || 170 || 196 || 315
+| style="background: #{{storm colour|cat5}};" | Cat 5
+| 890 || 858
+|-
+|colspan="7" align="left"|<small>Note: The pressures shown for the NW Pacific basin are lower as the pressure of the entire basin are relatively lower than that of the Atlantic basin.</small>
+|}
+
+In a developing cyclone, the technique takes advantage of the fact that cyclones of similar [[Tropical cyclone scales|intensity]] tend to have certain characteristic features, and as they strengthen, they tend to change in appearance in a predictable manner.  The structure and organization of the tropical cyclone are tracked over 24&nbsp;hours to determine if the storm has weakened, maintained its intensity, or strengthened.  Various central cloud and banding features are compared with templates that show typical storm patterns and their associated intensity.<ref>{{cite web|title=Tropical Cyclone Forecasters Reference Guide|url=http://www.nrlmry.navy.mil/~chu/chap6/ch6apb.htm|author=Naval Research Laboratory|publisher=[[United States Navy]]|accessdate=2006-05-29}}</ref>  If infrared satellite imagery is available for a cyclone with a visible eye pattern, then the technique utilizes the difference between the temperature of the warm eye and the surrounding cold cloud tops to determine intensity (colder cloud tops generally indicate a more intense storm). In each case a "T-number" and a Current Intensity (CI) value are assigned to the storm. These measurements range between 1 (minimum intensity) and 8 (maximum intensity).<ref>{{cite web|title=Subject: H1) What is the Dvorak technique and how is it used?|author=Landsea, Chris| year=2006| url=http://www.aoml.noaa.gov/hrd/tcfaq/H1.html|publisher=[[Hurricane Research Division]]|accessdate=2012-09-09}}</ref> The T-number and CI value are the same except for weakening storms, in which case the CI is higher.<ref>{{cite web|title=T-Number Curve Comparison between JTWC and JMA|author=Leffler, J.W | url=http://metoc.npmoc.navy.mil/jtwc/tnumcurves.jpg}}</ref><ref>{{cite web|date=2011-08-26|title=The Dvorak Technique Explained| url=http://www.ssd.noaa.gov/PS/TROP/dvorak.html|publisher=[[National Oceanic and Atmospheric Administration]]|author=[[National Oceanic and Atmospheric Administration]] Satellite and Information Service|accessdate=2006-05-29}}</ref> The table at right shows the approximate surface wind speed and [[Atmospheric pressure|sea level pressure]] that corresponds to a given T-number.<ref name="ODT" />
+
+===Pattern types===
+Within the Dvorak satellite strength estimate for tropical cyclones, there are several visual patterns that a cyclone may take on which define the upper and lower bounds on its intensity. The primary patterns used are curved band pattern (T1.0-T4.5), shear pattern (T1.5-T3.5), central dense overcast (CDO) pattern (T2.5-T5.0), banding eye pattern (T4.0-T4.5), eye pattern (T4.5 - T8.0), and central cold cover (CCC) pattern.<ref name="CCC">{{cite journal|title=Pictures of the Month: A Tropical Cyclone With an Enormous Central Cold Cover|author=Lander, Mark A.|journal=Monthly Weather Review|pages=132-134|volume=127|date=January 1999|publisher=[[American Meteorological Society]]}}</ref>  Both the central dense overcast and imbedded eye pattern utilize the size of the CDO.  The CDO pattern intensities start at T2.5, equivalent to minimal tropical storm intensity ({{convert|35|kn|km/h}}).  The shape of the central dense overcast is also considered.  The farther the center is tucked into the CDO, the stronger it is deemed.<ref name="Vern"/>  Tropical cyclones with maximum sustained winds between {{convert|55|kn|km/h}} and {{convert|85|kn|km/h}} can have their center of circulations obscured by cloudiness within visible and infrared satellite imagery, which makes diagnosis of their intensity a challenge.<ref>{{cite web|url=https://docs.google.com/viewer?a=v&q=cache:TNjsYx3-4tYJ:https://ams.confex.com/ams/30Hurricane/webprogram/Manuscript/Paper205619/hurrconf_2012_archer_extabs.pdf+Objectively+Determining+the+Rotational+Center+of+Tropical+Cyclones+in+Passive+Microwave+Satellite+Imagery+Anthony+J.+Wimmers+and+Christopher+S.+Velden&hl=en&gl=us&pid=bl&srcid=ADGEEShshgH1vysQyzdH8CmUQ2cUchwb6JJdg8q2-vIiIJ8uf5nFrmjAtTXCMD2PFrFah5R6Hl5q9A3x1-gV5iiLUzeVQbXO0D35UokP9lPv3wG6KVCjTOQp8zDmToJZzaKoiIXCEdP4&sig=AHIEtbTlbbUiMfUOQ_0o0lCPuM4jkc47bw|title=Advances in Objective Tropical Cyclone Center Fixing Using Multispectral Satellite Imagery|author=Wimmers, Anthony and Chistopher Velden|year=2012|accessdate=2012-08-12|publisher=American Meteorological Society}}</ref>  
+
+The CCC pattern, with its large and quickly developing mass of thick [[cirrus cloud]]s spreading out from an area of convection near a tropical cyclone center within a short time frame, indicates little development.  When it develops, rainbands and cloud lines around the tropical cyclone weaken and the thick cloud shield obscures the circulation center.  While it resembles a CDO pattern, it is rarely seen.<ref name="CCC"/>
+
+The eye pattern utilizes the coldness of the cloud tops within the surrounding mass of thunderstorms and contrasts it with the temperature within the eye itself.  The larger the temperature difference is, the stronger the tropical cyclone.<ref name="Vern">{{cite paper|author=Dvorak, Vernon F.|title=A Technique For the Analysis and Forecasting of Tropical Cyclone Intensities From Satellite Pictures|pages=5<U+2013>8|date=February 1973|publisher=[[National Oceanic and Atmospheric Administration]]}}</ref>  Winds within tropical cyclones can also be estimated by tracking features within the CDO using rapid scan [[Weather_satellite#Geostationary|geostationary satellite imagery]], whose pictures are taken minutes apart rather than every half hour.<ref>{{cite journal|author=Rogers, Edward, R. Cecil Gentry, William Shenk, and Vincent Oliver|title=The Benefits of Using Short-Interval Satellite Images To Derive Winds For Tropical Cyclones|journal=Monthly Weather Review|publisher=American Meteorological Society|volume=107|page=575|date=May 1979}}</ref>
+
+Once a pattern is identified, the storm features (such as length and curvature of banding features) are further analyzed to arrive at a particular T-number.<ref name="">{{cite web|title=Satellite Application is Tropical Weather Forecasting|url=http://www.comet.ucar.edu/class/satmet/11_Apr19_1999/html/demariamn/sld030.htm|author=De Maria, Mark|date=1999-04-19|accessdate=2006-05-29}}</ref>
+{{clear}}
+
+==Usage==
+
+Several agencies issue Dvorak intensity numbers for tropical cyclones and their precursors. These include the National Hurricane Center's Tropical Analysis and Forecast Branch (TAFB), the National Oceanic and Atmospheric Administration's Satellite Analysis Branch (SAB), and the Joint Typhoon Warning Center at the Naval Pacific Meteorology and Oceanography Center in Pearl Harbor, Hawaii.<ref name="ODT">{{cite journal|title=Development of an Objective Scheme to Estimate Tropical Cyclone Intensity from Digital Geostationary Satellite Infrared Imagery|url=http://tropic.ssec.wisc.edu/misc/adt/odt/odt.html|author=Velden, Christopher, Timothy L. Olander and Raymond M. Zehr|date=March 1998|journal=Weather and Forecasting|publisher=University of Wisconsin|accessdate=2012-09-09|volume=13|pages=172<U+2013>186|doi=10.1175/1520-0434(1998)013<0172%3ADOAOST>2.0.CO%3B2}}</ref>
+
+The National Hurricane Center will often quote Dvorak T-numbers in their tropical cyclone products. The following example is from discussion number 3 of Tropical Depression 24 (eventually [[Hurricane Wilma]]) of the [[2005 Atlantic hurricane season]]:
+
+<blockquote>
+<tt>BOTH TAFB AND SAB CAME IN WITH A DVORAK SATELLITE INTENSITY ESTIMATE OF T2.5/35 KT. HOWEVER ...OFTENTIMES THE SURFACE WIND FIELD OF LARGE DEVELOPING LOW PRESSURE SYSTEMS LIKE THIS ONE WILL LAG ABOUT 12 HOURS BEHIND THE SATELLITE SIGNATURE. THEREFORE... THE INITIAL INTENSITY HAS ONLY BEEN INCREASED TO 30 KT. </tt><ref>{{cite web|title=NHC Tropical Depression 24 Discussion Number 3|url=http://www.nhc.noaa.gov/archive/2005/dis/al242005.discus.003.shtml?|publisher=[[National Hurricane Center]]|author=Stewart, Stacy|accessdate=2006-05-29|date=2005-10-16}}</ref>
+</blockquote>
+
+Note that in this case the Dvorak T-number (in this case T2.5) was simply used as a guide but other factors determined how the NHC decided to set the system's intensity.
+
+The [[Cooperative Institute for Meteorological Satellite Studies]] (CIMSS) at the [[University of Wisconsin<U+2013>Madison]] has developed the Objective Dvorak Technique (ODT). This is a modified version of the Dvorak technique which uses computer algorithms rather than subjective human interpretation to arrive at a CI number. This is generally not implemented for tropical depressions or weak tropical storms.<ref name="ODT" />
+{| class="wikitable" style="clear:all;"
+|+ '''Satellite Images of Selected Tropical Storms and Associated T-Number''' 
+|-
+| [[File:Wilma-17-1315z-T30-discussion1500z.png]]
+| [[File:Dennis-06-1445z-T40-discussion1500z.png]]
+| [[File:Jeanne-22-1945z-T50-discussion2100z.png]]
+| [[File:Emily-14-1915z-T60-discussion15-0300z.png]]
+|- align=center 
+| [[Hurricane Wilma|Tropical Storm Wilma]] at T3.0 
+| [[Hurricane Dennis|Tropical Storm Dennis]] at T4.0
+| [[Hurricane Jeanne]] at T5.0
+| [[Hurricane Emily (2005)|Hurricane Emily]] at T6.0
+|}
+
+==See also==
+Other tools used to determine tropical cyclone intensity:
+*[[Quikscat]]
+*[[Tropical Rainfall Measuring Mission|TRMM]]
+
+==References==
+{{Reflist|2}}
+
+==External links==
+{{Commons category|Dvorak technique}}
+
+;Agencies issuing Dvorak intensity estimates
+*[http://www.usno.navy.mil/JTWC Joint Typhoon Warning Center]
+*[http://tropic.ssec.wisc.edu/real-time/adt/adt.html UW<U+2013>CIMSS] (Advanced Dvorak Technique)
+*[http://www.ssd.noaa.gov/PS/TROP/tdpositions.html NOAA/NESDIS Satellite Analysis Branch]
+*[http://www.nhc.noaa.gov/abouttafb.shtml About the TAFB]
+;Other
+*[http://journals.ametsoc.org/doi/abs/10.1175/1520-0493%281975%29103%3C0420%3ATCIAAF%3E2.0.CO%3B2 Tropical Cyclone Intensity Analysis and Forecasting from Satellite Imagery] Dvorak, 1974. (PDF, 1.3 MB)
+*[http://ams.confex.com/ams/pdfpapers/75193.pdf Dvorak Tropical Cyclone Wind Speed Biases Determined from Reconnaissance-based "Best Track" Data (1997-2003)] Franklin and Brown
+*[https://confex.webex.com/confex/playback.php?FileName=http%3A%2F%2Fams.confex.com%2Fdata%2Fams%2Fwebex%2F26HURR%2F75544.wrf The Dvorak Technique Through Time] Dr. Jack Beven. (WRF File. Requires WebEx player)
+
+[[Category:Satellite interpretation]]
+[[Category:Tropical cyclone meteorology]]
+[[Category:Article Feedback 5 Additional Articles]]
+
+[[de:Dvorak-Technik]]
+[[fr:Technique de Dvorak]]
+[[ms:Teknik Dvorak]]
+[[nl:Dvoraktechniek]]
+[[ja:<U+30C9><U+30DC><U+30E9><U+30C3><U+30AF><U+6CD5>]]
+[[pl:Metoda Dvoraka]]
+[[pt:T<U+00E9>cnica Dvorak]]
+[[simple:Dvorak technique]]
+[[sv:Dvorakteknik]]
+[[zh:<U+5FB7><U+6C83><U+590F><U+514B><U+5206><U+6790><U+6CD5>]]

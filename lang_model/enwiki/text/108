@@ -1,0 +1,46 @@
+A '''mail transfer agent''' (MTA) (also called a ''mail transport agent'', ''message transfer agent'', or ''smtpd'' (short for [[SMTP]] [[Daemon (computer software)|daemon]])), is a [[computer program]] or [[software agent]] that transfers [[electronic mail]] messages from one computer to another.
+
+The term '''mail server''' is also used to mean a [[computer]] acting as an MTA that is running the appropriate software. The term '''mail exchanger''' (MX), in the context of the [[Domain Name System]] formally refers to an [[IP address]] assigned to a device hosting a ''mail server'', and by extension also indicates the server itself.
+
+== Overview ==
+An MTA receives mail from another MTA (relaying) or from a [[mail user agent]] (MUA). The MTA works behind the scenes, while the user usually interacts with the MUA. Every time an MTA receives an e-mail, it will add a "Received:" trace header field to the top of the message.  In this way, there is a record of which MTAs handled the e-mail and in which order.  Upon final delivery, the "Return-Path:" header will also be added to record the [[return path]].
+
+The delivery of e-mail to a user's mailbox typically takes place via a [[mail delivery agent]] (MDA); many MTAs have basic MDA functionality built in, but a dedicated MDA like [[procmail]] can provide more sophisticated functionality.
+
+According to one survey, [[sendmail]], [[Microsoft Exchange Server]], [[Postfix (software)|Postfix]], and [[Exim]] together control over 85% of market share for SMTP service.{{Fact|date=September 2008}}<!-- This site wants 500 USD for this information <ref>Security Space [http://www.securityspace.com/s_survey/data/man.200707/mxsurvey.html Mail (MX) Server Survey], 1st Aug 2007.</ref> -->
+
+Another survey suggests a more balanced playing field, though it included hosted e-mail services such as [[Postini]].<ref name="oreilly">MailChannels [http://www.oreillynet.com/pub/a/sysadmin/2007/01/05/fingerprinting-mail-servers.html Mail Server Survey], 2006</ref>
+
+==See also==
+*[[MX record]]
+*[[List of mail servers]]
+*[[Comparison of mail servers]]
+*[[Mail user agent]]
+*[[Mail delivery agent]]
+
+==References==
+{{reflist}}
+
+{{software-type-stub}}
+{{network-software-stub}}
+
+[[Category:E-mail]]
+[[Category:Mail transfer agents| ]]
+
+[[cs:Mail Transfer Agent]]
+[[de:Mail Transfer Agent]]
+[[es:Agente de Transferencia de Correo]]
+[[eu:Posta zerbitzari]]
+[[fr:Serveur de messagerie <U+00E9>lectronique]]
+[[ko:<U+BA54><U+C77C> <U+C804><U+C1A1> <U+C5D0><U+C774><U+C804><U+D2B8>]]
+[[id:Mail transfer agent]]
+[[it:Mail server]]
+[[lv:Pasta serveris]]
+[[li:Mail transfer agent]]
+[[nl:Mailserver]]
+[[ja:<U+30E1><U+30FC><U+30EB><U+8EE2><U+9001><U+30A8><U+30FC><U+30B8><U+30A7><U+30F3><U+30C8>]]
+[[pl:Mail transfer agent]]
+[[pt:MTA]]
+[[ru:<U+041F><U+043E><U+0447><U+0442><U+043E><U+0432><U+044B><U+0439> <U+0441><U+0435><U+0440><U+0432><U+0435><U+0440>]]
+[[sr:MTA]]
+[[th:<U+0E40><U+0E21><U+0E25><U+0E40><U+0E0B><U+0E34><U+0E23><U+0E4C><U+0E1F><U+0E40><U+0E27><U+0E2D><U+0E23><U+0E4C>]]

@@ -1,0 +1,532 @@
+{{otheruses4|the North American Great Lakes|the African lakes|African Great Lakes|other uses of this term|Great Lakes (disambiguation)}}
+{{pp-move-indef|small=yes}}
+
+[[Image:Great Lakes from space.jpg|thumb|350px|right|A [[satellite]] image of the Great Lakes.]]
+[[Image:Great-Lakes.svg|thumb|350px|right|A map showing the Great Lakes.]]
+The '''Great Lakes''' are a chain of [[fresh water|freshwater]] [[lake]]s located in eastern [[North America]], on the [[Canada <U+2013> United States border]]. Consisting of Lakes [[Lake Superior|Superior]], [[Lake Michigan|Michigan]], [[Lake Huron|Huron]], [[Lake Erie|Erie]], and [[Lake Ontario|Ontario]], they form the largest group of freshwater lakes on [[Earth]].<ref>[http://biology.usgs.gov/luhna/chap6.html LUHNA Chapter 6: Historical Landcover Changes in the Great Lakes Region<!-- Bot generated title -->]</ref><ref name=>{{cite book | first=Fereidoun | last=Ghassemi | coauthors= 
+| year=2007 | title=Inter-basin water transfer | edition=| publisher=Cambridge, Cambridge University
+Press, 264 | location=| isbn=0-52-186969-2 | unused_data=|pgs.}}</ref>  They are sometimes referred to as the "[[Third Coast]]" by some citizens of the United States.  Because of their size, some regard them as inland [[seas]].{{Fact|date=May 2009}}
+
+==Geography==
+The Great Lakes region contains not only the five main lakes themselves, but also numerous minor lakes and rivers, as well as approximately 35,000 islands.
+
+===Bathymetry===
+{| class="wikitable" style="text-align: center" width="100%" cellpadding="5px"
+|-
+
+!
+!Lake Erie
+!Lake Huron
+!Lake Michigan
+!Lake Ontario
+!Lake Superior 
+|-
+! Surface area
+| {{convert|9940|sqmi|km2|abbr=on}}
+| {{convert|23010|sqmi|km2|abbr=on}}
+| {{convert|22400|sqmi|km2|abbr=on}}
+| {{convert|7540|sqmi|km2|abbr=on}}
+| {{convert|31820|sqmi|km2|abbr=on}}
+|-
+! Water volume
+| {{convert|116|cumi|km3|abbr=on}}
+| {{convert|849|cumi|km3|abbr=on}}
+| {{convert|1180|cumi|km3|abbr=on}}
+| {{convert|393|cumi|km3|abbr=on}}
+| {{convert|2900|cumi|km3|abbr=on}}
+|-
+! Elevation
+| {{convert|571|ft|m|abbr=on}}
+| {{convert|577|ft|m|abbr=on}}
+| {{convert|577|ft|m|abbr=on}}
+| {{convert|246|ft|m|abbr=on}}
+| {{convert|609|ft|m|abbr=on}}
+|-
+! Average depth<ref name="Grady" />
+| {{convert|62|ft|m|abbr=on}}
+| {{convert|195|ft|m|abbr=on}}
+| {{convert|279|ft|m|abbr=on}}
+| {{convert|283|ft|m|abbr=on}}
+| {{convert|483|ft|m|abbr=on}}
+|-
+! Maximum depth
+| {{convert|210|ft|m|abbr=on}}
+| {{convert|770|ft|m|abbr=on}}
+| {{convert|923|ft|m|abbr=on}}
+| {{convert|808|ft|m|abbr=on}}
+| {{convert|1332|ft|m|abbr=on}}
+|-
+! Major settlements<ref>See [[List of cities on the Great Lakes]] for a complete list.</ref>
+| [[Buffalo, New York|Buffalo, NY]]<br />[[Cleveland, Ohio|Cleveland, OH]]<br />[[Erie, Pennsylvania|Erie, PA]]<br />[[Toledo, Ohio|Toledo, OH]]<br />[[Leamington, Ontario|Leamington, ON]]
+| [[Sarnia, Ontario|Sarnia, ON]]<br />[[Owen Sound, Ontario|Owen Sound, ON]]<br />[[Alpena, MI]]<br />[[Port Huron, MI]]<br />[[Bay City, MI]]
+| [[Chicago, Illinois|Chicago, IL]]<br />[[Gary, Indiana|Gary, IN]]<br />[[Green Bay, Wisconsin|Green Bay, WI]]<br />[[Milwaukee, Wisconsin|Milwaukee, WI]]<br />[[Traverse City, MI]]<br />[[Muskegon, MI]]
+| [[Hamilton, Ontario|Hamilton, ON]]<br />[[Kingston, Ontario|Kingston, ON]]<br />[[Oshawa, Ontario|Oshawa, ON]]<br />[[Rochester, New York|Rochester, NY]]<br />[[Toronto, Ontario|Toronto, ON]]<br/>[[Mississauga, Ontario|Mississauga, ON]]
+| [[Duluth, Minnesota|Duluth, MN]]<br />[[Sault Ste. Marie, Ontario|Sault Ste. Marie, ON]]<br />[[Sault Ste. Marie, Michigan|Sault Ste. Marie, MI]]<br>[[Thunder Bay|Thunder Bay, ON]]<br />[[Marquette, MI]]<br />[[Superior, WI]]
+|}
+
+{| border=0 cellspacing=2 cellpadding=0 width=600 style="font-size:smaller; clear:both;"
+|+ style="font-size:larger;"| '''Relative elevations, average depths, maximum depths, and volumes of the Great Lakes.'''
+|-
+|colspan=2|
+<timeline>
+ImageSize  = width:595 height:250
+PlotArea   = width:525 height:200 left:50 bottom:15
+AlignBars = justify
+
+Period    = from:-1000 till:600
+TimeAxis  = orientation:vertical
+ScaleMajor = unit:year increment:500 start:-1000
+ScaleMinor = unit:year increment:100 start:-1000
+
+Colors =
+  id:blue1 value:rgb(0.0,0.0,0.75)
+  id:blue2 value:rgb(0.1,0.1,0.8)
+  id:blue3 value:rgb(0.2,0.2,0.85)
+  id:blue4 value:rgb(0.3,0.3,0.9)
+  id:blue5 value:rgb(0.4,0.4,0.95)
+  id:textinbar value:yelloworange
+  id:textoutsidebar value:redorange
+
+Define $elevation = shift:(0,15) mark:(line,textoutsidebar) textcolor:textoutsidebar
+Define $avgdepth = mark:(line,textinbar) textcolor:textinbar
+Define $maxdepth = shift:(0,-11) mark:(line,textoutsidebar) textcolor:textoutsidebar
+
+PlotData=
+  align:center
+
+  bar:Superior from:-732 till:600 width:194 color:blue1
+    $elevation at:600 text:"600&nbsp;ft (183&nbsp;m)"
+    $avgdepth at:117 shift:(0,1) text:"483&nbsp;ft (147&nbsp;m)"
+    $maxdepth at:-732 text:"1,332&nbsp;ft (406&nbsp;m)"
+
+  bar:Michigan from:-348 till:577 width:113 color:blue5
+    $elevation at:577 text:"577&nbsp;ft (176&nbsp;m)"
+    $avgdepth at:298 shift:(0,2) text:"279&nbsp;ft (85&nbsp;m)"
+    $maxdepth at:-348 text:"925&nbsp;ft (282&nbsp;m)"
+
+  bar:Huron from:-173 till:577 width:101 color:blue3
+    $elevation at:577 text:"577&nbsp;ft (176&nbsp;m)"
+    $avgdepth at:382 shift:(0,1) text:"195&nbsp;ft (59&nbsp;m)"
+    $maxdepth at:-173 text:"750&nbsp;ft (229&nbsp;m)"
+
+  bar:Erie from:359 till:569 width:49 color:blue2
+    $elevation at:569 text:"569&nbsp;ft (173&nbsp;m)"
+    $avgdepth at:507 align:left shift:(30,2) textcolor:textoutsidebar text:"62&nbsp;ft (19&nbsp;m)"
+    $maxdepth at:359 text:"210&nbsp;ft (64&nbsp;m)"
+
+  bar:Ontario from:-559 till:243 width:44 color:blue4
+    $elevation at:243 text:"243&nbsp;ft (74&nbsp;m)"
+    $avgdepth at:-40 shift:(0,2) text:"283&nbsp;ft (86&nbsp;m)"
+    $maxdepth at:-559 text:"802&nbsp;ft (244&nbsp;m)"
+
+  align:left shift:(35,0) textcolor:green
+    at:243 text:"surface~elevation"
+    at:-40 text:"average~depth"
+    at:-559 text:"maximum~depth"
+</timeline>
+|- valign=top
+!align=right| Notes:
+| The area of each rectangle is proportionate to the volume of each lake.  All measurements at Low Water Datum.
+|- valign=top
+!align=right| Source:
+| [[United States Environmental Protection Agency|EPA]] <ref name=EPA>{{cite web |url=http://www.epa.gov/glnpo/atlas/gl-fact1.html |title=Great Lakes Atlas: Factsheet #1 |accessdate=2007-12-03 |author= |date=March, 9th, 2006  and French |publisher=United States Environmental Protection Agency}}</ref>
+|}
+
+===Lake Michigan-Huron===
+Lakes Michigan and Huron are hydrologically a single lake, sometimes called [[Lake Michigan-Huron]]; they have the same surface elevation of 
+{{convert|577|ft|m}},<ref name=nyt>{{cite book | first=John W. (ed.) | last=Wright | coauthors=Editors and reporters of ''The New York Times'' | year=2006 | title=The New York Times Almanac | edition=2007 | publisher=Penguin Books | location=New York, New York | isbn=0-14-303820-6 | pages=64}}</ref> and are connected not by a river but by the {{convert|295|ft|m|adj=on}} deep [[Straits of Mackinac]].<ref name="Grady" />
+
+===Rivers===
+[[Image:Sarnialakeshore 02 2004 0717AB.jpg|thumb|right|[[Sarnia, ON]], the largest city on [[Lake Huron]], and the [[St. Clair River]] shoreline. The smokestacks of Chemical Valley along the river are visible in the background.]]
+*The [[St. Marys River (Michigan-Ontario)|St. Marys River]] connects Lake Superior to Lake Huron.
+*The [[St. Clair River]] connects Lake Huron to [[Lake Saint Clair (North America)|Lake St. Clair]]
+*The [[Detroit River]] connects [[Lake Saint Clair (North America)|Lake St. Clair]] to Lake Erie.   Through its middle is the border between Canada and the United States.
+*The [[Niagara River]], including [[Niagara Falls]], connects Lake Erie to Lake Ontario.
+*The [[St. Lawrence River]] connects Lake Ontario to the [[Atlantic Ocean]]
+
+===Other bodies of water===
+*[[Georgian Bay]] is a large bay located within Lake Huron, separated by the [[Bruce Peninsula]] and [[Manitoulin Island]]. It contains the majority of the islands of the Great Lakes, with a count of approximately 30,000. The [[North Channel (Ontario)|North Channel]], a narrower westerly extension of Georgian Bay, separates Manitoulin Island from mainland [[Northern Ontario]].
+*The [[Straits of Mackinac]] connects Lake Michigan to Lake Huron.
+*The [[Welland Canal]] connects Lake Erie to Lake Ontario, bypassing the [[Niagara River]] which cannot be fully navigated due to the presence of [[Niagara Falls]].
+*[[Lake St. Clair (North America)|Lake St. Clair]] is the smallest lake in the Great Lake system but due to its relatively small size (compared to the five "Great Lakes"), it is rarely, if ever, considered a Great Lake.
+*[[Lake Nipigon]] to the north of Lake Superior was formed by an extension or [[aulacogen]] of the [[Midcontinent Rift System]] which also formed Lake Superior, so the two lake beds are connected by shared geology. Lake Nipigon is sometimes called the sixth Great Lake.
+
+[[Image:ApostleIslandNationalLakeshoreWI-029-050507.jpg|thumb|right|The shoreline of a [[beach]] in the [[Apostle Islands]], Lake Superior]]
+
+===Islands===
+Dispersed throughout the Great Lakes are approximately [[Islands of the Great Lakes|35,000 islands]]. The largest among them is [[Manitoulin Island]] in Lake Huron, the largest island in any inland body of water and home to the world's largest lake within a lake, [[Lake Manitou]]. The second-largest island is [[Isle Royale]] in Lake Superior. Both of these islands are large enough to contain multiple lakes themselves.
+
+===Connection to ocean and open water===
+The [[Saint Lawrence Seaway]] and [[Great Lakes Waterway]] opened the Great Lakes to ocean-going vessels. The move to wider ocean-going container ships <U+2014> which do not fit through the [[canal lock|lock]]s on these routes <U+2014> has limited shipping on the lakes. Despite their vast size, large sections of the Great Lakes freeze over in winter, interrupting most shipping. Some [[icebreaker]]s ply the lakes.
+
+The Great Lakes are also connected to the Gulf of Mexico by way of the Illinois River (from Chicago), to the Mississippi, to the Gulf. An alternate track is via the Illinois River (from Chicago), to the Mississippi, to the Ohio, up the Ohio, and then through the [[Tennessee-Tombigbee Waterway]] (combination of a series of rivers and lakes and canals), to Mobile Bay and the Gulf. Commercial tug-and-barge traffic on these waterways is heavy.
+
+Pleasure boats can also enter or exit the Great Lakes by way of the [[Erie Canal]] and Hudson River in New York. The Erie Canal connects to the Great Lakes at the east end of Lake Erie (at Buffalo, NY) and at the south side of Lake Ontario (at Oswego, NY).
+
+===Boundaries===
+[[Image:Great-Lakes-Basin.svg|thumb|200px|right|A map showing the Great Lakes and their [[watershed]], with State, Provincial and International boundaries.]]
+
+The lakes are bound by the Canadian province of [[Ontario]] and the U.S. states of [[Minnesota]], [[Wisconsin]], [[Michigan]], [[Illinois]], [[New York]], [[Indiana]], [[Ohio]], and [[Pennsylvania]]. However, not all of the lakes border on all of these regions. Four of the five lakes form part of the Canada-United States border; the fifth, Lake Michigan, is contained entirely within the [[United States]]. The Saint Lawrence River, which marks the same international border for a portion of its course, is the primary outlet of these interconnected lakes, and flows through [[Quebec]] and past the [[Gasp<U+00E9> Peninsula]] to the northern Atlantic Ocean.
+
+===Great Lakes Circle Tour===
+The [[Great Lakes Circle Tour]] is a designated scenic road system connecting all of the Great Lakes and the St. Lawrence River.<ref>[http://www.great-lakes.net/tourism/circletour/ Great Lakes Circle Tour.]</ref>
+
+==Name Origins==
+{| class="wikitable" style="text-align: center" width="100%" cellpadding="5px"
+|-
+!
+!Lake Erie
+!Lake Huron
+!Lake Michigan
+!Lake Ontario
+!Lake Superior 
+|-
+! Origins of Name
+|  [[Erie (tribe)]]; shorten form of [[Iroquoian]] word Erielhonan or <U+201C>long tail<U+201D>
+|  Named by French explorers of inhabitants in the area, [[Wyandot]] or <U+201C>Hurons<U+201D>
+|  likely from the [[Ojibwe language|Ojibwa]] word mishigami meaning "great water<U+201D>
+|  [[Wyandot]] (Huron) word ontar<U+00ED>o meaing <U+201C>Great Lake<U+201D>
+|  English translation of French term <U+201C>lac sup<U+00E9>rieur
+|-
+! 
+| 
+| 
+|}
+
+==Statistics==
+The Great Lakes contain roughly 22% of the world<U+2019>s fresh surface water: {{convert|5472|cumi|km3}}, or 6.0<U+00D7>10<sup>15</sup> U.S.&nbsp;gallons (2.3<U+00D7>10<sup>16</sup> liters). This is enough water to cover the 48 contiguous U.S. states to a uniform depth of {{convert|9.5|ft|m}}. Although the lakes contain a large percent of the world's fresh water, the Great Lakes make up only a small portion of America's drinking water (roughly 4.2%).{{Fact|date=October 2008}}
+
+The combined [[surface area]] of the lakes is approximately {{convert|94250|sqmi|km2}}&mdash;nearly the same size as the [[United Kingdom]], and larger than the U.S. states of [[New York]], [[New Jersey]], [[Connecticut]], [[Rhode Island]], [[Massachusetts]], [[Vermont]] and [[New Hampshire]] combined.
+
+The Great Lakes [[coast]] measures approximately {{convert|10500|mi|km}};<ref name="Grady" /> however, the length of a coastline is impossible to measure exactly and is not a well-defined measure (see [[Coastline paradox]]).
+
+==Geology==
+[[Image:Glacial lakes.jpg|thumb|300px|right|A diagram of the formation of the Great Lakes.]]
+
+It has been estimated that the foundational geology which created the conditions shaping the present day upper Great Lakes was laid from 1.1 to 1.2 billion years ago,<ref name="Grady">{{cite book |last= Grady |first=Wayne |title= The Great Lakes|publisher= Greystone Books and [[David Suzuki Foundation]]| location=Vancouver |year= 2007 |isbn= 9781553651970 |unused_data= |pgs. 42-43}}</ref><ref name=Schmus>{{cite journal
+  | last = Van Schmus
+  | first = W. R.
+  | authorlink =
+  | coauthors = Hinze, W. J.
+  | title = The Midcontinent Rift System
+  | journal = Annual Review of Earth and Planetary Sciences
+  | volume = 13
+  | issue = 
+  | pages = 345<U+2013>83
+  | publisher = 
+  | date = May 1985
+  | url = https://kuscholarworks.ku.edu/dspace/bitstream/1808/104/1/fac6cit13.pdf
+  | doi = 10.1146/annurev.ea.13.050185.002021
+  | id =  
+  | accessdate = 2008-10-06 }}</ref> when two previously fused [[tectonic plates]] split apart and created the [[Midcontinent Rift System|Midcontinent Rift]]. A valley was formed providing a basin that eventually became modern day Lake Superior.  When a second fault line, the [[Saint Lawrence rift system|Saint Lawrence rift]], formed approximately 570&nbsp;million years ago,<ref name="Grady" /> the basis for Lakes Ontario and Erie were created, along with what would become the St. Lawrence River.
+
+The Great Lakes are estimated to have been formed at the end of the [[Last glacial period|last ice age]] (i.e. about 10,000 years ago), when the [[Laurentide ice sheet]] receded. The retreat of the ice sheet left behind a large amount of meltwater (see [[Lake Agassiz]]) which filled up the basins that the glaciers had carved, thus creating the Great Lakes as we know them today.<ref> {{cite journal
+  | last = Larson
+  | first = Grahame
+  | authorlink =
+  | coauthors = Schaetzl, R.
+  | title = Origin and evolution of the Great Lakes
+  | journal = Journal of Great Lakes Research
+  | volume = 27
+  | issue = 4
+  | pages = 518-546
+  | publisher = Internat. Assoc. Great Lakes Res.
+  | date = 2001
+  | url = http://www.geo.msu.edu/schaetzl/PDFs/Larson-Great_lakes.pdf
+  | doi = 
+  | id =  
+  | accessdate = 2009-03-04 }}</ref> Because of the uneven nature of glacier [[erosion]], some higher hills became [[Islands of the Great Lakes|Great Lakes islands]]. The [[Niagara Escarpment]] follows the contour of the Great Lakes between New York and Wisconsin.
+
+==Climate==
+===Lake effect===
+The effect of Great Lakes on weather in the region is called the ''[[lake effect snow|lake effect]]. ''In winter, the moisture picked up by the prevailing winds from the west can produce very heavy snowfall, especially along lake shores to the east such as Michigan, Ohio, Pennsylvania, Ontario, and New York. The lakes also moderate seasonal temperatures somewhat, by absorbing heat and cooling the air in summer, then slowly radiating that heat in autumn. This temperature buffering produces areas known as "fruit belts", where fruit typically grown farther south can be produced.  [[Western Michigan]] has apple and cherry orchards, and vineyards adjacent to the lake shore as far north as the [[Grand Traverse Bay]]. The eastern shore of Lake Michigan and the southern shore of Lake Erie have many wineries as a result of this, as does the [[Niagara Peninsula]] between Lake Erie and Lake Ontario.  A similar phenomenon occurs in the [[Finger Lakes]] region of New York as well as Prince Edward county on the northeast shore of Lake Ontario. Related to lake effect, is the occurrence of [[fog]] over medium-sized areas, particularly along the shorelines of the lakes. This is most noticeable along Lake Superior's shores, due to its [[maritime climate]].''
+
+The Great Lakes have been observed to help strengthen storms, such as [[Hurricane Hazel]] in 1954, and a [[Tornadoes of 2007#May 15|frontal system in 2007]] that spawned a few tornadoes in Michigan and Ontario, picking up warmth from the lakes to fuel them. Also observed in 1996, was a rare [[subtropical cyclone]] forming in Lake Huron, dubbed the [[1996 Lake Huron cyclone]].
+
+==Economy==
+The lakes are extensively used for [[transport]], though [[cargo]] traffic has decreased considerably in recent years.  The [[Great Lakes Waterway]] makes each of the lakes accessible.
+
+===Historical economy===
+[[Image:Le-griffon.jpg|thumb|left|A woodcut of ''Le Griffon'']]
+The brigantine ''[[Le Griffon]]'', which was commissioned by [[Ren<U+00E9> Robert Cavelier, Sieur de La Salle]], was built at Cayuga Creek, near the southern end of the [[Niagara River]], and became the first sailing ship to travel the upper Great Lakes on August 7, 1679.
+
+During settlement, the Great Lakes and its rivers were the only practical means of moving people and freight. [[Barge]]s from middle North America were able to reach the Atlantic Ocean from the Great Lakes when the [[Erie Canal]] opened in 1825.  By 1848, with the opening of the [[Illinois and Michigan Canal]] at [[Chicago]], direct access to the Mississippi River was possible from the lakes.  With these two canals an all-inland water route was provided between New York City and New Orleans.
+
+The main business of many of the passenger lines in the 1800s was transporting [[immigration|immigrants]]. Many of the larger cities owe their existence to their position on the lakes as a freight destination as well as for being a magnet for immigrants. After railroads and surface roads developed, the freight and passenger businesses dwindled and except for ferries and a few foreign cruise ships, now has vanished.
+
+The immigration routes still have an effect today. Immigrants often formed their own communities and some areas have a pronounced ethnicity, such as Dutch, German, Polish, Finnish, and many others. Since many immigrants settled for a time in New England before moving westward, many areas  on the U.S. side of the Great Lakes also have a New England feel, especially in home styles and accent.
+
+Since general freight these days is transported by railroads and trucks, domestic ships mostly move bulk cargoes, such as [[iron ore]], [[coal]] and [[limestone]] for the [[steel]] industry. The domestic bulk freight developed because of the nearby mines. It was more economical to transport the ingredients for steel to centralized plants rather than try to make steel on the spot. Ingredients for steel, however, are not the only bulk shipments made. Grain exports are also a major cargo on the lakes.
+
+In the 19th and early 20th centuries, iron and other ores such as copper were shipped south on (downbound ships), and supplies, food, and coal were shipped north (upbound). Because of the location of the coal fields in Pennsylvania and [[West Virginia]], and the general northeast track of the [[Appalachian Mountains]], railroads naturally developed shipping routes that went due north to ports such as [[Erie, Pennsylvania]] and [[Ashtabula, Ohio]].
+
+Because the lake maritime community largely developed independently, it has some distinctive vocabulary. Ships, no matter the size, are called ''boats''. When the sailing ships gave way to steamships, they were called ''steamboats''&mdash;the same term used on the Mississippi. The ships also have a distinctive design (see [[Lake freighter]]). Ships that primarily trade on the lakes are known as ''[[Lake freighter|lakers]]''. Foreign boats are known as ''salties''.
+
+One of the more common sights on the lakes is the 1,000<U+2011>by<U+2011>105&nbsp;foot (305-by-32&nbsp;m), {{convert|78850|LT|metric ton|sing=on}} self-unloader.  This is a laker with a conveyor belt system that can unload itself by swinging a crane over the side.[http://www.boatnerd.com/pictures/fleet/burnsharbor.htm] Today, the Great Lakes fleet is much smaller in numbers than it once was because of the increased use of overland freight, and a few larger ships replacing many small ones.
+
+===Modern economy===
+The Great Lakes are today used as a major [[mode of transport]] for bulk goods.  In 2002, 162 million net [[ton]]s of dry bulk cargo were moved on the Lakes. This was, in order of volume: iron ore, grain, and [[potash]]. The iron ore and much of the stone and coal are used in the steel industry. There is also some shipping of liquid and containerized cargo but most container ships cannot pass the locks on the Saint Lawrence Seaway because the ships are too wide. The total amount of shipping on the lakes has been on a downward trend for several years.
+
+Recreational boating and tourism are major industries on the Great Lakes. A few small cruise ships operate on the Great Lakes including a couple of [[sailing|sailing ships]]. Sport fishing, commercial fishing, and Native American fishing represent a US$4 billion a year industry with [[salmon]], [[Coregonus|whitefish]], [[smelt]], [[lake trout]], and [[walleye]] being major catches.
+
+The Great Lakes are used to supply drinking water to tens of millions of people in bordering areas. This valuable resource is collectively administered by the state and provincial governments adjacent to the lakes.
+
+===Great Lakes Passenger Steamers===
+{{Main|Great Lakes passenger steamers}}
+From 1844 through 1857, [[palace steamer]]s carried passengers and cargo around the Great Lakes. Throughout the 20th century, large luxurious passenger steamers sailed from Chicago all the way to Detroit and Cleveland. These were primarily operated by the Detroit & Cleveland Navigation Company.  Several ferries currently operate on the Great Lakes to carry passengers to various islands, including Isle Royale, [[Pelee, Ontario|Pelee Island]], [[Mackinac Island]], [[Beaver Island (Lake Michigan)|Beaver Island]], both [[Bois Blanc Island]]s, [[Kelleys Island, Ohio|Kelleys Island]], [[South Bass Island]], [[North Manitou Island]], [[South Manitou Island]], [[Harsens Island]], [[Manitoulin Island]], and the [[Toronto Islands]]. As of 2007, three car ferry services cross the Great Lakes, two on Lake Michigan: a steamer from [[Ludington, Michigan]] to [[Manitowoc, Wisconsin]] and a high speed catamaran from [[Milwaukee]] to [[Muskegon, Michigan]], and one on Lake Erie: a boat from [[Kingsville, Ontario]], or [[Leamington, Ontario]] to [[Pelee Island, Ontario]] then onto [[Sandusky, Ohio]].  [[Spirit of Ontario I|An international ferry]] across Lake Ontario from [[Rochester, New York]] to [[Toronto]] ran during 2004 and 2005, but is no longer in operation.
+
+====Some Passenger Steamers====
+{| class="wikitable"
+|-
+! Ship's Name
+! Year Built
+! Nationality
+! 
+! Ship's Name
+! Year Built
+! Nationality
+! 
+! Ship's Name
+! Year Built
+! Nationality
+|-
+| [[Niagara (palace steamer)]]
+| 1856
+| United States
+|
+| [[SS Christopher Columbus]]
+| 1892
+| United States
+|
+| [[SS Eastland]]
+| 1902
+| United States
+|-
+| [[Milwaukee Clipper]]
+| 1904
+| United States
+|
+| [[SS Keewatin]]
+| 1907
+| Canadian
+|
+| [[Comet (steamboat)]]
+| 1857
+| United States
+|}
+
+===Shipwrecks===
+The large size of the Great Lakes increases the risk of water travel; [[storm]]s and [[reef]]s are common threats. The lakes are prone to sudden and severe storms, particularly in the autumn, from late October until early December. Hundreds of ships have met their end on the lakes. The greatest concentration of shipwrecks lies near [[Thunder Bay (Michigan)]], beneath Lake Huron, near the point where eastbound and westbound shipping lanes converge.
+
+The [[Lake Superior]] shipwreck coast from [[Grand Marais, Michigan]] to [[Whitefish Point]] became known as the "Graveyard of the Great Lakes".  More vessels have been lost in the Whitefish Point area than any other part of Lake Superior.  <ref>Stonehouse, Frederick (1985, 1998). ''Lake Superior<U+2019>s Shipwreck Coast'', p. 267, Avery Color Studios, Gwinn, Michigan, U.S.A. ISBN 0-932232-43-3,</ref>  The [[Whitefish Point Underwater Preserve]] serves as an underwater museum to protect the many shipwrecks in this area.  
+
+The last major freighter wrecked on the lakes was the [[SS Edmund Fitzgerald|SS ''Edmund Fitzgerald'']], which sank on November 10, 1975, just over {{convert|30|mi|km|sigfig=1}} offshore from Whitefish Point. The largest loss of life in a shipwreck out on the lakes may have been that of the [[Lady Elgin (steamship)|''Lady Elgin'']], wrecked in 1860 with the loss of around 400 lives. In a horrifying incident at a Chicago dock in 1915, the [[SS Eastland|SS ''Eastland'']] rolled over while loading passengers, killing 841.
+
+In August 2007, the [http://www.shipwreckmuseum.com/society.phtml Great Lakes Shipwreck Historical Society] announced that it had found the wreckage of ''Cyprus'', a {{convert|420|ft|m|adj=on}} long, century-old [[ore]] carrier. ''Cyprus'' sank during a Lake Superior storm on October 11, 1907, during its second voyage while hauling iron ore from [[Superior, Wisconsin]], to [[Buffalo, New York]]. The entire crew of 23 drowned, except one, a man named Charles Pitz, who floated on a life raft for almost seven hours.<ref>{{cite news |title=Century-old shipwreck discovered |url=http://www.msnbc.msn.com/id/20679934/from/RS.1/|publisher=[[Associated Press]] |date=2007-09-10 |accessdate=2007-12-03 }}</ref>
+
+In June 2008 [[Deep sea diving|deep sea divers]] in Lake Ontario found the wreck of the 1780 [[Royal Navy]] warship [[HMS Ontario (1780)|HMS ''Ontario'']] in what has been described as an "archaeological miracle".<ref>{{cite news |title=Divers find 1780 British warship  |url=http://news.bbc.co.uk/1/hi/uk/7454578.stm|publisher=[[BBC News]] |date=2008-06-14 |accessdate=2008-06-15 }}</ref> There are no plans to raise her as the site is being treated as a war grave.
+
+====See also====
+{{multicol}}
+*[[:Category:Shipwrecks in the Great Lakes]]
+*[[List of shipwrecks#Great Lakes|List of Great Lakes shipwrecks]]
+*[[Great Storms of the North American Great Lakes]]
+*[[Great Lakes Storm of 1913]]
+{{multicol-break}}
+*[[Mataafa Storm]] of 1905
+*[[Michigan Underwater Preserves]]
+*[[Thunder Bay National Marine Sanctuary]]
+{{multicol-end}}
+
+==Political issues and legislation==
+===Great Lakes water use and diversions===
+The [[International Joint Commission]] was established in 1909 to help prevent and resolve disputes relating to the use and quality of boundary waters, and to advise Canada and the United States on questions related to water resources. Concerns over diversion of Lake water are of concern to both Americans and Canadians. Some water is diverted through the [[Chicago River]] to operate the [[Illinois Waterway]] but the flow is limited by treaty. Possible schemes for bottled water plants and diversion to dry regions of the continent raise concerns. Under the U.S. "Water Resources Development Act"[http://www.ohiodnr.com/water/planing/greatlksgov/fedstatut.htm], diversion of water from the [[Great Lakes Basin]] requires the approval of all eight Great Lakes governors through the [[Great Lakes Commission]], which rarely occurs. International treaties regulate large diversions. In 1998, the Canadian company [[Nova Group]] won approval from the Province of Ontario to withdraw {{convert|158000000|USgal|m3}} of Lake Superior water annually to ship by tanker to Asian countries. Public outcry forced the company to abandon the plan before it began. Since that time, the eight Great Lakes Governors and the Premiers of Ontario and Quebec have negotiated the Great Lakes-St. Lawrence River Basin Sustainable Water Resources Agreement [http://www.cglg.org/projects/water/docs/12-13-05/Great_Lakes-St_Lawrence_River_Basin_Sustainable_Water_Resources_Agreement.pdf] and the Great Lakes-St. Lawrence River Basin Water Resources Compact [http://www.cglg.org/projects/water/docs/12-13-05/Great_Lakes-St_Lawrence_River_Basin_Water_Resources_Compact.pdf] that would prevent most future diversion proposals and all long-distance ones. The agreements also strengthen protection against abusive water withdrawal practices within the Great Lakes basin. On December 13, 2005, the Governors and Premiers signed these two agreements, the first of which is between all ten jurisdictions. It is somewhat more detailed and protective, though its legal strength has not yet been tested in court. The second, the [[Great Lakes Compact]], has been approved by the state legislatures of all eight states that border the Great Lakes as well as the U.S. Congress, and was signed into law by President [[George W. Bush]] on 3 October 2008.<ref>http://www.greatlakeslaw.org/glelc/great-lakes-compact.html</ref>
+
+===Coast Guard live fire exercises===
+In 2006, the [[United States Coast Guard]] (USCG) proposed a plan to designate 34 areas in the Great Lakes, at least five miles (8&nbsp;km) offshore, as permanent safety zones for live fire machine gun practice. In August 2006 the plan was published in the [[Federal Register]]. The USCG reserved the right to hold target practice whenever the weather allowed with a two hour notice. These firing ranges would be open to the public when not in use. In response to requests from the public, the Coast Guard held a series of public meetings in nine U.S. cities to solicit comment. During these meetings many people voiced concerns about the plan and its impact on the environment.<ref>{{cite web |url=http://www.jsonline.com/story/index.aspx?id=529028 |title= Trading shots on bullets |accessdate=2007-12-02 |author=Meg Jones |date=2006-11-08 |publisher= Milwaukee Journal Sentinel}}</ref>
+
+A preliminary health risk assessment stated that the "proposed training will result in no elevated risks for a freshwater system such as the Great Lakes using 'realistic worst case' assumptions, and further investigation is not recommended ... if typical rather than worst case assumptions were used, the predicted risk would be even less."<ref>[http://www.house.gov/english/press_2005_2006/coastguard1206.html Representative Phil English (PA03) - English Praises Coast Guard<U+2019>s Decision on Proposed Live Fire Zones<!-- Bot generated title -->]</ref> However, the assessment was based on lead levels after five years, and so one could infer that lead levels could meet or exceed EPA safe levels for lead after fifteen years.<ref>{{cite web |url= http://dmses.dot.gov/docimages/pdf97/413051_web.pdf |title=Preliminary Health Risk Assessment for Proposed U.S. Coast Guard. Weapons Training Exercises |accessdate=2007-12-02 |author= |year=2006 |month=January |format=PDF |publisher=engineering-environmental Management, Inc. |pages=89 }}</ref> The Coast Guard established an information page about their proposal at [http://www.uscgd9safetyzones.com http://www.uscgd9safetyzones.com]
+
+On December 18, 2006, the Coast Guard announced its decision to withdraw the entire proposal.<ref>{{cite web |url=http://www.washingtonpost.com/wp-dyn/content/article/2006/12/18/AR2006121800596_pf.html |title=Coast Guard Target-Practice Plan Misfires |accessdate=2007-12-02 |author=Kari Lydersen |date=2006-12-19 |publisher=[[Washington Post]]}}</ref> Officials said they would look into alternative ammunition, modifying the proposed zones and have more public dialogue before proposing a new plan.<ref>{{cite web |url=http://www.post-gazette.com/pg/06358/748661-358.stm |title=Fishing: Coast Guard reloads on firing range |accessdate=2007-12-02 |author=Deborad Weisberg |date=2006-12-24 |publisher= [[Pittsburgh Post-Gazette]]}}</ref>
+
+===Great Lakes Collaboration Implementation Act===
+During the  [[109th United States Congress]] in 2006, the [http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=109_cong_bills&docid=f:h5100ih.txt.pdf Great Lakes Collaboration Implementation Act] (Bill HR5100) was introduced to enact the recommendations of the [http://www.glrc.us Great Lakes Regional Collaboration], an effort established in 2004 to produce a strategy for restoring and maintaining the Great Lakes. The bill was introduced by [[United States Senate|U.S. senators]] [[Mike DeWine]] and [[Carl Levin]], along with [[United States House of Representatives|representatives]] [[Vern Ehlers]] and [[Rahm Emanuel]].
+
+The bill states that "the Great Lakes are on the brink of an ecologic catastrophe" and that "if the pattern of deterioration is not reversed immediately, the damage could be irreparable". It cites the closing of over 1,800 beaches in 2003, the {{convert|6300|sqmi|km2|-2|sing=on}} [[Dead zone (ecology)|dead zone]] in Lake Erie, and the US$500 million damage each year due to the [[zebra mussel]] as evidences that "a comprehensive restoration of the system is needed to prevent the Great Lakes from collapsing".<ref name="HR5100">http://frwebgate.access.gpo.gov/cgi-bin/getdoc.cgi?dbname=109_cong_bills&docid=f:h5100ih.txt.pdf</ref>
+
+A press release states that the bill aims to stop the introduction and spreading of [[invasive species]], prevent the [[Asian carp]] from invading the Great Lakes, phase out [[mercury (element)|mercury]], restore animal [[habitat]]s, and prevent [[sewage]] contamination.<ref>[http://www.house.gov/apps/list/press/il05_emanuel/GLCIA_040506.html Emanuel (Il05) - Press Release - Emanuel, Ehlers Introduce Great Lakes Regional Collaboration Implementation Act<!-- Bot generated title -->]</ref>
+
+A coalition called [http://www.healthylakes.org/ Healing Our Waters],or HOW was formed by several environmental groups and foundations in 2005 to educate and assist citizens in advocating for the cleanup of the Great Lakes.
+
+===Additions to the five Great Lakes===
+[[Lake Champlain]], a lake on the border between upstate New York and northwestern Vermont that is part of the Saint Lawrence-Great Lakes Watershed, briefly became labeled by the U.S. government as the sixth "Great Lake of the [[United States]]" on March 6, 1998, when [[Bill Clinton|President Clinton]] signed Senate Bill 927. This bill, which reauthorized the [[National Sea Grant Program]], contained a line penned by Senator [[Patrick Leahy]] (D-VT) declaring [[Lake Champlain]] to be a Great Lake. Not coincidentally, this status allows neighboring states to apply for additional federal research and education funds allocated to these national resources. The claim was viewed with some amusement by other countries, particularly in the [[Media in Canada|Canadian media]], and the lake is small compared to other Canadian lakes (such as [[Great Bear Lake]] which has over 27 times more surface area). Following a small uproar (and several ''[[The New York Times|New York Times]]'' and ''[[Time Magazine]]''<ref>[http://www.time.com/time/magazine/article/0,9171,987998,00.html Congress's attempt to dub Lake Champlain a 'Great Lake']</ref> articles), the Great Lake status was rescinded on March 24, 1998 (although Vermont universities continue to receive funds to monitor and study the lake).
+
+Similarly, there has been interest in making Lake St. Clair a Great Lake. In October 2002, backers planned to present such a proposal at the [[Great Lakes Commission]] annual meeting<ref>"[http://infoweb.newsbank.com/iw-search/we/InfoWeb?p_action=doc&p_docid=0F6AE46A916999C5&p_docnum=2&p_queryname=NaN&p_product=NewsBank&p_theme=aggregated4&p_nbid=H5DJ5FQSMTE5NzMzMzUyNS45MTQwMzoxOjEyOjE5OC4zMC4yMjguMA Does size matter? Lake St. Clair advocates believe that it deserves to be called 'great']", ''[[The Plain Dealer (newspaper)|The Plain Dealer]]'', October 14, 2002.</ref>, but ultimately withheld it as it appeared to them to have too little support<ref>"[http://infoweb.newsbank.com/iw-search/we/InfoWeb?p_action=doc&p_docid=0F6B8D4D43205814&p_docnum=1&p_queryname=NaN&p_product=NewsBank&p_theme=aggregated4&p_nbid=H5DJ5FQSMTE5NzMzMzUyNS45MTQwMzoxOjEyOjE5OC4zMC4yMjguMA Great Lakes panel wants monster fish to stay away]", ''[[The Plain Dealer (newspaper)|The Plain Dealer]]'', October 16, 2002.</ref>.
+
+==Ecology==
+===Ecological challenges===
+The ecological history of the Great Lakes includes both great losses and enormous recovery; the system today is in the most-obvious ways much healthier than it was a half-century ago, while in less-apparent ways it remains seriously compromised.
+
+Before the arrival of Europeans, the Great Lakes provided [[fish]] to the [[Indigenous peoples of the Americas|indigenous]] groups who lived near them. Early European settlers were astounded by both the variety and quantity of fishes; there were 150 different species in the Great Lakes<ref name="Grady" />. Historically, fish populations were the early indicator of the condition of the Lakes, and have remained one of the key indicators even in the current era of sophisticated analyses and measuring instruments.  According to the bi-national (U.S. and Canadian) resource book, ''The Great Lakes: An Environmental Atlas and Resource Book'', "the largest Great Lakes fish harvests were recorded in 1889 and 1899 at some 67,000 tonnes [147 million pounds]," though the beginning of environmental impacts on the fish can be traced back nearly a century prior to those years.
+
+By 1801, the [[New York Legislature]] found it necessary to pass regulations curtailing obstructions to the natural migrations of Atlantic salmon from Lake Erie into their spawning channels.  In the early nineteenth century, [[Upper Canada|Upper Canada's]] government found it necessary to introduce similar legislation prohibiting the use of weirs and nets at the mouths of Lake Ontario<U+2019>s tributaries.  Other protective legislation was passed as well, but enforcement remained difficult and often quite spotty.
+
+On both sides of the Canada<U+2013>United States border, the proliferation of [[dam]]s and impoundments multiplied, necessitating more regulatory efforts. The decline in fish populations was unmistakable by the middle of the nineteenth century, as the obstructions in the rivers prevented [[salmon]] and [[sturgeon]] from reaching their spawning grounds. The decline in salmon was recognized by Canadian officials and reported as virtually a complete absence by the end of the 1860s. The Wisconsin Fisheries Commission noted a reduction of roughly 25 percent in general fish harvests by 1875. Many Michigan rivers sport multiple dams that range from mere relics to those with serious loss of life potential. The state's dam removal budget has been frozen in recent years; in the 1990s, the state was removing 1 dam per year.
+
+Overfishing was cited as responsible for the decline of the population of various [[whitefish]], important because of their culinary desirability and, hence, economic consequence. Moreover, between 1879 and 1899, reported whitefish harvests declined from some 24.3 million pounds (11 million&nbsp;kg) to just over 9 million pounds (4 million&nbsp;kg). Recorded sturgeon catches fell from 7.8 million pounds (1.5 million&nbsp;kg) in 1879 to 1.7 million pounds (770,000&nbsp;kg) in 1899. The population of giant freshwater mussels was eliminated as the mussels were harvested for use as buttons by early Great Lakes [[entrepreneurs]].
+
+There were, however, other factors in the population declines besides overfishing and the problems posed by water obstructions. [[Logging]] in the Great Lakes region removed tree cover near stream channels which provide spawning grounds, and this affected necessary shade and temperature-moderating conditions.  Removal of tree cover also destabilized soil, allowing soil to be carried in greater quantity into the streambeds, and even brought about more frequent flooding.  Running cut logs down the Lakes<U+2019> tributary rivers also stirred bottom sediments. In 1884, the New York Fish Commission determined that the dumping of sawmill waste (chips and sawdust) was impacting fish populations.
+
+In the development of ecological problems in the Great Lakes, it was the influx of parasitic [[lamprey]] populations after the development of the Erie Canal and the much later [[Welland Canal]] that led to the two federal governments attempting to work together. Despite a variety of efforts to eliminate or minimize the lamprey, by the mid 1950s the lake trout populations of Lakes Michigan and Huron were reduced by about 99%, with the lamprey deemed largely to blame. This led to the launch of the bi-national Great Lakes Fishery Commission.
+
+Other ecological problems in the Lakes and their surroundings have stemmed from urban runoff and sprawl, sewage disposal, and toxic industrial effluent. These, of course, also affect aquatic food chains and fish populations. Some of these glaring problem areas are what attracted the high-level publicity of Great Lakes ecological troubles in the 1960s and 1970s. Evidence of chemical pollution in the Lakes and their tributaries now stretches back for decades. In the 1960s Ohio<U+2019>s [[Cuyahoga River]] -- or more precisely a combination of oil, chemicals, and trash floating atop it in Cleveland -- ignited and smoldered, creating international headlines.
+
+The Cuyahoga, and a [[TIME Magazine]] cover story about the "death" of Lake Erie, helped focus public and policymaker attention and inspire the first Earth Day events in 1970. New advocacy organizations such as the Lake Michigan Federation, founded in 1970 by [[Lee Botts]], brought new public pressure to bear. The first U.S. [[Clean Water Act]], signed by President [[Richard Nixon]] in 1972, was a key step forward as was the innovative<ref>"Evolution of the Great Lakes Water Quality Agreement", Paul Muldoon and Lee Botts, Michigan State University Press, 2005</ref> bi-national [[Great Lakes Water Quality Agreement]] signed by Canada and the U.S. Thanks to a variety of steps taken to reduce industrial and municipal pollution discharges into the system, basic water quality had by the 1980s improved sharply and Lake Erie in particular was significantly healthier. The ongoing discharge of toxic substances has also been sharply reduced thanks to federal and state bans of substances like [[PCBs]] and [[DDT]], though historic toxics remain embedded in harbor and rivermouth sediments in dozens of "[[Great Lakes Areas of Concern]]".
+
+The authoritative but now outdated 1972 book ''The Great Lakes: An Environmental Atlas and Resource Book'' noted that "only pockets remain of the once large commercial fishery." In the meanwhile however the great water quality improvements realized during the 1970s and 1980s, combined with successful salmonid stocking programs, have enabled the growth of a large recreational fishery.
+
+===Invasive species===
+Since the 1800s an estimated 160 species have invaded the Great Lakes ecosystem, with ship ballast being a primary suspected pathway<ref>{{cite web |url=http://proquest.umi.com/pqdweb?did=1514525481&sid=1&Fmt=3&clientId=8991&RQT=309&VName=PQD |title=New EPA rules to target invasive species; Invaders have plagued Great Lakes for years |accessdate=2009-01-25 |format=HTML |publisher=The Blade}}</ref>, causing severe economic and ecological impacts.<ref name="ISEA">{{cite web |url=http://www.greatlakeseducation.org/about_isea/?id=204 |title=Our Threatened Great Lakes |accessdate=2007-11-30 |format=HTML |publisher=Inland Seas Education Association}}</ref> According to the Inland Seas Education Association, on average a new invasive species enters the Great Lakes every eight months.<ref name="ISEA" />
+
+[[Image:Zebra mussel GLERL 3.jpg|thumb|right|A [[zebra mussel]]-encrusted Vector Averaging Current Meter from Lake Michigan.]]
+One such infestation in the Great Lakes was the introduction of the [[zebra mussel]], which was first discovered in 1988.<ref>[http://www.baxterbulletin.com/apps/pbcs.dll/article?AID=/20071128/SPORTS/711280338/1006 Baxter Bulletin - www.baxterbulletin.com<!-- Bot generated title -->]</ref> The [[mollusk]] is an efficient feeder, competing with native [[mussels]]. It also reduces available food and spawning grounds for fishes. The zebra mussel also hurts utility and manufacturing industries by clogging or blocking pipes. The [[U.S. Fish and Wildlife Service]] estimates that the economic impact of the zebra mussel will be about $5&nbsp;billion over the next decade.<ref>{{cite web |url=http://www.glc.org/ans/ |title=Great Lakes Aquatic Nuisance Species |accessdate=2007-11-30 |publisher=Great Lakes Commission |date=2007-03-27}}</ref>
+
+The [[alewife]] first entered the system west of [[Lake Ontario]] via 19th-century canals. By the 1960s the small silver fish had become a familiar nuisance to beachgoers across lakes Michigan, Huron and Erie as periodic mass dieoffs resulted in vast numbers of them washing up on shore; estimates by various governments have placed the percentage of Lake Michigan's biomass which was made up of alewives in the early 1960s as high as 90 percent. The various state and federal governments began stocking several species of salmonids in the late 1960s, including the native lake trout as well as non-native chinook and coho salmon; by the 1980s alewife populations had dropped drastically. Ironically, today the sharply lower numbers of alewives is seen as a problem[http://www.jsonline.com/blogs/sports/40240287.html] by those involved in the large recreational fishing sector that has grown up particularly on [[Lake Michigan]].
+
+The [[ruffe]], a small [[percid]] fish, became the most abundant fish species in Lake Superior's [[St. Louis River]] within five years of its detection in 1986. Its range, which has expanded to Lake Huron, poses a significant threat to the lower lake fishery. Five years after first being observed in the St. Clair River, the [[round goby]] can now be found in all of the Great Lakes. The goby is considered undesirable for several reasons: It preys upon bottom-feeding fishes, overruns optimal habitat, spawns multiple times a season, and can survive poor water quality conditions.<ref>[http://www.glc.org/ans/pdf/briefpapercomplete.pdf]</ref>
+
+Several species of [[water flea]]s have accidentally been introduced into the Great lakes such as [[Bythotrephes cederstroemi]] and the [[Fishhook waterflea]] potentially having an effect on the zooplankton population. Several species of [[crayfish]] have also been introduced that may contend with native crayfish populations. More recently an electric fence has been set up across the [[Chicago Sanitary and Ship Canal]] in order to keep several species of invasive [[Asian carps]] out of the area.  These fast-growing planktivorous fishes have heavily colonized the Mississippi and Illinois river systems. [http://www.dfo-mpo.gc.ca/csas/Csas/DocREC/2004/RES2004_103_E.pdf]
+
+==See also==
+{{multicol}}
+*[[Eastern Continental Divide]]
+*[[Great Lakes Areas of Concern]]
+*[[Great Lakes census statistical areas]]
+*[[Great Lakes Commission]]
+*[[Great Recycling and Northern Development Canal]]
+{{multicol-break}}
+*[[International Boundary Waters Treaty]]
+*[[List of cities along the Great Lakes]]
+*[[Michigan Islands National Wildlife Refuge]]
+*[[Michigan Underwater Preserves]]
+*[[Muskellunge]]
+{{multicol-break}}
+*[[Northern Pike]]
+*[[Seiche#Lake_seiches|Seiche]]
+*[[Sixty Years' War]] for control of the Great Lakes
+*[[Lake surfing|Surfing the Great Lakes]]
+*[[Third Coast]]
+*[[Valparaiso Moraine]]
+{{multicol-end}}
+
+==Notes==
+<!-- ----------------------------------------------------------
+  See http://en.wikipedia.org/wiki/Wikipedia:Footnotes for a 
+  discussion of different citation methods and how to generate 
+  footnotes using the <ref>, </ref> and  <reference /> tags
+----------------------------------------------------------- -->
+{{reflist|2}}
+
+==References==
+*Beltran, R. ''et al.''.  ''The Great Lakes: An Environmental Atlas and Resource Book''.   (Washington & Ottawa: United States Environmental Protection Agency and Government of Canada, 1995, ISBN 0-662-23441-3).
+*Cappel, Constance. editor, "Odawa Language and Legends: Andrew J. Blackbird and Raymond Kiogima," Philadelphia: Xlibris, 2006.
+*Cappel, Constance, "The Smallpox Genocide of the Odawa Tribe at L'Arbre Croche, 1763: The History of a Native American People," Lewiston, NY: The Edwin Mellen Press, 2007. 
+*Dempsey, Dave  ''On the Brink: The Great Lakes in the 21st Century''.  (East Lansing: Michigan State University Press, 2004, ISBN 0-87013-705-0).
+*[[George Cuthbertson]] authored and illustrated <U+201C>Freshwater, a history of the Great Lakes,<U+201D> (Toronto: MacMillan, 1931).
+
+==Further reading==
+*Coon, W.F. and R.A. Sheets. ''Estimate of Ground Water in Storage in the Great Lakes Basin, United States, 2006: National Water Availability and Use Program'' [Scientific Investigations Report 2006-5180]. Reston, VA: U.S. Department of the Interior, U.S. Geological Survey, 2006.
+  
+==External links==
+{{commonscat}}
+{{wiktionary}}
+*Official [[Environment Canada]] website: [http://www.on.ec.gc.ca/greatlakes/default.asp?lang=En&n=7E5E6AF1-11 Our Great Lakes]
+*US Dept. of Commerce - NOAA - [http://www.glerl.noaa.gov/ Great Lakes Environmental Research Laboratory]
+*Official [[United States Environmental Protection Agency]] website: [http://www.epa.gov/glnpo/ Great Lakes]
+*[http://www.greatlakes.org/ Alliance For The Great Lakes]
+*[[Canadian Broadcasting Corporation|CBC]] Archives: [http://archives.cbc.ca/IDD-1-75-1390/science_technology/great_lakes_pollution/ Trouble Waters: Pollution in the Great Lakes]
+*[http://www.coastwatch.msu.edu/ Great Lakes Coast Watch]
+*[http://www.glc.org/ Great Lakes Commission]
+*[http://www.great-lakes.net/ Great Lakes Information Network]
+*[http://www.glu.org/ Great Lakes United]
+*[http://www.healthylakes.org/ Healthy Lakes, Healthy Lives]
+*[http://www.ijc.org/ Internation Joint Commission - Canada and United States]
+*[http://www.iaglr.org/ International Association for Great Lakes Research]
+*[http://beta.nfb.ca/film/great_clean_up/ ''The Great Clean Up'', a 1976 documentary on Great Lakes pollution]
+*[http://www.divinglore.com/Genesis/USA/Great_Lakes_&_Inland_Sites.htm Great Lakes Dive Sites - An overview of diving in the Great Lakes]
+
+{{greatlakes}}
+{{Canada topics}}
+
+{{coord|46.25|N|84.5|W|region:CA_type:waterbody|display=title}}
+
+[[Category:Great Lakes|*]]
+
+[[af:Groot Mere]]
+[[ar:<U+0628><U+062D><U+064A><U+0631><U+0627><U+062A> <U+0639><U+0638><U+0645><U+0649> (<U+0623><U+0645><U+0631><U+064A><U+0643><U+0627> <U+0627><U+0644><U+0634><U+0645><U+0627><U+0644><U+064A><U+0629>)]]
+[[an:Grans Lacos d'America d'o Norte]]
+[[arc:<U+071D><U+0721><U+0721><U+072C><U+0710> <U+072A><U+0712><U+072C><U+0710>]]
+[[ast:Grandes Llagos]]
+[[zh-min-nan:G<U+014D><U+0358>-to<U+0101>-<U+00F4><U+0358>]]
+[[be-x-old:<U+0412><U+044F><U+043B><U+0456><U+043A><U+0456><U+044F> <U+0430><U+0437><U+0451><U+0440><U+044B>]]
+[[bs:Velika jezera]]
+[[bg:<U+0413><U+043E><U+043B><U+0435><U+043C><U+0438><U+0442><U+0435> <U+0435><U+0437><U+0435><U+0440><U+0430>]]
+[[ca:Grans Llacs d'Am<U+00E8>rica del Nord]]
+[[cv:<U+041C><U+0103><U+043D> <U+043A><U+04F3><U+043B><U+0115><U+0441><U+0435><U+043C>]]
+[[cs:Velk<U+00E1> jezera]]
+[[cy:Y Llynnoedd Mawr]]
+[[da:Store s<U+00F8>er (Nordamerika)]]
+[[de:Gro<U+00DF>e Seen]]
+[[et:Suur j<U+00E4>rvistu]]
+[[el:<U+039C><U+03B5><U+03B3><U+03AC><U+03BB><U+03B5><U+03C2> <U+039B><U+03AF><U+03BC><U+03BD><U+03B5><U+03C2>]]
+[[eml:L<U+00E8>g grand]]
+[[es:Grandes Lagos (Am<U+00E9>rica del Norte)]]
+[[eo:Grandaj Lagoj (Nordameriko)]]
+[[eu:Amerikako Laku Handiak]]
+[[fa:<U+062F><U+0631><U+06CC><U+0627><U+0686><U+0647><U+200C><U+0647><U+0627><U+06CC> <U+0628><U+0632><U+0631><U+06AF>]]
+[[hif:Great Lakes]]
+[[fo:St<U+00F3>ruv<U+00F8>tn]]
+[[fr:Grands Lacs (Am<U+00E9>rique du Nord)]]
+[[ga:Na Locha M<U+00F3>ra]]
+[[gl:Grandes Lagos, Am<U+00E9>rica do Norte]]
+[[ko:<U+C624><U+B300><U+D638>]]
+[[hi:<U+092E><U+0939><U+093E><U+0928> <U+0938><U+0902><U+092F><U+0941><U+0915><U+094D><U+0924> <U+091D><U+0940><U+0932><U+0947><U+0902>]]
+[[hr:Velika jezera]]
+[[is:V<U+00F6>tnin miklu]]
+[[it:Grandi Laghi (America)]]
+[[he:<U+05D4><U+05D9><U+05DE><U+05D5><U+05EA> <U+05D4><U+05D2><U+05D3><U+05D5><U+05DC><U+05D5><U+05EA>]]
+[[sw:Maziwa makubwa ya Amerika Kaskazini]]
+[[la:Lacus Magni]]
+[[lv:Lielie ezeri]]
+[[lt:Didieji e<U+017E>erai]]
+[[hu:Nagy-tavak]]
+[[mk:<U+0413><U+043E><U+043B><U+0435><U+043C><U+0438><U+0442><U+0435> <U+0435><U+0437><U+0435><U+0440><U+0430>]]
+[[arz:<U+0628><U+062D><U+064A><U+0631><U+0627><U+062A> <U+0639><U+0638><U+0645><U+0649>]]
+[[ms:Tasik-Tasik Besar]]
+[[nl:Grote Meren]]
+[[ja:<U+4E94><U+5927><U+6E56>]]
+[[no:De store sj<U+00F8>er]]
+[[nn:Dei store sj<U+00F8>ane]]
+[[oc:Grands Lacs (America del N<U+00F2>rd)]]
+[[pl:Wielkie Jeziora P<U+00F3><U+0142>nocnoameryka<U+0144>skie]]
+[[pt:Grandes Lagos]]
+[[ro:Marile Lacuri (America de Nord)]]
+[[ru:<U+0412><U+0435><U+043B><U+0438><U+043A><U+0438><U+0435> <U+043E><U+0437><U+0451><U+0440><U+0430>]]
+[[sah:<U+0423><U+043B><U+0443><U+0443> <U+043A><U+04AF><U+04E9><U+043B><U+043B><U+044D><U+0440>]]
+[[simple:Great Lakes]]
+[[sk:Ve<U+013E>k<U+00E9> kanadsk<U+00E9> jazer<U+00E1>]]
+[[sl:Velika jezera]]
+[[sr:<U+0412><U+0435><U+043B><U+0438><U+043A><U+0430> <U+0458><U+0435><U+0437><U+0435><U+0440><U+0430>]]
+[[sh:Velika jezera]]
+[[fi:Suuret j<U+00E4>rvet]]
+[[sv:Stora sj<U+00F6>arna]]
+[[tl:Gran Lagos]]
+[[ta:<U+0B85><U+0BAE><U+0BC6><U+0BB0><U+0BBF><U+0B95><U+0BCD><U+0B95><U+0BAA><U+0BCD> <U+0BAA><U+0BC7><U+0BB0><U+0BC7><U+0BB0><U+0BBF><U+0B95><U+0BB3><U+0BCD>]]
+[[th:<U+0E40><U+0E01><U+0E23><U+0E15><U+0E40><U+0E25><U+0E01><U+0E2A><U+0E4C>]]
+[[tr:B<U+00FC>y<U+00FC>k G<U+00F6>ller]]
+[[uk:<U+0412><U+0435><U+043B><U+0438><U+043A><U+0456> <U+041E><U+0437><U+0435><U+0440><U+0430>]]
+[[vec:Grandi Laghi de la Merica]]
+[[vi:Ng<U+0169> <U+0110><U+1EA1>i H<U+1ED3>]]
+[[fiu-vro:Suur j<U+00E4>rvist<U+00FC>]]
+[[bat-smg:D<U+0117>dl<U+0117><U+0305>j<U+0117> e<U+017E>er<U+0101>]]
+[[zh:<U+4E94><U+5927><U+6E56>]]

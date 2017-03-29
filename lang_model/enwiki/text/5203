@@ -1,0 +1,104 @@
+{{Infobox spacecraft
+| name                   = Atmospheric Dynamics Mission Aeolus
+| image                  = [[File:ADM-Aeolus.jpg|300px]]
+| caption                = Artist's view of ADM-Aeolus
+| mission_identifier     = ADM-Aeolus
+
+| organisation           = [[ESA]]
+| major_contractors      = [[Astrium]]
+| bus                    = 
+| mission_type           = [[Weather satellite]]<br />(Wind profiles data)
+| launch_date            = 2014 <!-- {{Start date|2014|00|00|00|00|00}}&nbsp;UTC -->
+| launch_vehicle         = [[Vega_(rocket)|VEGA]]
+| carrier_rocket         = <!-- or American "launch_vehicle" can be used -->
+| flight_number          = 
+| launch_site            = [[Guiana Space Centre|Kourou]] [[ELA-1|ELV]]
+| mission_duration       = 3 years
+| mission_highlight      = 
+| deactivated            = <!-- when craft stopped operating -->
+| decay                  = <!-- when craft re-entered the atmosphere -->
+
+| COSPAR_ID              =
+| nolink                 = <!-- set to anything to prevent linking COSPAR to NSSDC database -->
+| satcat                 = 
+| webpage                = <!-- Homepage of the craft/mission -->
+| mass                   = {{convert|1366|kg|lb}}
+| dimensions             = 1.74m x 1.90m x 2.00m
+| power                  = 1400 watts
+| batteries              = 
+
+<!-- Orbit data -->
+| orbit_reference        = <!-- reference system-->
+| orbit_regime           = [[Sun-Synchronous Orbit|Dawn-Dusk SSO]]
+| semimajor_axis         = 
+| eccentricity           = 
+| orbit_inclination      = 97<U+00B0>
+| orbit_altitude         = {{convert|400|km|mi}}
+| apoapsis               = 
+| periapsis              = 
+| orbital_period         =
+| longitude              = 
+| repeat_interval        = 7 days
+| orbits_daily           = 
+| repetitivity           = 
+| orbit_swath            = 
+| orbit_crossing         = <!-- equator crossing -->
+
+<!-- Instruments -->
+| Instruments            = ALADIN<br/>(Atmospheric LAser Doppler INstrument)
+| Main_Instruments       = 
+| Resolution             = <!-- Spatial resolution --!>
+| Spectral_Band          = [[Ultra-Violet|UV]] 355nm
+| Data_Rate              = 
+| SSR                    = <!-- solid-state recorder -->
+| IMG_Resolution         = <!-- Imaging resolution -->
+
+<!-- Transponders -->
+| Transponders           = 
+| Transponder_Capacity   = 
+| Coverage               = <!-- Coverage area -->
+| Twta output power      = 
+| Bandwidth              = 10 [[Mbps]]
+
+| refs                   = <ref name="eoportal">{{cite web |url=https://directory.eoportal.org/web/eoportal/satellite-missions/a/adm-aeolus |title=ADM-Aeolus (Atmospheric Dynamics Mission) |author= |publisher=[[ESA]] |accessdate = 2013-03-26}}</ref><ref name="astrium">{{cite web |url=http://www.astrium.eads.net/en/programme/aeolus.html |title=Aeolus: wind monitoring |publisher=[[Astrium]] |accessdate = 2013-03-26}}</ref>
+| below                  = 
+}}
+
+'''ADM-Aeolus''', or, in full, '''Atmospheric Dynamics Mission Aeolus''', is an [[ESA]] [[satellite]] that is due for launch in 2014.<ref name="admOperations"/><ref name="tellus">{{cite journal|doi=10.1111/j.1600-0870.2007.00296.x|title=Tellus A: Special issue with manuscripts related to ESA's Atmospheric Dynamics Mission/Aeolus|bibcode = 2008TellA..60..189K }}</ref>
+ADM-Aeolus will be the first equipment capable of performing global wind-component-profile observation and will provide much-needed information to improve [[weather forecasting]]. 
+
+==Satellite==
+The ''Aeolus'' satellite is an integral part of the [[Atmospheric Dynamics Mission]] (ADM) that is planned by the European Space Agency ([[ESA]]) as the fourth [[Living Planet Programme|Earth Explorer Mission]]. The central aim of this mission is to further the knowledge of the Earth's atmosphere and weather systems. By recording and monitoring the weather in different parts of the world, Aeolus will allow scientists to build complex models of our environment, which can then be used to help predict how that environment will behave in the future. These predictions will be useful in the short-term, since they can be applied to [[Numerical Weather Prediction]] (NWP) in order to make forecasts more accurate. The mission will thus improve the knowledge of all sorts of weather phenomena, from global warming to the effects of pollution. ADM-Aeolus is seen as a mission that will pave the way for future operational meteorological satellites dedicated to measuring the Earth's wind fields.
+
+The spacecraft is being built by [[EADS Astrium]].<ref name="astrium" />
+
+==Instrumentation==
+The wind-component profiles will be measured by the Aeolus payload, namely the ''Atmospheric LAser Doppler INstrument'' (ALADIN).
+
+===Atmospheric LAser Doppler INstrument (ALADIN)===
+''ALADIN'' instrument, essentially a direct detection [[Lidar]], consists of three major elements: a transmitter, a combined [[Mie scattering|Mie]] and [[Rayleigh scattering|Rayleigh]] backscattering receiver assembly, and a [[Cassegrain telescope]] with a {{convert|1.5|m|ft}} diameter.<ref name="eoportal"/> The transmitter architecture is based on a 150 mJ diode-pumped frequency-tripled [[Nd:YAG laser]] operating in the [[ultraviolet]] at 355 nm.<ref name="eoportal"/> The Mie receiver consists of a [[Spectrometer|Fizeau spectrometer]] with a resolution of 100 MHz (equivalent to 18 m/s). The received backscatter signal produces a linear fringe whose position is directly linked to the wind velocity; the wind speed is determined by the fringe centroid position to better than a tenth of the resolution (1.8 m/s).<ref name="eoportal"/> The Raleigh receiver employs a dual-filter [[Fabry<U+2013>P<U+00E9>rot interferometer]] with a 2 GHz resolution and 5 GHz spacing. It analyzes the wings of the Rayleigh spectrum with a CCD; the etalon is split into two zones, which are imaged separately on the detector.<ref name="eoportal"/>
+
+The processing of the backscatter signals will produce line-of-sight wind-component profiles above thick clouds or down to the surface in clear air along the satellite track, every {{convert|200|km|mi}}. Wind information in thin cloud or at the tops of thick clouds is also attainable; from the data processing, information on other elements like clouds and aerosols can also be extracted. The data will be disseminated to the main [[Numerical_Weather_Prediction|NWP-centres]] in near-real-time.
+
+==Launch==
+The launch vehicle is not confirmed, can be any small-capacity launch vehicle such as [[Vega (rocket)|Vega]], [[Rockot]] or [[Dnepr rocket|Dnepr]].<ref name="admOperations">{{cite web |url=http://www.esa.int/Our_Activities/Operations/ADM-Aeolus |title=ADM-Aeolus operations |publisher=[[ESA]] |date=2012-12-07 |accessdate = 2013-03-26}}</ref>
+
+==References==
+{{Reflist}}
+
+==External links==
+* [http://www.astrium.eads.net/en/programme/aeolus.html Aeolus page at EADS Astrium]
+* [http://www.esa.int/esaLP/LPadmaeolus.html Aeolus pages at ESA, with latest news]
+* [http://www.esa.int/Our_Activities/Operations/ADM-Aeolus Aeolus page at ESA Spacecraft Operations]
+
+{{European Space Agency}}
+{{future spaceflights}}
+
+[[Category:Earth observation satellites]]
+[[Category:European Space Agency]]
+[[Category:Future spaceflights]]
+[[Category:2014 in spaceflight]]
+[[Category:Proposed spacecraft]]
+
+{{ESA-stub}}
+{{Europe-spacecraft-stub}}

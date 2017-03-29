@@ -1,0 +1,463 @@
+[[Image:Starfire Optical Range - sodium laser.jpg|thumb|FASOR, lidar à fluorescence expérimental utilisé pour sonder la densité de la haute atmosphère en excitant les atomes de sodium.]]
+
+La télédétection par laser ou '''LIDAR''', [[acronyme]] de l'expression en [[langue anglaise]] « light detection and ranging » ou « laser detection and ranging », est une technologie de mesure à distance basée sur l'analyse des propriétés d'un [[laser|faisceau]] de [[lumière]] renvoyé vers son émetteur.
+
+À la différence du [[radar]] qui emploie des ondes radio ou du [[sonar]] qui utilise des ondes sonores, le lidar utilise de la lumière (du [[spectre électromagnétique|spectre]] [[spectre visible|visible]], [[infrarouge]] ou [[ultraviolet]]). Elle est quasiment toujours issue d’un [[laser]], et donc [[Cohérence (physique)|cohérente]].
+
+Le principe de la télémétrie (détermination de la distance d’un objet), qui concerne une grande partie des applications du lidar, requiert généralement l’utilisation d’un laser impulsionnel. La distance est donnée par la mesure du délai entre l’émission d’une impulsion et la détection d’une impulsion réfléchie, connaissant la [[vitesse de la lumière]]. Une autre classe d’applications basées sur la mesure de vitesse emploie un laser à spectre d’émission fin (une fréquence bien déterminée). C’est l’[[effet Doppler-Fizeau]], soit le décalage de la fréquence de l’onde réfléchie et reçue, qui permet alors de déterminer la vitesse de l’objet. Dans l’[[Atmosphère terrestre|atmosphère]] et les autres [[diffusion des ondes|milieux diffus]], beaucoup d’autres paramètres (concentrations de gaz et de particules spécifiques, densité, température…) peuvent être mesurés si l’on sait isoler l’effet des différentes interactions entre la lumière et la matière le long du faisceau laser.
+
+Le lidar, instrument incontournable de [[télédétection]] active<ref>A. Cracknell, L. Hayes, ''Introduction to Remote Sensing, London'', Ed : Taylor and Francis, 1991 (ISBN 0849392551)</ref>, trouve ses applications en [[topographie]]<ref name="Stoker">J. Stoker, ''Introduction to Lidar'', USGS http://www.crssa.rutgers.edu/rs07/agenda/J%20Stoker_lidar101_nj_workshop.pdf</ref>  ([[géomorphologie]],  [[altimétrie]] et [[bathymétrie]]), [[géosciences]] ([[risque sismique]]<ref>T. Paulson, ''Lidar shows where earthquake risks are highest'', SeattlePI, 2001, http://www.seattlepi.com/local/article/LIDAR-shows-where-earthquake-risks-are-highest-1052381.php</ref>{{,}}<ref name="Gueguen">P. Guéguen et al., ''Analysis of reinforced concrete buildings using multipath lidar, European Workshop on Structural Health Monitoring'', 2014, https://hal.inria.fr/hal-01021064/PDF/0334.pdf</ref>, [[météorologie]]<ref name="Brocard">E. Brocard et al., ''Raman Lidar for Meteorological Observations, RALMO'', Atmospheric Measurement Techniques, 2013</ref>, [[physique atmosphérique|physique de l’atmosphère]]<ref>G. Baumgarten, ''Doppler/Rayleigh/Mie/Raman lidar for wind and temperature measurements in the middle atmosphere up to 80km'', Atmospheric Measurement Techniques, 2010</ref>) et [[environnement|sciences de l’environnement]] (étude de la [[pollution de l’air|pollution atmosphérique]]<ref name="Barrett">E. Barrett & O. Ben-Dov, ''Application of the Lidar to Air Pollution Measurements'', Journal of Applied Meteorology, 1967, http://journals.ametsoc.org/doi/abs/10.1175/1520-0450%281967%29006%3C0500%3AAOTLTA%3E2.0.CO%3B2</ref>, [[agronomie]] & [[sylviculture]]<ref>P. Lewis, ''Lidar for vegetation applications'', University College London, http://www2.geog.ucl.ac.uk/~plewis/lidarforvegetation/lidarRS.pdf</ref>), mais aussi dans l’[[archéologie]]<ref name="Raimondi">V. Raimondi et al, ''Fluorescence lidar technique for Cultural Heritage'', in ''Handbook of the Use of Lasers in Conservation and Conservation Science'', http://www.science4heritage.org/COSTG7/booklet</ref>, la prospection [[énergie éolienne|éolienne]]<ref name="Leosphere WindPower">Leosphere: Wind power applications, http://www.leosphere.com/applications/wind-power</ref>, la régulation du [[contrôle de la circulation aérienne|trafic aérien]]<ref name="Leosphere Airport">Leosphere, ''Windcube 400S-AT : Unambiguous wind shear detection for safe traffic decisions'', 2013, http://www.leosphere.com/wp-content/uploads/2014/02/WINDCUBE400S-AT_LEOSPHERE_BD.pdf</ref>, le [[véhicule à guidage automatique|guidage automatique]]<ref name="blogautomobile.fr">F. Euvrard, ''Après Google Street View, bientôt Google Driverless'', 2010, http://blogautomobile.fr/technologie-apres-google-street-view-bientot-google-alone-videos-85542#axzz1Op8Q8Umv</ref> de véhicules terrestres ou spatiaux, ou encore la [[sécurité routière]]<ref name="RadarAuto">Radars-auto.com, ''Les radars laser'', http://www.radars-auto.com/info-radars/modele-radar-laser.php</ref> ou la [[défense nationale (France)|défense]]<ref>G. Pillet et al, ''Wideband Dual-Frequency Lidar-Radar for High-Resolution Ranging, Profilometry and Doppler Measurement'', Proceedings of SPIE vol. 7114, 2008</ref>.
+
+== Histoire et dénomination ==
+
+[[File:Amazing Lunar Laser Show - 18 Sept. 2010.jpg|thumb|Amazing Lunar Laser Show - 18 Sept. 2010| Deux lidars montés sur des télescopes tentent de mesurer la distance Terre-Lune en visant les rétro-réflecteurs déposés sur la Lune par les missions Apollo.]]
+
+Peu après leur invention au début des années 1960, les premiers [[laser à rubis|lasers à rubis]] naturellement impulsionnels de Théodore Maiman sont exploités pour la télémétrie fine à grande distance. Aux USA, Smullin et Fiocco du [[MIT]] les emploient pour mesurer précisément la [[Mesure des distances en astronomie#Mesures de la distance Terre-Lune et du diamètre de la Lune|distance Terre-Lune]] en mai 1962 (Project Luna See)<ref>L. D. Smullin & G. Fiocco, Institute of Electrical and Electronics Engineers Proceedings 50, 1962</ref>, alors que Goyer et Watson du [[NCAR]] les appliquent parallèlement à la mesure de la hauteur des nuages<ref>G. Goyer, & R. Watson, ''The Laser and its Application to Meteorology'', Bulletin of the American Meteorological Society 44, 1963</ref>. Ils appellent leur système « radar optique » (optical radar).
+
+L’utilité et la précision des systèmes lidar deviennent connus du grand public en 1971 lors de la mission [[Apollo 15]]<ref>J. Abshire, ''NASA’s Space Lidar Measurements of Earth and Planetary Surfaces'', 2010, http://ntrs.nasa.gov/search.jsp?R=20100031189</ref>, qui cartographie la [[Lune]] à l’aide d’un altimètre laser. Alors que le mot lidar avait originellement été créé par l’assemblage de « light » et « radar »<ref>J. Ring, ''The Laser in Astronomy'', New Scientist, 1963</ref>, on considère à partir de cette même époque que leur dénomination est plutôt l’acronyme de « Light Detection And Ranging » ou « Laser Imaging Detection And Ranging », à l’instar de radar ou sonar.
+
+Le terme lidar couvre une très grande variété de systèmes de mesure à distance par laser. Mais ces systèmes sont parfois désignés autrement. Actuellement, on trouve encore l'acronyme « LADAR » (LAser Detection And Ranging), qui est plutôt utilisé dans le domaine militaire sur des cibles dures ou dans la littérature anglo-saxonne<ref>J. Hecht, ''Lidar/ladar acronyms'', LaserFocusWorld.com, http://www.laserfocusworld.com/blogs/what-the-hecht/2012/03/lidar-ladar-acronyms.html</ref>. On trouve également les expressions « ALSM » (Airborne Laser Swath Mapping)<ref>http://imaging.geocomm.com/features/laserswath/</ref> pour les applications spécifiques de topographie aéroportée. En français, l'expression « radar laser » est improprement employée par analogie, surtout pour les jumelles de contrôle de vitesse en sécurité routière<ref name="RadarAuto"/>.
+
+Alors que le terme radar n’est souvent plus traité comme un acronyme (il n’est pas écrit en lettres majuscules et s’accorde au pluriel), la dénomination de leurs équivalents optiques ne fait l’objet d’aucun consensus.  Si bien que l’on peut trouver dans différentes publications de référence, parfois même dans le même document, « LIDAR », « lidar », « Lidar » ou « LiDaR ».
+
+== Généralités ==
+
+De manière générale, le fonctionnement du lidar ressemble à celui du [[radar]] ([[écholocation]]), la différence étant le [[spectre électromagnétique|domaine spectral]] des [[ondes électromagnétiques]] employées. Alors que le radar fonctionne dans le domaine des  [[micro-ondes]] ([[fréquences]] de 1 à 100&nbsp;GHz, [[longueur d’onde|longueurs d’onde]] millimétriques et centimétriques), le lidar est basé sur des [[laser]]s rayonnant dans le domaine [[infrarouge]], le domaine [[spectre visible|visible]] ou le domaine [[ultraviolet]] proche (fréquences au-delà de 10THz, longueurs d’ondes de 250&nbsp;nm à 10&nbsp;µm). Dans les deux cas, l’onde électromagnétique émise est [[Cohérence (physique)|cohérente]] et [[Polarisation (optique)|polarisée]]. Mais dans le domaine spectral visible, elle est beaucoup plus directive et elle peut interagir avec des objets de taille microscopique.
+
+[[Fichier:Sonar Principle FR.svg|vignette|centre|upright=2|Principe de l’écholocation|alt=Principe de l’écholocation]]
+
+Un lidar est un système [[opto-électronique]] composé d’un émetteur laser, d’un récepteur comprenant un collecteur de lumière ([[télescope]] ou autre optique) et un [[photodétecteur]] qui transforme la lumière en [[signal électrique]], ainsi que d’une chaîne électronique de [[traitement du signal]] qui extrait l’information recherchée.
+
+[[File:SchemaGeneralLidarpng.png||thumb|center|upright=2.5|Schéma général d’un système lidar et du principe de la mesure|Schéma général d’un système lidar et du principe de la mesure. Noter que l’émission et la réception peuvent utiliser la même optique.]]
+
+Excepté à courte portée, afin de capter un signal suffisamment fort, il est nécessaire d’utiliser :
+* un laser de forte puissance moyenne (typiquement supérieure à 100mW). Ceci doit être concilié avec les exigences de [[laser#Sécurité|sécurité oculaire]] dans les applications proches du sol ; la sélection de longueurs d’ondes hors du domaine de transparence de la [[cornée]] de l’œil (400nm à 1400nm) ou le balayage du laser aident grandement dans ce sens. 
+*du côté de la réception, un photodétecteur de sensibilité élevée ([[photomultiplicateur]], [[photodiode]] à avalanche), excepté en détection cohérente.
+
+D’autre part, un filtrage de la lumière reçue est indispensable pour s’affranchir de la lumière de l’environnement, qui constitue un fort parasite. On filtre le plus souvent à la fois :
+*spatialement, en limitant le champ de vision de l’optique de réception étroitement autour du faisceau laser, à l’aide d’un [[Diaphragme (optique)#Diaphragme de champ|diaphragme de champ]] si nécessaire,
+*spectralement, à l’aide d’un [[filtre]] ne laissant passer qu’une gamme étroite autour de la longueur d’onde du laser ou d’un [[interféromètre]].
+
+Par opposition à cette détection dite « directe », il existe des lidars à détection dite « [[Cohérence (Physique)|cohérente]] » et/ou « [[hétérodyne]] », identique à celle du [[radar]]. Dans ce cas, on effectue à la réception un mélange entre l’onde lumineuse reçue et une partie de l’onde émise, qui a été décalée d’une fréquence connue, par exemple par un [[modulateur acousto-optique]] (onde dite « d’oscillateur local »). L’[[interférence]] de ces deux ondes génère un terme oscillant autour de cette fréquence dans le signal de sortie du photodétecteur, en plus des termes proportionnels à la puissance reçue et à la puissance d’oscillateur local. En filtrant électroniquement le signal dans une bande étroite autour de la fréquence en question, on obtient un signal dit « [[hétérodyne]] ».
+
+[[File:LidarCohérentHétérodynepng.png|alt=Lidar à détection cohérente hétérodyne|centre|thumb|upright=2|Lidar à détection cohérente hétérodyne]]
+
+Avec P est la puissance et φ la phase, R désignant l'onde reçue et OL désignant l'oscillateur local, on a :
+
+<math>I(t) \propto P_{OL} + P_R + \underbrace{2\sqrt{P_R P_{OL}} cos(\phi_R(t)-\phi_{OL}(t))}_{\text{Signal hétérodyne : fréquence } \Delta f_0+2 V_r/\lambda}</math>
+
+où &Delta;f0 est la le décalage en fréquence fixe introduit sur l'oscillateur local, V{{ind|r}} est la vitesse radiale de la cible et &lambda; la longueur d'onde du laser.
+
+Ce procédé a plusieurs intérêts :
+* le mélange interférométrique multiplie l’amplitude du signal utile, éliminant le besoin d’un photodétecteur ultra-sensible.
+* l’information de phase de l’onde reçue est conservée, alors qu’elle était perdue en détection directe.
+* on a ainsi effectué un filtrage spectral extrêmement fin (quelques dizaines de MHz, soit environ 10{{exp|-4}}nm) de la lumière reçue autour de la fréquence centrale, tandis que la condition de [[Cohérence (Physique)|cohérence spatiale]]  nécessaire à l’interférence implique un filtrage spatial parfaitement ajusté autour du faisceau émis. Ceci s’apparente à une [[détection synchrone]], méthode éprouvée pour amplifier des signaux de faible amplitude à bande étroite. L’impact de la lumière parasite en lidar cohérent est donc négligeable.
+Le lidar cohérent doit faire face à quelques difficultés en contrepartie :
+* il requiert une émission laser spectralement fine qui semble a priori incompatible avec la forte puissance nécessaire au lidar.
+* un fonctionnement impulsionnel à [[commutation-Q]] dans la cavité laser, qui crée des impulsions puissantes mais trop courtes et sans relation de phase, empêche également d’avoir une fréquence bien définie. L’émission doit donc être soit continue, soit contrôlée par un oscillateur maître, soit découpée en impulsions « longues » (plusieurs centaines de nanosecondes) a posteriori puis ré-amplifiée.
+* des bruits supplémentaires liés à la [[turbulence atmosphérique]] et aux mouvements des cibles (variations du [[Tavelure (optique)|« speckle »]]) perturbent la mesure en détruisant la cohérence entre les ondes mélangées.
+
+Ce système est directement applicable à la mesure précise de la vitesse de la cible via l’[[effet Doppler]], exactement sur le même principe qu’en [[radar Doppler]]. Cet effet provoque un décalage en fréquence de l’onde réfléchie par un objet proportionnellement à sa vitesse en direction de l’observateur, dite vitesse radiale.
+
+Il est difficile de classifier les lidars par principe ou par application ; toutefois, dans la suite, on se propose de les aborder par le type de cible (dure ou diffuse) et le type d’interaction lumière/matière qu’ils observent.
+
+== Lidars à cible dure ==
+=== Lidars télémètres laser à balayage ===
+
+[[Image:Lidar P1270901.jpg|thumb|Ce lidar balaye son environnement avec un faisceau laser et mesure pour chaque point balayé sa distance au lidar, permettant la reconstruction d'un modèle tridimensionnel de la scène.]]
+Le type de lidar le plus simple et le plus répandu demeure le télémètre laser qui calcule directement la distance d’un objet réfléchissant les impulsions laser émises, à partir de la différence de temps entre l’émission d'une impulsion t<sub>0</sub> et la réception de l’écho le plus important t<sub>écho,max</sub> :
+
+<math>z = \frac{c}{2}(t_{echo,max}-t_0)</math>
+
+avec c la [[vitesse de la lumière]] (environ {{unité|299800|km||s|-1}}). La précision de cette mesure est inversement proportionnelle à la durée de l’impulsion et augmente avec l’énergie que l’on est parvenu à récupérer sur le photodétecteur du lidar.
+
+On appelle  « équation lidar » le [[bilan de liaison]] du lidar entre son émission et sa réception, c’est-à-dire l’énergie lumineuse E (en J) de l’impulsion rétrodiffusée par une cible (supposée lambertienne, i.e. qui diffuse la lumière uniformément) située à une distance z et captée par le lidar<ref>J. Shaw, ''Optical Remote Sensing Systems : Lidar & Ladar'', Montana State University, http://www.coe.montana.edu/ee/jshaw/classes/rss/rss_s12/notes/9_ee583_s12_lidar_directdet.pdf</ref> :
+
+::<math> E(z) = E_0 F_R(z) T_{atm}^2(z) \frac{T_R A_R}{z^2}  \frac{\rho}{\pi}  \frac{A_{cible}(z)}{A_{spot}(z)}</math>
+
+Dans cette équation :
+* E<sub>0</sub> représente l’énergie initiale de l’impulsion émise (en J) ;
+* F{{ind|R}}(z) est la fonction de recouvrement entre le faisceau émis et le cône de réception du lidar (à valeur entre 0 et 1) ;
+* T<sub>atm</sub>(z) est la [[transmittance|transmission]] (à valeur entre 0 et 1) de l’atmosphère sur l’épaisseur z (cf. section lidar atmosphérique) ;
+* T{{ind|R}} est la transmission (à valeur entre 0 et 1) et A{{ind|R}} la surface (en m²) du système optique de réception ;
+* &rho; est l’[[albédo]] de la cible (à valeur entre 0 et 1) ;
+* A<sub>cible</sub> est la surface de la cible ''éclairée par le laser'' (en m²) ; A<sub>spot</sub>(z) est la surface totale (en m²) de la tâche (« spot ») laser à la distance z. Par définition, <math>A_{cible}\le A_{spot}</math>, d’où  <math>\frac{A_{cible}(z)}{A_{spot}(z)}=1</math> pour une cible [[pouvoir de résolution|résolue]] (cible plus grande que le faisceau) et <math>\frac{A_{cible}(z)}{A_{spot}(z)}\propto \frac{1}{z^2}\ </math> pour une cible non résolue (cible moins grande que le faisceau).
+Application numérique : pour F{{ind|R}}(z)=100%, T<sub>atm</sub>(z)=90% (propagation sur 1&nbsp;km en visée horizontale en visibilité moyenne), T{{ind|R}} = 60% (optiques et filtres compris), A{{ind|R}} = {{unité|20|cm|2}} (optique de 5&nbsp;cm de diamètre), ρ=30%, cible résolue à une distance z = 1&nbsp;km, on a :[[Image:LIDAR-scanned-SICK-LMS-animation.gif|thumb|upright=0.6|Principe du lidar télémètre à balayage]]<math> E(z) \approx 10^{-10} E_0</math>
+
+Seul un dix-milliardième de l’énergie émise est récupérée à la réception.
+
+Le laser émet de plusieurs dizaines à plusieurs centaines de milliers d’impulsions chaque seconde. En y associant un système de balayage angulaire (« [[scanner]] », typiquement à l’aide de miroirs qui dévient l’axe d’émission et de réception d’un angle connu), où en profitant du déplacement connu du porteur du lidar (avion ou satellite), on est capable de localiser les nombreux échos recueillis dans l’espace à trois dimensions. Ceci permet la cartographie en 3D de la surface de la cible du lidar, avec une précision qui peut atteindre quelques centimètres, ou une portée qui peut atteindre plusieurs centaines de kilomètres pour des systèmes spatiaux.
+
+Parmi les très nombreuses applications de ces lidars, on peut citer :
+* la reconstitution en [[3D]] d’environnements pour l’[[architecture]], l’[[urbanisme]]<ref>Y. Kobayashi, Photogrammetry and 3D city modeling, in Digital Architecture and Construction, WITpress, ISBN 1-84564-047-0, 2006</ref>, ou l’exploration [[spéléologie|spéléologique]]<ref>M.K. Funk, Empire of Rock : China’s Supercaves, National Geographic, 2014, http://www.nationalgeographic.com/china-caves/</ref>,
+* la télémétrie en temps réel pour le guidage automatique de véhicules terrestres<ref name="blogautomobile.fr"/>  ([[voiture autonome]]) ou spatiaux<ref>Blogueur Julien@ESA, ''LIRIS: Laser Infra-Red Imaging Sensors demonstrator on ATV-5'', 2014, http://blogs.esa.int/atv/2014/03/19/liris-laser-infra-red-imaging-sensors-demonstrator-on-atv-5/</ref> (rendez-vous orbital, exemple : [[Véhicule automatique de transfert européen|ATV]]-5 Georges Lemaître),
+* le contrôle de vitesse portatif pour la [[sécurité routière]] (jumelles dites à « radar laser »<ref name="RadarAuto"/>) par télémétrie différentielle : on mesure la variation de la distance de la cible en fonction du temps.
+* depuis un avion ou depuis l’orbite, la [[topographie]] à haute précision de la Terre<ref name="Stoker"/> (lidar GLAS des satellites [[ICESat]]) ou des corps rocheux du système solaire<ref>J. Abshire et al, ''Mars Orbital Lidar for Global Atsmopheric and Topographic Measurements'', International Workshop on Instrumentation for Planetary Missions, 2012, http://ssed.gsfc.nasa.gov/IPM/PDF/Sample_abstract-IPM.pdf</ref> (altimètre MOLA de la sonde martienne [[Mars Global Surveyor]]) pour obtenir un [[modèle numérique de terrain]]. En archéologie, cette technique est appliquée à la détection de sites enfouis sous la végétation<ref>McElhanney, ''McElhanney uses LiDAR to Map Angkor Archaeological Sites'', 2014, http://www.mcelhanney.com/index.php?mact=News,cntnt01,detail,0&cntnt01articleid=19&cntnt01returnid=24</ref> ou l’eau<ref>''Successful Subsea Laser Scanner Demonstration by C & C Technologies'', 2013, http://www.2grobotics.com/successful-subsea-laser-scanner-demonstration-by-c-c-technologies/</ref>. En [[sylviculture|foresterie]], elle sert à mesurer la hauteur de la [[canopée]] ou de la couronne des arbres, ce qui permet d’établir des bilans de couverture végétale, de [[biomasse (écologie)|biomasse]] ou de risque incendie à de très grandes échelles<ref name="Stoker"/>. Dans ce dernier cas, on note l’utilisation de lidars à large empreinte et à « onde complète » qui extraient les structures de la même manière que les lidars atmosphériques détaillés ci-après.
+{{images
+ |légende     = Applications des lidars télémètres
+ |image1      = Velodyne_High-Def_LIDAR.jpg
+ |légende1    = Pour le guidage automobile
+ |alternative1= Velodyne lidar
+ |image2      = ATV5_5_minutes_before_capture_-_outside_view.jpg
+ |légende2    = Approche et arrimage automatique de l'ATV 5 Georges Lemaître par lidar
+ |alternative2= ATV 5
+ |image3      = Mars_Orbiter_Laser_Altimeter_%28MOLA%29_Globe.jpg
+ |légende3    = Cartographie de Mars par le lidar MOLA de la sonde MGS
+ |alternative3= Carte Mars par MOLA
+ |image4      = Police-LIDAR-Gun-0946.jpg
+ |légende4    = Contrôle de vitesse 
+ |alternative4= Lidar mobile pour contrôle de vitesse
+ |image5      = LIDAR_field_yield.jpg
+ |légende5    = Carte de rendement agricole 
+ |alternative5= Carte de rendement agricole par lidar aéroporté
+ |position    = centre
+ |hauteur     = 150
+}}
+
+=== Lidars à détection cohérente pour la mesure de vitesse ===
+
+De par sa capacité à détecter un décalage en fréquence, le lidar à détection cohérente s'applique directement à la mesure de vitesse d'une cible dure.
+
+Le signal hétérodyne, partie variable du courant en sortie du photodétecteur (en A), s’écrit :
+
+<math>i_{het}(t) = i_0 cos(2\pi(\Delta f_0+2\frac{V_r}{\lambda})t+\phi)</math>
+
+avec Δf<sub>0</sub> le décalage fixe imposé à l’oscillateur local, V{{ind|r}} la vitesse radiale de la cible (projetée vers le lidar), λ la longueur d’onde émise et i<sub>0</sub> donné par l’équation lidar adaptée au cas du lidar cohérent (en supposant l’émission laser continue) :
+
+<math>i_0^2(z) = 4 \eta_{het}^2 S^2 P_0P_{OL} F_R(z) T_{atm}(z) \frac{ T_R A_R}{z^2}  \frac{\rho}{\pi}  \frac{A_{cible}(z)}{A_{spot}(z)}</math>
+
+Dans cette équation, plusieurs termes nouveaux apparaissent (les autres sont explicités dans la sous-section précédente) :
+* &eta;het le [[rendement (physique)|rendement]] hétérodyne (à valeur entre 0 et 1), d’autant meilleur que les fronts d’ondes interférents se ressemblent, et très sensible à la propagation du faisceau,
+* S, la [[sensibilité]] du [[photodétecteur]] (en A/W),
+* P<sub>0</sub>, la puissance émise (en W),
+* P<sub>OL</sub>, la puissance de l’oscillateur local (en W).
+
+Le traitement du signal s’effectue par l’estimation de la fréquence instantanée du signal hétérodyne (opération parfois appelée [[Modulation de fréquence|démodulation]], comme en [[Récepteur radio|radio]]), afin de remonter à la vitesse de la cible. Il est à noter que, le lidar ayant une longueur d’onde 10000 fois plus courte que le radar, la sensibilité en vitesse est d’autant décuplée par rapport aux [[radar Doppler]] : 1&nbsp;MHz de décalage en fréquence correspond approximativement à une vitesse de 1&nbsp;m/s. Sur des périodes longues, avec une émission laser continue visant une cible dure, on est ainsi capable de sonder des vitesses inférieures au micron par seconde.
+
+[[File:LidarVibroBuilding.png|thumb|La surveillance des méga-structures (grands bâtiments, ponts...) par leurs modes de vibration est l’une des applications civiles de la vibrométrie par lidar à detection cohérente : les vibrations naturelles sont ralenties et amorties après un endommagement.]]
+<u>Applications </u>:
+
+Jusqu’à la fin des années 1990, seuls d’imposants et coûteux [[laser au dioxyde de carbone|lasers à gaz CO{{ind|2}}]] (infrarouge thermique, &lambda;=10,6&nbsp;µm) avaient les caractéristiques nécessaires de finesse spectrale et de puissance, réservant ce lidar à des applications militaires apparentées au radar<ref>A. Gschwendter & W. Keicher, ''Development of Coherent Laser Radar at Lincoln Laboratory'', LLJ, 2000, https://www.ll.mit.edu/publications/journal/pdf/vol12_no2/12_2devcoherentlaserradar.pdf</ref>. Il s’agit principalement de l’imagerie/[[télémétrie]]/[[vélocimétrie]] à très grande portée (jusqu’à plusieurs centaines de kilomètres). Il est possible d’aller sonder jusqu’à la forme et les mouvements des [[satellite artificiel|satellites]] et [[débris spatial|débris spatiaux]] en [[orbite terrestre basse]], inaccessible aux radars, dont le faisceau est trop divergent.
+
+Par la suite, le développement des [[Liste des différents types de laser#Lasers à fibre|lasers fibrés]] (infrarouge proche, &lambda;=1,55µm), compacts, robustes et moins onéreux, ont ouvert d’autres champs d’application sur cible dure, notamment la [[vibromètre laser|vibrométrie laser]] à grande distance :
+* pour la surveillance de la santé mécanique des grandes structures par leurs [[mode normal|modes de vibration]] naturels, qu’il s’agisse d’[[ouvrage d’art|ouvrages d’art]]<ref>T. Miyashita et al., ''Vibration-based Structural Health Monitoring for Bridges using Laser Doppler Vibrometers and MEMS-based Technologies'', Steel Structures, 2008, http://www.ceric.net/kssc/KSSC_3_2008_8_4_325%28C%29.pdf</ref>, d’une falaise sur le point de se décrocher<ref>J.-L. Got et al., ''Pre-failure behaviour of an unstable limestone cliff from displacement and seismic data'', Natural Hazards and Earth System Sciences, 2010, http://www.nat-hazards-earth-syst-sci.net/10/819/2010/nhess-10-819-2010.pdf</ref> ou des grands bâtiments d’une ville<ref name="Gueguen"/> après un [[séisme]]. L’intérêt est de ne pas avoir à s’approcher d’une structure qui peut potentiellement s’effondrer, ou de pouvoir balayer sa surface pour étudier la forme des modes de vibration (ex : repérer des discontinuités causées par des fissures) sans avoir à y déposer des dizaines de capteurs. 
+* pour la détection de [[mine terrestre|mines terrestres]] enfouies, révélées par un scan des vibrations du sol soumis à une excitation sonore<ref>V. Aranchuk et al., ''Multi-beam laser Doppler vibrometry for landmine detection'', Optical Engineering 45, 2006</ref>
+* par ailleurs, dans la défense, les lidars vibromètres sont applicables à la détection<ref>V. Aranchuk et al., ''Standoff detection of obscured vehicle with laser Doppler vibrometry'', Proc. of SPIE 7303, 2009</ref> et à l’[[identification friend or foe|identification]] à grande distance<ref>V. Jolivet et al., ''Feasibility of air target identification using laser radar vibrometry'', Proc. of SPIE 5807, 2005</ref> de véhicules terrestres ou aériens par leurs vibrations spécifiques, ou encore à l’[[espionnage]]<ref>Z. Zhu, ''Integration of Laser Vibrometry with Infrared Video for Multimedia Surveillance Display'', City College of New York report for the US Air Force Research Laboratory, 2004, http://www-cs.ccny.cuny.edu/~zhu/LDV/FinalReportsHTML/CCNY-LDV-Tech-Report-html.htm</ref>.
+Ces applications sont toutefois relativement récentes et donc exploratoires.
+
+== Lidars à cible diffuse – lidar atmosphérique ==
+
+Les lidars peuvent effectuer des mesures à travers différents milieux diffus (océan, forêt) outre l’[[atmosphère terrestre|atmosphère]], mais nous nous concentrerons sur ce dernier cas, majoritaire et représentatif. Dans l’atmosphère, il s’agit d’analyser les échos lumineux provenant des molécules de l’air ou des particules ([[aérosols]], gouttelettes d’eau ou cristaux de glace) en suspension dans la colonne traversée par le faisceau laser. On étudie l’intensité de la rétro[[diffusion]] ou de l’[[atténuation]] de la lumière par ces constituants. Comme dans une [[échographie]], le signal reçu représente une coupe de l’atmosphère.
+
+[[Image:LidarAtmospheriquepng.png|thumb|upright=2|center|Principe du lidar atmosphérique]]
+
+La difficulté du traitement de ce signal est de séparer les effets d’atténuation de ceux de la rétrodiffusion, ainsi que la contribution respective des particules en suspension et des différentes molécules<ref>R. Collis & P. Russell, ''Lidar Measurement of Particles and Gases by Elastic Backscattering and Differential Absorption'', in Laser Monitoring of the Atmosphere, 1976.</ref>. C’est un cas exemplaire de [[problème inverse]] [[Conditionnement (analyse numérique)|mal conditionné]] pour lequel on tente, avec peu d’observables mais un bon [[modèle mathématique]] du [[système physique]] observé, de remonter aux paramètres caractéristiques du système. Si l’on sait résoudre ce problème, on peut alors accéder à la [[densité]] et la [[Concentration molaire|concentration]] de constituants de l’atmosphère, leurs propriétés optiques qui renseignent sur leur nature, mais aussi des paramètres physiques tels que la [[température]] ou la vitesse des vents, en fonction de l’altitude. On parle donc [[inversion|« d'inverser »]] le signal lidar pour le fait de résoudre l'équation qui le décrit.
+
+L’extinction (atténuation) et la rétrodiffusion sont en effet la somme de termes associés aux différentes particules et molécules présents dans l’atmosphère, et dépendent parfois fortement de la longueur d’onde. Chaque terme est le produit de la concentration de l’espèce (en m{{exp|-3}}) par la section efficace d’interaction (en m{{exp|2}} pour l’extinction ou m{{exp|2}}.sr{{exp|-1}} pour la rétrodiffusion). Ces sections efficaces donnent une idée de l’ordre de grandeur des phénomènes d’interaction.
+
+Importance des interactions lumière-atmosphère en termes de section efficace de rétrodiffusion<ref>X. Chu, ''Lecture on Lidar Remote Sensing'', University of Colorado, http://home.ustc.edu.cn/~522hyl/%B2%CE%BF%BC%CE%C4%CF%D7/UCS%BD%CC%B3%CC/Lecture07.pdf</ref> : 
+{| class="wikitable"
+|-
+! Interaction !! Section efficace de rétrodiffusion !! Caractéristiques
+|-
+| Diffusion de Mie (particules aérosols) || 10{{exp|-8}} - 10{{exp|-10}} cm{{exp|-2}}sr{{exp|-1}}   || Instantanée, élastique (même longueur d’onde)
+|-
+| Fluorescence résonnante (ex : espèces métalliques) || 10{{exp|-13}} cm{{exp|-2}}sr{{exp|-1}} || Instantanée, inélastique (changement de longueur d’onde)
+|-
+| Fluorescence (ex : aérosols biologiques) || 10{{exp|-19}} cm{{exp|-2}}sr{{exp|-1}}  || Retardée, inélastique 
+|-
+| Diffusion Rayleigh (molécules) || 10{{exp|-27}} cm{{exp|-2}}sr{{exp|-1}} || Instantanée, élastique
+|-
+| Diffusion Raman (molécules) || 10{{exp|-30}} cm{{exp|-2}}sr{{exp|-1}} || Instantanée, inélastique
+|}
+Les observations lidar sont principalement représentées sous deux formes : 
+* Le profil lidar est usuellement la représentation de l'évolution du signal lidar E(z)(parfois corrigée de la dépendance en 1/z²) ou d'un paramètre dérivé du traitement de ce signal, en abscisse, en fonction de l'altitude z, en ordonnée. 
+* Une série temporelle lidar est une figure en 3 dimensions représentant l'évolution du signal lidar (en couleur) en fonction du temps (en abscisse), et de l'altitude (en ordonnée).
+[[Image:Profil&SerieTemporelleLidar.jpg|thumb|upright=2|center|Exemple de profil et série temporelle obtenus à l’aide d’un lidar atmosphérique (Rayleigh-Mie-Raman, Minorque, 2012)]]
+On peut classer les lidars atmosphériques suivant le phénomène d’interaction observé.
+
+=== Lidars à rétrodiffusion (Rayleigh, Mie ou Raman) ===
+Ces lidars sont pour la plupart basés sur des lasers puissants (énergie de plus de 10m[[Joule|J]] par impulsion) émettant entre le proche [[infrarouge]] et le proche [[ultraviolet]]. La [[longueur d'onde]] sera choisie courte si l'on souhaite maximiser l’interaction avec les molécules et petites particules (cas Rayleigh/Raman)<ref name="Measures">R. Measures, ''Laser Remote Sensing : Fundamentals and Applications'', 1992</ref>, ou longue dans le cas contraire (cas Mie). De nos jours, les [[laser Nd-YAG|lasers au néodyme]] (Nd), émettant à <span style="color:Maroon">'''1064nm'''</span> (proche infrarouge), <span style="color:Lime">'''532nm'''</span> (vert) et/ou <span style="color:DarkSlateBlue">'''355nm'''</span> (proche ultraviolet) par doublage/triplage de fréquence, sont souvent employés.
+[[File:LidarAtmospheriqueDetail.png|thumb|center|upright=3|Détail de l'interaction laser-atmosphère en lidar atmosphérique et éléments de calcul de l'équation lidar]]
+
+==== Dans le cas des lidars « Rayleigh » et/ou « Mie » ====
+On étudie la rétrodiffusion directe des constituants de l’atmosphère à la même longueur d’onde que celle qui a été émise. La diffusion est dite « [[diffusion élastique de rayonnement|élastique]] » : elle se produit sans échange d’énergie entre les [[photon]]s incidents et le diffuseur rencontré. On distingue la [[Diffusion Rayleigh|diffusion « Rayleigh »]] des molécules (la taille du diffuseur est largement inférieure à la longueur d’onde utilisée) de la [[diffusion de Mie|diffusion « de Mie »]] des particules/[[aérosols]] (la taille du diffuseur est du même ordre de grandeur que la longueur d’onde utilisée).
+
+L' ''' « équation lidar » ''' est dans ce cas l’expression de la distribution verticale d’[[énergie électromagnétique|énergie lumineuse]] rétrodiffusée par une tranche d'atmosphère d'épaisseur &Delta;z et captée par le lidar, en fonction de l’altitude z, que l'on cherche le plus souvent à résoudre pour trouver le profil d'extinction &alpha;(z) ou de rétrodiffusion &beta;(z)<ref name="Measures"/>:
+
+<math>E(z) = E_0 F_R(z) \frac{ T_R A_R}{z^2} \beta(\lambda,z) \Delta z \underbrace{\exp\left[-2 \int_0^z \alpha(\lambda,z')dz'\right]}_{T_{atm}^2(\lambda,z)}</math>
+
+Dans cette équation :
+* E<sub>0</sub> représente l’énergie initiale des impulsions émises (en J) ;
+* F{{ind|R}}(z) est la fonction de recouvrement entre le faisceau laser émis et le cône de réception du lidar à la distance z (à valeur entre 0 et 1) ;
+* &Delta;z = c/2 &Delta;t est la taille de la case distance ou résolution en distance (en m), fixée par &Delta;t qui est le maximum entre la durée de l’impulsion et le temps de réponse de la détection ;
+* T{{ind|R}} est la transmission (à valeur entre 0 et 1) et A{{ind|R}} la surface (en m{{exp|2}}) du système optique de réception ;
+* &alpha;(&lambda;,z) représente le [[coefficient d'extinction]] (ou [[atténuation#Ondes|atténuation]], en m{{exp|-1}}) à l'altitude z et à la longueur d’onde &lambda;, elle conditionne la transmission de l’atmosphère T<sub>atm</sub>(&lambda;);
+* &beta;(&lambda;,z) représente le coefficient de [[Diffusion des ondes#Applications|rétrodiffusion]] (en m{{exp|-1}}.sr{{exp|-1}}) à l'altitude z à la longueur d’onde &lambda;.
+
+Il est à noter que les coefficients d’extinction et de rétrodiffusion sont la somme de contributions particulaire (p) et moléculaire (m) évoluant différemment avec la longueur d'onde et l'altitude :
+
+<math>\begin{cases} \alpha(z) = \alpha_p(z) + \alpha_m(z),  \\ \beta(z) = \beta_p(z) + \beta_m(z) \end{cases}</math>
+
+Sachant que l'énergie exacte transmise E<sub>0</sub>T{{ind|R}} est rarement connue avec suffisamment de précision, l'équation lidar devient une équation à 5 inconnues au total. Il faut user d'hypothèses simplificatrices pour la résoudre. 
+* Dans la haute atmosphère (>10&nbsp;km), il n'y a habituellement pas de particules, et un lidar Rayleigh étudiant uniquement la diffusion des molécules peut remonter, en sachant que &alpha;{{ind|m}} = 8&pi;/3 &beta;{{ind|m}}, au coefficient d'extinction. Celui-ci étant proportionnel au nombre de molécules, on obtient ainsi des profils de [[densité]] de la [[stratosphère]] et de la [[mésosphère]]. D’autre part, à l’aide d’un [[interféromètre]] spécifique placé à la réception (détection dite à « haute résolution spectrale »), il est possible de mesurer le décalage spectral par [[effet Doppler]] du spectre de rétrodiffusion des molécules, donnant accès à la vitesse du vent<ref>D. Bruneau et al., ''Wind velocity lidar measurements by use of a Mach-Zender interferometer, comparison with a Fabry-Perot interferometer'', Applied Optics 43, 2004</ref>.
+* Dans la [[troposphère]] (<10&nbsp;km), il faut utiliser des hypothèses simplificatrices (profil de densité moléculaire, albédo des particules), pour réduire le nombre d’inconnues. On remonte ainsi au profil d'extinction des particules ([[aérosols]], gouttelettes ou cristaux dans les [[nuage]]s) en fonction de l'altitude, qui renseigne sur leur [[Concentration molaire|concentration]]. Différents concepts d’instruments récents (avec une mesure de la [[polarisation|dépolarisation]] de la lumière reçue, ou l’utilisation de plusieurs longueurs d’ondes à l’émission) peuvent contribuer à déterminer la nature des particules<ref>S. Burton et al., ''Aerosol classification using airborne high spectral resolution lidar measurements - methodology and examples'', Atmospheric Measurements Techniques 5, 2012</ref> ("spéciation" : [[pollution]], poussières, cendres, gouttelettes, cristaux) ; par exemple, la phase des nuages (eau liquide : pas de dépolarisation, cristaux de glace : forte dépolarisation).
+
+<u>Applications</u> :
+
+De manière générale, les systèmes Rayleigh/Mie sont très divers et conçus spécifiquement en vue d'une application particulière (sol ou aéroporté, particules/molécules, basse ou haute altitude). Beaucoup mettent en œuvre de multiples canaux (Rayleigh, Mie, Raman, dépolarisation...) simultanément pour maximiser le nombre d'observations.
+
+On notera que plusieurs modèles de lidar Rayleigh-Mie sont commercialisés depuis la moitié des années 2000<ref>Raymetrics, ''Backscatter LIDAR LB100-D200'', http://www.raymetrics.gr/#!backscatter-lidar/cfm5</ref> et commencent à équiper des réseaux de surveillance de la basse atmosphère à l'échelle nationale et internationale<ref>{{Lien web|langue = anglais|titre = A European Aerosol Research Lidar Network to Establish an Aerosol Climatology: EARLINET|url = http://www.earlinet.org/|site = |date = |consulté le = 15/11/2014}}</ref>. Un réseau mondial de lidar à micro-impulsions (émettant des milliers d'impulsions micro-Joule par seconde, plutôt que les quelques dizaines d'impulsions milli-Joule par seconde des lidars), MPLNET, a notamment été développé par la NASA<ref>Goddard Space Center, ''The Micro Pulse Lidar Network'', http://mplnet.gsfc.nasa.gov/</ref>.
+* Étude de la densité, du contenu en eau/glace, de la granulométrie et de la formation des nuages et brouillards<ref>G. Goyer & R. Watson, ''The Laser and its Application to Meteorology'', Bulletin of the American Meteorological Society 44, 1963</ref>.
+* "Ceilométrie" : mesure de la hauteur de la [[Couche Limite#Domaines d'application#Météorologie|couche limite atmosphérique]], à l'œuvre dans de multiples processus météorologiques<ref name="Barrett"/>.
+* Mesure de densité et de température de la moyenne atmosphère (10 à 100&nbsp;km) terrestre depuis le sol par lidar Rayleigh<ref>E. Silverberg & S. Poultney, ''Optical radar back scattering from the mesopause region during July and August 1967'', Technical Report, 1967</ref>{{,}}<ref>L. Sox et al, ''Middle Atmosphere Temperature Results from a New, High powered, Large Aperture Rayleigh Lidar'', 2012, http://digitalcommons.usu.edu/cgi/viewcontent.cgi?article=1001&context=spacegrant</ref> (mise en évidence d'[[onde de gravité|ondes de gravité]] dès 1967).
+* Étude de la [[pollution atmosphérique]] [[particules en suspension|particulaire]]<ref name="Barrett"/> (pour la compréhension de ses sources, son impact sur le [[réchauffement climatique]]<ref>F. Wagner et al, ''Comparison of the radiative impact of aerosols derived from lidar and sunphotometer measurements : example of an Indian aerosol plume'', Journal of Geophysical research, 2001</ref>, la prévision de la [[Surveillance de la qualité de l'air|qualité de l’air]]<ref>Y.-G. Wang et al., ''Assimilation of lidar signals: application to aerosol forecasting in the Mediterranean Basin'', Atmospheric Physics and Chemistry vol. 14, 2014</ref>) et des transports de particules [[aérosols]] ([[pollen]], [[Tempête de sable|poussières désertiques]]<ref>P. Chazette et al., ''The mobile Water vapor Aerosol Raman LIdar and its implication in the framework of the HyMeX and ChArMEx programs: application to a dust transport process'', Atmospheric Measurement Techniques 7, 2014, http://www.atmos-meas-tech.net/7/1629/2014/amt-7-1629-2014.pdf</ref>, [[cendre volcanique|cendres volcaniques]]<ref>A. Miffre et al., ''Interpretation of Accurate UV Polarization Lidar Measurements: Application to Volcanic Ash Number Concentration Retrieval'', Journal of Atmospheric and Oceanic Technology vol. 29, 2012, http://journals.ametsoc.org/doi/abs/10.1175/JTECH-D-11-00124.1</ref>…) depuis le sol ou par satellite (lidar CALIOP sur le satellite [[CALIPSO]], partenariat [[CNES]]/[[NASA]]).
+* Observation des nuages de glace<ref>J. Whiteway et al, ''Mars Water Ice Clouds and Precipitations'', Science vol. 235, 2009</ref> et poussières<ref>L ; Komguem et al, ''Phoenix LIDAR measurements of Mars atmospheric dust'', Icarus vol. 223, 2013</ref> dans l’atmosphère de [[Mars (planète)|Mars]] par le lidar de la sonde [[Phoenix (sonde spatiale)|Phoenix]] (NASA), inclus à la station météo canadienne MET<ref>''Meteorological Station (MET) built by the Canadian Space Agency'', Phoenix Mars Mission, http://phoenix.lpl.arizona.edu/science_met.php</ref>.
+* Mesure de la vitesse du vent par satellite pour l’amélioration des modèles de [[prévision météorologique]] (lidar ALADIN sur le futur satellite [[ADM-Aeolus]]<ref>O. Reitebuch, ''The Wind Lidar Mission ADM-Aeolus : Recent Science Activities and Status of Instrument Development'', 2008, http://www.pa.op.dlr.de/aeolus/Campaigns_Pub/Reitebuch1_ADM_Feb08.pdf</ref>), et potentiellement par avion pour la mesure de vitesse air sans [[sonde Pitot]] et la détection de turbulence en avant de l’appareil<ref>N. Cezard et al., ''Performance evaluation of a dual fringe-imaging Michelson interferometer for air parameter measurements with a 355nm Rayleigh–Mie lidar'', Applied Optics Vol. 48, 2009</ref>.
+{{images
+ |légende     = Applications des lidars Rayleigh et/ou Mie 
+ |image1      = Sample_data_from_the_Cloud_Physics_Lidar.jpg
+ |légende1    = Structure de nuages cirrus mis en évidence par le Cloud Physics Lidar (NASA), lidar aéroporté pour l'étude des nuages
+ |alternative1= Observations lidar CPL
+ |image2      = Profiles_from_Australia_and_New_Zealand_with_model_trajectories.jpeg
+ |légende2    = Cendres volcaniques observées au dessus de l'Australie par le lidar CALIOP du satellite Calipso
+ |alternative2= Observations lidar Calipso
+ |image3      = Lidar_Fall_Streaks.jpg
+ |légende3    = Chutes de neige (flèche) vues par le lidar de la sonde Phoenix sur Mars
+ |alternative3= Neige sur Mars
+ |position    = centre
+ |hauteur     = 180
+}}
+
+==== Cas particulier du « lidar vent » : lidar Mie à détection cohérente ====
+
+[[File:LidarVent3D.png|thumb|Reconstitution du vecteur vent en 3 dimensions par un lidar vent mesurant la vitesse radiale par effet Doppler suivant différents axes.]]
+Le système communément appelé « lidar vent » est un lidar à diffusion de Mie à détection cohérente hétérodyne, [[Radar#Radar monostatique, bistatique, multistatique|monostatique]] (une seule optique d'émission et de réception), pour la mesure du champ de vent dans la [[Couche Limite#Domaines d'application#Météorologie|couche limite atmosphérique]] : il donne vitesse et direction du vent en fonction de l'altitude, potentiellement jusqu'à 1 ou 2km, dans la couche proche du sol où des particules (aérosols) réfléchissent son émission.
+
+Le signal hétérodyne du lidar vent peut s'exprimer comme suit :
+
+<math>i_{het}(t) = S \sqrt{P_0P_{OL}} F_R(z=ct/2) \frac{4 T_R A_R}{c^2 t^2} \eta_{het}(z=ct/2) T_{atm}^2(\lambda,z=ct/2) \beta(\lambda,z=ct/2) \Delta z \cos \left(2 \pi (\Delta f_0+2\frac{V_r(z=ct/2)}{\lambda})t+\phi \right)</math>
+
+avec &Delta;f<sub>0</sub> le décalage fixe imposé à l’oscillateur local, V{{ind|r}} la vitesse radiale de la cible (projetée vers le lidar), &lambda; la longueur d’onde émise.
+
+L'[[amplitude]] du signal peut-être exploitée pour calculer la concentration des aérosols, mais on s'intéresse majoritairement à la [[Phase (onde)|phase]] du signal, dont la [[dérivée]] est proportionnelle à la vitesse radiale (projetée sur l'axe du faisceau) du vent V{{ind|r}} de par l'[[effet Doppler]].
+
+S'il n'a accès qu'à la composante radiale de la vitesse du vent, comme figuré ci-dessus, une mesure suivant 3 axes ou plus (avec une précision ~cm/s) suffit en théorie à reconstituer, par [[matrice de passage|changement de base]], le vecteur vent en 3 dimensions (avec une précision meilleure que le m/s). En pratique, on opère souvent un balayage du faisceau incliné suivant un cône autour de la verticale<ref name="Valla"/>, pour mesurer la vitesse suivant des axes multiples.
+
+<u>Applications</u> :
+
+Développé dans les années 1980 pour la [[aérologie|dynamique atmosphérique]] par la [[NOAA]] à l'aide d'imposants laser CO{{ind|2}} (longueur d'onde 10,6&nbsp;µm) continus puis des lasers solides Tm/Ho:YAG (2&nbsp;µm)<ref>M. Huffaker & M. Hardesty, ''Remote Sensing of Atmospheric Wind Velocities Using Solid-State and {{fchim|CO|2}} laser systems'', Proc. of IEEE 84, 1996)</ref>, il se répand plus largement dans les années 2000 grâce à la technologie des lasers à fibre à 1,55&nbsp;µm<ref>G. Pearson et al., ''Analysis of the performance of a coherent pulsed fiber lidar for aerosol backscatter applications'', Applied Optics 41, 2002</ref>{{,}}<ref name="Valla">M. Valla, ''Étude d'un lidar Doppler impulsionnel à laser Erbium fibré pour des mesures de champ de vent dans la couche limite de l'atmosphère'', Thèse de doctorat, Télécom Paris, 2005</ref> dont les composants issus de l'industrie des [[fibres optiques]] pour les [[télécommunications]] sont fabriqués en grande série. Il est à noter que la résolution en distance est parfois obtenue par défocalisation sur des systèmes fibrés à émission continue<ref>ZephIR lidar, ''Zephir 300 - Onshore wind lidar'', http://www.zephirlidar.com/products/zephir-300/</ref>, le rendement hétérodyne étant beaucoup plus élevé au point de focalisation d'un faisceau convergent.
+* Prospection du profil vertical de vent en amont de l'implantation d'un [[parc éolien]] pour prévoir sa production [[énergie éolienne|énergétique]]<ref name="Leosphere WindPower"/>.
+* Surveillance des [[turbulence de sillage|tourbillons de sillage]], en bout<ref>S. M. Hannon & J. A. Thomson, ''Aircraft wake vortex detection and measurement with pulsed solid-state coherent laser radar'', Journal of Modern Optics 41, 1994</ref> ou sur toute la longueur<ref>A. Dolfi-Bouteyre et al., ''Pulsed 1.5-μm LIDAR for Axial Aircraft Wake Vortex Detection based on High-Brightness Large-Core Fiber Amplifier'', IEEE Journal of Selected Topics in Quantum Electronics 15, 2009</ref> des pistes de décollage des [[aéroport]]s, pour régler les intervalles de départ dans les "hubs" internationaux à fort trafic tels que [[Aéroport de Paris-Charles-de-Gaulle|CDG]]<ref>F. Barbaresco, ''Radar/Lidar Sensors for Wind & Wake-vortex Monitoring on Airport: Results at Paris CDG'', http://www.wakenet.eu/fileadmin/user_upload/4th_major_WN3E-Workshop/presentations/WN3E_2_08_Barbaresco_SESAR12.2.2.pdf</ref>.
+* Cartographie des champs de vent autour des aéroports pour détecter les [[Cisaillement (météorologie)|cisaillements de vent]] dangereux à l'atterrissage<ref name="Leosphere Airport"/><ref>J.-P. Cariou et al., ''Long Range pulsed coherent lidar for real time wind monitoring in the planetary boundary layer'', Coherent Laser Radar Conference, 2012, http://www.leosphere.com/wp-content/uploads/2014/03/Long-range-scanning-pulsed-Coherent-Lidar-CLRC2012.pdf</ref>.
+* Mesure de vitesse air sur [[hélicoptère]]<ref>J.-P Cariou et al, ''All-fiber 1.5 μm cW coherent laser Anemometer DALHEC. Helicopter flight test Analysis'', 13th Cohernet Laser Radar Conference, 2005</ref>, les sondes de vitesse classiques étant fréquemment perturbées par le flux d'air du [[rotor]].
+
+{{images
+ |légende     = Applications des lidars vent 
+ |image1      = Goliath Poldermolen.jpg
+ |légende1    = Pour la prospection éolienne
+ |alternative1= Ferme éolienne de Goliath Poldermolen
+ |image2      = Airplane vortex denoicefied.jpg
+ |légende2    = Surveillance des tourbillons de sillage après décollage pour le trafic aérien
+ |alternative2= Tourbillon de sillage
+ |image3      = Roberts_International_Airport_runway_approach.JPEG
+ |légende3    = Surveillance des cisaillement de vent pour la sécurité des atterrissages
+ |alternative3= Approche piste d'aterrissage
+ |position    = centre
+ |hauteur     = 150
+}}
+
+==== Dans le cas des lidars « Raman » ====
+On étudie la [[diffusion Raman|rétrodiffusion « Raman »]] de la lumière sur un constituant de l’atmosphère à une longueur d’onde &lambda; différente de celle de l’émission &lambda;<sub>0</sub>, choisie a priori, et caractéristique d’un composé chimique. Toutefois, ce type de diffusion a typiquement moins d’une chance sur mille de se produire pour chaque [[photon]] diffusé, ce qui rend le signal ténu et difficile à isoler.
+
+La [[diffusion Raman]] est dite [[diffusion inélastique|« inélastique »]], c’est-à-dire qu’il y a échange d’énergie entre le photon et la [[molécule]] qui le diffuse ; le photon peut mettre en vibration ou en rotation la molécule au repos, ou absorber l’énergie de vibration ou de rotation d’une molécule excitée. De par la [[mécanique quantique]], les [[Niveau d'énergie|niveaux d’énergie]] vibro-rotationnels accessibles aux molécules sont quantifiés, et spécifiques à celles-ci. Le spectre de diffusion Raman consiste donc en une série de raies à des longueurs d’ondes particulières. C’est une « empreinte digitale » de la molécule. De plus, l’intensité des raies est directement proportionnelle à la concentration des molécules dans l’atmosphère, et leur importance relative dépend de la statistique d'excitation des molécules et peut renseigner sur la [[température]].
+
+Pour l’exploiter, il faut employer à la réception un [[monochromateur]] ou plusieurs filtres interférentiels sélectifs afin de sélectionner ces raies, ainsi qu’un laser de forte puissance pour compenser la faiblesse de la diffusion Raman par rapport à la diffusion élastique classique. Une mesure de jour en présence de lumière solaire est très difficile.
+
+En contrepartie, l’équation du lidar Raman est simple à résoudre car la rétrodiffusion n’est le fait que d’une seule espèce chimique. Elle s'écrit dans ce cas :
+
+<math>E(\lambda,z) = E_0 F_R(z) \frac{ T_R A_R}{z^2}  \underbrace{\exp\left[- \int_0^z \alpha(\lambda_0,z')dz'\right]}_{T_{atm}(\lambda_0,z')} \beta(\lambda_0,\lambda,z) \Delta z \underbrace{\exp\left[- \int_0^z \alpha(\lambda,z')dz'\right]}_{T_{atm}(\lambda,z')} </math>
+
+Dans cette équation :
+* on distingue la longueur d’onde d’observation &lambda; de la longueur d’onde émise &lambda;<sub>0</sub>;
+* &beta;(&lambda;<sub>0</sub>,&lambda;,z) représente le coefficient de [[Diffusion des ondes#Applications|rétrodiffusion]] Raman de l'espèce d'intérêt (en m{{exp|-1}}.sr{{exp|-1}}) à l'altitude z entre la longueur d’onde d’émission &lambda;<sub>0</sub>, et la longueur d’onde d’observation &lambda;. Elle est uniquement due aux molécules ciblées, et est au premier ordre directement proportionnelle à leur concentration.
+Cette équation se résout donc facilement si l’on dispose d’un canal de réception « élastique » en parallèle, ou si l’on fait le rapport de la diffusion Raman de deux espèces à des longueurs d'ondes proches.
+
+<u>Applications :</u>
+
+À longue portée dans l'atmosphère, cette technique relativement nouvelle (années 1990) nécessite des lasers puissants qui sont le plus souvent l’apanage des laboratoires de recherche, mais quelques lidars Raman atmosphériques commerciaux ont récemment été mis sur le marché<ref>Lidar Raman Raymetrics, http://www.raymetrics.gr/#!water-vapour-raman-lidar/cud2</ref>. On peut envisager à terme un véritable lidar météorologique qui fournirait [[température]] et [[humidité relative|humidité]] atmosphériques en lieu et place des [[radiosonde]]s actuellement utilisés en météorologie opérationnelle<ref name="Brocard"/>.
+* Utilisation de la rétrodiffusion du [[diazote]] atmosphérique comme une référence afin de résoudre totalement  le problème inverse du lidar Rayleigh-Mie (section précédente) ; on détermine alors précisément la réflectivité ([[albédo]]) des particules aérosols et potentiellement leur concentration massique dans la colonne d'air<ref>A. Ansmann et al., ''Combined Raman Elastic-Backscatter LIDAR for Vertical Profiling of Moisture, Aerosol Extinction, Backscatter and LIDAR Ratio'', Applied Physics B Vol. 55, 1992</ref>,
+* Mesure de la concentration de gaz traces spécifiques comme la [[vapeur d’eau]]<ref>S. H. Melfi et al, ''Observation of Atmospheric Fronts Using Raman Lidar Moisture Measurements'', Journal of Applied Meteorology 28, 1989, http://dx.doi.org/10.1175/1520-0450(1989)028<0789:OOAFUR>2.0.CO;2</ref>  et autres [[gaz à effet de serre]]<ref>D. N. Whiteman, ''Demonstration Measurements of Water Vapor, Cirrus Clouds, and Carbon Dioxide Using a High-Performance Raman Lidar'', Journal of Atmospheric and Oceanic Technology 24, 2007</ref>,
+* Mesure de la [[température]], de la [[troposphère]] jusqu’à la [[mésosphère]]<ref>A. Behrendt & J. Reichardt, ''Atmospheric temperature profiling in the presence of clouds with a pure rotational Raman lidar by use of an interference-filter-based polychromator'', Applied Optics 39, 2000</ref>{{,}}<ref>M. Radlach et al., ''Scanning rotational Raman lidar at 355 nm for the measurement of tropospheric temperature fields'', Atmospheric Physics and Chemistry 8, 2008, http://www.atmos-chem-phys.net/8/159/2008/acp-8-159-2008.pdf</ref>
+
+À plus courte portée, le lidar Raman serait applicable au contrôle à distance de l’alcoolémie des automobilistes par l’analyse du taux d’alcool dans l’habitacle de la voiture<ref>''Alcolaser: le radar capable de détecter les vapeurs d'alcool'', Technosciences, http://www.techno-science.net/?onglet=news&news=8377</ref> (bien que la réalité de cet appareil ait été remise en cause depuis). Plus vraisemblablement, il a servi à la détection de substances<ref>A. Sedlacek et al., ''Short-range, Non-contact Detection of Surface Contamination Using Raman Lidar'', Proc. of SPIE 4577, 2001, http://www.ecd.bnl.gov/pubs/BNL69445.pdf</ref>{{,}}<ref>S.K. Sharma et al, ''Stand-off Raman instrument for detection of bulk organic and inorganic compounds'', Proc. of SPIE 6554, 2007</ref>  et à la localisation de fuites de gaz<ref>H. Ninomiya et al., ''Development of Remote Sensing Technology for Hydrogen Gas Concentration Measurement Using Raman Scattering Effect'', IEEJ Transactions on Electronics, Information and Systems Vol. 129, 2009</ref>, toxiques ou dangereux, à distance de sécurité ou dans des installations inaccessibles.
+[[File:LidarInélastiquepng.png|thumb|upright=2.5|center|Lidar Inélastique|Spectre de la diffusion Raman et de la fluorescence exploitables par un lidar à diffusion inélastique pour le sondage d'espèces chimiques spécifiques]].
+
+=== Lidars à fluorescence ===
+
+La [[fluorescence]] est le phénomène par lequel suite à l'excitation d'une molécule ou d’un atome par [[absorption (optique)|absorption]] d'un [[photon]], un autre photon est immédiatement ré-émis (exemple de [[photoluminescence]]).
+
+Cette ré-émission peut se faire à la même énergie et longueur d'onde (fluorescence résonnante) ou à une énergie inférieure (et longueur d'onde plus grande) lorsqu'il y a eu une légère relaxation non radiative entre temps (10{{exp|-10}}s). Dans tous les cas, l'excitation à une durée de vie pouvant aller jusqu'à 10{{exp|-7}}s et la ré-émission se fait statistiquement avec un léger retard, en suivant une [[décroissance exponentielle]]. Il est à noter que contrairement à la diffusion, la ré-émission fluorescente est pratiquement [[isotrope]], c'est-à-dire qu'elle se fait indifféremment dans toutes les directions.
+
+La fluorescence peut évidemment être induite par un éclairement au laser (« FIL » ou « LIF » en anglais, fluorescence induite par laser) à distance :
+* Par exemple, un [[composé organique]] excité par un rayonnement ultraviolet peut ré-émettre de la lumière visible par fluorescence, sur un [[spectre électromagnétique|spectre]] étendu. La [[spectroscopie de fluorescence]] est une technique courante de vision et d'analyse en [[chimie organique]], [[biochimie]] et [[biologie]], car de nombreuses molécules organiques et du domaine du vivant sont fluorescentes. On s'affranchit ainsi aisément de la diffusion simple à la longueur d'onde d'excitation sur les autres constituants du milieu, mais l'énergie ré-émise étant dispersée sur un plus grand domaine spectral, cela complique sa récupération. 
+* On peut aussi exploiter la fluorescence résonnante qui existe aux raies d'émission/absorption proches des espèces métalliques de l'atmosphère. Elle a l'avantage de ne pas être étendue spectralement.
+
+==== Lidars à fluorescence moléculaire (non résonnante) ====
+
+[[File:Colonies de legionelles.jpg|thumb|Bactéries fluorescentes sous illumination ultraviolette]]
+
+Un lidar à fluorescence avec une émission dans le domaine [[ultraviolet]] et une réception filtrée dans le domaine [[spectre visible|visible]] est ainsi capable de détecter la présence et la concentration de molécules organiques [[fluorochrome]]s, à distance. Cela rend possible une télédétection spécifique du vivant dans l'[[atmosphère]] ou dans l'[[océan]].
+
+Par ailleurs, en visant des cibles dures tout en profitant de la résolution temporelle du lidar, on peut détailler la décroissance de la fluorescence avec le temps (la ré-émission peut durer plusieurs dizaines de nanosecondes), ce qui permet parfois de reconnaître le matériau de la cible (« spectrofluorométrie résolue dans le temps »).
+
+Une première difficulté du lidar à fluorescence moléculaire réside dans la dilution temporelle (plusieurs dizaines de nanosecondes) et spectrale (plusieurs dizaines voire centaines de nm) de l'énergie ré-émise. Ceci complique fortement l’isolation de la réception du lidar des sources de lumière parasite et limite la portée de ces systèmes. Dans beaucoup de cas visant une espèce particulière, une autre difficulté demeure le réglage précis de la longueur d’onde d’émission laser sur la raie d’absorption de l’espèce étudiée.
+
+D'autre part, si la détection de [[fluorochrome|fluorophores]] (particules fluorescentes) est aisée, la détermination précise de leur concentration peut devenir assez complexe :
+* en premier lieu, la forte absorption de l'espèce visée éteint rapidement l'énergie du laser.
+* de plus, à cause du retard de la fluorescence, qui évolue en exp(-t/&tau;), avec &tau; son temps caractéristique qui peut aller jusqu'à quelques dizaines de nanosecondes, l'excitation et la ré-émission durent souvent plus longtemps que l'impulsion laser et la résolution temporelle de détection, ce qui brouille spatialement la couche de fluorophores observée avec son environnement.
+
+Typiquement, dans l'atmosphère, pour une couche de concentration N{{ind|F}}(z) (en m{{exp|-3}}) dont le plancher se trouve à une altitude z{{ind|F}}, l'équation lidar devient dans le cas d'une fluorescence longue devant la durée d'impulsion et la résolution temporelle<ref name="Measures"/> :
+
+<math>E(\lambda,\lambda_0,z) = E_0 F_R(z) \frac{T_R A_R}{z^2} T_{atm}(\lambda,z) T_{atm}(\lambda_0,z_F) \frac{\sigma_{fluo}(\lambda_0,\lambda)}{4\pi} \Delta z  \left[N_F(z) \underbrace{\exp\left(-\int_{z_F}^z \alpha(\lambda_0,z')dz'\right)}_{\text{Extinction rapide}}\right] \star \underbrace{H_F(z)}_{\text{Brouillage}} </math>
+
+avec :
+* &lambda;<sub>0</sub> la longueur d'onde d'excitation et &lambda;<sub></sub> la longueur d'onde d'observation, 
+* &sigma;<sub>fluo</sub> la section efficace de fluorescence à la longueur d'onde d'observation (en m²), donnée par la section d'absorption &sigma;<sub>abs</sub>, le temps de vie radiatif du niveau excité &tau;<sub>rad</sub>, la répartition spectrale de la fluorescence <math>\mathcal{L}(\lambda)</math>, et la largeur du filtre à la réception &delta;&lambda; :
+
+<math>\sigma_{fluo}(\lambda_0,\lambda) = \sigma_{abs}(\lambda_0) \frac{\lambda_0}{\lambda} \frac{\tau}{\tau_{rad}} \mathcal{L}(\lambda) \delta\lambda</math>
+* <math>\star</math> le produit de convolution et H{{ind|F}} un terme de brouillage donné par :
+
+<math>H_F(z=ct) = H(t) \exp(-t/\tau)</math>
+
+où H(t) est la [[fonction de Heaviside]].
+
+Une correction apparentée à une [[déconvolution]] est possible pour remonter à la concentration des particules fluorophores. Il faut alors connaître leur coefficient d'extinction massique et le temps caractéristique de fluorescence, ce qui implique de savoir leur nature exacte et d'avoir caractérisé ces propriétés en laboratoire. Dans le cas où la durée de l'impulsion n'est pas négligeable, il faut également connaître la forme de celle-ci.
+
+<u>Applications</u> :
+* Dans l'atmosphère, détection à distance des [[arme biologique|attaques biologiques]] par dispersion d’aérosols<ref>M. Trost, ''Detection of biological aerosols using Induced Fluorescence Lidar'', http://sabotin.ung.si/~sstanic/CRA/lidar/papers/200812_Trost_MLidar.pdf</ref>.
+* Dans l'océan, détection de [[dégazage (marine)|dégazages]], [[marée noire|fuites de pétrole]]<ref>R. Karpicz et al., ''Oil spill fluorosensing lidar for inclined onshore or shipboard operation'', Applied Optics 45, 2006</ref> et du [[plancton]]<ref>S. Palmer et al., ''Ultraviolet Fluorescence LiDAR (UFL) as a Measurement Tool for Water Quality Parameters in Turbid Lake Conditions'', Remote Sensing 5, 2013</ref>, cartographie de la biodiversité et de la santé des [[récif corallien|récifs coralliens]]<ref>M. Sasano et al., ''Development of boat-based fluorescence imaging lidar for coral monitoring'', Proceedings of the 12th International Coral Reef Symposium, 2012, http://www.icrs2012.com/proceedings/manuscripts/ICRS2012_5A_7.pdf</ref> par un lidar embarqué sur un bateau.
+* Sur cible dure, en [[archéologie]], reconnaissance des [[matériau]]x de construction par spectroscopie résolue dans le temps, ou mise en évidence de la détérioration biologique d’un site historique<ref name="Raimondi"/>.
+
+==== Lidars à fluorescence résonnante ====
+Plusieurs espèces non organiques de la haute atmosphère peuvent aussi être caractérisées par leur spectroscopie de fluorescence dite résonnante, si elles sont excitées à la longueur d'onde d'une [[raie spectrale]] d'absorption/émission. On étudie ainsi les confins de la [[mésosphère]] où des espèces métalliques telles que le [[sodium]] et le [[fer]] sont constamment déposées par les [[météore]]s, ou l'azote [[ion]]isé de l’[[ionosphère]], malgré la distance (~100&nbsp;km)<ref>X. Chu et al, ''Lidar Measurements of Winds in the Upper Atmosphere'', Univ. of Colorado at Boulder, http://cires.colorado.edu/events/lidarworkshop/LWG/Oct12/presentations/010-WindLidarUpperAtm-CHU.pdf</ref>.
+{| class="wikitable"
+|-
+! Espèce !! Na !! Fe !! K !! Ca !! N{{ind|2}}<sup>+</sup>
+|-
+| Longueur d'onde || <span style="color:DarkOrange">589.1nm</span> || <span style="color:Indigo">372.1nm</span> ||  <span style="color:Maroon">766.6/770.1nm</span> || <span style="color:DarkBlue">422.8nm</span> || <span style="color:Indigo">393.8nm</span>
+|}
+
+[[Image:Starfire Optical Range - sodium laser.jpg|thumb|FASOR Na lidar|FASOR, puissant lidar à fluorescence sodium, émettant à 589nm]]
+
+Le principe physique est le même pour les différentes espèces citées :
+* un laser continu asservi à la longueur d'onde voulue par [[absorption saturée]] dans une cellule du gaz visé joue le rôle d'oscillateur maître. 
+* son émission est décalée par un [[modulateur acousto-optique]] de quelques centaines de MHz (&Delta;f) alternativement de part et d'autre de la raie pour sonder les atomes de différentes classes de vitesse.
+* un laser impulsionnel injecté par ce flux produit une émission impulsionnelle plus puissante.
+* trois échantillonnages à -&Delta;f, 0 et +&Delta;f suffisent à reconstituer la fréquence centrale (liée à la vitesse radiale du vent par l'[[effet Doppler]]) et l'[[largeur Doppler d'une raie spectrale|élargissement]] (lié à la [[température]]) de la raie d'absorption des atomes sondés.
+
+Parce que les impulsions laser sont émises en résonance avec la raie de l'espèce étudiée, la puissance ré-émise est magnifiée d'un facteur 10{{exp|14}} par rapport à la simple [[diffusion Rayleigh]].
+
+En utilisant un laser modeste (impulsions de quelques 10 mJ) et un télescope de taille métrique, un lidar à fluorescence résonnante peut sonder température et vent au-delà de la [[mésopause]] (80km) en quelques minutes.
+Ces deux mesures sont directes (sans supposition de densité de l'air ou d'équilibre hydrostatique) et simultanées.
+
+<u>Applications</u> :
+* Mesure de la densité, de la température et des flux de la haute atmosphère via la spectroscopie de fluorescence des espèces métalliques atmosphérique (de 80 à 100km environ)<ref>G. Mégie & J.E. Blamont, ''Laser sounding of atmospheric sodium : interpretation in terms of global atmospheric parameters'', Planetary and Space Sciences 25, 1977</ref>.
+* Étude de l’[[ionosphère]] (couche externe de l’atmosphère où apparaisse les aurores boréales) via la fluorescence de l’azote ionisé<ref>R Garner & P. Dao, ''Molecular nitrogen fluorescence lidar for remote sensing of the auroral ionosphere'', Journal of Geophysical Research 100, 1995</ref>.
+=== Lidars à absorption différentielle : « DIAL » ===
+
+[[Image:LidarDIAL.jpg|thumb|upright=2|Espèces gazeuses mesurables par lidar DIAL et lasers utilisés. C'est dans les bandes d'absorption de l'atmosphère (maxima de la courbe) que l'on trouve les raies d'absorption des molécules indiquées (invisibles à cette échelle car souvent très étroites) pouvant servir au DIAL.]]
+Un puissant concurrent du lidar à diffusion Raman (très ténue et difficile à observer de jour ou à grande distance) pour la mesure de concentration de gaz traces dans l'atmosphère est le lidar à absorption différentielle (en anglais : "'''Di'''ifferential '''A'''bsorption '''L'''idar", DIAL).
+
+Son principe est le suivant :
+* on émet des impulsions à deux longueurs d'ondes, l'une (dite "ON") correspondant à une [[raie spectrale]] d'[[Absorption (optique)|absorption]] d'une espèce moléculaire de l'atmosphère, l'autre (dite "OFF") très proche mais hors de cette raie d'absorption,
+* la lumière à ces deux longueurs d'ondes est absorbée très différemment lors de sa propagation, mais a priori réfléchie de manière égale par les constituants de l'atmosphère,
+* à la réception, on calcule la différence d'atténuation des signaux ON et OFF, a priori proportionnelle à la concentration de l'espèce recherchée.
+
+En effet, d'après l'équation lidar, on a pour chacune des deux longueurs d'ondes ON et OFF :
+
+<math>\begin{cases} E(\lambda_{ON},z) = E_{ON} F_R(z) \frac{T_R A_R}{z^2} \beta(\lambda_{ON},z) \Delta z \exp\left[-2 \int_0^z \alpha(\lambda_{ON},z')dz'\right],  \\ E(\lambda_{OFF},z) = E_{OFF} F_R(z) \frac{T_R A_R}{z^2} \beta(\lambda_{OFF},z) \Delta z \exp\left[-2 \int_0^z \alpha(\lambda_{OFF},z')dz'\right] \end{cases}</math>
+
+d'où pour le ratio des énergies :
+
+<math>\frac{E(\lambda_{ON},z)}{E(\lambda_{OFF},z)} = \frac{\beta(\lambda_{ON},z)}{\beta(\lambda_{OFF},z)} \exp\left[2 \int_0^z \alpha(\lambda_{ON},z')-\alpha(\lambda_{OFF},z')dz'\right]</math>
+
+Or, si N(z) est le profil de concentration de l'espèce recherchée (en m{{exp|-3}}), &sigma;<sub>abs</sub> sa section efficace d'absorption (en m{{exp|2}}), et &lambda;<sub>ON</sub> proche de &lambda;<sub>OFF</sub> :
+
+<math>\begin{cases} \alpha(\lambda,z) \simeq N(z)\sigma_{abs}(\lambda) \\ \beta(\lambda_{ON}) \simeq \beta(\lambda_{OFF}) \end{cases}</math>
+
+Donc, avec &Delta;&sigma;<sub>abs</sub> la différence de section efficace d'absorption entre les deux longueurs d'onde &lambda;<sub>ON</sub> et &lambda;<sub>OFF</sub> :
+
+<math>\frac{E(\lambda_{ON},z)}{E(\lambda_{OFF},z)} \simeq \exp\left[2 \int_0^z N(z')\Delta\sigma_{abs}dz'\right]</math>
+
+et on peut déterminer :
+
+<math> N(z) \simeq \frac{1}{2\Delta \sigma_{abs}} \frac{\partial}{\partial z} \left[\ln \frac{E(\lambda_{ON},z)}{E(\lambda_{OFF},z)} \right] </math>
+
+La figure ci-dessus répertorie quelques espèces gazeuses mesurables par cette technique<ref name="Gibert">F. Gibert, ''Lidar à absorption différentielle'', www.cnrm.meteo.fr/ecole_lidar/IMG/pdf/Gibert-DIAL_heterodyne.pdf</ref>, en plaçant leur raies d'absorption sur le spectre UV-Visible-IR, et les [[liste des types de laser|types de laser]] utilisés pour ce faire. Il est à noter que certaines espèces présentes sous forme d'aérosols sont aussi sondables de cette manière<ref>K. Douglass, ''Progress and promise in DIAL lidar'', http://www.nist.gov/pml/div682/lidar.cfm</ref>.
+
+Certains lidar DIAL utilisent la technique de la détection hétérodyne<ref name="Gibert"/> pour s'affranchir totalement du parasite de la lumière ambiante et effectuer des mesures de jour comme de nuit.
+
+Plusieurs difficultés subsistent :
+* Il faut disposer d'un laser bi-fréquence [[laser accordable|accordable]] en longueur d'onde pour viser le sommet de la raie d'absorption de l'espèce à mesurer (&lambda;<sub>ON</sub>), ainsi que son pied (&lambda;<sub>OFF</sub>).
+* La précision de cette mesure dépend très fortement de l'absorption cumulée de l'espèce mesurée dans l'atmosphère (épaisseur optique). Il existe une épaisseur optique optimale à atteindre, qui contraint le choix de la raie d'absorption, du laser et donc la conception du système d'émission dans son ensemble, en fonction de la configuration d'observation (depuis le sol, depuis un avion, faible ou forte concentration, gamme d'altitudes d'intérêt...).
+* Plus important encore, le phénomène de décalage par la pression ("pressure shift") de raies spectrales d'absorption étroites biaise les mesures lidar faites sur de grandes gammes d'altitude, puisqu'au fur et à mesure que la pression décroît en montant dans l'atmosphère, la raie s'écarte de &lambda;<sub>ON</sub> et l'absorption diminue. Il faut donc placer &lambda;<sub>ON</sub> au flan de la raie à pression standard, pour qu'elle se rapproche plus du maximum avec l'altitude, et étalonner rigoureusement ce biais pour le soustraire aux mesures.
+
+<u>Applications</u> :
+* Surveillance de la [[couche d'ozone]] stratosphérique<ref>NASA Langley DIAL factsheet, http://www.nasa.gov/centers/langley/news/factsheets/DIAL.html</ref>{{,}}<ref name="Browell">E. V. Browell et al., ''Differential absorption lidar (DIAL) measurements from air and space'', Applied Physics B 67, 1998</ref>{{,}}<ref>J. A. Seabrook et al., ''LIDAR measurements of Arctic boundary layer ozone depletion events over the frozen Arctic Ocean'', Journal of Geophysical Research: Atmospheres 117, 2011</ref> (entre 15 et 30&nbsp;km d'altitude), dont la [[trou de la couche d'ozone|disparition partielle]] est l'un des problèmes environnementaux majeurs de la fin du vingtième siècle. L'ozone a été le premier gaz trace de l'atmosphère mesuré par DIAL dans les années 1980 grâce à ses raies d'absorption larges et marquées dans l'ultraviolet.
+* Mesure du [[rapport de mélange]] en [[vapeur d'eau]] atmosphérique (et éventuellement de la température<ref>V. Wulfmeyer & J. Bösenberg, ''Ground-based differential absorption lidar for water-vapor profiling: assessment of accuracy, resolution, and meteorological applications'', Appl. Opt. 37, 1998</ref>), y compris depuis l'espace<ref name="Browell"/>.
+* Mesure des concentrations de gaz à effet de serre tel que le [[dioxyde de carbone]]<ref>W. Grant et al., ''{{fchim|CO|2}} DIAL measurements of water vapor'', Applied Optics 26, 1987</ref> ou le [[méthane]]<ref>T. Refaat, ''Performance evaluation of a 1.6-µm methane DIAL system from ground, aircraft and UAV platforms'', Optics Express 21, 2013</ref>. Le satellite franco-allemand MERLIN<ref>eoPortal, ''MERLIN : Methane Remote Sensing Mission'', https://directory.eoportal.org/web/eoportal/satellite-missions/m/merlin</ref>, en développement, devrait mesurer à partir de 2018 le méthane atmosphérique par la méthode DIAL ''intégré'' (la mesure n'est pas résolue en altitude, pour avoir un signal suffisant).
+* Mesure de gaz polluants divers dans la [[troposphère]] (basse atmosphère) : [[ozone troposphérique|ozone]], [[dioxyde de soufre]], [[dioxyde d'azote]], [[toluène]], éventuellement de manière simultanée par un lidar DIAL à 5 longueurs d'ondes<ref>D. Weidauer et al., ''Ozone, VOC, NO2, and Aerosol Monitoring in Urban and Industrial Areas Using a Mobile DIAL System'', in Advances in Atmospheric Remote Sensing with Lidar, 1997</ref>, système commercialisé par la société allemande Elight jusqu'au début des années 2000.
+
+=== Lidars « supercontinuum » ===
+
+[[Image:Supercontinuum in a microstructured optical fiber.PNG|thumb|upright=1|Laser à supercontinuum dans une fibre microstructurée]]
+
+À l'aide de [[laser femtoseconde|lasers à impulsions femtosecondes]], ou maximisant les [[optique non linéaire|effets non-linéaires]] dans des [[fibre optique|fibres optiques]] ou cristaux spécifiques, il est possible de générer des impulsions lumineuses de spectre très large, couvrant des bandes spectrales de plusieurs microns (lumière blanche). On appelle une telle émission « [[supercontinuum]] ».
+
+Ceci a amené à envisager un lidar supercontinuum, pour la résolution de l'équation lidar à toutes longueurs d'ondes afin d'accéder simultanément à la concentration des espèces gazeuses polluantes<ref>P. Rairoux et al., ''Remote sensing of the atmosphere using ultrashort laser pulses'', Applied Physics B 71, 2000, http://www.teramobile.org/publications/rairoux.pdf</ref>, aux distributions de taille des aérosols<ref>G. Méjean et al., ''Towards a supercontinuum-based infrared lidar'', Applied Physics B 77, 2003, http://www.teramobile.org/publications/lidar_ir.pdf</ref>, et aux molécules organiques fluorescentes<ref>G. Méjean et al., ''Remote detection and identification
+of biological aerosols using a femtosecond terawatt lidar system'', Applied Physics B 78, 2004, http://www.teramobile.org/publications/ribo_ufraps.pdf</ref>. Le système franco-allemand "Téramobile"<ref>Projet Teramobile, http://www.teramobile.org/teramobile.html</ref> en est une incarnation renommée.
+
+Toutefois, de par la dispersion spectrale de leur puissance et les effets dissipatifs de la propagation dans l'atmosphère des faisceaux en régime de forte puissance crête, un problème de bilan de liaison limite la portée et par conséquent les applications de ces systèmes. Les derniers travaux à longue portée que l'on peut trouver remontent à la fin des années 2000<ref>D. Brown et al., ''Supercontinuum lidar applications for measurements of atmospheric constituents'', Proc. SPIE 6950 : Laser Radar Technology and Applications, 2008</ref>, alors que les travaux récents se concentrent sur la discrimination de gaz à courte portée, sans résolution en distance<ref>A. Dobroc, ''Etude et réalisation de dispositifs optiques à large couverture spectrale pour la détection multi-gaz à distance'', thèse, Ecole Polytechnique, 2013, https://tel.archives-ouvertes.fr/file/index/docid/959752/filename/manuscrit_these_Dobroc_Alexandre.pdf.</ref>.
+
+== Notes et références ==
+{{Références|colonnes=2}}
+
+== Bibliographie ==
+
+'''Travaux historiques :'''
+* L. D. Smullin & G. Fiocco, [Project Luna See : A lunar laser ranging experiment], Institute of Electrical and Electronics Engineers Proceedings 50, 1962
+* G. Goyer & R. Watson, ''The Laser and its Application to Meteorology'', Bulletin of the American Meteorological Society 44, 1963.
+* G. Mégie & J.E. Blamont, ''Laser sounding of atmospheric sodium : interpretation in terms of global atmospheric parameters'', Planetary and Space Sciences 25, 1977. Premier lidar atmosphérique en France.
+
+'''Ouvrages de référence :'''
+* R. M. Measures, ''Laser Remote Sensing : Fundamentals and Applications'', Krieger Pub. Co., Malabar FL, 1992. {{ISBN|0-89464-619-2}}
+* A. P. Cracknell, L. Hayes, ''Introduction to Remote Sensing'', Taylor and Francis Ed., London, 1991. {{ISBN|978-0415335799}}
+* C. Weitkamp, ''Lidar : Range-Resolved Optical Remote Sensing of the Atmosphere'', Springer , 2005. {{ISBN|978-0387400754}}
+
+== Voir aussi ==
+{{Autres projets|commons=Category:LIDAR}}
+
+=== Articles connexes ===
+* [[Radar]], [[Sonar]], [[Sodar]]
+* [[Laser]], [[Liste des différents types de laser]], [[Supercontinuum]]
+* [[Effet Doppler]]
+* [[Télédétection]]
+* [[Télémètre laser]], [[Vibromètre laser]], [[Scanner tridimensionnel]], assimilables à des lidars de courte portée.
+* Techniques laser à courte portée à ne pas confondre avec le lidar : [[Spectroscopie sur plasma induit par laser|LIBS]] (spectroscopie sur plasma induit par laser), [[CARS]] (spectroscopie Raman anti-Stockes cohérente), [[Vélocimétrie laser]].
+* Le principe du lidar appliqué au contrôle de fibres optiques : technique [[OTDR]].
+* [[CALIPSO|CALIOP]], lidar franco-américain sur le satellite CALIPSO, en orbite depuis avril 2006, et [[ADM-Aeolus|ALADIN]], lidar français en préparation sur le satellite ADM-AEOLUS.
+
+=== Liens externes ===
+* J. Stoker, USGS, Introduction au lidar aéroporté (en anglais) [http://www.crssa.rutgers.edu/rs07/agenda/J%20Stoker_lidar101_nj_workshop.pdf]
+* X. Chu, Lidar à fluorescence résonnante (en anglais) [http://cires.colorado.edu/events/lidarworkshop/LWG/Oct12/presentations/010-WindLidarUpperAtm-CHU.pdf]
+* P. Flamant, Fondamentaux lidar [http://lidar.abct.lmd.polytechnique.fr/uploads/documents/cours_lidar/Flamant_Fond1.pdf]
+* J. Pelon, Missions spatiales lidar [http://www.cnrm.meteo.fr/ecole_lidar/IMG/pdf/20._lidar_spatiaux_nar.pdf]
+
+{{Palette|Instruments de mesure météorologique|Capteur}}
+{{Portail|physique|électricité et électronique|Information géographique|Optique}}
+
+[[Catégorie:Optique ondulatoire]]
+[[Catégorie:Laser]]
+[[Catégorie:Instrument optique]]
+[[Catégorie:Instrument de mesure météorologique]]

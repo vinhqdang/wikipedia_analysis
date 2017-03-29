@@ -1,0 +1,215 @@
+[[Image:IDN-utopia-greek.jpg|thumbnail|Example of Greek IDN with [[country code top-level domain]] in [[Latin alphabet]]]]
+An '''internationalized domain name''' ('''IDN''') is an [[Internet]] [[domain name]] that may contain labels scripted in language-specific alphabets, such as [[Arabic alphabet|Arabic]], [[Chinese character|Chinese]], [[Cyrillic alphabet|Cyrillic]], [[Devanagari]], [[Hebrew alphabet|Hebrew]], and many others. These names contain one or more non-[[ASCII]] characters that may be letters with [[diacritic]]s or entirely different non-Latin scripts.
+
+The [[Domain Name System]], which performs a lookup service to translate user-friendly names into network addresses for locating Internet resources, is restricted to the use of ASCII characters, a technical limitation that initially set the standard for acceptable domain names. The internationalization of domain names is a technical solution to translate names written in language-native scripts into an ASCII text representation that is compatible with the Domain Name System. Internationalized domain names can only be used with applications that are specifically designed for such use, and they require no changes in the infrastructure of the Internet. 
+
+IDN was originally proposed in December 1996 by Martin D<U+00FC>rst<ref>{{cite web|author=D<U+00FC>rst, Martin J.|title=Internet Draft: Internationalization of Domain Names|url=http://tools.ietf.org/html/draft-duerst-dns-i18n-00.txt|date=December 10, 1996|publisher=The Internet Engineering Task Force (IETF), Internet Society (ISOC)|accessdate=2009-10-31}}</ref><ref>{{cite news|author=D<U+00FC>rst, Martin J.|title=URLs and internationalization|url=http://lists.w3.org/Archives/Public/uri/1996Dec/0038.html|date=December 20, 1996|publisher=World Wide Web Consortium|accessdate=2009-10-30}}</ref> and implemented in 1998 by Tan Juay Kwang and Leong Kok Yong under the guidance of T.W. Tan. After much debate and many competing proposals, a system called '''Internationalizing Domain Names in Applications''' (IDNA)
+<ref>RFC 3490, ''IDN in Applications'', Faltstrom, Hoffman, Costello, Internet Engineering Task Force (2003)</ref> was adopted as a standard, and has been implemented in several [[top level domains]].
+
+In IDNA, the term ''internationalized domain name'' means specifically any domain name consisting only of labels to which the IDNA ToASCII algorithm (see below) can be successfully applied.  In March 2008, the [[IETF]] formed a new IDN working group to update<ref>{{cite web |url=http://tools.ietf.org/html/draft-ietf-idnabis-protocol |title=Internationalized Domain Names in Applications (IDNA): Protocol |author=[[John Klensin]] |publisher=[http://tools.ietf.org/wg/idnabis IETF IDNAbis WG] |year=2008 }}</ref> the current IDNA protocol.
+
+In October 2009, the [[ICANN|Internet Corporation for Assigned Names and Numbers]] (ICANN) approved the creation of [[country code top-level domain]]s (ccTLDs) in the Internet that use the IDNA standard for native language scripts.<ref>{{cite press release|title=ICANN Bringing the Languages of the World to the Global Internet|url=http://www.icann.org/en/announcements/announcement-30oct09-en.htm|date=October 30, 2009|publisher=Internet Corporation For Assigned Names and Numbers (ICANN)|accessdate=2009-10-30}}</ref><ref name=BBC-200910>{{cite news|title=Internet addresses set for change |url=http://news.bbc.co.uk/2/hi/technology/8333194.stm|date=October 30, 2009|publisher=[[BBC News]]|accessdate=2009-10-30}}</ref>
+
+==Internationalizing Domain Names in Applications==
+Internationalizing Domain Names in Applications (IDNA) is a mechanism defined in 2003 for handling internationalized domain names containing non-[[ASCII]] characters.
+While much of the [[Domain Name System]] can technically support non-ASCII characters, applications such as [[e-mail]] and [[web browser]]s restrict domain names to what can be used as a [[hostname]]. Rather than redesigning the existing DNS infrastructure, it was decided that non-ASCII domain names should be converted to a suitable ASCII-based form by [[web browser]]s and other user applications; IDNA specifies how this conversion is to be done.
+
+IDNA was designed for maximum [[backward compatibility]] with the existing DNS system, which was designed for use with names using only a subset of the ASCII character set.
+
+An IDNA-enabled application is able to convert between the restricted-ASCII and non-ASCII representations of a domain, using the ASCII form in cases in which it is needed (such as for DNS lookup), but being able to present the more readable non-ASCII form to users. Applications that do not support IDNA will not be able to handle domain names with non-ASCII characters, but will still be able to access such domains if given the (usually rather cryptic) ASCII equivalent.
+
+[[ICANN]] issued guidelines for the use of IDNA in June 2003, and it was already possible to register [[.jp]] domains using this system in July 2003 and [[.info]]<ref>Mohan, Ram, [http://www.iana.org/domains/idn-tables/tables/info_de_1.0.html German IDN], [ http://www.afilias.info/register/idn/DE-INFO_IDN_Language_Table-v1-1.pdf German Language Table], March 2003</ref> domains in March 2004. Several other top-level domain registries started accepting registrations in 2004 and 2005. IDN Guidelines were first created<ref>Dam, Mohan, Karp, Kane & Hotta, [http://www.icann.org/general/idn-guidelines-20jun03.htm IDN Guidelines 1.0], ICANN, June 2003</ref> in June 2003, and have been updated<ref>Karp, Mohan, Dam, Kane, Hotta, El Bashir, [http://www.icann.org/general/idn-guidelines-14nov05.htm IDN Guidelines 2.0], ICANN, November 2005</ref> to respond to [[phishing]] concerns in November 2005.  An ICANN working group focused on country code domain names at the top level was formed in November 2007<ref>{{cite news|author=Jesdanun, Anick (Associated Press)|url=http://abcnews.go.com/Technology/wireStory?id=3813334|title=Group on Non-English Domains Formed|date=2 November 2007|accessdate=2007-11-02}}</ref> and promoted jointly by the country code supporting organization and the Governmental Advisory Committee.
+
+[[Mozilla Application Suite|Mozilla]] 1.4, [[Netscape Navigator|Netscape]] 7.1, [[Opera (web browser)|Opera]] 7.11 and [[Safari (web browser)|Safari]] were among the first applications to support IDNA.  A browser plugin is available for Internet Explorer 6 to provide IDN support. Internet Explorer 7.0<ref>[http://msdn2.microsoft.com/en-us/library/ms649487.aspx What's New in Internet Explorer 7]</ref><ref>[http://msdn.microsoft.com/en-us/library/bb250505.aspx International Domain Name Support in Internet Explorer 7]</ref> and [[Windows Vista]]'s URL APIs provide native support for IDN.<ref>[http://msdn.microsoft.com/en-us/library/dd318142(VS.85).aspx Handling Internationalized Domain Names (IDNs)]</ref>
+
+==ToASCII and ToUnicode==
+The conversions between ASCII and non-ASCII forms of a domain name are accomplished by algorithms called ToASCII and ToUnicode. These algorithms are not applied to the domain name as a whole, but rather to individual labels. For example, if the domain name is www.example.com, then the labels are www, example, and com, and ToASCII or ToUnicode would be applied to each of these three separately.
+
+The details of these two algorithms are complex, and are specified in the [[Request for Comments|RFC]]s linked at the end of this article. The following gives an overview of their behaviour.
+
+ToASCII leaves unchanged any ASCII label, but will fail if the label is unsuitable for DNS.
+If given a label containing at least one non-ASCII character, ToASCII will apply the [[Nameprep]] algorithm (which converts the label to lowercase and performs other normalization) and will then translate the result to ASCII using [[Punycode]]<ref name="rfc3492">RFC 3492, ''Punycode: A Bootstring encoding of Unicode for Internationalized Domain Names in Applications (IDNA)'', A. Costello, The Internet Society (March 2003)</ref>
+before prepending the four-character string "{{sic|xn--|hide=y}}". This four-character string is called the ''ACE prefix'', where ACE means ASCII Compatible Encoding, and is used to distinguish Punycode encoded labels from ordinary ASCII labels.
+Note that the ToASCII algorithm can fail in a number of ways; for example, the final string could exceed the 63-character limit for the DNS. A label on which ToASCII fails cannot be used in an internationalized domain name.
+
+ToUnicode reverses the action of ToASCII, stripping off the ACE prefix and applying the Punycode decode algorithm. It does not reverse the Nameprep processing, since that is merely a normalization and is by nature irreversible.
+Unlike ToASCII, ToUnicode always succeeds, because it simply returns the original string if decoding would fail. In particular, this means that ToUnicode has no effect on a string that does not begin with the ACE prefix.
+
+==Example of IDNA encoding==
+{{Main|Punycode}}
+As an example of how IDNA works, suppose the domain to be encoded is ''B<U+00FC>cher.ch'' (<U+201C>B<U+00FC>cher<U+201D> is [[German language|German]] for <U+201C>books<U+201D>, and [[.ch]] is the [[Country code top-level domain|country domain]] for [[Switzerland]]). This has two labels, ''B<U+00FC>cher'' and ''ch''. The second label is pure ASCII, and so is left unchanged. The first label is processed by Nameprep to give ''b<U+00FC>cher'', and then by Punycode to give ''bcher-kva'', and then has ''{{sic|xn--|hide=y}}'' prepended to give ''{{sic|xn--|hide=y}}bcher-kva''. The final domain suitable for use with the DNS is therefore ''{{sic|xn--|hide=y}}bcher-kva.ch''.
+
+==Top-level domain implementation==
+The ICANN board approved the establishment of an internationalized top-level domain name working group within the Country Code Names Supporting Organisation (ccNSO) in December 2006.<ref>{{cite web
+|title=Proposed Final Implementation Plan for IDN ccTLD Fast Track Process
+|url=http://ccnso.icann.org/workinggroups/idnc-wg-board-proposal-25jun08.pdf
+|format=PDF
+|date=September 30, 2009
+|publisher=ICANN|accessdate=2009-10-30}}</ref> They resolved in June 2007 ''inter alia'' to proceed and asked the IDNC Working Group to prepare a proposal, which the group delivered in June 2008, "''to recommend mechanisms to introduce a limited number of non-contentious IDN ccTLDs, associated with the ISO 3166-1 two-letter codes in a short time frame to meet near term demand.''" The group proposed a methodology using ICANN's Fast Track Process<ref>{{cite web|url=http://www.icann.org/en/topics/idn/fast-track/|title=IDN ccTLD Fast Track Process|publisher=ICANN}}</ref> based on the ICANN charter to work with the [[Internet Assigned Numbers Authority]] (IANA): 1) Identify technical basis of the TLD strings and country code specific processes, select IDN ccTLD personnel and authorities, and prepare documentation; 2) Perform ICANN due diligence process for technical proposal and publish method; 3) Enter delegation process within established IANA procedures.
+
+Starting November 16, 2009, nations and territories may apply for IDN TLDs, which may be expected to be operational in mid-2010.<ref name=BBC-200910 /> Non-[[Latin alphabet]] scripts are used by more than half of the world's 1.6 billion Internet users.<ref name=BBC-200910 /> ICANN expects that Arabic, Chinese, and Russian domains are likely to be the first implementations.<ref name=BBC-200910 />
+
+==Timeline==
+* 12/1996: Martin D<U+00FC>rst's original Internet Draft proposing UTF5 (the first example of what is known today as an ASCII-compatible encoding (ACE)) <U+2013> UTF-5 was first defined by Martin D<U+00FC>rst at the University of Z<U+00FC>rich in [http://tools.ietf.org/html/draft-duerst-dns-i18n-00|draft-duerst-dns-i18n-00.txt] [http://archive.minc.org/about/history/] [http://www.connect-world.com/articles/old_articles/Dr-TanTinWee.htm]
+* 03/1998: Early Research on IDN at National University of Singapore (NUS), Center for Internet Research (formerly Internet Research and Development Unit <U+2013> IRDU) led by Prof. Tan Tin Wee (IDN Project team <U+2013> Lim Juay Kwang and Leong Kok Yong) and subsequently continued under a team at Bioinformatrix Pte. Ltd. (BIX Pte. Ltd.) <U+2013> an NUS spin-off company led by Prof. S. Subbiah.
+* 07/1998: Geneva INET'98 conference with a BoF discussion on iDNS and APNG General Meeting and Working Group meeting.
+* 07/1998: Asia Pacific Networking Group (APNG, now still in existence [http://www.apng.org] and distinct from a gathering known as [[APSTAR]] [http://www.apstar.org]) iDNS Working Group formed. [http://www.apng.org/old/commission/idns/]
+* 10/1998: [[James Seng]] was recruited to lead further IDN development at BIX Pte. Ltd. by Prof. S. Subbiah.
+* 02/1999: iDNS Testbed launched by BIX Pte. Ltd. under the auspices of APNG with participation from [[CNNIC]], [[Japan Network Information Center|JPNIC]], KRNIC, TWNIC, THNIC, HKNIC and SGNIC led by [[James Seng]] [http://www.minc.org/about/history/idns/idomain/]
+* 02/1999: Presentation of Report on IDN at Joint APNG-APTLD meeting, at APRICOT'99
+* 03/1999: Endorsement of the IDN Report at APNG General Meeting 1 March 1999.
+* 06/1999: Grant application by APNG jointly with the Centre for Internet Research (CIR), National University of Singapore, to the International Development Research Center (IDRC), a Canadian Government funded international organisation to work on IDN for IPv6. This APNG Project was funded under the Pan Asia R&D Grant administered on behalf of IDRC by the Canadian Committee on Occupational Health and Safety (CCOHS). Principal Investigator: Tan Tin Wee of National University of Singapore. [http://www.apng.org/old/commission/idns/ipv6/]
+* 07/1999 Tout, Walid R. (WALID Inc.) Filed IDNA patent application number US1999000358043 Method and system for internationalizing domain names. Published 2001-01-30 [http://www.delphion.com/details?&pn=US06182148__]
+* 07/1999: [http://mirrors.isc.org/pub/www.watersprings.org/pub/id/draft-jseng-utf5-00.txt]; Renewed 2000 [http://www.nic.ad.jp/ja/idn/mdnkit/download/documents/mdnkit-2.4-doc/reference/draft/draft-jseng-utf5-01.txt] Internet Draft on UTF5 by James Seng, Martin D<U+00FC>rst and Tan Tin Wee.
+* 08/1999: APTLD and APNG forms a [[working group]] to look into IDN issues chaired by Kilnam Chon. [http://www.minc.org/about/history/idns/iname/]
+* 10/1999: BIX Pte. Ltd. and National University of Singapore together with New York Venture Capital investors, [[General Atlantic Partners]], spun-off the IDN effort into 2 new Singapore companies <U+2013> i-DNS.net International Inc. and i-Email.net Pte. Ltd. that created the first commercial implementation of an IDN Solution for both domain names and IDN email addresses respectively.
+* 11/1999: [[IETF]] IDN Birds-of-Feather in Washington was initiated by i-DNS.net at the request of IETF officials.
+* 12/1999: i-DNS.net InternationalPte. Ltd. launched the first commercial IDN. It was in [[Taiwan]] and in [[Chinese character]]s under the top-level IDN TLD ".gongsi" (meaning loosely ".com") with endorsement by the Minister of Communications of Taiwan and some major Taiwanese ISPs with reports of over 200 000 names sold in a week in Taiwan, Hong Kong, Singapore, Malaysia, [[People's Republic of China|China]], Australia and USA.
+* Late 1999: Kilnam Chon initiates Task Force on IDNS which led to formation of MINC, the Multilingual Internet Names Consortium. [http://www.minc.org/oldminc/old/meetings/]
+* 01/2000: [[IETF]] IDN Working Group formed chaired by [[James Seng]] and [[Marc Blanchet]]
+* 01/2000: The second ever commercial IDN launch was IDN TLDs in the Tamil Language, corresponding to .com, .net, .org, and .edu. These were launched in India with IT Ministry support by i-DNS.net International.
+* 02/2000: Multilingual Internet Names Consortium(MINC) Proposal BoF at IETF Adelaide. [http://www.minc.org/oldminc/old//meetings/minc_20000327.html]
+* 03/2000: APRICOT 2000 Multilingual DNS session [http://www.apricot.net/apricot2000/index2.html]
+* 04/2000: WALID Inc. (with IDNA patent pending application 6182148) started Registration & Resolving Multilingual Domain Names.
+* 05/2000: Interoperability Testing WG, MINC meeting. San Francisco, chaired by Bill Manning and Y. Yoneya 12 May 2000. [http://www.minc.org/oldminc/old/meetings/sanfrancisco_20000512/testing_SFO.htm]
+* 06/2000: Inaugural Launch of the Multilingual Internet Names Consortium (MINC) in Seoul [http://www.minc.org] to drive the collaborative roll-out of IDN starting from the Asia Pacific. [http://www.minc.org/about/history/]
+* 07/2000: Joint Engineering TaskForce (JET) initiated in Yokohama to study technical issues led by JPNIC (K.Konishi)
+* 07/2000: Official Formation of CDNC [[Chinese Domain Name Consortium]] to resolve issues related to and to deploy [[Han Character]] domain names, founded by [[CNNIC]], [[TWNIC]], [[HKNIC]] and [[MONIC]] in May 2000. [http://www.cdnc.org/english/introduction/index.html] [http://www.cdnc.org/english/news/index.html]
+* 03/2001: [[ICANN]] Board IDN Working Group formed
+* 07/2001: Japanese Domain Name Association : JDNA Launch Ceremony (July 13, 2001) in Tokyo, Japan.
+* 07/2001: Urdu Internet Names System (July 28, 2001) in Islamabad, Pakistan, Organised Jointly by SDNP and MINC. [http://urduworkshop.sdnpk.org]
+* 07/2001: Presentation on IDN to the Committee Meeting of the Computer Science and Telecommunications Board, National Academies USA (JULY 11<U+2013>13, 2001) at University of California School of Information Management and Systems, Berkeley, CA. [http://www.nap.edu/books/0309096405/html/390.html]
+* 08/2001: MINC presentation and outreach at the Asia Pacific Advanced Network annual conference, Penang, Malaysia 20 August 2001
+* 10/2001: Joint MINC-CDNC Meeting in Beijing 18<U+2013>20 October 2001
+* 11/2001: [[ICANN]] IDN Committee formed
+* 12/2001: Joint ITU-WIPO Symposium on Multilingual Domain Names organised in association with MINC, 6<U+2013>7 Dec 2001, International Conference Center, Geneva.
+* 01/2003: Free implementation of StringPrep, Punycode, and IDNA release in GNU Libidn.
+* 03/2003: Publication of RFC 3454, RFC 3490, RFC 3491 and RFC 3492
+* 06/2003: Publication of [http://www.icann.org/general/idn-guidelines-20jun03.htm ICANN IDN Guidelines for registries] Adopted by .cn, .info, .jp, .org, and .tw registries.
+* 05/2004: Publication of RFC 3743, Joint Engineering Team (JET) Guidelines for Internationalized Domain Names (IDN) Registration and Administration for [[Chinese character|Chinese]], Japanese, and Korean
+* 03/2005: First Study Group 17 of ITU-T meeting on Internationalized Domain Names [http://www.itu.int/md/T05-SG17-050330/sum/en]
+* 05/2005: .IN ccTLD (India) creates expert IDN Working Group to create solutions for 22 official languages
+* 04/2006: ITU Study Group 17 meeting in Korea gave final approval to the Question on Internationalized Domain Names [http://www.itu.int/ITU-T/newslog/Multilingual+Internet+Work+Progresses.aspx]
+* 06/2006: Workshop on IDN at ICANN meeting at Marrakech, Morocco
+* 11/2006: ICANN GNSO IDN Working Group created to discuss policy implications of IDN TLDs.  [[Ram Mohan]] elected Chair of the IDN Working Group.{{Citation needed|date=May 2008}}
+* 12/2006: ICANN meeting at S<U+00E3>o Paulo discusses status of lab tests of IDNs within the root.
+* 01/2007: Tamil and Malayalam variant table work completed by India's C-DAC and [[Afilias]]
+* 03/2007: ICANN GNSO IDN Working Group completes work, [[Ram Mohan]] presents report at ICANN Lisboa meeting.<ref>Mohan, Ram, [http://gnso.icann.org/correspondence/gnso-idn-wg-outcomes-ram.pdf GNSO IDN Working Group, Outcomes Report] (PDF), ICANN</ref>
+* 10/2007: Eleven IDNA [[top-level domain]]s were added to the [[root nameserver]]s in order to evaluate the use of IDNA at the top level of the DNS.<ref>[http://www.icann.org/announcements/announcement-2-09oct07.htm On Its Way: One of the Biggest Changes to the Internet]</ref><ref>[http://www.icann.org/announcements/announcement-15oct07.htm My Name, My Language, My Internet: IDN Test Goes Live]</ref>
+* 01/2008: ICANN: Successful Evaluations of .test IDN TLDs <ref>[http://icann.org/announcements/announcement-31jan08.htm Successful Evaluations of .test IDN TLDs]</ref>
+* 04/2008: [[IETF]] IDNAbis WG chaired by [[Vint Cerf]] continues the work to update IDNA <ref>[[purlnet:IDNAbis|IDNAbis overview]] (2008)</ref>
+* 06/2008: ICANN board votes to develop final fast-track implementation proposal for a limited number of IDN ccTLDS.<ref>[http://isoc-ny.org/wiki/ICANN_-_Paris/IDN_CCTLD_discussion ICANN - Paris/IDN CCTLD discussion - Wiki<!-- Bot generated title -->]</ref>
+* 10/2008: ICANN Seeks Interest in IDN ccTLD Fast-Track Process <ref>[http://www.icann.org/en/announcements/announcement-02oct08-en.htm ICANN Seeks Interest in IDN ccTLD Fast-Track Process]</ref>
+* 9/2009: ICANN puts IDN ccTLD proposal on agenda for Seoul meeting in October 2009<ref>[http://www.icann.org/en/announcements/announcement-2-30sep09-en.htm Proposed Final Implementation Plan: IDN ccTLD Fast Track Process], 30 September 2009</ref>
+* 10/2009: ICANN approves the registration of IDN names in the root of the DNS through the IDN ccTLD Fast-Track process at its meeting in Seoul, Oct. 26<U+2013>30, 2009.<ref>[http://www.siliconrepublic.com/news/article/14274/new-media/regulator-approves-multi-lingual-web-addresses Regulator approves multi-lingual web addresses], Silicon Republic, 30.10.2009</ref>
+
+==Top-level domains known to accept IDN registration==
+* [[.ar]]: (<U+00E1>, <U+00E0>, <U+00E2>, <U+00E9>, <U+00E8>, <U+00EA>, <U+00ED>, <U+00EC>, <U+00F3>, <U+00F2>, <U+00F4>, <U+00FA>, <U+00FC>, <U+00F1>, <U+00E7>) Starting in 2009. See [http://www.nic.ar/faqidn.html FAQ]
+* [[.ac]]: see [http://www.nic.ac/AC-IDN-Policy.pdf details]
+* [[.ae]]
+* [[.at]]: see [http://www.nic.at/de/service/technische_informationen/idn/zeichentabelle_konverter/ details]
+* [[.bd]]
+* [[.biz]] NeuLevel/NeuStar supports Chinese, Danish, Finnish, German, Hungarian, Icelandic, Japanese, Korean, Latvian, Lithuanian, Polish, Portuguese, Norwegian, Spanish, Swedish IDN in .biz:<ref>[http://www.neulevel.biz/idn/ NeuStar IDN details]</ref>
+* [[.br]] (May 9, 2005) for Portuguese (Brazilian) names: see [http://registro.br/anuncios/20050504.html details]
+* [[.cat]] (February 14, 2006) for Catalan names: see [http://domini.cat/en_faq/index.php#p4.3. details]
+* [[.com]] see [http://www.verisign.com/information-services/naming-services/internationalized-domain-names/ details]
+* [[.ch]] (March 1, 2004)
+* [[.cl]] (September 21, 2005), (<U+00E1>, <U+00E9>, <U+00ED>, <U+00F3>, <U+00FA>, <U+00FC>, <U+00F1>): see [http://www.nic.cl/CL-IDN-policy.html details]
+* [[.cn]]: see [http://www.cnnic.cn details]
+* [[.de]] (March 1, 2004): see [http://www.denic.de/en/domains/idns/liste.html details]
+* [[.dk]] (January 1, 2004), (<U+00E6>, <U+00F8>, <U+00E5>, <U+00F6>, <U+00E4>, <U+00FC>, & <U+00E9>): see [http://<U+00E6><U+00F8><U+00E5>.dk-hostmaster.dk details]
+* [[.es]] (October 2, 2007), (<U+00E1>, <U+00E0>, <U+00E9>, <U+00E8>, <U+00ED>, <U+00EF>, <U+00F3>, <U+00F2>, <U+00FA>, <U+00FC>, <U+00F1>, <U+00E7>, l<U+00B7>l): see [https://www.nic.es/descargas/Instruccion_DG.pdf details]
+* [[.eu]] (June 26, 2009) <ref>[http://www.eurid.eu/en/content/ec-adopts-idn-amendments-eu-regulation EC adopts IDN amendments to .eu regulation]. News archive of The European Registry of Internet Domain Names. June 26, 2009.</ref><ref>[http://europa.eu/rapid/pressReleasesAction.do?reference=IP/09/1044&format=HTML&aged=0&language=EN&guiLanguage=en '.eu' internet domain to be available also in Cyrillic and Greek alphabets]. Europa.eu Press Release. June 26, 2009.</ref>
+* [[.fi]] (September 1, 2005): see [http://www.ficora.fi/en/index/palvelut/palvelutaiheittain/fiverkkotunnukset/aakkostenkaytto.html details]
+* [[.gr]] (July 4, 2005) for Greek names: see [https://grweb.ics.forth.gr/english/gr_char_en.html details]
+* [[.hk]] (March 8, 2007) for [[Chinese characters]]: see [https://www.hkdnr.hk/aboutHK/faq_7.jsp details]
+* [[.hu]]
+* [[.id]] Indonesia
+* [[.info]] (March 19, 2003): see [http://www.afilias.info/register/idn/ details]
+* [[.io]]: see [http://www.nic.io/IO-IDN-Policy.pdf details]
+* [[.ir]]: see [http://www.nic.ir/idn details]
+* [[.is]] (July 1, 2004): see [http://www.isnic.is/english/ details]
+* [[.jp]] (July 2003), for Japanese characters (Kanji, hiragana & katakana)
+* [[.kr]] (August 2003), for Korean characters
+* [[.li]] (March 1, 2004)
+* [[.lt]] (March 30, 2003), (<U+0105>, <U+010D>, <U+0119>, <U+0117>, <U+012F>, <U+0161>, <U+0173>, <U+016B>, <U+017E>): see [http://www.domreg.lt/static/doc/public/idn_symbols-en.pdf details]
+* [[.lv]] (2004): see [http://www.nic.lv/DNS/lvdomain.php details]
+* [[.museum]] (January 20, 2004): see [http://about.museum/idn/ details]
+* [[.mn]] Mongolian
+* [[.net]]: see [http://www.verisign.com/products-services/naming-and-directory-services/naming-services/internationalized-domain-names/index.html details]
+* [[.no]] (February 9, 2004): see [http://www.norid.no/domeneregistrering/idn/idn_nyetegn.en.html details]
+* [[.nu]]: see [http://www.nunames.nu/Local-Language.cfm details]
+* [[.org]] (January 18, 2005): see [http://www.pir.org/index.php?db=content/FAQs&tbl=FAQs_Registrant&id=2 details]
+* [[.pe]] (December 8, 2007): see [http://www.nic.pe/nuevas_politicas_docs.php details]
+* [[.pl]] (September 11, 2003): see [http://www.dns.pl/IDN/idn_intro_eng.html details]
+* [[.pt]] (July 1, 2005) for Portuguese characters
+* [[.se]] (October 2003), for [[Swedish language|Swedish]] characters, summer 2007 also for [[Finnish language|Finnish]], [[Me<U+00E4>nkieli]], [[Romani language|Romani]], [[Sami languages|Sami]], and [[Yiddish language|Yiddish]]: see [http://www.iis.se/docs/teckentabell-03.pdf details]
+* [[.sh]]: see [http://www.nic.sh/SH-IDN-Policy.pdf details]
+* [[.su]] ({{As of|2008|alt=April 28, 2008}}) see [http://www.fid.su/english/?newsid=1207819620 details]
+* [[.tm]]: see [http://www.nic.tm/TM-IDN-Policy.pdf details]
+* [[.tr]] (November 14, 2006): see [http://www.nic.tr details]
+* [[.tw]] Traditional [[Chinese characters]]: see [http://www.twnic.net.tw details]
+* [[.vn]] Vietnamese: see [http://www.vnnic.net.vn/tenmientv/bangma.htm details]
+* [[.ws]]
+
+==Non-IDNA or non-ICANN registries that support non-ASCII domain names==
+There are other registries that support non-ASCII domain names. The company ThaiURL.com in Thailand supports .com registrations via its own modified domain name system, [[ThaiURL]]. Because these companies, and other organizations that offer modified DNS systems, do not subject themselves to [[ICANN]]'s control, they must be regarded as [[alternate DNS root]]s.  Domains registered with them will therefore not be supported by most [[Internet service provider]]s, and as a result most users will not be able to look up such domains without manually configuring their computers to use the alternate DNS.
+
+==ASCII spoofing concerns==
+{{Main|IDN homograph attack}}
+The use of Unicode in domain names makes it potentially easier to [[spoofing attack|spoof]] web sites visited by [[World Wide Web]] users as the visual representation of an IDN string in a web browser may appear identical to another{{Citation needed|date=October 2009}}, depending on the font used. For example, Unicode character U+0430, [[A (Cyrillic)|Cyrillic small letter a]], can look identical to Unicode character U+0061, Latin small letter a, used in English.
+
+In December 2001 [[Evgeniy Gabrilovich]] and [[Alex Gontmakher]], both from the [[Technion]] Institute of Technology in Israel, published a paper titled "The Homograph Attack",<ref>Evgeniy Gabrilovich and Alex Gontmakher, [http://www.cs.technion.ac.il/~gabr/papers/homograph_full.pdf The Homograph Attack], Communications of the ACM, 45(2):128, February 2002</ref> which described an attack that used Unicode URLs to spoof a website URL. To prove the feasibility of this kind of attack, the researchers successfully registered a variant of the domain name ''microsoft.com'' which incorporated Russian language characters.
+
+These kind of problems were anticipated before IDN was introduced, and guidelines were issued{{Citation needed|date=October 2009}} to registries to try to avoid or reduce the problem. For example, it was advised that registries only accept characters from the Latin alphabet and that of their own country, not all of Unicode characters, but this advice was neglected by major [[TLD]]s.{{Citation needed|date=October 2009}}
+
+On February 7, 2005, [[Slashdot]] reported that this exploit was disclosed at the [[Hacker (computing)|hacker]] conference [[Shmoocon]].<ref>[http://www.shmoo.com/idn/ IDN hacking disclosure by shmoo.com]</ref>  Web browsers supporting IDNA appeared to direct the URL <nowiki>http://www.p<U+0430>ypal.com/</nowiki>, in which the first ''a'' character is replaced by a Cyrillic ''<U+0430>'', to the site of the well known payment site [[Paypal]], but actually led to a spoofed web site with different content.
+
+Starting with version 7, [[Internet Explorer]] was capable of using IDNs, but it imposes restrictions on displaying non-ASCII domain names based on a user-defined list of allowed languages and provides an anti-phishing filter that checks suspicious Web sites against a remote database of known phishing sites.{{Citation needed|date=October 2009}}
+
+On February 17, 2005, Mozilla developers announced that the next software version still has IDN support enabled, but displaying the [[Punycode]] URLs instead, thus thwarting some attacks exploiting similarities between ASCII and non-ASCII characters, while still permitting access to web sites in an IDN domain.
+
+Since then, both Mozilla and Opera have announced that they will be using per-domain whitelists to selectively switch on IDN display for domain run by registries which are taking appropriate [[homograph spoofing attack]] precautions.<ref>[http://www.mozilla.org/projects/security/tld-idn-policy-list.html Mozilla IDN policy]</ref>  As of September 9, 2005, the most recent version of [[Mozilla Firefox]] as well as the most recent Internet Explorer display the spoofed Paypal URL as "http://www.{{sic|xn--|hide=y}}pypal-4ve.com/", clearly different from the original.
+
+[[Safari (web browser)|Safari's]] approach is to render problematic character sets as Punycode. This can be changed by altering the settings in Mac OS X's system files.<ref>{{cite web|url=http://docs.info.apple.com/article.html?artnum=301116|accessdate=2008-08-07|title= About Safari International Domain Name support}}</ref>
+
+==See also==
+* [[Internationalized Resource Identifier]]
+
+==References==
+{{reflist|2}}
+
+==External links==
+{{external links}}
+* [http://www.idnblog.com/ IDN Blog]
+* [http://www.idntools.com/ IDN Tools]
+* RFC 3454 (Stringprep)
+* RFC 3490 (IDNA)
+* RFC 3491 (Nameprep)
+* [http://www.icann.org/general/idn-guidelines-14nov05.htm ICANN Guidelines for the Implementation of Internationalized Domain Names v2.0]
+* [http://www.icann.org/general/idn-guidelines-20jun03.htm ICANN Guidelines for the Implementation of Internationalized Domain Names v1.0]
+* [http://gnso.icann.org/correspondence/gnso-idn-wg-outcomes-ram.pdf IANA Repository of TLD IDN Practices]
+* [http://www.gnu.org/software/libidn/ GNU Libidn, an implementation of the Stringprep, Punycode and IDNA specifications.]
+* [http://idn.icann.org/ IDN TLD evaluation gateway]<!--
+* [http://www.imc.org/idna/ Internet Mail Consortium IDNA test tool] (includes Perl source code)-->
+* [http://www.atm.tut.fi/list-archive/ietf-announce/msg13572.html IANA e-mails explaining the final choice of ACE prefix]
+* [http://www.unicode.org/reports/tr36/ Unicode Technical Report #36 - Security Considerations for the Implementation of Unicode and Related Technology]
+* [http://www.icann.org/topics/idn.html ICANN Internationalized Domain Names].
+* [http://www.iana.org/assignments/idn/ IDN Language Table Registry]
+
+[[Category:Domain name system]]
+
+[[ca:Nom de domini internacionalitzat]]
+[[cs:IDN]]
+[[de:Internationalizing Domain Names in Applications]]
+[[es:Nombre de dominio internacionalizado]]
+[[fr:Nom de domaine internationalis<U+00E9>]]
+[[ko:<U+AD6D><U+C81C><U+D654> <U+B3C4><U+BA54><U+C778>]]
+[[is:IDN-l<U+00E9>n]]
+[[it:Nome di dominio internazionalizzato]]
+[[ja:<U+56FD><U+969B><U+5316><U+30C9><U+30E1><U+30A4><U+30F3><U+540D>]]
+[[no:Internasjonaliserte domenenavn]]
+[[pl:Internationalized Domain Name]]
+[[ru:IDN]]
+[[sv:Internationalized Domain Name]]
+[[zh:<U+56FD><U+9645><U+5316><U+57DF><U+540D>]]

@@ -1,0 +1,81 @@
+{{homonyme|Josephson}}
+En [[physique]], l’'''effet Josephson'''<ref name=josephson>B.D. Josephson, Phys. Lett., 1, 251 (1962).</ref>se manifeste par l'apparition d'un [[courant électrique|courant]] entre deux matériaux [[supraconductivité|supraconducteurs]] séparés par une couche faite d'un matériau [[isolant électrique|isolant]] ou [[métal]]lique non-supraconducteur. 
+
+Dans le premier cas, on parle de « jonction Josephson S-I-S » (supraconducteur-isolant-supraconducteur) et dans le second de « jonction S-M-S ».
+
+On distingue de plus deux types d'effet Josephson <ref name=barone>Barone A, Paterno G. ''Physics and Applications of the Josephson Effect''. New York: John Wiley & Sons; 1982.</ref>, l'effet Josephson « continu » (''D.C. Josephson effect'' en [[anglais]]) et l'effet Josephson « alternatif » (''A.C. Josephson effect''). Ces deux effets ont été prédits par [[Brian David Josephson]] en [[1962]] à partir de la [[théorie BCS]]. Ces travaux lui ont valu le [[prix Nobel de physique]] en [[1973]], avec [[Leo Esaki]] et [[Ivar Giaever]].
+
+Bien que les [[paire de Cooper|paires de Cooper]] ne puissent pas exister dans un isolant ou un métal non-supraconducteur, si la couche qui sépare les deux supraconducteurs est suffisamment mince, elles peuvent la traverser par [[effet tunnel]] et garder leur cohérence de phase. C'est la persistance de cette cohérence de phase qui donne lieu à l'effet Josephson.
+
+== Effet Josephson alternatif ==
+
+À cause de l'effet tunnel des paires de Cooper, le courant supraconducteur à travers la barrière séparant les supraconducteurs est : 
+:<math> I_s=I_c \sin (\phi_1-\phi_2) \,</math>
+où ''I<sub>c</sub>'' est un courant caractéristique de la jonction et <math>\phi_{1,2}</math> sont les phases supraconductrices des deux supraconducteurs. 
+
+D'autre part, la phase supraconductrice étant canoniquement conjuguée avec le nombre de particules, elle obéit à l'équation du mouvement : 
+
+:<math> \hbar \frac{d (\phi_1-\phi_2)}{dt} = 2 e (V_1-V_2) \,</math>
+
+où ''e'' est la [[charge électrique|charge]] de l'[[électron]], et ''V<sub>1</sub> - V<sub>2</sub>'' est la différence de potentiel existant entre les deux supraconducteurs. Il en résulte que : 
+
+:<math> I(t)=I_c \sin \left(\frac{2e}{\hbar} (V_1 -V_2) t +\varphi_0\right) \,</math>
+
+Autrement dit, l'application d'une différence de potentiel entraîne des [[oscillation]]s du courant supraconducteur à une [[Vitesse angulaire|pulsation]] <math>\frac{2 e}{h} (V_1-V_2)</math>. L'effet Josephson alternatif fournit ainsi un moyen de [[métrologie|mesurer]] le rapport <math>e/h</math> ou de relier les standards du [[volt]] et de la [[Seconde (temps)|seconde]]<ref name=LNE> Laboratoire National de métrologie et d'essai : « [http://www.lne.fr/fr/r_et_d/metrologie_electrique/metrologie_electrique_quantique_EJ.shtml ''Représentation du Volt par l'effet Josephson''] » </ref>.
+
+== Effet Josephson continu ==
+L'équation du paragraphe ci-dessus, liant le courant à la différence de tension appliquée à la jonction, peut tout à fait s'écrire à tension nulle. On obtient alors un courant continu Ic caractéristique de la jonction et appelé "courant critique". Dit autrement, une jonction soumise à une différence de tension nulle est le siège d'un courant continu de paires de Cooper.  
+
+L'effet Josephson continu s'observe souvent en appliquant un [[champ magnétique]] à une jonction Josephson. Le champ magnétique provoque un déphasage entre les paires de Cooper qui traversent la jonction d'une manière analogue à l'[[effet Aharonov-Bohm]]. Ce déphasage peut produire des [[interférence]]s destructives entre les paires de Cooper, ce qui entraîne une réduction du courant maximal pouvant traverser la jonction. Si <math>\Phi</math> est le flux magnétique à travers la jonction, on a la relation : 
+
+:<math> I_s^{max}= I_c \frac{\sin \frac{\pi \Phi}{\Phi_0}}{\frac{\pi \Phi}{\Phi_0}} \,</math> 
+
+== Les jonctions Josephson : un dispositif à hautes performances ==
+Les jonctions Josephson, par leur propriétés physiques, constituent un dispositif de choix pour plusieurs domaines d'application :
+* C'est le constituant élémentaire du [[SQUID]] (''Superconducting Quantum Interference Device''), le plus fin détecteur de champ magnétique (et donc de courant). Un SQUID est constitué de 2 jonctions en parallèles dans une boucle.
+* C'est aussi le constituant de base de la logique rapide dite RSFQ (''Rapid Single Flux Quantum'') où elles jouent le rôle du transistor et autoriseraient des cadences en centaines de GHz.
+* C'est aussi un des détecteurs de photons les plus performants. On parle alors de jonctions supraconductrices à effet tunnel (STJ en anglais). Ces dispositifs combinent une sensibilité ultime jusqu'aux photons uniques dans une large bande spectrale (des [[rayons X]] au proche [[infrarouge]]) avec une bonne résolution en énergie.
+
+== Note et références ==
+<references /> <!-- aide : http://fr.wikipedia.org/wiki/Aide:Notes et références -->
+* {{en}} J. M. Ziman, ''Principles of the Theory of Solids'', Cambridge University Press ;
+* {{en}} M. Tinkham, ''Introduction to Superconductivity'', McGraw-Hill ;
+* {{en}} P. W. Anderson, ''Basic Notions of Condensed Matter Physics'', Addison-Wesley.
+
+
+== Liens externes ==
+* B. Dutoit : « [http://lanoswww.epfl.ch/studinfo/courses/Cours_supra/squid/default.htm ''EPFL: SQUIDs et effet Josephson''] » ;
+* Laboratoire National de métrologie et d'essai : « [http://www.lne.fr/fr/r_et_d/metrologie_electrique/metrologie_electrique_quantique_EJ.shtml ''Représentation du Volt par l'effet Josephson''] » ;
+* Les jonctions comme détecteurs de photons : [http://tel.archives-ouvertes.fr/tel-00009943/en/ ''thèse de l'INPG, 2004'']
+* {{en}} [[:en:SQUID|SQUID]]
+* {{en}} [[:en:RSFQ|RSFQ]]
+* {{en}} [http://nobelprize.org/physics/laureates/1973/index.html Fondation ''Nobel'' : l'effet Josephson] ;
+* {{en}} [http://hyperphysics.phy-astr.gsu.edu/Hbase/solids/squid.html HyperPhysics : magnétomètres ''SQUID''].
+
+{{portail physique}}
+
+[[Catégorie:Physique de la matière condensée]]
+[[Catégorie:Physique quantique]]
+
+{{Link FA|cs}}
+
+[[ca:Efecte Josephson]]
+[[cs:Josephsonův jev]]
+[[da:Josephson-kontakt]]
+[[de:Josephson-Effekt]]
+[[en:Josephson effect]]
+[[es:Efecto Josephson]]
+[[fi:Josephsonin ilmiö]]
+[[it:Giunzione Josephson]]
+[[ja:ジョセフソン効果]]
+[[kk:Джозефсон эффектісі]]
+[[ko:조지프슨 효과]]
+[[nl:Josephson-junctie]]
+[[no:Josephson-effekt]]
+[[pl:Tunelowanie Josephsona]]
+[[pt:Efeito Josephson]]
+[[ro:Efectul Josephson]]
+[[ru:Эффект Джозефсона]]
+[[sv:Josephson-effekt]]
+[[uk:Ефект Джозефсона]]
+[[zh:约瑟夫森结]]

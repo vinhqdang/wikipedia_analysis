@@ -1,0 +1,241 @@
+[[Image:Systems engineering application projects collage.jpg|thumb|right|280px|Systems engineering techniques are used in complex projects: spacecraft design, computer chip design, robotics, software integration, and bridge building. Systems engineering uses a host of tools that include modeling and simulation, requirements analysis and scheduling to manage complexity.]]
+
+'''Systems engineering''' (also known as '''Systems design engineering''') is an [[interdisciplinary]] field of [[engineering]] that focuses on how complex engineering projects should be designed and managed. Issues such as [[logistics]], the coordination of different teams, and automatic control of machinery become more difficult when dealing with large, complex projects. Systems engineering deals with work-processes and tools to handle such projects, and it overlaps with both technical and human-centered disciplines such as [[control engineering]] and [[project management]].
+
+== History ==
+
+[[Image:A1 House of Quality.png|left|thumb|QFD House of Quality for Enterprise Product Development Processes]]
+
+The term ''systems engineering'' can be traced back to [[Bell Labs|Bell Telephone Laboratories]] in the 1940s.<ref>{{cite journal
+  | last =Schlager
+  | first =J.
+  | title =Systems engineering: key to modern development
+  | journal =IRE Transactions
+  | volume =EM-3
+  | pages =64<U+2013>66
+  | month =July | year =1956
+}}</ref> The need to identify and manipulate the properties of a system as a whole, which in complex engineering projects may greatly differ from the sum of the parts' properties, motivated the [[United States Department of Defense|Department of Defense]], [[NASA]], and other industries to apply the discipline.<ref>{{cite book
+  | author =Arthur D. Hall
+  | title =A Methodology for Systems Engineering
+  | publisher =Van Nostrand Reinhold
+  | isbn =0442030460
+  | year =1962
+}}</ref> 
+
+When it was no longer possible to rely on design evolution to improve upon a system and the existing tools were not sufficient to meet growing demands, new methods began to be developed that addressed the complexity directly.<ref>{{cite book| title=Systems Engineering | author = Andrew Patrick Sage | publisher=Wiley IEEE | year = 1992 | isbn= 0471536393}}</ref> The evolution of systems engineering, which continues to this day, comprises the development and identification of new methods and modeling techniques. These methods aid in better comprehension of engineering systems as they grow more complex. Popular tools that are often used in the Systems Engineering context were developed during these times, including [[Universal Systems Language|USL]], [[Unified Modeling Language|UML]], [[Quality function deployment|QFD]], and [[IDEF|IDEF0]].
+
+In 1990, a professional society for systems engineering, the ''National Council on Systems Engineering'' (NCOSE), was founded by representatives from a number of US corporations and organizations. NCOSE was created to address the need for improvements in systems engineering practices and education. As a result of growing involvement from systems engineers outside of the U.S., the name of the organization was changed to the [[International Council on Systems Engineering]] (INCOSE) in 1995.<ref>{{cite web|author=[[INCOSE]] Resp Group|url=http://www.incose.org/about/genesis.aspx|title=Genesis of INCOSE | accessdate = 2006-07-11 | date=11 June 2004}}</ref> Schools in several countries offer graduate programs in systems engineering, and [[continuing education]] options are also available for practicing engineers.<ref name="edu_dir">{{cite web|author=[[INCOSE]] Education & Research Technical Committee | url=http://www.incose.org/educationcareers/academicprogramdirectory.aspx |title=Directory of Systems Engineering Academic Programs|accessdate=2006-07-11}}</ref>
+
+== Concept ==
+{| class="toccolours" style="float: right; margin-left: 1em; margin-right: 2em; font-size: 85%; background:#ffffcc; color:black; width:30%;" cellspacing="0" cellpadding="3"
+! style="background-color:#cccccc;" | Some definitions
+|-
+| style="text-align: left;" | "An interdisciplinary approach and means to enable the realization of successful systems"<ref>{{cite book | title=Systems Engineering Handbook, version 2a | publisher=INCOSE |year=2004}}</ref> &mdash; ''[[INCOSE]] handbook, 2004.''
+|-
+| style="text-align: left;" | "Systems engineering is a robust approach to the design, creation, and operation of systems. In simple  terms, the approach consists of identification and quantification of system goals, creation of alternative system design concepts, performance of design trades, selection and implementation of the best design, verification that the design is properly built and integrated, and post-implementation assessment of how well the system meets (or met) the goals."<ref>{{cite book| title=NASA Systems Engineering Handbook| id=SP-610S | year=1995|publisher=[[NASA]]}}</ref> &mdash; ''[[NASA]] Systems engineering handbook, 1995.''
+|-
+| style="text-align: left;" | "The Art and Science of creating effective systems, using whole system, whole life principles" OR "The Art and Science of creating optimal solution systems to complex issues and problems"<ref>{{cite web | url=http://incose.org.uk/people-dkh.htm | title=Derek Hitchins | publisher=INCOSE UK | accessdate=2007-06-02}}</ref> &mdash; ''Derek Hitchins, Prof. of Systems Engineering, former president of INCOSE (UK), 2007.''
+|-
+| style="text-align: left;" |"The concept from the engineering standpoint is the evolution of the engineering scientist, i.e., the scientific generalist who maintains a broad outlook. The method is that of the team approach. On large-scale-system problems, teams of scientists and engineers, generalists as well as specialists, exert their joint efforts to find a solution and physically realize it...The technique has been variously called the systems approach or the team development method."<ref>{{cite book | title = System Engineering: An Introduction to the Design of Large-scale Systems | last=Goode | first=Harry H. | coauthors=Robert E. Machol | publisher=McGraw-Hill| year = 1957}}, p. 8. {{LCCN|56|0|11714}}</ref> &mdash; ''Harry H. Goode & Robert E. Machol, 1957.'' 
+|-
+|style="text-align: left;" | "The Systems Engineering method recognizes each system is an integrated whole even though composed of diverse, specialized structures and sub-functions. It further recognizes that any system has a number of objectives and that the balance between them may differ widely from system to system.  The methods seek to optimize the overall system functions according to the weighted objectives and to achieve maximum compatibility of its parts."<ref>{{cite book | title =Systems Engineering Tools |last=Chestnut|first=Harold|year=1965|publisher=Wiley|isbn=0471154482}}</ref> &mdash; ''Systems Engineering Tools by Harold Chestnut, 1965.
+|}
+Systems Engineering signifies both an approach and, more recently, as a discipline in engineering. The aim of education in Systems Engineering is to simply formalize the approach and in doing so, identify new methods and research opportunities similar to the way it occurs in other fields of engineering. As an approach, Systems Engineering is holistic and interdisciplinary in flavor.
+
+===Holistic view===
+Systems Engineering focuses on analysing and eliciting customer needs and required functionality early in the development cycle, documenting requirements, then proceeding with design synthesis and system validation while considering the complete problem, the [[system lifecycle]]. Oliver ''et al.'' claim that the [[systems engineering process]] can be decomposed into
+* a ''Systems Engineering Technical Process'', and
+* a ''Systems Engineering Management Process''.
+Within Oliver's model, the goal of the Management Process is to organize the technical effort in the lifecycle, while the Technical Process includes ''assessing available information'', ''defining effectiveness measures'', to ''create a behavior model'', ''create a structure model'', ''perform trade-off analysis'', and ''create sequential build & test plan''.<ref name="Okk">{{cite book | last = Oliver | first = David W. | authorlink = | coauthors = Timothy P. Kelliher, James G. Keegan, Jr. | year = 1997 | title = Engineering Complex Systems with Models and Objects | publisher = McGraw-Hill | pages=85<U+2013>94| isbn = 0070481881}}</ref>
+
+Depending on their application, although there are several models that are used in the industry, all of them aim to identify the relation between the various stages mentioned above and incorporate feedback. Examples of such models include the [[Waterfall model]] and the [[VEE model]].<ref>{{cite web| url = http://www.gmu.edu/departments/seor/insert/robot/robot2.html | title = The SE VEE | publisher=SEOR, George Mason University | accessdate=2007-05-26}}</ref>
+
+===Interdisciplinary field===
+System development often requires contribution from diverse technical disciplines.<ref>{{cite book|last = Ramo|first = Simon|coauthors=Robin K. St.Clair|authorlink = Simon Ramo|title = The Systems Approach: Fresh Solutions to Complex Problems Through Combining Science and Practical Common Sense|year = 1998| location = Anaheim, CA | publisher = KNI, Inc.| url = http://www.incose.org/ProductsPubs/DOC/SystemsApproach.pdf |format=PDF}}</ref> By providing a systems ([[Holism|holistic]]) view of the development effort, systems engineering helps meld all the technical contributors into a unified team effort, forming a structured development process that proceeds from concept to production to operation and, in some cases, to termination and disposal.
+
+This perspective is often replicated in educational programs in that Systems Engineering courses are taught by faculty from other engineering departments which, in effect, helps create an interdisciplinary environment.<ref>{{cite web | url = http://systemseng.cornell.edu/people.html | title = Systems Engineering Program at Cornell University | publisher = Cornell University | accessdate=2007-05-25}}</ref><ref>{{cite web | url = http://esd.mit.edu/people/faculty.html | title= ESD Faculty and Teaching Staff | publisher = Engineering Systems Division, MIT | accessdate=2007-05-25}}</ref>
+
+===Managing complexity===
+The need for systems engineering arose with the increase in complexity of systems and projects. When speaking in this context, complexity incorporates not only engineering systems, but also the logical human organization of data. At the same time, a system can become more complex due to an increase in size as well as with an increase in the amount of data, variables, or the number of fields that are involved in the design. The [[International Space Station]] is an example of such a system.
+
+The development of smarter control algorithms, microprocessor design, and analysis of environmental systems also come within the purview of systems engineering. Systems engineering encourages the use of tools and methods to better comprehend and manage complexity in systems. Some examples of these tools can be seen here:<ref>{{cite web | url = http://systemseng.cornell.edu/CourseList.html | title=Core Courses, Systems Analysis - Architecture, Behavior and Optimization | publisher = Cornell University | accessdate=2007-05-25}}</ref>
+* ''[[Scientific modelling|Modeling]] and [[Simulation]]'', 
+* ''[[Optimization (mathematics)|Optimization]]'', 
+* ''[[System dynamics]]'', 
+* ''[[Systems analysis]]'', 
+* ''[[Statistical analysis]]'', 
+* ''[[Reliability engineering|Reliability analysis]]'', and
+* ''[[Decision making]]''
+
+Taking an [[interdisciplinary]] approach to engineering systems is inherently complex since the [[behavior]] of and interaction among system components is not always immediately [[well defined]] or understood. Defining and characterizing such [[system]]s and subsystems and the interactions among them is one of the goals of systems engineering. In doing so, the gap that exists between informal requirements from users, operators, marketing organizations, and technical specifications is successfully bridged.
+
+=== Scope ===
+[[Image:SE Activities.jpg|left|thumb|400px|The scope of Systems Engineering activities<ref name="SEF01"> [http://www.dau.mil/pubs/pdf/SEFGuide%2001-01.pdf ''Systems Engineering Fundamentals.''] Defense Acquisition University Press, 2001</ref>]]
+One way to understand the motivation behind systems engineering is to see it as a method, or practice, to identify and improve common rules that exist within a wide variety of systems.{{Citation needed|date=June 2007}} Keeping this in mind, the principles of Systems Engineering &mdash; holism, emergence, behavior, boundary, et al. &mdash; can be applied to any system, complex or otherwise, provided [[systems thinking]] is employed at all levels.<ref>{{cite web | url = http://incose.org.uk/Downloads/AA01.1.4_Principles%20&%20practices%20of%20SE.pdf |format=PDF| title = Principles and Practices of Systems Engineering | author=Rick Adcock | publisher=INCOSE, UK|accessdate=2007-06-07}}</ref> Besides defense and aerospace, many information and technology based companies, software development firms, and industries in the field of electronics & communications require Systems engineers as part of their team.<ref>{{cite web| url=http://www.gmu.edu/departments/seor/insert/intro/introsal.html | title= Systems Engineering, Career Opportunities and Salary Information (1994) | publisher=George Mason University | accessdate=2007-06-07}}</ref>
+
+An analysis by the INCOSE Systems Engineering center of excellence (SECOE) indicates that optimal effort spent on Systems Engineering is about 15-20% of the total project effort.<ref name="SEvalue"/> At the same time, studies have shown that Systems Engineering essentially leads to reduction in costs among other benefits.<ref name="SEvalue">{{cite web | url=http://www.incose.org/secoe/0103/ValueSE-INCOSE04.pdf |format=PDF| title=Understanding the Value of Systems Engineering | accessdate=2007-06-07}}</ref> However, no quantitative survey at a larger scale encompassing a wide variety of industries has been conducted until recently. Such studies are underway to determine the effectiveness and quantify the benefits of Systems engineering.<ref>{{cite web | url = http://www.splc.net/programs/acquisition-support/presentations/surveying.pdf |format=PDF| title=Surveying Systems Engineering Effectiveness | accessdate=2007-06-07}}</ref><ref> {{cite web | url=http://www.valerdi.com/cosysmo/rvalerdi.doc | title= Systems Engineering Cost Estimation by Consensus | accessdate=2007-06-07}}</ref> 
+
+Systems engineering encourages the use of modeling and simulation to validate assumptions or theories on systems and the interactions within them.<ref>{{cite paper | author = Andrew P. Sage, Stephen R. Olson | title =Modeling and Simulation in Systems Engineering | publisher = SAGE Publications | year = 2001 | url = http://intl-sim.sagepub.com/cgi/content/abstract/76/2/90 | accessdate = 2007-06-02}}</ref><ref>{{cite paper | author = E.C. Smith, Jr.  | title = Simulation in systems engineering | publisher = IBM Research | year = 1962 | url = http://www.research.ibm.com/journal/sj/011/ibmsj0101D.pdf |format=PDF| accessdate = 2007-06-02}}</ref> 
+
+Use of methods that allow early detection of possible failures, in [[Safety engineering]], are integrated into the design process. At the same time, decisions made at the beginning of a project whose consequences are not clearly understood can have enormous implications later in the life of a system, and it is the task of the modern systems engineer to explore these issues and make critical decisions. There is no method which guarantees that decisions made today will still be valid when a system goes into service years or decades after it is first conceived but there are techniques to support the process of systems engineering. Examples include the use of soft systems methodology, [[Jay Wright Forrester]]'s [[System dynamics]] method and the [[Unified Modeling Language]] (UML), each of which are currently being explored, evaluated and developed to support the engineering decision making process.
+
+== Education ==
+{{main|List of systems engineering at universities}}
+Education in systems engineering is often seen as an extension to the regular engineering courses,<ref>{{cite web | url=http://www.gaudisite.nl/DidacticRecommendationsSESlides.pdf |format=PDF| title=Didactic Recommendations for Education in Systems Engineering | accessdate=2007-06-07}}</ref> reflecting the industry attitude that engineering students need a foundational background in one of the traditional engineering disciplines (e.g. [[mechanical engineering]], [[industrial engineering]], [[computer engineering]], [[electrical engineering]]) plus practical, real-world experience in order to be effective as systems engineers. Undergraduate university programs in systems engineering are rare.
+
+[[INCOSE]] maintains a continuously updated Directory of Systems Engineering Academic Programs worldwide.<ref name="edu_dir"/> As of 2006, there are about 75 institutions in United States that offer 130 undergraduate and graduate programs in systems engineering. Education in systems engineering can be taken as ''SE-centric'' or ''Domain-centric''.
+* ''SE-centric'' programs treat systems engineering as a separate discipline and all the courses are taught focusing on systems engineering practice and techniques.
+* ''Domain-centric'' programs offer systems engineering as an option that can be exercised with another major field in engineering.
+Both these patterns cater to educate the systems engineer who is able to oversee interdisciplinary projects with the depth required of a core-engineer.<ref> {{cite web| url = http://sistemas.unmsm.edu.pe/occa/material/INCOSE-ABET-SE-SF-21Mar06.pdf |format=PDF| title = Perspectives of Systems Engineering Accreditation | publisher= [[INCOSE]] | accessdate=2007-06-07}}</ref>
+
+== Systems engineering topics ==
+Systems engineering tools are [[strategy|strategies]], [[procedure]]s, and [[wikt:technique|techniques]] that aid in performing systems engineering on a [[project]] or [[Product (business)|product]]. The purpose of these tools vary from database management, graphical browsing, simulation, and reasoning, to document production, neutral import/export and more.<ref>{{cite web | url = http://www.marc.gatech.edu/events/pde2005/presentations/0.2-jenkins.pdf |format=PDF| title=A Future for Systems Engineering Tools | author=Steven Jenkins|publisher=NASA|pages=pp 15|accessdate=2007-06-10}}</ref>
+
+=== System ===
+There are many definitions of what a [[system]] is in the field of systems engineering. Below are a few authoritative definitions:
+
+* [[ANSI]]/[[Electronic Industries Alliance|EIA]]-632-1999: "An aggregation of end products and enabling products to achieve a given purpose."<ref>"Processes for Engineering a System", ANSI/EIA-632-1999, [[ANSI]]/[[Electronic Industries Alliance|EIA]], 1999 [http://webstore.ansi.org/RecordDetail.aspx?sku=ANSI%2FEIA-632-1999]</ref>
+* [[IEEE]] Std 1220-1998: "A set or arrangement of elements and processes that are related and whose behavior satisfies customer/operational needs and provides for life cycle sustainment of the products."<ref>"Standard for Application and Management of the Systems Engineering Process -Description", IEEE Std 1220-1998, [[IEEE]], 1998 [http://standards.ieee.org/reading/ieee/std_public/description/se/1220-1998_desc.html]</ref>
+* [[ISO/IEC]] 15288:2008: "A combination of interacting elements organized to achieve one or more stated purposes."<ref>"Systems and software engineering - System life cycle processes", ISO/IEC 15288:2008, [[ISO/IEC]], 2008 [http://www.15288.com/]</ref>
+* [[NASA]] Systems Engineering Handbook: "(1) The combination of elements that function together to produce the capability to meet a need. The elements include all hardware, software, equipment, facilities, personnel, processes, and procedures needed for this purpose. (2) The end product (which performs operational functions) and enabling products (which provide life-cycle support services to the operational end products) that make up a system."<ref>"NASA Systems Engineering Handbook", Revision 1, NASA/SP-2007-6105, [[NASA]], 2007 [http://education.ksc.nasa.gov/esmdspacegrant/Documents/NASA%20SP-2007-6105%20Rev%201%20Final%2031Dec2007.pdf]</ref>
+* [[International Council on Systems Engineering|INCOSE]] Systems Engineering Handbook: "homogeneous entity that exhibits predefined behavior in the real world and is composed of heterogeneous parts that do not individually exhibit that behavior and an integrated configuration of components and/or subsystems."<ref>"Systems Engineering Handbook", v3.1, [[International Council on Systems Engineering|INCOSE]], 2007 [http://www.incose.org/ProductsPubs/products/sehandbook.aspx]</ref>
+* [[International Council on Systems Engineering|INCOSE]]: "A system is a construct or collection of different elements that together produce results not obtainable by the elements alone. The elements, or parts, can include people, hardware, software, facilities, policies, and documents; that is, all things required to produce systems-level results. The results include system level qualities, properties, characteristics, functions, behavior and performance. The value added by the system as a whole, beyond that contributed independently by the parts, is primarily created by the relationship among the parts; that is, how they are interconnected."<ref>"A Consensus of the INCOSE Fellows", [[International Council on Systems Engineering|INCOSE]], 2006 [http://www.incose.org/practice/fellowsconsensus.aspx]</ref>
+
+=== The systems engineering process ===
+Depending on their application, tools are used for various stages of the [[systems engineering process]]:<ref name="SEF01"/>
+
+:[[Image:Systems Engineering Process.jpg|600px|Center]]
+
+=== Using models ===
+[[Abstract model|Model]]s play important and diverse roles in systems engineering. A model can be defined in several
+ways, including:<ref name="NASA95"> NASA (1995). "System Analysis and Modeling Issues". In: '' [http://human.space.edu/old/docs/Systems_Eng_Handbook.pdf NASA Systems Engineering Handbook]'' June 1995. p.85.</ref>
+* An abstraction of reality designed to answer specific questions about the real world
+* An imitation, analogue, or representation of a real world process or structure; or
+* A conceptual, mathematical, or physical tool to assist a decision maker.
+Together, these definitions are broad enough to encompass physical engineering models used in the verification of a system design, as well as schematic models like a [[functional flow block diagram]] and mathematical (i.e., quantitative) models used in the trade study process. This section focuses on the last.<ref name="NASA95"/>  
+
+The main reason for using [[mathematical model]]s and [[mathematical diagram|diagrams]] in trade studies is to provide estimates of system effectiveness, performance or technical attributes, and cost from a set of known or estimable quantities. Typically, a collection of separate models is needed to provide all of these outcome variables. The heart of any mathematical model is a set of meaningful quantitative relationships among its inputs and outputs. These relationships can be as simple as adding up constituent quantities to obtain a total, or as complex as a set of differential equations describing the trajectory of a spacecraft in a gravitational field. Ideally, the relationships express causality, not just correlation.<ref name="NASA95"/>
+
+=== Tools for graphic representations ===
+Initially, when the primary purpose of a systems engineer is to comprehend a complex problem, graphic representations of a system are used to communicate a system's functional and data requirements.<ref>{{cite paper | url = http://www.vitechcorp.com/whitepapers/files/200701031634430.CommonGraphicalRepresentations_2002.pdf |format=PDF| title = Relationships between Common Graphical Representations in System Engineering | last=Long | first=Jim| publisher=Vitech Corporation | year=2002}}</ref> Common graphical representations include:
+* [[Functional Flow Block Diagram]] (FFBD) 
+* [[Data Flow Diagram]] (DFD) 
+* [[N2 Chart|N2 (N-Squared) Chart]]
+* [[IDEF0|IDEF0 Diagram]] 
+* [[Use case diagram|UML Use case diagram]] 
+* [[Sequence diagram|UML Sequence diagram]]
+* [[Universal Systems Language#Universal primitive control structures|USL Function Maps and Type Maps]].
+
+A graphical representation relates the various subsystems or parts of a system through functions, data, or interfaces. Any or each of the above methods are used in an industry based on its requirements. For instance, the N2 chart may be used where interfaces between systems is important. Part of the design phase is to create structural and behavioral models of the system.
+
+Once the requirements are understood, it is now the responsibility of a Systems engineer to refine them, and to determine, along with other engineers, the best technology for a job. At this point starting with a trade study, systems engineering encourages the use of weighted choices to determine the best option. A [[Decision Matrix|decision matrix]], or Pugh method, is one way ([[QFD]] is another) to make this choice while considering all criteria that are important. The trade study in turn informs the design which again affects the graphic representations of the system (without changing the requirements). In an SE process, this stage represents the iterative step that is carried out until a feasible solution is found. A decision matrix is often populated using techniques such as statistical analysis, reliability analysis, system dynamics (feedback control), and optimization methods.
+
+At times a systems engineer must assess the existence of feasible solutions, and rarely will customer inputs arrive at only one. Some customer requirements will produce no feasible solution. Constraints must be traded to find one or more feasible solutions. The customers' wants become the most valuable input to such a trade and cannot be assumed. Those wants/desires may only be discovered by the customer once the customer finds that he has overconstrained the problem. Most commonly, many feasible solutions can be found, and a sufficient set of constraints must be defined to produce an optimal solution. This situation is at times advantageous because one can present an opportunity to improve the design towards one or many ends, such as cost or schedule. Various modeling methods can be used to solve the problem including constraints and a cost function.
+
+[[Systems Modeling Language]] (SysML), a modeling language used for systems engineering applications, supports the specification, analysis, design, verification and validation of a broad range of complex systems.<ref>{{cite web | url = http://www.sysml.org/docs/specs/OMGSysML-FAS-06-05-04.pdf |format=PDF| title = OMG SysML Specification |pages = pp 23 | publisher=SysML Open Source Specification Project | accessdate=2007-07-03}}</ref>
+
+[[Universal Systems Language]] (USL) is a systems oriented object modeling language with executable (computer independent) semantics for defining complex systems, including software.<ref>Hamilton, M. Hackler, W.R., <U+201C>A Formal Universal Systems Semantics for SysML, 17th Annual International Symposium, INCOSE 2007, San Diego, CA, June 2007.</ref>
+
+== Closely related fields ==
+Many related fields may be considered tightly coupled to systems engineering. These areas have contributed to the development of systems engineering as a distinct entity.
+
+;Cognitive systems engineering
+:Cognitive systems engineering (CSE) is a specific approach to the description and analysis of human-machine systems or [[sociotechnical systems]].<ref>Hollnagel E. & Woods D. D. (1983). Cognitive systems engineering: New wine in new bottles. International Journal of Man-Machine Studies, 18, 583-600.</ref> The three main themes of CSE are how humans cope with complexity, how work is accomplished by the use of artefacts, and how human-machine systems and socio-technical systems can be described as joint cognitive systems. CSE has since its beginning become a recognised scientific discipline, sometimes also referred to as Cognitive Engineering. The concept of a Joint Cognitive System (JCS) has in particular become widely used as a way of understanding how complex socio-technical systems can be described with varying degrees of resolution. The experience with CSE has been described in two books that summarises the field after more than 20 years of work, namely<ref>Hollnagel, E. & Woods, D. D. (2005) Joint cognitive systems: The foundations of cognitive systems engineering. Taylor & Francis</ref> and <ref>Woods, D. D. & Hollnagel, E. (2006). Joint cognitive systems: Patterns in cognitive systems engineering. Taylor & Francis.</ref>.
+
+;Configuration Management 
+:Like Systems Engineering, [[Configuration Management]] as practiced in the [[defence industry|defence]] and [[aerospace industry]] is a broad systems-level practice.  The field parallels the taskings of Systems Engineering; where Systems Engineering deals with requirements development, allocation to development items and verification, Configuration Management deals with requirements capture, traceability to the development item, and audit of development item to ensure that it has achieved the desired functionality that Systems Engineering and/or Test and Verification Engineering have proven out through objective testing.
+
+;Control engineering
+:[[Control engineering]] and its design and implementation of [[control systems]], used extensively in nearly every industry, is a large sub-field of Systems Engineering. The cruise control on an automobile and the guidance system for a ballistic missile are two examples. Control systems theory is an active field of applied mathematics involving the investigation of solution spaces and the development of new methods for the analysis of the control process.
+
+;Industrial engineering
+:[[Industrial engineering]] is a branch of [[engineering]] that concerns the development, improvement, implementation and evaluation of [[integrated systems]] of people, money, knowledge, information, equipment, energy, material and process. Industrial engineering draws upon the principles and methods of engineering analysis and synthesis, as well as mathematical, physical and social sciences together with the principles and methods of engineering analysis and design to specify, predict and evaluate the results to be obtained from such systems.
+
+;Interface design
+:[[Interface design]] and its specification are concerned with assuring that the pieces of a system connect and inter-operate with other parts of the system and with external systems as necessary. Interface design also includes assuring that system interfaces be able to accept new features, including mechanical, electrical and logical interfaces, including reserved wires, plug-space, command codes and bits in communication protocols.  This is known as [[extensibility]]. [[Human-Computer Interaction]] (HCI) or Human-Machine Interface (HMI) is another aspect of interface design, and is a critical aspect of modern Systems Engineering. Systems engineering principles are applied in the [[network protocol design principles|design of network protocols]] for [[local-area networks]] and [[wide-area networks]].
+
+;Operations research
+:[[Operations research]] supports systems engineering. The tools of operations research are used in systems analysis, decision making, and trade studies. Several [[List of systems engineering at universities|schools teach SE courses]] within the [[operations research]] or [[industrial engineering]] department{{Citation needed|date=June 2007}}, highlighting the role systems engineering plays in complex projects. [[operations research]], briefly, is concerned with the optimization of a process under multiple constraints.<ref> (see articles for discussion: [http://www.boston.com/globe/search/stories/reprints/operationeverything062704.html] and [http://www.sas.com/news/sascom/2004q4/feature_tech.html])</ref>
+
+;Reliability engineering
+:[[Reliability engineering]] is the discipline of ensuring a system will meet the customer's expectations for reliability throughout its life; i.e. it will not fail more frequently than expected. Reliability engineering applies to all aspects of the system. It is closely associated with [[maintainability]], [[availability]] and [[logistic engineering|logistics engineering]]. Reliability engineering is always a critical component of safety engineering, as in [[Failure mode and effects analysis|failure modes and effects analysis]] (FMEA) and [[fault tree|hazard fault tree]] analysis, and of [[security engineering]]. Reliability engineering relies heavily on [[statistics]], [[probability theory]] and [[reliability theory]] for its tools and processes.
+
+;Performance engineering
+:[[Performance engineering]] is the discipline of ensuring a system will meet the customer's expectations for performance throughout its life.  Performance is usually defined as the speed with which a certain operation is executed or the capability of executing a number of such operations in a unit of time. Performance may be degraded when an operations queue to be executed is throttled when the capacity is of the system is limited.  For example, the performance of a packet-switched network would be characterised by the end-to-end packet transit delay or the number of packets switched within an hour. The design of high-performance systems makes use of analytical or simulation modeling, whereas the delivery of high-performance implementation involves thorough performance testing. Performance engineering relies heavily on statistics, queuing theory and probability theory for its tools and processes.
+
+;Program management and project management.
+:[[Program management]] (or programme management) has many similarities with systems engineering, but has broader-based origins than the engineering ones of systems engineering.  [[Project management]] is also closely related to both program management and systems engineering.
+
+;Safety engineering
+:The techniques of [[safety engineering]] may be applied by non-specialist engineers in designing complex systems to minimize the probability of safety-critical failures. The "System Safety Engineering" function helps to identify "safety hazards" in emerging designs, and may assist with techniques to "mitigate" the effects of (potentially) hazardous conditions that cannot be designed out of systems.
+
+;Security engineering
+: [[Security engineering]] can be viewed as an [[interdisciplinary]] field that integrates the [[community of practice]] for control systems design, reliability, safety and systems engineering.  It may involve such sub-specialties as [[authentication]] of system users, system targets and others: people, objects and processes.
+
+;Software engineering
+:From its beginnings [[Software engineering]] has helped shape modern Systems Engineering practice. The techniques used in the handling of complexes of large software-intensive systems has had a major effect on the shaping and reshaping of the tools, methods and processes of SE.
+
+== See also ==
+{{multicol}}
+;Lists
+* [[List of production topics]]
+* [[List of systems engineers]]
+* [[List of types of systems engineering]]
+* [[List of systems engineering at universities]]
+{{multicol-break}}
+{{portal|Systems science|Complex-adaptive-system.jpg}}
+{{Portal | Engineering | Nuvola apps kcmsystem.svg | 35}}
+;Topics
+* [[Management cybernetics]]
+* [[Enterprise systems engineering]]
+* [[System of systems engineering]]  (SoSE)
+{{multicol-end}}
+
+==References==
+{{Reflist|2}}
+
+== Further reading  ==
+* [[Harold Chestnut]], ''Systems Engineering Methods''. Wiley, 1967.
+* [[Harry H. Goode]], Robert E. Machol ''System Engineering: An Introduction to the Design of Large-scale Systems'', McGraw-Hill, 1957.
+* David W. Oliver, Timothy P. Kelliher & James G. Keegan, Jr. ''Engineering Complex Systems with Models and Objects. McGraw-Hill'', 1997.
+* [[Simon Ramo]], Robin K. St.Clair, ''The Systems Approach: Fresh Solutions to Complex Problems Through Combining Science and Practical Common Sense'', Anaheim, CA: KNI, Inc, 1998.
+* Andrew P. Sage, ''Systems Engineering''. Wiley IEEE, 1992.
+* Andrew P. Sage, Stephen R. Olson, ''Modeling and Simulation in Systems Engineering'', 2001.
+
+== External links ==
+{{Commonscat|Systems engineering}}
+* [http://www.incose.org INCOSE] homepage.
+* [http://www.dau.mil/pubs/pdf/SEFGuide%2001-01.pdf ''Systems Engineering Fundamentals.''] Defense Acquisition University Press, 2001
+* Shishko, Robert et al.  [http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19960002194_1996102194.pdf ''NASA Systems Engineering Handbook.''] NASA Center for AeroSpace Information, 2005
+* [http://education.ksc.nasa.gov/esmdspacegrant/Documents/NASA%20SP-2007-6105%20Rev%201%20Final%2031Dec2007.pdf Systems Engineering Handbook] NASA/SP-2007-6105 Rev1, December 2007.
+* Derek Hitchins, [http://www.hitchins.net/WCSE.html ''World Class Systems Engineering''], 1997.
+* [http://www.inderscience.com/search/index.php?action=record&rec_id=25267 Parallel product alternatives and verification & validation activities]
+
+{{Systems Engineering}}
+{{Software Engineering}}
+{{Systems}}
+{{Technology-footer}}
+
+{{DEFAULTSORT:Systems Engineering}}
+[[Category:Systems engineering| ]]
+[[Category:Engineering]]
+[[Category:Occupations]]
+
+[[af:Stelselingenieurswese]]
+[[ar:<U+0647><U+0646><U+062F><U+0633><U+0629> <U+0627><U+0644><U+0623><U+0646><U+0638><U+0645><U+0629>]]
+[[da:Systems Engineering]]
+[[de:Systems Engineering]]
+[[es:Ingenier<U+00ED>a de sistemas]]
+[[fa:<U+0645><U+0647><U+0646><U+062F><U+0633><U+06CC> <U+0633><U+0627><U+0645><U+0627><U+0646><U+0647><U+200C><U+0647><U+0627>]]
+[[fr:Ing<U+00E9>nierie des syst<U+00E8>mes]]
+[[ko:<U+C2DC><U+C2A4><U+D15C> <U+ACF5><U+D559>]]
+[[hi:<U+0924><U+0902><U+0924><U+094D><U+0930><U+0940><U+092F> <U+092A><U+094D><U+0930><U+094C><U+0926><U+094D><U+092F><U+094B><U+0917><U+093F><U+0915><U+0940>]]
+[[it:Ingegneria dei sistemi]]
+[[he:<U+05D4><U+05E0><U+05D3><U+05E1><U+05EA> <U+05DE><U+05E2><U+05E8><U+05DB><U+05D5><U+05EA>]]
+[[nl:Systeemkunde]]
+[[ja:<U+30B7><U+30B9><U+30C6><U+30E0><U+5DE5><U+5B66>]]
+[[nn:Systemarbeid]]
+[[pt:Engenharia de sistemas]]
+[[ru:<U+0421><U+0438><U+0441><U+0442><U+0435><U+043C><U+043E><U+0442><U+0435><U+0445><U+043D><U+0438><U+043A><U+0430>]]
+[[sk:Syst<U+00E9>mov<U+00E9> in<U+017E>inierstvo]]
+[[zh:<U+7CFB><U+7EDF><U+5DE5><U+7A0B>]]

@@ -1,0 +1,84 @@
+La '''tâche de sélection de Wason''' (ou ''tâche à quatre cartes de Wason'') est un [[casse-tête logique]] qui nécessite, pour être résolu, de maîtriser le [[modus ponens]] et le [[modus tollens]], deux notions du [[raisonnement]] [[logique]]s liées à l'[[Implication (logique)|implication]]. Lorsqu'ils sont confrontés à cette épreuve, pourtant simple, les gens commettent, en moyenne, un certain nombre d'[[erreur]]s de raisonnement. Or ces erreurs tendent à disparaître sous certaines conditions, notamment lorsque la question est formulée avec un contenu [[concret]] impliquant une [[norme]], c'est-à-dire lorsqu'il s'agit d'un énoncé faisant appel à la [[logique déontique]] et non un simple énoncé [[description|descriptif]]. L'interprétation des effets obtenus avec les différentes versions de la tâche de Wason a généré un important débat en [[psychologie du raisonnement]] depuis les [[années 1960]]. Certains [[psychologie évolutionniste|psychologues évolutionnistes]] y voient un argument en faveur de l'idée d'un [[Modularité de l'esprit|module]] spécialisé dans la « détection de [[tricheur]] » ou de « [[passager clandestin]] ». Pour d'autres ([[Dan Sperber]]), ces effets ne sont dus qu'à des [[intuition]]s ''[[théorie de la pertinence|pertinente]]s'', liées au contexte, que les personnes interrogées parviennent à se faire de l'[[énoncé]].
+
+== Énoncé de la tâche de sélection == 
+[[Image:Cartes_de_la_Tache_de_selection_de_Wason.png|thumb|Quelle(s) carte(s) faut-il retourner ?]]
+La tâche de sélection a été développée par le [[Psychologie cognitive|psychologue cognitiviste]] [[Peter Wason]] durant les [[années 1960]]<ref>''Natural and contrived experience in a reasoning problem'', P. C. Wason, D. Shapiro, in ''New horizons in psychology'', Foss, B. M. (ed.), Penguin, Harmondsworth, 1966.</ref>. Dans la version standard de la tâche de Wason, la question posée peut s'énoncer comme suit : 
+
+{{début citation}}Quatre cartes comportant un chiffre sur une face et une lettre sur l'autre, sont disposées à plat sur une table. Une seule face de chaque carte est visible. Les faces visibles sont les suivantes : D, 7, 5, K. Quelle(s) carte(s) devez-vous retourner pour déterminer la ou les carte(s) qui ne respecte(nt) pas la règle suivante  : ''Si une carte a un D sur une face, alors elle porte un 5 sur l'autre face. ''Il ne faut pas retourner de carte inutilement, ni oublier d'en retourner une.{{fin citation}}
+
+== Solution ==
+
+La réponse correcte à cette épreuve consiste à retourner deux cartes: celle portant la lettre D visible et l'autre montrant le numéro 7 visible. En effet, s'il n'y a pas de 5 au dos du D alors la carte ne respecte pas la règle. Et si au dos de la carte 7 il y a un D, celle-ci ne respecte pas la règle. Les deux autres cartes respectent la règle dans tous les cas.
+
+=== Les erreurs de raisonnement dans la tâche de Wason ===
+
+Beaucoup de gens se trompent à cette tâche (environ 80% <ref name=Sperber> [[Dan Sperber]], [[Vittorio Girotto]], [http://www.dan.sperber.fr/wp-content/uploads/2009/09/cheater-detection.pdf Does the selection task detect cheater-detection?] (à paraître dans Fitness, J. & Sterelny, K. (Eds.), ''New directions in evolutionary psychology'', Macquarie Monographs in Cognitive Science, Psychology Press</ref>). La plupart choisit correctement la carte D, une partie oublie la carte 7 et un grand nombre choisissent la carte 5. Or, soit cette dernière carte porte un D sur l'autre face (auquel cas elle respecte la règle), soit cette même carte porte une lettre autre que D et dans ce cas, elle vérifie aussi la règle (car la règle ne dit rien sur les cartes portant une lettre autre que D). De même, la carte portant un K (qui n'est en général pas choisie) ne peut pas invalider la règle (qui ne dit rien sur les cartes portant une lettre autre que D).
+
+L'erreur la plus courante, à savoir retourner la carte 5, et oublier la carte 7, révèle deux [[biais cognitif|biais cognitifs]] :
+* un biais de [[vérification]], qui consiste à chercher davantage une vérification qu'une [[réfutation]] de la règle ;
+* un [[biais d'appariement]], qui consiste à se focaliser sur les items cités dans l'énoncé.
+
+=== Interprétation logique ===
+
+Selon le [[calcul des propositions]], la règle est une [[proposition conditionnelle]]. La première carte permet d'invalider le [[modus ponens]] issu de cette conditionnelle ; la seconde permet quant à elle d'invalider le [[modus tollens]] dérivé par un [[raisonnement contre-factuel]]. Le choix 5 correspond au [[sophisme]] de l'[[affirmation du conséquent]], c'est-à-dire à confondre une simple relation d'[[implication (logique)|implication]] avec une relation d'[[équivalence logique]] ; le choix K à celui de la [[négation de l'antécédent]].
+
+== Version déontique de la tâche de Wason ==
+
+Confrontés à cette version dite ''abstraite'' de la tâche de sélection, les gens interrogées commettent donc fréquemment une erreur de raisonnement. Toutefois, les psychologues P. Johnson-Laird<ref>Johnson-Laird, P.N. Legrenzi, P., Legrenzi., M.S. (1972). « Reasoning and a sense of reality. », in ''[[British Journal of Psychology]]'', 63, 395-400</ref>, en 1972, puis R. Griggs et J. Cox<ref>R. Griggs and J. Cox. (1982). « The elusive thematic-materials effect in Wason's selection task. » in ''British Journal of Psychology'', 73, 407-420.</ref> ont montré que le taux d'erreurs était bien plus faible (moins de 50% <ref name=Sperber/>) lorsque la tâche était reformulée sous une forme dite ''[[concrète]]'' ou ''thématique'' (tout en gardant une structure logique rigoureusement identique) :
+
+[[Image:comptoir_de_la_Tache_de_selection_de_Wason_conv.png|thumb|Qui faut-il contrôler ?]]
+{{début citation}}Quatre personnes sont en train de boire dans un bar et vous disposez des informations suivantes : la première boit une boisson alcoolisée, la seconde a moins de 18 ans, la troisième a plus de 18 ans et la dernière boit une boisson sans alcool. Quelle(s) personne(s) devez-vous interroger sur leur âge ou sur le contenu de leur verre pour vous assurer que tous respectent bien la règle suivante : ''Si une personne boit de l'alcool, elle doit avoir plus de 18 ans.{{fin citation}}
+
+Dans cette version "concrète" de la tâche de sélection, les gens ne se trompent plus et choisissent facilement d'interroger la première personne sur son âge (car elle boit de l'alcool, équivalent de la carte D) et la seconde sur le contenu de son verre (car elle a moins de 18 ans, équivalent de la carte 7). Ces choix correspondent aux réponses logiquement justes. Rares sont ceux qui interrogent le troisième personnage sur le contenu de son verre (il a plus de 18 ans de toutes façons, carte 5) ou le dernier qui ne boit pas d'alcool (carte K). 
+
+Ainsi la reformulation concrète de la règle abstraite engendre moins d'erreurs de raisonnement logique. Cette observation a alimenté un important débat dans la [[psychologie du raisonnement]], les psychologues cherchant à vérifier si cet effet pouvait être obtenu dans d'autres conditions et à déterminer quels étaient les mécanismes [[cognition|cognitifs]] qui permettaient ainsi de résoudre la tâche de façon correcte.
+
+=== Interprétations proposées ===
+
+Selon une première interprétation, ce gain de performance serait dû au fait que le contenu de la règle possède une signification concrète. Par extension, des [[psychologie évolutionniste|psychologues évolutionnistes]], tels que les deux fondateurs du [[Centre de psychologie évolutionniste]] de l'[[Université de Californie à Santa Barbara|Université de Californie]] [[Leda Cosmides]] et [[John Tooby]], ainsi que [[Larry Fidick]] <ref name=Sperber/>, ont défendu l'idée que ce gain de performance serait spécifique aux situations de contrat social, dans lesquelles un tricheur (ou « [[passager clandestin]] »)  peut tirer un bénéfice indu de la violation d'une loi sociale en vigueur du type ''pour bénéficier de X, il faut faire/être Y''. En effet, ces situations déclencheraient la mise en œuvre d'un [[module (psychologie)|module]] de ''détection de tricheur'' (ou « [[algorithme]] de [[contrat social]] »). Ce module spécifique au domaine des interactions sociales ne serait donc pas utilisable pour des règles abstraites, que seuls des processus liés à l'[[intelligence]] générale peuvent traiter mais avec moins d'efficacité sur le plan de la performance. De plus, les impératifs de ce module (la détection de tricheur) primeraient sur les instructions données: on n'obéirait plus aux instructions logiques (si... alors...), qui seraient masquées, mais plutôt à un objectif de détection <ref name=Sperber/>.Ce serait ainsi l'illustration que certains processus psychologiques auraient bien [[Évolution (biologie)|évolué]] sous la pression de la [[sélection naturelle]] pour résoudre des problèmes spécifiquement liés aux interactions sociales. 
+
+À l'inverse, d'autres psychologues (dont certains se réclament, par ailleurs, eux aussi de la psychologie évolutionniste, comme [[Dan Sperber]]) ont critiqué cette interprétation en se fondant sur les aspects [[pragmatique]]s des situations exposées dans les versions ''descriptive'' et ''déontique'' de la tâche de Wason. En se basant sur la [[théorie de la pertinence]], ces auteurs montrent que suivant la façon dont les sujets interprètent la règle énoncée, ils n'aboutiront pas aux mêmes choix. Or le contenu narratif des situations concrètes oriente ce processus d'inférence vers les solutions logiquement justes ou non, indépendamment de l'aspect déontique ou non de la formulation, ce que ne fait pas la tâche abstraite. La tâche de Wason ne serait donc finalement pas une "bonne" tâche cognitive pour tester le raisonnement et l'existence d'un « algorithme de contrat social », car trop soumise aux processus inférentiels des individus testés. ''A fortiori'', elle ne permet donc pas de valider (ni d'invalider) l'existence d'un module de détection de tricheur.
+
+L'un des exemples donné par Sperber est la situation imaginaire suivante <ref name=Sperber> [[Dan Sperber]], [[Vittorio Girotto]], [http://dan.sperber.com/cheater%20detection.pdf Does the selection task detect cheater-detection?] (à paraître dans Fitness, J. & Sterelny, K. (Eds.), ''New directions in evolutionary psychology'', Macquarie Monographs in Cognitive Science, Psychology Press</ref> :
+
+{{début citation}}Vous êtes un journaliste qui visitez le petit État du Bargustan. Le Prince régnant y a imposé une forme de libéralisme économique radical : tout le monde peut travailler entre 18 et 65 ans, les étudiants sont salariés, il n'y a pas de salaire minimal, [etc.] (...) Avec assurance, le Prince vous fait la déclaration suivante : ''Dans mon État, toute personne en âge de travailler a un emploi''. [On vous présente le cas de quatre citoyens : le premier a 32 ans, le second a 79, le troisième travaille et le dernier ne travaille pas. Le(s)quel(s) devez-vous interroger pour vérifier si ce que dit le Prince est vrai ?] {{fin citation}}
+
+Plus de 70% des gens soumis à cette version de la tâche de sélection ne se trompent pas et choisissent correctement d'interroger la personne de 32 ans et celle qui ne travaille pas <ref name=Sperber/>. Or cette situation n'a rien à voir avec une détection de tricheur. L'argument de Sperber est qu'en cherchant à trouver quelle situation permet d'invalider la phrase du Prince, c'est-à-dire la situation ''pertinente'' dans ce contexte, on tombe sur un [[concept]] facile à se représenter, c'est celui d'une personne au [[chômage]] : sans emploi et n'ayant pas encore l'âge de la retraite. La question est donc interprétée comme : "Trouver quels sont les citoyens qui sont peut-être au chômage". Ce qui se résout sans difficulté. À l'inverse si la loi du prince avait été ''Toute personne de plus de 65 ans n'a pas d'emploi'', la situation invalidante aurait été une personne âgée qui occupe un emploi, un concept moins commun et moins facile à se représenter que celui, plus courant, de [[Retraite (sociale)|retraité]], une personne âgée qui ne travaille pas. Ce concept de ''vieille personne travaillant'' étant moins facile à manipuler, dans cette deuxième situation, les gens se trompent en majorité (75% <ref name=Sperber/>).
+
+Sperber et Girotto soulignent en outre que, même s'il y a effectivement un module ou algorithme de détection de tricheurs, celui-ci serait plus compliqué que les simples questions « a-t-il pris le bénéfice? » et « a-t-il rempli ses obligations ? » qui ont été testées par Cosmides & al <ref name=Sperber/>. En effet, d'autres processus cognitifs peuvent être mis en jeu, par exemple la [[mémoire]]: ainsi, dans le cas des [[Dorzés]] d'[[Éthiopie]], les gens doivent se rappeler des dizaines voire des centaines de [[don et contre-don|dons]] qui leur ont été faits au cours des années, et qu'ils devront rendre (selon le principe [[Mauss|maussien]] de l'[[économie des don]]s) au moment approprié, selon les circonstances <ref name=Sperber/>. Dans ce cas, repérer quelqu'un qui ne rend pas un contre-don est plus compliqué, puisque cela met en jeu le temps et la mémoire.
+
+Ainsi, la plupart des [[psychologie du raisonnement|psychologues du raisonnement]] ne considèrent plus la tâche de Wason comme une bonne procédure expérimentale car elle est trop dépendante de la compréhension linguistique des énoncés.
+
+== Notes et références ==
+{{Références}}
+
+== Voir aussi ==
+
+=== Articles connexes ===
+
+* [[Psychologie du raisonnement]]
+* [[Psychologie évolutionniste]]
+
+=== Bibliographie ===
+* Daniel Andler, ''Logique, raisonnement et psychologie'' in ''Introduction aux sciences cognitives'', sous la direction de Daniel Andler, Gallimard Folio / Essais, 2006 {{ISBN|2-07-030078-1}}
+
+=== Liens externes ===
+
+* [http://hal.ccsd.cnrs.fr/docs/00/00/01/77/PDF/contexteETraisonnement.pdf Contexte et raisonnement], Van der Henst, J.-B. in ''Le Raisonnement humain'', G. Politzer (ed.), Hermès, 2002. Une interprétation [[pragmatique]] de la tâche de Wason.
+*{{en}} [http://www.psych.ucsb.edu/research/cep/socex/wason.htm Argumentation] autour de la tâche de Wason du point de vue de la psychologie évolutionniste
+*{{en}} {{pdf}} [http://www.dan.sperber.com/cheater%20detection.pdf Interprétation contradictoire] de la tâche de Wason en termes de pertinence
+
+{{Portail|Logique|Psychologie}}
+
+[[Catégorie:Casse-tête]]
+[[Catégorie:Psychologie du raisonnement]]
+[[Catégorie:Psychologie évolutionniste]]
+
+[[ca:Tasca de selecció de Wason]]
+[[de:Peter Wason#Selection Task]]
+[[en:Wason selection task]]
+[[es:Tareas de selección de Wason]]
+[[fi:Wasonin korttitehtävä]]
+[[pl:Test selekcji Wasona]]
+[[ru:Задача выбора Уэйсона]]
+[[zh:華生選擇任務]]

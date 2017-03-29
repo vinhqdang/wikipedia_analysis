@@ -1,0 +1,124 @@
+{{primary sources|date=October 2013}}
+{{ref improve|date=October 2013}}
+{{Infobox OS version
+ |name = Mac OS X v10.0 Cheetah
+ |family = Mac OS X
+ |logo = MacosxlogoX1.png
+ |screenshot = MacOSX10-0screenshot.png
+ |developer = [[Apple Computer]]
+ |source_model = [[Closed source]] (with [[open source]] components)
+ |license = [[Apple Public Source License]] (APSL) and Apple [[end-user license agreement]] (EULA)
+ |kernel_type = [[Hybrid kernel]]
+ |supported_platforms = [[PowerPC]]<!--Only official platforms are listed, not what they played around with and never released-->
+ |release_version = 10.0.4
+ |release_date = June 22, 2001
+ |release_url = http://www.apple.com/support/downloads/macosxupdate_10_0_4.html
+ |first_release_date = March 24, 2001
+ |first_release_url = http://www.apple.com/pr/library/2001/mar/21osxstore.html
+ |preceded_by = [[Mac OS X Public Beta]]
+ |succeeded_by = [[Mac OS X v10.1|Mac OS X v10.1 Puma]]
+ |support_status = Discontinued
+ |date = January 2009 <!-- approximate date of template insertion for dating hidden maintenance categories -->
+}}
+'''Mac OS X version 10.0''', [[code name]]d '''Cheetah''', is the first [[software versioning|major release]] of [[Mac OS X]], [[Apple Inc.|Apple<U+2019>s]] desktop and server [[operating system]]. Mac OS X v10.0 was released on March 24, 2001 for a price of US$129. It was the successor of the [[Mac OS X Public Beta]] and the predecessor of [[Mac OS X v10.1]].
+
+Mac OS X v10.0 was a radical departure from the previous [[Mac OS Classic|classic]] Macintosh operating system ([[Mac OS]]) and was Apple<U+2019>s long awaited answer to the [[Mac OS X history|call]] for a next generation Macintosh operating system. It introduced a brand new code base completely separate from [[Mac OS 9]]'s, as well as all previous Apple operating systems. Mac OS X introduced the new [[Darwin (operating system)|Darwin]] [[Unix-like]] core and a totally new system of memory management. Cheetah proved to be a rocky start to the Mac OS X line, plagued with missing features and performance issues, although it was praised for being a good start to an operating system still in its infancy, in terms of completeness and overall operating system stability. Unlike later releases of Mac OS X, the cat-themed code name was not used in marketing the new operating system.
+
+==System requirements==
+The system requirements for Mac OS X v10.0 were not well received by the Macintosh community, as at the time the amount of [[RAM]] standard with Macintosh computers was 64&nbsp;[[megabyte]]s (MB), while the Mac OS X v10.0 requirements called for 128&nbsp;MB of RAM. In addition, [[central processing unit|processor]] upgrade cards, which were quite popular for [[obsolete]] pre-G3 [[Power Macintosh]] computers, were not supported (and never officially have been, but can be made to work through third-party utility programs).
+
+*'''Supported Computers:''' [[Power Macintosh G3]], [[Power Macintosh G3 (Blue & White)|G3 B&W]], [[Power Macintosh G4|G4]], [[Power Mac G4 Cube|G4 Cube]], [[iMac]], [[PowerBook G3]] (except for the original "[[PowerBook G3#PowerBook G3 (Kanga)|Kanga]]" model), [[PowerBook G4]], [[iBook]]
+*'''RAM:'''
+**128&nbsp;MB (unofficially 64&nbsp;MB minimum)
+*'''Hard Drive Space:'''
+** 1,500&nbsp;MB (800&nbsp;MB for the minimal install)
+
+==Features==
+*[[Dock (Mac OS X)|Dock]] <U+2014> the Dock was a new way of organizing one's Mac OS X applications on a user interface, and a change from the classic method of Application launching in previous Mac OS systems.
+*[[Mach (kernel)|Mach 3.0]] <U+2014> the Mach 3.0 microkernel was part of the XNU kernel for Mac OS X, and was one of the largest changes from a technical standpoint in Mac OS X.
+*[[Terminal (OS X)|Terminal]] <U+2014> the Terminal was a feature that allowed access to Mac OS X's underpinnings, namely the Unix core. Mac OS had previously had the distinction of being one of the few operating systems with no [[command line interface]] at all.
+*[[Mail (email client)|Mail]] <U+2014> [[email client]].
+*[[Address Book (application)|Address Book]]
+*[[TextEdit]] <U+2014> new on-board word processor, replacement to [[SimpleText]].
+*Full [[Pre-emptive multitasking|preemptive multitasking]] support, a long awaited feature on the Mac.
+*[[Portable Document Format|PDF Support]] (create PDFs from any application)
+*[[Aqua (user interface)|Aqua]] UI <U+2014> new [[user interface]]
+*Built on [[XNU]], a [[Unix-like]] operating system and its [[Darwin (operating system)|Darwin development platform]].
+*[[OpenGL]]
+*[[AppleScript]]
+*Support for [[Carbon (API)|Carbon]] and [[Cocoa (API)|Cocoa]] [[Application programming interface|API]]s
+*[[Sherlock (software)|Sherlock]] <U+2014> desktop and web search engine.
+*[[Protected memory]] <U+2014> memory protection so that if an application corrupts its memory, the memory of other applications will not be corrupted.
+
+==Limitations==
+*'''File-sharing client''' <U+2014> The system can only use TCP/IP,<ref>{{cite web|url= http://support.apple.com/kb/TA20436|title=Mac OS X 10.0: Connecting to AppleShare or File Sharing Requires TCP/IP|date=2003-09-18|accessdate=2010-02-22}}</ref> not [[AppleTalk]], to connect to servers sharing the [[Apple Filing Protocol]]. The System cannot use [[Server_Message_Block|SMB]] to connect to [[Microsoft Windows|Windows]] or [[Samba (software)|Samba]] servers.
+
+*'''File-sharing server''' <U+2014> As a server, the system can share files using only the [[Apple Filing Protocol]] (over [[TCP/IP]]), [[HTTP]], [[Secure Shell|SSH]], and [[FTP]].
+
+==Criticisms==
+While the first Mac OS X release was an advanced operating system in terms of its technical underpinnings, and in relation to its brand new code-base, Mac OS X v10.0 was heavily criticized. There were three main reasons for criticism:
+
+*'''Interface Responsiveness''' <U+2014> The brand-new Aqua interface was sluggish at best. It was heavily criticized for its slow application launch speed and user interface response speed. The interface response times compared to earlier Apple operating systems showed that Mac OS X still had a long way to go in terms of interface performance.
+*'''Stability''' <U+2014> While <U+2018>theoretical<U+2019> stability in Mac OS X was much better than stability in Mac OS 9,{{Citation needed|date=March 2011}} Mac OS X was riddled with fatal bugs that caused [[kernel panic]]s, especially in complex hardware setups.
+*'''Missing Features and Hardware Compatibility Issues''' <U+2014> Another reason for criticism were the missing features, especially missing [[DVD]] playback, as well as [[CD burning]], both of which were available in the ninth version of Mac OS. Mac OS X v10.0.2 included the necessary software frameworks to allow [[iTunes]] 1.1.1 to provide audio CD burning support, but data CD burning had to wait until [[Mac OS X 10.1|version 10.1]]. There were also several issues in respect to missing [[Printer (computing)|printer]] and other hardware drivers.
+
+The heavy criticism of Mac OS X v.10.0 ultimately resulted in Apple offering a free upgrade to [[Mac OS X v10.1]].<ref name="10_0_pr">[http://www.apple.com/pr/library/2001/sep/25osx_available.html First Major Upgrade to Mac OS X Hits Stores This Weekend].</ref>
+
+==Multilingual snags==
+With Mac OS X v.10.0 began a short era (that ended with [[Mac OS X 10.2|Mac OS X v.10.2 Jaguar]]'s release) where Apple offered two types of installation CDs: 1Z and 2Z CDs. The difference in the two lay in the extent of multilingual support.
+
+[[Input method|Input method editors]] of [[Simplified Chinese]], [[Traditional Chinese]], and [[Korean language|Korean]] were only included with the 2Z CDs. They also came with more languages (the full set of 15 languages), whereas the 1Z CDs came only with about eight languages and could not actually display simplified Chinese, traditional Chinese and/or Korean (except for the Chinese characters present in Japanese [[Kanji]]). A variant of 2Z CDs began when Mac OS X v.10.0.3 was released to the [[Asia|Asian]] market. However, it could not be upgraded to version 10.0.4. The brief period of multilingual confusion ended with the release of version 10.2.{{Citation needed|date=May 2007}} Currently, all Mac OS X installer CDs and preinstallations include the full set of 15 languages and full multilingual compatibility.
+
+==Release history==
+{|class="wikitable"
+|-
+!|Version
+!|Build
+!|Date
+!|[[uname|OS name]]
+!|Notes
+|-
+||10.0
+||4K78
+||March 24, 2001
+||[[Darwin (operating system)|Darwin]] 1.3.1
+||Original retail CD-ROM release
+|-
+||10.0.1
+||4L13
+||April 14, 2001
+||Darwin 1.3.1
+||
+|-
+||10.0.2
+||4P12
+||May 1, 2001
+||Darwin 1.3.1
+||
+|-
+||10.0.3
+||4P13
+||May 9, 2001
+||Darwin 1.3.1
+||[http://support.apple.com/kb/TA20457 Apple: 10.0.3 Update and Before You Install Information]
+|-
+||10.0.4
+||4Q12
+||June 21, 2001
+||Darwin 1.3.1
+||[http://support.apple.com/kb/TA20488 Apple: 10.0.4 Update and Before You Install Information]
+|}
+
+==References==
+{{Reflist}}
+
+==External links==
+*[http://arstechnica.com/apple/2001/04/macos-x Mac OS X v10.0 review] at [[Ars Technica]]
+
+{{Mac OS History}}
+{{Mac OS X}}
+
+[[Category:OS X]]
+[[Category:2001 software]]
+[[Category:PowerPC operating systems]]
+[[Category:Discontinued operating systems]]

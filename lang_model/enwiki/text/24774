@@ -1,0 +1,84 @@
+{{Infobox Software
+| name                   = Graphviz
+| logo                   = [[File:GraphvizLogo.png|128px]]
+| screenshot             = 
+| caption                = 
+| author                 = 
+| developer              = [[AT&T Labs|AT&T Research Labs]] and Contributors<ref>[http://www.graphviz.org/Credits.php Credits] Graphviz</ref>
+| released               = 
+| latest release version = 2.26.0
+| latest release date    = {{release date and age|2009|12|10}}
+| latest preview version = 2.27.0
+| latest preview date    = {{release date and age|2009|12|14}}
+| operating system       = [[Linux]], [[Microsoft Windows|Windows]], [[Mac OS X]]
+| platform               = 
+| language               = 
+| status                 = 
+| genre                  = Graph Visualization
+| license                = [[Common Public License]]
+| website                = http://graphviz.org/
+| file_ext               = .dot
+}}
+[[Image:Mvblog29jan06h.jpg|thumb|250px|right|Visual rendering by Graphviz. This graph visualises the relationship between a group of [[bloggers]].]]
+[[Image:UnitedStatesGraphViz.svg|thumb|250px|right|Undirected graph showing adjacency of the 48 [[Contiguous United States|contiguous]] [[United States]]]]
+'''Graphviz''' (short for ''Graph Visualization Software'') is a package of open source tools initiated by [[AT&T Labs|AT&T Research Labs]] for [[Graph drawing|drawing]] [[Graph theory|graphs]] specified in [[DOT language]] scripts. It also provides libraries for software applications to use the tools. Graphviz is [[free software]] licensed under the [[Common Public License]].
+
+==Architecture==
+
+Graphviz consists of a graph description language named the [[DOT language]]<ref>[http://www.graphviz.org/doc/info/lang.html The DOT Language<!-- Bot generated title -->]</ref> and a set of tools that can generate and/or process DOT files: 
+
+; dot : a [[command-line]] tool to lay out directed graphs into a variety of output formats ([[PostScript]], [[Portable Document Format|PDF]], [[Scalable Vector Graphics|SVG]], annotated text and so on).
+; neato : for "spring model" layout (in Mac OS version called "energy minimised")
+; twopi : for radial graph layouts. 
+; circo : for circular graph layouts.
+; fdp : another layout engine for undirected graphs.
+; dotty : a [[graphical user interface]] to visualize and edit graphs.
+; lefty : a programmable (in a language inspired by [http://portal.acm.org/citation.cfm?id=318642 EZ]<ref>[http://graphviz.org/pdf/leftyguide.pdf The Lefty guide (<U+201C>Editing Pictures with lefty<U+201D>)], section&nbsp;3.1, p.&nbsp;9.</ref>) [[GUI widget|widget]] that displays DOT graphs and allows the user to perform actions on them with the mouse. Lefty can therefore be used as the view in a [[model-view-controller]] GUI application that uses graphs.
+
+==Applications==
+
+* [[AsciiDoc]] can embed Graphviz syntax as a diagram
+* [[Doxygen]] uses Graphviz to generate diagrams including class hierarchies and collaboration for [[computer program]] [[source code]].
+* [[GRAMPS]] uses Graphviz to create family trees
+* [[mw:Extension:GraphViz|GraphViz]] - MediaWiki Graphviz Extension
+* [http://www.softwaresecretweapons.com/jspwiki/Wiki.jsp?page=LinguineMaps Linguine Maps Java API to Graphviz]
+* [http://www.cs.ucl.ac.uk/staff/W.Langdon/lisp2dot.html lisp2dot] converts [[Lisp programming language|Lisp]]-like program trees to DOT language. Designed for use with [[genetic programming]].
+* [http://moinmo.in/ProcessorMarket/dot.py MoinMoin wiki Graphviz Extension]
+* [[Omnigraffle|OmniGraffle 5]] uses the Graphviz engine for automatically laying out graphs
+* [http://www.umlgraph.org/ UMLGraph] creates [[Unified Modeling Language|UML]] class and sequence diagrams from declarative specifications
+* [http://wingraphviz.sourceforge.net/wingraphviz WinGraphviz] is a win32 platform application.
+* [[WikidPad]] uses Graphviz as a plugin
+* [http://www.codeplex.com/quickgraph QuickGraph] can use Graphviz to render the graphs.
+* [[Scribus]] is an Open Source DTP program that can use Graphviz to render graphs by using its internal editor in a special frame type called render frame.
+* [[Puppet (tool)|Puppet]] can produce DOT resource graphs which can be viewed with Graphviz<ref>[http://bitfieldconsulting.com/puppet-dependency-graphs Dependency graphs in Puppet]</ref>
+
+==See also==
+* [[Graph (mathematics)]]
+* [[Graph drawing]]
+* [[Graph theory]]
+* [[Dot language]]
+; Related software :
+* [[Microsoft Automatic Graph Layout]] - A .NET library for laying out graphs
+
+== References ==
+{{reflist}}
+
+== External links ==
+{{portal|Free software|Free Software Portal Logo.svg}}
+* [http://graphviz.org/ Graphviz Homepage]
+* [http://www2.research.att.com/areas/visualization/projects_software/graphviz.php Graphviz], Projects & Software Page, AT&T Research Labs
+* [http://www.linuxdevcenter.com/pub/a/linux/2004/05/06/graphviz_dot.html An Introduction to Graphviz and dot (M. Simionato, 2004)]
+* [http://www.linux.com/archive/articles/49655 Create relationship diagrams with Graphviz (Shashank Sharma, 2005) ]
+* [http://www-128.ibm.com/developerworks/linux/library/l-graphvis Visualize function calls with Graphviz (M. Tim Jones, 2005)]
+
+[[Category:Free diagramming software]]
+[[Category:Apple Design Award winners]]
+[[Category:Graph drawing]]
+
+[[de:Graphviz]]
+[[fr:Graphviz]]
+[[ja:Graphviz]]
+[[it:Graphviz]]
+[[pl:Graphviz]]
+[[ru:Graphviz]]
+[[sv:Graphviz]]

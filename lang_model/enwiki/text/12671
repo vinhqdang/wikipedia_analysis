@@ -1,0 +1,74 @@
+{{Infobox company
+| name             = Revolution Analytics
+| logo             = [[File:Revolution Analytics logo.png]]
+| caption          = 
+| type             = Private
+| traded_as        = 
+| genre            = <!-- Only used with media and publishing companies -->
+| fate             = 
+| predecessor      = REvolution Computing
+| successor        = 
+| foundation       = <!-- {{Start date|YYYY|MM|DD}} -->
+| founder          = 
+| defunct          = <!-- {{End date|YYYY|MM|DD}} -->
+| location_city    = San Francisco
+| location_country = United States
+| location         = 
+| locations        = 
+| area_served      = 
+| key_people       = Norman Nie
+| industry         = Statistical software
+| products         = Revolution R
+| services         = 
+| revenue          = 8-11 Million in 2009
+| operating_income = 
+| net_income       = 
+| aum              = <!-- Only used with financial services companies -->
+| assets           = 
+| equity           = 
+| owner            = 
+| num_employees    = 
+| parent           = 
+| divisions        = 
+| subsid           = 
+| homepage         = {{URL|http://www.revolutionanalytics.com/}} 
+| footnotes        = 
+| intl             = 
+}}
+
+'''Revolution Analytics''' (formerly '''REvolution Computing''') is a [[statistical software]] company focused on developing "open-core"<ref>{{cite web|last=Blankenhorn|first=Dana|title=Revolution rebooting R with name change and new strategy|url=http://www.zdnet.com/blog/open-source/revolution-rebooting-r-with-name-change-and-new-strategy/6362|work=ZDNet|accessdate=14 July 2011}}</ref> versions of the [[free and open source software]] [[R (programming language)|R]] for enterprise, academic and analytics customers.  Revolution Analytics was founded in 2007 as REvolution Computing providing support and services for R in a model similar to [[Red Hat]]'s approach with Linux in the 1990s as well as bolt-on additions for parallel processing.  In 2009 the company received nine million in [[venture capital]] from [[Intel]] along with a private equity firm and named [[Norman H. Nie]] as their new CEO.  In 2010 the company announced the name change as well as a change in focus.  Their core product, Revolution R, would be offered free to academic users and their commercial software would focus on [[big data]], large scale multiprocessor (or "[[High-performance computing|high performance]]") computing, and multi-core functionality. 
+
+==Founding and venture capital==
+
+REvolution Computing was founded in [[New Haven, Connecticut]] in 2007, spun off from [[Yale University]]'s computer science department.<ref>{{cite web|last=Bogdon|first=Steve|title=One-on-One with David Smith|url=http://www.dashboardinsight.com/articles/one-on-one-with-dashboard-insight/one-on-one-with-david-smith.aspx|work=Dashboard Insight|accessdate=31 August 2011}}</ref><ref name="rww1">{{cite web|last=Leidel|first=John|title=Revolution Analytics Defines The Future of R-Statistics|url=http://insidehpc.com/2010/05/06/revolution-analytics-defines-the-future-of-r-statistics/|work=InsideHPC|accessdate=31 August 2011}}</ref>  Adding parallel computing to R allowed the company to net large gains in speed for many common analytics operations and early clients like [[Pfizer]] took advantage of REvolution R to see large performance gains using R on computing clusters.<ref name="cnet">{{cite web|last=Shankland|first=Stephen|title=Intel open-source expert heads to start-up|url=http://news.cnet.com/8301-1001_3-10202355-92.html|work=cnet News|publisher=[[CBS Interactive]]|accessdate=14 July 2011}}</ref>  While the improvements to core R were released under the [[GNU Public License]] (GPL), REvolution provides support and services to customers of their commercial product and had considerable early success with life sciences and pharmaceutical companies.<ref>{{cite news|last=Vance|first=Ashlee|title=R You Ready for R?|url=http://bits.blogs.nytimes.com/2009/01/08/r-you-ready-for-r/|accessdate=14 July 2011|newspaper=The New York Times|date=8 January 2009}}</ref><ref>{{cite news|last=Davies|first=Kevin|title=The New England Computing Revolution|url=http://www.bio-itworld.com/issues/2008/july-august/parallel-r.html|accessdate=14 July 2011|newspaper=Bio-IT World Magazine|date=14 July 2008}}</ref>  A year later the company moved to [[Seattle]].<ref>{{cite web|title=REvolution Computing expands senior management team, opens west coast headquarters in Seattle|url=http://www.revolutionanalytics.com/news-events/news-room/2008/revolution-expands-senior-management.php|work=Revolution Analytics press release|accessdate=31 August 2011}}</ref> 
+
+In 2009 REVolution Computing accepted nine million dollars in venture capital from Intel and North Bridge Venture Partners, a private equity firm.  Intel had previously supported REvolution Computing with venture capital in 2008.<ref>{{cite web|title=Intel capital makes series a investment in REvolution Computing<U+2014>investment highlights Intel capital<U+2019>s open source incubator program|url=http://www.revolutionanalytics.com/news-events/news-room/2008/intel-capital-makes-series-a-investment-in-revolution-computing.php|work=Revolution Analytics press release|accessdate=31 August 2011}}</ref>  A number of Intel employees also joined Revolution Analytics as employees or as advisors.<ref name="cnet" />   Concurrently, the company changed their name to Revolution Analytics and invited Norman Nie, founder of [[SPSS]], to serve as CEO.<ref>{{cite web|last=Rao|first=Leena|title=REvolution Computing Raises $9 Million|url=http://techcrunch.com/2009/10/20/revolution-computing-raises-9-million/|work=TechCrunch|accessdate=14 July 2011}}</ref><ref>{{cite news|last=Higginbotham|first=Stacey|title=The Data Whisperer: Norman Nie of Revolution Analytics|url=http://www.nytimes.com/external/gigaom/2011/02/02/02gigaom-the-data-whisperer-norman-nie-of-revolution-analy-22582.html|accessdate=14 July 2011|newspaper=The New York Times|date=2 February 2011}}</ref>  This change in management corresponded with a movement toward building a more complete set of software for commercial users; prior to 2009 Revolution had been focused on building parallel processing functionality into the then mostly single threaded R.<ref>{{cite web|last=Prickett Morgan|first=Timothy|title=Open source R in commercial Revolution|url=http://www.theregister.co.uk/2010/05/06/revolution_commercial_r/|work=The Register|accessdate=1 September 2011}}</ref>  
+
+==High performance computing, big data and the shift to analytics==
+
+Unlike analytics products offered by [[SAS Institute]], R does not natively handle datasets larger than main memory.  In 2010 Revolution Analytics introduced RevoScaleR, a package for Revolution R Enterprise designed to handle big data through IBM's [[Extensible Data Format]] (XDF) and high performance computing across large clusters.<ref name=ZDNet>{{cite web|last=Gardner|first=Dana|title=Revolution Analytics targets R language, platform at growing need to handle 'big data' crunching challenges|url=http://www.zdnet.com/blog/gardner/revolution-analytics-targets-r-language-platform-at-growing-need-to-handle-big-data-crunching-challenges/3791|work=ZDNet|accessdate=14 July 2011}}</ref>  The release of RevoScaleR marked a push away from consulting and services alone to custom code and a la carte package pricing.<ref>{{cite news|last=Morgan|first=Timothy Prickett|title=Revolution lets R to stats on big data|url=http://www.theregister.co.uk/2010/08/03/revolution_r_enterprise_v4/|accessdate=14 July 2011|newspaper=The Register|date=3 August 2010}}</ref>  RevoScaleR also works with [[Apache Hadoop]] and other distributed file systems and Revolution Analytics has partnered with IBM to further integrate Hadoop into Revolution R..<ref>{{cite news|last=Harris|first=Derrick|title=IBM Creates Big Data Frankenstein With Netezza-R Fusion|url=http://www.nytimes.com/external/gigaom/2011/03/14/14gigaom-ibm-creates-big-data-frankenstein-with-netezza-r-78261.html|accessdate=14 July 2011|newspaper=The New York Times|date=14 March 2011}}</ref><ref>{{cite web|last=Rosenberg|first=Dave|title=Open-source 'R' gets Hadoop integration|url=http://news.cnet.com/8301-13846_3-20012446-62.html|work=cnet News|publisher=[[CBS Interactive]]|accessdate=14 July 2011}}</ref>  Packages to integrate Hadoop and MapReduce into open source R can also be found on the community package repository, CRAN.<ref>{{cite web|last=Smith|first=David|title=Hadoop ported to R (and it's trivial)|url=http://blog.revolutionanalytics.com/2009/11/hadoop-ported-to-r.html|work=Revolutions|publisher=Revolution Analytics|accessdate=1 September 2011}}</ref><ref>{{cite web|last=Brown|first=Christopher|title=Package:mapReduce|url=http://cran.r-project.org/web/packages/mapReduce/|work=CRAN|publisher=The R Project|accessdate=1 September 2011}}</ref>
+
+==Market position==
+
+In comparison to IBM (owners of SPSS, the analytics tool developed by Norman Nie and others) and SAS, Revolution Analytics is a small company.  In 2009 SAS reported 2.3 billion dollars in revenue while Revolution Analytics estimated sales of 8 to 11 million.<ref>{{cite news|last=Xavier|first=Jon|title=Revolution Analytics wants to overthrow old statistical tools|url=http://www.bizjournals.com/sanjose/stories/2010/08/16/smallb1.html?surround=etf&ana=e_article&b=1281931200^3787631|accessdate=14 July 2011|newspaper=Silicon Valley Business Journal|date=15 August 2010}}</ref>  According to Nie, this disparity is rapidly shifting as researchers and academics focus more on R and less on SAS or SPSS.<ref>{{cite news|last=Hardy|first=Quentin|title=Power in the Numbers|url=http://www.forbes.com/forbes/2010/0524/opinions-software-norman-nie-spss-ideas-opinions_print.html|accessdate=14 July 2011|newspaper=Forbes Magazine|date=24 May 2010}}</ref>  Advantages of R over SAS (for both the free and commercial versions of R) include flexibility and extensibility.<ref>{{cite web|last=McNally|first=Steve|title=Names You Need to Know in 2011: R Data Analysis Software|url=http://blogs.forbes.com/smcnally/2010/11/10/names-you-need-to-know-in-2011-r-data-analysis-software/|work=Forbes|accessdate=14 July 2011}}</ref>  In contrast to SAS, [[STATA]] or SPSS, R is a full featured programming language.<ref name=Register>{{cite web|last=Olds|first=Dan|title='R' is for Revolution Analytics|url=http://www.theregister.co.uk/2011/03/22/revolution_analytics_profile/|work=The Register|accessdate=14 July 2011}}</ref>  Revolution Analytics also hopes to compete on price as well as speed with SAS and other proprietary analytics tools.<ref>{{cite web|last=Lawson|first=Lorraine|title=Another Tool for Analyzing Big Data|url=http://www.itbusinessedge.com/cm/blogs/lawson/another-tool-for-analyzing-big-data/?cs=46294|work=IT Business Edge|accessdate=14 July 2011}}</ref><ref>{{cite web|last=Hardy|first=Quentin|title=Another Open Source Swipe at IBM and SAS|url=http://blogs.forbes.com/quentinhardy/2011/02/01/another-open-source-swipe-at-ibm-and-sas/|work=Forbes|accessdate=14 July 2011}}</ref>   Community vice president David Smith suggested that movement away from "[[black box]]" analytics toward open source tools in general supported vendors like Revolution over solely proprietary tools.<ref>{{cite web|last=Bodkin|first=Ron|title=Revolution Analytics - Commercializing R for Statistics|url=http://www.infoq.com/news/2011/02/revolution_analytics|work=InfoQ|accessdate=14 July 2011}}</ref>
+
+==Products==
+
+Revolution analytics offers licenses for single user and server versions of Revolution R Enterprise.  Single user licenses for academic users as well as users competing in Kaggle [[data mining]] competitions are free.<ref>{{cite web|title=Free single user subscription to Revolution R Enterprise|url=http://www.revolutionanalytics.com/downloads/free-academic.php|work=Revolution Analytics website|accessdate=2 September 2011}}</ref><ref>{{cite web|last=Finley|first=Klint|title=Revolution Analytics Offers Free Software for Kaggle Competitors|url=http://www.readwriteweb.com/hack/2011/04/revolution-analytics-offers-fr.php|work=ReadWriteWeb|accessdate=14 July 2011}}</ref>
+
+==References==
+
+{{reflist}}
+
+==Further reading==
+*{{cite news|last=Vance|first=Ashlee|title=Data Analysts Captivated by R<U+2019>s Power|url=http://www.nytimes.com/2009/01/07/technology/business-computing/07program.html|accessdate=14 July 2011|newspaper=The New York Times|date=6 January 2009}}
+
+==External links==
+*''[http://blog.revolutionanalytics.com/ Revolutions]'', the Revolution Analytics blog
+*''[http://www.revolutionanalytics.com/aboutus/who-we-r.php About page]'' for Revolution Analytics
+*[http://www.itbusinessedge.com/cm/community/features/interviews/blog/the-power-of-r-more-companies-using-language-for-business-analytics/?cs=46325&page=1 Interview] with Revolution Analytics COO Jeff Erhardt about R, Hadoop and business analytics
+
+{{Statistical software}}
+
+[[Category:R (programming language)]]
+[[Category:Software companies of the United States]]

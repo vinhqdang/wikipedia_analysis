@@ -1,0 +1,76 @@
+Des [[communautés]] intelligentes qui [[auto-organisation|s’auto-organisent]], sans chef, qui réagissent instantanément à un message, peuvent communiquer et débattre entre elles : voilà actuellement le [[modèle]] standard de l’« [[intelligence collective]] » des [[sciences cognitives]]. Ce modèle repose sur un principe simple et séduisant : la coopération d’entités multiples aboutit à la formation d’une intelligence supérieure par l’émergence de propriétés [[cognitives]] nouvelles. Il est appliqué autant aux sociétés d’insectes (les [[fourmis]]), aux neurones d’un cerveau, aux organisations humaines (les communautés), qu’aux réseaux d’ordinateurs (l’[[Intelligence collective sur Internet|Internet]]).
+
+L’expression d’« [[intelligence collective]] » est devenue l’emblème d’une galaxie hétéroclite de théoriciens, chercheurs, consultants en organisation et vulgarisateurs qui manipulent pêle-mêle des théories mathématiques de la complexité, des développements informatiques sur l’[[intelligence distribuée|intelligence artificielle distribuée]], des spéculations philosophico-politiques sur l’avènement d’une nouvelle ''démocratie cognitive'' et, enfin, des discours prophétiques sur l’avènement d’un [[cerveau global]]. Mais les choses se compliquent quand on veut dévoiler ses lois. 
+
+==Le modèle des « agents réactifs » : l’exemple des sociétés de fourmis==
+
+Ce modèle standard est inspiré de systèmes informatiques, les [[systèmes multi-agents]] (SMA) <ref>Voir: Jacques Ferber: ''Les systèmes multi-agents. Vers une intelligence collective'', InterEditions, 1995-1997.</ref>, où une série d’agents autonomes interagissent en suivant chacun des comportements simples. 
+
+Par exemple, à l’aide de quelques simples types de comportements attribués à une myriade de soldats robots, on peut simuler une bataille sur ordinateur. C’est ainsi que dans le film Le Seigneur des anneaux (Peter Jackson), les scènes de batailles ont été modélisées sur écran – sans qu’aucun figurant réel ne joue la scène. Le comportement des « agents » était géré par un programme d’intelligence artificielle multi-agent, nommé ''Massive''<ref>Voir: Ph. Mathieu, S. Picault et J.-C. Routier : « Les agents intelligents », ''Pour la science'' N°332, juin 2005, p.44-51.</ref>.
+
+Collectivement, les [[agents]] parviennent ensemble, sans pilote ni plan d’ensemble, à résoudre des problèmes. Dans les premiers modèles de SMA, les agents sont dits « agents réactifs ». Leur comportement est guidé par des règles élémentaires les faisant réagir à un environnement changeant. 
+
+Par la suite, on tente de modéliser des comportements avec des « agents intentionnels », qui obéissent à des conduites complexes : ces agents possèdent des représentations globales de la situation, sont capables de se fixer des buts, avec une gamme de conduites à leur disposition. L’interaction de ces agents intentionnels suppose alors planification et coordination des comportements.
+
+Prenons un exemple concret sur les êtres vivants. Depuis plusieurs centaines millions d’années, les [[fourmis]] primitives possédaient déjà une « [[intelligence collective]] » : elles construisaient en commun des dômes et élevaient ensemble leurs larves. Le principe de la coopération fut efficace. Quelques dizaines de millions d’années plus tard, la Terre entière était peuplée de milliers d’espèces (on en dénombre 9500) capables de construire des fourmilières complexes, avec chambre royale, crèches, greniers, couveuses, solariums, salles d’hibernation, salles de garde, cimetières… Certaines espèces pratiquent l’agriculture (culture de champignons), d’autres l’élevage (de pucerons pour récolter le miellat), d’autres l’esclavage. Et le tout sans chef, contremaître, centre de décision. 
+
+Comment s’y prennent-elles? Les chercheurs ont tenté de modéliser le problème sous le nom d’''[[intelligence en essaim]]''. Le modèle canonique concerne le problème du transport de la nourriture (trouver le chemin le plus court de la source de nourriture à la fourmilière). On suppose que les fourmis répondent à un comportement très simple : chacune suit la trace odorante laissée par les exploratrices retournées à la fourmilière. Comme celles qui empruntent le chemin le plus court font le plus d’allers et retours, elles laissent donc plus de traces odorantes. Les autres fourmis ont donc tendance à s’agréger autour de cette piste. Au bout d’un certain temps, ce chemin est emprunté par toutes. 
+
+Des modèles théoriques d’intelligence en essaim simulent assez bien par ordinateur, la façon dont les fourmis résolvent le problème dit du « voyageur de commerce » : comment trouver le plus court chemin entre deux points? 
+
+Cette voie de recherche semblait donc prometteuse pour l’étude de l’intelligence collective humaine. Pourtant à ce jour, on n’a même pas découvert vraiment comment les fourmis s’y prennent pour résoudre des problèmes plus complexes que celui du « chemin le plus court ». Au fil des recherches, il est devenu évident que les fourmis ne se comportaient pas en agents simples, répondant à des comportements élémentaires (suivre une trace odorante), régis par quelques formules élémentaires pour résolution de problèmes. En fait, la fourmilière est un super-organisme où chaque élément, issu d’une même histoire évolutive, est déjà doté d’un programme de conduite élaboré.
+
+==Le modèle des « agents intentionnels » : l’exemple du cerveau==
+
+De fait, les modèles de l’intelligence collective, ispirés des [[systèmes multi-agents]], ont dû, au fil du temps, intégrer des « agents intentionnels » et non plus seulement des « agents réactifs ». De même, il a fallu intégrer des dispositifs d’organisation hiérarchiques, des centres régulateurs, des dispositifs de supervision, de contrôle, s’éloignant ainsi de plus en plus du modèle standard où l’intelligence collective émergerait spontanément d’agents rudimentaires en interaction.
+
+Autre exemple biologique : on sait que le cerveau humain est composé de milliards de neurones reliés entre eux par des voies synaptiques. L’immense réseau ainsi formé est parcouru de flux d’informations circulant sous forme chimique et électrique. Comment ce dispositif fonctionne-t-il?
+
+Une des hypothèses avancées est celle des [[Réseau de neurones|réseaux de neurones formels]]. Il s’agit de modèles mathématiques censés reproduire le fonctionnement des [[neurones]] biologiques. Chaque neurone se comporte comme un agent simple, qui réagit – positivement ou négativement – à plusieurs stimuli qui lui sont envoyés. 
+
+Dès les années 1950, la théorie des réseaux de neurones formels a suscité de nombreux espoirs. On pouvait supposer que par la combinaison entre de très nombreux éléments, reliés entre eux, il serait possible de simuler des fonctions complexes: mémoire, perception, apprentissage, intelligence... Une fois le principe de base découvert, le passage de cerveau simple à cerveau complexe n’était plus qu’une question de nombre.
+
+Mais très vite, on allait déchanter. Dans les années 1960, suite au piétinement du perceptron<ref>Le perceptron, créé par Frank Rosenblatt en 1958, est un modèle informatique de réseau de neurones (destiné à simuler le fonctionnement des neurones du cerveau). Le perceptron classique de F. Rosenblatt est doté de deux couches de neurones.</ref> et des critiques de ses détracteurs, le projet était au point mort. Puis il a connu une renaissance dans les années 1990 (modèles dits réseaux de Hopfield) et constitue aujourd’hui une nouvelle piste pour l’intelligence collective. Mais il reste qu’on ne peut espérer y trouver la façon dont le cerveau s’y prend pour résoudre des problèmes généraux. La raison en est la suivante : si le cerveau se présente bien comme un réseau de neurones, cela ne signifie nullement que l’étude de la physiologie de chaque neurone et de ses connexions avec les autres suffit à expliquer l’organisation d’ensemble.
+
+Plus généralement, le corps humain – ou de tout autre animal complexe – apparaît comme une somme de milliards de cellules interconnectées. Mais pour comprendre le fonctionnement global de ce corps, on ne peut s’en tenir à la seule échelle des cellules et de leurs connexions. Des groupes de cellules forment des organes, eux-mêmes reliés entre eux... Il en va de même pour le cerveau. 
+
+La démarche élémentariste qui pense reconstruire le fonctionnement du cerveau à partir de réseaux de neurones ne saurait suffire. Pour en saisir la logique d’ensemble – celle des aires cérébrales spécialisées et leurs articulations –, il faut passer à un niveau d’organisation supérieur. Voilà pourquoi les modèles connexionnistes – qui se situent à un niveau d’organisation assez élémentaire – peinent à comprendre les lois d’organisation du cerveau à un niveau plus global.
+
+==Le modèle de la « théorie des organisations » : l’exemple des sociétés humaines==
+
+Ainsi, il apparaît que très peu d’organisations vivantes fonctionnent sur le modèle standard idéal de l’intelligence collective, c’est-à-dire d’une multiplicité d’agents simples qui s’auto-organiseraient spontanément. 
+
+Aucune ne peut se ramener à un simple schéma d’émergence. Toutes font plus ou moins appel à des dispositifs complexes formés de modules, sous-modules, centres de commande (système cybernétique<ref>Larousse appelle  système cybernétique  « des processus de commande et de communication chez les êtres vivants, dans les machines et les systèmes sociologiques et économiques ».</ref>… Par exemple, le cerveau n’apparaît pas comme une libre assemblée de neurones indépendants qui s’assemblent et entrent spontanément en coopération pour former une belle machine.
+
+Changeons de niveau d’organisation et passons aux ''sociétés humaines''.
+La question de l’intelligence collective y renvoie à des questions classiques en [[théorie des organisations]] : comment s’élaborent les décisions? Où se réalise la coordination d’activité dans une institution (entreprise, une administration, etc.)? 
+
+Jusqu’aux années 1970, ces questions étaient abordées à partir d’un modèle dominant : l’organisation hiérarchique pilotée du haut vers le bas à partir d’un centre de décision unique. 
+
+Depuis les années 1980, ce schéma d’organisation a perdu de son crédit. Le déclin des modèles hiérarchiques a conduit à s’intéresser de près au travail en équipe, au processus de décision collective (rebaptisée « gouvernance »), à l’autonomie et la communication des acteurs, à la logique des réseaux. 
+
+Finalement, a-t-on pour autant mis en évidence les lois de l’[[intelligence collective]]? On en est loin, comme le constate Jean-François Dortier<ref>Jean-François  Dortier : « Des fourmis à Internet. Le mythe de l’intelligence collective », ''Sciences Humaines'' N°169, Le dossier sur « L’intelligence collective », mars 2006, p.34-39.</ref> : « Tout d’abord parce que le modèle (standard) de l’intelligence collective, en se focalisant sur les réseaux, sur le fonctionnement des services, détourne de fait le regard du fonctionnement général des organisations. Or aucune entreprise, aucune administration ne fonctionne sur la base de l’auto-organisation. Les entreprises possèdent toutes des lignes hiérarchiques, des lieux de décision et des instances de pilotage centralisés. On peut certes concevoir l’ajustement, la régulation de dysfonctionnements, la transmission d’informations et d’une culture d’entreprise. Mais pour construire un avion, bâtir une maison, éditer un journal, faire fonctionner un hôpital, il faut un plan d’ensemble, un centre de pilotage des fonctions spécialisées ». 
+
+Le modèle standard de l’intelligence collective fonctionnerait-il mieux avec les communautés d’individus, de type associations, foules, réseaux scientifiques, usagers d’Internet? C’est le lieu de prédilection des gourous de ce modèle. Par exemple, H. Rheingold<ref>L’idée de « foule intelligente » développée par H. Rheingold a été reprise, en 2004, dans le livre à succès de James Surowiecki : The Wisdom of Crowds (la sagesse des foules).</ref> soutient, par des cas tirés de différents domaines, que l’agrégation spontanée d’une foule d’individus peut conduire à des décisions ou choix bien meilleurs que les décisions d’experts. En d’autres termes, il vaut mieux suivre la foule, meilleure conseillère, que l’avis des spécialistes.
+
+Le principe de la ''démocratie cognitive'' s’inspire de ces modèles. La délibération collective, en laissant s’exprimer les opinions diverses, vaut mieux que parole d’expert qui raisonne seule et en fonction d’une logique unique. Mais là encore, il importe de regarder de plus près. Si parfois la foule est plus pertinente que l’expert, il existe mille contre-exemples.
+
+En apparence, le modèle des réseaux scientifiques semble répondre au modèle standard de l’intelligence collective : organisations communautaires auto-organisées formées par des individus en coopération/compétition. Mais là encore, les études sociologiques sur les communautés de recherches décèlent plusieurs types de modèles d’organisation qui reflètent assez peu le modèle mythique de la coopération spontanée. Par exemple, l’organisation de la « big science » (grand programme de recherches impliquant des équipes entières de chercheurs dans des programmes pilotés) ne ressemble pas forcément à l’organisation des communautés de mathématiciens, plus individualistes.
+
+==En conclusion==
+
+Dès lors que l’on veut entrer dans le fonctionnement plus précis des organisations vivantes (sociétés d’insectes, cerveau, organisations humaines, etc.), les choses deviennent plus complexes. Apparaît alors une grande diversité de modes de fonctionnement et de type d’organisation. Les fourmis forment des sociétés totalitaires où chaque élément est asservi (par une implacable logique génétique) à la loi du groupe. Ce modèle est-il le même que celui de l’organisation des neurones du cerveau, d’une équipe de football, d’une communauté de chercheurs?
+
+Il existe une grande variété de modes d’organisation, selon les aptitudes des agents (réactifs ou cognitifs), leur mode de relation (coopération ou conflit), leur organisation d’ensemble (hiérarchique, anarchique) et des finalités (résolution de problème, action collective…). La modélisation de ces différents modes de cognition collective débouche sur des programmes de recherche qui ruinent en grande partie la vision idéale du modèle standard de l’intelligence collective.
+
+==Notes et références==
+
+<references/>
+
+{{Portail|psychologie|sociologie}}
+
+{{DEFAULTSORT:Modeles de l'intelligence collective des societes}}
+[[Catégorie:Sociologie]]
+[[Catégorie:Intelligence collective]]
+[[Catégorie:Psychologie cognitive]]
+[[Catégorie:Psychologie sociale]]

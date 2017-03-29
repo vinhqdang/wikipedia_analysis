@@ -1,0 +1,171 @@
+[[File:Lorentz.PNG|thumb|uptight=1.2|A [[strange attractor]] arising from a [[differential equation]]. Differential equations are an important area of mathematical analysis with many applications to science and engineering.]]
+
+'''Mathematical analysis''' is a branch of [[mathematics]] that includes the theories of [[Derivative|differentiation]], [[Integral|integration]], [[Measure (mathematics)|measure]], [[Limit (mathematics)|limits]], [[Series (mathematics)|infinite series]], and [[analytic function]]s.<ref>Edwin Hewitt and Karl Stromberg, "Real and Abstract Analysis", Springer-Verlag, 1965</ref> These theories are usually studied in the context of [[real number|real]] and [[complex number|complex]] numbers and [[function (mathematics)|functions]]. Analysis evolved from [[calculus]], which involves the elementary concepts and techniques of analysis. 
+Analysis may be distinguished from [[geometry]]. However, it can be applied to any [[space (mathematics)|space]] of mathematical objects that has a definition of nearness (a [[topological space]]) or specific distances between objects  (a [[metric space]]).
+
+== History ==
+[[Image:Archimedes pi.svg|thumb|right|300px|[[Archimedes]] used the [[method of exhaustion]] to compute the area inside a circle by finding the area of regular polygons with more and more sides. This was an early but informal example of a [[limit (mathematics)|limit]], one of the most basic concepts in mathematical analysis.]]
+Early results in analysis were implicitly present in the early days of ancient Greek mathematics. For instance, an infinite geometric sum is implicit in [[Zeno of Elea|Zeno's]] [[Zeno's paradoxes#The dichotomy paradox|paradox of the dichotomy]].<ref name="Stillwell Infinite Series Early Results">{{cite book|last=Stillwell|authorlink=John Stillwell|title=|year=2004|chapter=Infinite Series|pages=170|quote=Infinite series were present in Greek mathematics, [...] There is no question that Zeno's paradox of the dichotomy (Section 4.1), for example, concerns the decomposition of the number 1 into the infinite series <sup>1</sup><U+2044><sub>2</sub> + <sup>1</sup><U+2044><sub>2</sub><sup>2</sup> + <sup>1</sup><U+2044><sub>2</sub><sup>3</sup> + <sup>1</sup><U+2044><sub>2</sub><sup>4</sup> + ... and that Archimedes found the area of the parabolic segment (Section 4.4) essentially by summing the infinite series 1 + <sup>1</sup><U+2044><sub>4</sub> + <sup>1</sup><U+2044><sub>4</sub><sup>2</sup> + <sup>1</sup><U+2044><sub>4</sub><sup>3</sup> + ... = <sup>4</sup><U+2044><sub>3</sub>. Both these examples are special cases of the result we express as summation of a geometric series}}</ref> Later, [[Greek mathematics|Greek mathematicians]] such as [[Eudoxus of Cnidus|Eudoxus]] and [[Archimedes]] made more explicit, but informal, use of the concepts of limits and convergence when they used the [[method of exhaustion]] to compute the area and volume of regions and solids.<ref>(Smith, 1958)</ref> In [[Indian mathematics|India]], the 12th century mathematician [[Bh<U+0101>skara II]] gave examples of the [[derivative]] and used what is now known as [[Rolle's theorem]].<ref>{{citation|title=The positive sciences of the ancient Hindus|first=Sir Brajendranath|last=Seal|publisher=Longmans, Green and co.|year=1915}}</ref>
+
+In the 14th century, [[Madhava of Sangamagrama]] developed [[series (mathematics)|infinite series]] expansions, like the [[power series]] and the [[Taylor series]], of functions such as [[Trigonometric functions|sine]], [[Trigonometric functions|cosine]], [[trigonometric functions|tangent]] and [[Inverse trigonometric functions|arctangent]].<ref name=rajag78>
+{{cite journal
+ | title =       On an untapped source of medieval Keralese Mathematics
+ | author =      C. T. Rajagopal and M. S. Rangachari
+ | journal  =    Archive for History of Exact Sciences
+ | url =   http://www.springerlink.com/content/mnr38341u762u544/?p=a9e26ffde91946b288bcb6deebac245c&pi=0
+ | volume =      18 | number=2
+ | month =        June | year =        1978
+ | pages =       89<U+2013>102
+}}</ref> Alongside his development of the Taylor series of the [[trigonometric functions]], he also estimated the magnitude of the error terms created by truncating these series and gave a rational approximation of an infinite series.  His followers at the [[Kerala school of astronomy and mathematics]] further expanded his works, up to the 16th century.
+
+In Europe, during the later half of the 17th century, [[Isaac Newton|Newton]] and [[Gottfried Leibniz|Leibniz]] independently developed [[infinitesimal calculus]], which grew, with the stimulus of applied work that continued through the 18th&nbsp;century, into analysis topics such as the [[calculus of variations]], [[Ordinary differential equation|ordinary]] and [[partial differential equation]]s, [[Fourier analysis]], and [[generating function]]s. During this period, calculus techniques were applied to approximate [[discrete mathematics|discrete problems]] by continuous ones.
+
+In the 18th century, [[Leonhard Euler|Euler]] introduced the notion of [[function (mathematics)|mathematical function]].<ref name="function">{{cite book| last = Dunham| first = William| title = Euler: The Master of Us All| year = 1999| publisher =The Mathematical Association of America | pages = 17}}</ref> Real analysis began to emerge as an independent subject when [[Bernard Bolzano]] introduced the modern definition of continuity in 1816,<ref>*{{cite book|first=Roger |last=Cooke |authorlink=Roger Cooke |title=The History of Mathematics: A Brief Course |publisher=Wiley-Interscience |year=1997 |isbn=0-471-18082-3 |pages=379 |chapter=Beyond the Calculus |quote=Real analysis began its growth as an independent subject with the introduction of the modern definition of continuity in 1816 by the Czech mathematician Bernard Bolzano (1781<U+2013>1848)}}</ref> but Bolzano's work did not become widely known until the 1870s. In 1821, [[Augustin Louis Cauchy|Cauchy]] began to put calculus on a firm logical foundation by rejecting the principle of the [[generality of algebra]] widely used in earlier work, particularly by Euler.  Instead, Cauchy formulated calculus in terms of geometric ideas and [[infinitesimal]]s.  Thus, his definition of continuity required an infinitesimal change in ''x'' to correspond to an infinitesimal change in ''y''.  He also introduced the concept of the [[Cauchy sequence]], and started the formal theory of [[complex analysis]]. [[Sim<U+00E9>on Denis Poisson|Poisson]], [[Joseph Liouville|Liouville]], [[Joseph Fourier|Fourier]] and others studied partial differential equations and [[harmonic analysis]].  The contributions of these mathematicians and others, such as [[Karl Weierstrass|Weierstrass]], developed the [[(<U+03B5>, <U+03B4>)-definition of limit]] approach, thus founding the modern field of mathematical analysis.
+
+In the middle of the 19th century [[Bernhard Riemann|Riemann]] introduced his theory of [[integral|integration]]. The last third of the century saw the arithmetization of analysis by [[Karl Weierstrass|Weierstrass]], who thought that geometric reasoning was inherently misleading, and introduced the [[(<U+03B5>, <U+03B4>)-definition of limit|"epsilon-delta" definition]] of [[limit of a function|limit]].
+Then, mathematicians started worrying that they were assuming the existence of a [[Continuum (set theory)|continuum]] of [[real number]]s without proof. [[Richard Dedekind|Dedekind]] then constructed the real numbers by [[Dedekind cut]]s, in which irrational numbers are formally defined, which serve to fill the "gaps" between rational numbers, thereby creating a [[complete metric space|complete]] set: the continuum of real numbers, which had already been developed by [[Simon Stevin]] in terms of [[decimal expansion]]s. Around that time, the attempts to refine the [[theorem]]s of [[Riemann integral|Riemann integration]] led to the study of the "size" of the set of [[Classification of discontinuities|discontinuities]] of real functions.
+
+Also, "[[pathological (mathematics)|monsters]]" ([[nowhere continuous function]]s, continuous but [[Weierstrass function|nowhere differentiable functions]], [[space-filling curve]]s) began to be investigated. In this context, [[Camille Jordan|Jordan]] developed his theory of [[Jordan measure|measure]], [[Georg Cantor|Cantor]] developed what is now called [[naive set theory]], and [[Ren<U+00E9>-Louis Baire|Baire]] proved the [[Baire category theorem]]. In the early 20th century, calculus was formalized using an axiomatic [[set theory]]. [[Henri Lebesgue|Lebesgue]] solved the problem of measure, and [[David Hilbert|Hilbert]] introduced [[Hilbert space]]s to solve [[integral equation]]s. The idea of [[normed vector space]] was in the air, and in the 1920s [[Stefan Banach|Banach]] created [[functional analysis]].
+
+== Important concepts ==
+
+===Metric spaces===
+{{Main|Metric space}}
+In [[mathematics]], a '''metric space''' is a [[Set (mathematics)|set]] where a notion of [[distance]] (called a [[metric (mathematics)|metric]]) between elements of the set is defined.
+
+All of analysis happens in some metric space; the most commonly used are the [[real line]], the [[complex plane]], [[Euclidean space]], other [[vector space]]s, and the [[integer]]s.
+
+Formally, A '''metric space''' is an [[ordered pair]] <math>(M,d)</math> where <math>M</math> is a set and <math>d</math> is a [[metric (mathematics)|metric]] on <math>M</math>, i.e., a [[Function (mathematics)|function]]
+
+:<math>d \colon M \times M \rightarrow \mathbb{R}</math>
+
+such that for any <math>x, y, z \in M</math>, the following holds:
+
+# <math>d(x,y) \ge 0</math> &nbsp;&nbsp;&nbsp; (''non-negative''), 
+# <math>d(x,y) = 0\,</math> [[if and only if|iff]] <math>x = y\,</math> &nbsp;&nbsp;&nbsp; (''[[identity of indiscernibles]]''),
+# <math>d(x,y) = d(y,x)\,</math> &nbsp;&nbsp;&nbsp; (''symmetry'') and
+# <math>d(x,z) \le d(x,y) + d(y,z)</math> &nbsp;&nbsp;&nbsp; (''[[triangle inequality]]'') .
+
+===Sequences and limits===
+{{Main|Sequence}}
+A '''sequence''' is an ordered list. Like a [[Set (mathematics)|set]], it contains [[Element (mathematics)|members]] (also called ''elements'', or ''terms''). Unlike a set, order matters, and exactly the same elements can appear multiple times at different positions in the sequence. Most precisely, a sequence can be defined as a [[function (mathematics)|function]] whose domain is a [[countable]] [[totally ordered]] set, such as the [[natural numbers]].
+
+[[File:Converging Sequence example.svg|320px|thumb|The plot of a convergent sequence (''a<sub>n</sub>'') is shown in blue. Visually we can see that the sequence is converging to the limit zero as ''n'' increases.]]
+
+One of the most important properties of a sequence is ''convergence''. Informally, a sequence converges if it has a ''limit''. Continuing informally, a ([[#Finite and infinite|singly-infinite]]) sequence has a limit if it approaches some point ''x'', called the limit, as ''n'' becomes very large. That is, for an abstract sequence (''a''<sub>''n''</sub>) (with ''n'' running from 1 to infinity understood) the distance between ''a''<sub>''n''</sub> and ''x'' approaches 0 as ''n'' <U+2192> <U+221E>, denoted
+:<math>\lim_{n\to\infty} a_n = x.</math>
+
+== Main branches ==
+
+=== Real analysis ===
+{{Main|Real analysis}}
+'''Real analysis''' (traditionally, the '''theory of functions of a real variable''') is a branch of mathematical analysis dealing with the [[real number]]s and real-valued functions of a real variable.<ref>{{cite book |last=Rudin |first=Walter |authorlink=Walter Rudin |title=Principles of Mathematical Analysis |series=Walter Rudin Student Series in Advanced Mathematics |edition=3rd |publisher=McGraw<U+2013>Hill |isbn=978-0-07-054235-8}}</ref><ref>{{cite book |last=Abbott |first=Stephen |title=Understanding Analysis |series=Undergradutate Texts in Mathematics |isbn=0-387-95060-5 |year=2001 |location=New York |publisher=Springer-Verlag}}</ref> In particular, it deals with the analytic properties of real [[function (mathematics)|functions]] and [[sequence]]s, including [[Limit of a sequence|convergence]] and [[limit of a function|limit]]s of [[sequence]]s of real numbers, the [[calculus]] of the real numbers, and [[continuous function|continuity]], [[smooth function|smoothness]] and related properties of real-valued functions.
+
+=== Complex analysis ===
+{{Main|Complex analysis}}
+
+'''Complex analysis''', traditionally known as the '''theory of functions of a complex variable''', is the branch of mathematical analysis that investigates [[Function (mathematics)|functions]] of [[complex numbers]].<ref>Ahlfors.,''Complex Analysis'' (McGraw-Hill)</ref> It is useful in many branches of mathematics, including [[algebraic geometry]], [[number theory]], [[applied mathematics]]; as well as in [[physics]], including [[hydrodynamics]], [[thermodynamics]], [[mechanical engineering]], [[electrical engineering]], and particularly, [[quantum field theory]].
+
+Complex analysis is particularly concerned with the [[analytic function]]s of complex variables (or, more generally, [[meromorphic function]]s). Because the separate [[real number|real]] and [[imaginary number|imaginary]] parts of any analytic function must satisfy [[Laplace's equation]], complex analysis is widely applicable to two-dimensional problems in [[physics]].
+
+=== Functional analysis ===
+{{Main|Functional analysis}}
+'''Functional analysis''' is a branch of mathematical analysis, the core of which is formed by the study of [[vector space]]s endowed with some kind of limit-related structure (e.g. [[Inner product space#Definition|inner product]], [[Norm (mathematics)#Definition|norm]], [[Topological space#Definition|topology]], etc.) and the [[linear transformation|linear operator]]s acting upon these spaces and respecting these structures in a suitable sense.<ref>[[Walter Rudin|Rudin, W.]]: ''Functional Analysis'',  McGraw-Hill Science, 1991</ref><ref>[[John B. Conway|Conway, J. B.]]: ''A Course in Functional Analysis'', 2nd edition, Springer-Verlag, 1994, ISBN 0-387-97245-5</ref> The historical roots of functional analysis lie in the study of [[function space|spaces of functions]] and the formulation of properties of transformations of functions such as the [[Fourier transform]] as transformations defining [[continuous function|continuous]], [[unitary operator|unitary]] etc. operators between function spaces.  This point of view turned out to be particularly useful for the study of [[differential equations|differential]] and [[integral equations]].
+
+=== Differential equations ===
+{{Main|Differential equations}}
+A '''differential equation''' is a [[mathematics|mathematical]] [[equation]] for an unknown [[function (mathematics)|function]] of one or several [[Variable (mathematics)|variables]] that relates the values of the function itself and its [[derivative]]s of various [[Derivative#Higher derivatives|order]]s.<ref>E. L. Ince, ''Ordinary Differential Equations'', Dover Publications, 1958,  ISBN 0-486-60349-0
+</ref><ref>[[Witold Hurewicz]], ''Lectures on Ordinary Differential Equations'', Dover Publications, ISBN 0-486-49510-8
+</ref><ref>{{Citation |authorlink=Lawrence C. Evans |first=L. C. |last=Evans |title=Partial Differential Equations |publisher=American Mathematical Society |location=Providence |year=1998 |isbn=0-8218-0772-2 }}</ref> Differential equations play a prominent role in [[engineering]], [[physics]], [[economics]], [[biology]], and other disciplines.
+
+Differential equations arise in many areas of science and technology, specifically whenever a [[Deterministic system (mathematics)|deterministic]] relation involving some continuously varying quantities (modeled by functions) and their rates of change in space and/or time (expressed as derivatives) is known or postulated. This is illustrated in [[classical mechanics]], where the motion of a body is described by its position and velocity as the time value varies. [[Newton's laws of motion|Newton's laws]] allow one (given the position, velocity, acceleration and various forces acting on the body) to express these variables dynamically as a differential equation for the unknown position of the body as a function of time. In some cases, this differential equation (called an [[equations of motion|equation of motion]]) may be solved explicitly.
+
+=== Measure theory ===
+{{Main|Measure (mathematics)}}
+
+A '''measure''' on a [[set (mathematics)|set]] is a systematic way to assign a number to each suitable [[subset]] of that set, intuitively interpreted as its size.<ref>[[Terence Tao]], 2011. ''An Introduction to Measure Theory''.  American Mathematical Society.</ref> In this sense, a measure is a generalization of the concepts of length, area, and volume. A particularly important example is the [[Lebesgue measure]] on a [[Euclidean space]], which assigns the conventional [[length]], [[area]], and [[volume]] of [[Euclidean geometry]] to suitable subsets of the <math>n</math>-dimensional Euclidean space <math>\mathbb{R}^n</math>. For instance, the Lebesgue measure of the [[Interval (mathematics)|interval]] <math>\left[0, 1\right]</math> in the [[real line|real numbers]] is its length in the everyday sense of the word&thinsp;<U+2013>&thinsp;specifically, 1.
+
+Technically, a measure is a function that assigns a non-negative real number or [[Extended real number line|+<U+221E>]] to (certain) subsets of a set <math>X</math> (''see'' [[#Definition|Definition]] below). It must assign 0 to the [[empty set]] and be ([[countably]]) additive: the measure of a 'large' subset that can be decomposed into a finite (or countable) number of 'smaller' disjoint subsets, is the sum of the measures of the "smaller" subsets. In general, if one wants to associate a ''consistent'' size to ''each'' subset of a given set while satisfying the other axioms of a measure, one only finds trivial examples like the [[counting measure]]. This problem was resolved by defining measure only on a sub-collection of all subsets; the so-called ''measurable'' subsets, which are required to form a [[Sigma-algebra|<math>\sigma</math>-algebra]]. This means that countable [[union (set theory)|unions]], countable [[intersection (set theory)|intersections]] and [[complement (set theory)|complements]] of measurable subsets are measurable. [[Non-measurable set]]s in a Euclidean space, on which the Lebesgue measure cannot be defined consistently, are necessarily complicated in the sense of being badly mixed up with their complement. Indeed, their existence is a non-trivial consequence of the [[axiom of choice]].
+
+=== Numerical analysis ===
+{{Main|Numerical analysis}}
+'''Numerical analysis''' is the study of [[algorithm]]s that use numerical [[approximation]] (as opposed to general [[symbolic computation|symbolic manipulations]]) for the problems of mathematical analysis (as distinguished from [[discrete mathematics]]).<ref>{{cite book |last=Hildebrand |first=F. B. | authorlink=Francis B. Hildebrand | title=Introduction to Numerical Analysis | edition=2nd edition |year=1974 |publisher=McGraw-Hill |location= |isbn= 0-07-028761-9}}</ref>
+
+Modern numerical analysis does not seek exact answers, because exact answers are often impossible to obtain in practice. Instead, much of numerical analysis is concerned with obtaining approximate solutions while maintaining reasonable bounds on errors.
+
+Numerical analysis naturally finds applications in all fields of engineering and the physical sciences, but in the 21st&nbsp;century, the life sciences and even the arts have adopted elements of scientific computations. [[Ordinary differential equation]]s appear in [[celestial mechanics]] (planets, stars and galaxies); [[numerical linear algebra]] is important for data analysis; [[stochastic differential equation]]s and [[Markov chain]]s are essential in simulating living cells for medicine and biology.
+
+== Other topics in mathematical analysis ==
+
+* [[Calculus of variations]] deals with extremizing [[functional (mathematics)|functionals]], as opposed to ordinary [[calculus]] which deals with [[function (mathematics)|functions]].
+* [[Harmonic analysis]] deals with [[Fourier series]] and their abstractions.
+* [[Geometric analysis]] involves the use of geometrical methods in the study of [[partial differential equation]]s and the application of the theory of partial differential equations to geometry.
+* [[Clifford analysis]], the study of Clifford valued functions that are annihilated by Dirac or Dirac-like operators,  termed in general as monogenic or Clifford analytic functions.
+* [[p-adic analysis|''p''-adic analysis]], the study of analysis within the context of [[p-adic number|''p''-adic numbers]], which differs in some interesting and surprising ways from its real and complex counterparts.
+* [[Non-standard analysis]], which investigates the [[hyperreal number]]s and their functions and gives a [[rigour#Mathematical rigour|rigorous]] treatment of [[infinitesimal]]s and infinitely large numbers.
+*[[Computable analysis]], the study of which parts of analysis can be carried out in a [[computability theory|computable]] manner.
+* [[Stochastic calculus]] <U+2013> analytical notions developed for [[stochastic processes]].
+* [[Set-valued analysis]] <U+2013> applies ideas from analysis and topology to set-valued functions.
+* [[Convex analysis]], the study of convex sets and functions.
+* [[Tropical analysis]] (or [[idempotent analysis]]) <U+2013> analysis in the context of the [[semiring]] of the [[max-plus algebra]] where the lack of an additive inverse is compensated somewhat by the idempotent rule A&nbsp;+&nbsp;A&nbsp;=&nbsp;A. When transferred to the tropical setting, many nonlinear problems become linear.<ref>[http://arxiv.org/abs/math/0507014v1 THE MASLOV DEQUANTIZATION, IDEMPOTENT AND TROPICAL MATHEMATICS: A BRIEF INTRODUCTION]</ref>
+
+==Applications==
+Techniques from analysis are also found in other areas such as:
+
+===Physical sciences===
+
+The vast majority of [[classical mechanics]], [[relativity]], and [[quantum mechanics]] is based on applied analysis, and [[differential equation]]s in particular. Examples of important differential equations include [[Newton's second law]], the [[Schr<U+00F6>dinger equation]], and the [[Einstein field equations]].
+
+[[Functional analysis]] is also a major factor in [[quantum mechanics]].
+
+===Signal processing===
+When processing signals, such as [[Sound|audio]], [[radio wave]]s, light waves, [[seismic waves]], and even images, Fourier analysis can isolate individual components of a compound waveform, concentrating them for easier detection and/or removal.  A large family of signal processing techniques consist of Fourier-transforming a signal, manipulating the Fourier-transformed data in a simple way, and reversing the transformation.<ref>Theory and application of digital signal processing
+Rabiner, L. R.; Gold, B.
+Englewood Cliffs, N.J., Prentice-Hall, Inc., 1975.</ref>
+
+===Other areas of math===
+
+Techniques from analysis are used in many areas if mathematics, including:
+*[[Analytic number theory]]
+*[[Analytic combinatorics]]
+*[[Continuous probability]]
+*[[Differential entropy]] in information theory
+*[[Differential game]]s
+* [[Differential geometry]], the application of calculus to specific mathematical spaces known as [[manifold]]s that possess a complicated internal structure but behave in a simple manner locally.
+* [[Differential topology]]
+
+== See also ==
+{{portal|Analysis}}
+*[[Method of exhaustion]]
+*[[Non-classical analysis]]
+*[[Smooth infinitesimal analysis]]
+*[[Paraconsistent mathematics]]
+*[[Constructive analysis]]
+*[[Fourier analysis]]
+*[[Convex analysis]]
+*[[Timeline of calculus and mathematical analysis]]
+**[[History of calculus]]
+
+== Notes ==
+{{reflist|2}}
+
+==References==
+*Aleksandrov, A. D., Kolmogorov, A. N., Lavrent'ev, M. A. (eds.). 1984. ''Mathematics, its Content, Methods, and Meaning''. 2nd ed. Translated by S. H. Gould, K. A. Hirsch and T. Bartha; translation edited by S. H. Gould. MIT Press; published in cooperation with the American Mathematical Society.
+*Apostol, Tom M. 1974. ''Mathematical Analysis''. 2nd ed. Addison<U+2013>Wesley. ISBN 978-0-201-00288-1.
+*Binmore, K.G. 1980<U+2013>1981. ''The foundations of analysis: a straightforward introduction''. 2 volumes. Cambridge University Press.
+*Johnsonbaugh, Richard, & W. E. Pfaffenberger. 1981. ''Foundations of mathematical analysis''. New York: M. Dekker.
+*Nikol'skii, S. M. 2002. [http://eom.springer.de/M/m062610.htm "Mathematical analysis"]. In [http://eom.springer.de/default.htm ''Encyclopaedia of Mathematics''], [[Michiel Hazewinkel]] (editor).  Springer-Verlag. ISBN 1-4020-0609-8.
+*Rombaldi, Jean-<U+00C9>tienne. 2004. ''<U+00C9>l<U+00E9>ments d'analyse r<U+00E9>elle : CAPES et agr<U+00E9>gation interne de math<U+00E9>matiques''. EDP Sciences. ISBN 2-86883-681-X.
+*[[Walter Rudin|Rudin, Walter]]. 1976. ''Principles of Mathematical Analysis''. McGraw<U+2013>Hill Publishing Co.; 3rd revised edition (September 1, 1976), ISBN 978-0-07-085613-4.
+*Smith, David E. 1958. ''History of Mathematics''. Dover Publications. ISBN 0-486-20430-8.
+*Stillwell, John. 2004. ''Mathematics and its History''. 2nd ed. Springer Science + Business Media Inc. ISBN 0-387-95336-1.
+*[[E. T. Whittaker|Whittaker, E. T.]] and [[G. N. Watson|Watson, G. N.]]. 1927. ''[[Whittaker and Watson|A Course of Modern Analysis]]''. 4th edition. Cambridge University Press. ISBN 0-521-58807-3.
+*http://www.math.harvard.edu/~ctm/home/text/class/harvard/114/07/html/home/course/course.pdf
+
+==External links==
+* [http://www.economics.soton.ac.uk/staff/aldrich/Calculus%20and%20Analysis%20Earliest%20Uses.htm Earliest Known Uses of Some of the Words of Mathematics: Calculus & Analysis]
+* [http://www.jirka.org/ra/ Basic Analysis: Introduction to Real Analysis] by Jiri Lebl ([[Creative Commons|Creative Commons BY-NC-SA]])
+
+{{Mathematics-footer}}
+
+[[Category:Mathematical analysis| ]]

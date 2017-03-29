@@ -1,0 +1,79 @@
+{{Infobox Software
+|name                       = ExtendSim
+|logo                       =
+|author                     = Imagine That Inc.
+|developer                  = Imagine That Inc.
+|released                   = <!-- {{Start date|YYYY|MM|DD}} -->
+|latest release version     = ExtendSim 8
+|operating system           = [[Mac OS X]] 10.4+, [[Microsoft Windows|Windows XP, Vista and 7]]
+|language                   = English
+|status                     = Active
+|genre                      = Simulation & Optimization
+|license                    = [[Proprietary software|Proprietary]], Concurrent User Licensing
+|website                    = http://www.extendsim.com
+}}
+
+'''ExtendSim''' (formerly known as Extend) is a [[simulation software|simulation program]] for modeling [[discrete event simulation | discrete event]], [[continuous]], [[agent-based]], and discrete rate processes. There are four ExtendSim packages: CP for continuous processes; OR (operations research) which adds discrete event; AT (advanced technology) which adds discrete rate, a number of advanced modeling features , and [[Stat::Fit]] for statistical distribution fitting; and Suite which adds 3D animation.
+
+==History==
+
+{| class="wikitable" border="1"
+|+
+! Year !! Features added
+|-
+| 1987 || original release for continuous modeling on the Macintosh
+|-
+| 1990 || discrete event capabilities added
+|-
+| 1995 || release for Microsoft Windows
+|-
+| 2008 || discrete rate and 3D capabilities added
+|}
+
+==Model construction==
+Models are created by dragging blocks from a library into a model worksheet. Blocks are connected together to create the logical flow of the model. Data for the model resides in the parameters of the blocks and in a proprietary [[database]]. New blocks can be created by combining existing blocks into a single hierarchical block or by programming a block in ExtendSim's [[c (programming language) | c-based]] language, ModL. The major libraries in ExtendSim are:
+{| class="wikitable" border="1"
+|+
+! Library name !! Purpose !! Sample blocks
+|-
+| Value|| Mathematical calculations, remote data access, statistics collection || Math, Read, Write, Mean & Variance
+|-
+| Item || Models discrete event processes || Queue, Activity, Resource Pool, Item
+|-
+| Rate|| Models discrete rate processes || Tank, Valve, Interchange
+|-
+| Plotter || Displays plots and charts || Plotter I/O, Histogram
+|-
+| Animation 2D 3D || Animates the model state || Animate Value, Animate 3D
+|-
+| Utilities|| Model interface, debugging, and information  || Buttons, Record Message, Memory Usage
+|}
+==Application areas==
+
+ExtendSim is used for modeling manufacturing, healthcare, supply chain, communications, defense, environmental, agricultural, biological, energy, reliability, service, information flow, and recreational systems. Sample applications include resource optimization for food logistics <ref>{{cite web | url = http://www.ecology.kee.hu/pdf/0501_189200.pdf | title = Resource Optimization by Simulation Technique in Food Logistics | accessdate = 2011-02-11}}</ref>, [[six sigma]] process improvement for a hospital [[emergency department]] <ref> {{cite web | title = Simulating Six Sigma Improvement Ideas for a Hospital Emergency Department | url = http://www.informs-sim.org/wsc03papers/250.pdf | accessdate = 2011-02-11}} </ref>, communication systems <ref>{{cite web | title = NCW End-To-End (NETE) Model For Future C2 Architecture Assessments | url = http://www.dodccrp.org/events/10th_ICCRTS/CD/papers/141.pdf |  accessdate = 2011-02-14}}</ref>,  and manufacturing facility design  <ref>{{cite web | url = http://biopharminternational.findpharma.com/biopharm/article/articleDetail.jsp?id=432392| title = Facility Design: Simulation Methodology for Facility Design| accessdate = 2011-02-14}}</ref>
+
+== See also ==
+* [[Discrete event simulation]]
+* [[Computer model]]
+* [[Process optimization]]
+* [[Simulation software]]
+
+===Related software===
+* [[Simcad Pro]]
+* [[Simprocess]]
+* [[Simul8]]
+* [[Anylogic]]
+* [[Arena|Arena (software)]]
+* Simio
+* [[Flexsim]]
+
+==References==
+{{reflist}}
+
+==External links==
+* [http://www.extendsim.com ExtendSim home page]
+* [http://www.simulationsoftware.blogspot.com ExtendSim blog]
+* [http://www.spicosa.eu/simulation/index.htm SPICOSA page on ExtendSim]
+* [http://www.fairchildgarden.org/education/fclinks/rainforestmodel/ Rainforest carbon cycling model]
+
+[[Category:Simulation software]]
