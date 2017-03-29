@@ -77,6 +77,7 @@ for i in range(len(lines)):
     user_ids = []
     user_contrib = []
     for j in reversed (range(len(revisions))):
+        print ('Processing revision ' + str(len(revisions) - j) + '/' + str(len(revisions)) + ' of file: ' + str(i+1))
         rev_timestamp = revisions[j]["timestamp"]
         rev_id = revisions[j]["revid"]
         rev_timestamp = non_decimal.sub('', rev_timestamp)
