@@ -12,6 +12,21 @@ from dateutil import parser
 
 import distance
 
+import argparse
+
+def parse_args():
+    '''
+    Parses the arguments.
+    '''
+    parser = argparse.ArgumentParser(description="Retrieve historical contribution of Wikipedia users.")
+
+    parser.add_argument('--start_index', type = int, nargs='?', default=0,
+                        help='starting file index.')
+
+    return parser.parse_args()
+
+args = parse_args()
+
 lines = []
 non_decimal = re.compile(r'[^\d.]+')
 
@@ -29,6 +44,8 @@ missing_lines = []
 
 for i in range(len(lines)):
 # for i in [1]: # for debug
+    if i < args.start_index:
+        continue
     print ('Processing line number ' + str (i+1) + ' / ' + str(len(lines)))
     # if (os.path.isfile ("text/" + str (i+1))):
     #     continue
