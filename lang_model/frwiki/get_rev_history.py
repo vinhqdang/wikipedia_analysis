@@ -139,6 +139,7 @@ for i in range(len(lines)):
             continue
 
         # print user_id
+        print ('Calculating new contribution')
         new_contrib = distance.levenshtein (content, last_content)
         last_content = content
         print ('User ' + str(user_id) + ' contribute: ' + str (new_contrib))
