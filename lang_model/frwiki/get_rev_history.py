@@ -11,6 +11,7 @@ import datetime
 from dateutil import parser
 
 import distance
+import Levenshtein
 
 import argparse
 
@@ -140,14 +141,15 @@ for i in range(len(lines)):
 
         # print user_id
         print ('Calculating new contribution')
-        new_contrib = distance.levenshtein (content, last_content)
+        # new_contrib = Levenshtein.distance (content, last_content)
+        new_contrib = abs (len(content) - len(last_content))
         last_content = content
         print ('User ' + str(user_id) + ' contribute: ' + str (new_contrib))
         user_ids.append(user_id)
         user_contrib.append(new_contrib)
 
     # write user contribution to file
-    file_name = "contrib/" + str (i+1)
+    file_name = "contrib/" + str (i+1) + '.txt'
     f = open (file_name, "w")
     f.write("quality:" + quality + '\n')
     for k in range (len (user_ids)):
