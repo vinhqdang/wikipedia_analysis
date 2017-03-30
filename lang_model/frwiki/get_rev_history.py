@@ -10,8 +10,8 @@ import os
 import datetime
 from dateutil import parser
 
-import distance
-import Levenshtein
+# import distance
+# import Levenshtein
 import editdistance
 
 import argparse
