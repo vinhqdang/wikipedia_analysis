@@ -25,6 +25,9 @@ def parse_args():
     parser.add_argument('--start_index', type = int, nargs='?', default=0,
                         help='starting file index.')
 
+    parser.add_argument('--last_index', type = int, nargs='?', default=50000,
+                        help='last file index.')
+
     return parser.parse_args()
 
 args = parse_args()
@@ -47,6 +50,8 @@ missing_lines = []
 for i in range(len(lines)):
 # for i in [1]: # for debug
     if i < args.start_index:
+        continue
+    if i > args.last_index:
         continue
     print ('Processing line number ' + str (i+1) + ' / ' + str(len(lines)))
     # if (os.path.isfile ("text/" + str (i+1))):
