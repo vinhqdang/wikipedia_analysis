@@ -142,8 +142,8 @@ for i in range(len(lines)):
 
         # print user_id
         print ('Calculating new contribution')
-        # new_contrib = editdistance.eval (content, last_content)
-        new_contrib = abs (len(content) - len(last_content))
+        new_contrib = editdistance.eval (content, last_content)
+        # new_contrib = abs (len(content) - len(last_content))
         last_content = content
         print ('User ' + str(user_id) + ' contribute: ' + str (new_contrib))
         user_ids.append(user_id)
