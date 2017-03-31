@@ -129,8 +129,13 @@ for i in range(len(lines)):
 
     # got rev_id, now get the data
         url_string = "https://fr.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content%7Cuserid&format=json&revids=" + str(rev_id)
-        response = urllib2.urlopen(url_string).read ()
-        json_response = json.loads (response)
+        try:
+            response = urllib2.urlopen(url_string).read ()
+            json_response = json.loads (response)
+        except Exception, e:
+            print ("Cannot access the URL:" + url_string)
+            print (e)
+            continue
 
 
         page_id = json_response["query"]["pages"].keys()[0]
