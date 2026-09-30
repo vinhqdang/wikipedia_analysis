@@ -1,9 +1,9 @@
 """Build data/processed/{en,fr,ru}.parquet from the 2016-2017 text dumps.
 
-The raw article text is no longer in the working tree. It is kept in the git
-tag `legacy-2017`; by default this script extracts it from there.
+The raw article text is no longer in the working tree. It is kept in git history in
+commit `a8a849c`; by default this script extracts it from there.
 
-    python scripts/prepare_data.py                 # extract from the tag
+    python scripts/prepare_data.py                 # extract from that commit
     python scripts/prepare_data.py --source DIR    # DIR contains {en,fr,ru}wiki/
 """
 import argparse
@@ -16,12 +16,12 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from wikiquality.data import LANGS, PROCESSED, ROOT  # noqa: E402
 
-TAG = "legacy-2017"
+REV = "a8a849c"  # last commit that still contains the raw data
 
 
-def extract_from_tag(dest):
+def extract_from_history(dest):
     dest.mkdir(parents=True, exist_ok=True)
-    cmd = f"git -C {ROOT} archive {TAG} lang_model | tar -x -C {dest}"
+    cmd = f"git -C {ROOT} archive {REV} lang_model | tar -x -C {dest}"
     subprocess.run(cmd, shell=True, check=True)
     return dest / "lang_model"
 
@@ -40,7 +40,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", type=Path, help="directory holding enwiki/, frwiki/, ruwiki/")
     args = ap.parse_args()
-    source = args.source or extract_from_tag(ROOT / "data" / "raw")
+    source = args.source or extract_from_history(ROOT / "data" / "raw")
     PROCESSED.mkdir(parents=True, exist_ok=True)
     for lang in LANGS:
         df = build(lang, source)

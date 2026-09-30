@@ -5,10 +5,10 @@ The original code from the first version of this repository: R scripts (`analysi
 It targets R 3.2.3, Python 2 and TensorFlow 1.x and is kept for reference only.
 
 The large data files (article text, ORES feature tables, contribution files) were removed from the
-working tree. They are still in the git tag `legacy-2017`:
+working tree. They are still in the commit `a8a849c`:
 
 ```sh
-git checkout legacy-2017
+git checkout a8a849c
 ```
 
 The current pipeline is in the repository root.

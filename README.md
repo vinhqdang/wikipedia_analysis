@@ -18,7 +18,7 @@ baselines against frozen and fine-tuned multilingual transformers.
 
 Classes are roughly balanced. Labels come from the WikiProject assessments published with the ORES
 `wp10` model (2015); each article has one labelled revision, fetched by timestamp. The raw wikitext is about 1.5 GB and is no
-longer in the working tree. It stays in the git tag `legacy-2017`, and `scripts/prepare_data.py`
+longer in the working tree. It stays in the commit `a8a849c`, and `scripts/prepare_data.py`
 extracts it from there into `data/processed/*.parquet`. The class order used for ordinal metrics
 is in `wikiquality/data.py`; for French and Russian it is our reading of the scales.
 
@@ -68,7 +68,7 @@ What this shows so far:
 
 ```sh
 pip install -e .
-python scripts/prepare_data.py                 # extract corpora from the legacy-2017 tag
+python scripts/prepare_data.py                 # extract corpora from commit a8a849c
 python scripts/run_baselines.py                # length, structural, TF-IDF (about 40 min on 4 CPUs)
 python scripts/embed.py --max-len 256 --max-docs 4000
 python scripts/run_embeddings.py
