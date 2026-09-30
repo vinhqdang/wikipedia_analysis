@@ -1,0 +1,17 @@
+[project]
+name = "wikiquality"
+version = "0.2.0"
+description = "Predicting the quality class of Wikipedia articles in English, French and Russian"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "scikit-learn",
+    "lightgbm",
+    "torch",
+    "transformers",
+]
+
+[tool.setuptools]
+packages = ["wikiquality"]

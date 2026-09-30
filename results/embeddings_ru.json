@@ -1,0 +1,31 @@
+{
+  "n_docs": 4000,
+  "e5_small_frozen_lr": {
+    "accuracy": 0.34125,
+    "macro_f1": 0.33592006549152476,
+    "qwk": 0.46794944081713274,
+    "mae": 1.44375,
+    "within_one": 0.62125
+  },
+  "structural_lgbm": {
+    "accuracy": 0.555,
+    "macro_f1": 0.5521814999247591,
+    "qwk": 0.7862589777389033,
+    "mae": 0.7475,
+    "within_one": 0.8225
+  },
+  "structural_plus_e5_lgbm": {
+    "accuracy": 0.54375,
+    "macro_f1": 0.5265178334945049,
+    "qwk": 0.7723779975063068,
+    "mae": 0.8025,
+    "within_one": 0.80875
+  },
+  "tfidf_linear_svm": {
+    "accuracy": 0.565,
+    "macro_f1": 0.5568563163258428,
+    "qwk": 0.81487296326776,
+    "mae": 0.695,
+    "within_one": 0.85
+  }
+}

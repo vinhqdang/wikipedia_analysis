@@ -1,79 +1,89 @@
 # wikipedia_analysis
 
-This repository contains my code to predict quality class of Wikipedia articles.
+Predicting the quality class of Wikipedia articles (stub, start, C, B, good, featured) for English,
+French and Russian Wikipedia, with models that need little or no language-specific feature engineering.
 
-You should find the code in R file in **analysis** directory.
+The repository started in 2016 as R code on ~20k English articles, then grew into LSTM/CNN models on
+raw text (see [`legacy/`](legacy/README.md)). The current version is a Python pipeline that redoes the
+experiments with current tooling, fixes problems in the old evaluation, and benchmarks simple
+baselines against frozen and fine-tuned multilingual transformers.
 
-## Data set
+## Data
 
-The data is stored in *all_data.tsv* file.
+| Language | Articles | Classes |
+|---|---|---|
+| English | 29,468 | stub, start, c, b, ga, fa |
+| French | 8,834 | e, bd, b, ba, a, adq |
+| Russian | 7,888 | IV, III, II, I, GA, FA, SA |
 
-The data set contains information of ~ 20 000 Wikipedia articles, collected through Wikipedia projects.
+Classes are roughly balanced. Labels come from the WikiProject assessments published with the ORES
+`wp10` model (2015); each article has one labelled revision, fetched by timestamp. The raw wikitext is about 1.5 GB and is no
+longer in the working tree. It stays in the git tag `legacy-2017`, and `scripts/prepare_data.py`
+extracts it from there into `data/processed/*.parquet`. The class order used for ordinal metrics
+is in `wikiquality/data.py`; for French and Russian it is our reading of the scales.
 
-# Running the code
+## Label leakage
 
-You should have [R](https://www.r-project.org) installed. I suggest that you should also use [RStudio](https://www.rstudio.com) as the IDE, but it is optional.
+Featured and good articles carry status templates in their wikitext (`{{Featured article}}`,
+`{{Bon article}}`, `{{Избранная статья}}`, ...), and stubs carry stub templates (`{{Asia-geo-stub}}`,
+`{{Ébauche}}`, ...). A model trained on the raw text can read the label instead of judging quality.
+`wikiquality.features.scrub` removes these templates and the matching categories, and all results
+below are reported for scrubbed text. The effect is modest for the classic models (TF-IDF macro-F1
+on English 0.612 raw vs 0.595 scrubbed, see `results/baselines_*.json`) but large enough that the
+scrubbed numbers are the ones to cite.
 
-Please note that the code is tested with R 3.2.3
+## Results
 
-These following packages are required:
+Stratified 80/20 split, seed 2017, macro-F1 on the held-out 20% (full corpora, scrubbed text).
+QWK is quadratic weighted kappa under the class order above.
 
-- caTools
-- rpart
-- class
-- h2o
+| Model | en F1 | en QWK | fr F1 | fr QWK | ru F1 | ru QWK |
+|---|---|---|---|---|---|---|
+| Length only (log chars, logistic regression) | 0.448 | 0.78 | 0.432 | 0.78 | 0.431 | 0.64 |
+| 19 structural features (refs, headings, links, ...) + LightGBM | 0.570 | 0.84 | 0.534 | 0.82 | 0.556 | 0.82 |
+| TF-IDF word 1-2 grams over wikitext + linear SVM | 0.595 | 0.86 | 0.506 | 0.81 | 0.562 | 0.82 |
 
+Frozen `multilingual-e5-small` embeddings (first 256 tokens of the prose, logistic regression), on a
+random subset of about 4,000 articles per language with its own split, so compare within the block only:
 
-First, you should load the code
+| Model (4k-article subset) | en F1 | fr F1 | ru F1 |
+|---|---|---|---|
+| Frozen e5-small + logistic regression | 0.382 | 0.378 | 0.336 |
+| Structural features + LightGBM | 0.512 | 0.523 | 0.552 |
+| Structural features + e5-small embeddings + LightGBM | 0.524 | 0.528 | 0.527 |
+| TF-IDF + linear SVM | 0.539 | 0.505 | 0.557 |
 
+What this shows so far:
 
-```r
-setwd ("path to AnalyzeData.R file")
-source ("AnalyzeData.R")
+- Article length alone already gets QWK 0.64-0.78. Quality classes are largely a size and structure
+  signal, and the remaining gains come from references, headings and link density.
+- Semantic embeddings of the lead section carry little of that signal. A frozen encoder is clearly
+  worse than counting structure, and adding it to the structural features does not help reliably.
+- Fine-tuning a transformer on the full article is the remaining open comparison. It needs a GPU and
+  has **not** been run: `scripts/finetune.py` is tested end to end on a tiny CPU run only. Until it is
+  run, no claim about transformers beating the baselines is supported.
+- There is no comparison with the current ORES/Lift Wing `articlequality` model yet.
+
+## Reproducing
+
+```sh
+pip install -e .
+python scripts/prepare_data.py                 # extract corpora from the legacy-2017 tag
+python scripts/run_baselines.py                # length, structural, TF-IDF (about 40 min on 4 CPUs)
+python scripts/embed.py --max-len 256 --max-docs 4000
+python scripts/run_embeddings.py
+python scripts/finetune.py --lang en --model xlm-roberta-base   # GPU
 ```
 
-Then you can run the following analysis.
+Results are written as JSON to `results/`.
 
-## Linear regression
+## Limits
 
-The linear regression is done by calling the function *runRegression*. 
+- One labelled revision per article, dated between roughly 2008 and 2016, so results describe that period.
+- Lead-section embeddings were limited to 256 tokens to fit CPU time.
+- The original 2017 LSTM evaluation fitted the vocabulary separately on the test set, so its accuracies
+  from that time are not comparable with the numbers here.
 
-## CART
+## License
 
-The CART model is done by calling the function *runCART*. 
-
-## kNN
-
-The function for kNN model is *runKNNModel*.
-
-## Multinominal logistic regression
-
-The predictor using multinominal logistic regression could be called with the function *runMultinominalLogisticRegression*
-
-The function requires packages *caret* and *nnet*.
-
-## SVM
-
-Packages required: *caret* and *e1071*
-
-Function name: *runSVM*
-
-## random forest
-
-We provided two functions for *randomForest* model.
-
-The first function is ``runRFModel``, which will load and run the data with readability scores using k-fold (with k = 5)
-
-The second function is ``runRFModel_withoutReadabilityScore``, which will run without using readability scores, as in [1].
-
-We applied 5-folds cross validation.
-
-You should observe that the first function provide a better prediction.
-
-## Utilities
-
-We provided some other utility functions such as calculate RMSE or NDCG.
-
-[1] Warncke-Wang, M., Ayukaev, V.R., Hecht, B. and Terveen, L.G., 2015, February. The Success and Failure of Quality Improvement Projects in Peer Production Communities. In Proceedings of the 18th ACM Conference on Computer Supported Cooperative Work & Social Computing (pp. 743-756). ACM.
-
-
+GPL-2.0, see `LICENSE`.
