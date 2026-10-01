@@ -42,6 +42,7 @@ QWK is quadratic weighted kappa under the class order above.
 | Length only (log chars, logistic regression) | 0.448 | 0.78 | 0.432 | 0.78 | 0.431 | 0.64 |
 | 19 structural features (refs, headings, links, ...) + LightGBM | 0.570 | 0.84 | 0.534 | 0.82 | 0.556 | 0.82 |
 | TF-IDF word 1-2 grams over wikitext + linear SVM | 0.595 | 0.86 | 0.506 | 0.81 | 0.562 | 0.82 |
+| XLM-R base fine-tuned (first 512 tokens of prose, 3 epochs) | 0.536 | 0.83 | 0.410 | 0.74 | 0.430 | 0.70 |
 
 Frozen `multilingual-e5-small` embeddings (first 256 tokens of the prose, logistic regression), on a
 random subset of about 4,000 articles per language with its own split, so compare within the block only:
@@ -59,9 +60,14 @@ What this shows so far:
   signal, and the remaining gains come from references, headings and link density.
 - Semantic embeddings of the lead section carry little of that signal. A frozen encoder is clearly
   worse than counting structure, and adding it to the structural features does not help reliably.
-- Fine-tuning a transformer on the full article is the remaining open comparison. It needs a GPU and
-  has **not** been run: `scripts/finetune.py` is tested end to end on a tiny CPU run only. Until it is
-  run, no claim about transformers beating the baselines is supported.
+- Fine-tuned XLM-R base (`scripts/finetune.py`, T4 GPU, fp16, lr 2e-5, batch 16, 3 epochs, best epoch by
+  validation macro-F1, same test split as the baselines) does not beat the cheap baselines in any language:
+  0.536 vs 0.595 (en), 0.410 vs 0.534 (fr), 0.430 vs 0.562 (ru). Its QWK is lower too.
+  The gap is largest on the smaller French and Russian sets. Validation F1 was still rising at epoch 3
+  on all three, so these runs are under-trained; the model also only sees the first 512 tokens of prose,
+  so it has no view of length, references or headings, which are what the baselines exploit.
+  Longer training, a long-context model, or feeding structural features alongside the text may change
+  the picture, but none of that has been tried. One seed per language, no confidence intervals.
 - There is no comparison with the current ORES/Lift Wing `articlequality` model yet.
 
 ## Reproducing
@@ -72,7 +78,7 @@ python scripts/prepare_data.py                 # extract corpora from commit a8a
 python scripts/run_baselines.py                # length, structural, TF-IDF (about 40 min on 4 CPUs)
 python scripts/embed.py --max-len 256 --max-docs 4000
 python scripts/run_embeddings.py
-python scripts/finetune.py --lang en --model xlm-roberta-base   # GPU
+python scripts/finetune.py --lang en --model xlm-roberta-base   # GPU, about 50 min for en on a T4
 ```
 
 Results are written as JSON to `results/`.

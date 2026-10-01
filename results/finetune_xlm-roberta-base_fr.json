@@ -1,0 +1,19 @@
+{
+  "val_macro_f1": 0.3969547283011809,
+  "test": {
+    "accuracy": 0.44538766270514996,
+    "macro_f1": 0.41037612269608087,
+    "qwk": 0.7350991209258926,
+    "mae": 0.8941709111488398,
+    "within_one": 0.7447651386530844
+  },
+  "args": {
+    "lang": "fr",
+    "model": "xlm-roberta-base",
+    "max_len": 512,
+    "epochs": 3,
+    "batch_size": 16,
+    "lr": 2e-05,
+    "limit": 0
+  }
+}
