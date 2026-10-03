@@ -8,6 +8,8 @@ raw text (see [`legacy/`](legacy/README.md)). The current version is a Python pi
 experiments with current tooling, fixes problems in the old evaluation, and benchmarks simple
 baselines against frozen and fine-tuned multilingual transformers.
 
+> A separate study, on LLM-style text in new English Wikipedia articles (2018-2026), lives in [`ai_text/`](ai_text/README.md).
+
 ## Data
 
 | Language | Articles | Classes |
