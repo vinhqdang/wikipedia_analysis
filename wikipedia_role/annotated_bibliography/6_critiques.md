@@ -11,6 +11,7 @@ Halfaker, A., Geiger, R. S., Morgan, J. T., & Riedl, J. (2013). The rise and dec
 - Annotation (abstract only): Argues that Wikipedia's contributor base shrank after 2007 even as content grew. The authors present evidence that quality-control mechanisms and algorithmic tools used to reject contributions are key causes of lower newcomer retention. Governance structures built to manage growth became resistant to newer editors' input.
 - Bearing: The bastion's verification machinery is itself a hole. The defences that protect quality also thin the community that is said to be the source of its authority.
 - Keywords: editor retention, newcomers, bots, quality control, governance
+- **Full-text update (3 Oct 2026, copy supplied by the author):** read in full (25 pages; ABS 57(5), 664-688; online 2012). Active English editors peaked in March 2007 at 56,400; the authors reject the "right-sizing" explanation because most articles remain below community standards for good articles and underrepresented groups still find joining hard. They show a steady inflow of "desirable newcomers" with falling survival, tie it to restrictive quality control and algorithmic rejection tools, and show formal norm-articulation mechanisms calcifying against changes proposed by newer editors.
 
 ### 2. Graham, Hogan, Straumann and Medhat (2014)
 Graham, M., Hogan, B., Straumann, R. K., & Medhat, A. (2014). Uneven geographies of user-generated information: Patterns of increasing informational poverty. *Annals of the Association of American Geographers, 104*(4), 746-764. https://doi.org/10.1080/00045608.2014.910087
@@ -35,6 +36,7 @@ Ford, H., & Wajcman, J. (2017). 'Anyone can edit', not everyone does: Wikipedia'
 - Annotation (abstract only): Takes up the gender disparity in editing, with fewer than ten percent of editors women. Beyond masculine technoscience culture, the authors argue that Wikipedia's infrastructure introduces new, less visible sources of gender disparity.
 - Bearing: The "anyone can edit" premise is formally true and practically false. The openness that grounds the bastion's legitimacy is uneven by design.
 - Keywords: gender gap, infrastructure, STS, openness
+- **Full-text update (3 Oct 2026, copy supplied by the author):** read in full (17 pages; pp. 511-527). Argues that Wikipedia's origins and infrastructure rest on epistemologies that exclude women; that being a Wikipedian means acquiring sociotechnical expertise that is gender-coded male; and that those who master its technocratic system of representation, with its emphasis on facts and modular verifiable information, become power brokers. Notes that search-engine fact boxes black-box Wikipedia's facts. Concludes that unless Wikipedia changes its culture of knowledge production, women's knowledge will again be marginalised. The framing is feminist STS.
 
 ### 5. Menking and Rosenberg (2021)
 Menking, A., & Rosenberg, J. (2021). WP:NOT, WP:NPOV, and other stories Wikipedia tells us: A feminist critique of Wikipedia's epistemology. *Science, Technology, & Human Values, 46*(3), 455-479. https://doi.org/10.1177/0162243920924783
