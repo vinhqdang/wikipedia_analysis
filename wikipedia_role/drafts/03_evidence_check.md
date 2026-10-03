@@ -14,7 +14,7 @@ Reading level: **full** = read in full from a copy; **page** = web page read thr
 | About 1% LLM-related change in some categories | Huang et al. (2025) | abstract (preprint) | |
 | Comparative defence: accuracy comparable to traditional encyclopedias, better than free sources | Fallis (2008) | abstract | |
 | Middlebury history department vote, 2007 | Jaschik (2007) | page | |
-| Waters argues the method risks conflating facts with popular opinion | Waters (2007) | record / summary | Weakest item in 3.2; read before relying on it. |
+| Waters: open-source method risks conflating facts with popular opinion; scholarship requires accountability; editors leave only a handle; compares favourably in sciences, spottier in history; Foundation representative agreed Wikipedia is a tertiary source not suitable for citation | Waters (2007) | full | The agreement is reported by Waters, not by the Foundation. The reading of his objection as one about answerability is the essay's interpretation. |
 | Students use it for background | Head & Eisenberg (2010) | abstract | |
 | Almost all LLMs train on Wikipedia datasets | Miller (2025) | page | Recheck the exact wording. |
 | About 730,000 conversations; Wikipedia 5% of citations | Punturo (2026) | page | Vendor data, medium-low trust. |
@@ -27,7 +27,8 @@ Reading level: **full** = read in full from a copy; **page** = web page read thr
 | Deference to expertise driven away by anonymity and aggressive editors | Sanger (2009) | abstract | |
 | First pillar prioritises product over process; "process of aggregation"; "more than just an encyclopedia" (p. 468); "authority can always be questioned" (p. 469); topic bans 2014 | Menking & Rosenberg (2021) | full | |
 | Peak of 56,400 active editors, March 2007; newcomer survival; restrictive quality control and tools; calcified norms | Halfaker et al. (2013) | full | |
-| Uneven, clustered geographies; connectivity does not fix it | Graham et al. (2014) | abstract | |
+| Uneven, clustered geographies; model explains 71% of variance; some regions below expected; connectivity necessary not sufficient | Graham et al. (2014) | full | |
+| Wikipedia on the first page of 99% of 1,000 Google searches for nouns | Graham et al. (2014), citing Silverwood-Cope (2012) | full (Graham); the original not read | Second-hand figure from 2012; recheck or drop. |
 | 38 months, 22,174 biographies; 16.83% to 18.25%; over 25% of nominated; 25% vs 17% kept; inference about "keep"; Adams et al. (2019) counter-finding | Tripodi (2023) | full | Adams et al. is cited by Tripodi; not read directly. |
 | Women's share of editors 16.1% globally | Hill & Shaw (2013) | abstract | |
 | Oral transmission excluded; keepers judged too close to subjects | Gallert & van der Velden (2014) | opening section only, unedited preprint | Final publication details unconfirmed. |
@@ -45,4 +46,4 @@ Reading level: **full** = read in full from a copy; **page** = web page read thr
 
 - No measurement of contamination in the external sources Wikipedia cites; stated as open in 3.1.
 - No recent accuracy comparison of Wikipedia with generative systems; stated in 3.2.
-- Read Waters (2007), Goldman (2001), Graham et al. (2014) and Gallert & van der Velden (2014) in full before submission.
+- Read Goldman (2001) and Gallert & van der Velden (2014) in full before submission; Waters (2007) and Graham et al. (2014) have been read in full.

@@ -103,6 +103,7 @@ Section C: Moral-philosophy tools
 - Annotation: Per the description found, Baier treats trust as accepting vulnerability to another's possible ill will and criticises contractarian models of morality for neglecting trust, especially under unequal power; she offers a moral test for trust relations. Not read in full here.
 - Bears on: T2. Supplies the contrast between contract (what a licence is) and trust (accepted vulnerability to discretionary goodwill): betrayal needs trust, not a contract.
 - Keywords: trust, vulnerability, contract, moral test.
+- **Full-text update (3 Oct 2026, copy supplied by the author):** read in full (Ethics 96(2), 231-260). Trust, "on this first approximation", is "accepted vulnerability to another's possible but not expected ill will (or lack of good will) toward one" (p. 235). Mere dependence differs from trust: Kant's neighbours who counted on his walk to set clocks might be disappointed but not let down or betrayed. Trust extends to strangers and enemies and may be unconscious or unwanted; plausible conditions for proper trust are that it survives the consciousness of both parties and that the trusted has had an opportunity to signify acceptance or rejection and to warn the trusting. The contract model is strained for relations between unequals (infant and parent). The earlier record-only annotation is superseded.
 
 ## 13. Trust, Distrust and Commitment
 - Citation: Hawley, K. (2014). Trust, distrust and commitment. *Noûs, 48*(1), 1-20. https://doi.org/10.1111/nous.12000
@@ -120,6 +121,7 @@ Section C: Moral-philosophy tools
 - Annotation: Distinguishes trust from mere reliance by the participant stance and reactive attitudes: trusting makes one liable to feel betrayed rather than merely let down. Not read in full.
 - Bears on: T2. Marks the line the essay needs: editors who merely relied on reusers feel disappointed; only those who trusted can claim betrayal.
 - Keywords: trust, reliance, betrayal, reactive attitudes.
+- **Full-text update (3 Oct 2026, copy supplied by the author; manuscript pagination, so no page numbers are given here):** read in full. Holton argues that one can decide to trust without believing the other will deliver; that trust differs from reliance by a participant stance (after Strawson), i.e. a readiness to feel betrayal if let down and gratitude if the reliance is upheld, whereas a machine's failure gives annoyance but not resentment; and that trust is a three-place relation (one person trusts another to do certain things). He says he does not address when and to whom trust is appropriate. The earlier record-only annotation is superseded.
 
 ## 15. The Moral Economy of the English Crowd in the Eighteenth Century
 - Citation: Thompson, E. P. (1971). The moral economy of the English crowd in the eighteenth century. *Past & Present, 50*(1), 76-136. https://doi.org/10.1093/past/50.1.76
