@@ -12,7 +12,7 @@ def generate(model_name, titles, batch_size=16, max_new_tokens=380, device="cuda
     tok = AutoTokenizer.from_pretrained(model_name, padding_side="left")
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
-    model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16, low_cpu_mem_usage=True).to(device).eval()
+    model = AutoModelForCausalLM.from_pretrained(model_name, dtype=torch.float16, low_cpu_mem_usage=True).to(device).eval()
     outs = []
     for s in range(0, len(titles), batch_size):
         chunk = titles[s : s + batch_size]

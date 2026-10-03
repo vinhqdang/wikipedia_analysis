@@ -9,17 +9,17 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 class Binoculars:
-    def __init__(self, observer="Qwen/Qwen2.5-3B", performer="Qwen/Qwen2.5-3B-Instruct", device="cuda"):
+    def __init__(self, observer="Qwen/Qwen2.5-1.5B", performer="Qwen/Qwen2.5-1.5B-Instruct", device="cuda"):
         self.device = device
         self.tok = AutoTokenizer.from_pretrained(observer)
         if self.tok.pad_token is None:
             self.tok.pad_token = self.tok.eos_token
-        kw = dict(torch_dtype=torch.float16, low_cpu_mem_usage=True)
+        kw = dict(dtype=torch.float16, low_cpu_mem_usage=True)
         self.observer = AutoModelForCausalLM.from_pretrained(observer, **kw).to(device).eval()
         self.performer = AutoModelForCausalLM.from_pretrained(performer, **kw).to(device).eval()
 
     @torch.inference_mode()
-    def score(self, texts, max_len=512, batch_size=4):
+    def score(self, texts, max_len=512, batch_size=8):
         order = sorted(range(len(texts)), key=lambda i: len(texts[i]))
         out = [None] * len(texts)
         for s in range(0, len(texts), batch_size):
