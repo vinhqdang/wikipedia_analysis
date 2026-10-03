@@ -8,7 +8,7 @@ raw text (see [`legacy/`](legacy/README.md)). The current version is a Python pi
 experiments with current tooling, fixes problems in the old evaluation, and benchmarks simple
 baselines against frozen and fine-tuned multilingual transformers.
 
-> A separate study, on LLM-style text in new English Wikipedia articles (2018-2026), lives in [`ai_text/`](ai_text/README.md).
+> A separate study, on LLM-style text in new English Wikipedia articles (2018-2026), lives in [`ai_text/`](ai_text/README.md). Background reading for an essay on Wikipedia's role in the LLM era is in [`wikipedia_role/`](wikipedia_role/README.md).
 
 ## Data
 
