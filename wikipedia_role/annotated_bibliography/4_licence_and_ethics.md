@@ -111,6 +111,7 @@ Section C: Moral-philosophy tools
 - Annotation: Per the summary found, to trust someone is to rely on them to fulfil a commitment, and distrust is the expectation of an unfulfilled commitment. This ties betrayal to commitments, which may be explicit or implicit.
 - Bears on: T2. Test for "betrayal": did AI firms or the licence incur any commitment (e.g. through Wikimedia's own attribution request, or assurances) that editors relied on? If not, disappointment is not betrayal.
 - Keywords: trust, commitment, betrayal, reliance.
+- **Full-text update (3 Oct 2026, copy supplied by the author):** read in full. Hawley defines trust as believing that someone has a commitment to do something and relying on them to meet it, and distrust as believing they have the commitment and not relying on them. Commitments may be implicit or explicit; "mutual expectation and convention give rise to commitment unless we take steps to disown these". Betrayal does not require that the victim trusted; the wrong lies in failing to fulfil a commitment. Expecting what nobody committed to gives a feeling of betrayal without a betrayal. When a commitment is made to a third party, the person betrayed is the one to whom it was made. The earlier annotation above (record-only) is superseded by this one. The paper does not discuss open licences or digital commons.
 
 ## 14. Deciding to Trust, Coming to Believe
 - Citation: Holton, R. (1994). Deciding to trust, coming to believe. *Australasian Journal of Philosophy, 72*(1), 63-76. https://doi.org/10.1080/00048409412345881
