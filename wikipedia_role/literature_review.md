@@ -7,7 +7,7 @@ Working draft, 3 October 2026.
 This review maps the literature behind an essay in philosophy and technology. The essay rests on two claims.
 
 - **T3, relative legitimacy.** Wikipedia's standing as a "source of truth", or as the last bastion of human knowledge, in the era of large language models (LLMs) is relative. It rose because alternatives collapsed or were contaminated, and it had earlier been disparaged in academia. Each new tool is blamed for eroding skills, and the older tool is then rehabilitated.
-- **T2, reuse without reciprocity.** AI firms' reuse of Wikipedia can comply with its CC BY-SA licence and still breach an implicit social contract of the knowledge commons, harming the people who built it.
+- **T2, reuse without reciprocity.** AI firms' reuse of Wikipedia can comply with its CC BY-SA licence and still leave something owed to the people who built it. The everyday word for the unease is "betrayal"; the review treats that as a colloquial label, and tests whether it fits.
 
 The review is narrative and broad, not systematic. Six threads were searched on 3 October 2026: social epistemology of Wikipedia; technological succession and panics about knowledge tools; knowledge commons and peer production; licensing law and the moral philosophy of reuse; empirical and policy facts on Wikipedia and LLMs for 2023-2026; and critiques of Wikipedia as an epistemic institution. About 110 distinct sources were confirmed to exist through a publisher page, a DOI registry record or a preprint server. Thirteen candidates that could not be confirmed were dropped, and a few more that were confirmed only as bare metadata were left out.
 
@@ -79,7 +79,7 @@ The community has acted. WikiProject AI Cleanup was founded in December 2023; th
 
 Wikimedia Enterprise announced Amazon, Meta, Microsoft, Mistral AI and Perplexity as paid partners in January 2026, alongside Google and others, with no contract values given (Wikimedia Enterprise, 2026). In fiscal 2024-25 Enterprise revenue was $8.3 million, 4.0% of Foundation revenue, from 13 paid customers (Wikimedia Foundation, 2025a). The Foundation says commercial revenue is capped at 30% of annual funding and that commercial reusers should help carry the burden of sustaining the commons (Becker, 2026). On the other side of the comparison, Stack Overflow's partnership with OpenAI included a commitment to attribute the community (Stack Overflow, 2024), and Reddit has licensed its content to Google, reported by a law-firm commentary at about $60 million a year (Chintalapoodi, 2024; secondary source).
 
-## 5. Commons, reciprocity and the grammar of betrayal
+## 5. Commons, reciprocity and what is owed
 
 ### 5.1 Commons theory and the AI turn
 

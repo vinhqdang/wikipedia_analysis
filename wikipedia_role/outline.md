@@ -19,14 +19,11 @@ Working draft, 3 October 2026. Status: proposed, not yet confirmed by the author
 ## Thesis (proposed)
 
 1. **Relational legitimacy (T3).** Wikipedia's standing as a source of truth is relational. It rose when the alternatives were distrusted or collapsed, and it never claimed truth, only verifiability. What is worth defending is not a body of content but a community-held practice of verification: knowledge that, in Hardwig's terms, is known by the community and not by any individual.
-2. **The betrayal claim has to be tested, not assumed (T2).** Using Hawley's commitment account, betrayal requires a commitment held by the party said to have betrayed. Licence terms, public attribution assurances, and open-knowledge convention are candidate commitments, and they run to different parties. The claim holds for some cases and fails for others.
-3. **What survives is a duty of stewardship.** Where betrayal cannot be shown, a weaker duty remains: those who depend on a shared epistemic infrastructure, and whose reuse strains it, owe something toward keeping it going. This is better located in dependence and fair play than in a broken promise.
+2. **Something is owed that the licence does not say (T2).** The common reaction that reuse by AI developers is a betrayal of the community is a loose way of naming a real unease. Taken as a technical charge it would need a commitment held by the party accused (Hawley, 2014), and for general reuse under an open licence there is mostly none. The essay uses the commitment account briefly, to show why that word fits few cases, and then asks what the unease tracks.
+3. **What it tracks is a duty of stewardship.** Those who depend on a shared epistemic infrastructure, and whose reuse strains it, owe something toward keeping it going. This is better located in dependence, fair play and the avoidance of exploitation than in a broken promise.
 4. **The most urgent change is internal.** If the bastion is the community, the main threat to it is the one the literature documents from inside, the loss of newcomers and of inclusion, not only extraction from outside.
 
-**[decision] Stance on "betrayal".** The literature reviewed supports a weaker claim than "betrayal" for most reuse. Two ways to write the essay:
-
-- **A, defend betrayal for specific cases.** Identify commitments that were made and not kept, and argue that betrayal holds there.
-- **B, test betrayal and reframe (recommended).** Show where betrayal holds (narrow cases) and where it fails (general reuse under an open licence), then argue that a stewardship duty covers the remainder. This keeps the author's moral intuition as a hypothesis under test and gives a conclusion that can be defended against the strongest objection (the open licence is a gift to anyone).
+**Settled (author, 3 October 2026): "betrayal" is colloquial, not a technical claim.** The essay therefore does not defend betrayal. It treats the word as an everyday name for the unease, tests it briefly in section 5, and builds the argument on a stewardship duty (option B in the earlier draft).
 
 ## Structure and word budget (target about 9,000 words; check the target journal's limit)
 
@@ -57,13 +54,12 @@ Working draft, 3 October 2026. Status: proposed, not yet confirmed by the author
 - 4.2 Harms outside the licence: attention and referral traffic; bot load on infrastructure (Mueller et al., 2025); contributor effects (mixed evidence); the Foundation's own requests for credit and payment.
 - *Claim:* the licence is the wrong instrument for the worry, as its own steward concedes. The harm is real but modest and unevenly evidenced.
 
-### 5. Betrayal, disappointment, exploitation (about 2,000)
+### 5. What the unease tracks (about 1,800)
 
-- 5.1 Hawley's commitment account: commitment may be implicit; being trusted is neither necessary nor sufficient; expectations without commitment give a feeling, not a betrayal; commitments to third parties.
-- 5.2 Candidate commitments and who holds them: licence attribution duty; the Foundation's requests; AI developers' public assurances (for example Stack Overflow, 2024); open-knowledge convention. Who could be betrayed: editors, readers, the Foundation.
-- 5.3 The hard case: a gift to anyone (Mauss; Open Source Definition) and the question whether convention was disowned.
-- 5.4 Other grounds: fair play (Hart; Rawls) and its participation condition; exploitation (Zwolinski et al.); data labour and leverage.
-- *Claim:* betrayal holds only where a commitment was made and not kept; generally the better descriptions are free-riding on a scheme and neglect of a dependency.
+- 5.1 *Why "betrayal" is the wrong word for most cases.* Hawley's commitment account in brief: commitment may be implicit; expectations without commitment give a feeling of betrayal, not a betrayal; commitments to third parties. Candidate commitments (licence attribution duty, the Foundation's requests, public assurances such as Stack Overflow, 2024) run to different parties, and where one was made and not kept the word can apply.
+- 5.2 *The hard case: a gift to anyone* (Mauss; Open Source Definition), and whether convention was disowned.
+- 5.3 *Better descriptions:* free-riding on a cooperative scheme (Hart; Rawls, with the participation condition); exploitation that is consensual yet unfair (Zwolinski et al.); neglect of a dependency; data labour and leverage.
+- *Claim:* the unease is well founded but is not about a broken promise; it is about reliance without upkeep.
 
 ### 6. What is owed instead: stewardship of an epistemic commons (about 1,400)
 
@@ -103,7 +99,7 @@ Working draft, 3 October 2026. Status: proposed, not yet confirmed by the author
 
 ## What would change the argument
 
-- Evidence that editors do hold, and AI developers knowingly encouraged, a reciprocity expectation would strengthen the betrayal claim.
+- Evidence that editors do hold, and AI developers knowingly encouraged, a reciprocity expectation would give the commitment account more work to do and would strengthen the case for an owed duty.
 - Evidence that Wikimedia's reuse agreements deliver credit, traffic and funding in practice would weaken the case for an outstanding duty.
 - A study showing a general collapse in contributions caused by AI would strengthen the harm premise in section 4.
 
