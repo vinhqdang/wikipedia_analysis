@@ -89,7 +89,7 @@ For generative AI, Huang and Siddarth (2023, preprint) argue that foundation mod
 
 ### 5.2 What the licence promises
 
-The CC BY-SA 4.0 legal code grants rights to reproduce and share the work and adapted material, with duties of attribution and share-alike that attach when material is shared (Creative Commons, 2013). The Wikimedia Terms of Use state that the licences allow commercial uses (Wikimedia Foundation, 2023). Creative Commons itself says that AI training is often permitted by copyright, so licence conditions "have limited application to machine reuse" (Pearson, 2025), that its guidance was developed for reuse by people (Creative Commons, 2026), and that its CC Signals project aims at norms that embed reciprocity (Creative Commons, n.d.). In law, Lemley and Casey (2021) argue that training should generally be fair use; the Open Source Definition forbids field-of-use restrictions (Open Source Initiative, 2007); and the Ninth Circuit's September 2026 decision in *Doe v. GitHub*, as reported, affirmed dismissal of the DMCA attribution claims while contract claims over open-licence attribution remain pending (Bonfiglio, 2026; the opinion itself was not read).
+The CC BY-SA 4.0 legal code grants rights to reproduce and share the work and adapted material, with duties of attribution and share-alike that attach when material is shared (Creative Commons, 2013). The Wikimedia Terms of Use state that the licences allow commercial uses (Wikimedia Foundation, 2023). Creative Commons itself says that AI training is often permitted by copyright, so licence conditions "have limited application to machine reuse" (Pearson, 2025), that its guidance was developed for reuse by people (Creative Commons, 2026), and that its CC Signals project aims at norms that embed reciprocity (Creative Commons, n.d.). In law, Lemley and Casey (2021) argue that training should generally be fair use; the Open Source Definition forbids field-of-use restrictions (Open Source Initiative, 2007); and the Ninth Circuit's September 2026 decision in *Doe v. GitHub* (read in full) affirmed dismissal of a DMCA claim on the "output" theory, holding that a code-generating tool creates new works and does not "remove or alter" copyright management information from copies, while declining to consider the training-stage "input" theory as forfeited; two breach-of-contract claims remain in the district court (*Doe v. GitHub, Inc.*, 2026). The case concerns code, and it does not decide whether training breaches an open licence's conditions.
 
 The Foundation asks AI developers to credit contributions and to pay through Enterprise, in the language of a "virtuous cycle", but does not say that current reuse breaches the licence (Wikimedia Foundation, 2025d). Taken together, there is no evidence in this literature that licence compliance is lacking. The licence's steward concedes that the licence is the wrong instrument for the worry.
 
@@ -142,7 +142,7 @@ There is no evidence of a licence breach, and the licence's steward says the lic
 - Hess and Ostrom (2007) and Benkler (2002), which were checked only as records or summaries; Goldman (2001), seen only as a record and abstract-level description; and Fricker (2007), not read. Hawley (2014), Baier (1986) and Holton (1994) have now been read in full.
 - Encyclopaedia Britannica (2006), and the Lyu et al. (2025) paper, whose effect sizes were not read in the text.
 - The Derrida translation year; and whether Eric McLuhan is co-author of the 1988 book (he is listed here from outside the catalogue record).
-- The *Doe v. GitHub* opinion, the Foundation's pages quoted in Section 5.2, and the CC guidance, for exact wording.
+- The Foundation's pages and the CC pages quoted in Section 5.2, for exact wording; the *Doe v. GitHub* opinion has been read in full.
 - Any figures in the Wikimedia Signpost special report (Henner, 2026), which are the author's own compilation and were not traced to primary data; they are not used in this review.
 
 ## References
@@ -180,6 +180,8 @@ Creative Commons. (2013). *Attribution-ShareAlike 4.0 International (CC BY-SA 4.
 Creative Commons. (2026, September 3). *Guidance on using CC licenses in an AI ecosystem*. https://creativecommons.org/2026/09/03/guidance-on-using-cc-licenses-in-an-ai-ecosystem/
 
 del Rio-Chanona, M., Laurentsyeva, N., & Wachs, J. (2024). Large language models reduce public knowledge sharing on online Q&A platforms. *PNAS Nexus, 3*(9). https://doi.org/10.1093/pnasnexus/pgae400
+
+*Doe v. GitHub, Inc.*, No. 24-7700 (9th Cir. Sept. 16, 2026). https://www.eff.org/files/2026/09/16/doe_v_github.pdf
 
 Derrida, J. (1981). *Dissemination* (B. Johnson, Trans.). University of Chicago Press. (Original work published 1972.)
 
