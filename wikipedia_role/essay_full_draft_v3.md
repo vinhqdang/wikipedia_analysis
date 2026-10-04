@@ -51,11 +51,21 @@ The costs of reuse to the practice are real and modest, and the evidence is unev
 
 Readers lose something less visible. A generated answer gives, by default, no route to question a claim, and Section 2 argued that this route is what the practice provides. If the answer replaces the visit, the people who might have joined the practice never arrive.
 
-If reuse draws on a practice that others sustain and strains some of the conditions of its upkeep, and reusers can help at small cost relative to their means, then a proportionate duty of upkeep is plausible: it scales with reliance and capacity and runs to the practice and not to donors as repayment. This is the essay's own principle and is not found in this form in the literature reviewed; its nearest relatives are the proposal that developers should contribute quality data back to the commons they draw on (Huang & Siddarth, 2023) and the commons tradition's point that shared resources survive through community rules and not through licences alone (Hess & Ostrom, 2007). The duty is light, because the harm is modest, and conditional, because the dependence is contested.
+### 3.3 What is owed, and why
 
-### 3.3 A note on betrayal
+The facts above raise a question and do not answer it: does reliance on a shared practice, together with some strain on it, create any duty to help keep it going? Three families of argument in moral and political philosophy bear on the question. Each has a known weak point, and the essay's position is that together they support a modest answer.
 
-Public reaction to this reuse is often phrased as betrayal. The word is loose here and the argument does not depend on it. On the commitment account (Hawley, 2014), betrayal needs a commitment that was broken, and "we may feel betrayed, but we have not been betrayed" where nobody committed to what was expected. Commitments that exist run to platforms and not to editors: Stack Overflow's partnership says OpenAI will "provide attribution to the Stack Overflow community within ChatGPT" (Stack Overflow, 2024). The Foundation's requests create an expectation on one side and not a commitment on the other. Whether open-knowledge convention creates a commitment of acknowledgement is not studied. Nor does a gift to anyone, given under an irrevocable royalty-free licence, create a debt to editors (Mauss, 2024, in its standard reading, handles such gifts least well); the essay makes no claim of payment to individuals. What the unease tracks is reliance without upkeep, which is the subject of Section 3.2.
+*Fair play.* Hart (1955, p. 185) wrote that "when a number of persons conduct any joint enterprise according to rules and thus restrict their liberty, those who have submitted to these restrictions when required have a right to a similar submission from those who have benefited by their submission", and Rawls (1964) took this up as a duty of fair play. Wikipedia fits the description of a joint enterprise in which participants accept restrictions, such as sourcing rules, notability standards and deletion discussions. The weak point is Nozick's (1974): benefits that nobody asked for cannot bind, as with neighbours who broadcast entertainment on a public address system and then demand a turn at the microphone. Simmons (1979) replies that receiving benefits differs from accepting them, and that obligations arise only where the benefits are accepted and recognised as the product of others' cooperation; Klosko (1992) replaces acceptance with three conditions, that the goods are presumptively beneficial, worth the effort asked of the recipient, and fairly distributed (Dagger & Lefkowitz, 2021, section 4.2). Developers are not passive listeners. They choose Wikipedia as training material on the strength of its curation, and the Foundation says that almost all models use it (Miller, 2025), so the condition of acceptance is arguably met. What remains doubtful is whether developers have joined the scheme, since the restrictions that make the enterprise work fall on editors and not on them.
+
+*Natural duty.* Rawls's (1999, p. 99) natural duty of justice "requires us to support and comply with just institutions that exist and apply to us" (as quoted in Dagger & Lefkowitz, 2021, section 4.4). It differs from obligations of fair play in not resting on any voluntary act, so Nozick's objection does not touch it. Its weak points are two. It concerns just institutions in a full political sense, and Wikipedia is a voluntary association, so applying it here is an extension by analogy. And Simmons's particularity objection asks why a universal duty should be discharged through one institution and not another. The extension is the essay's own step and is offered as an argument by analogy: the practice is open, governed by rules, contestable by those it affects, and serves a common good that is not owned by any member.
+
+*Beneficence and the commons.* Singer (1972) argues that "if it is in our power to prevent something bad from happening, without thereby sacrificing anything of comparable moral importance, we ought, morally, to do it", and, in a weaker version, that this holds for something "very bad" and without sacrificing "anything morally significant". He adds that numbers do not dilute the duty: "the fact that there are millions of other people in the same position... does not make the situation significantly different". On Kant's account the duty of beneficence is imperfect: "to contribute to the happiness of others is an imperfect duty to others", a duty "to sometimes and to some extent" aid others (Johnson & Cureton, 2022, section 5). Three consequences follow. Credit, a route back and paid access cost little against the means of the largest firms, which satisfies the cost condition. The harm is mild, so the weaker principle does not clearly apply and the duty is correspondingly light. And an imperfect duty leaves latitude about the form it takes, which fits the plurality of forms in Section 4.
+
+The oldest statement of the sharing ideal marks the limit of the analogy. Cicero (1913, I.51) quotes Ennius: "Who kindly sets a wand'rer on his way / Does e'en as if he lit another's lamp by his: / No less shines his, when he his friend's hath lit", and draws the lesson that we should give strangers what costs us nothing. The lamp image supports both sides. It supports the gift objection, since if nothing is lost nothing is owed, and it supports the duty, since if nothing is lost there is no reason to refuse. But it fits a non-rival good, and there are two goods to separate here. Wikipedia's text is non-rival: copying it does not diminish it. The practice that produces and maintains the text is not: it is kept going by labour and by newcomers who arrive, and it can be strained by reuse that sends readers elsewhere or adds to its burdens (Section 3.2). The duty, if there is one, attaches to the second good, which is why it is compatible with free use of the first.
+
+Taken together, the three arguments support a conditional principle: those who knowingly depend on a shared practice that others sustain, whose reuse strains the conditions of its upkeep, and who can help at small cost relative to their means, have a reason to contribute to its upkeep, proportioned to their reliance and capacity and met in forms of their choosing within limits. The principle is neither a legal duty nor a debt to donors. Mauss (2024), in its standard reading, treats gifts as creating obligations of reciprocity, but a gift to anyone, under an irrevocable royalty-free licence, creates no claim by individual editors to payment or credit, and the essay makes none. The duty runs to the practice. The step from these accounts to an epistemic commons is the essay's own and is open to the weak points above; the nearest work on commons themselves is Hess and Ostrom's (2007) point that shared resources survive through community rules and not through licences alone, and Huang and Siddarth's (2023) proposal that developers contribute quality data back to the commons they draw on.
+
+A note on betrayal. Reaction to this reuse is often phrased as betrayal, a word the argument does not need. On the commitment account (Hawley, 2014), betrayal requires a commitment that was broken, and "we may feel betrayed, but we have not been betrayed" where nobody committed to what was expected. The commitments that exist run to platforms and not to editors, as in Stack Overflow's partnership, where OpenAI will "provide attribution to the Stack Overflow community within ChatGPT" (Stack Overflow, 2024). The Foundation's requests create an expectation on one side and not a commitment on the other.
 
 ## 4. Sustaining the practice
 
@@ -91,7 +101,7 @@ And it can be open about how it is reused. The Foundation controls the budget fo
 
 The question was what role Wikipedia can and should play in the era of language models. Wikipedia matters as an auditable practice of verification carried by a community, not as a source of truth, and its standing has risen and fallen with the alternatives against which it is compared. Language models rely on it, the licence is silent on that reliance, and the cost to the practice is modest and partly contested. What the practice needs in return is light, proportionate upkeep, in forms that reach the people who carry it. And Wikipedia has its own part to play in how it treats newcomers, what it counts as knowledge, and how openly it deals with those who reuse it.
 
-Three limits should be kept in view. No study asks whether editors hold an expectation of return from AI developers, whether readers sent to a model fare worse than readers sent to the source, or how far the sources that Wikipedia cites are being contaminated by machine-generated text. The principle of proportionate upkeep is this essay's own and is open to the objections above. And the evidence base is thin on the essay's central questions, with many sources used at the level of abstracts.
+Three limits should be kept in view. No study asks whether editors hold an expectation of return from AI developers, whether readers sent to a model fare worse than readers sent to the source, or how far the sources that Wikipedia cites are being contaminated by machine-generated text. The step from fair play, natural duty and beneficence to an epistemic commons is this essay's own and is open to the weak points set out in Section 3.3. And the evidence base is thin on the essay's central questions, with many sources used at the level of abstracts.
 
 ## References
 
@@ -103,11 +113,15 @@ Brooks, C., Eggert, S., & Peskoff, D. (2024). The rise of AI-generated content i
 
 Camerer, C. F., Dreber, A., Holzmeister, F., Ho, T.-H., Huber, J., Johannesson, M., ... Wu, H. (2018). Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015. *Nature Human Behaviour, 2*, 637-644. https://doi.org/10.1038/s41562-018-0399-z
 
-Creative Commons. (n.d.). *CC Signals*. https://creativecommons.org/ai-and-the-commons/cc-signals/
+Cicero. (1913). *De officiis* (W. Miller, Trans.). Harvard University Press. https://www.gutenberg.org/files/47001/47001-h/47001-h.htm (Original work published 44 BCE.)
 
 Creative Commons. (2013). *Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) legal code*. https://creativecommons.org/licenses/by-sa/4.0/legalcode.en
 
 Creative Commons. (2026, September 3). *Guidance on using CC licenses in an AI ecosystem*. https://creativecommons.org/2026/09/03/guidance-on-using-cc-licenses-in-an-ai-ecosystem/
+
+Creative Commons. (n.d.). *CC Signals*. https://creativecommons.org/ai-and-the-commons/cc-signals/
+
+Dagger, R., & Lefkowitz, D. (2021). Political obligation. In E. N. Zalta (Ed.), *The Stanford encyclopedia of philosophy* (Fall 2021 ed.). https://plato.stanford.edu/entries/political-obligation/
 
 del Rio-Chanona, M., Laurentsyeva, N., & Wachs, J. (2024). Large language models reduce public knowledge sharing on online Q&A platforms. *PNAS Nexus, 3*(9). https://doi.org/10.1093/pnasnexus/pgae400
 
@@ -133,6 +147,8 @@ Halfaker, A., Geiger, R. S., Morgan, J. T., & Riedl, J. (2013). The rise and dec
 
 Hardwig, J. (1985). Epistemic dependence. *The Journal of Philosophy, 82*(7), 335-349. https://doi.org/10.2307/2026523
 
+Hart, H. L. A. (1955). Are there any natural rights? *The Philosophical Review, 64*(2), 175-191. https://doi.org/10.2307/2182586
+
 Hawley, K. (2014). Trust, distrust and commitment. *Noûs, 48*(1), 1-20. https://doi.org/10.1111/nous.12000
 
 Head, A. J., & Eisenberg, M. B. (2010). How today's college students use Wikipedia for course-related research. *First Monday, 15*(3). https://doi.org/10.5210/fm.v15i3.2830
@@ -144,6 +160,10 @@ Huang, S., & Siddarth, D. (2023). *Generative AI and the digital commons* [Prepr
 Huang, S., Xu, Y., Geng, M., Wan, Y., & Chen, D. (2025). *Wikipedia in the era of LLMs: Evolution and risks* [Preprint]. arXiv:2503.02879. https://arxiv.org/abs/2503.02879
 
 Jaschik, S. (2007, January 26). A stand against Wikipedia. *Inside Higher Ed*. https://www.insidehighered.com/news/2007/01/26/stand-against-wikipedia
+
+Johnson, R., & Cureton, A. (2022). Kant's moral philosophy. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Fall 2022 ed.). https://plato.stanford.edu/entries/kant-moral/
+
+Klosko, G. (1992). *The principle of fairness and political obligation*. Rowman & Littlefield.
 
 Lemley, M. A., & Casey, B. (2021). Fair learning. *Texas Law Review, 99*, 743. https://doi.org/10.2139/ssrn.3528447
 
@@ -163,9 +183,15 @@ Miquel-Ribé, M., & Laniado, D. (2018). Wikipedia culture gap: Quantifying conte
 
 Mueller, B., Danis, C., & Lavagetto, G. (2025, April 1). How crawlers impact the operations of the Wikimedia projects. *Diff*, Wikimedia Foundation. https://diff.wikimedia.org/2025/04/01/how-crawlers-impact-the-operations-of-the-wikimedia-projects/
 
+Nozick, R. (1974). *Anarchy, state, and utopia*. Basic Books.
+
 Orben, A. (2020). The Sisyphean cycle of technology panics. *Perspectives on Psychological Science, 15*(5), 1143-1157. https://doi.org/10.1177/1745691620919372
 
 Pearson, S. H. (2025, May 15). *Understanding CC licenses and AI training: A legal primer*. Creative Commons. https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/
+
+Rawls, J. (1964). Legal obligation and the duty of fair play. In S. Hook (Ed.), *Law and philosophy* (pp. 3-18). New York University Press.
+
+Rawls, J. (1999). *A theory of justice* (Rev. ed.). Harvard University Press.
 
 Reddit, Inc. (2026a, February 5). *Reddit reports fourth quarter and full year 2025 results* (Form 8-K, Exhibit 99.1). U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1713445/000171344526000020/earningspressreleaseq425.htm
 
@@ -176,6 +202,10 @@ Reeves, N., Yin, W., & Simperl, E. (2025). Exploring the impact of ChatGPT on Wi
 Shi, F., Teplitskiy, M., Duede, E., & Evans, J. A. (2019). The wisdom of polarized crowds. *Nature Human Behaviour, 3*(4), 329-336. https://doi.org/10.1038/s41562-019-0541-6
 
 Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R., & Gal, Y. (2024). AI models collapse when trained on recursively generated data. *Nature, 631*(8022), 755-759. https://doi.org/10.1038/s41586-024-07566-y
+
+Simmons, A. J. (1979). *Moral principles and political obligations*. Princeton University Press.
+
+Singer, P. (1972). Famine, affluence, and morality. *Philosophy & Public Affairs, 1*(3), 229-243.
 
 Soldaini, L., et al. (2024). *Dolma: An open corpus of three trillion tokens for language model pretraining research* [Preprint]. arXiv:2402.00159. https://arxiv.org/abs/2402.00159
 

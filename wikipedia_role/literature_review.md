@@ -171,19 +171,23 @@ Camerer, C. F., Dreber, A., Holzmeister, F., Ho, T.-H., Huber, J., Johannesson, 
 
 Chintalapoodi, P. (2024, March 15). Reddit and Google enter into AI content licensing agreement. Chip Law Group. https://www.chiplawgroup.com/reddit-and-google-enter-into-ai-content-licensing-agreement/
 
-Coady, C. A. J. (1992). *Testimony: A philosophical study*. Clarendon Press. https://doi.org/10.1093/0198235518.001.0001
+Cicero. (1913). *De officiis* (W. Miller, Trans.). Harvard University Press. https://www.gutenberg.org/files/47001/47001-h/47001-h.htm (Original work published 44 BCE.)
 
-Creative Commons. (n.d.). *CC Signals*. https://creativecommons.org/ai-and-the-commons/cc-signals/
+Coady, C. A. J. (1992). *Testimony: A philosophical study*. Clarendon Press. https://doi.org/10.1093/0198235518.001.0001
 
 Creative Commons. (2013). *Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) legal code*. https://creativecommons.org/licenses/by-sa/4.0/legalcode.en
 
 Creative Commons. (2026, September 3). *Guidance on using CC licenses in an AI ecosystem*. https://creativecommons.org/2026/09/03/guidance-on-using-cc-licenses-in-an-ai-ecosystem/
 
+Creative Commons. (n.d.). *CC Signals*. https://creativecommons.org/ai-and-the-commons/cc-signals/
+
+Dagger, R., & Lefkowitz, D. (2021). Political obligation. In E. N. Zalta (Ed.), *The Stanford encyclopedia of philosophy* (Fall 2021 ed.). https://plato.stanford.edu/entries/political-obligation/
+
 del Rio-Chanona, M., Laurentsyeva, N., & Wachs, J. (2024). Large language models reduce public knowledge sharing on online Q&A platforms. *PNAS Nexus, 3*(9). https://doi.org/10.1093/pnasnexus/pgae400
 
-*Doe v. GitHub, Inc.*, No. 24-7700 (9th Cir. Sept. 16, 2026). https://www.eff.org/files/2026/09/16/doe_v_github.pdf
-
 Derrida, J. (1981). *Dissemination* (B. Johnson, Trans.). University of Chicago Press. (Original work published 1972.)
+
+*Doe v. GitHub, Inc.*, No. 24-7700 (9th Cir. Sept. 16, 2026). https://www.eff.org/files/2026/09/16/doe_v_github.pdf
 
 Ellington, A. J. (2003). A meta-analysis of the effects of calculators on students' achievement and attitude levels in precollege mathematics classes. *Journal for Research in Mathematics Education, 34*(5), 433-463. https://doi.org/10.2307/30034795
 
@@ -237,7 +241,11 @@ Jaschik, S. (2007, January 26). A stand against Wikipedia. *Inside Higher Ed*. h
 
 Jemielniak, D. (2014). *Common knowledge? An ethnography of Wikipedia*. Stanford University Press.
 
+Johnson, R., & Cureton, A. (2022). Kant's moral philosophy. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Fall 2022 ed.). https://plato.stanford.edu/entries/kant-moral/
+
 Kallel, M., & El Louadi, M. (2026). *Cognitive commons in the age of generative intelligence: A heterodox appraisal of the knowledge erosion hypothesis* [Preprint]. arXiv:2607.13272. https://arxiv.org/abs/2607.13272
+
+Klosko, G. (1992). *The principle of fairness and political obligation*. Rowman & Littlefield.
 
 Konieczny, P. (2016). Teaching with Wikipedia in a 21st-century classroom: Perceptions of Wikipedia and its educational benefits. *Journal of the Association for Information Science and Technology, 67*(7), 1523-1534. https://doi.org/10.1002/asi.23616
 
@@ -277,6 +285,8 @@ Mueller, B., Danis, C., & Lavagetto, G. (2025, April 1). How crawlers impact the
 
 Noroozian, A., Aldana, L., Arisi, M., et al. (2025). *Generative AI and the future of the digital commons: Five open questions and knowledge gaps* [Preprint]. arXiv:2508.06470. https://arxiv.org/abs/2508.06470
 
+Nozick, R. (1974). *Anarchy, state, and utopia*. Basic Books.
+
 Okoli, C., Mehdi, M., Mesgari, M., Nielsen, F. Å., & Lanamäki, A. (2014). Wikipedia in the eyes of its beholders: A systematic review of scholarly research on Wikipedia readers and readership. *Journal of the Association for Information Science and Technology, 65*(12), 2381-2403. https://doi.org/10.1002/asi.23162
 
 Open Source Initiative. (2007). *The open source definition* (v1.9). https://opensource.org/osd
@@ -292,6 +302,8 @@ Postman, N. (1992). *Technopoly: The surrender of culture to technology*. Knopf.
 Punturo, B. (2026, February 3). How ChatGPT sources the web. Profound. https://www.tryprofound.com/blog/chatgpt-citation-sources
 
 Rawls, J. (1964). Legal obligation and the duty of fair play. In S. Hook (Ed.), *Law and philosophy* (pp. 3-18). New York University Press.
+
+Rawls, J. (1999). *A theory of justice* (Rev. ed.). Harvard University Press.
 
 Reddit, Inc. (2026a, February 5). *Reddit reports fourth quarter and full year 2025 results* (Form 8-K, Exhibit 99.1). U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1713445/000171344526000020/earningspressreleaseq425.htm
 
@@ -310,6 +322,10 @@ Scott, J. C. (2017). *The moral economy of the peasant: Rebellion and subsistenc
 Shi, F., Teplitskiy, M., Duede, E., & Evans, J. A. (2019). The wisdom of polarized crowds. *Nature Human Behaviour, 3*(4), 329-336. https://doi.org/10.1038/s41562-019-0541-6
 
 Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R., & Gal, Y. (2024). AI models collapse when trained on recursively generated data. *Nature, 631*(8022), 755-759. https://doi.org/10.1038/s41586-024-07566-y
+
+Simmons, A. J. (1979). *Moral principles and political obligations*. Princeton University Press.
+
+Singer, P. (1972). Famine, affluence, and morality. *Philosophy & Public Affairs, 1*(3), 229-243.
 
 Soldaini, L., et al. (2024). *Dolma: An open corpus of three trillion tokens for language model pretraining research* [Preprint]. arXiv:2402.00159. https://arxiv.org/abs/2402.00159
 

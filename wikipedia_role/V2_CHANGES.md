@@ -19,3 +19,7 @@ v1 files in `drafts/` are kept as the fuller source. Regenerate with `python ass
 `essay_full_draft_v3.md` (body `essay_v3_body.md`, abstract `drafts/00_abstract_v3.md`), about 4,100 words, 5 sections: Introduction; What the bastion is; Wikipedia and the language models (3.1 licence silent, 3.2 what models take and what it costs, 3.3 a short note on betrayal); Sustaining the practice (4.1 what reusers can do, 4.2 what Wikipedia should change); Objections and conclusion.
 
 Betrayal shrinks from a subsection of its own, with fair play and exploitation, to one short note. Research question is now "what role can and should Wikipedia play in the LLM era". Regenerate with `python assemble.py --v3`.
+
+## v3 update: philosophical grounding
+
+Section 3.3 is rewritten as "What is owed, and why": fair play (Hart, Rawls, Nozick's objection, Simmons, Klosko), natural duty (Rawls), beneficence (Singer, Kant), and Cicero's lamp with a distinction between non-rival text and a rival practice. The statement that the principle is the essay's own is replaced by the claim that only the extension to an epistemic commons is. Reading status is in `annotated_bibliography/7_philosophical_foundations.md`.
