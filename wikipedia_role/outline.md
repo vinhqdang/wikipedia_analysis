@@ -36,7 +36,7 @@ Working draft, 3 October 2026. Status: proposed, not yet confirmed by the author
 ### 2. Three platforms, three fates (about 900)
 
 - What "dead" can mean: contributions, attention, business model.
-- Stack Overflow's questions collapse; Reddit grows and sells its archive; Wikipedia loses attention yet stays large. The comparison sets the empirical premises and corrects the common claim that Reddit is dead.
+- Stack Overflow's questions collapse; Reddit grows and explores licensing its archive; Wikipedia loses attention yet stays large. The comparison sets the empirical premises and corrects the common claim that Reddit is dead.
 - *Evidence:* Stack Exchange API pull; Reddit 10-K; del Rio-Chanona et al. (2024); Burtch et al. (2024); Reeves et al. (2025) versus Lyu et al. (2025); Wikimedia pageviews and Foundation reports.
 - *Caveat to state:* aggregate readership decline is about 7-8% a year, and the academic evidence on contributions is mixed.
 
