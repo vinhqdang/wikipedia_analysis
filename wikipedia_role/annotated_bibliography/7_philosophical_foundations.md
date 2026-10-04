@@ -6,7 +6,7 @@ Added 4 October 2026 after the author observed that the central principle must h
 |---|---|---|
 | Hart (1955); Rawls (1964) | Principle of fair play | Hart's formulation checked as quoted in Dagger & Lefkowitz (2021, section 4.2); Rawls (1964) not re-read |
 | Nozick (1974); Simmons (1979); Klosko (1992) | Objection from unrequested benefits; receiving versus accepting; presumptive benefits | As reported in Dagger & Lefkowitz (2021, section 4.2); originals not read |
-| Rawls (1999) | Natural duty of justice | Quotation from p. 99 as given in Dagger & Lefkowitz (2021, section 4.4); the obligation versus natural duty contrast checked only against secondary summaries |
+| Rawls (1999) | Principle of fairness (section 18, p. 96); natural duty of justice and mutual aid (section 19) | Quotations at second hand: p. 99 as given in Dagger & Lefkowitz (2021, section 4.4); the wording of the principle of fairness and of the duty to further just arrangements "at least when this can be done without excessive cost to ourselves" as given in a reader's guide and in two search summaries that agree. The author's upload failed. An open excerpt of the Revised Edition was fetched but covers only sections 1-5 and 22, so sections 18, 19 and 51 are not read in the original |
 | Singer (1972) | Strong and weak principles; numbers do not dilute; duty versus charity | Quotations checked against an online reproduction of the essay |
 | Johnson & Cureton (2022) | Kant on imperfect duty of beneficence | Quotation from section 5 of the entry; Kant's own text, including the duty of gratitude in the Metaphysics of Morals, not read |
 | Cicero (1913) | Ennius's lamp, I.51-52 | Passage read in Miller's translation (Project Gutenberg) |
