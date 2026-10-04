@@ -1,6 +1,7 @@
 """Assemble essay_full_draft.md from the section drafts and the reference list in literature_review.md.
 
-    python assemble.py
+    python assemble.py         # v1, nine sections
+    python assemble.py --v2    # trimmed, five sections (essay_v2_body.md)
 Only references that are cited in the body are kept.
 """
 import re
@@ -13,8 +14,11 @@ TITLE = "# The last bastion is a community: Wikipedia, language models, and what
 ABSTRACT = (HERE / "drafts" / "00_abstract.md").read_text().strip()
 
 
-def main():
-    body = "\n\n".join((HERE / "drafts" / f"{p}.md").read_text().strip() for p in PARTS)
+def main(v2=False):
+    if v2:
+        body = (HERE / "essay_v2_body.md").read_text().strip()
+    else:
+        body = "\n\n".join((HERE / "drafts" / f"{p}.md").read_text().strip() for p in PARTS)
     review = (HERE / "literature_review.md").read_text()
     refs = [r.strip() for r in review.split("## References", 1)[1].strip().split("\n\n") if r.strip()]
     kept = []
@@ -30,9 +34,10 @@ def main():
         if pat and re.search(pat, body, re.S):
             kept.append(r)
     out = TITLE + "\n\n" + ABSTRACT + "\n\n" + body + "\n\n## References\n\n" + "\n\n".join(kept) + "\n"
-    (HERE / "essay_full_draft.md").write_text(out)
+    (HERE / ("essay_full_draft_v2.md" if v2 else "essay_full_draft.md")).write_text(out)
     print(len(kept), "references;", len(body.split()), "words in the body")
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    main("--v2" in sys.argv)

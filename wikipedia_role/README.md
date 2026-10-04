@@ -1,5 +1,7 @@
 # Wikipedia's role in the LLM era (philosophy and technology)
 
+**Current draft: `essay_full_draft_v2.md` (5 sections, about 4,700 words; see `V2_CHANGES.md`). The nine-section v1 is `essay_full_draft.md`.**
+
 Background work for an argumentative essay on two claims: that Wikipedia's standing as a "source of truth" in the era of large language models is relative to its alternatives, and that AI reuse of Wikipedia can comply with its licence while breaching an implicit commons social contract.
 
 - `literature_review.md`: narrative review, broad scope, with reference list and a list of what must be read in full before drafting.
