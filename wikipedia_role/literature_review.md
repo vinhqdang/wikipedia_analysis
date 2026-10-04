@@ -281,6 +281,8 @@ Minguillón, J., Aibar, E., Lerga, M., Lladós, J., & Meseguer-Artola, A. (2018)
 
 Miquel-Ribé, M., & Laniado, D. (2018). Wikipedia culture gap: Quantifying content imbalances across 40 language editions. *Frontiers in Physics, 6*, Article 54. https://doi.org/10.3389/fphy.2018.00054
 
+Morgan, J. T., & Halfaker, A. (2018). Evaluating the impact of the Wikipedia Teahouse on newcomer socialization and retention. In *Proceedings of the 14th International Symposium on Open Collaboration (OpenSym '18)*. ACM. https://doi.org/10.1145/3233391.3233544
+
 Mueller, B., Danis, C., & Lavagetto, G. (2025, April 1). How crawlers impact the operations of the Wikimedia projects. *Diff*, Wikimedia Foundation. https://diff.wikimedia.org/2025/04/01/how-crawlers-impact-the-operations-of-the-wikimedia-projects/
 
 Noroozian, A., Aldana, L., Arisi, M., et al. (2025). *Generative AI and the future of the digital commons: Five open questions and knowledge gaps* [Preprint]. arXiv:2508.06470. https://arxiv.org/abs/2508.06470
@@ -349,11 +351,15 @@ Vincent, N., Li, H.-L., Tilly, N., Chancellor, S., & Hecht, B. (2021). Data leve
 
 Wagner, C., Graells-Garrido, E., Garcia, D., & Menczer, F. (2016). Women through the glass ceiling: Gender asymmetries in Wikipedia. *EPJ Data Science, 5*. https://doi.org/10.1140/epjds/s13688-016-0066-4
 
+Warncke-Wang, M., Ho, R., Miller, M., & Johnson, I. (2023). Increasing participation in peer production communities with the Newcomer Homepage. *Proceedings of the ACM on Human-Computer Interaction, 7*(CSCW). https://arxiv.org/abs/2308.09642
+
 Waters, N. L. (2007). Why you can't cite Wikipedia in my class. *Communications of the ACM, 50*(9), 15-17. https://doi.org/10.1145/1284621.1284635
 
 Werner, D. S. (2012). *Myth and philosophy in Plato's Phaedrus*. Cambridge University Press. https://doi.org/10.1017/CBO9781139108737
 
 Wikimedia Enterprise. (2026, January 15). Announcing new Wikimedia Enterprise partners for Wikipedia's 25th birthday. https://enterprise.wikimedia.com/blog/wikipedia-25-enterprise-partners/
+
+Wikimedia Enterprise. (n.d.). *Data model and data dictionary*. https://enterprise.wikimedia.com/docs/data-dictionary/
 
 Wikimedia Foundation. (2023). *Terms of use* (effective 7 June 2023). https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use
 
@@ -370,5 +376,7 @@ Wikimedia Foundation. (2026a, January 15). *Wikipedia celebrates 25 years of kno
 Wikimedia Foundation. (2026b, April 27). Introducing the Wikimedia Foundation's draft FY 2026-2027 annual plan. *Diff*. https://diff.wikimedia.org/2026/04/27/introducing-the-wikimedia-foundations-draft-fy-2026-2027-annual-plan/
 
 Wikipedia contributors. (n.d.). *Wikipedia:Verifiability*. https://en.wikipedia.org/wiki/Wikipedia:Verifiability (retrieved 3 October 2026)
+
+Zhou, M., Cho, S., & Terveen, L. (2026). LLMs in Wikipedia: Investigating how LLMs impact participation in knowledge communities. *Proceedings of the ACM on Human-Computer Interaction* (CSCW '26). https://arxiv.org/abs/2509.07819
 
 Zwolinski, M., Ferguson, B., & Wertheimer, A. (2022). Exploitation. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Winter 2022 ed.). https://plato.stanford.edu/entries/exploitation/
