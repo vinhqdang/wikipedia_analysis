@@ -19,7 +19,7 @@ Reading level: **full** = read in full from a copy; **page** = web page read thr
 | Almost all LLMs train on Wikipedia datasets | Miller (2025) | page | Recheck the exact wording. |
 | About 730,000 conversations; Wikipedia 5% of citations | Punturo (2026) | page | Vendor data, medium-low trust. |
 | Credibility as a three-place relation | Goldman (2001) for the shape of the problem | record | Goldman's argument was not read; the three-place formulation is the essay's own. |
-| Recurring pattern of technology panics | Orben (2020) | abstract | |
+| Panics over new technologies recur, mostly about children; research restarts without a theoretical baseline; radio-versus-phones example (p. 1144) | Orben (2020) | full | Her scope is young people and psychological research; the extension to knowledge tools is the essay's. |
 | Google-effect experiment did not replicate; authors cite design differences | Camerer et al. (2018) | record + replication-atlas page | Check the replication report itself. |
 | Generative-AI harm evidence is early, preprints | Kosmyna et al. (2025); Gerlich (2025) | abstract (preprints) | |
 | Collective testimony and trustworthiness | Tollefsen (2009) | abstract | |
@@ -46,4 +46,4 @@ Reading level: **full** = read in full from a copy; **page** = web page read thr
 
 - No measurement of contamination in the external sources Wikipedia cites; stated as open in 3.1.
 - No recent accuracy comparison of Wikipedia with generative systems; stated in 3.2.
-- Read Goldman (2001) and Gallert & van der Velden (2014) in full before submission; Waters (2007) and Graham et al. (2014) have been read in full.
+- Read Goldman (2001) and Gallert & van der Velden (2014) in full before submission; Waters (2007), Graham et al. (2014) and Orben (2020) have been read in full.
