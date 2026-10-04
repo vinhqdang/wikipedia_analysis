@@ -23,3 +23,7 @@ Betrayal shrinks from a subsection of its own, with fair play and exploitation, 
 ## v3 update: philosophical grounding
 
 Section 3.3 is rewritten as "What is owed, and why": fair play (Hart, Rawls, Nozick's objection, Simmons, Klosko), natural duty (Rawls), beneficence (Singer, Kant), and Cicero's lamp with a distinction between non-rival text and a rival practice. The statement that the principle is the essay's own is replaced by the claim that only the extension to an epistemic commons is. Reading status is in `annotated_bibliography/7_philosophical_foundations.md`.
+
+## v3 update: Wikipedia's own change as a section
+
+Former 4.2 is now Section 5, "What Wikipedia should change", about 1,200 words: a framing argument that a claim on others' upkeep is only as strong as the practice is open and fair (Rawls's fairness principle requires a just institution), then recommendations on auditability and provenance, newcomer survival (with the risk that defences against machine-generated text repeat the pattern Halfaker et al. describe), notability and oral knowledge by documented procedure, and publishing the terms and use of reuse income. Section 4 is now "What reusers can do"; objections and conclusion are Section 6. Body about 5,800 words.
