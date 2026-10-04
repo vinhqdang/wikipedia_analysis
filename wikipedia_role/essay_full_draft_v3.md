@@ -1,0 +1,206 @@
+# The last bastion is a community: Wikipedia in the era of language models
+
+## Abstract
+
+Wikipedia, once barred from classroom citation, is now invoked as a safeguard against machine-generated falsehood, even as its human readership falls and the firms that train language models on its text owe nothing under its licence by way of return. This essay asks what role Wikipedia can and should play in the era of language models. It argues that its standing as a source of truth is relational, and that what deserves defence is a community-held practice of verification whose distinctive property is auditability (provenance, contestability, answerability) and not truth. Language models rely on the practice, the licence is silent on that reliance, and the cost to the practice is modest and partly contested. Sustaining it calls for light, proportionate upkeep from those who rely on it, in forms that reach the people who carry the practice, and for changes inside Wikipedia in how it treats newcomers, what it counts as knowledge and how openly it handles reuse. The argument is conceptual, draws on public documents and the scholarly literature, and notes where the evidence is thin.
+
+**Keywords:** Wikipedia; large language models; knowledge commons; social epistemology; stewardship; auditability
+
+## 1. Introduction
+
+In 2007 the history department at Middlebury College voted to bar its students from citing Wikipedia, after a historian traced near-identical errors in a set of examinations to Wikipedia entries (Jaschik, 2007; Waters, 2007). Two years earlier a *Nature* exercise had found that the encyclopedia's science entries were not much less accurate than Britannica's (Giles, 2005). Students were already using it, and so were some scientists (Head & Eisenberg, 2010; Giles, 2005).
+
+Today the Wikimedia Foundation can publish a statement titled "In the AI era, Wikipedia has never been more valuable" (Wikimedia Foundation, 2025d). It says that almost all large language models train on Wikipedia datasets, and it asks their makers to credit the human contributors and to pay for access (Miller, 2025; Wikimedia Foundation, 2025d). In the same period human readership fell by roughly 8%, a fall the Foundation attributes in part to search engines and chatbots that answer directly, often from Wikipedia's own content (Miller, 2025). A source once scorned is now relied upon, and the people who maintain it are seeing fewer readers.
+
+It is tempting to read this as one more case of a place for shared knowledge dying, like Stack Overflow, and to ask whether Wikipedia will follow. "Dying" needs a measure, because contributors, readers and business model do not move together. Stack Overflow lost its contributors: monthly new questions that are still visible fell from 207,171 in March 2014 to 5,262 in October 2025 (own pull from the Stack Exchange interface), and a comparison with platforms where ChatGPT was less available puts about a 16% fall in weekly posts after its release down to it (del Rio-Chanona et al., 2024). Reddit did not: its 2025 filings report revenue of $2.2 billion, up 69%, and 121.4 million daily active users in the fourth quarter, up 19% (Reddit, Inc., 2026a, 2026b). Wikipedia lost a modest share of attention, with falls of 6.7% and 7.9% in English-language views in 2025 and 2026 on the public pageviews interface (own pull), while keeping its scale and its finances; the academic evidence on whether it lost contributors is mixed (Reeves et al., 2025; Lyu et al., 2025). The data do not support the claim that Wikipedia shares the fate of the others. The question is what role a widely relied-upon practice, with fewer readers and an unchanged load of work, can keep.
+
+This essay asks what role Wikipedia can and should play in the era of language models, and what is needed to sustain it. It argues that Wikipedia's standing as a source of truth is relational, and that what deserves defence is a practice of verification carried by a community (Section 2). Language models rely on that practice, the licence is silent on the reliance, and the cost to the practice is modest and partly contested (Section 3). Sustaining it calls for light, proportionate upkeep from those who rely on it, and for changes inside Wikipedia, since if the bastion is a community its defence also lies within it (Section 4).
+
+The essay does not claim that Wikipedia is failing, that reuse of it is unlawful, that AI developers have betrayed its contributors, or that the harm is large. The argument is conceptual and rests on public documents and the scholarly literature. Empirical premises carry their dates and sources, and the text says where the evidence is thin. The focus is the English-language edition.
+
+## 2. What the bastion is
+
+*Provenance, not truth.* Calling Wikipedia a source of truth credits it with a claim it does not make. Its policy asks editors to base articles on "reliable, independent, published sources with a reputation for fact-checking and accuracy", and says that content "is determined by published information rather than editors' beliefs, experiences, or previously unpublished ideas" (Wikipedia contributors, n.d.). The slogan "verifiability, not truth" is now described as historical wording, and Garfinkel (2008) read it as an appeal to the authority of other publications. When Middlebury barred citation, the historian who proposed the rule reported that a Foundation representative agreed, because Wikipedia is, like a print encyclopedia, a tertiary source (Waters, 2007). What it promises is that a reader can check where a statement came from. "Source of truth" can also mean accurate or deferred to. The accuracy evidence is comparative and narrow: in the *Nature* exercise the average Wikipedia science entry had about four inaccuracies against Britannica's three, a difference "not particularly great" (Giles, 2005). Deference is conferred from outside, by search engines and fact boxes that put its statements in front of readers until, as Ford and Wajcman (2017) observe, the facts fade into the background and are black-boxed. The label is mostly a name for granted authority.
+
+*Legitimacy by comparison.* The early defence was comparative from the start. Fallis (2008) argued that Wikipedia's effects were likely positive because its accuracy was comparable to traditional encyclopedias and better than other free sources, and a scientist quoted in the *Nature* report remarked that print encyclopaedias are "set up as the gold standards" against which "faster or cheaper resources" are judged (Giles, 2005, p. 901). Reputation then moved with the comparison class. The Middlebury historian objected to anonymity and to popularity as validation, a worry about accountability more than about accuracy, and granted that Wikipedia compared well in the sciences and less well in history (Waters, 2007). Today the alternative is a system that produces fluent text with no visible chain of sources, and Wikipedia plays the opposite role: unreliable beside the expert-reviewed print reference, reliable beside a model that may fabricate. Credibility is a three-place relation, a source credible for some purpose relative to the alternatives open to the reader, and what changed was less the encyclopedia than the set it is compared with. No study tests this directly, so it is a conceptual claim that the cases illustrate and do not prove.
+
+The story of a tool scorned and then rehabilitated needs care. Orben (2020) shows that concern about each new technology resurges, mostly about children, while research on it restarts without a baseline from earlier technologies, and her own example shows the comparison effect: radio dramas were once feared as an addictive intruder, yet many parents today "would enthusiastically welcome" them if they displaced phone use (p. 1144). Her scope is young people and psychology, so it applies to knowledge tools only by extension. The best-known alarm about search engines, the "Google effects on memory" experiment (Sparrow et al., 2011), did not replicate in a large replication project (Camerer et al., 2018), although its authors point to design differences. Rehabilitation of an older tool may therefore correct an overstated alarm and not reflect any improvement in the tool.
+
+*A community that knows, with gaps.* If the claim is provenance and the standing is relational, what is worth defending? Hardwig (1985) argued that a chain of appeals to authority "must end somewhere", with "someone who possesses the necessary evidence" (p. 337), and that where no individual has all the evidence one may have to accept "knowledge that is known by the community, not by any individual knower" (p. 349). A Wikipedia article is the output of such distributed checking: editors verify sources, contest one another and apply rules, and the page records the outcome. Menking and Rosenberg (2021) argue that the project's pillars privilege the product over the process of aggregation, and that "there needs to be a deeper connection and more transparency between the design of the back end and the design of the front end" (p. 468); authority, they note, can assert itself through accuracy and reliability "precisely because authority can always be questioned" (p. 469). A generated answer lacks, by default, a visible route to question it. The practice has a carrying capacity, which is people. Halfaker et al. (2013) report that active English editors peaked at 56,400 in March 2007 and have declined since, and they trace this to quality-control machinery, including tools that reject contributions, that treats good-faith newcomers badly. The machinery that makes the practice reliable has thinned the community that carries it.
+
+Three properties describe what the community provides. They are a working vocabulary for this essay, not terms from the literature: *provenance* (a claim points to a published source), *contestability* (any claim can be challenged through a recorded process), and *answerability* (a community with rules answers for what stands). Together they are auditability. The claim of this section is that auditability, not truth, is what makes Wikipedia worth defending, and that it lives in a practice and its people. Traffic and content volume are therefore poor measures of its health; whether newcomers can enter and whether claims can be contested are better.
+
+The walls have gaps. Graham et al. (2014) find that despite millions of hours of volunteer labour the encyclopedia's geography is uneven and clustered, with little content about much of the world. Tripodi (2023), using 38 months of deletion data on 22,174 biographies, finds women consistently over 25% of the biographies nominated for deletion while they were under 19% of all biographies, and reads the higher rate at which such nominations were kept as evidence of mistaken nomination, an inference open to challenge. Ford and Wajcman (2017) argue that the expertise required to take part is coded as male. Gallert and van der Velden (2014) describe a catch-22 for oral knowledge: the reliable-sources rule excludes oral transmission, and keepers of knowledge are judged too close to their subjects. The Vietnamese edition had the lowest share of culturally specific content among 40 compared in 2018 (Miquel-Ribé & Laniado, 2018). These gaps follow from the rules that give the bastion its legitimacy: if knowledge must be published and its subjects notable by one community's standards, absences in the published record become absences in the encyclopedia. "The last bastion of human knowledge" overstates the case. What is defended is published, verifiable knowledge as judged by a particular community. Diversity here is not an ornament, since politically diverse editorial teams write better articles (Shi et al., 2019), and contestability is what makes the gaps visible and repairable. A closed system's gaps cannot be audited in the same way.
+
+
+## 3. Wikipedia and the language models
+
+### 3.1 The licence is silent
+
+Contributors license their text under CC BY-SA 4.0, and the Foundation's terms say that the licences "do allow commercial uses of your contributions, as long as such uses are compliant with the terms of the respective licenses" (Wikimedia Foundation, 2023). The licence grants a "worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable" right to reproduce and share the material and adapted material. Its attribution duty applies when the material is shared, and share-alike applies "if You Share Adapted Material You produce" (Creative Commons, 2013, sections 2(a)(1), 3(a)(1), 3(b)). It says nothing about training a model and nothing about returning anything to the source.
+
+The steward of the licences reads their reach narrowly. Creative Commons writes that "AI training is often permitted by copyright", so that "the CC license conditions have limited application to machine reuse" (Pearson, 2025), and that its guidance "was developed for a world of reuse by people, a premise that doesn't fit as neatly in a world of widespread machine use" and that "licensing alone cannot address all of the challenges to sharing that AI presents" (Creative Commons, 2026). Courts have not filled the gap. *Doe v. GitHub* concerned code under open-source licences, not Wikipedia text. The Ninth Circuit affirmed dismissal of a claim under the Digital Millennium Copyright Act on the "output" theory, holding that Copilot creates new works and does not "remove or alter" copyright management information from copies. It declined to consider the training-stage "input" theory as forfeited, recording that plaintiffs' counsel, asked whether copying training data violated open-source attribution requirements, had answered "Perhaps it doesn't"; two contract claims remain in the district court (*Doe v. GitHub, Inc.*, 2026). Lemley and Casey (2021) argue that training should generally be fair use, in which case licence conditions are not reached at all. Nothing found here establishes that reuse of Wikipedia text breaches its licence, and the essay does not assume that it does.
+
+What the licence does not regulate is what a commons might ask of those who draw on it: credit in outputs, a route back for readers, a share of the cost of keeping it running, and openness about use. The Foundation asks for exactly these. Attribution "means that generative AI gives credit to the human contributions that it uses to create its outputs"; access should go through Enterprise; and reuse should sustain "a virtuous cycle that continues those human contributions that create the training data that these new technologies rely on". It does not say that current reuse breaches the licence (Wikimedia Foundation, 2025d). The gap is not a violation. It is a set of expectations that no instrument binds anyone to meet.
+
+### 3.2 What the models take, and what that costs
+
+Models rely on Wikipedia. The Foundation says almost all large language models train on its datasets (Miller, 2025), though its share is small in volume, about 0.14% of the tokens in one open corpus and 4.5% of the sampling weight in another (Soldaini et al., 2024; Touvron et al., 2023), so the reliance is on curation and quality and not on bulk. Shumailov et al. (2024) show that training recursively on model output degrades models and that human-generated data gain value as synthetic text spreads. The dependence is contested: collapse can be avoided when real data are kept and synthetic data accumulate (Gerstgrasser et al., 2024).
+
+The costs of reuse to the practice are real and modest, and the evidence is uneven. The Foundation reports human pageviews down roughly 8% against 2024 and attributes this to search engines "providing answers directly to searchers, often based on Wikipedia content" (Miller, 2025). The academic evidence is mixed: no overall decline in views, visitors, edits or editors in twelve editions through early 2024 (Reeves et al., 2025), against larger declines for new, popular articles overlapping with ChatGPT's output (Lyu et al., 2025). At least 65% of the most resource-consuming traffic to the Foundation's data centres comes from bots, which account for about 35% of pageviews, and bandwidth used for multimedia has grown by 50% since January 2024, "largely" from scrapers feeding images to AI models (Mueller et al., 2025); not all bot traffic is linked to AI developers. Wikimedia Enterprise, its paid-access service, earned $8.3 million in fiscal 2024-25, 4.0% of Foundation revenue, from 13 commercial customers (Wikimedia Foundation, 2025a), and in January 2026 named further partners without terms (Wikimedia Enterprise, 2026).
+
+Readers lose something less visible. A generated answer gives, by default, no route to question a claim, and Section 2 argued that this route is what the practice provides. If the answer replaces the visit, the people who might have joined the practice never arrive.
+
+If reuse draws on a practice that others sustain and strains some of the conditions of its upkeep, and reusers can help at small cost relative to their means, then a proportionate duty of upkeep is plausible: it scales with reliance and capacity and runs to the practice and not to donors as repayment. This is the essay's own principle and is not found in this form in the literature reviewed; its nearest relatives are the proposal that developers should contribute quality data back to the commons they draw on (Huang & Siddarth, 2023) and the commons tradition's point that shared resources survive through community rules and not through licences alone (Hess & Ostrom, 2007). The duty is light, because the harm is modest, and conditional, because the dependence is contested.
+
+### 3.3 A note on betrayal
+
+Public reaction to this reuse is often phrased as betrayal. The word is loose here and the argument does not depend on it. On the commitment account (Hawley, 2014), betrayal needs a commitment that was broken, and "we may feel betrayed, but we have not been betrayed" where nobody committed to what was expected. Commitments that exist run to platforms and not to editors: Stack Overflow's partnership says OpenAI will "provide attribution to the Stack Overflow community within ChatGPT" (Stack Overflow, 2024). The Foundation's requests create an expectation on one side and not a commitment on the other. Whether open-knowledge convention creates a commitment of acknowledgement is not studied. Nor does a gift to anyone, given under an irrevocable royalty-free licence, create a debt to editors (Mauss, 2024, in its standard reading, handles such gifts least well); the essay makes no claim of payment to individuals. What the unease tracks is reliance without upkeep, which is the subject of Section 3.2.
+
+## 4. Sustaining the practice
+
+### 4.1 What reusers can do
+
+A form of support should run to the practice, be proportionate to reliance and capacity, be open to checking, and not damage what it protects. The last two matter because the practice is carried by people while the Foundation owns the servers and controls the budget for community programmes (Menking & Rosenberg, 2021), so money for the Foundation does not by itself reach the people who carry the practice.
+
+Credit and a route back is cheap, runs to the practice, and, if readers follow the link, helps recruitment as well as traffic; the Foundation asks that platforms "elevate opportunities to visit and participate in those sources" (Miller, 2025) and proposes a reuse model that "sends value and future contributors back to Wikipedia — not just traffic away" (Wikimedia Foundation, 2026b). It is hard to enforce in law after *Doe v. GitHub*, and no study shows whether links bring readers into the practice. Paid structured access is proportionate in principle, and the Foundation caps Enterprise income at 30% of annual revenue to protect independence and says the content "will forever be free and open to anyone" (Becker, 2026); but its terms are not public and its revenue goes to the Foundation. Preference signals let a commons say what it expects without closing: Creative Commons describes its signals as "a flexible, commons-friendly framework for communicating expectations around AI use of content or data" meant to build norms "so shared knowledge is used in ways that embeds reciprocity", and does not call them binding (Creative Commons, n.d.), and without such a channel sources close, as Longpre et al. (2024) document in the growth of crawl restrictions in 2023-24. Contribution back could take the form of help with the work that keeps the practice reliable, such as policing machine-generated text, which the community has had to organise against, with a cleanup project, a narrow deletion criterion, and a vote of 44 to 2 in March 2026 to prohibit LLM-generated or rewritten content (Bansal, 2026; Froneman, 2026); that text is introduced by users of the tools and not by developers' reuse of Wikipedia, so this cost lies beside the argument.
+
+No form meets all four criteria. They work better together: a route back recruits editors, paid access funds infrastructure, signals state expectations. The weak point in most is the gap between those who receive support and those who carry the practice. A pooled arrangement run by the commons' own governance, with published terms and a published account of where money and effort go, would sit best with the criteria and would answer the problem that reliance varies across thousands of reusers. Four requests follow, as proposals of this essay and not established norms: credit and a route back, acceptance of the terms the commons states for heavy use, disclosure of use, and support that reaches participation and not only infrastructure.
+
+### 4.2 What Wikipedia should change
+
+If the bastion is a community that practises verification, what Wikipedia should change concerns the practice and its people more than its pages. What follows are questions the community can examine, grounded in the literature, and not prescriptions.
+
+It can say plainly what it offers. Its policy promises provenance and not truth, and a "source of truth" in a strong sense would conflict with it; the defensible claim is auditability. Describing it is not enough if the audit trail stays at the back end (Menking & Rosenberg, 2021), which is partly why the request that reusers carry credit and a route back matters.
+
+It can treat newcomers and inclusion as the central defence. The practice has about 273,000 editors, 0.02% of its monthly readers (Wikimedia Foundation, 2026b). Are the tools and rules for rejecting contributions calibrated so that good-faith newcomers can stay (Halfaker et al., 2013)? Do notability and deletion processes treat comparable subjects alike (Tripodi, 2023)? Do the rules on reliable sources leave room for knowledge held orally (Gallert & van der Velden, 2014)? Menking and Rosenberg (2021) report that the pillars have changed little and that editors who challenged them were punished, so the community's own mechanisms for revising norms are part of the question. For smaller editions the practice is thinner and the stakes higher, and the evidence on the Vietnamese edition is old and should be refreshed.
+
+And it can be open about how it is reused. The Foundation controls the budget for community programmes and announced paid partners without terms (Menking & Rosenberg, 2021; Wikimedia Enterprise, 2026). Publishing the terms of reuse agreements and an account of where money and effort go would let the community audit the arrangement meant to sustain it, and would make the commitments in Becker (2026), the revenue cap and the free and open licence, checkable.
+
+## 5. Objections and conclusion
+
+*AI answers may serve readers better, so who is wronged?* The essay does not claim that readers are harmed. Its claim concerns the upkeep of a practice that others rely on, and it is conditional: if developers cease to depend on the practice the premise weakens, and the evidence on that dependence is contested (Shumailov et al., 2024; Gerstgrasser et al., 2024; Villalobos et al., 2024). What readers lose, if anything, is a route to contest a claim, though some systems now cite sources.
+
+*Wikipedia is financially healthy.* Its fiscal 2024-25 revenue was $208.6 million, 11% above target (Wikimedia Foundation, 2025c). The argument rests on reliance and strain and not on need, and financial health does not measure the health of a practice whose binding constraint is its people (Halfaker et al., 2013). It does make the duty light.
+
+*The principle proves too much.* If reliance and strain ground a duty, search engines, teachers and readers owe something too, in proportion. That the principle generalises is a feature: Wikipedia and search engines have long depended on each other, with the engine's direct display of content reducing visits while Wikipedia improved its results (McMahon et al., 2017).
+
+*Machine-generated text is entering Wikipedia.* Detectors flagged over 5% of newly created English articles in one study, given as a lower bound (Brooks et al., 2024), and another estimates LLM-related change of about 1% in some categories (Huang et al., 2025). If contamination grows, auditability matters more, since provenance and contestability are the tools for dealing with it, and the cost to volunteers rises with it.
+
+*Who bears the duty?* Reliance varies across thousands of reusers, so a duty with no assignable bearer is easily ignored. That favours pooled arrangements with published terms, and is a reason to proportion the duty and not to drop it.
+
+The question was what role Wikipedia can and should play in the era of language models. Wikipedia matters as an auditable practice of verification carried by a community, not as a source of truth, and its standing has risen and fallen with the alternatives against which it is compared. Language models rely on it, the licence is silent on that reliance, and the cost to the practice is modest and partly contested. What the practice needs in return is light, proportionate upkeep, in forms that reach the people who carry it. And Wikipedia has its own part to play in how it treats newcomers, what it counts as knowledge, and how openly it deals with those who reuse it.
+
+Three limits should be kept in view. No study asks whether editors hold an expectation of return from AI developers, whether readers sent to a model fare worse than readers sent to the source, or how far the sources that Wikipedia cites are being contaminated by machine-generated text. The principle of proportionate upkeep is this essay's own and is open to the objections above. And the evidence base is thin on the essay's central questions, with many sources used at the level of abstracts.
+
+## References
+
+Bansal, A. (2026, March 26). Wikipedia bans AI-generated article content. *MediaNama*. https://www.medianama.com/2026/03/223-english-wikipedia-bans-ai-generated-text-allows-limited-use-copyediting-translation/
+
+Becker, L. (2026, July 16). The cost of "free": How Wikimedia Enterprise protects Wikipedia in the AI era. Wikimedia Foundation. https://wikimediafoundation.org/news/2026/07/16/wikimedia-enterprise-protecting-wikipedia-ai/
+
+Brooks, C., Eggert, S., & Peskoff, D. (2024). The rise of AI-generated content in Wikipedia. In *Proceedings of the First Workshop on Advancing NLP for Wikipedia* (pp. 67-79). https://aclanthology.org/2024.wikinlp-1.12/
+
+Camerer, C. F., Dreber, A., Holzmeister, F., Ho, T.-H., Huber, J., Johannesson, M., ... Wu, H. (2018). Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015. *Nature Human Behaviour, 2*, 637-644. https://doi.org/10.1038/s41562-018-0399-z
+
+Creative Commons. (n.d.). *CC Signals*. https://creativecommons.org/ai-and-the-commons/cc-signals/
+
+Creative Commons. (2013). *Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) legal code*. https://creativecommons.org/licenses/by-sa/4.0/legalcode.en
+
+Creative Commons. (2026, September 3). *Guidance on using CC licenses in an AI ecosystem*. https://creativecommons.org/2026/09/03/guidance-on-using-cc-licenses-in-an-ai-ecosystem/
+
+del Rio-Chanona, M., Laurentsyeva, N., & Wachs, J. (2024). Large language models reduce public knowledge sharing on online Q&A platforms. *PNAS Nexus, 3*(9). https://doi.org/10.1093/pnasnexus/pgae400
+
+*Doe v. GitHub, Inc.*, No. 24-7700 (9th Cir. Sept. 16, 2026). https://www.eff.org/files/2026/09/16/doe_v_github.pdf
+
+Fallis, D. (2008). Toward an epistemology of Wikipedia. *Journal of the American Society for Information Science and Technology, 59*(10), 1662-1674. https://doi.org/10.1002/asi.20870
+
+Ford, H., & Wajcman, J. (2017). 'Anyone can edit', not everyone does: Wikipedia's infrastructure and the gender gap. *Social Studies of Science, 47*(4), 511-527. https://doi.org/10.1177/0306312717692172
+
+Froneman, W. (2026). Failed comprehensiveness, successful minimalism: Wikipedia's 3-year struggle to govern AI-generated content (2022-2025). *AI & Society*. https://doi.org/10.1007/s00146-026-03046-1
+
+Gallert, P., & van der Velden, M. (2014). Reliable sources for indigenous knowledge: Dissecting Wikipedia's catch-22. In N. J. Bidwell & H. Winschiers-Theophilus (Eds.), *Indigenous Knowledge Technology Conference (IKTC) 2011 post-conference book*. (Unedited preliminary version; final publication details unconfirmed.) https://upload.wikimedia.org/wikipedia/commons/5/51/Indigenous_Knowledge_for_Wikipedia.pdf
+
+Garfinkel, S. L. (2008, October 20). Wikipedia and the meaning of truth. *MIT Technology Review*. https://www.technologyreview.com/2008/10/20/218162/wikipedia-and-the-meaning-of-truth/
+
+Gerstgrasser, M., Schaeffer, R., Dey, A., Rafailov, R., Sleight, H., Hughes, J., ... Koyejo, S. (2024). *Is model collapse inevitable? Breaking the curse of recursion by accumulating real and synthetic data* [Preprint]. arXiv:2404.01413. https://arxiv.org/abs/2404.01413
+
+Giles, J. (2005). Internet encyclopaedias go head to head. *Nature, 438*(7070), 900-901. https://doi.org/10.1038/438900a
+
+Graham, M., Hogan, B., Straumann, R. K., & Medhat, A. (2014). Uneven geographies of user-generated information: Patterns of increasing informational poverty. *Annals of the Association of American Geographers, 104*(4), 746-764. https://doi.org/10.1080/00045608.2014.910087
+
+Halfaker, A., Geiger, R. S., Morgan, J. T., & Riedl, J. (2013). The rise and decline of an open collaboration system: How Wikipedia's reaction to popularity is causing its decline. *American Behavioral Scientist, 57*(5), 664-688. https://doi.org/10.1177/0002764212469365
+
+Hardwig, J. (1985). Epistemic dependence. *The Journal of Philosophy, 82*(7), 335-349. https://doi.org/10.2307/2026523
+
+Hawley, K. (2014). Trust, distrust and commitment. *Noûs, 48*(1), 1-20. https://doi.org/10.1111/nous.12000
+
+Head, A. J., & Eisenberg, M. B. (2010). How today's college students use Wikipedia for course-related research. *First Monday, 15*(3). https://doi.org/10.5210/fm.v15i3.2830
+
+Hess, C., & Ostrom, E. (Eds.). (2007). *Understanding knowledge as a commons: From theory to practice*. MIT Press.
+
+Huang, S., & Siddarth, D. (2023). *Generative AI and the digital commons* [Preprint]. arXiv:2303.11074. https://arxiv.org/abs/2303.11074
+
+Huang, S., Xu, Y., Geng, M., Wan, Y., & Chen, D. (2025). *Wikipedia in the era of LLMs: Evolution and risks* [Preprint]. arXiv:2503.02879. https://arxiv.org/abs/2503.02879
+
+Jaschik, S. (2007, January 26). A stand against Wikipedia. *Inside Higher Ed*. https://www.insidehighered.com/news/2007/01/26/stand-against-wikipedia
+
+Lemley, M. A., & Casey, B. (2021). Fair learning. *Texas Law Review, 99*, 743. https://doi.org/10.2139/ssrn.3528447
+
+Longpre, S., Mahari, R., Lee, A., Lund, C., et al. (2024). *Consent in crisis: The rapid decline of the AI data commons* [Preprint]. arXiv:2407.14933. https://arxiv.org/abs/2407.14933
+
+Lyu, L., Siderius, J., Li, H., Acemoglu, D., Huttenlocher, D., & Ozdaglar, A. (2025). Wikipedia contributions in the wake of ChatGPT. In *Companion Proceedings of the ACM Web Conference 2025*. https://doi.org/10.1145/3701716.3715543
+
+Mauss, M. (2024). *The gift: The form and reason for exchange in archaic societies*. Routledge. https://doi.org/10.4324/9781003572350 (Original work published 1925.)
+
+McMahon, C., Johnson, I., & Hecht, B. (2017). The substantial interdependence of Wikipedia and Google: A case study on the relationship between peer production communities and information technologies. *Proceedings of the International AAAI Conference on Web and Social Media, 11*(1), 142-151. https://doi.org/10.1609/icwsm.v11i1.14883
+
+Menking, A., & Rosenberg, J. (2021). WP:NOT, WP:NPOV, and other stories Wikipedia tells us: A feminist critique of Wikipedia's epistemology. *Science, Technology, & Human Values, 46*(3), 455-479. https://doi.org/10.1177/0162243920924783
+
+Miller, M. (2025, October 17). New user trends on Wikipedia. *Diff*, Wikimedia Foundation. https://diff.wikimedia.org/2025/10/17/new-user-trends-on-wikipedia/
+
+Miquel-Ribé, M., & Laniado, D. (2018). Wikipedia culture gap: Quantifying content imbalances across 40 language editions. *Frontiers in Physics, 6*, Article 54. https://doi.org/10.3389/fphy.2018.00054
+
+Mueller, B., Danis, C., & Lavagetto, G. (2025, April 1). How crawlers impact the operations of the Wikimedia projects. *Diff*, Wikimedia Foundation. https://diff.wikimedia.org/2025/04/01/how-crawlers-impact-the-operations-of-the-wikimedia-projects/
+
+Orben, A. (2020). The Sisyphean cycle of technology panics. *Perspectives on Psychological Science, 15*(5), 1143-1157. https://doi.org/10.1177/1745691620919372
+
+Pearson, S. H. (2025, May 15). *Understanding CC licenses and AI training: A legal primer*. Creative Commons. https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/
+
+Reddit, Inc. (2026a, February 5). *Reddit reports fourth quarter and full year 2025 results* (Form 8-K, Exhibit 99.1). U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1713445/000171344526000020/earningspressreleaseq425.htm
+
+Reddit, Inc. (2026b). *Annual report (Form 10-K) for the fiscal year ended December 31, 2025*. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1713445/000171344526000022/rddt-20251231.htm
+
+Reeves, N., Yin, W., & Simperl, E. (2025). Exploring the impact of ChatGPT on Wikipedia engagement. *Collective Intelligence, 4*(3). https://doi.org/10.1177/26339137251372599
+
+Shi, F., Teplitskiy, M., Duede, E., & Evans, J. A. (2019). The wisdom of polarized crowds. *Nature Human Behaviour, 3*(4), 329-336. https://doi.org/10.1038/s41562-019-0541-6
+
+Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R., & Gal, Y. (2024). AI models collapse when trained on recursively generated data. *Nature, 631*(8022), 755-759. https://doi.org/10.1038/s41586-024-07566-y
+
+Soldaini, L., et al. (2024). *Dolma: An open corpus of three trillion tokens for language model pretraining research* [Preprint]. arXiv:2402.00159. https://arxiv.org/abs/2402.00159
+
+Sparrow, B., Liu, J., & Wegner, D. M. (2011). Google effects on memory: Cognitive consequences of having information at our fingertips. *Science, 333*(6043), 776-778. https://doi.org/10.1126/science.1207745
+
+Stack Overflow. (2024, May 6). *Stack Overflow and OpenAI partnership*. https://stackoverflow.co/company/press/archive/openai-partnership
+
+Touvron, H., et al. (2023). *LLaMA: Open and efficient foundation language models* [Preprint]. arXiv:2302.13971. https://arxiv.org/abs/2302.13971
+
+Tripodi, F. (2023). Ms. Categorized: Gender, notability, and inequality on Wikipedia. *New Media & Society, 25*(7), 1687-1707. https://doi.org/10.1177/14614448211023772
+
+Villalobos, P., Ho, A., Sevilla, J., Besiroglu, T., Heim, L., & Hobbhahn, M. (2024). *Will we run out of data? Limits of LLM scaling based on human-generated data* [Preprint]. arXiv:2211.04325. https://arxiv.org/abs/2211.04325
+
+Waters, N. L. (2007). Why you can't cite Wikipedia in my class. *Communications of the ACM, 50*(9), 15-17. https://doi.org/10.1145/1284621.1284635
+
+Wikimedia Enterprise. (2026, January 15). Announcing new Wikimedia Enterprise partners for Wikipedia's 25th birthday. https://enterprise.wikimedia.com/blog/wikipedia-25-enterprise-partners/
+
+Wikimedia Foundation. (2023). *Terms of use* (effective 7 June 2023). https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use
+
+Wikimedia Foundation. (2025a, November 24). Wikimedia Enterprise financial report: Fiscal year 2024-2025. *Diff*. https://diff.wikimedia.org/2025/11/24/wikimedia-enterprise-financial-report-fiscal-year-2024-2025/
+
+Wikimedia Foundation. (2025c, November 24). Highlights from the Wikimedia Foundation's fiscal year 2024-2025 audit report. *Diff*. https://diff.wikimedia.org/2025/11/24/highlights-from-the-wikimedia-foundations-fiscal-year-2024-2025-audit-report/
+
+Wikimedia Foundation. (2025d, November 10). *In the AI era, Wikipedia has never been more valuable*. https://wikimediafoundation.org/news/2025/11/10/in-the-ai-era-wikipedia-has-never-been-more-valuable/
+
+Wikimedia Foundation. (2026b, April 27). Introducing the Wikimedia Foundation's draft FY 2026-2027 annual plan. *Diff*. https://diff.wikimedia.org/2026/04/27/introducing-the-wikimedia-foundations-draft-fy-2026-2027-annual-plan/
+
+Wikipedia contributors. (n.d.). *Wikipedia:Verifiability*. https://en.wikipedia.org/wiki/Wikipedia:Verifiability (retrieved 3 October 2026)
