@@ -157,6 +157,8 @@ Becker, L. (2026, July 16). The cost of "free": How Wikimedia Enterprise protect
 
 Benkler, Y. (2002). Coase's penguin, or, Linux and *The Nature of the Firm*. *Yale Law Journal, 112*(3). https://www.yalelawjournal.org/article/coases-penguin-or-linux-and-the-nature-of-the-firm
 
+Benkler, Y., & Nissenbaum, H. (2006). Commons-based peer production and virtue. *Journal of Political Philosophy, 14*(4), 394-419. https://doi.org/10.1111/j.1467-9760.2006.00235.x
+
 Bennett, S., Maton, K., & Kervin, L. (2008). The 'digital natives' debate: A critical review of the evidence. *British Journal of Educational Technology, 39*(5), 775-786. https://doi.org/10.1111/j.1467-8535.2007.00793.x
 
 Bhattacharya, A. (2026, February 5). Wikipedia vs. AI slop: The volunteer army saving big tech's training data. *Rest of World*. https://restofworld.org/2026/wikipedia-ai-training-regional-languages/
@@ -201,6 +203,8 @@ Ford, H., & Wajcman, J. (2017). 'Anyone can edit', not everyone does: Wikipedia'
 
 Fricker, M. (2007). *Epistemic injustice: Power and the ethics of knowing*. Oxford University Press. https://doi.org/10.1093/acprof:oso/9780198237907.001.0001
 
+Frischmann, B. M. (2012). *Infrastructure: The social value of shared resources*. Oxford University Press. https://doi.org/10.1093/acprof:oso/9780199895656.001.0001
+
 Froneman, W. (2026). Failed comprehensiveness, successful minimalism: Wikipedia's 3-year struggle to govern AI-generated content (2022-2025). *AI & Society*. https://doi.org/10.1007/s00146-026-03046-1
 
 Gallert, P., & van der Velden, M. (2014). Reliable sources for indigenous knowledge: Dissecting Wikipedia's catch-22. In N. J. Bidwell & H. Winschiers-Theophilus (Eds.), *Indigenous Knowledge Technology Conference (IKTC) 2011 post-conference book*. (Unedited preliminary version; final publication details unconfirmed.) https://upload.wikimedia.org/wikipedia/commons/5/51/Indigenous_Knowledge_for_Wikipedia.pdf
@@ -214,6 +218,8 @@ Gerlich, M. (2025). *AI tools in society: Impacts on cognitive offloading and th
 Gerstgrasser, M., Schaeffer, R., Dey, A., Rafailov, R., Sleight, H., Hughes, J., ... Koyejo, S. (2024). *Is model collapse inevitable? Breaking the curse of recursion by accumulating real and synthetic data* [Preprint]. arXiv:2404.01413. https://arxiv.org/abs/2404.01413
 
 Giles, J. (2005). Internet encyclopaedias go head to head. *Nature, 438*(7070), 900-901. https://doi.org/10.1038/438900a
+
+Goldman, A. I. (1999). *Knowledge in a social world*. Oxford University Press. https://doi.org/10.1093/0198238207.001.0001
 
 Goldman, A. I. (2001). Experts: Which ones should you trust? *Philosophy and Phenomenological Research, 63*(1), 85-110. https://doi.org/10.1111/j.1933-1592.2001.tb00093.x
 
@@ -244,6 +250,8 @@ Huang, S., Xu, Y., Geng, M., Wan, Y., & Chen, D. (2025). *Wikipedia in the era o
 Jaschik, S. (2007, January 26). A stand against Wikipedia. *Inside Higher Ed*. https://www.insidehighered.com/news/2007/01/26/stand-against-wikipedia
 
 Jemielniak, D. (2014). *Common knowledge? An ethnography of Wikipedia*. Stanford University Press.
+
+Jernite, Y., Nguyen, H., Biderman, S., Rogers, A., Masoud, M., Danchev, V., ... Mitchell, M. (2022). Data governance in the age of large-scale data-driven language technology. In *Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency* (pp. 2206-2222). ACM. https://doi.org/10.1145/3531146.3534637
 
 Johnson, R., & Cureton, A. (2022). Kant's moral philosophy. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Fall 2022 ed.). https://plato.stanford.edu/entries/kant-moral/
 
@@ -350,6 +358,8 @@ Touvron, H., et al. (2023). *LLaMA: Open and efficient foundation language model
 Tripodi, F. (2023). Ms. Categorized: Gender, notability, and inequality on Wikipedia. *New Media & Society, 25*(7), 1687-1707. https://doi.org/10.1177/14614448211023772
 
 Vetter, M. A., Jiang, J., & McDowell, Z. J. (2025). An endangered species: How LLMs threaten Wikipedia's sustainability. *AI & Society, 40*(6), 4309-4322. https://doi.org/10.1007/s00146-025-02199-9
+
+Viljoen, S. (2020). *A relational theory of data governance* [Working paper]. SSRN. https://doi.org/10.2139/ssrn.3727562
 
 Villalobos, P., Ho, A., Sevilla, J., Besiroglu, T., Heim, L., & Hobbhahn, M. (2024). *Will we run out of data? Limits of LLM scaling based on human-generated data* [Preprint]. arXiv:2211.04325. https://arxiv.org/abs/2211.04325
 
