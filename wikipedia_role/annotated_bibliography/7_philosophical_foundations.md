@@ -17,3 +17,11 @@ Added 4 October 2026 after the author observed that the central principle must h
 - Natural duty avoids the consent problem but is framed for just political institutions; the extension to a voluntary epistemic commons is an analogy.
 - Singer's principle needs a "very bad" harm for its weaker form; the modest harm found in Section 3.2 is why the essay's duty is light.
 - Still to read before submission: Rawls (1999, sections 19, 51), Nozick (1974, pp. 93-95), Simmons (1979), Klosko (1992), Kant's *Metaphysics of Morals* on beneficence and gratitude, Seneca's *De beneficiis*, and the literature on collective responsibility if the collective-action problem is developed further.
+
+## Update 5 October 2026: Kant
+
+Public-domain texts were consulted instead of the secondary entry alone.
+
+- *Groundwork*, Section II, fourth example (Abbott translation, Project Gutenberg #5682): a universal law of non-helping "might exist", but "it is impossible to will that such a principle should have the universal validity of a law of nature. For a will which resolved this would contradict itself, inasmuch as many cases might occur in which one would have need of the love and sympathy of others". Read on the page.
+- *Metaphysical Elements of Ethics* (Abbott, Project Gutenberg #5684, which holds the introduction and general part, not the full Doctrine of Virtue): "Beneficence is a duty". Read on the page.
+- Gratitude (*Metaphysics of Morals*, Doctrine of Virtue, section 32, Akademie 6:454-455): not read in a primary text. The Liberty Fund copy of the Semple translation could not be fetched (an expired certificate on the host and a 503 through the page tool). Secondary accounts (Smit & Timmons, on the moral significance of gratitude in Kant's ethics; search summaries) agree that Kant calls gratitude a "sacred" duty because a benefit received cannot be fully repaid, with respect for the benefactor as the connected feeling. This point is not used in the essay text; the essay cites only the SEP entry for imperfect duty of beneficence. If gratitude is brought in, read section 32 in the Semple or Gregor translation first.
