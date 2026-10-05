@@ -401,6 +401,10 @@ Sujato, B. (Trans.). (n.d.-b). The great discourse on the Buddha's extinguishmen
 
 Sujato, B. (Trans.). (n.d.-c). The simile of the snake (Alagaddūpama Sutta, MN 22). In *SuttaCentral*. https://suttacentral.net/mn22/en/sujato
 
+Sujato, B. (Trans.). (n.d.-d). The fruits of the ascetic life (Sāmaññaphala Sutta, DN 2). In *SuttaCentral*. https://suttacentral.net/dn2/en/sujato
+
+Sujato, B. (Trans.). (n.d.-e). The chapter on hopes that are hard to give up (Aṅguttara Nikāya 2.118-129). In *SuttaCentral*. https://suttacentral.net/an2.118-129/en/sujato
+
 Sunstein, C. R. (1996). On the expressive function of law. *University of Pennsylvania Law Review, 144*(5), 2021-2053.
 
 Talbert, M. (2024). Moral responsibility. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Summer 2024 ed.). https://plato.stanford.edu/entries/moral-responsibility/
