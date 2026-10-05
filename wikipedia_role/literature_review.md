@@ -147,6 +147,12 @@ There is no evidence of a licence breach, and the licence's steward says the lic
 
 ## References
 
+Afroz, S., Miller, C., Menezes, T., Gilmour, E., Sarma, A., & Feng, Z. (2026). *"AI slop is DDoSing open source": Understanding the impact of AI-generated contributions on open source sustainability* [Preprint]. arXiv:2607.04003. https://arxiv.org/abs/2607.04003
+
+Algan, Y., Benkler, Y., Fuster Morell, M., & Hergueux, J. (2016). *Cooperation in a peer production economy: Experimental evidence from Wikipedia* [Working paper]. SSRN. https://doi.org/10.2139/ssrn.2843518
+
+Arnold, D. (n.d.). Madhyamaka Buddhist philosophy. In *Internet encyclopedia of philosophy*. https://iep.utm.edu/madhyamaka-buddhist-philosophy/
+
 Arrieta-Ibarra, I., Goff, L., Jiménez-Hernández, D., Lanier, J., & Weyl, E. G. (2018). Should we treat data as labor? Moving beyond "free". *AEA Papers and Proceedings, 108*, 38-42. https://doi.org/10.1257/pandp.20181003
 
 Baier, A. (1986). Trust and antitrust. *Ethics, 96*(2), 231-260. https://doi.org/10.1086/292745
@@ -163,6 +169,10 @@ Bennett, S., Maton, K., & Kervin, L. (2008). The 'digital natives' debate: A cri
 
 Bhattacharya, A. (2026, February 5). Wikipedia vs. AI slop: The volunteer army saving big tech's training data. *Rest of World*. https://restofworld.org/2026/wikipedia-ai-training-regional-languages/
 
+Bicchieri, C., & Mercier, H. (2014). Norms and beliefs: How change occurs. In M. Xenitidou & B. Edmonds (Eds.), *The complexity of social norms* (pp. 37-54). Springer. https://doi.org/10.1007/978-3-319-05308-0_3
+
+Bicchieri, C., Muldoon, R., & Sontuoso, A. (2023). Social norms. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Winter 2023 ed.). https://plato.stanford.edu/entries/social-norms/
+
 Bonfiglio, J. (2026, September 23). Resolving an interlocutory appeal, Ninth Circuit affirms dismissal of Section 1202 DMCA claims in ongoing *Doe v. GitHub* litigation. Authors Alliance. https://www.authorsalliance.org/2026/09/23/resolving-an-interlocutory-appeal-ninth-circuit-affirms-dismissal-of-section-1202-dmca-claims-in-ongoing-doe-v-github-litigation/
 
 Boyle, J. (2003). The second enclosure movement and the construction of the public domain. *Law and Contemporary Problems, 66*(1/2), 33-74. https://scholarship.law.duke.edu/lcp/vol66/iss1/2/
@@ -171,13 +181,19 @@ Brooks, C., Eggert, S., & Peskoff, D. (2024). The rise of AI-generated content i
 
 Burtch, G., Lee, D., & Chen, Z. (2024). The consequences of generative AI for online knowledge communities. *Scientific Reports, 14*, Article 10413. https://doi.org/10.1038/s41598-024-61221-0
 
+Butler, B., Joyce, E., & Pike, J. (2008). Don't look now, but we've created a bureaucracy: The nature and roles of policies and rules in Wikipedia. In *Proceedings of the SIGCHI Conference on Human Factors in Computing Systems* (pp. 1101-1110). ACM. https://doi.org/10.1145/1357054.1357227
+
 Camerer, C. F., Dreber, A., Holzmeister, F., Ho, T.-H., Huber, J., Johannesson, M., ... Wu, H. (2018). Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015. *Nature Human Behaviour, 2*, 637-644. https://doi.org/10.1038/s41562-018-0399-z
+
+Centola, D., Becker, J., Brackbill, D., & Baronchelli, A. (2018). Experimental evidence for tipping points in social convention. *Science, 360*(6393), 1116-1119. https://doi.org/10.1126/science.aas8827
 
 Chintalapoodi, P. (2024, March 15). Reddit and Google enter into AI content licensing agreement. Chip Law Group. https://www.chiplawgroup.com/reddit-and-google-enter-into-ai-content-licensing-agreement/
 
 Cicero. (1913). *De officiis* (W. Miller, Trans.). Harvard University Press. https://www.gutenberg.org/files/47001/47001-h/47001-h.htm (Original work published 44 BCE.)
 
 Coady, C. A. J. (1992). *Testimony: A philosophical study*. Clarendon Press. https://doi.org/10.1093/0198235518.001.0001
+
+Craig, E. (1990). *Knowledge and the state of nature: An essay in conceptual synthesis*. Clarendon Press. https://doi.org/10.1093/0198238797.001.0001
 
 Creative Commons. (2013). *Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) legal code*. https://creativecommons.org/licenses/by-sa/4.0/legalcode.en
 
@@ -188,6 +204,8 @@ Creative Commons. (n.d.). *CC Signals*. https://creativecommons.org/ai-and-the-c
 Cullity, G. (2004). *The moral demands of affluence*. Oxford University Press. https://doi.org/10.1093/0199258112.001.0001
 
 Dagger, R., & Lefkowitz, D. (2021). Political obligation. In E. N. Zalta (Ed.), *The Stanford encyclopedia of philosophy* (Fall 2021 ed.). https://plato.stanford.edu/entries/political-obligation/
+
+Dang Nguyen, Dejean, & Jullien. (2017). Do open online projects create social norms? *Journal of Institutional Economics, 14*(1), 45-70. https://doi.org/10.1017/S1744137417000182
 
 del Rio-Chanona, M., Laurentsyeva, N., & Wachs, J. (2024). Large language models reduce public knowledge sharing on online Q&A platforms. *PNAS Nexus, 3*(9). https://doi.org/10.1093/pnasnexus/pgae400
 
@@ -203,6 +221,8 @@ Fallis, D. (2008). Toward an epistemology of Wikipedia. *Journal of the American
 
 Ford, H., & Wajcman, J. (2017). 'Anyone can edit', not everyone does: Wikipedia's infrastructure and the gender gap. *Social Studies of Science, 47*(4), 511-527. https://doi.org/10.1177/0306312717692172
 
+Forte, A., & Bruckman, A. (2008). Scaling consensus: Increasing decentralization in Wikipedia governance. In *Proceedings of the 41st Hawaii International Conference on System Sciences*. IEEE. https://doi.org/10.1109/HICSS.2008.383
+
 Fricker, M. (2007). *Epistemic injustice: Power and the ethics of knowing*. Oxford University Press. https://doi.org/10.1093/acprof:oso/9780198237907.001.0001
 
 Frischmann, B. M. (2012). *Infrastructure: The social value of shared resources*. Oxford University Press. https://doi.org/10.1093/acprof:oso/9780199895656.001.0001
@@ -210,6 +230,8 @@ Frischmann, B. M. (2012). *Infrastructure: The social value of shared resources*
 Froneman, W. (2026). Failed comprehensiveness, successful minimalism: Wikipedia's 3-year struggle to govern AI-generated content (2022-2025). *AI & Society*. https://doi.org/10.1007/s00146-026-03046-1
 
 Gallert, P., & van der Velden, M. (2014). Reliable sources for indigenous knowledge: Dissecting Wikipedia's catch-22. In N. J. Bidwell & H. Winschiers-Theophilus (Eds.), *Indigenous Knowledge Technology Conference (IKTC) 2011 post-conference book*. (Unedited preliminary version; final publication details unconfirmed.) https://upload.wikimedia.org/wikipedia/commons/5/51/Indigenous_Knowledge_for_Wikipedia.pdf
+
+Garfield, J. L. (2010). Taking conventional truth seriously: Authority regarding deceptive reality. *Philosophy East and West, 60*(3), 341-354. https://doi.org/10.1353/pew.0.0113
 
 Garfinkel, S. L. (2008, October 20). Wikipedia and the meaning of truth. *MIT Technology Review*. https://www.technologyreview.com/2008/10/20/218162/wikipedia-and-the-meaning-of-truth/
 
@@ -235,9 +257,13 @@ Hart, H. L. A. (1955). Are there any natural rights? *The Philosophical Review, 
 
 Hawley, K. (2014). Trust, distrust and commitment. *Noûs, 48*(1), 1-20. https://doi.org/10.1111/nous.12000
 
+Hayes, R. (2023). Madhyamaka. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Fall 2023 ed.). https://plato.stanford.edu/entries/madhyamaka/
+
 Head, A. J., & Eisenberg, M. B. (2010). How today's college students use Wikipedia for course-related research. *First Monday, 15*(3). https://doi.org/10.5210/fm.v15i3.2830
 
 Henner, C. (2026, January 15). Wikipedia at 25: A wake-up call. *Wikipedia Signpost*. https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2026-01-15/Special_report
+
+Hergueux, J., Algan, Y., Benkler, Y., & Fuster-Morell, M. (2024). Public good superstars: A lab-in-the-field study of Wikipedia. *The Economic Journal, 135*(667), 861-891. https://doi.org/10.1093/ej/ueae093
 
 Hess, C., & Ostrom, E. (Eds.). (2007). *Understanding knowledge as a commons: From theory to practice*. MIT Press.
 
@@ -245,9 +271,13 @@ Hill, B. M., & Shaw, A. (2013). The Wikipedia gender gap revisited: Characterizi
 
 Holton, R. (1994). Deciding to trust, coming to believe. *Australasian Journal of Philosophy, 72*(1), 63-76. https://doi.org/10.1080/00048409412345881
 
+Hora, A., & Robbes, R. (2026). *AI policy, disclosure, and human in the loop: How are contribution guidelines adapting to GenAI?* [Preprint]. arXiv:2605.16706. https://arxiv.org/abs/2605.16706
+
 Huang, S., & Siddarth, D. (2023). *Generative AI and the digital commons* [Preprint]. arXiv:2303.11074. https://arxiv.org/abs/2303.11074
 
 Huang, S., Xu, Y., Geng, M., Wan, Y., & Chen, D. (2025). *Wikipedia in the era of LLMs: Evolution and risks* [Preprint]. arXiv:2503.02879. https://arxiv.org/abs/2503.02879
+
+Ichikawa, J. J., & Steup, M. (2026). The analysis of knowledge. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Spring 2026 ed.). https://plato.stanford.edu/entries/knowledge-analysis/
 
 Jaschik, S. (2007, January 26). A stand against Wikipedia. *Inside Higher Ed*. https://www.insidehighered.com/news/2007/01/26/stand-against-wikipedia
 
@@ -311,6 +341,8 @@ Open Source Initiative. (2007). *The open source definition* (v1.9). https://ope
 
 Orben, A. (2020). The Sisyphean cycle of technology panics. *Perspectives on Psychological Science, 15*(5), 1143-1157. https://doi.org/10.1177/1745691620919372
 
+Ostrom, E. (2010). Beyond markets and states: Polycentric governance of complex economic systems. *American Economic Review, 100*(3), 641-672.
+
 Pearson, S. H. (2025, May 15). *Understanding CC licenses and AI training: A legal primer*. Creative Commons. https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/
 
 Piccardi, T., Redi, M., Colavizza, G., & West, R. (2021). On the value of Wikipedia as a gateway to the Web. In *Proceedings of the Web Conference 2021*. ACM. https://doi.org/10.1145/3442381.3450136
@@ -331,6 +363,8 @@ Reeves, N., Yin, W., & Simperl, E. (2024). *Exploring the impact of ChatGPT on W
 
 Reeves, N., Yin, W., & Simperl, E. (2025). Exploring the impact of ChatGPT on Wikipedia engagement. *Collective Intelligence, 4*(3). https://doi.org/10.1177/26339137251372599
 
+Rescorla, M. (2024). Convention. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Spring 2024 ed.). https://plato.stanford.edu/entries/convention/
+
 Rosenzweig, R. (2006). Can history be open source? Wikipedia and the future of the past. *Journal of American History, 93*(1), 117-146. https://doi.org/10.2307/4486062
 
 Sanger, L. M. (2009). The fate of expertise after Wikipedia. *Episteme, 6*(1), 52-73. https://doi.org/10.3366/E1742360008000543
@@ -340,6 +374,8 @@ Scott, J. C. (2017). *The moral economy of the peasant: Rebellion and subsistenc
 Shi, F., Teplitskiy, M., Duede, E., & Evans, J. A. (2019). The wisdom of polarized crowds. *Nature Human Behaviour, 3*(4), 329-336. https://doi.org/10.1038/s41562-019-0541-6
 
 Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R., & Gal, Y. (2024). AI models collapse when trained on recursively generated data. *Nature, 631*(8022), 755-759. https://doi.org/10.1038/s41586-024-07566-y
+
+Siderits, M. (2023). Buddha. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Spring 2023 ed.). https://plato.stanford.edu/entries/buddha/
 
 Simmons, A. J. (1979). *Moral principles and political obligations*. Princeton University Press.
 
@@ -352,6 +388,10 @@ Sparrow, B., Liu, J., & Wegner, D. M. (2011). Google effects on memory: Cognitiv
 Stack Overflow. (2024, May 6). *Stack Overflow and OpenAI partnership*. https://stackoverflow.co/company/press/archive/openai-partnership
 
 Star, S. L., & Ruhleder, K. (1996). Steps toward an ecology of infrastructure: Design and access for large information spaces. *Information Systems Research, 7*(1), 111-134. https://doi.org/10.1287/isre.7.1.111
+
+Sunstein, C. R. (1996). On the expressive function of law. *University of Pennsylvania Law Review, 144*(5), 2021-2053.
+
+Talbert, M. (2024). Moral responsibility. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Summer 2024 ed.). https://plato.stanford.edu/entries/moral-responsibility/
 
 Thompson, E. P. (1971). The moral economy of the English crowd in the eighteenth century. *Past & Present, 50*(1), 76-136. https://doi.org/10.1093/past/50.1.76
 
@@ -369,6 +409,8 @@ Villalobos, P., Ho, A., Sevilla, J., Besiroglu, T., Heim, L., & Hobbhahn, M. (20
 
 Vincent, N., Li, H.-L., Tilly, N., Chancellor, S., & Hecht, B. (2021). Data leverage: A framework for empowering the public in its relationship with technology companies. In *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency* (pp. 215-227). https://doi.org/10.1145/3442188.3445885
 
+Vélez de Cea, A. (n.d.). Buddha. In *Internet encyclopedia of philosophy*. https://iep.utm.edu/buddha/
+
 Wagner, C., Graells-Garrido, E., Garcia, D., & Menczer, F. (2016). Women through the glass ceiling: Gender asymmetries in Wikipedia. *EPJ Data Science, 5*. https://doi.org/10.1140/epjds/s13688-016-0066-4
 
 Warncke-Wang, M., Ho, R., Miller, M., & Johnson, I. (2023). Increasing participation in peer production communities with the Newcomer Homepage. *Proceedings of the ACM on Human-Computer Interaction, 7*(CSCW). https://arxiv.org/abs/2308.09642
@@ -376,6 +418,8 @@ Warncke-Wang, M., Ho, R., Miller, M., & Johnson, I. (2023). Increasing participa
 Waters, N. L. (2007). Why you can't cite Wikipedia in my class. *Communications of the ACM, 50*(9), 15-17. https://doi.org/10.1145/1284621.1284635
 
 Werner, D. S. (2012). *Myth and philosophy in Plato's Phaedrus*. Cambridge University Press. https://doi.org/10.1017/CBO9781139108737
+
+Westerhoff, J. C. (2026). Nāgārjuna. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Summer 2026 ed.). https://plato.stanford.edu/entries/nagarjuna/
 
 Wikimedia Enterprise. (2026, January 15). Announcing new Wikimedia Enterprise partners for Wikipedia's 25th birthday. https://enterprise.wikimedia.com/blog/wikipedia-25-enterprise-partners/
 
@@ -396,6 +440,8 @@ Wikimedia Foundation. (2026a, January 15). *Wikipedia celebrates 25 years of kno
 Wikimedia Foundation. (2026b, April 27). Introducing the Wikimedia Foundation's draft FY 2026-2027 annual plan. *Diff*. https://diff.wikimedia.org/2026/04/27/introducing-the-wikimedia-foundations-draft-fy-2026-2027-annual-plan/
 
 Wikipedia contributors. (n.d.). *Wikipedia:Verifiability*. https://en.wikipedia.org/wiki/Wikipedia:Verifiability (retrieved 3 October 2026)
+
+Young, H. P. (2015). The evolution of social norms. *Annual Review of Economics, 7*, 359-387. https://doi.org/10.1146/annurev-economics-080614-115322
 
 Zhou, M., Cho, S., & Terveen, L. (2026). LLMs in Wikipedia: Investigating how LLMs impact participation in knowledge communities. *Proceedings of the ACM on Human-Computer Interaction* (CSCW '26). https://arxiv.org/abs/2509.07819
 
