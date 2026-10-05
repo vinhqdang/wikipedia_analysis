@@ -61,7 +61,7 @@ Tripodi, F. (2023). Ms. Categorized: Gender, notability, and inequality on Wikip
 Miquel-Ribé, M., & Laniado, D. (2018). Wikipedia culture gap: Quantifying content imbalances across 40 language editions. *Frontiers in Physics, 6*, Article 54. https://doi.org/10.3389/fphy.2018.00054
 - Type: peer-reviewed article (open access)
 - Verification: Opened the Frontiers full-text page.
-- Annotation (page summary): Computational method identifies culturally contextual content across 40 language editions. About a quarter of each edition covers its own cultural context, and that content is about 4.15 times less shared across languages than average content. Vietnamese Wikipedia (about 1.14 million articles at the time) had the lowest share, 2.5 percent, which the authors link to heavy bot-generated translated content.
+- Annotation (page summary): Computational method identifies culturally contextual content across 40 language editions. About a quarter of each edition covers its own cultural context, and that content is about 4.15 times less shared across languages than average content. Vietnamese Wikipedia (about 1.14 million articles at the time) had 2.5 percent; correction of 5 October 2026 after reading the paper's Table 2 and text: Cebuano and Waray were lower, at 0.1 percent each, so Vietnamese was third lowest of the 40 (mean 23.2%, median 24.2%), and the authors name all three as editions where bots had a major role in creation and translation.
 - Bearing: Small and mid-sized editions are not independent bastions. The Vietnamese case suggests large article counts can hide thin local knowledge. This is the only Vietnamese-specific quantitative evidence found.
 - Keywords: language editions, cultural context, Vietnamese Wikipedia, bots, coverage gap
 
