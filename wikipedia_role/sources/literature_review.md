@@ -395,6 +395,12 @@ Stack Overflow. (2024, May 6). *Stack Overflow and OpenAI partnership*. https://
 
 Star, S. L., & Ruhleder, K. (1996). Steps toward an ecology of infrastructure: Design and access for large information spaces. *Information Systems Research, 7*(1), 111-134. https://doi.org/10.1287/isre.7.1.111
 
+Sujato, B. (Trans.). (n.d.-a). The origin of the world (Aggañña Sutta, DN 27). In *SuttaCentral*. https://suttacentral.net/dn27/en/sujato
+
+Sujato, B. (Trans.). (n.d.-b). The great discourse on the Buddha's extinguishment (Mahāparinibbāna Sutta, DN 16). In *SuttaCentral*. https://suttacentral.net/dn16/en/sujato
+
+Sujato, B. (Trans.). (n.d.-c). The simile of the snake (Alagaddūpama Sutta, MN 22). In *SuttaCentral*. https://suttacentral.net/mn22/en/sujato
+
 Sunstein, C. R. (1996). On the expressive function of law. *University of Pennsylvania Law Review, 144*(5), 2021-2053.
 
 Talbert, M. (2024). Moral responsibility. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Summer 2024 ed.). https://plato.stanford.edu/entries/moral-responsibility/
