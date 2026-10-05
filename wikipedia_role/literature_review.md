@@ -185,6 +185,8 @@ Creative Commons. (2026, September 3). *Guidance on using CC licenses in an AI e
 
 Creative Commons. (n.d.). *CC Signals*. https://creativecommons.org/ai-and-the-commons/cc-signals/
 
+Cullity, G. (2004). *The moral demands of affluence*. Oxford University Press. https://doi.org/10.1093/0199258112.001.0001
+
 Dagger, R., & Lefkowitz, D. (2021). Political obligation. In E. N. Zalta (Ed.), *The Stanford encyclopedia of philosophy* (Fall 2021 ed.). https://plato.stanford.edu/entries/political-obligation/
 
 del Rio-Chanona, M., Laurentsyeva, N., & Wachs, J. (2024). Large language models reduce public knowledge sharing on online Q&A platforms. *PNAS Nexus, 3*(9). https://doi.org/10.1093/pnasnexus/pgae400
@@ -296,6 +298,8 @@ Miquel-Ribé, M., & Laniado, D. (2018). Wikipedia culture gap: Quantifying conte
 Morgan, J. T., & Halfaker, A. (2018). Evaluating the impact of the Wikipedia Teahouse on newcomer socialization and retention. In *Proceedings of the 14th International Symposium on Open Collaboration (OpenSym '18)*. ACM. https://doi.org/10.1145/3233391.3233544
 
 Mueller, B., Danis, C., & Lavagetto, G. (2025, April 1). How crawlers impact the operations of the Wikimedia projects. *Diff*, Wikimedia Foundation. https://diff.wikimedia.org/2025/04/01/how-crawlers-impact-the-operations-of-the-wikimedia-projects/
+
+Murphy, L. B. (2000). *Moral demands in nonideal theory*. Oxford University Press. https://doi.org/10.1093/oso/9780195079760.001.0001
 
 Noroozian, A., Aldana, L., Arisi, M., et al. (2025). *Generative AI and the future of the digital commons: Five open questions and knowledge gaps* [Preprint]. arXiv:2508.06470. https://arxiv.org/abs/2508.06470
 
