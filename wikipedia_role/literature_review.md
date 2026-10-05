@@ -205,7 +205,7 @@ Cullity, G. (2004). *The moral demands of affluence*. Oxford University Press. h
 
 Dagger, R., & Lefkowitz, D. (2021). Political obligation. In E. N. Zalta (Ed.), *The Stanford encyclopedia of philosophy* (Fall 2021 ed.). https://plato.stanford.edu/entries/political-obligation/
 
-Dang Nguyen, Dejean, & Jullien. (2017). Do open online projects create social norms? *Journal of Institutional Economics, 14*(1), 45-70. https://doi.org/10.1017/S1744137417000182
+Dang Nguyen, Dejean, & Jullien. (2018). Do open online projects create social norms? *Journal of Institutional Economics, 14*(1), 45-70. https://doi.org/10.1017/S1744137417000182
 
 del Rio-Chanona, M., Laurentsyeva, N., & Wachs, J. (2024). Large language models reduce public knowledge sharing on online Q&A platforms. *PNAS Nexus, 3*(9). https://doi.org/10.1093/pnasnexus/pgae400
 
@@ -263,7 +263,7 @@ Head, A. J., & Eisenberg, M. B. (2010). How today's college students use Wikiped
 
 Henner, C. (2026, January 15). Wikipedia at 25: A wake-up call. *Wikipedia Signpost*. https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2026-01-15/Special_report
 
-Hergueux, J., Algan, Y., Benkler, Y., & Fuster-Morell, M. (2024). Public good superstars: A lab-in-the-field study of Wikipedia. *The Economic Journal, 135*(667), 861-891. https://doi.org/10.1093/ej/ueae093
+Hergueux, J., Algan, Y., Benkler, Y., & Fuster-Morell, M. (2025). Public good superstars: A lab-in-the-field study of Wikipedia. *The Economic Journal, 135*(667), 861-891. https://doi.org/10.1093/ej/ueae093
 
 Hess, C., & Ostrom, E. (Eds.). (2007). *Understanding knowledge as a commons: From theory to practice*. MIT Press.
 
@@ -271,11 +271,13 @@ Hill, B. M., & Shaw, A. (2013). The Wikipedia gender gap revisited: Characterizi
 
 Holton, R. (1994). Deciding to trust, coming to believe. *Australasian Journal of Philosophy, 72*(1), 63-76. https://doi.org/10.1080/00048409412345881
 
-Hora, A., & Robbes, R. (2026). *AI policy, disclosure, and human in the loop: How are contribution guidelines adapting to GenAI?* [Preprint]. arXiv:2605.16706. https://arxiv.org/abs/2605.16706
+Hora, A., & Robbes, R. (2026). *AI policy, disclosure, and human in the loop: How are contribution guidelines adapting to GenAI?* [Preprint]. arXiv:2605.16706. https://arxiv.org/abs/2605.16706 Accepted to ICSME 2026.
 
 Huang, S., & Siddarth, D. (2023). *Generative AI and the digital commons* [Preprint]. arXiv:2303.11074. https://arxiv.org/abs/2303.11074
 
 Huang, S., Xu, Y., Geng, M., Wan, Y., & Chen, D. (2025). *Wikipedia in the era of LLMs: Evolution and risks* [Preprint]. arXiv:2503.02879. https://arxiv.org/abs/2503.02879
+
+Hume, D. (2003). *A treatise of human nature* [Project Gutenberg ebook 4705]. https://www.gutenberg.org/ebooks/4705 (Original work published 1739-1740.)
 
 Ichikawa, J. J., & Steup, M. (2026). The analysis of knowledge. In E. N. Zalta & U. Nodelman (Eds.), *The Stanford encyclopedia of philosophy* (Spring 2026 ed.). https://plato.stanford.edu/entries/knowledge-analysis/
 
@@ -306,6 +308,8 @@ Longpre, S., Mahari, R., Lee, A., Lund, C., et al. (2024). *Consent in crisis: T
 Lyu, L., Siderius, J., Li, H., Acemoglu, D., Huttenlocher, D., & Ozdaglar, A. (2025). Wikipedia contributions in the wake of ChatGPT. In *Companion Proceedings of the ACM Web Conference 2025*. https://doi.org/10.1145/3701716.3715543
 
 Magnus, P. D. (2009). On trusting Wikipedia. *Episteme, 6*(1), 74-90. https://doi.org/10.3366/E1742360008000555
+
+Manela, T. (2019). Gratitude. In E. N. Zalta (Ed.), *The Stanford encyclopedia of philosophy* (Winter 2019 ed.). https://plato.stanford.edu/entries/gratitude/
 
 Marsh, E. J., & Rajaram, S. (2019). The digital expansion of the mind: Implications of internet usage for memory and cognition. *Journal of Applied Research in Memory and Cognition, 8*(1), 1-14. https://doi.org/10.1016/j.jarmac.2018.11.001
 
@@ -429,11 +433,11 @@ Wikimedia Foundation. (2023). *Terms of use* (effective 7 June 2023). https://fo
 
 Wikimedia Foundation. (2025a, November 24). Wikimedia Enterprise financial report: Fiscal year 2024-2025. *Diff*. https://diff.wikimedia.org/2025/11/24/wikimedia-enterprise-financial-report-fiscal-year-2024-2025/
 
-Wikimedia Foundation. (2025b). *Wikipedia year in review 2025*. https://wikimediafoundation.org/wikipedia-year-in-review-2025/
+Wikimedia Foundation. (2025e). *Wikipedia year in review 2025*. https://wikimediafoundation.org/wikipedia-year-in-review-2025/
+
+Wikimedia Foundation. (2025b, November 10). *In the AI era, Wikipedia has never been more valuable*. https://wikimediafoundation.org/news/2025/11/10/in-the-ai-era-wikipedia-has-never-been-more-valuable/
 
 Wikimedia Foundation. (2025c, November 24). Highlights from the Wikimedia Foundation's fiscal year 2024-2025 audit report. *Diff*. https://diff.wikimedia.org/2025/11/24/highlights-from-the-wikimedia-foundations-fiscal-year-2024-2025-audit-report/
-
-Wikimedia Foundation. (2025d, November 10). *In the AI era, Wikipedia has never been more valuable*. https://wikimediafoundation.org/news/2025/11/10/in-the-ai-era-wikipedia-has-never-been-more-valuable/
 
 Wikimedia Foundation. (2026a, January 15). *Wikipedia celebrates 25 years of knowledge at its best*. https://wikimediafoundation.org/news/2026/01/15/wikipedia-celebrates-25years/
 
