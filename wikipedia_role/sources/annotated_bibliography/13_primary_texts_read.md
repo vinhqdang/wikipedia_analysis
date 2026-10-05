@@ -1,0 +1,28 @@
+# 13. Primary texts read directly (5 October 2026)
+
+Three PDFs uploaded by the author to the `master` branch of this repository were read from the git objects (not copied into `main`): Rawls, *A Theory of Justice*, revised edition (Harvard UP, 1999), file `rawls99.pdf`; Nozick, *Anarchy, State, and Utopia* (2001 printing, with the running heads and pagination of the 1974 edition), file `Robert Nozick Anarchy, State, and Utopia 2001.pdf`; and Kant, *The Metaphysics of Ethics* (Semple translation, Online Library of Liberty edition), file `Kant_0332_EBk_v6.0.pdf`. Page numbers below are the printed folios; text was extracted with a PDF reader and the quoted strings checked against the extraction.
+
+## Rawls (1999)
+
+- p. 96, section 18: "This principle holds that a person is required to do his part as defined by the rules of an institution when two conditions are met: first, the institution is just (or fair), that is, it satisfies the two principles of justice; and second, one has voluntarily accepted the benefits of the arrangement or taken advantage of the opportunities it offers to further one's interests." And: "when a number of persons engage in a mutually advantageous cooperative venture according to rules, and thus restrict their liberty in ways necessary to yield advantages for all, those who have submitted to these restrictions have a right to a similar acquiescence on the part of those who have benefited from their submission."
+- p. 98, section 19 (list of natural duties): "the duty of helping another when he is in need or jeopardy, provided that one can do so without excessive risk or loss to oneself".
+- p. 99, section 19: "From the standpoint of justice as fairness, a fundamental natural duty is the duty of justice. This duty requires us to support and to comply with just institutions that exist and apply to us. It also constrains us to further just arrangements not yet established, at least when this can be done without too much cost to ourselves." and "If their formulation shows that no binding action, consensual or otherwise, is a presupposition of their application, then they apply unconditionally."
+- p. 100, section 19: "The principle of fairness, on the other hand, binds only those who assume public office, say, or those who, being better situated, have advanced their aims within the system."
+- pp. 293-294, section 51: "the most important natural duty is that to support and to further just institutions. This duty has two parts: first, we are to comply with and to do our share in just institutions when they exist and apply to us; and second, we are to assist in the establishment of just arrangements when they do not exist, at least when this can be done with little cost to ourselves."
+- Section 22, pp. 109-110 (read earlier in an open excerpt, now confirmed in this file): the circumstances of justice as "the normal conditions under which human cooperation is both possible and necessary", and "Unless these circumstances existed there would be no occasion for the virtue of justice".
+
+## Nozick (1974)
+
+- pp. 93-94: "The principle of fairness, as we stated it following Hart and Rawls, is objectionable and unacceptable. Suppose some of the people in your neighborhood (there are 364 other adults) have found a public address system and decide to institute a system of public entertainment ..." "You would rather not have any of it and not give up a day than have it all and spend one of your days at it." p. 94: "At the very least one wants to build into the principle of fairness the condition that the benefits to a person from the actions of the others are greater than the costs to him of doing his share." And: "In this case you can choose to forgo the benefit by not turning on the radio; in other cases the benefits may be unavoidable."
+
+## Kant (Semple translation; section numbers as in that translation)
+
+- Sec. 30: "To deal kindly toward our brethren of mankind who are in distress, without hoping for anything in return, and to aid them in extricating themselves out of it, is a mutual duty incumbent on us all."
+- Sec. 31: beneficence "must studiously avoid all appearance of intending to oblige the other", otherwise "it would not be truly a benefit done to, but an obligation thrust upon his neighbour"; "no kindness being truly shown when I thrust upon him a present without his will."
+- Sec. 32: "gratitude must be regarded still further as a sacred duty, i.e., as such a duty, which to violate, would be to extinguish the moral principles of benevolence, even in their source; for that ethical object is sacred and holy, in regard of whom the obligation can never be adequately acquitted and discharged"; "the benefactor having always the good desert of being first in the benevolence".
+- Sec. 33: "As for the extent of gratitude, it is not by any means confined to contemporaries, but goes back to our ancestors, even to those whom we cannot certainly name."
+- Sec. 34: "the intensity of this duty ... is to be estimated by the advantage we have derived from the benefit, and the disinterestedness which prompted the benefactor to bestow it on us, the least degree of gratitude would be, when our benefactor is alive, to repay to him the identic service performed for us, or, when he is no more, to show like services to others."
+
+## Effect on the essay
+
+Section 6.2 now quotes these passages directly. The Kantian gratitude argument was added after reading Sec. 32-34, which showed it to be a closer fit than the earlier "hard case" reading drawn from an encyclopedia summary. Open: the Semple translation is older than the standard Gregor translation; the section numbering differs from the Akademie numbering (6:452-6:458) and a specialist would expect the latter.
