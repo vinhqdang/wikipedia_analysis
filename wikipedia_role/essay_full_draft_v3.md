@@ -67,6 +67,8 @@ Taken together, the three arguments support a conditional principle: those who k
 
 A note on betrayal. Reaction to this reuse is often phrased as betrayal, a word the argument does not need. On the commitment account (Hawley, 2014), betrayal requires a commitment that was broken, and "we may feel betrayed, but we have not been betrayed" where nobody committed to what was expected. The commitments that exist run to platforms and not to editors, as in Stack Overflow's partnership, where OpenAI will "provide attribution to the Stack Overflow community within ChatGPT" (Stack Overflow, 2024). The Foundation's requests create an expectation on one side and not a commitment on the other.
 
+What editors themselves think of this reuse has not been measured systematically, and the argument above does not assume an answer. The nearest evidence is indirect. In expert interviews, one participant reported that the objection heard most often from Wikipedians is that "the situation doesn't seem fundamentally fair", since editors work unpaid under an open licence while large firms profit, and another that contributors glad to share with people are not necessarily glad to have their content fed to a model (Vetter et al., 2025); both are second-hand reports from six experts and not accounts from editors. Editors from regional-language communities quoted by a news outlet spoke of wanting models trained on quality content and of fixing knowledge gaps, and none of those named reported payment or credit (Bhattacharya, 2026). A survey of editors on the future of the project was being prepared by volunteer researchers and had no results on its project page when read (Gelauff, 2026). The fair-play framing predicts the first kind of view and does not require it.
+
 ## 4. What reusers can do
 
 A form of support should run to the practice, be proportionate to reliance and capacity, be open to checking, and not damage what it protects. The last two matter because the practice is carried by people while the Foundation owns the servers and controls the budget for community programmes (Menking & Rosenberg, 2021), so money for the Foundation does not by itself reach the people who carry the practice.
@@ -121,13 +123,15 @@ Taken together the recommendations have one aim: that the practice stay worth re
 
 The question was what role Wikipedia can and should play in the era of language models. Wikipedia matters as an auditable practice of verification carried by a community, not as a source of truth, and its standing has risen and fallen with the alternatives against which it is compared. Language models rely on it, the licence is silent on that reliance, and the cost to the practice is modest and partly contested. What the practice needs in return is light, proportionate upkeep, in forms that reach the people who carry it. And Wikipedia has its own part to play in how it treats newcomers, what it counts as knowledge, and how openly it deals with those who reuse it.
 
-Three limits should be kept in view. No study asks whether editors hold an expectation of return from AI developers, whether readers sent to a model fare worse than readers sent to the source, or how far the sources that Wikipedia cites are being contaminated by machine-generated text. The step from fair play, natural duty and beneficence to an epistemic commons is this essay's own and is open to the weak points set out in Section 3.3. And the evidence base is thin on the essay's central questions, with many sources used at the level of abstracts.
+Three limits should be kept in view. No study yet measures systematically whether editors hold an expectation of return from AI developers (Section 3.3 gives the indirect evidence), whether readers sent to a model fare worse than readers sent to the source, or how far the sources that Wikipedia cites are being contaminated by machine-generated text. The step from fair play, natural duty and beneficence to an epistemic commons is this essay's own and is open to the weak points set out in Section 3.3. And the evidence base is thin on the essay's central questions, with many sources used at the level of abstracts.
 
 ## References
 
 Bansal, A. (2026, March 26). Wikipedia bans AI-generated article content. *MediaNama*. https://www.medianama.com/2026/03/223-english-wikipedia-bans-ai-generated-text-allows-limited-use-copyediting-translation/
 
 Becker, L. (2026, July 16). The cost of "free": How Wikimedia Enterprise protects Wikipedia in the AI era. Wikimedia Foundation. https://wikimediafoundation.org/news/2026/07/16/wikimedia-enterprise-protecting-wikipedia-ai/
+
+Bhattacharya, A. (2026, February 5). Wikipedia vs. AI slop: The volunteer army saving big tech's training data. *Rest of World*. https://restofworld.org/2026/wikipedia-ai-training-regional-languages/
 
 Brooks, C., Eggert, S., & Peskoff, D. (2024). The rise of AI-generated content in Wikipedia. In *Proceedings of the First Workshop on Advancing NLP for Wikipedia* (pp. 67-79). https://aclanthology.org/2024.wikinlp-1.12/
 
@@ -156,6 +160,8 @@ Froneman, W. (2026). Failed comprehensiveness, successful minimalism: Wikipedia'
 Gallert, P., & van der Velden, M. (2014). Reliable sources for indigenous knowledge: Dissecting Wikipedia's catch-22. In N. J. Bidwell & H. Winschiers-Theophilus (Eds.), *Indigenous Knowledge Technology Conference (IKTC) 2011 post-conference book*. (Unedited preliminary version; final publication details unconfirmed.) https://upload.wikimedia.org/wikipedia/commons/5/51/Indigenous_Knowledge_for_Wikipedia.pdf
 
 Garfinkel, S. L. (2008, October 20). Wikipedia and the meaning of truth. *MIT Technology Review*. https://www.technologyreview.com/2008/10/20/218162/wikipedia-and-the-meaning-of-truth/
+
+Gelauff, L. (2026). *Research: Wikipedia contributor outlooks to the future* [Project page]. Meta-Wiki. https://meta.wikimedia.org/wiki/Research:Wikipedia_Contributor_outlooks_to_the_future
 
 Gerstgrasser, M., Schaeffer, R., Dey, A., Rafailov, R., Sleight, H., Hughes, J., ... Koyejo, S. (2024). *Is model collapse inevitable? Breaking the curse of recursion by accumulating real and synthetic data* [Preprint]. arXiv:2404.01413. https://arxiv.org/abs/2404.01413
 
@@ -238,6 +244,8 @@ Stack Overflow. (2024, May 6). *Stack Overflow and OpenAI partnership*. https://
 Touvron, H., et al. (2023). *LLaMA: Open and efficient foundation language models* [Preprint]. arXiv:2302.13971. https://arxiv.org/abs/2302.13971
 
 Tripodi, F. (2023). Ms. Categorized: Gender, notability, and inequality on Wikipedia. *New Media & Society, 25*(7), 1687-1707. https://doi.org/10.1177/14614448211023772
+
+Vetter, M. A., Jiang, J., & McDowell, Z. J. (2025). An endangered species: How LLMs threaten Wikipedia's sustainability. *AI & Society, 40*(6), 4309-4322. https://doi.org/10.1007/s00146-025-02199-9
 
 Villalobos, P., Ho, A., Sevilla, J., Besiroglu, T., Heim, L., & Hobbhahn, M. (2024). *Will we run out of data? Limits of LLM scaling based on human-generated data* [Preprint]. arXiv:2211.04325. https://arxiv.org/abs/2211.04325
 

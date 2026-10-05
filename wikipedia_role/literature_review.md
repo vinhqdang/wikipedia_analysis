@@ -159,6 +159,8 @@ Benkler, Y. (2002). Coase's penguin, or, Linux and *The Nature of the Firm*. *Ya
 
 Bennett, S., Maton, K., & Kervin, L. (2008). The 'digital natives' debate: A critical review of the evidence. *British Journal of Educational Technology, 39*(5), 775-786. https://doi.org/10.1111/j.1467-8535.2007.00793.x
 
+Bhattacharya, A. (2026, February 5). Wikipedia vs. AI slop: The volunteer army saving big tech's training data. *Rest of World*. https://restofworld.org/2026/wikipedia-ai-training-regional-languages/
+
 Bonfiglio, J. (2026, September 23). Resolving an interlocutory appeal, Ninth Circuit affirms dismissal of Section 1202 DMCA claims in ongoing *Doe v. GitHub* litigation. Authors Alliance. https://www.authorsalliance.org/2026/09/23/resolving-an-interlocutory-appeal-ninth-circuit-affirms-dismissal-of-section-1202-dmca-claims-in-ongoing-doe-v-github-litigation/
 
 Boyle, J. (2003). The second enclosure movement and the construction of the public domain. *Law and Contemporary Problems, 66*(1/2), 33-74. https://scholarship.law.duke.edu/lcp/vol66/iss1/2/
@@ -204,6 +206,8 @@ Froneman, W. (2026). Failed comprehensiveness, successful minimalism: Wikipedia'
 Gallert, P., & van der Velden, M. (2014). Reliable sources for indigenous knowledge: Dissecting Wikipedia's catch-22. In N. J. Bidwell & H. Winschiers-Theophilus (Eds.), *Indigenous Knowledge Technology Conference (IKTC) 2011 post-conference book*. (Unedited preliminary version; final publication details unconfirmed.) https://upload.wikimedia.org/wikipedia/commons/5/51/Indigenous_Knowledge_for_Wikipedia.pdf
 
 Garfinkel, S. L. (2008, October 20). Wikipedia and the meaning of truth. *MIT Technology Review*. https://www.technologyreview.com/2008/10/20/218162/wikipedia-and-the-meaning-of-truth/
+
+Gelauff, L. (2026). *Research: Wikipedia contributor outlooks to the future* [Project page]. Meta-Wiki. https://meta.wikimedia.org/wiki/Research:Wikipedia_Contributor_outlooks_to_the_future
 
 Gerlich, M. (2025). *AI tools in society: Impacts on cognitive offloading and the future of critical thinking* [Preprint]. SSRN. https://doi.org/10.2139/ssrn.5082524
 
@@ -344,6 +348,8 @@ Tollefsen, D. P. (2009). Wikipedia and the epistemology of testimony. *Episteme,
 Touvron, H., et al. (2023). *LLaMA: Open and efficient foundation language models* [Preprint]. arXiv:2302.13971. https://arxiv.org/abs/2302.13971
 
 Tripodi, F. (2023). Ms. Categorized: Gender, notability, and inequality on Wikipedia. *New Media & Society, 25*(7), 1687-1707. https://doi.org/10.1177/14614448211023772
+
+Vetter, M. A., Jiang, J., & McDowell, Z. J. (2025). An endangered species: How LLMs threaten Wikipedia's sustainability. *AI & Society, 40*(6), 4309-4322. https://doi.org/10.1007/s00146-025-02199-9
 
 Villalobos, P., Ho, A., Sevilla, J., Besiroglu, T., Heim, L., & Hobbhahn, M. (2024). *Will we run out of data? Limits of LLM scaling based on human-generated data* [Preprint]. arXiv:2211.04325. https://arxiv.org/abs/2211.04325
 
