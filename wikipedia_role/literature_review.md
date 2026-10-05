@@ -291,6 +291,8 @@ Johnson, R., & Cureton, A. (2022). Kant's moral philosophy. In E. N. Zalta & U. 
 
 Kallel, M., & El Louadi, M. (2026). *Cognitive commons in the age of generative intelligence: A heterodox appraisal of the knowledge erosion hypothesis* [Preprint]. arXiv:2607.13272. https://arxiv.org/abs/2607.13272
 
+Kant, I. (1886). *The metaphysics of ethics* (J. W. Semple, Trans.; H. Calderwood, Ed.; 3rd ed.). T. & T. Clark. Online Library of Liberty. https://oll.libertyfund.org/titles/calderwood-the-metaphysics-of-ethics (Original work published 1796.)
+
 Klosko, G. (1992). *The principle of fairness and political obligation*. Rowman & Littlefield.
 
 Konieczny, P. (2016). Teaching with Wikipedia in a 21st-century classroom: Perceptions of Wikipedia and its educational benefits. *Journal of the Association for Information Science and Technology, 67*(7), 1523-1534. https://doi.org/10.1002/asi.23616
@@ -433,11 +435,11 @@ Wikimedia Foundation. (2023). *Terms of use* (effective 7 June 2023). https://fo
 
 Wikimedia Foundation. (2025a, November 24). Wikimedia Enterprise financial report: Fiscal year 2024-2025. *Diff*. https://diff.wikimedia.org/2025/11/24/wikimedia-enterprise-financial-report-fiscal-year-2024-2025/
 
-Wikimedia Foundation. (2025e). *Wikipedia year in review 2025*. https://wikimediafoundation.org/wikipedia-year-in-review-2025/
-
 Wikimedia Foundation. (2025b, November 10). *In the AI era, Wikipedia has never been more valuable*. https://wikimediafoundation.org/news/2025/11/10/in-the-ai-era-wikipedia-has-never-been-more-valuable/
 
 Wikimedia Foundation. (2025c, November 24). Highlights from the Wikimedia Foundation's fiscal year 2024-2025 audit report. *Diff*. https://diff.wikimedia.org/2025/11/24/highlights-from-the-wikimedia-foundations-fiscal-year-2024-2025-audit-report/
+
+Wikimedia Foundation. (2025e). *Wikipedia year in review 2025*. https://wikimediafoundation.org/wikipedia-year-in-review-2025/
 
 Wikimedia Foundation. (2026a, January 15). *Wikipedia celebrates 25 years of knowledge at its best*. https://wikimediafoundation.org/news/2026/01/15/wikipedia-celebrates-25years/
 
