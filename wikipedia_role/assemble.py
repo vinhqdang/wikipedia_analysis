@@ -44,7 +44,7 @@ def main(v2=False, v3=False, v4=False, v5=False, v6=False):
     refs = [r.strip() for r in review.split("## References", 1)[1].strip().split("\n\n") if r.strip()]
     kept = []
     for r in refs:
-        ym = re.search(r"\((\d{4}[a-d]?|n\.d\.)", r)
+        ym = re.search(r"\((\d{4}[a-z]?|n\.d\.)", r)
         year = ym.group(1) if ym else None
         if re.match(r"^[^\W\d_][\w'’\- ]*,", r) and not r.startswith("*"):
             key = r.split(",")[0]
